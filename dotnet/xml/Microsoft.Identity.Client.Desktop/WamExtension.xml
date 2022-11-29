@@ -1,0 +1,52 @@
+<Type Name="WamExtension" FullName="Microsoft.Identity.Client.Desktop.WamExtension">
+  <TypeSignature Language="C#" Value="public static class WamExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit WamExtension extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Client.Desktop.WamExtension" />
+  <TypeSignature Language="VB.NET" Value="Public Module WamExtension" />
+  <TypeSignature Language="F#" Value="type WamExtension = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Client.Desktop</AssemblyName>
+    <AssemblyVersion>4.48.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            WAM related extensions.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="WithWindowsBroker">
+      <MemberSignature Language="C#" Value="public static Microsoft.Identity.Client.PublicClientApplicationBuilder WithWindowsBroker (this Microsoft.Identity.Client.PublicClientApplicationBuilder builder, bool enableBroker = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Identity.Client.PublicClientApplicationBuilder WithWindowsBroker(class Microsoft.Identity.Client.PublicClientApplicationBuilder builder, bool enableBroker) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.Desktop.WamExtension.WithWindowsBroker(Microsoft.Identity.Client.PublicClientApplicationBuilder,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function WithWindowsBroker (builder As PublicClientApplicationBuilder, Optional enableBroker As Boolean = true) As PublicClientApplicationBuilder" />
+      <MemberSignature Language="F#" Value="static member WithWindowsBroker : Microsoft.Identity.Client.PublicClientApplicationBuilder * bool -&gt; Microsoft.Identity.Client.PublicClientApplicationBuilder" Usage="Microsoft.Identity.Client.Desktop.WamExtension.WithWindowsBroker (builder, enableBroker)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client.Desktop</AssemblyName>
+        <AssemblyVersion>4.48.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.PublicClientApplicationBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="builder" Type="Microsoft.Identity.Client.PublicClientApplicationBuilder" RefType="this" />
+        <Parameter Name="enableBroker" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="builder">To be added.</param>
+        <param name="enableBroker">To be added.</param>
+        <summary>
+            Enables Windows broker flows on older platforms, such as .NET framework, where these are not available in the box with Microsoft.Identity.Client
+            For details about Windows broker, see https://aka.ms/msal-net-wam
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

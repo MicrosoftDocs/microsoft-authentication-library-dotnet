@@ -1,0 +1,96 @@
+<Type Name="CacheData" FullName="Microsoft.Identity.Client.Cache.CacheData">
+  <TypeSignature Language="C#" Value="public class CacheData" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CacheData extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Client.Cache.CacheData" />
+  <TypeSignature Language="VB.NET" Value="Public Class CacheData" />
+  <TypeSignature Language="F#" Value="type CacheData = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+    <AssemblyVersion>4.48.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName Language="C#">[System.Obsolete("This is expected to be removed in MSAL.NET v3 and ADAL.NET v5. We recommend using SerializeMsalV3/DeserializeMsalV3. Read more: https://aka.ms/msal-net-3x-cache-breaking-change", false)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Obsolete("This is expected to be removed in MSAL.NET v3 and ADAL.NET v5. We recommend using SerializeMsalV3/DeserializeMsalV3. Read more: https://aka.ms/msal-net-3x-cache-breaking-change", false)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Data class, common to ADAL.NET and MSAL.NET V2 used for the token cache serialization
+            in a dual format: the ADAL V3 cache format, and the new unified cache format, common
+            to ADAL.NET 4.x, MSAL.NET 2.x and other libraries in the same Operating System
+            (for instance ADAL and MSAL for objective C in iOS)
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CacheData ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.Cache.CacheData.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.48.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdalV3State">
+      <MemberSignature Language="C#" Value="public byte[] AdalV3State { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] AdalV3State" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.Cache.CacheData.AdalV3State" />
+      <MemberSignature Language="VB.NET" Value="Public Property AdalV3State As Byte()" />
+      <MemberSignature Language="F#" Value="member this.AdalV3State : byte[] with get, set" Usage="Microsoft.Identity.Client.Cache.CacheData.AdalV3State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.48.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Array of bytes containing the serialized cache in ADAL.NET V3 format
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnifiedState">
+      <MemberSignature Language="C#" Value="public byte[] UnifiedState { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] UnifiedState" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.Cache.CacheData.UnifiedState" />
+      <MemberSignature Language="VB.NET" Value="Public Property UnifiedState As Byte()" />
+      <MemberSignature Language="F#" Value="member this.UnifiedState : byte[] with get, set" Usage="Microsoft.Identity.Client.Cache.CacheData.UnifiedState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.48.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Array of bytes containing the serialized MSAL.NET V2 cache
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
