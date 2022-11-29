@@ -1,0 +1,57 @@
+<Type Name="BrokerExtension" FullName="Microsoft.Identity.Client.Broker.BrokerExtension">
+  <TypeSignature Language="C#" Value="public static class BrokerExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit BrokerExtension extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Client.Broker.BrokerExtension" />
+  <TypeSignature Language="VB.NET" Value="Public Module BrokerExtension" />
+  <TypeSignature Language="F#" Value="type BrokerExtension = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Client.Broker</AssemblyName>
+    <AssemblyVersion>4.48.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            MSAL Broker Extension for WAM support
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="WithBrokerPreview">
+      <MemberSignature Language="C#" Value="public static Microsoft.Identity.Client.PublicClientApplicationBuilder WithBrokerPreview (this Microsoft.Identity.Client.PublicClientApplicationBuilder builder, bool enableBroker = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Identity.Client.PublicClientApplicationBuilder WithBrokerPreview(class Microsoft.Identity.Client.PublicClientApplicationBuilder builder, bool enableBroker) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.Broker.BrokerExtension.WithBrokerPreview(Microsoft.Identity.Client.PublicClientApplicationBuilder,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function WithBrokerPreview (builder As PublicClientApplicationBuilder, Optional enableBroker As Boolean = true) As PublicClientApplicationBuilder" />
+      <MemberSignature Language="F#" Value="static member WithBrokerPreview : Microsoft.Identity.Client.PublicClientApplicationBuilder * bool -&gt; Microsoft.Identity.Client.PublicClientApplicationBuilder" Usage="Microsoft.Identity.Client.Broker.BrokerExtension.WithBrokerPreview (builder, enableBroker)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client.Broker</AssemblyName>
+        <AssemblyVersion>4.48.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.PublicClientApplicationBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="builder" Type="Microsoft.Identity.Client.PublicClientApplicationBuilder" RefType="this" />
+        <Parameter Name="enableBroker" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="builder">To be added.</param>
+        <param name="enableBroker">To be added.</param>
+        <summary>
+            Enables MSAL to use Broker flows, which are more secure than browsers. 
+            For details about Windows broker, see https://aka.ms/msal-net-wam
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+            No broker integration exists on Mac and Linux yet. 
+            Windows broker does not work on Win 8, Win Server 2016 and lower.         
+            If a broker does not exist or cannot be used, MSAL will fallback to a browser. 
+            Make sure browser auth is enabled (e.g. if using system browser, register the "http://localhost" redirect uri etc.)
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
