@@ -1,0 +1,89 @@
+<Type Name="ManagedIdentityClientAssertion" FullName="Microsoft.Identity.Web.ManagedIdentityClientAssertion">
+  <TypeSignature Language="C#" Value="public class ManagedIdentityClientAssertion" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ManagedIdentityClientAssertion extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Web.ManagedIdentityClientAssertion" />
+  <TypeSignature Language="VB.NET" Value="Public Class ManagedIdentityClientAssertion" />
+  <TypeSignature Language="F#" Value="type ManagedIdentityClientAssertion = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
+    <AssemblyVersion>1.25.10.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            See https://aka.ms/ms-id-web/certificateless.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManagedIdentityClientAssertion ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.ManagedIdentityClientAssertion.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
+        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            See https://aka.ms/ms-id-web/certificateless.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManagedIdentityClientAssertion (string? managedIdentityClientId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string managedIdentityClientId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.ManagedIdentityClientAssertion.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (managedIdentityClientId As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Identity.Web.ManagedIdentityClientAssertion : string -&gt; Microsoft.Identity.Web.ManagedIdentityClientAssertion" Usage="new Microsoft.Identity.Web.ManagedIdentityClientAssertion managedIdentityClientId" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
+        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="managedIdentityClientId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="managedIdentityClientId" />
+        <summary>
+            See https://aka.ms/ms-id-web/certificateless.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSignedAssertion">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;string&gt; GetSignedAssertion (System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;string&gt; GetSignedAssertion(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.ManagedIdentityClientAssertion.GetSignedAssertion(System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetSignedAssertion (cancellationToken As CancellationToken) As Task(Of String)" />
+      <MemberSignature Language="F#" Value="member this.GetSignedAssertion : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;string&gt;" Usage="managedIdentityClientAssertion.GetSignedAssertion cancellationToken" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
+        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">Cancellation token.</param>
+        <summary>
+            Get the signed assertion (and refreshes it if needed).
+            </summary>
+        <returns>The signed assertion.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

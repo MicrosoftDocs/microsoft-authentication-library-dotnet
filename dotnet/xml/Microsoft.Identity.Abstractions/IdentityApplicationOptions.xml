@@ -1,0 +1,262 @@
+<Type Name="IdentityApplicationOptions" FullName="Microsoft.Identity.Abstractions.IdentityApplicationOptions">
+  <TypeSignature Language="C#" Value="public class IdentityApplicationOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit IdentityApplicationOptions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Abstractions.IdentityApplicationOptions" />
+  <TypeSignature Language="VB.NET" Value="Public Class IdentityApplicationOptions" />
+  <TypeSignature Language="F#" Value="type IdentityApplicationOptions = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Options for configuring authentication in a web app, web API or daemon app.
+            <para>
+            This class contains configuration properties for any OAuth 2.0 identity provider.
+            For Azure AD specific options see the derived class: <see cref="T:Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions" />.
+            </para></summary>
+    <remarks>To be added.</remarks>
+    <example />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IdentityApplicationOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.IdentityApplicationOptions.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowWebApiToBeAuthorizedByACL">
+      <MemberSignature Language="C#" Value="public bool AllowWebApiToBeAuthorizedByACL { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowWebApiToBeAuthorizedByACL" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.IdentityApplicationOptions.AllowWebApiToBeAuthorizedByACL" />
+      <MemberSignature Language="VB.NET" Value="Public Property AllowWebApiToBeAuthorizedByACL As Boolean" />
+      <MemberSignature Language="F#" Value="member this.AllowWebApiToBeAuthorizedByACL : bool with get, set" Usage="Microsoft.Identity.Abstractions.IdentityApplicationOptions.AllowWebApiToBeAuthorizedByACL" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Web APIs called by daemon applications can validate a token based on roles (representing app permissions), 
+            or using the ACL-based authorization pattern for the client (daemon) to the web API. If using ACL-based authorization,
+            the implementation will not throw if roles or scopes are not in the Claims.
+            For details see https://aka.ms/ms-identity-web/daemon-ACL.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <c>false.</c>
+      </Docs>
+    </Member>
+    <Member MemberName="Audience">
+      <MemberSignature Language="C#" Value="public string? Audience { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Audience" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.IdentityApplicationOptions.Audience" />
+      <MemberSignature Language="VB.NET" Value="Public Property Audience As String" />
+      <MemberSignature Language="F#" Value="member this.Audience : string with get, set" Usage="Microsoft.Identity.Abstractions.IdentityApplicationOptions.Audience" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            In a web API, audience of the tokens that will be accepted by the web API.
+            <para>If your web API accepts several audiences, see <see cref="P:Microsoft.Identity.Abstractions.IdentityApplicationOptions.Audiences" />.</para></summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Audiences">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;string&gt;? Audiences { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; Audiences" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.IdentityApplicationOptions.Audiences" />
+      <MemberSignature Language="VB.NET" Value="Public Property Audiences As IEnumerable(Of String)" />
+      <MemberSignature Language="F#" Value="member this.Audiences : seq&lt;string&gt; with get, set" Usage="Microsoft.Identity.Abstractions.IdentityApplicationOptions.Audiences" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            In a web API, accepted audiences for the tokens received by the web API.
+            <para>See also <see cref="P:Microsoft.Identity.Abstractions.IdentityApplicationOptions.Audience" />.</para></summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Authority">
+      <MemberSignature Language="C#" Value="public virtual string? Authority { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Authority" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.IdentityApplicationOptions.Authority" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property Authority As String" />
+      <MemberSignature Language="F#" Value="member this.Authority : string with get, set" Usage="Microsoft.Identity.Abstractions.IdentityApplicationOptions.Authority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the authority to use when calling the identity provider. 
+            For AzureAD or Azure AD B2C, rather use <see cref="P:Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions.Instance" />
+            and <see cref="P:Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions.TenantId" /></summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <example>
+          <code>
+            AuthenticationOptions options = new 
+            {
+             Authority = "https://login.microsoftonline.com/common/"
+            };
+            </code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientCredentials">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Microsoft.Identity.Abstractions.CredentialDescription&gt;? ClientCredentials { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Identity.Abstractions.CredentialDescription&gt; ClientCredentials" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.IdentityApplicationOptions.ClientCredentials" />
+      <MemberSignature Language="VB.NET" Value="Public Property ClientCredentials As IEnumerable(Of CredentialDescription)" />
+      <MemberSignature Language="F#" Value="member this.ClientCredentials : seq&lt;Microsoft.Identity.Abstractions.CredentialDescription&gt; with get, set" Usage="Microsoft.Identity.Abstractions.IdentityApplicationOptions.ClientCredentials" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.Identity.Abstractions.CredentialDescription&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Description of the client credentials provided to prove the identity of the web app,
+            web API, or daemon app.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <example> An example in the appsetting.json:
+            <code>
+            "ClientCredentials": [
+              {
+                "SourceType": "StoreWithDistinguishedName",
+                 "CertificateStorePath": "CurrentUser/My",
+                 "CertificateDistinguishedName": "CN=WebAppCallingWebApiCert"
+                }
+               ]
+              </code>
+              See also https://aka.ms/ms-id-web-certificates.
+              </example>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientId">
+      <MemberSignature Language="C#" Value="public string? ClientId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ClientId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.IdentityApplicationOptions.ClientId" />
+      <MemberSignature Language="VB.NET" Value="Public Property ClientId As String" />
+      <MemberSignature Language="F#" Value="member this.ClientId : string with get, set" Usage="Microsoft.Identity.Abstractions.IdentityApplicationOptions.ClientId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the 'client_id' (application ID) as it appears in the 
+            application registration. This is the string representation of a GUID.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnablePiiLogging">
+      <MemberSignature Language="C#" Value="public bool EnablePiiLogging { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnablePiiLogging" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.IdentityApplicationOptions.EnablePiiLogging" />
+      <MemberSignature Language="VB.NET" Value="Public Property EnablePiiLogging As Boolean" />
+      <MemberSignature Language="F#" Value="member this.EnablePiiLogging : bool with get, set" Usage="Microsoft.Identity.Abstractions.IdentityApplicationOptions.EnablePiiLogging" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Flag used to enable/disable logging of Personally Identifiable Information (PII).
+            PII logs are never written to default outputs.
+            Default is set to <c>false</c>, which ensures that your application is compliant with GDPR. You can set
+            it to <c>true</c> for advanced debugging requiring PII.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenDecryptionCredentials">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Microsoft.Identity.Abstractions.CredentialDescription&gt;? TokenDecryptionCredentials { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Identity.Abstractions.CredentialDescription&gt; TokenDecryptionCredentials" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.IdentityApplicationOptions.TokenDecryptionCredentials" />
+      <MemberSignature Language="VB.NET" Value="Public Property TokenDecryptionCredentials As IEnumerable(Of CredentialDescription)" />
+      <MemberSignature Language="F#" Value="member this.TokenDecryptionCredentials : seq&lt;Microsoft.Identity.Abstractions.CredentialDescription&gt; with get, set" Usage="Microsoft.Identity.Abstractions.IdentityApplicationOptions.TokenDecryptionCredentials" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.Identity.Abstractions.CredentialDescription&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Description of the credentials (usually certificates) used to decrypt an encrypted 
+            token in a web API.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <example> An example in the appsetting.json:
+            <code>
+            "TokenDecryptionCredentials": [
+              {
+                "SourceType": "StoreWithDistinguishedName",
+                 "CertificateStorePath": "CurrentUser/My",
+                 "CertificateDistinguishedName": "CN=WebAppCallingWebApiCert"
+                }
+               ]
+              </code>
+              See also https://aka.ms/ms-id-web-certificates.
+              </example>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
