@@ -1,0 +1,74 @@
+### YamlMime:NetMember
+type: method
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: beforeAccess
+    description: Delegate set in order to handle the cache deserialization
+    type: <xref href="System.Func`2?alt=System.Func&text=Func" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Client.TokenCacheNotificationArgs?alt=Microsoft.Identity.Client.TokenCacheNotificationArgs&text=TokenCacheNotificationArgs" data-throw-if-not-resolved="True"/>,<xref href="System.Threading.Tasks.Task?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&gt;
+  type: method
+  uid: Microsoft.Identity.Client.ITokenCache.SetBeforeAccessAsync(System.Func{Microsoft.Identity.Client.TokenCacheNotificationArgs,System.Threading.Tasks.Task})
+  commentId: M:Microsoft.Identity.Client.ITokenCache.SetBeforeAccessAsync(System.Func{Microsoft.Identity.Client.TokenCacheNotificationArgs,System.Threading.Tasks.Task})
+  name: SetBeforeAccessAsync(Func<TokenCacheNotificationArgs,Task>)
+  fullName: Microsoft.Identity.Client.ITokenCache.SetBeforeAccessAsync(Func<TokenCacheNotificationArgs,Task>)
+  nameWithType: ITokenCache.SetBeforeAccessAsync(Func<TokenCacheNotificationArgs,Task>)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public void SetBeforeAccessAsync (Func<Microsoft.Identity.Client.TokenCacheNotificationArgs,System.Threading.Tasks.Task> beforeAccess);
+  - lang: fsharp
+    values:
+    - value: 'abstract member SetBeforeAccessAsync : Func<Microsoft.Identity.Client.TokenCacheNotificationArgs, System.Threading.Tasks.Task> -> unit'
+  - lang: vb
+    values:
+    - value: Public Sub SetBeforeAccessAsync (beforeAccess As Func(Of TokenCacheNotificationArgs, Task))
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    Sets a delegate to be notified before any library method accesses the cache. This gives an option to the
+
+    delegate to deserialize a cache entry for the application and accounts specified in the <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.TokenCacheNotificationArgs"></xref>.
+
+    See https://aka.ms/msal-net-token-cache-serialization.
+
+    This provides the same functionality as SetBeforeAccess but it provides for an async/task-based callback.
+  remarks: <p>In the case where the delegate is used to deserialize the cache, it might want to call <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITokenCacheSerializer.DeserializeMsalV3(System.Byte[],System.Boolean)"></xref></p>
+  metadata: {}
+uid: Microsoft.Identity.Client.ITokenCache.SetBeforeAccessAsync*
+commentId: Overload:Microsoft.Identity.Client.ITokenCache.SetBeforeAccessAsync
+namespace: Microsoft.Identity.Client
+name: SetBeforeAccessAsync
+fullName: Microsoft.Identity.Client.ITokenCache.SetBeforeAccessAsync
+nameWithType: ITokenCache.SetBeforeAccessAsync
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.ITokenCache.SetBeforeAccessAsync
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.ITokenCache.SetBeforeAccessAsync
+  - Microsoft::Identity::Client::ITokenCache::SetBeforeAccessAsync
+  - SetBeforeAccessAsync
+  - ITokenCache.SetBeforeAccessAsync
+  - ITokenCache::SetBeforeAccessAsync
+  helpviewer_keywords:
+  - ITokenCache.SetBeforeAccessAsync method [.NET]
+  - SetBeforeAccessAsync method [.NET], interface ITokenCache
+  - ITokenCache.SetBeforeAccessAsync(Func<TokenCacheNotificationArgs,Task>) method [.NET]
+  - SetBeforeAccessAsync(Func<TokenCacheNotificationArgs,Task>) method [.NET], interface ITokenCache
+  monikers:
+  - msal-dotnet-latest

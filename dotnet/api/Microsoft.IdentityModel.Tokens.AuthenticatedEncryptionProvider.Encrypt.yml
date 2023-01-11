@@ -1,0 +1,131 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionResult?alt=Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionResult&text=AuthenticatedEncryptionResult" data-throw-if-not-resolved="True"/>
+    description: <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionResult"></xref>containing ciphertext, iv, authenticationtag.
+  parameters:
+  - namesWithMoniker:
+    - value: plaintext
+    description: the data to be encrypted.
+    type: <xref href="System.Byte?alt=System.Byte&text=Byte" data-throw-if-not-resolved="True"/>[]
+  - namesWithMoniker:
+    - value: authenticatedData
+    description: will be combined with iv and ciphertext to create an authenticationtag.
+    type: <xref href="System.Byte?alt=System.Byte&text=Byte" data-throw-if-not-resolved="True"/>[]
+  exceptions:
+  - description: authenticationData is null or empty.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: AES crypto operation threw. See inner exception for details.
+    type: <xref href="Microsoft.IdentityModel.Tokens.SecurityTokenEncryptionFailedException?alt=Microsoft.IdentityModel.Tokens.SecurityTokenEncryptionFailedException&text=SecurityTokenEncryptionFailedException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionProvider.Encrypt(System.Byte[],System.Byte[])
+  commentId: M:Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionProvider.Encrypt(System.Byte[],System.Byte[])
+  name: Encrypt(Byte[], Byte[])
+  fullName: Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionProvider.Encrypt(Byte[], Byte[])
+  nameWithType: AuthenticatedEncryptionProvider.Encrypt(Byte[], Byte[])
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public virtual Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionResult Encrypt (byte[] plaintext, byte[] authenticatedData);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member Encrypt : byte[] * byte[] -> Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionResult
+
+        override this.Encrypt : byte[] * byte[] -> Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionResult
+  - lang: vb
+    values:
+    - value: Public Overridable Function Encrypt (plaintext As Byte(), authenticatedData As Byte()) As AuthenticatedEncryptionResult
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Encrypts the 'plaintext'
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionResult?alt=Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionResult&text=AuthenticatedEncryptionResult" data-throw-if-not-resolved="True"/>
+    description: <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionResult"></xref>containing ciphertext, iv, authenticationtag.
+  parameters:
+  - namesWithMoniker:
+    - value: plaintext
+    description: the data to be encrypted.
+    type: <xref href="System.Byte?alt=System.Byte&text=Byte" data-throw-if-not-resolved="True"/>[]
+  - namesWithMoniker:
+    - value: authenticatedData
+    description: will be combined with iv and ciphertext to create an authenticationtag.
+    type: <xref href="System.Byte?alt=System.Byte&text=Byte" data-throw-if-not-resolved="True"/>[]
+  - namesWithMoniker:
+    - value: iv
+    description: initialization vector for encryption.
+    type: <xref href="System.Byte?alt=System.Byte&text=Byte" data-throw-if-not-resolved="True"/>[]
+  exceptions:
+  - description: <code data-dev-comment-type="paramref">authenticatedData</code> is null or empty.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: Thrown if the AES crypto operation threw. See inner exception for details.
+    type: <xref href="Microsoft.IdentityModel.Tokens.SecurityTokenEncryptionFailedException?alt=Microsoft.IdentityModel.Tokens.SecurityTokenEncryptionFailedException&text=SecurityTokenEncryptionFailedException" data-throw-if-not-resolved="True"/>
+  - description: Thrown if the internal <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SignatureProvider"></xref> is disposed.
+    type: <xref href="System.ObjectDisposedException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionProvider.Encrypt(System.Byte[],System.Byte[],System.Byte[])
+  commentId: M:Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionProvider.Encrypt(System.Byte[],System.Byte[],System.Byte[])
+  name: Encrypt(Byte[], Byte[], Byte[])
+  fullName: Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionProvider.Encrypt(Byte[], Byte[], Byte[])
+  nameWithType: AuthenticatedEncryptionProvider.Encrypt(Byte[], Byte[], Byte[])
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public virtual Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionResult Encrypt (byte[] plaintext, byte[] authenticatedData, byte[] iv);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member Encrypt : byte[] * byte[] * byte[] -> Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionResult
+
+        override this.Encrypt : byte[] * byte[] * byte[] -> Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionResult
+  - lang: vb
+    values:
+    - value: Public Overridable Function Encrypt (plaintext As Byte(), authenticatedData As Byte(), iv As Byte()) As AuthenticatedEncryptionResult
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Encrypts the 'plaintext'
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionProvider.Encrypt*
+commentId: Overload:Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionProvider.Encrypt
+namespace: Microsoft.IdentityModel.Tokens
+name: Encrypt
+fullName: Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionProvider.Encrypt
+nameWithType: AuthenticatedEncryptionProvider.Encrypt
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionProvider.Encrypt
+  api_location:
+  - Microsoft.IdentityModel.Tokens.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionProvider.Encrypt
+  - Microsoft::IdentityModel::Tokens::AuthenticatedEncryptionProvider::Encrypt
+  - Encrypt
+  - AuthenticatedEncryptionProvider.Encrypt
+  - AuthenticatedEncryptionProvider::Encrypt
+  helpviewer_keywords:
+  - AuthenticatedEncryptionProvider.Encrypt method [.NET]
+  - Encrypt method [.NET], class AuthenticatedEncryptionProvider
+  - AuthenticatedEncryptionProvider.Encrypt(Byte[], Byte[]) method [.NET]
+  - Encrypt(Byte[], Byte[]) method [.NET], class AuthenticatedEncryptionProvider
+  - AuthenticatedEncryptionProvider.Encrypt(Byte[], Byte[], Byte[]) method [.NET]
+  - Encrypt(Byte[], Byte[], Byte[]) method [.NET], class AuthenticatedEncryptionProvider
+  monikers:
+  - msal-web-dotnet-latest

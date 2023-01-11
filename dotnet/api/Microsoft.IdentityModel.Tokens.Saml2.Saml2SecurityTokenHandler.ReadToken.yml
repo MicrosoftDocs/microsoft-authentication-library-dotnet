@@ -1,0 +1,147 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.IdentityModel.Tokens.SecurityToken?alt=Microsoft.IdentityModel.Tokens.SecurityToken&text=SecurityToken" data-throw-if-not-resolved="True"/>
+    description: A <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken"></xref>
+  parameters:
+  - namesWithMoniker:
+    - value: token
+    description: a Saml2 token as a string.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: If <code data-dev-comment-type="paramref">token</code> is null or empty.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: If <code data-dev-comment-type="paramref">token</code>.Length is greater than <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.TokenHandler.MaximumTokenSizeInBytes"></xref>.
+    type: <xref href="System.ArgumentException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ReadToken(System.String)
+  commentId: M:Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ReadToken(System.String)
+  name: ReadToken(String)
+  fullName: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ReadToken(String)
+  nameWithType: Saml2SecurityTokenHandler.ReadToken(String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public override Microsoft.IdentityModel.Tokens.SecurityToken ReadToken (string token);
+  - lang: fsharp
+    values:
+    - value: 'override this.ReadToken : string -> Microsoft.IdentityModel.Tokens.SecurityToken'
+  - lang: vb
+    values:
+    - value: Public Overrides Function ReadToken (token As String) As SecurityToken
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Converts a string into an instance of <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken"></xref>.
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.IdentityModel.Tokens.SecurityToken?alt=Microsoft.IdentityModel.Tokens.SecurityToken&text=SecurityToken" data-throw-if-not-resolved="True"/>
+    description: A <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken"></xref>.
+  parameters:
+  - namesWithMoniker:
+    - value: reader
+    description: A <xref data-throw-if-not-resolved="true" uid="System.Xml.XmlReader"></xref> reader positioned at a saml2 assertion element.
+    type: <xref href="System.Xml.XmlReader?alt=System.Xml.XmlReader&text=XmlReader" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: If <code data-dev-comment-type="paramref">reader</code> is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ReadToken(System.Xml.XmlReader)
+  commentId: M:Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ReadToken(System.Xml.XmlReader)
+  name: ReadToken(XmlReader)
+  fullName: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ReadToken(XmlReader)
+  nameWithType: Saml2SecurityTokenHandler.ReadToken(XmlReader)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public override Microsoft.IdentityModel.Tokens.SecurityToken ReadToken (System.Xml.XmlReader reader);
+  - lang: fsharp
+    values:
+    - value: 'override this.ReadToken : System.Xml.XmlReader -> Microsoft.IdentityModel.Tokens.SecurityToken'
+  - lang: vb
+    values:
+    - value: Public Overrides Function ReadToken (reader As XmlReader) As SecurityToken
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Reads a <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken"></xref> where the XmlReader is positioned the beginning of a Saml2 assertion.
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.IdentityModel.Tokens.SecurityToken?alt=Microsoft.IdentityModel.Tokens.SecurityToken&text=SecurityToken" data-throw-if-not-resolved="True"/>
+    description: An instance of <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken"></xref>.
+  parameters:
+  - namesWithMoniker:
+    - value: reader
+    description: A <xref data-throw-if-not-resolved="true" uid="System.Xml.XmlReader"></xref> reader positioned at a <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2Assertion"></xref> element.
+    type: <xref href="System.Xml.XmlReader?alt=System.Xml.XmlReader&text=XmlReader" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: validationParameters
+    description: validation parameters for the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken"></xref>.
+    type: <xref href="Microsoft.IdentityModel.Tokens.TokenValidationParameters?alt=Microsoft.IdentityModel.Tokens.TokenValidationParameters&text=TokenValidationParameters" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: Currently not supported.
+    type: <xref href="System.NotSupportedException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ReadToken(System.Xml.XmlReader,Microsoft.IdentityModel.Tokens.TokenValidationParameters)
+  commentId: M:Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ReadToken(System.Xml.XmlReader,Microsoft.IdentityModel.Tokens.TokenValidationParameters)
+  name: ReadToken(XmlReader, TokenValidationParameters)
+  fullName: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ReadToken(XmlReader, TokenValidationParameters)
+  nameWithType: Saml2SecurityTokenHandler.ReadToken(XmlReader, TokenValidationParameters)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public override Microsoft.IdentityModel.Tokens.SecurityToken ReadToken (System.Xml.XmlReader reader, Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters);
+  - lang: fsharp
+    values:
+    - value: 'override this.ReadToken : System.Xml.XmlReader * Microsoft.IdentityModel.Tokens.TokenValidationParameters -> Microsoft.IdentityModel.Tokens.SecurityToken'
+  - lang: vb
+    values:
+    - value: Public Overrides Function ReadToken (reader As XmlReader, validationParameters As TokenValidationParameters) As SecurityToken
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Reads and validates a SAML 2.0 token using the XmlReader.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ReadToken*
+commentId: Overload:Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ReadToken
+namespace: Microsoft.IdentityModel.Tokens.Saml2
+name: ReadToken
+fullName: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ReadToken
+nameWithType: Saml2SecurityTokenHandler.ReadToken
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ReadToken
+  api_location:
+  - Microsoft.IdentityModel.Tokens.Saml.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ReadToken
+  - Microsoft::IdentityModel::Tokens::Saml2::Saml2SecurityTokenHandler::ReadToken
+  - ReadToken
+  - Saml2SecurityTokenHandler.ReadToken
+  - Saml2SecurityTokenHandler::ReadToken
+  helpviewer_keywords:
+  - Saml2SecurityTokenHandler.ReadToken method [.NET]
+  - ReadToken method [.NET], class Saml2SecurityTokenHandler
+  - Saml2SecurityTokenHandler.ReadToken(String) method [.NET]
+  - ReadToken(String) method [.NET], class Saml2SecurityTokenHandler
+  - Saml2SecurityTokenHandler.ReadToken(XmlReader) method [.NET]
+  - ReadToken(XmlReader) method [.NET], class Saml2SecurityTokenHandler
+  - Saml2SecurityTokenHandler.ReadToken(XmlReader, TokenValidationParameters) method [.NET]
+  - ReadToken(XmlReader, TokenValidationParameters) method [.NET], class Saml2SecurityTokenHandler
+  monikers:
+  - msal-web-dotnet-latest

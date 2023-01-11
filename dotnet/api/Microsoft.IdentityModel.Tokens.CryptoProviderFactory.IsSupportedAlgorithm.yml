@@ -1,0 +1,123 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+    description: >-
+      true if:
+                  <p>
+                  If <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CustomCryptoProvider"></xref> is set and <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.ICryptoProvider.IsSupportedAlgorithm(System.String,System.Object[])"></xref> returns true.
+                  </p><p>The algorithm is supported.
+                  </p>
+  parameters:
+  - namesWithMoniker:
+    - value: algorithm
+    description: the name of the Hash algorithm.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.CryptoProviderFactory.IsSupportedAlgorithm(System.String)
+  commentId: M:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.IsSupportedAlgorithm(System.String)
+  name: IsSupportedAlgorithm(String)
+  fullName: Microsoft.IdentityModel.Tokens.CryptoProviderFactory.IsSupportedAlgorithm(String)
+  nameWithType: CryptoProviderFactory.IsSupportedAlgorithm(String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public virtual bool IsSupportedAlgorithm (string algorithm);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member IsSupportedAlgorithm : string -> bool
+
+        override this.IsSupportedAlgorithm : string -> bool
+  - lang: vb
+    values:
+    - value: Public Overridable Function IsSupportedAlgorithm (algorithm As String) As Boolean
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Checks if an algorithm is supported.
+  remarks: Only considers known Hash algorithms.
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+    description: >-
+      true if:
+                  <p>
+                  If <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CustomCryptoProvider"></xref> is set and <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.ICryptoProvider.IsSupportedAlgorithm(System.String,System.Object[])"></xref> returns true.
+                  </p><p>The algorithm / key pair is supported.
+                  </p>
+  parameters:
+  - namesWithMoniker:
+    - value: algorithm
+    description: the security algorithm to apply.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: key
+    description: the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityKey"></xref>.
+    type: <xref href="Microsoft.IdentityModel.Tokens.SecurityKey?alt=Microsoft.IdentityModel.Tokens.SecurityKey&text=SecurityKey" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.CryptoProviderFactory.IsSupportedAlgorithm(System.String,Microsoft.IdentityModel.Tokens.SecurityKey)
+  commentId: M:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.IsSupportedAlgorithm(System.String,Microsoft.IdentityModel.Tokens.SecurityKey)
+  name: IsSupportedAlgorithm(String, SecurityKey)
+  fullName: Microsoft.IdentityModel.Tokens.CryptoProviderFactory.IsSupportedAlgorithm(String, SecurityKey)
+  nameWithType: CryptoProviderFactory.IsSupportedAlgorithm(String, SecurityKey)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public virtual bool IsSupportedAlgorithm (string algorithm, Microsoft.IdentityModel.Tokens.SecurityKey key);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member IsSupportedAlgorithm : string * Microsoft.IdentityModel.Tokens.SecurityKey -> bool
+
+        override this.IsSupportedAlgorithm : string * Microsoft.IdentityModel.Tokens.SecurityKey -> bool
+  - lang: vb
+    values:
+    - value: Public Overridable Function IsSupportedAlgorithm (algorithm As String, key As SecurityKey) As Boolean
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Checks if the algorithm and <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityKey"></xref> is supported.
+  remarks: <p>Algorithms are supported for specific key types. For example:</p><p><xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityAlgorithms.RsaSha256"></xref> and <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.RsaSecurityKey"></xref> will return true.</p><p><xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityAlgorithms.RsaSha256"></xref> and <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SymmetricSecurityKey"></xref> will return false.</p>
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.CryptoProviderFactory.IsSupportedAlgorithm*
+commentId: Overload:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.IsSupportedAlgorithm
+namespace: Microsoft.IdentityModel.Tokens
+name: IsSupportedAlgorithm
+fullName: Microsoft.IdentityModel.Tokens.CryptoProviderFactory.IsSupportedAlgorithm
+nameWithType: CryptoProviderFactory.IsSupportedAlgorithm
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.CryptoProviderFactory.IsSupportedAlgorithm
+  api_location:
+  - Microsoft.IdentityModel.Tokens.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.CryptoProviderFactory.IsSupportedAlgorithm
+  - Microsoft::IdentityModel::Tokens::CryptoProviderFactory::IsSupportedAlgorithm
+  - IsSupportedAlgorithm
+  - CryptoProviderFactory.IsSupportedAlgorithm
+  - CryptoProviderFactory::IsSupportedAlgorithm
+  helpviewer_keywords:
+  - CryptoProviderFactory.IsSupportedAlgorithm method [.NET]
+  - IsSupportedAlgorithm method [.NET], class CryptoProviderFactory
+  - CryptoProviderFactory.IsSupportedAlgorithm(String) method [.NET]
+  - IsSupportedAlgorithm(String) method [.NET], class CryptoProviderFactory
+  - CryptoProviderFactory.IsSupportedAlgorithm(String, SecurityKey) method [.NET]
+  - IsSupportedAlgorithm(String, SecurityKey) method [.NET], class CryptoProviderFactory
+  monikers:
+  - msal-web-dotnet-latest

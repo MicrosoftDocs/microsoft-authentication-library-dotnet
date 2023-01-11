@@ -1,0 +1,85 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.Identity.Client.PublicClientApplicationBuilder?alt=Microsoft.Identity.Client.PublicClientApplicationBuilder&text=PublicClientApplicationBuilder" data-throw-if-not-resolved="True"/>
+    description: >-
+      A <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.PublicClientApplicationBuilder"></xref> from which to set more
+                  parameters, and to create a public client application instance
+  parameters:
+  - namesWithMoniker:
+    - value: enableBroker
+    description: Determines whether or not to use broker with the default set to true.
+    type: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.PublicClientApplicationBuilder.WithBroker(System.Boolean)
+  commentId: M:Microsoft.Identity.Client.PublicClientApplicationBuilder.WithBroker(System.Boolean)
+  name: WithBroker(Boolean)
+  fullName: Microsoft.Identity.Client.PublicClientApplicationBuilder.WithBroker(Boolean)
+  nameWithType: PublicClientApplicationBuilder.WithBroker(Boolean)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public Microsoft.Identity.Client.PublicClientApplicationBuilder WithBroker (bool enableBroker = true);
+  - lang: fsharp
+    values:
+    - value: 'member this.WithBroker : bool -> Microsoft.Identity.Client.PublicClientApplicationBuilder'
+  - lang: vb
+    values:
+    - value: Public Function WithBroker (Optional enableBroker As Boolean = true) As PublicClientApplicationBuilder
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    Brokers enable Single-Sign-On, device identification,
+
+    and application identification verification. To enable one of these features,
+
+    you need to set the WithBroker() parameters to true. See https://aka.ms/msal-net-brokers 
+
+    for more information on platform specific settings required to enable the broker.
+
+
+    On iOS and Android, Authenticator and Company Portal serve as brokers.
+
+    On Windows, WAM (Windows Account Manager) serves as broker. See https://aka.ms/msal-net-wam
+  remarks: <p>If your app uses .NET classic or .NET Core 3.x, and you wish to use the Windows broker, please install the NuGet package Microsoft.Identity.Client.Desktop and call .WithDesktopFeatures()</p>
+  metadata: {}
+uid: Microsoft.Identity.Client.PublicClientApplicationBuilder.WithBroker*
+commentId: Overload:Microsoft.Identity.Client.PublicClientApplicationBuilder.WithBroker
+namespace: Microsoft.Identity.Client
+name: WithBroker
+fullName: Microsoft.Identity.Client.PublicClientApplicationBuilder.WithBroker
+nameWithType: PublicClientApplicationBuilder.WithBroker
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.PublicClientApplicationBuilder.WithBroker
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.PublicClientApplicationBuilder.WithBroker
+  - Microsoft::Identity::Client::PublicClientApplicationBuilder::WithBroker
+  - WithBroker
+  - PublicClientApplicationBuilder.WithBroker
+  - PublicClientApplicationBuilder::WithBroker
+  helpviewer_keywords:
+  - PublicClientApplicationBuilder.WithBroker method [.NET]
+  - WithBroker method [.NET], class PublicClientApplicationBuilder
+  - PublicClientApplicationBuilder.WithBroker(Boolean) method [.NET]
+  - WithBroker(Boolean) method [.NET], class PublicClientApplicationBuilder
+  monikers:
+  - msal-dotnet-latest

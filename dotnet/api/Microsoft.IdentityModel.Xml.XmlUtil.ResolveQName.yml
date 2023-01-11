@@ -1,0 +1,77 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Xml.XmlQualifiedName?alt=System.Xml.XmlQualifiedName&text=XmlQualifiedName" data-throw-if-not-resolved="True"/>
+    description: a <xref data-throw-if-not-resolved="true" uid="System.Xml.XmlQualifiedName"></xref> with the namespace that was in scope. If the prefix was not in scope, the namespace will be null.
+  parameters:
+  - namesWithMoniker:
+    - value: reader
+    description: the <xref data-throw-if-not-resolved="true" uid="System.Xml.XmlReader"></xref> in scope.
+    type: <xref href="System.Xml.XmlReader?alt=System.Xml.XmlReader&text=XmlReader" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: qualifiedString
+    description: the qualifiedName to check.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: if <code data-dev-comment-type="paramref">qualifiedString</code> is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Xml.XmlUtil.ResolveQName(System.Xml.XmlReader,System.String)
+  commentId: M:Microsoft.IdentityModel.Xml.XmlUtil.ResolveQName(System.Xml.XmlReader,System.String)
+  name: ResolveQName(XmlReader, String)
+  fullName: Microsoft.IdentityModel.Xml.XmlUtil.ResolveQName(XmlReader, String)
+  nameWithType: XmlUtil.ResolveQName(XmlReader, String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public static System.Xml.XmlQualifiedName ResolveQName (System.Xml.XmlReader reader, string qualifiedString);
+  - lang: fsharp
+    values:
+    - value: 'static member ResolveQName : System.Xml.XmlReader * string -> System.Xml.XmlQualifiedName'
+  - lang: vb
+    values:
+    - value: Public Shared Function ResolveQName (reader As XmlReader, qualifiedString As String) As XmlQualifiedName
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Determines if the prefix on a name maps to a namespace that is in scope the reader.
+  metadata: {}
+uid: Microsoft.IdentityModel.Xml.XmlUtil.ResolveQName*
+commentId: Overload:Microsoft.IdentityModel.Xml.XmlUtil.ResolveQName
+namespace: Microsoft.IdentityModel.Xml
+name: ResolveQName
+fullName: Microsoft.IdentityModel.Xml.XmlUtil.ResolveQName
+nameWithType: XmlUtil.ResolveQName
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Xml.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Xml v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Xml.XmlUtil.ResolveQName
+  api_location:
+  - Microsoft.IdentityModel.Xml.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Xml.XmlUtil.ResolveQName
+  - Microsoft::IdentityModel::Xml::XmlUtil::ResolveQName
+  - ResolveQName
+  - XmlUtil.ResolveQName
+  - XmlUtil::ResolveQName
+  helpviewer_keywords:
+  - XmlUtil.ResolveQName method [.NET]
+  - ResolveQName method [.NET], class XmlUtil
+  - XmlUtil.ResolveQName(XmlReader, String) method [.NET]
+  - ResolveQName(XmlReader, String) method [.NET], class XmlUtil
+  monikers:
+  - msal-web-dotnet-latest

@@ -1,0 +1,79 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.IdentityModel.Tokens.Saml2.Saml2NameIdentifier?alt=Microsoft.IdentityModel.Tokens.Saml2.Saml2NameIdentifier&text=Saml2NameIdentifier" data-throw-if-not-resolved="True"/>
+    description: A <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2NameIdentifier"></xref> using <code data-dev-comment-type="paramref">tokenDescriptor</code>.Issuer.
+  parameters:
+  - namesWithMoniker:
+    - value: tokenDescriptor
+    description: The token descriptor.
+    type: <xref href="Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor?alt=Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor&text=SecurityTokenDescriptor" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: If <code data-dev-comment-type="paramref">tokenDescriptor</code> is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: If <code data-dev-comment-type="paramref">tokenDescriptor</code>.Issuer is null or empty.
+    type: <xref href="Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenException?alt=Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenException&text=Saml2SecurityTokenException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.CreateIssuerNameIdentifier(Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor)
+  commentId: M:Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.CreateIssuerNameIdentifier(Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor)
+  name: CreateIssuerNameIdentifier(SecurityTokenDescriptor)
+  fullName: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.CreateIssuerNameIdentifier(SecurityTokenDescriptor)
+  nameWithType: Saml2SecurityTokenHandler.CreateIssuerNameIdentifier(SecurityTokenDescriptor)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected virtual Microsoft.IdentityModel.Tokens.Saml2.Saml2NameIdentifier CreateIssuerNameIdentifier (Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor tokenDescriptor);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member CreateIssuerNameIdentifier : Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor -> Microsoft.IdentityModel.Tokens.Saml2.Saml2NameIdentifier
+
+        override this.CreateIssuerNameIdentifier : Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor -> Microsoft.IdentityModel.Tokens.Saml2.Saml2NameIdentifier
+  - lang: vb
+    values:
+    - value: Protected Overridable Function CreateIssuerNameIdentifier (tokenDescriptor As SecurityTokenDescriptor) As Saml2NameIdentifier
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Creates a name identifier that identifies the assertion issuer.
+  remarks: Uses tokenDescriptor.Issuer.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.CreateIssuerNameIdentifier*
+commentId: Overload:Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.CreateIssuerNameIdentifier
+namespace: Microsoft.IdentityModel.Tokens.Saml2
+name: CreateIssuerNameIdentifier
+fullName: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.CreateIssuerNameIdentifier
+nameWithType: Saml2SecurityTokenHandler.CreateIssuerNameIdentifier
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.CreateIssuerNameIdentifier
+  api_location:
+  - Microsoft.IdentityModel.Tokens.Saml.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.CreateIssuerNameIdentifier
+  - Microsoft::IdentityModel::Tokens::Saml2::Saml2SecurityTokenHandler::CreateIssuerNameIdentifier
+  - CreateIssuerNameIdentifier
+  - Saml2SecurityTokenHandler.CreateIssuerNameIdentifier
+  - Saml2SecurityTokenHandler::CreateIssuerNameIdentifier
+  helpviewer_keywords:
+  - Saml2SecurityTokenHandler.CreateIssuerNameIdentifier method [.NET]
+  - CreateIssuerNameIdentifier method [.NET], class Saml2SecurityTokenHandler
+  - Saml2SecurityTokenHandler.CreateIssuerNameIdentifier(SecurityTokenDescriptor) method [.NET]
+  - CreateIssuerNameIdentifier(SecurityTokenDescriptor) method [.NET], class Saml2SecurityTokenHandler
+  monikers:
+  - msal-web-dotnet-latest

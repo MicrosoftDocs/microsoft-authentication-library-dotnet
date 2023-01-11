@@ -1,0 +1,85 @@
+### YamlMime:NetMember
+type: method
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: attribute
+    description: The SamlAttribute to be processed.
+    type: <xref href="Microsoft.IdentityModel.Tokens.Saml.SamlAttribute?alt=Microsoft.IdentityModel.Tokens.Saml.SamlAttribute&text=SamlAttribute" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: subject
+    description: The identity that should be modified to reflect the SamlAttribute.
+    type: <xref href="System.Security.Claims.ClaimsIdentity?alt=System.Security.Claims.ClaimsIdentity&text=ClaimsIdentity" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: issuer
+    description: Issuer Identity.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: if we have two delegates acting as an identity, we do not allow this.
+    type: <xref href="Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenException?alt=Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenException&text=SamlSecurityTokenException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.SetDelegateFromAttribute(Microsoft.IdentityModel.Tokens.Saml.SamlAttribute,System.Security.Claims.ClaimsIdentity,System.String)
+  commentId: M:Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.SetDelegateFromAttribute(Microsoft.IdentityModel.Tokens.Saml.SamlAttribute,System.Security.Claims.ClaimsIdentity,System.String)
+  name: SetDelegateFromAttribute(SamlAttribute, ClaimsIdentity, String)
+  fullName: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.SetDelegateFromAttribute(SamlAttribute, ClaimsIdentity, String)
+  nameWithType: SamlSecurityTokenHandler.SetDelegateFromAttribute(SamlAttribute, ClaimsIdentity, String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected virtual void SetDelegateFromAttribute (Microsoft.IdentityModel.Tokens.Saml.SamlAttribute attribute, System.Security.Claims.ClaimsIdentity subject, string issuer);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member SetDelegateFromAttribute : Microsoft.IdentityModel.Tokens.Saml.SamlAttribute * System.Security.Claims.ClaimsIdentity * string -> unit
+
+        override this.SetDelegateFromAttribute : Microsoft.IdentityModel.Tokens.Saml.SamlAttribute * System.Security.Claims.ClaimsIdentity * string -> unit
+  - lang: vb
+    values:
+    - value: Protected Overridable Sub SetDelegateFromAttribute (attribute As SamlAttribute, subject As ClaimsIdentity, issuer As String)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: >-
+    This method gets called when a special type of SamlAttribute is detected. The SamlAttribute passed in wraps a SamlAttribute 
+
+    that contains a collection of AttributeValues, each of which are mapped to a claim.  All of the claims will be returned
+
+    in an ClaimsIdentity with the specified issuer.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.SetDelegateFromAttribute*
+commentId: Overload:Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.SetDelegateFromAttribute
+namespace: Microsoft.IdentityModel.Tokens.Saml
+name: SetDelegateFromAttribute
+fullName: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.SetDelegateFromAttribute
+nameWithType: SamlSecurityTokenHandler.SetDelegateFromAttribute
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.SetDelegateFromAttribute
+  api_location:
+  - Microsoft.IdentityModel.Tokens.Saml.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.SetDelegateFromAttribute
+  - Microsoft::IdentityModel::Tokens::Saml::SamlSecurityTokenHandler::SetDelegateFromAttribute
+  - SetDelegateFromAttribute
+  - SamlSecurityTokenHandler.SetDelegateFromAttribute
+  - SamlSecurityTokenHandler::SetDelegateFromAttribute
+  helpviewer_keywords:
+  - SamlSecurityTokenHandler.SetDelegateFromAttribute method [.NET]
+  - SetDelegateFromAttribute method [.NET], class SamlSecurityTokenHandler
+  - SamlSecurityTokenHandler.SetDelegateFromAttribute(SamlAttribute, ClaimsIdentity, String) method [.NET]
+  - SetDelegateFromAttribute(SamlAttribute, ClaimsIdentity, String) method [.NET], class SamlSecurityTokenHandler
+  monikers:
+  - msal-web-dotnet-latest

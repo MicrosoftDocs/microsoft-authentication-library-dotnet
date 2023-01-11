@@ -1,0 +1,106 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Collections.Generic.IReadOnlyList`1?alt=System.Collections.Generic.IReadOnlyList&text=IReadOnlyList" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Client.WwwAuthenticateParameters?alt=Microsoft.Identity.Client.WwwAuthenticateParameters&text=WwwAuthenticateParameters" data-throw-if-not-resolved="True"/>&gt;
+    description: The parameters requested by the web API.
+  parameters:
+  - namesWithMoniker:
+    - value: httpResponseHeaders
+    description: HttpResponseHeaders.
+    type: <xref href="System.Net.Http.Headers.HttpResponseHeaders?alt=System.Net.Http.Headers.HttpResponseHeaders&text=HttpResponseHeaders" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.WwwAuthenticateParameters.CreateFromAuthenticationHeaders(System.Net.Http.Headers.HttpResponseHeaders)
+  commentId: M:Microsoft.Identity.Client.WwwAuthenticateParameters.CreateFromAuthenticationHeaders(System.Net.Http.Headers.HttpResponseHeaders)
+  name: CreateFromAuthenticationHeaders(HttpResponseHeaders)
+  fullName: Microsoft.Identity.Client.WwwAuthenticateParameters.CreateFromAuthenticationHeaders(HttpResponseHeaders)
+  nameWithType: WwwAuthenticateParameters.CreateFromAuthenticationHeaders(HttpResponseHeaders)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public static System.Collections.Generic.IReadOnlyList<Microsoft.Identity.Client.WwwAuthenticateParameters> CreateFromAuthenticationHeaders (System.Net.Http.Headers.HttpResponseHeaders httpResponseHeaders);
+  - lang: fsharp
+    values:
+    - value: 'static member CreateFromAuthenticationHeaders : System.Net.Http.Headers.HttpResponseHeaders -> System.Collections.Generic.IReadOnlyList<Microsoft.Identity.Client.WwwAuthenticateParameters>'
+  - lang: vb
+    values:
+    - value: Public Shared Function CreateFromAuthenticationHeaders (httpResponseHeaders As HttpResponseHeaders) As IReadOnlyList(Of WwwAuthenticateParameters)
+  monikers:
+  - msal-dotnet-latest
+  summary: Create WWW-Authenticate parameters from the HttpResponseHeaders for each auth scheme.
+  remarks: Currently it only supports the Bearer scheme
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.Identity.Client.WwwAuthenticateParameters?alt=Microsoft.Identity.Client.WwwAuthenticateParameters&text=WwwAuthenticateParameters" data-throw-if-not-resolved="True"/>
+    description: The parameters requested by the web API.
+  parameters:
+  - namesWithMoniker:
+    - value: httpResponseHeaders
+    description: HttpResponseHeaders.
+    type: <xref href="System.Net.Http.Headers.HttpResponseHeaders?alt=System.Net.Http.Headers.HttpResponseHeaders&text=HttpResponseHeaders" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: scheme
+    description: Authentication scheme.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.WwwAuthenticateParameters.CreateFromAuthenticationHeaders(System.Net.Http.Headers.HttpResponseHeaders,System.String)
+  commentId: M:Microsoft.Identity.Client.WwwAuthenticateParameters.CreateFromAuthenticationHeaders(System.Net.Http.Headers.HttpResponseHeaders,System.String)
+  name: CreateFromAuthenticationHeaders(HttpResponseHeaders, String)
+  fullName: Microsoft.Identity.Client.WwwAuthenticateParameters.CreateFromAuthenticationHeaders(HttpResponseHeaders, String)
+  nameWithType: WwwAuthenticateParameters.CreateFromAuthenticationHeaders(HttpResponseHeaders, String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public static Microsoft.Identity.Client.WwwAuthenticateParameters CreateFromAuthenticationHeaders (System.Net.Http.Headers.HttpResponseHeaders httpResponseHeaders, string scheme);
+  - lang: fsharp
+    values:
+    - value: 'static member CreateFromAuthenticationHeaders : System.Net.Http.Headers.HttpResponseHeaders * string -> Microsoft.Identity.Client.WwwAuthenticateParameters'
+  - lang: vb
+    values:
+    - value: Public Shared Function CreateFromAuthenticationHeaders (httpResponseHeaders As HttpResponseHeaders, scheme As String) As WwwAuthenticateParameters
+  monikers:
+  - msal-dotnet-latest
+  summary: Create WWW-Authenticate parameters from the HttpResponseHeaders.
+  metadata: {}
+uid: Microsoft.Identity.Client.WwwAuthenticateParameters.CreateFromAuthenticationHeaders*
+commentId: Overload:Microsoft.Identity.Client.WwwAuthenticateParameters.CreateFromAuthenticationHeaders
+namespace: Microsoft.Identity.Client
+name: CreateFromAuthenticationHeaders
+fullName: Microsoft.Identity.Client.WwwAuthenticateParameters.CreateFromAuthenticationHeaders
+nameWithType: WwwAuthenticateParameters.CreateFromAuthenticationHeaders
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.WwwAuthenticateParameters.CreateFromAuthenticationHeaders
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.WwwAuthenticateParameters.CreateFromAuthenticationHeaders
+  - Microsoft::Identity::Client::WwwAuthenticateParameters::CreateFromAuthenticationHeaders
+  - CreateFromAuthenticationHeaders
+  - WwwAuthenticateParameters.CreateFromAuthenticationHeaders
+  - WwwAuthenticateParameters::CreateFromAuthenticationHeaders
+  helpviewer_keywords:
+  - WwwAuthenticateParameters.CreateFromAuthenticationHeaders method [.NET]
+  - CreateFromAuthenticationHeaders method [.NET], class WwwAuthenticateParameters
+  - WwwAuthenticateParameters.CreateFromAuthenticationHeaders(HttpResponseHeaders) method [.NET]
+  - CreateFromAuthenticationHeaders(HttpResponseHeaders) method [.NET], class WwwAuthenticateParameters
+  - WwwAuthenticateParameters.CreateFromAuthenticationHeaders(HttpResponseHeaders, String) method [.NET]
+  - CreateFromAuthenticationHeaders(HttpResponseHeaders, String) method [.NET], class WwwAuthenticateParameters
+  monikers:
+  - msal-dotnet-latest

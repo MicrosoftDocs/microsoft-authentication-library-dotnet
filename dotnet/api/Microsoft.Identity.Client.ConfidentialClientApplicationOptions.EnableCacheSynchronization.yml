@@ -1,0 +1,72 @@
+### YamlMime:NetMember
+type: property
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  type: property
+  uid: Microsoft.Identity.Client.ConfidentialClientApplicationOptions.EnableCacheSynchronization
+  commentId: P:Microsoft.Identity.Client.ConfidentialClientApplicationOptions.EnableCacheSynchronization
+  name: EnableCacheSynchronization
+  fullName: Microsoft.Identity.Client.ConfidentialClientApplicationOptions.EnableCacheSynchronization
+  nameWithType: ConfidentialClientApplicationOptions.EnableCacheSynchronization
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public bool EnableCacheSynchronization { get; set; }
+  - lang: fsharp
+    values:
+    - value: 'member this.EnableCacheSynchronization : bool with get, set'
+  - lang: vb
+    values:
+    - value: Public Property EnableCacheSynchronization As Boolean
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    When set to <code data-dev-comment-type="c">true</code>, MSAL will lock cache access at the <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ConfidentialClientApplication"></xref> level, i.e.
+
+    the block of code between BeforeAccessAsync and AfterAccessAsync callbacks will be synchronized. 
+
+    Apps can set this flag to <code data-dev-comment-type="c">false</code> to enable an optimistic cache locking strategy, which may result in better performance, especially 
+
+    when ConfidentialClientApplication objects are reused.
+  remarks: <p>False by default. Not recommended for apps that call RemoveAsync</p>
+  metadata: {}
+uid: Microsoft.Identity.Client.ConfidentialClientApplicationOptions.EnableCacheSynchronization*
+commentId: Overload:Microsoft.Identity.Client.ConfidentialClientApplicationOptions.EnableCacheSynchronization
+namespace: Microsoft.Identity.Client
+name: EnableCacheSynchronization
+fullName: Microsoft.Identity.Client.ConfidentialClientApplicationOptions.EnableCacheSynchronization
+nameWithType: ConfidentialClientApplicationOptions.EnableCacheSynchronization
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.ConfidentialClientApplicationOptions.EnableCacheSynchronization
+  - Microsoft.Identity.Client.ConfidentialClientApplicationOptions.get_EnableCacheSynchronization
+  - Microsoft.Identity.Client.ConfidentialClientApplicationOptions.set_EnableCacheSynchronization
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.ConfidentialClientApplicationOptions.EnableCacheSynchronization
+  - Microsoft::Identity::Client::ConfidentialClientApplicationOptions::EnableCacheSynchronization
+  - EnableCacheSynchronization
+  - ConfidentialClientApplicationOptions.EnableCacheSynchronization
+  - ConfidentialClientApplicationOptions::EnableCacheSynchronization
+  helpviewer_keywords:
+  - ConfidentialClientApplicationOptions.EnableCacheSynchronization property [.NET]
+  - EnableCacheSynchronization property [.NET], class ConfidentialClientApplicationOptions
+  monikers:
+  - msal-dotnet-latest

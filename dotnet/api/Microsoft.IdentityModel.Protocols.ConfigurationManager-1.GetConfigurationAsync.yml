@@ -1,0 +1,104 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;T&gt;
+    description: Configuration of type T.
+  type: method
+  uid: Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationAsync
+  commentId: M:Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationAsync
+  name: GetConfigurationAsync()
+  fullName: Microsoft.IdentityModel.Protocols.ConfigurationManager<T>.GetConfigurationAsync()
+  nameWithType: ConfigurationManager<T>.GetConfigurationAsync()
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public System.Threading.Tasks.Task<T> GetConfigurationAsync ();
+  - lang: fsharp
+    values:
+    - value: "member this.GetConfigurationAsync : unit -> System.Threading.Tasks.Task<'T (requires 'T : null)>"
+  - lang: vb
+    values:
+    - value: Public Function GetConfigurationAsync () As Task(Of T)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Obtains an updated version of Configuration.
+  remarks: If the time since the last call is less than <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.BaseConfigurationManager.AutomaticRefreshInterval"></xref> then <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Protocols.IConfigurationRetriever`1.GetConfigurationAsync(System.String,Microsoft.IdentityModel.Protocols.IDocumentRetriever,System.Threading.CancellationToken)"></xref> is not called and the current Configuration is returned.
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;T&gt;
+    description: Configuration of type T.
+  parameters:
+  - namesWithMoniker:
+    - value: cancel
+    description: CancellationToken
+    type: <xref href="System.Threading.CancellationToken?alt=System.Threading.CancellationToken&text=CancellationToken" data-throw-if-not-resolved="True"/>
+  implementsWithMoniker:
+  - value: <xref href="Microsoft.IdentityModel.Protocols.IConfigurationManager`1.GetConfigurationAsync(System.Threading.CancellationToken)?alt=Microsoft.IdentityModel.Protocols.IConfigurationManager`1.GetConfigurationAsync(System.Threading.CancellationToken)&text=GetConfigurationAsync(CancellationToken)" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationAsync(System.Threading.CancellationToken)
+  commentId: M:Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationAsync(System.Threading.CancellationToken)
+  name: GetConfigurationAsync(CancellationToken)
+  fullName: Microsoft.IdentityModel.Protocols.ConfigurationManager<T>.GetConfigurationAsync(CancellationToken)
+  nameWithType: ConfigurationManager<T>.GetConfigurationAsync(CancellationToken)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public System.Threading.Tasks.Task<T> GetConfigurationAsync (System.Threading.CancellationToken cancel);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member GetConfigurationAsync : System.Threading.CancellationToken -> System.Threading.Tasks.Task<'T (requires 'T : null)>
+
+        override this.GetConfigurationAsync : System.Threading.CancellationToken -> System.Threading.Tasks.Task<'T (requires 'T : null)>
+  - lang: vb
+    values:
+    - value: Public Function GetConfigurationAsync (cancel As CancellationToken) As Task(Of T)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Obtains an updated version of Configuration.
+  remarks: If the time since the last call is less than <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.BaseConfigurationManager.AutomaticRefreshInterval"></xref> then <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Protocols.IConfigurationRetriever`1.GetConfigurationAsync(System.String,Microsoft.IdentityModel.Protocols.IDocumentRetriever,System.Threading.CancellationToken)"></xref> is not called and the current Configuration is returned.
+  metadata: {}
+uid: Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationAsync*
+commentId: Overload:Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationAsync
+namespace: Microsoft.IdentityModel.Protocols
+name: GetConfigurationAsync
+fullName: Microsoft.IdentityModel.Protocols.ConfigurationManager<T>.GetConfigurationAsync
+nameWithType: ConfigurationManager<T>.GetConfigurationAsync
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Protocols.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Protocols v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationAsync
+  api_location:
+  - Microsoft.IdentityModel.Protocols.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationAsync
+  - Microsoft::IdentityModel::Protocols::ConfigurationManager`1::GetConfigurationAsync
+  - Microsoft.IdentityModel.Protocols.ConfigurationManager.GetConfigurationAsync
+  - GetConfigurationAsync
+  - ConfigurationManager`1.GetConfigurationAsync
+  - ConfigurationManager`1::GetConfigurationAsync
+  helpviewer_keywords:
+  - ConfigurationManager<T>.GetConfigurationAsync method [.NET]
+  - GetConfigurationAsync method [.NET], class ConfigurationManager<T>
+  - ConfigurationManager<T>.GetConfigurationAsync() method [.NET]
+  - GetConfigurationAsync() method [.NET], class ConfigurationManager<T>
+  - ConfigurationManager<T>.GetConfigurationAsync(CancellationToken) method [.NET]
+  - GetConfigurationAsync(CancellationToken) method [.NET], class ConfigurationManager<T>
+  monikers:
+  - msal-web-dotnet-latest

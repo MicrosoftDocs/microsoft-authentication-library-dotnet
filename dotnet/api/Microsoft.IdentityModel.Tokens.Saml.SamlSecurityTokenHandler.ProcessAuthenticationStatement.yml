@@ -1,0 +1,80 @@
+### YamlMime:NetMember
+type: method
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: statement
+    description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml.SamlAuthenticationStatement"></xref>.
+    type: <xref href="Microsoft.IdentityModel.Tokens.Saml.SamlAuthenticationStatement?alt=Microsoft.IdentityModel.Tokens.Saml.SamlAuthenticationStatement&text=SamlAuthenticationStatement" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: identity
+    description: A <xref data-throw-if-not-resolved="true" uid="System.Security.Claims.ClaimsIdentity"></xref>.
+    type: <xref href="System.Security.Claims.ClaimsIdentity?alt=System.Security.Claims.ClaimsIdentity&text=ClaimsIdentity" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: issuer
+    description: The issuer.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: if <code data-dev-comment-type="paramref">identity</code> is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.ProcessAuthenticationStatement(Microsoft.IdentityModel.Tokens.Saml.SamlAuthenticationStatement,System.Security.Claims.ClaimsIdentity,System.String)
+  commentId: M:Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.ProcessAuthenticationStatement(Microsoft.IdentityModel.Tokens.Saml.SamlAuthenticationStatement,System.Security.Claims.ClaimsIdentity,System.String)
+  name: ProcessAuthenticationStatement(SamlAuthenticationStatement, ClaimsIdentity, String)
+  fullName: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.ProcessAuthenticationStatement(SamlAuthenticationStatement, ClaimsIdentity, String)
+  nameWithType: SamlSecurityTokenHandler.ProcessAuthenticationStatement(SamlAuthenticationStatement, ClaimsIdentity, String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected virtual void ProcessAuthenticationStatement (Microsoft.IdentityModel.Tokens.Saml.SamlAuthenticationStatement statement, System.Security.Claims.ClaimsIdentity identity, string issuer);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member ProcessAuthenticationStatement : Microsoft.IdentityModel.Tokens.Saml.SamlAuthenticationStatement * System.Security.Claims.ClaimsIdentity * string -> unit
+
+        override this.ProcessAuthenticationStatement : Microsoft.IdentityModel.Tokens.Saml.SamlAuthenticationStatement * System.Security.Claims.ClaimsIdentity * string -> unit
+  - lang: vb
+    values:
+    - value: Protected Overridable Sub ProcessAuthenticationStatement (statement As SamlAuthenticationStatement, identity As ClaimsIdentity, issuer As String)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Creates claims from a <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml.SamlAuthenticationStatement"></xref>.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.ProcessAuthenticationStatement*
+commentId: Overload:Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.ProcessAuthenticationStatement
+namespace: Microsoft.IdentityModel.Tokens.Saml
+name: ProcessAuthenticationStatement
+fullName: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.ProcessAuthenticationStatement
+nameWithType: SamlSecurityTokenHandler.ProcessAuthenticationStatement
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.ProcessAuthenticationStatement
+  api_location:
+  - Microsoft.IdentityModel.Tokens.Saml.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.ProcessAuthenticationStatement
+  - Microsoft::IdentityModel::Tokens::Saml::SamlSecurityTokenHandler::ProcessAuthenticationStatement
+  - ProcessAuthenticationStatement
+  - SamlSecurityTokenHandler.ProcessAuthenticationStatement
+  - SamlSecurityTokenHandler::ProcessAuthenticationStatement
+  helpviewer_keywords:
+  - SamlSecurityTokenHandler.ProcessAuthenticationStatement method [.NET]
+  - ProcessAuthenticationStatement method [.NET], class SamlSecurityTokenHandler
+  - SamlSecurityTokenHandler.ProcessAuthenticationStatement(SamlAuthenticationStatement, ClaimsIdentity, String) method [.NET]
+  - ProcessAuthenticationStatement(SamlAuthenticationStatement, ClaimsIdentity, String) method [.NET], class SamlSecurityTokenHandler
+  monikers:
+  - msal-web-dotnet-latest

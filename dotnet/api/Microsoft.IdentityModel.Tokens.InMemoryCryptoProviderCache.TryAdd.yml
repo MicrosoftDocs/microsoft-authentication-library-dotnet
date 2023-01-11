@@ -1,0 +1,74 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+    description: <code data-dev-comment-type="c">true</code> if the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SignatureProvider"></xref> was added, <code data-dev-comment-type="c">false</code> if the cache already contained the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SignatureProvider"></xref> or if <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SignatureProvider"></xref> should not be cached.
+  parameters:
+  - namesWithMoniker:
+    - value: signatureProvider
+    description: <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SignatureProvider"></xref> to cache.
+    type: <xref href="Microsoft.IdentityModel.Tokens.SignatureProvider?alt=Microsoft.IdentityModel.Tokens.SignatureProvider&text=SignatureProvider" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: if signatureProvider is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.InMemoryCryptoProviderCache.TryAdd(Microsoft.IdentityModel.Tokens.SignatureProvider)
+  commentId: M:Microsoft.IdentityModel.Tokens.InMemoryCryptoProviderCache.TryAdd(Microsoft.IdentityModel.Tokens.SignatureProvider)
+  name: TryAdd(SignatureProvider)
+  fullName: Microsoft.IdentityModel.Tokens.InMemoryCryptoProviderCache.TryAdd(SignatureProvider)
+  nameWithType: InMemoryCryptoProviderCache.TryAdd(SignatureProvider)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public override bool TryAdd (Microsoft.IdentityModel.Tokens.SignatureProvider signatureProvider);
+  - lang: fsharp
+    values:
+    - value: 'override this.TryAdd : Microsoft.IdentityModel.Tokens.SignatureProvider -> bool'
+  - lang: vb
+    values:
+    - value: Public Overrides Function TryAdd (signatureProvider As SignatureProvider) As Boolean
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Trys to adds a <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SignatureProvider"></xref> to this cache.
+  remarks: if the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SignatureProvider"></xref> is added <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SignatureProvider.CryptoProviderCache"></xref> will be set to 'this'.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.InMemoryCryptoProviderCache.TryAdd*
+commentId: Overload:Microsoft.IdentityModel.Tokens.InMemoryCryptoProviderCache.TryAdd
+namespace: Microsoft.IdentityModel.Tokens
+name: TryAdd
+fullName: Microsoft.IdentityModel.Tokens.InMemoryCryptoProviderCache.TryAdd
+nameWithType: InMemoryCryptoProviderCache.TryAdd
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.InMemoryCryptoProviderCache.TryAdd
+  api_location:
+  - Microsoft.IdentityModel.Tokens.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.InMemoryCryptoProviderCache.TryAdd
+  - Microsoft::IdentityModel::Tokens::InMemoryCryptoProviderCache::TryAdd
+  - TryAdd
+  - InMemoryCryptoProviderCache.TryAdd
+  - InMemoryCryptoProviderCache::TryAdd
+  helpviewer_keywords:
+  - InMemoryCryptoProviderCache.TryAdd method [.NET]
+  - TryAdd method [.NET], class InMemoryCryptoProviderCache
+  - InMemoryCryptoProviderCache.TryAdd(SignatureProvider) method [.NET]
+  - TryAdd(SignatureProvider) method [.NET], class InMemoryCryptoProviderCache
+  monikers:
+  - msal-web-dotnet-latest

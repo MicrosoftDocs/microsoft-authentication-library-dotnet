@@ -1,0 +1,76 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationResult?alt=Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationResult&text=SignedHttpRequestValidationResult" data-throw-if-not-resolved="True"/>&gt;
+    description: >-
+      A <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationResult"></xref>. 
+                  <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.TokenValidationResult.IsValid"></xref> will be <code data-dev-comment-type="c">true</code> if the signed http request was successfully validated, <code data-dev-comment-type="c">false</code> otherwise.
+  parameters:
+  - namesWithMoniker:
+    - value: signedHttpRequestValidationContext
+    description: A structure that wraps parameters needed for SignedHttpRequest validation.
+    type: <xref href="Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext?alt=Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext&text=SignedHttpRequestValidationContext" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: cancellationToken
+    description: Propagates notification that operations should be canceled.
+    type: <xref href="System.Threading.CancellationToken?alt=System.Threading.CancellationToken&text=CancellationToken" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestHandler.ValidateSignedHttpRequestAsync(Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext,System.Threading.CancellationToken)
+  commentId: M:Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestHandler.ValidateSignedHttpRequestAsync(Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext,System.Threading.CancellationToken)
+  name: ValidateSignedHttpRequestAsync(SignedHttpRequestValidationContext, CancellationToken)
+  fullName: Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestHandler.ValidateSignedHttpRequestAsync(SignedHttpRequestValidationContext, CancellationToken)
+  nameWithType: SignedHttpRequestHandler.ValidateSignedHttpRequestAsync(SignedHttpRequestValidationContext, CancellationToken)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public System.Threading.Tasks.Task<Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationResult> ValidateSignedHttpRequestAsync (Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext signedHttpRequestValidationContext, System.Threading.CancellationToken cancellationToken);
+  - lang: fsharp
+    values:
+    - value: 'member this.ValidateSignedHttpRequestAsync : Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext * System.Threading.CancellationToken -> System.Threading.Tasks.Task<Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationResult>'
+  - lang: vb
+    values:
+    - value: Public Function ValidateSignedHttpRequestAsync (signedHttpRequestValidationContext As SignedHttpRequestValidationContext, cancellationToken As CancellationToken) As Task(Of SignedHttpRequestValidationResult)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Validates a signed http request using the <code data-dev-comment-type="paramref">signedHttpRequestValidationContext</code>.
+  metadata: {}
+uid: Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestHandler.ValidateSignedHttpRequestAsync*
+commentId: Overload:Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestHandler.ValidateSignedHttpRequestAsync
+namespace: Microsoft.IdentityModel.Protocols.SignedHttpRequest
+name: ValidateSignedHttpRequestAsync
+fullName: Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestHandler.ValidateSignedHttpRequestAsync
+nameWithType: SignedHttpRequestHandler.ValidateSignedHttpRequestAsync
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Protocols.SignedHttpRequest.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Protocols.SignedHttpRequest v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestHandler.ValidateSignedHttpRequestAsync
+  api_location:
+  - Microsoft.IdentityModel.Protocols.SignedHttpRequest.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestHandler.ValidateSignedHttpRequestAsync
+  - Microsoft::IdentityModel::Protocols::SignedHttpRequest::SignedHttpRequestHandler::ValidateSignedHttpRequestAsync
+  - ValidateSignedHttpRequestAsync
+  - SignedHttpRequestHandler.ValidateSignedHttpRequestAsync
+  - SignedHttpRequestHandler::ValidateSignedHttpRequestAsync
+  helpviewer_keywords:
+  - SignedHttpRequestHandler.ValidateSignedHttpRequestAsync method [.NET]
+  - ValidateSignedHttpRequestAsync method [.NET], class SignedHttpRequestHandler
+  - SignedHttpRequestHandler.ValidateSignedHttpRequestAsync(SignedHttpRequestValidationContext, CancellationToken) method [.NET]
+  - ValidateSignedHttpRequestAsync(SignedHttpRequestValidationContext, CancellationToken) method [.NET], class SignedHttpRequestHandler
+  monikers:
+  - msal-web-dotnet-latest

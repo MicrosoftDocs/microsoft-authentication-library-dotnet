@@ -1,0 +1,69 @@
+### YamlMime:NetMember
+type: property
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Func`2?alt=System.Func&text=Func" data-throw-if-not-resolved="True"/>&lt;<xref href="System.Net.Http.HttpContent?alt=System.Net.Http.HttpContent&text=HttpContent" data-throw-if-not-resolved="True"/>,<xref href="System.Object?alt=System.Object&text=Object" data-throw-if-not-resolved="True"/>&gt;
+  type: property
+  uid: Microsoft.Identity.Abstractions.DownstreamRestApiOptions.Deserializer
+  commentId: P:Microsoft.Identity.Abstractions.DownstreamRestApiOptions.Deserializer
+  name: Deserializer
+  fullName: Microsoft.Identity.Abstractions.DownstreamRestApiOptions.Deserializer
+  nameWithType: DownstreamRestApiOptions.Deserializer
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public Func<System.Net.Http.HttpContent?,object?>? Deserializer { get; set; }
+  - lang: fsharp
+    values:
+    - value: 'member this.Deserializer : Func<System.Net.Http.HttpContent, obj> with get, set'
+  - lang: vb
+    values:
+    - value: Public Property Deserializer As Func(Of HttpContent, Object)
+  monikers:
+  - msal-model-dotnet-latest
+  summary: >-
+    Optional de-serializer. Will de-serialize the output from the web API (if any).
+
+    When not provided, the following is returned:
+
+    <code>JsonSerializer.Deserialize&lt;TOutput&gt;(content, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });</code>
+  metadata: {}
+uid: Microsoft.Identity.Abstractions.DownstreamRestApiOptions.Deserializer*
+commentId: Overload:Microsoft.Identity.Abstractions.DownstreamRestApiOptions.Deserializer
+namespace: Microsoft.Identity.Abstractions
+name: Deserializer
+fullName: Microsoft.Identity.Abstractions.DownstreamRestApiOptions.Deserializer
+nameWithType: DownstreamRestApiOptions.Deserializer
+assembliesWithMoniker:
+- value: Microsoft.Identity.Abstractions.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Abstractions v1.1.0
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-model-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Abstractions.DownstreamRestApiOptions.Deserializer
+  - Microsoft.Identity.Abstractions.DownstreamRestApiOptions.get_Deserializer
+  - Microsoft.Identity.Abstractions.DownstreamRestApiOptions.set_Deserializer
+  api_location:
+  - Microsoft.Identity.Abstractions.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Abstractions.DownstreamRestApiOptions.Deserializer
+  - Microsoft::Identity::Abstractions::DownstreamRestApiOptions::Deserializer
+  - Deserializer
+  - DownstreamRestApiOptions.Deserializer
+  - DownstreamRestApiOptions::Deserializer
+  helpviewer_keywords:
+  - DownstreamRestApiOptions.Deserializer property [.NET]
+  - Deserializer property [.NET], class DownstreamRestApiOptions
+  monikers:
+  - msal-model-dotnet-latest

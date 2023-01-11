@@ -1,0 +1,74 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.IdentityModel.Tokens.Saml.SamlAdvice?alt=Microsoft.IdentityModel.Tokens.Saml.SamlAdvice&text=SamlAdvice" data-throw-if-not-resolved="True"/>
+    description: A <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml.SamlAdvice"></xref> instance.
+  parameters:
+  - namesWithMoniker:
+    - value: reader
+    description: A <xref data-throw-if-not-resolved="true" uid="System.Xml.XmlReader"></xref> positioned at a <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml.SamlAdvice"></xref> element.
+    type: <xref href="System.Xml.XmlDictionaryReader?alt=System.Xml.XmlDictionaryReader&text=XmlDictionaryReader" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.Saml.SamlSerializer.ReadAdvice(System.Xml.XmlDictionaryReader)
+  commentId: M:Microsoft.IdentityModel.Tokens.Saml.SamlSerializer.ReadAdvice(System.Xml.XmlDictionaryReader)
+  name: ReadAdvice(XmlDictionaryReader)
+  fullName: Microsoft.IdentityModel.Tokens.Saml.SamlSerializer.ReadAdvice(XmlDictionaryReader)
+  nameWithType: SamlSerializer.ReadAdvice(XmlDictionaryReader)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected virtual Microsoft.IdentityModel.Tokens.Saml.SamlAdvice ReadAdvice (System.Xml.XmlDictionaryReader reader);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member ReadAdvice : System.Xml.XmlDictionaryReader -> Microsoft.IdentityModel.Tokens.Saml.SamlAdvice
+
+        override this.ReadAdvice : System.Xml.XmlDictionaryReader -> Microsoft.IdentityModel.Tokens.Saml.SamlAdvice
+  - lang: vb
+    values:
+    - value: Protected Overridable Function ReadAdvice (reader As XmlDictionaryReader) As SamlAdvice
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Reads the &lt;saml:Advice&gt; element.
+  remarks: <p>The Advice element has an extensibility point to allow XML elements from non-SAML namespaces to be included. By default, because the Advice may be ignored without affecting the semantics of the assertion, any such elements are ignored. To handle the processing of those elements, override this method.</p>
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.Saml.SamlSerializer.ReadAdvice*
+commentId: Overload:Microsoft.IdentityModel.Tokens.Saml.SamlSerializer.ReadAdvice
+namespace: Microsoft.IdentityModel.Tokens.Saml
+name: ReadAdvice
+fullName: Microsoft.IdentityModel.Tokens.Saml.SamlSerializer.ReadAdvice
+nameWithType: SamlSerializer.ReadAdvice
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.Saml.SamlSerializer.ReadAdvice
+  api_location:
+  - Microsoft.IdentityModel.Tokens.Saml.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.Saml.SamlSerializer.ReadAdvice
+  - Microsoft::IdentityModel::Tokens::Saml::SamlSerializer::ReadAdvice
+  - ReadAdvice
+  - SamlSerializer.ReadAdvice
+  - SamlSerializer::ReadAdvice
+  helpviewer_keywords:
+  - SamlSerializer.ReadAdvice method [.NET]
+  - ReadAdvice method [.NET], class SamlSerializer
+  - SamlSerializer.ReadAdvice(XmlDictionaryReader) method [.NET]
+  - ReadAdvice(XmlDictionaryReader) method [.NET], class SamlSerializer
+  monikers:
+  - msal-web-dotnet-latest

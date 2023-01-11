@@ -1,0 +1,76 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: T
+    description: The builder to chain the .With methods
+  parameters:
+  - namesWithMoniker:
+    - value: authorityUri
+    description: Authority URL for an ADFS server
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: validateAuthority
+    description: Whether the authority should be validated against the server metadata.
+    type: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithAdfsAuthority(System.String,System.Boolean)
+  commentId: M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithAdfsAuthority(System.String,System.Boolean)
+  name: WithAdfsAuthority(String, Boolean)
+  fullName: Microsoft.Identity.Client.AbstractApplicationBuilder<T>.WithAdfsAuthority(String, Boolean)
+  nameWithType: AbstractApplicationBuilder<T>.WithAdfsAuthority(String, Boolean)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public T WithAdfsAuthority (string authorityUri, bool validateAuthority = true);
+  - lang: fsharp
+    values:
+    - value: "member this.WithAdfsAuthority : string * bool -> 'T"
+  - lang: vb
+    values:
+    - value: Public Function WithAdfsAuthority (authorityUri As String, Optional validateAuthority As Boolean = true) As T
+  monikers:
+  - msal-dotnet-latest
+  summary: Adds a known Authority corresponding to an ADFS server. See https://aka.ms/msal-net-adfs
+  remarks: MSAL.NET will only support ADFS 2019 or later.
+  metadata: {}
+uid: Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithAdfsAuthority*
+commentId: Overload:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithAdfsAuthority
+namespace: Microsoft.Identity.Client
+name: WithAdfsAuthority
+fullName: Microsoft.Identity.Client.AbstractApplicationBuilder<T>.WithAdfsAuthority
+nameWithType: AbstractApplicationBuilder<T>.WithAdfsAuthority
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithAdfsAuthority
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithAdfsAuthority
+  - Microsoft::Identity::Client::AbstractApplicationBuilder`1::WithAdfsAuthority
+  - Microsoft.Identity.Client.AbstractApplicationBuilder.WithAdfsAuthority
+  - WithAdfsAuthority
+  - AbstractApplicationBuilder`1.WithAdfsAuthority
+  - AbstractApplicationBuilder`1::WithAdfsAuthority
+  helpviewer_keywords:
+  - AbstractApplicationBuilder<T>.WithAdfsAuthority method [.NET]
+  - WithAdfsAuthority method [.NET], class AbstractApplicationBuilder<T>
+  - AbstractApplicationBuilder<T>.WithAdfsAuthority(String, Boolean) method [.NET]
+  - WithAdfsAuthority(String, Boolean) method [.NET], class AbstractApplicationBuilder<T>
+  monikers:
+  - msal-dotnet-latest

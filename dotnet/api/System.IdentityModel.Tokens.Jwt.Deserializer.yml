@@ -1,0 +1,64 @@
+### YamlMime:NetDelegate
+returnsWithMoniker:
+  type:
+  - value: <xref href="System.Object?alt=System.Object&text=Object" data-throw-if-not-resolved="True"/>
+  description: The deserialized object.
+parameters:
+- namesWithMoniker:
+  - value: obj
+  description: JSON to deserialize.
+  type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+- namesWithMoniker:
+  - value: targetType
+  description: Type expected.
+  type: <xref href="System.Type?alt=System.Type&text=Type" data-throw-if-not-resolved="True"/>
+inheritances:
+- <xref href="System.Delegate" data-throw-if-not-resolved="True"/>
+uid: System.IdentityModel.Tokens.Jwt.Deserializer
+commentId: T:System.IdentityModel.Tokens.Jwt.Deserializer
+namespace: System.IdentityModel.Tokens.Jwt
+name: Deserializer
+fullName: System.IdentityModel.Tokens.Jwt.Deserializer
+nameWithType: System.IdentityModel.Tokens.Jwt.Deserializer
+assembliesWithMoniker:
+- value: System.IdentityModel.Tokens.Jwt.dll
+packagesWithMoniker:
+- value: System.IdentityModel.Tokens.Jwt v6.25.1
+syntaxWithMoniker:
+- lang: csharp
+  values:
+  - value: public delegate object Deserializer(string obj, Type targetType);
+- lang: fsharp
+  values:
+  - value: type Deserializer = delegate of string * Type -> obj
+- lang: vb
+  values:
+  - value: 'Public Delegate Function Deserializer(obj As String, targetType As Type) As Object '
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+summary: Delegate that can be set on <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JsonExtensions.Deserializer"></xref> to control deserialization JSON into objects.
+metadata:
+  api_name:
+  - System.IdentityModel.Tokens.Jwt.Deserializer
+  - System.IdentityModel.Tokens.Jwt.Deserializer..ctor
+  - System.IdentityModel.Tokens.Jwt.Deserializer.Invoke
+  - System.IdentityModel.Tokens.Jwt.Deserializer.BeginInvoke
+  - System.IdentityModel.Tokens.Jwt.Deserializer.EndInvoke
+  api_location:
+  - System.IdentityModel.Tokens.Jwt.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - System.IdentityModel.Tokens.Jwt.Deserializer
+  - System::IdentityModel::Tokens::Jwt::Deserializer
+  - Deserializer
+  helpviewer_keywords:
+  - System.IdentityModel.Tokens.Jwt.Deserializer delegate [.NET]
+  monikers:
+  - msal-web-dotnet-latest

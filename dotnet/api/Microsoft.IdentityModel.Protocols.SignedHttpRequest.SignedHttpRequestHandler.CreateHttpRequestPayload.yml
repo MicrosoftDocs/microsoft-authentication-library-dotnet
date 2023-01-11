@@ -1,0 +1,78 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+    description: A JSON representation of an HttpRequest payload.
+  parameters:
+  - namesWithMoniker:
+    - value: signedHttpRequestDescriptor
+    description: A structure that wraps parameters needed for SignedHttpRequest creation.
+    type: <xref href="Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestDescriptor?alt=Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestDescriptor&text=SignedHttpRequestDescriptor" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: callContext
+    description: An opaque context used to store work and logs when working with authentication artifacts.
+    type: <xref href="Microsoft.IdentityModel.Tokens.CallContext?alt=Microsoft.IdentityModel.Tokens.CallContext&text=CallContext" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestHandler.CreateHttpRequestPayload(Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestDescriptor,Microsoft.IdentityModel.Tokens.CallContext)
+  commentId: M:Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestHandler.CreateHttpRequestPayload(Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestDescriptor,Microsoft.IdentityModel.Tokens.CallContext)
+  name: CreateHttpRequestPayload(SignedHttpRequestDescriptor, CallContext)
+  fullName: Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestHandler.CreateHttpRequestPayload(SignedHttpRequestDescriptor, CallContext)
+  nameWithType: SignedHttpRequestHandler.CreateHttpRequestPayload(SignedHttpRequestDescriptor, CallContext)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected virtual string CreateHttpRequestPayload (Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestDescriptor signedHttpRequestDescriptor, Microsoft.IdentityModel.Tokens.CallContext callContext);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member CreateHttpRequestPayload : Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestDescriptor * Microsoft.IdentityModel.Tokens.CallContext -> string
+
+        override this.CreateHttpRequestPayload : Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestDescriptor * Microsoft.IdentityModel.Tokens.CallContext -> string
+  - lang: vb
+    values:
+    - value: Protected Overridable Function CreateHttpRequestPayload (signedHttpRequestDescriptor As SignedHttpRequestDescriptor, callContext As CallContext) As String
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Creates a JSON representation of a HttpRequest payload.
+  remarks: Users can utilize <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestDescriptor.AdditionalPayloadClaims"></xref> to create additional claim(s) and add them to the signed http request.
+  metadata: {}
+uid: Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestHandler.CreateHttpRequestPayload*
+commentId: Overload:Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestHandler.CreateHttpRequestPayload
+namespace: Microsoft.IdentityModel.Protocols.SignedHttpRequest
+name: CreateHttpRequestPayload
+fullName: Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestHandler.CreateHttpRequestPayload
+nameWithType: SignedHttpRequestHandler.CreateHttpRequestPayload
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Protocols.SignedHttpRequest.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Protocols.SignedHttpRequest v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestHandler.CreateHttpRequestPayload
+  api_location:
+  - Microsoft.IdentityModel.Protocols.SignedHttpRequest.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestHandler.CreateHttpRequestPayload
+  - Microsoft::IdentityModel::Protocols::SignedHttpRequest::SignedHttpRequestHandler::CreateHttpRequestPayload
+  - CreateHttpRequestPayload
+  - SignedHttpRequestHandler.CreateHttpRequestPayload
+  - SignedHttpRequestHandler::CreateHttpRequestPayload
+  helpviewer_keywords:
+  - SignedHttpRequestHandler.CreateHttpRequestPayload method [.NET]
+  - CreateHttpRequestPayload method [.NET], class SignedHttpRequestHandler
+  - SignedHttpRequestHandler.CreateHttpRequestPayload(SignedHttpRequestDescriptor, CallContext) method [.NET]
+  - CreateHttpRequestPayload(SignedHttpRequestDescriptor, CallContext) method [.NET], class SignedHttpRequestHandler
+  monikers:
+  - msal-web-dotnet-latest

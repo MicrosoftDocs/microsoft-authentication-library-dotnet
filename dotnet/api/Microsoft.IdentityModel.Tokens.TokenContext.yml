@@ -1,0 +1,93 @@
+### YamlMime:NetType
+type: class
+inheritancesWithMoniker:
+- values:
+  - <xref href="System.Object?alt=System.Object&text=Object" data-throw-if-not-resolved="True"/>
+  - <xref href="Microsoft.IdentityModel.Logging.LoggerContext?alt=Microsoft.IdentityModel.Logging.LoggerContext&text=LoggerContext" data-throw-if-not-resolved="True"/>
+  - <xref href="Microsoft.IdentityModel.Tokens.CallContext?alt=Microsoft.IdentityModel.Tokens.CallContext&text=CallContext" data-throw-if-not-resolved="True"/>
+constructors:
+- uid: Microsoft.IdentityModel.Tokens.TokenContext.#ctor
+  monikers:
+  - msal-web-dotnet-latest
+- uid: Microsoft.IdentityModel.Tokens.TokenContext.#ctor(System.Guid)
+  monikers:
+  - msal-web-dotnet-latest
+properties:
+- uid: Microsoft.IdentityModel.Logging.LoggerContext.ActivityId
+  inheritedFrom: Microsoft.IdentityModel.Logging.LoggerContext
+  monikers:
+  - msal-web-dotnet-latest
+- uid: Microsoft.IdentityModel.Logging.LoggerContext.CaptureLogs
+  inheritedFrom: Microsoft.IdentityModel.Logging.LoggerContext
+  monikers:
+  - msal-web-dotnet-latest
+- uid: Microsoft.IdentityModel.Logging.LoggerContext.DebugId
+  inheritedFrom: Microsoft.IdentityModel.Logging.LoggerContext
+  monikers:
+  - msal-web-dotnet-latest
+- uid: Microsoft.IdentityModel.Logging.LoggerContext.Logs
+  inheritedFrom: Microsoft.IdentityModel.Logging.LoggerContext
+  monikers:
+  - msal-web-dotnet-latest
+- uid: Microsoft.IdentityModel.Logging.LoggerContext.PropertyBag
+  inheritedFrom: Microsoft.IdentityModel.Logging.LoggerContext
+  monikers:
+  - msal-web-dotnet-latest
+uid: Microsoft.IdentityModel.Tokens.TokenContext
+commentId: T:Microsoft.IdentityModel.Tokens.TokenContext
+namespace: Microsoft.IdentityModel.Tokens
+name: TokenContext
+fullName: Microsoft.IdentityModel.Tokens.TokenContext
+nameWithType: Microsoft.IdentityModel.Tokens.TokenContext
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens v6.25.1
+attributesWithMoniker:
+- value: System.ObsoleteAttribute
+syntaxWithMoniker:
+- lang: csharp
+  values:
+  - value: >-
+      [System.Obsolete("The 'TokenContext' property is obsolete. Please use 'CallContext' instead.")]
+
+      public class TokenContext : Microsoft.IdentityModel.Tokens.CallContext
+- lang: fsharp
+  values:
+  - value: >-
+      [<System.Obsolete("The 'TokenContext' property is obsolete. Please use 'CallContext' instead.")>]
+
+      type TokenContext = class
+          inherit CallContext
+- lang: vb
+  values:
+  - value: >-
+      Public Class TokenContext
+
+      Inherits CallContext
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+obsoleteMessagesWithMoniker:
+- value: The 'TokenContext' property is obsolete. Please use 'CallContext' instead.
+summary: An opaque context used to store work when working with authentication artifacts.
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.TokenContext
+  api_location:
+  - Microsoft.IdentityModel.Tokens.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.TokenContext
+  - Microsoft::IdentityModel::Tokens::TokenContext
+  - TokenContext
+  helpviewer_keywords:
+  - Microsoft.IdentityModel.Tokens.TokenContext class [.NET]
+  monikers:
+  - msal-web-dotnet-latest

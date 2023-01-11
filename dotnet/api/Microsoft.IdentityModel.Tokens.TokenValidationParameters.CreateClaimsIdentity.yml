@@ -1,0 +1,80 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Security.Claims.ClaimsIdentity?alt=System.Security.Claims.ClaimsIdentity&text=ClaimsIdentity" data-throw-if-not-resolved="True"/>
+    description: A <xref data-throw-if-not-resolved="true" uid="System.Security.Claims.ClaimsIdentity"></xref> with Authentication, NameClaimType and RoleClaimType set.
+  parameters:
+  - namesWithMoniker:
+    - value: securityToken
+    type: <xref href="Microsoft.IdentityModel.Tokens.SecurityToken?alt=Microsoft.IdentityModel.Tokens.SecurityToken&text=SecurityToken" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: issuer
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.TokenValidationParameters.CreateClaimsIdentity(Microsoft.IdentityModel.Tokens.SecurityToken,System.String)
+  commentId: M:Microsoft.IdentityModel.Tokens.TokenValidationParameters.CreateClaimsIdentity(Microsoft.IdentityModel.Tokens.SecurityToken,System.String)
+  name: CreateClaimsIdentity(SecurityToken, String)
+  fullName: Microsoft.IdentityModel.Tokens.TokenValidationParameters.CreateClaimsIdentity(SecurityToken, String)
+  nameWithType: TokenValidationParameters.CreateClaimsIdentity(SecurityToken, String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public virtual System.Security.Claims.ClaimsIdentity CreateClaimsIdentity (Microsoft.IdentityModel.Tokens.SecurityToken securityToken, string issuer);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member CreateClaimsIdentity : Microsoft.IdentityModel.Tokens.SecurityToken * string -> System.Security.Claims.ClaimsIdentity
+
+        override this.CreateClaimsIdentity : Microsoft.IdentityModel.Tokens.SecurityToken * string -> System.Security.Claims.ClaimsIdentity
+  - lang: vb
+    values:
+    - value: Public Overridable Function CreateClaimsIdentity (securityToken As SecurityToken, issuer As String) As ClaimsIdentity
+  monikers:
+  - msal-web-dotnet-latest
+  summary: >-
+    Creates a <xref data-throw-if-not-resolved="true" uid="System.Security.Claims.ClaimsIdentity"></xref> using:
+
+    <p><xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.TokenValidationParameters.AuthenticationType"></xref></p><p>'NameClaimType': If NameClaimTypeRetriever is set, call delegate, else call NameClaimType. If the result is a null or empty string, use <xref data-throw-if-not-resolved="true" uid="System.Security.Claims.ClaimsIdentity.DefaultNameClaimType"></xref></p>.
+
+    <p>'RoleClaimType': If RoleClaimTypeRetriever is set, call delegate, else call RoleClaimType. If the result is a null or empty string, use <xref data-throw-if-not-resolved="true" uid="System.Security.Claims.ClaimsIdentity.DefaultRoleClaimType"></xref></p>.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.TokenValidationParameters.CreateClaimsIdentity*
+commentId: Overload:Microsoft.IdentityModel.Tokens.TokenValidationParameters.CreateClaimsIdentity
+namespace: Microsoft.IdentityModel.Tokens
+name: CreateClaimsIdentity
+fullName: Microsoft.IdentityModel.Tokens.TokenValidationParameters.CreateClaimsIdentity
+nameWithType: TokenValidationParameters.CreateClaimsIdentity
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.TokenValidationParameters.CreateClaimsIdentity
+  api_location:
+  - Microsoft.IdentityModel.Tokens.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.TokenValidationParameters.CreateClaimsIdentity
+  - Microsoft::IdentityModel::Tokens::TokenValidationParameters::CreateClaimsIdentity
+  - CreateClaimsIdentity
+  - TokenValidationParameters.CreateClaimsIdentity
+  - TokenValidationParameters::CreateClaimsIdentity
+  helpviewer_keywords:
+  - TokenValidationParameters.CreateClaimsIdentity method [.NET]
+  - CreateClaimsIdentity method [.NET], class TokenValidationParameters
+  - TokenValidationParameters.CreateClaimsIdentity(SecurityToken, String) method [.NET]
+  - CreateClaimsIdentity(SecurityToken, String) method [.NET], class TokenValidationParameters
+  monikers:
+  - msal-web-dotnet-latest

@@ -1,0 +1,81 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: T
+    description: The builder to chain the .With methods.
+  parameters:
+  - namesWithMoniker:
+    - value: authorityUri
+    description: URI from which to extract the tenant ID
+    type: <xref href="System.Uri?alt=System.Uri&text=Uri" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: Thrown if <code data-dev-comment-type="paramref">authorityUri</code> is null or an empty string
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: Thrown if the application was configured with an authority that is not AAD specific (e.g. ADFS or B2C).
+    type: <xref href="Microsoft.Identity.Client.MsalClientException?alt=Microsoft.Identity.Client.MsalClientException&text=MsalClientException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithTenantIdFromAuthority(System.Uri)
+  commentId: M:Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithTenantIdFromAuthority(System.Uri)
+  name: WithTenantIdFromAuthority(Uri)
+  fullName: Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder<T>.WithTenantIdFromAuthority(Uri)
+  nameWithType: AbstractAcquireTokenParameterBuilder<T>.WithTenantIdFromAuthority(Uri)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public T WithTenantIdFromAuthority (Uri authorityUri);
+  - lang: fsharp
+    values:
+    - value: "member this.WithTenantIdFromAuthority : Uri -> 'T"
+  - lang: vb
+    values:
+    - value: Public Function WithTenantIdFromAuthority (authorityUri As Uri) As T
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    Extracts the tenant ID from the provided authority URI and overrides the tenant ID specified in the authority at the application level. This operation preserves the authority host (environment) provided to the application builder.
+
+
+    If an authority was not provided to the application builder, this method will replace the tenant ID in the default authority - https://login.microsoftonline.com/common.
+  remarks: <p>The tenant should be more restrictive than the one configured at the application level, e.g. don't use "common". Does not affect authority validation, which is specified at the application level.</p>
+  metadata: {}
+uid: Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithTenantIdFromAuthority*
+commentId: Overload:Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithTenantIdFromAuthority
+namespace: Microsoft.Identity.Client
+name: WithTenantIdFromAuthority
+fullName: Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder<T>.WithTenantIdFromAuthority
+nameWithType: AbstractAcquireTokenParameterBuilder<T>.WithTenantIdFromAuthority
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithTenantIdFromAuthority
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithTenantIdFromAuthority
+  - Microsoft::Identity::Client::AbstractAcquireTokenParameterBuilder`1::WithTenantIdFromAuthority
+  - Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder.WithTenantIdFromAuthority
+  - WithTenantIdFromAuthority
+  - AbstractAcquireTokenParameterBuilder`1.WithTenantIdFromAuthority
+  - AbstractAcquireTokenParameterBuilder`1::WithTenantIdFromAuthority
+  helpviewer_keywords:
+  - AbstractAcquireTokenParameterBuilder<T>.WithTenantIdFromAuthority method [.NET]
+  - WithTenantIdFromAuthority method [.NET], class AbstractAcquireTokenParameterBuilder<T>
+  - AbstractAcquireTokenParameterBuilder<T>.WithTenantIdFromAuthority(Uri) method [.NET]
+  - WithTenantIdFromAuthority(Uri) method [.NET], class AbstractAcquireTokenParameterBuilder<T>
+  monikers:
+  - msal-dotnet-latest

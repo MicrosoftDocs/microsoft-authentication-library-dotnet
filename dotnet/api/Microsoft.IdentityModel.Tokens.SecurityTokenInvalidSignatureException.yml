@@ -1,0 +1,84 @@
+### YamlMime:NetType
+type: class
+inheritancesWithMoniker:
+- values:
+  - <xref href="System.Exception?alt=System.Exception&text=Exception" data-throw-if-not-resolved="True"/>
+  - <xref href="Microsoft.IdentityModel.Tokens.SecurityTokenException?alt=Microsoft.IdentityModel.Tokens.SecurityTokenException&text=SecurityTokenException" data-throw-if-not-resolved="True"/>
+  - <xref href="Microsoft.IdentityModel.Tokens.SecurityTokenValidationException?alt=Microsoft.IdentityModel.Tokens.SecurityTokenValidationException&text=SecurityTokenValidationException" data-throw-if-not-resolved="True"/>
+derivedClassesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException
+- value: Microsoft.IdentityModel.Tokens.SecurityTokenUnableToValidateException
+constructors:
+- uid: Microsoft.IdentityModel.Tokens.SecurityTokenInvalidSignatureException.#ctor
+  monikers:
+  - msal-web-dotnet-latest
+- uid: Microsoft.IdentityModel.Tokens.SecurityTokenInvalidSignatureException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  monikers:
+  - msal-web-dotnet-latest
+- uid: Microsoft.IdentityModel.Tokens.SecurityTokenInvalidSignatureException.#ctor(System.String,System.Exception)
+  monikers:
+  - msal-web-dotnet-latest
+- uid: Microsoft.IdentityModel.Tokens.SecurityTokenInvalidSignatureException.#ctor(System.String)
+  monikers:
+  - msal-web-dotnet-latest
+methods:
+- uid: Microsoft.IdentityModel.Tokens.SecurityTokenException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  inheritedFrom: Microsoft.IdentityModel.Tokens.SecurityTokenException
+  monikers:
+  - msal-web-dotnet-latest
+uid: Microsoft.IdentityModel.Tokens.SecurityTokenInvalidSignatureException
+commentId: T:Microsoft.IdentityModel.Tokens.SecurityTokenInvalidSignatureException
+namespace: Microsoft.IdentityModel.Tokens
+name: SecurityTokenInvalidSignatureException
+fullName: Microsoft.IdentityModel.Tokens.SecurityTokenInvalidSignatureException
+nameWithType: Microsoft.IdentityModel.Tokens.SecurityTokenInvalidSignatureException
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens v6.25.1
+attributesWithMoniker:
+- value: System.SerializableAttribute
+syntaxWithMoniker:
+- lang: csharp
+  values:
+  - value: >-
+      [System.Serializable]
+
+      public class SecurityTokenInvalidSignatureException : Microsoft.IdentityModel.Tokens.SecurityTokenValidationException
+- lang: fsharp
+  values:
+  - value: >-
+      [<System.Serializable>]
+
+      type SecurityTokenInvalidSignatureException = class
+          inherit SecurityTokenValidationException
+- lang: vb
+  values:
+  - value: >-
+      Public Class SecurityTokenInvalidSignatureException
+
+      Inherits SecurityTokenValidationException
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+summary: This exception is thrown when 'signature' of a token was not valid.
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.SecurityTokenInvalidSignatureException
+  api_location:
+  - Microsoft.IdentityModel.Tokens.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.SecurityTokenInvalidSignatureException
+  - Microsoft::IdentityModel::Tokens::SecurityTokenInvalidSignatureException
+  - SecurityTokenInvalidSignatureException
+  helpviewer_keywords:
+  - Microsoft.IdentityModel.Tokens.SecurityTokenInvalidSignatureException class [.NET]
+  monikers:
+  - msal-web-dotnet-latest

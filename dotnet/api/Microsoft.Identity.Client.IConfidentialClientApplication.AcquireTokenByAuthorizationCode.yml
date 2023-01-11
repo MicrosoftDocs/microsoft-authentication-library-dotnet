@@ -1,0 +1,88 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.Identity.Client.AcquireTokenByAuthorizationCodeParameterBuilder?alt=Microsoft.Identity.Client.AcquireTokenByAuthorizationCodeParameterBuilder&text=AcquireTokenByAuthorizationCodeParameterBuilder" data-throw-if-not-resolved="True"/>
+    description: A builder enabling you to add optional parameters before executing the token request
+  parameters:
+  - namesWithMoniker:
+    - value: scopes
+    description: Scopes requested to access a protected API
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: authorizationCode
+    description: The authorization code received from the service authorization endpoint.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenByAuthorizationCode(System.Collections.Generic.IEnumerable{System.String},System.String)
+  commentId: M:Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenByAuthorizationCode(System.Collections.Generic.IEnumerable{System.String},System.String)
+  name: AcquireTokenByAuthorizationCode(IEnumerable<String>, String)
+  fullName: Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenByAuthorizationCode(IEnumerable<String>, String)
+  nameWithType: IConfidentialClientApplication.AcquireTokenByAuthorizationCode(IEnumerable<String>, String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public Microsoft.Identity.Client.AcquireTokenByAuthorizationCodeParameterBuilder AcquireTokenByAuthorizationCode (System.Collections.Generic.IEnumerable<string> scopes, string authorizationCode);
+  - lang: fsharp
+    values:
+    - value: 'abstract member AcquireTokenByAuthorizationCode : seq<string> * string -> Microsoft.Identity.Client.AcquireTokenByAuthorizationCodeParameterBuilder'
+  - lang: vb
+    values:
+    - value: Public Function AcquireTokenByAuthorizationCode (scopes As IEnumerable(Of String), authorizationCode As String) As AcquireTokenByAuthorizationCodeParameterBuilder
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    [V3 API] Acquires a security token from the authority configured in the app using the authorization code
+
+    previously received from the STS.
+
+    It uses the OAuth 2.0 authorization code flow (See https://aka.ms/msal-net-authorization-code).
+
+    It's usually used in web apps (for instance ASP.NET / ASP.NET Core web apps) which sign-in users,
+
+    and can request an authorization code.
+
+    This method does not lookup the token cache, but stores the result in it, so it can be looked up
+
+    using other methods such as <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.IClientApplicationBase.AcquireTokenSilent(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount)"></xref>.
+  remarks: <p>You can set optional parameters by chaining the builder with, for example <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithExtraQueryParameters(System.Collections.Generic.Dictionary{System.String,System.String})"></xref>,</p>
+  metadata: {}
+uid: Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenByAuthorizationCode*
+commentId: Overload:Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenByAuthorizationCode
+namespace: Microsoft.Identity.Client
+name: AcquireTokenByAuthorizationCode
+fullName: Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenByAuthorizationCode
+nameWithType: IConfidentialClientApplication.AcquireTokenByAuthorizationCode
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenByAuthorizationCode
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenByAuthorizationCode
+  - Microsoft::Identity::Client::IConfidentialClientApplication::AcquireTokenByAuthorizationCode
+  - AcquireTokenByAuthorizationCode
+  - IConfidentialClientApplication.AcquireTokenByAuthorizationCode
+  - IConfidentialClientApplication::AcquireTokenByAuthorizationCode
+  helpviewer_keywords:
+  - IConfidentialClientApplication.AcquireTokenByAuthorizationCode method [.NET]
+  - AcquireTokenByAuthorizationCode method [.NET], interface IConfidentialClientApplication
+  - IConfidentialClientApplication.AcquireTokenByAuthorizationCode(IEnumerable<String>, String) method [.NET]
+  - AcquireTokenByAuthorizationCode(IEnumerable<String>, String) method [.NET], interface IConfidentialClientApplication
+  monikers:
+  - msal-dotnet-latest

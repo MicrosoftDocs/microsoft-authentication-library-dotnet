@@ -1,0 +1,110 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  parameters:
+  - namesWithMoniker:
+    - value: token
+    description: A <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml.SamlSecurityToken"></xref>.
+    type: <xref href="Microsoft.IdentityModel.Tokens.SecurityToken?alt=Microsoft.IdentityModel.Tokens.SecurityToken&text=SecurityToken" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: if the <code data-dev-comment-type="paramref">token</code> is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: if the token is not a <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml.SamlSecurityToken"></xref>.
+    type: <xref href="System.ArgumentException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.WriteToken(Microsoft.IdentityModel.Tokens.SecurityToken)
+  commentId: M:Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.WriteToken(Microsoft.IdentityModel.Tokens.SecurityToken)
+  name: WriteToken(SecurityToken)
+  fullName: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.WriteToken(SecurityToken)
+  nameWithType: SamlSecurityTokenHandler.WriteToken(SecurityToken)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public override string WriteToken (Microsoft.IdentityModel.Tokens.SecurityToken token);
+  - lang: fsharp
+    values:
+    - value: 'override this.WriteToken : Microsoft.IdentityModel.Tokens.SecurityToken -> string'
+  - lang: vb
+    values:
+    - value: Public Overrides Function WriteToken (token As SecurityToken) As String
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Serializes a <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml.SamlSecurityToken"></xref> to a string.
+  metadata: {}
+- parameters:
+  - namesWithMoniker:
+    - value: writer
+    description: The XML writer.
+    type: <xref href="System.Xml.XmlWriter?alt=System.Xml.XmlWriter&text=XmlWriter" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: token
+    description: A securityToken of type <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.TokenType"></xref>.
+    type: <xref href="Microsoft.IdentityModel.Tokens.SecurityToken?alt=Microsoft.IdentityModel.Tokens.SecurityToken&text=SecurityToken" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: if <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml.SamlSecurityToken.Assertion"></xref> is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: if the token is not a <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml.SamlSecurityToken"></xref>.
+    type: <xref href="System.ArgumentException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.WriteToken(System.Xml.XmlWriter,Microsoft.IdentityModel.Tokens.SecurityToken)
+  commentId: M:Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.WriteToken(System.Xml.XmlWriter,Microsoft.IdentityModel.Tokens.SecurityToken)
+  name: WriteToken(XmlWriter, SecurityToken)
+  fullName: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.WriteToken(XmlWriter, SecurityToken)
+  nameWithType: SamlSecurityTokenHandler.WriteToken(XmlWriter, SecurityToken)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public override void WriteToken (System.Xml.XmlWriter writer, Microsoft.IdentityModel.Tokens.SecurityToken token);
+  - lang: fsharp
+    values:
+    - value: 'override this.WriteToken : System.Xml.XmlWriter * Microsoft.IdentityModel.Tokens.SecurityToken -> unit'
+  - lang: vb
+    values:
+    - value: Public Overrides Sub WriteToken (writer As XmlWriter, token As SecurityToken)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Serializes to XML a securityToken of the type handled by this instance.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.WriteToken*
+commentId: Overload:Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.WriteToken
+namespace: Microsoft.IdentityModel.Tokens.Saml
+name: WriteToken
+fullName: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.WriteToken
+nameWithType: SamlSecurityTokenHandler.WriteToken
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.WriteToken
+  api_location:
+  - Microsoft.IdentityModel.Tokens.Saml.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.WriteToken
+  - Microsoft::IdentityModel::Tokens::Saml::SamlSecurityTokenHandler::WriteToken
+  - WriteToken
+  - SamlSecurityTokenHandler.WriteToken
+  - SamlSecurityTokenHandler::WriteToken
+  helpviewer_keywords:
+  - SamlSecurityTokenHandler.WriteToken method [.NET]
+  - WriteToken method [.NET], class SamlSecurityTokenHandler
+  - SamlSecurityTokenHandler.WriteToken(SecurityToken) method [.NET]
+  - WriteToken(SecurityToken) method [.NET], class SamlSecurityTokenHandler
+  - SamlSecurityTokenHandler.WriteToken(XmlWriter, SecurityToken) method [.NET]
+  - WriteToken(XmlWriter, SecurityToken) method [.NET], class SamlSecurityTokenHandler
+  monikers:
+  - msal-web-dotnet-latest

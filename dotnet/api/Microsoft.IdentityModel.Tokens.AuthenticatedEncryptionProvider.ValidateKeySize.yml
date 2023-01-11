@@ -1,0 +1,78 @@
+### YamlMime:NetMember
+type: method
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: key
+    description: <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityKey"></xref> that contains bytes.
+    type: <xref href="Microsoft.IdentityModel.Tokens.SecurityKey?alt=Microsoft.IdentityModel.Tokens.SecurityKey&text=SecurityKey" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: algorithm
+    description: the algorithm to apply.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: if <code data-dev-comment-type="paramref">algorithm</code> is null or empty.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: if <code data-dev-comment-type="paramref">algorithm</code> is not a supported algorithm.
+    type: <xref href="System.ArgumentException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionProvider.ValidateKeySize(Microsoft.IdentityModel.Tokens.SecurityKey,System.String)
+  commentId: M:Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionProvider.ValidateKeySize(Microsoft.IdentityModel.Tokens.SecurityKey,System.String)
+  name: ValidateKeySize(SecurityKey, String)
+  fullName: Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionProvider.ValidateKeySize(SecurityKey, String)
+  nameWithType: AuthenticatedEncryptionProvider.ValidateKeySize(SecurityKey, String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected virtual void ValidateKeySize (Microsoft.IdentityModel.Tokens.SecurityKey key, string algorithm);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member ValidateKeySize : Microsoft.IdentityModel.Tokens.SecurityKey * string -> unit
+
+        override this.ValidateKeySize : Microsoft.IdentityModel.Tokens.SecurityKey * string -> unit
+  - lang: vb
+    values:
+    - value: Protected Overridable Sub ValidateKeySize (key As SecurityKey, algorithm As String)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Checks that the key has sufficient length
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionProvider.ValidateKeySize*
+commentId: Overload:Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionProvider.ValidateKeySize
+namespace: Microsoft.IdentityModel.Tokens
+name: ValidateKeySize
+fullName: Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionProvider.ValidateKeySize
+nameWithType: AuthenticatedEncryptionProvider.ValidateKeySize
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionProvider.ValidateKeySize
+  api_location:
+  - Microsoft.IdentityModel.Tokens.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionProvider.ValidateKeySize
+  - Microsoft::IdentityModel::Tokens::AuthenticatedEncryptionProvider::ValidateKeySize
+  - ValidateKeySize
+  - AuthenticatedEncryptionProvider.ValidateKeySize
+  - AuthenticatedEncryptionProvider::ValidateKeySize
+  helpviewer_keywords:
+  - AuthenticatedEncryptionProvider.ValidateKeySize method [.NET]
+  - ValidateKeySize method [.NET], class AuthenticatedEncryptionProvider
+  - AuthenticatedEncryptionProvider.ValidateKeySize(SecurityKey, String) method [.NET]
+  - ValidateKeySize(SecurityKey, String) method [.NET], class AuthenticatedEncryptionProvider
+  monikers:
+  - msal-web-dotnet-latest

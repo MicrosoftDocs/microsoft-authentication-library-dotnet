@@ -1,0 +1,119 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Security.Claims.ClaimsIdentity?alt=System.Security.Claims.ClaimsIdentity&text=ClaimsIdentity" data-throw-if-not-resolved="True"/>
+    description: A <xref data-throw-if-not-resolved="true" uid="System.Security.Claims.ClaimsIdentity"></xref> containing the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Claims"></xref>.
+  parameters:
+  - namesWithMoniker:
+    - value: jwtToken
+    description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken"></xref> to use as a <xref data-throw-if-not-resolved="true" uid="System.Security.Claims.Claim"></xref> source.
+    type: <xref href="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken?alt=Microsoft.IdentityModel.JsonWebTokens.JsonWebToken&text=JsonWebToken" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: validationParameters
+    description: Contains parameters for validating the token.
+    type: <xref href="Microsoft.IdentityModel.Tokens.TokenValidationParameters?alt=Microsoft.IdentityModel.Tokens.TokenValidationParameters&text=TokenValidationParameters" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateClaimsIdentity(Microsoft.IdentityModel.JsonWebTokens.JsonWebToken,Microsoft.IdentityModel.Tokens.TokenValidationParameters)
+  commentId: M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateClaimsIdentity(Microsoft.IdentityModel.JsonWebTokens.JsonWebToken,Microsoft.IdentityModel.Tokens.TokenValidationParameters)
+  name: CreateClaimsIdentity(JsonWebToken, TokenValidationParameters)
+  fullName: Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateClaimsIdentity(JsonWebToken, TokenValidationParameters)
+  nameWithType: JsonWebTokenHandler.CreateClaimsIdentity(JsonWebToken, TokenValidationParameters)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected virtual System.Security.Claims.ClaimsIdentity CreateClaimsIdentity (Microsoft.IdentityModel.JsonWebTokens.JsonWebToken jwtToken, Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member CreateClaimsIdentity : Microsoft.IdentityModel.JsonWebTokens.JsonWebToken * Microsoft.IdentityModel.Tokens.TokenValidationParameters -> System.Security.Claims.ClaimsIdentity
+
+        override this.CreateClaimsIdentity : Microsoft.IdentityModel.JsonWebTokens.JsonWebToken * Microsoft.IdentityModel.Tokens.TokenValidationParameters -> System.Security.Claims.ClaimsIdentity
+  - lang: vb
+    values:
+    - value: Protected Overridable Function CreateClaimsIdentity (jwtToken As JsonWebToken, validationParameters As TokenValidationParameters) As ClaimsIdentity
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Creates a <xref data-throw-if-not-resolved="true" uid="System.Security.Claims.ClaimsIdentity"></xref> from a <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken"></xref>.
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Security.Claims.ClaimsIdentity?alt=System.Security.Claims.ClaimsIdentity&text=ClaimsIdentity" data-throw-if-not-resolved="True"/>
+    description: A <xref data-throw-if-not-resolved="true" uid="System.Security.Claims.ClaimsIdentity"></xref> containing the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Claims"></xref>.
+  parameters:
+  - namesWithMoniker:
+    - value: jwtToken
+    description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken"></xref> to use as a <xref data-throw-if-not-resolved="true" uid="System.Security.Claims.Claim"></xref> source.
+    type: <xref href="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken?alt=Microsoft.IdentityModel.JsonWebTokens.JsonWebToken&text=JsonWebToken" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: validationParameters
+    description: Contains parameters for validating the token.
+    type: <xref href="Microsoft.IdentityModel.Tokens.TokenValidationParameters?alt=Microsoft.IdentityModel.Tokens.TokenValidationParameters&text=TokenValidationParameters" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: issuer
+    description: Specifies the issuer for the <xref data-throw-if-not-resolved="true" uid="System.Security.Claims.ClaimsIdentity"></xref>.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateClaimsIdentity(Microsoft.IdentityModel.JsonWebTokens.JsonWebToken,Microsoft.IdentityModel.Tokens.TokenValidationParameters,System.String)
+  commentId: M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateClaimsIdentity(Microsoft.IdentityModel.JsonWebTokens.JsonWebToken,Microsoft.IdentityModel.Tokens.TokenValidationParameters,System.String)
+  name: CreateClaimsIdentity(JsonWebToken, TokenValidationParameters, String)
+  fullName: Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateClaimsIdentity(JsonWebToken, TokenValidationParameters, String)
+  nameWithType: JsonWebTokenHandler.CreateClaimsIdentity(JsonWebToken, TokenValidationParameters, String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected virtual System.Security.Claims.ClaimsIdentity CreateClaimsIdentity (Microsoft.IdentityModel.JsonWebTokens.JsonWebToken jwtToken, Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters, string issuer);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member CreateClaimsIdentity : Microsoft.IdentityModel.JsonWebTokens.JsonWebToken * Microsoft.IdentityModel.Tokens.TokenValidationParameters * string -> System.Security.Claims.ClaimsIdentity
+
+        override this.CreateClaimsIdentity : Microsoft.IdentityModel.JsonWebTokens.JsonWebToken * Microsoft.IdentityModel.Tokens.TokenValidationParameters * string -> System.Security.Claims.ClaimsIdentity
+  - lang: vb
+    values:
+    - value: Protected Overridable Function CreateClaimsIdentity (jwtToken As JsonWebToken, validationParameters As TokenValidationParameters, issuer As String) As ClaimsIdentity
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Creates a <xref data-throw-if-not-resolved="true" uid="System.Security.Claims.ClaimsIdentity"></xref> from a <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken"></xref> with the specified issuer.
+  metadata: {}
+uid: Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateClaimsIdentity*
+commentId: Overload:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateClaimsIdentity
+namespace: Microsoft.IdentityModel.JsonWebTokens
+name: CreateClaimsIdentity
+fullName: Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateClaimsIdentity
+nameWithType: JsonWebTokenHandler.CreateClaimsIdentity
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.JsonWebTokens.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.JsonWebTokens v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateClaimsIdentity
+  api_location:
+  - Microsoft.IdentityModel.JsonWebTokens.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateClaimsIdentity
+  - Microsoft::IdentityModel::JsonWebTokens::JsonWebTokenHandler::CreateClaimsIdentity
+  - CreateClaimsIdentity
+  - JsonWebTokenHandler.CreateClaimsIdentity
+  - JsonWebTokenHandler::CreateClaimsIdentity
+  helpviewer_keywords:
+  - JsonWebTokenHandler.CreateClaimsIdentity method [.NET]
+  - CreateClaimsIdentity method [.NET], class JsonWebTokenHandler
+  - JsonWebTokenHandler.CreateClaimsIdentity(JsonWebToken, TokenValidationParameters) method [.NET]
+  - CreateClaimsIdentity(JsonWebToken, TokenValidationParameters) method [.NET], class JsonWebTokenHandler
+  - JsonWebTokenHandler.CreateClaimsIdentity(JsonWebToken, TokenValidationParameters, String) method [.NET]
+  - CreateClaimsIdentity(JsonWebToken, TokenValidationParameters, String) method [.NET], class JsonWebTokenHandler
+  monikers:
+  - msal-web-dotnet-latest

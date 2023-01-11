@@ -1,0 +1,88 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Abstractions.AcquireTokenResult?alt=Microsoft.Identity.Abstractions.AcquireTokenResult&text=AcquireTokenResult" data-throw-if-not-resolved="True"/>&gt;
+    description: An <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Abstractions.AcquireTokenResult"></xref> to call on behalf of the user, the downstream API characterized by its scopes.
+  parameters:
+  - namesWithMoniker:
+    - value: scopes
+    description: Scopes to request for the downstream API to call.
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: tokenAcquisitionOptions
+    description: Options passed-in to create the token acquisition object which calls into MSAL .NET.
+    type: <xref href="Microsoft.Identity.Abstractions.AcquireTokenOptions?alt=Microsoft.Identity.Abstractions.AcquireTokenOptions&text=AcquireTokenOptions" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: user
+    description: >-
+      Optional claims principal representing the user. If not provided, will use the signed-in
+                  user (in a web app), or the user for which the token was received (in a web API)
+                  cases where a given account is a guest in other tenants, and you want to acquire tokens for a specific tenant, like where the user is a guest in.
+    type: <xref href="System.Security.Claims.ClaimsPrincipal?alt=System.Security.Claims.ClaimsPrincipal&text=ClaimsPrincipal" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: cancellationToken
+    description: Cancellation token
+    type: <xref href="System.Threading.CancellationToken?alt=System.Threading.CancellationToken&text=CancellationToken" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Abstractions.ITokenAcquirer.GetTokenForUserAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Abstractions.AcquireTokenOptions,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)
+  commentId: M:Microsoft.Identity.Abstractions.ITokenAcquirer.GetTokenForUserAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Abstractions.AcquireTokenOptions,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)
+  name: GetTokenForUserAsync(IEnumerable<String>, AcquireTokenOptions, ClaimsPrincipal, CancellationToken)
+  fullName: Microsoft.Identity.Abstractions.ITokenAcquirer.GetTokenForUserAsync(IEnumerable<String>, AcquireTokenOptions, ClaimsPrincipal, CancellationToken)
+  nameWithType: ITokenAcquirer.GetTokenForUserAsync(IEnumerable<String>, AcquireTokenOptions, ClaimsPrincipal, CancellationToken)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public System.Threading.Tasks.Task<Microsoft.Identity.Abstractions.AcquireTokenResult> GetTokenForUserAsync (System.Collections.Generic.IEnumerable<string> scopes, Microsoft.Identity.Abstractions.AcquireTokenOptions? tokenAcquisitionOptions = default, System.Security.Claims.ClaimsPrincipal? user = default, System.Threading.CancellationToken cancellationToken = default);
+  - lang: fsharp
+    values:
+    - value: 'abstract member GetTokenForUserAsync : seq<string> * Microsoft.Identity.Abstractions.AcquireTokenOptions * System.Security.Claims.ClaimsPrincipal * System.Threading.CancellationToken -> System.Threading.Tasks.Task<Microsoft.Identity.Abstractions.AcquireTokenResult>'
+  - lang: vb
+    values:
+    - value: Public Function GetTokenForUserAsync (scopes As IEnumerable(Of String), Optional tokenAcquisitionOptions As AcquireTokenOptions = Nothing, Optional user As ClaimsPrincipal = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of AcquireTokenResult)
+  monikers:
+  - msal-model-dotnet-latest
+  summary: >-
+    Typically used from an ASP.NET Core web app or web API controller. This method gets an access token
+
+    for a downstream API on behalf of the user account for which the claims are provided in the current user.
+  metadata: {}
+uid: Microsoft.Identity.Abstractions.ITokenAcquirer.GetTokenForUserAsync*
+commentId: Overload:Microsoft.Identity.Abstractions.ITokenAcquirer.GetTokenForUserAsync
+namespace: Microsoft.Identity.Abstractions
+name: GetTokenForUserAsync
+fullName: Microsoft.Identity.Abstractions.ITokenAcquirer.GetTokenForUserAsync
+nameWithType: ITokenAcquirer.GetTokenForUserAsync
+assembliesWithMoniker:
+- value: Microsoft.Identity.Abstractions.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Abstractions v1.1.0
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-model-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Abstractions.ITokenAcquirer.GetTokenForUserAsync
+  api_location:
+  - Microsoft.Identity.Abstractions.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Abstractions.ITokenAcquirer.GetTokenForUserAsync
+  - Microsoft::Identity::Abstractions::ITokenAcquirer::GetTokenForUserAsync
+  - GetTokenForUserAsync
+  - ITokenAcquirer.GetTokenForUserAsync
+  - ITokenAcquirer::GetTokenForUserAsync
+  helpviewer_keywords:
+  - ITokenAcquirer.GetTokenForUserAsync method [.NET]
+  - GetTokenForUserAsync method [.NET], interface ITokenAcquirer
+  - ITokenAcquirer.GetTokenForUserAsync(IEnumerable<String>, AcquireTokenOptions, ClaimsPrincipal, CancellationToken) method [.NET]
+  - GetTokenForUserAsync(IEnumerable<String>, AcquireTokenOptions, ClaimsPrincipal, CancellationToken) method [.NET], interface ITokenAcquirer
+  monikers:
+  - msal-model-dotnet-latest

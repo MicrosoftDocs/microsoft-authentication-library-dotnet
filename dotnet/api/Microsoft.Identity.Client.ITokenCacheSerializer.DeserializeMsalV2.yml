@@ -1,0 +1,84 @@
+### YamlMime:NetMember
+type: method
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: msalV2State
+    description: Byte stream representation of the cache
+    type: <xref href="System.Byte?alt=System.Byte&text=Byte" data-throw-if-not-resolved="True"/>[]
+  type: method
+  uid: Microsoft.Identity.Client.ITokenCacheSerializer.DeserializeMsalV2(System.Byte[])
+  commentId: M:Microsoft.Identity.Client.ITokenCacheSerializer.DeserializeMsalV2(System.Byte[])
+  name: DeserializeMsalV2(Byte[])
+  fullName: Microsoft.Identity.Client.ITokenCacheSerializer.DeserializeMsalV2(Byte[])
+  nameWithType: ITokenCacheSerializer.DeserializeMsalV2(Byte[])
+  attributesWithMoniker:
+  - value: System.ObsoleteAttribute
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: >-
+        [System.Obsolete("Support for the MSAL v2 token cache format will be dropped in the next major version", false)]
+
+        public void DeserializeMsalV2 (byte[] msalV2State);
+  - lang: fsharp
+    values:
+    - value: >-
+        [<System.Obsolete("Support for the MSAL v2 token cache format will be dropped in the next major version", false)>]
+
+        abstract member DeserializeMsalV2 : byte[] -> unit
+  - lang: vb
+    values:
+    - value: Public Sub DeserializeMsalV2 (msalV2State As Byte())
+  monikers:
+  - msal-dotnet-latest
+  obsoleteMessagesWithMoniker:
+  - value: Support for the MSAL v2 token cache format will be dropped in the next major version
+  summary: >-
+    Deserializes the token cache to the MSAL.NET 2.x cache format, which is compatible with ADAL.NET v4 and other MSAL.NET v2 applications.
+
+    If you need to maintain SSO between an application using ADAL 3.x or MSAL 2.x and this application using MSAL 3.x,
+
+    you might also want to serialize and deserialize with <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITokenCacheSerializer.SerializeAdalV3"></xref>/<xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITokenCacheSerializer.DeserializeAdalV3(System.Byte[])"></xref> or <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITokenCacheSerializer.SerializeMsalV2"></xref>/<xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITokenCacheSerializer.DeserializeMsalV2(System.Byte[])"></xref>,
+
+    otherwise just use <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITokenCacheSerializer.SerializeMsalV3"></xref>/<xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITokenCacheSerializer.DeserializeMsalV3(System.Byte[],System.Boolean)"></xref>.
+  remarks: <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITokenCacheSerializer.SerializeMsalV3"></xref>/<xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITokenCacheSerializer.DeserializeMsalV3(System.Byte[],System.Boolean)"></xref> is compatible with other MSAL libraries such as MSAL for Python and MSAL for Java.
+  metadata: {}
+uid: Microsoft.Identity.Client.ITokenCacheSerializer.DeserializeMsalV2*
+commentId: Overload:Microsoft.Identity.Client.ITokenCacheSerializer.DeserializeMsalV2
+namespace: Microsoft.Identity.Client
+name: DeserializeMsalV2
+fullName: Microsoft.Identity.Client.ITokenCacheSerializer.DeserializeMsalV2
+nameWithType: ITokenCacheSerializer.DeserializeMsalV2
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.ITokenCacheSerializer.DeserializeMsalV2
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.ITokenCacheSerializer.DeserializeMsalV2
+  - Microsoft::Identity::Client::ITokenCacheSerializer::DeserializeMsalV2
+  - DeserializeMsalV2
+  - ITokenCacheSerializer.DeserializeMsalV2
+  - ITokenCacheSerializer::DeserializeMsalV2
+  helpviewer_keywords:
+  - ITokenCacheSerializer.DeserializeMsalV2 method [.NET]
+  - DeserializeMsalV2 method [.NET], interface ITokenCacheSerializer
+  - ITokenCacheSerializer.DeserializeMsalV2(Byte[]) method [.NET]
+  - DeserializeMsalV2(Byte[]) method [.NET], interface ITokenCacheSerializer
+  monikers:
+  - msal-dotnet-latest

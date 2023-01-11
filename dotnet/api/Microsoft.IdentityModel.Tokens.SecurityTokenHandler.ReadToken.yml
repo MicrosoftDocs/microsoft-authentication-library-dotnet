@@ -1,0 +1,105 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.IdentityModel.Tokens.SecurityToken?alt=Microsoft.IdentityModel.Tokens.SecurityToken&text=SecurityToken" data-throw-if-not-resolved="True"/>
+  parameters:
+  - namesWithMoniker:
+    - value: reader
+    description: <xref data-throw-if-not-resolved="true" uid="System.Xml.XmlReader"></xref>.
+    type: <xref href="System.Xml.XmlReader?alt=System.Xml.XmlReader&text=XmlReader" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.SecurityTokenHandler.ReadToken(System.Xml.XmlReader)
+  commentId: M:Microsoft.IdentityModel.Tokens.SecurityTokenHandler.ReadToken(System.Xml.XmlReader)
+  name: ReadToken(XmlReader)
+  fullName: Microsoft.IdentityModel.Tokens.SecurityTokenHandler.ReadToken(XmlReader)
+  nameWithType: SecurityTokenHandler.ReadToken(XmlReader)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public virtual Microsoft.IdentityModel.Tokens.SecurityToken ReadToken (System.Xml.XmlReader reader);
+  - lang: fsharp
+    values:
+    - value: 'override this.ReadToken : System.Xml.XmlReader -> Microsoft.IdentityModel.Tokens.SecurityToken'
+  - lang: vb
+    values:
+    - value: Public Overridable Function ReadToken (reader As XmlReader) As SecurityToken
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Gets security token.
+  remarks: SecurityToken instance which represents the serialized token.
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.IdentityModel.Tokens.SecurityToken?alt=Microsoft.IdentityModel.Tokens.SecurityToken&text=SecurityToken" data-throw-if-not-resolved="True"/>
+  parameters:
+  - namesWithMoniker:
+    - value: reader
+    description: <xref data-throw-if-not-resolved="true" uid="System.Xml.XmlReader"></xref>.
+    type: <xref href="System.Xml.XmlReader?alt=System.Xml.XmlReader&text=XmlReader" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: validationParameters
+    description: the current <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.TokenValidationParameters"></xref>.
+    type: <xref href="Microsoft.IdentityModel.Tokens.TokenValidationParameters?alt=Microsoft.IdentityModel.Tokens.TokenValidationParameters&text=TokenValidationParameters" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.SecurityTokenHandler.ReadToken(System.Xml.XmlReader,Microsoft.IdentityModel.Tokens.TokenValidationParameters)
+  commentId: M:Microsoft.IdentityModel.Tokens.SecurityTokenHandler.ReadToken(System.Xml.XmlReader,Microsoft.IdentityModel.Tokens.TokenValidationParameters)
+  name: ReadToken(XmlReader, TokenValidationParameters)
+  fullName: Microsoft.IdentityModel.Tokens.SecurityTokenHandler.ReadToken(XmlReader, TokenValidationParameters)
+  nameWithType: SecurityTokenHandler.ReadToken(XmlReader, TokenValidationParameters)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public abstract Microsoft.IdentityModel.Tokens.SecurityToken ReadToken (System.Xml.XmlReader reader, Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters);
+  - lang: fsharp
+    values:
+    - value: 'override this.ReadToken : System.Xml.XmlReader * Microsoft.IdentityModel.Tokens.TokenValidationParameters -> Microsoft.IdentityModel.Tokens.SecurityToken'
+  - lang: vb
+    values:
+    - value: Public MustOverride Function ReadToken (reader As XmlReader, validationParameters As TokenValidationParameters) As SecurityToken
+  monikers:
+  - msal-web-dotnet-latest
+  summary: This must be overridden to deserialize token with the provided <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.TokenValidationParameters"></xref>.
+  remarks: SecurityToken instance which represents the serialized token.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.SecurityTokenHandler.ReadToken*
+commentId: Overload:Microsoft.IdentityModel.Tokens.SecurityTokenHandler.ReadToken
+namespace: Microsoft.IdentityModel.Tokens
+name: ReadToken
+fullName: Microsoft.IdentityModel.Tokens.SecurityTokenHandler.ReadToken
+nameWithType: SecurityTokenHandler.ReadToken
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.SecurityTokenHandler.ReadToken
+  api_location:
+  - Microsoft.IdentityModel.Tokens.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.SecurityTokenHandler.ReadToken
+  - Microsoft::IdentityModel::Tokens::SecurityTokenHandler::ReadToken
+  - ReadToken
+  - SecurityTokenHandler.ReadToken
+  - SecurityTokenHandler::ReadToken
+  helpviewer_keywords:
+  - SecurityTokenHandler.ReadToken method [.NET]
+  - ReadToken method [.NET], class SecurityTokenHandler
+  - SecurityTokenHandler.ReadToken(XmlReader) method [.NET]
+  - ReadToken(XmlReader) method [.NET], class SecurityTokenHandler
+  - SecurityTokenHandler.ReadToken(XmlReader, TokenValidationParameters) method [.NET]
+  - ReadToken(XmlReader, TokenValidationParameters) method [.NET], class SecurityTokenHandler
+  monikers:
+  - msal-web-dotnet-latest

@@ -1,0 +1,98 @@
+### YamlMime:NetMember
+type: constructor
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: adfsIdentifier
+    description: Unique identifier for the account if authority is ADFS
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: constructor
+  uid: Microsoft.Identity.Client.AccountId.#ctor(System.String)
+  commentId: M:Microsoft.Identity.Client.AccountId.#ctor(System.String)
+  name: AccountId(String)
+  fullName: Microsoft.Identity.Client.AccountId.AccountId(String)
+  nameWithType: AccountId.AccountId(String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public AccountId (string adfsIdentifier);
+  - lang: fsharp
+    values:
+    - value: 'new Microsoft.Identity.Client.AccountId : string -> Microsoft.Identity.Client.AccountId'
+  - lang: vb
+    values:
+    - value: Public Sub New (adfsIdentifier As String)
+  monikers:
+  - msal-dotnet-latest
+  summary: Constructor of an AccountId meant for ADFS scenarios since ADFS instances lack tenant ids.
+  metadata: {}
+- parameters:
+  - namesWithMoniker:
+    - value: identifier
+    description: Unique identifier for the account.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: objectId
+    description: A string representation for a GUID which is the ID of the user owning the account in the tenant
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: tenantId
+    description: A string representation for a GUID, which is the ID of the tenant where the account resides
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: constructor
+  uid: Microsoft.Identity.Client.AccountId.#ctor(System.String,System.String,System.String)
+  commentId: M:Microsoft.Identity.Client.AccountId.#ctor(System.String,System.String,System.String)
+  name: AccountId(String, String, String)
+  fullName: Microsoft.Identity.Client.AccountId.AccountId(String, String, String)
+  nameWithType: AccountId.AccountId(String, String, String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public AccountId (string identifier, string objectId, string tenantId);
+  - lang: fsharp
+    values:
+    - value: 'new Microsoft.Identity.Client.AccountId : string * string * string -> Microsoft.Identity.Client.AccountId'
+  - lang: vb
+    values:
+    - value: Public Sub New (identifier As String, objectId As String, tenantId As String)
+  monikers:
+  - msal-dotnet-latest
+  summary: Constructor of an AccountId
+  metadata: {}
+uid: Microsoft.Identity.Client.AccountId.#ctor*
+commentId: Overload:Microsoft.Identity.Client.AccountId.#ctor
+namespace: Microsoft.Identity.Client
+name: AccountId
+fullName: Microsoft.Identity.Client.AccountId.AccountId
+nameWithType: AccountId.AccountId
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.AccountId..ctor
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.AccountId.#ctor
+  - Microsoft::Identity::Client::AccountId::#ctor
+  - '#ctor'
+  - AccountId.#ctor
+  - AccountId::#ctor
+  helpviewer_keywords:
+  - AccountId class [.NET], constructors
+  - AccountId(String) class [.NET], constructors
+  - AccountId(String, String, String) class [.NET], constructors
+  monikers:
+  - msal-dotnet-latest

@@ -1,0 +1,80 @@
+### YamlMime:NetMember
+type: method
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: writer
+    description: A <xref data-throw-if-not-resolved="true" uid="System.Xml.XmlWriter"></xref> to serialize the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2Assertion"></xref>.
+    type: <xref href="System.Xml.XmlWriter?alt=System.Xml.XmlWriter&text=XmlWriter" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: assertion
+    description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2Assertion"></xref> to serialize.
+    type: <xref href="Microsoft.IdentityModel.Tokens.Saml2.Saml2Assertion?alt=Microsoft.IdentityModel.Tokens.Saml2.Saml2Assertion&text=Saml2Assertion" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: if <code data-dev-comment-type="paramref">assertion</code> is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: if <code data-dev-comment-type="paramref">assertion</code>.EncryptingCredentials != null.
+    type: <xref href="System.NotSupportedException" data-throw-if-not-resolved="True"/>
+  - description: The SAML2 authentication, attribute, and authorization decision <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2Statement"></xref> require a <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2Subject"></xref>.
+    type: <xref href="System.InvalidOperationException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteAssertion(System.Xml.XmlWriter,Microsoft.IdentityModel.Tokens.Saml2.Saml2Assertion)
+  commentId: M:Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteAssertion(System.Xml.XmlWriter,Microsoft.IdentityModel.Tokens.Saml2.Saml2Assertion)
+  name: WriteAssertion(XmlWriter, Saml2Assertion)
+  fullName: Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteAssertion(XmlWriter, Saml2Assertion)
+  nameWithType: Saml2Serializer.WriteAssertion(XmlWriter, Saml2Assertion)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public virtual void WriteAssertion (System.Xml.XmlWriter writer, Microsoft.IdentityModel.Tokens.Saml2.Saml2Assertion assertion);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member WriteAssertion : System.Xml.XmlWriter * Microsoft.IdentityModel.Tokens.Saml2.Saml2Assertion -> unit
+
+        override this.WriteAssertion : System.Xml.XmlWriter * Microsoft.IdentityModel.Tokens.Saml2.Saml2Assertion -> unit
+  - lang: vb
+    values:
+    - value: Public Overridable Sub WriteAssertion (writer As XmlWriter, assertion As Saml2Assertion)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Writes the &lt;Assertion&gt; element.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteAssertion*
+commentId: Overload:Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteAssertion
+namespace: Microsoft.IdentityModel.Tokens.Saml2
+name: WriteAssertion
+fullName: Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteAssertion
+nameWithType: Saml2Serializer.WriteAssertion
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteAssertion
+  api_location:
+  - Microsoft.IdentityModel.Tokens.Saml.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteAssertion
+  - Microsoft::IdentityModel::Tokens::Saml2::Saml2Serializer::WriteAssertion
+  - WriteAssertion
+  - Saml2Serializer.WriteAssertion
+  - Saml2Serializer::WriteAssertion
+  helpviewer_keywords:
+  - Saml2Serializer.WriteAssertion method [.NET]
+  - WriteAssertion method [.NET], class Saml2Serializer
+  - Saml2Serializer.WriteAssertion(XmlWriter, Saml2Assertion) method [.NET]
+  - WriteAssertion(XmlWriter, Saml2Assertion) method [.NET], class Saml2Serializer
+  monikers:
+  - msal-web-dotnet-latest

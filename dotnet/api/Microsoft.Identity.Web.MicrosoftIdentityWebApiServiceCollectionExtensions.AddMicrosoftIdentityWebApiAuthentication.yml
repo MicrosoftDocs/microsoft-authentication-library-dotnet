@@ -1,0 +1,92 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.Identity.Web.MicrosoftIdentityWebApiAuthenticationBuilderWithConfiguration?alt=Microsoft.Identity.Web.MicrosoftIdentityWebApiAuthenticationBuilderWithConfiguration&text=MicrosoftIdentityWebApiAuthenticationBuilderWithConfiguration" data-throw-if-not-resolved="True"/>
+    description: The authentication builder to chain extension methods.
+  parameters:
+  - namesWithMoniker:
+    - value: services
+    description: Service collection to which to add authentication.
+    type: <xref href="Microsoft.Extensions.DependencyInjection.IServiceCollection?alt=Microsoft.Extensions.DependencyInjection.IServiceCollection&text=IServiceCollection" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: configuration
+    description: The Configuration object.
+    type: <xref href="Microsoft.Extensions.Configuration.IConfiguration?alt=Microsoft.Extensions.Configuration.IConfiguration&text=IConfiguration" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: configSectionName
+    description: The configuration section with the necessary settings to initialize authentication options.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: jwtBearerScheme
+    description: The JwtBearer scheme name to be used. By default it uses "Bearer".
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: subscribeToJwtBearerMiddlewareDiagnosticsEvents
+    description: Set to true if you want to debug, or just understand the JwtBearer events.
+    type: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Web.MicrosoftIdentityWebApiServiceCollectionExtensions.AddMicrosoftIdentityWebApiAuthentication(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration,System.String,System.String,System.Boolean)
+  commentId: M:Microsoft.Identity.Web.MicrosoftIdentityWebApiServiceCollectionExtensions.AddMicrosoftIdentityWebApiAuthentication(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration,System.String,System.String,System.Boolean)
+  name: AddMicrosoftIdentityWebApiAuthentication(IServiceCollection, IConfiguration, String, String, Boolean)
+  fullName: Microsoft.Identity.Web.MicrosoftIdentityWebApiServiceCollectionExtensions.AddMicrosoftIdentityWebApiAuthentication(IServiceCollection, IConfiguration, String, String, Boolean)
+  nameWithType: MicrosoftIdentityWebApiServiceCollectionExtensions.AddMicrosoftIdentityWebApiAuthentication(IServiceCollection, IConfiguration, String, String, Boolean)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public static Microsoft.Identity.Web.MicrosoftIdentityWebApiAuthenticationBuilderWithConfiguration AddMicrosoftIdentityWebApiAuthentication (this Microsoft.Extensions.DependencyInjection.IServiceCollection services, Microsoft.Extensions.Configuration.IConfiguration configuration, string configSectionName = "AzureAd", string jwtBearerScheme = "Bearer", bool subscribeToJwtBearerMiddlewareDiagnosticsEvents = false);
+  - lang: fsharp
+    values:
+    - value: 'static member AddMicrosoftIdentityWebApiAuthentication : Microsoft.Extensions.DependencyInjection.IServiceCollection * Microsoft.Extensions.Configuration.IConfiguration * string * string * bool -> Microsoft.Identity.Web.MicrosoftIdentityWebApiAuthenticationBuilderWithConfiguration'
+  - lang: vb
+    values:
+    - value: >-
+        <Extension()>
+
+        Public Function AddMicrosoftIdentityWebApiAuthentication (services As IServiceCollection, configuration As IConfiguration, Optional configSectionName As String = "AzureAd", Optional jwtBearerScheme As String = "Bearer", Optional subscribeToJwtBearerMiddlewareDiagnosticsEvents As Boolean = false) As MicrosoftIdentityWebApiAuthenticationBuilderWithConfiguration
+  monikers:
+  - msal-model-dotnet-latest
+  summary: >-
+    Protects the web API with Microsoft identity platform (formerly Azure AD v2.0)
+
+    This method expects the configuration file will have a section, named "AzureAd" as default, with the necessary settings to initialize authentication options.
+  metadata: {}
+uid: Microsoft.Identity.Web.MicrosoftIdentityWebApiServiceCollectionExtensions.AddMicrosoftIdentityWebApiAuthentication*
+commentId: Overload:Microsoft.Identity.Web.MicrosoftIdentityWebApiServiceCollectionExtensions.AddMicrosoftIdentityWebApiAuthentication
+namespace: Microsoft.Identity.Web
+name: AddMicrosoftIdentityWebApiAuthentication
+fullName: Microsoft.Identity.Web.MicrosoftIdentityWebApiServiceCollectionExtensions.AddMicrosoftIdentityWebApiAuthentication
+nameWithType: MicrosoftIdentityWebApiServiceCollectionExtensions.AddMicrosoftIdentityWebApiAuthentication
+assembliesWithMoniker:
+- value: Microsoft.Identity.Web.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Web v1.25.10
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-model-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Web.MicrosoftIdentityWebApiServiceCollectionExtensions.AddMicrosoftIdentityWebApiAuthentication
+  api_location:
+  - Microsoft.Identity.Web.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Web.MicrosoftIdentityWebApiServiceCollectionExtensions.AddMicrosoftIdentityWebApiAuthentication
+  - Microsoft::Identity::Web::MicrosoftIdentityWebApiServiceCollectionExtensions::AddMicrosoftIdentityWebApiAuthentication
+  - AddMicrosoftIdentityWebApiAuthentication
+  - MicrosoftIdentityWebApiServiceCollectionExtensions.AddMicrosoftIdentityWebApiAuthentication
+  - MicrosoftIdentityWebApiServiceCollectionExtensions::AddMicrosoftIdentityWebApiAuthentication
+  helpviewer_keywords:
+  - MicrosoftIdentityWebApiServiceCollectionExtensions.AddMicrosoftIdentityWebApiAuthentication method [.NET]
+  - AddMicrosoftIdentityWebApiAuthentication method [.NET], class MicrosoftIdentityWebApiServiceCollectionExtensions
+  - MicrosoftIdentityWebApiServiceCollectionExtensions.AddMicrosoftIdentityWebApiAuthentication(IServiceCollection, IConfiguration, String, String, Boolean) extension method [.NET]
+  - AddMicrosoftIdentityWebApiAuthentication(IServiceCollection, IConfiguration, String, String, Boolean) extension method [.NET], class MicrosoftIdentityWebApiServiceCollectionExtensions
+  monikers:
+  - msal-model-dotnet-latest

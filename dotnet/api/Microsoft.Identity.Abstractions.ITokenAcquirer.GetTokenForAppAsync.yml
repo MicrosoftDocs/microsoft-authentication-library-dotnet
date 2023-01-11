@@ -1,0 +1,86 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Abstractions.AcquireTokenResult?alt=Microsoft.Identity.Abstractions.AcquireTokenResult&text=AcquireTokenResult" data-throw-if-not-resolved="True"/>&gt;
+    description: An authentication result for the app itself, based on its scopes.
+  parameters:
+  - namesWithMoniker:
+    - value: scope
+    description: >-
+      The scope requested to access a protected API. For this flow (client credentials), the scope
+                  should be of the form "{ResourceIdUri/.default}" for instance <code data-dev-comment-type="c">https://management.azure.net/.default</code> or, for Microsoft
+                  Graph, <code data-dev-comment-type="c">https://graph.microsoft.com/.default</code> as the requested scopes are defined statically with the application registration
+                  in the portal, and cannot be overridden in the application, as you can request a token for only one resource at a time (use
+                  several calls to get tokens for other resources).
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: tokenAcquisitionOptions
+    description: Options passed-in to create the token acquisition object which calls into MSAL .NET.
+    type: <xref href="Microsoft.Identity.Abstractions.AcquireTokenOptions?alt=Microsoft.Identity.Abstractions.AcquireTokenOptions&text=AcquireTokenOptions" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: cancellationToken
+    description: Cancellation token
+    type: <xref href="System.Threading.CancellationToken?alt=System.Threading.CancellationToken&text=CancellationToken" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Abstractions.ITokenAcquirer.GetTokenForAppAsync(System.String,Microsoft.Identity.Abstractions.AcquireTokenOptions,System.Threading.CancellationToken)
+  commentId: M:Microsoft.Identity.Abstractions.ITokenAcquirer.GetTokenForAppAsync(System.String,Microsoft.Identity.Abstractions.AcquireTokenOptions,System.Threading.CancellationToken)
+  name: GetTokenForAppAsync(String, AcquireTokenOptions, CancellationToken)
+  fullName: Microsoft.Identity.Abstractions.ITokenAcquirer.GetTokenForAppAsync(String, AcquireTokenOptions, CancellationToken)
+  nameWithType: ITokenAcquirer.GetTokenForAppAsync(String, AcquireTokenOptions, CancellationToken)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public System.Threading.Tasks.Task<Microsoft.Identity.Abstractions.AcquireTokenResult> GetTokenForAppAsync (string scope, Microsoft.Identity.Abstractions.AcquireTokenOptions? tokenAcquisitionOptions = default, System.Threading.CancellationToken cancellationToken = default);
+  - lang: fsharp
+    values:
+    - value: 'abstract member GetTokenForAppAsync : string * Microsoft.Identity.Abstractions.AcquireTokenOptions * System.Threading.CancellationToken -> System.Threading.Tasks.Task<Microsoft.Identity.Abstractions.AcquireTokenResult>'
+  - lang: vb
+    values:
+    - value: Public Function GetTokenForAppAsync (scope As String, Optional tokenAcquisitionOptions As AcquireTokenOptions = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of AcquireTokenResult)
+  monikers:
+  - msal-model-dotnet-latest
+  summary: >-
+    Acquires an authentication result from the authority configured in the app, for the confidential client itself (not on behalf of a user)
+
+    using the client credentials flow. See https://aka.ms/msal-net-client-credentials.
+  metadata: {}
+uid: Microsoft.Identity.Abstractions.ITokenAcquirer.GetTokenForAppAsync*
+commentId: Overload:Microsoft.Identity.Abstractions.ITokenAcquirer.GetTokenForAppAsync
+namespace: Microsoft.Identity.Abstractions
+name: GetTokenForAppAsync
+fullName: Microsoft.Identity.Abstractions.ITokenAcquirer.GetTokenForAppAsync
+nameWithType: ITokenAcquirer.GetTokenForAppAsync
+assembliesWithMoniker:
+- value: Microsoft.Identity.Abstractions.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Abstractions v1.1.0
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-model-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Abstractions.ITokenAcquirer.GetTokenForAppAsync
+  api_location:
+  - Microsoft.Identity.Abstractions.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Abstractions.ITokenAcquirer.GetTokenForAppAsync
+  - Microsoft::Identity::Abstractions::ITokenAcquirer::GetTokenForAppAsync
+  - GetTokenForAppAsync
+  - ITokenAcquirer.GetTokenForAppAsync
+  - ITokenAcquirer::GetTokenForAppAsync
+  helpviewer_keywords:
+  - ITokenAcquirer.GetTokenForAppAsync method [.NET]
+  - GetTokenForAppAsync method [.NET], interface ITokenAcquirer
+  - ITokenAcquirer.GetTokenForAppAsync(String, AcquireTokenOptions, CancellationToken) method [.NET]
+  - GetTokenForAppAsync(String, AcquireTokenOptions, CancellationToken) method [.NET], interface ITokenAcquirer
+  monikers:
+  - msal-model-dotnet-latest

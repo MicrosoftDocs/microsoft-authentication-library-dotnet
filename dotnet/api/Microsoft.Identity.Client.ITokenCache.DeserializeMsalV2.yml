@@ -1,0 +1,77 @@
+### YamlMime:NetMember
+type: method
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: msalV2State
+    description: Byte stream representation of the cache
+    type: <xref href="System.Byte?alt=System.Byte&text=Byte" data-throw-if-not-resolved="True"/>[]
+  type: method
+  uid: Microsoft.Identity.Client.ITokenCache.DeserializeMsalV2(System.Byte[])
+  commentId: M:Microsoft.Identity.Client.ITokenCache.DeserializeMsalV2(System.Byte[])
+  name: DeserializeMsalV2(Byte[])
+  fullName: Microsoft.Identity.Client.ITokenCache.DeserializeMsalV2(Byte[])
+  nameWithType: ITokenCache.DeserializeMsalV2(Byte[])
+  attributesWithMoniker:
+  - value: System.ObsoleteAttribute
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: >-
+        [System.Obsolete("Use ITokenCacheSerializer.DeserializeMsalV2 on the TokenCacheNotificationArgs in the cache callback. Read more: https://aka.ms/msal-net-4x-cache-breaking-change", false)]
+
+        public void DeserializeMsalV2 (byte[] msalV2State);
+  - lang: fsharp
+    values:
+    - value: >-
+        [<System.Obsolete("Use ITokenCacheSerializer.DeserializeMsalV2 on the TokenCacheNotificationArgs in the cache callback. Read more: https://aka.ms/msal-net-4x-cache-breaking-change", false)>]
+
+        abstract member DeserializeMsalV2 : byte[] -> unit
+  - lang: vb
+    values:
+    - value: Public Sub DeserializeMsalV2 (msalV2State As Byte())
+  monikers:
+  - msal-dotnet-latest
+  obsoleteMessagesWithMoniker:
+  - value: 'Use ITokenCacheSerializer.DeserializeMsalV2 on the TokenCacheNotificationArgs in the cache callback. Read more: https://aka.ms/msal-net-4x-cache-breaking-change'
+  summary: Functionality replaced by <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITokenCacheSerializer.DeserializeMsalV2(System.Byte[])"></xref> and is accessible in TokenCacheNotificationArgs.
+  remarks: <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITokenCache.SerializeMsalV3"></xref>/<xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITokenCache.DeserializeMsalV3(System.Byte[],System.Boolean)"></xref> is compatible with other MSAL libraries such as MSAL for Python and MSAL for Java.
+  metadata: {}
+uid: Microsoft.Identity.Client.ITokenCache.DeserializeMsalV2*
+commentId: Overload:Microsoft.Identity.Client.ITokenCache.DeserializeMsalV2
+namespace: Microsoft.Identity.Client
+name: DeserializeMsalV2
+fullName: Microsoft.Identity.Client.ITokenCache.DeserializeMsalV2
+nameWithType: ITokenCache.DeserializeMsalV2
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.ITokenCache.DeserializeMsalV2
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.ITokenCache.DeserializeMsalV2
+  - Microsoft::Identity::Client::ITokenCache::DeserializeMsalV2
+  - DeserializeMsalV2
+  - ITokenCache.DeserializeMsalV2
+  - ITokenCache::DeserializeMsalV2
+  helpviewer_keywords:
+  - ITokenCache.DeserializeMsalV2 method [.NET]
+  - DeserializeMsalV2 method [.NET], interface ITokenCache
+  - ITokenCache.DeserializeMsalV2(Byte[]) method [.NET]
+  - DeserializeMsalV2(Byte[]) method [.NET], interface ITokenCache
+  monikers:
+  - msal-dotnet-latest

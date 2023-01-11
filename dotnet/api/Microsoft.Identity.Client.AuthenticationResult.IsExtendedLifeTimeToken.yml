@@ -1,0 +1,78 @@
+### YamlMime:NetMember
+type: property
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  type: property
+  uid: Microsoft.Identity.Client.AuthenticationResult.IsExtendedLifeTimeToken
+  commentId: P:Microsoft.Identity.Client.AuthenticationResult.IsExtendedLifeTimeToken
+  name: IsExtendedLifeTimeToken
+  fullName: Microsoft.Identity.Client.AuthenticationResult.IsExtendedLifeTimeToken
+  nameWithType: AuthenticationResult.IsExtendedLifeTimeToken
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public bool IsExtendedLifeTimeToken { get; }
+  - lang: fsharp
+    values:
+    - value: 'member this.IsExtendedLifeTimeToken : bool'
+  - lang: vb
+    values:
+    - value: Public ReadOnly Property IsExtendedLifeTimeToken As Boolean
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    In case when Azure AD has an outage, to be more resilient, it can return tokens with
+
+    an expiration time, and also with an extended expiration time.
+
+    The tokens are then automatically refreshed by MSAL when the time is more than the
+
+    expiration time, except when ExtendedLifeTimeEnabled is true and the time is less
+
+    than the extended expiration time. This goes in pair with Web APIs middleware which,
+
+    when this extended life time is enabled, can accept slightly expired tokens.
+
+    Client applications accept extended life time tokens only if
+
+    the ExtendedLifeTimeEnabled Boolean is set to true on ClientApplicationBase.
+  metadata: {}
+uid: Microsoft.Identity.Client.AuthenticationResult.IsExtendedLifeTimeToken*
+commentId: Overload:Microsoft.Identity.Client.AuthenticationResult.IsExtendedLifeTimeToken
+namespace: Microsoft.Identity.Client
+name: IsExtendedLifeTimeToken
+fullName: Microsoft.Identity.Client.AuthenticationResult.IsExtendedLifeTimeToken
+nameWithType: AuthenticationResult.IsExtendedLifeTimeToken
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.AuthenticationResult.IsExtendedLifeTimeToken
+  - Microsoft.Identity.Client.AuthenticationResult.get_IsExtendedLifeTimeToken
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.AuthenticationResult.IsExtendedLifeTimeToken
+  - Microsoft::Identity::Client::AuthenticationResult::IsExtendedLifeTimeToken
+  - IsExtendedLifeTimeToken
+  - AuthenticationResult.IsExtendedLifeTimeToken
+  - AuthenticationResult::IsExtendedLifeTimeToken
+  helpviewer_keywords:
+  - AuthenticationResult.IsExtendedLifeTimeToken property [.NET]
+  - IsExtendedLifeTimeToken property [.NET], class AuthenticationResult
+  monikers:
+  - msal-dotnet-latest

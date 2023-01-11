@@ -1,0 +1,76 @@
+### YamlMime:NetMember
+type: method
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: afterAccess
+    description: >-
+      Delegate set in order to handle the cache serialization in the case where the <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.TokenCache.HasStateChanged"></xref>
+                  member of the cache is <code data-dev-comment-type="c">true</code>
+    type: <xref href="System.Func`2?alt=System.Func&text=Func" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Client.TokenCacheNotificationArgs?alt=Microsoft.Identity.Client.TokenCacheNotificationArgs&text=TokenCacheNotificationArgs" data-throw-if-not-resolved="True"/>,<xref href="System.Threading.Tasks.Task?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&gt;
+  type: method
+  uid: Microsoft.Identity.Client.ITokenCache.SetAfterAccessAsync(System.Func{Microsoft.Identity.Client.TokenCacheNotificationArgs,System.Threading.Tasks.Task})
+  commentId: M:Microsoft.Identity.Client.ITokenCache.SetAfterAccessAsync(System.Func{Microsoft.Identity.Client.TokenCacheNotificationArgs,System.Threading.Tasks.Task})
+  name: SetAfterAccessAsync(Func<TokenCacheNotificationArgs,Task>)
+  fullName: Microsoft.Identity.Client.ITokenCache.SetAfterAccessAsync(Func<TokenCacheNotificationArgs,Task>)
+  nameWithType: ITokenCache.SetAfterAccessAsync(Func<TokenCacheNotificationArgs,Task>)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public void SetAfterAccessAsync (Func<Microsoft.Identity.Client.TokenCacheNotificationArgs,System.Threading.Tasks.Task> afterAccess);
+  - lang: fsharp
+    values:
+    - value: 'abstract member SetAfterAccessAsync : Func<Microsoft.Identity.Client.TokenCacheNotificationArgs, System.Threading.Tasks.Task> -> unit'
+  - lang: vb
+    values:
+    - value: Public Sub SetAfterAccessAsync (afterAccess As Func(Of TokenCacheNotificationArgs, Task))
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    Sets a delegate to be notified after any library method accesses the cache. This gives an option to the
+
+    delegate to serialize a cache entry for the application and accounts specified in the <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.TokenCacheNotificationArgs"></xref>.
+
+    See https://aka.ms/msal-net-token-cache-serialization.
+
+    This provides the same functionality as SetAfterAccess but it provides for an async/task-based callback.
+  remarks: <p>In the case where the delegate is used to serialize the cache entirely (not just a row), it might want to call <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITokenCacheSerializer.SerializeMsalV3"></xref></p>
+  metadata: {}
+uid: Microsoft.Identity.Client.ITokenCache.SetAfterAccessAsync*
+commentId: Overload:Microsoft.Identity.Client.ITokenCache.SetAfterAccessAsync
+namespace: Microsoft.Identity.Client
+name: SetAfterAccessAsync
+fullName: Microsoft.Identity.Client.ITokenCache.SetAfterAccessAsync
+nameWithType: ITokenCache.SetAfterAccessAsync
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.ITokenCache.SetAfterAccessAsync
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.ITokenCache.SetAfterAccessAsync
+  - Microsoft::Identity::Client::ITokenCache::SetAfterAccessAsync
+  - SetAfterAccessAsync
+  - ITokenCache.SetAfterAccessAsync
+  - ITokenCache::SetAfterAccessAsync
+  helpviewer_keywords:
+  - ITokenCache.SetAfterAccessAsync method [.NET]
+  - SetAfterAccessAsync method [.NET], interface ITokenCache
+  - ITokenCache.SetAfterAccessAsync(Func<TokenCacheNotificationArgs,Task>) method [.NET]
+  - SetAfterAccessAsync(Func<TokenCacheNotificationArgs,Task>) method [.NET], interface ITokenCache
+  monikers:
+  - msal-dotnet-latest

@@ -1,0 +1,65 @@
+### YamlMime:NetMember
+type: property
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  type: property
+  uid: Microsoft.IdentityModel.Tokens.TokenValidationParameters.ValidateIssuer
+  commentId: P:Microsoft.IdentityModel.Tokens.TokenValidationParameters.ValidateIssuer
+  name: ValidateIssuer
+  fullName: Microsoft.IdentityModel.Tokens.TokenValidationParameters.ValidateIssuer
+  nameWithType: TokenValidationParameters.ValidateIssuer
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public bool ValidateIssuer { get; set; }
+  - lang: fsharp
+    values:
+    - value: 'member this.ValidateIssuer : bool with get, set'
+  - lang: vb
+    values:
+    - value: Public Property ValidateIssuer As Boolean
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Gets or sets a boolean to control if the issuer will be validated during token validation.
+  remarks: <p>Validation of the issuer mitigates forwarding attacks that can occur when an IdentityProvider represents multiple tenants and signs tokens with the same keys. It is possible that a token issued for the same audience could be from a different tenant. For example an application could accept users from contoso.onmicrosoft.com but not fabrikam.onmicrosoft.com, both valid tenants. An application that accepts tokens from fabrikam could forward them to the application that accepts tokens for contoso. This boolean only applies to default issuer validation. If <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.TokenValidationParameters.IssuerValidator"></xref> is set, it will be called regardless of whether this property is true or false. The default is <code data-dev-comment-type="c">true</code>.</p>
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.TokenValidationParameters.ValidateIssuer*
+commentId: Overload:Microsoft.IdentityModel.Tokens.TokenValidationParameters.ValidateIssuer
+namespace: Microsoft.IdentityModel.Tokens
+name: ValidateIssuer
+fullName: Microsoft.IdentityModel.Tokens.TokenValidationParameters.ValidateIssuer
+nameWithType: TokenValidationParameters.ValidateIssuer
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.TokenValidationParameters.ValidateIssuer
+  - Microsoft.IdentityModel.Tokens.TokenValidationParameters.get_ValidateIssuer
+  - Microsoft.IdentityModel.Tokens.TokenValidationParameters.set_ValidateIssuer
+  api_location:
+  - Microsoft.IdentityModel.Tokens.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.TokenValidationParameters.ValidateIssuer
+  - Microsoft::IdentityModel::Tokens::TokenValidationParameters::ValidateIssuer
+  - ValidateIssuer
+  - TokenValidationParameters.ValidateIssuer
+  - TokenValidationParameters::ValidateIssuer
+  helpviewer_keywords:
+  - TokenValidationParameters.ValidateIssuer property [.NET]
+  - ValidateIssuer property [.NET], class TokenValidationParameters
+  monikers:
+  - msal-web-dotnet-latest

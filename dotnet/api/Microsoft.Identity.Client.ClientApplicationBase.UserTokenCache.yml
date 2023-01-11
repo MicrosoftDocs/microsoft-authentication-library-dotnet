@@ -1,0 +1,75 @@
+### YamlMime:NetMember
+type: property
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.Identity.Client.ITokenCache?alt=Microsoft.Identity.Client.ITokenCache&text=ITokenCache" data-throw-if-not-resolved="True"/>
+  implementsWithMoniker:
+  - value: <xref href="Microsoft.Identity.Client.IClientApplicationBase.UserTokenCache?alt=Microsoft.Identity.Client.IClientApplicationBase.UserTokenCache&text=UserTokenCache" data-throw-if-not-resolved="True"/>
+  type: property
+  uid: Microsoft.Identity.Client.ClientApplicationBase.UserTokenCache
+  commentId: P:Microsoft.Identity.Client.ClientApplicationBase.UserTokenCache
+  name: UserTokenCache
+  fullName: Microsoft.Identity.Client.ClientApplicationBase.UserTokenCache
+  nameWithType: ClientApplicationBase.UserTokenCache
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public Microsoft.Identity.Client.ITokenCache UserTokenCache { get; }
+  - lang: fsharp
+    values:
+    - value: 'member this.UserTokenCache : Microsoft.Identity.Client.ITokenCache'
+  - lang: vb
+    values:
+    - value: Public ReadOnly Property UserTokenCache As ITokenCache
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    User token cache. It holds access tokens, id tokens and refresh tokens for accounts. It's used
+
+    and updated silently if needed when calling <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ClientApplicationBase.AcquireTokenSilent(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount)"></xref>
+
+    or one of the overrides of <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ClientApplicationBase.AcquireTokenSilent(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount)"></xref>.
+
+    It is updated by each AcquireTokenXXX method, with the exception of <code data-dev-comment-type="c">AcquireTokenForClient</code> which only uses the application
+
+    cache (see <code data-dev-comment-type="c">IConfidentialClientApplication</code>).
+  remarks: <p>On .NET Framework and .NET Core you can also customize the token cache serialization. See https://aka.ms/msal-net-token-cache-serialization. This is taken care of by MSAL.NET on mobile platforms and on UWP. It is recommended to use token cache serialization for web site and web api scenarios.</p>
+  metadata: {}
+uid: Microsoft.Identity.Client.ClientApplicationBase.UserTokenCache*
+commentId: Overload:Microsoft.Identity.Client.ClientApplicationBase.UserTokenCache
+namespace: Microsoft.Identity.Client
+name: UserTokenCache
+fullName: Microsoft.Identity.Client.ClientApplicationBase.UserTokenCache
+nameWithType: ClientApplicationBase.UserTokenCache
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.ClientApplicationBase.UserTokenCache
+  - Microsoft.Identity.Client.ClientApplicationBase.get_UserTokenCache
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.ClientApplicationBase.UserTokenCache
+  - Microsoft::Identity::Client::ClientApplicationBase::UserTokenCache
+  - UserTokenCache
+  - ClientApplicationBase.UserTokenCache
+  - ClientApplicationBase::UserTokenCache
+  helpviewer_keywords:
+  - ClientApplicationBase.UserTokenCache property [.NET]
+  - UserTokenCache property [.NET], class ClientApplicationBase
+  monikers:
+  - msal-dotnet-latest

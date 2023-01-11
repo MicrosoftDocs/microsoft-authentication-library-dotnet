@@ -1,0 +1,76 @@
+### YamlMime:NetMember
+type: constructor
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: key
+    description: the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityKey"></xref> used during <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionProvider.Encrypt(System.Byte[],System.Byte[])"></xref>
+    type: <xref href="Microsoft.IdentityModel.Tokens.SecurityKey?alt=Microsoft.IdentityModel.Tokens.SecurityKey&text=SecurityKey" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: ciphertext
+    description: protected text.
+    type: <xref href="System.Byte?alt=System.Byte&text=Byte" data-throw-if-not-resolved="True"/>[]
+  - namesWithMoniker:
+    - value: iv
+    description: the initialization vector used.
+    type: <xref href="System.Byte?alt=System.Byte&text=Byte" data-throw-if-not-resolved="True"/>[]
+  - namesWithMoniker:
+    - value: authenticationTag
+    description: the bytes that need be passed to <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionProvider.Decrypt(System.Byte[],System.Byte[],System.Byte[],System.Byte[])"></xref>.
+    type: <xref href="System.Byte?alt=System.Byte&text=Byte" data-throw-if-not-resolved="True"/>[]
+  type: constructor
+  uid: Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionResult.#ctor(Microsoft.IdentityModel.Tokens.SecurityKey,System.Byte[],System.Byte[],System.Byte[])
+  commentId: M:Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionResult.#ctor(Microsoft.IdentityModel.Tokens.SecurityKey,System.Byte[],System.Byte[],System.Byte[])
+  name: AuthenticatedEncryptionResult(SecurityKey, Byte[], Byte[], Byte[])
+  fullName: Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionResult.AuthenticatedEncryptionResult(SecurityKey, Byte[], Byte[], Byte[])
+  nameWithType: AuthenticatedEncryptionResult.AuthenticatedEncryptionResult(SecurityKey, Byte[], Byte[], Byte[])
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public AuthenticatedEncryptionResult (Microsoft.IdentityModel.Tokens.SecurityKey key, byte[] ciphertext, byte[] iv, byte[] authenticationTag);
+  - lang: fsharp
+    values:
+    - value: 'new Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionResult : Microsoft.IdentityModel.Tokens.SecurityKey * byte[] * byte[] * byte[] -> Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionResult'
+  - lang: vb
+    values:
+    - value: Public Sub New (key As SecurityKey, ciphertext As Byte(), iv As Byte(), authenticationTag As Byte())
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Initializes a new <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionResult"></xref>
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionResult.#ctor*
+commentId: Overload:Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionResult.#ctor
+namespace: Microsoft.IdentityModel.Tokens
+name: AuthenticatedEncryptionResult
+fullName: Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionResult.AuthenticatedEncryptionResult
+nameWithType: AuthenticatedEncryptionResult.AuthenticatedEncryptionResult
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionResult..ctor
+  api_location:
+  - Microsoft.IdentityModel.Tokens.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionResult.#ctor
+  - Microsoft::IdentityModel::Tokens::AuthenticatedEncryptionResult::#ctor
+  - '#ctor'
+  - AuthenticatedEncryptionResult.#ctor
+  - AuthenticatedEncryptionResult::#ctor
+  helpviewer_keywords:
+  - AuthenticatedEncryptionResult class [.NET], constructors
+  - AuthenticatedEncryptionResult(SecurityKey, Byte[], Byte[], Byte[]) class [.NET], constructors
+  monikers:
+  - msal-web-dotnet-latest

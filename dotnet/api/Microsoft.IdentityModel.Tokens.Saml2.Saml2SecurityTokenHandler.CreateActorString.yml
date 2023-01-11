@@ -1,0 +1,74 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+    description: A well-formed XML string.
+  parameters:
+  - namesWithMoniker:
+    - value: actor
+    description: A <xref data-throw-if-not-resolved="true" uid="System.Security.Claims.ClaimsIdentity"></xref> to be transformed.
+    type: <xref href="System.Security.Claims.ClaimsIdentity?alt=System.Security.Claims.ClaimsIdentity&text=ClaimsIdentity" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: if <code data-dev-comment-type="paramref">actor</code> is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.CreateActorString(System.Security.Claims.ClaimsIdentity)
+  commentId: M:Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.CreateActorString(System.Security.Claims.ClaimsIdentity)
+  name: CreateActorString(ClaimsIdentity)
+  fullName: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.CreateActorString(ClaimsIdentity)
+  nameWithType: Saml2SecurityTokenHandler.CreateActorString(ClaimsIdentity)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected string CreateActorString (System.Security.Claims.ClaimsIdentity actor);
+  - lang: fsharp
+    values:
+    - value: 'member this.CreateActorString : System.Security.Claims.ClaimsIdentity -> string'
+  - lang: vb
+    values:
+    - value: Protected Function CreateActorString (actor As ClaimsIdentity) As String
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Transforms a ClaimsIdentity into a string.
+  remarks: '<p>Normally this is called when creating a <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2Assertion"></xref> from a <xref data-throw-if-not-resolved="true" uid="System.Security.Claims.ClaimsIdentity"></xref>. When <xref data-throw-if-not-resolved="true" uid="System.Security.Claims.ClaimsIdentity.Actor"></xref> is not null, this method is called to create an string representation to add as an attribute.</p><p>The string is formed: "&lt;Actor&gt;&lt;Attribute name, namespace&gt;&lt;AttributeValue&gt;...&lt;/AttributeValue&gt;, ...&lt;/Attribute&gt;...&lt;/Actor&gt;</p>'
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.CreateActorString*
+commentId: Overload:Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.CreateActorString
+namespace: Microsoft.IdentityModel.Tokens.Saml2
+name: CreateActorString
+fullName: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.CreateActorString
+nameWithType: Saml2SecurityTokenHandler.CreateActorString
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.CreateActorString
+  api_location:
+  - Microsoft.IdentityModel.Tokens.Saml.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.CreateActorString
+  - Microsoft::IdentityModel::Tokens::Saml2::Saml2SecurityTokenHandler::CreateActorString
+  - CreateActorString
+  - Saml2SecurityTokenHandler.CreateActorString
+  - Saml2SecurityTokenHandler::CreateActorString
+  helpviewer_keywords:
+  - Saml2SecurityTokenHandler.CreateActorString method [.NET]
+  - CreateActorString method [.NET], class Saml2SecurityTokenHandler
+  - Saml2SecurityTokenHandler.CreateActorString(ClaimsIdentity) method [.NET]
+  - CreateActorString(ClaimsIdentity) method [.NET], class Saml2SecurityTokenHandler
+  monikers:
+  - msal-web-dotnet-latest

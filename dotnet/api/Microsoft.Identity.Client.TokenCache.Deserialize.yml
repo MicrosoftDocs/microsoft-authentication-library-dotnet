@@ -1,0 +1,88 @@
+### YamlMime:NetMember
+type: method
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: msalV2State
+    description: Array of bytes containing serialized MSAL.NET V2 cache data
+    type: <xref href="System.Byte?alt=System.Byte&text=Byte" data-throw-if-not-resolved="True"/>[]
+  implementsWithMoniker:
+  - value: <xref href="Microsoft.Identity.Client.ITokenCache.Deserialize(System.Byte[])?alt=Microsoft.Identity.Client.ITokenCache.Deserialize(System.Byte[])&text=Deserialize(Byte%5B%5D)" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.TokenCache.Deserialize(System.Byte[])
+  commentId: M:Microsoft.Identity.Client.TokenCache.Deserialize(System.Byte[])
+  name: Deserialize(Byte[])
+  fullName: Microsoft.Identity.Client.TokenCache.Deserialize(Byte[])
+  nameWithType: TokenCache.Deserialize(Byte[])
+  attributesWithMoniker:
+  - value: System.ObsoleteAttribute
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: >-
+        [System.Obsolete("This is expected to be removed in MSAL.NET v5. We recommend using SerializeMsalV3/DeserializeMsalV3. Read more: https://aka.ms/msal-net-3x-cache-breaking-change", false)]
+
+        public void Deserialize (byte[] msalV2State);
+  - lang: fsharp
+    values:
+    - value: >-
+        [<System.Obsolete("This is expected to be removed in MSAL.NET v5. We recommend using SerializeMsalV3/DeserializeMsalV3. Read more: https://aka.ms/msal-net-3x-cache-breaking-change", false)>]
+
+        abstract member Deserialize : byte[] -> unit
+
+        override this.Deserialize : byte[] -> unit
+  - lang: vb
+    values:
+    - value: Public Sub Deserialize (msalV2State As Byte())
+  monikers:
+  - msal-dotnet-latest
+  obsoleteMessagesWithMoniker:
+  - value: 'This is expected to be removed in MSAL.NET v5. We recommend using SerializeMsalV3/DeserializeMsalV3. Read more: https://aka.ms/msal-net-3x-cache-breaking-change'
+  summary: >-
+    Deserializes the token cache from a serialization blob in the unified cache format
+
+    Obsolete: Please use specialized Deserialization methods.
+
+    <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITokenCacheSerializer.DeserializeMsalV2(System.Byte[])"></xref> replaces <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.TokenCache.Deserialize(System.Byte[])"></xref><xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITokenCacheSerializer.SerializeMsalV3"></xref>/<xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITokenCacheSerializer.DeserializeMsalV3(System.Byte[],System.Boolean)"></xref> Is our recommended way of serializing/deserializing.
+
+    <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITokenCacheSerializer.DeserializeAdalV3(System.Byte[])"></xref> For interoperability with ADAL.NET v3
+  remarks: <p><xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITokenCacheSerializer.SerializeMsalV3"></xref>/<xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITokenCacheSerializer.DeserializeMsalV3(System.Byte[],System.Boolean)"></xref> is compatible with other MSAL libraries such as MSAL for Python and MSAL for Java. <code data-dev-comment-type="paramref">msalV2State</code>Is a Json blob containing access tokens, refresh tokens, id tokens and accounts information.</p>
+  metadata: {}
+uid: Microsoft.Identity.Client.TokenCache.Deserialize*
+commentId: Overload:Microsoft.Identity.Client.TokenCache.Deserialize
+namespace: Microsoft.Identity.Client
+name: Deserialize
+fullName: Microsoft.Identity.Client.TokenCache.Deserialize
+nameWithType: TokenCache.Deserialize
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.TokenCache.Deserialize
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.TokenCache.Deserialize
+  - Microsoft::Identity::Client::TokenCache::Deserialize
+  - Deserialize
+  - TokenCache.Deserialize
+  - TokenCache::Deserialize
+  helpviewer_keywords:
+  - TokenCache.Deserialize method [.NET]
+  - Deserialize method [.NET], class TokenCache
+  - TokenCache.Deserialize(Byte[]) method [.NET]
+  - Deserialize(Byte[]) method [.NET], class TokenCache
+  monikers:
+  - msal-dotnet-latest

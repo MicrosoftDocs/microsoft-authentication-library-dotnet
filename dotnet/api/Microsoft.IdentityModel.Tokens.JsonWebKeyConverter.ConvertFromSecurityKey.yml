@@ -1,0 +1,76 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.IdentityModel.Tokens.JsonWebKey?alt=Microsoft.IdentityModel.Tokens.JsonWebKey&text=JsonWebKey" data-throw-if-not-resolved="True"/>
+    description: a <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.JsonWebKey"></xref>
+  parameters:
+  - namesWithMoniker:
+    - value: key
+    description: a <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityKey"></xref> to convert.
+    type: <xref href="Microsoft.IdentityModel.Tokens.SecurityKey?alt=Microsoft.IdentityModel.Tokens.SecurityKey&text=SecurityKey" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: if <code data-dev-comment-type="paramref">key</code>is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: if <code data-dev-comment-type="paramref">key</code>is not a supported type.
+    type: <xref href="System.NotSupportedException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.JsonWebKeyConverter.ConvertFromSecurityKey(Microsoft.IdentityModel.Tokens.SecurityKey)
+  commentId: M:Microsoft.IdentityModel.Tokens.JsonWebKeyConverter.ConvertFromSecurityKey(Microsoft.IdentityModel.Tokens.SecurityKey)
+  name: ConvertFromSecurityKey(SecurityKey)
+  fullName: Microsoft.IdentityModel.Tokens.JsonWebKeyConverter.ConvertFromSecurityKey(SecurityKey)
+  nameWithType: JsonWebKeyConverter.ConvertFromSecurityKey(SecurityKey)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public static Microsoft.IdentityModel.Tokens.JsonWebKey ConvertFromSecurityKey (Microsoft.IdentityModel.Tokens.SecurityKey key);
+  - lang: fsharp
+    values:
+    - value: 'static member ConvertFromSecurityKey : Microsoft.IdentityModel.Tokens.SecurityKey -> Microsoft.IdentityModel.Tokens.JsonWebKey'
+  - lang: vb
+    values:
+    - value: Public Shared Function ConvertFromSecurityKey (key As SecurityKey) As JsonWebKey
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Converts a <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityKey"></xref> into a <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.JsonWebKey"></xref>
+  remarks: 'Supports: <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.RsaSecurityKey"></xref>, <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.X509SecurityKey"></xref> and <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SymmetricSecurityKey"></xref>.'
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.JsonWebKeyConverter.ConvertFromSecurityKey*
+commentId: Overload:Microsoft.IdentityModel.Tokens.JsonWebKeyConverter.ConvertFromSecurityKey
+namespace: Microsoft.IdentityModel.Tokens
+name: ConvertFromSecurityKey
+fullName: Microsoft.IdentityModel.Tokens.JsonWebKeyConverter.ConvertFromSecurityKey
+nameWithType: JsonWebKeyConverter.ConvertFromSecurityKey
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.JsonWebKeyConverter.ConvertFromSecurityKey
+  api_location:
+  - Microsoft.IdentityModel.Tokens.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.JsonWebKeyConverter.ConvertFromSecurityKey
+  - Microsoft::IdentityModel::Tokens::JsonWebKeyConverter::ConvertFromSecurityKey
+  - ConvertFromSecurityKey
+  - JsonWebKeyConverter.ConvertFromSecurityKey
+  - JsonWebKeyConverter::ConvertFromSecurityKey
+  helpviewer_keywords:
+  - JsonWebKeyConverter.ConvertFromSecurityKey method [.NET]
+  - ConvertFromSecurityKey method [.NET], class JsonWebKeyConverter
+  - JsonWebKeyConverter.ConvertFromSecurityKey(SecurityKey) method [.NET]
+  - ConvertFromSecurityKey(SecurityKey) method [.NET], class JsonWebKeyConverter
+  monikers:
+  - msal-web-dotnet-latest

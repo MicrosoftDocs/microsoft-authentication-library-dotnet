@@ -1,0 +1,74 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Byte?alt=System.Byte&text=Byte" data-throw-if-not-resolved="True"/>[]
+    description: Byte stream representation of the cache
+  type: method
+  uid: Microsoft.Identity.Client.ITokenCacheSerializer.SerializeAdalV3
+  commentId: M:Microsoft.Identity.Client.ITokenCacheSerializer.SerializeAdalV3
+  name: SerializeAdalV3()
+  fullName: Microsoft.Identity.Client.ITokenCacheSerializer.SerializeAdalV3()
+  nameWithType: ITokenCacheSerializer.SerializeAdalV3()
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public byte[] SerializeAdalV3 ();
+  - lang: fsharp
+    values:
+    - value: 'abstract member SerializeAdalV3 : unit -> byte[]'
+  - lang: vb
+    values:
+    - value: Public Function SerializeAdalV3 () As Byte()
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    Serializes a part of the token cache - the refresh tokens - to the ADAL.NET 3.x cache format. 
+
+    If you need to maintain SSO between an application using ADAL 3.x and this application using MSAL 3.x or later,
+
+    use <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITokenCacheSerializer.SerializeAdalV3"></xref>/<xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITokenCacheSerializer.DeserializeAdalV3(System.Byte[])"></xref> in adition to <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITokenCacheSerializer.SerializeMsalV3"></xref>/<xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITokenCacheSerializer.DeserializeMsalV3(System.Byte[],System.Boolean)"></xref>.
+
+
+    See https://aka.ms/adal-to-msal-net/cache for details on how to use this advanced API correctly.
+  remarks: <p>Do not use <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITokenCacheSerializer.SerializeAdalV3"></xref>/<xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITokenCacheSerializer.DeserializeAdalV3(System.Byte[])"></xref> without also using <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITokenCacheSerializer.SerializeMsalV3"></xref>/<xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITokenCacheSerializer.DeserializeMsalV3(System.Byte[],System.Boolean)"></xref>, because only refresh tokens are exported in this format. Your applications will not cache access token and id tokens, and will instead need to get them from the identity provider (AAD), which will eventually throttle you. Later versions of ADAL (4.x and 5.x) use the same cache format as MSAL. Only <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITokenCacheSerializer.SerializeMsalV3"></xref>/<xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITokenCacheSerializer.DeserializeMsalV3(System.Byte[],System.Boolean)"></xref> is compatible with other MSAL libraries such as MSAL for Python and MSAL for Java. ADAL to MSAL cache interop is only available for public client scenarios and for web site scenario.</p>
+  metadata: {}
+uid: Microsoft.Identity.Client.ITokenCacheSerializer.SerializeAdalV3*
+commentId: Overload:Microsoft.Identity.Client.ITokenCacheSerializer.SerializeAdalV3
+namespace: Microsoft.Identity.Client
+name: SerializeAdalV3
+fullName: Microsoft.Identity.Client.ITokenCacheSerializer.SerializeAdalV3
+nameWithType: ITokenCacheSerializer.SerializeAdalV3
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.ITokenCacheSerializer.SerializeAdalV3
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.ITokenCacheSerializer.SerializeAdalV3
+  - Microsoft::Identity::Client::ITokenCacheSerializer::SerializeAdalV3
+  - SerializeAdalV3
+  - ITokenCacheSerializer.SerializeAdalV3
+  - ITokenCacheSerializer::SerializeAdalV3
+  helpviewer_keywords:
+  - ITokenCacheSerializer.SerializeAdalV3 method [.NET]
+  - SerializeAdalV3 method [.NET], interface ITokenCacheSerializer
+  - ITokenCacheSerializer.SerializeAdalV3() method [.NET]
+  - SerializeAdalV3() method [.NET], interface ITokenCacheSerializer
+  monikers:
+  - msal-dotnet-latest

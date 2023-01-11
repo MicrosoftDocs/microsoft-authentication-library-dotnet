@@ -1,0 +1,152 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.Identity.Client.IConfidentialClientApplication?alt=Microsoft.Identity.Client.IConfidentialClientApplication&text=IConfidentialClientApplication" data-throw-if-not-resolved="True"/>
+    description: The application for chaining.
+  parameters:
+  - namesWithMoniker:
+    - value: confidentialClientApp
+    description: Confidential client application.
+    type: <xref href="Microsoft.Identity.Client.IConfidentialClientApplication?alt=Microsoft.Identity.Client.IConfidentialClientApplication&text=IConfidentialClientApplication" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Web.TokenCacheExtensions.AddInMemoryTokenCache(Microsoft.Identity.Client.IConfidentialClientApplication)
+  commentId: M:Microsoft.Identity.Web.TokenCacheExtensions.AddInMemoryTokenCache(Microsoft.Identity.Client.IConfidentialClientApplication)
+  name: AddInMemoryTokenCache(IConfidentialClientApplication)
+  fullName: Microsoft.Identity.Web.TokenCacheExtensions.AddInMemoryTokenCache(IConfidentialClientApplication)
+  nameWithType: TokenCacheExtensions.AddInMemoryTokenCache(IConfidentialClientApplication)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public static Microsoft.Identity.Client.IConfidentialClientApplication AddInMemoryTokenCache (this Microsoft.Identity.Client.IConfidentialClientApplication confidentialClientApp);
+  - lang: fsharp
+    values:
+    - value: 'static member AddInMemoryTokenCache : Microsoft.Identity.Client.IConfidentialClientApplication -> Microsoft.Identity.Client.IConfidentialClientApplication'
+  - lang: vb
+    values:
+    - value: >-
+        <Extension()>
+
+        Public Function AddInMemoryTokenCache (confidentialClientApp As IConfidentialClientApplication) As IConfidentialClientApplication
+  monikers:
+  - msal-model-dotnet-latest
+  summary: >-
+    Add an in-memory well partitioned token cache to MSAL.NET confidential client
+
+    application. Don't use this method in ASP.NET Core: rather use:
+
+    <code>services.AddInMemoryTokenCache()</code> in ConfigureServices.
+  remarks: <p>Don't use this method in ASP.NET Core. Just add use the ConfigureServices method instead.</p>
+  examples: >-
+    The following code adds an in-memory token cache.
+
+
+
+    ```
+
+    app.AddInMemoryTokenCache();
+
+    ```
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.Identity.Client.IConfidentialClientApplication?alt=Microsoft.Identity.Client.IConfidentialClientApplication&text=IConfidentialClientApplication" data-throw-if-not-resolved="True"/>
+    description: The application for chaining.
+  parameters:
+  - namesWithMoniker:
+    - value: confidentialClientApp
+    description: Confidential client application.
+    type: <xref href="Microsoft.Identity.Client.IConfidentialClientApplication?alt=Microsoft.Identity.Client.IConfidentialClientApplication&text=IConfidentialClientApplication" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: initializeMemoryCache
+    description: >-
+      Action taking a <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.DependencyInjection.IServiceCollection"></xref>
+                   and by which you initialize your memory cache.
+    type: <xref href="System.Action`1?alt=System.Action&text=Action" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Extensions.DependencyInjection.IServiceCollection?alt=Microsoft.Extensions.DependencyInjection.IServiceCollection&text=IServiceCollection" data-throw-if-not-resolved="True"/>&gt;
+  type: method
+  uid: Microsoft.Identity.Web.TokenCacheExtensions.AddInMemoryTokenCache(Microsoft.Identity.Client.IConfidentialClientApplication,System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection})
+  commentId: M:Microsoft.Identity.Web.TokenCacheExtensions.AddInMemoryTokenCache(Microsoft.Identity.Client.IConfidentialClientApplication,System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection})
+  name: AddInMemoryTokenCache(IConfidentialClientApplication, Action<IServiceCollection>)
+  fullName: Microsoft.Identity.Web.TokenCacheExtensions.AddInMemoryTokenCache(IConfidentialClientApplication, Action<IServiceCollection>)
+  nameWithType: TokenCacheExtensions.AddInMemoryTokenCache(IConfidentialClientApplication, Action<IServiceCollection>)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public static Microsoft.Identity.Client.IConfidentialClientApplication AddInMemoryTokenCache (this Microsoft.Identity.Client.IConfidentialClientApplication confidentialClientApp, Action<Microsoft.Extensions.DependencyInjection.IServiceCollection> initializeMemoryCache);
+  - lang: fsharp
+    values:
+    - value: 'static member AddInMemoryTokenCache : Microsoft.Identity.Client.IConfidentialClientApplication * Action<Microsoft.Extensions.DependencyInjection.IServiceCollection> -> Microsoft.Identity.Client.IConfidentialClientApplication'
+  - lang: vb
+    values:
+    - value: >-
+        <Extension()>
+
+        Public Function AddInMemoryTokenCache (confidentialClientApp As IConfidentialClientApplication, initializeMemoryCache As Action(Of IServiceCollection)) As IConfidentialClientApplication
+  monikers:
+  - msal-model-dotnet-latest
+  summary: >-
+    Add an in-memory well partitioned token cache to MSAL.NET confidential client
+
+    application. Don't use this method in ASP.NET Core: rather use:
+
+    <code>services.AddInMemoryTokenCache()</code> in ConfigureServices.
+  remarks: <p>Don't use this method in ASP.NET Core. Just add use the ConfigureServices method instead.</p>
+  examples: >-
+    The following code adds an in-memory token cache.
+
+
+
+    ```
+
+    app.AddInMemoryTokenCache(services =>
+
+    {
+         services.Configure<MemoryCacheOptions>(options =>
+         {
+             options.SizeLimit = 5000000; // in bytes (5 Mb), for example
+         });
+    });
+
+    ```
+  metadata: {}
+uid: Microsoft.Identity.Web.TokenCacheExtensions.AddInMemoryTokenCache*
+commentId: Overload:Microsoft.Identity.Web.TokenCacheExtensions.AddInMemoryTokenCache
+namespace: Microsoft.Identity.Web
+name: AddInMemoryTokenCache
+fullName: Microsoft.Identity.Web.TokenCacheExtensions.AddInMemoryTokenCache
+nameWithType: TokenCacheExtensions.AddInMemoryTokenCache
+assembliesWithMoniker:
+- value: Microsoft.Identity.Web.TokenCache.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Web.TokenCache v1.25.10
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-model-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Web.TokenCacheExtensions.AddInMemoryTokenCache
+  api_location:
+  - Microsoft.Identity.Web.TokenCache.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Web.TokenCacheExtensions.AddInMemoryTokenCache
+  - Microsoft::Identity::Web::TokenCacheExtensions::AddInMemoryTokenCache
+  - AddInMemoryTokenCache
+  - TokenCacheExtensions.AddInMemoryTokenCache
+  - TokenCacheExtensions::AddInMemoryTokenCache
+  helpviewer_keywords:
+  - TokenCacheExtensions.AddInMemoryTokenCache method [.NET]
+  - AddInMemoryTokenCache method [.NET], class TokenCacheExtensions
+  - TokenCacheExtensions.AddInMemoryTokenCache(IConfidentialClientApplication) extension method [.NET]
+  - AddInMemoryTokenCache(IConfidentialClientApplication) extension method [.NET], class TokenCacheExtensions
+  - TokenCacheExtensions.AddInMemoryTokenCache(IConfidentialClientApplication, Action<IServiceCollection>) extension method [.NET]
+  - AddInMemoryTokenCache(IConfidentialClientApplication, Action<IServiceCollection>) extension method [.NET], class TokenCacheExtensions
+  monikers:
+  - msal-model-dotnet-latest

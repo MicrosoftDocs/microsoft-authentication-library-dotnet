@@ -1,0 +1,123 @@
+### YamlMime:NetType
+type: class
+inheritancesWithMoniker:
+- values:
+  - <xref href="System.Exception?alt=System.Exception&text=Exception" data-throw-if-not-resolved="True"/>
+  - <xref href="Microsoft.Identity.Client.MsalException?alt=Microsoft.Identity.Client.MsalException&text=MsalException" data-throw-if-not-resolved="True"/>
+  - <xref href="Microsoft.Identity.Client.MsalServiceException?alt=Microsoft.Identity.Client.MsalServiceException&text=MsalServiceException" data-throw-if-not-resolved="True"/>
+  - <xref href="Microsoft.Identity.Client.MsalUiRequiredException?alt=Microsoft.Identity.Client.MsalUiRequiredException&text=MsalUiRequiredException" data-throw-if-not-resolved="True"/>
+constructors:
+- uid: Microsoft.Identity.Client.MsalThrottledUiRequiredException.#ctor(Microsoft.Identity.Client.MsalUiRequiredException)
+  monikers:
+  - msal-dotnet-latest
+methods:
+- uid: Microsoft.Identity.Client.MsalException.ToJsonString
+  inheritedFrom: Microsoft.Identity.Client.MsalException
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.MsalServiceException.ToString
+  inheritedFrom: Microsoft.Identity.Client.MsalServiceException
+  monikers:
+  - msal-dotnet-latest
+properties:
+- uid: Microsoft.Identity.Client.MsalServiceException.Claims
+  inheritedFrom: Microsoft.Identity.Client.MsalServiceException
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.MsalUiRequiredException.Classification
+  inheritedFrom: Microsoft.Identity.Client.MsalUiRequiredException
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.MsalServiceException.CorrelationId
+  inheritedFrom: Microsoft.Identity.Client.MsalServiceException
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.MsalException.ErrorCode
+  inheritedFrom: Microsoft.Identity.Client.MsalException
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.MsalServiceException.Headers
+  inheritedFrom: Microsoft.Identity.Client.MsalServiceException
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.MsalException.IsRetryable
+  inheritedFrom: Microsoft.Identity.Client.MsalException
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.MsalThrottledUiRequiredException.OriginalServiceException
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.MsalServiceException.ResponseBody
+  inheritedFrom: Microsoft.Identity.Client.MsalServiceException
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.MsalServiceException.StatusCode
+  inheritedFrom: Microsoft.Identity.Client.MsalServiceException
+  monikers:
+  - msal-dotnet-latest
+uid: Microsoft.Identity.Client.MsalThrottledUiRequiredException
+commentId: T:Microsoft.Identity.Client.MsalThrottledUiRequiredException
+namespace: Microsoft.Identity.Client
+name: MsalThrottledUiRequiredException
+fullName: Microsoft.Identity.Client.MsalThrottledUiRequiredException
+nameWithType: Microsoft.Identity.Client.MsalThrottledUiRequiredException
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+syntaxWithMoniker:
+- lang: csharp
+  values:
+  - value: 'public class MsalThrottledUiRequiredException : Microsoft.Identity.Client.MsalUiRequiredException'
+- lang: fsharp
+  values:
+  - value: >-
+      type MsalThrottledUiRequiredException = class
+          inherit MsalUiRequiredException
+- lang: vb
+  values:
+  - value: >-
+      Public Class MsalThrottledUiRequiredException
+
+      Inherits MsalUiRequiredException
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+summary: >-
+  Exception type thrown when MSAL detects that an application is trying to acquire a token even 
+
+  though an <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.MsalUiRequiredException"></xref> was recently thrown. 
+
+  To mitigate this, when a <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.MsalUiRequiredException"></xref> is encountered,
+
+  the application should switch to acquiring a token interactively. To better understand
+
+  why the <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.MsalUiRequiredException"></xref> was thrown, inspect the <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.MsalUiRequiredException.Classification"></xref>
+
+  property.
+
+
+  The properties of this exception are identical to the original exception
+
+
+  For more details see https://aka.ms/msal-net-throttling
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.MsalThrottledUiRequiredException
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.MsalThrottledUiRequiredException
+  - Microsoft::Identity::Client::MsalThrottledUiRequiredException
+  - MsalThrottledUiRequiredException
+  helpviewer_keywords:
+  - Microsoft.Identity.Client.MsalThrottledUiRequiredException class [.NET]
+  monikers:
+  - msal-dotnet-latest

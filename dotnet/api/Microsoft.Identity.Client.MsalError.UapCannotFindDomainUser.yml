@@ -1,0 +1,64 @@
+### YamlMime:NetMember
+type: field
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: field
+  uid: Microsoft.Identity.Client.MsalError.UapCannotFindDomainUser
+  commentId: F:Microsoft.Identity.Client.MsalError.UapCannotFindDomainUser
+  name: UapCannotFindDomainUser
+  fullName: Microsoft.Identity.Client.MsalError.UapCannotFindDomainUser
+  nameWithType: MsalError.UapCannotFindDomainUser
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public const string UapCannotFindDomainUser;
+  - lang: fsharp
+    values:
+    - value: 'val mutable UapCannotFindDomainUser : string'
+  - lang: vb
+    values:
+    - value: 'Public Const UapCannotFindDomainUser As String '
+  monikers:
+  - msal-dotnet-latest
+  summary: >2-
+     Cannot access the user from the OS (UWP)
+     <p>What happens</p>
+     You called <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenByIntegratedWindowsAuth(System.Collections.Generic.IEnumerable{System.String})"></xref>, but the domain user
+     name could not be found.
+    <p>Mitigation</p>
+     This might be because you need to add more capabilities to your UWP application in the Package.appxmanifest.
+     See https://aka.ms/msal-net-uwp
+  metadata: {}
+namespace: Microsoft.Identity.Client
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.MsalError.UapCannotFindDomainUser
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.MsalError.UapCannotFindDomainUser
+  - Microsoft::Identity::Client::MsalError::UapCannotFindDomainUser
+  - UapCannotFindDomainUser
+  - MsalError.UapCannotFindDomainUser
+  - MsalError::UapCannotFindDomainUser
+  helpviewer_keywords:
+  - MsalError.UapCannotFindDomainUser field [.NET]
+  - UapCannotFindDomainUser field [.NET], class MsalError
+  monikers:
+  - msal-dotnet-latest

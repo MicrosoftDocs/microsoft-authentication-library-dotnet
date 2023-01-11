@@ -1,0 +1,87 @@
+### YamlMime:NetEnum
+inheritancesWithMoniker:
+- values:
+  - <xref href="System.Enum?alt=System.Enum&text=Enum" data-throw-if-not-resolved="True"/>
+fields:
+- uid: Microsoft.Identity.Client.TelemetryAudienceType.PreProduction
+  commentId: F:Microsoft.Identity.Client.TelemetryAudienceType.PreProduction
+  literalValue: "0"
+  name: PreProduction
+  nameWithType: TelemetryAudienceType.PreProduction
+  fullName: Microsoft.Identity.Client.TelemetryAudienceType.PreProduction
+  summary: Indicates a PreProduction environment. PreProd environments are not sampled.
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.TelemetryAudienceType.Production
+  commentId: F:Microsoft.Identity.Client.TelemetryAudienceType.Production
+  literalValue: "1"
+  name: Production
+  nameWithType: TelemetryAudienceType.Production
+  fullName: Microsoft.Identity.Client.TelemetryAudienceType.Production
+  summary: Indicates a Production environment.  These environments are sampled based on the platforms' device info to reduce data load.
+  monikers:
+  - msal-dotnet-latest
+uid: Microsoft.Identity.Client.TelemetryAudienceType
+commentId: T:Microsoft.Identity.Client.TelemetryAudienceType
+namespace: Microsoft.Identity.Client
+name: TelemetryAudienceType
+fullName: Microsoft.Identity.Client.TelemetryAudienceType
+nameWithType: Microsoft.Identity.Client.TelemetryAudienceType
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+attributesWithMoniker:
+- value: System.ObsoleteAttribute
+syntaxWithMoniker:
+- lang: csharp
+  values:
+  - value: >-
+      [System.Obsolete("Telemetry is sent automatically by MSAL.NET. See https://aka.ms/msal-net-telemetry.", false)]
+
+      public enum TelemetryAudienceType
+- lang: fsharp
+  values:
+  - value: "[<System.Obsolete(\"Telemetry is sent automatically by MSAL.NET. See https://aka.ms/msal-net-telemetry.\", false)>]\ntype TelemetryAudienceType = "
+- lang: vb
+  values:
+  - value: Public Enum TelemetryAudienceType
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+obsoleteMessagesWithMoniker:
+- value: Telemetry is sent automatically by MSAL.NET. See https://aka.ms/msal-net-telemetry.
+summary: Describes the types of audiences for telemetry. <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITelemetryConfig.AudienceType"></xref>
+remarks: This API is experimental and it may change in future versions of the library without an major version increment
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.TelemetryAudienceType
+  - Microsoft.Identity.Client.TelemetryAudienceType.PreProduction
+  - Microsoft.Identity.Client.TelemetryAudienceType.Production
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.TelemetryAudienceType
+  - Microsoft::Identity::Client::TelemetryAudienceType
+  - TelemetryAudienceType
+  - Microsoft.Identity.Client.TelemetryAudienceType.PreProduction
+  - Microsoft::Identity::Client::TelemetryAudienceType::PreProduction
+  - PreProduction
+  - TelemetryAudienceType.PreProduction
+  - TelemetryAudienceType::PreProduction
+  - Microsoft.Identity.Client.TelemetryAudienceType.Production
+  - Microsoft::Identity::Client::TelemetryAudienceType::Production
+  - Production
+  - TelemetryAudienceType.Production
+  - TelemetryAudienceType::Production
+  helpviewer_keywords:
+  - Microsoft.Identity.Client.TelemetryAudienceType enum [.NET]
+  monikers:
+  - msal-dotnet-latest

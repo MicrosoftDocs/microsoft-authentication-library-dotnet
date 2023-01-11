@@ -1,0 +1,85 @@
+### YamlMime:NetMember
+type: method
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: scopes
+    description: Scopes to request.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>[]
+  - namesWithMoniker:
+    - value: claims
+    description: Claims to ensure.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: userflow
+    description: Userflow being invoked for AAD B2C.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Web.MicrosoftIdentityConsentAndConditionalAccessHandler.ChallengeUser(System.String[],System.String,System.String)
+  commentId: M:Microsoft.Identity.Web.MicrosoftIdentityConsentAndConditionalAccessHandler.ChallengeUser(System.String[],System.String,System.String)
+  name: ChallengeUser(String[], String, String)
+  fullName: Microsoft.Identity.Web.MicrosoftIdentityConsentAndConditionalAccessHandler.ChallengeUser(String[], String, String)
+  nameWithType: MicrosoftIdentityConsentAndConditionalAccessHandler.ChallengeUser(String[], String, String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public void ChallengeUser (string[]? scopes, string? claims = default, string? userflow = default);
+  - lang: fsharp
+    values:
+    - value: 'member this.ChallengeUser : string[] * string * string -> unit'
+  - lang: vb
+    values:
+    - value: Public Sub ChallengeUser (scopes As String(), Optional claims As String = Nothing, Optional userflow As String = Nothing)
+  monikers:
+  - msal-model-dotnet-latest
+  summary: >-
+    Forces the user to consent to specific scopes and perform
+
+    Conditional Access to get specific claims. Use on a Razor/Blazor
+
+    page or controller to proactively ensure the scopes and/or claims
+
+    before acquiring a token. The other mechanism <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Web.MicrosoftIdentityConsentAndConditionalAccessHandler.HandleException(System.Exception)"></xref>
+
+    ensures claims and scopes requested by Azure AD after a failed token acquisition attempt.
+
+    See https://aka.ms/ms-id-web/ca_incremental-consent for details.
+  metadata: {}
+uid: Microsoft.Identity.Web.MicrosoftIdentityConsentAndConditionalAccessHandler.ChallengeUser*
+commentId: Overload:Microsoft.Identity.Web.MicrosoftIdentityConsentAndConditionalAccessHandler.ChallengeUser
+namespace: Microsoft.Identity.Web
+name: ChallengeUser
+fullName: Microsoft.Identity.Web.MicrosoftIdentityConsentAndConditionalAccessHandler.ChallengeUser
+nameWithType: MicrosoftIdentityConsentAndConditionalAccessHandler.ChallengeUser
+assembliesWithMoniker:
+- value: Microsoft.Identity.Web.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Web v1.25.10
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-model-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Web.MicrosoftIdentityConsentAndConditionalAccessHandler.ChallengeUser
+  api_location:
+  - Microsoft.Identity.Web.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Web.MicrosoftIdentityConsentAndConditionalAccessHandler.ChallengeUser
+  - Microsoft::Identity::Web::MicrosoftIdentityConsentAndConditionalAccessHandler::ChallengeUser
+  - ChallengeUser
+  - MicrosoftIdentityConsentAndConditionalAccessHandler.ChallengeUser
+  - MicrosoftIdentityConsentAndConditionalAccessHandler::ChallengeUser
+  helpviewer_keywords:
+  - MicrosoftIdentityConsentAndConditionalAccessHandler.ChallengeUser method [.NET]
+  - ChallengeUser method [.NET], class MicrosoftIdentityConsentAndConditionalAccessHandler
+  - MicrosoftIdentityConsentAndConditionalAccessHandler.ChallengeUser(String[], String, String) method [.NET]
+  - ChallengeUser(String[], String, String) method [.NET], class MicrosoftIdentityConsentAndConditionalAccessHandler
+  monikers:
+  - msal-model-dotnet-latest

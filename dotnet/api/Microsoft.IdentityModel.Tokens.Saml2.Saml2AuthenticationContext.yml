@@ -1,0 +1,73 @@
+### YamlMime:NetType
+type: class
+inheritancesWithMoniker:
+- values:
+  - <xref href="System.Object?alt=System.Object&text=Object" data-throw-if-not-resolved="True"/>
+constructors:
+- uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2AuthenticationContext.#ctor
+  monikers:
+  - msal-web-dotnet-latest
+- uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2AuthenticationContext.#ctor(System.Uri,System.Uri)
+  monikers:
+  - msal-web-dotnet-latest
+- uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2AuthenticationContext.#ctor(System.Uri)
+  monikers:
+  - msal-web-dotnet-latest
+properties:
+- uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2AuthenticationContext.AuthenticatingAuthorities
+  monikers:
+  - msal-web-dotnet-latest
+- uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2AuthenticationContext.ClassReference
+  monikers:
+  - msal-web-dotnet-latest
+- uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2AuthenticationContext.DeclarationReference
+  monikers:
+  - msal-web-dotnet-latest
+uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2AuthenticationContext
+commentId: T:Microsoft.IdentityModel.Tokens.Saml2.Saml2AuthenticationContext
+namespace: Microsoft.IdentityModel.Tokens.Saml2
+name: Saml2AuthenticationContext
+fullName: Microsoft.IdentityModel.Tokens.Saml2.Saml2AuthenticationContext
+nameWithType: Microsoft.IdentityModel.Tokens.Saml2.Saml2AuthenticationContext
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml v6.25.1
+syntaxWithMoniker:
+- lang: csharp
+  values:
+  - value: public class Saml2AuthenticationContext
+- lang: fsharp
+  values:
+  - value: type Saml2AuthenticationContext = class
+- lang: vb
+  values:
+  - value: Public Class Saml2AuthenticationContext
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+summary: >-
+  Represents the AuthnContext element specified in [Saml2Core, 2.7.2.2].
+
+  see: http://docs.oasis-open.org/security/saml/v2.0/saml-core-2.0-os.pdf
+remarks: <p>This base class does not directly support any by-value authentication context declarations (represented in XML by the AuthnContextDecl element). To support by-value declarations, extend this class to support the data model and extend Saml2AssertionSerializer, overriding ReadAuthnContext and WriteAuthnContext to read and write the by-value declaration.</p>
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.Saml2.Saml2AuthenticationContext
+  api_location:
+  - Microsoft.IdentityModel.Tokens.Saml.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.Saml2.Saml2AuthenticationContext
+  - Microsoft::IdentityModel::Tokens::Saml2::Saml2AuthenticationContext
+  - Saml2AuthenticationContext
+  helpviewer_keywords:
+  - Microsoft.IdentityModel.Tokens.Saml2.Saml2AuthenticationContext class [.NET]
+  monikers:
+  - msal-web-dotnet-latest

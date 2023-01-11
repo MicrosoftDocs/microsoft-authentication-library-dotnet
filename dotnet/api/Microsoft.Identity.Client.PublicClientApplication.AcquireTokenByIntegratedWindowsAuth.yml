@@ -1,0 +1,81 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.Identity.Client.AcquireTokenByIntegratedWindowsAuthParameterBuilder?alt=Microsoft.Identity.Client.AcquireTokenByIntegratedWindowsAuthParameterBuilder&text=AcquireTokenByIntegratedWindowsAuthParameterBuilder" data-throw-if-not-resolved="True"/>
+    description: A builder enabling you to add optional parameters before executing the token request
+  parameters:
+  - namesWithMoniker:
+    - value: scopes
+    description: Scopes requested to access a protected API
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  implementsWithMoniker:
+  - value: <xref href="Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenByIntegratedWindowsAuth(System.Collections.Generic.IEnumerable{System.String})?alt=Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenByIntegratedWindowsAuth(System.Collections.Generic.IEnumerable{System.String})&text=AcquireTokenByIntegratedWindowsAuth(IEnumerable%3CString%3E)" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.PublicClientApplication.AcquireTokenByIntegratedWindowsAuth(System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenByIntegratedWindowsAuth(System.Collections.Generic.IEnumerable{System.String})
+  name: AcquireTokenByIntegratedWindowsAuth(IEnumerable<String>)
+  fullName: Microsoft.Identity.Client.PublicClientApplication.AcquireTokenByIntegratedWindowsAuth(IEnumerable<String>)
+  nameWithType: PublicClientApplication.AcquireTokenByIntegratedWindowsAuth(IEnumerable<String>)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public Microsoft.Identity.Client.AcquireTokenByIntegratedWindowsAuthParameterBuilder AcquireTokenByIntegratedWindowsAuth (System.Collections.Generic.IEnumerable<string> scopes);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member AcquireTokenByIntegratedWindowsAuth : seq<string> -> Microsoft.Identity.Client.AcquireTokenByIntegratedWindowsAuthParameterBuilder
+
+        override this.AcquireTokenByIntegratedWindowsAuth : seq<string> -> Microsoft.Identity.Client.AcquireTokenByIntegratedWindowsAuthParameterBuilder
+  - lang: vb
+    values:
+    - value: Public Function AcquireTokenByIntegratedWindowsAuth (scopes As IEnumerable(Of String)) As AcquireTokenByIntegratedWindowsAuthParameterBuilder
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    Non-interactive request to acquire a security token for the signed-in user in Windows,
+
+    via Integrated Windows Authentication. See https://aka.ms/msal-net-iwa.
+
+    The account used in this overrides is pulled from the operating system as the current user principal name.
+  remarks: '<p>You can also pass optional parameters by calling: <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.AcquireTokenByIntegratedWindowsAuthParameterBuilder.WithUsername(System.String)"></xref> to pass the identifier of the user account for which to acquire a token with Integrated Windows authentication. This is generally in UserPrincipalName (UPN) format, e.g. john.doe@contoso.com. This is normally not needed, but some Windows administrators set policies preventing applications from looking-up the signed-in user in Windows, and in that case the username needs to be passed. You can also chain with <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithExtraQueryParameters(System.Collections.Generic.Dictionary{System.String,System.String})"></xref> to pass additional query parameters to the STS, and one of the overrides of <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithAuthority(System.String,System.Boolean)"></xref> in order to override the default authority set at the application construction. Note that the overriding authority needs to be part of the known authorities added to the application construction.</p>'
+  metadata: {}
+uid: Microsoft.Identity.Client.PublicClientApplication.AcquireTokenByIntegratedWindowsAuth*
+commentId: Overload:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenByIntegratedWindowsAuth
+namespace: Microsoft.Identity.Client
+name: AcquireTokenByIntegratedWindowsAuth
+fullName: Microsoft.Identity.Client.PublicClientApplication.AcquireTokenByIntegratedWindowsAuth
+nameWithType: PublicClientApplication.AcquireTokenByIntegratedWindowsAuth
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.PublicClientApplication.AcquireTokenByIntegratedWindowsAuth
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.PublicClientApplication.AcquireTokenByIntegratedWindowsAuth
+  - Microsoft::Identity::Client::PublicClientApplication::AcquireTokenByIntegratedWindowsAuth
+  - AcquireTokenByIntegratedWindowsAuth
+  - PublicClientApplication.AcquireTokenByIntegratedWindowsAuth
+  - PublicClientApplication::AcquireTokenByIntegratedWindowsAuth
+  helpviewer_keywords:
+  - PublicClientApplication.AcquireTokenByIntegratedWindowsAuth method [.NET]
+  - AcquireTokenByIntegratedWindowsAuth method [.NET], class PublicClientApplication
+  - PublicClientApplication.AcquireTokenByIntegratedWindowsAuth(IEnumerable<String>) method [.NET]
+  - AcquireTokenByIntegratedWindowsAuth(IEnumerable<String>) method [.NET], class PublicClientApplication
+  monikers:
+  - msal-dotnet-latest

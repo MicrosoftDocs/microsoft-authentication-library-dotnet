@@ -1,0 +1,76 @@
+### YamlMime:NetMember
+type: method
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: writer
+    description: A <xref data-throw-if-not-resolved="true" uid="System.Xml.XmlWriter"></xref> to serialize the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2Advice"></xref>.
+    type: <xref href="System.Xml.XmlWriter?alt=System.Xml.XmlWriter&text=XmlWriter" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: advice
+    description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2Advice"></xref> to serialize.
+    type: <xref href="Microsoft.IdentityModel.Tokens.Saml2.Saml2Advice?alt=Microsoft.IdentityModel.Tokens.Saml2.Saml2Advice&text=Saml2Advice" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: if <code data-dev-comment-type="paramref">advice</code> is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteAdvice(System.Xml.XmlWriter,Microsoft.IdentityModel.Tokens.Saml2.Saml2Advice)
+  commentId: M:Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteAdvice(System.Xml.XmlWriter,Microsoft.IdentityModel.Tokens.Saml2.Saml2Advice)
+  name: WriteAdvice(XmlWriter, Saml2Advice)
+  fullName: Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteAdvice(XmlWriter, Saml2Advice)
+  nameWithType: Saml2Serializer.WriteAdvice(XmlWriter, Saml2Advice)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected virtual void WriteAdvice (System.Xml.XmlWriter writer, Microsoft.IdentityModel.Tokens.Saml2.Saml2Advice advice);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member WriteAdvice : System.Xml.XmlWriter * Microsoft.IdentityModel.Tokens.Saml2.Saml2Advice -> unit
+
+        override this.WriteAdvice : System.Xml.XmlWriter * Microsoft.IdentityModel.Tokens.Saml2.Saml2Advice -> unit
+  - lang: vb
+    values:
+    - value: Protected Overridable Sub WriteAdvice (writer As XmlWriter, advice As Saml2Advice)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Writes the &lt;saml:Advice&gt; element.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteAdvice*
+commentId: Overload:Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteAdvice
+namespace: Microsoft.IdentityModel.Tokens.Saml2
+name: WriteAdvice
+fullName: Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteAdvice
+nameWithType: Saml2Serializer.WriteAdvice
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteAdvice
+  api_location:
+  - Microsoft.IdentityModel.Tokens.Saml.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteAdvice
+  - Microsoft::IdentityModel::Tokens::Saml2::Saml2Serializer::WriteAdvice
+  - WriteAdvice
+  - Saml2Serializer.WriteAdvice
+  - Saml2Serializer::WriteAdvice
+  helpviewer_keywords:
+  - Saml2Serializer.WriteAdvice method [.NET]
+  - WriteAdvice method [.NET], class Saml2Serializer
+  - Saml2Serializer.WriteAdvice(XmlWriter, Saml2Advice) method [.NET]
+  - WriteAdvice(XmlWriter, Saml2Advice) method [.NET], class Saml2Serializer
+  monikers:
+  - msal-web-dotnet-latest

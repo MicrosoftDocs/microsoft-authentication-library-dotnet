@@ -1,0 +1,63 @@
+### YamlMime:NetDelegate
+returnsWithMoniker:
+  type:
+  - value: <xref href="Microsoft.IdentityModel.Tokens.SecurityToken?alt=Microsoft.IdentityModel.Tokens.SecurityToken&text=SecurityToken" data-throw-if-not-resolved="True"/>
+parameters:
+- namesWithMoniker:
+  - value: token
+  description: A securityToken with a signature.
+  type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+- namesWithMoniker:
+  - value: validationParameters
+  description: <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.TokenValidationParameters"></xref> required for validation.
+  type: <xref href="Microsoft.IdentityModel.Tokens.TokenValidationParameters?alt=Microsoft.IdentityModel.Tokens.TokenValidationParameters&text=TokenValidationParameters" data-throw-if-not-resolved="True"/>
+inheritances:
+- <xref href="System.Delegate" data-throw-if-not-resolved="True"/>
+uid: Microsoft.IdentityModel.Tokens.TokenReader
+commentId: T:Microsoft.IdentityModel.Tokens.TokenReader
+namespace: Microsoft.IdentityModel.Tokens
+name: TokenReader
+fullName: Microsoft.IdentityModel.Tokens.TokenReader
+nameWithType: Microsoft.IdentityModel.Tokens.TokenReader
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens v6.25.1
+syntaxWithMoniker:
+- lang: csharp
+  values:
+  - value: public delegate Microsoft.IdentityModel.Tokens.SecurityToken TokenReader(string token, TokenValidationParameters validationParameters);
+- lang: fsharp
+  values:
+  - value: type TokenReader = delegate of string * TokenValidationParameters -> SecurityToken
+- lang: vb
+  values:
+  - value: 'Public Delegate Function TokenReader(token As String, validationParameters As TokenValidationParameters) As SecurityToken '
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+summary: Definition for TokenReader.
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.TokenReader
+  - Microsoft.IdentityModel.Tokens.TokenReader..ctor
+  - Microsoft.IdentityModel.Tokens.TokenReader.Invoke
+  - Microsoft.IdentityModel.Tokens.TokenReader.BeginInvoke
+  - Microsoft.IdentityModel.Tokens.TokenReader.EndInvoke
+  api_location:
+  - Microsoft.IdentityModel.Tokens.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.TokenReader
+  - Microsoft::IdentityModel::Tokens::TokenReader
+  - TokenReader
+  helpviewer_keywords:
+  - Microsoft.IdentityModel.Tokens.TokenReader delegate [.NET]
+  monikers:
+  - msal-web-dotnet-latest

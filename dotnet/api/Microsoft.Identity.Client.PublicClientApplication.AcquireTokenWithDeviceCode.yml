@@ -1,0 +1,93 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.Identity.Client.AcquireTokenWithDeviceCodeParameterBuilder?alt=Microsoft.Identity.Client.AcquireTokenWithDeviceCodeParameterBuilder&text=AcquireTokenWithDeviceCodeParameterBuilder" data-throw-if-not-resolved="True"/>
+    description: A builder enabling you to add optional parameters before executing the token request
+  parameters:
+  - namesWithMoniker:
+    - value: scopes
+    description: Scopes requested to access a protected API
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: deviceCodeResultCallback
+    description: Callback containing information to show the user about how to authenticate and enter the device code.
+    type: <xref href="System.Func`2?alt=System.Func&text=Func" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Client.DeviceCodeResult?alt=Microsoft.Identity.Client.DeviceCodeResult&text=DeviceCodeResult" data-throw-if-not-resolved="True"/>,<xref href="System.Threading.Tasks.Task?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&gt;
+  implementsWithMoniker:
+  - value: <xref href="Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenWithDeviceCode(System.Collections.Generic.IEnumerable{System.String},System.Func{Microsoft.Identity.Client.DeviceCodeResult,System.Threading.Tasks.Task})?alt=Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenWithDeviceCode(System.Collections.Generic.IEnumerable{System.String},System.Func{Microsoft.Identity.Client.DeviceCodeResult,System.Threading.Tasks.Task})&text=AcquireTokenWithDeviceCode(IEnumerable%3CString%3E%2C+Func%3CDeviceCodeResult%2CTask%3E)" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.PublicClientApplication.AcquireTokenWithDeviceCode(System.Collections.Generic.IEnumerable{System.String},System.Func{Microsoft.Identity.Client.DeviceCodeResult,System.Threading.Tasks.Task})
+  commentId: M:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenWithDeviceCode(System.Collections.Generic.IEnumerable{System.String},System.Func{Microsoft.Identity.Client.DeviceCodeResult,System.Threading.Tasks.Task})
+  name: AcquireTokenWithDeviceCode(IEnumerable<String>, Func<DeviceCodeResult,Task>)
+  fullName: Microsoft.Identity.Client.PublicClientApplication.AcquireTokenWithDeviceCode(IEnumerable<String>, Func<DeviceCodeResult,Task>)
+  nameWithType: PublicClientApplication.AcquireTokenWithDeviceCode(IEnumerable<String>, Func<DeviceCodeResult,Task>)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public Microsoft.Identity.Client.AcquireTokenWithDeviceCodeParameterBuilder AcquireTokenWithDeviceCode (System.Collections.Generic.IEnumerable<string> scopes, Func<Microsoft.Identity.Client.DeviceCodeResult,System.Threading.Tasks.Task> deviceCodeResultCallback);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member AcquireTokenWithDeviceCode : seq<string> * Func<Microsoft.Identity.Client.DeviceCodeResult, System.Threading.Tasks.Task> -> Microsoft.Identity.Client.AcquireTokenWithDeviceCodeParameterBuilder
+
+        override this.AcquireTokenWithDeviceCode : seq<string> * Func<Microsoft.Identity.Client.DeviceCodeResult, System.Threading.Tasks.Task> -> Microsoft.Identity.Client.AcquireTokenWithDeviceCodeParameterBuilder
+  - lang: vb
+    values:
+    - value: Public Function AcquireTokenWithDeviceCode (scopes As IEnumerable(Of String), deviceCodeResultCallback As Func(Of DeviceCodeResult, Task)) As AcquireTokenWithDeviceCodeParameterBuilder
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    Acquires a security token on a device without a web browser, by letting the user authenticate on
+
+    another device. This is done in two steps:
+
+    <ul><li>The method first acquires a device code from the authority and returns it to the caller via
+
+    the <code data-dev-comment-type="paramref">deviceCodeResultCallback</code>. This callback takes care of interacting with the user
+
+    to direct them to authenticate (to a specific URL, with a code)</li><li>The method then proceeds to poll for the security
+
+    token which is granted upon successful login by the user based on the device code information</li></ul>
+
+    See https://aka.ms/msal-device-code-flow.
+  remarks: '<p>You can also pass optional parameters by calling: <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithExtraQueryParameters(System.Collections.Generic.Dictionary{System.String,System.String})"></xref> to pass additional query parameters to the STS, and one of the overrides of <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithAuthority(System.String,System.Boolean)"></xref> in order to override the default authority set at the application construction. Note that the overriding authority needs to be part of the known authorities added to the application construction.</p>'
+  metadata: {}
+uid: Microsoft.Identity.Client.PublicClientApplication.AcquireTokenWithDeviceCode*
+commentId: Overload:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenWithDeviceCode
+namespace: Microsoft.Identity.Client
+name: AcquireTokenWithDeviceCode
+fullName: Microsoft.Identity.Client.PublicClientApplication.AcquireTokenWithDeviceCode
+nameWithType: PublicClientApplication.AcquireTokenWithDeviceCode
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.PublicClientApplication.AcquireTokenWithDeviceCode
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.PublicClientApplication.AcquireTokenWithDeviceCode
+  - Microsoft::Identity::Client::PublicClientApplication::AcquireTokenWithDeviceCode
+  - AcquireTokenWithDeviceCode
+  - PublicClientApplication.AcquireTokenWithDeviceCode
+  - PublicClientApplication::AcquireTokenWithDeviceCode
+  helpviewer_keywords:
+  - PublicClientApplication.AcquireTokenWithDeviceCode method [.NET]
+  - AcquireTokenWithDeviceCode method [.NET], class PublicClientApplication
+  - PublicClientApplication.AcquireTokenWithDeviceCode(IEnumerable<String>, Func<DeviceCodeResult,Task>) method [.NET]
+  - AcquireTokenWithDeviceCode(IEnumerable<String>, Func<DeviceCodeResult,Task>) method [.NET], class PublicClientApplication
+  monikers:
+  - msal-dotnet-latest

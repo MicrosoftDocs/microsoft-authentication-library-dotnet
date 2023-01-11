@@ -1,0 +1,117 @@
+### YamlMime:NetMember
+type: method
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: message
+    description: The log message.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Logging.IdentityModelEventSource.WriteAlways(System.String)
+  commentId: M:Microsoft.IdentityModel.Logging.IdentityModelEventSource.WriteAlways(System.String)
+  name: WriteAlways(String)
+  fullName: Microsoft.IdentityModel.Logging.IdentityModelEventSource.WriteAlways(String)
+  nameWithType: IdentityModelEventSource.WriteAlways(String)
+  attributesWithMoniker:
+  - value: System.Diagnostics.Tracing.EventAttribute
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: >-
+        [System.Diagnostics.Tracing.Event(6, Level=System.Diagnostics.Tracing.EventLevel.LogAlways)]
+
+        public void WriteAlways (string message);
+  - lang: fsharp
+    values:
+    - value: >-
+        [<System.Diagnostics.Tracing.Event(6, Level=System.Diagnostics.Tracing.EventLevel.LogAlways)>]
+
+        member this.WriteAlways : string -> unit
+  - lang: vb
+    values:
+    - value: Public Sub WriteAlways (message As String)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: >-
+    Writes an event log by using the provided string argument and current UTC time.
+
+    No level filtering is done on the event.
+  remarks: No level filtering.
+  metadata: {}
+- parameters:
+  - namesWithMoniker:
+    - value: message
+    description: The log message.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: args
+    description: An object array that contains zero or more objects to format.
+    type: <xref href="System.Object?alt=System.Object&text=Object" data-throw-if-not-resolved="True"/>[]
+  type: method
+  uid: Microsoft.IdentityModel.Logging.IdentityModelEventSource.WriteAlways(System.String,System.Object[])
+  commentId: M:Microsoft.IdentityModel.Logging.IdentityModelEventSource.WriteAlways(System.String,System.Object[])
+  name: WriteAlways(String, Object[])
+  fullName: Microsoft.IdentityModel.Logging.IdentityModelEventSource.WriteAlways(String, Object[])
+  nameWithType: IdentityModelEventSource.WriteAlways(String, Object[])
+  attributesWithMoniker:
+  - value: System.Diagnostics.Tracing.NonEventAttribute
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: >-
+        [System.Diagnostics.Tracing.NonEvent]
+
+        public void WriteAlways (string message, params object[] args);
+  - lang: fsharp
+    values:
+    - value: >-
+        [<System.Diagnostics.Tracing.NonEvent>]
+
+        member this.WriteAlways : string * obj[] -> unit
+  - lang: vb
+    values:
+    - value: Public Sub WriteAlways (message As String, ParamArray args As Object())
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Writes an event log by using the provided string argument, current UTC time and the provided arguments list.
+  metadata: {}
+uid: Microsoft.IdentityModel.Logging.IdentityModelEventSource.WriteAlways*
+commentId: Overload:Microsoft.IdentityModel.Logging.IdentityModelEventSource.WriteAlways
+namespace: Microsoft.IdentityModel.Logging
+name: WriteAlways
+fullName: Microsoft.IdentityModel.Logging.IdentityModelEventSource.WriteAlways
+nameWithType: IdentityModelEventSource.WriteAlways
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Logging.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Logging v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Logging.IdentityModelEventSource.WriteAlways
+  api_location:
+  - Microsoft.IdentityModel.Logging.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Logging.IdentityModelEventSource.WriteAlways
+  - Microsoft::IdentityModel::Logging::IdentityModelEventSource::WriteAlways
+  - WriteAlways
+  - IdentityModelEventSource.WriteAlways
+  - IdentityModelEventSource::WriteAlways
+  helpviewer_keywords:
+  - IdentityModelEventSource.WriteAlways method [.NET]
+  - WriteAlways method [.NET], class IdentityModelEventSource
+  - IdentityModelEventSource.WriteAlways(String) method [.NET]
+  - WriteAlways(String) method [.NET], class IdentityModelEventSource
+  - IdentityModelEventSource.WriteAlways(String, Object[]) method [.NET]
+  - WriteAlways(String, Object[]) method [.NET], class IdentityModelEventSource
+  monikers:
+  - msal-web-dotnet-latest

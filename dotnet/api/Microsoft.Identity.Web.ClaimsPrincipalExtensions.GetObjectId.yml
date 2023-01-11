@@ -1,0 +1,74 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+    description: Unique object ID of the identity, or <code data-dev-comment-type="c">null</code> if it cannot be found.
+  parameters:
+  - namesWithMoniker:
+    - value: claimsPrincipal
+    description: The <xref data-throw-if-not-resolved="true" uid="System.Security.Claims.ClaimsPrincipal"></xref> from which to retrieve the unique object ID.
+    type: <xref href="System.Security.Claims.ClaimsPrincipal?alt=System.Security.Claims.ClaimsPrincipal&text=ClaimsPrincipal" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Web.ClaimsPrincipalExtensions.GetObjectId(System.Security.Claims.ClaimsPrincipal)
+  commentId: M:Microsoft.Identity.Web.ClaimsPrincipalExtensions.GetObjectId(System.Security.Claims.ClaimsPrincipal)
+  name: GetObjectId(ClaimsPrincipal)
+  fullName: Microsoft.Identity.Web.ClaimsPrincipalExtensions.GetObjectId(ClaimsPrincipal)
+  nameWithType: ClaimsPrincipalExtensions.GetObjectId(ClaimsPrincipal)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public static string? GetObjectId (this System.Security.Claims.ClaimsPrincipal claimsPrincipal);
+  - lang: fsharp
+    values:
+    - value: 'static member GetObjectId : System.Security.Claims.ClaimsPrincipal -> string'
+  - lang: vb
+    values:
+    - value: >-
+        <Extension()>
+
+        Public Function GetObjectId (claimsPrincipal As ClaimsPrincipal) As String
+  monikers:
+  - msal-model-dotnet-latest
+  summary: Gets the unique object ID associated with the <xref data-throw-if-not-resolved="true" uid="System.Security.Claims.ClaimsPrincipal"></xref>.
+  remarks: This method returns the object ID both in case the developer has enabled or not claims mapping.
+  metadata: {}
+uid: Microsoft.Identity.Web.ClaimsPrincipalExtensions.GetObjectId*
+commentId: Overload:Microsoft.Identity.Web.ClaimsPrincipalExtensions.GetObjectId
+namespace: Microsoft.Identity.Web
+name: GetObjectId
+fullName: Microsoft.Identity.Web.ClaimsPrincipalExtensions.GetObjectId
+nameWithType: ClaimsPrincipalExtensions.GetObjectId
+assembliesWithMoniker:
+- value: Microsoft.Identity.Web.TokenCache.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Web.TokenCache v1.25.10
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-model-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Web.ClaimsPrincipalExtensions.GetObjectId
+  api_location:
+  - Microsoft.Identity.Web.TokenCache.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Web.ClaimsPrincipalExtensions.GetObjectId
+  - Microsoft::Identity::Web::ClaimsPrincipalExtensions::GetObjectId
+  - GetObjectId
+  - ClaimsPrincipalExtensions.GetObjectId
+  - ClaimsPrincipalExtensions::GetObjectId
+  helpviewer_keywords:
+  - ClaimsPrincipalExtensions.GetObjectId method [.NET]
+  - GetObjectId method [.NET], class ClaimsPrincipalExtensions
+  - ClaimsPrincipalExtensions.GetObjectId(ClaimsPrincipal) extension method [.NET]
+  - GetObjectId(ClaimsPrincipal) extension method [.NET], class ClaimsPrincipalExtensions
+  monikers:
+  - msal-model-dotnet-latest

@@ -1,0 +1,78 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+    description: A string with the canonicalization method.
+  parameters:
+  - namesWithMoniker:
+    - value: reader
+    description: a <xref data-throw-if-not-resolved="true" uid="System.Xml.XmlReader"></xref>positioned on a &lt;CanonicalizationMethod&gt; element.
+    type: <xref href="System.Xml.XmlReader?alt=System.Xml.XmlReader&text=XmlReader" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: if <code data-dev-comment-type="paramref">reader</code> is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: if there is a problem reading the XML.
+    type: <xref href="Microsoft.IdentityModel.Xml.XmlReadException?alt=Microsoft.IdentityModel.Xml.XmlReadException&text=XmlReadException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Xml.DSigSerializer.ReadCanonicalizationMethod(System.Xml.XmlReader)
+  commentId: M:Microsoft.IdentityModel.Xml.DSigSerializer.ReadCanonicalizationMethod(System.Xml.XmlReader)
+  name: ReadCanonicalizationMethod(XmlReader)
+  fullName: Microsoft.IdentityModel.Xml.DSigSerializer.ReadCanonicalizationMethod(XmlReader)
+  nameWithType: DSigSerializer.ReadCanonicalizationMethod(XmlReader)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public virtual string ReadCanonicalizationMethod (System.Xml.XmlReader reader);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member ReadCanonicalizationMethod : System.Xml.XmlReader -> string
+
+        override this.ReadCanonicalizationMethod : System.Xml.XmlReader -> string
+  - lang: vb
+    values:
+    - value: Public Overridable Function ReadCanonicalizationMethod (reader As XmlReader) As String
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Reads XML conforming to https://www.w3.org/TR/2001/PR-xmldsig-core-20010820/#sec-CanonicalizationMethod
+  metadata: {}
+uid: Microsoft.IdentityModel.Xml.DSigSerializer.ReadCanonicalizationMethod*
+commentId: Overload:Microsoft.IdentityModel.Xml.DSigSerializer.ReadCanonicalizationMethod
+namespace: Microsoft.IdentityModel.Xml
+name: ReadCanonicalizationMethod
+fullName: Microsoft.IdentityModel.Xml.DSigSerializer.ReadCanonicalizationMethod
+nameWithType: DSigSerializer.ReadCanonicalizationMethod
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Xml.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Xml v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Xml.DSigSerializer.ReadCanonicalizationMethod
+  api_location:
+  - Microsoft.IdentityModel.Xml.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Xml.DSigSerializer.ReadCanonicalizationMethod
+  - Microsoft::IdentityModel::Xml::DSigSerializer::ReadCanonicalizationMethod
+  - ReadCanonicalizationMethod
+  - DSigSerializer.ReadCanonicalizationMethod
+  - DSigSerializer::ReadCanonicalizationMethod
+  helpviewer_keywords:
+  - DSigSerializer.ReadCanonicalizationMethod method [.NET]
+  - ReadCanonicalizationMethod method [.NET], class DSigSerializer
+  - DSigSerializer.ReadCanonicalizationMethod(XmlReader) method [.NET]
+  - ReadCanonicalizationMethod(XmlReader) method [.NET], class DSigSerializer
+  monikers:
+  - msal-web-dotnet-latest

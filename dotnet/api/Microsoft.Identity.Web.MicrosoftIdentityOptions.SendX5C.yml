@@ -1,0 +1,75 @@
+### YamlMime:NetMember
+type: property
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  type: property
+  uid: Microsoft.Identity.Web.MicrosoftIdentityOptions.SendX5C
+  commentId: P:Microsoft.Identity.Web.MicrosoftIdentityOptions.SendX5C
+  name: SendX5C
+  fullName: Microsoft.Identity.Web.MicrosoftIdentityOptions.SendX5C
+  nameWithType: MicrosoftIdentityOptions.SendX5C
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public bool SendX5C { get; set; }
+  - lang: fsharp
+    values:
+    - value: 'member this.SendX5C : bool with get, set'
+  - lang: vb
+    values:
+    - value: Public Property SendX5C As Boolean
+  monikers:
+  - msal-model-dotnet-latest
+  summary: >-
+    Specifies if the x5c claim (public key of the certificate) should be sent to the STS.
+
+    Sending the x5c enables application developers to achieve easy certificate rollover in Azure AD:
+
+    this method will send the public certificate to Azure AD along with the token request,
+
+    so that Azure AD can use it to validate the subject name based on a trusted issuer policy.
+
+    This saves the application admin from the need to explicitly manage the certificate rollover
+
+    (either via portal or PowerShell/CLI operation). For details see https://aka.ms/msal-net-sni.
+  metadata: {}
+uid: Microsoft.Identity.Web.MicrosoftIdentityOptions.SendX5C*
+commentId: Overload:Microsoft.Identity.Web.MicrosoftIdentityOptions.SendX5C
+namespace: Microsoft.Identity.Web
+name: SendX5C
+fullName: Microsoft.Identity.Web.MicrosoftIdentityOptions.SendX5C
+nameWithType: MicrosoftIdentityOptions.SendX5C
+assembliesWithMoniker:
+- value: Microsoft.Identity.Web.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Web v1.25.10
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-model-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Web.MicrosoftIdentityOptions.SendX5C
+  - Microsoft.Identity.Web.MicrosoftIdentityOptions.get_SendX5C
+  - Microsoft.Identity.Web.MicrosoftIdentityOptions.set_SendX5C
+  api_location:
+  - Microsoft.Identity.Web.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Web.MicrosoftIdentityOptions.SendX5C
+  - Microsoft::Identity::Web::MicrosoftIdentityOptions::SendX5C
+  - SendX5C
+  - MicrosoftIdentityOptions.SendX5C
+  - MicrosoftIdentityOptions::SendX5C
+  helpviewer_keywords:
+  - MicrosoftIdentityOptions.SendX5C property [.NET]
+  - SendX5C property [.NET], class MicrosoftIdentityOptions
+  monikers:
+  - msal-model-dotnet-latest

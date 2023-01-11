@@ -1,0 +1,85 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.IdentityModel.Tokens.Saml.SamlAuthenticationStatement?alt=Microsoft.IdentityModel.Tokens.Saml.SamlAuthenticationStatement&text=SamlAuthenticationStatement" data-throw-if-not-resolved="True"/>
+    description: SamlAuthenticationStatement
+  parameters:
+  - namesWithMoniker:
+    - value: subject
+    description: The SamlSubject of the Statement.
+    type: <xref href="Microsoft.IdentityModel.Tokens.Saml.SamlSubject?alt=Microsoft.IdentityModel.Tokens.Saml.SamlSubject&text=SamlSubject" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: authenticationInformation
+    description: Contains all the other information that is used in token issuance.
+    type: <xref href="Microsoft.IdentityModel.Tokens.Saml.AuthenticationInformation?alt=Microsoft.IdentityModel.Tokens.Saml.AuthenticationInformation&text=AuthenticationInformation" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: if <code data-dev-comment-type="paramref">subject</code> is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: if Assertion has one or more AuthenticationStatement, and one of AuthenticationMethod and authenticationInstant is null.
+    type: <xref href="Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenException?alt=Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenException&text=SamlSecurityTokenException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CreateAuthenticationStatement(Microsoft.IdentityModel.Tokens.Saml.SamlSubject,Microsoft.IdentityModel.Tokens.Saml.AuthenticationInformation)
+  commentId: M:Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CreateAuthenticationStatement(Microsoft.IdentityModel.Tokens.Saml.SamlSubject,Microsoft.IdentityModel.Tokens.Saml.AuthenticationInformation)
+  name: CreateAuthenticationStatement(SamlSubject, AuthenticationInformation)
+  fullName: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CreateAuthenticationStatement(SamlSubject, AuthenticationInformation)
+  nameWithType: SamlSecurityTokenHandler.CreateAuthenticationStatement(SamlSubject, AuthenticationInformation)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected virtual Microsoft.IdentityModel.Tokens.Saml.SamlAuthenticationStatement CreateAuthenticationStatement (Microsoft.IdentityModel.Tokens.Saml.SamlSubject subject, Microsoft.IdentityModel.Tokens.Saml.AuthenticationInformation authenticationInformation);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member CreateAuthenticationStatement : Microsoft.IdentityModel.Tokens.Saml.SamlSubject * Microsoft.IdentityModel.Tokens.Saml.AuthenticationInformation -> Microsoft.IdentityModel.Tokens.Saml.SamlAuthenticationStatement
+
+        override this.CreateAuthenticationStatement : Microsoft.IdentityModel.Tokens.Saml.SamlSubject * Microsoft.IdentityModel.Tokens.Saml.AuthenticationInformation -> Microsoft.IdentityModel.Tokens.Saml.SamlAuthenticationStatement
+  - lang: vb
+    values:
+    - value: Protected Overridable Function CreateAuthenticationStatement (subject As SamlSubject, authenticationInformation As AuthenticationInformation) As SamlAuthenticationStatement
+  monikers:
+  - msal-web-dotnet-latest
+  summary: >-
+    Creates a SamlAuthenticationStatement for each AuthenticationInformation found in AuthenticationInformation. 
+
+    Override this method to provide a custom implementation.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CreateAuthenticationStatement*
+commentId: Overload:Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CreateAuthenticationStatement
+namespace: Microsoft.IdentityModel.Tokens.Saml
+name: CreateAuthenticationStatement
+fullName: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CreateAuthenticationStatement
+nameWithType: SamlSecurityTokenHandler.CreateAuthenticationStatement
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CreateAuthenticationStatement
+  api_location:
+  - Microsoft.IdentityModel.Tokens.Saml.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CreateAuthenticationStatement
+  - Microsoft::IdentityModel::Tokens::Saml::SamlSecurityTokenHandler::CreateAuthenticationStatement
+  - CreateAuthenticationStatement
+  - SamlSecurityTokenHandler.CreateAuthenticationStatement
+  - SamlSecurityTokenHandler::CreateAuthenticationStatement
+  helpviewer_keywords:
+  - SamlSecurityTokenHandler.CreateAuthenticationStatement method [.NET]
+  - CreateAuthenticationStatement method [.NET], class SamlSecurityTokenHandler
+  - SamlSecurityTokenHandler.CreateAuthenticationStatement(SamlSubject, AuthenticationInformation) method [.NET]
+  - CreateAuthenticationStatement(SamlSubject, AuthenticationInformation) method [.NET], class SamlSecurityTokenHandler
+  monikers:
+  - msal-web-dotnet-latest

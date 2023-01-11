@@ -1,0 +1,101 @@
+### YamlMime:NetMember
+type: method
+members:
+- implementsWithMoniker:
+  - value: <xref href="System.IDisposable.Dispose" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.InMemoryCryptoProviderCache.Dispose
+  commentId: M:Microsoft.IdentityModel.Tokens.InMemoryCryptoProviderCache.Dispose
+  name: Dispose()
+  fullName: Microsoft.IdentityModel.Tokens.InMemoryCryptoProviderCache.Dispose()
+  nameWithType: InMemoryCryptoProviderCache.Dispose()
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public void Dispose ();
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member Dispose : unit -> unit
+
+        override this.Dispose : unit -> unit
+  - lang: vb
+    values:
+    - value: Public Sub Dispose ()
+  monikers:
+  - msal-web-dotnet-latest
+  summary: >-
+    Calls <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.InMemoryCryptoProviderCache.Dispose(System.Boolean)"></xref> and <xref data-throw-if-not-resolved="true" uid="System.GC.SuppressFinalize(System.Object)"></xref>
+
+    Note: the EventBasedLRUCache is no longer being disposed of, but since this is a public class and can be used as base class of
+
+    custom cache implementations, we need to keep it as some implementations may override Dispose().
+  metadata: {}
+- parameters:
+  - namesWithMoniker:
+    - value: disposing
+    description: True if called from the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.InMemoryCryptoProviderCache.Dispose"></xref> method, false otherwise.
+    type: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.InMemoryCryptoProviderCache.Dispose(System.Boolean)
+  commentId: M:Microsoft.IdentityModel.Tokens.InMemoryCryptoProviderCache.Dispose(System.Boolean)
+  name: Dispose(Boolean)
+  fullName: Microsoft.IdentityModel.Tokens.InMemoryCryptoProviderCache.Dispose(Boolean)
+  nameWithType: InMemoryCryptoProviderCache.Dispose(Boolean)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected virtual void Dispose (bool disposing);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member Dispose : bool -> unit
+
+        override this.Dispose : bool -> unit
+  - lang: vb
+    values:
+    - value: Protected Overridable Sub Dispose (disposing As Boolean)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: If <code data-dev-comment-type="paramref">disposing</code> is true, this method disposes of <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.InMemoryCryptoProviderCache._signingSignatureProviders"></xref> and <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.InMemoryCryptoProviderCache._verifyingSignatureProviders"></xref>.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.InMemoryCryptoProviderCache.Dispose*
+commentId: Overload:Microsoft.IdentityModel.Tokens.InMemoryCryptoProviderCache.Dispose
+namespace: Microsoft.IdentityModel.Tokens
+name: Dispose
+fullName: Microsoft.IdentityModel.Tokens.InMemoryCryptoProviderCache.Dispose
+nameWithType: InMemoryCryptoProviderCache.Dispose
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.InMemoryCryptoProviderCache.Dispose
+  api_location:
+  - Microsoft.IdentityModel.Tokens.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.InMemoryCryptoProviderCache.Dispose
+  - Microsoft::IdentityModel::Tokens::InMemoryCryptoProviderCache::Dispose
+  - Dispose
+  - InMemoryCryptoProviderCache.Dispose
+  - InMemoryCryptoProviderCache::Dispose
+  helpviewer_keywords:
+  - InMemoryCryptoProviderCache.Dispose method [.NET]
+  - Dispose method [.NET], class InMemoryCryptoProviderCache
+  - InMemoryCryptoProviderCache.Dispose() method [.NET]
+  - Dispose() method [.NET], class InMemoryCryptoProviderCache
+  - InMemoryCryptoProviderCache.Dispose(Boolean) method [.NET]
+  - Dispose(Boolean) method [.NET], class InMemoryCryptoProviderCache
+  monikers:
+  - msal-web-dotnet-latest

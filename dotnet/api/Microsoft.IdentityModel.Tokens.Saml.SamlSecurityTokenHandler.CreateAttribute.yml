@@ -1,0 +1,78 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.IdentityModel.Tokens.Saml.SamlAttribute?alt=Microsoft.IdentityModel.Tokens.Saml.SamlAttribute&text=SamlAttribute" data-throw-if-not-resolved="True"/>
+    description: <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml.SamlAttribute"></xref>
+  parameters:
+  - namesWithMoniker:
+    - value: claim
+    description: Claim from which to generate a SamlAttribute.
+    type: <xref href="System.Security.Claims.Claim?alt=System.Security.Claims.Claim&text=Claim" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: if the <code data-dev-comment-type="paramref">claim</code> is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: if the type of <code data-dev-comment-type="paramref">claim</code> doesn't have "/" or only has "/" at the beginning or doesn't have any character(s) after the last "/".
+    type: <xref href="Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenException?alt=Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenException&text=SamlSecurityTokenException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CreateAttribute(System.Security.Claims.Claim)
+  commentId: M:Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CreateAttribute(System.Security.Claims.Claim)
+  name: CreateAttribute(Claim)
+  fullName: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CreateAttribute(Claim)
+  nameWithType: SamlSecurityTokenHandler.CreateAttribute(Claim)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected virtual Microsoft.IdentityModel.Tokens.Saml.SamlAttribute CreateAttribute (System.Security.Claims.Claim claim);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member CreateAttribute : System.Security.Claims.Claim -> Microsoft.IdentityModel.Tokens.Saml.SamlAttribute
+
+        override this.CreateAttribute : System.Security.Claims.Claim -> Microsoft.IdentityModel.Tokens.Saml.SamlAttribute
+  - lang: vb
+    values:
+    - value: Protected Overridable Function CreateAttribute (claim As Claim) As SamlAttribute
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Generates a SamlAttribute from a claim.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CreateAttribute*
+commentId: Overload:Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CreateAttribute
+namespace: Microsoft.IdentityModel.Tokens.Saml
+name: CreateAttribute
+fullName: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CreateAttribute
+nameWithType: SamlSecurityTokenHandler.CreateAttribute
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CreateAttribute
+  api_location:
+  - Microsoft.IdentityModel.Tokens.Saml.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CreateAttribute
+  - Microsoft::IdentityModel::Tokens::Saml::SamlSecurityTokenHandler::CreateAttribute
+  - CreateAttribute
+  - SamlSecurityTokenHandler.CreateAttribute
+  - SamlSecurityTokenHandler::CreateAttribute
+  helpviewer_keywords:
+  - SamlSecurityTokenHandler.CreateAttribute method [.NET]
+  - CreateAttribute method [.NET], class SamlSecurityTokenHandler
+  - SamlSecurityTokenHandler.CreateAttribute(Claim) method [.NET]
+  - CreateAttribute(Claim) method [.NET], class SamlSecurityTokenHandler
+  monikers:
+  - msal-web-dotnet-latest

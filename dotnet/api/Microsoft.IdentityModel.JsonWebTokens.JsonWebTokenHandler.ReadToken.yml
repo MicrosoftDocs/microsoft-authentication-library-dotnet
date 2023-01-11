@@ -1,0 +1,76 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.IdentityModel.Tokens.SecurityToken?alt=Microsoft.IdentityModel.Tokens.SecurityToken&text=SecurityToken" data-throw-if-not-resolved="True"/>
+    description: A <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken"></xref>
+  parameters:
+  - namesWithMoniker:
+    - value: token
+    description: A 'JSON Web Token' (JWT) in JWS or JWE Compact Serialization Format.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: <code data-dev-comment-type="paramref">token</code> is null or empty.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: "'token.Length' is greater than <xref data-throw-if-not-resolved=\"true\" uid=\"Microsoft.IdentityModel.Tokens.TokenHandler.MaximumTokenSizeInBytes\"></xref>."
+    type: <xref href="System.ArgumentException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(System.String)
+  commentId: M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(System.String)
+  name: ReadToken(String)
+  fullName: Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String)
+  nameWithType: JsonWebTokenHandler.ReadToken(String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public override Microsoft.IdentityModel.Tokens.SecurityToken ReadToken (string token);
+  - lang: fsharp
+    values:
+    - value: 'override this.ReadToken : string -> Microsoft.IdentityModel.Tokens.SecurityToken'
+  - lang: vb
+    values:
+    - value: Public Overrides Function ReadToken (token As String) As SecurityToken
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Converts a string into an instance of <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken"></xref>.
+  remarks: <p>The token is NOT validated and no security decisions should be made about the contents.</p><p>Use <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateToken(System.String,Microsoft.IdentityModel.Tokens.TokenValidationParameters)"></xref> or <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenAsync(System.String,Microsoft.IdentityModel.Tokens.TokenValidationParameters)"></xref> to ensure the token is acceptable.</p>
+  metadata: {}
+uid: Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken*
+commentId: Overload:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken
+namespace: Microsoft.IdentityModel.JsonWebTokens
+name: ReadToken
+fullName: Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken
+nameWithType: JsonWebTokenHandler.ReadToken
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.JsonWebTokens.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.JsonWebTokens v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken
+  api_location:
+  - Microsoft.IdentityModel.JsonWebTokens.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken
+  - Microsoft::IdentityModel::JsonWebTokens::JsonWebTokenHandler::ReadToken
+  - ReadToken
+  - JsonWebTokenHandler.ReadToken
+  - JsonWebTokenHandler::ReadToken
+  helpviewer_keywords:
+  - JsonWebTokenHandler.ReadToken method [.NET]
+  - ReadToken method [.NET], class JsonWebTokenHandler
+  - JsonWebTokenHandler.ReadToken(String) method [.NET]
+  - ReadToken(String) method [.NET], class JsonWebTokenHandler
+  monikers:
+  - msal-web-dotnet-latest

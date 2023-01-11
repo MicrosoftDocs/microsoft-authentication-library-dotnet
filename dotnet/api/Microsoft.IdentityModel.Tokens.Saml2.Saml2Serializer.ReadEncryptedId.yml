@@ -1,0 +1,76 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.IdentityModel.Tokens.Saml2.Saml2NameIdentifier?alt=Microsoft.IdentityModel.Tokens.Saml2.Saml2NameIdentifier&text=Saml2NameIdentifier" data-throw-if-not-resolved="True"/>
+    description: An instance of <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2NameIdentifier"></xref> representing the EncryptedId that was read
+  parameters:
+  - namesWithMoniker:
+    - value: reader
+    description: <xref data-throw-if-not-resolved="true" uid="System.Xml.XmlReader"></xref> pointing at the XML EncryptedId element
+    type: <xref href="System.Xml.XmlDictionaryReader?alt=System.Xml.XmlDictionaryReader&text=XmlDictionaryReader" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: Not implemented right now.
+    type: <xref href="System.NotSupportedException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.ReadEncryptedId(System.Xml.XmlDictionaryReader)
+  commentId: M:Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.ReadEncryptedId(System.Xml.XmlDictionaryReader)
+  name: ReadEncryptedId(XmlDictionaryReader)
+  fullName: Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.ReadEncryptedId(XmlDictionaryReader)
+  nameWithType: Saml2Serializer.ReadEncryptedId(XmlDictionaryReader)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected virtual Microsoft.IdentityModel.Tokens.Saml2.Saml2NameIdentifier ReadEncryptedId (System.Xml.XmlDictionaryReader reader);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member ReadEncryptedId : System.Xml.XmlDictionaryReader -> Microsoft.IdentityModel.Tokens.Saml2.Saml2NameIdentifier
+
+        override this.ReadEncryptedId : System.Xml.XmlDictionaryReader -> Microsoft.IdentityModel.Tokens.Saml2.Saml2NameIdentifier
+  - lang: vb
+    values:
+    - value: Protected Overridable Function ReadEncryptedId (reader As XmlDictionaryReader) As Saml2NameIdentifier
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Reads the &lt;saml:EncryptedId&gt; element.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.ReadEncryptedId*
+commentId: Overload:Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.ReadEncryptedId
+namespace: Microsoft.IdentityModel.Tokens.Saml2
+name: ReadEncryptedId
+fullName: Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.ReadEncryptedId
+nameWithType: Saml2Serializer.ReadEncryptedId
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.ReadEncryptedId
+  api_location:
+  - Microsoft.IdentityModel.Tokens.Saml.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.ReadEncryptedId
+  - Microsoft::IdentityModel::Tokens::Saml2::Saml2Serializer::ReadEncryptedId
+  - ReadEncryptedId
+  - Saml2Serializer.ReadEncryptedId
+  - Saml2Serializer::ReadEncryptedId
+  helpviewer_keywords:
+  - Saml2Serializer.ReadEncryptedId method [.NET]
+  - ReadEncryptedId method [.NET], class Saml2Serializer
+  - Saml2Serializer.ReadEncryptedId(XmlDictionaryReader) method [.NET]
+  - ReadEncryptedId(XmlDictionaryReader) method [.NET], class Saml2Serializer
+  monikers:
+  - msal-web-dotnet-latest

@@ -1,0 +1,80 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.Identity.Client.Cache.CacheData?alt=Microsoft.Identity.Client.Cache.CacheData&text=CacheData" data-throw-if-not-resolved="True"/>
+    description: Serialized token cache <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.Cache.CacheData"></xref>
+  implementsWithMoniker:
+  - value: <xref href="Microsoft.Identity.Client.ITokenCache.SerializeUnifiedAndAdalCache?alt=Microsoft.Identity.Client.ITokenCache.SerializeUnifiedAndAdalCache&text=SerializeUnifiedAndAdalCache()" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.TokenCache.SerializeUnifiedAndAdalCache
+  commentId: M:Microsoft.Identity.Client.TokenCache.SerializeUnifiedAndAdalCache
+  name: SerializeUnifiedAndAdalCache()
+  fullName: Microsoft.Identity.Client.TokenCache.SerializeUnifiedAndAdalCache()
+  nameWithType: TokenCache.SerializeUnifiedAndAdalCache()
+  attributesWithMoniker:
+  - value: System.ObsoleteAttribute
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: >-
+        [System.Obsolete("This is expected to be removed in MSAL.NET v5. We recommend using SerializeMsalV3/DeserializeMsalV3. Read more: https://aka.ms/msal-net-3x-cache-breaking-change", false)]
+
+        public Microsoft.Identity.Client.Cache.CacheData SerializeUnifiedAndAdalCache ();
+  - lang: fsharp
+    values:
+    - value: >-
+        [<System.Obsolete("This is expected to be removed in MSAL.NET v5. We recommend using SerializeMsalV3/DeserializeMsalV3. Read more: https://aka.ms/msal-net-3x-cache-breaking-change", false)>]
+
+        abstract member SerializeUnifiedAndAdalCache : unit -> Microsoft.Identity.Client.Cache.CacheData
+
+        override this.SerializeUnifiedAndAdalCache : unit -> Microsoft.Identity.Client.Cache.CacheData
+  - lang: vb
+    values:
+    - value: Public Function SerializeUnifiedAndAdalCache () As CacheData
+  monikers:
+  - msal-dotnet-latest
+  obsoleteMessagesWithMoniker:
+  - value: 'This is expected to be removed in MSAL.NET v5. We recommend using SerializeMsalV3/DeserializeMsalV3. Read more: https://aka.ms/msal-net-3x-cache-breaking-change'
+  summary: Serializes the entire token cache in both the ADAL V3 and unified cache formats.
+  remarks: <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITokenCacheSerializer.SerializeMsalV3"></xref>/<xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITokenCacheSerializer.DeserializeMsalV3(System.Byte[],System.Boolean)"></xref> is compatible with other MSAL libraries such as MSAL for Python and MSAL for Java.
+  metadata: {}
+uid: Microsoft.Identity.Client.TokenCache.SerializeUnifiedAndAdalCache*
+commentId: Overload:Microsoft.Identity.Client.TokenCache.SerializeUnifiedAndAdalCache
+namespace: Microsoft.Identity.Client
+name: SerializeUnifiedAndAdalCache
+fullName: Microsoft.Identity.Client.TokenCache.SerializeUnifiedAndAdalCache
+nameWithType: TokenCache.SerializeUnifiedAndAdalCache
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.TokenCache.SerializeUnifiedAndAdalCache
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.TokenCache.SerializeUnifiedAndAdalCache
+  - Microsoft::Identity::Client::TokenCache::SerializeUnifiedAndAdalCache
+  - SerializeUnifiedAndAdalCache
+  - TokenCache.SerializeUnifiedAndAdalCache
+  - TokenCache::SerializeUnifiedAndAdalCache
+  helpviewer_keywords:
+  - TokenCache.SerializeUnifiedAndAdalCache method [.NET]
+  - SerializeUnifiedAndAdalCache method [.NET], class TokenCache
+  - TokenCache.SerializeUnifiedAndAdalCache() method [.NET]
+  - SerializeUnifiedAndAdalCache() method [.NET], class TokenCache
+  monikers:
+  - msal-dotnet-latest

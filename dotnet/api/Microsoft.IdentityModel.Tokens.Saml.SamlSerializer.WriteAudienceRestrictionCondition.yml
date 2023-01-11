@@ -1,0 +1,78 @@
+### YamlMime:NetMember
+type: method
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: writer
+    description: A <xref data-throw-if-not-resolved="true" uid="System.Xml.XmlWriter"></xref> to serialize the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml.SamlAudienceRestrictionCondition"></xref>.
+    type: <xref href="System.Xml.XmlWriter?alt=System.Xml.XmlWriter&text=XmlWriter" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: audienceRestriction
+    description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml.SamlAudienceRestrictionCondition"></xref> to serialize.
+    type: <xref href="Microsoft.IdentityModel.Tokens.Saml.SamlAudienceRestrictionCondition?alt=Microsoft.IdentityModel.Tokens.Saml.SamlAudienceRestrictionCondition&text=SamlAudienceRestrictionCondition" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: if <code data-dev-comment-type="paramref">audienceRestriction</code> is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: if <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml.SamlAudienceRestrictionCondition.Audiences"></xref> is empty.
+    type: <xref href="Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenWriteException?alt=Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenWriteException&text=SamlSecurityTokenWriteException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.Saml.SamlSerializer.WriteAudienceRestrictionCondition(System.Xml.XmlWriter,Microsoft.IdentityModel.Tokens.Saml.SamlAudienceRestrictionCondition)
+  commentId: M:Microsoft.IdentityModel.Tokens.Saml.SamlSerializer.WriteAudienceRestrictionCondition(System.Xml.XmlWriter,Microsoft.IdentityModel.Tokens.Saml.SamlAudienceRestrictionCondition)
+  name: WriteAudienceRestrictionCondition(XmlWriter, SamlAudienceRestrictionCondition)
+  fullName: Microsoft.IdentityModel.Tokens.Saml.SamlSerializer.WriteAudienceRestrictionCondition(XmlWriter, SamlAudienceRestrictionCondition)
+  nameWithType: SamlSerializer.WriteAudienceRestrictionCondition(XmlWriter, SamlAudienceRestrictionCondition)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected virtual void WriteAudienceRestrictionCondition (System.Xml.XmlWriter writer, Microsoft.IdentityModel.Tokens.Saml.SamlAudienceRestrictionCondition audienceRestriction);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member WriteAudienceRestrictionCondition : System.Xml.XmlWriter * Microsoft.IdentityModel.Tokens.Saml.SamlAudienceRestrictionCondition -> unit
+
+        override this.WriteAudienceRestrictionCondition : System.Xml.XmlWriter * Microsoft.IdentityModel.Tokens.Saml.SamlAudienceRestrictionCondition -> unit
+  - lang: vb
+    values:
+    - value: Protected Overridable Sub WriteAudienceRestrictionCondition (writer As XmlWriter, audienceRestriction As SamlAudienceRestrictionCondition)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Writes the &lt;saml:AudienceRestriction&gt; element.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.Saml.SamlSerializer.WriteAudienceRestrictionCondition*
+commentId: Overload:Microsoft.IdentityModel.Tokens.Saml.SamlSerializer.WriteAudienceRestrictionCondition
+namespace: Microsoft.IdentityModel.Tokens.Saml
+name: WriteAudienceRestrictionCondition
+fullName: Microsoft.IdentityModel.Tokens.Saml.SamlSerializer.WriteAudienceRestrictionCondition
+nameWithType: SamlSerializer.WriteAudienceRestrictionCondition
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.Saml.SamlSerializer.WriteAudienceRestrictionCondition
+  api_location:
+  - Microsoft.IdentityModel.Tokens.Saml.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.Saml.SamlSerializer.WriteAudienceRestrictionCondition
+  - Microsoft::IdentityModel::Tokens::Saml::SamlSerializer::WriteAudienceRestrictionCondition
+  - WriteAudienceRestrictionCondition
+  - SamlSerializer.WriteAudienceRestrictionCondition
+  - SamlSerializer::WriteAudienceRestrictionCondition
+  helpviewer_keywords:
+  - SamlSerializer.WriteAudienceRestrictionCondition method [.NET]
+  - WriteAudienceRestrictionCondition method [.NET], class SamlSerializer
+  - SamlSerializer.WriteAudienceRestrictionCondition(XmlWriter, SamlAudienceRestrictionCondition) method [.NET]
+  - WriteAudienceRestrictionCondition(XmlWriter, SamlAudienceRestrictionCondition) method [.NET], class SamlSerializer
+  monikers:
+  - msal-web-dotnet-latest

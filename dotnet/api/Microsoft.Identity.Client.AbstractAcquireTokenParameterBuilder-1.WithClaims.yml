@@ -1,0 +1,78 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: T
+    description: The builder to chain .With methods.
+  parameters:
+  - namesWithMoniker:
+    - value: claims
+    description: A string with one or multiple claims.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithClaims(System.String)
+  commentId: M:Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithClaims(System.String)
+  name: WithClaims(String)
+  fullName: Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder<T>.WithClaims(String)
+  nameWithType: AbstractAcquireTokenParameterBuilder<T>.WithClaims(String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public T WithClaims (string claims);
+  - lang: fsharp
+    values:
+    - value: "member this.WithClaims : string -> 'T"
+  - lang: vb
+    values:
+    - value: Public Function WithClaims (claims As String) As T
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    Sets claims in the query. Use when the AAD admin has enabled conditional access. Acquiring the token normally will result in a
+
+    <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.MsalUiRequiredException"></xref> with the <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.MsalServiceException.Claims"></xref> property set. Retry the 
+
+    token acquisition, and use this value in the <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithClaims(System.String)"></xref> method. See https://aka.ms/msal-exceptions for details
+
+    as well as https://aka.ms/msal-net-claim-challenge.
+  metadata: {}
+uid: Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithClaims*
+commentId: Overload:Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithClaims
+namespace: Microsoft.Identity.Client
+name: WithClaims
+fullName: Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder<T>.WithClaims
+nameWithType: AbstractAcquireTokenParameterBuilder<T>.WithClaims
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithClaims
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithClaims
+  - Microsoft::Identity::Client::AbstractAcquireTokenParameterBuilder`1::WithClaims
+  - Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder.WithClaims
+  - WithClaims
+  - AbstractAcquireTokenParameterBuilder`1.WithClaims
+  - AbstractAcquireTokenParameterBuilder`1::WithClaims
+  helpviewer_keywords:
+  - AbstractAcquireTokenParameterBuilder<T>.WithClaims method [.NET]
+  - WithClaims method [.NET], class AbstractAcquireTokenParameterBuilder<T>
+  - AbstractAcquireTokenParameterBuilder<T>.WithClaims(String) method [.NET]
+  - WithClaims(String) method [.NET], class AbstractAcquireTokenParameterBuilder<T>
+  monikers:
+  - msal-dotnet-latest

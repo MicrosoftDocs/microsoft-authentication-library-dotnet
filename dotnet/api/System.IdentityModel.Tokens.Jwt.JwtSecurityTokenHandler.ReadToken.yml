@@ -1,0 +1,112 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.IdentityModel.Tokens.SecurityToken?alt=Microsoft.IdentityModel.Tokens.SecurityToken&text=SecurityToken" data-throw-if-not-resolved="True"/>
+    description: A <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityToken"></xref>
+  parameters:
+  - namesWithMoniker:
+    - value: token
+    description: A 'JSON Web Token' (JWT) in JWS or JWE Compact Serialization Format.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: <code data-dev-comment-type="paramref">token</code> is null or empty.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CanReadToken(System.String)"></xref>
+    type: <xref href="System.ArgumentException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ReadToken(System.String)
+  commentId: M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ReadToken(System.String)
+  name: ReadToken(String)
+  fullName: System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ReadToken(String)
+  nameWithType: JwtSecurityTokenHandler.ReadToken(String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public override Microsoft.IdentityModel.Tokens.SecurityToken ReadToken (string token);
+  - lang: fsharp
+    values:
+    - value: 'override this.ReadToken : string -> Microsoft.IdentityModel.Tokens.SecurityToken'
+  - lang: vb
+    values:
+    - value: Public Overrides Function ReadToken (token As String) As SecurityToken
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Converts a string into an instance of <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityToken"></xref>.
+  remarks: <p>If the <code data-dev-comment-type="paramref">token</code> is in JWE Compact Serialization format, only the protected header will be deserialized.</p><p>This method is unable to decrypt the payload. Use <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(System.String,Microsoft.IdentityModel.Tokens.TokenValidationParameters,Microsoft.IdentityModel.Tokens.SecurityToken@)"></xref>to obtain the payload.</p>
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.IdentityModel.Tokens.SecurityToken?alt=Microsoft.IdentityModel.Tokens.SecurityToken&text=SecurityToken" data-throw-if-not-resolved="True"/>
+    description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityToken"></xref>
+  parameters:
+  - namesWithMoniker:
+    - value: reader
+    description: <xref data-throw-if-not-resolved="true" uid="System.Xml.XmlReader"></xref>.
+    type: <xref href="System.Xml.XmlReader?alt=System.Xml.XmlReader&text=XmlReader" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: validationParameters
+    description: The current <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.TokenValidationParameters"></xref>.
+    type: <xref href="Microsoft.IdentityModel.Tokens.TokenValidationParameters?alt=Microsoft.IdentityModel.Tokens.TokenValidationParameters&text=TokenValidationParameters" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ReadToken(System.Xml.XmlReader,Microsoft.IdentityModel.Tokens.TokenValidationParameters)
+  commentId: M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ReadToken(System.Xml.XmlReader,Microsoft.IdentityModel.Tokens.TokenValidationParameters)
+  name: ReadToken(XmlReader, TokenValidationParameters)
+  fullName: System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ReadToken(XmlReader, TokenValidationParameters)
+  nameWithType: JwtSecurityTokenHandler.ReadToken(XmlReader, TokenValidationParameters)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public override Microsoft.IdentityModel.Tokens.SecurityToken ReadToken (System.Xml.XmlReader reader, Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters);
+  - lang: fsharp
+    values:
+    - value: 'override this.ReadToken : System.Xml.XmlReader * Microsoft.IdentityModel.Tokens.TokenValidationParameters -> Microsoft.IdentityModel.Tokens.SecurityToken'
+  - lang: vb
+    values:
+    - value: Public Overrides Function ReadToken (reader As XmlReader, validationParameters As TokenValidationParameters) As SecurityToken
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Deserializes token with the provided <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.TokenValidationParameters"></xref>.
+  remarks: This method is not current supported.
+  metadata: {}
+uid: System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ReadToken*
+commentId: Overload:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ReadToken
+namespace: System.IdentityModel.Tokens.Jwt
+name: ReadToken
+fullName: System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ReadToken
+nameWithType: JwtSecurityTokenHandler.ReadToken
+assembliesWithMoniker:
+- value: System.IdentityModel.Tokens.Jwt.dll
+packagesWithMoniker:
+- value: System.IdentityModel.Tokens.Jwt v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ReadToken
+  api_location:
+  - System.IdentityModel.Tokens.Jwt.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ReadToken
+  - System::IdentityModel::Tokens::Jwt::JwtSecurityTokenHandler::ReadToken
+  - ReadToken
+  - JwtSecurityTokenHandler.ReadToken
+  - JwtSecurityTokenHandler::ReadToken
+  helpviewer_keywords:
+  - JwtSecurityTokenHandler.ReadToken method [.NET]
+  - ReadToken method [.NET], class JwtSecurityTokenHandler
+  - JwtSecurityTokenHandler.ReadToken(String) method [.NET]
+  - ReadToken(String) method [.NET], class JwtSecurityTokenHandler
+  - JwtSecurityTokenHandler.ReadToken(XmlReader, TokenValidationParameters) method [.NET]
+  - ReadToken(XmlReader, TokenValidationParameters) method [.NET], class JwtSecurityTokenHandler
+  monikers:
+  - msal-web-dotnet-latest

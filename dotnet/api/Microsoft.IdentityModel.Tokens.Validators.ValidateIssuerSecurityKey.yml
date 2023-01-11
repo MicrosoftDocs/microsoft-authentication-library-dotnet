@@ -1,0 +1,77 @@
+### YamlMime:NetMember
+type: method
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: securityKey
+    description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityKey"></xref> that signed the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityToken"></xref>.
+    type: <xref href="Microsoft.IdentityModel.Tokens.SecurityKey?alt=Microsoft.IdentityModel.Tokens.SecurityKey&text=SecurityKey" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: securityToken
+    description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityToken"></xref> being validated.
+    type: <xref href="Microsoft.IdentityModel.Tokens.SecurityToken?alt=Microsoft.IdentityModel.Tokens.SecurityToken&text=SecurityToken" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: validationParameters
+    description: <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.TokenValidationParameters"></xref> required for validation.
+    type: <xref href="Microsoft.IdentityModel.Tokens.TokenValidationParameters?alt=Microsoft.IdentityModel.Tokens.TokenValidationParameters&text=TokenValidationParameters" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: if 'vaidationParameters' is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.Validators.ValidateIssuerSecurityKey(Microsoft.IdentityModel.Tokens.SecurityKey,Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.TokenValidationParameters)
+  commentId: M:Microsoft.IdentityModel.Tokens.Validators.ValidateIssuerSecurityKey(Microsoft.IdentityModel.Tokens.SecurityKey,Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.TokenValidationParameters)
+  name: ValidateIssuerSecurityKey(SecurityKey, SecurityToken, TokenValidationParameters)
+  fullName: Microsoft.IdentityModel.Tokens.Validators.ValidateIssuerSecurityKey(SecurityKey, SecurityToken, TokenValidationParameters)
+  nameWithType: Validators.ValidateIssuerSecurityKey(SecurityKey, SecurityToken, TokenValidationParameters)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public static void ValidateIssuerSecurityKey (Microsoft.IdentityModel.Tokens.SecurityKey securityKey, Microsoft.IdentityModel.Tokens.SecurityToken securityToken, Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters);
+  - lang: fsharp
+    values:
+    - value: 'static member ValidateIssuerSecurityKey : Microsoft.IdentityModel.Tokens.SecurityKey * Microsoft.IdentityModel.Tokens.SecurityToken * Microsoft.IdentityModel.Tokens.TokenValidationParameters -> unit'
+  - lang: vb
+    values:
+    - value: Public Shared Sub ValidateIssuerSecurityKey (securityKey As SecurityKey, securityToken As SecurityToken, validationParameters As TokenValidationParameters)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Validates the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityKey"></xref> that signed a <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityToken"></xref>.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.Validators.ValidateIssuerSecurityKey*
+commentId: Overload:Microsoft.IdentityModel.Tokens.Validators.ValidateIssuerSecurityKey
+namespace: Microsoft.IdentityModel.Tokens
+name: ValidateIssuerSecurityKey
+fullName: Microsoft.IdentityModel.Tokens.Validators.ValidateIssuerSecurityKey
+nameWithType: Validators.ValidateIssuerSecurityKey
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.Validators.ValidateIssuerSecurityKey
+  api_location:
+  - Microsoft.IdentityModel.Tokens.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.Validators.ValidateIssuerSecurityKey
+  - Microsoft::IdentityModel::Tokens::Validators::ValidateIssuerSecurityKey
+  - ValidateIssuerSecurityKey
+  - Validators.ValidateIssuerSecurityKey
+  - Validators::ValidateIssuerSecurityKey
+  helpviewer_keywords:
+  - Validators.ValidateIssuerSecurityKey method [.NET]
+  - ValidateIssuerSecurityKey method [.NET], class Validators
+  - Validators.ValidateIssuerSecurityKey(SecurityKey, SecurityToken, TokenValidationParameters) method [.NET]
+  - ValidateIssuerSecurityKey(SecurityKey, SecurityToken, TokenValidationParameters) method [.NET], class Validators
+  monikers:
+  - msal-web-dotnet-latest

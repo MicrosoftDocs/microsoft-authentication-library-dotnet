@@ -1,0 +1,97 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Client.IAccount?alt=Microsoft.Identity.Client.IAccount&text=IAccount" data-throw-if-not-resolved="True"/>&gt;&gt;
+  parameters:
+  - namesWithMoniker:
+    - value: userFlow
+    description: The identifier is the user flow being targeted by the specific B2C authority/&gt;.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.IClientApplicationBase.GetAccountsAsync(System.String)
+  commentId: M:Microsoft.Identity.Client.IClientApplicationBase.GetAccountsAsync(System.String)
+  name: GetAccountsAsync(String)
+  fullName: Microsoft.Identity.Client.IClientApplicationBase.GetAccountsAsync(String)
+  nameWithType: IClientApplicationBase.GetAccountsAsync(String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<Microsoft.Identity.Client.IAccount>> GetAccountsAsync (string userFlow);
+  - lang: fsharp
+    values:
+    - value: 'abstract member GetAccountsAsync : string -> System.Threading.Tasks.Task<seq<Microsoft.Identity.Client.IAccount>>'
+  - lang: vb
+    values:
+    - value: Public Function GetAccountsAsync (userFlow As String) As Task(Of IEnumerable(Of IAccount))
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    Get the <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.IAccount"></xref> collection by its identifier among the accounts available in the token cache,
+
+    based on the user flow. This is for Azure AD B2C scenarios.
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Client.IAccount?alt=Microsoft.Identity.Client.IAccount&text=IAccount" data-throw-if-not-resolved="True"/>&gt;&gt;
+  type: method
+  uid: Microsoft.Identity.Client.IClientApplicationBase.GetAccountsAsync
+  commentId: M:Microsoft.Identity.Client.IClientApplicationBase.GetAccountsAsync
+  name: GetAccountsAsync()
+  fullName: Microsoft.Identity.Client.IClientApplicationBase.GetAccountsAsync()
+  nameWithType: IClientApplicationBase.GetAccountsAsync()
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<Microsoft.Identity.Client.IAccount>> GetAccountsAsync ();
+  - lang: fsharp
+    values:
+    - value: 'abstract member GetAccountsAsync : unit -> System.Threading.Tasks.Task<seq<Microsoft.Identity.Client.IAccount>>'
+  - lang: vb
+    values:
+    - value: Public Function GetAccountsAsync () As Task(Of IEnumerable(Of IAccount))
+  monikers:
+  - msal-dotnet-latest
+  summary: Returns all the available <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.IAccount" href="Microsoft.Identity.Client.IAccount?text=accounts"></xref> in the user token cache for the application.
+  metadata: {}
+uid: Microsoft.Identity.Client.IClientApplicationBase.GetAccountsAsync*
+commentId: Overload:Microsoft.Identity.Client.IClientApplicationBase.GetAccountsAsync
+namespace: Microsoft.Identity.Client
+name: GetAccountsAsync
+fullName: Microsoft.Identity.Client.IClientApplicationBase.GetAccountsAsync
+nameWithType: IClientApplicationBase.GetAccountsAsync
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.IClientApplicationBase.GetAccountsAsync
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.IClientApplicationBase.GetAccountsAsync
+  - Microsoft::Identity::Client::IClientApplicationBase::GetAccountsAsync
+  - GetAccountsAsync
+  - IClientApplicationBase.GetAccountsAsync
+  - IClientApplicationBase::GetAccountsAsync
+  helpviewer_keywords:
+  - IClientApplicationBase.GetAccountsAsync method [.NET]
+  - GetAccountsAsync method [.NET], interface IClientApplicationBase
+  - IClientApplicationBase.GetAccountsAsync(String) method [.NET]
+  - GetAccountsAsync(String) method [.NET], interface IClientApplicationBase
+  - IClientApplicationBase.GetAccountsAsync() method [.NET]
+  - GetAccountsAsync() method [.NET], interface IClientApplicationBase
+  monikers:
+  - msal-dotnet-latest

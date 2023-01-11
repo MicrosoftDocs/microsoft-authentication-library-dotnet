@@ -1,0 +1,88 @@
+### YamlMime:NetMember
+type: method
+members:
+- typeParameters:
+  - name: T
+  returnsWithMoniker:
+    type:
+    - value: T
+  parameters:
+  - namesWithMoniker:
+    - value: baseRequest
+    description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.Graph.IBaseRequest"></xref>.
+    type: T
+  - namesWithMoniker:
+    - value: authenticationScheme
+    description: Authentication scheme used to authenticate this request.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Web.BaseRequestExtensions.WithAuthenticationScheme``1(``0,System.String)
+  commentId: M:Microsoft.Identity.Web.BaseRequestExtensions.WithAuthenticationScheme``1(``0,System.String)
+  name: WithAuthenticationScheme<T>(T, String)
+  fullName: Microsoft.Identity.Web.BaseRequestExtensions.WithAuthenticationScheme<T>(T, String)
+  nameWithType: BaseRequestExtensions.WithAuthenticationScheme<T>(T, String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: 'public static T WithAuthenticationScheme<T> (this T baseRequest, string authenticationScheme) where T : Microsoft.Graph.IBaseRequest;'
+  - lang: fsharp
+    values:
+    - value: "static member WithAuthenticationScheme : 'T * string -> 'T (requires 'T :> Microsoft.Graph.IBaseRequest)"
+  - lang: vb
+    values:
+    - value: >-
+        <Extension()>
+
+        Public Function WithAuthenticationScheme(Of T As IBaseRequest) (baseRequest As T, authenticationScheme As String) As T
+  monikers:
+  - msal-model-dotnet-latest
+  summary: >-
+    Sets the authentication scheme that will be used by <xref data-throw-if-not-resolved="true" uid="Microsoft.Graph.IAuthenticationProvider"></xref> to authenticate this request.
+
+    This only works with the default authentication handler and default set of Microsoft Graph authentication providers.
+
+    If you use a custom authentication handler or authentication provider, you have to handle its retrieval in your implementation.
+  metadata: {}
+uid: Microsoft.Identity.Web.BaseRequestExtensions.WithAuthenticationScheme*
+commentId: Overload:Microsoft.Identity.Web.BaseRequestExtensions.WithAuthenticationScheme
+namespace: Microsoft.Identity.Web
+name: WithAuthenticationScheme
+fullName: Microsoft.Identity.Web.BaseRequestExtensions.WithAuthenticationScheme
+nameWithType: BaseRequestExtensions.WithAuthenticationScheme
+assembliesWithMoniker:
+- value: Microsoft.Identity.Web.MicrosoftGraph.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Web.MicrosoftGraph v1.25.10
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-model-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Web.BaseRequestExtensions.WithAuthenticationScheme
+  api_location:
+  - Microsoft.Identity.Web.MicrosoftGraph.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Web.BaseRequestExtensions.WithAuthenticationScheme
+  - Microsoft::Identity::Web::BaseRequestExtensions::WithAuthenticationScheme
+  - WithAuthenticationScheme
+  - BaseRequestExtensions.WithAuthenticationScheme
+  - BaseRequestExtensions::WithAuthenticationScheme
+  - Microsoft.Identity.Web.BaseRequestExtensions.WithAuthenticationScheme``1
+  - Microsoft::Identity::Web::BaseRequestExtensions::WithAuthenticationScheme``1
+  - WithAuthenticationScheme``1
+  - BaseRequestExtensions.WithAuthenticationScheme``1
+  - BaseRequestExtensions::WithAuthenticationScheme``1
+  helpviewer_keywords:
+  - BaseRequestExtensions.WithAuthenticationScheme method [.NET]
+  - WithAuthenticationScheme method [.NET], class BaseRequestExtensions
+  - BaseRequestExtensions.WithAuthenticationScheme<T>(T, String) extension method [.NET]
+  - WithAuthenticationScheme<T>(T, String) extension method [.NET], class BaseRequestExtensions
+  monikers:
+  - msal-model-dotnet-latest

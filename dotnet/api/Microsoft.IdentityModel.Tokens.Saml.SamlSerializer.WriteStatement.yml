@@ -1,0 +1,76 @@
+### YamlMime:NetMember
+type: method
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: writer
+    description: A <xref data-throw-if-not-resolved="true" uid="System.Xml.XmlWriter"></xref> to serialize the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml.SamlStatement"></xref>.
+    type: <xref href="System.Xml.XmlWriter?alt=System.Xml.XmlWriter&text=XmlWriter" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: statement
+    description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml.SamlStatement"></xref> to serialize.
+    type: <xref href="Microsoft.IdentityModel.Tokens.Saml.SamlStatement?alt=Microsoft.IdentityModel.Tokens.Saml.SamlStatement&text=SamlStatement" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: if <code data-dev-comment-type="paramref">statement</code> is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.Saml.SamlSerializer.WriteStatement(System.Xml.XmlWriter,Microsoft.IdentityModel.Tokens.Saml.SamlStatement)
+  commentId: M:Microsoft.IdentityModel.Tokens.Saml.SamlSerializer.WriteStatement(System.Xml.XmlWriter,Microsoft.IdentityModel.Tokens.Saml.SamlStatement)
+  name: WriteStatement(XmlWriter, SamlStatement)
+  fullName: Microsoft.IdentityModel.Tokens.Saml.SamlSerializer.WriteStatement(XmlWriter, SamlStatement)
+  nameWithType: SamlSerializer.WriteStatement(XmlWriter, SamlStatement)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected virtual void WriteStatement (System.Xml.XmlWriter writer, Microsoft.IdentityModel.Tokens.Saml.SamlStatement statement);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member WriteStatement : System.Xml.XmlWriter * Microsoft.IdentityModel.Tokens.Saml.SamlStatement -> unit
+
+        override this.WriteStatement : System.Xml.XmlWriter * Microsoft.IdentityModel.Tokens.Saml.SamlStatement -> unit
+  - lang: vb
+    values:
+    - value: Protected Overridable Sub WriteStatement (writer As XmlWriter, statement As SamlStatement)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Writes one of the suppported Statements.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.Saml.SamlSerializer.WriteStatement*
+commentId: Overload:Microsoft.IdentityModel.Tokens.Saml.SamlSerializer.WriteStatement
+namespace: Microsoft.IdentityModel.Tokens.Saml
+name: WriteStatement
+fullName: Microsoft.IdentityModel.Tokens.Saml.SamlSerializer.WriteStatement
+nameWithType: SamlSerializer.WriteStatement
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.Saml.SamlSerializer.WriteStatement
+  api_location:
+  - Microsoft.IdentityModel.Tokens.Saml.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.Saml.SamlSerializer.WriteStatement
+  - Microsoft::IdentityModel::Tokens::Saml::SamlSerializer::WriteStatement
+  - WriteStatement
+  - SamlSerializer.WriteStatement
+  - SamlSerializer::WriteStatement
+  helpviewer_keywords:
+  - SamlSerializer.WriteStatement method [.NET]
+  - WriteStatement method [.NET], class SamlSerializer
+  - SamlSerializer.WriteStatement(XmlWriter, SamlStatement) method [.NET]
+  - WriteStatement(XmlWriter, SamlStatement) method [.NET], class SamlSerializer
+  monikers:
+  - msal-web-dotnet-latest

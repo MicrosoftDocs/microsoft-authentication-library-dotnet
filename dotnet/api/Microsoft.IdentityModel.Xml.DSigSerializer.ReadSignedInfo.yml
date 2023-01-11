@@ -1,0 +1,78 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.IdentityModel.Xml.SignedInfo?alt=Microsoft.IdentityModel.Xml.SignedInfo&text=SignedInfo" data-throw-if-not-resolved="True"/>
+    description: <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Xml.SignedInfo"></xref>
+  parameters:
+  - namesWithMoniker:
+    - value: reader
+    description: a <xref data-throw-if-not-resolved="true" uid="System.Xml.XmlReader"></xref>positioned on a &lt;SignedInfo&gt; element.
+    type: <xref href="System.Xml.XmlReader?alt=System.Xml.XmlReader&text=XmlReader" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: if <code data-dev-comment-type="paramref">reader</code> is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: if there is a problem reading the XML.
+    type: <xref href="Microsoft.IdentityModel.Xml.XmlReadException?alt=Microsoft.IdentityModel.Xml.XmlReadException&text=XmlReadException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Xml.DSigSerializer.ReadSignedInfo(System.Xml.XmlReader)
+  commentId: M:Microsoft.IdentityModel.Xml.DSigSerializer.ReadSignedInfo(System.Xml.XmlReader)
+  name: ReadSignedInfo(XmlReader)
+  fullName: Microsoft.IdentityModel.Xml.DSigSerializer.ReadSignedInfo(XmlReader)
+  nameWithType: DSigSerializer.ReadSignedInfo(XmlReader)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public virtual Microsoft.IdentityModel.Xml.SignedInfo ReadSignedInfo (System.Xml.XmlReader reader);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member ReadSignedInfo : System.Xml.XmlReader -> Microsoft.IdentityModel.Xml.SignedInfo
+
+        override this.ReadSignedInfo : System.Xml.XmlReader -> Microsoft.IdentityModel.Xml.SignedInfo
+  - lang: vb
+    values:
+    - value: Public Overridable Function ReadSignedInfo (reader As XmlReader) As SignedInfo
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Reads XML conforming to https://www.w3.org/TR/2001/PR-xmldsig-core-20010820/#sec-SignedInfo
+  metadata: {}
+uid: Microsoft.IdentityModel.Xml.DSigSerializer.ReadSignedInfo*
+commentId: Overload:Microsoft.IdentityModel.Xml.DSigSerializer.ReadSignedInfo
+namespace: Microsoft.IdentityModel.Xml
+name: ReadSignedInfo
+fullName: Microsoft.IdentityModel.Xml.DSigSerializer.ReadSignedInfo
+nameWithType: DSigSerializer.ReadSignedInfo
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Xml.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Xml v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Xml.DSigSerializer.ReadSignedInfo
+  api_location:
+  - Microsoft.IdentityModel.Xml.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Xml.DSigSerializer.ReadSignedInfo
+  - Microsoft::IdentityModel::Xml::DSigSerializer::ReadSignedInfo
+  - ReadSignedInfo
+  - DSigSerializer.ReadSignedInfo
+  - DSigSerializer::ReadSignedInfo
+  helpviewer_keywords:
+  - DSigSerializer.ReadSignedInfo method [.NET]
+  - ReadSignedInfo method [.NET], class DSigSerializer
+  - DSigSerializer.ReadSignedInfo(XmlReader) method [.NET]
+  - ReadSignedInfo(XmlReader) method [.NET], class DSigSerializer
+  monikers:
+  - msal-web-dotnet-latest

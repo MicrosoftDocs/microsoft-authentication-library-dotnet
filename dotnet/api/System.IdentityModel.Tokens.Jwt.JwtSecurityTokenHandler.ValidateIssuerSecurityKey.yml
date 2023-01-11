@@ -1,0 +1,78 @@
+### YamlMime:NetMember
+type: method
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: key
+    description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityKey"></xref> that signed the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityToken"></xref>.
+    type: <xref href="Microsoft.IdentityModel.Tokens.SecurityKey?alt=Microsoft.IdentityModel.Tokens.SecurityKey&text=SecurityKey" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: securityToken
+    description: The <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityToken"></xref> to validate.
+    type: <xref href="System.IdentityModel.Tokens.Jwt.JwtSecurityToken?alt=System.IdentityModel.Tokens.Jwt.JwtSecurityToken&text=JwtSecurityToken" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: validationParameters
+    description: The current <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.TokenValidationParameters"></xref>.
+    type: <xref href="Microsoft.IdentityModel.Tokens.TokenValidationParameters?alt=Microsoft.IdentityModel.Tokens.TokenValidationParameters&text=TokenValidationParameters" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateIssuerSecurityKey(Microsoft.IdentityModel.Tokens.SecurityKey,System.IdentityModel.Tokens.Jwt.JwtSecurityToken,Microsoft.IdentityModel.Tokens.TokenValidationParameters)
+  commentId: M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateIssuerSecurityKey(Microsoft.IdentityModel.Tokens.SecurityKey,System.IdentityModel.Tokens.Jwt.JwtSecurityToken,Microsoft.IdentityModel.Tokens.TokenValidationParameters)
+  name: ValidateIssuerSecurityKey(SecurityKey, JwtSecurityToken, TokenValidationParameters)
+  fullName: System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateIssuerSecurityKey(SecurityKey, JwtSecurityToken, TokenValidationParameters)
+  nameWithType: JwtSecurityTokenHandler.ValidateIssuerSecurityKey(SecurityKey, JwtSecurityToken, TokenValidationParameters)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected virtual void ValidateIssuerSecurityKey (Microsoft.IdentityModel.Tokens.SecurityKey key, System.IdentityModel.Tokens.Jwt.JwtSecurityToken securityToken, Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member ValidateIssuerSecurityKey : Microsoft.IdentityModel.Tokens.SecurityKey * System.IdentityModel.Tokens.Jwt.JwtSecurityToken * Microsoft.IdentityModel.Tokens.TokenValidationParameters -> unit
+
+        override this.ValidateIssuerSecurityKey : Microsoft.IdentityModel.Tokens.SecurityKey * System.IdentityModel.Tokens.Jwt.JwtSecurityToken * Microsoft.IdentityModel.Tokens.TokenValidationParameters -> unit
+  - lang: vb
+    values:
+    - value: Protected Overridable Sub ValidateIssuerSecurityKey (key As SecurityKey, securityToken As JwtSecurityToken, validationParameters As TokenValidationParameters)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Validates the <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityToken.SigningKey"></xref> is an expected value.
+  remarks: If the <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityToken.SigningKey"></xref> is a <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.X509SecurityKey"></xref> then the X509Certificate2 will be validated using the CertificateValidator.
+  metadata: {}
+uid: System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateIssuerSecurityKey*
+commentId: Overload:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateIssuerSecurityKey
+namespace: System.IdentityModel.Tokens.Jwt
+name: ValidateIssuerSecurityKey
+fullName: System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateIssuerSecurityKey
+nameWithType: JwtSecurityTokenHandler.ValidateIssuerSecurityKey
+assembliesWithMoniker:
+- value: System.IdentityModel.Tokens.Jwt.dll
+packagesWithMoniker:
+- value: System.IdentityModel.Tokens.Jwt v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateIssuerSecurityKey
+  api_location:
+  - System.IdentityModel.Tokens.Jwt.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateIssuerSecurityKey
+  - System::IdentityModel::Tokens::Jwt::JwtSecurityTokenHandler::ValidateIssuerSecurityKey
+  - ValidateIssuerSecurityKey
+  - JwtSecurityTokenHandler.ValidateIssuerSecurityKey
+  - JwtSecurityTokenHandler::ValidateIssuerSecurityKey
+  helpviewer_keywords:
+  - JwtSecurityTokenHandler.ValidateIssuerSecurityKey method [.NET]
+  - ValidateIssuerSecurityKey method [.NET], class JwtSecurityTokenHandler
+  - JwtSecurityTokenHandler.ValidateIssuerSecurityKey(SecurityKey, JwtSecurityToken, TokenValidationParameters) method [.NET]
+  - ValidateIssuerSecurityKey(SecurityKey, JwtSecurityToken, TokenValidationParameters) method [.NET], class JwtSecurityTokenHandler
+  monikers:
+  - msal-web-dotnet-latest

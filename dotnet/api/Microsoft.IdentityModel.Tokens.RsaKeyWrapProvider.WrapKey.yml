@@ -1,0 +1,79 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Byte?alt=System.Byte&text=Byte" data-throw-if-not-resolved="True"/>[]
+    description: A wrapped key
+  parameters:
+  - namesWithMoniker:
+    - value: keyBytes
+    description: the key to be wrapped
+    type: <xref href="System.Byte?alt=System.Byte&text=Byte" data-throw-if-not-resolved="True"/>[]
+  exceptions:
+  - description: "'keyBytes' is null or has length == 0."
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: If <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.RsaKeyWrapProvider.Dispose(System.Boolean)"></xref> has been called.
+    type: <xref href="System.ObjectDisposedException" data-throw-if-not-resolved="True"/>
+  - description: Failed to wrap the 'keyBytes'.
+    type: <xref href="Microsoft.IdentityModel.Tokens.SecurityTokenKeyWrapException?alt=Microsoft.IdentityModel.Tokens.SecurityTokenKeyWrapException&text=SecurityTokenKeyWrapException" data-throw-if-not-resolved="True"/>
+  - description: If the internal RSA algorithm is null.
+    type: <xref href="System.InvalidOperationException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.RsaKeyWrapProvider.WrapKey(System.Byte[])
+  commentId: M:Microsoft.IdentityModel.Tokens.RsaKeyWrapProvider.WrapKey(System.Byte[])
+  name: WrapKey(Byte[])
+  fullName: Microsoft.IdentityModel.Tokens.RsaKeyWrapProvider.WrapKey(Byte[])
+  nameWithType: RsaKeyWrapProvider.WrapKey(Byte[])
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public override byte[] WrapKey (byte[] keyBytes);
+  - lang: fsharp
+    values:
+    - value: 'override this.WrapKey : byte[] -> byte[]'
+  - lang: vb
+    values:
+    - value: Public Overrides Function WrapKey (keyBytes As Byte()) As Byte()
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Wrap a key using RSA encryption.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.RsaKeyWrapProvider.WrapKey*
+commentId: Overload:Microsoft.IdentityModel.Tokens.RsaKeyWrapProvider.WrapKey
+namespace: Microsoft.IdentityModel.Tokens
+name: WrapKey
+fullName: Microsoft.IdentityModel.Tokens.RsaKeyWrapProvider.WrapKey
+nameWithType: RsaKeyWrapProvider.WrapKey
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.RsaKeyWrapProvider.WrapKey
+  api_location:
+  - Microsoft.IdentityModel.Tokens.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.RsaKeyWrapProvider.WrapKey
+  - Microsoft::IdentityModel::Tokens::RsaKeyWrapProvider::WrapKey
+  - WrapKey
+  - RsaKeyWrapProvider.WrapKey
+  - RsaKeyWrapProvider::WrapKey
+  helpviewer_keywords:
+  - RsaKeyWrapProvider.WrapKey method [.NET]
+  - WrapKey method [.NET], class RsaKeyWrapProvider
+  - RsaKeyWrapProvider.WrapKey(Byte[]) method [.NET]
+  - WrapKey(Byte[]) method [.NET], class RsaKeyWrapProvider
+  monikers:
+  - msal-web-dotnet-latest

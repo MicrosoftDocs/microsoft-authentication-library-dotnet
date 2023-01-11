@@ -1,0 +1,75 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Client.TenantProfile?alt=Microsoft.Identity.Client.TenantProfile&text=TenantProfile" data-throw-if-not-resolved="True"/>&gt;
+  parameters:
+  - namesWithMoniker:
+    - value: account
+    type: <xref href="Microsoft.Identity.Client.IAccount?alt=Microsoft.Identity.Client.IAccount&text=IAccount" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.AccountExtensions.GetTenantProfiles(Microsoft.Identity.Client.IAccount)
+  commentId: M:Microsoft.Identity.Client.AccountExtensions.GetTenantProfiles(Microsoft.Identity.Client.IAccount)
+  name: GetTenantProfiles(IAccount)
+  fullName: Microsoft.Identity.Client.AccountExtensions.GetTenantProfiles(IAccount)
+  nameWithType: AccountExtensions.GetTenantProfiles(IAccount)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public static System.Collections.Generic.IEnumerable<Microsoft.Identity.Client.TenantProfile> GetTenantProfiles (this Microsoft.Identity.Client.IAccount account);
+  - lang: fsharp
+    values:
+    - value: 'static member GetTenantProfiles : Microsoft.Identity.Client.IAccount -> seq<Microsoft.Identity.Client.TenantProfile>'
+  - lang: vb
+    values:
+    - value: >-
+        <Extension()>
+
+        Public Function GetTenantProfiles (account As IAccount) As IEnumerable(Of TenantProfile)
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    The same account can exist in its home tenant and also as a guest in multiple other tenants. 
+
+    <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.TenantProfile"></xref> is derived from the ID token for that tenant.
+  remarks: Only tenants for which a token was acquired will be available in <code data-dev-comment-type="c">TenantProfiles</code> property
+  metadata: {}
+uid: Microsoft.Identity.Client.AccountExtensions.GetTenantProfiles*
+commentId: Overload:Microsoft.Identity.Client.AccountExtensions.GetTenantProfiles
+namespace: Microsoft.Identity.Client
+name: GetTenantProfiles
+fullName: Microsoft.Identity.Client.AccountExtensions.GetTenantProfiles
+nameWithType: AccountExtensions.GetTenantProfiles
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.AccountExtensions.GetTenantProfiles
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.AccountExtensions.GetTenantProfiles
+  - Microsoft::Identity::Client::AccountExtensions::GetTenantProfiles
+  - GetTenantProfiles
+  - AccountExtensions.GetTenantProfiles
+  - AccountExtensions::GetTenantProfiles
+  helpviewer_keywords:
+  - AccountExtensions.GetTenantProfiles method [.NET]
+  - GetTenantProfiles method [.NET], class AccountExtensions
+  - AccountExtensions.GetTenantProfiles(IAccount) extension method [.NET]
+  - GetTenantProfiles(IAccount) extension method [.NET], class AccountExtensions
+  monikers:
+  - msal-dotnet-latest

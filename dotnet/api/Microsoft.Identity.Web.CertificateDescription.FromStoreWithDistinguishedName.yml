@@ -1,0 +1,81 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.Identity.Web.CertificateDescription?alt=Microsoft.Identity.Web.CertificateDescription&text=CertificateDescription" data-throw-if-not-resolved="True"/>
+    description: A certificate description.
+  parameters:
+  - namesWithMoniker:
+    - value: certificateDistinguishedName
+    description: Certificate distinguished named.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: certificateStoreLocation
+    description: Store location where to find the certificate.
+    type: <xref href="System.Security.Cryptography.X509Certificates.StoreLocation?alt=System.Security.Cryptography.X509Certificates.StoreLocation&text=StoreLocation" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: certificateStoreName
+    description: Store name where to find the certificate.
+    type: <xref href="System.Security.Cryptography.X509Certificates.StoreName?alt=System.Security.Cryptography.X509Certificates.StoreName&text=StoreName" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Web.CertificateDescription.FromStoreWithDistinguishedName(System.String,System.Security.Cryptography.X509Certificates.StoreLocation,System.Security.Cryptography.X509Certificates.StoreName)
+  commentId: M:Microsoft.Identity.Web.CertificateDescription.FromStoreWithDistinguishedName(System.String,System.Security.Cryptography.X509Certificates.StoreLocation,System.Security.Cryptography.X509Certificates.StoreName)
+  name: FromStoreWithDistinguishedName(String, StoreLocation, StoreName)
+  fullName: Microsoft.Identity.Web.CertificateDescription.FromStoreWithDistinguishedName(String, StoreLocation, StoreName)
+  nameWithType: CertificateDescription.FromStoreWithDistinguishedName(String, StoreLocation, StoreName)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public static Microsoft.Identity.Web.CertificateDescription FromStoreWithDistinguishedName (string certificateDistinguishedName, System.Security.Cryptography.X509Certificates.StoreLocation certificateStoreLocation = System.Security.Cryptography.X509Certificates.StoreLocation.CurrentUser, System.Security.Cryptography.X509Certificates.StoreName certificateStoreName = System.Security.Cryptography.X509Certificates.StoreName.My);
+  - lang: fsharp
+    values:
+    - value: 'static member FromStoreWithDistinguishedName : string * System.Security.Cryptography.X509Certificates.StoreLocation * System.Security.Cryptography.X509Certificates.StoreName -> Microsoft.Identity.Web.CertificateDescription'
+  - lang: vb
+    values:
+    - value: Public Shared Function FromStoreWithDistinguishedName (certificateDistinguishedName As String, Optional certificateStoreLocation As StoreLocation = System.Security.Cryptography.X509Certificates.StoreLocation.CurrentUser, Optional certificateStoreName As StoreName = System.Security.Cryptography.X509Certificates.StoreName.My) As CertificateDescription
+  monikers:
+  - msal-model-dotnet-latest
+  summary: >-
+    Creates a certificate description from a certificate distinguished name (such as CN=name)
+
+    and store location (Certificate Manager on Windows, for instance).
+  metadata: {}
+uid: Microsoft.Identity.Web.CertificateDescription.FromStoreWithDistinguishedName*
+commentId: Overload:Microsoft.Identity.Web.CertificateDescription.FromStoreWithDistinguishedName
+namespace: Microsoft.Identity.Web
+name: FromStoreWithDistinguishedName
+fullName: Microsoft.Identity.Web.CertificateDescription.FromStoreWithDistinguishedName
+nameWithType: CertificateDescription.FromStoreWithDistinguishedName
+assembliesWithMoniker:
+- value: Microsoft.Identity.Web.Certificate.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Web.Certificate v1.25.10
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-model-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Web.CertificateDescription.FromStoreWithDistinguishedName
+  api_location:
+  - Microsoft.Identity.Web.Certificate.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Web.CertificateDescription.FromStoreWithDistinguishedName
+  - Microsoft::Identity::Web::CertificateDescription::FromStoreWithDistinguishedName
+  - FromStoreWithDistinguishedName
+  - CertificateDescription.FromStoreWithDistinguishedName
+  - CertificateDescription::FromStoreWithDistinguishedName
+  helpviewer_keywords:
+  - CertificateDescription.FromStoreWithDistinguishedName method [.NET]
+  - FromStoreWithDistinguishedName method [.NET], class CertificateDescription
+  - CertificateDescription.FromStoreWithDistinguishedName(String, StoreLocation, StoreName) method [.NET]
+  - FromStoreWithDistinguishedName(String, StoreLocation, StoreName) method [.NET], class CertificateDescription
+  monikers:
+  - msal-model-dotnet-latest

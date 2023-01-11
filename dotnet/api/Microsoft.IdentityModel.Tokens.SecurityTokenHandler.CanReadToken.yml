@@ -1,0 +1,112 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+    description: "'True' if the ReadToken method can parse the token string."
+  parameters:
+  - namesWithMoniker:
+    - value: tokenString
+    description: The token string thats needs to be read.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  implementsWithMoniker:
+  - value: <xref href="Microsoft.IdentityModel.Tokens.ISecurityTokenValidator.CanReadToken(System.String)?alt=Microsoft.IdentityModel.Tokens.ISecurityTokenValidator.CanReadToken(System.String)&text=CanReadToken(String)" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken(System.String)
+  commentId: M:Microsoft.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken(System.String)
+  name: CanReadToken(String)
+  fullName: Microsoft.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken(String)
+  nameWithType: SecurityTokenHandler.CanReadToken(String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public virtual bool CanReadToken (string tokenString);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member CanReadToken : string -> bool
+
+        override this.CanReadToken : string -> bool
+  - lang: vb
+    values:
+    - value: Public Overridable Function CanReadToken (tokenString As String) As Boolean
+  monikers:
+  - msal-web-dotnet-latest
+  summary: >-
+    Indicates whether the current token string can be read as a token 
+
+    of the type handled by this instance.
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+    description: "'true' if the token can be read."
+  parameters:
+  - namesWithMoniker:
+    - value: reader
+    description: An <xref data-throw-if-not-resolved="true" uid="System.Xml.XmlReader"></xref> reader positioned at a start element. The reader should not be advanced.
+    type: <xref href="System.Xml.XmlReader?alt=System.Xml.XmlReader&text=XmlReader" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken(System.Xml.XmlReader)
+  commentId: M:Microsoft.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken(System.Xml.XmlReader)
+  name: CanReadToken(XmlReader)
+  fullName: Microsoft.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken(XmlReader)
+  nameWithType: SecurityTokenHandler.CanReadToken(XmlReader)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public virtual bool CanReadToken (System.Xml.XmlReader reader);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member CanReadToken : System.Xml.XmlReader -> bool
+
+        override this.CanReadToken : System.Xml.XmlReader -> bool
+  - lang: vb
+    values:
+    - value: Public Overridable Function CanReadToken (reader As XmlReader) As Boolean
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Indicates whether the <xref data-throw-if-not-resolved="true" uid="System.Xml.XmlReader"></xref> is positioned at an element that can be read.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken*
+commentId: Overload:Microsoft.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken
+namespace: Microsoft.IdentityModel.Tokens
+name: CanReadToken
+fullName: Microsoft.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken
+nameWithType: SecurityTokenHandler.CanReadToken
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken
+  api_location:
+  - Microsoft.IdentityModel.Tokens.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken
+  - Microsoft::IdentityModel::Tokens::SecurityTokenHandler::CanReadToken
+  - CanReadToken
+  - SecurityTokenHandler.CanReadToken
+  - SecurityTokenHandler::CanReadToken
+  helpviewer_keywords:
+  - SecurityTokenHandler.CanReadToken method [.NET]
+  - CanReadToken method [.NET], class SecurityTokenHandler
+  - SecurityTokenHandler.CanReadToken(String) method [.NET]
+  - CanReadToken(String) method [.NET], class SecurityTokenHandler
+  - SecurityTokenHandler.CanReadToken(XmlReader) method [.NET]
+  - CanReadToken(XmlReader) method [.NET], class SecurityTokenHandler
+  monikers:
+  - msal-web-dotnet-latest

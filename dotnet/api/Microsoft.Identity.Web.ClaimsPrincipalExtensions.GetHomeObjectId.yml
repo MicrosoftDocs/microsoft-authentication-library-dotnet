@@ -1,0 +1,73 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+    description: Home Object ID (sub) of the identity, or <code data-dev-comment-type="c">null</code> if it cannot be found.
+  parameters:
+  - namesWithMoniker:
+    - value: claimsPrincipal
+    description: The <xref data-throw-if-not-resolved="true" uid="System.Security.Claims.ClaimsPrincipal"></xref> from which to retrieve the sub claim.
+    type: <xref href="System.Security.Claims.ClaimsPrincipal?alt=System.Security.Claims.ClaimsPrincipal&text=ClaimsPrincipal" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Web.ClaimsPrincipalExtensions.GetHomeObjectId(System.Security.Claims.ClaimsPrincipal)
+  commentId: M:Microsoft.Identity.Web.ClaimsPrincipalExtensions.GetHomeObjectId(System.Security.Claims.ClaimsPrincipal)
+  name: GetHomeObjectId(ClaimsPrincipal)
+  fullName: Microsoft.Identity.Web.ClaimsPrincipalExtensions.GetHomeObjectId(ClaimsPrincipal)
+  nameWithType: ClaimsPrincipalExtensions.GetHomeObjectId(ClaimsPrincipal)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public static string? GetHomeObjectId (this System.Security.Claims.ClaimsPrincipal claimsPrincipal);
+  - lang: fsharp
+    values:
+    - value: 'static member GetHomeObjectId : System.Security.Claims.ClaimsPrincipal -> string'
+  - lang: vb
+    values:
+    - value: >-
+        <Extension()>
+
+        Public Function GetHomeObjectId (claimsPrincipal As ClaimsPrincipal) As String
+  monikers:
+  - msal-model-dotnet-latest
+  summary: Gets the Home Object ID associated with the <xref data-throw-if-not-resolved="true" uid="System.Security.Claims.ClaimsPrincipal"></xref>.
+  metadata: {}
+uid: Microsoft.Identity.Web.ClaimsPrincipalExtensions.GetHomeObjectId*
+commentId: Overload:Microsoft.Identity.Web.ClaimsPrincipalExtensions.GetHomeObjectId
+namespace: Microsoft.Identity.Web
+name: GetHomeObjectId
+fullName: Microsoft.Identity.Web.ClaimsPrincipalExtensions.GetHomeObjectId
+nameWithType: ClaimsPrincipalExtensions.GetHomeObjectId
+assembliesWithMoniker:
+- value: Microsoft.Identity.Web.TokenCache.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Web.TokenCache v1.25.10
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-model-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Web.ClaimsPrincipalExtensions.GetHomeObjectId
+  api_location:
+  - Microsoft.Identity.Web.TokenCache.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Web.ClaimsPrincipalExtensions.GetHomeObjectId
+  - Microsoft::Identity::Web::ClaimsPrincipalExtensions::GetHomeObjectId
+  - GetHomeObjectId
+  - ClaimsPrincipalExtensions.GetHomeObjectId
+  - ClaimsPrincipalExtensions::GetHomeObjectId
+  helpviewer_keywords:
+  - ClaimsPrincipalExtensions.GetHomeObjectId method [.NET]
+  - GetHomeObjectId method [.NET], class ClaimsPrincipalExtensions
+  - ClaimsPrincipalExtensions.GetHomeObjectId(ClaimsPrincipal) extension method [.NET]
+  - GetHomeObjectId(ClaimsPrincipal) extension method [.NET], class ClaimsPrincipalExtensions
+  monikers:
+  - msal-model-dotnet-latest

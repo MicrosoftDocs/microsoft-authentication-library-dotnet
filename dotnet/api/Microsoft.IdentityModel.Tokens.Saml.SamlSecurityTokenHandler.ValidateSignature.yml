@@ -1,0 +1,89 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.IdentityModel.Tokens.Saml.SamlSecurityToken?alt=Microsoft.IdentityModel.Tokens.Saml.SamlSecurityToken&text=SamlSecurityToken" data-throw-if-not-resolved="True"/>
+    description: A <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml.SamlSecurityToken"></xref> that has had the signature validated if token was signed.
+  parameters:
+  - namesWithMoniker:
+    - value: token
+    description: A Saml token.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: validationParameters
+    description: <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.TokenValidationParameters"></xref> that will be used during validation.
+    type: <xref href="Microsoft.IdentityModel.Tokens.TokenValidationParameters?alt=Microsoft.IdentityModel.Tokens.TokenValidationParameters&text=TokenValidationParameters" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: If <code data-dev-comment-type="paramref">validationParameters</code> is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: If a signature is not found and <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.TokenValidationParameters.RequireSignedTokens"></xref> is true.
+    type: <xref href="Microsoft.IdentityModel.Tokens.SecurityTokenValidationException?alt=Microsoft.IdentityModel.Tokens.SecurityTokenValidationException&text=SecurityTokenValidationException" data-throw-if-not-resolved="True"/>
+  - description: >-
+      If the 'token' has a key identifier and none of the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityKey"></xref>(s) provided result in a validated signature. 
+                  This can indicate that a key refresh is required.
+    type: <xref href="Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException?alt=Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException&text=SecurityTokenSignatureKeyNotFoundException" data-throw-if-not-resolved="True"/>
+  - description: If after trying all the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityKey"></xref>(s), none result in a validated signture AND the 'token' does not have a key identifier.
+    type: <xref href="Microsoft.IdentityModel.Tokens.SecurityTokenInvalidSignatureException?alt=Microsoft.IdentityModel.Tokens.SecurityTokenInvalidSignatureException&text=SecurityTokenInvalidSignatureException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.ValidateSignature(System.String,Microsoft.IdentityModel.Tokens.TokenValidationParameters)
+  commentId: M:Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.ValidateSignature(System.String,Microsoft.IdentityModel.Tokens.TokenValidationParameters)
+  name: ValidateSignature(String, TokenValidationParameters)
+  fullName: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.ValidateSignature(String, TokenValidationParameters)
+  nameWithType: SamlSecurityTokenHandler.ValidateSignature(String, TokenValidationParameters)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected virtual Microsoft.IdentityModel.Tokens.Saml.SamlSecurityToken ValidateSignature (string token, Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member ValidateSignature : string * Microsoft.IdentityModel.Tokens.TokenValidationParameters -> Microsoft.IdentityModel.Tokens.Saml.SamlSecurityToken
+
+        override this.ValidateSignature : string * Microsoft.IdentityModel.Tokens.TokenValidationParameters -> Microsoft.IdentityModel.Tokens.Saml.SamlSecurityToken
+  - lang: vb
+    values:
+    - value: Protected Overridable Function ValidateSignature (token As String, validationParameters As TokenValidationParameters) As SamlSecurityToken
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Validates that the signature, if found is valid.
+  remarks: <p>If the 'token' is signed, the signature is validated even if <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.TokenValidationParameters.RequireSignedTokens"></xref> is false.</p><p>If the 'token' signature is validated, then the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml.SamlSecurityToken.SigningKey"></xref> will be set to the key that signed the 'token'. It is the responsibility of <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.TokenValidationParameters.SignatureValidator"></xref> to set the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml.SamlSecurityToken.SigningKey"></xref></p>
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.ValidateSignature*
+commentId: Overload:Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.ValidateSignature
+namespace: Microsoft.IdentityModel.Tokens.Saml
+name: ValidateSignature
+fullName: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.ValidateSignature
+nameWithType: SamlSecurityTokenHandler.ValidateSignature
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.ValidateSignature
+  api_location:
+  - Microsoft.IdentityModel.Tokens.Saml.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.ValidateSignature
+  - Microsoft::IdentityModel::Tokens::Saml::SamlSecurityTokenHandler::ValidateSignature
+  - ValidateSignature
+  - SamlSecurityTokenHandler.ValidateSignature
+  - SamlSecurityTokenHandler::ValidateSignature
+  helpviewer_keywords:
+  - SamlSecurityTokenHandler.ValidateSignature method [.NET]
+  - ValidateSignature method [.NET], class SamlSecurityTokenHandler
+  - SamlSecurityTokenHandler.ValidateSignature(String, TokenValidationParameters) method [.NET]
+  - ValidateSignature(String, TokenValidationParameters) method [.NET], class SamlSecurityTokenHandler
+  monikers:
+  - msal-web-dotnet-latest

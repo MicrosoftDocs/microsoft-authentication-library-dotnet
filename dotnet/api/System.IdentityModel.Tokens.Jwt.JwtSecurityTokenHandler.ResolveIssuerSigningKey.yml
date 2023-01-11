@@ -1,0 +1,82 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.IdentityModel.Tokens.SecurityKey?alt=Microsoft.IdentityModel.Tokens.SecurityKey&text=SecurityKey" data-throw-if-not-resolved="True"/>
+    description: Returns a <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityKey"></xref> to use for signature validation.
+  parameters:
+  - namesWithMoniker:
+    - value: token
+    description: The <xref data-throw-if-not-resolved="true" uid="System.String"></xref> representation of the token that is being validated.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: jwtToken
+    description: The <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityToken"></xref> that is being validated.
+    type: <xref href="System.IdentityModel.Tokens.Jwt.JwtSecurityToken?alt=System.IdentityModel.Tokens.Jwt.JwtSecurityToken&text=JwtSecurityToken" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: validationParameters
+    description: A <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.TokenValidationParameters"></xref>  required for validation.
+    type: <xref href="Microsoft.IdentityModel.Tokens.TokenValidationParameters?alt=Microsoft.IdentityModel.Tokens.TokenValidationParameters&text=TokenValidationParameters" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ResolveIssuerSigningKey(System.String,System.IdentityModel.Tokens.Jwt.JwtSecurityToken,Microsoft.IdentityModel.Tokens.TokenValidationParameters)
+  commentId: M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ResolveIssuerSigningKey(System.String,System.IdentityModel.Tokens.Jwt.JwtSecurityToken,Microsoft.IdentityModel.Tokens.TokenValidationParameters)
+  name: ResolveIssuerSigningKey(String, JwtSecurityToken, TokenValidationParameters)
+  fullName: System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ResolveIssuerSigningKey(String, JwtSecurityToken, TokenValidationParameters)
+  nameWithType: JwtSecurityTokenHandler.ResolveIssuerSigningKey(String, JwtSecurityToken, TokenValidationParameters)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected virtual Microsoft.IdentityModel.Tokens.SecurityKey ResolveIssuerSigningKey (string token, System.IdentityModel.Tokens.Jwt.JwtSecurityToken jwtToken, Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member ResolveIssuerSigningKey : string * System.IdentityModel.Tokens.Jwt.JwtSecurityToken * Microsoft.IdentityModel.Tokens.TokenValidationParameters -> Microsoft.IdentityModel.Tokens.SecurityKey
+
+        override this.ResolveIssuerSigningKey : string * System.IdentityModel.Tokens.Jwt.JwtSecurityToken * Microsoft.IdentityModel.Tokens.TokenValidationParameters -> Microsoft.IdentityModel.Tokens.SecurityKey
+  - lang: vb
+    values:
+    - value: Protected Overridable Function ResolveIssuerSigningKey (token As String, jwtToken As JwtSecurityToken, validationParameters As TokenValidationParameters) As SecurityKey
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Returns a <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityKey"></xref> to use when validating the signature of a token.
+  remarks: If key fails to resolve, then null is returned
+  metadata: {}
+uid: System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ResolveIssuerSigningKey*
+commentId: Overload:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ResolveIssuerSigningKey
+namespace: System.IdentityModel.Tokens.Jwt
+name: ResolveIssuerSigningKey
+fullName: System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ResolveIssuerSigningKey
+nameWithType: JwtSecurityTokenHandler.ResolveIssuerSigningKey
+assembliesWithMoniker:
+- value: System.IdentityModel.Tokens.Jwt.dll
+packagesWithMoniker:
+- value: System.IdentityModel.Tokens.Jwt v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ResolveIssuerSigningKey
+  api_location:
+  - System.IdentityModel.Tokens.Jwt.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ResolveIssuerSigningKey
+  - System::IdentityModel::Tokens::Jwt::JwtSecurityTokenHandler::ResolveIssuerSigningKey
+  - ResolveIssuerSigningKey
+  - JwtSecurityTokenHandler.ResolveIssuerSigningKey
+  - JwtSecurityTokenHandler::ResolveIssuerSigningKey
+  helpviewer_keywords:
+  - JwtSecurityTokenHandler.ResolveIssuerSigningKey method [.NET]
+  - ResolveIssuerSigningKey method [.NET], class JwtSecurityTokenHandler
+  - JwtSecurityTokenHandler.ResolveIssuerSigningKey(String, JwtSecurityToken, TokenValidationParameters) method [.NET]
+  - ResolveIssuerSigningKey(String, JwtSecurityToken, TokenValidationParameters) method [.NET], class JwtSecurityTokenHandler
+  monikers:
+  - msal-web-dotnet-latest

@@ -1,0 +1,88 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.Identity.Web.CertificateDescription?alt=Microsoft.Identity.Web.CertificateDescription&text=CertificateDescription" data-throw-if-not-resolved="True"/>
+    description: A certificate description.
+  parameters:
+  - namesWithMoniker:
+    - value: certificateThumbprint
+    description: Certificate thumbprint.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: certificateStoreLocation
+    description: Store location where to find the certificate.
+    type: <xref href="System.Security.Cryptography.X509Certificates.StoreLocation?alt=System.Security.Cryptography.X509Certificates.StoreLocation&text=StoreLocation" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: certificateStoreName
+    description: Store name where to find the certificate.
+    type: <xref href="System.Security.Cryptography.X509Certificates.StoreName?alt=System.Security.Cryptography.X509Certificates.StoreName&text=StoreName" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Web.CertificateDescription.FromStoreWithThumprint(System.String,System.Security.Cryptography.X509Certificates.StoreLocation,System.Security.Cryptography.X509Certificates.StoreName)
+  commentId: M:Microsoft.Identity.Web.CertificateDescription.FromStoreWithThumprint(System.String,System.Security.Cryptography.X509Certificates.StoreLocation,System.Security.Cryptography.X509Certificates.StoreName)
+  name: FromStoreWithThumprint(String, StoreLocation, StoreName)
+  fullName: Microsoft.Identity.Web.CertificateDescription.FromStoreWithThumprint(String, StoreLocation, StoreName)
+  nameWithType: CertificateDescription.FromStoreWithThumprint(String, StoreLocation, StoreName)
+  attributesWithMoniker:
+  - value: System.ObsoleteAttribute
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: >-
+        [System.Obsolete("IDW10803: Use FromStoreWithThumbprint instead, due to spelling error. ", false)]
+
+        public static Microsoft.Identity.Web.CertificateDescription FromStoreWithThumprint (string certificateThumbprint, System.Security.Cryptography.X509Certificates.StoreLocation certificateStoreLocation = System.Security.Cryptography.X509Certificates.StoreLocation.CurrentUser, System.Security.Cryptography.X509Certificates.StoreName certificateStoreName = System.Security.Cryptography.X509Certificates.StoreName.My);
+  - lang: fsharp
+    values:
+    - value: >-
+        [<System.Obsolete("IDW10803: Use FromStoreWithThumbprint instead, due to spelling error. ", false)>]
+
+        static member FromStoreWithThumprint : string * System.Security.Cryptography.X509Certificates.StoreLocation * System.Security.Cryptography.X509Certificates.StoreName -> Microsoft.Identity.Web.CertificateDescription
+  - lang: vb
+    values:
+    - value: Public Shared Function FromStoreWithThumprint (certificateThumbprint As String, Optional certificateStoreLocation As StoreLocation = System.Security.Cryptography.X509Certificates.StoreLocation.CurrentUser, Optional certificateStoreName As StoreName = System.Security.Cryptography.X509Certificates.StoreName.My) As CertificateDescription
+  monikers:
+  - msal-model-dotnet-latest
+  obsoleteMessagesWithMoniker:
+  - value: 'IDW10803: Use FromStoreWithThumbprint instead, due to spelling error. '
+  summary: Creates a certificate description from a thumbprint and store location (Certificate Manager on Windows, for instance).
+  metadata: {}
+uid: Microsoft.Identity.Web.CertificateDescription.FromStoreWithThumprint*
+commentId: Overload:Microsoft.Identity.Web.CertificateDescription.FromStoreWithThumprint
+namespace: Microsoft.Identity.Web
+name: FromStoreWithThumprint
+fullName: Microsoft.Identity.Web.CertificateDescription.FromStoreWithThumprint
+nameWithType: CertificateDescription.FromStoreWithThumprint
+assembliesWithMoniker:
+- value: Microsoft.Identity.Web.Certificate.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Web.Certificate v1.25.10
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-model-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Web.CertificateDescription.FromStoreWithThumprint
+  api_location:
+  - Microsoft.Identity.Web.Certificate.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Web.CertificateDescription.FromStoreWithThumprint
+  - Microsoft::Identity::Web::CertificateDescription::FromStoreWithThumprint
+  - FromStoreWithThumprint
+  - CertificateDescription.FromStoreWithThumprint
+  - CertificateDescription::FromStoreWithThumprint
+  helpviewer_keywords:
+  - CertificateDescription.FromStoreWithThumprint method [.NET]
+  - FromStoreWithThumprint method [.NET], class CertificateDescription
+  - CertificateDescription.FromStoreWithThumprint(String, StoreLocation, StoreName) method [.NET]
+  - FromStoreWithThumprint(String, StoreLocation, StoreName) method [.NET], class CertificateDescription
+  monikers:
+  - msal-model-dotnet-latest

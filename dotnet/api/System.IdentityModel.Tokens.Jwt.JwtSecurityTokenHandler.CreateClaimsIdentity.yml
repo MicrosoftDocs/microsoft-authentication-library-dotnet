@@ -1,0 +1,81 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Security.Claims.ClaimsIdentity?alt=System.Security.Claims.ClaimsIdentity&text=ClaimsIdentity" data-throw-if-not-resolved="True"/>
+    description: A <xref data-throw-if-not-resolved="true" uid="System.Security.Claims.ClaimsIdentity"></xref> containing the <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityToken.Claims"></xref>.
+  parameters:
+  - namesWithMoniker:
+    - value: jwtToken
+    description: The <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityToken"></xref> to use as a <xref data-throw-if-not-resolved="true" uid="System.Security.Claims.Claim"></xref> source.
+    type: <xref href="System.IdentityModel.Tokens.Jwt.JwtSecurityToken?alt=System.IdentityModel.Tokens.Jwt.JwtSecurityToken&text=JwtSecurityToken" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: issuer
+    description: The value to set <xref data-throw-if-not-resolved="true" uid="System.Security.Claims.Claim.Issuer"></xref>
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: validationParameters
+    description: Contains parameters for validating the token.
+    type: <xref href="Microsoft.IdentityModel.Tokens.TokenValidationParameters?alt=Microsoft.IdentityModel.Tokens.TokenValidationParameters&text=TokenValidationParameters" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateClaimsIdentity(System.IdentityModel.Tokens.Jwt.JwtSecurityToken,System.String,Microsoft.IdentityModel.Tokens.TokenValidationParameters)
+  commentId: M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateClaimsIdentity(System.IdentityModel.Tokens.Jwt.JwtSecurityToken,System.String,Microsoft.IdentityModel.Tokens.TokenValidationParameters)
+  name: CreateClaimsIdentity(JwtSecurityToken, String, TokenValidationParameters)
+  fullName: System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateClaimsIdentity(JwtSecurityToken, String, TokenValidationParameters)
+  nameWithType: JwtSecurityTokenHandler.CreateClaimsIdentity(JwtSecurityToken, String, TokenValidationParameters)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected virtual System.Security.Claims.ClaimsIdentity CreateClaimsIdentity (System.IdentityModel.Tokens.Jwt.JwtSecurityToken jwtToken, string issuer, Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member CreateClaimsIdentity : System.IdentityModel.Tokens.Jwt.JwtSecurityToken * string * Microsoft.IdentityModel.Tokens.TokenValidationParameters -> System.Security.Claims.ClaimsIdentity
+
+        override this.CreateClaimsIdentity : System.IdentityModel.Tokens.Jwt.JwtSecurityToken * string * Microsoft.IdentityModel.Tokens.TokenValidationParameters -> System.Security.Claims.ClaimsIdentity
+  - lang: vb
+    values:
+    - value: Protected Overridable Function CreateClaimsIdentity (jwtToken As JwtSecurityToken, issuer As String, validationParameters As TokenValidationParameters) As ClaimsIdentity
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Creates a <xref data-throw-if-not-resolved="true" uid="System.Security.Claims.ClaimsIdentity"></xref> from a <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityToken"></xref>.
+  metadata: {}
+uid: System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateClaimsIdentity*
+commentId: Overload:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateClaimsIdentity
+namespace: System.IdentityModel.Tokens.Jwt
+name: CreateClaimsIdentity
+fullName: System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateClaimsIdentity
+nameWithType: JwtSecurityTokenHandler.CreateClaimsIdentity
+assembliesWithMoniker:
+- value: System.IdentityModel.Tokens.Jwt.dll
+packagesWithMoniker:
+- value: System.IdentityModel.Tokens.Jwt v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateClaimsIdentity
+  api_location:
+  - System.IdentityModel.Tokens.Jwt.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateClaimsIdentity
+  - System::IdentityModel::Tokens::Jwt::JwtSecurityTokenHandler::CreateClaimsIdentity
+  - CreateClaimsIdentity
+  - JwtSecurityTokenHandler.CreateClaimsIdentity
+  - JwtSecurityTokenHandler::CreateClaimsIdentity
+  helpviewer_keywords:
+  - JwtSecurityTokenHandler.CreateClaimsIdentity method [.NET]
+  - CreateClaimsIdentity method [.NET], class JwtSecurityTokenHandler
+  - JwtSecurityTokenHandler.CreateClaimsIdentity(JwtSecurityToken, String, TokenValidationParameters) method [.NET]
+  - CreateClaimsIdentity(JwtSecurityToken, String, TokenValidationParameters) method [.NET], class JwtSecurityTokenHandler
+  monikers:
+  - msal-web-dotnet-latest

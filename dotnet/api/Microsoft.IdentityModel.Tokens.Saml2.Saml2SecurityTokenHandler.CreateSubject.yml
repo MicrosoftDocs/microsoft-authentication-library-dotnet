@@ -1,0 +1,76 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.IdentityModel.Tokens.Saml2.Saml2Subject?alt=Microsoft.IdentityModel.Tokens.Saml2.Saml2Subject&text=Saml2Subject" data-throw-if-not-resolved="True"/>
+    description: A <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2Subject"></xref>.
+  parameters:
+  - namesWithMoniker:
+    - value: tokenDescriptor
+    description: The security token descriptor to create the subject.
+    type: <xref href="Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor?alt=Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor&text=SecurityTokenDescriptor" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: Thrown when 'tokenDescriptor' is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.CreateSubject(Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor)
+  commentId: M:Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.CreateSubject(Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor)
+  name: CreateSubject(SecurityTokenDescriptor)
+  fullName: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.CreateSubject(SecurityTokenDescriptor)
+  nameWithType: Saml2SecurityTokenHandler.CreateSubject(SecurityTokenDescriptor)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected virtual Microsoft.IdentityModel.Tokens.Saml2.Saml2Subject CreateSubject (Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor tokenDescriptor);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member CreateSubject : Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor -> Microsoft.IdentityModel.Tokens.Saml2.Saml2Subject
+
+        override this.CreateSubject : Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor -> Microsoft.IdentityModel.Tokens.Saml2.Saml2Subject
+  - lang: vb
+    values:
+    - value: Protected Overridable Function CreateSubject (tokenDescriptor As SecurityTokenDescriptor) As Saml2Subject
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Creates a SAML2 subject of the assertion.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.CreateSubject*
+commentId: Overload:Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.CreateSubject
+namespace: Microsoft.IdentityModel.Tokens.Saml2
+name: CreateSubject
+fullName: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.CreateSubject
+nameWithType: Saml2SecurityTokenHandler.CreateSubject
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.CreateSubject
+  api_location:
+  - Microsoft.IdentityModel.Tokens.Saml.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.CreateSubject
+  - Microsoft::IdentityModel::Tokens::Saml2::Saml2SecurityTokenHandler::CreateSubject
+  - CreateSubject
+  - Saml2SecurityTokenHandler.CreateSubject
+  - Saml2SecurityTokenHandler::CreateSubject
+  helpviewer_keywords:
+  - Saml2SecurityTokenHandler.CreateSubject method [.NET]
+  - CreateSubject method [.NET], class Saml2SecurityTokenHandler
+  - Saml2SecurityTokenHandler.CreateSubject(SecurityTokenDescriptor) method [.NET]
+  - CreateSubject(SecurityTokenDescriptor) method [.NET], class Saml2SecurityTokenHandler
+  monikers:
+  - msal-web-dotnet-latest

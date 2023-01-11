@@ -1,0 +1,75 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Client.IAccount?alt=Microsoft.Identity.Client.IAccount&text=IAccount" data-throw-if-not-resolved="True"/>&gt;
+  parameters:
+  - namesWithMoniker:
+    - value: identifier
+    description: >-
+      Account identifier. The value of the identifier will probably have been stored value from the
+                  value of the <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.AccountId.Identifier"></xref> property of <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.AccountId"></xref>.
+                  You typically get the account id from an <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.IAccount"></xref> by using the <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.IAccount.HomeAccountId"></xref> property&gt;
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.IClientApplicationBase.GetAccountAsync(System.String)
+  commentId: M:Microsoft.Identity.Client.IClientApplicationBase.GetAccountAsync(System.String)
+  name: GetAccountAsync(String)
+  fullName: Microsoft.Identity.Client.IClientApplicationBase.GetAccountAsync(String)
+  nameWithType: IClientApplicationBase.GetAccountAsync(String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public System.Threading.Tasks.Task<Microsoft.Identity.Client.IAccount> GetAccountAsync (string identifier);
+  - lang: fsharp
+    values:
+    - value: 'abstract member GetAccountAsync : string -> System.Threading.Tasks.Task<Microsoft.Identity.Client.IAccount>'
+  - lang: vb
+    values:
+    - value: Public Function GetAccountAsync (identifier As String) As Task(Of IAccount)
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    Get the <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.IAccount"></xref> by its identifier among the accounts available in the token cache and of the same
+
+    environment (authority host) as <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.IClientApplicationBase.Authority"></xref>
+  metadata: {}
+uid: Microsoft.Identity.Client.IClientApplicationBase.GetAccountAsync*
+commentId: Overload:Microsoft.Identity.Client.IClientApplicationBase.GetAccountAsync
+namespace: Microsoft.Identity.Client
+name: GetAccountAsync
+fullName: Microsoft.Identity.Client.IClientApplicationBase.GetAccountAsync
+nameWithType: IClientApplicationBase.GetAccountAsync
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.IClientApplicationBase.GetAccountAsync
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.IClientApplicationBase.GetAccountAsync
+  - Microsoft::Identity::Client::IClientApplicationBase::GetAccountAsync
+  - GetAccountAsync
+  - IClientApplicationBase.GetAccountAsync
+  - IClientApplicationBase::GetAccountAsync
+  helpviewer_keywords:
+  - IClientApplicationBase.GetAccountAsync method [.NET]
+  - GetAccountAsync method [.NET], interface IClientApplicationBase
+  - IClientApplicationBase.GetAccountAsync(String) method [.NET]
+  - GetAccountAsync(String) method [.NET], interface IClientApplicationBase
+  monikers:
+  - msal-dotnet-latest

@@ -1,0 +1,146 @@
+### YamlMime:NetType
+type: class
+implementsWithMoniker:
+- value: <xref href="Microsoft.Identity.Client.ITokenCache?alt=Microsoft.Identity.Client.ITokenCache&text=ITokenCache" data-throw-if-not-resolved="True"/>
+- value: <xref href="Microsoft.Identity.Client.ITokenCacheSerializer?alt=Microsoft.Identity.Client.ITokenCacheSerializer&text=ITokenCacheSerializer" data-throw-if-not-resolved="True"/>
+inheritancesWithMoniker:
+- values:
+  - <xref href="System.Object?alt=System.Object&text=Object" data-throw-if-not-resolved="True"/>
+extensionMethods:
+- uid: Microsoft.Identity.Client.TokenCacheExtensions.SetCacheOptions(Microsoft.Identity.Client.ITokenCache,Microsoft.Identity.Client.CacheOptions)
+  monikers:
+  - msal-dotnet-latest
+constructors:
+- uid: Microsoft.Identity.Client.TokenCache.#ctor
+  monikers:
+  - msal-dotnet-latest
+methods:
+- uid: Microsoft.Identity.Client.TokenCache.Deserialize(System.Byte[])
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.TokenCache.DeserializeAdalV3(System.Byte[])
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.TokenCache.DeserializeMsalV2(System.Byte[])
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.TokenCache.DeserializeMsalV3(System.Byte[],System.Boolean)
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.TokenCache.DeserializeUnifiedAndAdalCache(Microsoft.Identity.Client.Cache.CacheData)
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.TokenCache.Serialize
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.TokenCache.SerializeAdalV3
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.TokenCache.SerializeMsalV2
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.TokenCache.SerializeMsalV3
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.TokenCache.SerializeUnifiedAndAdalCache
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.TokenCache.SetAfterAccess(Microsoft.Identity.Client.TokenCacheCallback)
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.TokenCache.SetAfterAccessAsync(System.Func{Microsoft.Identity.Client.TokenCacheNotificationArgs,System.Threading.Tasks.Task})
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.TokenCache.SetBeforeAccess(Microsoft.Identity.Client.TokenCacheCallback)
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.TokenCache.SetBeforeAccessAsync(System.Func{Microsoft.Identity.Client.TokenCacheNotificationArgs,System.Threading.Tasks.Task})
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.TokenCache.SetBeforeWrite(Microsoft.Identity.Client.TokenCacheCallback)
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.TokenCache.SetBeforeWriteAsync(System.Func{Microsoft.Identity.Client.TokenCacheNotificationArgs,System.Threading.Tasks.Task})
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.TokenCache.SetIosKeychainSecurityGroup(System.String)
+  monikers:
+  - msal-dotnet-latest
+  crossInheritdocsUid: System.Object.SetIosKeychainSecurityGroup(System.String)
+eiis:
+- uid: Microsoft.Identity.Client.TokenCache.Microsoft#Identity#Client#ITokenCacheSerializer#DeserializeAdalV3(System.Byte[])
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.TokenCache.Microsoft#Identity#Client#ITokenCacheSerializer#DeserializeMsalV2(System.Byte[])
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.TokenCache.Microsoft#Identity#Client#ITokenCacheSerializer#DeserializeMsalV3(System.Byte[],System.Boolean)
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.TokenCache.Microsoft#Identity#Client#ITokenCacheSerializer#SerializeAdalV3
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.TokenCache.Microsoft#Identity#Client#ITokenCacheSerializer#SerializeMsalV2
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.TokenCache.Microsoft#Identity#Client#ITokenCacheSerializer#SerializeMsalV3
+  monikers:
+  - msal-dotnet-latest
+properties:
+- uid: Microsoft.Identity.Client.TokenCache.HasStateChanged
+  monikers:
+  - msal-dotnet-latest
+uid: Microsoft.Identity.Client.TokenCache
+commentId: T:Microsoft.Identity.Client.TokenCache
+namespace: Microsoft.Identity.Client
+name: TokenCache
+fullName: Microsoft.Identity.Client.TokenCache
+nameWithType: Microsoft.Identity.Client.TokenCache
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+syntaxWithMoniker:
+- lang: csharp
+  values:
+  - value: public sealed class TokenCache
+- lang: fsharp
+  values:
+  - value: >-
+      type TokenCache = class
+          interface ITokenCache
+          interface ITokenCacheSerializer
+- lang: vb
+  values:
+  - value: Public NotInheritable Class TokenCache
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+summary: >-
+  Token cache storing access and refresh tokens for accounts
+
+  This class is used in the constructors of <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.PublicClientApplication"></xref> and <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ConfidentialClientApplication"></xref>.
+
+  In the case of ConfidentialClientApplication, two instances are used, one for the user token cache, and one for the application
+
+  token cache (in the case of applications using the client credential flows).
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.TokenCache
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.TokenCache
+  - Microsoft::Identity::Client::TokenCache
+  - TokenCache
+  helpviewer_keywords:
+  - Microsoft.Identity.Client.TokenCache class [.NET]
+  monikers:
+  - msal-dotnet-latest

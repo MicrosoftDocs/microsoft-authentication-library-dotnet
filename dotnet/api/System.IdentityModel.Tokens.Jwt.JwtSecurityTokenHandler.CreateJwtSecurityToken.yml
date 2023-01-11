@@ -1,0 +1,279 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.IdentityModel.Tokens.Jwt.JwtSecurityToken?alt=System.IdentityModel.Tokens.Jwt.JwtSecurityToken&text=JwtSecurityToken" data-throw-if-not-resolved="True"/>
+    description: A <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityToken"></xref>.
+  parameters:
+  - namesWithMoniker:
+    - value: issuer
+    description: The issuer of the token.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: audience
+    description: The audience for this token.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: subject
+    description: The source of the <xref data-throw-if-not-resolved="true" uid="System.Security.Claims.Claim"></xref>(s) for this token.
+    type: <xref href="System.Security.Claims.ClaimsIdentity?alt=System.Security.Claims.ClaimsIdentity&text=ClaimsIdentity" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: notBefore
+    description: The notbefore time for this token.
+    type: <xref href="System.Nullable`1?alt=System.Nullable&text=Nullable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.DateTime?alt=System.DateTime&text=DateTime" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: expires
+    description: The expiration time for this token.
+    type: <xref href="System.Nullable`1?alt=System.Nullable&text=Nullable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.DateTime?alt=System.DateTime&text=DateTime" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: issuedAt
+    description: The issue time for this token.
+    type: <xref href="System.Nullable`1?alt=System.Nullable&text=Nullable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.DateTime?alt=System.DateTime&text=DateTime" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: signingCredentials
+    description: Contains cryptographic material for generating a signature.
+    type: <xref href="Microsoft.IdentityModel.Tokens.SigningCredentials?alt=Microsoft.IdentityModel.Tokens.SigningCredentials&text=SigningCredentials" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: encryptingCredentials
+    description: Contains cryptographic material for encrypting the token.
+    type: <xref href="Microsoft.IdentityModel.Tokens.EncryptingCredentials?alt=Microsoft.IdentityModel.Tokens.EncryptingCredentials&text=EncryptingCredentials" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: claimCollection
+    description: A collection of (key,value) pairs representing <xref data-throw-if-not-resolved="true" uid="System.Security.Claims.Claim"></xref>(s) for this token.
+    type: <xref href="System.Collections.Generic.IDictionary`2?alt=System.Collections.Generic.IDictionary&text=IDictionary" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>,<xref href="System.Object?alt=System.Object&text=Object" data-throw-if-not-resolved="True"/>&gt;
+  exceptions:
+  - description: If <code data-dev-comment-type="paramref">expires</code> &lt;= <code data-dev-comment-type="paramref">notBefore</code>.
+    type: <xref href="System.ArgumentException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateJwtSecurityToken(System.String,System.String,System.Security.Claims.ClaimsIdentity,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.DateTime},Microsoft.IdentityModel.Tokens.SigningCredentials,Microsoft.IdentityModel.Tokens.EncryptingCredentials,System.Collections.Generic.IDictionary{System.String,System.Object})
+  commentId: M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateJwtSecurityToken(System.String,System.String,System.Security.Claims.ClaimsIdentity,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.DateTime},Microsoft.IdentityModel.Tokens.SigningCredentials,Microsoft.IdentityModel.Tokens.EncryptingCredentials,System.Collections.Generic.IDictionary{System.String,System.Object})
+  name: >-
+    CreateJwtSecurityToken(String, String, ClaimsIdentity, Nullable<DateTime>,
+
+     Nullable<DateTime>, Nullable<DateTime>, SigningCredentials, EncryptingCredentials,
+
+     IDictionary<String,Object>)
+  fullName: System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateJwtSecurityToken(String, String, ClaimsIdentity, Nullable<DateTime>, Nullable<DateTime>, Nullable<DateTime>, SigningCredentials, EncryptingCredentials, IDictionary<String,Object>)
+  nameWithType: JwtSecurityTokenHandler.CreateJwtSecurityToken(String, String, ClaimsIdentity, Nullable<DateTime>, Nullable<DateTime>, Nullable<DateTime>, SigningCredentials, EncryptingCredentials, IDictionary<String,Object>)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public virtual System.IdentityModel.Tokens.Jwt.JwtSecurityToken CreateJwtSecurityToken (string issuer, string audience, System.Security.Claims.ClaimsIdentity subject, DateTime? notBefore, DateTime? expires, DateTime? issuedAt, Microsoft.IdentityModel.Tokens.SigningCredentials signingCredentials, Microsoft.IdentityModel.Tokens.EncryptingCredentials encryptingCredentials, System.Collections.Generic.IDictionary<string,object> claimCollection);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member CreateJwtSecurityToken : string * string * System.Security.Claims.ClaimsIdentity * Nullable<DateTime> * Nullable<DateTime> * Nullable<DateTime> * Microsoft.IdentityModel.Tokens.SigningCredentials * Microsoft.IdentityModel.Tokens.EncryptingCredentials * System.Collections.Generic.IDictionary<string, obj> -> System.IdentityModel.Tokens.Jwt.JwtSecurityToken
+
+        override this.CreateJwtSecurityToken : string * string * System.Security.Claims.ClaimsIdentity * Nullable<DateTime> * Nullable<DateTime> * Nullable<DateTime> * Microsoft.IdentityModel.Tokens.SigningCredentials * Microsoft.IdentityModel.Tokens.EncryptingCredentials * System.Collections.Generic.IDictionary<string, obj> -> System.IdentityModel.Tokens.Jwt.JwtSecurityToken
+  - lang: vb
+    values:
+    - value: Public Overridable Function CreateJwtSecurityToken (issuer As String, audience As String, subject As ClaimsIdentity, notBefore As Nullable(Of DateTime), expires As Nullable(Of DateTime), issuedAt As Nullable(Of DateTime), signingCredentials As SigningCredentials, encryptingCredentials As EncryptingCredentials, claimCollection As IDictionary(Of String, Object)) As JwtSecurityToken
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Creates a <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityToken"></xref>
+  remarks: <p>If <xref data-throw-if-not-resolved="true" uid="System.Security.Claims.ClaimsIdentity.Actor"></xref> is not null, then a claim { actort, 'value' } will be added to the payload. <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateActorValue(System.Security.Claims.ClaimsIdentity)"></xref> for details on how the value is created.</p><p>See <seealso cref="T:System.IdentityModel.Tokens.Jwt.JwtHeader"></seealso> for details on how the HeaderParameters are added to the header.</p><p>See <seealso cref="T:System.IdentityModel.Tokens.Jwt.JwtPayload"></seealso> for details on how the values are added to the payload.</p><p>Each <xref data-throw-if-not-resolved="true" uid="System.Security.Claims.Claim"></xref> on the <code data-dev-comment-type="paramref">subject</code> added will have <xref data-throw-if-not-resolved="true" uid="System.Security.Claims.Claim.Type"></xref> translated according to the mapping found in <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.OutboundClaimTypeMap"></xref>. Adding and removing to <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.OutboundClaimTypeMap"></xref> will affect the name component of the Json claim.</p><p><xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SigningCredentials.#ctor(Microsoft.IdentityModel.Tokens.SecurityKey,System.String)"></xref> is used to sign <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityToken.RawData"></xref>.</p><p><xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.EncryptingCredentials.#ctor(Microsoft.IdentityModel.Tokens.SecurityKey,System.String,System.String)"></xref> is used to encrypt <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityToken.RawData"></xref> or <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityToken.RawPayload"></xref> .</p>
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.IdentityModel.Tokens.Jwt.JwtSecurityToken?alt=System.IdentityModel.Tokens.Jwt.JwtSecurityToken&text=JwtSecurityToken" data-throw-if-not-resolved="True"/>
+    description: A <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityToken"></xref>.
+  parameters:
+  - namesWithMoniker:
+    - value: issuer
+    description: The issuer of the token.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: audience
+    description: The audience for this token.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: subject
+    description: The source of the <xref data-throw-if-not-resolved="true" uid="System.Security.Claims.Claim"></xref>(s) for this token.
+    type: <xref href="System.Security.Claims.ClaimsIdentity?alt=System.Security.Claims.ClaimsIdentity&text=ClaimsIdentity" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: notBefore
+    description: The notbefore time for this token.
+    type: <xref href="System.Nullable`1?alt=System.Nullable&text=Nullable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.DateTime?alt=System.DateTime&text=DateTime" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: expires
+    description: The expiration time for this token.
+    type: <xref href="System.Nullable`1?alt=System.Nullable&text=Nullable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.DateTime?alt=System.DateTime&text=DateTime" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: issuedAt
+    description: The issue time for this token.
+    type: <xref href="System.Nullable`1?alt=System.Nullable&text=Nullable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.DateTime?alt=System.DateTime&text=DateTime" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: signingCredentials
+    description: Contains cryptographic material for generating a signature.
+    type: <xref href="Microsoft.IdentityModel.Tokens.SigningCredentials?alt=Microsoft.IdentityModel.Tokens.SigningCredentials&text=SigningCredentials" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: encryptingCredentials
+    description: Contains cryptographic material for encrypting the token.
+    type: <xref href="Microsoft.IdentityModel.Tokens.EncryptingCredentials?alt=Microsoft.IdentityModel.Tokens.EncryptingCredentials&text=EncryptingCredentials" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: If <code data-dev-comment-type="paramref">expires</code> &lt;= <code data-dev-comment-type="paramref">notBefore</code>.
+    type: <xref href="System.ArgumentException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateJwtSecurityToken(System.String,System.String,System.Security.Claims.ClaimsIdentity,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.DateTime},Microsoft.IdentityModel.Tokens.SigningCredentials,Microsoft.IdentityModel.Tokens.EncryptingCredentials)
+  commentId: M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateJwtSecurityToken(System.String,System.String,System.Security.Claims.ClaimsIdentity,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.DateTime},Microsoft.IdentityModel.Tokens.SigningCredentials,Microsoft.IdentityModel.Tokens.EncryptingCredentials)
+  name: >-
+    CreateJwtSecurityToken(String, String, ClaimsIdentity, Nullable<DateTime>,
+
+     Nullable<DateTime>, Nullable<DateTime>, SigningCredentials, EncryptingCredentials)
+  fullName: System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateJwtSecurityToken(String, String, ClaimsIdentity, Nullable<DateTime>, Nullable<DateTime>, Nullable<DateTime>, SigningCredentials, EncryptingCredentials)
+  nameWithType: JwtSecurityTokenHandler.CreateJwtSecurityToken(String, String, ClaimsIdentity, Nullable<DateTime>, Nullable<DateTime>, Nullable<DateTime>, SigningCredentials, EncryptingCredentials)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public virtual System.IdentityModel.Tokens.Jwt.JwtSecurityToken CreateJwtSecurityToken (string issuer, string audience, System.Security.Claims.ClaimsIdentity subject, DateTime? notBefore, DateTime? expires, DateTime? issuedAt, Microsoft.IdentityModel.Tokens.SigningCredentials signingCredentials, Microsoft.IdentityModel.Tokens.EncryptingCredentials encryptingCredentials);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member CreateJwtSecurityToken : string * string * System.Security.Claims.ClaimsIdentity * Nullable<DateTime> * Nullable<DateTime> * Nullable<DateTime> * Microsoft.IdentityModel.Tokens.SigningCredentials * Microsoft.IdentityModel.Tokens.EncryptingCredentials -> System.IdentityModel.Tokens.Jwt.JwtSecurityToken
+
+        override this.CreateJwtSecurityToken : string * string * System.Security.Claims.ClaimsIdentity * Nullable<DateTime> * Nullable<DateTime> * Nullable<DateTime> * Microsoft.IdentityModel.Tokens.SigningCredentials * Microsoft.IdentityModel.Tokens.EncryptingCredentials -> System.IdentityModel.Tokens.Jwt.JwtSecurityToken
+  - lang: vb
+    values:
+    - value: Public Overridable Function CreateJwtSecurityToken (issuer As String, audience As String, subject As ClaimsIdentity, notBefore As Nullable(Of DateTime), expires As Nullable(Of DateTime), issuedAt As Nullable(Of DateTime), signingCredentials As SigningCredentials, encryptingCredentials As EncryptingCredentials) As JwtSecurityToken
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Creates a <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityToken"></xref>
+  remarks: <p>If <xref data-throw-if-not-resolved="true" uid="System.Security.Claims.ClaimsIdentity.Actor"></xref> is not null, then a claim { actort, 'value' } will be added to the payload. <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateActorValue(System.Security.Claims.ClaimsIdentity)"></xref> for details on how the value is created.</p><p>See <seealso cref="T:System.IdentityModel.Tokens.Jwt.JwtHeader"></seealso> for details on how the HeaderParameters are added to the header.</p><p>See <seealso cref="T:System.IdentityModel.Tokens.Jwt.JwtPayload"></seealso> for details on how the values are added to the payload.</p><p>Each <xref data-throw-if-not-resolved="true" uid="System.Security.Claims.Claim"></xref> on the <code data-dev-comment-type="paramref">subject</code> added will have <xref data-throw-if-not-resolved="true" uid="System.Security.Claims.Claim.Type"></xref> translated according to the mapping found in <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.OutboundClaimTypeMap"></xref>. Adding and removing to <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.OutboundClaimTypeMap"></xref> will affect the name component of the Json claim.</p><p><xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SigningCredentials.#ctor(Microsoft.IdentityModel.Tokens.SecurityKey,System.String)"></xref> is used to sign <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityToken.RawData"></xref>.</p><p><xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.EncryptingCredentials.#ctor(Microsoft.IdentityModel.Tokens.SecurityKey,System.String,System.String)"></xref> is used to encrypt <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityToken.RawData"></xref> or <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityToken.RawPayload"></xref> .</p>
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.IdentityModel.Tokens.Jwt.JwtSecurityToken?alt=System.IdentityModel.Tokens.Jwt.JwtSecurityToken&text=JwtSecurityToken" data-throw-if-not-resolved="True"/>
+  parameters:
+  - namesWithMoniker:
+    - value: tokenDescriptor
+    description: A <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor"></xref> that contains details of contents of the token.
+    type: <xref href="Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor?alt=Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor&text=SecurityTokenDescriptor" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateJwtSecurityToken(Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor)
+  commentId: M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateJwtSecurityToken(Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor)
+  name: CreateJwtSecurityToken(SecurityTokenDescriptor)
+  fullName: System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateJwtSecurityToken(SecurityTokenDescriptor)
+  nameWithType: JwtSecurityTokenHandler.CreateJwtSecurityToken(SecurityTokenDescriptor)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public virtual System.IdentityModel.Tokens.Jwt.JwtSecurityToken CreateJwtSecurityToken (Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor tokenDescriptor);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member CreateJwtSecurityToken : Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor -> System.IdentityModel.Tokens.Jwt.JwtSecurityToken
+
+        override this.CreateJwtSecurityToken : Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor -> System.IdentityModel.Tokens.Jwt.JwtSecurityToken
+  - lang: vb
+    values:
+    - value: Public Overridable Function CreateJwtSecurityToken (tokenDescriptor As SecurityTokenDescriptor) As JwtSecurityToken
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Creates a Json Web Token (JWT).
+  remarks: <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor.SigningCredentials"></xref> is used to sign <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityToken.RawData"></xref>.
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.IdentityModel.Tokens.Jwt.JwtSecurityToken?alt=System.IdentityModel.Tokens.Jwt.JwtSecurityToken&text=JwtSecurityToken" data-throw-if-not-resolved="True"/>
+    description: A <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityToken"></xref>.
+  parameters:
+  - namesWithMoniker:
+    - value: issuer
+    description: The issuer of the token.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: audience
+    description: The audience for this token.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: subject
+    description: The source of the <xref data-throw-if-not-resolved="true" uid="System.Security.Claims.Claim"></xref>(s) for this token.
+    type: <xref href="System.Security.Claims.ClaimsIdentity?alt=System.Security.Claims.ClaimsIdentity&text=ClaimsIdentity" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: notBefore
+    description: The notbefore time for this token.
+    type: <xref href="System.Nullable`1?alt=System.Nullable&text=Nullable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.DateTime?alt=System.DateTime&text=DateTime" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: expires
+    description: The expiration time for this token.
+    type: <xref href="System.Nullable`1?alt=System.Nullable&text=Nullable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.DateTime?alt=System.DateTime&text=DateTime" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: issuedAt
+    description: The issue time for this token.
+    type: <xref href="System.Nullable`1?alt=System.Nullable&text=Nullable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.DateTime?alt=System.DateTime&text=DateTime" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: signingCredentials
+    description: Contains cryptographic material for generating a signature.
+    type: <xref href="Microsoft.IdentityModel.Tokens.SigningCredentials?alt=Microsoft.IdentityModel.Tokens.SigningCredentials&text=SigningCredentials" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: If <code data-dev-comment-type="paramref">expires</code> &lt;= <code data-dev-comment-type="paramref">notBefore</code>.
+    type: <xref href="System.ArgumentException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateJwtSecurityToken(System.String,System.String,System.Security.Claims.ClaimsIdentity,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.DateTime},Microsoft.IdentityModel.Tokens.SigningCredentials)
+  commentId: M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateJwtSecurityToken(System.String,System.String,System.Security.Claims.ClaimsIdentity,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.DateTime},Microsoft.IdentityModel.Tokens.SigningCredentials)
+  name: CreateJwtSecurityToken(String, String, ClaimsIdentity, Nullable<DateTime>, Nullable<DateTime>, Nullable<DateTime>, SigningCredentials)
+  fullName: System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateJwtSecurityToken(String, String, ClaimsIdentity, Nullable<DateTime>, Nullable<DateTime>, Nullable<DateTime>, SigningCredentials)
+  nameWithType: JwtSecurityTokenHandler.CreateJwtSecurityToken(String, String, ClaimsIdentity, Nullable<DateTime>, Nullable<DateTime>, Nullable<DateTime>, SigningCredentials)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public virtual System.IdentityModel.Tokens.Jwt.JwtSecurityToken CreateJwtSecurityToken (string issuer = default, string audience = default, System.Security.Claims.ClaimsIdentity subject = default, DateTime? notBefore = default, DateTime? expires = default, DateTime? issuedAt = default, Microsoft.IdentityModel.Tokens.SigningCredentials signingCredentials = default);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member CreateJwtSecurityToken : string * string * System.Security.Claims.ClaimsIdentity * Nullable<DateTime> * Nullable<DateTime> * Nullable<DateTime> * Microsoft.IdentityModel.Tokens.SigningCredentials -> System.IdentityModel.Tokens.Jwt.JwtSecurityToken
+
+        override this.CreateJwtSecurityToken : string * string * System.Security.Claims.ClaimsIdentity * Nullable<DateTime> * Nullable<DateTime> * Nullable<DateTime> * Microsoft.IdentityModel.Tokens.SigningCredentials -> System.IdentityModel.Tokens.Jwt.JwtSecurityToken
+  - lang: vb
+    values:
+    - value: Public Overridable Function CreateJwtSecurityToken (Optional issuer As String = Nothing, Optional audience As String = Nothing, Optional subject As ClaimsIdentity = Nothing, Optional notBefore As Nullable(Of DateTime) = Nothing, Optional expires As Nullable(Of DateTime) = Nothing, Optional issuedAt As Nullable(Of DateTime) = Nothing, Optional signingCredentials As SigningCredentials = Nothing) As JwtSecurityToken
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Creates a <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityToken"></xref>
+  remarks: <p>If <xref data-throw-if-not-resolved="true" uid="System.Security.Claims.ClaimsIdentity.Actor"></xref> is not null, then a claim { actort, 'value' } will be added to the payload. <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateActorValue(System.Security.Claims.ClaimsIdentity)"></xref> for details on how the value is created.</p><p>See <seealso cref="T:System.IdentityModel.Tokens.Jwt.JwtHeader"></seealso> for details on how the HeaderParameters are added to the header.</p><p>See <seealso cref="T:System.IdentityModel.Tokens.Jwt.JwtPayload"></seealso> for details on how the values are added to the payload.</p><p>Each <xref data-throw-if-not-resolved="true" uid="System.Security.Claims.Claim"></xref> on the <code data-dev-comment-type="paramref">subject</code> added will have <xref data-throw-if-not-resolved="true" uid="System.Security.Claims.Claim.Type"></xref> translated according to the mapping found in <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.OutboundClaimTypeMap"></xref>. Adding and removing to <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.OutboundClaimTypeMap"></xref> will affect the name component of the Json claim.</p><p><xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SigningCredentials.#ctor(Microsoft.IdentityModel.Tokens.SecurityKey,System.String)"></xref> is used to sign <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityToken.RawData"></xref>.</p>
+  metadata: {}
+uid: System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateJwtSecurityToken*
+commentId: Overload:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateJwtSecurityToken
+namespace: System.IdentityModel.Tokens.Jwt
+name: CreateJwtSecurityToken
+fullName: System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateJwtSecurityToken
+nameWithType: JwtSecurityTokenHandler.CreateJwtSecurityToken
+assembliesWithMoniker:
+- value: System.IdentityModel.Tokens.Jwt.dll
+packagesWithMoniker:
+- value: System.IdentityModel.Tokens.Jwt v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateJwtSecurityToken
+  api_location:
+  - System.IdentityModel.Tokens.Jwt.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateJwtSecurityToken
+  - System::IdentityModel::Tokens::Jwt::JwtSecurityTokenHandler::CreateJwtSecurityToken
+  - CreateJwtSecurityToken
+  - JwtSecurityTokenHandler.CreateJwtSecurityToken
+  - JwtSecurityTokenHandler::CreateJwtSecurityToken
+  helpviewer_keywords:
+  - JwtSecurityTokenHandler.CreateJwtSecurityToken method [.NET]
+  - CreateJwtSecurityToken method [.NET], class JwtSecurityTokenHandler
+  - JwtSecurityTokenHandler.CreateJwtSecurityToken(String, String, ClaimsIdentity, Nullable<DateTime>, Nullable<DateTime>, Nullable<DateTime>, SigningCredentials, EncryptingCredentials, IDictionary<String,Object>) method [.NET]
+  - CreateJwtSecurityToken(String, String, ClaimsIdentity, Nullable<DateTime>, Nullable<DateTime>, Nullable<DateTime>, SigningCredentials, EncryptingCredentials, IDictionary<String,Object>) method [.NET], class JwtSecurityTokenHandler
+  - JwtSecurityTokenHandler.CreateJwtSecurityToken(String, String, ClaimsIdentity, Nullable<DateTime>, Nullable<DateTime>, Nullable<DateTime>, SigningCredentials, EncryptingCredentials) method [.NET]
+  - CreateJwtSecurityToken(String, String, ClaimsIdentity, Nullable<DateTime>, Nullable<DateTime>, Nullable<DateTime>, SigningCredentials, EncryptingCredentials) method [.NET], class JwtSecurityTokenHandler
+  - JwtSecurityTokenHandler.CreateJwtSecurityToken(SecurityTokenDescriptor) method [.NET]
+  - CreateJwtSecurityToken(SecurityTokenDescriptor) method [.NET], class JwtSecurityTokenHandler
+  - JwtSecurityTokenHandler.CreateJwtSecurityToken(String, String, ClaimsIdentity, Nullable<DateTime>, Nullable<DateTime>, Nullable<DateTime>, SigningCredentials) method [.NET]
+  - CreateJwtSecurityToken(String, String, ClaimsIdentity, Nullable<DateTime>, Nullable<DateTime>, Nullable<DateTime>, SigningCredentials) method [.NET], class JwtSecurityTokenHandler
+  monikers:
+  - msal-web-dotnet-latest

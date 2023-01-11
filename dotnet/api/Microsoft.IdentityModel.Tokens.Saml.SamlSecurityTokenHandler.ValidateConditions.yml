@@ -1,0 +1,78 @@
+### YamlMime:NetMember
+type: method
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: securityToken
+    description: a <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml.SamlSecurityToken"></xref> that contains the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml.SamlConditions"></xref>.
+    type: <xref href="Microsoft.IdentityModel.Tokens.Saml.SamlSecurityToken?alt=Microsoft.IdentityModel.Tokens.Saml.SamlSecurityToken&text=SamlSecurityToken" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: validationParameters
+    description: <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.TokenValidationParameters"></xref> required for validation.
+    type: <xref href="Microsoft.IdentityModel.Tokens.TokenValidationParameters?alt=Microsoft.IdentityModel.Tokens.TokenValidationParameters&text=TokenValidationParameters" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: If <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml.SamlSecurityToken.Assertion"></xref> is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: if the Condition 'ProxyRestriction' is specified. Requires overriding.
+    type: <xref href="Microsoft.IdentityModel.Tokens.SecurityTokenValidationException?alt=Microsoft.IdentityModel.Tokens.SecurityTokenValidationException&text=SecurityTokenValidationException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.ValidateConditions(Microsoft.IdentityModel.Tokens.Saml.SamlSecurityToken,Microsoft.IdentityModel.Tokens.TokenValidationParameters)
+  commentId: M:Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.ValidateConditions(Microsoft.IdentityModel.Tokens.Saml.SamlSecurityToken,Microsoft.IdentityModel.Tokens.TokenValidationParameters)
+  name: ValidateConditions(SamlSecurityToken, TokenValidationParameters)
+  fullName: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.ValidateConditions(SamlSecurityToken, TokenValidationParameters)
+  nameWithType: SamlSecurityTokenHandler.ValidateConditions(SamlSecurityToken, TokenValidationParameters)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected virtual void ValidateConditions (Microsoft.IdentityModel.Tokens.Saml.SamlSecurityToken securityToken, Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member ValidateConditions : Microsoft.IdentityModel.Tokens.Saml.SamlSecurityToken * Microsoft.IdentityModel.Tokens.TokenValidationParameters -> unit
+
+        override this.ValidateConditions : Microsoft.IdentityModel.Tokens.Saml.SamlSecurityToken * Microsoft.IdentityModel.Tokens.TokenValidationParameters -> unit
+  - lang: vb
+    values:
+    - value: Protected Overridable Sub ValidateConditions (securityToken As SamlSecurityToken, validationParameters As TokenValidationParameters)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Validates the Lifetime and Audience conditions.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.ValidateConditions*
+commentId: Overload:Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.ValidateConditions
+namespace: Microsoft.IdentityModel.Tokens.Saml
+name: ValidateConditions
+fullName: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.ValidateConditions
+nameWithType: SamlSecurityTokenHandler.ValidateConditions
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.ValidateConditions
+  api_location:
+  - Microsoft.IdentityModel.Tokens.Saml.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.ValidateConditions
+  - Microsoft::IdentityModel::Tokens::Saml::SamlSecurityTokenHandler::ValidateConditions
+  - ValidateConditions
+  - SamlSecurityTokenHandler.ValidateConditions
+  - SamlSecurityTokenHandler::ValidateConditions
+  helpviewer_keywords:
+  - SamlSecurityTokenHandler.ValidateConditions method [.NET]
+  - ValidateConditions method [.NET], class SamlSecurityTokenHandler
+  - SamlSecurityTokenHandler.ValidateConditions(SamlSecurityToken, TokenValidationParameters) method [.NET]
+  - ValidateConditions(SamlSecurityToken, TokenValidationParameters) method [.NET], class SamlSecurityTokenHandler
+  monikers:
+  - msal-web-dotnet-latest

@@ -1,0 +1,309 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Client.AuthenticationResult?alt=Microsoft.Identity.Client.AuthenticationResult&text=AuthenticationResult" data-throw-if-not-resolved="True"/>&gt;
+    description: Authentication result containing a token for the requested scopes and for the user who has authenticated on another device with the code
+  parameters:
+  - namesWithMoniker:
+    - value: scopes
+    description: Scopes requested to access a protected API
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: extraQueryParameters
+    description: >-
+      This parameter will be appended as is to the query string in the HTTP authentication request to the authority.
+                  This is expected to be a string of segments of the form <code data-dev-comment-type="c">key=value</code> separated by an ampersand character.
+                  The parameter can be null.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: deviceCodeResultCallback
+    description: Callback containing information to show the user about how to authenticate and enter the device code.
+    type: <xref href="System.Func`2?alt=System.Func&text=Func" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Client.DeviceCodeResult?alt=Microsoft.Identity.Client.DeviceCodeResult&text=DeviceCodeResult" data-throw-if-not-resolved="True"/>,<xref href="System.Threading.Tasks.Task?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&gt;
+  implementsWithMoniker:
+  - value: <xref href="Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenWithDeviceCodeAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.Func{Microsoft.Identity.Client.DeviceCodeResult,System.Threading.Tasks.Task})?alt=Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenWithDeviceCodeAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.Func{Microsoft.Identity.Client.DeviceCodeResult,System.Threading.Tasks.Task})&text=AcquireTokenWithDeviceCodeAsync(IEnumerable%3CString%3E%2C+String%2C+Func%3CDeviceCodeResult%2CTask%3E)" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.PublicClientApplication.AcquireTokenWithDeviceCodeAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.Func{Microsoft.Identity.Client.DeviceCodeResult,System.Threading.Tasks.Task})
+  commentId: M:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenWithDeviceCodeAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.Func{Microsoft.Identity.Client.DeviceCodeResult,System.Threading.Tasks.Task})
+  name: AcquireTokenWithDeviceCodeAsync(IEnumerable<String>, String, Func<DeviceCodeResult,Task>)
+  fullName: Microsoft.Identity.Client.PublicClientApplication.AcquireTokenWithDeviceCodeAsync(IEnumerable<String>, String, Func<DeviceCodeResult,Task>)
+  nameWithType: PublicClientApplication.AcquireTokenWithDeviceCodeAsync(IEnumerable<String>, String, Func<DeviceCodeResult,Task>)
+  attributesWithMoniker:
+  - value: System.ObsoleteAttribute
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: >-
+        [System.Obsolete("Use AcquireTokenWithDeviceCode instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]
+
+        public System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult> AcquireTokenWithDeviceCodeAsync (System.Collections.Generic.IEnumerable<string> scopes, string extraQueryParameters, Func<Microsoft.Identity.Client.DeviceCodeResult,System.Threading.Tasks.Task> deviceCodeResultCallback);
+  - lang: fsharp
+    values:
+    - value: >-
+        [<System.Obsolete("Use AcquireTokenWithDeviceCode instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)>]
+
+        abstract member AcquireTokenWithDeviceCodeAsync : seq<string> * string * Func<Microsoft.Identity.Client.DeviceCodeResult, System.Threading.Tasks.Task> -> System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult>
+
+        override this.AcquireTokenWithDeviceCodeAsync : seq<string> * string * Func<Microsoft.Identity.Client.DeviceCodeResult, System.Threading.Tasks.Task> -> System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult>
+  - lang: vb
+    values:
+    - value: Public Function AcquireTokenWithDeviceCodeAsync (scopes As IEnumerable(Of String), extraQueryParameters As String, deviceCodeResultCallback As Func(Of DeviceCodeResult, Task)) As Task(Of AuthenticationResult)
+  monikers:
+  - msal-dotnet-latest
+  obsoleteMessagesWithMoniker:
+  - value: 'Use AcquireTokenWithDeviceCode instead. See https://aka.ms/msal-net-3-breaking-changes. '
+  summary: >-
+    Acquires a security token on a device without a web browser, by letting the user authenticate on
+
+    another device, with possibility of passing extra parameters. This is done in two steps:
+
+    <ul><li>the method first acquires a device code from the authority and returns it to the caller via
+
+    the <code data-dev-comment-type="paramref">deviceCodeResultCallback</code>. This callback takes care of interacting with the user
+
+    to direct them to authenticate (to a specific URL, with a code)</li><li>The method then proceeds to poll for the security
+
+    token which is granted upon successful login by the user based on the device code information</li></ul>
+
+    See https://aka.ms/msal-device-code-flow.
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Client.AuthenticationResult?alt=Microsoft.Identity.Client.AuthenticationResult&text=AuthenticationResult" data-throw-if-not-resolved="True"/>&gt;
+    description: Authentication result containing a token for the requested scopes and for the user who has authenticated on another device with the code
+  parameters:
+  - namesWithMoniker:
+    - value: scopes
+    description: Scopes requested to access a protected API
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: extraQueryParameters
+    description: >-
+      This parameter will be appended as is to the query string in the HTTP authentication request to the authority.
+                  This is expected to be a string of segments of the form <code data-dev-comment-type="c">key=value</code> separated by an ampersand character.
+                  The parameter can be null.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: deviceCodeResultCallback
+    description: The callback containing information to show the user about how to authenticate and enter the device code.
+    type: <xref href="System.Func`2?alt=System.Func&text=Func" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Client.DeviceCodeResult?alt=Microsoft.Identity.Client.DeviceCodeResult&text=DeviceCodeResult" data-throw-if-not-resolved="True"/>,<xref href="System.Threading.Tasks.Task?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: cancellationToken
+    description: A CancellationToken which can be triggered to cancel the operation in progress.
+    type: <xref href="System.Threading.CancellationToken?alt=System.Threading.CancellationToken&text=CancellationToken" data-throw-if-not-resolved="True"/>
+  implementsWithMoniker:
+  - value: <xref href="Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenWithDeviceCodeAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.Func{Microsoft.Identity.Client.DeviceCodeResult,System.Threading.Tasks.Task},System.Threading.CancellationToken)?alt=Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenWithDeviceCodeAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.Func{Microsoft.Identity.Client.DeviceCodeResult,System.Threading.Tasks.Task},System.Threading.CancellationToken)&text=AcquireTokenWithDeviceCodeAsync(IEnumerable%3CString%3E%2C+String%2C+Func%3CDeviceCodeResult%2CTask%3E%2C+CancellationToken)" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.PublicClientApplication.AcquireTokenWithDeviceCodeAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.Func{Microsoft.Identity.Client.DeviceCodeResult,System.Threading.Tasks.Task},System.Threading.CancellationToken)
+  commentId: M:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenWithDeviceCodeAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.Func{Microsoft.Identity.Client.DeviceCodeResult,System.Threading.Tasks.Task},System.Threading.CancellationToken)
+  name: AcquireTokenWithDeviceCodeAsync(IEnumerable<String>, String, Func<DeviceCodeResult,Task>, CancellationToken)
+  fullName: Microsoft.Identity.Client.PublicClientApplication.AcquireTokenWithDeviceCodeAsync(IEnumerable<String>, String, Func<DeviceCodeResult,Task>, CancellationToken)
+  nameWithType: PublicClientApplication.AcquireTokenWithDeviceCodeAsync(IEnumerable<String>, String, Func<DeviceCodeResult,Task>, CancellationToken)
+  attributesWithMoniker:
+  - value: System.ObsoleteAttribute
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: >-
+        [System.Obsolete("Use AcquireTokenWithDeviceCode instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]
+
+        public System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult> AcquireTokenWithDeviceCodeAsync (System.Collections.Generic.IEnumerable<string> scopes, string extraQueryParameters, Func<Microsoft.Identity.Client.DeviceCodeResult,System.Threading.Tasks.Task> deviceCodeResultCallback, System.Threading.CancellationToken cancellationToken);
+  - lang: fsharp
+    values:
+    - value: >-
+        [<System.Obsolete("Use AcquireTokenWithDeviceCode instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)>]
+
+        abstract member AcquireTokenWithDeviceCodeAsync : seq<string> * string * Func<Microsoft.Identity.Client.DeviceCodeResult, System.Threading.Tasks.Task> * System.Threading.CancellationToken -> System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult>
+
+        override this.AcquireTokenWithDeviceCodeAsync : seq<string> * string * Func<Microsoft.Identity.Client.DeviceCodeResult, System.Threading.Tasks.Task> * System.Threading.CancellationToken -> System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult>
+  - lang: vb
+    values:
+    - value: Public Function AcquireTokenWithDeviceCodeAsync (scopes As IEnumerable(Of String), extraQueryParameters As String, deviceCodeResultCallback As Func(Of DeviceCodeResult, Task), cancellationToken As CancellationToken) As Task(Of AuthenticationResult)
+  monikers:
+  - msal-dotnet-latest
+  obsoleteMessagesWithMoniker:
+  - value: 'Use AcquireTokenWithDeviceCode instead. See https://aka.ms/msal-net-3-breaking-changes. '
+  summary: >-
+    Acquires a security token on a device without a web browser, by letting the user authenticate on
+
+    another device, with possibility of passing extra query parameters and cancelling the token acquisition before it times out. This is done in two steps:
+
+    <ul><li>the method first acquires a device code from the authority and returns it to the caller via
+
+    the <code data-dev-comment-type="paramref">deviceCodeResultCallback</code>. This callback takes care of interacting with the user
+
+    to direct them to authenticate (to a specific URL, with a code)</li><li>The method then proceeds to poll for the security
+
+    token which is granted upon successful login by the user based on the device code information. This step is cancelable</li></ul>
+
+    See https://aka.ms/msal-device-code-flow.
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Client.AuthenticationResult?alt=Microsoft.Identity.Client.AuthenticationResult&text=AuthenticationResult" data-throw-if-not-resolved="True"/>&gt;
+    description: Authentication result containing a token for the requested scopes and for the user who has authenticated on another device with the code
+  parameters:
+  - namesWithMoniker:
+    - value: scopes
+    description: Scopes requested to access a protected API
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: deviceCodeResultCallback
+    description: Callback containing information to show the user about how to authenticate and enter the device code.
+    type: <xref href="System.Func`2?alt=System.Func&text=Func" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Client.DeviceCodeResult?alt=Microsoft.Identity.Client.DeviceCodeResult&text=DeviceCodeResult" data-throw-if-not-resolved="True"/>,<xref href="System.Threading.Tasks.Task?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&gt;
+  implementsWithMoniker:
+  - value: <xref href="Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenWithDeviceCodeAsync(System.Collections.Generic.IEnumerable{System.String},System.Func{Microsoft.Identity.Client.DeviceCodeResult,System.Threading.Tasks.Task})?alt=Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenWithDeviceCodeAsync(System.Collections.Generic.IEnumerable{System.String},System.Func{Microsoft.Identity.Client.DeviceCodeResult,System.Threading.Tasks.Task})&text=AcquireTokenWithDeviceCodeAsync(IEnumerable%3CString%3E%2C+Func%3CDeviceCodeResult%2CTask%3E)" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.PublicClientApplication.AcquireTokenWithDeviceCodeAsync(System.Collections.Generic.IEnumerable{System.String},System.Func{Microsoft.Identity.Client.DeviceCodeResult,System.Threading.Tasks.Task})
+  commentId: M:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenWithDeviceCodeAsync(System.Collections.Generic.IEnumerable{System.String},System.Func{Microsoft.Identity.Client.DeviceCodeResult,System.Threading.Tasks.Task})
+  name: AcquireTokenWithDeviceCodeAsync(IEnumerable<String>, Func<DeviceCodeResult,Task>)
+  fullName: Microsoft.Identity.Client.PublicClientApplication.AcquireTokenWithDeviceCodeAsync(IEnumerable<String>, Func<DeviceCodeResult,Task>)
+  nameWithType: PublicClientApplication.AcquireTokenWithDeviceCodeAsync(IEnumerable<String>, Func<DeviceCodeResult,Task>)
+  attributesWithMoniker:
+  - value: System.ObsoleteAttribute
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: >-
+        [System.Obsolete("Use AcquireTokenWithDeviceCode instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]
+
+        public System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult> AcquireTokenWithDeviceCodeAsync (System.Collections.Generic.IEnumerable<string> scopes, Func<Microsoft.Identity.Client.DeviceCodeResult,System.Threading.Tasks.Task> deviceCodeResultCallback);
+  - lang: fsharp
+    values:
+    - value: >-
+        [<System.Obsolete("Use AcquireTokenWithDeviceCode instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)>]
+
+        abstract member AcquireTokenWithDeviceCodeAsync : seq<string> * Func<Microsoft.Identity.Client.DeviceCodeResult, System.Threading.Tasks.Task> -> System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult>
+
+        override this.AcquireTokenWithDeviceCodeAsync : seq<string> * Func<Microsoft.Identity.Client.DeviceCodeResult, System.Threading.Tasks.Task> -> System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult>
+  - lang: vb
+    values:
+    - value: Public Function AcquireTokenWithDeviceCodeAsync (scopes As IEnumerable(Of String), deviceCodeResultCallback As Func(Of DeviceCodeResult, Task)) As Task(Of AuthenticationResult)
+  monikers:
+  - msal-dotnet-latest
+  obsoleteMessagesWithMoniker:
+  - value: 'Use AcquireTokenWithDeviceCode instead. See https://aka.ms/msal-net-3-breaking-changes. '
+  summary: >-
+    Acquires a security token on a device without a web browser, by letting the user authenticate on
+
+    another device. This is done in two steps:
+
+    <ul><li>the method first acquires a device code from the authority and returns it to the caller via
+
+    the <code data-dev-comment-type="paramref">deviceCodeResultCallback</code>. This callback takes care of interacting with the user
+
+    to direct them to authenticate (to a specific URL, with a code)</li><li>The method then proceeds to poll for the security
+
+    token which is granted upon successful login by the user based on the device code information</li></ul>
+
+    See https://aka.ms/msal-device-code-flow.
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Client.AuthenticationResult?alt=Microsoft.Identity.Client.AuthenticationResult&text=AuthenticationResult" data-throw-if-not-resolved="True"/>&gt;
+    description: Authentication result containing a token for the requested scopes and for the user who has authenticated on another device with the code
+  parameters:
+  - namesWithMoniker:
+    - value: scopes
+    description: Scopes requested to access a protected API
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: deviceCodeResultCallback
+    description: The callback containing information to show the user about how to authenticate and enter the device code.
+    type: <xref href="System.Func`2?alt=System.Func&text=Func" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Client.DeviceCodeResult?alt=Microsoft.Identity.Client.DeviceCodeResult&text=DeviceCodeResult" data-throw-if-not-resolved="True"/>,<xref href="System.Threading.Tasks.Task?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: cancellationToken
+    description: A CancellationToken which can be triggered to cancel the operation in progress.
+    type: <xref href="System.Threading.CancellationToken?alt=System.Threading.CancellationToken&text=CancellationToken" data-throw-if-not-resolved="True"/>
+  implementsWithMoniker:
+  - value: <xref href="Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenWithDeviceCodeAsync(System.Collections.Generic.IEnumerable{System.String},System.Func{Microsoft.Identity.Client.DeviceCodeResult,System.Threading.Tasks.Task},System.Threading.CancellationToken)?alt=Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenWithDeviceCodeAsync(System.Collections.Generic.IEnumerable{System.String},System.Func{Microsoft.Identity.Client.DeviceCodeResult,System.Threading.Tasks.Task},System.Threading.CancellationToken)&text=AcquireTokenWithDeviceCodeAsync(IEnumerable%3CString%3E%2C+Func%3CDeviceCodeResult%2CTask%3E%2C+CancellationToken)" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.PublicClientApplication.AcquireTokenWithDeviceCodeAsync(System.Collections.Generic.IEnumerable{System.String},System.Func{Microsoft.Identity.Client.DeviceCodeResult,System.Threading.Tasks.Task},System.Threading.CancellationToken)
+  commentId: M:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenWithDeviceCodeAsync(System.Collections.Generic.IEnumerable{System.String},System.Func{Microsoft.Identity.Client.DeviceCodeResult,System.Threading.Tasks.Task},System.Threading.CancellationToken)
+  name: AcquireTokenWithDeviceCodeAsync(IEnumerable<String>, Func<DeviceCodeResult,Task>, CancellationToken)
+  fullName: Microsoft.Identity.Client.PublicClientApplication.AcquireTokenWithDeviceCodeAsync(IEnumerable<String>, Func<DeviceCodeResult,Task>, CancellationToken)
+  nameWithType: PublicClientApplication.AcquireTokenWithDeviceCodeAsync(IEnumerable<String>, Func<DeviceCodeResult,Task>, CancellationToken)
+  attributesWithMoniker:
+  - value: System.ObsoleteAttribute
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: >-
+        [System.Obsolete("Use AcquireTokenWithDeviceCode instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]
+
+        public System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult> AcquireTokenWithDeviceCodeAsync (System.Collections.Generic.IEnumerable<string> scopes, Func<Microsoft.Identity.Client.DeviceCodeResult,System.Threading.Tasks.Task> deviceCodeResultCallback, System.Threading.CancellationToken cancellationToken);
+  - lang: fsharp
+    values:
+    - value: >-
+        [<System.Obsolete("Use AcquireTokenWithDeviceCode instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)>]
+
+        abstract member AcquireTokenWithDeviceCodeAsync : seq<string> * Func<Microsoft.Identity.Client.DeviceCodeResult, System.Threading.Tasks.Task> * System.Threading.CancellationToken -> System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult>
+
+        override this.AcquireTokenWithDeviceCodeAsync : seq<string> * Func<Microsoft.Identity.Client.DeviceCodeResult, System.Threading.Tasks.Task> * System.Threading.CancellationToken -> System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult>
+  - lang: vb
+    values:
+    - value: Public Function AcquireTokenWithDeviceCodeAsync (scopes As IEnumerable(Of String), deviceCodeResultCallback As Func(Of DeviceCodeResult, Task), cancellationToken As CancellationToken) As Task(Of AuthenticationResult)
+  monikers:
+  - msal-dotnet-latest
+  obsoleteMessagesWithMoniker:
+  - value: 'Use AcquireTokenWithDeviceCode instead. See https://aka.ms/msal-net-3-breaking-changes. '
+  summary: >-
+    Acquires a security token on a device without a web browser, by letting the user authenticate on
+
+    another device, with possibility of cancelling the token acquisition before it times out. This is done in two steps:
+
+    <ul><li>the method first acquires a device code from the authority and returns it to the caller via
+
+    the <code data-dev-comment-type="paramref">deviceCodeResultCallback</code>. This callback takes care of interacting with the user
+
+    to direct them to authenticate (to a specific URL, with a code)</li><li>The method then proceeds to poll for the security
+
+    token which is granted upon successful login by the user based on the device code information. This step is cancelable</li></ul>
+
+    See https://aka.ms/msal-device-code-flow.
+  metadata: {}
+uid: Microsoft.Identity.Client.PublicClientApplication.AcquireTokenWithDeviceCodeAsync*
+commentId: Overload:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenWithDeviceCodeAsync
+namespace: Microsoft.Identity.Client
+name: AcquireTokenWithDeviceCodeAsync
+fullName: Microsoft.Identity.Client.PublicClientApplication.AcquireTokenWithDeviceCodeAsync
+nameWithType: PublicClientApplication.AcquireTokenWithDeviceCodeAsync
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.PublicClientApplication.AcquireTokenWithDeviceCodeAsync
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.PublicClientApplication.AcquireTokenWithDeviceCodeAsync
+  - Microsoft::Identity::Client::PublicClientApplication::AcquireTokenWithDeviceCodeAsync
+  - AcquireTokenWithDeviceCodeAsync
+  - PublicClientApplication.AcquireTokenWithDeviceCodeAsync
+  - PublicClientApplication::AcquireTokenWithDeviceCodeAsync
+  helpviewer_keywords:
+  - PublicClientApplication.AcquireTokenWithDeviceCodeAsync method [.NET]
+  - AcquireTokenWithDeviceCodeAsync method [.NET], class PublicClientApplication
+  - PublicClientApplication.AcquireTokenWithDeviceCodeAsync(IEnumerable<String>, String, Func<DeviceCodeResult,Task>) method [.NET]
+  - AcquireTokenWithDeviceCodeAsync(IEnumerable<String>, String, Func<DeviceCodeResult,Task>) method [.NET], class PublicClientApplication
+  - PublicClientApplication.AcquireTokenWithDeviceCodeAsync(IEnumerable<String>, String, Func<DeviceCodeResult,Task>, CancellationToken) method [.NET]
+  - AcquireTokenWithDeviceCodeAsync(IEnumerable<String>, String, Func<DeviceCodeResult,Task>, CancellationToken) method [.NET], class PublicClientApplication
+  - PublicClientApplication.AcquireTokenWithDeviceCodeAsync(IEnumerable<String>, Func<DeviceCodeResult,Task>) method [.NET]
+  - AcquireTokenWithDeviceCodeAsync(IEnumerable<String>, Func<DeviceCodeResult,Task>) method [.NET], class PublicClientApplication
+  - PublicClientApplication.AcquireTokenWithDeviceCodeAsync(IEnumerable<String>, Func<DeviceCodeResult,Task>, CancellationToken) method [.NET]
+  - AcquireTokenWithDeviceCodeAsync(IEnumerable<String>, Func<DeviceCodeResult,Task>, CancellationToken) method [.NET], class PublicClientApplication
+  monikers:
+  - msal-dotnet-latest

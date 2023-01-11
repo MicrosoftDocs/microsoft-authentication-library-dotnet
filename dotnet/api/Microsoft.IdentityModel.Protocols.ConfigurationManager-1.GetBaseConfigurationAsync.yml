@@ -1,0 +1,72 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.IdentityModel.Tokens.BaseConfiguration?alt=Microsoft.IdentityModel.Tokens.BaseConfiguration&text=BaseConfiguration" data-throw-if-not-resolved="True"/>&gt;
+    description: Configuration of type BaseConfiguration    .
+  parameters:
+  - namesWithMoniker:
+    - value: cancel
+    description: CancellationToken
+    type: <xref href="System.Threading.CancellationToken?alt=System.Threading.CancellationToken&text=CancellationToken" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetBaseConfigurationAsync(System.Threading.CancellationToken)
+  commentId: M:Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetBaseConfigurationAsync(System.Threading.CancellationToken)
+  name: GetBaseConfigurationAsync(CancellationToken)
+  fullName: Microsoft.IdentityModel.Protocols.ConfigurationManager<T>.GetBaseConfigurationAsync(CancellationToken)
+  nameWithType: ConfigurationManager<T>.GetBaseConfigurationAsync(CancellationToken)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public override System.Threading.Tasks.Task<Microsoft.IdentityModel.Tokens.BaseConfiguration> GetBaseConfigurationAsync (System.Threading.CancellationToken cancel);
+  - lang: fsharp
+    values:
+    - value: 'override this.GetBaseConfigurationAsync : System.Threading.CancellationToken -> System.Threading.Tasks.Task<Microsoft.IdentityModel.Tokens.BaseConfiguration>'
+  - lang: vb
+    values:
+    - value: Public Overrides Function GetBaseConfigurationAsync (cancel As CancellationToken) As Task(Of BaseConfiguration)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Obtains an updated version of Configuration.
+  remarks: If the time since the last call is less than <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.BaseConfigurationManager.AutomaticRefreshInterval"></xref> then <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Protocols.IConfigurationRetriever`1.GetConfigurationAsync(System.String,Microsoft.IdentityModel.Protocols.IDocumentRetriever,System.Threading.CancellationToken)"></xref> is not called and the current Configuration is returned.
+  metadata: {}
+uid: Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetBaseConfigurationAsync*
+commentId: Overload:Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetBaseConfigurationAsync
+namespace: Microsoft.IdentityModel.Protocols
+name: GetBaseConfigurationAsync
+fullName: Microsoft.IdentityModel.Protocols.ConfigurationManager<T>.GetBaseConfigurationAsync
+nameWithType: ConfigurationManager<T>.GetBaseConfigurationAsync
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Protocols.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Protocols v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetBaseConfigurationAsync
+  api_location:
+  - Microsoft.IdentityModel.Protocols.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetBaseConfigurationAsync
+  - Microsoft::IdentityModel::Protocols::ConfigurationManager`1::GetBaseConfigurationAsync
+  - Microsoft.IdentityModel.Protocols.ConfigurationManager.GetBaseConfigurationAsync
+  - GetBaseConfigurationAsync
+  - ConfigurationManager`1.GetBaseConfigurationAsync
+  - ConfigurationManager`1::GetBaseConfigurationAsync
+  helpviewer_keywords:
+  - ConfigurationManager<T>.GetBaseConfigurationAsync method [.NET]
+  - GetBaseConfigurationAsync method [.NET], class ConfigurationManager<T>
+  - ConfigurationManager<T>.GetBaseConfigurationAsync(CancellationToken) method [.NET]
+  - GetBaseConfigurationAsync(CancellationToken) method [.NET], class ConfigurationManager<T>
+  monikers:
+  - msal-web-dotnet-latest

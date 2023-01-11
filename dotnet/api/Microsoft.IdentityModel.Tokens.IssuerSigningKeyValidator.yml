@@ -1,0 +1,68 @@
+### YamlMime:NetDelegate
+returnsWithMoniker:
+  type:
+  - value: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+parameters:
+- namesWithMoniker:
+  - value: securityKey
+  description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityKey"></xref> that signed the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityToken"></xref>.
+  type: <xref href="Microsoft.IdentityModel.Tokens.SecurityKey?alt=Microsoft.IdentityModel.Tokens.SecurityKey&text=SecurityKey" data-throw-if-not-resolved="True"/>
+- namesWithMoniker:
+  - value: securityToken
+  description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityToken"></xref> being validated.
+  type: <xref href="Microsoft.IdentityModel.Tokens.SecurityToken?alt=Microsoft.IdentityModel.Tokens.SecurityToken&text=SecurityToken" data-throw-if-not-resolved="True"/>
+- namesWithMoniker:
+  - value: validationParameters
+  description: <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.TokenValidationParameters"></xref> required for validation.
+  type: <xref href="Microsoft.IdentityModel.Tokens.TokenValidationParameters?alt=Microsoft.IdentityModel.Tokens.TokenValidationParameters&text=TokenValidationParameters" data-throw-if-not-resolved="True"/>
+inheritances:
+- <xref href="System.Delegate" data-throw-if-not-resolved="True"/>
+uid: Microsoft.IdentityModel.Tokens.IssuerSigningKeyValidator
+commentId: T:Microsoft.IdentityModel.Tokens.IssuerSigningKeyValidator
+namespace: Microsoft.IdentityModel.Tokens
+name: IssuerSigningKeyValidator
+fullName: Microsoft.IdentityModel.Tokens.IssuerSigningKeyValidator
+nameWithType: Microsoft.IdentityModel.Tokens.IssuerSigningKeyValidator
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens v6.25.1
+syntaxWithMoniker:
+- lang: csharp
+  values:
+  - value: public delegate bool IssuerSigningKeyValidator(SecurityKey securityKey, SecurityToken securityToken, TokenValidationParameters validationParameters);
+- lang: fsharp
+  values:
+  - value: type IssuerSigningKeyValidator = delegate of SecurityKey * SecurityToken * TokenValidationParameters -> bool
+- lang: vb
+  values:
+  - value: 'Public Delegate Function IssuerSigningKeyValidator(securityKey As SecurityKey, securityToken As SecurityToken, validationParameters As TokenValidationParameters) As Boolean '
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+summary: Definition for IssuerSigningKeyValidator.
+remarks: <p>If both <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.IssuerSigningKeyResolverUsingConfiguration"></xref> and <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.IssuerSigningKeyResolver"></xref> are set, IssuerSigningKeyResolverUsingConfiguration takes priority.</p>
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.IssuerSigningKeyValidator
+  - Microsoft.IdentityModel.Tokens.IssuerSigningKeyValidator..ctor
+  - Microsoft.IdentityModel.Tokens.IssuerSigningKeyValidator.Invoke
+  - Microsoft.IdentityModel.Tokens.IssuerSigningKeyValidator.BeginInvoke
+  - Microsoft.IdentityModel.Tokens.IssuerSigningKeyValidator.EndInvoke
+  api_location:
+  - Microsoft.IdentityModel.Tokens.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.IssuerSigningKeyValidator
+  - Microsoft::IdentityModel::Tokens::IssuerSigningKeyValidator
+  - IssuerSigningKeyValidator
+  helpviewer_keywords:
+  - Microsoft.IdentityModel.Tokens.IssuerSigningKeyValidator delegate [.NET]
+  monikers:
+  - msal-web-dotnet-latest

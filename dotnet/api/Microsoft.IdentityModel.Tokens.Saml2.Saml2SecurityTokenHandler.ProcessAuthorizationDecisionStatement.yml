@@ -1,0 +1,78 @@
+### YamlMime:NetMember
+type: method
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: statement
+    description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2AuthorizationDecisionStatement"></xref>.
+    type: <xref href="Microsoft.IdentityModel.Tokens.Saml2.Saml2AuthorizationDecisionStatement?alt=Microsoft.IdentityModel.Tokens.Saml2.Saml2AuthorizationDecisionStatement&text=Saml2AuthorizationDecisionStatement" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: identity
+    description: The identity that will contain the AuthorizationDecision <xref data-throw-if-not-resolved="true" uid="System.Security.Claims.Claim"></xref>s.
+    type: <xref href="System.Security.Claims.ClaimsIdentity?alt=System.Security.Claims.ClaimsIdentity&text=ClaimsIdentity" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: issuer
+    description: The issuer for each <xref data-throw-if-not-resolved="true" uid="System.Security.Claims.Claim"></xref>.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ProcessAuthorizationDecisionStatement(Microsoft.IdentityModel.Tokens.Saml2.Saml2AuthorizationDecisionStatement,System.Security.Claims.ClaimsIdentity,System.String)
+  commentId: M:Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ProcessAuthorizationDecisionStatement(Microsoft.IdentityModel.Tokens.Saml2.Saml2AuthorizationDecisionStatement,System.Security.Claims.ClaimsIdentity,System.String)
+  name: ProcessAuthorizationDecisionStatement(Saml2AuthorizationDecisionStatement, ClaimsIdentity, String)
+  fullName: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ProcessAuthorizationDecisionStatement(Saml2AuthorizationDecisionStatement, ClaimsIdentity, String)
+  nameWithType: Saml2SecurityTokenHandler.ProcessAuthorizationDecisionStatement(Saml2AuthorizationDecisionStatement, ClaimsIdentity, String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected virtual void ProcessAuthorizationDecisionStatement (Microsoft.IdentityModel.Tokens.Saml2.Saml2AuthorizationDecisionStatement statement, System.Security.Claims.ClaimsIdentity identity, string issuer);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member ProcessAuthorizationDecisionStatement : Microsoft.IdentityModel.Tokens.Saml2.Saml2AuthorizationDecisionStatement * System.Security.Claims.ClaimsIdentity * string -> unit
+
+        override this.ProcessAuthorizationDecisionStatement : Microsoft.IdentityModel.Tokens.Saml2.Saml2AuthorizationDecisionStatement * System.Security.Claims.ClaimsIdentity * string -> unit
+  - lang: vb
+    values:
+    - value: Protected Overridable Sub ProcessAuthorizationDecisionStatement (statement As Saml2AuthorizationDecisionStatement, identity As ClaimsIdentity, issuer As String)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Creates claims from a <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2AuthorizationDecisionStatement"></xref>.
+  remarks: Provided for extensibility. By default no claims are added.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ProcessAuthorizationDecisionStatement*
+commentId: Overload:Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ProcessAuthorizationDecisionStatement
+namespace: Microsoft.IdentityModel.Tokens.Saml2
+name: ProcessAuthorizationDecisionStatement
+fullName: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ProcessAuthorizationDecisionStatement
+nameWithType: Saml2SecurityTokenHandler.ProcessAuthorizationDecisionStatement
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ProcessAuthorizationDecisionStatement
+  api_location:
+  - Microsoft.IdentityModel.Tokens.Saml.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ProcessAuthorizationDecisionStatement
+  - Microsoft::IdentityModel::Tokens::Saml2::Saml2SecurityTokenHandler::ProcessAuthorizationDecisionStatement
+  - ProcessAuthorizationDecisionStatement
+  - Saml2SecurityTokenHandler.ProcessAuthorizationDecisionStatement
+  - Saml2SecurityTokenHandler::ProcessAuthorizationDecisionStatement
+  helpviewer_keywords:
+  - Saml2SecurityTokenHandler.ProcessAuthorizationDecisionStatement method [.NET]
+  - ProcessAuthorizationDecisionStatement method [.NET], class Saml2SecurityTokenHandler
+  - Saml2SecurityTokenHandler.ProcessAuthorizationDecisionStatement(Saml2AuthorizationDecisionStatement, ClaimsIdentity, String) method [.NET]
+  - ProcessAuthorizationDecisionStatement(Saml2AuthorizationDecisionStatement, ClaimsIdentity, String) method [.NET], class Saml2SecurityTokenHandler
+  monikers:
+  - msal-web-dotnet-latest

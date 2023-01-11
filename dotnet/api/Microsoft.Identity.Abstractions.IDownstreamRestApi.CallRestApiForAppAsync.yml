@@ -1,0 +1,203 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="System.Net.Http.HttpResponseMessage?alt=System.Net.Http.HttpResponseMessage&text=HttpResponseMessage" data-throw-if-not-resolved="True"/>&gt;
+    description: An <xref data-throw-if-not-resolved="true" uid="System.Net.Http.HttpResponseMessage"></xref> that the application will process.
+  parameters:
+  - namesWithMoniker:
+    - value: serviceName
+    description: >-
+      Name of the service describing the downstream REST API. There can
+                  be several configuration named sections mapped to a <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Abstractions.DownstreamRestApiOptions"></xref>,
+                  each for one downstream REST API. You can pass-in null, but in that case <code data-dev-comment-type="paramref">downstreamRestApiOptionsOverride</code>
+                  needs to be set.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: downstreamRestApiOptionsOverride
+    description: >-
+      (Optional) Overrides the options proposed in the configuration described
+                  by <code data-dev-comment-type="paramref">serviceName</code>.
+    type: <xref href="System.Action`1?alt=System.Action&text=Action" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Abstractions.DownstreamRestApiOptions?alt=Microsoft.Identity.Abstractions.DownstreamRestApiOptions&text=DownstreamRestApiOptions" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: content
+    description: >-
+      Content to send to the REST API in the case where
+                  <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions.HttpMethod"></xref> is <code>HttpMethod.Patch</code>, 
+                  <xref data-throw-if-not-resolved="true" uid="System.Net.Http.HttpMethod.Post"></xref>, <xref data-throw-if-not-resolved="true" uid="System.Net.Http.HttpMethod.Put"></xref>.
+    type: <xref href="System.Net.Http.HttpContent?alt=System.Net.Http.HttpContent&text=HttpContent" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: cancellationToken
+    description: Cancellation token.
+    type: <xref href="System.Threading.CancellationToken?alt=System.Threading.CancellationToken&text=CancellationToken" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Abstractions.IDownstreamRestApi.CallRestApiForAppAsync(System.String,System.Action{Microsoft.Identity.Abstractions.DownstreamRestApiOptions},System.Net.Http.HttpContent,System.Threading.CancellationToken)
+  commentId: M:Microsoft.Identity.Abstractions.IDownstreamRestApi.CallRestApiForAppAsync(System.String,System.Action{Microsoft.Identity.Abstractions.DownstreamRestApiOptions},System.Net.Http.HttpContent,System.Threading.CancellationToken)
+  name: CallRestApiForAppAsync(String, Action<DownstreamRestApiOptions>, HttpContent, CancellationToken)
+  fullName: Microsoft.Identity.Abstractions.IDownstreamRestApi.CallRestApiForAppAsync(String, Action<DownstreamRestApiOptions>, HttpContent, CancellationToken)
+  nameWithType: IDownstreamRestApi.CallRestApiForAppAsync(String, Action<DownstreamRestApiOptions>, HttpContent, CancellationToken)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public System.Threading.Tasks.Task<System.Net.Http.HttpResponseMessage> CallRestApiForAppAsync (string? serviceName, Action<Microsoft.Identity.Abstractions.DownstreamRestApiOptions>? downstreamRestApiOptionsOverride = default, System.Net.Http.HttpContent? content = default, System.Threading.CancellationToken cancellationToken = default);
+  - lang: fsharp
+    values:
+    - value: 'abstract member CallRestApiForAppAsync : string * Action<Microsoft.Identity.Abstractions.DownstreamRestApiOptions> * System.Net.Http.HttpContent * System.Threading.CancellationToken -> System.Threading.Tasks.Task<System.Net.Http.HttpResponseMessage>'
+  - lang: vb
+    values:
+    - value: Public Function CallRestApiForAppAsync (serviceName As String, Optional downstreamRestApiOptionsOverride As Action(Of DownstreamRestApiOptions) = Nothing, Optional content As HttpContent = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of HttpResponseMessage)
+  monikers:
+  - msal-model-dotnet-latest
+  summary: Calls the downstream REST API on behalf of the app itself, with the required scopes.
+  metadata: {}
+- typeParameters:
+  - description: Input type.
+    name: TInput
+  - description: Output type.
+    name: TOutput
+  returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;TOutput&gt;
+    description: The value returned by the downstream web API.
+  parameters:
+  - namesWithMoniker:
+    - value: serviceName
+    description: >-
+      Name of the service describing the downstream REST API. There can
+                  be several configuration named sections mapped to a <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Abstractions.DownstreamRestApiOptions"></xref>,
+                  each for one downstream REST API. You can pass-in null, but in that case <code data-dev-comment-type="paramref">downstreamRestApiOptionsOverride</code>
+                  needs to be set.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: input
+    description: Input parameter to the downstream web API.
+    type: TInput
+  - namesWithMoniker:
+    - value: downstreamRestApiOptionsOverride
+    description: >-
+      Overrides the options proposed in the configuration described
+                  by <code data-dev-comment-type="paramref">serviceName</code>.
+    type: <xref href="System.Action`1?alt=System.Action&text=Action" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Abstractions.DownstreamRestApiOptions?alt=Microsoft.Identity.Abstractions.DownstreamRestApiOptions&text=DownstreamRestApiOptions" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: cancellationToken
+    description: Cancellation token.
+    type: <xref href="System.Threading.CancellationToken?alt=System.Threading.CancellationToken&text=CancellationToken" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Abstractions.IDownstreamRestApi.CallRestApiForAppAsync``2(System.String,``0,System.Action{Microsoft.Identity.Abstractions.DownstreamRestApiOptions},System.Threading.CancellationToken)
+  commentId: M:Microsoft.Identity.Abstractions.IDownstreamRestApi.CallRestApiForAppAsync``2(System.String,``0,System.Action{Microsoft.Identity.Abstractions.DownstreamRestApiOptions},System.Threading.CancellationToken)
+  name: CallRestApiForAppAsync<TInput,TOutput>(String, TInput, Action<DownstreamRestApiOptions>, CancellationToken)
+  fullName: Microsoft.Identity.Abstractions.IDownstreamRestApi.CallRestApiForAppAsync<TInput,TOutput>(String, TInput, Action<DownstreamRestApiOptions>, CancellationToken)
+  nameWithType: IDownstreamRestApi.CallRestApiForAppAsync<TInput,TOutput>(String, TInput, Action<DownstreamRestApiOptions>, CancellationToken)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: 'public System.Threading.Tasks.Task<TOutput?> CallRestApiForAppAsync<TInput,TOutput> (string? serviceName, TInput input, Action<Microsoft.Identity.Abstractions.DownstreamRestApiOptions>? downstreamRestApiOptionsOverride = default, System.Threading.CancellationToken cancellationToken = default) where TOutput : class;'
+  - lang: fsharp
+    values:
+    - value: "abstract member CallRestApiForAppAsync : string * 'Input * Action<Microsoft.Identity.Abstractions.DownstreamRestApiOptions> * System.Threading.CancellationToken -> System.Threading.Tasks.Task<'Output (requires 'Output : null)> (requires 'Output : null)"
+  - lang: vb
+    values:
+    - value: Public Function CallRestApiForAppAsync(Of TInput, TOutput) (serviceName As String, input As TInput, Optional downstreamRestApiOptionsOverride As Action(Of DownstreamRestApiOptions) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of TOutput)
+  monikers:
+  - msal-model-dotnet-latest
+  summary: Calls a downstream REST API consuming JSON with some data and returns data.
+  metadata: {}
+- typeParameters:
+  - description: Output type.
+    name: TOutput
+  returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;TOutput&gt;
+    description: The value returned by the downstream web API.
+  parameters:
+  - namesWithMoniker:
+    - value: serviceName
+    description: >-
+      Name of the service describing the downstream REST API. There can
+                  be several configuration named sections mapped to a <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Abstractions.DownstreamRestApiOptions"></xref>,
+                  each for one downstream REST API. You can pass-in null, but in that case <code data-dev-comment-type="paramref">downstreamRestApiOptionsOverride</code>
+                  needs to be set.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: downstreamRestApiOptionsOverride
+    description: >-
+      Overrides the options proposed in the configuration described
+                  by <code data-dev-comment-type="paramref">serviceName</code>.
+    type: <xref href="System.Action`1?alt=System.Action&text=Action" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Abstractions.DownstreamRestApiOptions?alt=Microsoft.Identity.Abstractions.DownstreamRestApiOptions&text=DownstreamRestApiOptions" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: cancellationToken
+    description: Cancellation token.
+    type: <xref href="System.Threading.CancellationToken?alt=System.Threading.CancellationToken&text=CancellationToken" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Abstractions.IDownstreamRestApi.CallRestApiForAppAsync``1(System.String,System.Action{Microsoft.Identity.Abstractions.DownstreamRestApiOptions},System.Threading.CancellationToken)
+  commentId: M:Microsoft.Identity.Abstractions.IDownstreamRestApi.CallRestApiForAppAsync``1(System.String,System.Action{Microsoft.Identity.Abstractions.DownstreamRestApiOptions},System.Threading.CancellationToken)
+  name: CallRestApiForAppAsync<TOutput>(String, Action<DownstreamRestApiOptions>, CancellationToken)
+  fullName: Microsoft.Identity.Abstractions.IDownstreamRestApi.CallRestApiForAppAsync<TOutput>(String, Action<DownstreamRestApiOptions>, CancellationToken)
+  nameWithType: IDownstreamRestApi.CallRestApiForAppAsync<TOutput>(String, Action<DownstreamRestApiOptions>, CancellationToken)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: 'public System.Threading.Tasks.Task<TOutput?> CallRestApiForAppAsync<TOutput> (string serviceName, Action<Microsoft.Identity.Abstractions.DownstreamRestApiOptions>? downstreamRestApiOptionsOverride = default, System.Threading.CancellationToken cancellationToken = default) where TOutput : class;'
+  - lang: fsharp
+    values:
+    - value: "abstract member CallRestApiForAppAsync : string * Action<Microsoft.Identity.Abstractions.DownstreamRestApiOptions> * System.Threading.CancellationToken -> System.Threading.Tasks.Task<'Output (requires 'Output : null)> (requires 'Output : null)"
+  - lang: vb
+    values:
+    - value: Public Function CallRestApiForAppAsync(Of TOutput As Class) (serviceName As String, Optional downstreamRestApiOptionsOverride As Action(Of DownstreamRestApiOptions) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of TOutput)
+  monikers:
+  - msal-model-dotnet-latest
+  summary: Call a web API endpoint with an HttpGet, and return strongly typed data.
+  metadata: {}
+uid: Microsoft.Identity.Abstractions.IDownstreamRestApi.CallRestApiForAppAsync*
+commentId: Overload:Microsoft.Identity.Abstractions.IDownstreamRestApi.CallRestApiForAppAsync
+namespace: Microsoft.Identity.Abstractions
+name: CallRestApiForAppAsync
+fullName: Microsoft.Identity.Abstractions.IDownstreamRestApi.CallRestApiForAppAsync
+nameWithType: IDownstreamRestApi.CallRestApiForAppAsync
+assembliesWithMoniker:
+- value: Microsoft.Identity.Abstractions.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Abstractions v1.1.0
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-model-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Abstractions.IDownstreamRestApi.CallRestApiForAppAsync
+  api_location:
+  - Microsoft.Identity.Abstractions.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Abstractions.IDownstreamRestApi.CallRestApiForAppAsync
+  - Microsoft::Identity::Abstractions::IDownstreamRestApi::CallRestApiForAppAsync
+  - CallRestApiForAppAsync
+  - IDownstreamRestApi.CallRestApiForAppAsync
+  - IDownstreamRestApi::CallRestApiForAppAsync
+  - Microsoft.Identity.Abstractions.IDownstreamRestApi.CallRestApiForAppAsync``2
+  - Microsoft::Identity::Abstractions::IDownstreamRestApi::CallRestApiForAppAsync``2
+  - CallRestApiForAppAsync``2
+  - IDownstreamRestApi.CallRestApiForAppAsync``2
+  - IDownstreamRestApi::CallRestApiForAppAsync``2
+  - Microsoft.Identity.Abstractions.IDownstreamRestApi.CallRestApiForAppAsync``1
+  - Microsoft::Identity::Abstractions::IDownstreamRestApi::CallRestApiForAppAsync``1
+  - CallRestApiForAppAsync``1
+  - IDownstreamRestApi.CallRestApiForAppAsync``1
+  - IDownstreamRestApi::CallRestApiForAppAsync``1
+  helpviewer_keywords:
+  - IDownstreamRestApi.CallRestApiForAppAsync method [.NET]
+  - CallRestApiForAppAsync method [.NET], interface IDownstreamRestApi
+  - IDownstreamRestApi.CallRestApiForAppAsync(String, Action<DownstreamRestApiOptions>, HttpContent, CancellationToken) method [.NET]
+  - CallRestApiForAppAsync(String, Action<DownstreamRestApiOptions>, HttpContent, CancellationToken) method [.NET], interface IDownstreamRestApi
+  - IDownstreamRestApi.CallRestApiForAppAsync<TInput,TOutput>(String, TInput, Action<DownstreamRestApiOptions>, CancellationToken) method [.NET]
+  - CallRestApiForAppAsync<TInput,TOutput>(String, TInput, Action<DownstreamRestApiOptions>, CancellationToken) method [.NET], interface IDownstreamRestApi
+  - IDownstreamRestApi.CallRestApiForAppAsync<TOutput>(String, Action<DownstreamRestApiOptions>, CancellationToken) method [.NET]
+  - CallRestApiForAppAsync<TOutput>(String, Action<DownstreamRestApiOptions>, CancellationToken) method [.NET], interface IDownstreamRestApi
+  monikers:
+  - msal-model-dotnet-latest

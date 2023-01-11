@@ -1,0 +1,65 @@
+### YamlMime:NetMember
+type: property
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  type: property
+  uid: Microsoft.IdentityModel.Tokens.TokenValidationParameters.ValidateAudience
+  commentId: P:Microsoft.IdentityModel.Tokens.TokenValidationParameters.ValidateAudience
+  name: ValidateAudience
+  fullName: Microsoft.IdentityModel.Tokens.TokenValidationParameters.ValidateAudience
+  nameWithType: TokenValidationParameters.ValidateAudience
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public bool ValidateAudience { get; set; }
+  - lang: fsharp
+    values:
+    - value: 'member this.ValidateAudience : bool with get, set'
+  - lang: vb
+    values:
+    - value: Public Property ValidateAudience As Boolean
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Gets or sets a boolean to control if the audience will be validated during token validation.
+  remarks: <p>Validation of the audience, mitigates forwarding attacks. For example, a site that receives a token, could not replay it to another side. A forwarded token would contain the audience of the original site. This boolean only applies to default audience validation. If <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.TokenValidationParameters.AudienceValidator"></xref> is set, it will be called regardless of whether this property is true or false. The default is <code data-dev-comment-type="c">true</code>.</p>
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.TokenValidationParameters.ValidateAudience*
+commentId: Overload:Microsoft.IdentityModel.Tokens.TokenValidationParameters.ValidateAudience
+namespace: Microsoft.IdentityModel.Tokens
+name: ValidateAudience
+fullName: Microsoft.IdentityModel.Tokens.TokenValidationParameters.ValidateAudience
+nameWithType: TokenValidationParameters.ValidateAudience
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.TokenValidationParameters.ValidateAudience
+  - Microsoft.IdentityModel.Tokens.TokenValidationParameters.get_ValidateAudience
+  - Microsoft.IdentityModel.Tokens.TokenValidationParameters.set_ValidateAudience
+  api_location:
+  - Microsoft.IdentityModel.Tokens.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.TokenValidationParameters.ValidateAudience
+  - Microsoft::IdentityModel::Tokens::TokenValidationParameters::ValidateAudience
+  - ValidateAudience
+  - TokenValidationParameters.ValidateAudience
+  - TokenValidationParameters::ValidateAudience
+  helpviewer_keywords:
+  - TokenValidationParameters.ValidateAudience property [.NET]
+  - ValidateAudience property [.NET], class TokenValidationParameters
+  monikers:
+  - msal-web-dotnet-latest

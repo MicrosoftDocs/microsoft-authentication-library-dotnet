@@ -1,0 +1,73 @@
+### YamlMime:NetMember
+type: method
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: beforeWrite
+    description: Delegate set in order to prepare the cache serialization
+    type: <xref href="Microsoft.Identity.Client.TokenCacheCallback?alt=Microsoft.Identity.Client.TokenCacheCallback&text=TokenCacheCallback" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.ITokenCache.SetBeforeWrite(Microsoft.Identity.Client.TokenCacheCallback)
+  commentId: M:Microsoft.Identity.Client.ITokenCache.SetBeforeWrite(Microsoft.Identity.Client.TokenCacheCallback)
+  name: SetBeforeWrite(TokenCacheCallback)
+  fullName: Microsoft.Identity.Client.ITokenCache.SetBeforeWrite(TokenCacheCallback)
+  nameWithType: ITokenCache.SetBeforeWrite(TokenCacheCallback)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public void SetBeforeWrite (Microsoft.Identity.Client.TokenCacheCallback beforeWrite);
+  - lang: fsharp
+    values:
+    - value: 'abstract member SetBeforeWrite : Microsoft.Identity.Client.TokenCacheCallback -> unit'
+  - lang: vb
+    values:
+    - value: Public Sub SetBeforeWrite (beforeWrite As TokenCacheCallback)
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    Sets a delegate called before any library method writes to the cache. This gives an option to the delegate
+
+    to reload the cache state from a row in database and lock that row. That database row can then be unlocked in the delegate
+
+    registered with <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITokenCache.SetAfterAccess(Microsoft.Identity.Client.TokenCacheCallback)"></xref>
+
+    If you need async/task-based callbacks, please use SetBeforeWriteAsync instead.
+  metadata: {}
+uid: Microsoft.Identity.Client.ITokenCache.SetBeforeWrite*
+commentId: Overload:Microsoft.Identity.Client.ITokenCache.SetBeforeWrite
+namespace: Microsoft.Identity.Client
+name: SetBeforeWrite
+fullName: Microsoft.Identity.Client.ITokenCache.SetBeforeWrite
+nameWithType: ITokenCache.SetBeforeWrite
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.ITokenCache.SetBeforeWrite
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.ITokenCache.SetBeforeWrite
+  - Microsoft::Identity::Client::ITokenCache::SetBeforeWrite
+  - SetBeforeWrite
+  - ITokenCache.SetBeforeWrite
+  - ITokenCache::SetBeforeWrite
+  helpviewer_keywords:
+  - ITokenCache.SetBeforeWrite method [.NET]
+  - SetBeforeWrite method [.NET], interface ITokenCache
+  - ITokenCache.SetBeforeWrite(TokenCacheCallback) method [.NET]
+  - SetBeforeWrite(TokenCacheCallback) method [.NET], interface ITokenCache
+  monikers:
+  - msal-dotnet-latest

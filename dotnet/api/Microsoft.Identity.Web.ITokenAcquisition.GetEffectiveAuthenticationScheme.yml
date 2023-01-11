@@ -1,0 +1,73 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+    description: >-
+      Effective authenticationScheme which is the authentication scheme
+                  if it's not null, or otherwise OpenIdConnectDefault.AuthenticationScheme
+                  if called from a web app, and JwtBearerDefault.AuthenticationScheme if called from a web API.
+  parameters:
+  - namesWithMoniker:
+    - value: authenticationScheme
+    description: Proposed authentication scheme.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Web.ITokenAcquisition.GetEffectiveAuthenticationScheme(System.String)
+  commentId: M:Microsoft.Identity.Web.ITokenAcquisition.GetEffectiveAuthenticationScheme(System.String)
+  name: GetEffectiveAuthenticationScheme(String)
+  fullName: Microsoft.Identity.Web.ITokenAcquisition.GetEffectiveAuthenticationScheme(String)
+  nameWithType: ITokenAcquisition.GetEffectiveAuthenticationScheme(String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public string GetEffectiveAuthenticationScheme (string? authenticationScheme);
+  - lang: fsharp
+    values:
+    - value: 'abstract member GetEffectiveAuthenticationScheme : string -> string'
+  - lang: vb
+    values:
+    - value: Public Function GetEffectiveAuthenticationScheme (authenticationScheme As String) As String
+  monikers:
+  - msal-model-dotnet-latest
+  summary: Get the effective authentication scheme based on the context.
+  metadata: {}
+uid: Microsoft.Identity.Web.ITokenAcquisition.GetEffectiveAuthenticationScheme*
+commentId: Overload:Microsoft.Identity.Web.ITokenAcquisition.GetEffectiveAuthenticationScheme
+namespace: Microsoft.Identity.Web
+name: GetEffectiveAuthenticationScheme
+fullName: Microsoft.Identity.Web.ITokenAcquisition.GetEffectiveAuthenticationScheme
+nameWithType: ITokenAcquisition.GetEffectiveAuthenticationScheme
+assembliesWithMoniker:
+- value: Microsoft.Identity.Web.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Web v1.25.10
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-model-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Web.ITokenAcquisition.GetEffectiveAuthenticationScheme
+  api_location:
+  - Microsoft.Identity.Web.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Web.ITokenAcquisition.GetEffectiveAuthenticationScheme
+  - Microsoft::Identity::Web::ITokenAcquisition::GetEffectiveAuthenticationScheme
+  - GetEffectiveAuthenticationScheme
+  - ITokenAcquisition.GetEffectiveAuthenticationScheme
+  - ITokenAcquisition::GetEffectiveAuthenticationScheme
+  helpviewer_keywords:
+  - ITokenAcquisition.GetEffectiveAuthenticationScheme method [.NET]
+  - GetEffectiveAuthenticationScheme method [.NET], interface ITokenAcquisition
+  - ITokenAcquisition.GetEffectiveAuthenticationScheme(String) method [.NET]
+  - GetEffectiveAuthenticationScheme(String) method [.NET], interface ITokenAcquisition
+  monikers:
+  - msal-model-dotnet-latest

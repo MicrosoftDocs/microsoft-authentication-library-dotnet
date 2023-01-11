@@ -1,0 +1,76 @@
+### YamlMime:NetMember
+type: method
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: writer
+    description: A <xref data-throw-if-not-resolved="true" uid="System.Xml.XmlWriter"></xref> to serialize the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2NameIdentifier"></xref>.
+    type: <xref href="System.Xml.XmlWriter?alt=System.Xml.XmlWriter&text=XmlWriter" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: nameIdentifier
+    description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2NameIdentifier"></xref> to serialize.
+    type: <xref href="Microsoft.IdentityModel.Tokens.Saml2.Saml2NameIdentifier?alt=Microsoft.IdentityModel.Tokens.Saml2.Saml2NameIdentifier&text=Saml2NameIdentifier" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: if <code data-dev-comment-type="paramref">nameIdentifier</code> is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteIssuer(System.Xml.XmlWriter,Microsoft.IdentityModel.Tokens.Saml2.Saml2NameIdentifier)
+  commentId: M:Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteIssuer(System.Xml.XmlWriter,Microsoft.IdentityModel.Tokens.Saml2.Saml2NameIdentifier)
+  name: WriteIssuer(XmlWriter, Saml2NameIdentifier)
+  fullName: Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteIssuer(XmlWriter, Saml2NameIdentifier)
+  nameWithType: Saml2Serializer.WriteIssuer(XmlWriter, Saml2NameIdentifier)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected virtual void WriteIssuer (System.Xml.XmlWriter writer, Microsoft.IdentityModel.Tokens.Saml2.Saml2NameIdentifier nameIdentifier);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member WriteIssuer : System.Xml.XmlWriter * Microsoft.IdentityModel.Tokens.Saml2.Saml2NameIdentifier -> unit
+
+        override this.WriteIssuer : System.Xml.XmlWriter * Microsoft.IdentityModel.Tokens.Saml2.Saml2NameIdentifier -> unit
+  - lang: vb
+    values:
+    - value: Protected Overridable Sub WriteIssuer (writer As XmlWriter, nameIdentifier As Saml2NameIdentifier)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Writes the &lt;saml:Issuer&gt; element.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteIssuer*
+commentId: Overload:Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteIssuer
+namespace: Microsoft.IdentityModel.Tokens.Saml2
+name: WriteIssuer
+fullName: Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteIssuer
+nameWithType: Saml2Serializer.WriteIssuer
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteIssuer
+  api_location:
+  - Microsoft.IdentityModel.Tokens.Saml.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteIssuer
+  - Microsoft::IdentityModel::Tokens::Saml2::Saml2Serializer::WriteIssuer
+  - WriteIssuer
+  - Saml2Serializer.WriteIssuer
+  - Saml2Serializer::WriteIssuer
+  helpviewer_keywords:
+  - Saml2Serializer.WriteIssuer method [.NET]
+  - WriteIssuer method [.NET], class Saml2Serializer
+  - Saml2Serializer.WriteIssuer(XmlWriter, Saml2NameIdentifier) method [.NET]
+  - WriteIssuer(XmlWriter, Saml2NameIdentifier) method [.NET], class Saml2Serializer
+  monikers:
+  - msal-web-dotnet-latest

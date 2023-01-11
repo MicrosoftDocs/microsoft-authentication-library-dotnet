@@ -1,0 +1,78 @@
+### YamlMime:NetMember
+type: method
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: writer
+    description: A <xref data-throw-if-not-resolved="true" uid="System.Xml.XmlWriter"></xref> to serialize the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2AuthorizationDecisionStatement"></xref>.
+    type: <xref href="System.Xml.XmlWriter?alt=System.Xml.XmlWriter&text=XmlWriter" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: statement
+    description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2AuthorizationDecisionStatement"></xref> to serialize.
+    type: <xref href="Microsoft.IdentityModel.Tokens.Saml2.Saml2AuthorizationDecisionStatement?alt=Microsoft.IdentityModel.Tokens.Saml2.Saml2AuthorizationDecisionStatement&text=Saml2AuthorizationDecisionStatement" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: if <code data-dev-comment-type="paramref">statement</code> is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: if <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2AuthorizationDecisionStatement.Resource"></xref> is null or empty.
+    type: <xref href="Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenWriteException?alt=Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenWriteException&text=Saml2SecurityTokenWriteException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteAuthorizationDecisionStatement(System.Xml.XmlWriter,Microsoft.IdentityModel.Tokens.Saml2.Saml2AuthorizationDecisionStatement)
+  commentId: M:Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteAuthorizationDecisionStatement(System.Xml.XmlWriter,Microsoft.IdentityModel.Tokens.Saml2.Saml2AuthorizationDecisionStatement)
+  name: WriteAuthorizationDecisionStatement(XmlWriter, Saml2AuthorizationDecisionStatement)
+  fullName: Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteAuthorizationDecisionStatement(XmlWriter, Saml2AuthorizationDecisionStatement)
+  nameWithType: Saml2Serializer.WriteAuthorizationDecisionStatement(XmlWriter, Saml2AuthorizationDecisionStatement)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected virtual void WriteAuthorizationDecisionStatement (System.Xml.XmlWriter writer, Microsoft.IdentityModel.Tokens.Saml2.Saml2AuthorizationDecisionStatement statement);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member WriteAuthorizationDecisionStatement : System.Xml.XmlWriter * Microsoft.IdentityModel.Tokens.Saml2.Saml2AuthorizationDecisionStatement -> unit
+
+        override this.WriteAuthorizationDecisionStatement : System.Xml.XmlWriter * Microsoft.IdentityModel.Tokens.Saml2.Saml2AuthorizationDecisionStatement -> unit
+  - lang: vb
+    values:
+    - value: Protected Overridable Sub WriteAuthorizationDecisionStatement (writer As XmlWriter, statement As Saml2AuthorizationDecisionStatement)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Writes the &lt;saml:AuthzDecisionStatement&gt; element.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteAuthorizationDecisionStatement*
+commentId: Overload:Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteAuthorizationDecisionStatement
+namespace: Microsoft.IdentityModel.Tokens.Saml2
+name: WriteAuthorizationDecisionStatement
+fullName: Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteAuthorizationDecisionStatement
+nameWithType: Saml2Serializer.WriteAuthorizationDecisionStatement
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteAuthorizationDecisionStatement
+  api_location:
+  - Microsoft.IdentityModel.Tokens.Saml.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteAuthorizationDecisionStatement
+  - Microsoft::IdentityModel::Tokens::Saml2::Saml2Serializer::WriteAuthorizationDecisionStatement
+  - WriteAuthorizationDecisionStatement
+  - Saml2Serializer.WriteAuthorizationDecisionStatement
+  - Saml2Serializer::WriteAuthorizationDecisionStatement
+  helpviewer_keywords:
+  - Saml2Serializer.WriteAuthorizationDecisionStatement method [.NET]
+  - WriteAuthorizationDecisionStatement method [.NET], class Saml2Serializer
+  - Saml2Serializer.WriteAuthorizationDecisionStatement(XmlWriter, Saml2AuthorizationDecisionStatement) method [.NET]
+  - WriteAuthorizationDecisionStatement(XmlWriter, Saml2AuthorizationDecisionStatement) method [.NET], class Saml2Serializer
+  monikers:
+  - msal-web-dotnet-latest

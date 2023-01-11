@@ -1,0 +1,123 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Security.Claims.ClaimsPrincipal?alt=System.Security.Claims.ClaimsPrincipal&text=ClaimsPrincipal" data-throw-if-not-resolved="True"/>
+  parameters:
+  - namesWithMoniker:
+    - value: securityToken
+    description: A token of type <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityTokenHandler.TokenType"></xref>.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: validationParameters
+    description: the current <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.TokenValidationParameters"></xref>.
+    type: <xref href="Microsoft.IdentityModel.Tokens.TokenValidationParameters?alt=Microsoft.IdentityModel.Tokens.TokenValidationParameters&text=TokenValidationParameters" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: validatedToken
+    description: The token of type <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityTokenHandler.TokenType"></xref> that was validated.
+    type: <xref href="Microsoft.IdentityModel.Tokens.SecurityToken?alt=Microsoft.IdentityModel.Tokens.SecurityToken&text=SecurityToken" data-throw-if-not-resolved="True"/>
+  implementsWithMoniker:
+  - value: <xref href="Microsoft.IdentityModel.Tokens.ISecurityTokenValidator.ValidateToken(System.String,Microsoft.IdentityModel.Tokens.TokenValidationParameters,Microsoft.IdentityModel.Tokens.SecurityToken@)?alt=Microsoft.IdentityModel.Tokens.ISecurityTokenValidator.ValidateToken(System.String,Microsoft.IdentityModel.Tokens.TokenValidationParameters,Microsoft.IdentityModel.Tokens.SecurityToken@)&text=ValidateToken(String%2C+TokenValidationParameters%2C+SecurityToken)" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken(System.String,Microsoft.IdentityModel.Tokens.TokenValidationParameters,Microsoft.IdentityModel.Tokens.SecurityToken@)
+  commentId: M:Microsoft.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken(System.String,Microsoft.IdentityModel.Tokens.TokenValidationParameters,Microsoft.IdentityModel.Tokens.SecurityToken@)
+  name: ValidateToken(String, TokenValidationParameters, SecurityToken)
+  fullName: Microsoft.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken(String, TokenValidationParameters, SecurityToken)
+  nameWithType: SecurityTokenHandler.ValidateToken(String, TokenValidationParameters, SecurityToken)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public virtual System.Security.Claims.ClaimsPrincipal ValidateToken (string securityToken, Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters, out Microsoft.IdentityModel.Tokens.SecurityToken validatedToken);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member ValidateToken : string * Microsoft.IdentityModel.Tokens.TokenValidationParameters * SecurityToken -> System.Security.Claims.ClaimsPrincipal
+
+        override this.ValidateToken : string * Microsoft.IdentityModel.Tokens.TokenValidationParameters * SecurityToken -> System.Security.Claims.ClaimsPrincipal
+  - lang: vb
+    values:
+    - value: Public Overridable Function ValidateToken (securityToken As String, validationParameters As TokenValidationParameters, ByRef validatedToken As SecurityToken) As ClaimsPrincipal
+  monikers:
+  - msal-web-dotnet-latest
+  summary: This must be overridden to validate a token passed as a string using <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.TokenValidationParameters"></xref>
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Security.Claims.ClaimsPrincipal?alt=System.Security.Claims.ClaimsPrincipal&text=ClaimsPrincipal" data-throw-if-not-resolved="True"/>
+  parameters:
+  - namesWithMoniker:
+    - value: reader
+    description: A <xref data-throw-if-not-resolved="true" uid="System.Xml.XmlReader"></xref> pointing at the start element of the token.
+    type: <xref href="System.Xml.XmlReader?alt=System.Xml.XmlReader&text=XmlReader" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: validationParameters
+    description: Contains data and information needed for validation.
+    type: <xref href="Microsoft.IdentityModel.Tokens.TokenValidationParameters?alt=Microsoft.IdentityModel.Tokens.TokenValidationParameters&text=TokenValidationParameters" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: validatedToken
+    description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityToken"></xref> that was validated.
+    type: <xref href="Microsoft.IdentityModel.Tokens.SecurityToken?alt=Microsoft.IdentityModel.Tokens.SecurityToken&text=SecurityToken" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken(System.Xml.XmlReader,Microsoft.IdentityModel.Tokens.TokenValidationParameters,Microsoft.IdentityModel.Tokens.SecurityToken@)
+  commentId: M:Microsoft.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken(System.Xml.XmlReader,Microsoft.IdentityModel.Tokens.TokenValidationParameters,Microsoft.IdentityModel.Tokens.SecurityToken@)
+  name: ValidateToken(XmlReader, TokenValidationParameters, SecurityToken)
+  fullName: Microsoft.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken(XmlReader, TokenValidationParameters, SecurityToken)
+  nameWithType: SecurityTokenHandler.ValidateToken(XmlReader, TokenValidationParameters, SecurityToken)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public virtual System.Security.Claims.ClaimsPrincipal ValidateToken (System.Xml.XmlReader reader, Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters, out Microsoft.IdentityModel.Tokens.SecurityToken validatedToken);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member ValidateToken : System.Xml.XmlReader * Microsoft.IdentityModel.Tokens.TokenValidationParameters * SecurityToken -> System.Security.Claims.ClaimsPrincipal
+
+        override this.ValidateToken : System.Xml.XmlReader * Microsoft.IdentityModel.Tokens.TokenValidationParameters * SecurityToken -> System.Security.Claims.ClaimsPrincipal
+  - lang: vb
+    values:
+    - value: Public Overridable Function ValidateToken (reader As XmlReader, validationParameters As TokenValidationParameters, ByRef validatedToken As SecurityToken) As ClaimsPrincipal
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Reads and validates a token using a xmlReader and <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.TokenValidationParameters"></xref>
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken*
+commentId: Overload:Microsoft.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken
+namespace: Microsoft.IdentityModel.Tokens
+name: ValidateToken
+fullName: Microsoft.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken
+nameWithType: SecurityTokenHandler.ValidateToken
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken
+  api_location:
+  - Microsoft.IdentityModel.Tokens.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken
+  - Microsoft::IdentityModel::Tokens::SecurityTokenHandler::ValidateToken
+  - ValidateToken
+  - SecurityTokenHandler.ValidateToken
+  - SecurityTokenHandler::ValidateToken
+  helpviewer_keywords:
+  - SecurityTokenHandler.ValidateToken method [.NET]
+  - ValidateToken method [.NET], class SecurityTokenHandler
+  - SecurityTokenHandler.ValidateToken(String, TokenValidationParameters, SecurityToken) method [.NET]
+  - ValidateToken(String, TokenValidationParameters, SecurityToken) method [.NET], class SecurityTokenHandler
+  - SecurityTokenHandler.ValidateToken(XmlReader, TokenValidationParameters, SecurityToken) method [.NET]
+  - ValidateToken(XmlReader, TokenValidationParameters, SecurityToken) method [.NET], class SecurityTokenHandler
+  monikers:
+  - msal-web-dotnet-latest

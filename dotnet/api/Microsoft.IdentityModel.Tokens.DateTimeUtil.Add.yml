@@ -1,0 +1,79 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.DateTime?alt=System.DateTime&text=DateTime" data-throw-if-not-resolved="True"/>
+    description: <xref data-throw-if-not-resolved="true" uid="System.DateTime"></xref> as the sum of time and timespan.
+  parameters:
+  - namesWithMoniker:
+    - value: time
+    description: Initial <xref data-throw-if-not-resolved="true" uid="System.DateTime"></xref> value.
+    type: <xref href="System.DateTime?alt=System.DateTime&text=DateTime" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: timespan
+    description: <xref data-throw-if-not-resolved="true" uid="System.TimeSpan"></xref> to add.
+    type: <xref href="System.TimeSpan?alt=System.TimeSpan&text=TimeSpan" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.DateTimeUtil.Add(System.DateTime,System.TimeSpan)
+  commentId: M:Microsoft.IdentityModel.Tokens.DateTimeUtil.Add(System.DateTime,System.TimeSpan)
+  name: Add(DateTime, TimeSpan)
+  fullName: Microsoft.IdentityModel.Tokens.DateTimeUtil.Add(DateTime, TimeSpan)
+  nameWithType: DateTimeUtil.Add(DateTime, TimeSpan)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public static DateTime Add (DateTime time, TimeSpan timespan);
+  - lang: fsharp
+    values:
+    - value: 'static member Add : DateTime * TimeSpan -> DateTime'
+  - lang: vb
+    values:
+    - value: Public Shared Function Add (time As DateTime, timespan As TimeSpan) As DateTime
+  monikers:
+  - msal-web-dotnet-latest
+  summary: >-
+    Add a DateTime and a TimeSpan.
+
+    The maximum time is DateTime.MaxTime.  It is not an error if time + timespan &gt; MaxTime.
+
+    Just return MaxTime.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.DateTimeUtil.Add*
+commentId: Overload:Microsoft.IdentityModel.Tokens.DateTimeUtil.Add
+namespace: Microsoft.IdentityModel.Tokens
+name: Add
+fullName: Microsoft.IdentityModel.Tokens.DateTimeUtil.Add
+nameWithType: DateTimeUtil.Add
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.DateTimeUtil.Add
+  api_location:
+  - Microsoft.IdentityModel.Tokens.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.DateTimeUtil.Add
+  - Microsoft::IdentityModel::Tokens::DateTimeUtil::Add
+  - Add
+  - DateTimeUtil.Add
+  - DateTimeUtil::Add
+  helpviewer_keywords:
+  - DateTimeUtil.Add method [.NET]
+  - Add method [.NET], class DateTimeUtil
+  - DateTimeUtil.Add(DateTime, TimeSpan) method [.NET]
+  - Add(DateTime, TimeSpan) method [.NET], class DateTimeUtil
+  monikers:
+  - msal-web-dotnet-latest

@@ -1,0 +1,74 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+    description: true if the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SignatureProvider"></xref> was removed, false if the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SignatureProvider"></xref> was not found.
+  parameters:
+  - namesWithMoniker:
+    - value: signatureProvider
+    description: <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SignatureProvider"></xref> to remove.
+    type: <xref href="Microsoft.IdentityModel.Tokens.SignatureProvider?alt=Microsoft.IdentityModel.Tokens.SignatureProvider&text=SignatureProvider" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: if signatureProvider is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.InMemoryCryptoProviderCache.TryRemove(Microsoft.IdentityModel.Tokens.SignatureProvider)
+  commentId: M:Microsoft.IdentityModel.Tokens.InMemoryCryptoProviderCache.TryRemove(Microsoft.IdentityModel.Tokens.SignatureProvider)
+  name: TryRemove(SignatureProvider)
+  fullName: Microsoft.IdentityModel.Tokens.InMemoryCryptoProviderCache.TryRemove(SignatureProvider)
+  nameWithType: InMemoryCryptoProviderCache.TryRemove(SignatureProvider)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public override bool TryRemove (Microsoft.IdentityModel.Tokens.SignatureProvider signatureProvider);
+  - lang: fsharp
+    values:
+    - value: 'override this.TryRemove : Microsoft.IdentityModel.Tokens.SignatureProvider -> bool'
+  - lang: vb
+    values:
+    - value: Public Overrides Function TryRemove (signatureProvider As SignatureProvider) As Boolean
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Trys to remove a <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SignatureProvider"></xref> from this cache.
+  remarks: if the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SignatureProvider"></xref> is removed <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SignatureProvider.CryptoProviderCache"></xref> will be set to null.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.InMemoryCryptoProviderCache.TryRemove*
+commentId: Overload:Microsoft.IdentityModel.Tokens.InMemoryCryptoProviderCache.TryRemove
+namespace: Microsoft.IdentityModel.Tokens
+name: TryRemove
+fullName: Microsoft.IdentityModel.Tokens.InMemoryCryptoProviderCache.TryRemove
+nameWithType: InMemoryCryptoProviderCache.TryRemove
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.InMemoryCryptoProviderCache.TryRemove
+  api_location:
+  - Microsoft.IdentityModel.Tokens.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.InMemoryCryptoProviderCache.TryRemove
+  - Microsoft::IdentityModel::Tokens::InMemoryCryptoProviderCache::TryRemove
+  - TryRemove
+  - InMemoryCryptoProviderCache.TryRemove
+  - InMemoryCryptoProviderCache::TryRemove
+  helpviewer_keywords:
+  - InMemoryCryptoProviderCache.TryRemove method [.NET]
+  - TryRemove method [.NET], class InMemoryCryptoProviderCache
+  - InMemoryCryptoProviderCache.TryRemove(SignatureProvider) method [.NET]
+  - TryRemove(SignatureProvider) method [.NET], class InMemoryCryptoProviderCache
+  monikers:
+  - msal-web-dotnet-latest

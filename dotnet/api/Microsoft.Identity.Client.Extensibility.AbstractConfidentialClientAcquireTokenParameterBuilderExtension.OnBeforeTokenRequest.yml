@@ -1,0 +1,87 @@
+### YamlMime:NetMember
+type: method
+members:
+- typeParameters:
+  - name: T
+  returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1?alt=Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1&text=AbstractAcquireTokenParameterBuilder%3CT%3E" data-throw-if-not-resolved="True"/>
+    description: The builder to chain other options to.
+  parameters:
+  - namesWithMoniker:
+    - value: builder
+    description: The builder to chain options to
+    type: <xref href="Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1?alt=Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1&text=AbstractAcquireTokenParameterBuilder%3CT%3E" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: onBeforeTokenRequestHandler
+    description: An async delegate which gets invoked just before MSAL makes a token request
+    type: <xref href="System.Func`2?alt=System.Func&text=Func" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Client.Extensibility.OnBeforeTokenRequestData?alt=Microsoft.Identity.Client.Extensibility.OnBeforeTokenRequestData&text=OnBeforeTokenRequestData" data-throw-if-not-resolved="True"/>,<xref href="System.Threading.Tasks.Task?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&gt;
+  type: method
+  uid: Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.OnBeforeTokenRequest``1(Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder{``0},System.Func{Microsoft.Identity.Client.Extensibility.OnBeforeTokenRequestData,System.Threading.Tasks.Task})
+  commentId: M:Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.OnBeforeTokenRequest``1(Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder{``0},System.Func{Microsoft.Identity.Client.Extensibility.OnBeforeTokenRequestData,System.Threading.Tasks.Task})
+  name: OnBeforeTokenRequest<T>(AbstractAcquireTokenParameterBuilder<T>, Func<OnBeforeTokenRequestData,Task>)
+  fullName: Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.OnBeforeTokenRequest<T>(AbstractAcquireTokenParameterBuilder<T>, Func<OnBeforeTokenRequestData,Task>)
+  nameWithType: AbstractConfidentialClientAcquireTokenParameterBuilderExtension.OnBeforeTokenRequest<T>(AbstractAcquireTokenParameterBuilder<T>, Func<OnBeforeTokenRequestData,Task>)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: 'public static Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder<T> OnBeforeTokenRequest<T> (this Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder<T> builder, Func<Microsoft.Identity.Client.Extensibility.OnBeforeTokenRequestData,System.Threading.Tasks.Task> onBeforeTokenRequestHandler) where T : Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder<T>;'
+  - lang: fsharp
+    values:
+    - value: "static member OnBeforeTokenRequest : Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder<'T (requires 'T :> Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder<'T>)> * Func<Microsoft.Identity.Client.Extensibility.OnBeforeTokenRequestData, System.Threading.Tasks.Task> -> Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder<'T (requires 'T :> Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder<'T>)> (requires 'T :> Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder<'T>)"
+  - lang: vb
+    values:
+    - value: >-
+        <Extension()>
+
+        Public Function OnBeforeTokenRequest(Of T As AbstractAcquireTokenParameterBuilder(Of T)) (builder As AbstractAcquireTokenParameterBuilder(Of T), onBeforeTokenRequestHandler As Func(Of OnBeforeTokenRequestData, Task)) As AbstractAcquireTokenParameterBuilder(Of T)
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    Intervenes in the request pipeline, by executing a user provided delegate before MSAL makes the token request. 
+
+    The delegate can modify the request payload by adding or removing  body parameters and headers. <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.Extensibility.OnBeforeTokenRequestData"></xref>
+  metadata: {}
+uid: Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.OnBeforeTokenRequest*
+commentId: Overload:Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.OnBeforeTokenRequest
+namespace: Microsoft.Identity.Client.Extensibility
+name: OnBeforeTokenRequest
+fullName: Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.OnBeforeTokenRequest
+nameWithType: AbstractConfidentialClientAcquireTokenParameterBuilderExtension.OnBeforeTokenRequest
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.OnBeforeTokenRequest
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.OnBeforeTokenRequest
+  - Microsoft::Identity::Client::Extensibility::AbstractConfidentialClientAcquireTokenParameterBuilderExtension::OnBeforeTokenRequest
+  - OnBeforeTokenRequest
+  - AbstractConfidentialClientAcquireTokenParameterBuilderExtension.OnBeforeTokenRequest
+  - AbstractConfidentialClientAcquireTokenParameterBuilderExtension::OnBeforeTokenRequest
+  - Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.OnBeforeTokenRequest``1
+  - Microsoft::Identity::Client::Extensibility::AbstractConfidentialClientAcquireTokenParameterBuilderExtension::OnBeforeTokenRequest``1
+  - OnBeforeTokenRequest``1
+  - AbstractConfidentialClientAcquireTokenParameterBuilderExtension.OnBeforeTokenRequest``1
+  - AbstractConfidentialClientAcquireTokenParameterBuilderExtension::OnBeforeTokenRequest``1
+  helpviewer_keywords:
+  - AbstractConfidentialClientAcquireTokenParameterBuilderExtension.OnBeforeTokenRequest method [.NET]
+  - OnBeforeTokenRequest method [.NET], class AbstractConfidentialClientAcquireTokenParameterBuilderExtension
+  - AbstractConfidentialClientAcquireTokenParameterBuilderExtension.OnBeforeTokenRequest<T>(AbstractAcquireTokenParameterBuilder<T>, Func<OnBeforeTokenRequestData,Task>) extension method [.NET]
+  - OnBeforeTokenRequest<T>(AbstractAcquireTokenParameterBuilder<T>, Func<OnBeforeTokenRequestData,Task>) extension method [.NET], class AbstractConfidentialClientAcquireTokenParameterBuilderExtension
+  monikers:
+  - msal-dotnet-latest

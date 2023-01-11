@@ -1,0 +1,169 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Client.AuthenticationResult?alt=Microsoft.Identity.Client.AuthenticationResult&text=AuthenticationResult" data-throw-if-not-resolved="True"/>&gt;
+    description: Authentication result containing a token for the requested scopes and account
+  parameters:
+  - namesWithMoniker:
+    - value: scopes
+    description: Scopes requested to access a protected API
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: userAssertion
+    description: >-
+      Instance of <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.UserAssertion"></xref> containing credential information about
+                  the user on behalf of whom to get a token.
+    type: <xref href="Microsoft.Identity.Client.UserAssertion?alt=Microsoft.Identity.Client.UserAssertion&text=UserAssertion" data-throw-if-not-resolved="True"/>
+  implementsWithMoniker:
+  - value: <xref href="Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenOnBehalfOfAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.UserAssertion)?alt=Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenOnBehalfOfAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.UserAssertion)&text=AcquireTokenOnBehalfOfAsync(IEnumerable%3CString%3E%2C+UserAssertion)" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenOnBehalfOfAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.UserAssertion)
+  commentId: M:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenOnBehalfOfAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.UserAssertion)
+  name: AcquireTokenOnBehalfOfAsync(IEnumerable<String>, UserAssertion)
+  fullName: Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenOnBehalfOfAsync(IEnumerable<String>, UserAssertion)
+  nameWithType: ConfidentialClientApplication.AcquireTokenOnBehalfOfAsync(IEnumerable<String>, UserAssertion)
+  attributesWithMoniker:
+  - value: System.ObsoleteAttribute
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: >-
+        [System.Obsolete("Use AcquireTokenOnBehalfOf instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]
+
+        public System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult> AcquireTokenOnBehalfOfAsync (System.Collections.Generic.IEnumerable<string> scopes, Microsoft.Identity.Client.UserAssertion userAssertion);
+  - lang: fsharp
+    values:
+    - value: >-
+        [<System.Obsolete("Use AcquireTokenOnBehalfOf instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)>]
+
+        abstract member AcquireTokenOnBehalfOfAsync : seq<string> * Microsoft.Identity.Client.UserAssertion -> System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult>
+
+        override this.AcquireTokenOnBehalfOfAsync : seq<string> * Microsoft.Identity.Client.UserAssertion -> System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult>
+  - lang: vb
+    values:
+    - value: Public Function AcquireTokenOnBehalfOfAsync (scopes As IEnumerable(Of String), userAssertion As UserAssertion) As Task(Of AuthenticationResult)
+  monikers:
+  - msal-dotnet-latest
+  seeAlso: >+
+    - <xref:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenOnBehalfOf(System.Collections.Generic.IEnumerable%7bSystem.String%7d%2cMicrosoft.Identity.Client.UserAssertion)>
+
+    - <xref:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenOnBehalfOfAsync(System.Collections.Generic.IEnumerable%7bSystem.String%7d%2cMicrosoft.Identity.Client.UserAssertion%2cSystem.String)>
+
+  obsoleteMessagesWithMoniker:
+  - value: 'Use AcquireTokenOnBehalfOf instead. See https://aka.ms/msal-net-3-breaking-changes. '
+  summary: >-
+    [V2 API] Acquires an access token for this application (usually a web API) from the authority configured in the application, in order to access
+
+    another downstream protected web API on behalf of a user using the OAuth 2.0 On-Behalf-Of flow. (See https://aka.ms/msal-net-on-behalf-of).
+
+    This confidential client application was itself called with a token which will be provided in the
+
+    <code data-dev-comment-type="paramref">userAssertion</code> parameter.
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Client.AuthenticationResult?alt=Microsoft.Identity.Client.AuthenticationResult&text=AuthenticationResult" data-throw-if-not-resolved="True"/>&gt;
+    description: Authentication result containing a token for the requested scopes and account
+  parameters:
+  - namesWithMoniker:
+    - value: scopes
+    description: Scopes requested to access a protected API
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: userAssertion
+    description: >-
+      Instance of <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.UserAssertion"></xref> containing credential information about
+                  the user on behalf of whom to get a token.
+    type: <xref href="Microsoft.Identity.Client.UserAssertion?alt=Microsoft.Identity.Client.UserAssertion&text=UserAssertion" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: authority
+    description: Specific authority for which the token is requested. Passing a different value than configured does not change the configured value
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  implementsWithMoniker:
+  - value: <xref href="Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenOnBehalfOfAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.UserAssertion,System.String)?alt=Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenOnBehalfOfAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.UserAssertion,System.String)&text=AcquireTokenOnBehalfOfAsync(IEnumerable%3CString%3E%2C+UserAssertion%2C+String)" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenOnBehalfOfAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.UserAssertion,System.String)
+  commentId: M:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenOnBehalfOfAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.UserAssertion,System.String)
+  name: AcquireTokenOnBehalfOfAsync(IEnumerable<String>, UserAssertion, String)
+  fullName: Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenOnBehalfOfAsync(IEnumerable<String>, UserAssertion, String)
+  nameWithType: ConfidentialClientApplication.AcquireTokenOnBehalfOfAsync(IEnumerable<String>, UserAssertion, String)
+  attributesWithMoniker:
+  - value: System.ObsoleteAttribute
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: >-
+        [System.Obsolete("Use AcquireTokenOnBehalfOf instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]
+
+        public System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult> AcquireTokenOnBehalfOfAsync (System.Collections.Generic.IEnumerable<string> scopes, Microsoft.Identity.Client.UserAssertion userAssertion, string authority);
+  - lang: fsharp
+    values:
+    - value: >-
+        [<System.Obsolete("Use AcquireTokenOnBehalfOf instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)>]
+
+        abstract member AcquireTokenOnBehalfOfAsync : seq<string> * Microsoft.Identity.Client.UserAssertion * string -> System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult>
+
+        override this.AcquireTokenOnBehalfOfAsync : seq<string> * Microsoft.Identity.Client.UserAssertion * string -> System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult>
+  - lang: vb
+    values:
+    - value: Public Function AcquireTokenOnBehalfOfAsync (scopes As IEnumerable(Of String), userAssertion As UserAssertion, authority As String) As Task(Of AuthenticationResult)
+  monikers:
+  - msal-dotnet-latest
+  seeAlso: >+
+    - <xref:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenOnBehalfOf(System.Collections.Generic.IEnumerable%7bSystem.String%7d%2cMicrosoft.Identity.Client.UserAssertion)>
+
+    - <xref:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenOnBehalfOfAsync(System.Collections.Generic.IEnumerable%7bSystem.String%7d%2cMicrosoft.Identity.Client.UserAssertion)>
+
+  obsoleteMessagesWithMoniker:
+  - value: 'Use AcquireTokenOnBehalfOf instead. See https://aka.ms/msal-net-3-breaking-changes. '
+  summary: >-
+    [V2 API] Acquires an access token for this application (usually a web API) from a specific authority, in order to access
+
+    another downstream protected web API on behalf of a user (See https://aka.ms/msal-net-on-behalf-of).
+
+    This confidential client application was itself called with a token which will be provided in the
+
+    <code data-dev-comment-type="paramref">userAssertion</code> parameter.
+  metadata: {}
+uid: Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenOnBehalfOfAsync*
+commentId: Overload:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenOnBehalfOfAsync
+namespace: Microsoft.Identity.Client
+name: AcquireTokenOnBehalfOfAsync
+fullName: Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenOnBehalfOfAsync
+nameWithType: ConfidentialClientApplication.AcquireTokenOnBehalfOfAsync
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenOnBehalfOfAsync
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenOnBehalfOfAsync
+  - Microsoft::Identity::Client::ConfidentialClientApplication::AcquireTokenOnBehalfOfAsync
+  - AcquireTokenOnBehalfOfAsync
+  - ConfidentialClientApplication.AcquireTokenOnBehalfOfAsync
+  - ConfidentialClientApplication::AcquireTokenOnBehalfOfAsync
+  helpviewer_keywords:
+  - ConfidentialClientApplication.AcquireTokenOnBehalfOfAsync method [.NET]
+  - AcquireTokenOnBehalfOfAsync method [.NET], class ConfidentialClientApplication
+  - ConfidentialClientApplication.AcquireTokenOnBehalfOfAsync(IEnumerable<String>, UserAssertion) method [.NET]
+  - AcquireTokenOnBehalfOfAsync(IEnumerable<String>, UserAssertion) method [.NET], class ConfidentialClientApplication
+  - ConfidentialClientApplication.AcquireTokenOnBehalfOfAsync(IEnumerable<String>, UserAssertion, String) method [.NET]
+  - AcquireTokenOnBehalfOfAsync(IEnumerable<String>, UserAssertion, String) method [.NET], class ConfidentialClientApplication
+  monikers:
+  - msal-dotnet-latest

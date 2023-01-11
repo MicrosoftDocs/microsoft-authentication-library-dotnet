@@ -1,0 +1,61 @@
+### YamlMime:NetMember
+type: field
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: field
+  uid: Microsoft.Identity.Client.MsalError.CryptoNet45
+  commentId: F:Microsoft.Identity.Client.MsalError.CryptoNet45
+  name: CryptoNet45
+  fullName: Microsoft.Identity.Client.MsalError.CryptoNet45
+  nameWithType: MsalError.CryptoNet45
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public const string CryptoNet45;
+  - lang: fsharp
+    values:
+    - value: 'val mutable CryptoNet45 : string'
+  - lang: vb
+    values:
+    - value: 'Public Const CryptoNet45 As String '
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    <p>What happens?</p>MSAL cannot use the certificate for signing.
+
+    <p>Mitigation</p>Possible cause: use of CNG certificates with .Net classic 4.6 or lower. Either target a higher version of .NET desktop - 4.6.1 and above, or use a different certificate type (non-CNG) 
+      or sign your own assertion as described at https://aka.ms/msal-net-signed-assertion
+  metadata: {}
+namespace: Microsoft.Identity.Client
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.MsalError.CryptoNet45
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.MsalError.CryptoNet45
+  - Microsoft::Identity::Client::MsalError::CryptoNet45
+  - CryptoNet45
+  - MsalError.CryptoNet45
+  - MsalError::CryptoNet45
+  helpviewer_keywords:
+  - MsalError.CryptoNet45 field [.NET]
+  - CryptoNet45 field [.NET], class MsalError
+  monikers:
+  - msal-dotnet-latest

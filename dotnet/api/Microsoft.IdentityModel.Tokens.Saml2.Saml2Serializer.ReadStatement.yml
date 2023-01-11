@@ -1,0 +1,74 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.IdentityModel.Tokens.Saml2.Saml2Statement?alt=Microsoft.IdentityModel.Tokens.Saml2.Saml2Statement&text=Saml2Statement" data-throw-if-not-resolved="True"/>
+    description: An instance of <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2Statement"></xref> derived type.
+  parameters:
+  - namesWithMoniker:
+    - value: reader
+    description: A <xref data-throw-if-not-resolved="true" uid="System.Xml.XmlReader"></xref> positioned at a <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2Statement"></xref> element.
+    type: <xref href="System.Xml.XmlDictionaryReader?alt=System.Xml.XmlDictionaryReader&text=XmlDictionaryReader" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.ReadStatement(System.Xml.XmlDictionaryReader)
+  commentId: M:Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.ReadStatement(System.Xml.XmlDictionaryReader)
+  name: ReadStatement(XmlDictionaryReader)
+  fullName: Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.ReadStatement(XmlDictionaryReader)
+  nameWithType: Saml2Serializer.ReadStatement(XmlDictionaryReader)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected virtual Microsoft.IdentityModel.Tokens.Saml2.Saml2Statement ReadStatement (System.Xml.XmlDictionaryReader reader);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member ReadStatement : System.Xml.XmlDictionaryReader -> Microsoft.IdentityModel.Tokens.Saml2.Saml2Statement
+
+        override this.ReadStatement : System.Xml.XmlDictionaryReader -> Microsoft.IdentityModel.Tokens.Saml2.Saml2Statement
+  - lang: vb
+    values:
+    - value: Protected Overridable Function ReadStatement (reader As XmlDictionaryReader) As Saml2Statement
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Reads the &lt;saml:Statement&gt; element.
+  remarks: <p>The default implementation only handles Statement elements which specify an xsi:type of saml:AttributeStatementType, saml:AuthnStatementType, and saml:AuthzDecisionStatementType. To handle custom statements, override this method.</p>
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.ReadStatement*
+commentId: Overload:Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.ReadStatement
+namespace: Microsoft.IdentityModel.Tokens.Saml2
+name: ReadStatement
+fullName: Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.ReadStatement
+nameWithType: Saml2Serializer.ReadStatement
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.ReadStatement
+  api_location:
+  - Microsoft.IdentityModel.Tokens.Saml.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.ReadStatement
+  - Microsoft::IdentityModel::Tokens::Saml2::Saml2Serializer::ReadStatement
+  - ReadStatement
+  - Saml2Serializer.ReadStatement
+  - Saml2Serializer::ReadStatement
+  helpviewer_keywords:
+  - Saml2Serializer.ReadStatement method [.NET]
+  - ReadStatement method [.NET], class Saml2Serializer
+  - Saml2Serializer.ReadStatement(XmlDictionaryReader) method [.NET]
+  - ReadStatement(XmlDictionaryReader) method [.NET], class Saml2Serializer
+  monikers:
+  - msal-web-dotnet-latest

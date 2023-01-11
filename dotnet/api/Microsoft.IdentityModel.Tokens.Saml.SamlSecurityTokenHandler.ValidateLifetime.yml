@@ -1,0 +1,82 @@
+### YamlMime:NetMember
+type: method
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: notBefore
+    description: The <xref data-throw-if-not-resolved="true" uid="System.DateTime"></xref> value found in the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml.SamlSecurityToken"></xref>.
+    type: <xref href="System.Nullable`1?alt=System.Nullable&text=Nullable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.DateTime?alt=System.DateTime&text=DateTime" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: expires
+    description: The <xref data-throw-if-not-resolved="true" uid="System.DateTime"></xref> value found in the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml.SamlSecurityToken"></xref>.
+    type: <xref href="System.Nullable`1?alt=System.Nullable&text=Nullable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.DateTime?alt=System.DateTime&text=DateTime" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: securityToken
+    description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml.SamlSecurityToken"></xref> being validated.
+    type: <xref href="Microsoft.IdentityModel.Tokens.SecurityToken?alt=Microsoft.IdentityModel.Tokens.SecurityToken&text=SecurityToken" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: validationParameters
+    description: <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.TokenValidationParameters"></xref> required for validation.
+    type: <xref href="Microsoft.IdentityModel.Tokens.TokenValidationParameters?alt=Microsoft.IdentityModel.Tokens.TokenValidationParameters&text=TokenValidationParameters" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.ValidateLifetime(System.Nullable{System.DateTime},System.Nullable{System.DateTime},Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.TokenValidationParameters)
+  commentId: M:Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.ValidateLifetime(System.Nullable{System.DateTime},System.Nullable{System.DateTime},Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.TokenValidationParameters)
+  name: ValidateLifetime(Nullable<DateTime>, Nullable<DateTime>, SecurityToken, TokenValidationParameters)
+  fullName: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.ValidateLifetime(Nullable<DateTime>, Nullable<DateTime>, SecurityToken, TokenValidationParameters)
+  nameWithType: SamlSecurityTokenHandler.ValidateLifetime(Nullable<DateTime>, Nullable<DateTime>, SecurityToken, TokenValidationParameters)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected virtual void ValidateLifetime (DateTime? notBefore, DateTime? expires, Microsoft.IdentityModel.Tokens.SecurityToken securityToken, Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member ValidateLifetime : Nullable<DateTime> * Nullable<DateTime> * Microsoft.IdentityModel.Tokens.SecurityToken * Microsoft.IdentityModel.Tokens.TokenValidationParameters -> unit
+
+        override this.ValidateLifetime : Nullable<DateTime> * Nullable<DateTime> * Microsoft.IdentityModel.Tokens.SecurityToken * Microsoft.IdentityModel.Tokens.TokenValidationParameters -> unit
+  - lang: vb
+    values:
+    - value: Protected Overridable Sub ValidateLifetime (notBefore As Nullable(Of DateTime), expires As Nullable(Of DateTime), securityToken As SecurityToken, validationParameters As TokenValidationParameters)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Validates the lifetime of a <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml.SamlSecurityToken"></xref>.
+  remarks: <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(System.Nullable{System.DateTime},System.Nullable{System.DateTime},Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.TokenValidationParameters)"></xref> for additional details.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.ValidateLifetime*
+commentId: Overload:Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.ValidateLifetime
+namespace: Microsoft.IdentityModel.Tokens.Saml
+name: ValidateLifetime
+fullName: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.ValidateLifetime
+nameWithType: SamlSecurityTokenHandler.ValidateLifetime
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.ValidateLifetime
+  api_location:
+  - Microsoft.IdentityModel.Tokens.Saml.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.ValidateLifetime
+  - Microsoft::IdentityModel::Tokens::Saml::SamlSecurityTokenHandler::ValidateLifetime
+  - ValidateLifetime
+  - SamlSecurityTokenHandler.ValidateLifetime
+  - SamlSecurityTokenHandler::ValidateLifetime
+  helpviewer_keywords:
+  - SamlSecurityTokenHandler.ValidateLifetime method [.NET]
+  - ValidateLifetime method [.NET], class SamlSecurityTokenHandler
+  - SamlSecurityTokenHandler.ValidateLifetime(Nullable<DateTime>, Nullable<DateTime>, SecurityToken, TokenValidationParameters) method [.NET]
+  - ValidateLifetime(Nullable<DateTime>, Nullable<DateTime>, SecurityToken, TokenValidationParameters) method [.NET], class SamlSecurityTokenHandler
+  monikers:
+  - msal-web-dotnet-latest

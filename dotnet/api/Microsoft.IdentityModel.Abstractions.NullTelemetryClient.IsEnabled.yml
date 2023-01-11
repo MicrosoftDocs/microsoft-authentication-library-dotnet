@@ -1,0 +1,109 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+    description: Returns <code data-dev-comment-type="langword">true</code> if telemetry should be sent; <code data-dev-comment-type="langword">false</code> otherwise.
+  implementsWithMoniker:
+  - value: <xref href="Microsoft.IdentityModel.Abstractions.ITelemetryClient.IsEnabled?alt=Microsoft.IdentityModel.Abstractions.ITelemetryClient.IsEnabled&text=IsEnabled()" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Abstractions.NullTelemetryClient.IsEnabled
+  commentId: M:Microsoft.IdentityModel.Abstractions.NullTelemetryClient.IsEnabled
+  name: IsEnabled()
+  fullName: Microsoft.IdentityModel.Abstractions.NullTelemetryClient.IsEnabled()
+  nameWithType: NullTelemetryClient.IsEnabled()
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public bool IsEnabled ();
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member IsEnabled : unit -> bool
+
+        override this.IsEnabled : unit -> bool
+  - lang: vb
+    values:
+    - value: Public Function IsEnabled () As Boolean
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Checks to see if telemetry is enabled all up.
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+    description: >-
+      Returns <code data-dev-comment-type="langword">true</code> if telemetry should be sent for <code data-dev-comment-type="paramref">eventName</code>;
+
+      <code data-dev-comment-type="langword">false</code> otherwise.
+  parameters:
+  - namesWithMoniker:
+    - value: eventName
+    description: Name of the event to check.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  implementsWithMoniker:
+  - value: <xref href="Microsoft.IdentityModel.Abstractions.ITelemetryClient.IsEnabled(System.String)?alt=Microsoft.IdentityModel.Abstractions.ITelemetryClient.IsEnabled(System.String)&text=IsEnabled(String)" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Abstractions.NullTelemetryClient.IsEnabled(System.String)
+  commentId: M:Microsoft.IdentityModel.Abstractions.NullTelemetryClient.IsEnabled(System.String)
+  name: IsEnabled(String)
+  fullName: Microsoft.IdentityModel.Abstractions.NullTelemetryClient.IsEnabled(String)
+  nameWithType: NullTelemetryClient.IsEnabled(String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public bool IsEnabled (string eventName);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member IsEnabled : string -> bool
+
+        override this.IsEnabled : string -> bool
+  - lang: vb
+    values:
+    - value: Public Function IsEnabled (eventName As String) As Boolean
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Checks to see if telemetry is enabled for the named event.
+  metadata: {}
+uid: Microsoft.IdentityModel.Abstractions.NullTelemetryClient.IsEnabled*
+commentId: Overload:Microsoft.IdentityModel.Abstractions.NullTelemetryClient.IsEnabled
+namespace: Microsoft.IdentityModel.Abstractions
+name: IsEnabled
+fullName: Microsoft.IdentityModel.Abstractions.NullTelemetryClient.IsEnabled
+nameWithType: NullTelemetryClient.IsEnabled
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Abstractions.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Abstractions v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Abstractions.NullTelemetryClient.IsEnabled
+  api_location:
+  - Microsoft.IdentityModel.Abstractions.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Abstractions.NullTelemetryClient.IsEnabled
+  - Microsoft::IdentityModel::Abstractions::NullTelemetryClient::IsEnabled
+  - IsEnabled
+  - NullTelemetryClient.IsEnabled
+  - NullTelemetryClient::IsEnabled
+  helpviewer_keywords:
+  - NullTelemetryClient.IsEnabled method [.NET]
+  - IsEnabled method [.NET], class NullTelemetryClient
+  - NullTelemetryClient.IsEnabled() method [.NET]
+  - IsEnabled() method [.NET], class NullTelemetryClient
+  - NullTelemetryClient.IsEnabled(String) method [.NET]
+  - IsEnabled(String) method [.NET], class NullTelemetryClient
+  monikers:
+  - msal-web-dotnet-latest

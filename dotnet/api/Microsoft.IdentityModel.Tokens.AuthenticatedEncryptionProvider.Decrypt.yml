@@ -1,0 +1,92 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Byte?alt=System.Byte&text=Byte" data-throw-if-not-resolved="True"/>[]
+    description: decrypted ciphertext
+  parameters:
+  - namesWithMoniker:
+    - value: ciphertext
+    description: the encrypted text to decrypt.
+    type: <xref href="System.Byte?alt=System.Byte&text=Byte" data-throw-if-not-resolved="True"/>[]
+  - namesWithMoniker:
+    - value: authenticatedData
+    description: the authenticateData that is used in verification.
+    type: <xref href="System.Byte?alt=System.Byte&text=Byte" data-throw-if-not-resolved="True"/>[]
+  - namesWithMoniker:
+    - value: iv
+    description: the initialization vector used when creating the ciphertext.
+    type: <xref href="System.Byte?alt=System.Byte&text=Byte" data-throw-if-not-resolved="True"/>[]
+  - namesWithMoniker:
+    - value: authenticationTag
+    description: the authenticationTag that was created during the encyption.
+    type: <xref href="System.Byte?alt=System.Byte&text=Byte" data-throw-if-not-resolved="True"/>[]
+  exceptions:
+  - description: <code data-dev-comment-type="paramref">authenticationTag</code> is null or empty.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: Thrown if the AES crypto operation threw. See inner exception.
+    type: <xref href="Microsoft.IdentityModel.Tokens.SecurityTokenDecryptionFailedException?alt=Microsoft.IdentityModel.Tokens.SecurityTokenDecryptionFailedException&text=SecurityTokenDecryptionFailedException" data-throw-if-not-resolved="True"/>
+  - description: Thrown if the internal <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SignatureProvider"></xref> is disposed.
+    type: <xref href="System.ObjectDisposedException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionProvider.Decrypt(System.Byte[],System.Byte[],System.Byte[],System.Byte[])
+  commentId: M:Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionProvider.Decrypt(System.Byte[],System.Byte[],System.Byte[],System.Byte[])
+  name: Decrypt(Byte[], Byte[], Byte[], Byte[])
+  fullName: Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionProvider.Decrypt(Byte[], Byte[], Byte[], Byte[])
+  nameWithType: AuthenticatedEncryptionProvider.Decrypt(Byte[], Byte[], Byte[], Byte[])
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public virtual byte[] Decrypt (byte[] ciphertext, byte[] authenticatedData, byte[] iv, byte[] authenticationTag);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member Decrypt : byte[] * byte[] * byte[] * byte[] -> byte[]
+
+        override this.Decrypt : byte[] * byte[] * byte[] * byte[] -> byte[]
+  - lang: vb
+    values:
+    - value: Public Overridable Function Decrypt (ciphertext As Byte(), authenticatedData As Byte(), iv As Byte(), authenticationTag As Byte()) As Byte()
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Decrypts ciphertext into plaintext
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionProvider.Decrypt*
+commentId: Overload:Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionProvider.Decrypt
+namespace: Microsoft.IdentityModel.Tokens
+name: Decrypt
+fullName: Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionProvider.Decrypt
+nameWithType: AuthenticatedEncryptionProvider.Decrypt
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionProvider.Decrypt
+  api_location:
+  - Microsoft.IdentityModel.Tokens.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionProvider.Decrypt
+  - Microsoft::IdentityModel::Tokens::AuthenticatedEncryptionProvider::Decrypt
+  - Decrypt
+  - AuthenticatedEncryptionProvider.Decrypt
+  - AuthenticatedEncryptionProvider::Decrypt
+  helpviewer_keywords:
+  - AuthenticatedEncryptionProvider.Decrypt method [.NET]
+  - Decrypt method [.NET], class AuthenticatedEncryptionProvider
+  - AuthenticatedEncryptionProvider.Decrypt(Byte[], Byte[], Byte[], Byte[]) method [.NET]
+  - Decrypt(Byte[], Byte[], Byte[], Byte[]) method [.NET], class AuthenticatedEncryptionProvider
+  monikers:
+  - msal-web-dotnet-latest

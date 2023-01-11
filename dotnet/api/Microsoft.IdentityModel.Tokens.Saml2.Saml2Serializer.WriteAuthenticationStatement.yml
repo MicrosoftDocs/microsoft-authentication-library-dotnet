@@ -1,0 +1,76 @@
+### YamlMime:NetMember
+type: method
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: writer
+    description: A <xref data-throw-if-not-resolved="true" uid="System.Xml.XmlWriter"></xref> to serialize the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2AuthenticationStatement"></xref>.
+    type: <xref href="System.Xml.XmlWriter?alt=System.Xml.XmlWriter&text=XmlWriter" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: statement
+    description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2AuthenticationStatement"></xref> to serialize.
+    type: <xref href="Microsoft.IdentityModel.Tokens.Saml2.Saml2AuthenticationStatement?alt=Microsoft.IdentityModel.Tokens.Saml2.Saml2AuthenticationStatement&text=Saml2AuthenticationStatement" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: if <code data-dev-comment-type="paramref">statement</code> is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteAuthenticationStatement(System.Xml.XmlWriter,Microsoft.IdentityModel.Tokens.Saml2.Saml2AuthenticationStatement)
+  commentId: M:Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteAuthenticationStatement(System.Xml.XmlWriter,Microsoft.IdentityModel.Tokens.Saml2.Saml2AuthenticationStatement)
+  name: WriteAuthenticationStatement(XmlWriter, Saml2AuthenticationStatement)
+  fullName: Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteAuthenticationStatement(XmlWriter, Saml2AuthenticationStatement)
+  nameWithType: Saml2Serializer.WriteAuthenticationStatement(XmlWriter, Saml2AuthenticationStatement)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected virtual void WriteAuthenticationStatement (System.Xml.XmlWriter writer, Microsoft.IdentityModel.Tokens.Saml2.Saml2AuthenticationStatement statement);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member WriteAuthenticationStatement : System.Xml.XmlWriter * Microsoft.IdentityModel.Tokens.Saml2.Saml2AuthenticationStatement -> unit
+
+        override this.WriteAuthenticationStatement : System.Xml.XmlWriter * Microsoft.IdentityModel.Tokens.Saml2.Saml2AuthenticationStatement -> unit
+  - lang: vb
+    values:
+    - value: Protected Overridable Sub WriteAuthenticationStatement (writer As XmlWriter, statement As Saml2AuthenticationStatement)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Writes the &lt;saml:AuthnStatement&gt; element.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteAuthenticationStatement*
+commentId: Overload:Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteAuthenticationStatement
+namespace: Microsoft.IdentityModel.Tokens.Saml2
+name: WriteAuthenticationStatement
+fullName: Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteAuthenticationStatement
+nameWithType: Saml2Serializer.WriteAuthenticationStatement
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteAuthenticationStatement
+  api_location:
+  - Microsoft.IdentityModel.Tokens.Saml.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteAuthenticationStatement
+  - Microsoft::IdentityModel::Tokens::Saml2::Saml2Serializer::WriteAuthenticationStatement
+  - WriteAuthenticationStatement
+  - Saml2Serializer.WriteAuthenticationStatement
+  - Saml2Serializer::WriteAuthenticationStatement
+  helpviewer_keywords:
+  - Saml2Serializer.WriteAuthenticationStatement method [.NET]
+  - WriteAuthenticationStatement method [.NET], class Saml2Serializer
+  - Saml2Serializer.WriteAuthenticationStatement(XmlWriter, Saml2AuthenticationStatement) method [.NET]
+  - WriteAuthenticationStatement(XmlWriter, Saml2AuthenticationStatement) method [.NET], class Saml2Serializer
+  monikers:
+  - msal-web-dotnet-latest

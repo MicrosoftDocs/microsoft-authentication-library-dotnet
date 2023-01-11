@@ -1,0 +1,134 @@
+### YamlMime:NetType
+type: class
+inheritancesWithMoniker:
+- values:
+  - <xref href="System.Collections.Generic.Dictionary`2?alt=System.Collections.Generic.Dictionary&text=Dictionary" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>,<xref href="System.Object?alt=System.Object&text=Object" data-throw-if-not-resolved="True"/>&gt;
+constructors:
+- uid: System.IdentityModel.Tokens.Jwt.JwtHeader.#ctor
+  monikers:
+  - msal-web-dotnet-latest
+- uid: System.IdentityModel.Tokens.Jwt.JwtHeader.#ctor(Microsoft.IdentityModel.Tokens.EncryptingCredentials,System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.Collections.Generic.IDictionary{System.String,System.Object})
+  monikers:
+  - msal-web-dotnet-latest
+- uid: System.IdentityModel.Tokens.Jwt.JwtHeader.#ctor(Microsoft.IdentityModel.Tokens.EncryptingCredentials,System.Collections.Generic.IDictionary{System.String,System.String},System.String)
+  monikers:
+  - msal-web-dotnet-latest
+- uid: System.IdentityModel.Tokens.Jwt.JwtHeader.#ctor(Microsoft.IdentityModel.Tokens.EncryptingCredentials,System.Collections.Generic.IDictionary{System.String,System.String})
+  monikers:
+  - msal-web-dotnet-latest
+- uid: System.IdentityModel.Tokens.Jwt.JwtHeader.#ctor(Microsoft.IdentityModel.Tokens.EncryptingCredentials)
+  monikers:
+  - msal-web-dotnet-latest
+- uid: System.IdentityModel.Tokens.Jwt.JwtHeader.#ctor(Microsoft.IdentityModel.Tokens.SigningCredentials,System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.Collections.Generic.IDictionary{System.String,System.Object})
+  monikers:
+  - msal-web-dotnet-latest
+- uid: System.IdentityModel.Tokens.Jwt.JwtHeader.#ctor(Microsoft.IdentityModel.Tokens.SigningCredentials,System.Collections.Generic.IDictionary{System.String,System.String},System.String)
+  monikers:
+  - msal-web-dotnet-latest
+- uid: System.IdentityModel.Tokens.Jwt.JwtHeader.#ctor(Microsoft.IdentityModel.Tokens.SigningCredentials,System.Collections.Generic.IDictionary{System.String,System.String})
+  monikers:
+  - msal-web-dotnet-latest
+- uid: System.IdentityModel.Tokens.Jwt.JwtHeader.#ctor(Microsoft.IdentityModel.Tokens.SigningCredentials)
+  monikers:
+  - msal-web-dotnet-latest
+methods:
+- uid: System.IdentityModel.Tokens.Jwt.JwtHeader.Base64UrlDeserialize(System.String)
+  monikers:
+  - msal-web-dotnet-latest
+- uid: System.IdentityModel.Tokens.Jwt.JwtHeader.Base64UrlEncode
+  monikers:
+  - msal-web-dotnet-latest
+- uid: System.IdentityModel.Tokens.Jwt.JwtHeader.Deserialize(System.String)
+  monikers:
+  - msal-web-dotnet-latest
+- uid: System.IdentityModel.Tokens.Jwt.JwtHeader.SerializeToJson
+  monikers:
+  - msal-web-dotnet-latest
+properties:
+- uid: System.IdentityModel.Tokens.Jwt.JwtHeader.Alg
+  monikers:
+  - msal-web-dotnet-latest
+- uid: System.IdentityModel.Tokens.Jwt.JwtHeader.Cty
+  monikers:
+  - msal-web-dotnet-latest
+- uid: System.IdentityModel.Tokens.Jwt.JwtHeader.Enc
+  monikers:
+  - msal-web-dotnet-latest
+- uid: System.IdentityModel.Tokens.Jwt.JwtHeader.EncryptingCredentials
+  monikers:
+  - msal-web-dotnet-latest
+- uid: System.IdentityModel.Tokens.Jwt.JwtHeader.IV
+  monikers:
+  - msal-web-dotnet-latest
+- uid: System.IdentityModel.Tokens.Jwt.JwtHeader.Kid
+  monikers:
+  - msal-web-dotnet-latest
+- uid: System.IdentityModel.Tokens.Jwt.JwtHeader.SigningCredentials
+  monikers:
+  - msal-web-dotnet-latest
+- uid: System.IdentityModel.Tokens.Jwt.JwtHeader.Typ
+  monikers:
+  - msal-web-dotnet-latest
+- uid: System.IdentityModel.Tokens.Jwt.JwtHeader.X5c
+  monikers:
+  - msal-web-dotnet-latest
+- uid: System.IdentityModel.Tokens.Jwt.JwtHeader.X5t
+  monikers:
+  - msal-web-dotnet-latest
+- uid: System.IdentityModel.Tokens.Jwt.JwtHeader.Zip
+  monikers:
+  - msal-web-dotnet-latest
+uid: System.IdentityModel.Tokens.Jwt.JwtHeader
+commentId: T:System.IdentityModel.Tokens.Jwt.JwtHeader
+namespace: System.IdentityModel.Tokens.Jwt
+name: JwtHeader
+fullName: System.IdentityModel.Tokens.Jwt.JwtHeader
+nameWithType: System.IdentityModel.Tokens.Jwt.JwtHeader
+assembliesWithMoniker:
+- value: System.IdentityModel.Tokens.Jwt.dll
+packagesWithMoniker:
+- value: System.IdentityModel.Tokens.Jwt v6.25.1
+syntaxWithMoniker:
+- lang: csharp
+  values:
+  - value: 'public class JwtHeader : System.Collections.Generic.Dictionary<string,object>'
+- lang: fsharp
+  values:
+  - value: >-
+      type JwtHeader = class
+          inherit Dictionary<string, obj>
+- lang: vb
+  values:
+  - value: >-
+      Public Class JwtHeader
+
+      Inherits Dictionary(Of String, Object)
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+summary: >-
+  Initializes a new instance of <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtHeader"></xref> which contains JSON objects representing the cryptographic operations applied to the JWT and optionally any additional properties of the JWT. 
+
+  The member names within the JWT Header are referred to as Header Parameter Names.
+
+  <p>These names MUST be unique and the values must be <xref data-throw-if-not-resolved="true" uid="System.String"></xref>(s). The corresponding values are referred to as Header Parameter Values.</p>
+metadata:
+  api_name:
+  - System.IdentityModel.Tokens.Jwt.JwtHeader
+  api_location:
+  - System.IdentityModel.Tokens.Jwt.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - System.IdentityModel.Tokens.Jwt.JwtHeader
+  - System::IdentityModel::Tokens::Jwt::JwtHeader
+  - JwtHeader
+  helpviewer_keywords:
+  - System.IdentityModel.Tokens.Jwt.JwtHeader class [.NET]
+  monikers:
+  - msal-web-dotnet-latest

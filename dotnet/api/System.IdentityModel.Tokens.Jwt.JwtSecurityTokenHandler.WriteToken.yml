@@ -1,0 +1,109 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+    description: A JWE or JWS in 'Compact Serialization Format'.
+  parameters:
+  - namesWithMoniker:
+    - value: token
+    description: <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityToken"></xref> to serialize.
+    type: <xref href="Microsoft.IdentityModel.Tokens.SecurityToken?alt=Microsoft.IdentityModel.Tokens.SecurityToken&text=SecurityToken" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: <code data-dev-comment-type="paramref">token</code> is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: "'token' is not a not <xref data-throw-if-not-resolved=\"true\" uid=\"System.IdentityModel.Tokens.Jwt.JwtSecurityToken\"></xref>."
+    type: <xref href="System.ArgumentException" data-throw-if-not-resolved="True"/>
+  - description: if <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityToken.InnerToken"></xref> is set and <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityToken.EncryptingCredentials"></xref> is not set.
+    type: <xref href="Microsoft.IdentityModel.Tokens.SecurityTokenEncryptionFailedException?alt=Microsoft.IdentityModel.Tokens.SecurityTokenEncryptionFailedException&text=SecurityTokenEncryptionFailedException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(Microsoft.IdentityModel.Tokens.SecurityToken)
+  commentId: M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(Microsoft.IdentityModel.Tokens.SecurityToken)
+  name: WriteToken(SecurityToken)
+  fullName: System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(SecurityToken)
+  nameWithType: JwtSecurityTokenHandler.WriteToken(SecurityToken)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public override string WriteToken (Microsoft.IdentityModel.Tokens.SecurityToken token);
+  - lang: fsharp
+    values:
+    - value: 'override this.WriteToken : Microsoft.IdentityModel.Tokens.SecurityToken -> string'
+  - lang: vb
+    values:
+    - value: Public Overrides Function WriteToken (token As SecurityToken) As String
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Serializes a <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityToken"></xref> into a JWT in Compact Serialization Format.
+  remarks: <p>The JWT will be serialized as a JWE or JWS.</p><p><xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityToken.Payload"></xref> will be used to create the JWT. If there is an inner token, the inner token's payload will be used.</p><p>If either <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityToken.SigningCredentials"></xref> or <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityToken.InnerToken"></xref>.SigningCredentials are set, the JWT will be signed.</p><p>If <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityToken.EncryptingCredentials"></xref> is set, a JWE will be created using the JWT above as the plaintext.</p>
+  metadata: {}
+- parameters:
+  - namesWithMoniker:
+    - value: writer
+    description: The XML writer.
+    type: <xref href="System.Xml.XmlWriter?alt=System.Xml.XmlWriter&text=XmlWriter" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: token
+    description: A token of type <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.TokenType"></xref>.
+    type: <xref href="Microsoft.IdentityModel.Tokens.SecurityToken?alt=Microsoft.IdentityModel.Tokens.SecurityToken&text=SecurityToken" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(System.Xml.XmlWriter,Microsoft.IdentityModel.Tokens.SecurityToken)
+  commentId: M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(System.Xml.XmlWriter,Microsoft.IdentityModel.Tokens.SecurityToken)
+  name: WriteToken(XmlWriter, SecurityToken)
+  fullName: System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(XmlWriter, SecurityToken)
+  nameWithType: JwtSecurityTokenHandler.WriteToken(XmlWriter, SecurityToken)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public override void WriteToken (System.Xml.XmlWriter writer, Microsoft.IdentityModel.Tokens.SecurityToken token);
+  - lang: fsharp
+    values:
+    - value: 'override this.WriteToken : System.Xml.XmlWriter * Microsoft.IdentityModel.Tokens.SecurityToken -> unit'
+  - lang: vb
+    values:
+    - value: Public Overrides Sub WriteToken (writer As XmlWriter, token As SecurityToken)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Serializes to XML a token of the type handled by this instance.
+  metadata: {}
+uid: System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken*
+commentId: Overload:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken
+namespace: System.IdentityModel.Tokens.Jwt
+name: WriteToken
+fullName: System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken
+nameWithType: JwtSecurityTokenHandler.WriteToken
+assembliesWithMoniker:
+- value: System.IdentityModel.Tokens.Jwt.dll
+packagesWithMoniker:
+- value: System.IdentityModel.Tokens.Jwt v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken
+  api_location:
+  - System.IdentityModel.Tokens.Jwt.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken
+  - System::IdentityModel::Tokens::Jwt::JwtSecurityTokenHandler::WriteToken
+  - WriteToken
+  - JwtSecurityTokenHandler.WriteToken
+  - JwtSecurityTokenHandler::WriteToken
+  helpviewer_keywords:
+  - JwtSecurityTokenHandler.WriteToken method [.NET]
+  - WriteToken method [.NET], class JwtSecurityTokenHandler
+  - JwtSecurityTokenHandler.WriteToken(SecurityToken) method [.NET]
+  - WriteToken(SecurityToken) method [.NET], class JwtSecurityTokenHandler
+  - JwtSecurityTokenHandler.WriteToken(XmlWriter, SecurityToken) method [.NET]
+  - WriteToken(XmlWriter, SecurityToken) method [.NET], class JwtSecurityTokenHandler
+  monikers:
+  - msal-web-dotnet-latest

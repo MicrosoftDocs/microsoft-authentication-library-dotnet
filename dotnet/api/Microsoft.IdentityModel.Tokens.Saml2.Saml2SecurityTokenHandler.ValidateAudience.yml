@@ -1,0 +1,78 @@
+### YamlMime:NetMember
+type: method
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: audiences
+    description: The audiences found in the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken"></xref>
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: securityToken
+    description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken"></xref> that is being validated.
+    type: <xref href="Microsoft.IdentityModel.Tokens.SecurityToken?alt=Microsoft.IdentityModel.Tokens.SecurityToken&text=SecurityToken" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: validationParameters
+    description: <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.TokenValidationParameters"></xref> required for validation.
+    type: <xref href="Microsoft.IdentityModel.Tokens.TokenValidationParameters?alt=Microsoft.IdentityModel.Tokens.TokenValidationParameters&text=TokenValidationParameters" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ValidateAudience(System.Collections.Generic.IEnumerable{System.String},Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.TokenValidationParameters)
+  commentId: M:Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ValidateAudience(System.Collections.Generic.IEnumerable{System.String},Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.TokenValidationParameters)
+  name: ValidateAudience(IEnumerable<String>, SecurityToken, TokenValidationParameters)
+  fullName: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ValidateAudience(IEnumerable<String>, SecurityToken, TokenValidationParameters)
+  nameWithType: Saml2SecurityTokenHandler.ValidateAudience(IEnumerable<String>, SecurityToken, TokenValidationParameters)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected virtual void ValidateAudience (System.Collections.Generic.IEnumerable<string> audiences, Microsoft.IdentityModel.Tokens.SecurityToken securityToken, Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member ValidateAudience : seq<string> * Microsoft.IdentityModel.Tokens.SecurityToken * Microsoft.IdentityModel.Tokens.TokenValidationParameters -> unit
+
+        override this.ValidateAudience : seq<string> * Microsoft.IdentityModel.Tokens.SecurityToken * Microsoft.IdentityModel.Tokens.TokenValidationParameters -> unit
+  - lang: vb
+    values:
+    - value: Protected Overridable Sub ValidateAudience (audiences As IEnumerable(Of String), securityToken As SecurityToken, validationParameters As TokenValidationParameters)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Determines if the audience found in a <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken"></xref> is valid.
+  remarks: <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Validators.ValidateAudience(System.Collections.Generic.IEnumerable{System.String},Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.TokenValidationParameters)"></xref> for additional details.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ValidateAudience*
+commentId: Overload:Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ValidateAudience
+namespace: Microsoft.IdentityModel.Tokens.Saml2
+name: ValidateAudience
+fullName: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ValidateAudience
+nameWithType: Saml2SecurityTokenHandler.ValidateAudience
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ValidateAudience
+  api_location:
+  - Microsoft.IdentityModel.Tokens.Saml.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ValidateAudience
+  - Microsoft::IdentityModel::Tokens::Saml2::Saml2SecurityTokenHandler::ValidateAudience
+  - ValidateAudience
+  - Saml2SecurityTokenHandler.ValidateAudience
+  - Saml2SecurityTokenHandler::ValidateAudience
+  helpviewer_keywords:
+  - Saml2SecurityTokenHandler.ValidateAudience method [.NET]
+  - ValidateAudience method [.NET], class Saml2SecurityTokenHandler
+  - Saml2SecurityTokenHandler.ValidateAudience(IEnumerable<String>, SecurityToken, TokenValidationParameters) method [.NET]
+  - ValidateAudience(IEnumerable<String>, SecurityToken, TokenValidationParameters) method [.NET], class Saml2SecurityTokenHandler
+  monikers:
+  - msal-web-dotnet-latest

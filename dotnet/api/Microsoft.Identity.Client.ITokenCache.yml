@@ -1,0 +1,110 @@
+### YamlMime:NetType
+type: interface
+derivedClassesWithMoniker:
+- value: Microsoft.Identity.Client.TokenCache
+extensionMethods:
+- uid: Microsoft.Identity.Client.TokenCacheExtensions.SetCacheOptions(Microsoft.Identity.Client.ITokenCache,Microsoft.Identity.Client.CacheOptions)
+  monikers:
+  - msal-dotnet-latest
+methods:
+- uid: Microsoft.Identity.Client.ITokenCache.Deserialize(System.Byte[])
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.ITokenCache.DeserializeAdalV3(System.Byte[])
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.ITokenCache.DeserializeMsalV2(System.Byte[])
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.ITokenCache.DeserializeMsalV3(System.Byte[],System.Boolean)
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.ITokenCache.DeserializeUnifiedAndAdalCache(Microsoft.Identity.Client.Cache.CacheData)
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.ITokenCache.Serialize
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.ITokenCache.SerializeAdalV3
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.ITokenCache.SerializeMsalV2
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.ITokenCache.SerializeMsalV3
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.ITokenCache.SerializeUnifiedAndAdalCache
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.ITokenCache.SetAfterAccess(Microsoft.Identity.Client.TokenCacheCallback)
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.ITokenCache.SetAfterAccessAsync(System.Func{Microsoft.Identity.Client.TokenCacheNotificationArgs,System.Threading.Tasks.Task})
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.ITokenCache.SetBeforeAccess(Microsoft.Identity.Client.TokenCacheCallback)
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.ITokenCache.SetBeforeAccessAsync(System.Func{Microsoft.Identity.Client.TokenCacheNotificationArgs,System.Threading.Tasks.Task})
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.ITokenCache.SetBeforeWrite(Microsoft.Identity.Client.TokenCacheCallback)
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.ITokenCache.SetBeforeWriteAsync(System.Func{Microsoft.Identity.Client.TokenCacheNotificationArgs,System.Threading.Tasks.Task})
+  monikers:
+  - msal-dotnet-latest
+uid: Microsoft.Identity.Client.ITokenCache
+commentId: T:Microsoft.Identity.Client.ITokenCache
+namespace: Microsoft.Identity.Client
+name: ITokenCache
+fullName: Microsoft.Identity.Client.ITokenCache
+nameWithType: Microsoft.Identity.Client.ITokenCache
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+syntaxWithMoniker:
+- lang: csharp
+  values:
+  - value: public interface ITokenCache
+- lang: fsharp
+  values:
+  - value: type ITokenCache = interface
+- lang: vb
+  values:
+  - value: Public Interface ITokenCache
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+summary: >-
+  This is the interface that implements the public access to cache operations.
+
+  With CacheV2, this should only be necessary if the caller is persisting
+
+  the cache in their own store, since this will provide the serialize/deserialize
+
+  and before/after notifications used in that scenario.
+
+  See https://aka.ms/aka.ms/msal-net-token-cache-serialization
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.ITokenCache
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.ITokenCache
+  - Microsoft::Identity::Client::ITokenCache
+  - ITokenCache
+  helpviewer_keywords:
+  - Microsoft.Identity.Client.ITokenCache interface [.NET]
+  monikers:
+  - msal-dotnet-latest

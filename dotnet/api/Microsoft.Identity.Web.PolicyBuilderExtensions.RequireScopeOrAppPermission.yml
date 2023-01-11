@@ -1,0 +1,84 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.AspNetCore.Authorization.AuthorizationPolicyBuilder?alt=Microsoft.AspNetCore.Authorization.AuthorizationPolicyBuilder&text=AuthorizationPolicyBuilder" data-throw-if-not-resolved="True"/>
+    description: A reference to this instance after the operation has completed.
+  parameters:
+  - namesWithMoniker:
+    - value: authorizationPolicyBuilder
+    description: Used for building policies during application startup.
+    type: <xref href="Microsoft.AspNetCore.Authorization.AuthorizationPolicyBuilder?alt=Microsoft.AspNetCore.Authorization.AuthorizationPolicyBuilder&text=AuthorizationPolicyBuilder" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: allowedScopeValues
+    description: scopes (the value of scope or scp) accepted by this app.
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: allowedAppPermissionValues
+    description: App permission (in role claim) that this app accepts.
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  type: method
+  uid: Microsoft.Identity.Web.PolicyBuilderExtensions.RequireScopeOrAppPermission(Microsoft.AspNetCore.Authorization.AuthorizationPolicyBuilder,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:Microsoft.Identity.Web.PolicyBuilderExtensions.RequireScopeOrAppPermission(Microsoft.AspNetCore.Authorization.AuthorizationPolicyBuilder,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String})
+  name: RequireScopeOrAppPermission(AuthorizationPolicyBuilder, IEnumerable<String>, IEnumerable<String>)
+  fullName: Microsoft.Identity.Web.PolicyBuilderExtensions.RequireScopeOrAppPermission(AuthorizationPolicyBuilder, IEnumerable<String>, IEnumerable<String>)
+  nameWithType: PolicyBuilderExtensions.RequireScopeOrAppPermission(AuthorizationPolicyBuilder, IEnumerable<String>, IEnumerable<String>)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public static Microsoft.AspNetCore.Authorization.AuthorizationPolicyBuilder RequireScopeOrAppPermission (this Microsoft.AspNetCore.Authorization.AuthorizationPolicyBuilder authorizationPolicyBuilder, System.Collections.Generic.IEnumerable<string> allowedScopeValues, System.Collections.Generic.IEnumerable<string> allowedAppPermissionValues);
+  - lang: fsharp
+    values:
+    - value: 'static member RequireScopeOrAppPermission : Microsoft.AspNetCore.Authorization.AuthorizationPolicyBuilder * seq<string> * seq<string> -> Microsoft.AspNetCore.Authorization.AuthorizationPolicyBuilder'
+  - lang: vb
+    values:
+    - value: >-
+        <Extension()>
+
+        Public Function RequireScopeOrAppPermission (authorizationPolicyBuilder As AuthorizationPolicyBuilder, allowedScopeValues As IEnumerable(Of String), allowedAppPermissionValues As IEnumerable(Of String)) As AuthorizationPolicyBuilder
+  monikers:
+  - msal-model-dotnet-latest
+  summary: >-
+    Adds a <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Web.ScopeOrAppPermissionAuthorizationRequirement"></xref> to the current instance which requires
+
+    that the current user has the specified claim and that the claim value must be one of the allowed values.
+  metadata: {}
+uid: Microsoft.Identity.Web.PolicyBuilderExtensions.RequireScopeOrAppPermission*
+commentId: Overload:Microsoft.Identity.Web.PolicyBuilderExtensions.RequireScopeOrAppPermission
+namespace: Microsoft.Identity.Web
+name: RequireScopeOrAppPermission
+fullName: Microsoft.Identity.Web.PolicyBuilderExtensions.RequireScopeOrAppPermission
+nameWithType: PolicyBuilderExtensions.RequireScopeOrAppPermission
+assembliesWithMoniker:
+- value: Microsoft.Identity.Web.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Web v1.25.10
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-model-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Web.PolicyBuilderExtensions.RequireScopeOrAppPermission
+  api_location:
+  - Microsoft.Identity.Web.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Web.PolicyBuilderExtensions.RequireScopeOrAppPermission
+  - Microsoft::Identity::Web::PolicyBuilderExtensions::RequireScopeOrAppPermission
+  - RequireScopeOrAppPermission
+  - PolicyBuilderExtensions.RequireScopeOrAppPermission
+  - PolicyBuilderExtensions::RequireScopeOrAppPermission
+  helpviewer_keywords:
+  - PolicyBuilderExtensions.RequireScopeOrAppPermission method [.NET]
+  - RequireScopeOrAppPermission method [.NET], class PolicyBuilderExtensions
+  - PolicyBuilderExtensions.RequireScopeOrAppPermission(AuthorizationPolicyBuilder, IEnumerable<String>, IEnumerable<String>) extension method [.NET]
+  - RequireScopeOrAppPermission(AuthorizationPolicyBuilder, IEnumerable<String>, IEnumerable<String>) extension method [.NET], class PolicyBuilderExtensions
+  monikers:
+  - msal-model-dotnet-latest

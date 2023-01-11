@@ -1,0 +1,101 @@
+### YamlMime:NetMember
+type: method
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: ticket
+    description: Kerberos ticket object to save.
+    type: <xref href="Microsoft.Identity.Client.Kerberos.KerberosSupplementalTicket?alt=Microsoft.Identity.Client.Kerberos.KerberosSupplementalTicket&text=KerberosSupplementalTicket" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.Kerberos.KerberosSupplementalTicketManager.SaveToWindowsTicketCache(Microsoft.Identity.Client.Kerberos.KerberosSupplementalTicket)
+  commentId: M:Microsoft.Identity.Client.Kerberos.KerberosSupplementalTicketManager.SaveToWindowsTicketCache(Microsoft.Identity.Client.Kerberos.KerberosSupplementalTicket)
+  name: SaveToWindowsTicketCache(KerberosSupplementalTicket)
+  fullName: Microsoft.Identity.Client.Kerberos.KerberosSupplementalTicketManager.SaveToWindowsTicketCache(KerberosSupplementalTicket)
+  nameWithType: KerberosSupplementalTicketManager.SaveToWindowsTicketCache(KerberosSupplementalTicket)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public static void SaveToWindowsTicketCache (Microsoft.Identity.Client.Kerberos.KerberosSupplementalTicket ticket);
+  - lang: fsharp
+    values:
+    - value: 'static member SaveToWindowsTicketCache : Microsoft.Identity.Client.Kerberos.KerberosSupplementalTicket -> unit'
+  - lang: vb
+    values:
+    - value: Public Shared Sub SaveToWindowsTicketCache (ticket As KerberosSupplementalTicket)
+  monikers:
+  - msal-dotnet-latest
+  summary: Save current Kerberos Ticket to current user's Ticket Cache.
+  remarks: <p>Can throws <xref data-throw-if-not-resolved="true" uid="System.ArgumentException"></xref> when given ticket parameter is not a valid Kerberos Supplemental Ticket. Can throws <xref data-throw-if-not-resolved="true" uid="System.ComponentModel.Win32Exception"></xref> if error occurs while saving ticket information into Ticket Cache.</p>
+  metadata: {}
+- parameters:
+  - namesWithMoniker:
+    - value: ticket
+    description: Kerberos ticket object to save.
+    type: <xref href="Microsoft.Identity.Client.Kerberos.KerberosSupplementalTicket?alt=Microsoft.Identity.Client.Kerberos.KerberosSupplementalTicket&text=KerberosSupplementalTicket" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: logonId
+    description: >-
+      The Logon Id of the user owning the ticket cache.
+                  The default of 0 represents the currently logged on user.
+    type: <xref href="System.Int64?alt=System.Int64&text=Int64" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.Kerberos.KerberosSupplementalTicketManager.SaveToWindowsTicketCache(Microsoft.Identity.Client.Kerberos.KerberosSupplementalTicket,System.Int64)
+  commentId: M:Microsoft.Identity.Client.Kerberos.KerberosSupplementalTicketManager.SaveToWindowsTicketCache(Microsoft.Identity.Client.Kerberos.KerberosSupplementalTicket,System.Int64)
+  name: SaveToWindowsTicketCache(KerberosSupplementalTicket, Int64)
+  fullName: Microsoft.Identity.Client.Kerberos.KerberosSupplementalTicketManager.SaveToWindowsTicketCache(KerberosSupplementalTicket, Int64)
+  nameWithType: KerberosSupplementalTicketManager.SaveToWindowsTicketCache(KerberosSupplementalTicket, Int64)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public static void SaveToWindowsTicketCache (Microsoft.Identity.Client.Kerberos.KerberosSupplementalTicket ticket, long logonId);
+  - lang: fsharp
+    values:
+    - value: 'static member SaveToWindowsTicketCache : Microsoft.Identity.Client.Kerberos.KerberosSupplementalTicket * int64 -> unit'
+  - lang: vb
+    values:
+    - value: Public Shared Sub SaveToWindowsTicketCache (ticket As KerberosSupplementalTicket, logonId As Long)
+  monikers:
+  - msal-dotnet-latest
+  summary: Save current Kerberos Ticket to current user's Ticket Cache. Windows only.
+  remarks: <p>Can throw <xref data-throw-if-not-resolved="true" uid="System.ArgumentException"></xref> when given ticket parameter is not a valid Kerberos Supplemental Ticket. Can throw <xref data-throw-if-not-resolved="true" uid="System.ComponentModel.Win32Exception"></xref> if error occurs while saving ticket information into Ticket Cache.</p>
+  metadata: {}
+uid: Microsoft.Identity.Client.Kerberos.KerberosSupplementalTicketManager.SaveToWindowsTicketCache*
+commentId: Overload:Microsoft.Identity.Client.Kerberos.KerberosSupplementalTicketManager.SaveToWindowsTicketCache
+namespace: Microsoft.Identity.Client.Kerberos
+name: SaveToWindowsTicketCache
+fullName: Microsoft.Identity.Client.Kerberos.KerberosSupplementalTicketManager.SaveToWindowsTicketCache
+nameWithType: KerberosSupplementalTicketManager.SaveToWindowsTicketCache
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.Kerberos.KerberosSupplementalTicketManager.SaveToWindowsTicketCache
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.Kerberos.KerberosSupplementalTicketManager.SaveToWindowsTicketCache
+  - Microsoft::Identity::Client::Kerberos::KerberosSupplementalTicketManager::SaveToWindowsTicketCache
+  - SaveToWindowsTicketCache
+  - KerberosSupplementalTicketManager.SaveToWindowsTicketCache
+  - KerberosSupplementalTicketManager::SaveToWindowsTicketCache
+  helpviewer_keywords:
+  - KerberosSupplementalTicketManager.SaveToWindowsTicketCache method [.NET]
+  - SaveToWindowsTicketCache method [.NET], class KerberosSupplementalTicketManager
+  - KerberosSupplementalTicketManager.SaveToWindowsTicketCache(KerberosSupplementalTicket) method [.NET]
+  - SaveToWindowsTicketCache(KerberosSupplementalTicket) method [.NET], class KerberosSupplementalTicketManager
+  - KerberosSupplementalTicketManager.SaveToWindowsTicketCache(KerberosSupplementalTicket, Int64) method [.NET]
+  - SaveToWindowsTicketCache(KerberosSupplementalTicket, Int64) method [.NET], class KerberosSupplementalTicketManager
+  monikers:
+  - msal-dotnet-latest

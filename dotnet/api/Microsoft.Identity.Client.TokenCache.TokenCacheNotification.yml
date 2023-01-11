@@ -1,0 +1,69 @@
+### YamlMime:NetDelegate
+parameters:
+- namesWithMoniker:
+  - value: args
+  description: Arguments related to the cache item impacted
+  type: <xref href="Microsoft.Identity.Client.TokenCacheNotificationArgs?alt=Microsoft.Identity.Client.TokenCacheNotificationArgs&text=TokenCacheNotificationArgs" data-throw-if-not-resolved="True"/>
+inheritances:
+- <xref href="System.Delegate" data-throw-if-not-resolved="True"/>
+uid: Microsoft.Identity.Client.TokenCache.TokenCacheNotification
+commentId: T:Microsoft.Identity.Client.TokenCache.TokenCacheNotification
+namespace: Microsoft.Identity.Client
+name: TokenCache.TokenCacheNotification
+fullName: Microsoft.Identity.Client.TokenCache.TokenCacheNotification
+nameWithType: Microsoft.Identity.Client.TokenCache.TokenCacheNotification
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+attributesWithMoniker:
+- value: System.ObsoleteAttribute
+syntaxWithMoniker:
+- lang: csharp
+  values:
+  - value: >-
+      [System.Obsolete("Use Microsoft.Identity.Client.TokenCacheCallback instead. See https://aka.msa/msal-net-3x-cache-breaking-change", true)]
+
+      public delegate void TokenCache.TokenCacheNotification(TokenCacheNotificationArgs args);
+- lang: fsharp
+  values:
+  - value: >-
+      [<System.Obsolete("Use Microsoft.Identity.Client.TokenCacheCallback instead. See https://aka.msa/msal-net-3x-cache-breaking-change", true)>]
+
+      type TokenCache.TokenCacheNotification = delegate of TokenCacheNotificationArgs -> unit
+- lang: vb
+  values:
+  - value: Public Delegate Sub TokenCache.TokenCacheNotification(args As TokenCacheNotificationArgs)
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+obsoleteMessagesWithMoniker:
+- value: Use Microsoft.Identity.Client.TokenCacheCallback instead. See https://aka.msa/msal-net-3x-cache-breaking-change
+summary: >-
+  Notification for certain token cache interactions during token acquisition. This delegate is
+
+  used in particular to provide a custom token cache serialization
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.TokenCache.TokenCacheNotification
+  - Microsoft.Identity.Client.TokenCache.TokenCacheNotification..ctor
+  - Microsoft.Identity.Client.TokenCache.TokenCacheNotification.Invoke
+  - Microsoft.Identity.Client.TokenCache.TokenCacheNotification.BeginInvoke
+  - Microsoft.Identity.Client.TokenCache.TokenCacheNotification.EndInvoke
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.TokenCache.TokenCacheNotification
+  - Microsoft::Identity::Client::TokenCache::TokenCacheNotification
+  - TokenCacheNotification
+  helpviewer_keywords:
+  - Microsoft.Identity.Client.TokenCache.TokenCacheNotification delegate [.NET]
+  monikers:
+  - msal-dotnet-latest

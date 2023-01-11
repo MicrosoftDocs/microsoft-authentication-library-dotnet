@@ -1,0 +1,76 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Byte?alt=System.Byte&text=Byte" data-throw-if-not-resolved="True"/>[]
+    description: A signature over the input.
+  parameters:
+  - namesWithMoniker:
+    - value: input
+    description: The bytes to be signed.
+    type: <xref href="System.Byte?alt=System.Byte&text=Byte" data-throw-if-not-resolved="True"/>[]
+  exceptions:
+  - description: if <code data-dev-comment-type="paramref">input</code>.Length == 0.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: If <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.AsymmetricSignatureProvider.Dispose(System.Boolean)"></xref> has been called.
+    type: <xref href="System.ObjectDisposedException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.AsymmetricSignatureProvider.Sign(System.Byte[])
+  commentId: M:Microsoft.IdentityModel.Tokens.AsymmetricSignatureProvider.Sign(System.Byte[])
+  name: Sign(Byte[])
+  fullName: Microsoft.IdentityModel.Tokens.AsymmetricSignatureProvider.Sign(Byte[])
+  nameWithType: AsymmetricSignatureProvider.Sign(Byte[])
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public override byte[] Sign (byte[] input);
+  - lang: fsharp
+    values:
+    - value: 'override this.Sign : byte[] -> byte[]'
+  - lang: vb
+    values:
+    - value: Public Overrides Function Sign (input As Byte()) As Byte()
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Produces a signature over the 'input' using the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.AsymmetricSecurityKey"></xref> and algorithm passed to <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.AsymmetricSignatureProvider.#ctor(Microsoft.IdentityModel.Tokens.SecurityKey,System.String,System.Boolean)"></xref>.
+  remarks: Sign is thread safe.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.AsymmetricSignatureProvider.Sign*
+commentId: Overload:Microsoft.IdentityModel.Tokens.AsymmetricSignatureProvider.Sign
+namespace: Microsoft.IdentityModel.Tokens
+name: Sign
+fullName: Microsoft.IdentityModel.Tokens.AsymmetricSignatureProvider.Sign
+nameWithType: AsymmetricSignatureProvider.Sign
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.AsymmetricSignatureProvider.Sign
+  api_location:
+  - Microsoft.IdentityModel.Tokens.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.AsymmetricSignatureProvider.Sign
+  - Microsoft::IdentityModel::Tokens::AsymmetricSignatureProvider::Sign
+  - Sign
+  - AsymmetricSignatureProvider.Sign
+  - AsymmetricSignatureProvider::Sign
+  helpviewer_keywords:
+  - AsymmetricSignatureProvider.Sign method [.NET]
+  - Sign method [.NET], class AsymmetricSignatureProvider
+  - AsymmetricSignatureProvider.Sign(Byte[]) method [.NET]
+  - Sign(Byte[]) method [.NET], class AsymmetricSignatureProvider
+  monikers:
+  - msal-web-dotnet-latest

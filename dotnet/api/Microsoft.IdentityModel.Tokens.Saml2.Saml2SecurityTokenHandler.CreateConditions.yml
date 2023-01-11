@@ -1,0 +1,77 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.IdentityModel.Tokens.Saml2.Saml2Conditions?alt=Microsoft.IdentityModel.Tokens.Saml2.Saml2Conditions&text=Saml2Conditions" data-throw-if-not-resolved="True"/>
+    description: A Saml2Conditions object.
+  parameters:
+  - namesWithMoniker:
+    - value: tokenDescriptor
+    description: contains the details of the conditions.
+    type: <xref href="Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor?alt=Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor&text=SecurityTokenDescriptor" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: If <code data-dev-comment-type="paramref">tokenDescriptor</code> is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.CreateConditions(Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor)
+  commentId: M:Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.CreateConditions(Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor)
+  name: CreateConditions(SecurityTokenDescriptor)
+  fullName: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.CreateConditions(SecurityTokenDescriptor)
+  nameWithType: Saml2SecurityTokenHandler.CreateConditions(SecurityTokenDescriptor)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected virtual Microsoft.IdentityModel.Tokens.Saml2.Saml2Conditions CreateConditions (Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor tokenDescriptor);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member CreateConditions : Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor -> Microsoft.IdentityModel.Tokens.Saml2.Saml2Conditions
+
+        override this.CreateConditions : Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor -> Microsoft.IdentityModel.Tokens.Saml2.Saml2Conditions
+  - lang: vb
+    values:
+    - value: Protected Overridable Function CreateConditions (tokenDescriptor As SecurityTokenDescriptor) As Saml2Conditions
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Creates the conditions for the assertion.
+  remarks: <p>Generally, conditions should be included in assertions to limit the impact of misuse of the assertion. Specifying the NotBefore and NotOnOrAfter conditions can limit the period of vulnerability in the case of a compromised assertion. The AudienceRestrictionCondition can be used to explicitly state the intended relying party or parties of the assertion, which coupled with appropriate audience restriction enforcement at relying parties can help to mitigate spoofing attacks between relying parties.</p><p>The default implementation creates NotBefore and NotOnOrAfter conditions based on the tokenDescriptor.Lifetime. It will also generate an AudienceRestrictionCondition limiting consumption of the assertion to tokenDescriptor.Scope.Address.</p>
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.CreateConditions*
+commentId: Overload:Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.CreateConditions
+namespace: Microsoft.IdentityModel.Tokens.Saml2
+name: CreateConditions
+fullName: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.CreateConditions
+nameWithType: Saml2SecurityTokenHandler.CreateConditions
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.CreateConditions
+  api_location:
+  - Microsoft.IdentityModel.Tokens.Saml.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.CreateConditions
+  - Microsoft::IdentityModel::Tokens::Saml2::Saml2SecurityTokenHandler::CreateConditions
+  - CreateConditions
+  - Saml2SecurityTokenHandler.CreateConditions
+  - Saml2SecurityTokenHandler::CreateConditions
+  helpviewer_keywords:
+  - Saml2SecurityTokenHandler.CreateConditions method [.NET]
+  - CreateConditions method [.NET], class Saml2SecurityTokenHandler
+  - Saml2SecurityTokenHandler.CreateConditions(SecurityTokenDescriptor) method [.NET]
+  - CreateConditions(SecurityTokenDescriptor) method [.NET], class Saml2SecurityTokenHandler
+  monikers:
+  - msal-web-dotnet-latest

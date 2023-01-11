@@ -1,0 +1,72 @@
+### YamlMime:NetMember
+type: property
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Nullable`1?alt=System.Nullable&text=Nullable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.DateTimeOffset?alt=System.DateTimeOffset&text=DateTimeOffset" data-throw-if-not-resolved="True"/>&gt;
+  type: property
+  uid: Microsoft.Identity.Client.TokenCacheNotificationArgs.SuggestedCacheExpiry
+  commentId: P:Microsoft.Identity.Client.TokenCacheNotificationArgs.SuggestedCacheExpiry
+  name: SuggestedCacheExpiry
+  fullName: Microsoft.Identity.Client.TokenCacheNotificationArgs.SuggestedCacheExpiry
+  nameWithType: TokenCacheNotificationArgs.SuggestedCacheExpiry
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public DateTimeOffset? SuggestedCacheExpiry { get; }
+  - lang: fsharp
+    values:
+    - value: 'member this.SuggestedCacheExpiry : Nullable<DateTimeOffset>'
+  - lang: vb
+    values:
+    - value: Public ReadOnly Property SuggestedCacheExpiry As Nullable(Of DateTimeOffset)
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    Suggested value of the expiry, to help determining the cache eviction time. 
+
+    This value is <strong>only</strong> set on the <code>OnAfterAccess</code> delegate, on a cache write
+
+    operation (that is when <code>args.HasStateChanged</code> is <code>true</code>) and when the cache write 
+
+    is triggered from the <code>AcquireTokenForClient</code> method. In all other cases it's <code>null</code>, as there is a refresh token, and therefore the
+
+    access tokens are refreshable.
+  metadata: {}
+uid: Microsoft.Identity.Client.TokenCacheNotificationArgs.SuggestedCacheExpiry*
+commentId: Overload:Microsoft.Identity.Client.TokenCacheNotificationArgs.SuggestedCacheExpiry
+namespace: Microsoft.Identity.Client
+name: SuggestedCacheExpiry
+fullName: Microsoft.Identity.Client.TokenCacheNotificationArgs.SuggestedCacheExpiry
+nameWithType: TokenCacheNotificationArgs.SuggestedCacheExpiry
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.TokenCacheNotificationArgs.SuggestedCacheExpiry
+  - Microsoft.Identity.Client.TokenCacheNotificationArgs.get_SuggestedCacheExpiry
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.TokenCacheNotificationArgs.SuggestedCacheExpiry
+  - Microsoft::Identity::Client::TokenCacheNotificationArgs::SuggestedCacheExpiry
+  - SuggestedCacheExpiry
+  - TokenCacheNotificationArgs.SuggestedCacheExpiry
+  - TokenCacheNotificationArgs::SuggestedCacheExpiry
+  helpviewer_keywords:
+  - TokenCacheNotificationArgs.SuggestedCacheExpiry property [.NET]
+  - SuggestedCacheExpiry property [.NET], class TokenCacheNotificationArgs
+  monikers:
+  - msal-dotnet-latest

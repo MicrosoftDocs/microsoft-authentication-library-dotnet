@@ -1,0 +1,100 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Client.AuthenticationResult?alt=Microsoft.Identity.Client.AuthenticationResult&text=AuthenticationResult" data-throw-if-not-resolved="True"/>&gt;
+    description: Authentication result containing token of the user for the requested scopes
+  parameters:
+  - namesWithMoniker:
+    - value: authorizationCode
+    description: The authorization code received from service authorization endpoint.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: scopes
+    description: Scopes requested to access a protected API
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  implementsWithMoniker:
+  - value: <xref href="Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenByAuthorizationCodeAsync(System.String,System.Collections.Generic.IEnumerable{System.String})?alt=Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenByAuthorizationCodeAsync(System.String,System.Collections.Generic.IEnumerable{System.String})&text=AcquireTokenByAuthorizationCodeAsync(String%2C+IEnumerable%3CString%3E)" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenByAuthorizationCodeAsync(System.String,System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenByAuthorizationCodeAsync(System.String,System.Collections.Generic.IEnumerable{System.String})
+  name: AcquireTokenByAuthorizationCodeAsync(String, IEnumerable<String>)
+  fullName: Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenByAuthorizationCodeAsync(String, IEnumerable<String>)
+  nameWithType: ConfidentialClientApplication.AcquireTokenByAuthorizationCodeAsync(String, IEnumerable<String>)
+  attributesWithMoniker:
+  - value: System.ObsoleteAttribute
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: >-
+        [System.Obsolete("Use AcquireTokenByAuthorizationCode instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]
+
+        public System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult> AcquireTokenByAuthorizationCodeAsync (string authorizationCode, System.Collections.Generic.IEnumerable<string> scopes);
+  - lang: fsharp
+    values:
+    - value: >-
+        [<System.Obsolete("Use AcquireTokenByAuthorizationCode instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)>]
+
+        abstract member AcquireTokenByAuthorizationCodeAsync : string * seq<string> -> System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult>
+
+        override this.AcquireTokenByAuthorizationCodeAsync : string * seq<string> -> System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult>
+  - lang: vb
+    values:
+    - value: Public Function AcquireTokenByAuthorizationCodeAsync (authorizationCode As String, scopes As IEnumerable(Of String)) As Task(Of AuthenticationResult)
+  monikers:
+  - msal-dotnet-latest
+  seeAlso: >+
+    - <xref:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenByAuthorizationCode(System.Collections.Generic.IEnumerable%7bSystem.String%7d%2cSystem.String)>
+
+  obsoleteMessagesWithMoniker:
+  - value: 'Use AcquireTokenByAuthorizationCode instead. See https://aka.ms/msal-net-3-breaking-changes. '
+  summary: >-
+    [V2 API] Acquires a security token from the authority configured in the app using the authorization code previously received from the STS. It uses
+
+    the OAuth 2.0 authorization code flow (See https://aka.ms/msal-net-authorization-code).
+
+    It's usually used in web apps (for instance ASP.NET / ASP.NET Core web apps) which sign-in users, and therefore receive an authorization code.
+
+    This method does not lookup the token cache, but stores the result in it, so it can be looked up using other methods
+
+    such as <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.IClientApplicationBase.AcquireTokenSilentAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount)"></xref>.
+  metadata: {}
+uid: Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenByAuthorizationCodeAsync*
+commentId: Overload:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenByAuthorizationCodeAsync
+namespace: Microsoft.Identity.Client
+name: AcquireTokenByAuthorizationCodeAsync
+fullName: Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenByAuthorizationCodeAsync
+nameWithType: ConfidentialClientApplication.AcquireTokenByAuthorizationCodeAsync
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenByAuthorizationCodeAsync
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenByAuthorizationCodeAsync
+  - Microsoft::Identity::Client::ConfidentialClientApplication::AcquireTokenByAuthorizationCodeAsync
+  - AcquireTokenByAuthorizationCodeAsync
+  - ConfidentialClientApplication.AcquireTokenByAuthorizationCodeAsync
+  - ConfidentialClientApplication::AcquireTokenByAuthorizationCodeAsync
+  helpviewer_keywords:
+  - ConfidentialClientApplication.AcquireTokenByAuthorizationCodeAsync method [.NET]
+  - AcquireTokenByAuthorizationCodeAsync method [.NET], class ConfidentialClientApplication
+  - ConfidentialClientApplication.AcquireTokenByAuthorizationCodeAsync(String, IEnumerable<String>) method [.NET]
+  - AcquireTokenByAuthorizationCodeAsync(String, IEnumerable<String>) method [.NET], class ConfidentialClientApplication
+  monikers:
+  - msal-dotnet-latest

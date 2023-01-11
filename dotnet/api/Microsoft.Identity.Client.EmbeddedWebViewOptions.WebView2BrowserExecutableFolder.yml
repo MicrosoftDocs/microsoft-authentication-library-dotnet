@@ -1,0 +1,79 @@
+### YamlMime:NetMember
+type: property
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: property
+  uid: Microsoft.Identity.Client.EmbeddedWebViewOptions.WebView2BrowserExecutableFolder
+  commentId: P:Microsoft.Identity.Client.EmbeddedWebViewOptions.WebView2BrowserExecutableFolder
+  name: WebView2BrowserExecutableFolder
+  fullName: Microsoft.Identity.Client.EmbeddedWebViewOptions.WebView2BrowserExecutableFolder
+  nameWithType: EmbeddedWebViewOptions.WebView2BrowserExecutableFolder
+  attributesWithMoniker:
+  - value: System.ObsoleteAttribute
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: >-
+        [System.Obsolete("In case when WebView2 is not available, MSAL.NET will fallback to legacy WebView.", true)]
+
+        public string WebView2BrowserExecutableFolder { get; set; }
+  - lang: fsharp
+    values:
+    - value: >-
+        [<System.Obsolete("In case when WebView2 is not available, MSAL.NET will fallback to legacy WebView.", true)>]
+
+        member this.WebView2BrowserExecutableFolder : string with get, set
+  - lang: vb
+    values:
+    - value: Public Property WebView2BrowserExecutableFolder As String
+  monikers:
+  - msal-dotnet-latest
+  obsoleteMessagesWithMoniker:
+  - value: In case when WebView2 is not available, MSAL.NET will fallback to legacy WebView.
+  summary: >-
+    It is possible for applications to bundle a fixed version of the runtime, and ship it side-by-side.
+
+    For this you need to tell MSAL (so it can tell WebView2) where to find the runtime bits by setting this property. If you don't set it, MSAL will attempt to use a system-wide "evergreen" installation of the runtime."
+
+    For more details see: https://docs.microsoft.com/en-us/dotnet/api/microsoft.web.webview2.core.corewebview2environment.createasync?view=webview2-dotnet-1.0.705.50
+  metadata: {}
+uid: Microsoft.Identity.Client.EmbeddedWebViewOptions.WebView2BrowserExecutableFolder*
+commentId: Overload:Microsoft.Identity.Client.EmbeddedWebViewOptions.WebView2BrowserExecutableFolder
+namespace: Microsoft.Identity.Client
+name: WebView2BrowserExecutableFolder
+fullName: Microsoft.Identity.Client.EmbeddedWebViewOptions.WebView2BrowserExecutableFolder
+nameWithType: EmbeddedWebViewOptions.WebView2BrowserExecutableFolder
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.EmbeddedWebViewOptions.WebView2BrowserExecutableFolder
+  - Microsoft.Identity.Client.EmbeddedWebViewOptions.get_WebView2BrowserExecutableFolder
+  - Microsoft.Identity.Client.EmbeddedWebViewOptions.set_WebView2BrowserExecutableFolder
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.EmbeddedWebViewOptions.WebView2BrowserExecutableFolder
+  - Microsoft::Identity::Client::EmbeddedWebViewOptions::WebView2BrowserExecutableFolder
+  - WebView2BrowserExecutableFolder
+  - EmbeddedWebViewOptions.WebView2BrowserExecutableFolder
+  - EmbeddedWebViewOptions::WebView2BrowserExecutableFolder
+  helpviewer_keywords:
+  - EmbeddedWebViewOptions.WebView2BrowserExecutableFolder property [.NET]
+  - WebView2BrowserExecutableFolder property [.NET], class EmbeddedWebViewOptions
+  monikers:
+  - msal-dotnet-latest

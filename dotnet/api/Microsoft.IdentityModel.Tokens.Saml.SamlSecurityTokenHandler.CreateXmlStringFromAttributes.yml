@@ -1,0 +1,74 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+    description: A well formed XML string.
+  parameters:
+  - namesWithMoniker:
+    - value: attributes
+    description: <xref data-throw-if-not-resolved="true" uid="System.Collections.Generic.ICollection`1"></xref>.
+    type: <xref href="System.Collections.Generic.ICollection`1?alt=System.Collections.Generic.ICollection&text=ICollection" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.IdentityModel.Tokens.Saml.SamlAttribute?alt=Microsoft.IdentityModel.Tokens.Saml.SamlAttribute&text=SamlAttribute" data-throw-if-not-resolved="True"/>&gt;
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CreateXmlStringFromAttributes(System.Collections.Generic.ICollection{Microsoft.IdentityModel.Tokens.Saml.SamlAttribute})
+  commentId: M:Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CreateXmlStringFromAttributes(System.Collections.Generic.ICollection{Microsoft.IdentityModel.Tokens.Saml.SamlAttribute})
+  name: CreateXmlStringFromAttributes(ICollection<SamlAttribute>)
+  fullName: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CreateXmlStringFromAttributes(ICollection<SamlAttribute>)
+  nameWithType: SamlSecurityTokenHandler.CreateXmlStringFromAttributes(ICollection<SamlAttribute>)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected virtual string CreateXmlStringFromAttributes (System.Collections.Generic.ICollection<Microsoft.IdentityModel.Tokens.Saml.SamlAttribute> attributes);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member CreateXmlStringFromAttributes : System.Collections.Generic.ICollection<Microsoft.IdentityModel.Tokens.Saml.SamlAttribute> -> string
+
+        override this.CreateXmlStringFromAttributes : System.Collections.Generic.ICollection<Microsoft.IdentityModel.Tokens.Saml.SamlAttribute> -> string
+  - lang: vb
+    values:
+    - value: Protected Overridable Function CreateXmlStringFromAttributes (attributes As ICollection(Of SamlAttribute)) As String
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Builds an XML formated string from a collection of saml attributes that represent an Actor.
+  remarks: The string is of the form "&lt;Actor&gt;&lt;SamlAttribute name, ns&gt;&lt;SamlAttributeValue&gt;...&lt;/SamlAttributeValue&gt;, ...&lt;/SamlAttribute&gt;...&lt;/Actor&gt;"
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CreateXmlStringFromAttributes*
+commentId: Overload:Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CreateXmlStringFromAttributes
+namespace: Microsoft.IdentityModel.Tokens.Saml
+name: CreateXmlStringFromAttributes
+fullName: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CreateXmlStringFromAttributes
+nameWithType: SamlSecurityTokenHandler.CreateXmlStringFromAttributes
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CreateXmlStringFromAttributes
+  api_location:
+  - Microsoft.IdentityModel.Tokens.Saml.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CreateXmlStringFromAttributes
+  - Microsoft::IdentityModel::Tokens::Saml::SamlSecurityTokenHandler::CreateXmlStringFromAttributes
+  - CreateXmlStringFromAttributes
+  - SamlSecurityTokenHandler.CreateXmlStringFromAttributes
+  - SamlSecurityTokenHandler::CreateXmlStringFromAttributes
+  helpviewer_keywords:
+  - SamlSecurityTokenHandler.CreateXmlStringFromAttributes method [.NET]
+  - CreateXmlStringFromAttributes method [.NET], class SamlSecurityTokenHandler
+  - SamlSecurityTokenHandler.CreateXmlStringFromAttributes(ICollection<SamlAttribute>) method [.NET]
+  - CreateXmlStringFromAttributes(ICollection<SamlAttribute>) method [.NET], class SamlSecurityTokenHandler
+  monikers:
+  - msal-web-dotnet-latest

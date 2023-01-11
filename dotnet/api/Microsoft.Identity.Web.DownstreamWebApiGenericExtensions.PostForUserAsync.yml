@@ -1,0 +1,121 @@
+### YamlMime:NetMember
+type: method
+members:
+- typeParameters:
+  - description: Output type.
+    name: TOutput
+  - description: Input type.
+    name: TInput
+  returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;TOutput&gt;
+    description: A strongly typed response from the web API.
+  parameters:
+  - namesWithMoniker:
+    - value: downstreamWebApi
+    description: The downstream web API.
+    type: <xref href="Microsoft.Identity.Web.IDownstreamWebApi?alt=Microsoft.Identity.Web.IDownstreamWebApi&text=IDownstreamWebApi" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: serviceName
+    description: >-
+      Name of the service describing the downstream web API. There can
+                  be several configuration named sections mapped to a <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Web.DownstreamWebApiOptions"></xref>,
+                  each for one downstream web API. You can pass-in null, but in that case <code data-dev-comment-type="paramref">downstreamWebApiOptionsOverride</code>
+                  needs to be set.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: relativePath
+    description: Path to the API endpoint relative to the base URL specified in the configuration.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: inputData
+    description: Input data sent to the API.
+    type: TInput
+  - namesWithMoniker:
+    - value: downstreamWebApiOptionsOverride
+    description: >-
+      Overrides the options proposed in the configuration described
+                  by <code data-dev-comment-type="paramref">serviceName</code>.
+    type: <xref href="System.Action`1?alt=System.Action&text=Action" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Web.DownstreamWebApiOptions?alt=Microsoft.Identity.Web.DownstreamWebApiOptions&text=DownstreamWebApiOptions" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: user
+    description: >-
+      [Optional] Claims representing a user. This is useful in platforms like Blazor
+                  or Azure Signal R, where the HttpContext is not available. In other platforms, the library
+                  will find the user from the HttpContext.
+    type: <xref href="System.Security.Claims.ClaimsPrincipal?alt=System.Security.Claims.ClaimsPrincipal&text=ClaimsPrincipal" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: authenticationScheme
+    description: >-
+      Authentication scheme. If null, will use OpenIdConnectDefault.AuthenticationScheme
+                  if called from a web app, and JwtBearerDefault.AuthenticationScheme if called from a web API.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Web.DownstreamWebApiGenericExtensions.PostForUserAsync``2(Microsoft.Identity.Web.IDownstreamWebApi,System.String,System.String,``1,System.Action{Microsoft.Identity.Web.DownstreamWebApiOptions},System.Security.Claims.ClaimsPrincipal,System.String)
+  commentId: M:Microsoft.Identity.Web.DownstreamWebApiGenericExtensions.PostForUserAsync``2(Microsoft.Identity.Web.IDownstreamWebApi,System.String,System.String,``1,System.Action{Microsoft.Identity.Web.DownstreamWebApiOptions},System.Security.Claims.ClaimsPrincipal,System.String)
+  name: PostForUserAsync<TOutput,TInput>(IDownstreamWebApi, String, String, TInput, Action<DownstreamWebApiOptions>, ClaimsPrincipal, String)
+  fullName: Microsoft.Identity.Web.DownstreamWebApiGenericExtensions.PostForUserAsync<TOutput,TInput>(IDownstreamWebApi, String, String, TInput, Action<DownstreamWebApiOptions>, ClaimsPrincipal, String)
+  nameWithType: DownstreamWebApiGenericExtensions.PostForUserAsync<TOutput,TInput>(IDownstreamWebApi, String, String, TInput, Action<DownstreamWebApiOptions>, ClaimsPrincipal, String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: 'public static System.Threading.Tasks.Task<TOutput?> PostForUserAsync<TOutput,TInput> (this Microsoft.Identity.Web.IDownstreamWebApi downstreamWebApi, string serviceName, string relativePath, TInput inputData, Action<Microsoft.Identity.Web.DownstreamWebApiOptions>? downstreamWebApiOptionsOverride = default, System.Security.Claims.ClaimsPrincipal? user = default, string? authenticationScheme = default) where TOutput : class;'
+  - lang: fsharp
+    values:
+    - value: "static member PostForUserAsync : Microsoft.Identity.Web.IDownstreamWebApi * string * string * 'Input * Action<Microsoft.Identity.Web.DownstreamWebApiOptions> * System.Security.Claims.ClaimsPrincipal * string -> System.Threading.Tasks.Task<'Output (requires 'Output : null)> (requires 'Output : null)"
+  - lang: vb
+    values:
+    - value: >-
+        <Extension()>
+
+        Public Function PostForUserAsync(Of TOutput As Class, TInput As Class) (downstreamWebApi As IDownstreamWebApi, serviceName As String, relativePath As String, inputData As TInput, Optional downstreamWebApiOptionsOverride As Action(Of DownstreamWebApiOptions) = Nothing, Optional user As ClaimsPrincipal = Nothing, Optional authenticationScheme As String = Nothing) As Task(Of TOutput)
+  monikers:
+  - msal-model-dotnet-latest
+  summary: >-
+    Calls the web API with an HttpPost, providing strongly typed input and getting
+
+    strongly typed output.
+  metadata: {}
+uid: Microsoft.Identity.Web.DownstreamWebApiGenericExtensions.PostForUserAsync*
+commentId: Overload:Microsoft.Identity.Web.DownstreamWebApiGenericExtensions.PostForUserAsync
+namespace: Microsoft.Identity.Web
+name: PostForUserAsync
+fullName: Microsoft.Identity.Web.DownstreamWebApiGenericExtensions.PostForUserAsync
+nameWithType: DownstreamWebApiGenericExtensions.PostForUserAsync
+assembliesWithMoniker:
+- value: Microsoft.Identity.Web.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Web v1.25.10
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-model-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Web.DownstreamWebApiGenericExtensions.PostForUserAsync
+  api_location:
+  - Microsoft.Identity.Web.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Web.DownstreamWebApiGenericExtensions.PostForUserAsync
+  - Microsoft::Identity::Web::DownstreamWebApiGenericExtensions::PostForUserAsync
+  - PostForUserAsync
+  - DownstreamWebApiGenericExtensions.PostForUserAsync
+  - DownstreamWebApiGenericExtensions::PostForUserAsync
+  - Microsoft.Identity.Web.DownstreamWebApiGenericExtensions.PostForUserAsync``2
+  - Microsoft::Identity::Web::DownstreamWebApiGenericExtensions::PostForUserAsync``2
+  - PostForUserAsync``2
+  - DownstreamWebApiGenericExtensions.PostForUserAsync``2
+  - DownstreamWebApiGenericExtensions::PostForUserAsync``2
+  helpviewer_keywords:
+  - DownstreamWebApiGenericExtensions.PostForUserAsync method [.NET]
+  - PostForUserAsync method [.NET], class DownstreamWebApiGenericExtensions
+  - DownstreamWebApiGenericExtensions.PostForUserAsync<TOutput,TInput>(IDownstreamWebApi, String, String, TInput, Action<DownstreamWebApiOptions>, ClaimsPrincipal, String) extension method [.NET]
+  - PostForUserAsync<TOutput,TInput>(IDownstreamWebApi, String, String, TInput, Action<DownstreamWebApiOptions>, ClaimsPrincipal, String) extension method [.NET], class DownstreamWebApiGenericExtensions
+  monikers:
+  - msal-model-dotnet-latest

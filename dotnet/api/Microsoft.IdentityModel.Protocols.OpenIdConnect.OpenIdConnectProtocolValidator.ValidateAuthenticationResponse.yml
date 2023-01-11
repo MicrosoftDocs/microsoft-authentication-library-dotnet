@@ -1,0 +1,75 @@
+### YamlMime:NetMember
+type: method
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: validationContext
+    description: the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectProtocolValidationContext"></xref> that contains expected values.
+    type: <xref href="Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectProtocolValidationContext?alt=Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectProtocolValidationContext&text=OpenIdConnectProtocolValidationContext" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: If 'validationContext' is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: If the response is not spec compliant.
+    type: <xref href="Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectProtocolException?alt=Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectProtocolException&text=OpenIdConnectProtocolException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectProtocolValidator.ValidateAuthenticationResponse(Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectProtocolValidationContext)
+  commentId: M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectProtocolValidator.ValidateAuthenticationResponse(Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectProtocolValidationContext)
+  name: ValidateAuthenticationResponse(OpenIdConnectProtocolValidationContext)
+  fullName: Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectProtocolValidator.ValidateAuthenticationResponse(OpenIdConnectProtocolValidationContext)
+  nameWithType: OpenIdConnectProtocolValidator.ValidateAuthenticationResponse(OpenIdConnectProtocolValidationContext)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public virtual void ValidateAuthenticationResponse (Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectProtocolValidationContext validationContext);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member ValidateAuthenticationResponse : Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectProtocolValidationContext -> unit
+
+        override this.ValidateAuthenticationResponse : Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectProtocolValidationContext -> unit
+  - lang: vb
+    values:
+    - value: Public Overridable Sub ValidateAuthenticationResponse (validationContext As OpenIdConnectProtocolValidationContext)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Validates that an OpenIdConnect Response from 'authorization_endpoint" is valid as per http://openid.net/specs/openid-connect-core-1_0.html
+  remarks: It is assumed that the IdToken had ('aud', 'iss', 'signature', 'lifetime') validated.
+  metadata: {}
+uid: Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectProtocolValidator.ValidateAuthenticationResponse*
+commentId: Overload:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectProtocolValidator.ValidateAuthenticationResponse
+namespace: Microsoft.IdentityModel.Protocols.OpenIdConnect
+name: ValidateAuthenticationResponse
+fullName: Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectProtocolValidator.ValidateAuthenticationResponse
+nameWithType: OpenIdConnectProtocolValidator.ValidateAuthenticationResponse
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Protocols.OpenIdConnect v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectProtocolValidator.ValidateAuthenticationResponse
+  api_location:
+  - Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectProtocolValidator.ValidateAuthenticationResponse
+  - Microsoft::IdentityModel::Protocols::OpenIdConnect::OpenIdConnectProtocolValidator::ValidateAuthenticationResponse
+  - ValidateAuthenticationResponse
+  - OpenIdConnectProtocolValidator.ValidateAuthenticationResponse
+  - OpenIdConnectProtocolValidator::ValidateAuthenticationResponse
+  helpviewer_keywords:
+  - OpenIdConnectProtocolValidator.ValidateAuthenticationResponse method [.NET]
+  - ValidateAuthenticationResponse method [.NET], class OpenIdConnectProtocolValidator
+  - OpenIdConnectProtocolValidator.ValidateAuthenticationResponse(OpenIdConnectProtocolValidationContext) method [.NET]
+  - ValidateAuthenticationResponse(OpenIdConnectProtocolValidationContext) method [.NET], class OpenIdConnectProtocolValidator
+  monikers:
+  - msal-web-dotnet-latest

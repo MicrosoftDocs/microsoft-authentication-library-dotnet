@@ -1,0 +1,88 @@
+### YamlMime:NetMember
+type: constructor
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: accessToken
+    description: Access token.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: expiresOn
+    description: Expiration date/time.
+    type: <xref href="System.DateTimeOffset?alt=System.DateTimeOffset&text=DateTimeOffset" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: tenantId
+    description: Tenant for which the token was acquired.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: idToken
+    description: ID Token, in the case of a token for a user.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: scopes
+    description: Scopes granted by the IdP.
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: correlationId
+    description: Correlation ID of the token acquisition.
+    type: <xref href="System.Guid?alt=System.Guid&text=Guid" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: tokenType
+    description: Token type of the access token (Bearer or Pop).
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: constructor
+  uid: Microsoft.Identity.Abstractions.AcquireTokenResult.#ctor(System.String,System.DateTimeOffset,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Guid,System.String)
+  commentId: M:Microsoft.Identity.Abstractions.AcquireTokenResult.#ctor(System.String,System.DateTimeOffset,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Guid,System.String)
+  name: AcquireTokenResult(String, DateTimeOffset, String, String, IEnumerable<String>, Guid, String)
+  fullName: Microsoft.Identity.Abstractions.AcquireTokenResult.AcquireTokenResult(String, DateTimeOffset, String, String, IEnumerable<String>, Guid, String)
+  nameWithType: AcquireTokenResult.AcquireTokenResult(String, DateTimeOffset, String, String, IEnumerable<String>, Guid, String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public AcquireTokenResult (string accessToken, DateTimeOffset expiresOn, string tenantId, string idToken, System.Collections.Generic.IEnumerable<string> scopes, Guid correlationId, string tokenType);
+  - lang: fsharp
+    values:
+    - value: 'new Microsoft.Identity.Abstractions.AcquireTokenResult : string * DateTimeOffset * string * string * seq<string> * Guid * string -> Microsoft.Identity.Abstractions.AcquireTokenResult'
+  - lang: vb
+    values:
+    - value: Public Sub New (accessToken As String, expiresOn As DateTimeOffset, tenantId As String, idToken As String, scopes As IEnumerable(Of String), correlationId As Guid, tokenType As String)
+  monikers:
+  - msal-model-dotnet-latest
+  summary: Constructor.
+  metadata: {}
+uid: Microsoft.Identity.Abstractions.AcquireTokenResult.#ctor*
+commentId: Overload:Microsoft.Identity.Abstractions.AcquireTokenResult.#ctor
+namespace: Microsoft.Identity.Abstractions
+name: AcquireTokenResult
+fullName: Microsoft.Identity.Abstractions.AcquireTokenResult.AcquireTokenResult
+nameWithType: AcquireTokenResult.AcquireTokenResult
+assembliesWithMoniker:
+- value: Microsoft.Identity.Abstractions.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Abstractions v1.1.0
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-model-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Abstractions.AcquireTokenResult..ctor
+  api_location:
+  - Microsoft.Identity.Abstractions.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Abstractions.AcquireTokenResult.#ctor
+  - Microsoft::Identity::Abstractions::AcquireTokenResult::#ctor
+  - '#ctor'
+  - AcquireTokenResult.#ctor
+  - AcquireTokenResult::#ctor
+  helpviewer_keywords:
+  - AcquireTokenResult class [.NET], constructors
+  - AcquireTokenResult(String, DateTimeOffset, String, String, IEnumerable<String>, Guid, String) class [.NET], constructors
+  monikers:
+  - msal-model-dotnet-latest

@@ -1,0 +1,100 @@
+### YamlMime:NetType
+type: class
+implementsWithMoniker:
+- value: <xref href="Microsoft.Identity.Web.ICertificateLoader?alt=Microsoft.Identity.Web.ICertificateLoader&text=ICertificateLoader" data-throw-if-not-resolved="True"/>
+inheritancesWithMoniker:
+- values:
+  - <xref href="System.Object?alt=System.Object&text=Object" data-throw-if-not-resolved="True"/>
+constructors:
+- uid: Microsoft.Identity.Web.DefaultCertificateLoader.#ctor
+  monikers:
+  - msal-model-dotnet-latest
+methods:
+- uid: Microsoft.Identity.Web.DefaultCertificateLoader.LoadAllCertificates(System.Collections.Generic.IEnumerable{Microsoft.Identity.Web.CertificateDescription})
+  monikers:
+  - msal-model-dotnet-latest
+- uid: Microsoft.Identity.Web.DefaultCertificateLoader.LoadFirstCertificate(System.Collections.Generic.IEnumerable{Microsoft.Identity.Web.CertificateDescription})
+  monikers:
+  - msal-model-dotnet-latest
+- uid: Microsoft.Identity.Web.DefaultCertificateLoader.LoadIfNeeded(Microsoft.Identity.Web.CertificateDescription)
+  monikers:
+  - msal-model-dotnet-latest
+- uid: Microsoft.Identity.Web.DefaultCertificateLoader.ResetCertificates(System.Collections.Generic.IEnumerable{Microsoft.Identity.Web.CertificateDescription})
+  monikers:
+  - msal-model-dotnet-latest
+properties:
+- uid: Microsoft.Identity.Web.DefaultCertificateLoader.UserAssignedManagedIdentityClientId
+  monikers:
+  - msal-model-dotnet-latest
+uid: Microsoft.Identity.Web.DefaultCertificateLoader
+commentId: T:Microsoft.Identity.Web.DefaultCertificateLoader
+namespace: Microsoft.Identity.Web
+name: DefaultCertificateLoader
+fullName: Microsoft.Identity.Web.DefaultCertificateLoader
+nameWithType: Microsoft.Identity.Web.DefaultCertificateLoader
+assembliesWithMoniker:
+- value: Microsoft.Identity.Web.Certificate.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Web.Certificate v1.25.10
+syntaxWithMoniker:
+- lang: csharp
+  values:
+  - value: 'public class DefaultCertificateLoader : Microsoft.Identity.Web.ICertificateLoader'
+- lang: fsharp
+  values:
+  - value: >-
+      type DefaultCertificateLoader = class
+          interface ICertificateLoader
+- lang: vb
+  values:
+  - value: >-
+      Public Class DefaultCertificateLoader
+
+      Implements ICertificateLoader
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-model-dotnet-latest
+summary: >-
+  Certificate Loader.
+
+  Only use when loading a certificate from a daemon application, or an ASP NET app, using MSAL .NET directly.
+
+  For an ASP NET Core app, <strong>Microsoft Identity Web will handle the certificate loading</strong> for you.
+
+  <example>
+
+
+  ```
+
+  IConfidentialClientApplication app;
+
+  ICertificateLoader certificateLoader = new DefaultCertificateLoader();
+      certificateLoader.LoadIfNeeded(config.CertificateDescription);
+
+     app = ConfidentialClientApplicationBuilder.Create(config.ClientId)
+            .WithCertificate(config.CertificateDescription.Certificate)
+            .WithAuthority(new Uri(config.Authority))
+            .Build();
+  ```
+
+  </example>
+metadata:
+  api_name:
+  - Microsoft.Identity.Web.DefaultCertificateLoader
+  api_location:
+  - Microsoft.Identity.Web.Certificate.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Web.DefaultCertificateLoader
+  - Microsoft::Identity::Web::DefaultCertificateLoader
+  - DefaultCertificateLoader
+  helpviewer_keywords:
+  - Microsoft.Identity.Web.DefaultCertificateLoader class [.NET]
+  monikers:
+  - msal-model-dotnet-latest

@@ -1,0 +1,78 @@
+### YamlMime:NetMember
+type: method
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: writer
+    description: A <xref data-throw-if-not-resolved="true" uid="System.Xml.XmlWriter"></xref> to serialize the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml.SamlAttribute"></xref>.
+    type: <xref href="System.Xml.XmlWriter?alt=System.Xml.XmlWriter&text=XmlWriter" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: attribute
+    description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml.SamlAttribute"></xref> to serialize.
+    type: <xref href="Microsoft.IdentityModel.Tokens.Saml.SamlAttribute?alt=Microsoft.IdentityModel.Tokens.Saml.SamlAttribute&text=SamlAttribute" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: if <code data-dev-comment-type="paramref">attribute</code> is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: if any attribute values are null or empty.
+    type: <xref href="Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenWriteException?alt=Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenWriteException&text=SamlSecurityTokenWriteException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.Saml.SamlSerializer.WriteAttribute(System.Xml.XmlWriter,Microsoft.IdentityModel.Tokens.Saml.SamlAttribute)
+  commentId: M:Microsoft.IdentityModel.Tokens.Saml.SamlSerializer.WriteAttribute(System.Xml.XmlWriter,Microsoft.IdentityModel.Tokens.Saml.SamlAttribute)
+  name: WriteAttribute(XmlWriter, SamlAttribute)
+  fullName: Microsoft.IdentityModel.Tokens.Saml.SamlSerializer.WriteAttribute(XmlWriter, SamlAttribute)
+  nameWithType: SamlSerializer.WriteAttribute(XmlWriter, SamlAttribute)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public virtual void WriteAttribute (System.Xml.XmlWriter writer, Microsoft.IdentityModel.Tokens.Saml.SamlAttribute attribute);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member WriteAttribute : System.Xml.XmlWriter * Microsoft.IdentityModel.Tokens.Saml.SamlAttribute -> unit
+
+        override this.WriteAttribute : System.Xml.XmlWriter * Microsoft.IdentityModel.Tokens.Saml.SamlAttribute -> unit
+  - lang: vb
+    values:
+    - value: Public Overridable Sub WriteAttribute (writer As XmlWriter, attribute As SamlAttribute)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Writes the &lt;saml:Attribute&gt; element.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.Saml.SamlSerializer.WriteAttribute*
+commentId: Overload:Microsoft.IdentityModel.Tokens.Saml.SamlSerializer.WriteAttribute
+namespace: Microsoft.IdentityModel.Tokens.Saml
+name: WriteAttribute
+fullName: Microsoft.IdentityModel.Tokens.Saml.SamlSerializer.WriteAttribute
+nameWithType: SamlSerializer.WriteAttribute
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.Saml.SamlSerializer.WriteAttribute
+  api_location:
+  - Microsoft.IdentityModel.Tokens.Saml.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.Saml.SamlSerializer.WriteAttribute
+  - Microsoft::IdentityModel::Tokens::Saml::SamlSerializer::WriteAttribute
+  - WriteAttribute
+  - SamlSerializer.WriteAttribute
+  - SamlSerializer::WriteAttribute
+  helpviewer_keywords:
+  - SamlSerializer.WriteAttribute method [.NET]
+  - WriteAttribute method [.NET], class SamlSerializer
+  - SamlSerializer.WriteAttribute(XmlWriter, SamlAttribute) method [.NET]
+  - WriteAttribute(XmlWriter, SamlAttribute) method [.NET], class SamlSerializer
+  monikers:
+  - msal-web-dotnet-latest

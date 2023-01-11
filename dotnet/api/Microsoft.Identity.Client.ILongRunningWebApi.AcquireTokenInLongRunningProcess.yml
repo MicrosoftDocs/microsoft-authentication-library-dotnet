@@ -1,0 +1,85 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.Identity.Client.AcquireTokenOnBehalfOfParameterBuilder?alt=Microsoft.Identity.Client.AcquireTokenOnBehalfOfParameterBuilder&text=AcquireTokenOnBehalfOfParameterBuilder" data-throw-if-not-resolved="True"/>
+    description: A builder enabling you to add optional parameters before executing the token request
+  parameters:
+  - namesWithMoniker:
+    - value: scopes
+    description: Scopes requested to access a protected API
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: longRunningProcessSessionKey
+    description: Key by which to look up the token in the cache
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: >-
+      is thrown if the token cache does not contain a token
+                 with an OBO cache key that matches the <code data-dev-comment-type="paramref">longRunningProcessSessionKey</code>.
+    type: <xref href="Microsoft.Identity.Client.MsalClientException?alt=Microsoft.Identity.Client.MsalClientException&text=MsalClientException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.ILongRunningWebApi.AcquireTokenInLongRunningProcess(System.Collections.Generic.IEnumerable{System.String},System.String)
+  commentId: M:Microsoft.Identity.Client.ILongRunningWebApi.AcquireTokenInLongRunningProcess(System.Collections.Generic.IEnumerable{System.String},System.String)
+  name: AcquireTokenInLongRunningProcess(IEnumerable<String>, String)
+  fullName: Microsoft.Identity.Client.ILongRunningWebApi.AcquireTokenInLongRunningProcess(IEnumerable<String>, String)
+  nameWithType: ILongRunningWebApi.AcquireTokenInLongRunningProcess(IEnumerable<String>, String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public Microsoft.Identity.Client.AcquireTokenOnBehalfOfParameterBuilder AcquireTokenInLongRunningProcess (System.Collections.Generic.IEnumerable<string> scopes, string longRunningProcessSessionKey);
+  - lang: fsharp
+    values:
+    - value: 'abstract member AcquireTokenInLongRunningProcess : seq<string> * string -> Microsoft.Identity.Client.AcquireTokenOnBehalfOfParameterBuilder'
+  - lang: vb
+    values:
+    - value: Public Function AcquireTokenInLongRunningProcess (scopes As IEnumerable(Of String), longRunningProcessSessionKey As String) As AcquireTokenOnBehalfOfParameterBuilder
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    Retrieves an access token from the cache using the provided cache key that can be used to
+
+    access another downstream protected web API on behalf of a user using the OAuth 2.0 On-Behalf-Of flow.
+
+    See https://aka.ms/msal-net-long-running-obo .
+  remarks: This method is intended to be used in the long running processes inside of web APIs.
+  metadata: {}
+uid: Microsoft.Identity.Client.ILongRunningWebApi.AcquireTokenInLongRunningProcess*
+commentId: Overload:Microsoft.Identity.Client.ILongRunningWebApi.AcquireTokenInLongRunningProcess
+namespace: Microsoft.Identity.Client
+name: AcquireTokenInLongRunningProcess
+fullName: Microsoft.Identity.Client.ILongRunningWebApi.AcquireTokenInLongRunningProcess
+nameWithType: ILongRunningWebApi.AcquireTokenInLongRunningProcess
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.ILongRunningWebApi.AcquireTokenInLongRunningProcess
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.ILongRunningWebApi.AcquireTokenInLongRunningProcess
+  - Microsoft::Identity::Client::ILongRunningWebApi::AcquireTokenInLongRunningProcess
+  - AcquireTokenInLongRunningProcess
+  - ILongRunningWebApi.AcquireTokenInLongRunningProcess
+  - ILongRunningWebApi::AcquireTokenInLongRunningProcess
+  helpviewer_keywords:
+  - ILongRunningWebApi.AcquireTokenInLongRunningProcess method [.NET]
+  - AcquireTokenInLongRunningProcess method [.NET], interface ILongRunningWebApi
+  - ILongRunningWebApi.AcquireTokenInLongRunningProcess(IEnumerable<String>, String) method [.NET]
+  - AcquireTokenInLongRunningProcess(IEnumerable<String>, String) method [.NET], interface ILongRunningWebApi
+  monikers:
+  - msal-dotnet-latest

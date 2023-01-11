@@ -1,0 +1,74 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: T
+    description: The builder to chain the .With methods.
+  parameters:
+  - namesWithMoniker:
+    - value: correlationId
+    description: Correlation id of the authentication request.
+    type: <xref href="System.Guid?alt=System.Guid&text=Guid" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithCorrelationId(System.Guid)
+  commentId: M:Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithCorrelationId(System.Guid)
+  name: WithCorrelationId(Guid)
+  fullName: Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder<T>.WithCorrelationId(Guid)
+  nameWithType: AbstractAcquireTokenParameterBuilder<T>.WithCorrelationId(Guid)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public T WithCorrelationId (Guid correlationId);
+  - lang: fsharp
+    values:
+    - value: "member this.WithCorrelationId : Guid -> 'T"
+  - lang: vb
+    values:
+    - value: Public Function WithCorrelationId (correlationId As Guid) As T
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    Sets the correlation id to be used in the authentication request. Used to track a request in the logs of both the SDK and the Identity Provider service.
+
+    If not set, a random one will be generated.
+  metadata: {}
+uid: Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithCorrelationId*
+commentId: Overload:Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithCorrelationId
+namespace: Microsoft.Identity.Client
+name: WithCorrelationId
+fullName: Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder<T>.WithCorrelationId
+nameWithType: AbstractAcquireTokenParameterBuilder<T>.WithCorrelationId
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithCorrelationId
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithCorrelationId
+  - Microsoft::Identity::Client::AbstractAcquireTokenParameterBuilder`1::WithCorrelationId
+  - Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder.WithCorrelationId
+  - WithCorrelationId
+  - AbstractAcquireTokenParameterBuilder`1.WithCorrelationId
+  - AbstractAcquireTokenParameterBuilder`1::WithCorrelationId
+  helpviewer_keywords:
+  - AbstractAcquireTokenParameterBuilder<T>.WithCorrelationId method [.NET]
+  - WithCorrelationId method [.NET], class AbstractAcquireTokenParameterBuilder<T>
+  - AbstractAcquireTokenParameterBuilder<T>.WithCorrelationId(Guid) method [.NET]
+  - WithCorrelationId(Guid) method [.NET], class AbstractAcquireTokenParameterBuilder<T>
+  monikers:
+  - msal-dotnet-latest

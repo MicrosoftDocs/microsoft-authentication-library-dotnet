@@ -1,0 +1,83 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Security.Cryptography.HashAlgorithmName?alt=System.Security.Cryptography.HashAlgorithmName&text=HashAlgorithmName" data-throw-if-not-resolved="True"/>
+    description: The <xref data-throw-if-not-resolved="true" uid="System.Security.Cryptography.HashAlgorithmName"></xref> to use.
+  parameters:
+  - namesWithMoniker:
+    - value: algorithm
+    description: The SignatureAlgorithm in use.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: if <code data-dev-comment-type="paramref">algorithm</code> is null or whitespace.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: if <code data-dev-comment-type="paramref">algorithm</code> is not supported.
+    type: <xref href="System.ArgumentOutOfRangeException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.AsymmetricSignatureProvider.GetHashAlgorithmName(System.String)
+  commentId: M:Microsoft.IdentityModel.Tokens.AsymmetricSignatureProvider.GetHashAlgorithmName(System.String)
+  name: GetHashAlgorithmName(String)
+  fullName: Microsoft.IdentityModel.Tokens.AsymmetricSignatureProvider.GetHashAlgorithmName(String)
+  nameWithType: AsymmetricSignatureProvider.GetHashAlgorithmName(String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected virtual System.Security.Cryptography.HashAlgorithmName GetHashAlgorithmName (string algorithm);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member GetHashAlgorithmName : string -> System.Security.Cryptography.HashAlgorithmName
+
+        override this.GetHashAlgorithmName : string -> System.Security.Cryptography.HashAlgorithmName
+  - lang: vb
+    values:
+    - value: Protected Overridable Function GetHashAlgorithmName (algorithm As String) As HashAlgorithmName
+  monikers:
+  - msal-web-dotnet-latest
+  summary: >-
+    Creating a Signature requires the use of a <xref data-throw-if-not-resolved="true" uid="System.Security.Cryptography.HashAlgorithm"></xref>.
+
+    This method returns the <xref data-throw-if-not-resolved="true" uid="System.Security.Cryptography.HashAlgorithmName"></xref>
+
+    that describes the <xref data-throw-if-not-resolved="true" uid="System.Security.Cryptography.HashAlgorithm"></xref>to use when generating a Signature.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.AsymmetricSignatureProvider.GetHashAlgorithmName*
+commentId: Overload:Microsoft.IdentityModel.Tokens.AsymmetricSignatureProvider.GetHashAlgorithmName
+namespace: Microsoft.IdentityModel.Tokens
+name: GetHashAlgorithmName
+fullName: Microsoft.IdentityModel.Tokens.AsymmetricSignatureProvider.GetHashAlgorithmName
+nameWithType: AsymmetricSignatureProvider.GetHashAlgorithmName
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.AsymmetricSignatureProvider.GetHashAlgorithmName
+  api_location:
+  - Microsoft.IdentityModel.Tokens.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.AsymmetricSignatureProvider.GetHashAlgorithmName
+  - Microsoft::IdentityModel::Tokens::AsymmetricSignatureProvider::GetHashAlgorithmName
+  - GetHashAlgorithmName
+  - AsymmetricSignatureProvider.GetHashAlgorithmName
+  - AsymmetricSignatureProvider::GetHashAlgorithmName
+  helpviewer_keywords:
+  - AsymmetricSignatureProvider.GetHashAlgorithmName method [.NET]
+  - GetHashAlgorithmName method [.NET], class AsymmetricSignatureProvider
+  - AsymmetricSignatureProvider.GetHashAlgorithmName(String) method [.NET]
+  - GetHashAlgorithmName(String) method [.NET], class AsymmetricSignatureProvider
+  monikers:
+  - msal-web-dotnet-latest

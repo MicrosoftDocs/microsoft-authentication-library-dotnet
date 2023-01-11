@@ -1,0 +1,72 @@
+### YamlMime:NetMember
+type: property
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.IdentityModel.Tokens.TypeValidator?alt=Microsoft.IdentityModel.Tokens.TypeValidator&text=TypeValidator" data-throw-if-not-resolved="True"/>
+  type: property
+  uid: Microsoft.IdentityModel.Tokens.TokenValidationParameters.TypeValidator
+  commentId: P:Microsoft.IdentityModel.Tokens.TokenValidationParameters.TypeValidator
+  name: TypeValidator
+  fullName: Microsoft.IdentityModel.Tokens.TokenValidationParameters.TypeValidator
+  nameWithType: TokenValidationParameters.TypeValidator
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public Microsoft.IdentityModel.Tokens.TypeValidator TypeValidator { get; set; }
+  - lang: fsharp
+    values:
+    - value: 'member this.TypeValidator : Microsoft.IdentityModel.Tokens.TypeValidator with get, set'
+  - lang: vb
+    values:
+    - value: Public Property TypeValidator As TypeValidator
+  monikers:
+  - msal-web-dotnet-latest
+  summary: >-
+    Gets or sets a delegate that will be used to validate the type of the token.
+
+    If the token type cannot be validated, an exception MUST be thrown by the delegate.
+
+    Note: the 'type' parameter may be null if it couldn't be extracted from its usual location.
+
+    Implementations that need to resolve it from a different location can use the 'token' parameter.
+  remarks: <p>If set, this delegate will be called to validate the 'type' of the token, instead of default processing. This means that no default 'type' validation will occur.</p>
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.TokenValidationParameters.TypeValidator*
+commentId: Overload:Microsoft.IdentityModel.Tokens.TokenValidationParameters.TypeValidator
+namespace: Microsoft.IdentityModel.Tokens
+name: TypeValidator
+fullName: Microsoft.IdentityModel.Tokens.TokenValidationParameters.TypeValidator
+nameWithType: TokenValidationParameters.TypeValidator
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.TokenValidationParameters.TypeValidator
+  - Microsoft.IdentityModel.Tokens.TokenValidationParameters.get_TypeValidator
+  - Microsoft.IdentityModel.Tokens.TokenValidationParameters.set_TypeValidator
+  api_location:
+  - Microsoft.IdentityModel.Tokens.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.TokenValidationParameters.TypeValidator
+  - Microsoft::IdentityModel::Tokens::TokenValidationParameters::TypeValidator
+  - TypeValidator
+  - TokenValidationParameters.TypeValidator
+  - TokenValidationParameters::TypeValidator
+  helpviewer_keywords:
+  - TokenValidationParameters.TypeValidator property [.NET]
+  - TypeValidator property [.NET], class TokenValidationParameters
+  monikers:
+  - msal-web-dotnet-latest

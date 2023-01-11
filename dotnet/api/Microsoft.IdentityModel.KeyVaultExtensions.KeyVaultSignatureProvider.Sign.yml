@@ -1,0 +1,75 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Byte?alt=System.Byte&text=Byte" data-throw-if-not-resolved="True"/>[]
+    description: A signature over the input.
+  parameters:
+  - namesWithMoniker:
+    - value: input
+    description: The bytes to sign.
+    type: <xref href="System.Byte?alt=System.Byte&text=Byte" data-throw-if-not-resolved="True"/>[]
+  exceptions:
+  - description: if <code data-dev-comment-type="paramref">input</code>.Length == 0.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: If Dispose has been called.
+    type: <xref href="System.ObjectDisposedException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSignatureProvider.Sign(System.Byte[])
+  commentId: M:Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSignatureProvider.Sign(System.Byte[])
+  name: Sign(Byte[])
+  fullName: Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSignatureProvider.Sign(Byte[])
+  nameWithType: KeyVaultSignatureProvider.Sign(Byte[])
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public override byte[] Sign (byte[] input);
+  - lang: fsharp
+    values:
+    - value: 'override this.Sign : byte[] -> byte[]'
+  - lang: vb
+    values:
+    - value: Public Overrides Function Sign (input As Byte()) As Byte()
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Produces a signature over the 'input' using Azure Key Vault.
+  metadata: {}
+uid: Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSignatureProvider.Sign*
+commentId: Overload:Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSignatureProvider.Sign
+namespace: Microsoft.IdentityModel.KeyVaultExtensions
+name: Sign
+fullName: Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSignatureProvider.Sign
+nameWithType: KeyVaultSignatureProvider.Sign
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.KeyVaultExtensions.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.KeyVaultExtensions v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSignatureProvider.Sign
+  api_location:
+  - Microsoft.IdentityModel.KeyVaultExtensions.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSignatureProvider.Sign
+  - Microsoft::IdentityModel::KeyVaultExtensions::KeyVaultSignatureProvider::Sign
+  - Sign
+  - KeyVaultSignatureProvider.Sign
+  - KeyVaultSignatureProvider::Sign
+  helpviewer_keywords:
+  - KeyVaultSignatureProvider.Sign method [.NET]
+  - Sign method [.NET], class KeyVaultSignatureProvider
+  - KeyVaultSignatureProvider.Sign(Byte[]) method [.NET]
+  - Sign(Byte[]) method [.NET], class KeyVaultSignatureProvider
+  monikers:
+  - msal-web-dotnet-latest

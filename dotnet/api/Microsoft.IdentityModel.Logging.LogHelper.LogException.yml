@@ -1,0 +1,352 @@
+### YamlMime:NetMember
+type: method
+members:
+- typeParameters:
+  - name: T
+  returnsWithMoniker:
+    type:
+    - value: T
+  parameters:
+  - namesWithMoniker:
+    - value: eventLevel
+    description: Identifies the level of an event to be logged.
+    type: <xref href="System.Diagnostics.Tracing.EventLevel?alt=System.Diagnostics.Tracing.EventLevel&text=EventLevel" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: innerException
+    description: the inner <xref data-throw-if-not-resolved="true" uid="System.Exception"></xref> to be added to the outer exception.
+    type: <xref href="System.Exception?alt=System.Exception&text=Exception" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: format
+    description: Format string of the log message.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: args
+    description: An object array that contains zero or more objects to format.
+    type: <xref href="System.Object?alt=System.Object&text=Object" data-throw-if-not-resolved="True"/>[]
+  type: method
+  uid: Microsoft.IdentityModel.Logging.LogHelper.LogException``1(System.Diagnostics.Tracing.EventLevel,System.Exception,System.String,System.Object[])
+  commentId: M:Microsoft.IdentityModel.Logging.LogHelper.LogException``1(System.Diagnostics.Tracing.EventLevel,System.Exception,System.String,System.Object[])
+  name: LogException<T>(EventLevel, Exception, String, Object[])
+  fullName: Microsoft.IdentityModel.Logging.LogHelper.LogException<T>(EventLevel, Exception, String, Object[])
+  nameWithType: LogHelper.LogException<T>(EventLevel, Exception, String, Object[])
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: 'public static T LogException<T> (System.Diagnostics.Tracing.EventLevel eventLevel, Exception innerException, string format, params object[] args) where T : Exception;'
+  - lang: fsharp
+    values:
+    - value: "static member LogException : System.Diagnostics.Tracing.EventLevel * Exception * string * obj[] -> 'T (requires 'T :> Exception)"
+  - lang: vb
+    values:
+    - value: Public Shared Function LogException(Of T As Exception) (eventLevel As EventLevel, innerException As Exception, format As String, ParamArray args As Object()) As T
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Logs an exception using the event source logger and returns new typed exception.
+  metadata: {}
+- typeParameters:
+  - name: T
+  returnsWithMoniker:
+    type:
+    - value: T
+  parameters:
+  - namesWithMoniker:
+    - value: innerException
+    description: the inner <xref data-throw-if-not-resolved="true" uid="System.Exception"></xref> to be added to the outer exception.
+    type: <xref href="System.Exception?alt=System.Exception&text=Exception" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: format
+    description: Format string of the log message.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: args
+    description: An object array that contains zero or more objects to format.
+    type: <xref href="System.Object?alt=System.Object&text=Object" data-throw-if-not-resolved="True"/>[]
+  type: method
+  uid: Microsoft.IdentityModel.Logging.LogHelper.LogException``1(System.Exception,System.String,System.Object[])
+  commentId: M:Microsoft.IdentityModel.Logging.LogHelper.LogException``1(System.Exception,System.String,System.Object[])
+  name: LogException<T>(Exception, String, Object[])
+  fullName: Microsoft.IdentityModel.Logging.LogHelper.LogException<T>(Exception, String, Object[])
+  nameWithType: LogHelper.LogException<T>(Exception, String, Object[])
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: 'public static T LogException<T> (Exception innerException, string format, params object[] args) where T : Exception;'
+  - lang: fsharp
+    values:
+    - value: "static member LogException : Exception * string * obj[] -> 'T (requires 'T :> Exception)"
+  - lang: vb
+    values:
+    - value: Public Shared Function LogException(Of T As Exception) (innerException As Exception, format As String, ParamArray args As Object()) As T
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Logs an exception using the event source logger and returns new typed exception.
+  remarks: EventLevel is set to Error.
+  metadata: {}
+- typeParameters:
+  - name: T
+  returnsWithMoniker:
+    type:
+    - value: T
+  parameters:
+  - namesWithMoniker:
+    - value: eventLevel
+    description: Identifies the level of an event to be logged.
+    type: <xref href="System.Diagnostics.Tracing.EventLevel?alt=System.Diagnostics.Tracing.EventLevel&text=EventLevel" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: format
+    description: Format string of the log message.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: args
+    description: An object array that contains zero or more objects to format.
+    type: <xref href="System.Object?alt=System.Object&text=Object" data-throw-if-not-resolved="True"/>[]
+  type: method
+  uid: Microsoft.IdentityModel.Logging.LogHelper.LogException``1(System.Diagnostics.Tracing.EventLevel,System.String,System.Object[])
+  commentId: M:Microsoft.IdentityModel.Logging.LogHelper.LogException``1(System.Diagnostics.Tracing.EventLevel,System.String,System.Object[])
+  name: LogException<T>(EventLevel, String, Object[])
+  fullName: Microsoft.IdentityModel.Logging.LogHelper.LogException<T>(EventLevel, String, Object[])
+  nameWithType: LogHelper.LogException<T>(EventLevel, String, Object[])
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: 'public static T LogException<T> (System.Diagnostics.Tracing.EventLevel eventLevel, string format, params object[] args) where T : Exception;'
+  - lang: fsharp
+    values:
+    - value: "static member LogException : System.Diagnostics.Tracing.EventLevel * string * obj[] -> 'T (requires 'T :> Exception)"
+  - lang: vb
+    values:
+    - value: Public Shared Function LogException(Of T As Exception) (eventLevel As EventLevel, format As String, ParamArray args As Object()) As T
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Logs an exception using the event source logger and returns new typed exception.
+  metadata: {}
+- typeParameters:
+  - name: T
+  returnsWithMoniker:
+    type:
+    - value: T
+  parameters:
+  - namesWithMoniker:
+    - value: eventLevel
+    description: Identifies the level of an event to be logged.
+    type: <xref href="System.Diagnostics.Tracing.EventLevel?alt=System.Diagnostics.Tracing.EventLevel&text=EventLevel" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: innerException
+    description: the inner <xref data-throw-if-not-resolved="true" uid="System.Exception"></xref> to be added to the outer exception.
+    type: <xref href="System.Exception?alt=System.Exception&text=Exception" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: message
+    description: message to log.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Logging.LogHelper.LogException``1(System.Diagnostics.Tracing.EventLevel,System.Exception,System.String)
+  commentId: M:Microsoft.IdentityModel.Logging.LogHelper.LogException``1(System.Diagnostics.Tracing.EventLevel,System.Exception,System.String)
+  name: LogException<T>(EventLevel, Exception, String)
+  fullName: Microsoft.IdentityModel.Logging.LogHelper.LogException<T>(EventLevel, Exception, String)
+  nameWithType: LogHelper.LogException<T>(EventLevel, Exception, String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: 'public static T LogException<T> (System.Diagnostics.Tracing.EventLevel eventLevel, Exception innerException, string message) where T : Exception;'
+  - lang: fsharp
+    values:
+    - value: "static member LogException : System.Diagnostics.Tracing.EventLevel * Exception * string -> 'T (requires 'T :> Exception)"
+  - lang: vb
+    values:
+    - value: Public Shared Function LogException(Of T As Exception) (eventLevel As EventLevel, innerException As Exception, message As String) As T
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Logs an exception using the event source logger and returns new typed exception.
+  metadata: {}
+- typeParameters:
+  - name: T
+  returnsWithMoniker:
+    type:
+    - value: T
+  parameters:
+  - namesWithMoniker:
+    - value: eventLevel
+    description: Identifies the level of an event to be logged.
+    type: <xref href="System.Diagnostics.Tracing.EventLevel?alt=System.Diagnostics.Tracing.EventLevel&text=EventLevel" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: message
+    description: message to log.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Logging.LogHelper.LogException``1(System.Diagnostics.Tracing.EventLevel,System.String)
+  commentId: M:Microsoft.IdentityModel.Logging.LogHelper.LogException``1(System.Diagnostics.Tracing.EventLevel,System.String)
+  name: LogException<T>(EventLevel, String)
+  fullName: Microsoft.IdentityModel.Logging.LogHelper.LogException<T>(EventLevel, String)
+  nameWithType: LogHelper.LogException<T>(EventLevel, String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: 'public static T LogException<T> (System.Diagnostics.Tracing.EventLevel eventLevel, string message) where T : Exception;'
+  - lang: fsharp
+    values:
+    - value: "static member LogException : System.Diagnostics.Tracing.EventLevel * string -> 'T (requires 'T :> Exception)"
+  - lang: vb
+    values:
+    - value: Public Shared Function LogException(Of T As Exception) (eventLevel As EventLevel, message As String) As T
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Logs an exception using the event source logger and returns new typed exception.
+  metadata: {}
+- typeParameters:
+  - name: T
+  returnsWithMoniker:
+    type:
+    - value: T
+  parameters:
+  - namesWithMoniker:
+    - value: innerException
+    description: the inner <xref data-throw-if-not-resolved="true" uid="System.Exception"></xref> to be added to the outer exception.
+    type: <xref href="System.Exception?alt=System.Exception&text=Exception" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: message
+    description: message to log.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Logging.LogHelper.LogException``1(System.Exception,System.String)
+  commentId: M:Microsoft.IdentityModel.Logging.LogHelper.LogException``1(System.Exception,System.String)
+  name: LogException<T>(Exception, String)
+  fullName: Microsoft.IdentityModel.Logging.LogHelper.LogException<T>(Exception, String)
+  nameWithType: LogHelper.LogException<T>(Exception, String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: 'public static T LogException<T> (Exception innerException, string message) where T : Exception;'
+  - lang: fsharp
+    values:
+    - value: "static member LogException : Exception * string -> 'T (requires 'T :> Exception)"
+  - lang: vb
+    values:
+    - value: Public Shared Function LogException(Of T As Exception) (innerException As Exception, message As String) As T
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Logs an exception using the event source logger and returns new typed exception.
+  remarks: EventLevel is set to Error.
+  metadata: {}
+- typeParameters:
+  - name: T
+  returnsWithMoniker:
+    type:
+    - value: T
+  parameters:
+  - namesWithMoniker:
+    - value: message
+    description: message to log.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Logging.LogHelper.LogException``1(System.String)
+  commentId: M:Microsoft.IdentityModel.Logging.LogHelper.LogException``1(System.String)
+  name: LogException<T>(String)
+  fullName: Microsoft.IdentityModel.Logging.LogHelper.LogException<T>(String)
+  nameWithType: LogHelper.LogException<T>(String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: 'public static T LogException<T> (string message) where T : Exception;'
+  - lang: fsharp
+    values:
+    - value: "static member LogException : string -> 'T (requires 'T :> Exception)"
+  - lang: vb
+    values:
+    - value: Public Shared Function LogException(Of T As Exception) (message As String) As T
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Logs an exception using the event source logger and returns new typed exception.
+  remarks: EventLevel is set to Error.
+  metadata: {}
+- typeParameters:
+  - name: T
+  returnsWithMoniker:
+    type:
+    - value: T
+  parameters:
+  - namesWithMoniker:
+    - value: format
+    description: Format string of the log message.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: args
+    description: An object array that contains zero or more objects to format.
+    type: <xref href="System.Object?alt=System.Object&text=Object" data-throw-if-not-resolved="True"/>[]
+  type: method
+  uid: Microsoft.IdentityModel.Logging.LogHelper.LogException``1(System.String,System.Object[])
+  commentId: M:Microsoft.IdentityModel.Logging.LogHelper.LogException``1(System.String,System.Object[])
+  name: LogException<T>(String, Object[])
+  fullName: Microsoft.IdentityModel.Logging.LogHelper.LogException<T>(String, Object[])
+  nameWithType: LogHelper.LogException<T>(String, Object[])
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: 'public static T LogException<T> (string format, params object[] args) where T : Exception;'
+  - lang: fsharp
+    values:
+    - value: "static member LogException : string * obj[] -> 'T (requires 'T :> Exception)"
+  - lang: vb
+    values:
+    - value: Public Shared Function LogException(Of T As Exception) (format As String, ParamArray args As Object()) As T
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Logs an exception using the event source logger and returns new typed exception.
+  remarks: EventLevel is set to Error.
+  metadata: {}
+uid: Microsoft.IdentityModel.Logging.LogHelper.LogException*
+commentId: Overload:Microsoft.IdentityModel.Logging.LogHelper.LogException
+namespace: Microsoft.IdentityModel.Logging
+name: LogException
+fullName: Microsoft.IdentityModel.Logging.LogHelper.LogException
+nameWithType: LogHelper.LogException
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Logging.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Logging v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Logging.LogHelper.LogException
+  api_location:
+  - Microsoft.IdentityModel.Logging.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Logging.LogHelper.LogException
+  - Microsoft::IdentityModel::Logging::LogHelper::LogException
+  - LogException
+  - LogHelper.LogException
+  - LogHelper::LogException
+  - Microsoft.IdentityModel.Logging.LogHelper.LogException``1
+  - Microsoft::IdentityModel::Logging::LogHelper::LogException``1
+  - LogException``1
+  - LogHelper.LogException``1
+  - LogHelper::LogException``1
+  helpviewer_keywords:
+  - LogHelper.LogException method [.NET]
+  - LogException method [.NET], class LogHelper
+  - LogHelper.LogException<T>(EventLevel, Exception, String, Object[]) method [.NET]
+  - LogException<T>(EventLevel, Exception, String, Object[]) method [.NET], class LogHelper
+  - LogHelper.LogException<T>(Exception, String, Object[]) method [.NET]
+  - LogException<T>(Exception, String, Object[]) method [.NET], class LogHelper
+  - LogHelper.LogException<T>(EventLevel, String, Object[]) method [.NET]
+  - LogException<T>(EventLevel, String, Object[]) method [.NET], class LogHelper
+  - LogHelper.LogException<T>(EventLevel, Exception, String) method [.NET]
+  - LogException<T>(EventLevel, Exception, String) method [.NET], class LogHelper
+  - LogHelper.LogException<T>(EventLevel, String) method [.NET]
+  - LogException<T>(EventLevel, String) method [.NET], class LogHelper
+  - LogHelper.LogException<T>(Exception, String) method [.NET]
+  - LogException<T>(Exception, String) method [.NET], class LogHelper
+  - LogHelper.LogException<T>(String) method [.NET]
+  - LogException<T>(String) method [.NET], class LogHelper
+  - LogHelper.LogException<T>(String, Object[]) method [.NET]
+  - LogException<T>(String, Object[]) method [.NET], class LogHelper
+  monikers:
+  - msal-web-dotnet-latest

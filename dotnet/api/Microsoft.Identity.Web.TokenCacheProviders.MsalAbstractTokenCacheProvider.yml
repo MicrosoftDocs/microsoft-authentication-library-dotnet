@@ -1,0 +1,101 @@
+### YamlMime:NetType
+type: class
+implementsWithMoniker:
+- value: <xref href="Microsoft.Identity.Web.TokenCacheProviders.IMsalTokenCacheProvider?alt=Microsoft.Identity.Web.TokenCacheProviders.IMsalTokenCacheProvider&text=IMsalTokenCacheProvider" data-throw-if-not-resolved="True"/>
+inheritancesWithMoniker:
+- values:
+  - <xref href="System.Object?alt=System.Object&text=Object" data-throw-if-not-resolved="True"/>
+derivedClassesWithMoniker:
+- value: Microsoft.Identity.Web.TokenCacheProviders.Distributed.MsalDistributedTokenCacheAdapter
+- value: Microsoft.Identity.Web.TokenCacheProviders.InMemory.MsalMemoryTokenCacheProvider
+- value: Microsoft.Identity.Web.TokenCacheProviders.Session.MsalSessionTokenCacheProvider
+constructors:
+- uid: Microsoft.Identity.Web.TokenCacheProviders.MsalAbstractTokenCacheProvider.#ctor(Microsoft.AspNetCore.DataProtection.IDataProtector,Microsoft.Extensions.Logging.ILogger{Microsoft.Identity.Web.TokenCacheProviders.MsalAbstractTokenCacheProvider})
+  monikers:
+  - msal-model-dotnet-latest
+- uid: Microsoft.Identity.Web.TokenCacheProviders.MsalAbstractTokenCacheProvider.#ctor(Microsoft.AspNetCore.DataProtection.IDataProtector)
+  monikers:
+  - msal-model-dotnet-latest
+methods:
+- uid: Microsoft.Identity.Web.TokenCacheProviders.MsalAbstractTokenCacheProvider.ClearAsync(System.String)
+  monikers:
+  - msal-model-dotnet-latest
+- uid: Microsoft.Identity.Web.TokenCacheProviders.MsalAbstractTokenCacheProvider.Initialize(Microsoft.Identity.Client.ITokenCache)
+  monikers:
+  - msal-model-dotnet-latest
+- uid: Microsoft.Identity.Web.TokenCacheProviders.MsalAbstractTokenCacheProvider.InitializeAsync(Microsoft.Identity.Client.ITokenCache)
+  monikers:
+  - msal-model-dotnet-latest
+- uid: Microsoft.Identity.Web.TokenCacheProviders.MsalAbstractTokenCacheProvider.OnBeforeWriteAsync(Microsoft.Identity.Client.TokenCacheNotificationArgs)
+  monikers:
+  - msal-model-dotnet-latest
+- uid: Microsoft.Identity.Web.TokenCacheProviders.MsalAbstractTokenCacheProvider.ReadCacheBytesAsync(System.String,Microsoft.Identity.Web.TokenCacheProviders.CacheSerializerHints)
+  monikers:
+  - msal-model-dotnet-latest
+- uid: Microsoft.Identity.Web.TokenCacheProviders.MsalAbstractTokenCacheProvider.ReadCacheBytesAsync(System.String)
+  monikers:
+  - msal-model-dotnet-latest
+- uid: Microsoft.Identity.Web.TokenCacheProviders.MsalAbstractTokenCacheProvider.RemoveKeyAsync(System.String,Microsoft.Identity.Web.TokenCacheProviders.CacheSerializerHints)
+  monikers:
+  - msal-model-dotnet-latest
+- uid: Microsoft.Identity.Web.TokenCacheProviders.MsalAbstractTokenCacheProvider.RemoveKeyAsync(System.String)
+  monikers:
+  - msal-model-dotnet-latest
+- uid: Microsoft.Identity.Web.TokenCacheProviders.MsalAbstractTokenCacheProvider.WriteCacheBytesAsync(System.String,System.Byte[],Microsoft.Identity.Web.TokenCacheProviders.CacheSerializerHints)
+  monikers:
+  - msal-model-dotnet-latest
+- uid: Microsoft.Identity.Web.TokenCacheProviders.MsalAbstractTokenCacheProvider.WriteCacheBytesAsync(System.String,System.Byte[])
+  monikers:
+  - msal-model-dotnet-latest
+uid: Microsoft.Identity.Web.TokenCacheProviders.MsalAbstractTokenCacheProvider
+commentId: T:Microsoft.Identity.Web.TokenCacheProviders.MsalAbstractTokenCacheProvider
+namespace: Microsoft.Identity.Web.TokenCacheProviders
+name: MsalAbstractTokenCacheProvider
+fullName: Microsoft.Identity.Web.TokenCacheProviders.MsalAbstractTokenCacheProvider
+nameWithType: Microsoft.Identity.Web.TokenCacheProviders.MsalAbstractTokenCacheProvider
+assembliesWithMoniker:
+- value: Microsoft.Identity.Web.TokenCache.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Web.TokenCache v1.25.10
+syntaxWithMoniker:
+- lang: csharp
+  values:
+  - value: 'public abstract class MsalAbstractTokenCacheProvider : Microsoft.Identity.Web.TokenCacheProviders.IMsalTokenCacheProvider'
+- lang: fsharp
+  values:
+  - value: >-
+      type MsalAbstractTokenCacheProvider = class
+          interface IMsalTokenCacheProvider
+- lang: vb
+  values:
+  - value: >-
+      Public MustInherit Class MsalAbstractTokenCacheProvider
+
+      Implements IMsalTokenCacheProvider
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-model-dotnet-latest
+seeAlso: >+
+  - <xref:Microsoft.Identity.Web.TokenCacheProviders.IMsalTokenCacheProvider>
+
+summary: Token cache provider with default implementation.
+metadata:
+  api_name:
+  - Microsoft.Identity.Web.TokenCacheProviders.MsalAbstractTokenCacheProvider
+  api_location:
+  - Microsoft.Identity.Web.TokenCache.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Web.TokenCacheProviders.MsalAbstractTokenCacheProvider
+  - Microsoft::Identity::Web::TokenCacheProviders::MsalAbstractTokenCacheProvider
+  - MsalAbstractTokenCacheProvider
+  helpviewer_keywords:
+  - Microsoft.Identity.Web.TokenCacheProviders.MsalAbstractTokenCacheProvider class [.NET]
+  monikers:
+  - msal-model-dotnet-latest

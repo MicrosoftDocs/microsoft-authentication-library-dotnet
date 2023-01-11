@@ -1,0 +1,205 @@
+### YamlMime:NetMember
+type: constructor
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: accessToken
+    description: Access Token that can be used as a bearer token to access protected web APIs
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: isExtendedLifeTimeToken
+    description: See <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.AuthenticationResult.IsExtendedLifeTimeToken"></xref>
+    type: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: uniqueId
+    description: Unique Id of the account. It can be null. When the <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.AuthenticationResult.IdToken"></xref> is not <code data-dev-comment-type="c">null</code>, this is its ID, that is its ObjectId claim, or if that claim is <code data-dev-comment-type="c">null</code>, the Subject claim.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: expiresOn
+    description: Expiry date-time for the access token
+    type: <xref href="System.DateTimeOffset?alt=System.DateTimeOffset&text=DateTimeOffset" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: extendedExpiresOn
+    description: See <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.AuthenticationResult.ExtendedExpiresOn"></xref>
+    type: <xref href="System.DateTimeOffset?alt=System.DateTimeOffset&text=DateTimeOffset" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: tenantId
+    description: Identifier for the Azure AD tenant from which the token was acquired. Can be <code data-dev-comment-type="c">null</code>
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: account
+    description: Account information
+    type: <xref href="Microsoft.Identity.Client.IAccount?alt=Microsoft.Identity.Client.IAccount&text=IAccount" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: idToken
+    description: ID token
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: scopes
+    description: Granted scope values as returned by the service
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: correlationId
+    description: The correlation id of the authentication request
+    type: <xref href="System.Guid?alt=System.Guid&text=Guid" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: authenticationResultMetadata
+    description: Contains metadata related to the Authentication Result.
+    type: <xref href="Microsoft.Identity.Client.AuthenticationResultMetadata?alt=Microsoft.Identity.Client.AuthenticationResultMetadata&text=AuthenticationResultMetadata" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: tokenType
+    description: 'The token type, defaults to Bearer. Note: this property is experimental and may change in future versions of the library.'
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: constructor
+  uid: Microsoft.Identity.Client.AuthenticationResult.#ctor(System.String,System.Boolean,System.String,System.DateTimeOffset,System.DateTimeOffset,System.String,Microsoft.Identity.Client.IAccount,System.String,System.Collections.Generic.IEnumerable{System.String},System.Guid,Microsoft.Identity.Client.AuthenticationResultMetadata,System.String)
+  commentId: M:Microsoft.Identity.Client.AuthenticationResult.#ctor(System.String,System.Boolean,System.String,System.DateTimeOffset,System.DateTimeOffset,System.String,Microsoft.Identity.Client.IAccount,System.String,System.Collections.Generic.IEnumerable{System.String},System.Guid,Microsoft.Identity.Client.AuthenticationResultMetadata,System.String)
+  name: >-
+    AuthenticationResult(String, Boolean, String, DateTimeOffset,
+
+     DateTimeOffset, String, IAccount, String, IEnumerable<String>,
+
+     Guid, AuthenticationResultMetadata, String)
+  fullName: Microsoft.Identity.Client.AuthenticationResult.AuthenticationResult(String, Boolean, String, DateTimeOffset, DateTimeOffset, String, IAccount, String, IEnumerable<String>, Guid, AuthenticationResultMetadata, String)
+  nameWithType: AuthenticationResult.AuthenticationResult(String, Boolean, String, DateTimeOffset, DateTimeOffset, String, IAccount, String, IEnumerable<String>, Guid, AuthenticationResultMetadata, String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public AuthenticationResult (string accessToken, bool isExtendedLifeTimeToken, string uniqueId, DateTimeOffset expiresOn, DateTimeOffset extendedExpiresOn, string tenantId, Microsoft.Identity.Client.IAccount account, string idToken, System.Collections.Generic.IEnumerable<string> scopes, Guid correlationId, Microsoft.Identity.Client.AuthenticationResultMetadata authenticationResultMetadata, string tokenType = "Bearer");
+  - lang: fsharp
+    values:
+    - value: 'new Microsoft.Identity.Client.AuthenticationResult : string * bool * string * DateTimeOffset * DateTimeOffset * string * Microsoft.Identity.Client.IAccount * string * seq<string> * Guid * Microsoft.Identity.Client.AuthenticationResultMetadata * string -> Microsoft.Identity.Client.AuthenticationResult'
+  - lang: vb
+    values:
+    - value: Public Sub New (accessToken As String, isExtendedLifeTimeToken As Boolean, uniqueId As String, expiresOn As DateTimeOffset, extendedExpiresOn As DateTimeOffset, tenantId As String, account As IAccount, idToken As String, scopes As IEnumerable(Of String), correlationId As Guid, authenticationResultMetadata As AuthenticationResultMetadata, Optional tokenType As String = "Bearer")
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    Constructor meant to help application developers test their apps. Allows mocking of authentication flows.
+
+    App developers should <strong>never</strong> new-up <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.AuthenticationResult"></xref> in product code.
+  remarks: For backwards compatibility with MSAL 4.17-4.20
+  metadata: {}
+- parameters:
+  - namesWithMoniker:
+    - value: accessToken
+    description: Access Token that can be used as a bearer token to access protected web APIs
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: isExtendedLifeTimeToken
+    description: See <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.AuthenticationResult.IsExtendedLifeTimeToken"></xref>
+    type: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: uniqueId
+    description: Unique Id of the account. It can be null. When the <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.AuthenticationResult.IdToken"></xref> is not <code data-dev-comment-type="c">null</code>, this is its ID, that is its ObjectId claim, or if that claim is <code data-dev-comment-type="c">null</code>, the Subject claim.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: expiresOn
+    description: Expiry date-time for the access token
+    type: <xref href="System.DateTimeOffset?alt=System.DateTimeOffset&text=DateTimeOffset" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: extendedExpiresOn
+    description: See <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.AuthenticationResult.ExtendedExpiresOn"></xref>
+    type: <xref href="System.DateTimeOffset?alt=System.DateTimeOffset&text=DateTimeOffset" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: tenantId
+    description: Identifier for the Azure AD tenant from which the token was acquired. Can be <code data-dev-comment-type="c">null</code>
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: account
+    description: Account information
+    type: <xref href="Microsoft.Identity.Client.IAccount?alt=Microsoft.Identity.Client.IAccount&text=IAccount" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: idToken
+    description: ID token
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: scopes
+    description: Granted scope values as returned by the service
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: correlationId
+    description: The correlation id of the authentication request
+    type: <xref href="System.Guid?alt=System.Guid&text=Guid" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: tokenType
+    description: 'The token type, defaults to Bearer. Note: this property is experimental and may change in future versions of the library.'
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: authenticationResultMetadata
+    description: Contains metadata related to the Authentication Result.
+    type: <xref href="Microsoft.Identity.Client.AuthenticationResultMetadata?alt=Microsoft.Identity.Client.AuthenticationResultMetadata&text=AuthenticationResultMetadata" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: claimsPrincipal
+    description: Claims from the ID token
+    type: <xref href="System.Security.Claims.ClaimsPrincipal?alt=System.Security.Claims.ClaimsPrincipal&text=ClaimsPrincipal" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: spaAuthCode
+    description: Auth Code returned by the Microsoft identity platform when you use AcquireTokenByAuthorizeCode.WithSpaAuthorizationCode(). This auth code is meant to be redeemed by the frontend code.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: constructor
+  uid: Microsoft.Identity.Client.AuthenticationResult.#ctor(System.String,System.Boolean,System.String,System.DateTimeOffset,System.DateTimeOffset,System.String,Microsoft.Identity.Client.IAccount,System.String,System.Collections.Generic.IEnumerable{System.String},System.Guid,System.String,Microsoft.Identity.Client.AuthenticationResultMetadata,System.Security.Claims.ClaimsPrincipal,System.String)
+  commentId: M:Microsoft.Identity.Client.AuthenticationResult.#ctor(System.String,System.Boolean,System.String,System.DateTimeOffset,System.DateTimeOffset,System.String,Microsoft.Identity.Client.IAccount,System.String,System.Collections.Generic.IEnumerable{System.String},System.Guid,System.String,Microsoft.Identity.Client.AuthenticationResultMetadata,System.Security.Claims.ClaimsPrincipal,System.String)
+  name: >-
+    AuthenticationResult(String, Boolean, String, DateTimeOffset,
+
+     DateTimeOffset, String, IAccount, String, IEnumerable<String>,
+
+     Guid, String, AuthenticationResultMetadata, ClaimsPrincipal,
+
+     String)
+  fullName: Microsoft.Identity.Client.AuthenticationResult.AuthenticationResult(String, Boolean, String, DateTimeOffset, DateTimeOffset, String, IAccount, String, IEnumerable<String>, Guid, String, AuthenticationResultMetadata, ClaimsPrincipal, String)
+  nameWithType: AuthenticationResult.AuthenticationResult(String, Boolean, String, DateTimeOffset, DateTimeOffset, String, IAccount, String, IEnumerable<String>, Guid, String, AuthenticationResultMetadata, ClaimsPrincipal, String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public AuthenticationResult (string accessToken, bool isExtendedLifeTimeToken, string uniqueId, DateTimeOffset expiresOn, DateTimeOffset extendedExpiresOn, string tenantId, Microsoft.Identity.Client.IAccount account, string idToken, System.Collections.Generic.IEnumerable<string> scopes, Guid correlationId, string tokenType = "Bearer", Microsoft.Identity.Client.AuthenticationResultMetadata authenticationResultMetadata = default, System.Security.Claims.ClaimsPrincipal claimsPrincipal = default, string spaAuthCode = default);
+  - lang: fsharp
+    values:
+    - value: 'new Microsoft.Identity.Client.AuthenticationResult : string * bool * string * DateTimeOffset * DateTimeOffset * string * Microsoft.Identity.Client.IAccount * string * seq<string> * Guid * string * Microsoft.Identity.Client.AuthenticationResultMetadata * System.Security.Claims.ClaimsPrincipal * string -> Microsoft.Identity.Client.AuthenticationResult'
+  - lang: vb
+    values:
+    - value: Public Sub New (accessToken As String, isExtendedLifeTimeToken As Boolean, uniqueId As String, expiresOn As DateTimeOffset, extendedExpiresOn As DateTimeOffset, tenantId As String, account As IAccount, idToken As String, scopes As IEnumerable(Of String), correlationId As Guid, Optional tokenType As String = "Bearer", Optional authenticationResultMetadata As AuthenticationResultMetadata = Nothing, Optional claimsPrincipal As ClaimsPrincipal = Nothing, Optional spaAuthCode As String = Nothing)
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    Constructor meant to help application developers test their apps. Allows mocking of authentication flows.
+
+    App developers should <strong>never</strong> new-up <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.AuthenticationResult"></xref> in product code.
+  metadata: {}
+uid: Microsoft.Identity.Client.AuthenticationResult.#ctor*
+commentId: Overload:Microsoft.Identity.Client.AuthenticationResult.#ctor
+namespace: Microsoft.Identity.Client
+name: AuthenticationResult
+fullName: Microsoft.Identity.Client.AuthenticationResult.AuthenticationResult
+nameWithType: AuthenticationResult.AuthenticationResult
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.AuthenticationResult..ctor
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.AuthenticationResult.#ctor
+  - Microsoft::Identity::Client::AuthenticationResult::#ctor
+  - '#ctor'
+  - AuthenticationResult.#ctor
+  - AuthenticationResult::#ctor
+  helpviewer_keywords:
+  - AuthenticationResult class [.NET], constructors
+  - AuthenticationResult(String, Boolean, String, DateTimeOffset, DateTimeOffset, String, IAccount, String, IEnumerable<String>, Guid, AuthenticationResultMetadata, String) class [.NET], constructors
+  - AuthenticationResult(String, Boolean, String, DateTimeOffset, DateTimeOffset, String, IAccount, String, IEnumerable<String>, Guid, String, AuthenticationResultMetadata, ClaimsPrincipal, String) class [.NET], constructors
+  monikers:
+  - msal-dotnet-latest

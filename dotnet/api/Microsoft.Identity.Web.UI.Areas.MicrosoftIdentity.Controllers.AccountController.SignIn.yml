@@ -1,0 +1,82 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.AspNetCore.Mvc.IActionResult?alt=Microsoft.AspNetCore.Mvc.IActionResult&text=IActionResult" data-throw-if-not-resolved="True"/>
+    description: Challenge generating a redirect to Azure AD to sign in the user.
+  parameters:
+  - namesWithMoniker:
+    - value: scheme
+    description: Authentication scheme.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: redirectUri
+    description: Redirect URI.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Web.UI.Areas.MicrosoftIdentity.Controllers.AccountController.SignIn(System.String,System.String)
+  commentId: M:Microsoft.Identity.Web.UI.Areas.MicrosoftIdentity.Controllers.AccountController.SignIn(System.String,System.String)
+  name: SignIn(String, String)
+  fullName: Microsoft.Identity.Web.UI.Areas.MicrosoftIdentity.Controllers.AccountController.SignIn(String, String)
+  nameWithType: AccountController.SignIn(String, String)
+  attributesWithMoniker:
+  - value: Microsoft.AspNetCore.Mvc.HttpGetAttribute
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: >-
+        [Microsoft.AspNetCore.Mvc.HttpGet("{scheme?}")]
+
+        public Microsoft.AspNetCore.Mvc.IActionResult SignIn (string scheme, string redirectUri);
+  - lang: fsharp
+    values:
+    - value: >-
+        [<Microsoft.AspNetCore.Mvc.HttpGet("{scheme?}")>]
+
+        override this.SignIn : string * string -> Microsoft.AspNetCore.Mvc.IActionResult
+  - lang: vb
+    values:
+    - value: Public Function SignIn (scheme As String, redirectUri As String) As IActionResult
+  monikers:
+  - msal-model-dotnet-latest
+  summary: Handles user sign in.
+  metadata: {}
+uid: Microsoft.Identity.Web.UI.Areas.MicrosoftIdentity.Controllers.AccountController.SignIn*
+commentId: Overload:Microsoft.Identity.Web.UI.Areas.MicrosoftIdentity.Controllers.AccountController.SignIn
+namespace: Microsoft.Identity.Web.UI.Areas.MicrosoftIdentity.Controllers
+name: SignIn
+fullName: Microsoft.Identity.Web.UI.Areas.MicrosoftIdentity.Controllers.AccountController.SignIn
+nameWithType: AccountController.SignIn
+assembliesWithMoniker:
+- value: Microsoft.Identity.Web.UI.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Web.UI v1.25.10
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-model-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Web.UI.Areas.MicrosoftIdentity.Controllers.AccountController.SignIn
+  api_location:
+  - Microsoft.Identity.Web.UI.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Web.UI.Areas.MicrosoftIdentity.Controllers.AccountController.SignIn
+  - Microsoft::Identity::Web::UI::Areas::MicrosoftIdentity::Controllers::AccountController::SignIn
+  - SignIn
+  - AccountController.SignIn
+  - AccountController::SignIn
+  helpviewer_keywords:
+  - AccountController.SignIn method [.NET]
+  - SignIn method [.NET], class AccountController
+  - AccountController.SignIn(String, String) method [.NET]
+  - SignIn(String, String) method [.NET], class AccountController
+  monikers:
+  - msal-model-dotnet-latest

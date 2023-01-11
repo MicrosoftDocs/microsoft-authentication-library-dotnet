@@ -1,0 +1,111 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.IdentityModel.Tokens.SecurityToken?alt=Microsoft.IdentityModel.Tokens.SecurityToken&text=SecurityToken" data-throw-if-not-resolved="True"/>
+    description: A <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityToken"></xref> instance.
+  parameters:
+  - namesWithMoniker:
+    - value: tokenDescriptor
+    description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor"></xref> that has creation information.
+    type: <xref href="Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor?alt=Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor&text=SecurityTokenDescriptor" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: If <code data-dev-comment-type="paramref">tokenDescriptor</code> is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CreateToken(Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor)
+  commentId: M:Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CreateToken(Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor)
+  name: CreateToken(SecurityTokenDescriptor)
+  fullName: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CreateToken(SecurityTokenDescriptor)
+  nameWithType: SamlSecurityTokenHandler.CreateToken(SecurityTokenDescriptor)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public override Microsoft.IdentityModel.Tokens.SecurityToken CreateToken (Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor tokenDescriptor);
+  - lang: fsharp
+    values:
+    - value: 'override this.CreateToken : Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor -> Microsoft.IdentityModel.Tokens.SecurityToken'
+  - lang: vb
+    values:
+    - value: Public Overrides Function CreateToken (tokenDescriptor As SecurityTokenDescriptor) As SecurityToken
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Creates a <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml.SamlSecurityToken"></xref> based on a information contained in the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor"></xref>.
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.IdentityModel.Tokens.SecurityToken?alt=Microsoft.IdentityModel.Tokens.SecurityToken&text=SecurityToken" data-throw-if-not-resolved="True"/>
+    description: A <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityToken"></xref> instance.
+  parameters:
+  - namesWithMoniker:
+    - value: tokenDescriptor
+    description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor"></xref> that has creation information.
+    type: <xref href="Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor?alt=Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor&text=SecurityTokenDescriptor" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: authenticationInformation
+    description: additional information for creating the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml.SamlAuthenticationStatement"></xref>.
+    type: <xref href="Microsoft.IdentityModel.Tokens.Saml.AuthenticationInformation?alt=Microsoft.IdentityModel.Tokens.Saml.AuthenticationInformation&text=AuthenticationInformation" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: If <code data-dev-comment-type="paramref">tokenDescriptor</code> is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CreateToken(Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor,Microsoft.IdentityModel.Tokens.Saml.AuthenticationInformation)
+  commentId: M:Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CreateToken(Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor,Microsoft.IdentityModel.Tokens.Saml.AuthenticationInformation)
+  name: CreateToken(SecurityTokenDescriptor, AuthenticationInformation)
+  fullName: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CreateToken(SecurityTokenDescriptor, AuthenticationInformation)
+  nameWithType: SamlSecurityTokenHandler.CreateToken(SecurityTokenDescriptor, AuthenticationInformation)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public virtual Microsoft.IdentityModel.Tokens.SecurityToken CreateToken (Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor tokenDescriptor, Microsoft.IdentityModel.Tokens.Saml.AuthenticationInformation authenticationInformation);
+  - lang: fsharp
+    values:
+    - value: 'override this.CreateToken : Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor * Microsoft.IdentityModel.Tokens.Saml.AuthenticationInformation -> Microsoft.IdentityModel.Tokens.SecurityToken'
+  - lang: vb
+    values:
+    - value: Public Overridable Function CreateToken (tokenDescriptor As SecurityTokenDescriptor, authenticationInformation As AuthenticationInformation) As SecurityToken
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Creates a <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml.SamlSecurityToken"></xref> based on a information contained in the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor"></xref>.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CreateToken*
+commentId: Overload:Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CreateToken
+namespace: Microsoft.IdentityModel.Tokens.Saml
+name: CreateToken
+fullName: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CreateToken
+nameWithType: SamlSecurityTokenHandler.CreateToken
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CreateToken
+  api_location:
+  - Microsoft.IdentityModel.Tokens.Saml.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CreateToken
+  - Microsoft::IdentityModel::Tokens::Saml::SamlSecurityTokenHandler::CreateToken
+  - CreateToken
+  - SamlSecurityTokenHandler.CreateToken
+  - SamlSecurityTokenHandler::CreateToken
+  helpviewer_keywords:
+  - SamlSecurityTokenHandler.CreateToken method [.NET]
+  - CreateToken method [.NET], class SamlSecurityTokenHandler
+  - SamlSecurityTokenHandler.CreateToken(SecurityTokenDescriptor) method [.NET]
+  - CreateToken(SecurityTokenDescriptor) method [.NET], class SamlSecurityTokenHandler
+  - SamlSecurityTokenHandler.CreateToken(SecurityTokenDescriptor, AuthenticationInformation) method [.NET]
+  - CreateToken(SecurityTokenDescriptor, AuthenticationInformation) method [.NET], class SamlSecurityTokenHandler
+  monikers:
+  - msal-web-dotnet-latest

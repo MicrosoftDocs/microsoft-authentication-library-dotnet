@@ -1,0 +1,61 @@
+### YamlMime:NetDelegate
+parameters:
+- namesWithMoniker:
+  - value: args
+  description: Arguments related to the cache item impacted
+  type: <xref href="Microsoft.Identity.Client.TokenCacheNotificationArgs?alt=Microsoft.Identity.Client.TokenCacheNotificationArgs&text=TokenCacheNotificationArgs" data-throw-if-not-resolved="True"/>
+inheritances:
+- <xref href="System.Delegate" data-throw-if-not-resolved="True"/>
+uid: Microsoft.Identity.Client.TokenCacheCallback
+commentId: T:Microsoft.Identity.Client.TokenCacheCallback
+namespace: Microsoft.Identity.Client
+name: TokenCacheCallback
+fullName: Microsoft.Identity.Client.TokenCacheCallback
+nameWithType: Microsoft.Identity.Client.TokenCacheCallback
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+syntaxWithMoniker:
+- lang: csharp
+  values:
+  - value: public delegate void TokenCacheCallback(TokenCacheNotificationArgs args);
+- lang: fsharp
+  values:
+  - value: type TokenCacheCallback = delegate of TokenCacheNotificationArgs -> unit
+- lang: vb
+  values:
+  - value: Public Delegate Sub TokenCacheCallback(args As TokenCacheNotificationArgs)
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+summary: >-
+  Notification for certain token cache interactions during token acquisition. This delegate is
+
+  used in particular to provide a custom token cache serialization.
+
+  See https://aka.ms/aka.ms/msal-net-token-cache-serialization
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.TokenCacheCallback
+  - Microsoft.Identity.Client.TokenCacheCallback..ctor
+  - Microsoft.Identity.Client.TokenCacheCallback.Invoke
+  - Microsoft.Identity.Client.TokenCacheCallback.BeginInvoke
+  - Microsoft.Identity.Client.TokenCacheCallback.EndInvoke
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.TokenCacheCallback
+  - Microsoft::Identity::Client::TokenCacheCallback
+  - TokenCacheCallback
+  helpviewer_keywords:
+  - Microsoft.Identity.Client.TokenCacheCallback delegate [.NET]
+  monikers:
+  - msal-dotnet-latest

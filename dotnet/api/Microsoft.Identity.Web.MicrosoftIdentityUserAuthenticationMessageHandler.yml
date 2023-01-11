@@ -1,0 +1,73 @@
+### YamlMime:NetType
+type: class
+inheritancesWithMoniker:
+- values:
+  - <xref href="System.Net.Http.DelegatingHandler?alt=System.Net.Http.DelegatingHandler&text=DelegatingHandler" data-throw-if-not-resolved="True"/>
+  - <xref href="Microsoft.Identity.Web.MicrosoftIdentityAuthenticationBaseMessageHandler?alt=Microsoft.Identity.Web.MicrosoftIdentityAuthenticationBaseMessageHandler&text=MicrosoftIdentityAuthenticationBaseMessageHandler" data-throw-if-not-resolved="True"/>
+constructors:
+- uid: Microsoft.Identity.Web.MicrosoftIdentityUserAuthenticationMessageHandler.#ctor(Microsoft.Identity.Web.ITokenAcquisition,Microsoft.Extensions.Options.IOptionsMonitor{Microsoft.Identity.Web.MicrosoftIdentityAuthenticationMessageHandlerOptions},Microsoft.Extensions.Options.IOptionsMonitor{Microsoft.Identity.Web.MicrosoftIdentityOptions},System.String)
+  monikers:
+  - msal-model-dotnet-latest
+methods:
+- uid: Microsoft.Identity.Web.MicrosoftIdentityAuthenticationBaseMessageHandler.GetOptionsForRequest(System.Net.Http.HttpRequestMessage)
+  inheritedFrom: Microsoft.Identity.Web.MicrosoftIdentityAuthenticationBaseMessageHandler
+  monikers:
+  - msal-model-dotnet-latest
+- uid: Microsoft.Identity.Web.MicrosoftIdentityUserAuthenticationMessageHandler.SendAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)
+  monikers:
+  - msal-model-dotnet-latest
+  crossInheritdocsUid: System.Net.Http.DelegatingHandler.SendAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)
+properties:
+- uid: Microsoft.Identity.Web.MicrosoftIdentityAuthenticationBaseMessageHandler.TokenAcquisition
+  inheritedFrom: Microsoft.Identity.Web.MicrosoftIdentityAuthenticationBaseMessageHandler
+  monikers:
+  - msal-model-dotnet-latest
+uid: Microsoft.Identity.Web.MicrosoftIdentityUserAuthenticationMessageHandler
+commentId: T:Microsoft.Identity.Web.MicrosoftIdentityUserAuthenticationMessageHandler
+namespace: Microsoft.Identity.Web
+name: MicrosoftIdentityUserAuthenticationMessageHandler
+fullName: Microsoft.Identity.Web.MicrosoftIdentityUserAuthenticationMessageHandler
+nameWithType: Microsoft.Identity.Web.MicrosoftIdentityUserAuthenticationMessageHandler
+assembliesWithMoniker:
+- value: Microsoft.Identity.Web.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Web v1.25.10
+syntaxWithMoniker:
+- lang: csharp
+  values:
+  - value: 'public class MicrosoftIdentityUserAuthenticationMessageHandler : Microsoft.Identity.Web.MicrosoftIdentityAuthenticationBaseMessageHandler'
+- lang: fsharp
+  values:
+  - value: >-
+      type MicrosoftIdentityUserAuthenticationMessageHandler = class
+          inherit MicrosoftIdentityAuthenticationBaseMessageHandler
+- lang: vb
+  values:
+  - value: >-
+      Public Class MicrosoftIdentityUserAuthenticationMessageHandler
+
+      Inherits MicrosoftIdentityAuthenticationBaseMessageHandler
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-model-dotnet-latest
+summary: A DelegatingHandler implementation that add an authorization header with a token on behalf of the current user.
+metadata:
+  api_name:
+  - Microsoft.Identity.Web.MicrosoftIdentityUserAuthenticationMessageHandler
+  api_location:
+  - Microsoft.Identity.Web.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Web.MicrosoftIdentityUserAuthenticationMessageHandler
+  - Microsoft::Identity::Web::MicrosoftIdentityUserAuthenticationMessageHandler
+  - MicrosoftIdentityUserAuthenticationMessageHandler
+  helpviewer_keywords:
+  - Microsoft.Identity.Web.MicrosoftIdentityUserAuthenticationMessageHandler class [.NET]
+  monikers:
+  - msal-model-dotnet-latest

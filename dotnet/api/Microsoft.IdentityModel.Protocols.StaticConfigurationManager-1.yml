@@ -1,0 +1,110 @@
+### YamlMime:NetType
+typeParameters:
+- description: must be a class.
+  name: T
+type: class
+implementsWithMoniker:
+- value: <xref href="Microsoft.IdentityModel.Protocols.IConfigurationManager`1?alt=Microsoft.IdentityModel.Protocols.IConfigurationManager`1&text=IConfigurationManager%3CT%3E" data-throw-if-not-resolved="True"/>
+inheritancesWithMoniker:
+- values:
+  - <xref href="System.Object?alt=System.Object&text=Object" data-throw-if-not-resolved="True"/>
+  - <xref href="Microsoft.IdentityModel.Tokens.BaseConfigurationManager?alt=Microsoft.IdentityModel.Tokens.BaseConfigurationManager&text=BaseConfigurationManager" data-throw-if-not-resolved="True"/>
+constructors:
+- uid: Microsoft.IdentityModel.Protocols.StaticConfigurationManager`1.#ctor(`0)
+  monikers:
+  - msal-web-dotnet-latest
+methods:
+- uid: Microsoft.IdentityModel.Protocols.StaticConfigurationManager`1.GetBaseConfigurationAsync(System.Threading.CancellationToken)
+  monikers:
+  - msal-web-dotnet-latest
+- uid: Microsoft.IdentityModel.Protocols.StaticConfigurationManager`1.GetConfigurationAsync(System.Threading.CancellationToken)
+  monikers:
+  - msal-web-dotnet-latest
+- uid: Microsoft.IdentityModel.Protocols.StaticConfigurationManager`1.RequestRefresh
+  monikers:
+  - msal-web-dotnet-latest
+properties:
+- uid: Microsoft.IdentityModel.Tokens.BaseConfigurationManager.AutomaticRefreshInterval
+  inheritedFrom: Microsoft.IdentityModel.Tokens.BaseConfigurationManager
+  monikers:
+  - msal-web-dotnet-latest
+- uid: Microsoft.IdentityModel.Tokens.BaseConfigurationManager.IsLastKnownGoodValid
+  inheritedFrom: Microsoft.IdentityModel.Tokens.BaseConfigurationManager
+  monikers:
+  - msal-web-dotnet-latest
+- uid: Microsoft.IdentityModel.Tokens.BaseConfigurationManager.LastKnownGoodConfiguration
+  inheritedFrom: Microsoft.IdentityModel.Tokens.BaseConfigurationManager
+  monikers:
+  - msal-web-dotnet-latest
+- uid: Microsoft.IdentityModel.Tokens.BaseConfigurationManager.LastKnownGoodLifetime
+  inheritedFrom: Microsoft.IdentityModel.Tokens.BaseConfigurationManager
+  monikers:
+  - msal-web-dotnet-latest
+- uid: Microsoft.IdentityModel.Tokens.BaseConfigurationManager.MetadataAddress
+  inheritedFrom: Microsoft.IdentityModel.Tokens.BaseConfigurationManager
+  monikers:
+  - msal-web-dotnet-latest
+- uid: Microsoft.IdentityModel.Tokens.BaseConfigurationManager.RefreshInterval
+  inheritedFrom: Microsoft.IdentityModel.Tokens.BaseConfigurationManager
+  monikers:
+  - msal-web-dotnet-latest
+- uid: Microsoft.IdentityModel.Tokens.BaseConfigurationManager.UseLastKnownGoodConfiguration
+  inheritedFrom: Microsoft.IdentityModel.Tokens.BaseConfigurationManager
+  monikers:
+  - msal-web-dotnet-latest
+uid: Microsoft.IdentityModel.Protocols.StaticConfigurationManager`1
+commentId: T:Microsoft.IdentityModel.Protocols.StaticConfigurationManager`1
+namespace: Microsoft.IdentityModel.Protocols
+name: StaticConfigurationManager<T>
+fullName: Microsoft.IdentityModel.Protocols.StaticConfigurationManager<T>
+nameWithType: Microsoft.IdentityModel.Protocols.StaticConfigurationManager<T>
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Protocols.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Protocols v6.25.1
+syntaxWithMoniker:
+- lang: csharp
+  values:
+  - value: 'public class StaticConfigurationManager<T> : Microsoft.IdentityModel.Tokens.BaseConfigurationManager, Microsoft.IdentityModel.Protocols.IConfigurationManager<T> where T : class'
+- lang: fsharp
+  values:
+  - value: >-
+      type StaticConfigurationManager<'T (requires 'T : null)> = class
+          inherit BaseConfigurationManager
+          interface IConfigurationManager<'T (requires 'T : null)>
+- lang: vb
+  values:
+  - value: >-
+      Public Class StaticConfigurationManager(Of T)
+
+      Inherits BaseConfigurationManager
+
+      Implements IConfigurationManager(Of T)
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+summary: >-
+  This type is for users that want a fixed and static Configuration.
+
+  In this case, the configuration is obtained and passed to the constructor.
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Protocols.StaticConfigurationManager`1
+  api_location:
+  - Microsoft.IdentityModel.Protocols.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Protocols.StaticConfigurationManager`1
+  - Microsoft::IdentityModel::Protocols::StaticConfigurationManager`1
+  - Microsoft.IdentityModel.Protocols.StaticConfigurationManager
+  - StaticConfigurationManager`1
+  helpviewer_keywords:
+  - Microsoft.IdentityModel.Protocols.StaticConfigurationManager<T> class [.NET]
+  monikers:
+  - msal-web-dotnet-latest

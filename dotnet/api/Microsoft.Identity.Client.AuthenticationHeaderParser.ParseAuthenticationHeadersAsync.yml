@@ -1,0 +1,113 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Client.AuthenticationHeaderParser?alt=Microsoft.Identity.Client.AuthenticationHeaderParser&text=AuthenticationHeaderParser" data-throw-if-not-resolved="True"/>&gt;
+  parameters:
+  - namesWithMoniker:
+    - value: resourceUri
+    description: URI of the resource.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: cancellationToken
+    description: The cancellation token to cancel the operation.
+    type: <xref href="System.Threading.CancellationToken?alt=System.Threading.CancellationToken&text=CancellationToken" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.AuthenticationHeaderParser.ParseAuthenticationHeadersAsync(System.String,System.Threading.CancellationToken)
+  commentId: M:Microsoft.Identity.Client.AuthenticationHeaderParser.ParseAuthenticationHeadersAsync(System.String,System.Threading.CancellationToken)
+  name: ParseAuthenticationHeadersAsync(String, CancellationToken)
+  fullName: Microsoft.Identity.Client.AuthenticationHeaderParser.ParseAuthenticationHeadersAsync(String, CancellationToken)
+  nameWithType: AuthenticationHeaderParser.ParseAuthenticationHeadersAsync(String, CancellationToken)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public static System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationHeaderParser> ParseAuthenticationHeadersAsync (string resourceUri, System.Threading.CancellationToken cancellationToken = default);
+  - lang: fsharp
+    values:
+    - value: 'static member ParseAuthenticationHeadersAsync : string * System.Threading.CancellationToken -> System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationHeaderParser>'
+  - lang: vb
+    values:
+    - value: Public Shared Function ParseAuthenticationHeadersAsync (resourceUri As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of AuthenticationHeaderParser)
+  monikers:
+  - msal-dotnet-latest
+  summary: Creates the authenticate parameters by attempting to call the resource unauthenticated, and analyzing the response.
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Client.AuthenticationHeaderParser?alt=Microsoft.Identity.Client.AuthenticationHeaderParser&text=AuthenticationHeaderParser" data-throw-if-not-resolved="True"/>&gt;
+  parameters:
+  - namesWithMoniker:
+    - value: resourceUri
+    description: URI of the resource.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: httpClient
+    description: Instance of <xref data-throw-if-not-resolved="true" uid="System.Net.Http.HttpClient"></xref> to make the request with.
+    type: <xref href="System.Net.Http.HttpClient?alt=System.Net.Http.HttpClient&text=HttpClient" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: cancellationToken
+    description: The cancellation token to cancel operation.
+    type: <xref href="System.Threading.CancellationToken?alt=System.Threading.CancellationToken&text=CancellationToken" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.AuthenticationHeaderParser.ParseAuthenticationHeadersAsync(System.String,System.Net.Http.HttpClient,System.Threading.CancellationToken)
+  commentId: M:Microsoft.Identity.Client.AuthenticationHeaderParser.ParseAuthenticationHeadersAsync(System.String,System.Net.Http.HttpClient,System.Threading.CancellationToken)
+  name: ParseAuthenticationHeadersAsync(String, HttpClient, CancellationToken)
+  fullName: Microsoft.Identity.Client.AuthenticationHeaderParser.ParseAuthenticationHeadersAsync(String, HttpClient, CancellationToken)
+  nameWithType: AuthenticationHeaderParser.ParseAuthenticationHeadersAsync(String, HttpClient, CancellationToken)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public static System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationHeaderParser> ParseAuthenticationHeadersAsync (string resourceUri, System.Net.Http.HttpClient httpClient, System.Threading.CancellationToken cancellationToken = default);
+  - lang: fsharp
+    values:
+    - value: 'static member ParseAuthenticationHeadersAsync : string * System.Net.Http.HttpClient * System.Threading.CancellationToken -> System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationHeaderParser>'
+  - lang: vb
+    values:
+    - value: Public Shared Function ParseAuthenticationHeadersAsync (resourceUri As String, httpClient As HttpClient, Optional cancellationToken As CancellationToken = Nothing) As Task(Of AuthenticationHeaderParser)
+  monikers:
+  - msal-dotnet-latest
+  summary: Creates the authenticate parameters by attempting to call the resource unauthenticated, and analyzing the response.
+  metadata: {}
+uid: Microsoft.Identity.Client.AuthenticationHeaderParser.ParseAuthenticationHeadersAsync*
+commentId: Overload:Microsoft.Identity.Client.AuthenticationHeaderParser.ParseAuthenticationHeadersAsync
+namespace: Microsoft.Identity.Client
+name: ParseAuthenticationHeadersAsync
+fullName: Microsoft.Identity.Client.AuthenticationHeaderParser.ParseAuthenticationHeadersAsync
+nameWithType: AuthenticationHeaderParser.ParseAuthenticationHeadersAsync
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.AuthenticationHeaderParser.ParseAuthenticationHeadersAsync
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.AuthenticationHeaderParser.ParseAuthenticationHeadersAsync
+  - Microsoft::Identity::Client::AuthenticationHeaderParser::ParseAuthenticationHeadersAsync
+  - ParseAuthenticationHeadersAsync
+  - AuthenticationHeaderParser.ParseAuthenticationHeadersAsync
+  - AuthenticationHeaderParser::ParseAuthenticationHeadersAsync
+  helpviewer_keywords:
+  - AuthenticationHeaderParser.ParseAuthenticationHeadersAsync method [.NET]
+  - ParseAuthenticationHeadersAsync method [.NET], class AuthenticationHeaderParser
+  - AuthenticationHeaderParser.ParseAuthenticationHeadersAsync(String, CancellationToken) method [.NET]
+  - ParseAuthenticationHeadersAsync(String, CancellationToken) method [.NET], class AuthenticationHeaderParser
+  - AuthenticationHeaderParser.ParseAuthenticationHeadersAsync(String, HttpClient, CancellationToken) method [.NET]
+  - ParseAuthenticationHeadersAsync(String, HttpClient, CancellationToken) method [.NET], class AuthenticationHeaderParser
+  monikers:
+  - msal-dotnet-latest

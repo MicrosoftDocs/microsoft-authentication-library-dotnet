@@ -1,0 +1,78 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder?alt=Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder&text=AcquireTokenForClientParameterBuilder" data-throw-if-not-resolved="True"/>
+    description: A builder enabling you to add optional parameters before executing the token request
+  parameters:
+  - namesWithMoniker:
+    - value: scopes
+    description: >-
+      scopes requested to access a protected API. For this flow (client credentials), the scopes
+                  should be of the form "{ResourceIdUri/.default}" for instance <code data-dev-comment-type="c">https://management.azure.net/.default</code> or, for Microsoft
+                  Graph, <code data-dev-comment-type="c">https://graph.microsoft.com/.default</code> as the requested scopes are really defined statically at application registration
+                  in the portal, and cannot be overridden in the application.
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  type: method
+  uid: Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenForClient(System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenForClient(System.Collections.Generic.IEnumerable{System.String})
+  name: AcquireTokenForClient(IEnumerable<String>)
+  fullName: Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenForClient(IEnumerable<String>)
+  nameWithType: IConfidentialClientApplication.AcquireTokenForClient(IEnumerable<String>)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder AcquireTokenForClient (System.Collections.Generic.IEnumerable<string> scopes);
+  - lang: fsharp
+    values:
+    - value: 'abstract member AcquireTokenForClient : seq<string> -> Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder'
+  - lang: vb
+    values:
+    - value: Public Function AcquireTokenForClient (scopes As IEnumerable(Of String)) As AcquireTokenForClientParameterBuilder
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    [V3 API] Acquires a token from the authority configured in the app, for the confidential client itself (in the name of no user)
+
+    using the client credentials flow. See https://aka.ms/msal-net-client-credentials.
+  remarks: '<p>You can also chain the following optional parameters: <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder.WithForceRefresh(System.Boolean)"></xref><xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithExtraQueryParameters(System.Collections.Generic.Dictionary{System.String,System.String})"></xref></p>'
+  metadata: {}
+uid: Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenForClient*
+commentId: Overload:Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenForClient
+namespace: Microsoft.Identity.Client
+name: AcquireTokenForClient
+fullName: Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenForClient
+nameWithType: IConfidentialClientApplication.AcquireTokenForClient
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenForClient
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenForClient
+  - Microsoft::Identity::Client::IConfidentialClientApplication::AcquireTokenForClient
+  - AcquireTokenForClient
+  - IConfidentialClientApplication.AcquireTokenForClient
+  - IConfidentialClientApplication::AcquireTokenForClient
+  helpviewer_keywords:
+  - IConfidentialClientApplication.AcquireTokenForClient method [.NET]
+  - AcquireTokenForClient method [.NET], interface IConfidentialClientApplication
+  - IConfidentialClientApplication.AcquireTokenForClient(IEnumerable<String>) method [.NET]
+  - AcquireTokenForClient(IEnumerable<String>) method [.NET], interface IConfidentialClientApplication
+  monikers:
+  - msal-dotnet-latest

@@ -1,0 +1,75 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder?alt=Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder&text=AcquireTokenForClientParameterBuilder" data-throw-if-not-resolved="True"/>
+    description: The builder to chain the .With methods
+  parameters:
+  - namesWithMoniker:
+    - value: forceRefresh
+    description: If <code data-dev-comment-type="c">true</code>, the request will ignore the token cache. The default is <code data-dev-comment-type="c">false</code>
+    type: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder.WithForceRefresh(System.Boolean)
+  commentId: M:Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder.WithForceRefresh(System.Boolean)
+  name: WithForceRefresh(Boolean)
+  fullName: Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder.WithForceRefresh(Boolean)
+  nameWithType: AcquireTokenForClientParameterBuilder.WithForceRefresh(Boolean)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder WithForceRefresh (bool forceRefresh);
+  - lang: fsharp
+    values:
+    - value: 'member this.WithForceRefresh : bool -> Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder'
+  - lang: vb
+    values:
+    - value: Public Function WithForceRefresh (forceRefresh As Boolean) As AcquireTokenForClientParameterBuilder
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    Specifies if the token request will ignore the access token in the application token cache
+
+    and will attempt to acquire a new access token using client credentials.
+
+    By default the token is taken from the application token cache (forceRefresh=false)
+  metadata: {}
+uid: Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder.WithForceRefresh*
+commentId: Overload:Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder.WithForceRefresh
+namespace: Microsoft.Identity.Client
+name: WithForceRefresh
+fullName: Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder.WithForceRefresh
+nameWithType: AcquireTokenForClientParameterBuilder.WithForceRefresh
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder.WithForceRefresh
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder.WithForceRefresh
+  - Microsoft::Identity::Client::AcquireTokenForClientParameterBuilder::WithForceRefresh
+  - WithForceRefresh
+  - AcquireTokenForClientParameterBuilder.WithForceRefresh
+  - AcquireTokenForClientParameterBuilder::WithForceRefresh
+  helpviewer_keywords:
+  - AcquireTokenForClientParameterBuilder.WithForceRefresh method [.NET]
+  - WithForceRefresh method [.NET], class AcquireTokenForClientParameterBuilder
+  - AcquireTokenForClientParameterBuilder.WithForceRefresh(Boolean) method [.NET]
+  - WithForceRefresh(Boolean) method [.NET], class AcquireTokenForClientParameterBuilder
+  monikers:
+  - msal-dotnet-latest

@@ -1,0 +1,72 @@
+### YamlMime:NetDelegate
+returnsWithMoniker:
+  type:
+  - value: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  description: <code data-dev-comment-type="c">true</code> if the algorithm is considered valid
+parameters:
+- namesWithMoniker:
+  - value: algorithm
+  description: The algorithm to validate.
+  type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+- namesWithMoniker:
+  - value: securityKey
+  description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityKey"></xref> that signed the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityToken"></xref>.
+  type: <xref href="Microsoft.IdentityModel.Tokens.SecurityKey?alt=Microsoft.IdentityModel.Tokens.SecurityKey&text=SecurityKey" data-throw-if-not-resolved="True"/>
+- namesWithMoniker:
+  - value: securityToken
+  description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityToken"></xref> being validated.
+  type: <xref href="Microsoft.IdentityModel.Tokens.SecurityToken?alt=Microsoft.IdentityModel.Tokens.SecurityToken&text=SecurityToken" data-throw-if-not-resolved="True"/>
+- namesWithMoniker:
+  - value: validationParameters
+  description: <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.TokenValidationParameters"></xref> required for validation.
+  type: <xref href="Microsoft.IdentityModel.Tokens.TokenValidationParameters?alt=Microsoft.IdentityModel.Tokens.TokenValidationParameters&text=TokenValidationParameters" data-throw-if-not-resolved="True"/>
+inheritances:
+- <xref href="System.Delegate" data-throw-if-not-resolved="True"/>
+uid: Microsoft.IdentityModel.Tokens.AlgorithmValidator
+commentId: T:Microsoft.IdentityModel.Tokens.AlgorithmValidator
+namespace: Microsoft.IdentityModel.Tokens
+name: AlgorithmValidator
+fullName: Microsoft.IdentityModel.Tokens.AlgorithmValidator
+nameWithType: Microsoft.IdentityModel.Tokens.AlgorithmValidator
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens v6.25.1
+syntaxWithMoniker:
+- lang: csharp
+  values:
+  - value: public delegate bool AlgorithmValidator(string algorithm, SecurityKey securityKey, SecurityToken securityToken, TokenValidationParameters validationParameters);
+- lang: fsharp
+  values:
+  - value: type AlgorithmValidator = delegate of string * SecurityKey * SecurityToken * TokenValidationParameters -> bool
+- lang: vb
+  values:
+  - value: 'Public Delegate Function AlgorithmValidator(algorithm As String, securityKey As SecurityKey, securityToken As SecurityToken, validationParameters As TokenValidationParameters) As Boolean '
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+summary: Definition for AlgorithmValidator
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.AlgorithmValidator
+  - Microsoft.IdentityModel.Tokens.AlgorithmValidator..ctor
+  - Microsoft.IdentityModel.Tokens.AlgorithmValidator.Invoke
+  - Microsoft.IdentityModel.Tokens.AlgorithmValidator.BeginInvoke
+  - Microsoft.IdentityModel.Tokens.AlgorithmValidator.EndInvoke
+  api_location:
+  - Microsoft.IdentityModel.Tokens.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.AlgorithmValidator
+  - Microsoft::IdentityModel::Tokens::AlgorithmValidator
+  - AlgorithmValidator
+  helpviewer_keywords:
+  - Microsoft.IdentityModel.Tokens.AlgorithmValidator delegate [.NET]
+  monikers:
+  - msal-web-dotnet-latest

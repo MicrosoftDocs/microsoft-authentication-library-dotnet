@@ -1,0 +1,110 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder?alt=Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder&text=MicrosoftIdentityAppCallsWebApiAuthenticationBuilder" data-throw-if-not-resolved="True"/>
+    description: The builder itself for chaining.
+  parameters:
+  - namesWithMoniker:
+    - value: initialScopes
+    description: Initial scopes.
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  type: method
+  uid: Microsoft.Identity.Web.MicrosoftIdentityWebAppAuthenticationBuilder.EnableTokenAcquisitionToCallDownstreamApi(System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:Microsoft.Identity.Web.MicrosoftIdentityWebAppAuthenticationBuilder.EnableTokenAcquisitionToCallDownstreamApi(System.Collections.Generic.IEnumerable{System.String})
+  name: EnableTokenAcquisitionToCallDownstreamApi(IEnumerable<String>)
+  fullName: Microsoft.Identity.Web.MicrosoftIdentityWebAppAuthenticationBuilder.EnableTokenAcquisitionToCallDownstreamApi(IEnumerable<String>)
+  nameWithType: MicrosoftIdentityWebAppAuthenticationBuilder.EnableTokenAcquisitionToCallDownstreamApi(IEnumerable<String>)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder EnableTokenAcquisitionToCallDownstreamApi (System.Collections.Generic.IEnumerable<string>? initialScopes = default);
+  - lang: fsharp
+    values:
+    - value: 'member this.EnableTokenAcquisitionToCallDownstreamApi : seq<string> -> Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder'
+  - lang: vb
+    values:
+    - value: Public Function EnableTokenAcquisitionToCallDownstreamApi (Optional initialScopes As IEnumerable(Of String) = Nothing) As MicrosoftIdentityAppCallsWebApiAuthenticationBuilder
+  monikers:
+  - msal-model-dotnet-latest
+  summary: The web app calls a web API.
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder?alt=Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder&text=MicrosoftIdentityAppCallsWebApiAuthenticationBuilder" data-throw-if-not-resolved="True"/>
+    description: The builder itself for chaining.
+  parameters:
+  - namesWithMoniker:
+    - value: configureConfidentialClientApplicationOptions
+    description: >-
+      Action to configure the
+                  MSAL.NET confidential client application options.
+    type: <xref href="System.Action`1?alt=System.Action&text=Action" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Client.ConfidentialClientApplicationOptions?alt=Microsoft.Identity.Client.ConfidentialClientApplicationOptions&text=ConfidentialClientApplicationOptions" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: initialScopes
+    description: Initial scopes.
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  type: method
+  uid: Microsoft.Identity.Web.MicrosoftIdentityWebAppAuthenticationBuilder.EnableTokenAcquisitionToCallDownstreamApi(System.Action{Microsoft.Identity.Client.ConfidentialClientApplicationOptions},System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:Microsoft.Identity.Web.MicrosoftIdentityWebAppAuthenticationBuilder.EnableTokenAcquisitionToCallDownstreamApi(System.Action{Microsoft.Identity.Client.ConfidentialClientApplicationOptions},System.Collections.Generic.IEnumerable{System.String})
+  name: EnableTokenAcquisitionToCallDownstreamApi(Action<ConfidentialClientApplicationOptions>, IEnumerable<String>)
+  fullName: Microsoft.Identity.Web.MicrosoftIdentityWebAppAuthenticationBuilder.EnableTokenAcquisitionToCallDownstreamApi(Action<ConfidentialClientApplicationOptions>, IEnumerable<String>)
+  nameWithType: MicrosoftIdentityWebAppAuthenticationBuilder.EnableTokenAcquisitionToCallDownstreamApi(Action<ConfidentialClientApplicationOptions>, IEnumerable<String>)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder EnableTokenAcquisitionToCallDownstreamApi (Action<Microsoft.Identity.Client.ConfidentialClientApplicationOptions>? configureConfidentialClientApplicationOptions, System.Collections.Generic.IEnumerable<string>? initialScopes = default);
+  - lang: fsharp
+    values:
+    - value: 'member this.EnableTokenAcquisitionToCallDownstreamApi : Action<Microsoft.Identity.Client.ConfidentialClientApplicationOptions> * seq<string> -> Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder'
+  - lang: vb
+    values:
+    - value: Public Function EnableTokenAcquisitionToCallDownstreamApi (configureConfidentialClientApplicationOptions As Action(Of ConfidentialClientApplicationOptions), Optional initialScopes As IEnumerable(Of String) = Nothing) As MicrosoftIdentityAppCallsWebApiAuthenticationBuilder
+  monikers:
+  - msal-model-dotnet-latest
+  summary: >-
+    The web app calls a web API. This override enables you to specify the
+
+    ConfidentialClientApplicationOptions (from MSAL.NET) programmatically.
+  metadata: {}
+uid: Microsoft.Identity.Web.MicrosoftIdentityWebAppAuthenticationBuilder.EnableTokenAcquisitionToCallDownstreamApi*
+commentId: Overload:Microsoft.Identity.Web.MicrosoftIdentityWebAppAuthenticationBuilder.EnableTokenAcquisitionToCallDownstreamApi
+namespace: Microsoft.Identity.Web
+name: EnableTokenAcquisitionToCallDownstreamApi
+fullName: Microsoft.Identity.Web.MicrosoftIdentityWebAppAuthenticationBuilder.EnableTokenAcquisitionToCallDownstreamApi
+nameWithType: MicrosoftIdentityWebAppAuthenticationBuilder.EnableTokenAcquisitionToCallDownstreamApi
+assembliesWithMoniker:
+- value: Microsoft.Identity.Web.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Web v1.25.10
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-model-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Web.MicrosoftIdentityWebAppAuthenticationBuilder.EnableTokenAcquisitionToCallDownstreamApi
+  api_location:
+  - Microsoft.Identity.Web.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Web.MicrosoftIdentityWebAppAuthenticationBuilder.EnableTokenAcquisitionToCallDownstreamApi
+  - Microsoft::Identity::Web::MicrosoftIdentityWebAppAuthenticationBuilder::EnableTokenAcquisitionToCallDownstreamApi
+  - EnableTokenAcquisitionToCallDownstreamApi
+  - MicrosoftIdentityWebAppAuthenticationBuilder.EnableTokenAcquisitionToCallDownstreamApi
+  - MicrosoftIdentityWebAppAuthenticationBuilder::EnableTokenAcquisitionToCallDownstreamApi
+  helpviewer_keywords:
+  - MicrosoftIdentityWebAppAuthenticationBuilder.EnableTokenAcquisitionToCallDownstreamApi method [.NET]
+  - EnableTokenAcquisitionToCallDownstreamApi method [.NET], class MicrosoftIdentityWebAppAuthenticationBuilder
+  - MicrosoftIdentityWebAppAuthenticationBuilder.EnableTokenAcquisitionToCallDownstreamApi(IEnumerable<String>) method [.NET]
+  - EnableTokenAcquisitionToCallDownstreamApi(IEnumerable<String>) method [.NET], class MicrosoftIdentityWebAppAuthenticationBuilder
+  - MicrosoftIdentityWebAppAuthenticationBuilder.EnableTokenAcquisitionToCallDownstreamApi(Action<ConfidentialClientApplicationOptions>, IEnumerable<String>) method [.NET]
+  - EnableTokenAcquisitionToCallDownstreamApi(Action<ConfidentialClientApplicationOptions>, IEnumerable<String>) method [.NET], class MicrosoftIdentityWebAppAuthenticationBuilder
+  monikers:
+  - msal-model-dotnet-latest

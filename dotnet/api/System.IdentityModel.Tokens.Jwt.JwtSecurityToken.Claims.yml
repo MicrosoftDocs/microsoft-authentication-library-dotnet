@@ -1,0 +1,68 @@
+### YamlMime:NetMember
+type: property
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.Security.Claims.Claim?alt=System.Security.Claims.Claim&text=Claim" data-throw-if-not-resolved="True"/>&gt;
+  type: property
+  uid: System.IdentityModel.Tokens.Jwt.JwtSecurityToken.Claims
+  commentId: P:System.IdentityModel.Tokens.Jwt.JwtSecurityToken.Claims
+  name: Claims
+  fullName: System.IdentityModel.Tokens.Jwt.JwtSecurityToken.Claims
+  nameWithType: JwtSecurityToken.Claims
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public System.Collections.Generic.IEnumerable<System.Security.Claims.Claim> Claims { get; }
+  - lang: fsharp
+    values:
+    - value: 'member this.Claims : seq<System.Security.Claims.Claim>'
+  - lang: vb
+    values:
+    - value: Public ReadOnly Property Claims As IEnumerable(Of Claim)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: >-
+    Gets the <xref data-throw-if-not-resolved="true" uid="System.Security.Claims.Claim"></xref>(s) for this token.
+
+    If this is a JWE token, this property only returns the encrypted claims;
+     the unencrypted claims should be read from the header seperately.
+  remarks: <p><xref data-throw-if-not-resolved="true" uid="System.Security.Claims.Claim"></xref>(s) returned will NOT have the <xref data-throw-if-not-resolved="true" uid="System.Security.Claims.Claim.Type"></xref> translated according to <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.InboundClaimTypeMap"></xref></p>
+  metadata: {}
+uid: System.IdentityModel.Tokens.Jwt.JwtSecurityToken.Claims*
+commentId: Overload:System.IdentityModel.Tokens.Jwt.JwtSecurityToken.Claims
+namespace: System.IdentityModel.Tokens.Jwt
+name: Claims
+fullName: System.IdentityModel.Tokens.Jwt.JwtSecurityToken.Claims
+nameWithType: JwtSecurityToken.Claims
+assembliesWithMoniker:
+- value: System.IdentityModel.Tokens.Jwt.dll
+packagesWithMoniker:
+- value: System.IdentityModel.Tokens.Jwt v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - System.IdentityModel.Tokens.Jwt.JwtSecurityToken.Claims
+  - System.IdentityModel.Tokens.Jwt.JwtSecurityToken.get_Claims
+  api_location:
+  - System.IdentityModel.Tokens.Jwt.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - System.IdentityModel.Tokens.Jwt.JwtSecurityToken.Claims
+  - System::IdentityModel::Tokens::Jwt::JwtSecurityToken::Claims
+  - Claims
+  - JwtSecurityToken.Claims
+  - JwtSecurityToken::Claims
+  helpviewer_keywords:
+  - JwtSecurityToken.Claims property [.NET]
+  - Claims property [.NET], class JwtSecurityToken
+  monikers:
+  - msal-web-dotnet-latest

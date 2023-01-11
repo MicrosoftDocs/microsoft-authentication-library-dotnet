@@ -1,0 +1,202 @@
+### YamlMime:NetEnum
+inheritancesWithMoniker:
+- values:
+  - <xref href="System.Enum?alt=System.Enum&text=Enum" data-throw-if-not-resolved="True"/>
+fields:
+- uid: Microsoft.Identity.Client.UiRequiredExceptionClassification.AcquireTokenSilentFailed
+  commentId: F:Microsoft.Identity.Client.UiRequiredExceptionClassification.AcquireTokenSilentFailed
+  literalValue: "7"
+  name: AcquireTokenSilentFailed
+  nameWithType: UiRequiredExceptionClassification.AcquireTokenSilentFailed
+  fullName: Microsoft.Identity.Client.UiRequiredExceptionClassification.AcquireTokenSilentFailed
+  summary: >-
+    An AcquireTokenSilent call failed. This is usually part of the pattern 
+
+    of calling AcquireTokenSilent for getting a token from the cache, followed by an a different
+
+    AcquireToken call for getting a token from AAD. See the error message for details. 
+
+    See https://aka.ms/msal-net-UiRequiredException for details.
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.UiRequiredExceptionClassification.AdditionalAction
+  commentId: F:Microsoft.Identity.Client.UiRequiredExceptionClassification.AdditionalAction
+  literalValue: "3"
+  name: AdditionalAction
+  nameWithType: UiRequiredExceptionClassification.AdditionalAction
+  fullName: Microsoft.Identity.Client.UiRequiredExceptionClassification.AdditionalAction
+  summary: >-
+    Issue can be resolved by additional remedial interaction with the system, outside of the interactive authentication flow.
+
+    Starting an interactive authentication flow will show the user what they need to do, but it is possible that the user is unable to complete the action.
+
+    See https://aka.ms/msal-net-UiRequiredException for details
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.UiRequiredExceptionClassification.BasicAction
+  commentId: F:Microsoft.Identity.Client.UiRequiredExceptionClassification.BasicAction
+  literalValue: "2"
+  name: BasicAction
+  nameWithType: UiRequiredExceptionClassification.BasicAction
+  fullName: Microsoft.Identity.Client.UiRequiredExceptionClassification.BasicAction
+  summary: >-
+    Issue can be resolved by user interaction during the interactive authentication flow.
+
+    See https://aka.ms/msal-net-UiRequiredException for details
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.UiRequiredExceptionClassification.ConsentRequired
+  commentId: F:Microsoft.Identity.Client.UiRequiredExceptionClassification.ConsentRequired
+  literalValue: "4"
+  name: ConsentRequired
+  nameWithType: UiRequiredExceptionClassification.ConsentRequired
+  fullName: Microsoft.Identity.Client.UiRequiredExceptionClassification.ConsentRequired
+  summary: >-
+    User consent is missing, or has been revoked. Issue can be resolved by user consenting during the interactive authentication flow.
+
+    See https://aka.ms/msal-net-UiRequiredException for details
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.UiRequiredExceptionClassification.MessageOnly
+  commentId: F:Microsoft.Identity.Client.UiRequiredExceptionClassification.MessageOnly
+  literalValue: "1"
+  name: MessageOnly
+  nameWithType: UiRequiredExceptionClassification.MessageOnly
+  fullName: Microsoft.Identity.Client.UiRequiredExceptionClassification.MessageOnly
+  summary: >-
+    Issue cannot be resolved at this time. Launching interactive authentication flow will show a message explaining the condition.
+
+    See https://aka.ms/msal-net-UiRequiredException for details
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.UiRequiredExceptionClassification.None
+  commentId: F:Microsoft.Identity.Client.UiRequiredExceptionClassification.None
+  literalValue: "0"
+  name: None
+  nameWithType: UiRequiredExceptionClassification.None
+  fullName: Microsoft.Identity.Client.UiRequiredExceptionClassification.None
+  summary: >-
+    No further details are provided. It is possible that the user will be able to resolve the issue by launching interactive authentication.
+
+    See https://aka.ms/msal-net-UiRequiredException for details
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.UiRequiredExceptionClassification.PromptNeverFailed
+  commentId: F:Microsoft.Identity.Client.UiRequiredExceptionClassification.PromptNeverFailed
+  literalValue: "6"
+  name: PromptNeverFailed
+  nameWithType: UiRequiredExceptionClassification.PromptNeverFailed
+  fullName: Microsoft.Identity.Client.UiRequiredExceptionClassification.PromptNeverFailed
+  summary: >-
+    <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.AcquireTokenInteractiveParameterBuilder.WithPrompt(Microsoft.Identity.Client.Prompt)"></xref> was used with Prompt.Never value, 
+      however this could not be honored by the server. Please use a different prompt behavior, such as <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.Prompt.SelectAccount"></xref>
+      See https://aka.ms/msal-net-UiRequiredException for details.
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.UiRequiredExceptionClassification.UserPasswordExpired
+  commentId: F:Microsoft.Identity.Client.UiRequiredExceptionClassification.UserPasswordExpired
+  literalValue: "5"
+  name: UserPasswordExpired
+  nameWithType: UiRequiredExceptionClassification.UserPasswordExpired
+  fullName: Microsoft.Identity.Client.UiRequiredExceptionClassification.UserPasswordExpired
+  summary: >-
+    User's password has expired. Issue can be resolved by user during the interactive authentication flow.
+
+    See https://aka.ms/msal-net-UiRequiredException for details.
+  monikers:
+  - msal-dotnet-latest
+uid: Microsoft.Identity.Client.UiRequiredExceptionClassification
+commentId: T:Microsoft.Identity.Client.UiRequiredExceptionClassification
+namespace: Microsoft.Identity.Client
+name: UiRequiredExceptionClassification
+fullName: Microsoft.Identity.Client.UiRequiredExceptionClassification
+nameWithType: Microsoft.Identity.Client.UiRequiredExceptionClassification
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+syntaxWithMoniker:
+- lang: csharp
+  values:
+  - value: public enum UiRequiredExceptionClassification
+- lang: fsharp
+  values:
+  - value: 'type UiRequiredExceptionClassification = '
+- lang: vb
+  values:
+  - value: Public Enum UiRequiredExceptionClassification
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+summary: >-
+  Details about the cause of an <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.MsalUiRequiredException"></xref>, giving a hint about what the user can expect when 
+
+  they go through interactive authentication. See https://aka.ms/msal-net-UiRequiredException for details.
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.UiRequiredExceptionClassification
+  - Microsoft.Identity.Client.UiRequiredExceptionClassification.AcquireTokenSilentFailed
+  - Microsoft.Identity.Client.UiRequiredExceptionClassification.AdditionalAction
+  - Microsoft.Identity.Client.UiRequiredExceptionClassification.BasicAction
+  - Microsoft.Identity.Client.UiRequiredExceptionClassification.ConsentRequired
+  - Microsoft.Identity.Client.UiRequiredExceptionClassification.MessageOnly
+  - Microsoft.Identity.Client.UiRequiredExceptionClassification.None
+  - Microsoft.Identity.Client.UiRequiredExceptionClassification.PromptNeverFailed
+  - Microsoft.Identity.Client.UiRequiredExceptionClassification.UserPasswordExpired
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.UiRequiredExceptionClassification
+  - Microsoft::Identity::Client::UiRequiredExceptionClassification
+  - UiRequiredExceptionClassification
+  - Microsoft.Identity.Client.UiRequiredExceptionClassification.AcquireTokenSilentFailed
+  - Microsoft::Identity::Client::UiRequiredExceptionClassification::AcquireTokenSilentFailed
+  - AcquireTokenSilentFailed
+  - UiRequiredExceptionClassification.AcquireTokenSilentFailed
+  - UiRequiredExceptionClassification::AcquireTokenSilentFailed
+  - Microsoft.Identity.Client.UiRequiredExceptionClassification.AdditionalAction
+  - Microsoft::Identity::Client::UiRequiredExceptionClassification::AdditionalAction
+  - AdditionalAction
+  - UiRequiredExceptionClassification.AdditionalAction
+  - UiRequiredExceptionClassification::AdditionalAction
+  - Microsoft.Identity.Client.UiRequiredExceptionClassification.BasicAction
+  - Microsoft::Identity::Client::UiRequiredExceptionClassification::BasicAction
+  - BasicAction
+  - UiRequiredExceptionClassification.BasicAction
+  - UiRequiredExceptionClassification::BasicAction
+  - Microsoft.Identity.Client.UiRequiredExceptionClassification.ConsentRequired
+  - Microsoft::Identity::Client::UiRequiredExceptionClassification::ConsentRequired
+  - ConsentRequired
+  - UiRequiredExceptionClassification.ConsentRequired
+  - UiRequiredExceptionClassification::ConsentRequired
+  - Microsoft.Identity.Client.UiRequiredExceptionClassification.MessageOnly
+  - Microsoft::Identity::Client::UiRequiredExceptionClassification::MessageOnly
+  - MessageOnly
+  - UiRequiredExceptionClassification.MessageOnly
+  - UiRequiredExceptionClassification::MessageOnly
+  - Microsoft.Identity.Client.UiRequiredExceptionClassification.None
+  - Microsoft::Identity::Client::UiRequiredExceptionClassification::None
+  - None
+  - UiRequiredExceptionClassification.None
+  - UiRequiredExceptionClassification::None
+  - Microsoft.Identity.Client.UiRequiredExceptionClassification.PromptNeverFailed
+  - Microsoft::Identity::Client::UiRequiredExceptionClassification::PromptNeverFailed
+  - PromptNeverFailed
+  - UiRequiredExceptionClassification.PromptNeverFailed
+  - UiRequiredExceptionClassification::PromptNeverFailed
+  - Microsoft.Identity.Client.UiRequiredExceptionClassification.UserPasswordExpired
+  - Microsoft::Identity::Client::UiRequiredExceptionClassification::UserPasswordExpired
+  - UserPasswordExpired
+  - UiRequiredExceptionClassification.UserPasswordExpired
+  - UiRequiredExceptionClassification::UserPasswordExpired
+  helpviewer_keywords:
+  - Microsoft.Identity.Client.UiRequiredExceptionClassification enum [.NET]
+  monikers:
+  - msal-dotnet-latest

@@ -1,0 +1,78 @@
+### YamlMime:NetMember
+type: method
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: writer
+    description: A <xref data-throw-if-not-resolved="true" uid="System.Xml.XmlWriter"></xref> to serialize the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2AttributeStatement"></xref>.
+    type: <xref href="System.Xml.XmlWriter?alt=System.Xml.XmlWriter&text=XmlWriter" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: statement
+    description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2AttributeStatement"></xref> to serialize.
+    type: <xref href="Microsoft.IdentityModel.Tokens.Saml2.Saml2AttributeStatement?alt=Microsoft.IdentityModel.Tokens.Saml2.Saml2AttributeStatement&text=Saml2AttributeStatement" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: if <code data-dev-comment-type="paramref">statement</code> is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: if <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2AttributeStatement.Attributes"></xref>.Count == 0.
+    type: <xref href="Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenWriteException?alt=Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenWriteException&text=Saml2SecurityTokenWriteException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteAttributeStatement(System.Xml.XmlWriter,Microsoft.IdentityModel.Tokens.Saml2.Saml2AttributeStatement)
+  commentId: M:Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteAttributeStatement(System.Xml.XmlWriter,Microsoft.IdentityModel.Tokens.Saml2.Saml2AttributeStatement)
+  name: WriteAttributeStatement(XmlWriter, Saml2AttributeStatement)
+  fullName: Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteAttributeStatement(XmlWriter, Saml2AttributeStatement)
+  nameWithType: Saml2Serializer.WriteAttributeStatement(XmlWriter, Saml2AttributeStatement)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected virtual void WriteAttributeStatement (System.Xml.XmlWriter writer, Microsoft.IdentityModel.Tokens.Saml2.Saml2AttributeStatement statement);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member WriteAttributeStatement : System.Xml.XmlWriter * Microsoft.IdentityModel.Tokens.Saml2.Saml2AttributeStatement -> unit
+
+        override this.WriteAttributeStatement : System.Xml.XmlWriter * Microsoft.IdentityModel.Tokens.Saml2.Saml2AttributeStatement -> unit
+  - lang: vb
+    values:
+    - value: Protected Overridable Sub WriteAttributeStatement (writer As XmlWriter, statement As Saml2AttributeStatement)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Writes the &lt;saml:AttributeStatement&gt; element.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteAttributeStatement*
+commentId: Overload:Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteAttributeStatement
+namespace: Microsoft.IdentityModel.Tokens.Saml2
+name: WriteAttributeStatement
+fullName: Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteAttributeStatement
+nameWithType: Saml2Serializer.WriteAttributeStatement
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteAttributeStatement
+  api_location:
+  - Microsoft.IdentityModel.Tokens.Saml.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteAttributeStatement
+  - Microsoft::IdentityModel::Tokens::Saml2::Saml2Serializer::WriteAttributeStatement
+  - WriteAttributeStatement
+  - Saml2Serializer.WriteAttributeStatement
+  - Saml2Serializer::WriteAttributeStatement
+  helpviewer_keywords:
+  - Saml2Serializer.WriteAttributeStatement method [.NET]
+  - WriteAttributeStatement method [.NET], class Saml2Serializer
+  - Saml2Serializer.WriteAttributeStatement(XmlWriter, Saml2AttributeStatement) method [.NET]
+  - WriteAttributeStatement(XmlWriter, Saml2AttributeStatement) method [.NET], class Saml2Serializer
+  monikers:
+  - msal-web-dotnet-latest

@@ -1,0 +1,78 @@
+### YamlMime:NetMember
+type: property
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Client.IUser?alt=Microsoft.Identity.Client.IUser&text=IUser" data-throw-if-not-resolved="True"/>&gt;
+  implementsWithMoniker:
+  - value: <xref href="Microsoft.Identity.Client.IClientApplicationBase.Users?alt=Microsoft.Identity.Client.IClientApplicationBase.Users&text=Users" data-throw-if-not-resolved="True"/>
+  type: property
+  uid: Microsoft.Identity.Client.ClientApplicationBase.Users
+  commentId: P:Microsoft.Identity.Client.ClientApplicationBase.Users
+  name: Users
+  fullName: Microsoft.Identity.Client.ClientApplicationBase.Users
+  nameWithType: ClientApplicationBase.Users
+  attributesWithMoniker:
+  - value: System.ObsoleteAttribute
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: >-
+        [System.Obsolete("Use GetAccountsAsync instead (See https://aka.ms/msal-net-2-released)", true)]
+
+        public System.Collections.Generic.IEnumerable<Microsoft.Identity.Client.IUser> Users { get; }
+  - lang: fsharp
+    values:
+    - value: >-
+        [<System.Obsolete("Use GetAccountsAsync instead (See https://aka.ms/msal-net-2-released)", true)>]
+
+        member this.Users : seq<Microsoft.Identity.Client.IUser>
+  - lang: vb
+    values:
+    - value: Public ReadOnly Property Users As IEnumerable(Of IUser)
+  monikers:
+  - msal-dotnet-latest
+  obsoleteMessagesWithMoniker:
+  - value: Use GetAccountsAsync instead (See https://aka.ms/msal-net-2-released)
+  summary: >-
+    In MSAL 1.x returned an enumeration of <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.IUser"></xref>. From MSAL 2.x, use <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ClientApplicationBase.GetAccountsAsync"></xref> instead.
+
+    See https://aka.ms/msal-net-2-released for more details.
+  metadata: {}
+uid: Microsoft.Identity.Client.ClientApplicationBase.Users*
+commentId: Overload:Microsoft.Identity.Client.ClientApplicationBase.Users
+namespace: Microsoft.Identity.Client
+name: Users
+fullName: Microsoft.Identity.Client.ClientApplicationBase.Users
+nameWithType: ClientApplicationBase.Users
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.ClientApplicationBase.Users
+  - Microsoft.Identity.Client.ClientApplicationBase.get_Users
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.ClientApplicationBase.Users
+  - Microsoft::Identity::Client::ClientApplicationBase::Users
+  - Users
+  - ClientApplicationBase.Users
+  - ClientApplicationBase::Users
+  helpviewer_keywords:
+  - ClientApplicationBase.Users property [.NET]
+  - Users property [.NET], class ClientApplicationBase
+  monikers:
+  - msal-dotnet-latest

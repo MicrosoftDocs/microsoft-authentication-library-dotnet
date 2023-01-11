@@ -1,0 +1,102 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.AspNetCore.Mvc.IActionResult?alt=Microsoft.AspNetCore.Mvc.IActionResult&text=IActionResult" data-throw-if-not-resolved="True"/>
+    description: Challenge generating a redirect to Azure AD to sign in the user.
+  parameters:
+  - namesWithMoniker:
+    - value: redirectUri
+    description: Redirect URI.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: scope
+    description: Scopes to request.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: loginHint
+    description: Login hint.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: domainHint
+    description: Domain hint.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: claims
+    description: Claims.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: policy
+    description: AAD B2C policy.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: scheme
+    description: Authentication scheme.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Web.UI.Areas.MicrosoftIdentity.Controllers.AccountController.Challenge(System.String,System.String,System.String,System.String,System.String,System.String,System.String)
+  commentId: M:Microsoft.Identity.Web.UI.Areas.MicrosoftIdentity.Controllers.AccountController.Challenge(System.String,System.String,System.String,System.String,System.String,System.String,System.String)
+  name: Challenge(String, String, String, String, String, String, String)
+  fullName: Microsoft.Identity.Web.UI.Areas.MicrosoftIdentity.Controllers.AccountController.Challenge(String, String, String, String, String, String, String)
+  nameWithType: AccountController.Challenge(String, String, String, String, String, String, String)
+  attributesWithMoniker:
+  - value: Microsoft.AspNetCore.Mvc.HttpGetAttribute
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: >-
+        [Microsoft.AspNetCore.Mvc.HttpGet("{scheme?}")]
+
+        public Microsoft.AspNetCore.Mvc.IActionResult Challenge (string redirectUri, string scope, string loginHint, string domainHint, string claims, string policy, string scheme);
+  - lang: fsharp
+    values:
+    - value: >-
+        [<Microsoft.AspNetCore.Mvc.HttpGet("{scheme?}")>]
+
+        override this.Challenge : string * string * string * string * string * string * string -> Microsoft.AspNetCore.Mvc.IActionResult
+  - lang: vb
+    values:
+    - value: Public Function Challenge (redirectUri As String, scope As String, loginHint As String, domainHint As String, claims As String, policy As String, scheme As String) As IActionResult
+  monikers:
+  - msal-model-dotnet-latest
+  summary: Challenges the user.
+  metadata: {}
+uid: Microsoft.Identity.Web.UI.Areas.MicrosoftIdentity.Controllers.AccountController.Challenge*
+commentId: Overload:Microsoft.Identity.Web.UI.Areas.MicrosoftIdentity.Controllers.AccountController.Challenge
+namespace: Microsoft.Identity.Web.UI.Areas.MicrosoftIdentity.Controllers
+name: Challenge
+fullName: Microsoft.Identity.Web.UI.Areas.MicrosoftIdentity.Controllers.AccountController.Challenge
+nameWithType: AccountController.Challenge
+assembliesWithMoniker:
+- value: Microsoft.Identity.Web.UI.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Web.UI v1.25.10
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-model-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Web.UI.Areas.MicrosoftIdentity.Controllers.AccountController.Challenge
+  api_location:
+  - Microsoft.Identity.Web.UI.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Web.UI.Areas.MicrosoftIdentity.Controllers.AccountController.Challenge
+  - Microsoft::Identity::Web::UI::Areas::MicrosoftIdentity::Controllers::AccountController::Challenge
+  - Challenge
+  - AccountController.Challenge
+  - AccountController::Challenge
+  helpviewer_keywords:
+  - AccountController.Challenge method [.NET]
+  - Challenge method [.NET], class AccountController
+  - AccountController.Challenge(String, String, String, String, String, String, String) method [.NET]
+  - Challenge(String, String, String, String, String, String, String) method [.NET], class AccountController
+  monikers:
+  - msal-model-dotnet-latest

@@ -1,0 +1,84 @@
+### YamlMime:NetMember
+type: method
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: name
+    description: The name of the DOCTYPE. This must be non-empty.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: pubid
+    description: >-
+      If non-null it also writes PUBLIC "pubid" "sysid" where pubid and sysid are
+                  replaced with the value of the given arguments.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: sysid
+    description: >-
+      If pubid is null and sysid is non-null it writes SYSTEM "sysid" where sysid
+                  is replaced with the value of this argument.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: subset
+    description: >-
+      If non-null it writes [subset] where subset is replaced with the value of
+                  this argument.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Xml.DelegatingXmlDictionaryWriter.WriteDocType(System.String,System.String,System.String,System.String)
+  commentId: M:Microsoft.IdentityModel.Xml.DelegatingXmlDictionaryWriter.WriteDocType(System.String,System.String,System.String,System.String)
+  name: WriteDocType(String, String, String, String)
+  fullName: Microsoft.IdentityModel.Xml.DelegatingXmlDictionaryWriter.WriteDocType(String, String, String, String)
+  nameWithType: DelegatingXmlDictionaryWriter.WriteDocType(String, String, String, String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public override void WriteDocType (string name, string pubid, string sysid, string subset);
+  - lang: fsharp
+    values:
+    - value: 'override this.WriteDocType : string * string * string * string -> unit'
+  - lang: vb
+    values:
+    - value: Public Overrides Sub WriteDocType (name As String, pubid As String, sysid As String, subset As String)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Writes the DOCTYPE declaration with the specified name and optional attributes.
+  metadata: {}
+uid: Microsoft.IdentityModel.Xml.DelegatingXmlDictionaryWriter.WriteDocType*
+commentId: Overload:Microsoft.IdentityModel.Xml.DelegatingXmlDictionaryWriter.WriteDocType
+namespace: Microsoft.IdentityModel.Xml
+name: WriteDocType
+fullName: Microsoft.IdentityModel.Xml.DelegatingXmlDictionaryWriter.WriteDocType
+nameWithType: DelegatingXmlDictionaryWriter.WriteDocType
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Xml.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Xml v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Xml.DelegatingXmlDictionaryWriter.WriteDocType
+  api_location:
+  - Microsoft.IdentityModel.Xml.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Xml.DelegatingXmlDictionaryWriter.WriteDocType
+  - Microsoft::IdentityModel::Xml::DelegatingXmlDictionaryWriter::WriteDocType
+  - WriteDocType
+  - DelegatingXmlDictionaryWriter.WriteDocType
+  - DelegatingXmlDictionaryWriter::WriteDocType
+  helpviewer_keywords:
+  - DelegatingXmlDictionaryWriter.WriteDocType method [.NET]
+  - WriteDocType method [.NET], class DelegatingXmlDictionaryWriter
+  - DelegatingXmlDictionaryWriter.WriteDocType(String, String, String, String) method [.NET]
+  - WriteDocType(String, String, String, String) method [.NET], class DelegatingXmlDictionaryWriter
+  monikers:
+  - msal-web-dotnet-latest

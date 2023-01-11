@@ -1,0 +1,97 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.Extensions.DependencyInjection.IServiceCollection?alt=Microsoft.Extensions.DependencyInjection.IServiceCollection&text=IServiceCollection" data-throw-if-not-resolved="True"/>
+    description: The service collection.
+  parameters:
+  - namesWithMoniker:
+    - value: services
+    description: The services collection to add to.
+    type: <xref href="Microsoft.Extensions.DependencyInjection.IServiceCollection?alt=Microsoft.Extensions.DependencyInjection.IServiceCollection&text=IServiceCollection" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Web.TokenCacheProviders.Session.SessionTokenCacheProviderExtension.AddSessionPerUserTokenCache(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  commentId: M:Microsoft.Identity.Web.TokenCacheProviders.Session.SessionTokenCacheProviderExtension.AddSessionPerUserTokenCache(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name: AddSessionPerUserTokenCache(IServiceCollection)
+  fullName: Microsoft.Identity.Web.TokenCacheProviders.Session.SessionTokenCacheProviderExtension.AddSessionPerUserTokenCache(IServiceCollection)
+  nameWithType: SessionTokenCacheProviderExtension.AddSessionPerUserTokenCache(IServiceCollection)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public static Microsoft.Extensions.DependencyInjection.IServiceCollection AddSessionPerUserTokenCache (this Microsoft.Extensions.DependencyInjection.IServiceCollection services);
+  - lang: fsharp
+    values:
+    - value: 'static member AddSessionPerUserTokenCache : Microsoft.Extensions.DependencyInjection.IServiceCollection -> Microsoft.Extensions.DependencyInjection.IServiceCollection'
+  - lang: vb
+    values:
+    - value: >-
+        <Extension()>
+
+        Public Function AddSessionPerUserTokenCache (services As IServiceCollection) As IServiceCollection
+  monikers:
+  - msal-model-dotnet-latest
+  summary: Adds an HTTP session-based per-user token cache to the service collection.
+  remarks: >-
+    <p>For this session cache to work effectively the ASP.NET Core session has to be configured properly. The latest guidance is provided at https://docs.microsoft.com/aspnet/core/fundamentals/app-state.</p><p>In the method <code data-dev-comment-type="c">public void ConfigureServices(IServiceCollection services)</code> in Startup.cs, add the following: 
+
+
+    ```
+
+    services.AddSession(option =>
+
+    {
+        option.Cookie.IsEssential = true;
+    });
+
+    ```
+
+     In the method <code data-dev-comment-type="c">public void Configure(IApplicationBuilder app, IHostingEnvironment env)</code> in Startup.cs, add the following: 
+
+
+    ```
+
+    app.UseSession(); // Before UseMvc()
+
+    ```
+
+     Because session token caches are added with scoped lifetime, they should not be used when <code data-dev-comment-type="c">TokenAcquisition</code> is also used as a singleton (for example, when using Microsoft Graph SDK).</p>
+  metadata: {}
+uid: Microsoft.Identity.Web.TokenCacheProviders.Session.SessionTokenCacheProviderExtension.AddSessionPerUserTokenCache*
+commentId: Overload:Microsoft.Identity.Web.TokenCacheProviders.Session.SessionTokenCacheProviderExtension.AddSessionPerUserTokenCache
+namespace: Microsoft.Identity.Web.TokenCacheProviders.Session
+name: AddSessionPerUserTokenCache
+fullName: Microsoft.Identity.Web.TokenCacheProviders.Session.SessionTokenCacheProviderExtension.AddSessionPerUserTokenCache
+nameWithType: SessionTokenCacheProviderExtension.AddSessionPerUserTokenCache
+assembliesWithMoniker:
+- value: Microsoft.Identity.Web.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Web v1.25.10
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-model-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Web.TokenCacheProviders.Session.SessionTokenCacheProviderExtension.AddSessionPerUserTokenCache
+  api_location:
+  - Microsoft.Identity.Web.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Web.TokenCacheProviders.Session.SessionTokenCacheProviderExtension.AddSessionPerUserTokenCache
+  - Microsoft::Identity::Web::TokenCacheProviders::Session::SessionTokenCacheProviderExtension::AddSessionPerUserTokenCache
+  - AddSessionPerUserTokenCache
+  - SessionTokenCacheProviderExtension.AddSessionPerUserTokenCache
+  - SessionTokenCacheProviderExtension::AddSessionPerUserTokenCache
+  helpviewer_keywords:
+  - SessionTokenCacheProviderExtension.AddSessionPerUserTokenCache method [.NET]
+  - AddSessionPerUserTokenCache method [.NET], class SessionTokenCacheProviderExtension
+  - SessionTokenCacheProviderExtension.AddSessionPerUserTokenCache(IServiceCollection) extension method [.NET]
+  - AddSessionPerUserTokenCache(IServiceCollection) extension method [.NET], class SessionTokenCacheProviderExtension
+  monikers:
+  - msal-model-dotnet-latest

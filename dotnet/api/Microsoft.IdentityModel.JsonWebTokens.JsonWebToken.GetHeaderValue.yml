@@ -1,0 +1,80 @@
+### YamlMime:NetMember
+type: method
+members:
+- typeParameters:
+  - name: T
+  returnsWithMoniker:
+    type:
+    - value: T
+    description: The value as <code data-dev-comment-type="typeparamref">T</code>.
+  parameters:
+  - namesWithMoniker:
+    - value: key
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: if claim is not found or a transformation to <code data-dev-comment-type="typeparamref">T</code> cannot be made.
+    type: <xref href="System.ArgumentException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.GetHeaderValue``1(System.String)
+  commentId: M:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.GetHeaderValue``1(System.String)
+  name: GetHeaderValue<T>(String)
+  fullName: Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.GetHeaderValue<T>(String)
+  nameWithType: JsonWebToken.GetHeaderValue<T>(String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public T GetHeaderValue<T> (string key);
+  - lang: fsharp
+    values:
+    - value: "member this.GetHeaderValue : string -> 'T"
+  - lang: vb
+    values:
+    - value: Public Function GetHeaderValue(Of T) (key As String) As T
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Gets the 'value' corresponding to key from the JWT header transformed as type 'T'.
+  remarks: "<p>The expectation is that the 'value' corresponds to a type are expected in a JWT token. The 5 basic types: number, string, true / false, nil, array (of basic types). This is not a general purpose translation layer for complex types.</p>"
+  metadata: {}
+uid: Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.GetHeaderValue*
+commentId: Overload:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.GetHeaderValue
+namespace: Microsoft.IdentityModel.JsonWebTokens
+name: GetHeaderValue
+fullName: Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.GetHeaderValue
+nameWithType: JsonWebToken.GetHeaderValue
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.JsonWebTokens.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.JsonWebTokens v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.GetHeaderValue
+  api_location:
+  - Microsoft.IdentityModel.JsonWebTokens.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.GetHeaderValue
+  - Microsoft::IdentityModel::JsonWebTokens::JsonWebToken::GetHeaderValue
+  - GetHeaderValue
+  - JsonWebToken.GetHeaderValue
+  - JsonWebToken::GetHeaderValue
+  - Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.GetHeaderValue``1
+  - Microsoft::IdentityModel::JsonWebTokens::JsonWebToken::GetHeaderValue``1
+  - GetHeaderValue``1
+  - JsonWebToken.GetHeaderValue``1
+  - JsonWebToken::GetHeaderValue``1
+  helpviewer_keywords:
+  - JsonWebToken.GetHeaderValue method [.NET]
+  - GetHeaderValue method [.NET], class JsonWebToken
+  - JsonWebToken.GetHeaderValue<T>(String) method [.NET]
+  - GetHeaderValue<T>(String) method [.NET], class JsonWebToken
+  monikers:
+  - msal-web-dotnet-latest

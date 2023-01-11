@@ -1,0 +1,78 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.AspNetCore.Mvc.IActionResult?alt=Microsoft.AspNetCore.Mvc.IActionResult&text=IActionResult" data-throw-if-not-resolved="True"/>
+    description: Sign out result.
+  parameters:
+  - namesWithMoniker:
+    - value: scheme
+    description: Authentication scheme.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Web.UI.Areas.MicrosoftIdentity.Controllers.AccountController.SignOut(System.String)
+  commentId: M:Microsoft.Identity.Web.UI.Areas.MicrosoftIdentity.Controllers.AccountController.SignOut(System.String)
+  name: SignOut(String)
+  fullName: Microsoft.Identity.Web.UI.Areas.MicrosoftIdentity.Controllers.AccountController.SignOut(String)
+  nameWithType: AccountController.SignOut(String)
+  attributesWithMoniker:
+  - value: Microsoft.AspNetCore.Mvc.HttpGetAttribute
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: >-
+        [Microsoft.AspNetCore.Mvc.HttpGet("{scheme?}")]
+
+        public Microsoft.AspNetCore.Mvc.IActionResult SignOut (string scheme);
+  - lang: fsharp
+    values:
+    - value: >-
+        [<Microsoft.AspNetCore.Mvc.HttpGet("{scheme?}")>]
+
+        override this.SignOut : string -> Microsoft.AspNetCore.Mvc.IActionResult
+  - lang: vb
+    values:
+    - value: Public Function SignOut (scheme As String) As IActionResult
+  monikers:
+  - msal-model-dotnet-latest
+  summary: Handles the user sign-out.
+  metadata: {}
+uid: Microsoft.Identity.Web.UI.Areas.MicrosoftIdentity.Controllers.AccountController.SignOut*
+commentId: Overload:Microsoft.Identity.Web.UI.Areas.MicrosoftIdentity.Controllers.AccountController.SignOut
+namespace: Microsoft.Identity.Web.UI.Areas.MicrosoftIdentity.Controllers
+name: SignOut
+fullName: Microsoft.Identity.Web.UI.Areas.MicrosoftIdentity.Controllers.AccountController.SignOut
+nameWithType: AccountController.SignOut
+assembliesWithMoniker:
+- value: Microsoft.Identity.Web.UI.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Web.UI v1.25.10
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-model-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Web.UI.Areas.MicrosoftIdentity.Controllers.AccountController.SignOut
+  api_location:
+  - Microsoft.Identity.Web.UI.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Web.UI.Areas.MicrosoftIdentity.Controllers.AccountController.SignOut
+  - Microsoft::Identity::Web::UI::Areas::MicrosoftIdentity::Controllers::AccountController::SignOut
+  - SignOut
+  - AccountController.SignOut
+  - AccountController::SignOut
+  helpviewer_keywords:
+  - AccountController.SignOut method [.NET]
+  - SignOut method [.NET], class AccountController
+  - AccountController.SignOut(String) method [.NET]
+  - SignOut(String) method [.NET], class AccountController
+  monikers:
+  - msal-model-dotnet-latest

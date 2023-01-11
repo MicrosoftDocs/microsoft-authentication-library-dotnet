@@ -1,0 +1,72 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  parameters:
+  - namesWithMoniker:
+    - value: publicClientApplication
+    type: <xref href="Microsoft.Identity.Client.IPublicClientApplication?alt=Microsoft.Identity.Client.IPublicClientApplication&text=IPublicClientApplication" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.OsCapabilitiesExtensions.IsEmbeddedWebViewAvailable(Microsoft.Identity.Client.IPublicClientApplication)
+  commentId: M:Microsoft.Identity.Client.OsCapabilitiesExtensions.IsEmbeddedWebViewAvailable(Microsoft.Identity.Client.IPublicClientApplication)
+  name: IsEmbeddedWebViewAvailable(IPublicClientApplication)
+  fullName: Microsoft.Identity.Client.OsCapabilitiesExtensions.IsEmbeddedWebViewAvailable(IPublicClientApplication)
+  nameWithType: OsCapabilitiesExtensions.IsEmbeddedWebViewAvailable(IPublicClientApplication)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public static bool IsEmbeddedWebViewAvailable (this Microsoft.Identity.Client.IPublicClientApplication publicClientApplication);
+  - lang: fsharp
+    values:
+    - value: 'static member IsEmbeddedWebViewAvailable : Microsoft.Identity.Client.IPublicClientApplication -> bool'
+  - lang: vb
+    values:
+    - value: >-
+        <Extension()>
+
+        Public Function IsEmbeddedWebViewAvailable (publicClientApplication As IPublicClientApplication) As Boolean
+  monikers:
+  - msal-dotnet-latest
+  summary: Returns true if MSAL can use an embedded webview (browser).
+  remarks: <p>Currently there are no embedded webviews on Mac and Linux. On Windows, app developers or users should install the WebView2 runtime and this property will inform if the runtime is available, see https://aka.ms/msal-net-webview2</p>
+  metadata: {}
+uid: Microsoft.Identity.Client.OsCapabilitiesExtensions.IsEmbeddedWebViewAvailable*
+commentId: Overload:Microsoft.Identity.Client.OsCapabilitiesExtensions.IsEmbeddedWebViewAvailable
+namespace: Microsoft.Identity.Client
+name: IsEmbeddedWebViewAvailable
+fullName: Microsoft.Identity.Client.OsCapabilitiesExtensions.IsEmbeddedWebViewAvailable
+nameWithType: OsCapabilitiesExtensions.IsEmbeddedWebViewAvailable
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.OsCapabilitiesExtensions.IsEmbeddedWebViewAvailable
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.OsCapabilitiesExtensions.IsEmbeddedWebViewAvailable
+  - Microsoft::Identity::Client::OsCapabilitiesExtensions::IsEmbeddedWebViewAvailable
+  - IsEmbeddedWebViewAvailable
+  - OsCapabilitiesExtensions.IsEmbeddedWebViewAvailable
+  - OsCapabilitiesExtensions::IsEmbeddedWebViewAvailable
+  helpviewer_keywords:
+  - OsCapabilitiesExtensions.IsEmbeddedWebViewAvailable method [.NET]
+  - IsEmbeddedWebViewAvailable method [.NET], class OsCapabilitiesExtensions
+  - OsCapabilitiesExtensions.IsEmbeddedWebViewAvailable(IPublicClientApplication) extension method [.NET]
+  - IsEmbeddedWebViewAvailable(IPublicClientApplication) extension method [.NET], class OsCapabilitiesExtensions
+  monikers:
+  - msal-dotnet-latest

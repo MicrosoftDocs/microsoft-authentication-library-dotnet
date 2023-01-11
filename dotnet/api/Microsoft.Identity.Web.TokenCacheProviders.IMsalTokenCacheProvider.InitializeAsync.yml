@@ -1,0 +1,80 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>
+    description: A <xref data-throw-if-not-resolved="true" uid="System.Threading.Tasks.Task"></xref> that represents a completed initialization operation.
+  parameters:
+  - namesWithMoniker:
+    - value: tokenCache
+    description: Token cache for which to initialize the serialization.
+    type: <xref href="Microsoft.Identity.Client.ITokenCache?alt=Microsoft.Identity.Client.ITokenCache&text=ITokenCache" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Web.TokenCacheProviders.IMsalTokenCacheProvider.InitializeAsync(Microsoft.Identity.Client.ITokenCache)
+  commentId: M:Microsoft.Identity.Web.TokenCacheProviders.IMsalTokenCacheProvider.InitializeAsync(Microsoft.Identity.Client.ITokenCache)
+  name: InitializeAsync(ITokenCache)
+  fullName: Microsoft.Identity.Web.TokenCacheProviders.IMsalTokenCacheProvider.InitializeAsync(ITokenCache)
+  nameWithType: IMsalTokenCacheProvider.InitializeAsync(ITokenCache)
+  attributesWithMoniker:
+  - value: System.ObsoleteAttribute
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: >-
+        [System.Obsolete("IDW10801: Use Initialize instead. See https://aka.ms/ms-id-web/1.9.0. ", true)]
+
+        public System.Threading.Tasks.Task InitializeAsync (Microsoft.Identity.Client.ITokenCache tokenCache);
+  - lang: fsharp
+    values:
+    - value: >-
+        [<System.Obsolete("IDW10801: Use Initialize instead. See https://aka.ms/ms-id-web/1.9.0. ", true)>]
+
+        abstract member InitializeAsync : Microsoft.Identity.Client.ITokenCache -> System.Threading.Tasks.Task
+  - lang: vb
+    values:
+    - value: Public Function InitializeAsync (tokenCache As ITokenCache) As Task
+  monikers:
+  - msal-model-dotnet-latest
+  obsoleteMessagesWithMoniker:
+  - value: 'IDW10801: Use Initialize instead. See https://aka.ms/ms-id-web/1.9.0. '
+  summary: Initializes a token cache (which can be a user token cache or an app token cache).
+  metadata: {}
+uid: Microsoft.Identity.Web.TokenCacheProviders.IMsalTokenCacheProvider.InitializeAsync*
+commentId: Overload:Microsoft.Identity.Web.TokenCacheProviders.IMsalTokenCacheProvider.InitializeAsync
+namespace: Microsoft.Identity.Web.TokenCacheProviders
+name: InitializeAsync
+fullName: Microsoft.Identity.Web.TokenCacheProviders.IMsalTokenCacheProvider.InitializeAsync
+nameWithType: IMsalTokenCacheProvider.InitializeAsync
+assembliesWithMoniker:
+- value: Microsoft.Identity.Web.TokenCache.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Web.TokenCache v1.25.10
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-model-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Web.TokenCacheProviders.IMsalTokenCacheProvider.InitializeAsync
+  api_location:
+  - Microsoft.Identity.Web.TokenCache.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Web.TokenCacheProviders.IMsalTokenCacheProvider.InitializeAsync
+  - Microsoft::Identity::Web::TokenCacheProviders::IMsalTokenCacheProvider::InitializeAsync
+  - InitializeAsync
+  - IMsalTokenCacheProvider.InitializeAsync
+  - IMsalTokenCacheProvider::InitializeAsync
+  helpviewer_keywords:
+  - IMsalTokenCacheProvider.InitializeAsync method [.NET]
+  - InitializeAsync method [.NET], interface IMsalTokenCacheProvider
+  - IMsalTokenCacheProvider.InitializeAsync(ITokenCache) method [.NET]
+  - InitializeAsync(ITokenCache) method [.NET], interface IMsalTokenCacheProvider
+  monikers:
+  - msal-model-dotnet-latest

@@ -1,0 +1,101 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+    description: "'true' if the string has a start element equal <xref data-throw-if-not-resolved=\"true\" uid=\"Microsoft.IdentityModel.Tokens.Saml.SamlConstants.Elements.Assertion\"></xref>."
+  parameters:
+  - namesWithMoniker:
+    - value: securityToken
+    description: A Saml token as a string.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CanReadToken(System.String)
+  commentId: M:Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CanReadToken(System.String)
+  name: CanReadToken(String)
+  fullName: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CanReadToken(String)
+  nameWithType: SamlSecurityTokenHandler.CanReadToken(String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public override bool CanReadToken (string securityToken);
+  - lang: fsharp
+    values:
+    - value: 'override this.CanReadToken : string -> bool'
+  - lang: vb
+    values:
+    - value: Public Overrides Function CanReadToken (securityToken As String) As Boolean
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Determines if the string is a valid Saml token by examining the xml for the correct start element.
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+    description: "'true' if a token can be read."
+  parameters:
+  - namesWithMoniker:
+    - value: reader
+    description: An <xref data-throw-if-not-resolved="true" uid="System.Xml.XmlReader"></xref> reader positioned at a start element. The reader should not be advanced.
+    type: <xref href="System.Xml.XmlReader?alt=System.Xml.XmlReader&text=XmlReader" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CanReadToken(System.Xml.XmlReader)
+  commentId: M:Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CanReadToken(System.Xml.XmlReader)
+  name: CanReadToken(XmlReader)
+  fullName: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CanReadToken(XmlReader)
+  nameWithType: SamlSecurityTokenHandler.CanReadToken(XmlReader)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public override bool CanReadToken (System.Xml.XmlReader reader);
+  - lang: fsharp
+    values:
+    - value: 'override this.CanReadToken : System.Xml.XmlReader -> bool'
+  - lang: vb
+    values:
+    - value: Public Overrides Function CanReadToken (reader As XmlReader) As Boolean
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Indicates whether the current reader is positioned at a Saml assertion.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CanReadToken*
+commentId: Overload:Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CanReadToken
+namespace: Microsoft.IdentityModel.Tokens.Saml
+name: CanReadToken
+fullName: Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CanReadToken
+nameWithType: SamlSecurityTokenHandler.CanReadToken
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CanReadToken
+  api_location:
+  - Microsoft.IdentityModel.Tokens.Saml.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CanReadToken
+  - Microsoft::IdentityModel::Tokens::Saml::SamlSecurityTokenHandler::CanReadToken
+  - CanReadToken
+  - SamlSecurityTokenHandler.CanReadToken
+  - SamlSecurityTokenHandler::CanReadToken
+  helpviewer_keywords:
+  - SamlSecurityTokenHandler.CanReadToken method [.NET]
+  - CanReadToken method [.NET], class SamlSecurityTokenHandler
+  - SamlSecurityTokenHandler.CanReadToken(String) method [.NET]
+  - CanReadToken(String) method [.NET], class SamlSecurityTokenHandler
+  - SamlSecurityTokenHandler.CanReadToken(XmlReader) method [.NET]
+  - CanReadToken(XmlReader) method [.NET], class SamlSecurityTokenHandler
+  monikers:
+  - msal-web-dotnet-latest

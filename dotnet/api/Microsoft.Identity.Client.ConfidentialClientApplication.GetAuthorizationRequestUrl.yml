@@ -1,0 +1,83 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.Identity.Client.GetAuthorizationRequestUrlParameterBuilder?alt=Microsoft.Identity.Client.GetAuthorizationRequestUrlParameterBuilder&text=GetAuthorizationRequestUrlParameterBuilder" data-throw-if-not-resolved="True"/>
+    description: >-
+      A builder enabling you to add optional parameters before executing the token request to get the
+                  URL of the STS authorization endpoint parametrized with the parameters
+  parameters:
+  - namesWithMoniker:
+    - value: scopes
+    description: Scopes requested to access a protected API
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  implementsWithMoniker:
+  - value: <xref href="Microsoft.Identity.Client.IConfidentialClientApplication.GetAuthorizationRequestUrl(System.Collections.Generic.IEnumerable{System.String})?alt=Microsoft.Identity.Client.IConfidentialClientApplication.GetAuthorizationRequestUrl(System.Collections.Generic.IEnumerable{System.String})&text=GetAuthorizationRequestUrl(IEnumerable%3CString%3E)" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.ConfidentialClientApplication.GetAuthorizationRequestUrl(System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:Microsoft.Identity.Client.ConfidentialClientApplication.GetAuthorizationRequestUrl(System.Collections.Generic.IEnumerable{System.String})
+  name: GetAuthorizationRequestUrl(IEnumerable<String>)
+  fullName: Microsoft.Identity.Client.ConfidentialClientApplication.GetAuthorizationRequestUrl(IEnumerable<String>)
+  nameWithType: ConfidentialClientApplication.GetAuthorizationRequestUrl(IEnumerable<String>)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public Microsoft.Identity.Client.GetAuthorizationRequestUrlParameterBuilder GetAuthorizationRequestUrl (System.Collections.Generic.IEnumerable<string> scopes);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member GetAuthorizationRequestUrl : seq<string> -> Microsoft.Identity.Client.GetAuthorizationRequestUrlParameterBuilder
+
+        override this.GetAuthorizationRequestUrl : seq<string> -> Microsoft.Identity.Client.GetAuthorizationRequestUrlParameterBuilder
+  - lang: vb
+    values:
+    - value: Public Function GetAuthorizationRequestUrl (scopes As IEnumerable(Of String)) As GetAuthorizationRequestUrlParameterBuilder
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    Computes the URL of the authorization request letting the user sign-in and consent to the application accessing specific scopes in
+
+    the user's name. The URL targets the /authorize endpoint of the authority configured in the application.
+
+    This override enables you to specify a login hint and extra query parameter.
+  remarks: '<p>You can also chain the following optional parameters: <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.GetAuthorizationRequestUrlParameterBuilder.WithRedirectUri(System.String)"></xref><xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.GetAuthorizationRequestUrlParameterBuilder.WithLoginHint(System.String)"></xref><xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithExtraQueryParameters(System.Collections.Generic.Dictionary{System.String,System.String})"></xref><xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.GetAuthorizationRequestUrlParameterBuilder.WithExtraScopesToConsent(System.Collections.Generic.IEnumerable{System.String})"></xref></p>'
+  metadata: {}
+uid: Microsoft.Identity.Client.ConfidentialClientApplication.GetAuthorizationRequestUrl*
+commentId: Overload:Microsoft.Identity.Client.ConfidentialClientApplication.GetAuthorizationRequestUrl
+namespace: Microsoft.Identity.Client
+name: GetAuthorizationRequestUrl
+fullName: Microsoft.Identity.Client.ConfidentialClientApplication.GetAuthorizationRequestUrl
+nameWithType: ConfidentialClientApplication.GetAuthorizationRequestUrl
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.ConfidentialClientApplication.GetAuthorizationRequestUrl
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.ConfidentialClientApplication.GetAuthorizationRequestUrl
+  - Microsoft::Identity::Client::ConfidentialClientApplication::GetAuthorizationRequestUrl
+  - GetAuthorizationRequestUrl
+  - ConfidentialClientApplication.GetAuthorizationRequestUrl
+  - ConfidentialClientApplication::GetAuthorizationRequestUrl
+  helpviewer_keywords:
+  - ConfidentialClientApplication.GetAuthorizationRequestUrl method [.NET]
+  - GetAuthorizationRequestUrl method [.NET], class ConfidentialClientApplication
+  - ConfidentialClientApplication.GetAuthorizationRequestUrl(IEnumerable<String>) method [.NET]
+  - GetAuthorizationRequestUrl(IEnumerable<String>) method [.NET], class ConfidentialClientApplication
+  monikers:
+  - msal-dotnet-latest

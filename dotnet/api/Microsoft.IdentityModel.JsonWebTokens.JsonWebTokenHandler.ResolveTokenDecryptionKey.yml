@@ -1,0 +1,82 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.IdentityModel.Tokens.SecurityKey?alt=Microsoft.IdentityModel.Tokens.SecurityKey&text=SecurityKey" data-throw-if-not-resolved="True"/>
+    description: Returns a <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityKey"></xref> to use for signature validation.
+  parameters:
+  - namesWithMoniker:
+    - value: token
+    description: The <xref data-throw-if-not-resolved="true" uid="System.String"></xref> the token that is being decrypted.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: jwtToken
+    description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken"></xref> that is being decrypted.
+    type: <xref href="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken?alt=Microsoft.IdentityModel.JsonWebTokens.JsonWebToken&text=JsonWebToken" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: validationParameters
+    description: A <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.TokenValidationParameters"></xref>  required for validation.
+    type: <xref href="Microsoft.IdentityModel.Tokens.TokenValidationParameters?alt=Microsoft.IdentityModel.Tokens.TokenValidationParameters&text=TokenValidationParameters" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ResolveTokenDecryptionKey(System.String,Microsoft.IdentityModel.JsonWebTokens.JsonWebToken,Microsoft.IdentityModel.Tokens.TokenValidationParameters)
+  commentId: M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ResolveTokenDecryptionKey(System.String,Microsoft.IdentityModel.JsonWebTokens.JsonWebToken,Microsoft.IdentityModel.Tokens.TokenValidationParameters)
+  name: ResolveTokenDecryptionKey(String, JsonWebToken, TokenValidationParameters)
+  fullName: Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ResolveTokenDecryptionKey(String, JsonWebToken, TokenValidationParameters)
+  nameWithType: JsonWebTokenHandler.ResolveTokenDecryptionKey(String, JsonWebToken, TokenValidationParameters)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected virtual Microsoft.IdentityModel.Tokens.SecurityKey ResolveTokenDecryptionKey (string token, Microsoft.IdentityModel.JsonWebTokens.JsonWebToken jwtToken, Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member ResolveTokenDecryptionKey : string * Microsoft.IdentityModel.JsonWebTokens.JsonWebToken * Microsoft.IdentityModel.Tokens.TokenValidationParameters -> Microsoft.IdentityModel.Tokens.SecurityKey
+
+        override this.ResolveTokenDecryptionKey : string * Microsoft.IdentityModel.JsonWebTokens.JsonWebToken * Microsoft.IdentityModel.Tokens.TokenValidationParameters -> Microsoft.IdentityModel.Tokens.SecurityKey
+  - lang: vb
+    values:
+    - value: Protected Overridable Function ResolveTokenDecryptionKey (token As String, jwtToken As JsonWebToken, validationParameters As TokenValidationParameters) As SecurityKey
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Returns a <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityKey"></xref> to use when decrypting a JWE.
+  remarks: If key fails to resolve, then null is returned
+  metadata: {}
+uid: Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ResolveTokenDecryptionKey*
+commentId: Overload:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ResolveTokenDecryptionKey
+namespace: Microsoft.IdentityModel.JsonWebTokens
+name: ResolveTokenDecryptionKey
+fullName: Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ResolveTokenDecryptionKey
+nameWithType: JsonWebTokenHandler.ResolveTokenDecryptionKey
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.JsonWebTokens.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.JsonWebTokens v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ResolveTokenDecryptionKey
+  api_location:
+  - Microsoft.IdentityModel.JsonWebTokens.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ResolveTokenDecryptionKey
+  - Microsoft::IdentityModel::JsonWebTokens::JsonWebTokenHandler::ResolveTokenDecryptionKey
+  - ResolveTokenDecryptionKey
+  - JsonWebTokenHandler.ResolveTokenDecryptionKey
+  - JsonWebTokenHandler::ResolveTokenDecryptionKey
+  helpviewer_keywords:
+  - JsonWebTokenHandler.ResolveTokenDecryptionKey method [.NET]
+  - ResolveTokenDecryptionKey method [.NET], class JsonWebTokenHandler
+  - JsonWebTokenHandler.ResolveTokenDecryptionKey(String, JsonWebToken, TokenValidationParameters) method [.NET]
+  - ResolveTokenDecryptionKey(String, JsonWebToken, TokenValidationParameters) method [.NET], class JsonWebTokenHandler
+  monikers:
+  - msal-web-dotnet-latest

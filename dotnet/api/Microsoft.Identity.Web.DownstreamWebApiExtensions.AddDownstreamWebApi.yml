@@ -1,0 +1,127 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder?alt=Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder&text=MicrosoftIdentityAppCallsWebApiAuthenticationBuilder" data-throw-if-not-resolved="True"/>
+    description: The builder for chaining.
+  parameters:
+  - namesWithMoniker:
+    - value: builder
+    description: Builder.
+    type: <xref href="Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder?alt=Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder&text=MicrosoftIdentityAppCallsWebApiAuthenticationBuilder" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: serviceName
+    description: >-
+      Name of the configuration for the service.
+                  This is the name used when calling the service from controller/pages.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: configuration
+    description: Configuration.
+    type: <xref href="Microsoft.Extensions.Configuration.IConfiguration?alt=Microsoft.Extensions.Configuration.IConfiguration&text=IConfiguration" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Web.DownstreamWebApiExtensions.AddDownstreamWebApi(Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder,System.String,Microsoft.Extensions.Configuration.IConfiguration)
+  commentId: M:Microsoft.Identity.Web.DownstreamWebApiExtensions.AddDownstreamWebApi(Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder,System.String,Microsoft.Extensions.Configuration.IConfiguration)
+  name: AddDownstreamWebApi(MicrosoftIdentityAppCallsWebApiAuthenticationBuilder, String, IConfiguration)
+  fullName: Microsoft.Identity.Web.DownstreamWebApiExtensions.AddDownstreamWebApi(MicrosoftIdentityAppCallsWebApiAuthenticationBuilder, String, IConfiguration)
+  nameWithType: DownstreamWebApiExtensions.AddDownstreamWebApi(MicrosoftIdentityAppCallsWebApiAuthenticationBuilder, String, IConfiguration)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public static Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder AddDownstreamWebApi (this Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder builder, string serviceName, Microsoft.Extensions.Configuration.IConfiguration configuration);
+  - lang: fsharp
+    values:
+    - value: 'static member AddDownstreamWebApi : Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder * string * Microsoft.Extensions.Configuration.IConfiguration -> Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder'
+  - lang: vb
+    values:
+    - value: >-
+        <Extension()>
+
+        Public Function AddDownstreamWebApi (builder As MicrosoftIdentityAppCallsWebApiAuthenticationBuilder, serviceName As String, configuration As IConfiguration) As MicrosoftIdentityAppCallsWebApiAuthenticationBuilder
+  monikers:
+  - msal-model-dotnet-latest
+  summary: Adds a named downstream web API service related to a specific configuration section.
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder?alt=Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder&text=MicrosoftIdentityAppCallsWebApiAuthenticationBuilder" data-throw-if-not-resolved="True"/>
+    description: The builder for chaining.
+  parameters:
+  - namesWithMoniker:
+    - value: builder
+    description: Builder.
+    type: <xref href="Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder?alt=Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder&text=MicrosoftIdentityAppCallsWebApiAuthenticationBuilder" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: serviceName
+    description: >-
+      Name of the configuration for the service.
+                  This is the name which will be used when calling the service from controller/pages.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: configureOptions
+    description: Action to configure the options.
+    type: <xref href="System.Action`1?alt=System.Action&text=Action" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Web.DownstreamWebApiOptions?alt=Microsoft.Identity.Web.DownstreamWebApiOptions&text=DownstreamWebApiOptions" data-throw-if-not-resolved="True"/>&gt;
+  type: method
+  uid: Microsoft.Identity.Web.DownstreamWebApiExtensions.AddDownstreamWebApi(Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder,System.String,System.Action{Microsoft.Identity.Web.DownstreamWebApiOptions})
+  commentId: M:Microsoft.Identity.Web.DownstreamWebApiExtensions.AddDownstreamWebApi(Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder,System.String,System.Action{Microsoft.Identity.Web.DownstreamWebApiOptions})
+  name: AddDownstreamWebApi(MicrosoftIdentityAppCallsWebApiAuthenticationBuilder, String, Action<DownstreamWebApiOptions>)
+  fullName: Microsoft.Identity.Web.DownstreamWebApiExtensions.AddDownstreamWebApi(MicrosoftIdentityAppCallsWebApiAuthenticationBuilder, String, Action<DownstreamWebApiOptions>)
+  nameWithType: DownstreamWebApiExtensions.AddDownstreamWebApi(MicrosoftIdentityAppCallsWebApiAuthenticationBuilder, String, Action<DownstreamWebApiOptions>)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public static Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder AddDownstreamWebApi (this Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder builder, string serviceName, Action<Microsoft.Identity.Web.DownstreamWebApiOptions> configureOptions);
+  - lang: fsharp
+    values:
+    - value: 'static member AddDownstreamWebApi : Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder * string * Action<Microsoft.Identity.Web.DownstreamWebApiOptions> -> Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder'
+  - lang: vb
+    values:
+    - value: >-
+        <Extension()>
+
+        Public Function AddDownstreamWebApi (builder As MicrosoftIdentityAppCallsWebApiAuthenticationBuilder, serviceName As String, configureOptions As Action(Of DownstreamWebApiOptions)) As MicrosoftIdentityAppCallsWebApiAuthenticationBuilder
+  monikers:
+  - msal-model-dotnet-latest
+  summary: Adds a named downstream web API service initialized with delegates.
+  metadata: {}
+uid: Microsoft.Identity.Web.DownstreamWebApiExtensions.AddDownstreamWebApi*
+commentId: Overload:Microsoft.Identity.Web.DownstreamWebApiExtensions.AddDownstreamWebApi
+namespace: Microsoft.Identity.Web
+name: AddDownstreamWebApi
+fullName: Microsoft.Identity.Web.DownstreamWebApiExtensions.AddDownstreamWebApi
+nameWithType: DownstreamWebApiExtensions.AddDownstreamWebApi
+assembliesWithMoniker:
+- value: Microsoft.Identity.Web.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Web v1.25.10
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-model-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Web.DownstreamWebApiExtensions.AddDownstreamWebApi
+  api_location:
+  - Microsoft.Identity.Web.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Web.DownstreamWebApiExtensions.AddDownstreamWebApi
+  - Microsoft::Identity::Web::DownstreamWebApiExtensions::AddDownstreamWebApi
+  - AddDownstreamWebApi
+  - DownstreamWebApiExtensions.AddDownstreamWebApi
+  - DownstreamWebApiExtensions::AddDownstreamWebApi
+  helpviewer_keywords:
+  - DownstreamWebApiExtensions.AddDownstreamWebApi method [.NET]
+  - AddDownstreamWebApi method [.NET], class DownstreamWebApiExtensions
+  - DownstreamWebApiExtensions.AddDownstreamWebApi(MicrosoftIdentityAppCallsWebApiAuthenticationBuilder, String, IConfiguration) extension method [.NET]
+  - AddDownstreamWebApi(MicrosoftIdentityAppCallsWebApiAuthenticationBuilder, String, IConfiguration) extension method [.NET], class DownstreamWebApiExtensions
+  - DownstreamWebApiExtensions.AddDownstreamWebApi(MicrosoftIdentityAppCallsWebApiAuthenticationBuilder, String, Action<DownstreamWebApiOptions>) extension method [.NET]
+  - AddDownstreamWebApi(MicrosoftIdentityAppCallsWebApiAuthenticationBuilder, String, Action<DownstreamWebApiOptions>) extension method [.NET], class DownstreamWebApiExtensions
+  monikers:
+  - msal-model-dotnet-latest

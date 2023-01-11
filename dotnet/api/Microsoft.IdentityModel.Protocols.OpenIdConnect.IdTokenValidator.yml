@@ -1,0 +1,60 @@
+### YamlMime:NetDelegate
+parameters:
+- namesWithMoniker:
+  - value: idToken
+  description: <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityToken"></xref> to validate
+  type: <xref href="System.IdentityModel.Tokens.Jwt.JwtSecurityToken?alt=System.IdentityModel.Tokens.Jwt.JwtSecurityToken&text=JwtSecurityToken" data-throw-if-not-resolved="True"/>
+- namesWithMoniker:
+  - value: context
+  description: <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectProtocolValidationContext"></xref> used for validation
+  type: <xref href="Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectProtocolValidationContext?alt=Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectProtocolValidationContext&text=OpenIdConnectProtocolValidationContext" data-throw-if-not-resolved="True"/>
+inheritances:
+- <xref href="System.Delegate" data-throw-if-not-resolved="True"/>
+uid: Microsoft.IdentityModel.Protocols.OpenIdConnect.IdTokenValidator
+commentId: T:Microsoft.IdentityModel.Protocols.OpenIdConnect.IdTokenValidator
+namespace: Microsoft.IdentityModel.Protocols.OpenIdConnect
+name: IdTokenValidator
+fullName: Microsoft.IdentityModel.Protocols.OpenIdConnect.IdTokenValidator
+nameWithType: Microsoft.IdentityModel.Protocols.OpenIdConnect.IdTokenValidator
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Protocols.OpenIdConnect v6.25.1
+syntaxWithMoniker:
+- lang: csharp
+  values:
+  - value: public delegate void IdTokenValidator(JwtSecurityToken idToken, OpenIdConnectProtocolValidationContext context);
+- lang: fsharp
+  values:
+  - value: type IdTokenValidator = delegate of JwtSecurityToken * OpenIdConnectProtocolValidationContext -> unit
+- lang: vb
+  values:
+  - value: Public Delegate Sub IdTokenValidator(idToken As JwtSecurityToken, context As OpenIdConnectProtocolValidationContext)
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+summary: Delegate for validating additional claims in 'id_token'
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Protocols.OpenIdConnect.IdTokenValidator
+  - Microsoft.IdentityModel.Protocols.OpenIdConnect.IdTokenValidator..ctor
+  - Microsoft.IdentityModel.Protocols.OpenIdConnect.IdTokenValidator.Invoke
+  - Microsoft.IdentityModel.Protocols.OpenIdConnect.IdTokenValidator.BeginInvoke
+  - Microsoft.IdentityModel.Protocols.OpenIdConnect.IdTokenValidator.EndInvoke
+  api_location:
+  - Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Protocols.OpenIdConnect.IdTokenValidator
+  - Microsoft::IdentityModel::Protocols::OpenIdConnect::IdTokenValidator
+  - IdTokenValidator
+  helpviewer_keywords:
+  - Microsoft.IdentityModel.Protocols.OpenIdConnect.IdTokenValidator delegate [.NET]
+  monikers:
+  - msal-web-dotnet-latest

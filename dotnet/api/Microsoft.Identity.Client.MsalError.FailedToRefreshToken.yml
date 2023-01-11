@@ -1,0 +1,72 @@
+### YamlMime:NetMember
+type: field
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: field
+  uid: Microsoft.Identity.Client.MsalError.FailedToRefreshToken
+  commentId: F:Microsoft.Identity.Client.MsalError.FailedToRefreshToken
+  name: FailedToRefreshToken
+  fullName: Microsoft.Identity.Client.MsalError.FailedToRefreshToken
+  nameWithType: MsalError.FailedToRefreshToken
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public const string FailedToRefreshToken;
+  - lang: fsharp
+    values:
+    - value: 'val mutable FailedToRefreshToken : string'
+  - lang: vb
+    values:
+    - value: 'Public Const FailedToRefreshToken As String '
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    Failed to refresh token.
+
+    <p>What happens?</p>
+
+    The token could not be refreshed. This can be because the user has not used the application for a long time.
+
+    and therefore the refresh token maintained in the token cache has expired
+
+    <p>Mitigation</p>
+
+    If you are in a public client application, that supports interactivity, send an interactive request
+
+    <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenInteractive(System.Collections.Generic.IEnumerable{System.String})"></xref>. Otherwise,
+
+    use a different method to acquire tokens.
+  metadata: {}
+namespace: Microsoft.Identity.Client
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.MsalError.FailedToRefreshToken
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.MsalError.FailedToRefreshToken
+  - Microsoft::Identity::Client::MsalError::FailedToRefreshToken
+  - FailedToRefreshToken
+  - MsalError.FailedToRefreshToken
+  - MsalError::FailedToRefreshToken
+  helpviewer_keywords:
+  - MsalError.FailedToRefreshToken field [.NET]
+  - FailedToRefreshToken field [.NET], class MsalError
+  monikers:
+  - msal-dotnet-latest

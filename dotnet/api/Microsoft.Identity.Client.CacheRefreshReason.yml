@@ -1,0 +1,124 @@
+### YamlMime:NetEnum
+inheritancesWithMoniker:
+- values:
+  - <xref href="System.Enum?alt=System.Enum&text=Enum" data-throw-if-not-resolved="True"/>
+fields:
+- uid: Microsoft.Identity.Client.CacheRefreshReason.Expired
+  commentId: F:Microsoft.Identity.Client.CacheRefreshReason.Expired
+  literalValue: "3"
+  name: Expired
+  nameWithType: CacheRefreshReason.Expired
+  fullName: Microsoft.Identity.Client.CacheRefreshReason.Expired
+  summary: When the token request goes to the identity provider because cached access token expired
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.CacheRefreshReason.ForceRefreshOrClaims
+  commentId: F:Microsoft.Identity.Client.CacheRefreshReason.ForceRefreshOrClaims
+  literalValue: "1"
+  name: ForceRefreshOrClaims
+  nameWithType: CacheRefreshReason.ForceRefreshOrClaims
+  fullName: Microsoft.Identity.Client.CacheRefreshReason.ForceRefreshOrClaims
+  summary: When the token request goes to the identity provider because force_refresh was set to true. Also occurs if WithClaims() is used.
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.CacheRefreshReason.NoCachedAccessToken
+  commentId: F:Microsoft.Identity.Client.CacheRefreshReason.NoCachedAccessToken
+  literalValue: "2"
+  name: NoCachedAccessToken
+  nameWithType: CacheRefreshReason.NoCachedAccessToken
+  fullName: Microsoft.Identity.Client.CacheRefreshReason.NoCachedAccessToken
+  summary: When the token request goes to the identity provider because no cached access token exists
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.CacheRefreshReason.NotApplicable
+  commentId: F:Microsoft.Identity.Client.CacheRefreshReason.NotApplicable
+  literalValue: "0"
+  name: NotApplicable
+  nameWithType: CacheRefreshReason.NotApplicable
+  fullName: Microsoft.Identity.Client.CacheRefreshReason.NotApplicable
+  summary: When a token is found in the cache or the cache is not supposed to be hit when making the request (interactive call, username password call, device code flow, etc.)
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.CacheRefreshReason.ProactivelyRefreshed
+  commentId: F:Microsoft.Identity.Client.CacheRefreshReason.ProactivelyRefreshed
+  literalValue: "4"
+  name: ProactivelyRefreshed
+  nameWithType: CacheRefreshReason.ProactivelyRefreshed
+  fullName: Microsoft.Identity.Client.CacheRefreshReason.ProactivelyRefreshed
+  summary: When the token request goes to the identity provider because refresh_in was used and the existing token needs to be refreshed
+  monikers:
+  - msal-dotnet-latest
+uid: Microsoft.Identity.Client.CacheRefreshReason
+commentId: T:Microsoft.Identity.Client.CacheRefreshReason
+namespace: Microsoft.Identity.Client
+name: CacheRefreshReason
+fullName: Microsoft.Identity.Client.CacheRefreshReason
+nameWithType: Microsoft.Identity.Client.CacheRefreshReason
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+syntaxWithMoniker:
+- lang: csharp
+  values:
+  - value: public enum CacheRefreshReason
+- lang: fsharp
+  values:
+  - value: 'type CacheRefreshReason = '
+- lang: vb
+  values:
+  - value: Public Enum CacheRefreshReason
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+summary: Specifies the reason for fetching the access token from the identity provider when using AcquireTokenSilent, AcquireTokenForClient or AcquireTokenOnBehalfOf.
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.CacheRefreshReason
+  - Microsoft.Identity.Client.CacheRefreshReason.Expired
+  - Microsoft.Identity.Client.CacheRefreshReason.ForceRefreshOrClaims
+  - Microsoft.Identity.Client.CacheRefreshReason.NoCachedAccessToken
+  - Microsoft.Identity.Client.CacheRefreshReason.NotApplicable
+  - Microsoft.Identity.Client.CacheRefreshReason.ProactivelyRefreshed
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.CacheRefreshReason
+  - Microsoft::Identity::Client::CacheRefreshReason
+  - CacheRefreshReason
+  - Microsoft.Identity.Client.CacheRefreshReason.Expired
+  - Microsoft::Identity::Client::CacheRefreshReason::Expired
+  - Expired
+  - CacheRefreshReason.Expired
+  - CacheRefreshReason::Expired
+  - Microsoft.Identity.Client.CacheRefreshReason.ForceRefreshOrClaims
+  - Microsoft::Identity::Client::CacheRefreshReason::ForceRefreshOrClaims
+  - ForceRefreshOrClaims
+  - CacheRefreshReason.ForceRefreshOrClaims
+  - CacheRefreshReason::ForceRefreshOrClaims
+  - Microsoft.Identity.Client.CacheRefreshReason.NoCachedAccessToken
+  - Microsoft::Identity::Client::CacheRefreshReason::NoCachedAccessToken
+  - NoCachedAccessToken
+  - CacheRefreshReason.NoCachedAccessToken
+  - CacheRefreshReason::NoCachedAccessToken
+  - Microsoft.Identity.Client.CacheRefreshReason.NotApplicable
+  - Microsoft::Identity::Client::CacheRefreshReason::NotApplicable
+  - NotApplicable
+  - CacheRefreshReason.NotApplicable
+  - CacheRefreshReason::NotApplicable
+  - Microsoft.Identity.Client.CacheRefreshReason.ProactivelyRefreshed
+  - Microsoft::Identity::Client::CacheRefreshReason::ProactivelyRefreshed
+  - ProactivelyRefreshed
+  - CacheRefreshReason.ProactivelyRefreshed
+  - CacheRefreshReason::ProactivelyRefreshed
+  helpviewer_keywords:
+  - Microsoft.Identity.Client.CacheRefreshReason enum [.NET]
+  monikers:
+  - msal-dotnet-latest

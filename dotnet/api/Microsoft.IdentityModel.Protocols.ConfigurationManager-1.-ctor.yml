@@ -1,0 +1,181 @@
+### YamlMime:NetMember
+type: constructor
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: metadataAddress
+    description: The address to obtain configuration.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: configRetriever
+    description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Protocols.IConfigurationRetriever`1"></xref>
+    type: <xref href="Microsoft.IdentityModel.Protocols.IConfigurationRetriever`1?alt=Microsoft.IdentityModel.Protocols.IConfigurationRetriever`1&text=IConfigurationRetriever%3CT%3E" data-throw-if-not-resolved="True"/>
+  type: constructor
+  uid: Microsoft.IdentityModel.Protocols.ConfigurationManager`1.#ctor(System.String,Microsoft.IdentityModel.Protocols.IConfigurationRetriever{`0})
+  commentId: M:Microsoft.IdentityModel.Protocols.ConfigurationManager`1.#ctor(System.String,Microsoft.IdentityModel.Protocols.IConfigurationRetriever{`0})
+  name: ConfigurationManager<T>(String, IConfigurationRetriever<T>)
+  fullName: Microsoft.IdentityModel.Protocols.ConfigurationManager<T>.ConfigurationManager<T>(String, IConfigurationRetriever<T>)
+  nameWithType: ConfigurationManager<T>.ConfigurationManager<T>(String, IConfigurationRetriever<T>)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public ConfigurationManager (string metadataAddress, Microsoft.IdentityModel.Protocols.IConfigurationRetriever<T> configRetriever);
+  - lang: fsharp
+    values:
+    - value: "new Microsoft.IdentityModel.Protocols.ConfigurationManager<'T (requires 'T : null)> : string * Microsoft.IdentityModel.Protocols.IConfigurationRetriever<'T (requires 'T : null)> -> Microsoft.IdentityModel.Protocols.ConfigurationManager<'T (requires 'T : null)>"
+  - lang: vb
+    values:
+    - value: Public Sub New (metadataAddress As String, configRetriever As IConfigurationRetriever(Of T))
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Instantiates a new <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Protocols.ConfigurationManager`1"></xref> that manages automatic and controls refreshing on configuration data.
+  metadata: {}
+- parameters:
+  - namesWithMoniker:
+    - value: metadataAddress
+    description: The address to obtain configuration.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: configRetriever
+    description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Protocols.IConfigurationRetriever`1"></xref>
+    type: <xref href="Microsoft.IdentityModel.Protocols.IConfigurationRetriever`1?alt=Microsoft.IdentityModel.Protocols.IConfigurationRetriever`1&text=IConfigurationRetriever%3CT%3E" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: docRetriever
+    description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Protocols.IDocumentRetriever"></xref> that reaches out to obtain the configuration.
+    type: <xref href="Microsoft.IdentityModel.Protocols.IDocumentRetriever?alt=Microsoft.IdentityModel.Protocols.IDocumentRetriever&text=IDocumentRetriever" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: If 'docRetriever' is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  type: constructor
+  uid: Microsoft.IdentityModel.Protocols.ConfigurationManager`1.#ctor(System.String,Microsoft.IdentityModel.Protocols.IConfigurationRetriever{`0},Microsoft.IdentityModel.Protocols.IDocumentRetriever)
+  commentId: M:Microsoft.IdentityModel.Protocols.ConfigurationManager`1.#ctor(System.String,Microsoft.IdentityModel.Protocols.IConfigurationRetriever{`0},Microsoft.IdentityModel.Protocols.IDocumentRetriever)
+  name: ConfigurationManager<T>(String, IConfigurationRetriever<T>, IDocumentRetriever)
+  fullName: Microsoft.IdentityModel.Protocols.ConfigurationManager<T>.ConfigurationManager<T>(String, IConfigurationRetriever<T>, IDocumentRetriever)
+  nameWithType: ConfigurationManager<T>.ConfigurationManager<T>(String, IConfigurationRetriever<T>, IDocumentRetriever)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public ConfigurationManager (string metadataAddress, Microsoft.IdentityModel.Protocols.IConfigurationRetriever<T> configRetriever, Microsoft.IdentityModel.Protocols.IDocumentRetriever docRetriever);
+  - lang: fsharp
+    values:
+    - value: "new Microsoft.IdentityModel.Protocols.ConfigurationManager<'T (requires 'T : null)> : string * Microsoft.IdentityModel.Protocols.IConfigurationRetriever<'T (requires 'T : null)> * Microsoft.IdentityModel.Protocols.IDocumentRetriever -> Microsoft.IdentityModel.Protocols.ConfigurationManager<'T (requires 'T : null)>"
+  - lang: vb
+    values:
+    - value: Public Sub New (metadataAddress As String, configRetriever As IConfigurationRetriever(Of T), docRetriever As IDocumentRetriever)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Instantiates a new <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Protocols.ConfigurationManager`1"></xref> that manages automatic and controls refreshing on configuration data.
+  metadata: {}
+- parameters:
+  - namesWithMoniker:
+    - value: metadataAddress
+    description: The address to obtain configuration.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: configRetriever
+    description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Protocols.IConfigurationRetriever`1"></xref>
+    type: <xref href="Microsoft.IdentityModel.Protocols.IConfigurationRetriever`1?alt=Microsoft.IdentityModel.Protocols.IConfigurationRetriever`1&text=IConfigurationRetriever%3CT%3E" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: httpClient
+    description: The client to use when obtaining configuration.
+    type: <xref href="System.Net.Http.HttpClient?alt=System.Net.Http.HttpClient&text=HttpClient" data-throw-if-not-resolved="True"/>
+  type: constructor
+  uid: Microsoft.IdentityModel.Protocols.ConfigurationManager`1.#ctor(System.String,Microsoft.IdentityModel.Protocols.IConfigurationRetriever{`0},System.Net.Http.HttpClient)
+  commentId: M:Microsoft.IdentityModel.Protocols.ConfigurationManager`1.#ctor(System.String,Microsoft.IdentityModel.Protocols.IConfigurationRetriever{`0},System.Net.Http.HttpClient)
+  name: ConfigurationManager<T>(String, IConfigurationRetriever<T>, HttpClient)
+  fullName: Microsoft.IdentityModel.Protocols.ConfigurationManager<T>.ConfigurationManager<T>(String, IConfigurationRetriever<T>, HttpClient)
+  nameWithType: ConfigurationManager<T>.ConfigurationManager<T>(String, IConfigurationRetriever<T>, HttpClient)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public ConfigurationManager (string metadataAddress, Microsoft.IdentityModel.Protocols.IConfigurationRetriever<T> configRetriever, System.Net.Http.HttpClient httpClient);
+  - lang: fsharp
+    values:
+    - value: "new Microsoft.IdentityModel.Protocols.ConfigurationManager<'T (requires 'T : null)> : string * Microsoft.IdentityModel.Protocols.IConfigurationRetriever<'T (requires 'T : null)> * System.Net.Http.HttpClient -> Microsoft.IdentityModel.Protocols.ConfigurationManager<'T (requires 'T : null)>"
+  - lang: vb
+    values:
+    - value: Public Sub New (metadataAddress As String, configRetriever As IConfigurationRetriever(Of T), httpClient As HttpClient)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Instantiates a new <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Protocols.ConfigurationManager`1"></xref> that manages automatic and controls refreshing on configuration data.
+  metadata: {}
+- parameters:
+  - namesWithMoniker:
+    - value: metadataAddress
+    description: The address to obtain configuration.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: configRetriever
+    description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Protocols.IConfigurationRetriever`1"></xref>
+    type: <xref href="Microsoft.IdentityModel.Protocols.IConfigurationRetriever`1?alt=Microsoft.IdentityModel.Protocols.IConfigurationRetriever`1&text=IConfigurationRetriever%3CT%3E" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: docRetriever
+    description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Protocols.IDocumentRetriever"></xref> that reaches out to obtain the configuration.
+    type: <xref href="Microsoft.IdentityModel.Protocols.IDocumentRetriever?alt=Microsoft.IdentityModel.Protocols.IDocumentRetriever&text=IDocumentRetriever" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: configValidator
+    description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Protocols.IConfigurationValidator`1"></xref>
+    type: <xref href="Microsoft.IdentityModel.Protocols.IConfigurationValidator`1?alt=Microsoft.IdentityModel.Protocols.IConfigurationValidator`1&text=IConfigurationValidator%3CT%3E" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: If 'configValidator' is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  type: constructor
+  uid: Microsoft.IdentityModel.Protocols.ConfigurationManager`1.#ctor(System.String,Microsoft.IdentityModel.Protocols.IConfigurationRetriever{`0},Microsoft.IdentityModel.Protocols.IDocumentRetriever,Microsoft.IdentityModel.Protocols.IConfigurationValidator{`0})
+  commentId: M:Microsoft.IdentityModel.Protocols.ConfigurationManager`1.#ctor(System.String,Microsoft.IdentityModel.Protocols.IConfigurationRetriever{`0},Microsoft.IdentityModel.Protocols.IDocumentRetriever,Microsoft.IdentityModel.Protocols.IConfigurationValidator{`0})
+  name: ConfigurationManager<T>(String, IConfigurationRetriever<T>, IDocumentRetriever, IConfigurationValidator<T>)
+  fullName: Microsoft.IdentityModel.Protocols.ConfigurationManager<T>.ConfigurationManager<T>(String, IConfigurationRetriever<T>, IDocumentRetriever, IConfigurationValidator<T>)
+  nameWithType: ConfigurationManager<T>.ConfigurationManager<T>(String, IConfigurationRetriever<T>, IDocumentRetriever, IConfigurationValidator<T>)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public ConfigurationManager (string metadataAddress, Microsoft.IdentityModel.Protocols.IConfigurationRetriever<T> configRetriever, Microsoft.IdentityModel.Protocols.IDocumentRetriever docRetriever, Microsoft.IdentityModel.Protocols.IConfigurationValidator<T> configValidator);
+  - lang: fsharp
+    values:
+    - value: "new Microsoft.IdentityModel.Protocols.ConfigurationManager<'T (requires 'T : null)> : string * Microsoft.IdentityModel.Protocols.IConfigurationRetriever<'T (requires 'T : null)> * Microsoft.IdentityModel.Protocols.IDocumentRetriever * Microsoft.IdentityModel.Protocols.IConfigurationValidator<'T (requires 'T : null)> -> Microsoft.IdentityModel.Protocols.ConfigurationManager<'T (requires 'T : null)>"
+  - lang: vb
+    values:
+    - value: Public Sub New (metadataAddress As String, configRetriever As IConfigurationRetriever(Of T), docRetriever As IDocumentRetriever, configValidator As IConfigurationValidator(Of T))
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Instantiates a new <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Protocols.ConfigurationManager`1"></xref> with cinfiguration validator that manages automatic and controls refreshing on configuration data.
+  metadata: {}
+uid: Microsoft.IdentityModel.Protocols.ConfigurationManager`1.#ctor*
+commentId: Overload:Microsoft.IdentityModel.Protocols.ConfigurationManager`1.#ctor
+namespace: Microsoft.IdentityModel.Protocols
+name: ConfigurationManager<T>
+fullName: Microsoft.IdentityModel.Protocols.ConfigurationManager<T>.ConfigurationManager
+nameWithType: ConfigurationManager<T>.ConfigurationManager<T>
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Protocols.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Protocols v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Protocols.ConfigurationManager`1..ctor
+  api_location:
+  - Microsoft.IdentityModel.Protocols.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Protocols.ConfigurationManager`1.#ctor
+  - Microsoft::IdentityModel::Protocols::ConfigurationManager`1::#ctor
+  - Microsoft.IdentityModel.Protocols.ConfigurationManager.#ctor
+  - '#ctor'
+  - ConfigurationManager`1.#ctor
+  - ConfigurationManager`1::#ctor
+  helpviewer_keywords:
+  - ConfigurationManager<T> class [.NET], constructors
+  - ConfigurationManager<T>(String, IConfigurationRetriever<T>) class [.NET], constructors
+  - ConfigurationManager<T>(String, IConfigurationRetriever<T>, IDocumentRetriever) class [.NET], constructors
+  - ConfigurationManager<T>(String, IConfigurationRetriever<T>, HttpClient) class [.NET], constructors
+  - ConfigurationManager<T>(String, IConfigurationRetriever<T>, IDocumentRetriever, IConfigurationValidator<T>) class [.NET], constructors
+  monikers:
+  - msal-web-dotnet-latest

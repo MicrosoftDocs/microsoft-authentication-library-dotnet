@@ -1,0 +1,60 @@
+### YamlMime:NetMember
+type: field
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: field
+  uid: Microsoft.Identity.Client.MsalError.AccessTokenTypeMissing
+  commentId: F:Microsoft.Identity.Client.MsalError.AccessTokenTypeMissing
+  name: AccessTokenTypeMissing
+  fullName: Microsoft.Identity.Client.MsalError.AccessTokenTypeMissing
+  nameWithType: MsalError.AccessTokenTypeMissing
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public const string AccessTokenTypeMissing;
+  - lang: fsharp
+    values:
+    - value: 'val mutable AccessTokenTypeMissing : string'
+  - lang: vb
+    values:
+    - value: 'Public Const AccessTokenTypeMissing As String '
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    <p>What happens?</p>The response from the token endpoint does not contain the token_type parameter.
+
+    <p>Mitigation</p>This happens if the identity provider (AAD, B2C, ADFS, etc.) did not include the access token type in the token response. Verify the configuration of the identity provider.
+  metadata: {}
+namespace: Microsoft.Identity.Client
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.MsalError.AccessTokenTypeMissing
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.MsalError.AccessTokenTypeMissing
+  - Microsoft::Identity::Client::MsalError::AccessTokenTypeMissing
+  - AccessTokenTypeMissing
+  - MsalError.AccessTokenTypeMissing
+  - MsalError::AccessTokenTypeMissing
+  helpviewer_keywords:
+  - MsalError.AccessTokenTypeMissing field [.NET]
+  - AccessTokenTypeMissing field [.NET], class MsalError
+  monikers:
+  - msal-dotnet-latest

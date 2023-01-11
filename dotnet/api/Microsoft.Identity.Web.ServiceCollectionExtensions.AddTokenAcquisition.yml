@@ -1,0 +1,97 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.Extensions.DependencyInjection.IServiceCollection?alt=Microsoft.Extensions.DependencyInjection.IServiceCollection&text=IServiceCollection" data-throw-if-not-resolved="True"/>
+    description: The service collection.
+  parameters:
+  - namesWithMoniker:
+    - value: services
+    description: Service collection.
+    type: <xref href="Microsoft.Extensions.DependencyInjection.IServiceCollection?alt=Microsoft.Extensions.DependencyInjection.IServiceCollection&text=IServiceCollection" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: isTokenAcquisitionSingleton
+    description: Specifies if an instance of <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Web.ITokenAcquisition"></xref> should be a singleton.
+    type: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Web.ServiceCollectionExtensions.AddTokenAcquisition(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Boolean)
+  commentId: M:Microsoft.Identity.Web.ServiceCollectionExtensions.AddTokenAcquisition(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Boolean)
+  name: AddTokenAcquisition(IServiceCollection, Boolean)
+  fullName: Microsoft.Identity.Web.ServiceCollectionExtensions.AddTokenAcquisition(IServiceCollection, Boolean)
+  nameWithType: ServiceCollectionExtensions.AddTokenAcquisition(IServiceCollection, Boolean)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public static Microsoft.Extensions.DependencyInjection.IServiceCollection AddTokenAcquisition (this Microsoft.Extensions.DependencyInjection.IServiceCollection services, bool isTokenAcquisitionSingleton = false);
+  - lang: fsharp
+    values:
+    - value: 'static member AddTokenAcquisition : Microsoft.Extensions.DependencyInjection.IServiceCollection * bool -> Microsoft.Extensions.DependencyInjection.IServiceCollection'
+  - lang: vb
+    values:
+    - value: >-
+        <Extension()>
+
+        Public Function AddTokenAcquisition (services As IServiceCollection, Optional isTokenAcquisitionSingleton As Boolean = false) As IServiceCollection
+  monikers:
+  - msal-model-dotnet-latest
+  summary: Add the token acquisition service.
+  examples: >-
+    This method is typically called from the <code data-dev-comment-type="c">ConfigureServices(IServiceCollection services)</code> in Startup.cs.
+
+    Note that the implementation of the token cache can be chosen separately.
+
+
+
+    ```
+
+    // Token acquisition service and its cache implementation as a session cache
+
+    services.AddTokenAcquisition()
+
+    .AddDistributedMemoryCache()
+
+    .AddSession()
+
+    .AddSessionBasedTokenCache();
+
+    ```
+  metadata: {}
+uid: Microsoft.Identity.Web.ServiceCollectionExtensions.AddTokenAcquisition*
+commentId: Overload:Microsoft.Identity.Web.ServiceCollectionExtensions.AddTokenAcquisition
+namespace: Microsoft.Identity.Web
+name: AddTokenAcquisition
+fullName: Microsoft.Identity.Web.ServiceCollectionExtensions.AddTokenAcquisition
+nameWithType: ServiceCollectionExtensions.AddTokenAcquisition
+assembliesWithMoniker:
+- value: Microsoft.Identity.Web.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Web v1.25.10
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-model-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Web.ServiceCollectionExtensions.AddTokenAcquisition
+  api_location:
+  - Microsoft.Identity.Web.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Web.ServiceCollectionExtensions.AddTokenAcquisition
+  - Microsoft::Identity::Web::ServiceCollectionExtensions::AddTokenAcquisition
+  - AddTokenAcquisition
+  - ServiceCollectionExtensions.AddTokenAcquisition
+  - ServiceCollectionExtensions::AddTokenAcquisition
+  helpviewer_keywords:
+  - ServiceCollectionExtensions.AddTokenAcquisition method [.NET]
+  - AddTokenAcquisition method [.NET], class ServiceCollectionExtensions
+  - ServiceCollectionExtensions.AddTokenAcquisition(IServiceCollection, Boolean) extension method [.NET]
+  - AddTokenAcquisition(IServiceCollection, Boolean) extension method [.NET], class ServiceCollectionExtensions
+  monikers:
+  - msal-model-dotnet-latest

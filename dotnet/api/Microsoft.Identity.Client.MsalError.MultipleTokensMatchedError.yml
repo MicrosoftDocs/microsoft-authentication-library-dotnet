@@ -1,0 +1,66 @@
+### YamlMime:NetMember
+type: field
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: field
+  uid: Microsoft.Identity.Client.MsalError.MultipleTokensMatchedError
+  commentId: F:Microsoft.Identity.Client.MsalError.MultipleTokensMatchedError
+  name: MultipleTokensMatchedError
+  fullName: Microsoft.Identity.Client.MsalError.MultipleTokensMatchedError
+  nameWithType: MsalError.MultipleTokensMatchedError
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public const string MultipleTokensMatchedError;
+  - lang: fsharp
+    values:
+    - value: 'val mutable MultipleTokensMatchedError : string'
+  - lang: vb
+    values:
+    - value: 'Public Const MultipleTokensMatchedError As String '
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    Multiple Tokens were matched.
+
+    <p>What happens?</p>This exception happens in the case of applications managing several identities,
+
+    when calling <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ClientApplicationBase.AcquireTokenSilent(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount)"></xref>
+
+    or one of its overrides and the user token cache contains multiple tokens for this client application and the specified Account, but from different authorities.
+
+    <p>Mitigation [App Development]</p>specify the authority to use in the acquire token operation
+  metadata: {}
+namespace: Microsoft.Identity.Client
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.MsalError.MultipleTokensMatchedError
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.MsalError.MultipleTokensMatchedError
+  - Microsoft::Identity::Client::MsalError::MultipleTokensMatchedError
+  - MultipleTokensMatchedError
+  - MsalError.MultipleTokensMatchedError
+  - MsalError::MultipleTokensMatchedError
+  helpviewer_keywords:
+  - MsalError.MultipleTokensMatchedError field [.NET]
+  - MultipleTokensMatchedError field [.NET], class MsalError
+  monikers:
+  - msal-dotnet-latest

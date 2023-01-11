@@ -1,0 +1,79 @@
+### YamlMime:NetMember
+type: property
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  type: property
+  uid: Microsoft.Identity.Client.TokenCache.HasStateChanged
+  commentId: P:Microsoft.Identity.Client.TokenCache.HasStateChanged
+  name: HasStateChanged
+  fullName: Microsoft.Identity.Client.TokenCache.HasStateChanged
+  nameWithType: TokenCache.HasStateChanged
+  attributesWithMoniker:
+  - value: System.ObsoleteAttribute
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: >-
+        [System.Obsolete("Please use the equivalent flag TokenCacheNotificationArgs.HasStateChanged, which indicates if the operation triggering the notification is modifying the cache or not. Setting the flag is not required.")]
+
+        public bool HasStateChanged { get; set; }
+  - lang: fsharp
+    values:
+    - value: >-
+        [<System.Obsolete("Please use the equivalent flag TokenCacheNotificationArgs.HasStateChanged, which indicates if the operation triggering the notification is modifying the cache or not. Setting the flag is not required.")>]
+
+        member this.HasStateChanged : bool with get, set
+  - lang: vb
+    values:
+    - value: Public Property HasStateChanged As Boolean
+  monikers:
+  - msal-dotnet-latest
+  obsoleteMessagesWithMoniker:
+  - value: Please use the equivalent flag TokenCacheNotificationArgs.HasStateChanged, which indicates if the operation triggering the notification is modifying the cache or not. Setting the flag is not required.
+  summary: >-
+    Gets or sets the flag indicating whether the state of the cache has changed.
+
+    MSAL methods set this flag after any change.
+
+    Caller applications should reset the flag after serializing and persisting the state of the cache.
+  metadata: {}
+uid: Microsoft.Identity.Client.TokenCache.HasStateChanged*
+commentId: Overload:Microsoft.Identity.Client.TokenCache.HasStateChanged
+namespace: Microsoft.Identity.Client
+name: HasStateChanged
+fullName: Microsoft.Identity.Client.TokenCache.HasStateChanged
+nameWithType: TokenCache.HasStateChanged
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.TokenCache.HasStateChanged
+  - Microsoft.Identity.Client.TokenCache.get_HasStateChanged
+  - Microsoft.Identity.Client.TokenCache.set_HasStateChanged
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.TokenCache.HasStateChanged
+  - Microsoft::Identity::Client::TokenCache::HasStateChanged
+  - HasStateChanged
+  - TokenCache.HasStateChanged
+  - TokenCache::HasStateChanged
+  helpviewer_keywords:
+  - TokenCache.HasStateChanged property [.NET]
+  - HasStateChanged property [.NET], class TokenCache
+  monikers:
+  - msal-dotnet-latest

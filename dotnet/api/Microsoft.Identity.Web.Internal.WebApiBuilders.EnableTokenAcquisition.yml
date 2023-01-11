@@ -1,0 +1,89 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder?alt=Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder&text=MicrosoftIdentityAppCallsWebApiAuthenticationBuilder" data-throw-if-not-resolved="True"/>
+    description: The authentication builder to chain.
+  parameters:
+  - namesWithMoniker:
+    - value: configureConfidentialClientApplicationOptions
+    description: The action to configure <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ConfidentialClientApplicationOptions"></xref>.
+    type: <xref href="System.Action`1?alt=System.Action&text=Action" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Client.ConfidentialClientApplicationOptions?alt=Microsoft.Identity.Client.ConfidentialClientApplicationOptions&text=ConfidentialClientApplicationOptions" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: authenticationScheme
+    description: Authentication scheme.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: services
+    description: The services being configured.
+    type: <xref href="Microsoft.Extensions.DependencyInjection.IServiceCollection?alt=Microsoft.Extensions.DependencyInjection.IServiceCollection&text=IServiceCollection" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: configuration
+    description: IConfigurationSection.
+    type: <xref href="Microsoft.Extensions.Configuration.IConfigurationSection?alt=Microsoft.Extensions.Configuration.IConfigurationSection&text=IConfigurationSection" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Web.Internal.WebApiBuilders.EnableTokenAcquisition(System.Action{Microsoft.Identity.Client.ConfidentialClientApplicationOptions},System.String,Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfigurationSection)
+  commentId: M:Microsoft.Identity.Web.Internal.WebApiBuilders.EnableTokenAcquisition(System.Action{Microsoft.Identity.Client.ConfidentialClientApplicationOptions},System.String,Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfigurationSection)
+  name: EnableTokenAcquisition(Action<ConfidentialClientApplicationOptions>, String, IServiceCollection, IConfigurationSection)
+  fullName: Microsoft.Identity.Web.Internal.WebApiBuilders.EnableTokenAcquisition(Action<ConfidentialClientApplicationOptions>, String, IServiceCollection, IConfigurationSection)
+  nameWithType: WebApiBuilders.EnableTokenAcquisition(Action<ConfidentialClientApplicationOptions>, String, IServiceCollection, IConfigurationSection)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public static Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder EnableTokenAcquisition (Action<Microsoft.Identity.Client.ConfidentialClientApplicationOptions> configureConfidentialClientApplicationOptions, string authenticationScheme, Microsoft.Extensions.DependencyInjection.IServiceCollection services, Microsoft.Extensions.Configuration.IConfigurationSection? configuration);
+  - lang: fsharp
+    values:
+    - value: 'static member EnableTokenAcquisition : Action<Microsoft.Identity.Client.ConfidentialClientApplicationOptions> * string * Microsoft.Extensions.DependencyInjection.IServiceCollection * Microsoft.Extensions.Configuration.IConfigurationSection -> Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder'
+  - lang: vb
+    values:
+    - value: Public Shared Function EnableTokenAcquisition (configureConfidentialClientApplicationOptions As Action(Of ConfidentialClientApplicationOptions), authenticationScheme As String, services As IServiceCollection, configuration As IConfigurationSection) As MicrosoftIdentityAppCallsWebApiAuthenticationBuilder
+  monikers:
+  - msal-model-dotnet-latest
+  summary: >-
+    Allows a higher level abstraction of security token (i.e. System.IdentityModel.Tokens.Jwt and more modern, Microsoft.IdentityModel.JsonWebTokens)
+
+    to be used with Microsoft Identity Web.
+
+    Developers should continue to use `EnableTokenAcquisitionToCallDownstreamApi`.
+
+    This API is not considered part of the public API and may change.
+  metadata: {}
+uid: Microsoft.Identity.Web.Internal.WebApiBuilders.EnableTokenAcquisition*
+commentId: Overload:Microsoft.Identity.Web.Internal.WebApiBuilders.EnableTokenAcquisition
+namespace: Microsoft.Identity.Web.Internal
+name: EnableTokenAcquisition
+fullName: Microsoft.Identity.Web.Internal.WebApiBuilders.EnableTokenAcquisition
+nameWithType: WebApiBuilders.EnableTokenAcquisition
+assembliesWithMoniker:
+- value: Microsoft.Identity.Web.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Web v1.25.10
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-model-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Web.Internal.WebApiBuilders.EnableTokenAcquisition
+  api_location:
+  - Microsoft.Identity.Web.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Web.Internal.WebApiBuilders.EnableTokenAcquisition
+  - Microsoft::Identity::Web::Internal::WebApiBuilders::EnableTokenAcquisition
+  - EnableTokenAcquisition
+  - WebApiBuilders.EnableTokenAcquisition
+  - WebApiBuilders::EnableTokenAcquisition
+  helpviewer_keywords:
+  - WebApiBuilders.EnableTokenAcquisition method [.NET]
+  - EnableTokenAcquisition method [.NET], class WebApiBuilders
+  - WebApiBuilders.EnableTokenAcquisition(Action<ConfidentialClientApplicationOptions>, String, IServiceCollection, IConfigurationSection) method [.NET]
+  - EnableTokenAcquisition(Action<ConfidentialClientApplicationOptions>, String, IServiceCollection, IConfigurationSection) method [.NET], class WebApiBuilders
+  monikers:
+  - msal-model-dotnet-latest

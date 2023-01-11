@@ -1,0 +1,78 @@
+### YamlMime:NetMember
+type: method
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: samlToken
+    description: the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken"></xref> being validated.
+    type: <xref href="Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken?alt=Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken&text=Saml2SecurityToken" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: validationParameters
+    description: the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.TokenValidationParameters"></xref> that will be used during validation.
+    type: <xref href="Microsoft.IdentityModel.Tokens.TokenValidationParameters?alt=Microsoft.IdentityModel.Tokens.TokenValidationParameters&text=TokenValidationParameters" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: confirmationData
+    description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2SubjectConfirmationData"></xref> to validate.
+    type: <xref href="Microsoft.IdentityModel.Tokens.Saml2.Saml2SubjectConfirmationData?alt=Microsoft.IdentityModel.Tokens.Saml2.Saml2SubjectConfirmationData&text=Saml2SubjectConfirmationData" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ValidateConfirmationData(Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken,Microsoft.IdentityModel.Tokens.TokenValidationParameters,Microsoft.IdentityModel.Tokens.Saml2.Saml2SubjectConfirmationData)
+  commentId: M:Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ValidateConfirmationData(Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken,Microsoft.IdentityModel.Tokens.TokenValidationParameters,Microsoft.IdentityModel.Tokens.Saml2.Saml2SubjectConfirmationData)
+  name: ValidateConfirmationData(Saml2SecurityToken, TokenValidationParameters, Saml2SubjectConfirmationData)
+  fullName: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ValidateConfirmationData(Saml2SecurityToken, TokenValidationParameters, Saml2SubjectConfirmationData)
+  nameWithType: Saml2SecurityTokenHandler.ValidateConfirmationData(Saml2SecurityToken, TokenValidationParameters, Saml2SubjectConfirmationData)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected virtual void ValidateConfirmationData (Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken samlToken, Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters, Microsoft.IdentityModel.Tokens.Saml2.Saml2SubjectConfirmationData confirmationData);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member ValidateConfirmationData : Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken * Microsoft.IdentityModel.Tokens.TokenValidationParameters * Microsoft.IdentityModel.Tokens.Saml2.Saml2SubjectConfirmationData -> unit
+
+        override this.ValidateConfirmationData : Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken * Microsoft.IdentityModel.Tokens.TokenValidationParameters * Microsoft.IdentityModel.Tokens.Saml2.Saml2SubjectConfirmationData -> unit
+  - lang: vb
+    values:
+    - value: Protected Overridable Sub ValidateConfirmationData (samlToken As Saml2SecurityToken, validationParameters As TokenValidationParameters, confirmationData As Saml2SubjectConfirmationData)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Validates <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2SubjectConfirmationData"></xref> object.
+  remarks: Validation of confirmation data is currently not supported by default. To customize SubjectConfirmationData processing, extend Saml2SecurityTokenHandler and override ValidateConfirmationData.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ValidateConfirmationData*
+commentId: Overload:Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ValidateConfirmationData
+namespace: Microsoft.IdentityModel.Tokens.Saml2
+name: ValidateConfirmationData
+fullName: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ValidateConfirmationData
+nameWithType: Saml2SecurityTokenHandler.ValidateConfirmationData
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ValidateConfirmationData
+  api_location:
+  - Microsoft.IdentityModel.Tokens.Saml.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ValidateConfirmationData
+  - Microsoft::IdentityModel::Tokens::Saml2::Saml2SecurityTokenHandler::ValidateConfirmationData
+  - ValidateConfirmationData
+  - Saml2SecurityTokenHandler.ValidateConfirmationData
+  - Saml2SecurityTokenHandler::ValidateConfirmationData
+  helpviewer_keywords:
+  - Saml2SecurityTokenHandler.ValidateConfirmationData method [.NET]
+  - ValidateConfirmationData method [.NET], class Saml2SecurityTokenHandler
+  - Saml2SecurityTokenHandler.ValidateConfirmationData(Saml2SecurityToken, TokenValidationParameters, Saml2SubjectConfirmationData) method [.NET]
+  - ValidateConfirmationData(Saml2SecurityToken, TokenValidationParameters, Saml2SubjectConfirmationData) method [.NET], class Saml2SecurityTokenHandler
+  monikers:
+  - msal-web-dotnet-latest

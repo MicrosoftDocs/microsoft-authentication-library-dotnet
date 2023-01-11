@@ -1,0 +1,84 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+    description: UTF8 decoding of bytes in the file.
+  parameters:
+  - namesWithMoniker:
+    - value: address
+    description: Fully qualified path to a file.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: cancel
+    description: <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken"></xref> not used.
+    type: <xref href="System.Threading.CancellationToken?alt=System.Threading.CancellationToken&text=CancellationToken" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: If address is null or whitespace.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: with inner expection containing the original exception.
+    type: <xref href="System.IO.IOException" data-throw-if-not-resolved="True"/>
+  implementsWithMoniker:
+  - value: <xref href="Microsoft.IdentityModel.Protocols.IDocumentRetriever.GetDocumentAsync(System.String,System.Threading.CancellationToken)?alt=Microsoft.IdentityModel.Protocols.IDocumentRetriever.GetDocumentAsync(System.String,System.Threading.CancellationToken)&text=GetDocumentAsync(String%2C+CancellationToken)" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Protocols.FileDocumentRetriever.GetDocumentAsync(System.String,System.Threading.CancellationToken)
+  commentId: M:Microsoft.IdentityModel.Protocols.FileDocumentRetriever.GetDocumentAsync(System.String,System.Threading.CancellationToken)
+  name: GetDocumentAsync(String, CancellationToken)
+  fullName: Microsoft.IdentityModel.Protocols.FileDocumentRetriever.GetDocumentAsync(String, CancellationToken)
+  nameWithType: FileDocumentRetriever.GetDocumentAsync(String, CancellationToken)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public System.Threading.Tasks.Task<string> GetDocumentAsync (string address, System.Threading.CancellationToken cancel);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member GetDocumentAsync : string * System.Threading.CancellationToken -> System.Threading.Tasks.Task<string>
+
+        override this.GetDocumentAsync : string * System.Threading.CancellationToken -> System.Threading.Tasks.Task<string>
+  - lang: vb
+    values:
+    - value: Public Function GetDocumentAsync (address As String, cancel As CancellationToken) As Task(Of String)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Reads a document using <xref data-throw-if-not-resolved="true" uid="System.IO.FileStream"></xref>.
+  metadata: {}
+uid: Microsoft.IdentityModel.Protocols.FileDocumentRetriever.GetDocumentAsync*
+commentId: Overload:Microsoft.IdentityModel.Protocols.FileDocumentRetriever.GetDocumentAsync
+namespace: Microsoft.IdentityModel.Protocols
+name: GetDocumentAsync
+fullName: Microsoft.IdentityModel.Protocols.FileDocumentRetriever.GetDocumentAsync
+nameWithType: FileDocumentRetriever.GetDocumentAsync
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Protocols.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Protocols v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Protocols.FileDocumentRetriever.GetDocumentAsync
+  api_location:
+  - Microsoft.IdentityModel.Protocols.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Protocols.FileDocumentRetriever.GetDocumentAsync
+  - Microsoft::IdentityModel::Protocols::FileDocumentRetriever::GetDocumentAsync
+  - GetDocumentAsync
+  - FileDocumentRetriever.GetDocumentAsync
+  - FileDocumentRetriever::GetDocumentAsync
+  helpviewer_keywords:
+  - FileDocumentRetriever.GetDocumentAsync method [.NET]
+  - GetDocumentAsync method [.NET], class FileDocumentRetriever
+  - FileDocumentRetriever.GetDocumentAsync(String, CancellationToken) method [.NET]
+  - GetDocumentAsync(String, CancellationToken) method [.NET], class FileDocumentRetriever
+  monikers:
+  - msal-web-dotnet-latest

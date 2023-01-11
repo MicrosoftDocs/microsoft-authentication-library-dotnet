@@ -1,0 +1,74 @@
+### YamlMime:NetMember
+type: method
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: writer
+    description: A <xref data-throw-if-not-resolved="true" uid="System.Xml.XmlWriter"></xref> to serialize the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2SubjectConfirmationData"></xref>.
+    type: <xref href="System.Xml.XmlWriter?alt=System.Xml.XmlWriter&text=XmlWriter" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: subjectConfirmationData
+    description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2SubjectConfirmationData"></xref> to serialize.
+    type: <xref href="Microsoft.IdentityModel.Tokens.Saml2.Saml2SubjectConfirmationData?alt=Microsoft.IdentityModel.Tokens.Saml2.Saml2SubjectConfirmationData&text=Saml2SubjectConfirmationData" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteSubjectConfirmationData(System.Xml.XmlWriter,Microsoft.IdentityModel.Tokens.Saml2.Saml2SubjectConfirmationData)
+  commentId: M:Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteSubjectConfirmationData(System.Xml.XmlWriter,Microsoft.IdentityModel.Tokens.Saml2.Saml2SubjectConfirmationData)
+  name: WriteSubjectConfirmationData(XmlWriter, Saml2SubjectConfirmationData)
+  fullName: Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteSubjectConfirmationData(XmlWriter, Saml2SubjectConfirmationData)
+  nameWithType: Saml2Serializer.WriteSubjectConfirmationData(XmlWriter, Saml2SubjectConfirmationData)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected virtual void WriteSubjectConfirmationData (System.Xml.XmlWriter writer, Microsoft.IdentityModel.Tokens.Saml2.Saml2SubjectConfirmationData subjectConfirmationData);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member WriteSubjectConfirmationData : System.Xml.XmlWriter * Microsoft.IdentityModel.Tokens.Saml2.Saml2SubjectConfirmationData -> unit
+
+        override this.WriteSubjectConfirmationData : System.Xml.XmlWriter * Microsoft.IdentityModel.Tokens.Saml2.Saml2SubjectConfirmationData -> unit
+  - lang: vb
+    values:
+    - value: Protected Overridable Sub WriteSubjectConfirmationData (writer As XmlWriter, subjectConfirmationData As Saml2SubjectConfirmationData)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Writes the &lt;saml:SubjectConfirmationData&gt; element.
+  remarks: <p>When the data.KeyIdentifiers collection is not empty, an xsi:type attribute will be written specifying saml:KeyInfoConfirmationDataType.</p>
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteSubjectConfirmationData*
+commentId: Overload:Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteSubjectConfirmationData
+namespace: Microsoft.IdentityModel.Tokens.Saml2
+name: WriteSubjectConfirmationData
+fullName: Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteSubjectConfirmationData
+nameWithType: Saml2Serializer.WriteSubjectConfirmationData
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteSubjectConfirmationData
+  api_location:
+  - Microsoft.IdentityModel.Tokens.Saml.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteSubjectConfirmationData
+  - Microsoft::IdentityModel::Tokens::Saml2::Saml2Serializer::WriteSubjectConfirmationData
+  - WriteSubjectConfirmationData
+  - Saml2Serializer.WriteSubjectConfirmationData
+  - Saml2Serializer::WriteSubjectConfirmationData
+  helpviewer_keywords:
+  - Saml2Serializer.WriteSubjectConfirmationData method [.NET]
+  - WriteSubjectConfirmationData method [.NET], class Saml2Serializer
+  - Saml2Serializer.WriteSubjectConfirmationData(XmlWriter, Saml2SubjectConfirmationData) method [.NET]
+  - WriteSubjectConfirmationData(XmlWriter, Saml2SubjectConfirmationData) method [.NET], class Saml2Serializer
+  monikers:
+  - msal-web-dotnet-latest

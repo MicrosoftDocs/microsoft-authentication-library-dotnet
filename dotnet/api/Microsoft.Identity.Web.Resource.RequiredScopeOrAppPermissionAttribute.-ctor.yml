@@ -1,0 +1,123 @@
+### YamlMime:NetMember
+type: constructor
+members:
+- type: constructor
+  uid: Microsoft.Identity.Web.Resource.RequiredScopeOrAppPermissionAttribute.#ctor
+  commentId: M:Microsoft.Identity.Web.Resource.RequiredScopeOrAppPermissionAttribute.#ctor
+  name: RequiredScopeOrAppPermissionAttribute()
+  fullName: Microsoft.Identity.Web.Resource.RequiredScopeOrAppPermissionAttribute.RequiredScopeOrAppPermissionAttribute()
+  nameWithType: RequiredScopeOrAppPermissionAttribute.RequiredScopeOrAppPermissionAttribute()
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public RequiredScopeOrAppPermissionAttribute ();
+  - lang: vb
+    values:
+    - value: Public Sub New ()
+  monikers:
+  - msal-model-dotnet-latest
+  summary: Default constructor.
+  examples: >-
+    ```
+
+    [RequiredScopeOrAppPermission(RequiredScopesConfigurationKey="AzureAD:Scope", RequiredAppPermissionsConfigurationKey="AzureAD:AppPermission")]
+
+    class Controller : BaseController
+
+    {
+
+    }
+
+    ```
+  metadata: {}
+- parameters:
+  - namesWithMoniker:
+    - value: acceptedScopes
+    description: Scopes accepted by this web API.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>[]
+  - namesWithMoniker:
+    - value: acceptedAppPermissions
+    description: App permissions accepted by this web API.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>[]
+  type: constructor
+  uid: Microsoft.Identity.Web.Resource.RequiredScopeOrAppPermissionAttribute.#ctor(System.String[],System.String[])
+  commentId: M:Microsoft.Identity.Web.Resource.RequiredScopeOrAppPermissionAttribute.#ctor(System.String[],System.String[])
+  name: RequiredScopeOrAppPermissionAttribute(String[], String[])
+  fullName: Microsoft.Identity.Web.Resource.RequiredScopeOrAppPermissionAttribute.RequiredScopeOrAppPermissionAttribute(String[], String[])
+  nameWithType: RequiredScopeOrAppPermissionAttribute.RequiredScopeOrAppPermissionAttribute(String[], String[])
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public RequiredScopeOrAppPermissionAttribute (string[] acceptedScopes, string[] acceptedAppPermissions);
+  - lang: fsharp
+    values:
+    - value: 'new Microsoft.Identity.Web.Resource.RequiredScopeOrAppPermissionAttribute : string[] * string[] -> Microsoft.Identity.Web.Resource.RequiredScopeOrAppPermissionAttribute'
+  - lang: vb
+    values:
+    - value: Public Sub New (acceptedScopes As String(), acceptedAppPermissions As String())
+  monikers:
+  - msal-model-dotnet-latest
+  seeAlso: >+
+    - <xref:RequiredScopeOrAppPermissionAttribute()>
+
+  summary: >-
+    Verifies that the web API is called with the right app permissions.
+
+    If the token obtained for this API is on behalf of the authenticated user does not have
+
+    any of these <code data-dev-comment-type="paramref">acceptedScopes</code> in its scope claim, 
+
+    nor <code data-dev-comment-type="paramref">acceptedAppPermissions</code> in its roles claim, the
+
+    method updates the HTTP response providing a status code 403 (Forbidden)
+
+    and writes to the response body a message telling which scopes are expected in the token.
+  remarks: <p>When neither the scopes nor app permissions match, the response is a 403 (Forbidden), because the user is authenticated (hence not 401), but not authorized.</p>
+  examples: >-
+    Add the following attribute on the controller/page/action to protect:
+
+
+
+    ```
+
+    [RequiredScopeOrAppPermission(new [] { "access_as_user" }, new [] { "access_as_app" })]
+
+    ```
+  metadata: {}
+uid: Microsoft.Identity.Web.Resource.RequiredScopeOrAppPermissionAttribute.#ctor*
+commentId: Overload:Microsoft.Identity.Web.Resource.RequiredScopeOrAppPermissionAttribute.#ctor
+namespace: Microsoft.Identity.Web.Resource
+name: RequiredScopeOrAppPermissionAttribute
+fullName: Microsoft.Identity.Web.Resource.RequiredScopeOrAppPermissionAttribute.RequiredScopeOrAppPermissionAttribute
+nameWithType: RequiredScopeOrAppPermissionAttribute.RequiredScopeOrAppPermissionAttribute
+assembliesWithMoniker:
+- value: Microsoft.Identity.Web.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Web v1.25.10
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-model-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Web.Resource.RequiredScopeOrAppPermissionAttribute..ctor
+  api_location:
+  - Microsoft.Identity.Web.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Web.Resource.RequiredScopeOrAppPermissionAttribute.#ctor
+  - Microsoft::Identity::Web::Resource::RequiredScopeOrAppPermissionAttribute::#ctor
+  - '#ctor'
+  - RequiredScopeOrAppPermissionAttribute.#ctor
+  - RequiredScopeOrAppPermissionAttribute::#ctor
+  helpviewer_keywords:
+  - RequiredScopeOrAppPermissionAttribute class [.NET], constructors
+  - RequiredScopeOrAppPermissionAttribute() class [.NET], constructors
+  - RequiredScopeOrAppPermissionAttribute(String[], String[]) class [.NET], constructors
+  monikers:
+  - msal-model-dotnet-latest

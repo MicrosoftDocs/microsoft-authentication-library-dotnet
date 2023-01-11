@@ -1,0 +1,95 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+    description: The <code data-dev-comment-type="c">issuer</code> if it's valid, or otherwise <code data-dev-comment-type="c">SecurityTokenInvalidIssuerException</code> is thrown.
+  parameters:
+  - namesWithMoniker:
+    - value: issuer
+    description: Issuer to validate (will be tenanted).
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: securityToken
+    description: Received security token.
+    type: <xref href="Microsoft.IdentityModel.Tokens.SecurityToken?alt=Microsoft.IdentityModel.Tokens.SecurityToken&text=SecurityToken" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: validationParameters
+    description: Token validation parameters.
+    type: <xref href="Microsoft.IdentityModel.Tokens.TokenValidationParameters?alt=Microsoft.IdentityModel.Tokens.TokenValidationParameters&text=TokenValidationParameters" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: if <code data-dev-comment-type="paramref">validationParameters</code> is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: if the issuer is invalid or if there is a network issue.
+    type: <xref href="Microsoft.IdentityModel.Tokens.SecurityTokenInvalidIssuerException?alt=Microsoft.IdentityModel.Tokens.SecurityTokenInvalidIssuerException&text=SecurityTokenInvalidIssuerException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Validators.AadIssuerValidator.Validate(System.String,Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.TokenValidationParameters)
+  commentId: M:Microsoft.IdentityModel.Validators.AadIssuerValidator.Validate(System.String,Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.TokenValidationParameters)
+  name: Validate(String, SecurityToken, TokenValidationParameters)
+  fullName: Microsoft.IdentityModel.Validators.AadIssuerValidator.Validate(String, SecurityToken, TokenValidationParameters)
+  nameWithType: AadIssuerValidator.Validate(String, SecurityToken, TokenValidationParameters)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public string Validate (string issuer, Microsoft.IdentityModel.Tokens.SecurityToken securityToken, Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters);
+  - lang: fsharp
+    values:
+    - value: 'member this.Validate : string * Microsoft.IdentityModel.Tokens.SecurityToken * Microsoft.IdentityModel.Tokens.TokenValidationParameters -> string'
+  - lang: vb
+    values:
+    - value: Public Function Validate (issuer As String, securityToken As SecurityToken, validationParameters As TokenValidationParameters) As String
+  monikers:
+  - msal-web-dotnet-latest
+  summary: >-
+    Validate the issuer for single and multi-tenant applications of various audiences (Work and School accounts, or Work and School accounts +
+
+    Personal accounts) and the various clouds.
+  remarks: <p>The issuer is considered as valid if it has the same HTTP scheme and authority as the authority from the configuration file, has a tenant ID, and optionally v2.0 (if this web API accepts both V1 and V2 tokens).</p>
+  examples: >-
+    ```
+
+    AadIssuerValidator aadIssuerValidator = AadIssuerValidator.GetAadIssuerValidator(authority, httpClient);
+
+    TokenValidationParameters.IssuerValidator = aadIssuerValidator.Validate;
+
+    ```
+  metadata: {}
+uid: Microsoft.IdentityModel.Validators.AadIssuerValidator.Validate*
+commentId: Overload:Microsoft.IdentityModel.Validators.AadIssuerValidator.Validate
+namespace: Microsoft.IdentityModel.Validators
+name: Validate
+fullName: Microsoft.IdentityModel.Validators.AadIssuerValidator.Validate
+nameWithType: AadIssuerValidator.Validate
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Validators.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Validators v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Validators.AadIssuerValidator.Validate
+  api_location:
+  - Microsoft.IdentityModel.Validators.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Validators.AadIssuerValidator.Validate
+  - Microsoft::IdentityModel::Validators::AadIssuerValidator::Validate
+  - Validate
+  - AadIssuerValidator.Validate
+  - AadIssuerValidator::Validate
+  helpviewer_keywords:
+  - AadIssuerValidator.Validate method [.NET]
+  - Validate method [.NET], class AadIssuerValidator
+  - AadIssuerValidator.Validate(String, SecurityToken, TokenValidationParameters) method [.NET]
+  - Validate(String, SecurityToken, TokenValidationParameters) method [.NET], class AadIssuerValidator
+  monikers:
+  - msal-web-dotnet-latest

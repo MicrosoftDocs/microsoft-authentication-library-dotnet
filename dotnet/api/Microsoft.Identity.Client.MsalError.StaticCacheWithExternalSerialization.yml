@@ -1,0 +1,60 @@
+### YamlMime:NetMember
+type: field
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: field
+  uid: Microsoft.Identity.Client.MsalError.StaticCacheWithExternalSerialization
+  commentId: F:Microsoft.Identity.Client.MsalError.StaticCacheWithExternalSerialization
+  name: StaticCacheWithExternalSerialization
+  fullName: Microsoft.Identity.Client.MsalError.StaticCacheWithExternalSerialization
+  nameWithType: MsalError.StaticCacheWithExternalSerialization
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public const string StaticCacheWithExternalSerialization;
+  - lang: fsharp
+    values:
+    - value: 'val mutable StaticCacheWithExternalSerialization : string'
+  - lang: vb
+    values:
+    - value: 'Public Const StaticCacheWithExternalSerialization As String '
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    <p>What happens?</p>You configured MSAL cache serialization at the same time with a static internal cache via <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithCacheOptions(Microsoft.Identity.Client.CacheOptions)"></xref>
+      These are mutually exclusive.
+    <p>Mitigation</p> Use only one option. Web site and web API scenarios should rely on external cache serialization, as internal cache serialization cannot scale. See https://aka.ms/msal-net-cca-token-cache-serialization
+  metadata: {}
+namespace: Microsoft.Identity.Client
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.MsalError.StaticCacheWithExternalSerialization
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.MsalError.StaticCacheWithExternalSerialization
+  - Microsoft::Identity::Client::MsalError::StaticCacheWithExternalSerialization
+  - StaticCacheWithExternalSerialization
+  - MsalError.StaticCacheWithExternalSerialization
+  - MsalError::StaticCacheWithExternalSerialization
+  helpviewer_keywords:
+  - MsalError.StaticCacheWithExternalSerialization field [.NET]
+  - StaticCacheWithExternalSerialization field [.NET], class MsalError
+  monikers:
+  - msal-dotnet-latest

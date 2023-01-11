@@ -1,0 +1,102 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.Identity.Client.IConfidentialClientApplication?alt=Microsoft.Identity.Client.IConfidentialClientApplication&text=IConfidentialClientApplication" data-throw-if-not-resolved="True"/>
+    description: The application for chaining.
+  parameters:
+  - namesWithMoniker:
+    - value: confidentialClientApp
+    description: Confidential client application.
+    type: <xref href="Microsoft.Identity.Client.IConfidentialClientApplication?alt=Microsoft.Identity.Client.IConfidentialClientApplication&text=IConfidentialClientApplication" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: initializeDistributedCache
+    description: >-
+      Action taking a <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.DependencyInjection.IServiceCollection"></xref>
+                   and by which you initialize your distributed cache.
+    type: <xref href="System.Action`1?alt=System.Action&text=Action" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Extensions.DependencyInjection.IServiceCollection?alt=Microsoft.Extensions.DependencyInjection.IServiceCollection&text=IServiceCollection" data-throw-if-not-resolved="True"/>&gt;
+  type: method
+  uid: Microsoft.Identity.Web.TokenCacheExtensions.AddDistributedTokenCache(Microsoft.Identity.Client.IConfidentialClientApplication,System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection})
+  commentId: M:Microsoft.Identity.Web.TokenCacheExtensions.AddDistributedTokenCache(Microsoft.Identity.Client.IConfidentialClientApplication,System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection})
+  name: AddDistributedTokenCache(IConfidentialClientApplication, Action<IServiceCollection>)
+  fullName: Microsoft.Identity.Web.TokenCacheExtensions.AddDistributedTokenCache(IConfidentialClientApplication, Action<IServiceCollection>)
+  nameWithType: TokenCacheExtensions.AddDistributedTokenCache(IConfidentialClientApplication, Action<IServiceCollection>)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public static Microsoft.Identity.Client.IConfidentialClientApplication AddDistributedTokenCache (this Microsoft.Identity.Client.IConfidentialClientApplication confidentialClientApp, Action<Microsoft.Extensions.DependencyInjection.IServiceCollection> initializeDistributedCache);
+  - lang: fsharp
+    values:
+    - value: 'static member AddDistributedTokenCache : Microsoft.Identity.Client.IConfidentialClientApplication * Action<Microsoft.Extensions.DependencyInjection.IServiceCollection> -> Microsoft.Identity.Client.IConfidentialClientApplication'
+  - lang: vb
+    values:
+    - value: >-
+        <Extension()>
+
+        Public Function AddDistributedTokenCache (confidentialClientApp As IConfidentialClientApplication, initializeDistributedCache As Action(Of IServiceCollection)) As IConfidentialClientApplication
+  monikers:
+  - msal-model-dotnet-latest
+  summary: Add a distributed token cache.
+  remarks: <p>Don't use this method in ASP.NET Core. Just add use the ConfigureServices method instead.</p>
+  examples: >-
+    The following code adds a token cache based on REDIS and initializes
+
+    its configuration.
+
+
+
+    ```
+
+    app.AddDistributedTokenCache(services =>
+
+    {
+         // Redis token cache
+         // Requires to reference Microsoft.Extensions.Caching.StackExchangeRedis
+         services.AddStackExchangeRedisCache(options =>
+         {
+             options.Configuration = "localhost";
+             options.InstanceName = "Redis";
+         });
+    });
+
+    ```
+  metadata: {}
+uid: Microsoft.Identity.Web.TokenCacheExtensions.AddDistributedTokenCache*
+commentId: Overload:Microsoft.Identity.Web.TokenCacheExtensions.AddDistributedTokenCache
+namespace: Microsoft.Identity.Web
+name: AddDistributedTokenCache
+fullName: Microsoft.Identity.Web.TokenCacheExtensions.AddDistributedTokenCache
+nameWithType: TokenCacheExtensions.AddDistributedTokenCache
+assembliesWithMoniker:
+- value: Microsoft.Identity.Web.TokenCache.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Web.TokenCache v1.25.10
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-model-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Web.TokenCacheExtensions.AddDistributedTokenCache
+  api_location:
+  - Microsoft.Identity.Web.TokenCache.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Web.TokenCacheExtensions.AddDistributedTokenCache
+  - Microsoft::Identity::Web::TokenCacheExtensions::AddDistributedTokenCache
+  - AddDistributedTokenCache
+  - TokenCacheExtensions.AddDistributedTokenCache
+  - TokenCacheExtensions::AddDistributedTokenCache
+  helpviewer_keywords:
+  - TokenCacheExtensions.AddDistributedTokenCache method [.NET]
+  - AddDistributedTokenCache method [.NET], class TokenCacheExtensions
+  - TokenCacheExtensions.AddDistributedTokenCache(IConfidentialClientApplication, Action<IServiceCollection>) extension method [.NET]
+  - AddDistributedTokenCache(IConfidentialClientApplication, Action<IServiceCollection>) extension method [.NET], class TokenCacheExtensions
+  monikers:
+  - msal-model-dotnet-latest

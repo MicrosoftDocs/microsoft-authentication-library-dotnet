@@ -1,0 +1,77 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: T
+    description: The builder.
+  parameters:
+  - namesWithMoniker:
+    - value: popAuthenticationConfiguration
+    description: Configuration properties used to construct a proof of possession request.
+    type: <xref href="Microsoft.Identity.Client.AppConfig.PoPAuthenticationConfiguration?alt=Microsoft.Identity.Client.AppConfig.PoPAuthenticationConfiguration&text=PoPAuthenticationConfiguration" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.AbstractConfidentialClientAcquireTokenParameterBuilder`1.WithProofOfPossession(Microsoft.Identity.Client.AppConfig.PoPAuthenticationConfiguration)
+  commentId: M:Microsoft.Identity.Client.AbstractConfidentialClientAcquireTokenParameterBuilder`1.WithProofOfPossession(Microsoft.Identity.Client.AppConfig.PoPAuthenticationConfiguration)
+  name: WithProofOfPossession(PoPAuthenticationConfiguration)
+  fullName: Microsoft.Identity.Client.AbstractConfidentialClientAcquireTokenParameterBuilder<T>.WithProofOfPossession(PoPAuthenticationConfiguration)
+  nameWithType: AbstractConfidentialClientAcquireTokenParameterBuilder<T>.WithProofOfPossession(PoPAuthenticationConfiguration)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public T WithProofOfPossession (Microsoft.Identity.Client.AppConfig.PoPAuthenticationConfiguration popAuthenticationConfiguration);
+  - lang: fsharp
+    values:
+    - value: "member this.WithProofOfPossession : Microsoft.Identity.Client.AppConfig.PoPAuthenticationConfiguration -> 'T"
+  - lang: vb
+    values:
+    - value: Public Function WithProofOfPossession (popAuthenticationConfiguration As PoPAuthenticationConfiguration) As T
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    Modifies the token acquisition request so that the acquired token is a Proof of Possession token (PoP), rather than a Bearer token. 
+
+    PoP tokens are similar to Bearer tokens, but are bound to the HTTP request and to a cryptographic key, which MSAL can manage on Windows.
+
+    See https://aka.ms/msal-net-pop
+  remarks: <ul><li>An Authentication header is automatically added to the request</li><li>The PoP token is bound to the HTTP request, more specifically to the HTTP method (GET, POST, etc.) and to the Uri (path and query, but not query parameters).</li><li>MSAL creates, reads and stores a key in memory that will be cycled every 8 hours.</li><li>This is an experimental API. The method signature may change in the future without involving a major version upgrade.</li></ul>
+  metadata: {}
+uid: Microsoft.Identity.Client.AbstractConfidentialClientAcquireTokenParameterBuilder`1.WithProofOfPossession*
+commentId: Overload:Microsoft.Identity.Client.AbstractConfidentialClientAcquireTokenParameterBuilder`1.WithProofOfPossession
+namespace: Microsoft.Identity.Client
+name: WithProofOfPossession
+fullName: Microsoft.Identity.Client.AbstractConfidentialClientAcquireTokenParameterBuilder<T>.WithProofOfPossession
+nameWithType: AbstractConfidentialClientAcquireTokenParameterBuilder<T>.WithProofOfPossession
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.AbstractConfidentialClientAcquireTokenParameterBuilder`1.WithProofOfPossession
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.AbstractConfidentialClientAcquireTokenParameterBuilder`1.WithProofOfPossession
+  - Microsoft::Identity::Client::AbstractConfidentialClientAcquireTokenParameterBuilder`1::WithProofOfPossession
+  - Microsoft.Identity.Client.AbstractConfidentialClientAcquireTokenParameterBuilder.WithProofOfPossession
+  - WithProofOfPossession
+  - AbstractConfidentialClientAcquireTokenParameterBuilder`1.WithProofOfPossession
+  - AbstractConfidentialClientAcquireTokenParameterBuilder`1::WithProofOfPossession
+  helpviewer_keywords:
+  - AbstractConfidentialClientAcquireTokenParameterBuilder<T>.WithProofOfPossession method [.NET]
+  - WithProofOfPossession method [.NET], class AbstractConfidentialClientAcquireTokenParameterBuilder<T>
+  - AbstractConfidentialClientAcquireTokenParameterBuilder<T>.WithProofOfPossession(PoPAuthenticationConfiguration) method [.NET]
+  - WithProofOfPossession(PoPAuthenticationConfiguration) method [.NET], class AbstractConfidentialClientAcquireTokenParameterBuilder<T>
+  monikers:
+  - msal-dotnet-latest

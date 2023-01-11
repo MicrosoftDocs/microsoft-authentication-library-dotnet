@@ -1,0 +1,68 @@
+### YamlMime:NetDelegate
+returnsWithMoniker:
+  type:
+  - value: <xref href="System.Threading.Tasks.Task?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>
+  description: Expected to throw an appropriate exception if SignedHttpRequest replay is detected.
+parameters:
+- namesWithMoniker:
+  - value: signedHttpRequest
+  description: A SignedHttpRequest which contains the 'nonce' claim to validate.
+  type: <xref href="Microsoft.IdentityModel.Tokens.SecurityToken?alt=Microsoft.IdentityModel.Tokens.SecurityToken&text=SecurityToken" data-throw-if-not-resolved="True"/>
+- namesWithMoniker:
+  - value: signedHttpRequestValidationContext
+  description: A structure that wraps parameters needed for SignedHttpRequest validation.
+  type: <xref href="Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext?alt=Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext&text=SignedHttpRequestValidationContext" data-throw-if-not-resolved="True"/>
+- namesWithMoniker:
+  - value: cancellationToken
+  description: Propagates notification that operations should be canceled.
+  type: <xref href="System.Threading.CancellationToken?alt=System.Threading.CancellationToken&text=CancellationToken" data-throw-if-not-resolved="True"/>
+inheritances:
+- <xref href="System.Delegate" data-throw-if-not-resolved="True"/>
+uid: Microsoft.IdentityModel.Protocols.SignedHttpRequest.ReplayValidatorAsync
+commentId: T:Microsoft.IdentityModel.Protocols.SignedHttpRequest.ReplayValidatorAsync
+namespace: Microsoft.IdentityModel.Protocols.SignedHttpRequest
+name: ReplayValidatorAsync
+fullName: Microsoft.IdentityModel.Protocols.SignedHttpRequest.ReplayValidatorAsync
+nameWithType: Microsoft.IdentityModel.Protocols.SignedHttpRequest.ReplayValidatorAsync
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Protocols.SignedHttpRequest.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Protocols.SignedHttpRequest v6.25.1
+syntaxWithMoniker:
+- lang: csharp
+  values:
+  - value: public delegate System.Threading.Tasks.Task ReplayValidatorAsync(SecurityToken signedHttpRequest, SignedHttpRequestValidationContext signedHttpRequestValidationContext, CancellationToken cancellationToken);
+- lang: fsharp
+  values:
+  - value: type ReplayValidatorAsync = delegate of SecurityToken * SignedHttpRequestValidationContext * CancellationToken -> Task
+- lang: vb
+  values:
+  - value: 'Public Delegate Function ReplayValidatorAsync(signedHttpRequest As SecurityToken, signedHttpRequestValidationContext As SignedHttpRequestValidationContext, cancellationToken As CancellationToken) As Task '
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+summary: A delegate that will be called to check if SignedHttpRequest is replayed, if set.
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Protocols.SignedHttpRequest.ReplayValidatorAsync
+  - Microsoft.IdentityModel.Protocols.SignedHttpRequest.ReplayValidatorAsync..ctor
+  - Microsoft.IdentityModel.Protocols.SignedHttpRequest.ReplayValidatorAsync.Invoke
+  - Microsoft.IdentityModel.Protocols.SignedHttpRequest.ReplayValidatorAsync.BeginInvoke
+  - Microsoft.IdentityModel.Protocols.SignedHttpRequest.ReplayValidatorAsync.EndInvoke
+  api_location:
+  - Microsoft.IdentityModel.Protocols.SignedHttpRequest.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Protocols.SignedHttpRequest.ReplayValidatorAsync
+  - Microsoft::IdentityModel::Protocols::SignedHttpRequest::ReplayValidatorAsync
+  - ReplayValidatorAsync
+  helpviewer_keywords:
+  - Microsoft.IdentityModel.Protocols.SignedHttpRequest.ReplayValidatorAsync delegate [.NET]
+  monikers:
+  - msal-web-dotnet-latest

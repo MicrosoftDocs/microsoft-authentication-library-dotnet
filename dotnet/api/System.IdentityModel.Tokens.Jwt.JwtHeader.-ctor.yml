@@ -1,0 +1,364 @@
+### YamlMime:NetMember
+type: constructor
+members:
+- type: constructor
+  uid: System.IdentityModel.Tokens.Jwt.JwtHeader.#ctor
+  commentId: M:System.IdentityModel.Tokens.Jwt.JwtHeader.#ctor
+  name: JwtHeader()
+  fullName: System.IdentityModel.Tokens.Jwt.JwtHeader.JwtHeader()
+  nameWithType: JwtHeader.JwtHeader()
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public JwtHeader ();
+  - lang: vb
+    values:
+    - value: Public Sub New ()
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Initializes a new instance of the <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtHeader"></xref> class. Default string comparer <xref data-throw-if-not-resolved="true" uid="System.StringComparer.Ordinal"></xref>.
+  metadata: {}
+- parameters:
+  - namesWithMoniker:
+    - value: encryptingCredentials
+    description: <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtHeader.EncryptingCredentials"></xref> used creating a JWE Compact JSON.
+    type: <xref href="Microsoft.IdentityModel.Tokens.EncryptingCredentials?alt=Microsoft.IdentityModel.Tokens.EncryptingCredentials&text=EncryptingCredentials" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: If 'encryptingCredentials' is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  type: constructor
+  uid: System.IdentityModel.Tokens.Jwt.JwtHeader.#ctor(Microsoft.IdentityModel.Tokens.EncryptingCredentials)
+  commentId: M:System.IdentityModel.Tokens.Jwt.JwtHeader.#ctor(Microsoft.IdentityModel.Tokens.EncryptingCredentials)
+  name: JwtHeader(EncryptingCredentials)
+  fullName: System.IdentityModel.Tokens.Jwt.JwtHeader.JwtHeader(EncryptingCredentials)
+  nameWithType: JwtHeader.JwtHeader(EncryptingCredentials)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public JwtHeader (Microsoft.IdentityModel.Tokens.EncryptingCredentials encryptingCredentials);
+  - lang: fsharp
+    values:
+    - value: 'new System.IdentityModel.Tokens.Jwt.JwtHeader : Microsoft.IdentityModel.Tokens.EncryptingCredentials -> System.IdentityModel.Tokens.Jwt.JwtHeader'
+  - lang: vb
+    values:
+    - value: Public Sub New (encryptingCredentials As EncryptingCredentials)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: >-
+    Initializes a new instance of <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtHeader"></xref>.
+
+    With the Header Parameters:
+
+    <p>{ { typ, JWT }, { alg, EncryptingCredentials.Alg }, { enc, EncryptingCredentials.Enc } }</p>
+  metadata: {}
+- parameters:
+  - namesWithMoniker:
+    - value: signingCredentials
+    description: <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtHeader.SigningCredentials"></xref> used creating a JWS Compact JSON.
+    type: <xref href="Microsoft.IdentityModel.Tokens.SigningCredentials?alt=Microsoft.IdentityModel.Tokens.SigningCredentials&text=SigningCredentials" data-throw-if-not-resolved="True"/>
+  type: constructor
+  uid: System.IdentityModel.Tokens.Jwt.JwtHeader.#ctor(Microsoft.IdentityModel.Tokens.SigningCredentials)
+  commentId: M:System.IdentityModel.Tokens.Jwt.JwtHeader.#ctor(Microsoft.IdentityModel.Tokens.SigningCredentials)
+  name: JwtHeader(SigningCredentials)
+  fullName: System.IdentityModel.Tokens.Jwt.JwtHeader.JwtHeader(SigningCredentials)
+  nameWithType: JwtHeader.JwtHeader(SigningCredentials)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public JwtHeader (Microsoft.IdentityModel.Tokens.SigningCredentials signingCredentials);
+  - lang: fsharp
+    values:
+    - value: 'new System.IdentityModel.Tokens.Jwt.JwtHeader : Microsoft.IdentityModel.Tokens.SigningCredentials -> System.IdentityModel.Tokens.Jwt.JwtHeader'
+  - lang: vb
+    values:
+    - value: Public Sub New (signingCredentials As SigningCredentials)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: >-
+    Initializes a new instance of <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtHeader"></xref>.
+
+    With the Header Parameters:
+
+    <p>{ { typ, JWT }, { alg, SigningCredentials.Algorithm } }</p>
+  metadata: {}
+- parameters:
+  - namesWithMoniker:
+    - value: encryptingCredentials
+    description: <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtHeader.EncryptingCredentials"></xref> used when creating a JWS Compact JSON.
+    type: <xref href="Microsoft.IdentityModel.Tokens.EncryptingCredentials?alt=Microsoft.IdentityModel.Tokens.EncryptingCredentials&text=EncryptingCredentials" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: outboundAlgorithmMap
+    description: provides a mapping for the 'alg' value so that values are within the JWT namespace.
+    type: <xref href="System.Collections.Generic.IDictionary`2?alt=System.Collections.Generic.IDictionary&text=IDictionary" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>,<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  exceptions:
+  - description: If 'encryptingCredentials' is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  type: constructor
+  uid: System.IdentityModel.Tokens.Jwt.JwtHeader.#ctor(Microsoft.IdentityModel.Tokens.EncryptingCredentials,System.Collections.Generic.IDictionary{System.String,System.String})
+  commentId: M:System.IdentityModel.Tokens.Jwt.JwtHeader.#ctor(Microsoft.IdentityModel.Tokens.EncryptingCredentials,System.Collections.Generic.IDictionary{System.String,System.String})
+  name: JwtHeader(EncryptingCredentials, IDictionary<String,String>)
+  fullName: System.IdentityModel.Tokens.Jwt.JwtHeader.JwtHeader(EncryptingCredentials, IDictionary<String,String>)
+  nameWithType: JwtHeader.JwtHeader(EncryptingCredentials, IDictionary<String,String>)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public JwtHeader (Microsoft.IdentityModel.Tokens.EncryptingCredentials encryptingCredentials, System.Collections.Generic.IDictionary<string,string> outboundAlgorithmMap);
+  - lang: fsharp
+    values:
+    - value: 'new System.IdentityModel.Tokens.Jwt.JwtHeader : Microsoft.IdentityModel.Tokens.EncryptingCredentials * System.Collections.Generic.IDictionary<string, string> -> System.IdentityModel.Tokens.Jwt.JwtHeader'
+  - lang: vb
+    values:
+    - value: Public Sub New (encryptingCredentials As EncryptingCredentials, outboundAlgorithmMap As IDictionary(Of String, String))
+  monikers:
+  - msal-web-dotnet-latest
+  summary: >-
+    Initializes a new instance of <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtHeader"></xref>.
+
+    With the Header Parameters:
+
+    <p>{ { typ, JWT }, { alg, EncryptingCredentials.Algorithm } }</p>
+  metadata: {}
+- parameters:
+  - namesWithMoniker:
+    - value: signingCredentials
+    description: <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtHeader.SigningCredentials"></xref> used when creating a JWS Compact JSON.
+    type: <xref href="Microsoft.IdentityModel.Tokens.SigningCredentials?alt=Microsoft.IdentityModel.Tokens.SigningCredentials&text=SigningCredentials" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: outboundAlgorithmMap
+    description: provides a mapping for the 'alg' value so that values are within the JWT namespace.
+    type: <xref href="System.Collections.Generic.IDictionary`2?alt=System.Collections.Generic.IDictionary&text=IDictionary" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>,<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  type: constructor
+  uid: System.IdentityModel.Tokens.Jwt.JwtHeader.#ctor(Microsoft.IdentityModel.Tokens.SigningCredentials,System.Collections.Generic.IDictionary{System.String,System.String})
+  commentId: M:System.IdentityModel.Tokens.Jwt.JwtHeader.#ctor(Microsoft.IdentityModel.Tokens.SigningCredentials,System.Collections.Generic.IDictionary{System.String,System.String})
+  name: JwtHeader(SigningCredentials, IDictionary<String,String>)
+  fullName: System.IdentityModel.Tokens.Jwt.JwtHeader.JwtHeader(SigningCredentials, IDictionary<String,String>)
+  nameWithType: JwtHeader.JwtHeader(SigningCredentials, IDictionary<String,String>)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public JwtHeader (Microsoft.IdentityModel.Tokens.SigningCredentials signingCredentials, System.Collections.Generic.IDictionary<string,string> outboundAlgorithmMap);
+  - lang: fsharp
+    values:
+    - value: 'new System.IdentityModel.Tokens.Jwt.JwtHeader : Microsoft.IdentityModel.Tokens.SigningCredentials * System.Collections.Generic.IDictionary<string, string> -> System.IdentityModel.Tokens.Jwt.JwtHeader'
+  - lang: vb
+    values:
+    - value: Public Sub New (signingCredentials As SigningCredentials, outboundAlgorithmMap As IDictionary(Of String, String))
+  monikers:
+  - msal-web-dotnet-latest
+  summary: >-
+    Initializes a new instance of <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtHeader"></xref>.
+
+    With the Header Parameters:
+
+    <p>{ { typ, JWT }, { alg, SigningCredentials.Algorithm } }</p>
+  metadata: {}
+- parameters:
+  - namesWithMoniker:
+    - value: encryptingCredentials
+    description: <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtHeader.EncryptingCredentials"></xref> used when creating a JWS Compact JSON.
+    type: <xref href="Microsoft.IdentityModel.Tokens.EncryptingCredentials?alt=Microsoft.IdentityModel.Tokens.EncryptingCredentials&text=EncryptingCredentials" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: outboundAlgorithmMap
+    description: provides a mapping for the 'alg' value so that values are within the JWT namespace.
+    type: <xref href="System.Collections.Generic.IDictionary`2?alt=System.Collections.Generic.IDictionary&text=IDictionary" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>,<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: tokenType
+    description: provides the token type
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: If 'encryptingCredentials' is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  type: constructor
+  uid: System.IdentityModel.Tokens.Jwt.JwtHeader.#ctor(Microsoft.IdentityModel.Tokens.EncryptingCredentials,System.Collections.Generic.IDictionary{System.String,System.String},System.String)
+  commentId: M:System.IdentityModel.Tokens.Jwt.JwtHeader.#ctor(Microsoft.IdentityModel.Tokens.EncryptingCredentials,System.Collections.Generic.IDictionary{System.String,System.String},System.String)
+  name: JwtHeader(EncryptingCredentials, IDictionary<String,String>, String)
+  fullName: System.IdentityModel.Tokens.Jwt.JwtHeader.JwtHeader(EncryptingCredentials, IDictionary<String,String>, String)
+  nameWithType: JwtHeader.JwtHeader(EncryptingCredentials, IDictionary<String,String>, String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public JwtHeader (Microsoft.IdentityModel.Tokens.EncryptingCredentials encryptingCredentials, System.Collections.Generic.IDictionary<string,string> outboundAlgorithmMap, string tokenType);
+  - lang: fsharp
+    values:
+    - value: 'new System.IdentityModel.Tokens.Jwt.JwtHeader : Microsoft.IdentityModel.Tokens.EncryptingCredentials * System.Collections.Generic.IDictionary<string, string> * string -> System.IdentityModel.Tokens.Jwt.JwtHeader'
+  - lang: vb
+    values:
+    - value: Public Sub New (encryptingCredentials As EncryptingCredentials, outboundAlgorithmMap As IDictionary(Of String, String), tokenType As String)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: >-
+    Initializes a new instance of <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtHeader"></xref>.
+
+    With the Header Parameters:
+
+    <p>{ { typ, JWT }, { alg, EncryptingCredentials.Algorithm } }</p>
+  metadata: {}
+- parameters:
+  - namesWithMoniker:
+    - value: signingCredentials
+    description: <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtHeader.SigningCredentials"></xref> used when creating a JWS Compact JSON.
+    type: <xref href="Microsoft.IdentityModel.Tokens.SigningCredentials?alt=Microsoft.IdentityModel.Tokens.SigningCredentials&text=SigningCredentials" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: outboundAlgorithmMap
+    description: provides a mapping for the 'alg' value so that values are within the JWT namespace.
+    type: <xref href="System.Collections.Generic.IDictionary`2?alt=System.Collections.Generic.IDictionary&text=IDictionary" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>,<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: tokenType
+    description: will be added as the value for the 'typ' claim in the header. If it is null or empty <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtConstants.HeaderType"></xref> will be used as token type
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: constructor
+  uid: System.IdentityModel.Tokens.Jwt.JwtHeader.#ctor(Microsoft.IdentityModel.Tokens.SigningCredentials,System.Collections.Generic.IDictionary{System.String,System.String},System.String)
+  commentId: M:System.IdentityModel.Tokens.Jwt.JwtHeader.#ctor(Microsoft.IdentityModel.Tokens.SigningCredentials,System.Collections.Generic.IDictionary{System.String,System.String},System.String)
+  name: JwtHeader(SigningCredentials, IDictionary<String,String>, String)
+  fullName: System.IdentityModel.Tokens.Jwt.JwtHeader.JwtHeader(SigningCredentials, IDictionary<String,String>, String)
+  nameWithType: JwtHeader.JwtHeader(SigningCredentials, IDictionary<String,String>, String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public JwtHeader (Microsoft.IdentityModel.Tokens.SigningCredentials signingCredentials, System.Collections.Generic.IDictionary<string,string> outboundAlgorithmMap, string tokenType);
+  - lang: fsharp
+    values:
+    - value: 'new System.IdentityModel.Tokens.Jwt.JwtHeader : Microsoft.IdentityModel.Tokens.SigningCredentials * System.Collections.Generic.IDictionary<string, string> * string -> System.IdentityModel.Tokens.Jwt.JwtHeader'
+  - lang: vb
+    values:
+    - value: Public Sub New (signingCredentials As SigningCredentials, outboundAlgorithmMap As IDictionary(Of String, String), tokenType As String)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: >-
+    Initializes a new instance of <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtHeader"></xref>.
+
+    With the Header Parameters:
+
+    <p>{ { typ, JWT }, { alg, SigningCredentials.Algorithm } }</p>
+  metadata: {}
+- parameters:
+  - namesWithMoniker:
+    - value: encryptingCredentials
+    description: <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtHeader.EncryptingCredentials"></xref> used when creating a JWS Compact JSON.
+    type: <xref href="Microsoft.IdentityModel.Tokens.EncryptingCredentials?alt=Microsoft.IdentityModel.Tokens.EncryptingCredentials&text=EncryptingCredentials" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: outboundAlgorithmMap
+    description: provides a mapping for the 'alg' value so that values are within the JWT namespace.
+    type: <xref href="System.Collections.Generic.IDictionary`2?alt=System.Collections.Generic.IDictionary&text=IDictionary" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>,<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: tokenType
+    description: provides the token type
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: additionalHeaderClaims
+    description: Defines the dictionary containing any custom header claims that need to be added to the outer JWT token header.
+    type: <xref href="System.Collections.Generic.IDictionary`2?alt=System.Collections.Generic.IDictionary&text=IDictionary" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>,<xref href="System.Object?alt=System.Object&text=Object" data-throw-if-not-resolved="True"/>&gt;
+  exceptions:
+  - description: If 'encryptingCredentials' is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  type: constructor
+  uid: System.IdentityModel.Tokens.Jwt.JwtHeader.#ctor(Microsoft.IdentityModel.Tokens.EncryptingCredentials,System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.Collections.Generic.IDictionary{System.String,System.Object})
+  commentId: M:System.IdentityModel.Tokens.Jwt.JwtHeader.#ctor(Microsoft.IdentityModel.Tokens.EncryptingCredentials,System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.Collections.Generic.IDictionary{System.String,System.Object})
+  name: JwtHeader(EncryptingCredentials, IDictionary<String,String>, String, IDictionary<String,Object>)
+  fullName: System.IdentityModel.Tokens.Jwt.JwtHeader.JwtHeader(EncryptingCredentials, IDictionary<String,String>, String, IDictionary<String,Object>)
+  nameWithType: JwtHeader.JwtHeader(EncryptingCredentials, IDictionary<String,String>, String, IDictionary<String,Object>)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public JwtHeader (Microsoft.IdentityModel.Tokens.EncryptingCredentials encryptingCredentials, System.Collections.Generic.IDictionary<string,string> outboundAlgorithmMap, string tokenType, System.Collections.Generic.IDictionary<string,object> additionalHeaderClaims);
+  - lang: fsharp
+    values:
+    - value: 'new System.IdentityModel.Tokens.Jwt.JwtHeader : Microsoft.IdentityModel.Tokens.EncryptingCredentials * System.Collections.Generic.IDictionary<string, string> * string * System.Collections.Generic.IDictionary<string, obj> -> System.IdentityModel.Tokens.Jwt.JwtHeader'
+  - lang: vb
+    values:
+    - value: Public Sub New (encryptingCredentials As EncryptingCredentials, outboundAlgorithmMap As IDictionary(Of String, String), tokenType As String, additionalHeaderClaims As IDictionary(Of String, Object))
+  monikers:
+  - msal-web-dotnet-latest
+  summary: >-
+    Initializes a new instance of <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtHeader"></xref>.
+
+    With the Header Parameters:
+
+    <p>{ { typ, JWT }, { alg, EncryptingCredentials.Algorithm } }</p>
+  metadata: {}
+- parameters:
+  - namesWithMoniker:
+    - value: signingCredentials
+    description: <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtHeader.SigningCredentials"></xref> used when creating a JWS Compact JSON.
+    type: <xref href="Microsoft.IdentityModel.Tokens.SigningCredentials?alt=Microsoft.IdentityModel.Tokens.SigningCredentials&text=SigningCredentials" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: outboundAlgorithmMap
+    description: provides a mapping for the 'alg' value so that values are within the JWT namespace.
+    type: <xref href="System.Collections.Generic.IDictionary`2?alt=System.Collections.Generic.IDictionary&text=IDictionary" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>,<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: tokenType
+    description: will be added as the value for the 'typ' claim in the header. If it is null or empty <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtConstants.HeaderType"></xref> will be used as token type
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: additionalInnerHeaderClaims
+    description: Defines the dictionary containing any custom header claims that need to be added to the inner JWT token header.
+    type: <xref href="System.Collections.Generic.IDictionary`2?alt=System.Collections.Generic.IDictionary&text=IDictionary" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>,<xref href="System.Object?alt=System.Object&text=Object" data-throw-if-not-resolved="True"/>&gt;
+  type: constructor
+  uid: System.IdentityModel.Tokens.Jwt.JwtHeader.#ctor(Microsoft.IdentityModel.Tokens.SigningCredentials,System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.Collections.Generic.IDictionary{System.String,System.Object})
+  commentId: M:System.IdentityModel.Tokens.Jwt.JwtHeader.#ctor(Microsoft.IdentityModel.Tokens.SigningCredentials,System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.Collections.Generic.IDictionary{System.String,System.Object})
+  name: JwtHeader(SigningCredentials, IDictionary<String,String>, String, IDictionary<String,Object>)
+  fullName: System.IdentityModel.Tokens.Jwt.JwtHeader.JwtHeader(SigningCredentials, IDictionary<String,String>, String, IDictionary<String,Object>)
+  nameWithType: JwtHeader.JwtHeader(SigningCredentials, IDictionary<String,String>, String, IDictionary<String,Object>)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public JwtHeader (Microsoft.IdentityModel.Tokens.SigningCredentials signingCredentials, System.Collections.Generic.IDictionary<string,string> outboundAlgorithmMap, string tokenType, System.Collections.Generic.IDictionary<string,object> additionalInnerHeaderClaims);
+  - lang: fsharp
+    values:
+    - value: 'new System.IdentityModel.Tokens.Jwt.JwtHeader : Microsoft.IdentityModel.Tokens.SigningCredentials * System.Collections.Generic.IDictionary<string, string> * string * System.Collections.Generic.IDictionary<string, obj> -> System.IdentityModel.Tokens.Jwt.JwtHeader'
+  - lang: vb
+    values:
+    - value: Public Sub New (signingCredentials As SigningCredentials, outboundAlgorithmMap As IDictionary(Of String, String), tokenType As String, additionalInnerHeaderClaims As IDictionary(Of String, Object))
+  monikers:
+  - msal-web-dotnet-latest
+  summary: >-
+    Initializes a new instance of <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtHeader"></xref>.
+
+    With the Header Parameters:
+
+    <p>{ { typ, JWT }, { alg, SigningCredentials.Algorithm } }</p>
+  metadata: {}
+uid: System.IdentityModel.Tokens.Jwt.JwtHeader.#ctor*
+commentId: Overload:System.IdentityModel.Tokens.Jwt.JwtHeader.#ctor
+namespace: System.IdentityModel.Tokens.Jwt
+name: JwtHeader
+fullName: System.IdentityModel.Tokens.Jwt.JwtHeader.JwtHeader
+nameWithType: JwtHeader.JwtHeader
+assembliesWithMoniker:
+- value: System.IdentityModel.Tokens.Jwt.dll
+packagesWithMoniker:
+- value: System.IdentityModel.Tokens.Jwt v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - System.IdentityModel.Tokens.Jwt.JwtHeader..ctor
+  api_location:
+  - System.IdentityModel.Tokens.Jwt.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - System.IdentityModel.Tokens.Jwt.JwtHeader.#ctor
+  - System::IdentityModel::Tokens::Jwt::JwtHeader::#ctor
+  - '#ctor'
+  - JwtHeader.#ctor
+  - JwtHeader::#ctor
+  helpviewer_keywords:
+  - JwtHeader class [.NET], constructors
+  - JwtHeader() class [.NET], constructors
+  - JwtHeader(EncryptingCredentials) class [.NET], constructors
+  - JwtHeader(SigningCredentials) class [.NET], constructors
+  - JwtHeader(EncryptingCredentials, IDictionary<String,String>) class [.NET], constructors
+  - JwtHeader(SigningCredentials, IDictionary<String,String>) class [.NET], constructors
+  - JwtHeader(EncryptingCredentials, IDictionary<String,String>, String) class [.NET], constructors
+  - JwtHeader(SigningCredentials, IDictionary<String,String>, String) class [.NET], constructors
+  - JwtHeader(EncryptingCredentials, IDictionary<String,String>, String, IDictionary<String,Object>) class [.NET], constructors
+  - JwtHeader(SigningCredentials, IDictionary<String,String>, String, IDictionary<String,Object>) class [.NET], constructors
+  monikers:
+  - msal-web-dotnet-latest

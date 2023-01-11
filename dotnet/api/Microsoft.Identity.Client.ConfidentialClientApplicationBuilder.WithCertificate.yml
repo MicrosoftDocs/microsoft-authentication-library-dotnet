@@ -1,0 +1,120 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.Identity.Client.ConfidentialClientApplicationBuilder?alt=Microsoft.Identity.Client.ConfidentialClientApplicationBuilder&text=ConfidentialClientApplicationBuilder" data-throw-if-not-resolved="True"/>
+  parameters:
+  - namesWithMoniker:
+    - value: certificate
+    description: The X509 certificate used as credentials to prove the identity of the application to Azure AD.
+    type: <xref href="System.Security.Cryptography.X509Certificates.X509Certificate2?alt=System.Security.Cryptography.X509Certificates.X509Certificate2&text=X509Certificate2" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.ConfidentialClientApplicationBuilder.WithCertificate(System.Security.Cryptography.X509Certificates.X509Certificate2)
+  commentId: M:Microsoft.Identity.Client.ConfidentialClientApplicationBuilder.WithCertificate(System.Security.Cryptography.X509Certificates.X509Certificate2)
+  name: WithCertificate(X509Certificate2)
+  fullName: Microsoft.Identity.Client.ConfidentialClientApplicationBuilder.WithCertificate(X509Certificate2)
+  nameWithType: ConfidentialClientApplicationBuilder.WithCertificate(X509Certificate2)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public Microsoft.Identity.Client.ConfidentialClientApplicationBuilder WithCertificate (System.Security.Cryptography.X509Certificates.X509Certificate2 certificate);
+  - lang: fsharp
+    values:
+    - value: 'member this.WithCertificate : System.Security.Cryptography.X509Certificates.X509Certificate2 -> Microsoft.Identity.Client.ConfidentialClientApplicationBuilder'
+  - lang: vb
+    values:
+    - value: Public Function WithCertificate (certificate As X509Certificate2) As ConfidentialClientApplicationBuilder
+  monikers:
+  - msal-dotnet-latest
+  summary: Sets the certificate associated with the application.
+  remarks: <p>You should use certificates with a private key size of at least 2048 bytes. Future versions of this library might reject certificates with smaller keys. Does not send the certificate (as x5c parameter) with the request by default.</p>
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.Identity.Client.ConfidentialClientApplicationBuilder?alt=Microsoft.Identity.Client.ConfidentialClientApplicationBuilder&text=ConfidentialClientApplicationBuilder" data-throw-if-not-resolved="True"/>
+  parameters:
+  - namesWithMoniker:
+    - value: certificate
+    description: The X509 certificate used as credentials to prove the identity of the application to Azure AD.
+    type: <xref href="System.Security.Cryptography.X509Certificates.X509Certificate2?alt=System.Security.Cryptography.X509Certificates.X509Certificate2&text=X509Certificate2" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: sendX5C
+    description: To send X5C with every request or not. The default is <code data-dev-comment-type="c">false</code>
+    type: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.ConfidentialClientApplicationBuilder.WithCertificate(System.Security.Cryptography.X509Certificates.X509Certificate2,System.Boolean)
+  commentId: M:Microsoft.Identity.Client.ConfidentialClientApplicationBuilder.WithCertificate(System.Security.Cryptography.X509Certificates.X509Certificate2,System.Boolean)
+  name: WithCertificate(X509Certificate2, Boolean)
+  fullName: Microsoft.Identity.Client.ConfidentialClientApplicationBuilder.WithCertificate(X509Certificate2, Boolean)
+  nameWithType: ConfidentialClientApplicationBuilder.WithCertificate(X509Certificate2, Boolean)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public Microsoft.Identity.Client.ConfidentialClientApplicationBuilder WithCertificate (System.Security.Cryptography.X509Certificates.X509Certificate2 certificate, bool sendX5C);
+  - lang: fsharp
+    values:
+    - value: 'member this.WithCertificate : System.Security.Cryptography.X509Certificates.X509Certificate2 * bool -> Microsoft.Identity.Client.ConfidentialClientApplicationBuilder'
+  - lang: vb
+    values:
+    - value: Public Function WithCertificate (certificate As X509Certificate2, sendX5C As Boolean) As ConfidentialClientApplicationBuilder
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    Sets the certificate associated with the application.
+
+    Applicable to first-party applications only, this method also allows to specify 
+
+    if the <a href="https://datatracker.ietf.org/doc/html/rfc7517#section-4.7">x5c claim</a> should be sent to Azure AD.
+
+    Sending the x5c enables application developers to achieve easy certificate roll-over in Azure AD:
+
+    this method will send the certificate chain to Azure AD along with the token request,
+
+    so that Azure AD can use it to validate the subject name based on a trusted issuer policy.
+
+    This saves the application admin from the need to explicitly manage the certificate rollover
+
+    (either via portal or PowerShell/CLI operation). For details see https://aka.ms/msal-net-sni
+  remarks: You should use certificates with a private key size of at least 2048 bytes. Future versions of this library might reject certificates with smaller keys.
+  metadata: {}
+uid: Microsoft.Identity.Client.ConfidentialClientApplicationBuilder.WithCertificate*
+commentId: Overload:Microsoft.Identity.Client.ConfidentialClientApplicationBuilder.WithCertificate
+namespace: Microsoft.Identity.Client
+name: WithCertificate
+fullName: Microsoft.Identity.Client.ConfidentialClientApplicationBuilder.WithCertificate
+nameWithType: ConfidentialClientApplicationBuilder.WithCertificate
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.ConfidentialClientApplicationBuilder.WithCertificate
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.ConfidentialClientApplicationBuilder.WithCertificate
+  - Microsoft::Identity::Client::ConfidentialClientApplicationBuilder::WithCertificate
+  - WithCertificate
+  - ConfidentialClientApplicationBuilder.WithCertificate
+  - ConfidentialClientApplicationBuilder::WithCertificate
+  helpviewer_keywords:
+  - ConfidentialClientApplicationBuilder.WithCertificate method [.NET]
+  - WithCertificate method [.NET], class ConfidentialClientApplicationBuilder
+  - ConfidentialClientApplicationBuilder.WithCertificate(X509Certificate2) method [.NET]
+  - WithCertificate(X509Certificate2) method [.NET], class ConfidentialClientApplicationBuilder
+  - ConfidentialClientApplicationBuilder.WithCertificate(X509Certificate2, Boolean) method [.NET]
+  - WithCertificate(X509Certificate2, Boolean) method [.NET], class ConfidentialClientApplicationBuilder
+  monikers:
+  - msal-dotnet-latest

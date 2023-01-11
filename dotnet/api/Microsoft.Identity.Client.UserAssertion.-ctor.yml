@@ -1,0 +1,97 @@
+### YamlMime:NetMember
+type: constructor
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: jwtBearerToken
+    description: JWT bearer token used to access the Web application itself
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: constructor
+  uid: Microsoft.Identity.Client.UserAssertion.#ctor(System.String)
+  commentId: M:Microsoft.Identity.Client.UserAssertion.#ctor(System.String)
+  name: UserAssertion(String)
+  fullName: Microsoft.Identity.Client.UserAssertion.UserAssertion(String)
+  nameWithType: UserAssertion.UserAssertion(String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public UserAssertion (string jwtBearerToken);
+  - lang: fsharp
+    values:
+    - value: 'new Microsoft.Identity.Client.UserAssertion : string -> Microsoft.Identity.Client.UserAssertion'
+  - lang: vb
+    values:
+    - value: Public Sub New (jwtBearerToken As String)
+  monikers:
+  - msal-dotnet-latest
+  summary: Constructor from a JWT assertion. For other assertion types (SAML), use the other constructor <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.UserAssertion.#ctor(System.String,System.String)"></xref>
+  metadata: {}
+- parameters:
+  - namesWithMoniker:
+    - value: assertion
+    description: Assertion representing the user.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: assertionType
+    description: >-
+      Type of the assertion representing the user. Accepted types are currently:
+                  <ul><li>urn:ietf:params:oauth:grant-type:jwt-bearerJWT bearer token. Passing this is equivalent to using
+                  the other (simpler) constructor</li><li>urn:ietf:params:oauth:grant-type:saml1_1-bearerSAML 1.1 bearer token</li><li>urn:ietf:params:oauth:grant-type:saml2-bearerSAML 2 bearer token</li></ul>
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: constructor
+  uid: Microsoft.Identity.Client.UserAssertion.#ctor(System.String,System.String)
+  commentId: M:Microsoft.Identity.Client.UserAssertion.#ctor(System.String,System.String)
+  name: UserAssertion(String, String)
+  fullName: Microsoft.Identity.Client.UserAssertion.UserAssertion(String, String)
+  nameWithType: UserAssertion.UserAssertion(String, String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public UserAssertion (string assertion, string assertionType);
+  - lang: fsharp
+    values:
+    - value: 'new Microsoft.Identity.Client.UserAssertion : string * string -> Microsoft.Identity.Client.UserAssertion'
+  - lang: vb
+    values:
+    - value: Public Sub New (assertion As String, assertionType As String)
+  monikers:
+  - msal-dotnet-latest
+  summary: Constructor of a UserAssertion specifying the assertionType in addition to the assertion
+  metadata: {}
+uid: Microsoft.Identity.Client.UserAssertion.#ctor*
+commentId: Overload:Microsoft.Identity.Client.UserAssertion.#ctor
+namespace: Microsoft.Identity.Client
+name: UserAssertion
+fullName: Microsoft.Identity.Client.UserAssertion.UserAssertion
+nameWithType: UserAssertion.UserAssertion
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.UserAssertion..ctor
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.UserAssertion.#ctor
+  - Microsoft::Identity::Client::UserAssertion::#ctor
+  - '#ctor'
+  - UserAssertion.#ctor
+  - UserAssertion::#ctor
+  helpviewer_keywords:
+  - UserAssertion class [.NET], constructors
+  - UserAssertion(String) class [.NET], constructors
+  - UserAssertion(String, String) class [.NET], constructors
+  monikers:
+  - msal-dotnet-latest

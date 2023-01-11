@@ -1,0 +1,67 @@
+### YamlMime:NetDelegate
+returnsWithMoniker:
+  type:
+  - value: <xref href="Microsoft.IdentityModel.Tokens.SecurityToken?alt=Microsoft.IdentityModel.Tokens.SecurityToken&text=SecurityToken" data-throw-if-not-resolved="True"/>
+parameters:
+- namesWithMoniker:
+  - value: token
+  description: A securityToken with a signature.
+  type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+- namesWithMoniker:
+  - value: validationParameters
+  description: <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.TokenValidationParameters"></xref> required for validation.
+  type: <xref href="Microsoft.IdentityModel.Tokens.TokenValidationParameters?alt=Microsoft.IdentityModel.Tokens.TokenValidationParameters&text=TokenValidationParameters" data-throw-if-not-resolved="True"/>
+- namesWithMoniker:
+  - value: configuration
+  description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.BaseConfiguration"></xref> that is required for validation.
+  type: <xref href="Microsoft.IdentityModel.Tokens.BaseConfiguration?alt=Microsoft.IdentityModel.Tokens.BaseConfiguration&text=BaseConfiguration" data-throw-if-not-resolved="True"/>
+inheritances:
+- <xref href="System.Delegate" data-throw-if-not-resolved="True"/>
+uid: Microsoft.IdentityModel.Tokens.SignatureValidatorUsingConfiguration
+commentId: T:Microsoft.IdentityModel.Tokens.SignatureValidatorUsingConfiguration
+namespace: Microsoft.IdentityModel.Tokens
+name: SignatureValidatorUsingConfiguration
+fullName: Microsoft.IdentityModel.Tokens.SignatureValidatorUsingConfiguration
+nameWithType: Microsoft.IdentityModel.Tokens.SignatureValidatorUsingConfiguration
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens v6.25.1
+syntaxWithMoniker:
+- lang: csharp
+  values:
+  - value: public delegate Microsoft.IdentityModel.Tokens.SecurityToken SignatureValidatorUsingConfiguration(string token, TokenValidationParameters validationParameters, BaseConfiguration configuration);
+- lang: fsharp
+  values:
+  - value: type SignatureValidatorUsingConfiguration = delegate of string * TokenValidationParameters * BaseConfiguration -> SecurityToken
+- lang: vb
+  values:
+  - value: 'Public Delegate Function SignatureValidatorUsingConfiguration(token As String, validationParameters As TokenValidationParameters, configuration As BaseConfiguration) As SecurityToken '
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+summary: Definition for SignatureValidator.
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.SignatureValidatorUsingConfiguration
+  - Microsoft.IdentityModel.Tokens.SignatureValidatorUsingConfiguration..ctor
+  - Microsoft.IdentityModel.Tokens.SignatureValidatorUsingConfiguration.Invoke
+  - Microsoft.IdentityModel.Tokens.SignatureValidatorUsingConfiguration.BeginInvoke
+  - Microsoft.IdentityModel.Tokens.SignatureValidatorUsingConfiguration.EndInvoke
+  api_location:
+  - Microsoft.IdentityModel.Tokens.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.SignatureValidatorUsingConfiguration
+  - Microsoft::IdentityModel::Tokens::SignatureValidatorUsingConfiguration
+  - SignatureValidatorUsingConfiguration
+  helpviewer_keywords:
+  - Microsoft.IdentityModel.Tokens.SignatureValidatorUsingConfiguration delegate [.NET]
+  monikers:
+  - msal-web-dotnet-latest

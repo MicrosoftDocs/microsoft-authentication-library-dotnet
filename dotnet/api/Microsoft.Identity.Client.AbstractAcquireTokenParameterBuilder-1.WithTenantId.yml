@@ -1,0 +1,81 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: T
+    description: The builder to chain the .With methods.
+  parameters:
+  - namesWithMoniker:
+    - value: tenantId
+    description: The tenant ID, which can be either in GUID format or a domain name. Also known as the Directory ID.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: Thrown if tenantId is null or an empty string
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: Thrown if the application was configured with an authority that is not AAD specific (e.g. ADFS or B2C).
+    type: <xref href="Microsoft.Identity.Client.MsalClientException?alt=Microsoft.Identity.Client.MsalClientException&text=MsalClientException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithTenantId(System.String)
+  commentId: M:Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithTenantId(System.String)
+  name: WithTenantId(String)
+  fullName: Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder<T>.WithTenantId(String)
+  nameWithType: AbstractAcquireTokenParameterBuilder<T>.WithTenantId(String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public T WithTenantId (string tenantId);
+  - lang: fsharp
+    values:
+    - value: "member this.WithTenantId : string -> 'T"
+  - lang: vb
+    values:
+    - value: Public Function WithTenantId (tenantId As String) As T
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    Overrides the tenant ID specified in the authority at the application level. This operation preserves the authority host (environment).
+
+
+    If an authority was not specified at the application level, the default used is https://login.microsoftonline.com/common.
+  remarks: <p>The tenant should be more restrictive than the one configured at the application level, e.g. don't use "common". Does not affect authority validation, which is specified at the application level.</p>
+  metadata: {}
+uid: Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithTenantId*
+commentId: Overload:Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithTenantId
+namespace: Microsoft.Identity.Client
+name: WithTenantId
+fullName: Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder<T>.WithTenantId
+nameWithType: AbstractAcquireTokenParameterBuilder<T>.WithTenantId
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithTenantId
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithTenantId
+  - Microsoft::Identity::Client::AbstractAcquireTokenParameterBuilder`1::WithTenantId
+  - Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder.WithTenantId
+  - WithTenantId
+  - AbstractAcquireTokenParameterBuilder`1.WithTenantId
+  - AbstractAcquireTokenParameterBuilder`1::WithTenantId
+  helpviewer_keywords:
+  - AbstractAcquireTokenParameterBuilder<T>.WithTenantId method [.NET]
+  - WithTenantId method [.NET], class AbstractAcquireTokenParameterBuilder<T>
+  - AbstractAcquireTokenParameterBuilder<T>.WithTenantId(String) method [.NET]
+  - WithTenantId(String) method [.NET], class AbstractAcquireTokenParameterBuilder<T>
+  monikers:
+  - msal-dotnet-latest

@@ -1,0 +1,848 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Client.AuthenticationResult?alt=Microsoft.Identity.Client.AuthenticationResult&text=AuthenticationResult" data-throw-if-not-resolved="True"/>&gt;
+    description: Authentication result containing a token for the requested scopes and account
+  parameters:
+  - namesWithMoniker:
+    - value: scopes
+    description: Scopes requested to access a protected API
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  type: method
+  uid: Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String})
+  name: AcquireTokenAsync(IEnumerable<String>)
+  fullName: Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(IEnumerable<String>)
+  nameWithType: IPublicClientApplication.AcquireTokenAsync(IEnumerable<String>)
+  attributesWithMoniker:
+  - value: System.ObsoleteAttribute
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: >-
+        [System.Obsolete("Use AcquireTokenInteractive instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]
+
+        public System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult> AcquireTokenAsync (System.Collections.Generic.IEnumerable<string> scopes);
+  - lang: fsharp
+    values:
+    - value: >-
+        [<System.Obsolete("Use AcquireTokenInteractive instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)>]
+
+        abstract member AcquireTokenAsync : seq<string> -> System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult>
+  - lang: vb
+    values:
+    - value: Public Function AcquireTokenAsync (scopes As IEnumerable(Of String)) As Task(Of AuthenticationResult)
+  monikers:
+  - msal-dotnet-latest
+  obsoleteMessagesWithMoniker:
+  - value: 'Use AcquireTokenInteractive instead. See https://aka.ms/msal-net-3-breaking-changes. '
+  summary: Interactive request to acquire token for the specified scopes. The user is required to select an account
+  remarks: <p>The user will be signed-in interactively if needed, and will consent to scopes and do multi-factor authentication if such a policy was enabled in the Azure AD tenant.</p>
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Client.AuthenticationResult?alt=Microsoft.Identity.Client.AuthenticationResult&text=AuthenticationResult" data-throw-if-not-resolved="True"/>&gt;
+    description: Authentication result containing a token for the requested scopes and account
+  parameters:
+  - namesWithMoniker:
+    - value: scopes
+    description: Scopes requested to access a protected API
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: account
+    description: Account to use for the interactive token acquisition. See <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.IAccount"></xref> for ways to get an account
+    type: <xref href="Microsoft.Identity.Client.IAccount?alt=Microsoft.Identity.Client.IAccount&text=IAccount" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: prompt
+    description: Designed interactive experience for the user.
+    type: <xref href="Microsoft.Identity.Client.Prompt?alt=Microsoft.Identity.Client.Prompt&text=Prompt" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: extraQueryParameters
+    description: >-
+      This parameter will be appended as is to the query string in the HTTP authentication request to the authority.
+                  This is expected to be a string of segments of the form <code data-dev-comment-type="c">key=value</code> separated by an ampersand character.
+                  The parameter can be null.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: extraScopesToConsent
+    description: >-
+      Scopes that you can request the end user to consent upfront, in addition to the scopes for the protected web API
+                  for which you want to acquire a security token.
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: authority
+    description: Specific authority for which the token is requested. Passing a different value than configured does not change the configured value
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: parent
+    description: Object containing a reference to the parent window/activity. REQUIRED for Xamarin.Android only.
+    type: <xref href="Microsoft.Identity.Client.UIParent?alt=Microsoft.Identity.Client.UIParent&text=UIParent" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount,Microsoft.Identity.Client.Prompt,System.String,System.Collections.Generic.IEnumerable{System.String},System.String,Microsoft.Identity.Client.UIParent)
+  commentId: M:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount,Microsoft.Identity.Client.Prompt,System.String,System.Collections.Generic.IEnumerable{System.String},System.String,Microsoft.Identity.Client.UIParent)
+  name: AcquireTokenAsync(IEnumerable<String>, IAccount, Prompt, String, IEnumerable<String>, String, UIParent)
+  fullName: Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(IEnumerable<String>, IAccount, Prompt, String, IEnumerable<String>, String, UIParent)
+  nameWithType: IPublicClientApplication.AcquireTokenAsync(IEnumerable<String>, IAccount, Prompt, String, IEnumerable<String>, String, UIParent)
+  attributesWithMoniker:
+  - value: System.ObsoleteAttribute
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: >-
+        [System.Obsolete("Use AcquireTokenInteractive instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]
+
+        public System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult> AcquireTokenAsync (System.Collections.Generic.IEnumerable<string> scopes, Microsoft.Identity.Client.IAccount account, Microsoft.Identity.Client.Prompt prompt, string extraQueryParameters, System.Collections.Generic.IEnumerable<string> extraScopesToConsent, string authority, Microsoft.Identity.Client.UIParent parent);
+  - lang: fsharp
+    values:
+    - value: >-
+        [<System.Obsolete("Use AcquireTokenInteractive instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)>]
+
+        abstract member AcquireTokenAsync : seq<string> * Microsoft.Identity.Client.IAccount * Microsoft.Identity.Client.Prompt * string * seq<string> * string * Microsoft.Identity.Client.UIParent -> System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult>
+  - lang: vb
+    values:
+    - value: Public Function AcquireTokenAsync (scopes As IEnumerable(Of String), account As IAccount, prompt As Prompt, extraQueryParameters As String, extraScopesToConsent As IEnumerable(Of String), authority As String, parent As UIParent) As Task(Of AuthenticationResult)
+  monikers:
+  - msal-dotnet-latest
+  obsoleteMessagesWithMoniker:
+  - value: 'Use AcquireTokenInteractive instead. See https://aka.ms/msal-net-3-breaking-changes. '
+  summary: >-
+    Interactive request to acquire token for a given account, with the possibility of controlling the user experience, passing extra query
+
+    parameters, providing extra scopes that the user can pre-consent to, and overriding the authority pre-configured in the application
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Client.AuthenticationResult?alt=Microsoft.Identity.Client.AuthenticationResult&text=AuthenticationResult" data-throw-if-not-resolved="True"/>&gt;
+    description: Authentication result containing a token for the requested scopes and account
+  parameters:
+  - namesWithMoniker:
+    - value: scopes
+    description: scopes requested to access a protected API
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: loginHint
+    description: Identifier of the user. Generally in UserPrincipalName (UPN) format, e.g. <code data-dev-comment-type="c">john.doe@contoso.com</code>
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: prompt
+    description: Designed interactive experience for the user.
+    type: <xref href="Microsoft.Identity.Client.Prompt?alt=Microsoft.Identity.Client.Prompt&text=Prompt" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: extraQueryParameters
+    description: >-
+      This parameter will be appended as is to the query string in the HTTP authentication request to the authority.
+                  This is expected to be a string of segments of the form <code data-dev-comment-type="c">key=value</code> separated by an ampersand character.
+                  The parameter can be null.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: extraScopesToConsent
+    description: >-
+      scopes that you can request the end user to consent upfront, in addition to the scopes for the protected web API
+                  for which you want to acquire a security token.
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: authority
+    description: Specific authority for which the token is requested. Passing a different value than configured does not change the configured value
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},System.String,Microsoft.Identity.Client.Prompt,System.String,System.Collections.Generic.IEnumerable{System.String},System.String)
+  commentId: M:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},System.String,Microsoft.Identity.Client.Prompt,System.String,System.Collections.Generic.IEnumerable{System.String},System.String)
+  name: AcquireTokenAsync(IEnumerable<String>, String, Prompt, String, IEnumerable<String>, String)
+  fullName: Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(IEnumerable<String>, String, Prompt, String, IEnumerable<String>, String)
+  nameWithType: IPublicClientApplication.AcquireTokenAsync(IEnumerable<String>, String, Prompt, String, IEnumerable<String>, String)
+  attributesWithMoniker:
+  - value: System.ObsoleteAttribute
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: >-
+        [System.Obsolete("Use AcquireTokenInteractive instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]
+
+        public System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult> AcquireTokenAsync (System.Collections.Generic.IEnumerable<string> scopes, string loginHint, Microsoft.Identity.Client.Prompt prompt, string extraQueryParameters, System.Collections.Generic.IEnumerable<string> extraScopesToConsent, string authority);
+  - lang: fsharp
+    values:
+    - value: >-
+        [<System.Obsolete("Use AcquireTokenInteractive instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)>]
+
+        abstract member AcquireTokenAsync : seq<string> * string * Microsoft.Identity.Client.Prompt * string * seq<string> * string -> System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult>
+  - lang: vb
+    values:
+    - value: Public Function AcquireTokenAsync (scopes As IEnumerable(Of String), loginHint As String, prompt As Prompt, extraQueryParameters As String, extraScopesToConsent As IEnumerable(Of String), authority As String) As Task(Of AuthenticationResult)
+  monikers:
+  - msal-dotnet-latest
+  obsoleteMessagesWithMoniker:
+  - value: 'Use AcquireTokenInteractive instead. See https://aka.ms/msal-net-3-breaking-changes. '
+  summary: >-
+    Interactive request to acquire token for a given login, with the possibility of controlling the user experience, passing extra query
+
+    parameters, providing extra scopes that the user can pre-consent to, and overriding the authority pre-configured in the application
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Client.AuthenticationResult?alt=Microsoft.Identity.Client.AuthenticationResult&text=AuthenticationResult" data-throw-if-not-resolved="True"/>&gt;
+    description: Authentication result containing a token for the requested scopes and account
+  parameters:
+  - namesWithMoniker:
+    - value: scopes
+    description: Scopes requested to access a protected API
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: account
+    description: Account to use for the interactive token acquisition. See <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.IAccount"></xref> for ways to get an account
+    type: <xref href="Microsoft.Identity.Client.IAccount?alt=Microsoft.Identity.Client.IAccount&text=IAccount" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: prompt
+    description: Designed interactive experience for the user.
+    type: <xref href="Microsoft.Identity.Client.Prompt?alt=Microsoft.Identity.Client.Prompt&text=Prompt" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: extraQueryParameters
+    description: >-
+      This parameter will be appended as is to the query string in the HTTP authentication request to the authority.
+                  This is expected to be a string of segments of the form <code data-dev-comment-type="c">key=value</code> separated by an ampersand character.
+                  The parameter can be null.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: extraScopesToConsent
+    description: >-
+      Scopes that you can request the end user to consent upfront, in addition to the scopes for the protected web API
+                  for which you want to acquire a security token.
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: authority
+    description: Specific authority for which the token is requested. Passing a different value than configured does not change the configured value
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount,Microsoft.Identity.Client.Prompt,System.String,System.Collections.Generic.IEnumerable{System.String},System.String)
+  commentId: M:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount,Microsoft.Identity.Client.Prompt,System.String,System.Collections.Generic.IEnumerable{System.String},System.String)
+  name: AcquireTokenAsync(IEnumerable<String>, IAccount, Prompt, String, IEnumerable<String>, String)
+  fullName: Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(IEnumerable<String>, IAccount, Prompt, String, IEnumerable<String>, String)
+  nameWithType: IPublicClientApplication.AcquireTokenAsync(IEnumerable<String>, IAccount, Prompt, String, IEnumerable<String>, String)
+  attributesWithMoniker:
+  - value: System.ObsoleteAttribute
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: >-
+        [System.Obsolete("Use AcquireTokenInteractive instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]
+
+        public System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult> AcquireTokenAsync (System.Collections.Generic.IEnumerable<string> scopes, Microsoft.Identity.Client.IAccount account, Microsoft.Identity.Client.Prompt prompt, string extraQueryParameters, System.Collections.Generic.IEnumerable<string> extraScopesToConsent, string authority);
+  - lang: fsharp
+    values:
+    - value: >-
+        [<System.Obsolete("Use AcquireTokenInteractive instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)>]
+
+        abstract member AcquireTokenAsync : seq<string> * Microsoft.Identity.Client.IAccount * Microsoft.Identity.Client.Prompt * string * seq<string> * string -> System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult>
+  - lang: vb
+    values:
+    - value: Public Function AcquireTokenAsync (scopes As IEnumerable(Of String), account As IAccount, prompt As Prompt, extraQueryParameters As String, extraScopesToConsent As IEnumerable(Of String), authority As String) As Task(Of AuthenticationResult)
+  monikers:
+  - msal-dotnet-latest
+  obsoleteMessagesWithMoniker:
+  - value: 'Use AcquireTokenInteractive instead. See https://aka.ms/msal-net-3-breaking-changes. '
+  summary: >-
+    Interactive request to acquire token for a given account, with the possibility of controlling the user experience, passing extra query
+
+    parameters, providing extra scopes that the user can pre-consent to, and overriding the authority pre-configured in the application
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Client.AuthenticationResult?alt=Microsoft.Identity.Client.AuthenticationResult&text=AuthenticationResult" data-throw-if-not-resolved="True"/>&gt;
+    description: Authentication result containing a token for the requested scopes and account
+  parameters:
+  - namesWithMoniker:
+    - value: scopes
+    description: Scopes requested to access a protected API
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: loginHint
+    description: Identifier of the user. Generally in UserPrincipalName (UPN) format, e.g. <code data-dev-comment-type="c">john.doe@contoso.com</code>
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: prompt
+    description: Designed interactive experience for the user.
+    type: <xref href="Microsoft.Identity.Client.Prompt?alt=Microsoft.Identity.Client.Prompt&text=Prompt" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: extraQueryParameters
+    description: >-
+      This parameter will be appended as is to the query string in the HTTP authentication request to the authority.
+                  This is expected to be a string of segments of the form <code data-dev-comment-type="c">key=value</code> separated by an ampersand character.
+                  The parameter can be null.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: parent
+    description: Object containing a reference to the parent window/activity. REQUIRED for Xamarin.Android only.
+    type: <xref href="Microsoft.Identity.Client.UIParent?alt=Microsoft.Identity.Client.UIParent&text=UIParent" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},System.String,Microsoft.Identity.Client.Prompt,System.String,Microsoft.Identity.Client.UIParent)
+  commentId: M:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},System.String,Microsoft.Identity.Client.Prompt,System.String,Microsoft.Identity.Client.UIParent)
+  name: AcquireTokenAsync(IEnumerable<String>, String, Prompt, String, UIParent)
+  fullName: Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(IEnumerable<String>, String, Prompt, String, UIParent)
+  nameWithType: IPublicClientApplication.AcquireTokenAsync(IEnumerable<String>, String, Prompt, String, UIParent)
+  attributesWithMoniker:
+  - value: System.ObsoleteAttribute
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: >-
+        [System.Obsolete("Use AcquireTokenInteractive instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]
+
+        public System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult> AcquireTokenAsync (System.Collections.Generic.IEnumerable<string> scopes, string loginHint, Microsoft.Identity.Client.Prompt prompt, string extraQueryParameters, Microsoft.Identity.Client.UIParent parent);
+  - lang: fsharp
+    values:
+    - value: >-
+        [<System.Obsolete("Use AcquireTokenInteractive instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)>]
+
+        abstract member AcquireTokenAsync : seq<string> * string * Microsoft.Identity.Client.Prompt * string * Microsoft.Identity.Client.UIParent -> System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult>
+  - lang: vb
+    values:
+    - value: Public Function AcquireTokenAsync (scopes As IEnumerable(Of String), loginHint As String, prompt As Prompt, extraQueryParameters As String, parent As UIParent) As Task(Of AuthenticationResult)
+  monikers:
+  - msal-dotnet-latest
+  obsoleteMessagesWithMoniker:
+  - value: 'Use AcquireTokenInteractive instead. See https://aka.ms/msal-net-3-breaking-changes. '
+  summary: Interactive request to acquire token for a login with control of the UI behavior and possibility of passing extra query parameters like additional claims
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Client.AuthenticationResult?alt=Microsoft.Identity.Client.AuthenticationResult&text=AuthenticationResult" data-throw-if-not-resolved="True"/>&gt;
+    description: Authentication result containing a token for the requested scopes and account
+  parameters:
+  - namesWithMoniker:
+    - value: scopes
+    description: Scopes requested to access a protected API
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: account
+    description: Account to use for the interactive token acquisition. See <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.IAccount"></xref> for ways to get an account
+    type: <xref href="Microsoft.Identity.Client.IAccount?alt=Microsoft.Identity.Client.IAccount&text=IAccount" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: prompt
+    description: Designed interactive experience for the user.
+    type: <xref href="Microsoft.Identity.Client.Prompt?alt=Microsoft.Identity.Client.Prompt&text=Prompt" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: extraQueryParameters
+    description: >-
+      This parameter will be appended as is to the query string in the HTTP authentication request to the authority.
+                  This is expected to be a string of segments of the form <code data-dev-comment-type="c">key=value</code> separated by an ampersand character.
+                  The parameter can be null.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: parent
+    description: Object containing a reference to the parent window/activity. REQUIRED for Xamarin.Android only.
+    type: <xref href="Microsoft.Identity.Client.UIParent?alt=Microsoft.Identity.Client.UIParent&text=UIParent" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount,Microsoft.Identity.Client.Prompt,System.String,Microsoft.Identity.Client.UIParent)
+  commentId: M:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount,Microsoft.Identity.Client.Prompt,System.String,Microsoft.Identity.Client.UIParent)
+  name: AcquireTokenAsync(IEnumerable<String>, IAccount, Prompt, String, UIParent)
+  fullName: Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(IEnumerable<String>, IAccount, Prompt, String, UIParent)
+  nameWithType: IPublicClientApplication.AcquireTokenAsync(IEnumerable<String>, IAccount, Prompt, String, UIParent)
+  attributesWithMoniker:
+  - value: System.ObsoleteAttribute
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: >-
+        [System.Obsolete("Use AcquireTokenInteractive instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]
+
+        public System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult> AcquireTokenAsync (System.Collections.Generic.IEnumerable<string> scopes, Microsoft.Identity.Client.IAccount account, Microsoft.Identity.Client.Prompt prompt, string extraQueryParameters, Microsoft.Identity.Client.UIParent parent);
+  - lang: fsharp
+    values:
+    - value: >-
+        [<System.Obsolete("Use AcquireTokenInteractive instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)>]
+
+        abstract member AcquireTokenAsync : seq<string> * Microsoft.Identity.Client.IAccount * Microsoft.Identity.Client.Prompt * string * Microsoft.Identity.Client.UIParent -> System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult>
+  - lang: vb
+    values:
+    - value: Public Function AcquireTokenAsync (scopes As IEnumerable(Of String), account As IAccount, prompt As Prompt, extraQueryParameters As String, parent As UIParent) As Task(Of AuthenticationResult)
+  monikers:
+  - msal-dotnet-latest
+  obsoleteMessagesWithMoniker:
+  - value: 'Use AcquireTokenInteractive instead. See https://aka.ms/msal-net-3-breaking-changes. '
+  summary: Interactive request to acquire token for an account with control of the UI behavior and possibility of passing extra query parameters like additional claims
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Client.AuthenticationResult?alt=Microsoft.Identity.Client.AuthenticationResult&text=AuthenticationResult" data-throw-if-not-resolved="True"/>&gt;
+    description: Authentication result containing a token for the requested scopes and account
+  parameters:
+  - namesWithMoniker:
+    - value: scopes
+    description: Scopes requested to access a protected API
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: loginHint
+    description: Identifier of the user. Generally in UserPrincipalName (UPN) format, e.g. <code data-dev-comment-type="c">john.doe@contoso.com</code>
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: prompt
+    description: Designed interactive experience for the user.
+    type: <xref href="Microsoft.Identity.Client.Prompt?alt=Microsoft.Identity.Client.Prompt&text=Prompt" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: extraQueryParameters
+    description: >-
+      This parameter will be appended as is to the query string in the HTTP authentication request to the authority.
+                  This is expected to be a string of segments of the form <code data-dev-comment-type="c">key=value</code> separated by an ampersand character.
+                  The parameter can be null.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},System.String,Microsoft.Identity.Client.Prompt,System.String)
+  commentId: M:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},System.String,Microsoft.Identity.Client.Prompt,System.String)
+  name: AcquireTokenAsync(IEnumerable<String>, String, Prompt, String)
+  fullName: Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(IEnumerable<String>, String, Prompt, String)
+  nameWithType: IPublicClientApplication.AcquireTokenAsync(IEnumerable<String>, String, Prompt, String)
+  attributesWithMoniker:
+  - value: System.ObsoleteAttribute
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: >-
+        [System.Obsolete("Use AcquireTokenInteractive instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]
+
+        public System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult> AcquireTokenAsync (System.Collections.Generic.IEnumerable<string> scopes, string loginHint, Microsoft.Identity.Client.Prompt prompt, string extraQueryParameters);
+  - lang: fsharp
+    values:
+    - value: >-
+        [<System.Obsolete("Use AcquireTokenInteractive instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)>]
+
+        abstract member AcquireTokenAsync : seq<string> * string * Microsoft.Identity.Client.Prompt * string -> System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult>
+  - lang: vb
+    values:
+    - value: Public Function AcquireTokenAsync (scopes As IEnumerable(Of String), loginHint As String, prompt As Prompt, extraQueryParameters As String) As Task(Of AuthenticationResult)
+  monikers:
+  - msal-dotnet-latest
+  obsoleteMessagesWithMoniker:
+  - value: 'Use AcquireTokenInteractive instead. See https://aka.ms/msal-net-3-breaking-changes. '
+  summary: Interactive request to acquire token for a login with control of the UI behavior and possibility of passing extra query parameters like additional claims
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Client.AuthenticationResult?alt=Microsoft.Identity.Client.AuthenticationResult&text=AuthenticationResult" data-throw-if-not-resolved="True"/>&gt;
+    description: Authentication result containing a token for the requested scopes and account
+  parameters:
+  - namesWithMoniker:
+    - value: scopes
+    description: Scopes requested to access a protected API
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: loginHint
+    description: Identifier of the user. Generally in UserPrincipalName (UPN) format, e.g. <code data-dev-comment-type="c">john.doe@contoso.com</code>
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: prompt
+    description: Designed interactive experience for the user.
+    type: <xref href="Microsoft.Identity.Client.Prompt?alt=Microsoft.Identity.Client.Prompt&text=Prompt" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: extraQueryParameters
+    description: >-
+      This parameter will be appended as is to the query string in the HTTP authentication request to the authority.
+                  This is expected to be a string of segments of the form <code data-dev-comment-type="c">key=value</code> separated by an ampersand character.
+                  The parameter can be null.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: extraScopesToConsent
+    description: >-
+      Scopes that you can request the end user to consent upfront, in addition to the scopes for the protected web API
+                  for which you want to acquire a security token.
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: authority
+    description: Specific authority for which the token is requested. Passing a different value than configured does not change the configured value
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: parent
+    description: Object containing a reference to the parent window/activity. REQUIRED for Xamarin.Android only.
+    type: <xref href="Microsoft.Identity.Client.UIParent?alt=Microsoft.Identity.Client.UIParent&text=UIParent" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},System.String,Microsoft.Identity.Client.Prompt,System.String,System.Collections.Generic.IEnumerable{System.String},System.String,Microsoft.Identity.Client.UIParent)
+  commentId: M:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},System.String,Microsoft.Identity.Client.Prompt,System.String,System.Collections.Generic.IEnumerable{System.String},System.String,Microsoft.Identity.Client.UIParent)
+  name: AcquireTokenAsync(IEnumerable<String>, String, Prompt, String, IEnumerable<String>, String, UIParent)
+  fullName: Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(IEnumerable<String>, String, Prompt, String, IEnumerable<String>, String, UIParent)
+  nameWithType: IPublicClientApplication.AcquireTokenAsync(IEnumerable<String>, String, Prompt, String, IEnumerable<String>, String, UIParent)
+  attributesWithMoniker:
+  - value: System.ObsoleteAttribute
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: >-
+        [System.Obsolete("Use AcquireTokenInteractive instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]
+
+        public System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult> AcquireTokenAsync (System.Collections.Generic.IEnumerable<string> scopes, string loginHint, Microsoft.Identity.Client.Prompt prompt, string extraQueryParameters, System.Collections.Generic.IEnumerable<string> extraScopesToConsent, string authority, Microsoft.Identity.Client.UIParent parent);
+  - lang: fsharp
+    values:
+    - value: >-
+        [<System.Obsolete("Use AcquireTokenInteractive instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)>]
+
+        abstract member AcquireTokenAsync : seq<string> * string * Microsoft.Identity.Client.Prompt * string * seq<string> * string * Microsoft.Identity.Client.UIParent -> System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult>
+  - lang: vb
+    values:
+    - value: Public Function AcquireTokenAsync (scopes As IEnumerable(Of String), loginHint As String, prompt As Prompt, extraQueryParameters As String, extraScopesToConsent As IEnumerable(Of String), authority As String, parent As UIParent) As Task(Of AuthenticationResult)
+  monikers:
+  - msal-dotnet-latest
+  obsoleteMessagesWithMoniker:
+  - value: 'Use AcquireTokenInteractive instead. See https://aka.ms/msal-net-3-breaking-changes. '
+  summary: >-
+    Interactive request to acquire token for a given login, with the possibility of controlling the user experience, passing extra query
+
+    parameters, providing extra scopes that the user can pre-consent to, and overriding the authority pre-configured in the application
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Client.AuthenticationResult?alt=Microsoft.Identity.Client.AuthenticationResult&text=AuthenticationResult" data-throw-if-not-resolved="True"/>&gt;
+    description: Authentication result containing a token for the requested scopes and login
+  parameters:
+  - namesWithMoniker:
+    - value: scopes
+    description: Scopes requested to access a protected API
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: loginHint
+    description: Identifier of the user. Generally in UserPrincipalName (UPN) format, e.g. <code data-dev-comment-type="c">john.doe@contoso.com</code>
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: parent
+    description: Object containing a reference to the parent window/activity. REQUIRED for Xamarin.Android only.
+    type: <xref href="Microsoft.Identity.Client.UIParent?alt=Microsoft.Identity.Client.UIParent&text=UIParent" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},System.String,Microsoft.Identity.Client.UIParent)
+  commentId: M:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},System.String,Microsoft.Identity.Client.UIParent)
+  name: AcquireTokenAsync(IEnumerable<String>, String, UIParent)
+  fullName: Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(IEnumerable<String>, String, UIParent)
+  nameWithType: IPublicClientApplication.AcquireTokenAsync(IEnumerable<String>, String, UIParent)
+  attributesWithMoniker:
+  - value: System.ObsoleteAttribute
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: >-
+        [System.Obsolete("Use AcquireTokenInteractive instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]
+
+        public System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult> AcquireTokenAsync (System.Collections.Generic.IEnumerable<string> scopes, string loginHint, Microsoft.Identity.Client.UIParent parent);
+  - lang: fsharp
+    values:
+    - value: >-
+        [<System.Obsolete("Use AcquireTokenInteractive instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)>]
+
+        abstract member AcquireTokenAsync : seq<string> * string * Microsoft.Identity.Client.UIParent -> System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult>
+  - lang: vb
+    values:
+    - value: Public Function AcquireTokenAsync (scopes As IEnumerable(Of String), loginHint As String, parent As UIParent) As Task(Of AuthenticationResult)
+  monikers:
+  - msal-dotnet-latest
+  obsoleteMessagesWithMoniker:
+  - value: 'Use AcquireTokenInteractive instead. See https://aka.ms/msal-net-3-breaking-changes. '
+  summary: >-
+    Interactive request to acquire token for the specified scopes. The interactive window will be parented to the specified
+
+    window. . The user will need to sign-in but an account will be proposed
+
+    based on the <code data-dev-comment-type="paramref">loginHint</code>
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Client.AuthenticationResult?alt=Microsoft.Identity.Client.AuthenticationResult&text=AuthenticationResult" data-throw-if-not-resolved="True"/>&gt;
+    description: Authentication result containing a token for the requested scopes and account
+  parameters:
+  - namesWithMoniker:
+    - value: scopes
+    description: Scopes requested to access a protected API
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: account
+    description: Account to use for the interactive token acquisition. See <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.IAccount"></xref> for ways to get an account
+    type: <xref href="Microsoft.Identity.Client.IAccount?alt=Microsoft.Identity.Client.IAccount&text=IAccount" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: parent
+    description: Object containing a reference to the parent window/activity. REQUIRED for Xamarin.Android only.
+    type: <xref href="Microsoft.Identity.Client.UIParent?alt=Microsoft.Identity.Client.UIParent&text=UIParent" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount,Microsoft.Identity.Client.UIParent)
+  commentId: M:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount,Microsoft.Identity.Client.UIParent)
+  name: AcquireTokenAsync(IEnumerable<String>, IAccount, UIParent)
+  fullName: Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(IEnumerable<String>, IAccount, UIParent)
+  nameWithType: IPublicClientApplication.AcquireTokenAsync(IEnumerable<String>, IAccount, UIParent)
+  attributesWithMoniker:
+  - value: System.ObsoleteAttribute
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: >-
+        [System.Obsolete("Use AcquireTokenInteractive instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]
+
+        public System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult> AcquireTokenAsync (System.Collections.Generic.IEnumerable<string> scopes, Microsoft.Identity.Client.IAccount account, Microsoft.Identity.Client.UIParent parent);
+  - lang: fsharp
+    values:
+    - value: >-
+        [<System.Obsolete("Use AcquireTokenInteractive instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)>]
+
+        abstract member AcquireTokenAsync : seq<string> * Microsoft.Identity.Client.IAccount * Microsoft.Identity.Client.UIParent -> System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult>
+  - lang: vb
+    values:
+    - value: Public Function AcquireTokenAsync (scopes As IEnumerable(Of String), account As IAccount, parent As UIParent) As Task(Of AuthenticationResult)
+  monikers:
+  - msal-dotnet-latest
+  obsoleteMessagesWithMoniker:
+  - value: 'Use AcquireTokenInteractive instead. See https://aka.ms/msal-net-3-breaking-changes. '
+  summary: >-
+    Interactive request to acquire token for the specified scopes. The user will need to sign-in but an account will be proposed
+
+    based on the provided <code data-dev-comment-type="paramref">account</code>
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Client.AuthenticationResult?alt=Microsoft.Identity.Client.AuthenticationResult&text=AuthenticationResult" data-throw-if-not-resolved="True"/>&gt;
+    description: Authentication result containing a token for the requested scopes and account
+  parameters:
+  - namesWithMoniker:
+    - value: scopes
+    description: Scopes requested to access a protected API
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: loginHint
+    description: Identifier of the user. Generally in UserPrincipalName (UPN) format, e.g. <code data-dev-comment-type="c">john.doe@contoso.com</code>
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},System.String)
+  commentId: M:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},System.String)
+  name: AcquireTokenAsync(IEnumerable<String>, String)
+  fullName: Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(IEnumerable<String>, String)
+  nameWithType: IPublicClientApplication.AcquireTokenAsync(IEnumerable<String>, String)
+  attributesWithMoniker:
+  - value: System.ObsoleteAttribute
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: >-
+        [System.Obsolete("Use AcquireTokenInteractive instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]
+
+        public System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult> AcquireTokenAsync (System.Collections.Generic.IEnumerable<string> scopes, string loginHint);
+  - lang: fsharp
+    values:
+    - value: >-
+        [<System.Obsolete("Use AcquireTokenInteractive instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)>]
+
+        abstract member AcquireTokenAsync : seq<string> * string -> System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult>
+  - lang: vb
+    values:
+    - value: Public Function AcquireTokenAsync (scopes As IEnumerable(Of String), loginHint As String) As Task(Of AuthenticationResult)
+  monikers:
+  - msal-dotnet-latest
+  obsoleteMessagesWithMoniker:
+  - value: 'Use AcquireTokenInteractive instead. See https://aka.ms/msal-net-3-breaking-changes. '
+  summary: >-
+    Interactive request to acquire token for the specified scopes. The user will need to sign-in but an account will be proposed
+
+    based on the <code data-dev-comment-type="paramref">loginHint</code>
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Client.AuthenticationResult?alt=Microsoft.Identity.Client.AuthenticationResult&text=AuthenticationResult" data-throw-if-not-resolved="True"/>&gt;
+    description: Authentication result containing a token for the requested scopes and account
+  parameters:
+  - namesWithMoniker:
+    - value: scopes
+    description: Scopes requested to access a protected API
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: parent
+    description: Object containing a reference to the parent window/activity. REQUIRED for Xamarin.Android only.
+    type: <xref href="Microsoft.Identity.Client.UIParent?alt=Microsoft.Identity.Client.UIParent&text=UIParent" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.UIParent)
+  commentId: M:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.UIParent)
+  name: AcquireTokenAsync(IEnumerable<String>, UIParent)
+  fullName: Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(IEnumerable<String>, UIParent)
+  nameWithType: IPublicClientApplication.AcquireTokenAsync(IEnumerable<String>, UIParent)
+  attributesWithMoniker:
+  - value: System.ObsoleteAttribute
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: >-
+        [System.Obsolete("Use AcquireTokenInteractive instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]
+
+        public System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult> AcquireTokenAsync (System.Collections.Generic.IEnumerable<string> scopes, Microsoft.Identity.Client.UIParent parent);
+  - lang: fsharp
+    values:
+    - value: >-
+        [<System.Obsolete("Use AcquireTokenInteractive instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)>]
+
+        abstract member AcquireTokenAsync : seq<string> * Microsoft.Identity.Client.UIParent -> System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult>
+  - lang: vb
+    values:
+    - value: Public Function AcquireTokenAsync (scopes As IEnumerable(Of String), parent As UIParent) As Task(Of AuthenticationResult)
+  monikers:
+  - msal-dotnet-latest
+  obsoleteMessagesWithMoniker:
+  - value: 'Use AcquireTokenInteractive instead. See https://aka.ms/msal-net-3-breaking-changes. '
+  summary: >-
+    Interactive request to acquire token for the specified scopes. The interactive window will be parented to the specified
+
+    window. The user will be required to select an account
+  remarks: <p>The user will be signed-in interactively if needed, and will consent to scopes and do multi-factor authentication if such a policy was enabled in the Azure AD tenant.</p>
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Client.AuthenticationResult?alt=Microsoft.Identity.Client.AuthenticationResult&text=AuthenticationResult" data-throw-if-not-resolved="True"/>&gt;
+    description: Authentication result containing a token for the requested scopes and account
+  parameters:
+  - namesWithMoniker:
+    - value: scopes
+    description: Scopes requested to access a protected API
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: account
+    description: Account to use for the interactive token acquisition. See <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.IAccount"></xref> for ways to get an account
+    type: <xref href="Microsoft.Identity.Client.IAccount?alt=Microsoft.Identity.Client.IAccount&text=IAccount" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount)
+  commentId: M:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount)
+  name: AcquireTokenAsync(IEnumerable<String>, IAccount)
+  fullName: Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(IEnumerable<String>, IAccount)
+  nameWithType: IPublicClientApplication.AcquireTokenAsync(IEnumerable<String>, IAccount)
+  attributesWithMoniker:
+  - value: System.ObsoleteAttribute
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: >-
+        [System.Obsolete("Use AcquireTokenInteractive instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]
+
+        public System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult> AcquireTokenAsync (System.Collections.Generic.IEnumerable<string> scopes, Microsoft.Identity.Client.IAccount account);
+  - lang: fsharp
+    values:
+    - value: >-
+        [<System.Obsolete("Use AcquireTokenInteractive instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)>]
+
+        abstract member AcquireTokenAsync : seq<string> * Microsoft.Identity.Client.IAccount -> System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult>
+  - lang: vb
+    values:
+    - value: Public Function AcquireTokenAsync (scopes As IEnumerable(Of String), account As IAccount) As Task(Of AuthenticationResult)
+  monikers:
+  - msal-dotnet-latest
+  obsoleteMessagesWithMoniker:
+  - value: 'Use AcquireTokenInteractive instead. See https://aka.ms/msal-net-3-breaking-changes. '
+  summary: >-
+    Interactive request to acquire token for the specified scopes. The user will need to sign-in but an account will be proposed
+
+    based on the provided <code data-dev-comment-type="paramref">account</code>
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Client.AuthenticationResult?alt=Microsoft.Identity.Client.AuthenticationResult&text=AuthenticationResult" data-throw-if-not-resolved="True"/>&gt;
+    description: Authentication result containing a token for the requested scopes and account
+  parameters:
+  - namesWithMoniker:
+    - value: scopes
+    description: Scopes requested to access a protected API
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: account
+    description: Account to use for the interactive token acquisition. See <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.IAccount"></xref> for ways to get an account
+    type: <xref href="Microsoft.Identity.Client.IAccount?alt=Microsoft.Identity.Client.IAccount&text=IAccount" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: prompt
+    description: Designed interactive experience for the user.
+    type: <xref href="Microsoft.Identity.Client.Prompt?alt=Microsoft.Identity.Client.Prompt&text=Prompt" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: extraQueryParameters
+    description: >-
+      This parameter will be appended as is to the query string in the HTTP authentication request to the authority.
+                  This is expected to be a string of segments of the form <code data-dev-comment-type="c">key=value</code> separated by an ampersand character.
+                  The parameter can be null.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount,Microsoft.Identity.Client.Prompt,System.String)
+  commentId: M:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount,Microsoft.Identity.Client.Prompt,System.String)
+  name: AcquireTokenAsync(IEnumerable<String>, IAccount, Prompt, String)
+  fullName: Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(IEnumerable<String>, IAccount, Prompt, String)
+  nameWithType: IPublicClientApplication.AcquireTokenAsync(IEnumerable<String>, IAccount, Prompt, String)
+  attributesWithMoniker:
+  - value: System.ObsoleteAttribute
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: >-
+        [System.Obsolete("Use AcquireTokenInteractive instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]
+
+        public System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult> AcquireTokenAsync (System.Collections.Generic.IEnumerable<string> scopes, Microsoft.Identity.Client.IAccount account, Microsoft.Identity.Client.Prompt prompt, string extraQueryParameters);
+  - lang: fsharp
+    values:
+    - value: >-
+        [<System.Obsolete("Use AcquireTokenInteractive instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)>]
+
+        abstract member AcquireTokenAsync : seq<string> * Microsoft.Identity.Client.IAccount * Microsoft.Identity.Client.Prompt * string -> System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult>
+  - lang: vb
+    values:
+    - value: Public Function AcquireTokenAsync (scopes As IEnumerable(Of String), account As IAccount, prompt As Prompt, extraQueryParameters As String) As Task(Of AuthenticationResult)
+  monikers:
+  - msal-dotnet-latest
+  obsoleteMessagesWithMoniker:
+  - value: 'Use AcquireTokenInteractive instead. See https://aka.ms/msal-net-3-breaking-changes. '
+  summary: Interactive request to acquire token for an account with control of the UI behavior and possibility of passing extra query parameters like additional claims
+  metadata: {}
+uid: Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync*
+commentId: Overload:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync
+namespace: Microsoft.Identity.Client
+name: AcquireTokenAsync
+fullName: Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync
+nameWithType: IPublicClientApplication.AcquireTokenAsync
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync
+  - Microsoft::Identity::Client::IPublicClientApplication::AcquireTokenAsync
+  - AcquireTokenAsync
+  - IPublicClientApplication.AcquireTokenAsync
+  - IPublicClientApplication::AcquireTokenAsync
+  helpviewer_keywords:
+  - IPublicClientApplication.AcquireTokenAsync method [.NET]
+  - AcquireTokenAsync method [.NET], interface IPublicClientApplication
+  - IPublicClientApplication.AcquireTokenAsync(IEnumerable<String>) method [.NET]
+  - AcquireTokenAsync(IEnumerable<String>) method [.NET], interface IPublicClientApplication
+  - IPublicClientApplication.AcquireTokenAsync(IEnumerable<String>, IAccount, Prompt, String, IEnumerable<String>, String, UIParent) method [.NET]
+  - AcquireTokenAsync(IEnumerable<String>, IAccount, Prompt, String, IEnumerable<String>, String, UIParent) method [.NET], interface IPublicClientApplication
+  - IPublicClientApplication.AcquireTokenAsync(IEnumerable<String>, String, Prompt, String, IEnumerable<String>, String) method [.NET]
+  - AcquireTokenAsync(IEnumerable<String>, String, Prompt, String, IEnumerable<String>, String) method [.NET], interface IPublicClientApplication
+  - IPublicClientApplication.AcquireTokenAsync(IEnumerable<String>, IAccount, Prompt, String, IEnumerable<String>, String) method [.NET]
+  - AcquireTokenAsync(IEnumerable<String>, IAccount, Prompt, String, IEnumerable<String>, String) method [.NET], interface IPublicClientApplication
+  - IPublicClientApplication.AcquireTokenAsync(IEnumerable<String>, String, Prompt, String, UIParent) method [.NET]
+  - AcquireTokenAsync(IEnumerable<String>, String, Prompt, String, UIParent) method [.NET], interface IPublicClientApplication
+  - IPublicClientApplication.AcquireTokenAsync(IEnumerable<String>, IAccount, Prompt, String, UIParent) method [.NET]
+  - AcquireTokenAsync(IEnumerable<String>, IAccount, Prompt, String, UIParent) method [.NET], interface IPublicClientApplication
+  - IPublicClientApplication.AcquireTokenAsync(IEnumerable<String>, String, Prompt, String) method [.NET]
+  - AcquireTokenAsync(IEnumerable<String>, String, Prompt, String) method [.NET], interface IPublicClientApplication
+  - IPublicClientApplication.AcquireTokenAsync(IEnumerable<String>, String, Prompt, String, IEnumerable<String>, String, UIParent) method [.NET]
+  - AcquireTokenAsync(IEnumerable<String>, String, Prompt, String, IEnumerable<String>, String, UIParent) method [.NET], interface IPublicClientApplication
+  - IPublicClientApplication.AcquireTokenAsync(IEnumerable<String>, String, UIParent) method [.NET]
+  - AcquireTokenAsync(IEnumerable<String>, String, UIParent) method [.NET], interface IPublicClientApplication
+  - IPublicClientApplication.AcquireTokenAsync(IEnumerable<String>, IAccount, UIParent) method [.NET]
+  - AcquireTokenAsync(IEnumerable<String>, IAccount, UIParent) method [.NET], interface IPublicClientApplication
+  - IPublicClientApplication.AcquireTokenAsync(IEnumerable<String>, String) method [.NET]
+  - AcquireTokenAsync(IEnumerable<String>, String) method [.NET], interface IPublicClientApplication
+  - IPublicClientApplication.AcquireTokenAsync(IEnumerable<String>, UIParent) method [.NET]
+  - AcquireTokenAsync(IEnumerable<String>, UIParent) method [.NET], interface IPublicClientApplication
+  - IPublicClientApplication.AcquireTokenAsync(IEnumerable<String>, IAccount) method [.NET]
+  - AcquireTokenAsync(IEnumerable<String>, IAccount) method [.NET], interface IPublicClientApplication
+  - IPublicClientApplication.AcquireTokenAsync(IEnumerable<String>, IAccount, Prompt, String) method [.NET]
+  - AcquireTokenAsync(IEnumerable<String>, IAccount, Prompt, String) method [.NET], interface IPublicClientApplication
+  monikers:
+  - msal-dotnet-latest

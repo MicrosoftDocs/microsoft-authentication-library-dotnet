@@ -1,0 +1,109 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.Identity.Abstractions.ITokenAcquirer?alt=Microsoft.Identity.Abstractions.ITokenAcquirer&text=ITokenAcquirer" data-throw-if-not-resolved="True"/>
+    description: An instance of <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Abstractions.ITokenAcquirer"></xref> for acquiring tokens.
+  parameters:
+  - namesWithMoniker:
+    - value: identityApplicationOptions
+    description: >-
+      the <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Abstractions.IdentityApplicationOptions"></xref>
+                 that describe the <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Abstractions.ITokenAcquirer"></xref> instance to return.
+                 For Microsoft applications use <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions"></xref>.
+    type: <xref href="Microsoft.Identity.Abstractions.IdentityApplicationOptions?alt=Microsoft.Identity.Abstractions.IdentityApplicationOptions&text=IdentityApplicationOptions" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Abstractions.ITokenAcquirerFactory.GetTokenAcquirer(Microsoft.Identity.Abstractions.IdentityApplicationOptions)
+  commentId: M:Microsoft.Identity.Abstractions.ITokenAcquirerFactory.GetTokenAcquirer(Microsoft.Identity.Abstractions.IdentityApplicationOptions)
+  name: GetTokenAcquirer(IdentityApplicationOptions)
+  fullName: Microsoft.Identity.Abstractions.ITokenAcquirerFactory.GetTokenAcquirer(IdentityApplicationOptions)
+  nameWithType: ITokenAcquirerFactory.GetTokenAcquirer(IdentityApplicationOptions)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public Microsoft.Identity.Abstractions.ITokenAcquirer GetTokenAcquirer (Microsoft.Identity.Abstractions.IdentityApplicationOptions identityApplicationOptions);
+  - lang: fsharp
+    values:
+    - value: 'abstract member GetTokenAcquirer : Microsoft.Identity.Abstractions.IdentityApplicationOptions -> Microsoft.Identity.Abstractions.ITokenAcquirer'
+  - lang: vb
+    values:
+    - value: Public Function GetTokenAcquirer (identityApplicationOptions As IdentityApplicationOptions) As ITokenAcquirer
+  monikers:
+  - msal-model-dotnet-latest
+  summary: Get a token acquirer given a set of application identity options.
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.Identity.Abstractions.ITokenAcquirer?alt=Microsoft.Identity.Abstractions.ITokenAcquirer&text=ITokenAcquirer" data-throw-if-not-resolved="True"/>
+    description: An instance of <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Abstractions.ITokenAcquirer"></xref> for acquiring tokens.
+  parameters:
+  - namesWithMoniker:
+    - value: optionName
+    description: >-
+      Name of the Application configuration as defined by the configuration.
+                  For instance in ASP.NET Core it could be the authentication scheme.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Abstractions.ITokenAcquirerFactory.GetTokenAcquirer(System.String)
+  commentId: M:Microsoft.Identity.Abstractions.ITokenAcquirerFactory.GetTokenAcquirer(System.String)
+  name: GetTokenAcquirer(String)
+  fullName: Microsoft.Identity.Abstractions.ITokenAcquirerFactory.GetTokenAcquirer(String)
+  nameWithType: ITokenAcquirerFactory.GetTokenAcquirer(String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public Microsoft.Identity.Abstractions.ITokenAcquirer GetTokenAcquirer (string optionName = "");
+  - lang: fsharp
+    values:
+    - value: 'abstract member GetTokenAcquirer : string -> Microsoft.Identity.Abstractions.ITokenAcquirer'
+  - lang: vb
+    values:
+    - value: Public Function GetTokenAcquirer (Optional optionName As String = "") As ITokenAcquirer
+  monikers:
+  - msal-model-dotnet-latest
+  summary: >-
+    Get a token acquirer for a specific named configuration
+
+    (for instance an ASP.NET Core authentication scheme).
+  metadata: {}
+uid: Microsoft.Identity.Abstractions.ITokenAcquirerFactory.GetTokenAcquirer*
+commentId: Overload:Microsoft.Identity.Abstractions.ITokenAcquirerFactory.GetTokenAcquirer
+namespace: Microsoft.Identity.Abstractions
+name: GetTokenAcquirer
+fullName: Microsoft.Identity.Abstractions.ITokenAcquirerFactory.GetTokenAcquirer
+nameWithType: ITokenAcquirerFactory.GetTokenAcquirer
+assembliesWithMoniker:
+- value: Microsoft.Identity.Abstractions.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Abstractions v1.1.0
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-model-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Abstractions.ITokenAcquirerFactory.GetTokenAcquirer
+  api_location:
+  - Microsoft.Identity.Abstractions.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Abstractions.ITokenAcquirerFactory.GetTokenAcquirer
+  - Microsoft::Identity::Abstractions::ITokenAcquirerFactory::GetTokenAcquirer
+  - GetTokenAcquirer
+  - ITokenAcquirerFactory.GetTokenAcquirer
+  - ITokenAcquirerFactory::GetTokenAcquirer
+  helpviewer_keywords:
+  - ITokenAcquirerFactory.GetTokenAcquirer method [.NET]
+  - GetTokenAcquirer method [.NET], interface ITokenAcquirerFactory
+  - ITokenAcquirerFactory.GetTokenAcquirer(IdentityApplicationOptions) method [.NET]
+  - GetTokenAcquirer(IdentityApplicationOptions) method [.NET], interface ITokenAcquirerFactory
+  - ITokenAcquirerFactory.GetTokenAcquirer(String) method [.NET]
+  - GetTokenAcquirer(String) method [.NET], interface ITokenAcquirerFactory
+  monikers:
+  - msal-model-dotnet-latest

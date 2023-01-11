@@ -1,0 +1,79 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Byte?alt=System.Byte&text=Byte" data-throw-if-not-resolved="True"/>[]
+    description: The wrapped key result
+  parameters:
+  - namesWithMoniker:
+    - value: keyBytes
+    description: the key to be wrapped
+    type: <xref href="System.Byte?alt=System.Byte&text=Byte" data-throw-if-not-resolved="True"/>[]
+  exceptions:
+  - description: "'keyBytes' is null or has length 0."
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: "'keyBytes' is not a multiple of 8."
+    type: <xref href="System.ArgumentException" data-throw-if-not-resolved="True"/>
+  - description: If <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.KeyWrapProvider.Dispose(System.Boolean)"></xref> has been called.
+    type: <xref href="System.ObjectDisposedException" data-throw-if-not-resolved="True"/>
+  - description: Failed to wrap 'keyBytes'.
+    type: <xref href="Microsoft.IdentityModel.Tokens.SecurityTokenKeyWrapException?alt=Microsoft.IdentityModel.Tokens.SecurityTokenKeyWrapException&text=SecurityTokenKeyWrapException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.SymmetricKeyWrapProvider.WrapKey(System.Byte[])
+  commentId: M:Microsoft.IdentityModel.Tokens.SymmetricKeyWrapProvider.WrapKey(System.Byte[])
+  name: WrapKey(Byte[])
+  fullName: Microsoft.IdentityModel.Tokens.SymmetricKeyWrapProvider.WrapKey(Byte[])
+  nameWithType: SymmetricKeyWrapProvider.WrapKey(Byte[])
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public override byte[] WrapKey (byte[] keyBytes);
+  - lang: fsharp
+    values:
+    - value: 'override this.WrapKey : byte[] -> byte[]'
+  - lang: vb
+    values:
+    - value: Public Overrides Function WrapKey (keyBytes As Byte()) As Byte()
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Wrap a key using Symmetric encryption.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.SymmetricKeyWrapProvider.WrapKey*
+commentId: Overload:Microsoft.IdentityModel.Tokens.SymmetricKeyWrapProvider.WrapKey
+namespace: Microsoft.IdentityModel.Tokens
+name: WrapKey
+fullName: Microsoft.IdentityModel.Tokens.SymmetricKeyWrapProvider.WrapKey
+nameWithType: SymmetricKeyWrapProvider.WrapKey
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.SymmetricKeyWrapProvider.WrapKey
+  api_location:
+  - Microsoft.IdentityModel.Tokens.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.SymmetricKeyWrapProvider.WrapKey
+  - Microsoft::IdentityModel::Tokens::SymmetricKeyWrapProvider::WrapKey
+  - WrapKey
+  - SymmetricKeyWrapProvider.WrapKey
+  - SymmetricKeyWrapProvider::WrapKey
+  helpviewer_keywords:
+  - SymmetricKeyWrapProvider.WrapKey method [.NET]
+  - WrapKey method [.NET], class SymmetricKeyWrapProvider
+  - SymmetricKeyWrapProvider.WrapKey(Byte[]) method [.NET]
+  - WrapKey(Byte[]) method [.NET], class SymmetricKeyWrapProvider
+  monikers:
+  - msal-web-dotnet-latest

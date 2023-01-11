@@ -1,0 +1,149 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="System.Uri?alt=System.Uri&text=Uri" data-throw-if-not-resolved="True"/>&gt;
+    description: URL of the authorize endpoint including the query parameters.
+  parameters:
+  - namesWithMoniker:
+    - value: scopes
+    description: Array of scopes requested for resource
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: loginHint
+    description: Identifier of the user. Generally a UPN.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: extraQueryParameters
+    description: This parameter will be appended as is to the query string in the HTTP authentication request to the authority. The parameter can be null.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.IConfidentialClientApplication.GetAuthorizationRequestUrlAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.String)
+  commentId: M:Microsoft.Identity.Client.IConfidentialClientApplication.GetAuthorizationRequestUrlAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.String)
+  name: GetAuthorizationRequestUrlAsync(IEnumerable<String>, String, String)
+  fullName: Microsoft.Identity.Client.IConfidentialClientApplication.GetAuthorizationRequestUrlAsync(IEnumerable<String>, String, String)
+  nameWithType: IConfidentialClientApplication.GetAuthorizationRequestUrlAsync(IEnumerable<String>, String, String)
+  attributesWithMoniker:
+  - value: System.ObsoleteAttribute
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: >-
+        [System.Obsolete("Use GetAuthorizationRequestUrl instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]
+
+        public System.Threading.Tasks.Task<Uri> GetAuthorizationRequestUrlAsync (System.Collections.Generic.IEnumerable<string> scopes, string loginHint, string extraQueryParameters);
+  - lang: fsharp
+    values:
+    - value: >-
+        [<System.Obsolete("Use GetAuthorizationRequestUrl instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)>]
+
+        abstract member GetAuthorizationRequestUrlAsync : seq<string> * string * string -> System.Threading.Tasks.Task<Uri>
+  - lang: vb
+    values:
+    - value: Public Function GetAuthorizationRequestUrlAsync (scopes As IEnumerable(Of String), loginHint As String, extraQueryParameters As String) As Task(Of Uri)
+  monikers:
+  - msal-dotnet-latest
+  obsoleteMessagesWithMoniker:
+  - value: 'Use GetAuthorizationRequestUrl instead. See https://aka.ms/msal-net-3-breaking-changes. '
+  summary: '[V2 API] URL of the authorize endpoint including the query parameters.'
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="System.Uri?alt=System.Uri&text=Uri" data-throw-if-not-resolved="True"/>&gt;
+    description: URL of the authorize endpoint including the query parameters.
+  parameters:
+  - namesWithMoniker:
+    - value: scopes
+    description: Array of scopes requested for resource
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: redirectUri
+    description: Address to return to upon receiving a response from the authority.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: loginHint
+    description: Identifier of the user. Generally a UPN.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: extraQueryParameters
+    description: This parameter will be appended as is to the query string in the HTTP authentication request to the authority. The parameter can be null.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: extraScopesToConsent
+    description: Array of scopes for which a developer can request consent upfront.
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: authority
+    description: Specific authority for which the token is requested. Passing a different value than configured does not change the configured value
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.IConfidentialClientApplication.GetAuthorizationRequestUrlAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.String)
+  commentId: M:Microsoft.Identity.Client.IConfidentialClientApplication.GetAuthorizationRequestUrlAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.String)
+  name: GetAuthorizationRequestUrlAsync(IEnumerable<String>, String, String, String, IEnumerable<String>, String)
+  fullName: Microsoft.Identity.Client.IConfidentialClientApplication.GetAuthorizationRequestUrlAsync(IEnumerable<String>, String, String, String, IEnumerable<String>, String)
+  nameWithType: IConfidentialClientApplication.GetAuthorizationRequestUrlAsync(IEnumerable<String>, String, String, String, IEnumerable<String>, String)
+  attributesWithMoniker:
+  - value: System.ObsoleteAttribute
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: >-
+        [System.Obsolete("Use GetAuthorizationRequestUrl instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]
+
+        public System.Threading.Tasks.Task<Uri> GetAuthorizationRequestUrlAsync (System.Collections.Generic.IEnumerable<string> scopes, string redirectUri, string loginHint, string extraQueryParameters, System.Collections.Generic.IEnumerable<string> extraScopesToConsent, string authority);
+  - lang: fsharp
+    values:
+    - value: >-
+        [<System.Obsolete("Use GetAuthorizationRequestUrl instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)>]
+
+        abstract member GetAuthorizationRequestUrlAsync : seq<string> * string * string * string * seq<string> * string -> System.Threading.Tasks.Task<Uri>
+  - lang: vb
+    values:
+    - value: Public Function GetAuthorizationRequestUrlAsync (scopes As IEnumerable(Of String), redirectUri As String, loginHint As String, extraQueryParameters As String, extraScopesToConsent As IEnumerable(Of String), authority As String) As Task(Of Uri)
+  monikers:
+  - msal-dotnet-latest
+  obsoleteMessagesWithMoniker:
+  - value: 'Use GetAuthorizationRequestUrl instead. See https://aka.ms/msal-net-3-breaking-changes. '
+  summary: '[V2 API] Gets URL of the authorize endpoint including the query parameters.'
+  metadata: {}
+uid: Microsoft.Identity.Client.IConfidentialClientApplication.GetAuthorizationRequestUrlAsync*
+commentId: Overload:Microsoft.Identity.Client.IConfidentialClientApplication.GetAuthorizationRequestUrlAsync
+namespace: Microsoft.Identity.Client
+name: GetAuthorizationRequestUrlAsync
+fullName: Microsoft.Identity.Client.IConfidentialClientApplication.GetAuthorizationRequestUrlAsync
+nameWithType: IConfidentialClientApplication.GetAuthorizationRequestUrlAsync
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.IConfidentialClientApplication.GetAuthorizationRequestUrlAsync
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.IConfidentialClientApplication.GetAuthorizationRequestUrlAsync
+  - Microsoft::Identity::Client::IConfidentialClientApplication::GetAuthorizationRequestUrlAsync
+  - GetAuthorizationRequestUrlAsync
+  - IConfidentialClientApplication.GetAuthorizationRequestUrlAsync
+  - IConfidentialClientApplication::GetAuthorizationRequestUrlAsync
+  helpviewer_keywords:
+  - IConfidentialClientApplication.GetAuthorizationRequestUrlAsync method [.NET]
+  - GetAuthorizationRequestUrlAsync method [.NET], interface IConfidentialClientApplication
+  - IConfidentialClientApplication.GetAuthorizationRequestUrlAsync(IEnumerable<String>, String, String) method [.NET]
+  - GetAuthorizationRequestUrlAsync(IEnumerable<String>, String, String) method [.NET], interface IConfidentialClientApplication
+  - IConfidentialClientApplication.GetAuthorizationRequestUrlAsync(IEnumerable<String>, String, String, String, IEnumerable<String>, String) method [.NET]
+  - GetAuthorizationRequestUrlAsync(IEnumerable<String>, String, String, String, IEnumerable<String>, String) method [.NET], interface IConfidentialClientApplication
+  monikers:
+  - msal-dotnet-latest

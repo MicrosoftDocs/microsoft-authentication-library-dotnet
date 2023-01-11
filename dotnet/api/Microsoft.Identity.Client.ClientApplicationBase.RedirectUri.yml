@@ -1,0 +1,92 @@
+### YamlMime:NetMember
+type: property
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  implementsWithMoniker:
+  - value: <xref href="Microsoft.Identity.Client.IClientApplicationBase.RedirectUri?alt=Microsoft.Identity.Client.IClientApplicationBase.RedirectUri&text=RedirectUri" data-throw-if-not-resolved="True"/>
+  type: property
+  uid: Microsoft.Identity.Client.ClientApplicationBase.RedirectUri
+  commentId: P:Microsoft.Identity.Client.ClientApplicationBase.RedirectUri
+  name: RedirectUri
+  fullName: Microsoft.Identity.Client.ClientApplicationBase.RedirectUri
+  nameWithType: ClientApplicationBase.RedirectUri
+  attributesWithMoniker:
+  - value: System.ObsoleteAttribute
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: >-
+        [System.Obsolete("Should be set using AbstractApplicationBuilder<T>.WithRedirectUri and can be viewed with ClientApplicationBase.AppConfig.RedirectUri.See https://aka.ms/msal-net-3-breaking-changes. ", true)]
+
+        public string RedirectUri { get; set; }
+  - lang: fsharp
+    values:
+    - value: >-
+        [<System.Obsolete("Should be set using AbstractApplicationBuilder<T>.WithRedirectUri and can be viewed with ClientApplicationBase.AppConfig.RedirectUri.See https://aka.ms/msal-net-3-breaking-changes. ", true)>]
+
+        member this.RedirectUri : string with get, set
+  - lang: vb
+    values:
+    - value: Public Property RedirectUri As String
+  monikers:
+  - msal-dotnet-latest
+  obsoleteMessagesWithMoniker:
+  - value: 'Should be set using AbstractApplicationBuilder&lt;T&gt;.WithRedirectUri and can be viewed with ClientApplicationBase.AppConfig.RedirectUri.See https://aka.ms/msal-net-3-breaking-changes. '
+  summary: >-
+    The redirect URI (also known as Reply URI or Reply URL), is the URI at which Azure AD will contact back the application with the tokens.
+
+    This redirect URI needs to be registered in the app registration (https://aka.ms/msal-net-register-app).
+
+    In MSAL.NET, <xref data-throw-if-not-resolved="true" uid="PublicClientApplication"></xref> define the following default RedirectUri values:
+
+    <ul><li><code data-dev-comment-type="c">https://login.microsoftonline.com/common/oauth2/nativeclient</code> for desktop (.NET Framework and .NET Core) applications</li><li><code data-dev-comment-type="c">msal{ClientId}</code> for Xamarin iOS and Xamarin Android (as this will be used by the system web browser by default on these
+
+    platforms to call back the application)
+
+    </li></ul>
+
+    These default URIs could change in the future.
+
+    In Microsoft.Identity.Client.ConfidentialClientApplication, this can be the URL of the web application / web API.
+  remarks: <p>This is especially important when you deploy an application that you have initially tested locally; you then need to add the reply URL of the deployed application in the application registration portal</p>
+  metadata: {}
+uid: Microsoft.Identity.Client.ClientApplicationBase.RedirectUri*
+commentId: Overload:Microsoft.Identity.Client.ClientApplicationBase.RedirectUri
+namespace: Microsoft.Identity.Client
+name: RedirectUri
+fullName: Microsoft.Identity.Client.ClientApplicationBase.RedirectUri
+nameWithType: ClientApplicationBase.RedirectUri
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.ClientApplicationBase.RedirectUri
+  - Microsoft.Identity.Client.ClientApplicationBase.get_RedirectUri
+  - Microsoft.Identity.Client.ClientApplicationBase.set_RedirectUri
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.ClientApplicationBase.RedirectUri
+  - Microsoft::Identity::Client::ClientApplicationBase::RedirectUri
+  - RedirectUri
+  - ClientApplicationBase.RedirectUri
+  - ClientApplicationBase::RedirectUri
+  helpviewer_keywords:
+  - ClientApplicationBase.RedirectUri property [.NET]
+  - RedirectUri property [.NET], class ClientApplicationBase
+  monikers:
+  - msal-dotnet-latest

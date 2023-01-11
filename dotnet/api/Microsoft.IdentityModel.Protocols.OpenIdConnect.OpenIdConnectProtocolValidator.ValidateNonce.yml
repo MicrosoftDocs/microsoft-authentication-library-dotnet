@@ -1,0 +1,75 @@
+### YamlMime:NetMember
+type: method
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: validationContext
+    description: A <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectProtocolValidationContext"></xref> that contains the 'nonce' to validate.
+    type: <xref href="Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectProtocolValidationContext?alt=Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectProtocolValidationContext&text=OpenIdConnectProtocolValidationContext" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: If 'validationContext.ValidatedIdToken' is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: 'If <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectProtocolValidator.RequireTimeStampInNonce"></xref> is true and a timestamp is not: found, well formed, negatire or expired.'
+    type: <xref href="Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectProtocolInvalidNonceException?alt=Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectProtocolInvalidNonceException&text=OpenIdConnectProtocolInvalidNonceException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectProtocolValidator.ValidateNonce(Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectProtocolValidationContext)
+  commentId: M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectProtocolValidator.ValidateNonce(Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectProtocolValidationContext)
+  name: ValidateNonce(OpenIdConnectProtocolValidationContext)
+  fullName: Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectProtocolValidator.ValidateNonce(OpenIdConnectProtocolValidationContext)
+  nameWithType: OpenIdConnectProtocolValidator.ValidateNonce(OpenIdConnectProtocolValidationContext)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected virtual void ValidateNonce (Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectProtocolValidationContext validationContext);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member ValidateNonce : Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectProtocolValidationContext -> unit
+
+        override this.ValidateNonce : Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectProtocolValidationContext -> unit
+  - lang: vb
+    values:
+    - value: Protected Overridable Sub ValidateNonce (validationContext As OpenIdConnectProtocolValidationContext)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Validates that the <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityToken"></xref> contains the nonce.
+  remarks: <p>The timestamp is only validated if <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectProtocolValidator.RequireTimeStampInNonce"></xref> is true.</p><p>If <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectProtocolValidationContext.Nonce"></xref> is not-null, then a matching 'nonce' must exist in the 'id_token'.</p>
+  metadata: {}
+uid: Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectProtocolValidator.ValidateNonce*
+commentId: Overload:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectProtocolValidator.ValidateNonce
+namespace: Microsoft.IdentityModel.Protocols.OpenIdConnect
+name: ValidateNonce
+fullName: Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectProtocolValidator.ValidateNonce
+nameWithType: OpenIdConnectProtocolValidator.ValidateNonce
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Protocols.OpenIdConnect v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectProtocolValidator.ValidateNonce
+  api_location:
+  - Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectProtocolValidator.ValidateNonce
+  - Microsoft::IdentityModel::Protocols::OpenIdConnect::OpenIdConnectProtocolValidator::ValidateNonce
+  - ValidateNonce
+  - OpenIdConnectProtocolValidator.ValidateNonce
+  - OpenIdConnectProtocolValidator::ValidateNonce
+  helpviewer_keywords:
+  - OpenIdConnectProtocolValidator.ValidateNonce method [.NET]
+  - ValidateNonce method [.NET], class OpenIdConnectProtocolValidator
+  - OpenIdConnectProtocolValidator.ValidateNonce(OpenIdConnectProtocolValidationContext) method [.NET]
+  - ValidateNonce(OpenIdConnectProtocolValidationContext) method [.NET], class OpenIdConnectProtocolValidator
+  monikers:
+  - msal-web-dotnet-latest

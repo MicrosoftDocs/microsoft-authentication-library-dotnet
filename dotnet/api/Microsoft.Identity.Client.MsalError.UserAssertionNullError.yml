@@ -1,0 +1,64 @@
+### YamlMime:NetMember
+type: field
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: field
+  uid: Microsoft.Identity.Client.MsalError.UserAssertionNullError
+  commentId: F:Microsoft.Identity.Client.MsalError.UserAssertionNullError
+  name: UserAssertionNullError
+  fullName: Microsoft.Identity.Client.MsalError.UserAssertionNullError
+  nameWithType: MsalError.UserAssertionNullError
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public const string UserAssertionNullError;
+  - lang: fsharp
+    values:
+    - value: 'val mutable UserAssertionNullError : string'
+  - lang: vb
+    values:
+    - value: 'Public Const UserAssertionNullError As String '
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    This error code comes back from <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenOnBehalfOf(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.UserAssertion)"></xref> 
+
+    calls when a null user assertion is passed as the <code data-dev-comment-type="c">UserAssertion</code> parameter. 
+
+    <p>Mitigation</p>
+
+    Pass a valid value for user assertion
+  metadata: {}
+namespace: Microsoft.Identity.Client
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.MsalError.UserAssertionNullError
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.MsalError.UserAssertionNullError
+  - Microsoft::Identity::Client::MsalError::UserAssertionNullError
+  - UserAssertionNullError
+  - MsalError.UserAssertionNullError
+  - MsalError::UserAssertionNullError
+  helpviewer_keywords:
+  - MsalError.UserAssertionNullError field [.NET]
+  - UserAssertionNullError field [.NET], class MsalError
+  monikers:
+  - msal-dotnet-latest

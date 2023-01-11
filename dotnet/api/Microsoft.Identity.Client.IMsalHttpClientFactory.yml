@@ -1,0 +1,54 @@
+### YamlMime:NetType
+type: interface
+methods:
+- uid: Microsoft.Identity.Client.IMsalHttpClientFactory.GetHttpClient
+  monikers:
+  - msal-dotnet-latest
+uid: Microsoft.Identity.Client.IMsalHttpClientFactory
+commentId: T:Microsoft.Identity.Client.IMsalHttpClientFactory
+namespace: Microsoft.Identity.Client
+name: IMsalHttpClientFactory
+fullName: Microsoft.Identity.Client.IMsalHttpClientFactory
+nameWithType: Microsoft.Identity.Client.IMsalHttpClientFactory
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+syntaxWithMoniker:
+- lang: csharp
+  values:
+  - value: public interface IMsalHttpClientFactory
+- lang: fsharp
+  values:
+  - value: type IMsalHttpClientFactory = interface
+- lang: vb
+  values:
+  - value: Public Interface IMsalHttpClientFactory
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+summary: >-
+  Factory responsible for creating HttpClient
+
+  .Net recommends to use a single instance of HttpClient.
+remarks: <p>Implementations must be thread safe. Consider creating and configuring an HttpClient in the constructor of the factory, and returning the same object in <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.IMsalHttpClientFactory.GetHttpClient"></xref></p>
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.IMsalHttpClientFactory
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.IMsalHttpClientFactory
+  - Microsoft::Identity::Client::IMsalHttpClientFactory
+  - IMsalHttpClientFactory
+  helpviewer_keywords:
+  - Microsoft.Identity.Client.IMsalHttpClientFactory interface [.NET]
+  monikers:
+  - msal-dotnet-latest

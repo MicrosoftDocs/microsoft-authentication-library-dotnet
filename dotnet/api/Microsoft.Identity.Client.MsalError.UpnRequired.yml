@@ -1,0 +1,66 @@
+### YamlMime:NetMember
+type: field
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: field
+  uid: Microsoft.Identity.Client.MsalError.UpnRequired
+  commentId: F:Microsoft.Identity.Client.MsalError.UpnRequired
+  name: UpnRequired
+  fullName: Microsoft.Identity.Client.MsalError.UpnRequired
+  nameWithType: MsalError.UpnRequired
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public const string UpnRequired;
+  - lang: fsharp
+    values:
+    - value: 'val mutable UpnRequired : string'
+  - lang: vb
+    values:
+    - value: 'Public Const UpnRequired As String '
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    loginHint should be a UPN
+
+    <p>What happens?</p> An override of a token acquisition operation was called in <xref data-throw-if-not-resolved="true" uid="IPublicClientApplication"></xref> which
+
+    takes a <code data-dev-comment-type="c">loginHint</code> as a parameters, but this login hint was not using the UserPrincipalName (UPN) format, e.g. <code data-dev-comment-type="c">john.doe@contoso.com</code>
+
+    expected by the service
+
+    <p>Remediation</p> Make sure in your code that you enforce <code data-dev-comment-type="c">loginHint</code> to be a UPN
+  metadata: {}
+namespace: Microsoft.Identity.Client
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.MsalError.UpnRequired
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.MsalError.UpnRequired
+  - Microsoft::Identity::Client::MsalError::UpnRequired
+  - UpnRequired
+  - MsalError.UpnRequired
+  - MsalError::UpnRequired
+  helpviewer_keywords:
+  - MsalError.UpnRequired field [.NET]
+  - UpnRequired field [.NET], class MsalError
+  monikers:
+  - msal-dotnet-latest

@@ -1,0 +1,251 @@
+### YamlMime:NetMember
+type: constructor
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: jwtEncodedString
+    description: A JSON Web Token that has been serialized in JWS Compact serialized format.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: "'jwtEncodedString' is null."
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: "'jwtEncodedString' is not in JWS Compact serialized format."
+    type: <xref href="System.ArgumentException" data-throw-if-not-resolved="True"/>
+  type: constructor
+  uid: System.IdentityModel.Tokens.Jwt.JwtSecurityToken.#ctor(System.String)
+  commentId: M:System.IdentityModel.Tokens.Jwt.JwtSecurityToken.#ctor(System.String)
+  name: JwtSecurityToken(String)
+  fullName: System.IdentityModel.Tokens.Jwt.JwtSecurityToken.JwtSecurityToken(String)
+  nameWithType: JwtSecurityToken.JwtSecurityToken(String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public JwtSecurityToken (string jwtEncodedString);
+  - lang: fsharp
+    values:
+    - value: 'new System.IdentityModel.Tokens.Jwt.JwtSecurityToken : string -> System.IdentityModel.Tokens.Jwt.JwtSecurityToken'
+  - lang: vb
+    values:
+    - value: Public Sub New (jwtEncodedString As String)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Initializes a new instance of <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityToken"></xref> from a string in JWS Compact serialized format.
+  remarks: The contents of this <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityToken"></xref> have not been validated, the JSON Web Token is simply decoded. Validation can be accomplished using <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(System.String,Microsoft.IdentityModel.Tokens.TokenValidationParameters,Microsoft.IdentityModel.Tokens.SecurityToken@)"></xref>
+  metadata: {}
+- parameters:
+  - namesWithMoniker:
+    - value: header
+    description: Contains JSON objects representing the cryptographic operations applied to the JWT and optionally any additional properties of the JWT
+    type: <xref href="System.IdentityModel.Tokens.Jwt.JwtHeader?alt=System.IdentityModel.Tokens.Jwt.JwtHeader&text=JwtHeader" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: payload
+    description: Contains JSON objects representing the claims contained in the JWT. Each claim is a JSON object of the form { Name, Value }
+    type: <xref href="System.IdentityModel.Tokens.Jwt.JwtPayload?alt=System.IdentityModel.Tokens.Jwt.JwtPayload&text=JwtPayload" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: "'payload' is null."
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  type: constructor
+  uid: System.IdentityModel.Tokens.Jwt.JwtSecurityToken.#ctor(System.IdentityModel.Tokens.Jwt.JwtHeader,System.IdentityModel.Tokens.Jwt.JwtPayload)
+  commentId: M:System.IdentityModel.Tokens.Jwt.JwtSecurityToken.#ctor(System.IdentityModel.Tokens.Jwt.JwtHeader,System.IdentityModel.Tokens.Jwt.JwtPayload)
+  name: JwtSecurityToken(JwtHeader, JwtPayload)
+  fullName: System.IdentityModel.Tokens.Jwt.JwtSecurityToken.JwtSecurityToken(JwtHeader, JwtPayload)
+  nameWithType: JwtSecurityToken.JwtSecurityToken(JwtHeader, JwtPayload)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public JwtSecurityToken (System.IdentityModel.Tokens.Jwt.JwtHeader header, System.IdentityModel.Tokens.Jwt.JwtPayload payload);
+  - lang: fsharp
+    values:
+    - value: 'new System.IdentityModel.Tokens.Jwt.JwtSecurityToken : System.IdentityModel.Tokens.Jwt.JwtHeader * System.IdentityModel.Tokens.Jwt.JwtPayload -> System.IdentityModel.Tokens.Jwt.JwtSecurityToken'
+  - lang: vb
+    values:
+    - value: Public Sub New (header As JwtHeader, payload As JwtPayload)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Initializes a new instance of the <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityToken"></xref> class where the <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtHeader"></xref> contains the crypto algorithms applied to the encoded <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtHeader"></xref> and <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtPayload"></xref>. The jwtEncodedString is the result of those operations.
+  metadata: {}
+- parameters:
+  - namesWithMoniker:
+    - value: header
+    description: Contains JSON objects representing the cryptographic operations applied to the JWT and optionally any additional properties of the JWT
+    type: <xref href="System.IdentityModel.Tokens.Jwt.JwtHeader?alt=System.IdentityModel.Tokens.Jwt.JwtHeader&text=JwtHeader" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: payload
+    description: Contains JSON objects representing the claims contained in the JWT. Each claim is a JSON object of the form { Name, Value }
+    type: <xref href="System.IdentityModel.Tokens.Jwt.JwtPayload?alt=System.IdentityModel.Tokens.Jwt.JwtPayload&text=JwtPayload" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: rawHeader
+    description: base64urlencoded JwtHeader
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: rawPayload
+    description: base64urlencoded JwtPayload
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: rawSignature
+    description: base64urlencoded JwtSignature
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: "'rawSignature' is null."
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: "'rawHeader' or 'rawPayload' is null or whitespace."
+    type: <xref href="System.ArgumentException" data-throw-if-not-resolved="True"/>
+  type: constructor
+  uid: System.IdentityModel.Tokens.Jwt.JwtSecurityToken.#ctor(System.IdentityModel.Tokens.Jwt.JwtHeader,System.IdentityModel.Tokens.Jwt.JwtPayload,System.String,System.String,System.String)
+  commentId: M:System.IdentityModel.Tokens.Jwt.JwtSecurityToken.#ctor(System.IdentityModel.Tokens.Jwt.JwtHeader,System.IdentityModel.Tokens.Jwt.JwtPayload,System.String,System.String,System.String)
+  name: JwtSecurityToken(JwtHeader, JwtPayload, String, String, String)
+  fullName: System.IdentityModel.Tokens.Jwt.JwtSecurityToken.JwtSecurityToken(JwtHeader, JwtPayload, String, String, String)
+  nameWithType: JwtSecurityToken.JwtSecurityToken(JwtHeader, JwtPayload, String, String, String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public JwtSecurityToken (System.IdentityModel.Tokens.Jwt.JwtHeader header, System.IdentityModel.Tokens.Jwt.JwtPayload payload, string rawHeader, string rawPayload, string rawSignature);
+  - lang: fsharp
+    values:
+    - value: 'new System.IdentityModel.Tokens.Jwt.JwtSecurityToken : System.IdentityModel.Tokens.Jwt.JwtHeader * System.IdentityModel.Tokens.Jwt.JwtPayload * string * string * string -> System.IdentityModel.Tokens.Jwt.JwtSecurityToken'
+  - lang: vb
+    values:
+    - value: Public Sub New (header As JwtHeader, payload As JwtPayload, rawHeader As String, rawPayload As String, rawSignature As String)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Initializes a new instance of the <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityToken"></xref> class where the <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtHeader"></xref> contains the crypto algorithms applied to the encoded <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtHeader"></xref> and <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtPayload"></xref>. The jwtEncodedString is the result of those operations.
+  metadata: {}
+- parameters:
+  - namesWithMoniker:
+    - value: issuer
+    description: If this value is not null, a { iss, 'issuer' } claim will be added, overwriting any 'iss' claim in 'claims' if present.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: audience
+    description: If this value is not null, a { aud, 'audience' } claim will be added, appending to any 'aud' claims in 'claims' if present.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: claims
+    description: If this value is not null then for each <xref data-throw-if-not-resolved="true" uid="System.Security.Claims.Claim"></xref> a { 'Claim.Type', 'Claim.Value' } is added. If duplicate claims are found then a { 'Claim.Type', List&lt;object&gt; } will be created to contain the duplicate values.
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.Security.Claims.Claim?alt=System.Security.Claims.Claim&text=Claim" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: notBefore
+    description: If notbefore.HasValue a { nbf, 'value' } claim is added, overwriting any 'nbf' claim in 'claims' if present.
+    type: <xref href="System.Nullable`1?alt=System.Nullable&text=Nullable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.DateTime?alt=System.DateTime&text=DateTime" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: expires
+    description: If expires.HasValue a { exp, 'value' } claim is added, overwriting any 'exp' claim in 'claims' if present.
+    type: <xref href="System.Nullable`1?alt=System.Nullable&text=Nullable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.DateTime?alt=System.DateTime&text=DateTime" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: signingCredentials
+    description: The <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityToken.SigningCredentials"></xref> that will be used to sign the <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityToken"></xref>. See <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtHeader.#ctor(Microsoft.IdentityModel.Tokens.SigningCredentials)"></xref> for details pertaining to the Header Parameter(s).
+    type: <xref href="Microsoft.IdentityModel.Tokens.SigningCredentials?alt=Microsoft.IdentityModel.Tokens.SigningCredentials&text=SigningCredentials" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: If 'expires' &lt;= 'notbefore'.
+    type: <xref href="System.ArgumentException" data-throw-if-not-resolved="True"/>
+  type: constructor
+  uid: System.IdentityModel.Tokens.Jwt.JwtSecurityToken.#ctor(System.String,System.String,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.Nullable{System.DateTime},System.Nullable{System.DateTime},Microsoft.IdentityModel.Tokens.SigningCredentials)
+  commentId: M:System.IdentityModel.Tokens.Jwt.JwtSecurityToken.#ctor(System.String,System.String,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.Nullable{System.DateTime},System.Nullable{System.DateTime},Microsoft.IdentityModel.Tokens.SigningCredentials)
+  name: JwtSecurityToken(String, String, IEnumerable<Claim>, Nullable<DateTime>, Nullable<DateTime>, SigningCredentials)
+  fullName: System.IdentityModel.Tokens.Jwt.JwtSecurityToken.JwtSecurityToken(String, String, IEnumerable<Claim>, Nullable<DateTime>, Nullable<DateTime>, SigningCredentials)
+  nameWithType: JwtSecurityToken.JwtSecurityToken(String, String, IEnumerable<Claim>, Nullable<DateTime>, Nullable<DateTime>, SigningCredentials)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public JwtSecurityToken (string issuer = default, string audience = default, System.Collections.Generic.IEnumerable<System.Security.Claims.Claim> claims = default, DateTime? notBefore = default, DateTime? expires = default, Microsoft.IdentityModel.Tokens.SigningCredentials signingCredentials = default);
+  - lang: fsharp
+    values:
+    - value: 'new System.IdentityModel.Tokens.Jwt.JwtSecurityToken : string * string * seq<System.Security.Claims.Claim> * Nullable<DateTime> * Nullable<DateTime> * Microsoft.IdentityModel.Tokens.SigningCredentials -> System.IdentityModel.Tokens.Jwt.JwtSecurityToken'
+  - lang: vb
+    values:
+    - value: Public Sub New (Optional issuer As String = Nothing, Optional audience As String = Nothing, Optional claims As IEnumerable(Of Claim) = Nothing, Optional notBefore As Nullable(Of DateTime) = Nothing, Optional expires As Nullable(Of DateTime) = Nothing, Optional signingCredentials As SigningCredentials = Nothing)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Initializes a new instance of the <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityToken"></xref> class specifying optional parameters.
+  metadata: {}
+- parameters:
+  - namesWithMoniker:
+    - value: header
+    description: Defines cryptographic operations applied to the 'innerToken'.
+    type: <xref href="System.IdentityModel.Tokens.Jwt.JwtHeader?alt=System.IdentityModel.Tokens.Jwt.JwtHeader&text=JwtHeader" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: innerToken
+    type: <xref href="System.IdentityModel.Tokens.Jwt.JwtSecurityToken?alt=System.IdentityModel.Tokens.Jwt.JwtSecurityToken&text=JwtSecurityToken" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: rawHeader
+    description: base64urlencoded JwtHeader
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: rawEncryptedKey
+    description: base64urlencoded key
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: rawInitializationVector
+    description: base64urlencoded initialization vector.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: rawCiphertext
+    description: base64urlencoded encrypted innerToken
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: rawAuthenticationTag
+    description: base64urlencoded authentication tag.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: "'rawAuthenticationTag' is null or empty."
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  type: constructor
+  uid: System.IdentityModel.Tokens.Jwt.JwtSecurityToken.#ctor(System.IdentityModel.Tokens.Jwt.JwtHeader,System.IdentityModel.Tokens.Jwt.JwtSecurityToken,System.String,System.String,System.String,System.String,System.String)
+  commentId: M:System.IdentityModel.Tokens.Jwt.JwtSecurityToken.#ctor(System.IdentityModel.Tokens.Jwt.JwtHeader,System.IdentityModel.Tokens.Jwt.JwtSecurityToken,System.String,System.String,System.String,System.String,System.String)
+  name: JwtSecurityToken(JwtHeader, JwtSecurityToken, String, String, String, String, String)
+  fullName: System.IdentityModel.Tokens.Jwt.JwtSecurityToken.JwtSecurityToken(JwtHeader, JwtSecurityToken, String, String, String, String, String)
+  nameWithType: JwtSecurityToken.JwtSecurityToken(JwtHeader, JwtSecurityToken, String, String, String, String, String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public JwtSecurityToken (System.IdentityModel.Tokens.Jwt.JwtHeader header, System.IdentityModel.Tokens.Jwt.JwtSecurityToken innerToken, string rawHeader, string rawEncryptedKey, string rawInitializationVector, string rawCiphertext, string rawAuthenticationTag);
+  - lang: fsharp
+    values:
+    - value: 'new System.IdentityModel.Tokens.Jwt.JwtSecurityToken : System.IdentityModel.Tokens.Jwt.JwtHeader * System.IdentityModel.Tokens.Jwt.JwtSecurityToken * string * string * string * string * string -> System.IdentityModel.Tokens.Jwt.JwtSecurityToken'
+  - lang: vb
+    values:
+    - value: Public Sub New (header As JwtHeader, innerToken As JwtSecurityToken, rawHeader As String, rawEncryptedKey As String, rawInitializationVector As String, rawCiphertext As String, rawAuthenticationTag As String)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Initializes an instance of <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityToken"></xref> where the <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtHeader"></xref> contains the crypto algorithms applied to the innerToken <xref data-throw-if-not-resolved="true" uid="System.IdentityModel.Tokens.Jwt.JwtSecurityToken"></xref>.
+  metadata: {}
+uid: System.IdentityModel.Tokens.Jwt.JwtSecurityToken.#ctor*
+commentId: Overload:System.IdentityModel.Tokens.Jwt.JwtSecurityToken.#ctor
+namespace: System.IdentityModel.Tokens.Jwt
+name: JwtSecurityToken
+fullName: System.IdentityModel.Tokens.Jwt.JwtSecurityToken.JwtSecurityToken
+nameWithType: JwtSecurityToken.JwtSecurityToken
+assembliesWithMoniker:
+- value: System.IdentityModel.Tokens.Jwt.dll
+packagesWithMoniker:
+- value: System.IdentityModel.Tokens.Jwt v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - System.IdentityModel.Tokens.Jwt.JwtSecurityToken..ctor
+  api_location:
+  - System.IdentityModel.Tokens.Jwt.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - System.IdentityModel.Tokens.Jwt.JwtSecurityToken.#ctor
+  - System::IdentityModel::Tokens::Jwt::JwtSecurityToken::#ctor
+  - '#ctor'
+  - JwtSecurityToken.#ctor
+  - JwtSecurityToken::#ctor
+  helpviewer_keywords:
+  - JwtSecurityToken class [.NET], constructors
+  - JwtSecurityToken(String) class [.NET], constructors
+  - JwtSecurityToken(JwtHeader, JwtPayload) class [.NET], constructors
+  - JwtSecurityToken(JwtHeader, JwtPayload, String, String, String) class [.NET], constructors
+  - JwtSecurityToken(String, String, IEnumerable<Claim>, Nullable<DateTime>, Nullable<DateTime>, SigningCredentials) class [.NET], constructors
+  - JwtSecurityToken(JwtHeader, JwtSecurityToken, String, String, String, String, String) class [.NET], constructors
+  monikers:
+  - msal-web-dotnet-latest

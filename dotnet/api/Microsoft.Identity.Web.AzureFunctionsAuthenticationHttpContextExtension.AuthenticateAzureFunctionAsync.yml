@@ -1,0 +1,73 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="System.ValueTuple`2?alt=System.ValueTuple&text=ValueTuple" data-throw-if-not-resolved="True"/>&lt;<xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>,<xref href="Microsoft.AspNetCore.Mvc.IActionResult?alt=Microsoft.AspNetCore.Mvc.IActionResult&text=IActionResult" data-throw-if-not-resolved="True"/>&gt;&gt;
+    description: A task indicating success or failure. In case of failure <xref data-throw-if-not-resolved="true" uid="Microsoft.AspNetCore.Mvc.UnauthorizedObjectResult"></xref>.
+  parameters:
+  - namesWithMoniker:
+    - value: httpContext
+    description: The current HTTP Context, such as req.HttpContext.
+    type: <xref href="Microsoft.AspNetCore.Http.HttpContext?alt=Microsoft.AspNetCore.Http.HttpContext&text=HttpContext" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Web.AzureFunctionsAuthenticationHttpContextExtension.AuthenticateAzureFunctionAsync(Microsoft.AspNetCore.Http.HttpContext)
+  commentId: M:Microsoft.Identity.Web.AzureFunctionsAuthenticationHttpContextExtension.AuthenticateAzureFunctionAsync(Microsoft.AspNetCore.Http.HttpContext)
+  name: AuthenticateAzureFunctionAsync(HttpContext)
+  fullName: Microsoft.Identity.Web.AzureFunctionsAuthenticationHttpContextExtension.AuthenticateAzureFunctionAsync(HttpContext)
+  nameWithType: AzureFunctionsAuthenticationHttpContextExtension.AuthenticateAzureFunctionAsync(HttpContext)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public static System.Threading.Tasks.Task<(bool, Microsoft.AspNetCore.Mvc.IActionResult?)> AuthenticateAzureFunctionAsync (this Microsoft.AspNetCore.Http.HttpContext httpContext);
+  - lang: fsharp
+    values:
+    - value: 'static member AuthenticateAzureFunctionAsync : Microsoft.AspNetCore.Http.HttpContext -> System.Threading.Tasks.Task<ValueTuple<bool, Microsoft.AspNetCore.Mvc.IActionResult>>'
+  - lang: vb
+    values:
+    - value: >-
+        <Extension()>
+
+        Public Function AuthenticateAzureFunctionAsync (httpContext As HttpContext) As Task(Of ValueTuple(Of Boolean, IActionResult))
+  monikers:
+  - msal-model-dotnet-latest
+  summary: Enables an Azure Function to act as/expose a protected web API, enabling bearer token authentication. Calling this method from your Azure function validates the token and exposes the identity of the user or app on behalf of which your function is called, in the HttpContext.User member, where your function can make use of it.
+  metadata: {}
+uid: Microsoft.Identity.Web.AzureFunctionsAuthenticationHttpContextExtension.AuthenticateAzureFunctionAsync*
+commentId: Overload:Microsoft.Identity.Web.AzureFunctionsAuthenticationHttpContextExtension.AuthenticateAzureFunctionAsync
+namespace: Microsoft.Identity.Web
+name: AuthenticateAzureFunctionAsync
+fullName: Microsoft.Identity.Web.AzureFunctionsAuthenticationHttpContextExtension.AuthenticateAzureFunctionAsync
+nameWithType: AzureFunctionsAuthenticationHttpContextExtension.AuthenticateAzureFunctionAsync
+assembliesWithMoniker:
+- value: Microsoft.Identity.Web.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Web v1.25.10
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-model-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Web.AzureFunctionsAuthenticationHttpContextExtension.AuthenticateAzureFunctionAsync
+  api_location:
+  - Microsoft.Identity.Web.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Web.AzureFunctionsAuthenticationHttpContextExtension.AuthenticateAzureFunctionAsync
+  - Microsoft::Identity::Web::AzureFunctionsAuthenticationHttpContextExtension::AuthenticateAzureFunctionAsync
+  - AuthenticateAzureFunctionAsync
+  - AzureFunctionsAuthenticationHttpContextExtension.AuthenticateAzureFunctionAsync
+  - AzureFunctionsAuthenticationHttpContextExtension::AuthenticateAzureFunctionAsync
+  helpviewer_keywords:
+  - AzureFunctionsAuthenticationHttpContextExtension.AuthenticateAzureFunctionAsync method [.NET]
+  - AuthenticateAzureFunctionAsync method [.NET], class AzureFunctionsAuthenticationHttpContextExtension
+  - AzureFunctionsAuthenticationHttpContextExtension.AuthenticateAzureFunctionAsync(HttpContext) extension method [.NET]
+  - AuthenticateAzureFunctionAsync(HttpContext) extension method [.NET], class AzureFunctionsAuthenticationHttpContextExtension
+  monikers:
+  - msal-model-dotnet-latest

@@ -1,0 +1,81 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Security.Cryptography.SymmetricAlgorithm?alt=System.Security.Cryptography.SymmetricAlgorithm&text=SymmetricAlgorithm" data-throw-if-not-resolved="True"/>
+  parameters:
+  - namesWithMoniker:
+    - value: key
+    type: <xref href="Microsoft.IdentityModel.Tokens.SecurityKey?alt=Microsoft.IdentityModel.Tokens.SecurityKey&text=SecurityKey" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: algorithm
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityKey"></xref> cannot be converted to byte array
+    type: <xref href="System.ArgumentException" data-throw-if-not-resolved="True"/>
+  - description: The keysize doesn't match the algorithm.
+    type: <xref href="System.ArgumentOutOfRangeException" data-throw-if-not-resolved="True"/>
+  - description: Failed to create symmetric algorithm with provided key and algorithm.
+    type: <xref href="System.InvalidOperationException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.SymmetricKeyWrapProvider.GetSymmetricAlgorithm(Microsoft.IdentityModel.Tokens.SecurityKey,System.String)
+  commentId: M:Microsoft.IdentityModel.Tokens.SymmetricKeyWrapProvider.GetSymmetricAlgorithm(Microsoft.IdentityModel.Tokens.SecurityKey,System.String)
+  name: GetSymmetricAlgorithm(SecurityKey, String)
+  fullName: Microsoft.IdentityModel.Tokens.SymmetricKeyWrapProvider.GetSymmetricAlgorithm(SecurityKey, String)
+  nameWithType: SymmetricKeyWrapProvider.GetSymmetricAlgorithm(SecurityKey, String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected virtual System.Security.Cryptography.SymmetricAlgorithm GetSymmetricAlgorithm (Microsoft.IdentityModel.Tokens.SecurityKey key, string algorithm);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member GetSymmetricAlgorithm : Microsoft.IdentityModel.Tokens.SecurityKey * string -> System.Security.Cryptography.SymmetricAlgorithm
+
+        override this.GetSymmetricAlgorithm : Microsoft.IdentityModel.Tokens.SecurityKey * string -> System.Security.Cryptography.SymmetricAlgorithm
+  - lang: vb
+    values:
+    - value: Protected Overridable Function GetSymmetricAlgorithm (key As SecurityKey, algorithm As String) As SymmetricAlgorithm
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Returns the <xref data-throw-if-not-resolved="true" uid="System.Security.Cryptography.SymmetricAlgorithm"></xref>.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.SymmetricKeyWrapProvider.GetSymmetricAlgorithm*
+commentId: Overload:Microsoft.IdentityModel.Tokens.SymmetricKeyWrapProvider.GetSymmetricAlgorithm
+namespace: Microsoft.IdentityModel.Tokens
+name: GetSymmetricAlgorithm
+fullName: Microsoft.IdentityModel.Tokens.SymmetricKeyWrapProvider.GetSymmetricAlgorithm
+nameWithType: SymmetricKeyWrapProvider.GetSymmetricAlgorithm
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.SymmetricKeyWrapProvider.GetSymmetricAlgorithm
+  api_location:
+  - Microsoft.IdentityModel.Tokens.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.SymmetricKeyWrapProvider.GetSymmetricAlgorithm
+  - Microsoft::IdentityModel::Tokens::SymmetricKeyWrapProvider::GetSymmetricAlgorithm
+  - GetSymmetricAlgorithm
+  - SymmetricKeyWrapProvider.GetSymmetricAlgorithm
+  - SymmetricKeyWrapProvider::GetSymmetricAlgorithm
+  helpviewer_keywords:
+  - SymmetricKeyWrapProvider.GetSymmetricAlgorithm method [.NET]
+  - GetSymmetricAlgorithm method [.NET], class SymmetricKeyWrapProvider
+  - SymmetricKeyWrapProvider.GetSymmetricAlgorithm(SecurityKey, String) method [.NET]
+  - GetSymmetricAlgorithm(SecurityKey, String) method [.NET], class SymmetricKeyWrapProvider
+  monikers:
+  - msal-web-dotnet-latest

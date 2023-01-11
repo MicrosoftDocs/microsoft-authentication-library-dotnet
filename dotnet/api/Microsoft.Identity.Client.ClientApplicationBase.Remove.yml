@@ -1,0 +1,83 @@
+### YamlMime:NetMember
+type: method
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: user
+    description: User to remove from the cache
+    type: <xref href="Microsoft.Identity.Client.IUser?alt=Microsoft.Identity.Client.IUser&text=IUser" data-throw-if-not-resolved="True"/>
+  implementsWithMoniker:
+  - value: <xref href="Microsoft.Identity.Client.IClientApplicationBase.Remove(Microsoft.Identity.Client.IUser)?alt=Microsoft.Identity.Client.IClientApplicationBase.Remove(Microsoft.Identity.Client.IUser)&text=Remove(IUser)" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.ClientApplicationBase.Remove(Microsoft.Identity.Client.IUser)
+  commentId: M:Microsoft.Identity.Client.ClientApplicationBase.Remove(Microsoft.Identity.Client.IUser)
+  name: Remove(IUser)
+  fullName: Microsoft.Identity.Client.ClientApplicationBase.Remove(IUser)
+  nameWithType: ClientApplicationBase.Remove(IUser)
+  attributesWithMoniker:
+  - value: System.ObsoleteAttribute
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: >-
+        [System.Obsolete("Use RemoveAccountAsync instead (See https://aka.ms/msal-net-2-released)", true)]
+
+        public void Remove (Microsoft.Identity.Client.IUser user);
+  - lang: fsharp
+    values:
+    - value: >-
+        [<System.Obsolete("Use RemoveAccountAsync instead (See https://aka.ms/msal-net-2-released)", true)>]
+
+        abstract member Remove : Microsoft.Identity.Client.IUser -> unit
+
+        override this.Remove : Microsoft.Identity.Client.IUser -> unit
+  - lang: vb
+    values:
+    - value: Public Sub Remove (user As IUser)
+  monikers:
+  - msal-dotnet-latest
+  obsoleteMessagesWithMoniker:
+  - value: Use RemoveAccountAsync instead (See https://aka.ms/msal-net-2-released)
+  summary: >-
+    In MSAL 1.x removed a user from the cache. From MSAL 2.x, use <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ClientApplicationBase.RemoveAsync(Microsoft.Identity.Client.IAccount)"></xref> instead.
+
+    See https://aka.ms/msal-net-2-released for more details.
+  metadata: {}
+uid: Microsoft.Identity.Client.ClientApplicationBase.Remove*
+commentId: Overload:Microsoft.Identity.Client.ClientApplicationBase.Remove
+namespace: Microsoft.Identity.Client
+name: Remove
+fullName: Microsoft.Identity.Client.ClientApplicationBase.Remove
+nameWithType: ClientApplicationBase.Remove
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.ClientApplicationBase.Remove
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.ClientApplicationBase.Remove
+  - Microsoft::Identity::Client::ClientApplicationBase::Remove
+  - Remove
+  - ClientApplicationBase.Remove
+  - ClientApplicationBase::Remove
+  helpviewer_keywords:
+  - ClientApplicationBase.Remove method [.NET]
+  - Remove method [.NET], class ClientApplicationBase
+  - ClientApplicationBase.Remove(IUser) method [.NET]
+  - Remove(IUser) method [.NET], class ClientApplicationBase
+  monikers:
+  - msal-dotnet-latest

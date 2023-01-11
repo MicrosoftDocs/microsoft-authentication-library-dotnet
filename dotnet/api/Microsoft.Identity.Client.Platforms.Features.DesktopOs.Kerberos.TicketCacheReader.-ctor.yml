@@ -1,0 +1,74 @@
+### YamlMime:NetMember
+type: constructor
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: spn
+    description: Service principal name of ticket to read out from Ticket Cache.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: logonId
+    description: >-
+      The Logon Id of the user owning the ticket cache.
+                  The default of 0 represents the currently logged on user.
+    type: <xref href="System.Int64?alt=System.Int64&text=Int64" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: package
+    description: The name of the LSA authentication package that will be interacted with.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: constructor
+  uid: Microsoft.Identity.Client.Platforms.Features.DesktopOs.Kerberos.TicketCacheReader.#ctor(System.String,System.Int64,System.String)
+  commentId: M:Microsoft.Identity.Client.Platforms.Features.DesktopOs.Kerberos.TicketCacheReader.#ctor(System.String,System.Int64,System.String)
+  name: TicketCacheReader(String, Int64, String)
+  fullName: Microsoft.Identity.Client.Platforms.Features.DesktopOs.Kerberos.TicketCacheReader.TicketCacheReader(String, Int64, String)
+  nameWithType: TicketCacheReader.TicketCacheReader(String, Int64, String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public TicketCacheReader (string spn, long logonId = 0, string package = "Kerberos");
+  - lang: fsharp
+    values:
+    - value: 'new Microsoft.Identity.Client.Platforms.Features.DesktopOs.Kerberos.TicketCacheReader : string * int64 * string -> Microsoft.Identity.Client.Platforms.Features.DesktopOs.Kerberos.TicketCacheReader'
+  - lang: vb
+    values:
+    - value: Public Sub New (spn As String, Optional logonId As Long = 0, Optional package As String = "Kerberos")
+  monikers:
+  - msal-dotnet-latest
+  summary: Creates a <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.Platforms.Features.DesktopOs.Kerberos.TicketCacheReader"></xref> object to read a Kerberos Ticket from Ticket Cache.
+  metadata: {}
+uid: Microsoft.Identity.Client.Platforms.Features.DesktopOs.Kerberos.TicketCacheReader.#ctor*
+commentId: Overload:Microsoft.Identity.Client.Platforms.Features.DesktopOs.Kerberos.TicketCacheReader.#ctor
+namespace: Microsoft.Identity.Client.Platforms.Features.DesktopOs.Kerberos
+name: TicketCacheReader
+fullName: Microsoft.Identity.Client.Platforms.Features.DesktopOs.Kerberos.TicketCacheReader.TicketCacheReader
+nameWithType: TicketCacheReader.TicketCacheReader
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.Platforms.Features.DesktopOs.Kerberos.TicketCacheReader..ctor
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.Platforms.Features.DesktopOs.Kerberos.TicketCacheReader.#ctor
+  - Microsoft::Identity::Client::Platforms::Features::DesktopOs::Kerberos::TicketCacheReader::#ctor
+  - '#ctor'
+  - TicketCacheReader.#ctor
+  - TicketCacheReader::#ctor
+  helpviewer_keywords:
+  - TicketCacheReader class [.NET], constructors
+  - TicketCacheReader(String, Int64, String) class [.NET], constructors
+  monikers:
+  - msal-dotnet-latest

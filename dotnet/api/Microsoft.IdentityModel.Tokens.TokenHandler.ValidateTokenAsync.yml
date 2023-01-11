@@ -1,0 +1,82 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.IdentityModel.Tokens.TokenValidationResult?alt=Microsoft.IdentityModel.Tokens.TokenValidationResult&text=TokenValidationResult" data-throw-if-not-resolved="True"/>&gt;
+    description: A <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.TokenValidationResult"></xref>
+  parameters:
+  - namesWithMoniker:
+    - value: token
+    description: The token to be validated.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: validationParameters
+    description: A <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.TokenValidationParameters"></xref> required for validation.
+    type: <xref href="Microsoft.IdentityModel.Tokens.TokenValidationParameters?alt=Microsoft.IdentityModel.Tokens.TokenValidationParameters&text=TokenValidationParameters" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.TokenHandler.ValidateTokenAsync(System.String,Microsoft.IdentityModel.Tokens.TokenValidationParameters)
+  commentId: M:Microsoft.IdentityModel.Tokens.TokenHandler.ValidateTokenAsync(System.String,Microsoft.IdentityModel.Tokens.TokenValidationParameters)
+  name: ValidateTokenAsync(String, TokenValidationParameters)
+  fullName: Microsoft.IdentityModel.Tokens.TokenHandler.ValidateTokenAsync(String, TokenValidationParameters)
+  nameWithType: TokenHandler.ValidateTokenAsync(String, TokenValidationParameters)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public virtual System.Threading.Tasks.Task<Microsoft.IdentityModel.Tokens.TokenValidationResult> ValidateTokenAsync (string token, Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member ValidateTokenAsync : string * Microsoft.IdentityModel.Tokens.TokenValidationParameters -> System.Threading.Tasks.Task<Microsoft.IdentityModel.Tokens.TokenValidationResult>
+
+        override this.ValidateTokenAsync : string * Microsoft.IdentityModel.Tokens.TokenValidationParameters -> System.Threading.Tasks.Task<Microsoft.IdentityModel.Tokens.TokenValidationResult>
+  - lang: vb
+    values:
+    - value: Public Overridable Function ValidateTokenAsync (token As String, validationParameters As TokenValidationParameters) As Task(Of TokenValidationResult)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: >-
+    Validates a token.
+
+    On a validation failure, no exception will be thrown; instead, the exception will be set in the returned TokenValidationResult.Exception property.
+
+    Callers should always check the TokenValidationResult.IsValid property to verify the validity of the result.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.TokenHandler.ValidateTokenAsync*
+commentId: Overload:Microsoft.IdentityModel.Tokens.TokenHandler.ValidateTokenAsync
+namespace: Microsoft.IdentityModel.Tokens
+name: ValidateTokenAsync
+fullName: Microsoft.IdentityModel.Tokens.TokenHandler.ValidateTokenAsync
+nameWithType: TokenHandler.ValidateTokenAsync
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.TokenHandler.ValidateTokenAsync
+  api_location:
+  - Microsoft.IdentityModel.Tokens.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.TokenHandler.ValidateTokenAsync
+  - Microsoft::IdentityModel::Tokens::TokenHandler::ValidateTokenAsync
+  - ValidateTokenAsync
+  - TokenHandler.ValidateTokenAsync
+  - TokenHandler::ValidateTokenAsync
+  helpviewer_keywords:
+  - TokenHandler.ValidateTokenAsync method [.NET]
+  - ValidateTokenAsync method [.NET], class TokenHandler
+  - TokenHandler.ValidateTokenAsync(String, TokenValidationParameters) method [.NET]
+  - ValidateTokenAsync(String, TokenValidationParameters) method [.NET], class TokenHandler
+  monikers:
+  - msal-web-dotnet-latest

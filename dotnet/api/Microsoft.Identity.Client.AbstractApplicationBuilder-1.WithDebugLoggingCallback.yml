@@ -1,0 +1,95 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: T
+    description: The builder to chain the .With methods
+  parameters:
+  - namesWithMoniker:
+    - value: logLevel
+    description: Desired level of logging.  The default is LogLevel.Info
+    type: <xref href="Microsoft.Identity.Client.LogLevel?alt=Microsoft.Identity.Client.LogLevel&text=LogLevel" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: enablePiiLogging
+    description: >-
+      Boolean used to enable/disable logging of
+                  Personally Identifiable Information (PII).
+                  PII logs are never written to default outputs like Console, Logcat or NSLog
+                  Default is set to <code data-dev-comment-type="c">false</code>, which ensures that your application is compliant with GDPR.
+                  You can set it to <code data-dev-comment-type="c">true</code> for advanced debugging requiring PII
+    type: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: withDefaultPlatformLoggingEnabled
+    description: >-
+      Flag to enable/disable logging to platform defaults.
+                  In Desktop/UWP, Event Tracing is used. In iOS, NSLog is used.
+                  In android, logcat is used. The default value is <code data-dev-comment-type="c">false</code>
+    type: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - type: <xref href="System.InvalidOperationException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithDebugLoggingCallback(Microsoft.Identity.Client.LogLevel,System.Boolean,System.Boolean)
+  commentId: M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithDebugLoggingCallback(Microsoft.Identity.Client.LogLevel,System.Boolean,System.Boolean)
+  name: WithDebugLoggingCallback(LogLevel, Boolean, Boolean)
+  fullName: Microsoft.Identity.Client.AbstractApplicationBuilder<T>.WithDebugLoggingCallback(LogLevel, Boolean, Boolean)
+  nameWithType: AbstractApplicationBuilder<T>.WithDebugLoggingCallback(LogLevel, Boolean, Boolean)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public T WithDebugLoggingCallback (Microsoft.Identity.Client.LogLevel logLevel = Microsoft.Identity.Client.LogLevel.Info, bool enablePiiLogging = false, bool withDefaultPlatformLoggingEnabled = false);
+  - lang: fsharp
+    values:
+    - value: "member this.WithDebugLoggingCallback : Microsoft.Identity.Client.LogLevel * bool * bool -> 'T"
+  - lang: vb
+    values:
+    - value: Public Function WithDebugLoggingCallback (Optional logLevel As LogLevel = Microsoft.Identity.Client.LogLevel.Info, Optional enablePiiLogging As Boolean = false, Optional withDefaultPlatformLoggingEnabled As Boolean = false) As T
+  monikers:
+  - msal-dotnet-latest
+  seeAlso: >+
+    - <xref:Microsoft.Identity.Client.AbstractApplicationBuilder%601.WithLogging(Microsoft.Identity.Client.LogCallback%2cSystem.Nullable%7bMicrosoft.Identity.Client.LogLevel%7d%2cSystem.Nullable%7bSystem.Boolean%7d%2cSystem.Nullable%7bSystem.Boolean%7d)>
+
+  summary: >-
+    Sets the Debug logging callback to a default debug method which displays
+
+    the level of the message and the message itself. For details see https://aka.ms/msal-net-logging
+  metadata: {}
+uid: Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithDebugLoggingCallback*
+commentId: Overload:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithDebugLoggingCallback
+namespace: Microsoft.Identity.Client
+name: WithDebugLoggingCallback
+fullName: Microsoft.Identity.Client.AbstractApplicationBuilder<T>.WithDebugLoggingCallback
+nameWithType: AbstractApplicationBuilder<T>.WithDebugLoggingCallback
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithDebugLoggingCallback
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithDebugLoggingCallback
+  - Microsoft::Identity::Client::AbstractApplicationBuilder`1::WithDebugLoggingCallback
+  - Microsoft.Identity.Client.AbstractApplicationBuilder.WithDebugLoggingCallback
+  - WithDebugLoggingCallback
+  - AbstractApplicationBuilder`1.WithDebugLoggingCallback
+  - AbstractApplicationBuilder`1::WithDebugLoggingCallback
+  helpviewer_keywords:
+  - AbstractApplicationBuilder<T>.WithDebugLoggingCallback method [.NET]
+  - WithDebugLoggingCallback method [.NET], class AbstractApplicationBuilder<T>
+  - AbstractApplicationBuilder<T>.WithDebugLoggingCallback(LogLevel, Boolean, Boolean) method [.NET]
+  - WithDebugLoggingCallback(LogLevel, Boolean, Boolean) method [.NET], class AbstractApplicationBuilder<T>
+  monikers:
+  - msal-dotnet-latest

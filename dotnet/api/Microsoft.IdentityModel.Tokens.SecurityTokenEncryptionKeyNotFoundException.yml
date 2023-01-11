@@ -1,0 +1,84 @@
+### YamlMime:NetType
+type: class
+inheritancesWithMoniker:
+- values:
+  - <xref href="System.Exception?alt=System.Exception&text=Exception" data-throw-if-not-resolved="True"/>
+  - <xref href="Microsoft.IdentityModel.Tokens.SecurityTokenException?alt=Microsoft.IdentityModel.Tokens.SecurityTokenException&text=SecurityTokenException" data-throw-if-not-resolved="True"/>
+  - <xref href="Microsoft.IdentityModel.Tokens.SecurityTokenDecryptionFailedException?alt=Microsoft.IdentityModel.Tokens.SecurityTokenDecryptionFailedException&text=SecurityTokenDecryptionFailedException" data-throw-if-not-resolved="True"/>
+constructors:
+- uid: Microsoft.IdentityModel.Tokens.SecurityTokenEncryptionKeyNotFoundException.#ctor
+  monikers:
+  - msal-web-dotnet-latest
+- uid: Microsoft.IdentityModel.Tokens.SecurityTokenEncryptionKeyNotFoundException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  monikers:
+  - msal-web-dotnet-latest
+- uid: Microsoft.IdentityModel.Tokens.SecurityTokenEncryptionKeyNotFoundException.#ctor(System.String,System.Exception)
+  monikers:
+  - msal-web-dotnet-latest
+- uid: Microsoft.IdentityModel.Tokens.SecurityTokenEncryptionKeyNotFoundException.#ctor(System.String)
+  monikers:
+  - msal-web-dotnet-latest
+methods:
+- uid: Microsoft.IdentityModel.Tokens.SecurityTokenException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  inheritedFrom: Microsoft.IdentityModel.Tokens.SecurityTokenException
+  monikers:
+  - msal-web-dotnet-latest
+uid: Microsoft.IdentityModel.Tokens.SecurityTokenEncryptionKeyNotFoundException
+commentId: T:Microsoft.IdentityModel.Tokens.SecurityTokenEncryptionKeyNotFoundException
+namespace: Microsoft.IdentityModel.Tokens
+name: SecurityTokenEncryptionKeyNotFoundException
+fullName: Microsoft.IdentityModel.Tokens.SecurityTokenEncryptionKeyNotFoundException
+nameWithType: Microsoft.IdentityModel.Tokens.SecurityTokenEncryptionKeyNotFoundException
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens v6.25.1
+attributesWithMoniker:
+- value: System.SerializableAttribute
+syntaxWithMoniker:
+- lang: csharp
+  values:
+  - value: >-
+      [System.Serializable]
+
+      public class SecurityTokenEncryptionKeyNotFoundException : Microsoft.IdentityModel.Tokens.SecurityTokenDecryptionFailedException
+- lang: fsharp
+  values:
+  - value: >-
+      [<System.Serializable>]
+
+      type SecurityTokenEncryptionKeyNotFoundException = class
+          inherit SecurityTokenDecryptionFailedException
+- lang: vb
+  values:
+  - value: >-
+      Public Class SecurityTokenEncryptionKeyNotFoundException
+
+      Inherits SecurityTokenDecryptionFailedException
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+summary: >-
+  This exception is thrown when a security token contained a key identifier but the key was not found by the runtime 
+
+  when decrypting a token.
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.SecurityTokenEncryptionKeyNotFoundException
+  api_location:
+  - Microsoft.IdentityModel.Tokens.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.SecurityTokenEncryptionKeyNotFoundException
+  - Microsoft::IdentityModel::Tokens::SecurityTokenEncryptionKeyNotFoundException
+  - SecurityTokenEncryptionKeyNotFoundException
+  helpviewer_keywords:
+  - Microsoft.IdentityModel.Tokens.SecurityTokenEncryptionKeyNotFoundException class [.NET]
+  monikers:
+  - msal-web-dotnet-latest

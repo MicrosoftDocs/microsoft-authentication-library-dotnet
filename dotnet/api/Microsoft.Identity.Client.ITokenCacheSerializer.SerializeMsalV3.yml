@@ -1,0 +1,73 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Byte?alt=System.Byte&text=Byte" data-throw-if-not-resolved="True"/>[]
+    description: Byte stream representation of the cache
+  type: method
+  uid: Microsoft.Identity.Client.ITokenCacheSerializer.SerializeMsalV3
+  commentId: M:Microsoft.Identity.Client.ITokenCacheSerializer.SerializeMsalV3
+  name: SerializeMsalV3()
+  fullName: Microsoft.Identity.Client.ITokenCacheSerializer.SerializeMsalV3()
+  nameWithType: ITokenCacheSerializer.SerializeMsalV3()
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public byte[] SerializeMsalV3 ();
+  - lang: fsharp
+    values:
+    - value: 'abstract member SerializeMsalV3 : unit -> byte[]'
+  - lang: vb
+    values:
+    - value: Public Function SerializeMsalV3 () As Byte()
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    Serializes the token cache to the MSAL.NET 3.x cache format, which is compatible with other MSAL desktop libraries, including MSAL.NET 4.x, MSAL for Python and MSAL for Java.
+
+    If you need to maintain SSO between an application using ADAL 3.x and this application using MSAL 3.x or later,
+
+    you might also want to serialize and deserialize with <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITokenCacheSerializer.SerializeAdalV3"></xref>/<xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITokenCacheSerializer.DeserializeAdalV3(System.Byte[])"></xref>,
+
+    otherwise just use <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITokenCacheSerializer.SerializeMsalV3"></xref>/<xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITokenCacheSerializer.DeserializeMsalV3(System.Byte[],System.Boolean)"></xref>.
+  remarks: <p>This is the recommended format for maintaining SSO state between applications. <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITokenCacheSerializer.SerializeMsalV3"></xref>/<xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITokenCacheSerializer.DeserializeMsalV3(System.Byte[],System.Boolean)"></xref> is compatible with other MSAL libraries such as MSAL for Python and MSAL for Java.</p>
+  metadata: {}
+uid: Microsoft.Identity.Client.ITokenCacheSerializer.SerializeMsalV3*
+commentId: Overload:Microsoft.Identity.Client.ITokenCacheSerializer.SerializeMsalV3
+namespace: Microsoft.Identity.Client
+name: SerializeMsalV3
+fullName: Microsoft.Identity.Client.ITokenCacheSerializer.SerializeMsalV3
+nameWithType: ITokenCacheSerializer.SerializeMsalV3
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.ITokenCacheSerializer.SerializeMsalV3
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.ITokenCacheSerializer.SerializeMsalV3
+  - Microsoft::Identity::Client::ITokenCacheSerializer::SerializeMsalV3
+  - SerializeMsalV3
+  - ITokenCacheSerializer.SerializeMsalV3
+  - ITokenCacheSerializer::SerializeMsalV3
+  helpviewer_keywords:
+  - ITokenCacheSerializer.SerializeMsalV3 method [.NET]
+  - SerializeMsalV3 method [.NET], interface ITokenCacheSerializer
+  - ITokenCacheSerializer.SerializeMsalV3() method [.NET]
+  - SerializeMsalV3() method [.NET], interface ITokenCacheSerializer
+  monikers:
+  - msal-dotnet-latest

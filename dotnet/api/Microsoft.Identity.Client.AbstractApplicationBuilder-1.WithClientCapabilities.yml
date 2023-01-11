@@ -1,0 +1,73 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: T
+  parameters:
+  - namesWithMoniker:
+    - value: clientCapabilities
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  type: method
+  uid: Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithClientCapabilities(System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithClientCapabilities(System.Collections.Generic.IEnumerable{System.String})
+  name: WithClientCapabilities(IEnumerable<String>)
+  fullName: Microsoft.Identity.Client.AbstractApplicationBuilder<T>.WithClientCapabilities(IEnumerable<String>)
+  nameWithType: AbstractApplicationBuilder<T>.WithClientCapabilities(IEnumerable<String>)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public T WithClientCapabilities (System.Collections.Generic.IEnumerable<string> clientCapabilities);
+  - lang: fsharp
+    values:
+    - value: "member this.WithClientCapabilities : seq<string> -> 'T"
+  - lang: vb
+    values:
+    - value: Public Function WithClientCapabilities (clientCapabilities As IEnumerable(Of String)) As T
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    Microsoft Identity specific OIDC extension that allows resource challenges to be resolved without interaction. 
+
+    Allows configuration of one or more client capabilities, e.g. "llt"
+  remarks: <p>MSAL will transform these into special claims request. See https://openid.net/specs/openid-connect-core-1_0-final.html#ClaimsParameter for details on claim requests. For more details see https://aka.ms/msal-net-claims-request</p>
+  metadata: {}
+uid: Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithClientCapabilities*
+commentId: Overload:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithClientCapabilities
+namespace: Microsoft.Identity.Client
+name: WithClientCapabilities
+fullName: Microsoft.Identity.Client.AbstractApplicationBuilder<T>.WithClientCapabilities
+nameWithType: AbstractApplicationBuilder<T>.WithClientCapabilities
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithClientCapabilities
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithClientCapabilities
+  - Microsoft::Identity::Client::AbstractApplicationBuilder`1::WithClientCapabilities
+  - Microsoft.Identity.Client.AbstractApplicationBuilder.WithClientCapabilities
+  - WithClientCapabilities
+  - AbstractApplicationBuilder`1.WithClientCapabilities
+  - AbstractApplicationBuilder`1::WithClientCapabilities
+  helpviewer_keywords:
+  - AbstractApplicationBuilder<T>.WithClientCapabilities method [.NET]
+  - WithClientCapabilities method [.NET], class AbstractApplicationBuilder<T>
+  - AbstractApplicationBuilder<T>.WithClientCapabilities(IEnumerable<String>) method [.NET]
+  - WithClientCapabilities(IEnumerable<String>) method [.NET], class AbstractApplicationBuilder<T>
+  monikers:
+  - msal-dotnet-latest

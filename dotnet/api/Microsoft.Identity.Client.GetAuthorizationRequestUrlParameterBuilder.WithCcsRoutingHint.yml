@@ -1,0 +1,79 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.Identity.Client.GetAuthorizationRequestUrlParameterBuilder?alt=Microsoft.Identity.Client.GetAuthorizationRequestUrlParameterBuilder&text=GetAuthorizationRequestUrlParameterBuilder" data-throw-if-not-resolved="True"/>
+    description: The builder to chain the .With methods
+  parameters:
+  - namesWithMoniker:
+    - value: userObjectIdentifier
+    description: GUID which is unique to the user, parsed from the client_info.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: tenantIdentifier
+    description: GUID format of the tenant ID, parsed from the client_info.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.GetAuthorizationRequestUrlParameterBuilder.WithCcsRoutingHint(System.String,System.String)
+  commentId: M:Microsoft.Identity.Client.GetAuthorizationRequestUrlParameterBuilder.WithCcsRoutingHint(System.String,System.String)
+  name: WithCcsRoutingHint(String, String)
+  fullName: Microsoft.Identity.Client.GetAuthorizationRequestUrlParameterBuilder.WithCcsRoutingHint(String, String)
+  nameWithType: GetAuthorizationRequestUrlParameterBuilder.WithCcsRoutingHint(String, String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public Microsoft.Identity.Client.GetAuthorizationRequestUrlParameterBuilder WithCcsRoutingHint (string userObjectIdentifier, string tenantIdentifier);
+  - lang: fsharp
+    values:
+    - value: 'member this.WithCcsRoutingHint : string * string -> Microsoft.Identity.Client.GetAuthorizationRequestUrlParameterBuilder'
+  - lang: vb
+    values:
+    - value: Public Function WithCcsRoutingHint (userObjectIdentifier As String, tenantIdentifier As String) As GetAuthorizationRequestUrlParameterBuilder
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    To help with resiliency, the AAD backup authentication system operates as an AAD backup.
+
+    This will provide the AAD backup authentication system with a routing hint to help improve performance during authentication.
+
+    The hint created with this api will take precedence over the one created with <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.GetAuthorizationRequestUrlParameterBuilder.WithLoginHint(System.String)"></xref>
+  metadata: {}
+uid: Microsoft.Identity.Client.GetAuthorizationRequestUrlParameterBuilder.WithCcsRoutingHint*
+commentId: Overload:Microsoft.Identity.Client.GetAuthorizationRequestUrlParameterBuilder.WithCcsRoutingHint
+namespace: Microsoft.Identity.Client
+name: WithCcsRoutingHint
+fullName: Microsoft.Identity.Client.GetAuthorizationRequestUrlParameterBuilder.WithCcsRoutingHint
+nameWithType: GetAuthorizationRequestUrlParameterBuilder.WithCcsRoutingHint
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.GetAuthorizationRequestUrlParameterBuilder.WithCcsRoutingHint
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.GetAuthorizationRequestUrlParameterBuilder.WithCcsRoutingHint
+  - Microsoft::Identity::Client::GetAuthorizationRequestUrlParameterBuilder::WithCcsRoutingHint
+  - WithCcsRoutingHint
+  - GetAuthorizationRequestUrlParameterBuilder.WithCcsRoutingHint
+  - GetAuthorizationRequestUrlParameterBuilder::WithCcsRoutingHint
+  helpviewer_keywords:
+  - GetAuthorizationRequestUrlParameterBuilder.WithCcsRoutingHint method [.NET]
+  - WithCcsRoutingHint method [.NET], class GetAuthorizationRequestUrlParameterBuilder
+  - GetAuthorizationRequestUrlParameterBuilder.WithCcsRoutingHint(String, String) method [.NET]
+  - WithCcsRoutingHint(String, String) method [.NET], class GetAuthorizationRequestUrlParameterBuilder
+  monikers:
+  - msal-dotnet-latest

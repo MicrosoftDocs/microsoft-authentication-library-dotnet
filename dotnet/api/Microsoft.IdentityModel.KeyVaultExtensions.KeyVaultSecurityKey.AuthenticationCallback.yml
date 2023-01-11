@@ -1,0 +1,68 @@
+### YamlMime:NetDelegate
+returnsWithMoniker:
+  type:
+  - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  description: An access token for Azure Key Vault.
+parameters:
+- namesWithMoniker:
+  - value: authority
+  description: Identifier of the authority, a URL.
+  type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+- namesWithMoniker:
+  - value: resource
+  description: Identifier of the target resource that is the recipient of the requested token, a URL.
+  type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+- namesWithMoniker:
+  - value: scope
+  description: The scope of the authentication request.
+  type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+inheritances:
+- <xref href="System.Delegate" data-throw-if-not-resolved="True"/>
+uid: Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey.AuthenticationCallback
+commentId: T:Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey.AuthenticationCallback
+namespace: Microsoft.IdentityModel.KeyVaultExtensions
+name: KeyVaultSecurityKey.AuthenticationCallback
+fullName: Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey.AuthenticationCallback
+nameWithType: Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey.AuthenticationCallback
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.KeyVaultExtensions.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.KeyVaultExtensions v6.25.1
+syntaxWithMoniker:
+- lang: csharp
+  values:
+  - value: public delegate System.Threading.Tasks.Task<string> KeyVaultSecurityKey.AuthenticationCallback(string authority, string resource, string scope);
+- lang: fsharp
+  values:
+  - value: type KeyVaultSecurityKey.AuthenticationCallback = delegate of string * string * string -> Task<string>
+- lang: vb
+  values:
+  - value: 'Public Delegate Function KeyVaultSecurityKey.AuthenticationCallback(authority As String, resource As String, scope As String) As Task(Of String) '
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+summary: The authentication callback delegate which is to be implemented by the client code.
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey.AuthenticationCallback
+  - Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey.AuthenticationCallback..ctor
+  - Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey.AuthenticationCallback.Invoke
+  - Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey.AuthenticationCallback.BeginInvoke
+  - Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey.AuthenticationCallback.EndInvoke
+  api_location:
+  - Microsoft.IdentityModel.KeyVaultExtensions.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey.AuthenticationCallback
+  - Microsoft::IdentityModel::KeyVaultExtensions::KeyVaultSecurityKey::AuthenticationCallback
+  - AuthenticationCallback
+  helpviewer_keywords:
+  - Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey.AuthenticationCallback delegate [.NET]
+  monikers:
+  - msal-web-dotnet-latest

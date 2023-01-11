@@ -1,0 +1,79 @@
+### YamlMime:NetMember
+type: property
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Web.CertificateDescription?alt=Microsoft.Identity.Web.CertificateDescription&text=CertificateDescription" data-throw-if-not-resolved="True"/>&gt;
+  type: property
+  uid: Microsoft.Identity.Web.MicrosoftIdentityOptions.ClientCertificates
+  commentId: P:Microsoft.Identity.Web.MicrosoftIdentityOptions.ClientCertificates
+  name: ClientCertificates
+  fullName: Microsoft.Identity.Web.MicrosoftIdentityOptions.ClientCertificates
+  nameWithType: MicrosoftIdentityOptions.ClientCertificates
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public System.Collections.Generic.IEnumerable<Microsoft.Identity.Web.CertificateDescription>? ClientCertificates { get; set; }
+  - lang: fsharp
+    values:
+    - value: 'member this.ClientCertificates : seq<Microsoft.Identity.Web.CertificateDescription> with get, set'
+  - lang: vb
+    values:
+    - value: Public Property ClientCertificates As IEnumerable(Of CertificateDescription)
+  monikers:
+  - msal-model-dotnet-latest
+  summary: Description of the certificates used to prove the identity of the web app or web API.
+  examples: >-
+    An example in the appsetting.json:
+
+
+    ```
+
+    "ClientCertificates": [
+      {
+        "SourceType": "StoreWithDistinguishedName",
+         "CertificateStorePath": "CurrentUser/My",
+         "CertificateDistinguishedName": "CN=WebAppCallingWebApiCert"
+        }
+       ]
+    ```
+                 See also https://aka.ms/ms-id-web-certificates.
+  metadata: {}
+uid: Microsoft.Identity.Web.MicrosoftIdentityOptions.ClientCertificates*
+commentId: Overload:Microsoft.Identity.Web.MicrosoftIdentityOptions.ClientCertificates
+namespace: Microsoft.Identity.Web
+name: ClientCertificates
+fullName: Microsoft.Identity.Web.MicrosoftIdentityOptions.ClientCertificates
+nameWithType: MicrosoftIdentityOptions.ClientCertificates
+assembliesWithMoniker:
+- value: Microsoft.Identity.Web.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Web v1.25.10
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-model-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Web.MicrosoftIdentityOptions.ClientCertificates
+  - Microsoft.Identity.Web.MicrosoftIdentityOptions.get_ClientCertificates
+  - Microsoft.Identity.Web.MicrosoftIdentityOptions.set_ClientCertificates
+  api_location:
+  - Microsoft.Identity.Web.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Web.MicrosoftIdentityOptions.ClientCertificates
+  - Microsoft::Identity::Web::MicrosoftIdentityOptions::ClientCertificates
+  - ClientCertificates
+  - MicrosoftIdentityOptions.ClientCertificates
+  - MicrosoftIdentityOptions::ClientCertificates
+  helpviewer_keywords:
+  - MicrosoftIdentityOptions.ClientCertificates property [.NET]
+  - ClientCertificates property [.NET], class MicrosoftIdentityOptions
+  monikers:
+  - msal-model-dotnet-latest

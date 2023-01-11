@@ -1,0 +1,76 @@
+### YamlMime:NetMember
+type: method
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: writer
+    description: A <xref data-throw-if-not-resolved="true" uid="System.Xml.XmlWriter"></xref> to serialize the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2Conditions"></xref>.
+    type: <xref href="System.Xml.XmlWriter?alt=System.Xml.XmlWriter&text=XmlWriter" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: conditions
+    description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2Conditions"></xref> to serialize.
+    type: <xref href="Microsoft.IdentityModel.Tokens.Saml2.Saml2Conditions?alt=Microsoft.IdentityModel.Tokens.Saml2.Saml2Conditions&text=Saml2Conditions" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: if <code data-dev-comment-type="paramref">conditions</code> is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteConditions(System.Xml.XmlWriter,Microsoft.IdentityModel.Tokens.Saml2.Saml2Conditions)
+  commentId: M:Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteConditions(System.Xml.XmlWriter,Microsoft.IdentityModel.Tokens.Saml2.Saml2Conditions)
+  name: WriteConditions(XmlWriter, Saml2Conditions)
+  fullName: Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteConditions(XmlWriter, Saml2Conditions)
+  nameWithType: Saml2Serializer.WriteConditions(XmlWriter, Saml2Conditions)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected virtual void WriteConditions (System.Xml.XmlWriter writer, Microsoft.IdentityModel.Tokens.Saml2.Saml2Conditions conditions);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member WriteConditions : System.Xml.XmlWriter * Microsoft.IdentityModel.Tokens.Saml2.Saml2Conditions -> unit
+
+        override this.WriteConditions : System.Xml.XmlWriter * Microsoft.IdentityModel.Tokens.Saml2.Saml2Conditions -> unit
+  - lang: vb
+    values:
+    - value: Protected Overridable Sub WriteConditions (writer As XmlWriter, conditions As Saml2Conditions)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Writes the &lt;saml:Conditions&gt; element.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteConditions*
+commentId: Overload:Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteConditions
+namespace: Microsoft.IdentityModel.Tokens.Saml2
+name: WriteConditions
+fullName: Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteConditions
+nameWithType: Saml2Serializer.WriteConditions
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteConditions
+  api_location:
+  - Microsoft.IdentityModel.Tokens.Saml.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.WriteConditions
+  - Microsoft::IdentityModel::Tokens::Saml2::Saml2Serializer::WriteConditions
+  - WriteConditions
+  - Saml2Serializer.WriteConditions
+  - Saml2Serializer::WriteConditions
+  helpviewer_keywords:
+  - Saml2Serializer.WriteConditions method [.NET]
+  - WriteConditions method [.NET], class Saml2Serializer
+  - Saml2Serializer.WriteConditions(XmlWriter, Saml2Conditions) method [.NET]
+  - WriteConditions(XmlWriter, Saml2Conditions) method [.NET], class Saml2Serializer
+  monikers:
+  - msal-web-dotnet-latest

@@ -1,0 +1,127 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.IdentityModel.Validators.AadIssuerValidator?alt=Microsoft.IdentityModel.Validators.AadIssuerValidator&text=AadIssuerValidator" data-throw-if-not-resolved="True"/>
+    description: A <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Validators.AadIssuerValidator"></xref> for the aadAuthority.
+  parameters:
+  - namesWithMoniker:
+    - value: aadAuthority
+    description: The authority to create the validator for, e.g. https://login.microsoftonline.com/.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: if <code data-dev-comment-type="paramref">aadAuthority</code> is null or empty.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Validators.AadIssuerValidator.GetAadIssuerValidator(System.String)
+  commentId: M:Microsoft.IdentityModel.Validators.AadIssuerValidator.GetAadIssuerValidator(System.String)
+  name: GetAadIssuerValidator(String)
+  fullName: Microsoft.IdentityModel.Validators.AadIssuerValidator.GetAadIssuerValidator(String)
+  nameWithType: AadIssuerValidator.GetAadIssuerValidator(String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public static Microsoft.IdentityModel.Validators.AadIssuerValidator GetAadIssuerValidator (string aadAuthority);
+  - lang: fsharp
+    values:
+    - value: 'static member GetAadIssuerValidator : string -> Microsoft.IdentityModel.Validators.AadIssuerValidator'
+  - lang: vb
+    values:
+    - value: Public Shared Function GetAadIssuerValidator (aadAuthority As String) As AadIssuerValidator
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Gets an <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Validators.AadIssuerValidator"></xref> for an Azure Active Directory (AAD) authority.
+  examples: >-
+    ```
+
+    AadIssuerValidator aadIssuerValidator = AadIssuerValidator.GetAadIssuerValidator(authority);
+
+    TokenValidationParameters.IssuerValidator = aadIssuerValidator.Validate;
+
+    ```
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.IdentityModel.Validators.AadIssuerValidator?alt=Microsoft.IdentityModel.Validators.AadIssuerValidator&text=AadIssuerValidator" data-throw-if-not-resolved="True"/>
+    description: A <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Validators.AadIssuerValidator"></xref> for the aadAuthority.
+  parameters:
+  - namesWithMoniker:
+    - value: aadAuthority
+    description: The authority to create the validator for, e.g. https://login.microsoftonline.com/.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: httpClient
+    description: Optional HttpClient to use to retrieve the endpoint metadata (can be null).
+    type: <xref href="System.Net.Http.HttpClient?alt=System.Net.Http.HttpClient&text=HttpClient" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: if <code data-dev-comment-type="paramref">aadAuthority</code> is null or empty.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Validators.AadIssuerValidator.GetAadIssuerValidator(System.String,System.Net.Http.HttpClient)
+  commentId: M:Microsoft.IdentityModel.Validators.AadIssuerValidator.GetAadIssuerValidator(System.String,System.Net.Http.HttpClient)
+  name: GetAadIssuerValidator(String, HttpClient)
+  fullName: Microsoft.IdentityModel.Validators.AadIssuerValidator.GetAadIssuerValidator(String, HttpClient)
+  nameWithType: AadIssuerValidator.GetAadIssuerValidator(String, HttpClient)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public static Microsoft.IdentityModel.Validators.AadIssuerValidator GetAadIssuerValidator (string aadAuthority, System.Net.Http.HttpClient httpClient);
+  - lang: fsharp
+    values:
+    - value: 'static member GetAadIssuerValidator : string * System.Net.Http.HttpClient -> Microsoft.IdentityModel.Validators.AadIssuerValidator'
+  - lang: vb
+    values:
+    - value: Public Shared Function GetAadIssuerValidator (aadAuthority As String, httpClient As HttpClient) As AadIssuerValidator
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Gets an <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Validators.AadIssuerValidator"></xref> for an Azure Active Directory (AAD) authority.
+  examples: >-
+    ```
+
+    AadIssuerValidator aadIssuerValidator = AadIssuerValidator.GetAadIssuerValidator(authority, httpClient);
+
+    TokenValidationParameters.IssuerValidator = aadIssuerValidator.Validate;
+
+    ```
+  metadata: {}
+uid: Microsoft.IdentityModel.Validators.AadIssuerValidator.GetAadIssuerValidator*
+commentId: Overload:Microsoft.IdentityModel.Validators.AadIssuerValidator.GetAadIssuerValidator
+namespace: Microsoft.IdentityModel.Validators
+name: GetAadIssuerValidator
+fullName: Microsoft.IdentityModel.Validators.AadIssuerValidator.GetAadIssuerValidator
+nameWithType: AadIssuerValidator.GetAadIssuerValidator
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Validators.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Validators v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Validators.AadIssuerValidator.GetAadIssuerValidator
+  api_location:
+  - Microsoft.IdentityModel.Validators.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Validators.AadIssuerValidator.GetAadIssuerValidator
+  - Microsoft::IdentityModel::Validators::AadIssuerValidator::GetAadIssuerValidator
+  - GetAadIssuerValidator
+  - AadIssuerValidator.GetAadIssuerValidator
+  - AadIssuerValidator::GetAadIssuerValidator
+  helpviewer_keywords:
+  - AadIssuerValidator.GetAadIssuerValidator method [.NET]
+  - GetAadIssuerValidator method [.NET], class AadIssuerValidator
+  - AadIssuerValidator.GetAadIssuerValidator(String) method [.NET]
+  - GetAadIssuerValidator(String) method [.NET], class AadIssuerValidator
+  - AadIssuerValidator.GetAadIssuerValidator(String, HttpClient) method [.NET]
+  - GetAadIssuerValidator(String, HttpClient) method [.NET], class AadIssuerValidator
+  monikers:
+  - msal-web-dotnet-latest

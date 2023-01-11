@@ -1,0 +1,96 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Client.AuthenticationResult?alt=Microsoft.Identity.Client.AuthenticationResult&text=AuthenticationResult" data-throw-if-not-resolved="True"/>&gt;
+  parameters:
+  - namesWithMoniker:
+    - value: scopes
+    description: >-
+      Scope to request from the token endpoint.
+                  Setting this to null or empty will request an access token, refresh token and ID token with default scopes
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: refreshToken
+    description: The refresh token (for example previously obtained from ADAL 2.x)
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  implementsWithMoniker:
+  - value: <xref href="Microsoft.Identity.Client.IByRefreshToken.AcquireTokenByRefreshTokenAsync(System.Collections.Generic.IEnumerable{System.String},System.String)?alt=Microsoft.Identity.Client.IByRefreshToken.AcquireTokenByRefreshTokenAsync(System.Collections.Generic.IEnumerable{System.String},System.String)&text=AcquireTokenByRefreshTokenAsync(IEnumerable%3CString%3E%2C+String)" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.PublicClientApplication.Microsoft#Identity#Client#IByRefreshToken#AcquireTokenByRefreshTokenAsync(System.Collections.Generic.IEnumerable{System.String},System.String)
+  commentId: M:Microsoft.Identity.Client.PublicClientApplication.Microsoft#Identity#Client#IByRefreshToken#AcquireTokenByRefreshTokenAsync(System.Collections.Generic.IEnumerable{System.String},System.String)
+  name: IByRefreshToken.AcquireTokenByRefreshTokenAsync(IEnumerable<String>, String)
+  fullName: Microsoft.Identity.Client.PublicClientApplication.Microsoft.Identity.Client.IByRefreshToken.AcquireTokenByRefreshTokenAsync(IEnumerable<String>, String)
+  nameWithType: PublicClientApplication.IByRefreshToken.AcquireTokenByRefreshTokenAsync(IEnumerable<String>, String)
+  attributesWithMoniker:
+  - value: System.ObsoleteAttribute
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: >-
+        [System.Obsolete("Use AcquireTokenByRefreshToken instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)]
+
+        System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult> IByRefreshToken.AcquireTokenByRefreshTokenAsync (System.Collections.Generic.IEnumerable<string> scopes, string refreshToken);
+  - lang: fsharp
+    values:
+    - value: >-
+        [<System.Obsolete("Use AcquireTokenByRefreshToken instead. See https://aka.ms/msal-net-3-breaking-changes. ", true)>]
+
+        abstract member Microsoft.Identity.Client.IByRefreshToken.AcquireTokenByRefreshTokenAsync : seq<string> * string -> System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult>
+
+        override this.Microsoft.Identity.Client.IByRefreshToken.AcquireTokenByRefreshTokenAsync : seq<string> * string -> System.Threading.Tasks.Task<Microsoft.Identity.Client.AuthenticationResult>
+  - lang: vb
+    values:
+    - value: Function AcquireTokenByRefreshTokenAsync (scopes As IEnumerable(Of String), refreshToken As String) As Task(Of AuthenticationResult) Implements IByRefreshToken.AcquireTokenByRefreshTokenAsync
+  monikers:
+  - msal-dotnet-latest
+  obsoleteMessagesWithMoniker:
+  - value: 'Use AcquireTokenByRefreshToken instead. See https://aka.ms/msal-net-3-breaking-changes. '
+  summary: >-
+    Acquires an access token from an existing refresh token and stores it and the refresh token into
+
+    the application user token cache, where it will be available for further AcquireTokenSilentAsync calls.
+
+    This method can be used in migration to MSAL from ADAL v2 and in various integration
+
+    scenarios where you have a RefreshToken available.
+
+    (see https://aka.ms/msal-net-migration-adal2-msal2)
+  metadata: {}
+uid: Microsoft.Identity.Client.PublicClientApplication.Microsoft#Identity#Client#IByRefreshToken#AcquireTokenByRefreshTokenAsync*
+commentId: Overload:Microsoft.Identity.Client.PublicClientApplication.Microsoft#Identity#Client#IByRefreshToken#AcquireTokenByRefreshTokenAsync
+namespace: Microsoft.Identity.Client
+name: IByRefreshToken.AcquireTokenByRefreshTokenAsync
+fullName: Microsoft.Identity.Client.PublicClientApplication.Microsoft.Identity.Client.IByRefreshToken.AcquireTokenByRefreshTokenAsync
+nameWithType: PublicClientApplication.IByRefreshToken.AcquireTokenByRefreshTokenAsync
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.PublicClientApplication.Microsoft.Identity.Client.IByRefreshToken.AcquireTokenByRefreshTokenAsync
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.PublicClientApplication.Microsoft#Identity#Client#IByRefreshToken#AcquireTokenByRefreshTokenAsync
+  - Microsoft::Identity::Client::PublicClientApplication::Microsoft#Identity#Client#IByRefreshToken#AcquireTokenByRefreshTokenAsync
+  - Microsoft#Identity#Client#IByRefreshToken#AcquireTokenByRefreshTokenAsync
+  - PublicClientApplication.Microsoft#Identity#Client#IByRefreshToken#AcquireTokenByRefreshTokenAsync
+  - PublicClientApplication::Microsoft#Identity#Client#IByRefreshToken#AcquireTokenByRefreshTokenAsync
+  helpviewer_keywords:
+  - IByRefreshToken.AcquireTokenByRefreshTokenAsync explicitly implemented method [.NET]
+  - IByRefreshToken.AcquireTokenByRefreshTokenAsync(IEnumerable<String>, String) explicitly implemented method [.NET]
+  monikers:
+  - msal-dotnet-latest

@@ -1,0 +1,134 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: T
+  parameters:
+  - namesWithMoniker:
+    - value: instanceDiscoveryJson
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithInstanceDicoveryMetadata(System.String)
+  commentId: M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithInstanceDicoveryMetadata(System.String)
+  name: WithInstanceDicoveryMetadata(String)
+  fullName: Microsoft.Identity.Client.AbstractApplicationBuilder<T>.WithInstanceDicoveryMetadata(String)
+  nameWithType: AbstractApplicationBuilder<T>.WithInstanceDicoveryMetadata(String)
+  attributesWithMoniker:
+  - value: System.ObsoleteAttribute
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: >-
+        [System.Obsolete("This method name has a typo, please use WithInstanceDiscoveryMetadata instead", false)]
+
+        public T WithInstanceDicoveryMetadata (string instanceDiscoveryJson);
+  - lang: fsharp
+    values:
+    - value: >-
+        [<System.Obsolete("This method name has a typo, please use WithInstanceDiscoveryMetadata instead", false)>]
+
+        member this.WithInstanceDicoveryMetadata : string -> 'T
+  - lang: vb
+    values:
+    - value: Public Function WithInstanceDicoveryMetadata (instanceDiscoveryJson As String) As T
+  monikers:
+  - msal-dotnet-latest
+  obsoleteMessagesWithMoniker:
+  - value: This method name has a typo, please use WithInstanceDiscoveryMetadata instead
+  summary: >-
+    Allows developers to configure their own valid authorities. A json string similar to https://aka.ms/aad-instance-discovery should be provided.
+
+    MSAL uses this information to: 
+
+    <ul><li>Call REST APIs on the environment specified in the preferred_network</li><li>Identify an environment under which to save tokens and accounts in the cache</li><li>Use the environment aliases to match tokens issued to other authorities</li></ul>
+
+    For more details see https://aka.ms/msal-net-custom-instance-metadata
+  remarks: <p>Developers take responsibility for authority validation if they use this method. Should not be used when the authority is not know in advance. Has no effect on ADFS or B2C authorities, only for AAD authorities</p>
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: T
+  parameters:
+  - namesWithMoniker:
+    - value: instanceDiscoveryUri
+    type: <xref href="System.Uri?alt=System.Uri&text=Uri" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithInstanceDicoveryMetadata(System.Uri)
+  commentId: M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithInstanceDicoveryMetadata(System.Uri)
+  name: WithInstanceDicoveryMetadata(Uri)
+  fullName: Microsoft.Identity.Client.AbstractApplicationBuilder<T>.WithInstanceDicoveryMetadata(Uri)
+  nameWithType: AbstractApplicationBuilder<T>.WithInstanceDicoveryMetadata(Uri)
+  attributesWithMoniker:
+  - value: System.ObsoleteAttribute
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: >-
+        [System.Obsolete("This method name has a typo, please use WithInstanceDiscoveryMetadata instead", false)]
+
+        public T WithInstanceDicoveryMetadata (Uri instanceDiscoveryUri);
+  - lang: fsharp
+    values:
+    - value: >-
+        [<System.Obsolete("This method name has a typo, please use WithInstanceDiscoveryMetadata instead", false)>]
+
+        member this.WithInstanceDicoveryMetadata : Uri -> 'T
+  - lang: vb
+    values:
+    - value: Public Function WithInstanceDicoveryMetadata (instanceDiscoveryUri As Uri) As T
+  monikers:
+  - msal-dotnet-latest
+  obsoleteMessagesWithMoniker:
+  - value: This method name has a typo, please use WithInstanceDiscoveryMetadata instead
+  summary: >-
+    Lets an organization setup their own service to handle instance discovery, which enables better caching for microservice/service environments.
+
+    A Uri that returns a response similar to https://aka.ms/aad-instance-discovery should be provided. MSAL uses this information to: 
+
+    <ul><li>Call REST APIs on the environment specified in the preferred_network</li><li>Identify an environment under which to save tokens and accounts in the cache</li><li>Use the environment aliases to match tokens issued to other authorities</li></ul>
+
+    For more details see https://aka.ms/msal-net-custom-instance-metadata
+  remarks: <p>Developers take responsibility for authority validation if they use this method. Should not be used when the authority is not know in advance. Has no effect on ADFS or B2C authorities, only for AAD authorities</p>
+  metadata: {}
+uid: Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithInstanceDicoveryMetadata*
+commentId: Overload:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithInstanceDicoveryMetadata
+namespace: Microsoft.Identity.Client
+name: WithInstanceDicoveryMetadata
+fullName: Microsoft.Identity.Client.AbstractApplicationBuilder<T>.WithInstanceDicoveryMetadata
+nameWithType: AbstractApplicationBuilder<T>.WithInstanceDicoveryMetadata
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithInstanceDicoveryMetadata
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithInstanceDicoveryMetadata
+  - Microsoft::Identity::Client::AbstractApplicationBuilder`1::WithInstanceDicoveryMetadata
+  - Microsoft.Identity.Client.AbstractApplicationBuilder.WithInstanceDicoveryMetadata
+  - WithInstanceDicoveryMetadata
+  - AbstractApplicationBuilder`1.WithInstanceDicoveryMetadata
+  - AbstractApplicationBuilder`1::WithInstanceDicoveryMetadata
+  helpviewer_keywords:
+  - AbstractApplicationBuilder<T>.WithInstanceDicoveryMetadata method [.NET]
+  - WithInstanceDicoveryMetadata method [.NET], class AbstractApplicationBuilder<T>
+  - AbstractApplicationBuilder<T>.WithInstanceDicoveryMetadata(String) method [.NET]
+  - WithInstanceDicoveryMetadata(String) method [.NET], class AbstractApplicationBuilder<T>
+  - AbstractApplicationBuilder<T>.WithInstanceDicoveryMetadata(Uri) method [.NET]
+  - WithInstanceDicoveryMetadata(Uri) method [.NET], class AbstractApplicationBuilder<T>
+  monikers:
+  - msal-dotnet-latest

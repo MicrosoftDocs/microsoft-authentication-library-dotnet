@@ -1,0 +1,89 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Byte?alt=System.Byte&text=Byte" data-throw-if-not-resolved="True"/>[]
+    description: array of bytes, <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITokenCacheSerializer.SerializeMsalV2"></xref>
+  implementsWithMoniker:
+  - value: <xref href="Microsoft.Identity.Client.ITokenCache.Serialize?alt=Microsoft.Identity.Client.ITokenCache.Serialize&text=Serialize()" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.TokenCache.Serialize
+  commentId: M:Microsoft.Identity.Client.TokenCache.Serialize
+  name: Serialize()
+  fullName: Microsoft.Identity.Client.TokenCache.Serialize()
+  nameWithType: TokenCache.Serialize()
+  attributesWithMoniker:
+  - value: System.ObsoleteAttribute
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: >-
+        [System.Obsolete("This is expected to be removed in MSAL.NET v5. We recommend using SerializeMsalV3/DeserializeMsalV3. Read more: https://aka.ms/msal-net-3x-cache-breaking-change", false)]
+
+        public byte[] Serialize ();
+  - lang: fsharp
+    values:
+    - value: >-
+        [<System.Obsolete("This is expected to be removed in MSAL.NET v5. We recommend using SerializeMsalV3/DeserializeMsalV3. Read more: https://aka.ms/msal-net-3x-cache-breaking-change", false)>]
+
+        abstract member Serialize : unit -> byte[]
+
+        override this.Serialize : unit -> byte[]
+  - lang: vb
+    values:
+    - value: Public Function Serialize () As Byte()
+  monikers:
+  - msal-dotnet-latest
+  obsoleteMessagesWithMoniker:
+  - value: 'This is expected to be removed in MSAL.NET v5. We recommend using SerializeMsalV3/DeserializeMsalV3. Read more: https://aka.ms/msal-net-3x-cache-breaking-change'
+  summary: >-
+    Serializes using the <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITokenCacheSerializer.SerializeMsalV2"></xref> serializer.
+
+    Obsolete: Please use specialized Serialization methods.
+
+    <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITokenCacheSerializer.SerializeMsalV2"></xref> replaces <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.TokenCache.Serialize"></xref>.
+
+    <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITokenCacheSerializer.SerializeMsalV3"></xref>/<xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITokenCacheSerializer.DeserializeMsalV3(System.Byte[],System.Boolean)"></xref> Is our recommended way of serializing/deserializing.
+
+    <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITokenCacheSerializer.SerializeAdalV3"></xref> For interoperability with ADAL.NET v3.
+  remarks: <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITokenCacheSerializer.SerializeMsalV3"></xref>/<xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.ITokenCacheSerializer.DeserializeMsalV3(System.Byte[],System.Boolean)"></xref> is compatible with other MSAL libraries such as MSAL for Python and MSAL for Java.
+  metadata: {}
+uid: Microsoft.Identity.Client.TokenCache.Serialize*
+commentId: Overload:Microsoft.Identity.Client.TokenCache.Serialize
+namespace: Microsoft.Identity.Client
+name: Serialize
+fullName: Microsoft.Identity.Client.TokenCache.Serialize
+nameWithType: TokenCache.Serialize
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.TokenCache.Serialize
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.TokenCache.Serialize
+  - Microsoft::Identity::Client::TokenCache::Serialize
+  - Serialize
+  - TokenCache.Serialize
+  - TokenCache::Serialize
+  helpviewer_keywords:
+  - TokenCache.Serialize method [.NET]
+  - Serialize method [.NET], class TokenCache
+  - TokenCache.Serialize() method [.NET]
+  - Serialize() method [.NET], class TokenCache
+  monikers:
+  - msal-dotnet-latest

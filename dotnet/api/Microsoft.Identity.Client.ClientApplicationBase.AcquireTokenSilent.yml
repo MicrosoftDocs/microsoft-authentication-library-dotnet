@@ -1,0 +1,145 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.Identity.Client.AcquireTokenSilentParameterBuilder?alt=Microsoft.Identity.Client.AcquireTokenSilentParameterBuilder&text=AcquireTokenSilentParameterBuilder" data-throw-if-not-resolved="True"/>
+    description: >-
+      An <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.AcquireTokenSilentParameterBuilder"></xref> used to build the token request, adding optional
+                   parameters
+  parameters:
+  - namesWithMoniker:
+    - value: scopes
+    description: Scopes requested to access a protected API
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: account
+    description: Account for which the token is requested.
+    type: <xref href="Microsoft.Identity.Client.IAccount?alt=Microsoft.Identity.Client.IAccount&text=IAccount" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: >-
+      will be thrown in the case where an interaction is required with the end user of the application,
+                   for instance, if no refresh token was in the cache, or the user needs to consent, or re-sign-in (for instance if the password expired),
+                   or the user needs to perform two factor authentication
+    type: <xref href="Microsoft.Identity.Client.MsalUiRequiredException?alt=Microsoft.Identity.Client.MsalUiRequiredException&text=MsalUiRequiredException" data-throw-if-not-resolved="True"/>
+  implementsWithMoniker:
+  - value: <xref href="Microsoft.Identity.Client.IClientApplicationBase.AcquireTokenSilent(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount)?alt=Microsoft.Identity.Client.IClientApplicationBase.AcquireTokenSilent(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount)&text=AcquireTokenSilent(IEnumerable%3CString%3E%2C+IAccount)" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.ClientApplicationBase.AcquireTokenSilent(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount)
+  commentId: M:Microsoft.Identity.Client.ClientApplicationBase.AcquireTokenSilent(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount)
+  name: AcquireTokenSilent(IEnumerable<String>, IAccount)
+  fullName: Microsoft.Identity.Client.ClientApplicationBase.AcquireTokenSilent(IEnumerable<String>, IAccount)
+  nameWithType: ClientApplicationBase.AcquireTokenSilent(IEnumerable<String>, IAccount)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public Microsoft.Identity.Client.AcquireTokenSilentParameterBuilder AcquireTokenSilent (System.Collections.Generic.IEnumerable<string> scopes, Microsoft.Identity.Client.IAccount account);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member AcquireTokenSilent : seq<string> * Microsoft.Identity.Client.IAccount -> Microsoft.Identity.Client.AcquireTokenSilentParameterBuilder
+
+        override this.AcquireTokenSilent : seq<string> * Microsoft.Identity.Client.IAccount -> Microsoft.Identity.Client.AcquireTokenSilentParameterBuilder
+  - lang: vb
+    values:
+    - value: Public Function AcquireTokenSilent (scopes As IEnumerable(Of String), account As IAccount) As AcquireTokenSilentParameterBuilder
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    [V3 API] Attempts to acquire an access token for the <code data-dev-comment-type="paramref">account</code> from the user token cache.
+
+    See https://aka.ms/msal-net-acquiretokensilent for more details
+  remarks: '<p>The access token is considered a match if it contains <strong>at least</strong> all the requested scopes. This means that an access token with more scopes than requested could be returned. If the access token is expired or close to expiration - within a 5 minute window - then the cached refresh token (if available) is used to acquire a new access token by making a silent network call.</p><p>You can set additional parameters by chaining the builder with: <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithTenantId(System.String)"></xref> to request a token for a different authority than the one set at the application construction <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.AcquireTokenSilentParameterBuilder.WithForceRefresh(System.Boolean)"></xref> to bypass the user token cache and force refreshing the token, as well as <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithExtraQueryParameters(System.Collections.Generic.Dictionary{System.String,System.String})"></xref> to specify extra query parameters</p>'
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.Identity.Client.AcquireTokenSilentParameterBuilder?alt=Microsoft.Identity.Client.AcquireTokenSilentParameterBuilder&text=AcquireTokenSilentParameterBuilder" data-throw-if-not-resolved="True"/>
+    description: >-
+      An <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.AcquireTokenSilentParameterBuilder"></xref> used to build the token request, adding optional
+                   parameters
+  parameters:
+  - namesWithMoniker:
+    - value: scopes
+    description: Scopes requested to access a protected API
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: loginHint
+    description: Typically the username, in UPN format, e.g. johnd@contoso.com
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: >-
+      will be thrown in the case where an interaction is required with the end user of the application,
+                   for instance, if no refresh token was in the cache, or the user needs to consent, or re-sign-in (for instance if the password expired),
+                   or the user needs to perform two factor authentication
+    type: <xref href="Microsoft.Identity.Client.MsalUiRequiredException?alt=Microsoft.Identity.Client.MsalUiRequiredException&text=MsalUiRequiredException" data-throw-if-not-resolved="True"/>
+  implementsWithMoniker:
+  - value: <xref href="Microsoft.Identity.Client.IClientApplicationBase.AcquireTokenSilent(System.Collections.Generic.IEnumerable{System.String},System.String)?alt=Microsoft.Identity.Client.IClientApplicationBase.AcquireTokenSilent(System.Collections.Generic.IEnumerable{System.String},System.String)&text=AcquireTokenSilent(IEnumerable%3CString%3E%2C+String)" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.ClientApplicationBase.AcquireTokenSilent(System.Collections.Generic.IEnumerable{System.String},System.String)
+  commentId: M:Microsoft.Identity.Client.ClientApplicationBase.AcquireTokenSilent(System.Collections.Generic.IEnumerable{System.String},System.String)
+  name: AcquireTokenSilent(IEnumerable<String>, String)
+  fullName: Microsoft.Identity.Client.ClientApplicationBase.AcquireTokenSilent(IEnumerable<String>, String)
+  nameWithType: ClientApplicationBase.AcquireTokenSilent(IEnumerable<String>, String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public Microsoft.Identity.Client.AcquireTokenSilentParameterBuilder AcquireTokenSilent (System.Collections.Generic.IEnumerable<string> scopes, string loginHint);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member AcquireTokenSilent : seq<string> * string -> Microsoft.Identity.Client.AcquireTokenSilentParameterBuilder
+
+        override this.AcquireTokenSilent : seq<string> * string -> Microsoft.Identity.Client.AcquireTokenSilentParameterBuilder
+  - lang: vb
+    values:
+    - value: Public Function AcquireTokenSilent (scopes As IEnumerable(Of String), loginHint As String) As AcquireTokenSilentParameterBuilder
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    [V3 API] Attempts to acquire an access token for the <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.IAccount"></xref>
+
+    having the <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.IAccount.Username"></xref> match the given <code data-dev-comment-type="paramref">loginHint</code>, from the user token cache.
+
+    See https://aka.ms/msal-net-acquiretokensilent for more details
+  remarks: '<p>If multiple <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.IAccount"></xref> match the <code data-dev-comment-type="paramref">loginHint</code>, or if there are no matches, an exception is thrown.</p><p>The access token is considered a match if it contains <strong>at least</strong> all the requested scopes. This means that an access token with more scopes than requested could be returned. If the access token is expired or close to expiration - within a 5 minute window - then the cached refresh token (if available) is used to acquire a new access token by making a silent network call.</p><p>You can set additional parameters by chaining the builder with: <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithTenantId(System.String)"></xref> to request a token for a different authority than the one set at the application construction <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.AcquireTokenSilentParameterBuilder.WithForceRefresh(System.Boolean)"></xref> to bypass the user token cache and force refreshing the token, as well as <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithExtraQueryParameters(System.Collections.Generic.Dictionary{System.String,System.String})"></xref> to specify extra query parameters</p>'
+  metadata: {}
+uid: Microsoft.Identity.Client.ClientApplicationBase.AcquireTokenSilent*
+commentId: Overload:Microsoft.Identity.Client.ClientApplicationBase.AcquireTokenSilent
+namespace: Microsoft.Identity.Client
+name: AcquireTokenSilent
+fullName: Microsoft.Identity.Client.ClientApplicationBase.AcquireTokenSilent
+nameWithType: ClientApplicationBase.AcquireTokenSilent
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.ClientApplicationBase.AcquireTokenSilent
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.ClientApplicationBase.AcquireTokenSilent
+  - Microsoft::Identity::Client::ClientApplicationBase::AcquireTokenSilent
+  - AcquireTokenSilent
+  - ClientApplicationBase.AcquireTokenSilent
+  - ClientApplicationBase::AcquireTokenSilent
+  helpviewer_keywords:
+  - ClientApplicationBase.AcquireTokenSilent method [.NET]
+  - AcquireTokenSilent method [.NET], class ClientApplicationBase
+  - ClientApplicationBase.AcquireTokenSilent(IEnumerable<String>, IAccount) method [.NET]
+  - AcquireTokenSilent(IEnumerable<String>, IAccount) method [.NET], class ClientApplicationBase
+  - ClientApplicationBase.AcquireTokenSilent(IEnumerable<String>, String) method [.NET]
+  - AcquireTokenSilent(IEnumerable<String>, String) method [.NET], class ClientApplicationBase
+  monikers:
+  - msal-dotnet-latest

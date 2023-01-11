@@ -1,0 +1,86 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Security.Cryptography.KeyedHashAlgorithm?alt=System.Security.Cryptography.KeyedHashAlgorithm&text=KeyedHashAlgorithm" data-throw-if-not-resolved="True"/>
+    description: An instance of <xref data-throw-if-not-resolved="true" uid="System.Security.Cryptography.KeyedHashAlgorithm"></xref>
+  parameters:
+  - namesWithMoniker:
+    - value: keyBytes
+    description: The byte array of the key.
+    type: <xref href="System.Byte?alt=System.Byte&text=Byte" data-throw-if-not-resolved="True"/>[]
+  - namesWithMoniker:
+    - value: algorithm
+    description: The hash algorithm to use to create the hash value.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.GetKeyedHashAlgorithm(System.Byte[],System.String)
+  commentId: M:Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.GetKeyedHashAlgorithm(System.Byte[],System.String)
+  name: GetKeyedHashAlgorithm(Byte[], String)
+  fullName: Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.GetKeyedHashAlgorithm(Byte[], String)
+  nameWithType: SymmetricSignatureProvider.GetKeyedHashAlgorithm(Byte[], String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected virtual System.Security.Cryptography.KeyedHashAlgorithm GetKeyedHashAlgorithm (byte[] keyBytes, string algorithm);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member GetKeyedHashAlgorithm : byte[] * string -> System.Security.Cryptography.KeyedHashAlgorithm
+
+        override this.GetKeyedHashAlgorithm : byte[] * string -> System.Security.Cryptography.KeyedHashAlgorithm
+  - lang: vb
+    values:
+    - value: Protected Overridable Function GetKeyedHashAlgorithm (keyBytes As Byte(), algorithm As String) As KeyedHashAlgorithm
+  monikers:
+  - msal-web-dotnet-latest
+  summary: >-
+    Returns a <xref data-throw-if-not-resolved="true" uid="System.Security.Cryptography.KeyedHashAlgorithm"></xref>.
+
+    This method is called just before a cryptographic operation.
+
+    This provides the opportunity to obtain the <xref data-throw-if-not-resolved="true" uid="System.Security.Cryptography.KeyedHashAlgorithm"></xref> from an object pool.
+
+    If this method is overridden, it is importont to override <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.ReleaseKeyedHashAlgorithm(System.Security.Cryptography.KeyedHashAlgorithm)"></xref>
+
+    if custom releasing of the <xref data-throw-if-not-resolved="true" uid="System.Security.Cryptography.KeyedHashAlgorithm"></xref> is desired.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.GetKeyedHashAlgorithm*
+commentId: Overload:Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.GetKeyedHashAlgorithm
+namespace: Microsoft.IdentityModel.Tokens
+name: GetKeyedHashAlgorithm
+fullName: Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.GetKeyedHashAlgorithm
+nameWithType: SymmetricSignatureProvider.GetKeyedHashAlgorithm
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.GetKeyedHashAlgorithm
+  api_location:
+  - Microsoft.IdentityModel.Tokens.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.GetKeyedHashAlgorithm
+  - Microsoft::IdentityModel::Tokens::SymmetricSignatureProvider::GetKeyedHashAlgorithm
+  - GetKeyedHashAlgorithm
+  - SymmetricSignatureProvider.GetKeyedHashAlgorithm
+  - SymmetricSignatureProvider::GetKeyedHashAlgorithm
+  helpviewer_keywords:
+  - SymmetricSignatureProvider.GetKeyedHashAlgorithm method [.NET]
+  - GetKeyedHashAlgorithm method [.NET], class SymmetricSignatureProvider
+  - SymmetricSignatureProvider.GetKeyedHashAlgorithm(Byte[], String) method [.NET]
+  - GetKeyedHashAlgorithm(Byte[], String) method [.NET], class SymmetricSignatureProvider
+  monikers:
+  - msal-web-dotnet-latest

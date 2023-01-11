@@ -1,0 +1,66 @@
+### YamlMime:NetMember
+type: field
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: field
+  uid: Microsoft.Identity.Client.MsalError.InvalidGrantError
+  commentId: F:Microsoft.Identity.Client.MsalError.InvalidGrantError
+  name: InvalidGrantError
+  fullName: Microsoft.Identity.Client.MsalError.InvalidGrantError
+  nameWithType: MsalError.InvalidGrantError
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public const string InvalidGrantError;
+  - lang: fsharp
+    values:
+    - value: 'val mutable InvalidGrantError : string'
+  - lang: vb
+    values:
+    - value: 'Public Const InvalidGrantError As String '
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    Standard OAuth2 protocol error code. It indicates that the application needs to expose the UI to the user
+
+    so that the user does an interactive action in order to get a new token.
+
+    <p>Mitigation:</p> If your application is a <xref data-throw-if-not-resolved="true" uid="IPublicClientApplication"></xref> call <code data-dev-comment-type="c">AcquireTokenInteractive</code>
+
+    perform an interactive authentication. If your application is a <xref data-throw-if-not-resolved="true" uid="ConfidentialClientApplication"></xref> chances are that the Claims member
+
+    of the exception is not empty. See <xref data-throw-if-not-resolved="true" uid="MsalServiceException.Claims"></xref> for the right mitigation
+  metadata: {}
+namespace: Microsoft.Identity.Client
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.MsalError.InvalidGrantError
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.MsalError.InvalidGrantError
+  - Microsoft::Identity::Client::MsalError::InvalidGrantError
+  - InvalidGrantError
+  - MsalError.InvalidGrantError
+  - MsalError::InvalidGrantError
+  helpviewer_keywords:
+  - MsalError.InvalidGrantError field [.NET]
+  - InvalidGrantError field [.NET], class MsalError
+  monikers:
+  - msal-dotnet-latest

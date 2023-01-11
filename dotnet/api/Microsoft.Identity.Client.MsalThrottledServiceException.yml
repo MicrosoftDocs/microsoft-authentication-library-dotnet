@@ -1,0 +1,112 @@
+### YamlMime:NetType
+type: class
+inheritancesWithMoniker:
+- values:
+  - <xref href="System.Exception?alt=System.Exception&text=Exception" data-throw-if-not-resolved="True"/>
+  - <xref href="Microsoft.Identity.Client.MsalException?alt=Microsoft.Identity.Client.MsalException&text=MsalException" data-throw-if-not-resolved="True"/>
+  - <xref href="Microsoft.Identity.Client.MsalServiceException?alt=Microsoft.Identity.Client.MsalServiceException&text=MsalServiceException" data-throw-if-not-resolved="True"/>
+constructors:
+- uid: Microsoft.Identity.Client.MsalThrottledServiceException.#ctor(Microsoft.Identity.Client.MsalServiceException)
+  monikers:
+  - msal-dotnet-latest
+methods:
+- uid: Microsoft.Identity.Client.MsalException.ToJsonString
+  inheritedFrom: Microsoft.Identity.Client.MsalException
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.MsalServiceException.ToString
+  inheritedFrom: Microsoft.Identity.Client.MsalServiceException
+  monikers:
+  - msal-dotnet-latest
+properties:
+- uid: Microsoft.Identity.Client.MsalServiceException.Claims
+  inheritedFrom: Microsoft.Identity.Client.MsalServiceException
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.MsalServiceException.CorrelationId
+  inheritedFrom: Microsoft.Identity.Client.MsalServiceException
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.MsalException.ErrorCode
+  inheritedFrom: Microsoft.Identity.Client.MsalException
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.MsalServiceException.Headers
+  inheritedFrom: Microsoft.Identity.Client.MsalServiceException
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.MsalException.IsRetryable
+  inheritedFrom: Microsoft.Identity.Client.MsalException
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.MsalThrottledServiceException.OriginalServiceException
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.MsalServiceException.ResponseBody
+  inheritedFrom: Microsoft.Identity.Client.MsalServiceException
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.MsalServiceException.StatusCode
+  inheritedFrom: Microsoft.Identity.Client.MsalServiceException
+  monikers:
+  - msal-dotnet-latest
+uid: Microsoft.Identity.Client.MsalThrottledServiceException
+commentId: T:Microsoft.Identity.Client.MsalThrottledServiceException
+namespace: Microsoft.Identity.Client
+name: MsalThrottledServiceException
+fullName: Microsoft.Identity.Client.MsalThrottledServiceException
+nameWithType: Microsoft.Identity.Client.MsalThrottledServiceException
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+syntaxWithMoniker:
+- lang: csharp
+  values:
+  - value: 'public class MsalThrottledServiceException : Microsoft.Identity.Client.MsalServiceException'
+- lang: fsharp
+  values:
+  - value: >-
+      type MsalThrottledServiceException = class
+          inherit MsalServiceException
+- lang: vb
+  values:
+  - value: >-
+      Public Class MsalThrottledServiceException
+
+      Inherits MsalServiceException
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+summary: >-
+  Exception type thrown when MSAL detects that an application is trying to acquire a token too often, as a result of: 
+
+  - A previous request resulted in an HTTP response containing a Retry-After header which was not followed.
+
+  - A previous request resulted in an HTTP 429 or 5xx, which indicates a problem with the server.
+
+
+  The properties of this exception are identical to the original exception
+
+
+  For more details see https://aka.ms/msal-net-throttling
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.MsalThrottledServiceException
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.MsalThrottledServiceException
+  - Microsoft::Identity::Client::MsalThrottledServiceException
+  - MsalThrottledServiceException
+  helpviewer_keywords:
+  - Microsoft.Identity.Client.MsalThrottledServiceException class [.NET]
+  monikers:
+  - msal-dotnet-latest

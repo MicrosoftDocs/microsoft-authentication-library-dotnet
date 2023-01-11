@@ -1,0 +1,88 @@
+### YamlMime:NetMember
+type: method
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: context
+    description: HttpContext (from the controller).
+    type: <xref href="Microsoft.AspNetCore.Http.HttpContext?alt=Microsoft.AspNetCore.Http.HttpContext&text=HttpContext" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: acceptedScopes
+    description: Scopes accepted by this web API.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>[]
+  type: method
+  uid: Microsoft.Identity.Web.Resource.ScopesRequiredHttpContextExtensions.VerifyUserHasAnyAcceptedScope(Microsoft.AspNetCore.Http.HttpContext,System.String[])
+  commentId: M:Microsoft.Identity.Web.Resource.ScopesRequiredHttpContextExtensions.VerifyUserHasAnyAcceptedScope(Microsoft.AspNetCore.Http.HttpContext,System.String[])
+  name: VerifyUserHasAnyAcceptedScope(HttpContext, String[])
+  fullName: Microsoft.Identity.Web.Resource.ScopesRequiredHttpContextExtensions.VerifyUserHasAnyAcceptedScope(HttpContext, String[])
+  nameWithType: ScopesRequiredHttpContextExtensions.VerifyUserHasAnyAcceptedScope(HttpContext, String[])
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public static void VerifyUserHasAnyAcceptedScope (this Microsoft.AspNetCore.Http.HttpContext context, params string[] acceptedScopes);
+  - lang: fsharp
+    values:
+    - value: 'static member VerifyUserHasAnyAcceptedScope : Microsoft.AspNetCore.Http.HttpContext * string[] -> unit'
+  - lang: vb
+    values:
+    - value: >-
+        <Extension()>
+
+        Public Sub VerifyUserHasAnyAcceptedScope (context As HttpContext, ParamArray acceptedScopes As String())
+  monikers:
+  - msal-model-dotnet-latest
+  summary: >-
+    When applied to an <xref data-throw-if-not-resolved="true" uid="Microsoft.AspNetCore.Http.HttpContext"></xref>, verifies that the user authenticated in the
+
+    web API has any of the accepted scopes.
+
+    If there is no authenticated user, the response is a 401 (Unauthenticated).
+
+    If the authenticated user does not have any of these <code data-dev-comment-type="paramref">acceptedScopes</code>, the
+
+    method updates the HTTP response providing a status code 403 (Forbidden)
+
+    and writes to the response body a message telling which scopes are expected in the token.
+
+    We recommend using instead the RequiredScope Attribute on the controller, the page or the action.
+
+    See https://aka.ms/ms-id-web/required-scope-attribute.
+  metadata: {}
+uid: Microsoft.Identity.Web.Resource.ScopesRequiredHttpContextExtensions.VerifyUserHasAnyAcceptedScope*
+commentId: Overload:Microsoft.Identity.Web.Resource.ScopesRequiredHttpContextExtensions.VerifyUserHasAnyAcceptedScope
+namespace: Microsoft.Identity.Web.Resource
+name: VerifyUserHasAnyAcceptedScope
+fullName: Microsoft.Identity.Web.Resource.ScopesRequiredHttpContextExtensions.VerifyUserHasAnyAcceptedScope
+nameWithType: ScopesRequiredHttpContextExtensions.VerifyUserHasAnyAcceptedScope
+assembliesWithMoniker:
+- value: Microsoft.Identity.Web.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Web v1.25.10
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-model-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Web.Resource.ScopesRequiredHttpContextExtensions.VerifyUserHasAnyAcceptedScope
+  api_location:
+  - Microsoft.Identity.Web.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Web.Resource.ScopesRequiredHttpContextExtensions.VerifyUserHasAnyAcceptedScope
+  - Microsoft::Identity::Web::Resource::ScopesRequiredHttpContextExtensions::VerifyUserHasAnyAcceptedScope
+  - VerifyUserHasAnyAcceptedScope
+  - ScopesRequiredHttpContextExtensions.VerifyUserHasAnyAcceptedScope
+  - ScopesRequiredHttpContextExtensions::VerifyUserHasAnyAcceptedScope
+  helpviewer_keywords:
+  - ScopesRequiredHttpContextExtensions.VerifyUserHasAnyAcceptedScope method [.NET]
+  - VerifyUserHasAnyAcceptedScope method [.NET], class ScopesRequiredHttpContextExtensions
+  - ScopesRequiredHttpContextExtensions.VerifyUserHasAnyAcceptedScope(HttpContext, String[]) extension method [.NET]
+  - VerifyUserHasAnyAcceptedScope(HttpContext, String[]) extension method [.NET], class ScopesRequiredHttpContextExtensions
+  monikers:
+  - msal-model-dotnet-latest

@@ -1,0 +1,128 @@
+### YamlMime:NetMember
+type: method
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: scopes
+    description: Scopes to consent to.
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: msalServiceException
+    description: <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.MsalUiRequiredException"></xref> triggering the challenge.
+    type: <xref href="Microsoft.Identity.Client.MsalUiRequiredException?alt=Microsoft.Identity.Client.MsalUiRequiredException&text=MsalUiRequiredException" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: httpResponse
+    description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.AspNetCore.Http.HttpResponse"></xref> to update.
+    type: <xref href="Microsoft.AspNetCore.Http.HttpResponse?alt=Microsoft.AspNetCore.Http.HttpResponse&text=HttpResponse" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Web.ITokenAcquisition.ReplyForbiddenWithWwwAuthenticateHeader(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.MsalUiRequiredException,Microsoft.AspNetCore.Http.HttpResponse)
+  commentId: M:Microsoft.Identity.Web.ITokenAcquisition.ReplyForbiddenWithWwwAuthenticateHeader(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.MsalUiRequiredException,Microsoft.AspNetCore.Http.HttpResponse)
+  name: ReplyForbiddenWithWwwAuthenticateHeader(IEnumerable<String>, MsalUiRequiredException, HttpResponse)
+  fullName: Microsoft.Identity.Web.ITokenAcquisition.ReplyForbiddenWithWwwAuthenticateHeader(IEnumerable<String>, MsalUiRequiredException, HttpResponse)
+  nameWithType: ITokenAcquisition.ReplyForbiddenWithWwwAuthenticateHeader(IEnumerable<String>, MsalUiRequiredException, HttpResponse)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public virtual void ReplyForbiddenWithWwwAuthenticateHeader (System.Collections.Generic.IEnumerable<string> scopes, Microsoft.Identity.Client.MsalUiRequiredException msalServiceException, Microsoft.AspNetCore.Http.HttpResponse? httpResponse = default);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member ReplyForbiddenWithWwwAuthenticateHeader : seq<string> * Microsoft.Identity.Client.MsalUiRequiredException * Microsoft.AspNetCore.Http.HttpResponse -> unit
+
+        override this.ReplyForbiddenWithWwwAuthenticateHeader : seq<string> * Microsoft.Identity.Client.MsalUiRequiredException * Microsoft.AspNetCore.Http.HttpResponse -> unit
+  - lang: vb
+    values:
+    - value: Public Overridable Sub ReplyForbiddenWithWwwAuthenticateHeader (scopes As IEnumerable(Of String), msalServiceException As MsalUiRequiredException, Optional httpResponse As HttpResponse = Nothing)
+  monikers:
+  - msal-model-dotnet-latest
+  summary: >-
+    Used in web APIs (which therefore cannot have an interaction with the user).
+
+    Replies to the client through the HttpResponse by sending a 403 (forbidden) and populating wwwAuthenticateHeaders so that
+
+    the client can trigger an interaction with the user so the user can consent to more scopes.
+  metadata: {}
+- parameters:
+  - namesWithMoniker:
+    - value: scopes
+    description: Scopes to consent to.
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: msalServiceException
+    description: <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.MsalUiRequiredException"></xref> triggering the challenge.
+    type: <xref href="Microsoft.Identity.Client.MsalUiRequiredException?alt=Microsoft.Identity.Client.MsalUiRequiredException&text=MsalUiRequiredException" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: authenticationScheme
+    description: >-
+      Authentication scheme. If null, will use OpenIdConnectDefault.AuthenticationScheme
+                  if called from a web app, and JwtBearerDefault.AuthenticationScheme if called from a web API.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: httpResponse
+    description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.AspNetCore.Http.HttpResponse"></xref> to update.
+    type: <xref href="Microsoft.AspNetCore.Http.HttpResponse?alt=Microsoft.AspNetCore.Http.HttpResponse&text=HttpResponse" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Web.ITokenAcquisition.ReplyForbiddenWithWwwAuthenticateHeader(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.MsalUiRequiredException,System.String,Microsoft.AspNetCore.Http.HttpResponse)
+  commentId: M:Microsoft.Identity.Web.ITokenAcquisition.ReplyForbiddenWithWwwAuthenticateHeader(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.MsalUiRequiredException,System.String,Microsoft.AspNetCore.Http.HttpResponse)
+  name: ReplyForbiddenWithWwwAuthenticateHeader(IEnumerable<String>, MsalUiRequiredException, String, HttpResponse)
+  fullName: Microsoft.Identity.Web.ITokenAcquisition.ReplyForbiddenWithWwwAuthenticateHeader(IEnumerable<String>, MsalUiRequiredException, String, HttpResponse)
+  nameWithType: ITokenAcquisition.ReplyForbiddenWithWwwAuthenticateHeader(IEnumerable<String>, MsalUiRequiredException, String, HttpResponse)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public void ReplyForbiddenWithWwwAuthenticateHeader (System.Collections.Generic.IEnumerable<string> scopes, Microsoft.Identity.Client.MsalUiRequiredException msalServiceException, string? authenticationScheme, Microsoft.AspNetCore.Http.HttpResponse? httpResponse = default);
+  - lang: fsharp
+    values:
+    - value: 'abstract member ReplyForbiddenWithWwwAuthenticateHeader : seq<string> * Microsoft.Identity.Client.MsalUiRequiredException * string * Microsoft.AspNetCore.Http.HttpResponse -> unit'
+  - lang: vb
+    values:
+    - value: Public Sub ReplyForbiddenWithWwwAuthenticateHeader (scopes As IEnumerable(Of String), msalServiceException As MsalUiRequiredException, authenticationScheme As String, Optional httpResponse As HttpResponse = Nothing)
+  monikers:
+  - msal-model-dotnet-latest
+  summary: >-
+    Used in web APIs (which therefore cannot have an interaction with the user).
+
+    Replies to the client through the HttpResponse by sending a 403 (forbidden) and populating wwwAuthenticateHeaders so that
+
+    the client can trigger an interaction with the user so the user can consent to more scopes.
+  metadata: {}
+uid: Microsoft.Identity.Web.ITokenAcquisition.ReplyForbiddenWithWwwAuthenticateHeader*
+commentId: Overload:Microsoft.Identity.Web.ITokenAcquisition.ReplyForbiddenWithWwwAuthenticateHeader
+namespace: Microsoft.Identity.Web
+name: ReplyForbiddenWithWwwAuthenticateHeader
+fullName: Microsoft.Identity.Web.ITokenAcquisition.ReplyForbiddenWithWwwAuthenticateHeader
+nameWithType: ITokenAcquisition.ReplyForbiddenWithWwwAuthenticateHeader
+assembliesWithMoniker:
+- value: Microsoft.Identity.Web.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Web v1.25.10
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-model-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Web.ITokenAcquisition.ReplyForbiddenWithWwwAuthenticateHeader
+  api_location:
+  - Microsoft.Identity.Web.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Web.ITokenAcquisition.ReplyForbiddenWithWwwAuthenticateHeader
+  - Microsoft::Identity::Web::ITokenAcquisition::ReplyForbiddenWithWwwAuthenticateHeader
+  - ReplyForbiddenWithWwwAuthenticateHeader
+  - ITokenAcquisition.ReplyForbiddenWithWwwAuthenticateHeader
+  - ITokenAcquisition::ReplyForbiddenWithWwwAuthenticateHeader
+  helpviewer_keywords:
+  - ITokenAcquisition.ReplyForbiddenWithWwwAuthenticateHeader method [.NET]
+  - ReplyForbiddenWithWwwAuthenticateHeader method [.NET], interface ITokenAcquisition
+  - ITokenAcquisition.ReplyForbiddenWithWwwAuthenticateHeader(IEnumerable<String>, MsalUiRequiredException, HttpResponse) method [.NET]
+  - ReplyForbiddenWithWwwAuthenticateHeader(IEnumerable<String>, MsalUiRequiredException, HttpResponse) method [.NET], interface ITokenAcquisition
+  - ITokenAcquisition.ReplyForbiddenWithWwwAuthenticateHeader(IEnumerable<String>, MsalUiRequiredException, String, HttpResponse) method [.NET]
+  - ReplyForbiddenWithWwwAuthenticateHeader(IEnumerable<String>, MsalUiRequiredException, String, HttpResponse) method [.NET], interface ITokenAcquisition
+  monikers:
+  - msal-model-dotnet-latest

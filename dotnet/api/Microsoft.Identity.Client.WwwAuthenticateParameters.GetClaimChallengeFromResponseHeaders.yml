@@ -1,0 +1,77 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+    description: The claims challenge
+  parameters:
+  - namesWithMoniker:
+    - value: httpResponseHeaders
+    description: The HTTP response headers.
+    type: <xref href="System.Net.Http.Headers.HttpResponseHeaders?alt=System.Net.Http.Headers.HttpResponseHeaders&text=HttpResponseHeaders" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: scheme
+    description: Authentication scheme. Default is Bearer.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.WwwAuthenticateParameters.GetClaimChallengeFromResponseHeaders(System.Net.Http.Headers.HttpResponseHeaders,System.String)
+  commentId: M:Microsoft.Identity.Client.WwwAuthenticateParameters.GetClaimChallengeFromResponseHeaders(System.Net.Http.Headers.HttpResponseHeaders,System.String)
+  name: GetClaimChallengeFromResponseHeaders(HttpResponseHeaders, String)
+  fullName: Microsoft.Identity.Client.WwwAuthenticateParameters.GetClaimChallengeFromResponseHeaders(HttpResponseHeaders, String)
+  nameWithType: WwwAuthenticateParameters.GetClaimChallengeFromResponseHeaders(HttpResponseHeaders, String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public static string GetClaimChallengeFromResponseHeaders (System.Net.Http.Headers.HttpResponseHeaders httpResponseHeaders, string scheme = "Bearer");
+  - lang: fsharp
+    values:
+    - value: 'static member GetClaimChallengeFromResponseHeaders : System.Net.Http.Headers.HttpResponseHeaders * string -> string'
+  - lang: vb
+    values:
+    - value: Public Shared Function GetClaimChallengeFromResponseHeaders (httpResponseHeaders As HttpResponseHeaders, Optional scheme As String = "Bearer") As String
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    Gets the claim challenge from HTTP header.
+
+    Used, for example, for CA auth context.
+  metadata: {}
+uid: Microsoft.Identity.Client.WwwAuthenticateParameters.GetClaimChallengeFromResponseHeaders*
+commentId: Overload:Microsoft.Identity.Client.WwwAuthenticateParameters.GetClaimChallengeFromResponseHeaders
+namespace: Microsoft.Identity.Client
+name: GetClaimChallengeFromResponseHeaders
+fullName: Microsoft.Identity.Client.WwwAuthenticateParameters.GetClaimChallengeFromResponseHeaders
+nameWithType: WwwAuthenticateParameters.GetClaimChallengeFromResponseHeaders
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.WwwAuthenticateParameters.GetClaimChallengeFromResponseHeaders
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.WwwAuthenticateParameters.GetClaimChallengeFromResponseHeaders
+  - Microsoft::Identity::Client::WwwAuthenticateParameters::GetClaimChallengeFromResponseHeaders
+  - GetClaimChallengeFromResponseHeaders
+  - WwwAuthenticateParameters.GetClaimChallengeFromResponseHeaders
+  - WwwAuthenticateParameters::GetClaimChallengeFromResponseHeaders
+  helpviewer_keywords:
+  - WwwAuthenticateParameters.GetClaimChallengeFromResponseHeaders method [.NET]
+  - GetClaimChallengeFromResponseHeaders method [.NET], class WwwAuthenticateParameters
+  - WwwAuthenticateParameters.GetClaimChallengeFromResponseHeaders(HttpResponseHeaders, String) method [.NET]
+  - GetClaimChallengeFromResponseHeaders(HttpResponseHeaders, String) method [.NET], class WwwAuthenticateParameters
+  monikers:
+  - msal-dotnet-latest

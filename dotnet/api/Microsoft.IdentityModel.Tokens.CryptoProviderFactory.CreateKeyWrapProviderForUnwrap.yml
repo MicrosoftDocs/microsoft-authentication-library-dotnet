@@ -1,0 +1,85 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.IdentityModel.Tokens.KeyWrapProvider?alt=Microsoft.IdentityModel.Tokens.KeyWrapProvider&text=KeyWrapProvider" data-throw-if-not-resolved="True"/>
+    description: an instance of <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.KeyWrapProvider"></xref>
+  parameters:
+  - namesWithMoniker:
+    - value: key
+    description: the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityKey"></xref> to use.
+    type: <xref href="Microsoft.IdentityModel.Tokens.SecurityKey?alt=Microsoft.IdentityModel.Tokens.SecurityKey&text=SecurityKey" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: algorithm
+    description: the algorithm to use.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: thrown if <code data-dev-comment-type="paramref">algorithm</code> is null or empty.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: thrown if <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityKey"></xref> and algorithm pair are not supported.
+    type: <xref href="System.ArgumentException" data-throw-if-not-resolved="True"/>
+  - description: thrown if <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.ICryptoProvider.Create(System.String,System.Object[])"></xref> returns a type that is not assignable from <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.KeyWrapProvider"></xref>.
+    type: <xref href="System.InvalidOperationException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateKeyWrapProviderForUnwrap(Microsoft.IdentityModel.Tokens.SecurityKey,System.String)
+  commentId: M:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateKeyWrapProviderForUnwrap(Microsoft.IdentityModel.Tokens.SecurityKey,System.String)
+  name: CreateKeyWrapProviderForUnwrap(SecurityKey, String)
+  fullName: Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateKeyWrapProviderForUnwrap(SecurityKey, String)
+  nameWithType: CryptoProviderFactory.CreateKeyWrapProviderForUnwrap(SecurityKey, String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public virtual Microsoft.IdentityModel.Tokens.KeyWrapProvider CreateKeyWrapProviderForUnwrap (Microsoft.IdentityModel.Tokens.SecurityKey key, string algorithm);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member CreateKeyWrapProviderForUnwrap : Microsoft.IdentityModel.Tokens.SecurityKey * string -> Microsoft.IdentityModel.Tokens.KeyWrapProvider
+
+        override this.CreateKeyWrapProviderForUnwrap : Microsoft.IdentityModel.Tokens.SecurityKey * string -> Microsoft.IdentityModel.Tokens.KeyWrapProvider
+  - lang: vb
+    values:
+    - value: Public Overridable Function CreateKeyWrapProviderForUnwrap (key As SecurityKey, algorithm As String) As KeyWrapProvider
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Creates an instance of <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.KeyWrapProvider"></xref> for a specific &lt;SecurityKey, Algorithm&gt;.
+  remarks: <p>If <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CustomCryptoProvider"></xref> is set and <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.ICryptoProvider.IsSupportedAlgorithm(System.String,System.Object[])"></xref> returns true. <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.ICryptoProvider.Create(System.String,System.Object[])"></xref> is called to obtain the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionProvider"></xref>.</p><p>When finished with the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.KeyWrapProvider"></xref> call <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.CryptoProviderFactory.ReleaseKeyWrapProvider(Microsoft.IdentityModel.Tokens.KeyWrapProvider)"></xref>.</p>
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateKeyWrapProviderForUnwrap*
+commentId: Overload:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateKeyWrapProviderForUnwrap
+namespace: Microsoft.IdentityModel.Tokens
+name: CreateKeyWrapProviderForUnwrap
+fullName: Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateKeyWrapProviderForUnwrap
+nameWithType: CryptoProviderFactory.CreateKeyWrapProviderForUnwrap
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateKeyWrapProviderForUnwrap
+  api_location:
+  - Microsoft.IdentityModel.Tokens.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateKeyWrapProviderForUnwrap
+  - Microsoft::IdentityModel::Tokens::CryptoProviderFactory::CreateKeyWrapProviderForUnwrap
+  - CreateKeyWrapProviderForUnwrap
+  - CryptoProviderFactory.CreateKeyWrapProviderForUnwrap
+  - CryptoProviderFactory::CreateKeyWrapProviderForUnwrap
+  helpviewer_keywords:
+  - CryptoProviderFactory.CreateKeyWrapProviderForUnwrap method [.NET]
+  - CreateKeyWrapProviderForUnwrap method [.NET], class CryptoProviderFactory
+  - CryptoProviderFactory.CreateKeyWrapProviderForUnwrap(SecurityKey, String) method [.NET]
+  - CreateKeyWrapProviderForUnwrap(SecurityKey, String) method [.NET], class CryptoProviderFactory
+  monikers:
+  - msal-web-dotnet-latest

@@ -1,0 +1,74 @@
+### YamlMime:NetMember
+type: field
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: field
+  uid: Microsoft.Identity.Client.MsalError.InvalidOwnerWindowType
+  commentId: F:Microsoft.Identity.Client.MsalError.InvalidOwnerWindowType
+  name: InvalidOwnerWindowType
+  fullName: Microsoft.Identity.Client.MsalError.InvalidOwnerWindowType
+  nameWithType: MsalError.InvalidOwnerWindowType
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public const string InvalidOwnerWindowType;
+  - lang: fsharp
+    values:
+    - value: 'val mutable InvalidOwnerWindowType : string'
+  - lang: vb
+    values:
+    - value: 'Public Const InvalidOwnerWindowType As String '
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    Invalid owner window type.
+
+    <p>What happens?</p>
+
+    You used <code data-dev-comment-type="c">"AcquireTokenInteractiveParameterBuilder.WithParentActivityOrWindow(object)</code>
+
+    but the parameter you passed is invalid.
+
+    <p>Remediation</p>
+
+    On .NET Standard, the expected object is an <code data-dev-comment-type="c">Activity</code> on Android, a <code data-dev-comment-type="c">UIViewController</code> on iOS,
+
+    a <code data-dev-comment-type="c">NSWindow</code> on MAC, and a <code data-dev-comment-type="c">IWin32Window</code> or <code data-dev-comment-type="c">IntPr</code> on Windows.
+
+    If you are in a WPF application, you can use <code data-dev-comment-type="c">WindowInteropHelper(wpfControl).Handle</code> to get the window
+
+    handle associated with a WPF control
+  metadata: {}
+namespace: Microsoft.Identity.Client
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.MsalError.InvalidOwnerWindowType
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.MsalError.InvalidOwnerWindowType
+  - Microsoft::Identity::Client::MsalError::InvalidOwnerWindowType
+  - InvalidOwnerWindowType
+  - MsalError.InvalidOwnerWindowType
+  - MsalError::InvalidOwnerWindowType
+  helpviewer_keywords:
+  - MsalError.InvalidOwnerWindowType field [.NET]
+  - InvalidOwnerWindowType field [.NET], class MsalError
+  monikers:
+  - msal-dotnet-latest

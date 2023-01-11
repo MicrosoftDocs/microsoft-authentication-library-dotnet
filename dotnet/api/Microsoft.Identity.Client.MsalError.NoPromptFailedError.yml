@@ -1,0 +1,68 @@
+### YamlMime:NetMember
+type: field
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: field
+  uid: Microsoft.Identity.Client.MsalError.NoPromptFailedError
+  commentId: F:Microsoft.Identity.Client.MsalError.NoPromptFailedError
+  name: NoPromptFailedError
+  fullName: Microsoft.Identity.Client.MsalError.NoPromptFailedError
+  nameWithType: MsalError.NoPromptFailedError
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public const string NoPromptFailedError;
+  - lang: fsharp
+    values:
+    - value: 'val mutable NoPromptFailedError : string'
+  - lang: vb
+    values:
+    - value: 'Public Const NoPromptFailedError As String '
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    One of two conditions was encountered:
+
+    <ul><li>The <code data-dev-comment-type="c">Prompt.NoPrompt</code> was passed in an interactive token call, but the constraint could not be honored because user interaction is required,
+
+    for instance because the user needs to re-sign-in, give consent for more scopes, or perform multiple factor authentication.
+
+    </li><li>
+
+    An error occurred during a silent web authentication that prevented the authentication flow from completing in a short enough time frame.
+
+    </li></ul><p>Remediation:</p>call <code data-dev-comment-type="c">AcquireTokenInteractive</code> so that the user of your application signs-in and accepts consent.
+  metadata: {}
+namespace: Microsoft.Identity.Client
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.MsalError.NoPromptFailedError
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.MsalError.NoPromptFailedError
+  - Microsoft::Identity::Client::MsalError::NoPromptFailedError
+  - NoPromptFailedError
+  - MsalError.NoPromptFailedError
+  - MsalError::NoPromptFailedError
+  helpviewer_keywords:
+  - MsalError.NoPromptFailedError field [.NET]
+  - NoPromptFailedError field [.NET], class MsalError
+  monikers:
+  - msal-dotnet-latest

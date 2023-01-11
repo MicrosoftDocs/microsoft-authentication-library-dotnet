@@ -1,0 +1,193 @@
+### YamlMime:NetMember
+type: constructor
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: signedHttpRequest
+    description: SignedHttpRequest to be validated as a JWS in Compact Serialization Format.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: httpRequestData
+    description: A structure that represents an incoming http request.
+    type: <xref href="Microsoft.IdentityModel.Protocols.HttpRequestData?alt=Microsoft.IdentityModel.Protocols.HttpRequestData&text=HttpRequestData" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: accessTokenValidationParameters
+    description: A <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.TokenValidationParameters"></xref> required for access token ("at") validation.
+    type: <xref href="Microsoft.IdentityModel.Tokens.TokenValidationParameters?alt=Microsoft.IdentityModel.Tokens.TokenValidationParameters&text=TokenValidationParameters" data-throw-if-not-resolved="True"/>
+  type: constructor
+  uid: Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext.#ctor(System.String,Microsoft.IdentityModel.Protocols.HttpRequestData,Microsoft.IdentityModel.Tokens.TokenValidationParameters)
+  commentId: M:Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext.#ctor(System.String,Microsoft.IdentityModel.Protocols.HttpRequestData,Microsoft.IdentityModel.Tokens.TokenValidationParameters)
+  name: SignedHttpRequestValidationContext(String, HttpRequestData, TokenValidationParameters)
+  fullName: Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext.SignedHttpRequestValidationContext(String, HttpRequestData, TokenValidationParameters)
+  nameWithType: SignedHttpRequestValidationContext.SignedHttpRequestValidationContext(String, HttpRequestData, TokenValidationParameters)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public SignedHttpRequestValidationContext (string signedHttpRequest, Microsoft.IdentityModel.Protocols.HttpRequestData httpRequestData, Microsoft.IdentityModel.Tokens.TokenValidationParameters accessTokenValidationParameters);
+  - lang: fsharp
+    values:
+    - value: 'new Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext : string * Microsoft.IdentityModel.Protocols.HttpRequestData * Microsoft.IdentityModel.Tokens.TokenValidationParameters -> Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext'
+  - lang: vb
+    values:
+    - value: Public Sub New (signedHttpRequest As String, httpRequestData As HttpRequestData, accessTokenValidationParameters As TokenValidationParameters)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Initializes a new instance of <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext"></xref>.
+  remarks: Default <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext.SignedHttpRequestValidationParameters"></xref> and <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext.CallContext"></xref> will be created.
+  metadata: {}
+- parameters:
+  - namesWithMoniker:
+    - value: signedHttpRequest
+    description: SignedHttpRequest to be validated encoded as a JWS in Compact Serialization Format.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: httpRequestData
+    description: A structure that represents an incoming http request.
+    type: <xref href="Microsoft.IdentityModel.Protocols.HttpRequestData?alt=Microsoft.IdentityModel.Protocols.HttpRequestData&text=HttpRequestData" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: accessTokenValidationParameters
+    description: A <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.TokenValidationParameters"></xref> required for access token ("at") validation.
+    type: <xref href="Microsoft.IdentityModel.Tokens.TokenValidationParameters?alt=Microsoft.IdentityModel.Tokens.TokenValidationParameters&text=TokenValidationParameters" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: signedHttpRequestValidationParameters
+    description: A set of parameters required for validating a SignedHttpRequest.
+    type: <xref href="Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters?alt=Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters&text=SignedHttpRequestValidationParameters" data-throw-if-not-resolved="True"/>
+  type: constructor
+  uid: Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext.#ctor(System.String,Microsoft.IdentityModel.Protocols.HttpRequestData,Microsoft.IdentityModel.Tokens.TokenValidationParameters,Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters)
+  commentId: M:Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext.#ctor(System.String,Microsoft.IdentityModel.Protocols.HttpRequestData,Microsoft.IdentityModel.Tokens.TokenValidationParameters,Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters)
+  name: SignedHttpRequestValidationContext(String, HttpRequestData, TokenValidationParameters, SignedHttpRequestValidationParameters)
+  fullName: Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext.SignedHttpRequestValidationContext(String, HttpRequestData, TokenValidationParameters, SignedHttpRequestValidationParameters)
+  nameWithType: SignedHttpRequestValidationContext.SignedHttpRequestValidationContext(String, HttpRequestData, TokenValidationParameters, SignedHttpRequestValidationParameters)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public SignedHttpRequestValidationContext (string signedHttpRequest, Microsoft.IdentityModel.Protocols.HttpRequestData httpRequestData, Microsoft.IdentityModel.Tokens.TokenValidationParameters accessTokenValidationParameters, Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters signedHttpRequestValidationParameters);
+  - lang: fsharp
+    values:
+    - value: 'new Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext : string * Microsoft.IdentityModel.Protocols.HttpRequestData * Microsoft.IdentityModel.Tokens.TokenValidationParameters * Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters -> Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext'
+  - lang: vb
+    values:
+    - value: Public Sub New (signedHttpRequest As String, httpRequestData As HttpRequestData, accessTokenValidationParameters As TokenValidationParameters, signedHttpRequestValidationParameters As SignedHttpRequestValidationParameters)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Initializes a new instance of <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext"></xref>.
+  remarks: Default <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext.CallContext"></xref> will be created.
+  metadata: {}
+- parameters:
+  - namesWithMoniker:
+    - value: signedHttpRequest
+    description: SignedHttpRequest to be validated encoded as a JWS in Compact Serialization Format.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: httpRequestData
+    description: A structure that represents an incoming http request.
+    type: <xref href="Microsoft.IdentityModel.Protocols.HttpRequestData?alt=Microsoft.IdentityModel.Protocols.HttpRequestData&text=HttpRequestData" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: accessTokenValidationParameters
+    description: A <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.TokenValidationParameters"></xref> required for access token ("at") validation.
+    type: <xref href="Microsoft.IdentityModel.Tokens.TokenValidationParameters?alt=Microsoft.IdentityModel.Tokens.TokenValidationParameters&text=TokenValidationParameters" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: callContext
+    description: An opaque context used to store work when working with authentication artifacts.
+    type: <xref href="Microsoft.IdentityModel.Tokens.CallContext?alt=Microsoft.IdentityModel.Tokens.CallContext&text=CallContext" data-throw-if-not-resolved="True"/>
+  type: constructor
+  uid: Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext.#ctor(System.String,Microsoft.IdentityModel.Protocols.HttpRequestData,Microsoft.IdentityModel.Tokens.TokenValidationParameters,Microsoft.IdentityModel.Tokens.CallContext)
+  commentId: M:Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext.#ctor(System.String,Microsoft.IdentityModel.Protocols.HttpRequestData,Microsoft.IdentityModel.Tokens.TokenValidationParameters,Microsoft.IdentityModel.Tokens.CallContext)
+  name: SignedHttpRequestValidationContext(String, HttpRequestData, TokenValidationParameters, CallContext)
+  fullName: Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext.SignedHttpRequestValidationContext(String, HttpRequestData, TokenValidationParameters, CallContext)
+  nameWithType: SignedHttpRequestValidationContext.SignedHttpRequestValidationContext(String, HttpRequestData, TokenValidationParameters, CallContext)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public SignedHttpRequestValidationContext (string signedHttpRequest, Microsoft.IdentityModel.Protocols.HttpRequestData httpRequestData, Microsoft.IdentityModel.Tokens.TokenValidationParameters accessTokenValidationParameters, Microsoft.IdentityModel.Tokens.CallContext callContext);
+  - lang: fsharp
+    values:
+    - value: 'new Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext : string * Microsoft.IdentityModel.Protocols.HttpRequestData * Microsoft.IdentityModel.Tokens.TokenValidationParameters * Microsoft.IdentityModel.Tokens.CallContext -> Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext'
+  - lang: vb
+    values:
+    - value: Public Sub New (signedHttpRequest As String, httpRequestData As HttpRequestData, accessTokenValidationParameters As TokenValidationParameters, callContext As CallContext)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Initializes a new instance of <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext"></xref>.
+  remarks: Default <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext.SignedHttpRequestValidationParameters"></xref> will be created.
+  metadata: {}
+- parameters:
+  - namesWithMoniker:
+    - value: signedHttpRequest
+    description: SignedHttpRequest to be validated encoded as a JWS in Compact Serialization Format.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: httpRequestData
+    description: A structure that represents an incoming http request.
+    type: <xref href="Microsoft.IdentityModel.Protocols.HttpRequestData?alt=Microsoft.IdentityModel.Protocols.HttpRequestData&text=HttpRequestData" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: accessTokenValidationParameters
+    description: A <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.TokenValidationParameters"></xref> required for access token ("at") validation.
+    type: <xref href="Microsoft.IdentityModel.Tokens.TokenValidationParameters?alt=Microsoft.IdentityModel.Tokens.TokenValidationParameters&text=TokenValidationParameters" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: signedHttpRequestValidationParameters
+    description: A set of parameters required for validating a SignedHttpRequest.
+    type: <xref href="Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters?alt=Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters&text=SignedHttpRequestValidationParameters" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: callContext
+    description: An opaque context used to store work when working with authentication artifacts.
+    type: <xref href="Microsoft.IdentityModel.Tokens.CallContext?alt=Microsoft.IdentityModel.Tokens.CallContext&text=CallContext" data-throw-if-not-resolved="True"/>
+  type: constructor
+  uid: Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext.#ctor(System.String,Microsoft.IdentityModel.Protocols.HttpRequestData,Microsoft.IdentityModel.Tokens.TokenValidationParameters,Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters,Microsoft.IdentityModel.Tokens.CallContext)
+  commentId: M:Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext.#ctor(System.String,Microsoft.IdentityModel.Protocols.HttpRequestData,Microsoft.IdentityModel.Tokens.TokenValidationParameters,Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters,Microsoft.IdentityModel.Tokens.CallContext)
+  name: SignedHttpRequestValidationContext(String, HttpRequestData, TokenValidationParameters, SignedHttpRequestValidationParameters, CallContext)
+  fullName: Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext.SignedHttpRequestValidationContext(String, HttpRequestData, TokenValidationParameters, SignedHttpRequestValidationParameters, CallContext)
+  nameWithType: SignedHttpRequestValidationContext.SignedHttpRequestValidationContext(String, HttpRequestData, TokenValidationParameters, SignedHttpRequestValidationParameters, CallContext)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public SignedHttpRequestValidationContext (string signedHttpRequest, Microsoft.IdentityModel.Protocols.HttpRequestData httpRequestData, Microsoft.IdentityModel.Tokens.TokenValidationParameters accessTokenValidationParameters, Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters signedHttpRequestValidationParameters, Microsoft.IdentityModel.Tokens.CallContext callContext);
+  - lang: fsharp
+    values:
+    - value: 'new Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext : string * Microsoft.IdentityModel.Protocols.HttpRequestData * Microsoft.IdentityModel.Tokens.TokenValidationParameters * Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters * Microsoft.IdentityModel.Tokens.CallContext -> Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext'
+  - lang: vb
+    values:
+    - value: Public Sub New (signedHttpRequest As String, httpRequestData As HttpRequestData, accessTokenValidationParameters As TokenValidationParameters, signedHttpRequestValidationParameters As SignedHttpRequestValidationParameters, callContext As CallContext)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Initializes a new instance of <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext"></xref>.
+  metadata: {}
+uid: Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext.#ctor*
+commentId: Overload:Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext.#ctor
+namespace: Microsoft.IdentityModel.Protocols.SignedHttpRequest
+name: SignedHttpRequestValidationContext
+fullName: Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext.SignedHttpRequestValidationContext
+nameWithType: SignedHttpRequestValidationContext.SignedHttpRequestValidationContext
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Protocols.SignedHttpRequest.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Protocols.SignedHttpRequest v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext..ctor
+  api_location:
+  - Microsoft.IdentityModel.Protocols.SignedHttpRequest.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext.#ctor
+  - Microsoft::IdentityModel::Protocols::SignedHttpRequest::SignedHttpRequestValidationContext::#ctor
+  - '#ctor'
+  - SignedHttpRequestValidationContext.#ctor
+  - SignedHttpRequestValidationContext::#ctor
+  helpviewer_keywords:
+  - SignedHttpRequestValidationContext class [.NET], constructors
+  - SignedHttpRequestValidationContext(String, HttpRequestData, TokenValidationParameters) class [.NET], constructors
+  - SignedHttpRequestValidationContext(String, HttpRequestData, TokenValidationParameters, SignedHttpRequestValidationParameters) class [.NET], constructors
+  - SignedHttpRequestValidationContext(String, HttpRequestData, TokenValidationParameters, CallContext) class [.NET], constructors
+  - SignedHttpRequestValidationContext(String, HttpRequestData, TokenValidationParameters, SignedHttpRequestValidationParameters, CallContext) class [.NET], constructors
+  monikers:
+  - msal-web-dotnet-latest

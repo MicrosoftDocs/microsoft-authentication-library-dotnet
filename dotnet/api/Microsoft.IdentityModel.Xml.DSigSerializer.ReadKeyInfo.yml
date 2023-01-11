@@ -1,0 +1,78 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.IdentityModel.Xml.KeyInfo?alt=Microsoft.IdentityModel.Xml.KeyInfo&text=KeyInfo" data-throw-if-not-resolved="True"/>
+  parameters:
+  - namesWithMoniker:
+    - value: reader
+    description: <xref data-throw-if-not-resolved="true" uid="System.Xml.XmlReader"></xref> pointing positioned on a &lt;KeyInfo&gt; element.
+    type: <xref href="System.Xml.XmlReader?alt=System.Xml.XmlReader&text=XmlReader" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: if <code data-dev-comment-type="paramref">reader</code> is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: if there is a problem reading the XML.
+    type: <xref href="Microsoft.IdentityModel.Xml.XmlReadException?alt=Microsoft.IdentityModel.Xml.XmlReadException&text=XmlReadException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Xml.DSigSerializer.ReadKeyInfo(System.Xml.XmlReader)
+  commentId: M:Microsoft.IdentityModel.Xml.DSigSerializer.ReadKeyInfo(System.Xml.XmlReader)
+  name: ReadKeyInfo(XmlReader)
+  fullName: Microsoft.IdentityModel.Xml.DSigSerializer.ReadKeyInfo(XmlReader)
+  nameWithType: DSigSerializer.ReadKeyInfo(XmlReader)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public virtual Microsoft.IdentityModel.Xml.KeyInfo ReadKeyInfo (System.Xml.XmlReader reader);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member ReadKeyInfo : System.Xml.XmlReader -> Microsoft.IdentityModel.Xml.KeyInfo
+
+        override this.ReadKeyInfo : System.Xml.XmlReader -> Microsoft.IdentityModel.Xml.KeyInfo
+  - lang: vb
+    values:
+    - value: Public Overridable Function ReadKeyInfo (reader As XmlReader) As KeyInfo
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Reads XML conforming to https://www.w3.org/TR/2001/PR-xmldsig-core-20010820/#sec-KeyInfo
+  remarks: Only handles IssuerSerial, Ski, SubjectName, Certificate. Unsupported types are skipped. Only a X509 data element is supported.
+  metadata: {}
+uid: Microsoft.IdentityModel.Xml.DSigSerializer.ReadKeyInfo*
+commentId: Overload:Microsoft.IdentityModel.Xml.DSigSerializer.ReadKeyInfo
+namespace: Microsoft.IdentityModel.Xml
+name: ReadKeyInfo
+fullName: Microsoft.IdentityModel.Xml.DSigSerializer.ReadKeyInfo
+nameWithType: DSigSerializer.ReadKeyInfo
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Xml.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Xml v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Xml.DSigSerializer.ReadKeyInfo
+  api_location:
+  - Microsoft.IdentityModel.Xml.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Xml.DSigSerializer.ReadKeyInfo
+  - Microsoft::IdentityModel::Xml::DSigSerializer::ReadKeyInfo
+  - ReadKeyInfo
+  - DSigSerializer.ReadKeyInfo
+  - DSigSerializer::ReadKeyInfo
+  helpviewer_keywords:
+  - DSigSerializer.ReadKeyInfo method [.NET]
+  - ReadKeyInfo method [.NET], class DSigSerializer
+  - DSigSerializer.ReadKeyInfo(XmlReader) method [.NET]
+  - ReadKeyInfo(XmlReader) method [.NET], class DSigSerializer
+  monikers:
+  - msal-web-dotnet-latest

@@ -1,0 +1,119 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+    description: The bse64urlendcoded signature over the bytes obtained from UTF8Encoding.GetBytes( 'input' ).
+  parameters:
+  - namesWithMoniker:
+    - value: input
+    description: String to be signed
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: signingCredentials
+    description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SigningCredentials"></xref> that contain crypto specs used to sign the token.
+    type: <xref href="Microsoft.IdentityModel.Tokens.SigningCredentials?alt=Microsoft.IdentityModel.Tokens.SigningCredentials&text=SigningCredentials" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: "'input' or 'signingCredentials' is null."
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(System.String,Microsoft.IdentityModel.Tokens.SigningCredentials)
+  commentId: M:Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(System.String,Microsoft.IdentityModel.Tokens.SigningCredentials)
+  name: CreateEncodedSignature(String, SigningCredentials)
+  fullName: Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(String, SigningCredentials)
+  nameWithType: JwtTokenUtilities.CreateEncodedSignature(String, SigningCredentials)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public static string CreateEncodedSignature (string input, Microsoft.IdentityModel.Tokens.SigningCredentials signingCredentials);
+  - lang: fsharp
+    values:
+    - value: 'static member CreateEncodedSignature : string * Microsoft.IdentityModel.Tokens.SigningCredentials -> string'
+  - lang: vb
+    values:
+    - value: Public Shared Function CreateEncodedSignature (input As String, signingCredentials As SigningCredentials) As String
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Produces a signature over the <code data-dev-comment-type="paramref">input</code>.
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+    description: The bse64urlendcoded signature over the bytes obtained from UTF8Encoding.GetBytes( 'input' ).
+  parameters:
+  - namesWithMoniker:
+    - value: input
+    description: String to be signed
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: signingCredentials
+    description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SigningCredentials"></xref> that contain crypto specs used to sign the token.
+    type: <xref href="Microsoft.IdentityModel.Tokens.SigningCredentials?alt=Microsoft.IdentityModel.Tokens.SigningCredentials&text=SigningCredentials" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: cacheProvider
+    description: should the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SignatureProvider"></xref> be cached.
+    type: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: <code data-dev-comment-type="paramref">input</code> or <code data-dev-comment-type="paramref">signingCredentials</code> is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(System.String,Microsoft.IdentityModel.Tokens.SigningCredentials,System.Boolean)
+  commentId: M:Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(System.String,Microsoft.IdentityModel.Tokens.SigningCredentials,System.Boolean)
+  name: CreateEncodedSignature(String, SigningCredentials, Boolean)
+  fullName: Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(String, SigningCredentials, Boolean)
+  nameWithType: JwtTokenUtilities.CreateEncodedSignature(String, SigningCredentials, Boolean)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public static string CreateEncodedSignature (string input, Microsoft.IdentityModel.Tokens.SigningCredentials signingCredentials, bool cacheProvider);
+  - lang: fsharp
+    values:
+    - value: 'static member CreateEncodedSignature : string * Microsoft.IdentityModel.Tokens.SigningCredentials * bool -> string'
+  - lang: vb
+    values:
+    - value: Public Shared Function CreateEncodedSignature (input As String, signingCredentials As SigningCredentials, cacheProvider As Boolean) As String
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Produces a signature over the <code data-dev-comment-type="paramref">input</code>.
+  metadata: {}
+uid: Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature*
+commentId: Overload:Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature
+namespace: Microsoft.IdentityModel.JsonWebTokens
+name: CreateEncodedSignature
+fullName: Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature
+nameWithType: JwtTokenUtilities.CreateEncodedSignature
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.JsonWebTokens.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.JsonWebTokens v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature
+  api_location:
+  - Microsoft.IdentityModel.JsonWebTokens.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature
+  - Microsoft::IdentityModel::JsonWebTokens::JwtTokenUtilities::CreateEncodedSignature
+  - CreateEncodedSignature
+  - JwtTokenUtilities.CreateEncodedSignature
+  - JwtTokenUtilities::CreateEncodedSignature
+  helpviewer_keywords:
+  - JwtTokenUtilities.CreateEncodedSignature method [.NET]
+  - CreateEncodedSignature method [.NET], class JwtTokenUtilities
+  - JwtTokenUtilities.CreateEncodedSignature(String, SigningCredentials) method [.NET]
+  - CreateEncodedSignature(String, SigningCredentials) method [.NET], class JwtTokenUtilities
+  - JwtTokenUtilities.CreateEncodedSignature(String, SigningCredentials, Boolean) method [.NET]
+  - CreateEncodedSignature(String, SigningCredentials, Boolean) method [.NET], class JwtTokenUtilities
+  monikers:
+  - msal-web-dotnet-latest

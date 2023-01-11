@@ -1,0 +1,81 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.Identity.Client.AcquireTokenSilentParameterBuilder?alt=Microsoft.Identity.Client.AcquireTokenSilentParameterBuilder&text=AcquireTokenSilentParameterBuilder" data-throw-if-not-resolved="True"/>
+    description: The builder to chain the .With methods
+  parameters:
+  - namesWithMoniker:
+    - value: forceRefresh
+    description: >-
+      If <code data-dev-comment-type="c">true</code>, ignore any access token in the user token cache
+                  and attempt to acquire new access token using the refresh token for the account
+                  if one is available. This can be useful in the case when the application developer wants to make
+                  sure that conditional access policies are applied immediately, rather than after the expiration of the access token.
+                  The default is <code data-dev-comment-type="c">false</code>
+    type: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.AcquireTokenSilentParameterBuilder.WithForceRefresh(System.Boolean)
+  commentId: M:Microsoft.Identity.Client.AcquireTokenSilentParameterBuilder.WithForceRefresh(System.Boolean)
+  name: WithForceRefresh(Boolean)
+  fullName: Microsoft.Identity.Client.AcquireTokenSilentParameterBuilder.WithForceRefresh(Boolean)
+  nameWithType: AcquireTokenSilentParameterBuilder.WithForceRefresh(Boolean)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public Microsoft.Identity.Client.AcquireTokenSilentParameterBuilder WithForceRefresh (bool forceRefresh);
+  - lang: fsharp
+    values:
+    - value: 'member this.WithForceRefresh : bool -> Microsoft.Identity.Client.AcquireTokenSilentParameterBuilder'
+  - lang: vb
+    values:
+    - value: Public Function WithForceRefresh (forceRefresh As Boolean) As AcquireTokenSilentParameterBuilder
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    Specifies if the client application should force refreshing the
+
+    token from the user token cache. By default the token is taken from the
+
+    the user token cache (forceRefresh=false)
+  remarks: <p>Avoid unnecessarily setting <code data-dev-comment-type="paramref">forceRefresh</code> to <code data-dev-comment-type="c">true</code> true in order to avoid negatively affecting the performance of your application</p>
+  metadata: {}
+uid: Microsoft.Identity.Client.AcquireTokenSilentParameterBuilder.WithForceRefresh*
+commentId: Overload:Microsoft.Identity.Client.AcquireTokenSilentParameterBuilder.WithForceRefresh
+namespace: Microsoft.Identity.Client
+name: WithForceRefresh
+fullName: Microsoft.Identity.Client.AcquireTokenSilentParameterBuilder.WithForceRefresh
+nameWithType: AcquireTokenSilentParameterBuilder.WithForceRefresh
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.AcquireTokenSilentParameterBuilder.WithForceRefresh
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.AcquireTokenSilentParameterBuilder.WithForceRefresh
+  - Microsoft::Identity::Client::AcquireTokenSilentParameterBuilder::WithForceRefresh
+  - WithForceRefresh
+  - AcquireTokenSilentParameterBuilder.WithForceRefresh
+  - AcquireTokenSilentParameterBuilder::WithForceRefresh
+  helpviewer_keywords:
+  - AcquireTokenSilentParameterBuilder.WithForceRefresh method [.NET]
+  - WithForceRefresh method [.NET], class AcquireTokenSilentParameterBuilder
+  - AcquireTokenSilentParameterBuilder.WithForceRefresh(Boolean) method [.NET]
+  - WithForceRefresh(Boolean) method [.NET], class AcquireTokenSilentParameterBuilder
+  monikers:
+  - msal-dotnet-latest

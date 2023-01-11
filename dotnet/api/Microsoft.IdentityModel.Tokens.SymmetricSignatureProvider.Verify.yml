@@ -1,0 +1,181 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+    description: true if computed signature matches the signature parameter, false otherwise.
+  parameters:
+  - namesWithMoniker:
+    - value: input
+    description: The bytes to verify.
+    type: <xref href="System.Byte?alt=System.Byte&text=Byte" data-throw-if-not-resolved="True"/>[]
+  - namesWithMoniker:
+    - value: signature
+    description: signature to compare against.
+    type: <xref href="System.Byte?alt=System.Byte&text=Byte" data-throw-if-not-resolved="True"/>[]
+  exceptions:
+  - description: "'signature' is null."
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: "'signature.Length' == 0."
+    type: <xref href="System.ArgumentException" data-throw-if-not-resolved="True"/>
+  - description: <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Dispose(System.Boolean)"></xref> has been called.
+    type: <xref href="System.ObjectDisposedException" data-throw-if-not-resolved="True"/>
+  - description: If the internal <xref data-throw-if-not-resolved="true" uid="System.Security.Cryptography.KeyedHashAlgorithm"></xref> is null. This can occur if a derived type deletes it or does not create it.
+    type: <xref href="System.InvalidOperationException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Verify(System.Byte[],System.Byte[])
+  commentId: M:Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Verify(System.Byte[],System.Byte[])
+  name: Verify(Byte[], Byte[])
+  fullName: Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Verify(Byte[], Byte[])
+  nameWithType: SymmetricSignatureProvider.Verify(Byte[], Byte[])
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public override bool Verify (byte[] input, byte[] signature);
+  - lang: fsharp
+    values:
+    - value: 'override this.Verify : byte[] * byte[] -> bool'
+  - lang: vb
+    values:
+    - value: Public Overrides Function Verify (input As Byte(), signature As Byte()) As Boolean
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Verifies that a signature created over the 'input' matches the signature. Using <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SymmetricSecurityKey"></xref> and 'algorithm' passed to <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.#ctor(Microsoft.IdentityModel.Tokens.SecurityKey,System.String)"></xref>.
+  remarks: Verify is thread safe.
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+    description: true if computed signature matches the signature parameter, false otherwise.
+  parameters:
+  - namesWithMoniker:
+    - value: input
+    description: The bytes to verify.
+    type: <xref href="System.Byte?alt=System.Byte&text=Byte" data-throw-if-not-resolved="True"/>[]
+  - namesWithMoniker:
+    - value: signature
+    description: signature to compare against.
+    type: <xref href="System.Byte?alt=System.Byte&text=Byte" data-throw-if-not-resolved="True"/>[]
+  - namesWithMoniker:
+    - value: length
+    description: number of bytes of signature to use.
+    type: <xref href="System.Int32?alt=System.Int32&text=Int32" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: "'signature' is null."
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: "'length &lt; 1'"
+    type: <xref href="System.ArgumentException" data-throw-if-not-resolved="True"/>
+  - description: <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Dispose(System.Boolean)"></xref> has been called.
+    type: <xref href="System.ObjectDisposedException" data-throw-if-not-resolved="True"/>
+  - description: If the internal <xref data-throw-if-not-resolved="true" uid="System.Security.Cryptography.KeyedHashAlgorithm"></xref> is null. This can occur if a derived type deletes it or does not create it.
+    type: <xref href="System.InvalidOperationException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Verify(System.Byte[],System.Byte[],System.Int32)
+  commentId: M:Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Verify(System.Byte[],System.Byte[],System.Int32)
+  name: Verify(Byte[], Byte[], Int32)
+  fullName: Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Verify(Byte[], Byte[], Int32)
+  nameWithType: SymmetricSignatureProvider.Verify(Byte[], Byte[], Int32)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public bool Verify (byte[] input, byte[] signature, int length);
+  - lang: fsharp
+    values:
+    - value: 'override this.Verify : byte[] * byte[] * int -> bool'
+  - lang: vb
+    values:
+    - value: Public Function Verify (input As Byte(), signature As Byte(), length As Integer) As Boolean
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Verifies that a signature created over the 'input' matches the signature. Using <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SymmetricSecurityKey"></xref> and 'algorithm' passed to <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.#ctor(Microsoft.IdentityModel.Tokens.SecurityKey,System.String)"></xref>.
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+    description: true if computed signature matches the signature parameter, false otherwise.
+  parameters:
+  - namesWithMoniker:
+    - value: input
+    description: The bytes to verify.
+    type: <xref href="System.Byte?alt=System.Byte&text=Byte" data-throw-if-not-resolved="True"/>[]
+  - namesWithMoniker:
+    - value: inputOffset
+    description: offset in to input bytes to caculate hash.
+    type: <xref href="System.Int32?alt=System.Int32&text=Int32" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: inputLength
+    description: number of bytes of signature to use.
+    type: <xref href="System.Int32?alt=System.Int32&text=Int32" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: signature
+    description: signature to compare against.
+    type: <xref href="System.Byte?alt=System.Byte&text=Byte" data-throw-if-not-resolved="True"/>[]
+  - namesWithMoniker:
+    - value: signatureOffset
+    type: <xref href="System.Int32?alt=System.Int32&text=Int32" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: signatureLength
+    type: <xref href="System.Int32?alt=System.Int32&text=Int32" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Verify(System.Byte[],System.Int32,System.Int32,System.Byte[],System.Int32,System.Int32)
+  commentId: M:Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Verify(System.Byte[],System.Int32,System.Int32,System.Byte[],System.Int32,System.Int32)
+  name: Verify(Byte[], Int32, Int32, Byte[], Int32, Int32)
+  fullName: Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Verify(Byte[], Int32, Int32, Byte[], Int32, Int32)
+  nameWithType: SymmetricSignatureProvider.Verify(Byte[], Int32, Int32, Byte[], Int32, Int32)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public override bool Verify (byte[] input, int inputOffset, int inputLength, byte[] signature, int signatureOffset, int signatureLength);
+  - lang: fsharp
+    values:
+    - value: 'override this.Verify : byte[] * int * int * byte[] * int * int -> bool'
+  - lang: vb
+    values:
+    - value: Public Overrides Function Verify (input As Byte(), inputOffset As Integer, inputLength As Integer, signature As Byte(), signatureOffset As Integer, signatureLength As Integer) As Boolean
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Verifies that a signature created over the 'input' matches the signature. Using <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityKey"></xref> and 'algorithm' passed to <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SignatureProvider.#ctor(Microsoft.IdentityModel.Tokens.SecurityKey,System.String)"></xref>.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Verify*
+commentId: Overload:Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Verify
+namespace: Microsoft.IdentityModel.Tokens
+name: Verify
+fullName: Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Verify
+nameWithType: SymmetricSignatureProvider.Verify
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Verify
+  api_location:
+  - Microsoft.IdentityModel.Tokens.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Verify
+  - Microsoft::IdentityModel::Tokens::SymmetricSignatureProvider::Verify
+  - Verify
+  - SymmetricSignatureProvider.Verify
+  - SymmetricSignatureProvider::Verify
+  helpviewer_keywords:
+  - SymmetricSignatureProvider.Verify method [.NET]
+  - Verify method [.NET], class SymmetricSignatureProvider
+  - SymmetricSignatureProvider.Verify(Byte[], Byte[]) method [.NET]
+  - Verify(Byte[], Byte[]) method [.NET], class SymmetricSignatureProvider
+  - SymmetricSignatureProvider.Verify(Byte[], Byte[], Int32) method [.NET]
+  - Verify(Byte[], Byte[], Int32) method [.NET], class SymmetricSignatureProvider
+  - SymmetricSignatureProvider.Verify(Byte[], Int32, Int32, Byte[], Int32, Int32) method [.NET]
+  - Verify(Byte[], Int32, Int32, Byte[], Int32, Int32) method [.NET], class SymmetricSignatureProvider
+  monikers:
+  - msal-web-dotnet-latest

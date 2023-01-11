@@ -1,0 +1,85 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.IdentityModel.Tokens.SecurityKey?alt=Microsoft.IdentityModel.Tokens.SecurityKey&text=SecurityKey" data-throw-if-not-resolved="True"/>
+    description: Returns a <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityKey"></xref> to use for signature validation.
+  parameters:
+  - namesWithMoniker:
+    - value: token
+    description: The <xref data-throw-if-not-resolved="true" uid="System.String"></xref> representation of the token that is being validated.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: samlToken
+    description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken"></xref> that is being validated.
+    type: <xref href="Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken?alt=Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken&text=Saml2SecurityToken" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: validationParameters
+    description: <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.TokenValidationParameters"></xref> that will be used during validation.
+    type: <xref href="Microsoft.IdentityModel.Tokens.TokenValidationParameters?alt=Microsoft.IdentityModel.Tokens.TokenValidationParameters&text=TokenValidationParameters" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: If <code data-dev-comment-type="paramref">samlToken</code>.Assertion' is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ResolveIssuerSigningKey(System.String,Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken,Microsoft.IdentityModel.Tokens.TokenValidationParameters)
+  commentId: M:Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ResolveIssuerSigningKey(System.String,Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken,Microsoft.IdentityModel.Tokens.TokenValidationParameters)
+  name: ResolveIssuerSigningKey(String, Saml2SecurityToken, TokenValidationParameters)
+  fullName: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ResolveIssuerSigningKey(String, Saml2SecurityToken, TokenValidationParameters)
+  nameWithType: Saml2SecurityTokenHandler.ResolveIssuerSigningKey(String, Saml2SecurityToken, TokenValidationParameters)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected virtual Microsoft.IdentityModel.Tokens.SecurityKey ResolveIssuerSigningKey (string token, Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken samlToken, Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member ResolveIssuerSigningKey : string * Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken * Microsoft.IdentityModel.Tokens.TokenValidationParameters -> Microsoft.IdentityModel.Tokens.SecurityKey
+
+        override this.ResolveIssuerSigningKey : string * Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken * Microsoft.IdentityModel.Tokens.TokenValidationParameters -> Microsoft.IdentityModel.Tokens.SecurityKey
+  - lang: vb
+    values:
+    - value: Protected Overridable Function ResolveIssuerSigningKey (token As String, samlToken As Saml2SecurityToken, validationParameters As TokenValidationParameters) As SecurityKey
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Returns a <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityKey"></xref> to use for validating the signature of a token.
+  remarks: If key fails to resolve, then null is returned.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ResolveIssuerSigningKey*
+commentId: Overload:Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ResolveIssuerSigningKey
+namespace: Microsoft.IdentityModel.Tokens.Saml2
+name: ResolveIssuerSigningKey
+fullName: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ResolveIssuerSigningKey
+nameWithType: Saml2SecurityTokenHandler.ResolveIssuerSigningKey
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ResolveIssuerSigningKey
+  api_location:
+  - Microsoft.IdentityModel.Tokens.Saml.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ResolveIssuerSigningKey
+  - Microsoft::IdentityModel::Tokens::Saml2::Saml2SecurityTokenHandler::ResolveIssuerSigningKey
+  - ResolveIssuerSigningKey
+  - Saml2SecurityTokenHandler.ResolveIssuerSigningKey
+  - Saml2SecurityTokenHandler::ResolveIssuerSigningKey
+  helpviewer_keywords:
+  - Saml2SecurityTokenHandler.ResolveIssuerSigningKey method [.NET]
+  - ResolveIssuerSigningKey method [.NET], class Saml2SecurityTokenHandler
+  - Saml2SecurityTokenHandler.ResolveIssuerSigningKey(String, Saml2SecurityToken, TokenValidationParameters) method [.NET]
+  - ResolveIssuerSigningKey(String, Saml2SecurityToken, TokenValidationParameters) method [.NET], class Saml2SecurityTokenHandler
+  monikers:
+  - msal-web-dotnet-latest

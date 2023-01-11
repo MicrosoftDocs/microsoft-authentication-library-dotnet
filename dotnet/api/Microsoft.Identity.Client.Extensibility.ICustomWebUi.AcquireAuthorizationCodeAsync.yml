@@ -1,0 +1,87 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="System.Uri?alt=System.Uri&text=Uri" data-throw-if-not-resolved="True"/>&gt;
+    description: >-
+      The URI returned back from the STS authorization endpoint. This URI contains a code=CODE
+                  parameters that MSAL.NET will extract and redeem.
+  parameters:
+  - namesWithMoniker:
+    - value: authorizationUri
+    description: >-
+      URI computed by MSAL.NET that will let the UI extension
+                  navigate to the STS authorization endpoint in order to sign-in the user and have them consent
+    type: <xref href="System.Uri?alt=System.Uri&text=Uri" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: redirectUri
+    description: >-
+      The redirect URI that was configured. The auth code will be appended to this redirect URI and the browser
+                   will redirect to it.
+    type: <xref href="System.Uri?alt=System.Uri&text=Uri" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: cancellationToken
+    description: >-
+      The cancellation token to which you should respond to.
+                   See https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/task-cancellation for details.
+    type: <xref href="System.Threading.CancellationToken?alt=System.Threading.CancellationToken&text=CancellationToken" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.Extensibility.ICustomWebUi.AcquireAuthorizationCodeAsync(System.Uri,System.Uri,System.Threading.CancellationToken)
+  commentId: M:Microsoft.Identity.Client.Extensibility.ICustomWebUi.AcquireAuthorizationCodeAsync(System.Uri,System.Uri,System.Threading.CancellationToken)
+  name: AcquireAuthorizationCodeAsync(Uri, Uri, CancellationToken)
+  fullName: Microsoft.Identity.Client.Extensibility.ICustomWebUi.AcquireAuthorizationCodeAsync(Uri, Uri, CancellationToken)
+  nameWithType: ICustomWebUi.AcquireAuthorizationCodeAsync(Uri, Uri, CancellationToken)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public System.Threading.Tasks.Task<Uri> AcquireAuthorizationCodeAsync (Uri authorizationUri, Uri redirectUri, System.Threading.CancellationToken cancellationToken);
+  - lang: fsharp
+    values:
+    - value: 'abstract member AcquireAuthorizationCodeAsync : Uri * Uri * System.Threading.CancellationToken -> System.Threading.Tasks.Task<Uri>'
+  - lang: vb
+    values:
+    - value: Public Function AcquireAuthorizationCodeAsync (authorizationUri As Uri, redirectUri As Uri, cancellationToken As CancellationToken) As Task(Of Uri)
+  monikers:
+  - msal-dotnet-latest
+  summary: Method called by MSAL.NET to delegate the authentication code web with the Secure Token Service (STS)
+  remarks: <p>The <code data-dev-comment-type="paramref">authorizationUri</code>"/&gt; is crafted to leverage PKCE in order to protect the token from a man in the middle attack. Only MSAL.NET can redeem the code.</p><p>In the event of cancellation, the implementer should return OperationCanceledException.</p>
+  metadata: {}
+uid: Microsoft.Identity.Client.Extensibility.ICustomWebUi.AcquireAuthorizationCodeAsync*
+commentId: Overload:Microsoft.Identity.Client.Extensibility.ICustomWebUi.AcquireAuthorizationCodeAsync
+namespace: Microsoft.Identity.Client.Extensibility
+name: AcquireAuthorizationCodeAsync
+fullName: Microsoft.Identity.Client.Extensibility.ICustomWebUi.AcquireAuthorizationCodeAsync
+nameWithType: ICustomWebUi.AcquireAuthorizationCodeAsync
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.Extensibility.ICustomWebUi.AcquireAuthorizationCodeAsync
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.Extensibility.ICustomWebUi.AcquireAuthorizationCodeAsync
+  - Microsoft::Identity::Client::Extensibility::ICustomWebUi::AcquireAuthorizationCodeAsync
+  - AcquireAuthorizationCodeAsync
+  - ICustomWebUi.AcquireAuthorizationCodeAsync
+  - ICustomWebUi::AcquireAuthorizationCodeAsync
+  helpviewer_keywords:
+  - ICustomWebUi.AcquireAuthorizationCodeAsync method [.NET]
+  - AcquireAuthorizationCodeAsync method [.NET], interface ICustomWebUi
+  - ICustomWebUi.AcquireAuthorizationCodeAsync(Uri, Uri, CancellationToken) method [.NET]
+  - AcquireAuthorizationCodeAsync(Uri, Uri, CancellationToken) method [.NET], interface ICustomWebUi
+  monikers:
+  - msal-dotnet-latest

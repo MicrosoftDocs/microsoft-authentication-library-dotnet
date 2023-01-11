@@ -1,0 +1,66 @@
+### YamlMime:NetMember
+type: field
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: field
+  uid: Microsoft.Identity.Client.MsalError.InteractionRequired
+  commentId: F:Microsoft.Identity.Client.MsalError.InteractionRequired
+  name: InteractionRequired
+  fullName: Microsoft.Identity.Client.MsalError.InteractionRequired
+  nameWithType: MsalError.InteractionRequired
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public const string InteractionRequired;
+  - lang: fsharp
+    values:
+    - value: 'val mutable InteractionRequired : string'
+  - lang: vb
+    values:
+    - value: 'Public Const InteractionRequired As String '
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    Standard OAuth2 protocol error code. It indicates that the application needs to expose the UI to the user
+
+    so the user can do an interactive log-in to get a token with updated claims.
+
+    <p>Mitigation:</p> If your application is a <xref data-throw-if-not-resolved="true" uid="IPublicClientApplication"></xref> call <code data-dev-comment-type="c">AcquireTokenInteractive</code>
+
+    perform an interactive authentication. If your application is a <xref data-throw-if-not-resolved="true" uid="ConfidentialClientApplication"></xref> chances are that the Claims member
+
+    of the exception is not empty. See <xref data-throw-if-not-resolved="true" uid="MsalServiceException.Claims"></xref> for the right mitigation
+  metadata: {}
+namespace: Microsoft.Identity.Client
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.MsalError.InteractionRequired
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.MsalError.InteractionRequired
+  - Microsoft::Identity::Client::MsalError::InteractionRequired
+  - InteractionRequired
+  - MsalError.InteractionRequired
+  - MsalError::InteractionRequired
+  helpviewer_keywords:
+  - MsalError.InteractionRequired field [.NET]
+  - InteractionRequired field [.NET], class MsalError
+  monikers:
+  - msal-dotnet-latest

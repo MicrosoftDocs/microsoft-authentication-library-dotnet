@@ -1,0 +1,174 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Client.WwwAuthenticateParameters?alt=Microsoft.Identity.Client.WwwAuthenticateParameters&text=WwwAuthenticateParameters" data-throw-if-not-resolved="True"/>&gt;
+    description: WWW-Authenticate Parameters extracted from response to the unauthenticated call.
+  parameters:
+  - namesWithMoniker:
+    - value: httpClient
+    description: Instance of <xref data-throw-if-not-resolved="true" uid="System.Net.Http.HttpClient"></xref> to make the request with.
+    type: <xref href="System.Net.Http.HttpClient?alt=System.Net.Http.HttpClient&text=HttpClient" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: resourceUri
+    description: URI of the resource.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: cancellationToken
+    description: The cancellation token to cancel operation.
+    type: <xref href="System.Threading.CancellationToken?alt=System.Threading.CancellationToken&text=CancellationToken" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.WwwAuthenticateParameters.CreateFromResourceResponseAsync(System.Net.Http.HttpClient,System.String,System.Threading.CancellationToken)
+  commentId: M:Microsoft.Identity.Client.WwwAuthenticateParameters.CreateFromResourceResponseAsync(System.Net.Http.HttpClient,System.String,System.Threading.CancellationToken)
+  name: CreateFromResourceResponseAsync(HttpClient, String, CancellationToken)
+  fullName: Microsoft.Identity.Client.WwwAuthenticateParameters.CreateFromResourceResponseAsync(HttpClient, String, CancellationToken)
+  nameWithType: WwwAuthenticateParameters.CreateFromResourceResponseAsync(HttpClient, String, CancellationToken)
+  attributesWithMoniker:
+  - value: System.ObsoleteAttribute
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: >-
+        [System.Obsolete("This api is now obsolete and has been replaced with replaced with CreateFromAuthenticationResponseAsync(HttpResponseHeaders, string)")]
+
+        public static System.Threading.Tasks.Task<Microsoft.Identity.Client.WwwAuthenticateParameters> CreateFromResourceResponseAsync (System.Net.Http.HttpClient httpClient, string resourceUri, System.Threading.CancellationToken cancellationToken = default);
+  - lang: fsharp
+    values:
+    - value: >-
+        [<System.Obsolete("This api is now obsolete and has been replaced with replaced with CreateFromAuthenticationResponseAsync(HttpResponseHeaders, string)")>]
+
+        static member CreateFromResourceResponseAsync : System.Net.Http.HttpClient * string * System.Threading.CancellationToken -> System.Threading.Tasks.Task<Microsoft.Identity.Client.WwwAuthenticateParameters>
+  - lang: vb
+    values:
+    - value: Public Shared Function CreateFromResourceResponseAsync (httpClient As HttpClient, resourceUri As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of WwwAuthenticateParameters)
+  monikers:
+  - msal-dotnet-latest
+  obsoleteMessagesWithMoniker:
+  - value: This api is now obsolete and has been replaced with replaced with CreateFromAuthenticationResponseAsync(HttpResponseHeaders, string)
+  summary: Create the authenticate parameters by attempting to call the resource unauthenticated, and analyzing the response.
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Client.WwwAuthenticateParameters?alt=Microsoft.Identity.Client.WwwAuthenticateParameters&text=WwwAuthenticateParameters" data-throw-if-not-resolved="True"/>&gt;
+    description: WWW-Authenticate Parameters extracted from response to the unauthenticated call.
+  parameters:
+  - namesWithMoniker:
+    - value: resourceUri
+    description: URI of the resource.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.WwwAuthenticateParameters.CreateFromResourceResponseAsync(System.String)
+  commentId: M:Microsoft.Identity.Client.WwwAuthenticateParameters.CreateFromResourceResponseAsync(System.String)
+  name: CreateFromResourceResponseAsync(String)
+  fullName: Microsoft.Identity.Client.WwwAuthenticateParameters.CreateFromResourceResponseAsync(String)
+  nameWithType: WwwAuthenticateParameters.CreateFromResourceResponseAsync(String)
+  attributesWithMoniker:
+  - value: System.ObsoleteAttribute
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: >-
+        [System.Obsolete("This api is now obsolete and has been replaced with CreateFromAuthenticationResponseAsync(...)")]
+
+        public static System.Threading.Tasks.Task<Microsoft.Identity.Client.WwwAuthenticateParameters> CreateFromResourceResponseAsync (string resourceUri);
+  - lang: fsharp
+    values:
+    - value: >-
+        [<System.Obsolete("This api is now obsolete and has been replaced with CreateFromAuthenticationResponseAsync(...)")>]
+
+        static member CreateFromResourceResponseAsync : string -> System.Threading.Tasks.Task<Microsoft.Identity.Client.WwwAuthenticateParameters>
+  - lang: vb
+    values:
+    - value: Public Shared Function CreateFromResourceResponseAsync (resourceUri As String) As Task(Of WwwAuthenticateParameters)
+  monikers:
+  - msal-dotnet-latest
+  obsoleteMessagesWithMoniker:
+  - value: This api is now obsolete and has been replaced with CreateFromAuthenticationResponseAsync(...)
+  summary: Create the authenticate parameters by attempting to call the resource unauthenticated, and analyzing the response.
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Client.WwwAuthenticateParameters?alt=Microsoft.Identity.Client.WwwAuthenticateParameters&text=WwwAuthenticateParameters" data-throw-if-not-resolved="True"/>&gt;
+    description: WWW-Authenticate Parameters extracted from response to the unauthenticated call.
+  parameters:
+  - namesWithMoniker:
+    - value: resourceUri
+    description: URI of the resource.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: cancellationToken
+    description: The cancellation token to cancel operation.
+    type: <xref href="System.Threading.CancellationToken?alt=System.Threading.CancellationToken&text=CancellationToken" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.WwwAuthenticateParameters.CreateFromResourceResponseAsync(System.String,System.Threading.CancellationToken)
+  commentId: M:Microsoft.Identity.Client.WwwAuthenticateParameters.CreateFromResourceResponseAsync(System.String,System.Threading.CancellationToken)
+  name: CreateFromResourceResponseAsync(String, CancellationToken)
+  fullName: Microsoft.Identity.Client.WwwAuthenticateParameters.CreateFromResourceResponseAsync(String, CancellationToken)
+  nameWithType: WwwAuthenticateParameters.CreateFromResourceResponseAsync(String, CancellationToken)
+  attributesWithMoniker:
+  - value: System.ObsoleteAttribute
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: >-
+        [System.Obsolete("This api is now obsolete and has been replaced with CreateFromAuthenticationResponseAsync(...)")]
+
+        public static System.Threading.Tasks.Task<Microsoft.Identity.Client.WwwAuthenticateParameters> CreateFromResourceResponseAsync (string resourceUri, System.Threading.CancellationToken cancellationToken = default);
+  - lang: fsharp
+    values:
+    - value: >-
+        [<System.Obsolete("This api is now obsolete and has been replaced with CreateFromAuthenticationResponseAsync(...)")>]
+
+        static member CreateFromResourceResponseAsync : string * System.Threading.CancellationToken -> System.Threading.Tasks.Task<Microsoft.Identity.Client.WwwAuthenticateParameters>
+  - lang: vb
+    values:
+    - value: Public Shared Function CreateFromResourceResponseAsync (resourceUri As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of WwwAuthenticateParameters)
+  monikers:
+  - msal-dotnet-latest
+  obsoleteMessagesWithMoniker:
+  - value: This api is now obsolete and has been replaced with CreateFromAuthenticationResponseAsync(...)
+  summary: Create the authenticate parameters by attempting to call the resource unauthenticated, and analyzing the response.
+  metadata: {}
+uid: Microsoft.Identity.Client.WwwAuthenticateParameters.CreateFromResourceResponseAsync*
+commentId: Overload:Microsoft.Identity.Client.WwwAuthenticateParameters.CreateFromResourceResponseAsync
+namespace: Microsoft.Identity.Client
+name: CreateFromResourceResponseAsync
+fullName: Microsoft.Identity.Client.WwwAuthenticateParameters.CreateFromResourceResponseAsync
+nameWithType: WwwAuthenticateParameters.CreateFromResourceResponseAsync
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.WwwAuthenticateParameters.CreateFromResourceResponseAsync
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.WwwAuthenticateParameters.CreateFromResourceResponseAsync
+  - Microsoft::Identity::Client::WwwAuthenticateParameters::CreateFromResourceResponseAsync
+  - CreateFromResourceResponseAsync
+  - WwwAuthenticateParameters.CreateFromResourceResponseAsync
+  - WwwAuthenticateParameters::CreateFromResourceResponseAsync
+  helpviewer_keywords:
+  - WwwAuthenticateParameters.CreateFromResourceResponseAsync method [.NET]
+  - CreateFromResourceResponseAsync method [.NET], class WwwAuthenticateParameters
+  - WwwAuthenticateParameters.CreateFromResourceResponseAsync(HttpClient, String, CancellationToken) method [.NET]
+  - CreateFromResourceResponseAsync(HttpClient, String, CancellationToken) method [.NET], class WwwAuthenticateParameters
+  - WwwAuthenticateParameters.CreateFromResourceResponseAsync(String) method [.NET]
+  - CreateFromResourceResponseAsync(String) method [.NET], class WwwAuthenticateParameters
+  - WwwAuthenticateParameters.CreateFromResourceResponseAsync(String, CancellationToken) method [.NET]
+  - CreateFromResourceResponseAsync(String, CancellationToken) method [.NET], class WwwAuthenticateParameters
+  monikers:
+  - msal-dotnet-latest

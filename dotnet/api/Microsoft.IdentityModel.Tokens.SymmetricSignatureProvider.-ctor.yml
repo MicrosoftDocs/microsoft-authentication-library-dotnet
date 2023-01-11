@@ -1,0 +1,116 @@
+### YamlMime:NetMember
+type: constructor
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: key
+    description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityKey"></xref> that will be used for signature operations.
+    type: <xref href="Microsoft.IdentityModel.Tokens.SecurityKey?alt=Microsoft.IdentityModel.Tokens.SecurityKey&text=SecurityKey" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: algorithm
+    description: The signature algorithm to use.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: "'algorithm' is null or empty."
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: If <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityKey"></xref> and algorithm pair are not supported.
+    type: <xref href="System.NotSupportedException" data-throw-if-not-resolved="True"/>
+  - description: "'<xref data-throw-if-not-resolved=\"true\" uid=\"Microsoft.IdentityModel.Tokens.SecurityKey\"></xref>.KeySize' is smaller than <xref data-throw-if-not-resolved=\"true\" uid=\"Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.MinimumSymmetricKeySizeInBits\"></xref>."
+    type: <xref href="System.ArgumentOutOfRangeException" data-throw-if-not-resolved="True"/>
+  type: constructor
+  uid: Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.#ctor(Microsoft.IdentityModel.Tokens.SecurityKey,System.String)
+  commentId: M:Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.#ctor(Microsoft.IdentityModel.Tokens.SecurityKey,System.String)
+  name: SymmetricSignatureProvider(SecurityKey, String)
+  fullName: Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.SymmetricSignatureProvider(SecurityKey, String)
+  nameWithType: SymmetricSignatureProvider.SymmetricSignatureProvider(SecurityKey, String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public SymmetricSignatureProvider (Microsoft.IdentityModel.Tokens.SecurityKey key, string algorithm);
+  - lang: fsharp
+    values:
+    - value: 'new Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider : Microsoft.IdentityModel.Tokens.SecurityKey * string -> Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider'
+  - lang: vb
+    values:
+    - value: Public Sub New (key As SecurityKey, algorithm As String)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Initializes a new instance of the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider"></xref> class that uses an <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityKey"></xref> to create and / or verify signatures over a array of bytes.
+  metadata: {}
+- parameters:
+  - namesWithMoniker:
+    - value: key
+    description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityKey"></xref> that will be used for signature operations.
+    type: <xref href="Microsoft.IdentityModel.Tokens.SecurityKey?alt=Microsoft.IdentityModel.Tokens.SecurityKey&text=SecurityKey" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: algorithm
+    description: The signature algorithm to use.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: willCreateSignatures
+    description: indicates if this <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider"></xref> will be used to create signatures.
+    type: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: "'algorithm' is null or empty."
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: If <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityKey"></xref> and algorithm pair are not supported.
+    type: <xref href="System.NotSupportedException" data-throw-if-not-resolved="True"/>
+  - description: "'<xref data-throw-if-not-resolved=\"true\" uid=\"Microsoft.IdentityModel.Tokens.SecurityKey\"></xref>.KeySize' is smaller than <xref data-throw-if-not-resolved=\"true\" uid=\"Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.MinimumSymmetricKeySizeInBits\"></xref>."
+    type: <xref href="System.ArgumentOutOfRangeException" data-throw-if-not-resolved="True"/>
+  type: constructor
+  uid: Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.#ctor(Microsoft.IdentityModel.Tokens.SecurityKey,System.String,System.Boolean)
+  commentId: M:Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.#ctor(Microsoft.IdentityModel.Tokens.SecurityKey,System.String,System.Boolean)
+  name: SymmetricSignatureProvider(SecurityKey, String, Boolean)
+  fullName: Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.SymmetricSignatureProvider(SecurityKey, String, Boolean)
+  nameWithType: SymmetricSignatureProvider.SymmetricSignatureProvider(SecurityKey, String, Boolean)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public SymmetricSignatureProvider (Microsoft.IdentityModel.Tokens.SecurityKey key, string algorithm, bool willCreateSignatures);
+  - lang: fsharp
+    values:
+    - value: 'new Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider : Microsoft.IdentityModel.Tokens.SecurityKey * string * bool -> Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider'
+  - lang: vb
+    values:
+    - value: Public Sub New (key As SecurityKey, algorithm As String, willCreateSignatures As Boolean)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Initializes a new instance of the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider"></xref> class that uses an <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.SecurityKey"></xref> to create and / or verify signatures over a array of bytes.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.#ctor*
+commentId: Overload:Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.#ctor
+namespace: Microsoft.IdentityModel.Tokens
+name: SymmetricSignatureProvider
+fullName: Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.SymmetricSignatureProvider
+nameWithType: SymmetricSignatureProvider.SymmetricSignatureProvider
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider..ctor
+  api_location:
+  - Microsoft.IdentityModel.Tokens.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.#ctor
+  - Microsoft::IdentityModel::Tokens::SymmetricSignatureProvider::#ctor
+  - '#ctor'
+  - SymmetricSignatureProvider.#ctor
+  - SymmetricSignatureProvider::#ctor
+  helpviewer_keywords:
+  - SymmetricSignatureProvider class [.NET], constructors
+  - SymmetricSignatureProvider(SecurityKey, String) class [.NET], constructors
+  - SymmetricSignatureProvider(SecurityKey, String, Boolean) class [.NET], constructors
+  monikers:
+  - msal-web-dotnet-latest

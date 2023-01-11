@@ -1,0 +1,116 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>
+    description: A <xref data-throw-if-not-resolved="true" uid="System.Threading.Tasks.Task"></xref> that represents a completed write operation.
+  parameters:
+  - namesWithMoniker:
+    - value: cacheKey
+    description: Cache key.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: bytes
+    description: Bytes to write.
+    type: <xref href="System.Byte?alt=System.Byte&text=Byte" data-throw-if-not-resolved="True"/>[]
+  type: method
+  uid: Microsoft.Identity.Web.TokenCacheProviders.MsalAbstractTokenCacheProvider.WriteCacheBytesAsync(System.String,System.Byte[])
+  commentId: M:Microsoft.Identity.Web.TokenCacheProviders.MsalAbstractTokenCacheProvider.WriteCacheBytesAsync(System.String,System.Byte[])
+  name: WriteCacheBytesAsync(String, Byte[])
+  fullName: Microsoft.Identity.Web.TokenCacheProviders.MsalAbstractTokenCacheProvider.WriteCacheBytesAsync(String, Byte[])
+  nameWithType: MsalAbstractTokenCacheProvider.WriteCacheBytesAsync(String, Byte[])
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected abstract System.Threading.Tasks.Task WriteCacheBytesAsync (string cacheKey, byte[] bytes);
+  - lang: fsharp
+    values:
+    - value: 'abstract member WriteCacheBytesAsync : string * byte[] -> System.Threading.Tasks.Task'
+  - lang: vb
+    values:
+    - value: Protected MustOverride Function WriteCacheBytesAsync (cacheKey As String, bytes As Byte()) As Task
+  monikers:
+  - msal-model-dotnet-latest
+  summary: Method to be implemented by concrete cache serializers to write the cache bytes.
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>
+    description: A <xref data-throw-if-not-resolved="true" uid="System.Threading.Tasks.Task"></xref> that represents a completed write operation.
+  parameters:
+  - namesWithMoniker:
+    - value: cacheKey
+    description: Cache key.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: bytes
+    description: Bytes to write.
+    type: <xref href="System.Byte?alt=System.Byte&text=Byte" data-throw-if-not-resolved="True"/>[]
+  - namesWithMoniker:
+    - value: cacheSerializerHints
+    description: Hints for the cache serialization implementation optimization.
+    type: <xref href="Microsoft.Identity.Web.TokenCacheProviders.CacheSerializerHints?alt=Microsoft.Identity.Web.TokenCacheProviders.CacheSerializerHints&text=CacheSerializerHints" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Web.TokenCacheProviders.MsalAbstractTokenCacheProvider.WriteCacheBytesAsync(System.String,System.Byte[],Microsoft.Identity.Web.TokenCacheProviders.CacheSerializerHints)
+  commentId: M:Microsoft.Identity.Web.TokenCacheProviders.MsalAbstractTokenCacheProvider.WriteCacheBytesAsync(System.String,System.Byte[],Microsoft.Identity.Web.TokenCacheProviders.CacheSerializerHints)
+  name: WriteCacheBytesAsync(String, Byte[], CacheSerializerHints)
+  fullName: Microsoft.Identity.Web.TokenCacheProviders.MsalAbstractTokenCacheProvider.WriteCacheBytesAsync(String, Byte[], CacheSerializerHints)
+  nameWithType: MsalAbstractTokenCacheProvider.WriteCacheBytesAsync(String, Byte[], CacheSerializerHints)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected virtual System.Threading.Tasks.Task WriteCacheBytesAsync (string cacheKey, byte[] bytes, Microsoft.Identity.Web.TokenCacheProviders.CacheSerializerHints cacheSerializerHints);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member WriteCacheBytesAsync : string * byte[] * Microsoft.Identity.Web.TokenCacheProviders.CacheSerializerHints -> System.Threading.Tasks.Task
+
+        override this.WriteCacheBytesAsync : string * byte[] * Microsoft.Identity.Web.TokenCacheProviders.CacheSerializerHints -> System.Threading.Tasks.Task
+  - lang: vb
+    values:
+    - value: Protected Overridable Function WriteCacheBytesAsync (cacheKey As String, bytes As Byte(), cacheSerializerHints As CacheSerializerHints) As Task
+  monikers:
+  - msal-model-dotnet-latest
+  summary: Method to be overridden by concrete cache serializers to write the cache bytes.
+  metadata: {}
+uid: Microsoft.Identity.Web.TokenCacheProviders.MsalAbstractTokenCacheProvider.WriteCacheBytesAsync*
+commentId: Overload:Microsoft.Identity.Web.TokenCacheProviders.MsalAbstractTokenCacheProvider.WriteCacheBytesAsync
+namespace: Microsoft.Identity.Web.TokenCacheProviders
+name: WriteCacheBytesAsync
+fullName: Microsoft.Identity.Web.TokenCacheProviders.MsalAbstractTokenCacheProvider.WriteCacheBytesAsync
+nameWithType: MsalAbstractTokenCacheProvider.WriteCacheBytesAsync
+assembliesWithMoniker:
+- value: Microsoft.Identity.Web.TokenCache.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Web.TokenCache v1.25.10
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-model-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Web.TokenCacheProviders.MsalAbstractTokenCacheProvider.WriteCacheBytesAsync
+  api_location:
+  - Microsoft.Identity.Web.TokenCache.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Web.TokenCacheProviders.MsalAbstractTokenCacheProvider.WriteCacheBytesAsync
+  - Microsoft::Identity::Web::TokenCacheProviders::MsalAbstractTokenCacheProvider::WriteCacheBytesAsync
+  - WriteCacheBytesAsync
+  - MsalAbstractTokenCacheProvider.WriteCacheBytesAsync
+  - MsalAbstractTokenCacheProvider::WriteCacheBytesAsync
+  helpviewer_keywords:
+  - MsalAbstractTokenCacheProvider.WriteCacheBytesAsync method [.NET]
+  - WriteCacheBytesAsync method [.NET], class MsalAbstractTokenCacheProvider
+  - MsalAbstractTokenCacheProvider.WriteCacheBytesAsync(String, Byte[]) method [.NET]
+  - WriteCacheBytesAsync(String, Byte[]) method [.NET], class MsalAbstractTokenCacheProvider
+  - MsalAbstractTokenCacheProvider.WriteCacheBytesAsync(String, Byte[], CacheSerializerHints) method [.NET]
+  - WriteCacheBytesAsync(String, Byte[], CacheSerializerHints) method [.NET], class MsalAbstractTokenCacheProvider
+  monikers:
+  - msal-model-dotnet-latest

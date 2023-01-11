@@ -1,0 +1,111 @@
+### YamlMime:NetMember
+type: method
+members:
+- typeParameters:
+  - description: Output type.
+    name: TOutput
+  returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;TOutput&gt;
+    description: The value returned by the downstream web API.
+  parameters:
+  - namesWithMoniker:
+    - value: downstreamWebApi
+    description: The downstream web API.
+    type: <xref href="Microsoft.Identity.Web.IDownstreamWebApi?alt=Microsoft.Identity.Web.IDownstreamWebApi&text=IDownstreamWebApi" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: serviceName
+    description: >-
+      Name of the service describing the downstream web API. There can
+                  be several configuration named sections mapped to a <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Web.DownstreamWebApiOptions"></xref>,
+                  each for one downstream web API. You can pass-in null, but in that case <code data-dev-comment-type="paramref">downstreamWebApiOptionsOverride</code>
+                  needs to be set.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: downstreamWebApiOptionsOverride
+    description: >-
+      Overrides the options proposed in the configuration described
+                  by <code data-dev-comment-type="paramref">serviceName</code>.
+    type: <xref href="System.Action`1?alt=System.Action&text=Action" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.Identity.Web.DownstreamWebApiOptions?alt=Microsoft.Identity.Web.DownstreamWebApiOptions&text=DownstreamWebApiOptions" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: user
+    description: >-
+      [Optional] Claims representing a user. This is useful in platforms like Blazor
+                  or Azure Signal R, where the HttpContext is not available. In other platforms, the library
+                  will find the user from the HttpContext.
+    type: <xref href="System.Security.Claims.ClaimsPrincipal?alt=System.Security.Claims.ClaimsPrincipal&text=ClaimsPrincipal" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: authenticationScheme
+    description: >-
+      Authentication scheme. If null, will use OpenIdConnectDefault.AuthenticationScheme
+                  if called from a web app, and JwtBearerDefault.AuthenticationScheme if called from a web API.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Web.DownstreamWebApiGenericExtensions.CallWebApiForUserAsync``1(Microsoft.Identity.Web.IDownstreamWebApi,System.String,System.Action{Microsoft.Identity.Web.DownstreamWebApiOptions},System.Security.Claims.ClaimsPrincipal,System.String)
+  commentId: M:Microsoft.Identity.Web.DownstreamWebApiGenericExtensions.CallWebApiForUserAsync``1(Microsoft.Identity.Web.IDownstreamWebApi,System.String,System.Action{Microsoft.Identity.Web.DownstreamWebApiOptions},System.Security.Claims.ClaimsPrincipal,System.String)
+  name: CallWebApiForUserAsync<TOutput>(IDownstreamWebApi, String, Action<DownstreamWebApiOptions>, ClaimsPrincipal, String)
+  fullName: Microsoft.Identity.Web.DownstreamWebApiGenericExtensions.CallWebApiForUserAsync<TOutput>(IDownstreamWebApi, String, Action<DownstreamWebApiOptions>, ClaimsPrincipal, String)
+  nameWithType: DownstreamWebApiGenericExtensions.CallWebApiForUserAsync<TOutput>(IDownstreamWebApi, String, Action<DownstreamWebApiOptions>, ClaimsPrincipal, String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: 'public static System.Threading.Tasks.Task<TOutput?> CallWebApiForUserAsync<TOutput> (this Microsoft.Identity.Web.IDownstreamWebApi downstreamWebApi, string serviceName, Action<Microsoft.Identity.Web.DownstreamWebApiOptions>? downstreamWebApiOptionsOverride = default, System.Security.Claims.ClaimsPrincipal? user = default, string? authenticationScheme = default) where TOutput : class;'
+  - lang: fsharp
+    values:
+    - value: "static member CallWebApiForUserAsync : Microsoft.Identity.Web.IDownstreamWebApi * string * Action<Microsoft.Identity.Web.DownstreamWebApiOptions> * System.Security.Claims.ClaimsPrincipal * string -> System.Threading.Tasks.Task<'Output (requires 'Output : null)> (requires 'Output : null)"
+  - lang: vb
+    values:
+    - value: >-
+        <Extension()>
+
+        Public Function CallWebApiForUserAsync(Of TOutput As Class) (downstreamWebApi As IDownstreamWebApi, serviceName As String, Optional downstreamWebApiOptionsOverride As Action(Of DownstreamWebApiOptions) = Nothing, Optional user As ClaimsPrincipal = Nothing, Optional authenticationScheme As String = Nothing) As Task(Of TOutput)
+  monikers:
+  - msal-model-dotnet-latest
+  summary: >-
+    Call a web API endpoint with an HttpGet,
+
+    and return strongly typed data.
+  metadata: {}
+uid: Microsoft.Identity.Web.DownstreamWebApiGenericExtensions.CallWebApiForUserAsync*
+commentId: Overload:Microsoft.Identity.Web.DownstreamWebApiGenericExtensions.CallWebApiForUserAsync
+namespace: Microsoft.Identity.Web
+name: CallWebApiForUserAsync
+fullName: Microsoft.Identity.Web.DownstreamWebApiGenericExtensions.CallWebApiForUserAsync
+nameWithType: DownstreamWebApiGenericExtensions.CallWebApiForUserAsync
+assembliesWithMoniker:
+- value: Microsoft.Identity.Web.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Web v1.25.10
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-model-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Web.DownstreamWebApiGenericExtensions.CallWebApiForUserAsync
+  api_location:
+  - Microsoft.Identity.Web.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Web.DownstreamWebApiGenericExtensions.CallWebApiForUserAsync
+  - Microsoft::Identity::Web::DownstreamWebApiGenericExtensions::CallWebApiForUserAsync
+  - CallWebApiForUserAsync
+  - DownstreamWebApiGenericExtensions.CallWebApiForUserAsync
+  - DownstreamWebApiGenericExtensions::CallWebApiForUserAsync
+  - Microsoft.Identity.Web.DownstreamWebApiGenericExtensions.CallWebApiForUserAsync``1
+  - Microsoft::Identity::Web::DownstreamWebApiGenericExtensions::CallWebApiForUserAsync``1
+  - CallWebApiForUserAsync``1
+  - DownstreamWebApiGenericExtensions.CallWebApiForUserAsync``1
+  - DownstreamWebApiGenericExtensions::CallWebApiForUserAsync``1
+  helpviewer_keywords:
+  - DownstreamWebApiGenericExtensions.CallWebApiForUserAsync method [.NET]
+  - CallWebApiForUserAsync method [.NET], class DownstreamWebApiGenericExtensions
+  - DownstreamWebApiGenericExtensions.CallWebApiForUserAsync<TOutput>(IDownstreamWebApi, String, Action<DownstreamWebApiOptions>, ClaimsPrincipal, String) extension method [.NET]
+  - CallWebApiForUserAsync<TOutput>(IDownstreamWebApi, String, Action<DownstreamWebApiOptions>, ClaimsPrincipal, String) extension method [.NET], class DownstreamWebApiGenericExtensions
+  monikers:
+  - msal-model-dotnet-latest

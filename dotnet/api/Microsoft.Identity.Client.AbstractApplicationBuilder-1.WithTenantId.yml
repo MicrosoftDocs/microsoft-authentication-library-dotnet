@@ -1,0 +1,82 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: T
+    description: The builder to chain the .With methods
+  parameters:
+  - namesWithMoniker:
+    - value: tenantId
+    description: >-
+      tenant ID of the Azure AD tenant
+                  or a domain associated with this Azure AD tenant, in order to sign-in a user of a specific organization only
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithTenantId(System.String)
+  commentId: M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithTenantId(System.String)
+  name: WithTenantId(String)
+  fullName: Microsoft.Identity.Client.AbstractApplicationBuilder<T>.WithTenantId(String)
+  nameWithType: AbstractApplicationBuilder<T>.WithTenantId(String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public T WithTenantId (string tenantId);
+  - lang: fsharp
+    values:
+    - value: "member this.WithTenantId : string -> 'T"
+  - lang: vb
+    values:
+    - value: Public Function WithTenantId (tenantId As String) As T
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    Sets the Tenant Id of the organization from which the application will let
+
+    users sign-in. This is classically a GUID or a domain name. See https://aka.ms/msal-net-application-configuration.
+
+    Although it is also possible to set <code data-dev-comment-type="paramref">tenantId</code> to <code data-dev-comment-type="c">common</code>,
+
+    <code data-dev-comment-type="c">organizations</code>, and <code data-dev-comment-type="c">consumers</code>, it's recommended to use one of the
+
+    overrides of <xref data-throw-if-not-resolved="true" uid="Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithAuthority(Microsoft.Identity.Client.AzureCloudInstance,Microsoft.Identity.Client.AadAuthorityAudience,System.Boolean)"></xref>
+  metadata: {}
+uid: Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithTenantId*
+commentId: Overload:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithTenantId
+namespace: Microsoft.Identity.Client
+name: WithTenantId
+fullName: Microsoft.Identity.Client.AbstractApplicationBuilder<T>.WithTenantId
+nameWithType: AbstractApplicationBuilder<T>.WithTenantId
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithTenantId
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithTenantId
+  - Microsoft::Identity::Client::AbstractApplicationBuilder`1::WithTenantId
+  - Microsoft.Identity.Client.AbstractApplicationBuilder.WithTenantId
+  - WithTenantId
+  - AbstractApplicationBuilder`1.WithTenantId
+  - AbstractApplicationBuilder`1::WithTenantId
+  helpviewer_keywords:
+  - AbstractApplicationBuilder<T>.WithTenantId method [.NET]
+  - WithTenantId method [.NET], class AbstractApplicationBuilder<T>
+  - AbstractApplicationBuilder<T>.WithTenantId(String) method [.NET]
+  - WithTenantId(String) method [.NET], class AbstractApplicationBuilder<T>
+  monikers:
+  - msal-dotnet-latest

@@ -1,0 +1,75 @@
+### YamlMime:NetType
+type: interface
+derivedClassesWithMoniker:
+- value: Microsoft.Identity.Web.DefaultCertificateLoader
+methods:
+- uid: Microsoft.Identity.Web.ICertificateLoader.LoadIfNeeded(Microsoft.Identity.Web.CertificateDescription)
+  monikers:
+  - msal-model-dotnet-latest
+uid: Microsoft.Identity.Web.ICertificateLoader
+commentId: T:Microsoft.Identity.Web.ICertificateLoader
+namespace: Microsoft.Identity.Web
+name: ICertificateLoader
+fullName: Microsoft.Identity.Web.ICertificateLoader
+nameWithType: Microsoft.Identity.Web.ICertificateLoader
+assembliesWithMoniker:
+- value: Microsoft.Identity.Web.Certificate.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Web.Certificate v1.25.10
+syntaxWithMoniker:
+- lang: csharp
+  values:
+  - value: public interface ICertificateLoader
+- lang: fsharp
+  values:
+  - value: type ICertificateLoader = interface
+- lang: vb
+  values:
+  - value: Public Interface ICertificateLoader
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-model-dotnet-latest
+summary: >-
+  Interface to implement loading of a certificate.
+
+  Only use when loading a certificate from a daemon application, or an ASP NET app, using MSAL .NET directly.
+
+  For an ASP NET Core app, <strong>Microsoft Identity Web will handle the certificate loading</strong> for you.
+
+  <example>
+
+
+  ```
+
+  IConfidentialClientApplication app;
+
+  ICertificateLoader certificateLoader = new DefaultCertificateLoader();
+      certificateLoader.LoadIfNeeded(config.CertificateDescription);
+
+     app = ConfidentialClientApplicationBuilder.Create(config.ClientId)
+            .WithCertificate(config.CertificateDescription.Certificate)
+            .WithAuthority(new Uri(config.Authority))
+            .Build();
+  ```
+
+  </example>
+metadata:
+  api_name:
+  - Microsoft.Identity.Web.ICertificateLoader
+  api_location:
+  - Microsoft.Identity.Web.Certificate.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Web.ICertificateLoader
+  - Microsoft::Identity::Web::ICertificateLoader
+  - ICertificateLoader
+  helpviewer_keywords:
+  - Microsoft.Identity.Web.ICertificateLoader interface [.NET]
+  monikers:
+  - msal-model-dotnet-latest

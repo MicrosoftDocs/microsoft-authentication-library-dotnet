@@ -1,0 +1,73 @@
+### YamlMime:NetMember
+type: property
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  type: property
+  uid: Microsoft.Identity.Abstractions.AcquireTokenOptions.ForceRefresh
+  commentId: P:Microsoft.Identity.Abstractions.AcquireTokenOptions.ForceRefresh
+  name: ForceRefresh
+  fullName: Microsoft.Identity.Abstractions.AcquireTokenOptions.ForceRefresh
+  nameWithType: AcquireTokenOptions.ForceRefresh
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public bool ForceRefresh { get; set; }
+  - lang: fsharp
+    values:
+    - value: 'member this.ForceRefresh : bool with get, set'
+  - lang: vb
+    values:
+    - value: Public Property ForceRefresh As Boolean
+  monikers:
+  - msal-model-dotnet-latest
+  summary: >-
+    Specifies if the token request will ignore the access token in the token cache
+
+    and will attempt to acquire a new access token.
+
+    If <code data-dev-comment-type="c">true</code>, the request will ignore the token cache. The default is <code data-dev-comment-type="c">false</code>.
+
+    Use this option with care and only when needed, for instance, if you know that conditional access policies have changed,
+
+    for it induces performance degradation, as the token cache is not utilized, and the STS might throttle the app.
+  metadata: {}
+uid: Microsoft.Identity.Abstractions.AcquireTokenOptions.ForceRefresh*
+commentId: Overload:Microsoft.Identity.Abstractions.AcquireTokenOptions.ForceRefresh
+namespace: Microsoft.Identity.Abstractions
+name: ForceRefresh
+fullName: Microsoft.Identity.Abstractions.AcquireTokenOptions.ForceRefresh
+nameWithType: AcquireTokenOptions.ForceRefresh
+assembliesWithMoniker:
+- value: Microsoft.Identity.Abstractions.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Abstractions v1.1.0
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-model-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Abstractions.AcquireTokenOptions.ForceRefresh
+  - Microsoft.Identity.Abstractions.AcquireTokenOptions.get_ForceRefresh
+  - Microsoft.Identity.Abstractions.AcquireTokenOptions.set_ForceRefresh
+  api_location:
+  - Microsoft.Identity.Abstractions.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Abstractions.AcquireTokenOptions.ForceRefresh
+  - Microsoft::Identity::Abstractions::AcquireTokenOptions::ForceRefresh
+  - ForceRefresh
+  - AcquireTokenOptions.ForceRefresh
+  - AcquireTokenOptions::ForceRefresh
+  helpviewer_keywords:
+  - AcquireTokenOptions.ForceRefresh property [.NET]
+  - ForceRefresh property [.NET], class AcquireTokenOptions
+  monikers:
+  - msal-model-dotnet-latest

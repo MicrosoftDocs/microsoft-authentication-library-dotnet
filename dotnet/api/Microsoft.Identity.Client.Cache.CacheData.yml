@@ -1,0 +1,77 @@
+### YamlMime:NetType
+type: class
+inheritancesWithMoniker:
+- values:
+  - <xref href="System.Object?alt=System.Object&text=Object" data-throw-if-not-resolved="True"/>
+constructors:
+- uid: Microsoft.Identity.Client.Cache.CacheData.#ctor
+  monikers:
+  - msal-dotnet-latest
+properties:
+- uid: Microsoft.Identity.Client.Cache.CacheData.AdalV3State
+  monikers:
+  - msal-dotnet-latest
+- uid: Microsoft.Identity.Client.Cache.CacheData.UnifiedState
+  monikers:
+  - msal-dotnet-latest
+uid: Microsoft.Identity.Client.Cache.CacheData
+commentId: T:Microsoft.Identity.Client.Cache.CacheData
+namespace: Microsoft.Identity.Client.Cache
+name: CacheData
+fullName: Microsoft.Identity.Client.Cache.CacheData
+nameWithType: Microsoft.Identity.Client.Cache.CacheData
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+attributesWithMoniker:
+- value: System.ObsoleteAttribute
+syntaxWithMoniker:
+- lang: csharp
+  values:
+  - value: >-
+      [System.Obsolete("This is expected to be removed in MSAL.NET v3 and ADAL.NET v5. We recommend using SerializeMsalV3/DeserializeMsalV3. Read more: https://aka.ms/msal-net-3x-cache-breaking-change", false)]
+
+      public class CacheData
+- lang: fsharp
+  values:
+  - value: >-
+      [<System.Obsolete("This is expected to be removed in MSAL.NET v3 and ADAL.NET v5. We recommend using SerializeMsalV3/DeserializeMsalV3. Read more: https://aka.ms/msal-net-3x-cache-breaking-change", false)>]
+
+      type CacheData = class
+- lang: vb
+  values:
+  - value: Public Class CacheData
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+obsoleteMessagesWithMoniker:
+- value: 'This is expected to be removed in MSAL.NET v3 and ADAL.NET v5. We recommend using SerializeMsalV3/DeserializeMsalV3. Read more: https://aka.ms/msal-net-3x-cache-breaking-change'
+summary: >-
+  Data class, common to ADAL.NET and MSAL.NET V2 used for the token cache serialization
+
+  in a dual format: the ADAL V3 cache format, and the new unified cache format, common
+
+  to ADAL.NET 4.x, MSAL.NET 2.x and other libraries in the same Operating System
+
+  (for instance ADAL and MSAL for objective C in iOS)
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.Cache.CacheData
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.Cache.CacheData
+  - Microsoft::Identity::Client::Cache::CacheData
+  - CacheData
+  helpviewer_keywords:
+  - Microsoft.Identity.Client.Cache.CacheData class [.NET]
+  monikers:
+  - msal-dotnet-latest

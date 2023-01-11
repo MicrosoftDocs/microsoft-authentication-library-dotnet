@@ -1,0 +1,137 @@
+### YamlMime:NetMember
+type: constructor
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: keyIdentifier
+    description: The key identifier that is recognized by KeyVault.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: if <code data-dev-comment-type="paramref">keyIdentifier</code> is null or empty.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  type: constructor
+  uid: Microsoft.IdentityModel.ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey.#ctor(System.String)
+  commentId: M:Microsoft.IdentityModel.ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey.#ctor(System.String)
+  name: ManagedKeyVaultSecurityKey(String)
+  fullName: Microsoft.IdentityModel.ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey(String)
+  nameWithType: ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey(String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public ManagedKeyVaultSecurityKey (string keyIdentifier);
+  - lang: fsharp
+    values:
+    - value: 'new Microsoft.IdentityModel.ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey : string -> Microsoft.IdentityModel.ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey'
+  - lang: vb
+    values:
+    - value: Public Sub New (keyIdentifier As String)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Initializes a new instance of the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey"></xref> class.
+  metadata: {}
+- parameters:
+  - namesWithMoniker:
+    - value: keyIdentifier
+    description: The key identifier that is recognized by KeyVault.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: callback
+    description: The authentication callback.
+    type: <xref href="Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey.AuthenticationCallback?alt=Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey.AuthenticationCallback&text=KeyVaultSecurityKey.AuthenticationCallback" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: if <code data-dev-comment-type="paramref">callback</code>is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  type: constructor
+  uid: Microsoft.IdentityModel.ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey.#ctor(System.String,Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey.AuthenticationCallback)
+  commentId: M:Microsoft.IdentityModel.ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey.#ctor(System.String,Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey.AuthenticationCallback)
+  name: ManagedKeyVaultSecurityKey(String, KeyVaultSecurityKey+AuthenticationCallback)
+  fullName: Microsoft.IdentityModel.ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey(String, KeyVaultSecurityKey+AuthenticationCallback)
+  nameWithType: ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey(String, KeyVaultSecurityKey+AuthenticationCallback)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public ManagedKeyVaultSecurityKey (string keyIdentifier, Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey.AuthenticationCallback callback);
+  - lang: fsharp
+    values:
+    - value: 'new Microsoft.IdentityModel.ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey : string * Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey.AuthenticationCallback -> Microsoft.IdentityModel.ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey'
+  - lang: vb
+    values:
+    - value: Public Sub New (keyIdentifier As String, callback As KeyVaultSecurityKey.AuthenticationCallback)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Initializes a new instance of the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey"></xref> class.
+  metadata: {}
+- parameters:
+  - namesWithMoniker:
+    - value: keyIdentifier
+    description: The key identifier.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: clientId
+    description: Identifier of the client.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: clientSecret
+    description: Secret of the client identity.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: if <code data-dev-comment-type="paramref">clientSecret</code>is null or clientSecret.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  type: constructor
+  uid: Microsoft.IdentityModel.ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey.#ctor(System.String,System.String,System.String)
+  commentId: M:Microsoft.IdentityModel.ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey.#ctor(System.String,System.String,System.String)
+  name: ManagedKeyVaultSecurityKey(String, String, String)
+  fullName: Microsoft.IdentityModel.ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey(String, String, String)
+  nameWithType: ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey(String, String, String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public ManagedKeyVaultSecurityKey (string keyIdentifier, string clientId, string clientSecret);
+  - lang: fsharp
+    values:
+    - value: 'new Microsoft.IdentityModel.ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey : string * string * string -> Microsoft.IdentityModel.ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey'
+  - lang: vb
+    values:
+    - value: Public Sub New (keyIdentifier As String, clientId As String, clientSecret As String)
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Initializes a new instance of the <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey"></xref> class.
+  metadata: {}
+uid: Microsoft.IdentityModel.ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey.#ctor*
+commentId: Overload:Microsoft.IdentityModel.ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey.#ctor
+namespace: Microsoft.IdentityModel.ManagedKeyVaultSecurityKey
+name: ManagedKeyVaultSecurityKey
+fullName: Microsoft.IdentityModel.ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey
+nameWithType: ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.ManagedKeyVaultSecurityKey.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.ManagedKeyVaultSecurityKey v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey..ctor
+  api_location:
+  - Microsoft.IdentityModel.ManagedKeyVaultSecurityKey.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey.#ctor
+  - Microsoft::IdentityModel::ManagedKeyVaultSecurityKey::ManagedKeyVaultSecurityKey::#ctor
+  - '#ctor'
+  - ManagedKeyVaultSecurityKey.#ctor
+  - ManagedKeyVaultSecurityKey::#ctor
+  helpviewer_keywords:
+  - ManagedKeyVaultSecurityKey class [.NET], constructors
+  - ManagedKeyVaultSecurityKey(String) class [.NET], constructors
+  - ManagedKeyVaultSecurityKey(String, KeyVaultSecurityKey+AuthenticationCallback) class [.NET], constructors
+  - ManagedKeyVaultSecurityKey(String, String, String) class [.NET], constructors
+  monikers:
+  - msal-web-dotnet-latest

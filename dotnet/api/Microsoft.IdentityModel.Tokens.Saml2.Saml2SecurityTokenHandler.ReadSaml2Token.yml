@@ -1,0 +1,117 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken?alt=Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken&text=Saml2SecurityToken" data-throw-if-not-resolved="True"/>
+    description: A <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken"></xref>
+  parameters:
+  - namesWithMoniker:
+    - value: token
+    description: a Saml2 token as a string.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: If <code data-dev-comment-type="paramref">token</code> is null or empty.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: If <code data-dev-comment-type="paramref">token</code>.Length is greater than <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.TokenHandler.MaximumTokenSizeInBytes"></xref>.
+    type: <xref href="System.ArgumentException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ReadSaml2Token(System.String)
+  commentId: M:Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ReadSaml2Token(System.String)
+  name: ReadSaml2Token(String)
+  fullName: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ReadSaml2Token(String)
+  nameWithType: Saml2SecurityTokenHandler.ReadSaml2Token(String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public virtual Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken ReadSaml2Token (string token);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member ReadSaml2Token : string -> Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken
+
+        override this.ReadSaml2Token : string -> Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken
+  - lang: vb
+    values:
+    - value: Public Overridable Function ReadSaml2Token (token As String) As Saml2SecurityToken
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Converts a string into an instance of <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken"></xref>.
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken?alt=Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken&text=Saml2SecurityToken" data-throw-if-not-resolved="True"/>
+    description: A <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken"></xref>.
+  parameters:
+  - namesWithMoniker:
+    - value: reader
+    description: A <xref data-throw-if-not-resolved="true" uid="System.Xml.XmlReader"></xref> reader positioned at a saml2 assertion element.
+    type: <xref href="System.Xml.XmlReader?alt=System.Xml.XmlReader&text=XmlReader" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: If <code data-dev-comment-type="paramref">reader</code> is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: If <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer.ReadAssertion(System.Xml.XmlReader)"></xref> returns null.
+    type: <xref href="Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenReadException?alt=Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenReadException&text=Saml2SecurityTokenReadException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ReadSaml2Token(System.Xml.XmlReader)
+  commentId: M:Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ReadSaml2Token(System.Xml.XmlReader)
+  name: ReadSaml2Token(XmlReader)
+  fullName: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ReadSaml2Token(XmlReader)
+  nameWithType: Saml2SecurityTokenHandler.ReadSaml2Token(XmlReader)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public virtual Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken ReadSaml2Token (System.Xml.XmlReader reader);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member ReadSaml2Token : System.Xml.XmlReader -> Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken
+
+        override this.ReadSaml2Token : System.Xml.XmlReader -> Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken
+  - lang: vb
+    values:
+    - value: Public Overridable Function ReadSaml2Token (reader As XmlReader) As Saml2SecurityToken
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Reads a <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken"></xref> where the XmlReader is positioned the beginning of a Saml2 assertion.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ReadSaml2Token*
+commentId: Overload:Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ReadSaml2Token
+namespace: Microsoft.IdentityModel.Tokens.Saml2
+name: ReadSaml2Token
+fullName: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ReadSaml2Token
+nameWithType: Saml2SecurityTokenHandler.ReadSaml2Token
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ReadSaml2Token
+  api_location:
+  - Microsoft.IdentityModel.Tokens.Saml.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ReadSaml2Token
+  - Microsoft::IdentityModel::Tokens::Saml2::Saml2SecurityTokenHandler::ReadSaml2Token
+  - ReadSaml2Token
+  - Saml2SecurityTokenHandler.ReadSaml2Token
+  - Saml2SecurityTokenHandler::ReadSaml2Token
+  helpviewer_keywords:
+  - Saml2SecurityTokenHandler.ReadSaml2Token method [.NET]
+  - ReadSaml2Token method [.NET], class Saml2SecurityTokenHandler
+  - Saml2SecurityTokenHandler.ReadSaml2Token(String) method [.NET]
+  - ReadSaml2Token(String) method [.NET], class Saml2SecurityTokenHandler
+  - Saml2SecurityTokenHandler.ReadSaml2Token(XmlReader) method [.NET]
+  - ReadSaml2Token(XmlReader) method [.NET], class Saml2SecurityTokenHandler
+  monikers:
+  - msal-web-dotnet-latest

@@ -1,0 +1,66 @@
+### YamlMime:NetMember
+type: field
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: field
+  uid: Microsoft.Identity.Client.MsalError.DuplicateQueryParameterError
+  commentId: F:Microsoft.Identity.Client.MsalError.DuplicateQueryParameterError
+  name: DuplicateQueryParameterError
+  fullName: Microsoft.Identity.Client.MsalError.DuplicateQueryParameterError
+  nameWithType: MsalError.DuplicateQueryParameterError
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public const string DuplicateQueryParameterError;
+  - lang: fsharp
+    values:
+    - value: 'val mutable DuplicateQueryParameterError : string'
+  - lang: vb
+    values:
+    - value: 'Public Const DuplicateQueryParameterError As String '
+  monikers:
+  - msal-dotnet-latest
+  summary: >-
+    Duplicate query parameter was found in extraQueryParameters.
+
+    <p>What happens?</p> You have used <code data-dev-comment-type="c">extraQueryParameter</code> of overrides
+
+    of token acquisition operations in public client and confidential client application and are passing a parameter which is already present in the
+
+    URL (either because you had it in another way, or the library added it).
+
+    <p>Mitigation [App Development]</p> RemoveAccount the duplicate parameter from the token acquisition override.
+  metadata: {}
+namespace: Microsoft.Identity.Client
+assembliesWithMoniker:
+- value: Microsoft.Identity.Client.dll
+packagesWithMoniker:
+- value: Microsoft.Identity.Client v4.49.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.Identity.Client.MsalError.DuplicateQueryParameterError
+  api_location:
+  - Microsoft.Identity.Client.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.Identity.Client.MsalError.DuplicateQueryParameterError
+  - Microsoft::Identity::Client::MsalError::DuplicateQueryParameterError
+  - DuplicateQueryParameterError
+  - MsalError.DuplicateQueryParameterError
+  - MsalError::DuplicateQueryParameterError
+  helpviewer_keywords:
+  - MsalError.DuplicateQueryParameterError field [.NET]
+  - DuplicateQueryParameterError field [.NET], class MsalError
+  monikers:
+  - msal-dotnet-latest

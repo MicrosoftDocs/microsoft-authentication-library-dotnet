@@ -1,0 +1,84 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Security.Claims.ClaimsIdentity?alt=System.Security.Claims.ClaimsIdentity&text=ClaimsIdentity" data-throw-if-not-resolved="True"/>
+    description: A <xref data-throw-if-not-resolved="true" uid="System.Security.Claims.ClaimsIdentity"></xref> with claims from the saml statements.
+  parameters:
+  - namesWithMoniker:
+    - value: samlToken
+    description: The <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken"></xref>.
+    type: <xref href="Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken?alt=Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken&text=Saml2SecurityToken" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: issuer
+    description: The value to set <xref data-throw-if-not-resolved="true" uid="System.Security.Claims.Claim.Issuer"></xref>
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: validationParameters
+    description: creates the <xref data-throw-if-not-resolved="true" uid="System.Security.Claims.ClaimsIdentity"></xref> using <xref data-throw-if-not-resolved="true" uid="Microsoft.IdentityModel.Tokens.TokenValidationParameters.CreateClaimsIdentity(Microsoft.IdentityModel.Tokens.SecurityToken,System.String)"></xref>.
+    type: <xref href="Microsoft.IdentityModel.Tokens.TokenValidationParameters?alt=Microsoft.IdentityModel.Tokens.TokenValidationParameters&text=TokenValidationParameters" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: If <code data-dev-comment-type="paramref">samlToken</code>.Assertion is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.CreateClaimsIdentity(Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken,System.String,Microsoft.IdentityModel.Tokens.TokenValidationParameters)
+  commentId: M:Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.CreateClaimsIdentity(Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken,System.String,Microsoft.IdentityModel.Tokens.TokenValidationParameters)
+  name: CreateClaimsIdentity(Saml2SecurityToken, String, TokenValidationParameters)
+  fullName: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.CreateClaimsIdentity(Saml2SecurityToken, String, TokenValidationParameters)
+  nameWithType: Saml2SecurityTokenHandler.CreateClaimsIdentity(Saml2SecurityToken, String, TokenValidationParameters)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected virtual System.Security.Claims.ClaimsIdentity CreateClaimsIdentity (Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken samlToken, string issuer, Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member CreateClaimsIdentity : Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken * string * Microsoft.IdentityModel.Tokens.TokenValidationParameters -> System.Security.Claims.ClaimsIdentity
+
+        override this.CreateClaimsIdentity : Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken * string * Microsoft.IdentityModel.Tokens.TokenValidationParameters -> System.Security.Claims.ClaimsIdentity
+  - lang: vb
+    values:
+    - value: Protected Overridable Function CreateClaimsIdentity (samlToken As Saml2SecurityToken, issuer As String, validationParameters As TokenValidationParameters) As ClaimsIdentity
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Creates claims from a Saml2 token.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.CreateClaimsIdentity*
+commentId: Overload:Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.CreateClaimsIdentity
+namespace: Microsoft.IdentityModel.Tokens.Saml2
+name: CreateClaimsIdentity
+fullName: Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.CreateClaimsIdentity
+nameWithType: Saml2SecurityTokenHandler.CreateClaimsIdentity
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.CreateClaimsIdentity
+  api_location:
+  - Microsoft.IdentityModel.Tokens.Saml.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.CreateClaimsIdentity
+  - Microsoft::IdentityModel::Tokens::Saml2::Saml2SecurityTokenHandler::CreateClaimsIdentity
+  - CreateClaimsIdentity
+  - Saml2SecurityTokenHandler.CreateClaimsIdentity
+  - Saml2SecurityTokenHandler::CreateClaimsIdentity
+  helpviewer_keywords:
+  - Saml2SecurityTokenHandler.CreateClaimsIdentity method [.NET]
+  - CreateClaimsIdentity method [.NET], class Saml2SecurityTokenHandler
+  - Saml2SecurityTokenHandler.CreateClaimsIdentity(Saml2SecurityToken, String, TokenValidationParameters) method [.NET]
+  - CreateClaimsIdentity(Saml2SecurityToken, String, TokenValidationParameters) method [.NET], class Saml2SecurityTokenHandler
+  monikers:
+  - msal-web-dotnet-latest

@@ -1,0 +1,78 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.IdentityModel.Tokens.Saml.SamlAuthenticationStatement?alt=Microsoft.IdentityModel.Tokens.Saml.SamlAuthenticationStatement&text=SamlAuthenticationStatement" data-throw-if-not-resolved="True"/>
+    description: SamlAuthenticationStatement
+  parameters:
+  - namesWithMoniker:
+    - value: reader
+    description: XmlReader positioned at a saml:AuthenticationStatement.
+    type: <xref href="System.Xml.XmlDictionaryReader?alt=System.Xml.XmlDictionaryReader&text=XmlDictionaryReader" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: >-
+      The input parameter 'reader' is null.
+                  or the statement contains a unknown child element.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.IdentityModel.Tokens.Saml.SamlSerializer.ReadAuthenticationStatement(System.Xml.XmlDictionaryReader)
+  commentId: M:Microsoft.IdentityModel.Tokens.Saml.SamlSerializer.ReadAuthenticationStatement(System.Xml.XmlDictionaryReader)
+  name: ReadAuthenticationStatement(XmlDictionaryReader)
+  fullName: Microsoft.IdentityModel.Tokens.Saml.SamlSerializer.ReadAuthenticationStatement(XmlDictionaryReader)
+  nameWithType: SamlSerializer.ReadAuthenticationStatement(XmlDictionaryReader)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected virtual Microsoft.IdentityModel.Tokens.Saml.SamlAuthenticationStatement ReadAuthenticationStatement (System.Xml.XmlDictionaryReader reader);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member ReadAuthenticationStatement : System.Xml.XmlDictionaryReader -> Microsoft.IdentityModel.Tokens.Saml.SamlAuthenticationStatement
+
+        override this.ReadAuthenticationStatement : System.Xml.XmlDictionaryReader -> Microsoft.IdentityModel.Tokens.Saml.SamlAuthenticationStatement
+  - lang: vb
+    values:
+    - value: Protected Overridable Function ReadAuthenticationStatement (reader As XmlDictionaryReader) As SamlAuthenticationStatement
+  monikers:
+  - msal-web-dotnet-latest
+  summary: Read the saml:AuthenticationStatement.
+  metadata: {}
+uid: Microsoft.IdentityModel.Tokens.Saml.SamlSerializer.ReadAuthenticationStatement*
+commentId: Overload:Microsoft.IdentityModel.Tokens.Saml.SamlSerializer.ReadAuthenticationStatement
+namespace: Microsoft.IdentityModel.Tokens.Saml
+name: ReadAuthenticationStatement
+fullName: Microsoft.IdentityModel.Tokens.Saml.SamlSerializer.ReadAuthenticationStatement
+nameWithType: SamlSerializer.ReadAuthenticationStatement
+assembliesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml.dll
+packagesWithMoniker:
+- value: Microsoft.IdentityModel.Tokens.Saml v6.25.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- msal-web-dotnet-latest
+metadata:
+  api_name:
+  - Microsoft.IdentityModel.Tokens.Saml.SamlSerializer.ReadAuthenticationStatement
+  api_location:
+  - Microsoft.IdentityModel.Tokens.Saml.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.IdentityModel.Tokens.Saml.SamlSerializer.ReadAuthenticationStatement
+  - Microsoft::IdentityModel::Tokens::Saml::SamlSerializer::ReadAuthenticationStatement
+  - ReadAuthenticationStatement
+  - SamlSerializer.ReadAuthenticationStatement
+  - SamlSerializer::ReadAuthenticationStatement
+  helpviewer_keywords:
+  - SamlSerializer.ReadAuthenticationStatement method [.NET]
+  - ReadAuthenticationStatement method [.NET], class SamlSerializer
+  - SamlSerializer.ReadAuthenticationStatement(XmlDictionaryReader) method [.NET]
+  - ReadAuthenticationStatement(XmlDictionaryReader) method [.NET], class SamlSerializer
+  monikers:
+  - msal-web-dotnet-latest
