@@ -1,0 +1,953 @@
+<Type Name="JsonWebTokenHandler" FullName="Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler">
+  <TypeSignature Language="C#" Value="public class JsonWebTokenHandler : Microsoft.IdentityModel.Tokens.TokenHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit JsonWebTokenHandler extends Microsoft.IdentityModel.Tokens.TokenHandler" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler" />
+  <TypeSignature Language="VB.NET" Value="Public Class JsonWebTokenHandler&#xA;Inherits TokenHandler" />
+  <TypeSignature Language="F#" Value="type JsonWebTokenHandler = class&#xA;    inherit TokenHandler" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+    <AssemblyVersion>6.25.0.0</AssemblyVersion>
+    <AssemblyVersion>6.25.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.IdentityModel.Tokens.TokenHandler</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            A <see cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenHandler" /> designed for creating and validating Json Web Tokens. 
+            See: https://datatracker.ietf.org/doc/html/rfc7519 and http://www.rfc-editor.org/info/rfc7515.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public JsonWebTokenHandler ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Base64UrlEncodedUnsignedJWSHeader">
+      <MemberSignature Language="C#" Value="public const string Base64UrlEncodedUnsignedJWSHeader;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string Base64UrlEncodedUnsignedJWSHeader" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.Base64UrlEncodedUnsignedJWSHeader" />
+      <MemberSignature Language="VB.NET" Value="Public Const Base64UrlEncodedUnsignedJWSHeader As String " />
+      <MemberSignature Language="F#" Value="val mutable Base64UrlEncodedUnsignedJWSHeader : string" Usage="Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.Base64UrlEncodedUnsignedJWSHeader" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the Base64Url encoded string representation of the following JWT header: 
+            { <see cref="F:Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.Alg" />, <see cref="F:Microsoft.IdentityModel.Tokens.SecurityAlgorithms.None" /> }.
+            </summary>
+        <remarks>To be added.</remarks>
+        <return>The Base64Url encoded string representation of the unsigned JWT header.</return>
+      </Docs>
+    </Member>
+    <Member MemberName="CanReadToken">
+      <MemberSignature Language="C#" Value="public virtual bool CanReadToken (string token);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanReadToken(string token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CanReadToken(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CanReadToken (token As String) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member CanReadToken : string -&gt; bool&#xA;override this.CanReadToken : string -&gt; bool" Usage="jsonWebTokenHandler.CanReadToken token" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="token">String that should represent a valid JWT.</param>
+        <summary>
+            Determines if the string is a well formed Json Web Token (JWT).
+            <para>See: https://datatracker.ietf.org/doc/html/rfc7519 </para></summary>
+        <returns>
+          <para>'false' if the token is null or whitespace.</para>
+          <para>'false' if token.Length is greater than <see cref="P:Microsoft.IdentityModel.Tokens.TokenHandler.MaximumTokenSizeInBytes" />.</para>
+          <para>'true' if the token is in JSON compact serialization format.</para>
+        </returns>
+        <remarks>Uses <see cref="M:System.Text.RegularExpressions.Regex.IsMatch(System.String,System.String)" /> matching:
+            <para>JWS: @"^[A-Za-z0-9-_]+\.[A-Za-z0-9-_]+\.[A-Za-z0-9-_]*$"</para><para>JWE: (dir): @"^[A-Za-z0-9-_]+\.\.[A-Za-z0-9-_]+\.[A-Za-z0-9-_]+\.[A-Za-z0-9-_]*$"</para><para>JWE: (wrappedkey): @"^[A-Za-z0-9-_]+\.[A-Za-z0-9-_]+\.[A-Za-z0-9-_]+\.[A-Za-z0-9-_]+\.[A-Za-z0-9-_]$"</para></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanValidateToken">
+      <MemberSignature Language="C#" Value="public virtual bool CanValidateToken { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanValidateToken" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CanValidateToken" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property CanValidateToken As Boolean" />
+      <MemberSignature Language="F#" Value="member this.CanValidateToken : bool" Usage="Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CanValidateToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns a value that indicates if this handler can validate a <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" />.
+            </summary>
+        <value>'true', indicating this instance can validate a <see cref="T:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateClaimsIdentity">
+      <MemberSignature Language="C#" Value="protected virtual System.Security.Claims.ClaimsIdentity CreateClaimsIdentity (Microsoft.IdentityModel.JsonWebTokens.JsonWebToken jwtToken, Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Security.Claims.ClaimsIdentity CreateClaimsIdentity(class Microsoft.IdentityModel.JsonWebTokens.JsonWebToken jwtToken, class Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateClaimsIdentity(Microsoft.IdentityModel.JsonWebTokens.JsonWebToken,Microsoft.IdentityModel.Tokens.TokenValidationParameters)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function CreateClaimsIdentity (jwtToken As JsonWebToken, validationParameters As TokenValidationParameters) As ClaimsIdentity" />
+      <MemberSignature Language="F#" Value="abstract member CreateClaimsIdentity : Microsoft.IdentityModel.JsonWebTokens.JsonWebToken * Microsoft.IdentityModel.Tokens.TokenValidationParameters -&gt; System.Security.Claims.ClaimsIdentity&#xA;override this.CreateClaimsIdentity : Microsoft.IdentityModel.JsonWebTokens.JsonWebToken * Microsoft.IdentityModel.Tokens.TokenValidationParameters -&gt; System.Security.Claims.ClaimsIdentity" Usage="jsonWebTokenHandler.CreateClaimsIdentity (jwtToken, validationParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Claims.ClaimsIdentity</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="jwtToken" Type="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken" />
+        <Parameter Name="validationParameters" Type="Microsoft.IdentityModel.Tokens.TokenValidationParameters" />
+      </Parameters>
+      <Docs>
+        <param name="jwtToken">The <see cref="T:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken" /> to use as a <see cref="T:System.Security.Claims.Claim" /> source.</param>
+        <param name="validationParameters"> Contains parameters for validating the token.</param>
+        <summary>
+            Creates a <see cref="T:System.Security.Claims.ClaimsIdentity" /> from a <see cref="T:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken" />.
+            </summary>
+        <returns>A <see cref="T:System.Security.Claims.ClaimsIdentity" /> containing the <see cref="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Claims" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateClaimsIdentity">
+      <MemberSignature Language="C#" Value="protected virtual System.Security.Claims.ClaimsIdentity CreateClaimsIdentity (Microsoft.IdentityModel.JsonWebTokens.JsonWebToken jwtToken, Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters, string issuer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Security.Claims.ClaimsIdentity CreateClaimsIdentity(class Microsoft.IdentityModel.JsonWebTokens.JsonWebToken jwtToken, class Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters, string issuer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateClaimsIdentity(Microsoft.IdentityModel.JsonWebTokens.JsonWebToken,Microsoft.IdentityModel.Tokens.TokenValidationParameters,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function CreateClaimsIdentity (jwtToken As JsonWebToken, validationParameters As TokenValidationParameters, issuer As String) As ClaimsIdentity" />
+      <MemberSignature Language="F#" Value="abstract member CreateClaimsIdentity : Microsoft.IdentityModel.JsonWebTokens.JsonWebToken * Microsoft.IdentityModel.Tokens.TokenValidationParameters * string -&gt; System.Security.Claims.ClaimsIdentity&#xA;override this.CreateClaimsIdentity : Microsoft.IdentityModel.JsonWebTokens.JsonWebToken * Microsoft.IdentityModel.Tokens.TokenValidationParameters * string -&gt; System.Security.Claims.ClaimsIdentity" Usage="jsonWebTokenHandler.CreateClaimsIdentity (jwtToken, validationParameters, issuer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Claims.ClaimsIdentity</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="jwtToken" Type="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken" />
+        <Parameter Name="validationParameters" Type="Microsoft.IdentityModel.Tokens.TokenValidationParameters" />
+        <Parameter Name="issuer" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="jwtToken">The <see cref="T:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken" /> to use as a <see cref="T:System.Security.Claims.Claim" /> source.</param>
+        <param name="validationParameters">Contains parameters for validating the token.</param>
+        <param name="issuer">Specifies the issuer for the <see cref="T:System.Security.Claims.ClaimsIdentity" />.</param>
+        <summary>
+            Creates a <see cref="T:System.Security.Claims.ClaimsIdentity" /> from a <see cref="T:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken" /> with the specified issuer.
+            </summary>
+        <returns>A <see cref="T:System.Security.Claims.ClaimsIdentity" /> containing the <see cref="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Claims" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateToken">
+      <MemberSignature Language="C#" Value="public virtual string CreateToken (Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor tokenDescriptor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string CreateToken(class Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor tokenDescriptor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateToken(Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateToken (tokenDescriptor As SecurityTokenDescriptor) As String" />
+      <MemberSignature Language="F#" Value="abstract member CreateToken : Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor -&gt; string&#xA;override this.CreateToken : Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor -&gt; string" Usage="jsonWebTokenHandler.CreateToken tokenDescriptor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tokenDescriptor" Type="Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="tokenDescriptor">A <see cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor" /> that contains details of contents of the token.</param>
+        <summary>
+            Creates a JWS(Json Web Signature).
+            </summary>
+        <returns>A JWS in Compact Serialization Format.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateToken">
+      <MemberSignature Language="C#" Value="public virtual string CreateToken (string payload);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string CreateToken(string payload) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateToken(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateToken (payload As String) As String" />
+      <MemberSignature Language="F#" Value="abstract member CreateToken : string -&gt; string&#xA;override this.CreateToken : string -&gt; string" Usage="jsonWebTokenHandler.CreateToken payload" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="payload" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="payload">A string containing JSON which represents the JWT token payload.</param>
+        <summary>
+            Creates an unsigned JWS (Json Web Signature).
+            </summary>
+        <returns>A JWS in Compact Serialization Format.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">if <paramref name="payload" /> is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateToken">
+      <MemberSignature Language="C#" Value="public virtual string CreateToken (string payload, Microsoft.IdentityModel.Tokens.EncryptingCredentials encryptingCredentials);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string CreateToken(string payload, class Microsoft.IdentityModel.Tokens.EncryptingCredentials encryptingCredentials) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateToken(System.String,Microsoft.IdentityModel.Tokens.EncryptingCredentials)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateToken (payload As String, encryptingCredentials As EncryptingCredentials) As String" />
+      <MemberSignature Language="F#" Value="abstract member CreateToken : string * Microsoft.IdentityModel.Tokens.EncryptingCredentials -&gt; string&#xA;override this.CreateToken : string * Microsoft.IdentityModel.Tokens.EncryptingCredentials -&gt; string" Usage="jsonWebTokenHandler.CreateToken (payload, encryptingCredentials)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="payload" Type="System.String" />
+        <Parameter Name="encryptingCredentials" Type="Microsoft.IdentityModel.Tokens.EncryptingCredentials" />
+      </Parameters>
+      <Docs>
+        <param name="payload">A string containing JSON which represents the JWT token payload.</param>
+        <param name="encryptingCredentials">Defines the security key and algorithm that will be used to encrypt the JWT.</param>
+        <summary>
+            Creates a JWE (Json Web Encryption).
+            </summary>
+        <returns>A JWE in compact serialization format.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateToken">
+      <MemberSignature Language="C#" Value="public virtual string CreateToken (string payload, Microsoft.IdentityModel.Tokens.SigningCredentials signingCredentials);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string CreateToken(string payload, class Microsoft.IdentityModel.Tokens.SigningCredentials signingCredentials) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateToken(System.String,Microsoft.IdentityModel.Tokens.SigningCredentials)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateToken (payload As String, signingCredentials As SigningCredentials) As String" />
+      <MemberSignature Language="F#" Value="abstract member CreateToken : string * Microsoft.IdentityModel.Tokens.SigningCredentials -&gt; string&#xA;override this.CreateToken : string * Microsoft.IdentityModel.Tokens.SigningCredentials -&gt; string" Usage="jsonWebTokenHandler.CreateToken (payload, signingCredentials)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="payload" Type="System.String" />
+        <Parameter Name="signingCredentials" Type="Microsoft.IdentityModel.Tokens.SigningCredentials" />
+      </Parameters>
+      <Docs>
+        <param name="payload">A string containing JSON which represents the JWT token payload.</param>
+        <param name="signingCredentials">Defines the security key and algorithm that will be used to sign the JWS.</param>
+        <summary>
+            Creates a JWS (Json Web Signature).
+            </summary>
+        <returns>A JWS in Compact Serialization Format.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">if <paramref name="signingCredentials" /> is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateToken">
+      <MemberSignature Language="C#" Value="public virtual string CreateToken (string payload, System.Collections.Generic.IDictionary&lt;string,object&gt; additionalHeaderClaims);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string CreateToken(string payload, class System.Collections.Generic.IDictionary`2&lt;string, object&gt; additionalHeaderClaims) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateToken(System.String,System.Collections.Generic.IDictionary{System.String,System.Object})" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateToken (payload As String, additionalHeaderClaims As IDictionary(Of String, Object)) As String" />
+      <MemberSignature Language="F#" Value="abstract member CreateToken : string * System.Collections.Generic.IDictionary&lt;string, obj&gt; -&gt; string&#xA;override this.CreateToken : string * System.Collections.Generic.IDictionary&lt;string, obj&gt; -&gt; string" Usage="jsonWebTokenHandler.CreateToken (payload, additionalHeaderClaims)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="payload" Type="System.String" />
+        <Parameter Name="additionalHeaderClaims" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="payload">A string containing JSON which represents the JWT token payload.</param>
+        <param name="additionalHeaderClaims">Defines the dictionary containing any custom header claims that need to be added to the JWT token header.</param>
+        <summary>
+            Creates an unsigned JWS (Json Web Signature).
+            </summary>
+        <returns>A JWS in Compact Serialization Format.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">if <paramref name="additionalHeaderClaims" /> is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateToken">
+      <MemberSignature Language="C#" Value="public virtual string CreateToken (string payload, Microsoft.IdentityModel.Tokens.EncryptingCredentials encryptingCredentials, System.Collections.Generic.IDictionary&lt;string,object&gt; additionalHeaderClaims);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string CreateToken(string payload, class Microsoft.IdentityModel.Tokens.EncryptingCredentials encryptingCredentials, class System.Collections.Generic.IDictionary`2&lt;string, object&gt; additionalHeaderClaims) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateToken(System.String,Microsoft.IdentityModel.Tokens.EncryptingCredentials,System.Collections.Generic.IDictionary{System.String,System.Object})" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateToken (payload As String, encryptingCredentials As EncryptingCredentials, additionalHeaderClaims As IDictionary(Of String, Object)) As String" />
+      <MemberSignature Language="F#" Value="abstract member CreateToken : string * Microsoft.IdentityModel.Tokens.EncryptingCredentials * System.Collections.Generic.IDictionary&lt;string, obj&gt; -&gt; string&#xA;override this.CreateToken : string * Microsoft.IdentityModel.Tokens.EncryptingCredentials * System.Collections.Generic.IDictionary&lt;string, obj&gt; -&gt; string" Usage="jsonWebTokenHandler.CreateToken (payload, encryptingCredentials, additionalHeaderClaims)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="payload" Type="System.String" />
+        <Parameter Name="encryptingCredentials" Type="Microsoft.IdentityModel.Tokens.EncryptingCredentials" />
+        <Parameter Name="additionalHeaderClaims" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="payload">A string containing JSON which represents the JWT token payload.</param>
+        <param name="encryptingCredentials">Defines the security key and algorithm that will be used to encrypt the JWT.</param>
+        <param name="additionalHeaderClaims">Defines the dictionary containing any custom header claims that need to be added to the outer JWT token header.</param>
+        <summary>
+            Creates a JWE (Json Web Encryption).
+            </summary>
+        <returns>A JWS in Compact Serialization Format.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">if <paramref name="additionalHeaderClaims" /> is null.</exception>
+        <exception cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenException">if <see cref="F:Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.Alg" />, <see cref="F:Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.Kid" /><see cref="F:Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.X5t" />, <see cref="F:Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.Enc" />, and/or <see cref="F:Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.Zip" />
+            are present inside of <paramref name="additionalHeaderClaims" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateToken">
+      <MemberSignature Language="C#" Value="public virtual string CreateToken (string payload, Microsoft.IdentityModel.Tokens.EncryptingCredentials encryptingCredentials, string compressionAlgorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string CreateToken(string payload, class Microsoft.IdentityModel.Tokens.EncryptingCredentials encryptingCredentials, string compressionAlgorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateToken(System.String,Microsoft.IdentityModel.Tokens.EncryptingCredentials,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateToken (payload As String, encryptingCredentials As EncryptingCredentials, compressionAlgorithm As String) As String" />
+      <MemberSignature Language="F#" Value="abstract member CreateToken : string * Microsoft.IdentityModel.Tokens.EncryptingCredentials * string -&gt; string&#xA;override this.CreateToken : string * Microsoft.IdentityModel.Tokens.EncryptingCredentials * string -&gt; string" Usage="jsonWebTokenHandler.CreateToken (payload, encryptingCredentials, compressionAlgorithm)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="payload" Type="System.String" />
+        <Parameter Name="encryptingCredentials" Type="Microsoft.IdentityModel.Tokens.EncryptingCredentials" />
+        <Parameter Name="compressionAlgorithm" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="payload">A string containing JSON which represents the JWT token payload.</param>
+        <param name="encryptingCredentials">Defines the security key and algorithm that will be used to encrypt the JWT.</param>
+        <param name="compressionAlgorithm">Defines the compression algorithm that will be used to compress the JWT token payload.</param>
+        <summary>
+            Creates a JWE (Json Web Encryption).
+            </summary>
+        <returns>A JWE in compact serialization format.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateToken">
+      <MemberSignature Language="C#" Value="public virtual string CreateToken (string payload, Microsoft.IdentityModel.Tokens.SigningCredentials signingCredentials, Microsoft.IdentityModel.Tokens.EncryptingCredentials encryptingCredentials);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string CreateToken(string payload, class Microsoft.IdentityModel.Tokens.SigningCredentials signingCredentials, class Microsoft.IdentityModel.Tokens.EncryptingCredentials encryptingCredentials) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateToken(System.String,Microsoft.IdentityModel.Tokens.SigningCredentials,Microsoft.IdentityModel.Tokens.EncryptingCredentials)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateToken (payload As String, signingCredentials As SigningCredentials, encryptingCredentials As EncryptingCredentials) As String" />
+      <MemberSignature Language="F#" Value="abstract member CreateToken : string * Microsoft.IdentityModel.Tokens.SigningCredentials * Microsoft.IdentityModel.Tokens.EncryptingCredentials -&gt; string&#xA;override this.CreateToken : string * Microsoft.IdentityModel.Tokens.SigningCredentials * Microsoft.IdentityModel.Tokens.EncryptingCredentials -&gt; string" Usage="jsonWebTokenHandler.CreateToken (payload, signingCredentials, encryptingCredentials)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="payload" Type="System.String" />
+        <Parameter Name="signingCredentials" Type="Microsoft.IdentityModel.Tokens.SigningCredentials" />
+        <Parameter Name="encryptingCredentials" Type="Microsoft.IdentityModel.Tokens.EncryptingCredentials" />
+      </Parameters>
+      <Docs>
+        <param name="payload">A string containing JSON which represents the JWT token payload.</param>
+        <param name="signingCredentials">Defines the security key and algorithm that will be used to sign the JWT.</param>
+        <param name="encryptingCredentials">Defines the security key and algorithm that will be used to encrypt the JWT.</param>
+        <summary>
+            Creates a JWE (Json Web Encryption).
+            </summary>
+        <returns>A JWE in compact serialization format.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">if <paramref name="encryptingCredentials" /> is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateToken">
+      <MemberSignature Language="C#" Value="public virtual string CreateToken (string payload, Microsoft.IdentityModel.Tokens.SigningCredentials signingCredentials, System.Collections.Generic.IDictionary&lt;string,object&gt; additionalHeaderClaims);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string CreateToken(string payload, class Microsoft.IdentityModel.Tokens.SigningCredentials signingCredentials, class System.Collections.Generic.IDictionary`2&lt;string, object&gt; additionalHeaderClaims) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateToken(System.String,Microsoft.IdentityModel.Tokens.SigningCredentials,System.Collections.Generic.IDictionary{System.String,System.Object})" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateToken (payload As String, signingCredentials As SigningCredentials, additionalHeaderClaims As IDictionary(Of String, Object)) As String" />
+      <MemberSignature Language="F#" Value="abstract member CreateToken : string * Microsoft.IdentityModel.Tokens.SigningCredentials * System.Collections.Generic.IDictionary&lt;string, obj&gt; -&gt; string&#xA;override this.CreateToken : string * Microsoft.IdentityModel.Tokens.SigningCredentials * System.Collections.Generic.IDictionary&lt;string, obj&gt; -&gt; string" Usage="jsonWebTokenHandler.CreateToken (payload, signingCredentials, additionalHeaderClaims)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="payload" Type="System.String" />
+        <Parameter Name="signingCredentials" Type="Microsoft.IdentityModel.Tokens.SigningCredentials" />
+        <Parameter Name="additionalHeaderClaims" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="payload">A string containing JSON which represents the JWT token payload.</param>
+        <param name="signingCredentials">Defines the security key and algorithm that will be used to sign the JWS.</param>
+        <param name="additionalHeaderClaims">Defines the dictionary containing any custom header claims that need to be added to the JWT token header.</param>
+        <summary>
+            Creates a JWS (Json Web Signature).
+            </summary>
+        <returns>A JWS in Compact Serialization Format.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">if <paramref name="additionalHeaderClaims" /> is null.</exception>
+        <exception cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenException">if <see cref="F:Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.Alg" />, <see cref="F:Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.Kid" /><see cref="F:Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.X5t" />, <see cref="F:Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.Enc" />, and/or <see cref="F:Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.Zip" />
+            are present inside of <paramref name="additionalHeaderClaims" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateToken">
+      <MemberSignature Language="C#" Value="public virtual string CreateToken (string payload, Microsoft.IdentityModel.Tokens.SigningCredentials signingCredentials, Microsoft.IdentityModel.Tokens.EncryptingCredentials encryptingCredentials, System.Collections.Generic.IDictionary&lt;string,object&gt; additionalHeaderClaims);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string CreateToken(string payload, class Microsoft.IdentityModel.Tokens.SigningCredentials signingCredentials, class Microsoft.IdentityModel.Tokens.EncryptingCredentials encryptingCredentials, class System.Collections.Generic.IDictionary`2&lt;string, object&gt; additionalHeaderClaims) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateToken(System.String,Microsoft.IdentityModel.Tokens.SigningCredentials,Microsoft.IdentityModel.Tokens.EncryptingCredentials,System.Collections.Generic.IDictionary{System.String,System.Object})" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateToken (payload As String, signingCredentials As SigningCredentials, encryptingCredentials As EncryptingCredentials, additionalHeaderClaims As IDictionary(Of String, Object)) As String" />
+      <MemberSignature Language="F#" Value="abstract member CreateToken : string * Microsoft.IdentityModel.Tokens.SigningCredentials * Microsoft.IdentityModel.Tokens.EncryptingCredentials * System.Collections.Generic.IDictionary&lt;string, obj&gt; -&gt; string&#xA;override this.CreateToken : string * Microsoft.IdentityModel.Tokens.SigningCredentials * Microsoft.IdentityModel.Tokens.EncryptingCredentials * System.Collections.Generic.IDictionary&lt;string, obj&gt; -&gt; string" Usage="jsonWebTokenHandler.CreateToken (payload, signingCredentials, encryptingCredentials, additionalHeaderClaims)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="payload" Type="System.String" />
+        <Parameter Name="signingCredentials" Type="Microsoft.IdentityModel.Tokens.SigningCredentials" />
+        <Parameter Name="encryptingCredentials" Type="Microsoft.IdentityModel.Tokens.EncryptingCredentials" />
+        <Parameter Name="additionalHeaderClaims" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="payload">A string containing JSON which represents the JWT token payload.</param>
+        <param name="signingCredentials">Defines the security key and algorithm that will be used to sign the JWT.</param>
+        <param name="encryptingCredentials">Defines the security key and algorithm that will be used to encrypt the JWT.</param>
+        <param name="additionalHeaderClaims">Defines the dictionary containing any custom header claims that need to be added to the outer JWT token header.</param>
+        <summary>
+            Creates a JWE (Json Web Encryption).
+            </summary>
+        <returns>A JWE in compact serialization format.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">if <paramref name="additionalHeaderClaims" /> is null.</exception>
+        <exception cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenException">if <see cref="F:Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.Alg" />, <see cref="F:Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.Kid" /><see cref="F:Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.X5t" />, <see cref="F:Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.Enc" />, and/or <see cref="F:Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.Zip" />
+            are present inside of <paramref name="additionalHeaderClaims" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateToken">
+      <MemberSignature Language="C#" Value="public virtual string CreateToken (string payload, Microsoft.IdentityModel.Tokens.SigningCredentials signingCredentials, Microsoft.IdentityModel.Tokens.EncryptingCredentials encryptingCredentials, string compressionAlgorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string CreateToken(string payload, class Microsoft.IdentityModel.Tokens.SigningCredentials signingCredentials, class Microsoft.IdentityModel.Tokens.EncryptingCredentials encryptingCredentials, string compressionAlgorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateToken(System.String,Microsoft.IdentityModel.Tokens.SigningCredentials,Microsoft.IdentityModel.Tokens.EncryptingCredentials,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateToken (payload As String, signingCredentials As SigningCredentials, encryptingCredentials As EncryptingCredentials, compressionAlgorithm As String) As String" />
+      <MemberSignature Language="F#" Value="abstract member CreateToken : string * Microsoft.IdentityModel.Tokens.SigningCredentials * Microsoft.IdentityModel.Tokens.EncryptingCredentials * string -&gt; string&#xA;override this.CreateToken : string * Microsoft.IdentityModel.Tokens.SigningCredentials * Microsoft.IdentityModel.Tokens.EncryptingCredentials * string -&gt; string" Usage="jsonWebTokenHandler.CreateToken (payload, signingCredentials, encryptingCredentials, compressionAlgorithm)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="payload" Type="System.String" />
+        <Parameter Name="signingCredentials" Type="Microsoft.IdentityModel.Tokens.SigningCredentials" />
+        <Parameter Name="encryptingCredentials" Type="Microsoft.IdentityModel.Tokens.EncryptingCredentials" />
+        <Parameter Name="compressionAlgorithm" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="payload">A string containing JSON which represents the JWT token payload.</param>
+        <param name="signingCredentials">Defines the security key and algorithm that will be used to sign the JWT.</param>
+        <param name="encryptingCredentials">Defines the security key and algorithm that will be used to encrypt the JWT.</param>
+        <param name="compressionAlgorithm">Defines the compression algorithm that will be used to compress the JWT token payload.</param>
+        <summary>
+            Creates a JWE (Json Web Encryption).
+            </summary>
+        <returns>A JWE in compact serialization format.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">if <paramref name="compressionAlgorithm" /> is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateToken">
+      <MemberSignature Language="C#" Value="public virtual string CreateToken (string payload, Microsoft.IdentityModel.Tokens.SigningCredentials signingCredentials, Microsoft.IdentityModel.Tokens.EncryptingCredentials encryptingCredentials, string compressionAlgorithm, System.Collections.Generic.IDictionary&lt;string,object&gt; additionalHeaderClaims);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string CreateToken(string payload, class Microsoft.IdentityModel.Tokens.SigningCredentials signingCredentials, class Microsoft.IdentityModel.Tokens.EncryptingCredentials encryptingCredentials, string compressionAlgorithm, class System.Collections.Generic.IDictionary`2&lt;string, object&gt; additionalHeaderClaims) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateToken(System.String,Microsoft.IdentityModel.Tokens.SigningCredentials,Microsoft.IdentityModel.Tokens.EncryptingCredentials,System.String,System.Collections.Generic.IDictionary{System.String,System.Object})" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateToken (payload As String, signingCredentials As SigningCredentials, encryptingCredentials As EncryptingCredentials, compressionAlgorithm As String, additionalHeaderClaims As IDictionary(Of String, Object)) As String" />
+      <MemberSignature Language="F#" Value="abstract member CreateToken : string * Microsoft.IdentityModel.Tokens.SigningCredentials * Microsoft.IdentityModel.Tokens.EncryptingCredentials * string * System.Collections.Generic.IDictionary&lt;string, obj&gt; -&gt; string&#xA;override this.CreateToken : string * Microsoft.IdentityModel.Tokens.SigningCredentials * Microsoft.IdentityModel.Tokens.EncryptingCredentials * string * System.Collections.Generic.IDictionary&lt;string, obj&gt; -&gt; string" Usage="jsonWebTokenHandler.CreateToken (payload, signingCredentials, encryptingCredentials, compressionAlgorithm, additionalHeaderClaims)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="payload" Type="System.String" />
+        <Parameter Name="signingCredentials" Type="Microsoft.IdentityModel.Tokens.SigningCredentials" />
+        <Parameter Name="encryptingCredentials" Type="Microsoft.IdentityModel.Tokens.EncryptingCredentials" />
+        <Parameter Name="compressionAlgorithm" Type="System.String" />
+        <Parameter Name="additionalHeaderClaims" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="payload">A string containing JSON which represents the JWT token payload.</param>
+        <param name="signingCredentials">Defines the security key and algorithm that will be used to sign the JWT.</param>
+        <param name="encryptingCredentials">Defines the security key and algorithm that will be used to encrypt the JWT.</param>
+        <param name="compressionAlgorithm">Defines the compression algorithm that will be used to compress the JWT token payload.</param>
+        <param name="additionalHeaderClaims">Defines the dictionary containing any custom header claims that need to be added to the outer JWT token header.</param>
+        <summary>
+            Creates a JWE (Json Web Encryption).
+            </summary>
+        <returns>A JWE in compact serialization format.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">if <paramref name="additionalHeaderClaims" /> is null.</exception>
+        <exception cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenException">if <see cref="F:Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.Alg" />, <see cref="F:Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.Kid" /><see cref="F:Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.X5t" />, <see cref="F:Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.Enc" />, and/or <see cref="F:Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.Zip" />
+            are present inside of <paramref name="additionalHeaderClaims" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateToken">
+      <MemberSignature Language="C#" Value="public virtual string CreateToken (string payload, Microsoft.IdentityModel.Tokens.SigningCredentials signingCredentials, Microsoft.IdentityModel.Tokens.EncryptingCredentials encryptingCredentials, string compressionAlgorithm, System.Collections.Generic.IDictionary&lt;string,object&gt; additionalHeaderClaims, System.Collections.Generic.IDictionary&lt;string,object&gt; additionalInnerHeaderClaims);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string CreateToken(string payload, class Microsoft.IdentityModel.Tokens.SigningCredentials signingCredentials, class Microsoft.IdentityModel.Tokens.EncryptingCredentials encryptingCredentials, string compressionAlgorithm, class System.Collections.Generic.IDictionary`2&lt;string, object&gt; additionalHeaderClaims, class System.Collections.Generic.IDictionary`2&lt;string, object&gt; additionalInnerHeaderClaims) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateToken(System.String,Microsoft.IdentityModel.Tokens.SigningCredentials,Microsoft.IdentityModel.Tokens.EncryptingCredentials,System.String,System.Collections.Generic.IDictionary{System.String,System.Object},System.Collections.Generic.IDictionary{System.String,System.Object})" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateToken (payload As String, signingCredentials As SigningCredentials, encryptingCredentials As EncryptingCredentials, compressionAlgorithm As String, additionalHeaderClaims As IDictionary(Of String, Object), additionalInnerHeaderClaims As IDictionary(Of String, Object)) As String" />
+      <MemberSignature Language="F#" Value="abstract member CreateToken : string * Microsoft.IdentityModel.Tokens.SigningCredentials * Microsoft.IdentityModel.Tokens.EncryptingCredentials * string * System.Collections.Generic.IDictionary&lt;string, obj&gt; * System.Collections.Generic.IDictionary&lt;string, obj&gt; -&gt; string&#xA;override this.CreateToken : string * Microsoft.IdentityModel.Tokens.SigningCredentials * Microsoft.IdentityModel.Tokens.EncryptingCredentials * string * System.Collections.Generic.IDictionary&lt;string, obj&gt; * System.Collections.Generic.IDictionary&lt;string, obj&gt; -&gt; string" Usage="jsonWebTokenHandler.CreateToken (payload, signingCredentials, encryptingCredentials, compressionAlgorithm, additionalHeaderClaims, additionalInnerHeaderClaims)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="payload" Type="System.String" />
+        <Parameter Name="signingCredentials" Type="Microsoft.IdentityModel.Tokens.SigningCredentials" />
+        <Parameter Name="encryptingCredentials" Type="Microsoft.IdentityModel.Tokens.EncryptingCredentials" />
+        <Parameter Name="compressionAlgorithm" Type="System.String" />
+        <Parameter Name="additionalHeaderClaims" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+        <Parameter Name="additionalInnerHeaderClaims" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="payload">A string containing JSON which represents the JWT token payload.</param>
+        <param name="signingCredentials">Defines the security key and algorithm that will be used to sign the JWT.</param>
+        <param name="encryptingCredentials">Defines the security key and algorithm that will be used to encrypt the JWT.</param>
+        <param name="compressionAlgorithm">Defines the compression algorithm that will be used to compress the JWT token payload.</param>
+        <param name="additionalHeaderClaims">Defines the dictionary containing any custom header claims that need to be added to the outer JWT token header.</param>
+        <param name="additionalInnerHeaderClaims">Defines the dictionary containing any custom header claims that need to be added to the inner JWT token header.</param>
+        <summary>
+            Creates a JWE (Json Web Encryption).
+            </summary>
+        <returns>A JWE in compact serialization format.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">if <paramref name="additionalHeaderClaims" /> is null.</exception>
+        <exception cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenException">if <see cref="F:Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.Alg" />, <see cref="F:Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.Kid" /><see cref="F:Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.X5t" />, <see cref="F:Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.Enc" />, and/or <see cref="F:Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.Zip" />
+            are present inside of <paramref name="additionalHeaderClaims" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DecryptToken">
+      <MemberSignature Language="C#" Value="public string DecryptToken (Microsoft.IdentityModel.JsonWebTokens.JsonWebToken jwtToken, Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string DecryptToken(class Microsoft.IdentityModel.JsonWebTokens.JsonWebToken jwtToken, class Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.DecryptToken(Microsoft.IdentityModel.JsonWebTokens.JsonWebToken,Microsoft.IdentityModel.Tokens.TokenValidationParameters)" />
+      <MemberSignature Language="VB.NET" Value="Public Function DecryptToken (jwtToken As JsonWebToken, validationParameters As TokenValidationParameters) As String" />
+      <MemberSignature Language="F#" Value="member this.DecryptToken : Microsoft.IdentityModel.JsonWebTokens.JsonWebToken * Microsoft.IdentityModel.Tokens.TokenValidationParameters -&gt; string" Usage="jsonWebTokenHandler.DecryptToken (jwtToken, validationParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="jwtToken" Type="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken" />
+        <Parameter Name="validationParameters" Type="Microsoft.IdentityModel.Tokens.TokenValidationParameters" />
+      </Parameters>
+      <Docs>
+        <param name="jwtToken">the JWE that contains the cypher text.</param>
+        <param name="validationParameters">contains crypto material.</param>
+        <summary>
+            Decrypts a JWE and returns the clear text 
+            </summary>
+        <returns>the decoded / cleartext contents of the JWE.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">if <paramref name="validationParameters" />  is null.</exception>
+        <exception cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenException">if '<paramref name="jwtToken" /> .Enc' is null or empty.</exception>
+        <exception cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenDecompressionFailedException">if decompression failed.</exception>
+        <exception cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenEncryptionKeyNotFoundException">if '<paramref name="jwtToken" /> .Kid' is not null AND decryption fails.</exception>
+        <exception cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenDecryptionFailedException">if the JWE was not able to be decrypted.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EncryptToken">
+      <MemberSignature Language="C#" Value="public string EncryptToken (string innerJwt, Microsoft.IdentityModel.Tokens.EncryptingCredentials encryptingCredentials);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string EncryptToken(string innerJwt, class Microsoft.IdentityModel.Tokens.EncryptingCredentials encryptingCredentials) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.EncryptToken(System.String,Microsoft.IdentityModel.Tokens.EncryptingCredentials)" />
+      <MemberSignature Language="VB.NET" Value="Public Function EncryptToken (innerJwt As String, encryptingCredentials As EncryptingCredentials) As String" />
+      <MemberSignature Language="F#" Value="member this.EncryptToken : string * Microsoft.IdentityModel.Tokens.EncryptingCredentials -&gt; string" Usage="jsonWebTokenHandler.EncryptToken (innerJwt, encryptingCredentials)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="innerJwt" Type="System.String" />
+        <Parameter Name="encryptingCredentials" Type="Microsoft.IdentityModel.Tokens.EncryptingCredentials" />
+      </Parameters>
+      <Docs>
+        <param name="innerJwt">A 'JSON Web Token' (JWT) in JWS Compact Serialization Format.</param>
+        <param name="encryptingCredentials">Defines the security key and algorithm that will be used to encrypt the <paramref name="innerJwt" />.</param>
+        <summary>
+            Encrypts a JWS.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">if <paramref name="encryptingCredentials" /> is null.</exception>
+        <exception cref="T:System.ArgumentException">if both <see cref="P:Microsoft.IdentityModel.Tokens.EncryptingCredentials.CryptoProviderFactory" /> and <see cref="P:Microsoft.IdentityModel.Tokens.EncryptingCredentials.Key" />.<see cref="T:Microsoft.IdentityModel.Tokens.CryptoProviderFactory" /> are null.</exception>
+        <exception cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenEncryptionFailedException">if not using one of the supported content encryption key (CEK) algorithms: 128, 384 or 512 AesCbcHmac (this applies in the case of key wrap only, not direct encryption).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EncryptToken">
+      <MemberSignature Language="C#" Value="public string EncryptToken (string innerJwt, Microsoft.IdentityModel.Tokens.EncryptingCredentials encryptingCredentials, System.Collections.Generic.IDictionary&lt;string,object&gt; additionalHeaderClaims);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string EncryptToken(string innerJwt, class Microsoft.IdentityModel.Tokens.EncryptingCredentials encryptingCredentials, class System.Collections.Generic.IDictionary`2&lt;string, object&gt; additionalHeaderClaims) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.EncryptToken(System.String,Microsoft.IdentityModel.Tokens.EncryptingCredentials,System.Collections.Generic.IDictionary{System.String,System.Object})" />
+      <MemberSignature Language="VB.NET" Value="Public Function EncryptToken (innerJwt As String, encryptingCredentials As EncryptingCredentials, additionalHeaderClaims As IDictionary(Of String, Object)) As String" />
+      <MemberSignature Language="F#" Value="member this.EncryptToken : string * Microsoft.IdentityModel.Tokens.EncryptingCredentials * System.Collections.Generic.IDictionary&lt;string, obj&gt; -&gt; string" Usage="jsonWebTokenHandler.EncryptToken (innerJwt, encryptingCredentials, additionalHeaderClaims)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="innerJwt" Type="System.String" />
+        <Parameter Name="encryptingCredentials" Type="Microsoft.IdentityModel.Tokens.EncryptingCredentials" />
+        <Parameter Name="additionalHeaderClaims" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="innerJwt">A 'JSON Web Token' (JWT) in JWS Compact Serialization Format.</param>
+        <param name="encryptingCredentials">Defines the security key and algorithm that will be used to encrypt the <paramref name="innerJwt" />.</param>
+        <param name="additionalHeaderClaims">Defines the dictionary containing any custom header claims that need to be added to the outer JWT token header.</param>
+        <summary>
+            Encrypts a JWS.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">if <paramref name="additionalHeaderClaims" /> is null.</exception>
+        <exception cref="T:System.ArgumentException">if both <see cref="P:Microsoft.IdentityModel.Tokens.EncryptingCredentials.CryptoProviderFactory" /> and <see cref="P:Microsoft.IdentityModel.Tokens.EncryptingCredentials.Key" />.<see cref="T:Microsoft.IdentityModel.Tokens.CryptoProviderFactory" /> are null.</exception>
+        <exception cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenEncryptionFailedException">if not using one of the supported content encryption key (CEK) algorithms: 128, 384 or 512 AesCbcHmac (this applies in the case of key wrap only, not direct encryption).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EncryptToken">
+      <MemberSignature Language="C#" Value="public string EncryptToken (string innerJwt, Microsoft.IdentityModel.Tokens.EncryptingCredentials encryptingCredentials, string algorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string EncryptToken(string innerJwt, class Microsoft.IdentityModel.Tokens.EncryptingCredentials encryptingCredentials, string algorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.EncryptToken(System.String,Microsoft.IdentityModel.Tokens.EncryptingCredentials,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function EncryptToken (innerJwt As String, encryptingCredentials As EncryptingCredentials, algorithm As String) As String" />
+      <MemberSignature Language="F#" Value="member this.EncryptToken : string * Microsoft.IdentityModel.Tokens.EncryptingCredentials * string -&gt; string" Usage="jsonWebTokenHandler.EncryptToken (innerJwt, encryptingCredentials, algorithm)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="innerJwt" Type="System.String" />
+        <Parameter Name="encryptingCredentials" Type="Microsoft.IdentityModel.Tokens.EncryptingCredentials" />
+        <Parameter Name="algorithm" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="innerJwt">A 'JSON Web Token' (JWT) in JWS Compact Serialization Format.</param>
+        <param name="encryptingCredentials">Defines the security key and algorithm that will be used to encrypt the <paramref name="innerJwt" />.</param>
+        <param name="algorithm">Defines the compression algorithm that will be used to compress the 'innerJwt'.</param>
+        <summary>
+            Encrypts a JWS.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">if <paramref name="algorithm" /> is null or empty.</exception>
+        <exception cref="T:System.ArgumentException">if both <see cref="P:Microsoft.IdentityModel.Tokens.EncryptingCredentials.CryptoProviderFactory" /> and <see cref="P:Microsoft.IdentityModel.Tokens.EncryptingCredentials.Key" />.<see cref="T:Microsoft.IdentityModel.Tokens.CryptoProviderFactory" /> are null.</exception>
+        <exception cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenEncryptionFailedException">if not using one of the supported content encryption key (CEK) algorithms: 128, 384 or 512 AesCbcHmac (this applies in the case of key wrap only, not direct encryption).</exception>
+        <exception cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenCompressionFailedException">if compression using <paramref name="algorithm" /> fails.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EncryptToken">
+      <MemberSignature Language="C#" Value="public string EncryptToken (string innerJwt, Microsoft.IdentityModel.Tokens.EncryptingCredentials encryptingCredentials, string algorithm, System.Collections.Generic.IDictionary&lt;string,object&gt; additionalHeaderClaims);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string EncryptToken(string innerJwt, class Microsoft.IdentityModel.Tokens.EncryptingCredentials encryptingCredentials, string algorithm, class System.Collections.Generic.IDictionary`2&lt;string, object&gt; additionalHeaderClaims) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.EncryptToken(System.String,Microsoft.IdentityModel.Tokens.EncryptingCredentials,System.String,System.Collections.Generic.IDictionary{System.String,System.Object})" />
+      <MemberSignature Language="VB.NET" Value="Public Function EncryptToken (innerJwt As String, encryptingCredentials As EncryptingCredentials, algorithm As String, additionalHeaderClaims As IDictionary(Of String, Object)) As String" />
+      <MemberSignature Language="F#" Value="member this.EncryptToken : string * Microsoft.IdentityModel.Tokens.EncryptingCredentials * string * System.Collections.Generic.IDictionary&lt;string, obj&gt; -&gt; string" Usage="jsonWebTokenHandler.EncryptToken (innerJwt, encryptingCredentials, algorithm, additionalHeaderClaims)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="innerJwt" Type="System.String" />
+        <Parameter Name="encryptingCredentials" Type="Microsoft.IdentityModel.Tokens.EncryptingCredentials" />
+        <Parameter Name="algorithm" Type="System.String" />
+        <Parameter Name="additionalHeaderClaims" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="innerJwt">A 'JSON Web Token' (JWT) in JWS Compact Serialization Format.</param>
+        <param name="encryptingCredentials">Defines the security key and algorithm that will be used to encrypt the <paramref name="innerJwt" />.</param>
+        <param name="algorithm">Defines the compression algorithm that will be used to compress the <paramref name="innerJwt" /></param>
+        <param name="additionalHeaderClaims">Defines the dictionary containing any custom header claims that need to be added to the outer JWT token header.</param>
+        <summary>
+            Encrypts a JWS.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">if <paramref name="additionalHeaderClaims" /> is null or empty.</exception>
+        <exception cref="T:System.ArgumentException">if both <see cref="P:Microsoft.IdentityModel.Tokens.EncryptingCredentials.CryptoProviderFactory" /> and <see cref="P:Microsoft.IdentityModel.Tokens.EncryptingCredentials.Key" />.<see cref="T:Microsoft.IdentityModel.Tokens.CryptoProviderFactory" /> are null.</exception>
+        <exception cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenEncryptionFailedException">if not using one of the supported content encryption key (CEK) algorithms: 128, 384 or 512 AesCbcHmac (this applies in the case of key wrap only, not direct encryption).</exception>
+        <exception cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenCompressionFailedException">if compression using 'algorithm' fails.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadJsonWebToken">
+      <MemberSignature Language="C#" Value="public virtual Microsoft.IdentityModel.JsonWebTokens.JsonWebToken ReadJsonWebToken (string token);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.IdentityModel.JsonWebTokens.JsonWebToken ReadJsonWebToken(string token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadJsonWebToken(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function ReadJsonWebToken (token As String) As JsonWebToken" />
+      <MemberSignature Language="F#" Value="abstract member ReadJsonWebToken : string -&gt; Microsoft.IdentityModel.JsonWebTokens.JsonWebToken&#xA;override this.ReadJsonWebToken : string -&gt; Microsoft.IdentityModel.JsonWebTokens.JsonWebToken" Usage="jsonWebTokenHandler.ReadJsonWebToken token" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.JsonWebTokens.JsonWebToken</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="token">A 'JSON Web Token' (JWT) in JWS or JWE Compact Serialization Format.</param>
+        <summary>
+            Converts a string into an instance of <see cref="T:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken" />.
+            </summary>
+        <returns>A <see cref="T:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken" /></returns>
+        <remarks>
+          <para>If the <paramref name="token" /> is in JWE Compact Serialization format, only the protected header will be deserialized.</para>
+            This method is unable to decrypt the payload. Use <see cref="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateToken(System.String,Microsoft.IdentityModel.Tokens.TokenValidationParameters)" />to obtain the payload.
+            <para>The token is NOT validated and no security decisions should be made about the contents.
+            Use <see cref="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateToken(System.String,Microsoft.IdentityModel.Tokens.TokenValidationParameters)" /> or <see cref="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenAsync(System.String,Microsoft.IdentityModel.Tokens.TokenValidationParameters)" /> to ensure the token is acceptable.</para></remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="token" /> is null or empty.</exception>
+        <exception cref="T:System.ArgumentException">'token.Length' is greater than <see cref="P:Microsoft.IdentityModel.Tokens.TokenHandler.MaximumTokenSizeInBytes" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadToken">
+      <MemberSignature Language="C#" Value="public override Microsoft.IdentityModel.Tokens.SecurityToken ReadToken (string token);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class Microsoft.IdentityModel.Tokens.SecurityToken ReadToken(string token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ReadToken (token As String) As SecurityToken" />
+      <MemberSignature Language="F#" Value="override this.ReadToken : string -&gt; Microsoft.IdentityModel.Tokens.SecurityToken" Usage="jsonWebTokenHandler.ReadToken token" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Tokens.SecurityToken</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="token">A 'JSON Web Token' (JWT) in JWS or JWE Compact Serialization Format.</param>
+        <summary>
+            Converts a string into an instance of <see cref="T:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken" />.
+            </summary>
+        <returns>A <see cref="T:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken" /></returns>
+        <remarks>The token is NOT validated and no security decisions should be made about the contents.
+            <para>Use <see cref="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateToken(System.String,Microsoft.IdentityModel.Tokens.TokenValidationParameters)" /> or <see cref="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenAsync(System.String,Microsoft.IdentityModel.Tokens.TokenValidationParameters)" /> to ensure the token is acceptable.</para></remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="token" /> is null or empty.</exception>
+        <exception cref="T:System.ArgumentException">'token.Length' is greater than <see cref="P:Microsoft.IdentityModel.Tokens.TokenHandler.MaximumTokenSizeInBytes" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveTokenDecryptionKey">
+      <MemberSignature Language="C#" Value="protected virtual Microsoft.IdentityModel.Tokens.SecurityKey ResolveTokenDecryptionKey (string token, Microsoft.IdentityModel.JsonWebTokens.JsonWebToken jwtToken, Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.IdentityModel.Tokens.SecurityKey ResolveTokenDecryptionKey(string token, class Microsoft.IdentityModel.JsonWebTokens.JsonWebToken jwtToken, class Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ResolveTokenDecryptionKey(System.String,Microsoft.IdentityModel.JsonWebTokens.JsonWebToken,Microsoft.IdentityModel.Tokens.TokenValidationParameters)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function ResolveTokenDecryptionKey (token As String, jwtToken As JsonWebToken, validationParameters As TokenValidationParameters) As SecurityKey" />
+      <MemberSignature Language="F#" Value="abstract member ResolveTokenDecryptionKey : string * Microsoft.IdentityModel.JsonWebTokens.JsonWebToken * Microsoft.IdentityModel.Tokens.TokenValidationParameters -&gt; Microsoft.IdentityModel.Tokens.SecurityKey&#xA;override this.ResolveTokenDecryptionKey : string * Microsoft.IdentityModel.JsonWebTokens.JsonWebToken * Microsoft.IdentityModel.Tokens.TokenValidationParameters -&gt; Microsoft.IdentityModel.Tokens.SecurityKey" Usage="jsonWebTokenHandler.ResolveTokenDecryptionKey (token, jwtToken, validationParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Tokens.SecurityKey</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.String" />
+        <Parameter Name="jwtToken" Type="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken" />
+        <Parameter Name="validationParameters" Type="Microsoft.IdentityModel.Tokens.TokenValidationParameters" />
+      </Parameters>
+      <Docs>
+        <param name="token">The <see cref="T:System.String" /> the token that is being decrypted.</param>
+        <param name="jwtToken">The <see cref="T:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken" /> that is being decrypted.</param>
+        <param name="validationParameters">A <see cref="T:Microsoft.IdentityModel.Tokens.TokenValidationParameters" />  required for validation.</param>
+        <summary>
+            Returns a <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> to use when decrypting a JWE.
+            </summary>
+        <returns>Returns a <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> to use for signature validation.</returns>
+        <remarks>If key fails to resolve, then null is returned</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenType">
+      <MemberSignature Language="C#" Value="public Type TokenType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type TokenType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.TokenType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TokenType As Type" />
+      <MemberSignature Language="F#" Value="member this.TokenType : Type" Usage="Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.TokenType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the type of the <see cref="T:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <return>The type of <see cref="T:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken" /></return>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateToken">
+      <MemberSignature Language="C#" Value="public virtual Microsoft.IdentityModel.Tokens.TokenValidationResult ValidateToken (string token, Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.IdentityModel.Tokens.TokenValidationResult ValidateToken(string token, class Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateToken(System.String,Microsoft.IdentityModel.Tokens.TokenValidationParameters)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function ValidateToken (token As String, validationParameters As TokenValidationParameters) As TokenValidationResult" />
+      <MemberSignature Language="F#" Value="abstract member ValidateToken : string * Microsoft.IdentityModel.Tokens.TokenValidationParameters -&gt; Microsoft.IdentityModel.Tokens.TokenValidationResult&#xA;override this.ValidateToken : string * Microsoft.IdentityModel.Tokens.TokenValidationParameters -&gt; Microsoft.IdentityModel.Tokens.TokenValidationResult" Usage="jsonWebTokenHandler.ValidateToken (token, validationParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Tokens.TokenValidationResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.String" />
+        <Parameter Name="validationParameters" Type="Microsoft.IdentityModel.Tokens.TokenValidationParameters" />
+      </Parameters>
+      <Docs>
+        <param name="token">A 'JSON Web Token' (JWT) in JWS or JWE Compact Serialization Format.</param>
+        <param name="validationParameters">A <see cref="T:Microsoft.IdentityModel.Tokens.TokenValidationParameters" />  required for validation.</param>
+        <summary>
+            Validates a JWS or a JWE.
+            </summary>
+        <returns>A <see cref="T:Microsoft.IdentityModel.Tokens.TokenValidationResult" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateTokenAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.TokenValidationResult&gt; ValidateTokenAsync (string token, Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.IdentityModel.Tokens.TokenValidationResult&gt; ValidateTokenAsync(string token, class Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenAsync(System.String,Microsoft.IdentityModel.Tokens.TokenValidationParameters)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ValidateTokenAsync (token As String, validationParameters As TokenValidationParameters) As Task(Of TokenValidationResult)" />
+      <MemberSignature Language="F#" Value="override this.ValidateTokenAsync : string * Microsoft.IdentityModel.Tokens.TokenValidationParameters -&gt; System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.TokenValidationResult&gt;" Usage="jsonWebTokenHandler.ValidateTokenAsync (token, validationParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.TokenValidationResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.String" />
+        <Parameter Name="validationParameters" Type="Microsoft.IdentityModel.Tokens.TokenValidationParameters" />
+      </Parameters>
+      <Docs>
+        <param name="token">To be added.</param>
+        <param name="validationParameters">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,32 @@
+<Type Name="ReplayValidatorAsync" FullName="Microsoft.IdentityModel.Protocols.SignedHttpRequest.ReplayValidatorAsync">
+  <TypeSignature Language="C#" Value="public delegate System.Threading.Tasks.Task ReplayValidatorAsync(SecurityToken signedHttpRequest, SignedHttpRequestValidationContext signedHttpRequestValidationContext, CancellationToken cancellationToken);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ReplayValidatorAsync extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.IdentityModel.Protocols.SignedHttpRequest.ReplayValidatorAsync" />
+  <TypeSignature Language="VB.NET" Value="Public Delegate Function ReplayValidatorAsync(signedHttpRequest As SecurityToken, signedHttpRequestValidationContext As SignedHttpRequestValidationContext, cancellationToken As CancellationToken) As Task " />
+  <TypeSignature Language="F#" Value="type ReplayValidatorAsync = delegate of SecurityToken * SignedHttpRequestValidationContext * CancellationToken -&gt; Task" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.IdentityModel.Protocols.SignedHttpRequest</AssemblyName>
+    <AssemblyVersion>6.25.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="signedHttpRequest" Type="Microsoft.IdentityModel.Tokens.SecurityToken" />
+    <Parameter Name="signedHttpRequestValidationContext" Type="Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext" />
+    <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Threading.Tasks.Task</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="signedHttpRequest">A SignedHttpRequest which contains the 'nonce' claim to validate.</param>
+    <param name="signedHttpRequestValidationContext">A structure that wraps parameters needed for SignedHttpRequest validation.</param>
+    <param name="cancellationToken">Propagates notification that operations should be canceled.</param>
+    <summary>
+            A delegate that will be called to check if SignedHttpRequest is replayed, if set.
+            </summary>
+    <returns>Expected to throw an appropriate exception if SignedHttpRequest replay is detected.</returns>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

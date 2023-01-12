@@ -1,0 +1,170 @@
+<Type Name="KeyVaultSignatureProvider" FullName="Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSignatureProvider">
+  <TypeSignature Language="C#" Value="public class KeyVaultSignatureProvider : Microsoft.IdentityModel.Tokens.SignatureProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit KeyVaultSignatureProvider extends Microsoft.IdentityModel.Tokens.SignatureProvider" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSignatureProvider" />
+  <TypeSignature Language="VB.NET" Value="Public Class KeyVaultSignatureProvider&#xA;Inherits SignatureProvider" />
+  <TypeSignature Language="F#" Value="type KeyVaultSignatureProvider = class&#xA;    inherit SignatureProvider" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.IdentityModel.KeyVaultExtensions</AssemblyName>
+    <AssemblyVersion>6.25.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.IdentityModel.Tokens.SignatureProvider</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Provides signing and verifying operations using Azure Key Vault.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KeyVaultSignatureProvider (Microsoft.IdentityModel.Tokens.SecurityKey key, string algorithm, bool willCreateSignatures);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.IdentityModel.Tokens.SecurityKey key, string algorithm, bool willCreateSignatures) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSignatureProvider.#ctor(Microsoft.IdentityModel.Tokens.SecurityKey,System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (key As SecurityKey, algorithm As String, willCreateSignatures As Boolean)" />
+      <MemberSignature Language="F#" Value="new Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSignatureProvider : Microsoft.IdentityModel.Tokens.SecurityKey * string * bool -&gt; Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSignatureProvider" Usage="new Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSignatureProvider (key, algorithm, willCreateSignatures)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.KeyVaultExtensions</AssemblyName>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="key" Type="Microsoft.IdentityModel.Tokens.SecurityKey" />
+        <Parameter Name="algorithm" Type="System.String" />
+        <Parameter Name="willCreateSignatures" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="key">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> that will be used for signature operations.</param>
+        <param name="algorithm">The signature algorithm to apply.</param>
+        <param name="willCreateSignatures">Whether this <see cref="T:Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSignatureProvider" /> is required to create signatures then set this to true.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSignatureProvider" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="algorithm" />is null or empty.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSignatureProvider.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="override this.Dispose : bool -&gt; unit" Usage="keyVaultSignatureProvider.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.KeyVaultExtensions</AssemblyName>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">true, if called from Dispose(), false, if invoked inside a finalizer</param>
+        <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sign">
+      <MemberSignature Language="C#" Value="public override byte[] Sign (byte[] input);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance unsigned int8[] Sign(unsigned int8[] input) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSignatureProvider.Sign(System.Byte[])" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Sign (input As Byte()) As Byte()" />
+      <MemberSignature Language="F#" Value="override this.Sign : byte[] -&gt; byte[]" Usage="keyVaultSignatureProvider.Sign input" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.KeyVaultExtensions</AssemblyName>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="input">The bytes to sign.</param>
+        <summary>
+            Produces a signature over the 'input' using Azure Key Vault.
+            </summary>
+        <returns>A signature over the input.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">if <paramref name="input" />.Length == 0.</exception>
+        <exception cref="T:System.ObjectDisposedException">If Dispose has been called.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Verify">
+      <MemberSignature Language="C#" Value="public override bool Verify (byte[] input, byte[] signature);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Verify(unsigned int8[] input, unsigned int8[] signature) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSignatureProvider.Verify(System.Byte[],System.Byte[])" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Verify (input As Byte(), signature As Byte()) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Verify : byte[] * byte[] -&gt; bool" Usage="keyVaultSignatureProvider.Verify (input, signature)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.KeyVaultExtensions</AssemblyName>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.Byte[]" />
+        <Parameter Name="signature" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="input">bytes to verify.</param>
+        <param name="signature">signature to compare against.</param>
+        <summary>
+            Verifies that the <paramref name="signature" /> is over <paramref name="input" /> using Azure Key Vault.
+            </summary>
+        <returns>true if the computed signature matches the signature parameter, false otherwise.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="signature" /> is null or has length == 0.</exception>
+        <exception cref="T:System.ObjectDisposedException">If Dispose has been called.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Verify">
+      <MemberSignature Language="C#" Value="public override bool Verify (byte[] input, int inputOffset, int lengthOffset, byte[] signature, int signatureOffset, int signatureLength);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Verify(unsigned int8[] input, int32 inputOffset, int32 lengthOffset, unsigned int8[] signature, int32 signatureOffset, int32 signatureLength) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSignatureProvider.Verify(System.Byte[],System.Int32,System.Int32,System.Byte[],System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Verify (input As Byte(), inputOffset As Integer, lengthOffset As Integer, signature As Byte(), signatureOffset As Integer, signatureLength As Integer) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Verify : byte[] * int * int * byte[] * int * int -&gt; bool" Usage="keyVaultSignatureProvider.Verify (input, inputOffset, lengthOffset, signature, signatureOffset, signatureLength)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.KeyVaultExtensions</AssemblyName>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.Byte[]" />
+        <Parameter Name="inputOffset" Type="System.Int32" />
+        <Parameter Name="lengthOffset" Type="System.Int32" />
+        <Parameter Name="signature" Type="System.Byte[]" />
+        <Parameter Name="signatureOffset" Type="System.Int32" />
+        <Parameter Name="signatureLength" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="input">To be added.</param>
+        <param name="inputOffset">To be added.</param>
+        <param name="lengthOffset">To be added.</param>
+        <param name="signature">To be added.</param>
+        <param name="signatureOffset">To be added.</param>
+        <param name="signatureLength">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

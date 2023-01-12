@@ -1,0 +1,1111 @@
+<Type Name="JsonWebToken" FullName="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken">
+  <TypeSignature Language="C#" Value="public class JsonWebToken : Microsoft.IdentityModel.Tokens.SecurityToken" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit JsonWebToken extends Microsoft.IdentityModel.Tokens.SecurityToken" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken" />
+  <TypeSignature Language="VB.NET" Value="Public Class JsonWebToken&#xA;Inherits SecurityToken" />
+  <TypeSignature Language="F#" Value="type JsonWebToken = class&#xA;    inherit SecurityToken" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+    <AssemblyVersion>6.25.0.0</AssemblyVersion>
+    <AssemblyVersion>6.25.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.IdentityModel.Tokens.SecurityToken</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            A <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" /> designed for representing a JSON Web Token (JWT). 
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public JsonWebToken (string jwtEncodedString);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string jwtEncodedString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (jwtEncodedString As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.IdentityModel.JsonWebTokens.JsonWebToken : string -&gt; Microsoft.IdentityModel.JsonWebTokens.JsonWebToken" Usage="new Microsoft.IdentityModel.JsonWebTokens.JsonWebToken jwtEncodedString" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="jwtEncodedString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="jwtEncodedString">A JSON Web Token that has been serialized in JWS or JWE Compact serialized format.</param>
+        <summary>
+            Initializes a new instance of <see cref="T:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken" /> from a string in JWS or JWE Compact serialized format.
+            </summary>
+        <remarks>
+            see: https://datatracker.ietf.org/doc/html/rfc7519 (JWT)
+            see: https://datatracker.ietf.org/doc/html/rfc7515 (JWS)
+            see: https://datatracker.ietf.org/doc/html/rfc7516 (JWE)
+            <para>
+            The contents of the returned <see cref="T:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken" /> have not been validated, the JSON Web Token is simply decoded. Validation can be accomplished using the validation methods in <see cref="T:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler" /></para></remarks>
+        <exception cref="T:System.ArgumentNullException">'jwtEncodedString' is null or empty.</exception>
+        <exception cref="T:System.ArgumentException">'jwtEncodedString' is not in JWS or JWE Compact serialization format.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public JsonWebToken (string header, string payload);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string header, string payload) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.#ctor(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (header As String, payload As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.IdentityModel.JsonWebTokens.JsonWebToken : string * string -&gt; Microsoft.IdentityModel.JsonWebTokens.JsonWebToken" Usage="new Microsoft.IdentityModel.JsonWebTokens.JsonWebToken (header, payload)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="header" Type="System.String" />
+        <Parameter Name="payload" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="header">A string containing JSON which represents the cryptographic operations applied to the JWT and optionally any additional properties of the JWT.</param>
+        <param name="payload">A string containing JSON which represents the claims contained in the JWT. Each claim is a JSON object of the form { Name, Value }.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken" /> class where the header contains the crypto algorithms applied to the encoded header and payload.
+            </summary>
+        <remarks>
+            see: https://datatracker.ietf.org/doc/html/rfc7519 (JWT)
+            see: https://datatracker.ietf.org/doc/html/rfc7515 (JWS)
+            see: https://datatracker.ietf.org/doc/html/rfc7516 (JWE)
+            <para>
+            The contents of the returned <see cref="T:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken" /> have not been validated, the JSON Web Token is simply decoded. Validation can be accomplished using the validation methods in <see cref="T:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler" /></para></remarks>
+        <exception cref="T:System.ArgumentNullException">'payload' is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Actor">
+      <MemberSignature Language="C#" Value="public string Actor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Actor" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Actor" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Actor As String" />
+      <MemberSignature Language="F#" Value="member this.Actor : string" Usage="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Actor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the 'value' of the 'actort' claim the payload.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            If the 'actort' claim is not found, an empty string is returned.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Alg">
+      <MemberSignature Language="C#" Value="public string Alg { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Alg" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Alg" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Alg As String" />
+      <MemberSignature Language="F#" Value="member this.Alg : string" Usage="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Alg" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the 'value' of the 'alg' claim from the header.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Identifies the cryptographic algorithm used to encrypt or determine the value of the Content Encryption Key.
+            Applicable to an encrypted JWT {JWE}.
+            see: https://datatracker.ietf.org/doc/html/rfc7516#section-4.1.1
+            <para>
+            If the 'alg' claim is not found, an empty string is returned.
+            </para></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Audiences">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;string&gt; Audiences { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; Audiences" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Audiences" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Audiences As IEnumerable(Of String)" />
+      <MemberSignature Language="F#" Value="member this.Audiences : seq&lt;string&gt;" Usage="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Audiences" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the list of 'aud' claims from the payload.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Identifies the recipients that the JWT is intended for.
+            see: https://datatracker.ietf.org/doc/html/rfc7519#section-4.1.3
+            <para>
+            If the 'aud' claim is not found, enumeration will be empty.
+            </para></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthenticationTag">
+      <MemberSignature Language="C#" Value="public string AuthenticationTag { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AuthenticationTag" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.AuthenticationTag" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AuthenticationTag As String" />
+      <MemberSignature Language="F#" Value="member this.AuthenticationTag : string" Usage="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.AuthenticationTag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the AuthenticationTag from the original raw data of this instance when it was created.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Contains the results of a Authentication Encryption with Associated Data (AEAD).
+            see: https://datatracker.ietf.org/doc/html/rfc7516#section-2
+            <para>
+            If this JWT is not encrypted with an algorithms that uses an Authentication Tag, an empty string will be returned.
+            </para></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Ciphertext">
+      <MemberSignature Language="C#" Value="public string Ciphertext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Ciphertext" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Ciphertext" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Ciphertext As String" />
+      <MemberSignature Language="F#" Value="member this.Ciphertext : string" Usage="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Ciphertext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the Ciphertext representing the encrypted JWT in the original raw data.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            When decrypted using values in the JWE header will contain the plaintext payload.
+            see: https://datatracker.ietf.org/doc/html/rfc7516#section-2
+            <para>
+            If this JWT is not encrypted, an empty string will be returned.
+            </para></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Claims">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IEnumerable&lt;System.Security.Claims.Claim&gt; Claims { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class System.Security.Claims.Claim&gt; Claims" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Claims" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Claims As IEnumerable(Of Claim)" />
+      <MemberSignature Language="F#" Value="member this.Claims : seq&lt;System.Security.Claims.Claim&gt;" Usage="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Claims" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Security.Claims.Claim&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets a <see cref="T:System.Collections.Generic.IEnumerable`1" /> where each claim in the JWT { name, value } is returned as a <see cref="T:System.Security.Claims.Claim" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            A <see cref="T:System.Security.Claims.Claim" /> requires each value to be represented as a string. If the value was not a string, then <see cref="P:System.Security.Claims.Claim.Type" /> contains the json type.
+            <see cref="T:Microsoft.IdentityModel.JsonWebTokens.JsonClaimValueTypes" /> and <see cref="T:System.Security.Claims.ClaimValueTypes" /> to determine the json type.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cty">
+      <MemberSignature Language="C#" Value="public string Cty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Cty" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Cty" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Cty As String" />
+      <MemberSignature Language="F#" Value="member this.Cty : string" Usage="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Cty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the 'value' of the 'cty' claim from the header.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Used by JWS applications to declare the media type[IANA.MediaTypes] of the secured content (the payload).
+            see: https://datatracker.ietf.org/doc/html/rfc7516#section-4.1.12 (JWE)
+            see: https://datatracker.ietf.org/doc/html/rfc7515#section-4.1.10 (JWS)
+            <para>
+            If the 'cty' claim is not found, an empty string is returned.
+            </para></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enc">
+      <MemberSignature Language="C#" Value="public string Enc { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Enc" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Enc" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Enc As String" />
+      <MemberSignature Language="F#" Value="member this.Enc : string" Usage="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Enc" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the 'value' of the 'enc' claim from the header.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Identifies the content encryption algorithm used to perform authenticated encryption
+            on the plaintext to produce the ciphertext and the Authentication Tag.
+            see: https://datatracker.ietf.org/doc/html/rfc7516#section-4.1.2
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EncodedHeader">
+      <MemberSignature Language="C#" Value="public string EncodedHeader { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EncodedHeader" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.EncodedHeader" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EncodedHeader As String" />
+      <MemberSignature Language="F#" Value="member this.EncodedHeader : string" Usage="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.EncodedHeader" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the EncodedHeader from the original raw data of this instance when it was created.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            The original Base64UrlEncoded string of the JWT header.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EncodedPayload">
+      <MemberSignature Language="C#" Value="public string EncodedPayload { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EncodedPayload" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.EncodedPayload" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EncodedPayload As String" />
+      <MemberSignature Language="F#" Value="member this.EncodedPayload : string" Usage="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.EncodedPayload" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the EncodedPayload from the original raw data of this instance when it was created.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            The original Base64UrlEncoded of the JWT payload, for JWE this will an empty string.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EncodedSignature">
+      <MemberSignature Language="C#" Value="public string EncodedSignature { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EncodedSignature" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.EncodedSignature" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EncodedSignature As String" />
+      <MemberSignature Language="F#" Value="member this.EncodedSignature : string" Usage="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.EncodedSignature" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the EncodedSignature from the original raw data of this instance when it was created.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            The original Base64UrlEncoded of the JWT signature.
+            If the JWT was not signed or a JWE, an empty string is returned.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EncodedToken">
+      <MemberSignature Language="C#" Value="public string EncodedToken { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EncodedToken" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.EncodedToken" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EncodedToken As String" />
+      <MemberSignature Language="F#" Value="member this.EncodedToken : string" Usage="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.EncodedToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the original raw data of this instance when it was created.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            The original Base64UrlEncoded of the JWT.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EncryptedKey">
+      <MemberSignature Language="C#" Value="public string EncryptedKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EncryptedKey" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.EncryptedKey" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EncryptedKey As String" />
+      <MemberSignature Language="F#" Value="member this.EncryptedKey : string" Usage="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.EncryptedKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the Encrypted Content Encryption Key.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            For some algorithms this value may be null even though the JWT was encrypted.
+            see: https://datatracker.ietf.org/doc/html/rfc7516#section-2
+            <para>
+            If not found, an empty string is returned.
+            </para></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetClaim">
+      <MemberSignature Language="C#" Value="public System.Security.Claims.Claim GetClaim (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Security.Claims.Claim GetClaim(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.GetClaim(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetClaim (key As String) As Claim" />
+      <MemberSignature Language="F#" Value="member this.GetClaim : string -&gt; System.Security.Claims.Claim" Usage="jsonWebToken.GetClaim key" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Claims.Claim</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">To be added.</param>
+        <summary>
+            Gets a <see cref="T:System.Security.Claims.Claim" /> representing the { key, 'value' } pair corresponding to the provided <paramref name="key" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+            A <see cref="T:System.Security.Claims.Claim" /> requires each value to be represented as a string. If the value was not a string, then <see cref="P:System.Security.Claims.Claim.Type" /> contains the json type.
+            <see cref="T:Microsoft.IdentityModel.JsonWebTokens.JsonClaimValueTypes" /> and <see cref="T:System.Security.Claims.ClaimValueTypes" /> to determine the json type.
+            <para>
+            If the key has no corresponding value, this method will throw.
+            </para></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHeaderValue&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T GetHeaderValue&lt;T&gt; (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T GetHeaderValue&lt;T&gt;(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.GetHeaderValue``1(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetHeaderValue(Of T) (key As String) As T" />
+      <MemberSignature Language="F#" Value="member this.GetHeaderValue : string -&gt; 'T" Usage="jsonWebToken.GetHeaderValue key" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">To be added.</typeparam>
+        <param name="key">To be added.</param>
+        <summary>
+            Gets the 'value' corresponding to key from the JWT header transformed as type 'T'.
+            </summary>
+        <returns>The value as <typeparamref name="T" />.</returns>
+        <remarks>
+            The expectation is that the 'value' corresponds to a type are expected in a JWT token.
+            The 5 basic types: number, string, true / false, nil, array (of basic types).
+            This is not a general purpose translation layer for complex types.
+            </remarks>
+        <exception cref="T:System.ArgumentException">if claim is not found or a transformation to <typeparamref name="T" /> cannot be made.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPayloadValue&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T GetPayloadValue&lt;T&gt; (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T GetPayloadValue&lt;T&gt;(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.GetPayloadValue``1(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetPayloadValue(Of T) (key As String) As T" />
+      <MemberSignature Language="F#" Value="member this.GetPayloadValue : string -&gt; 'T" Usage="jsonWebToken.GetPayloadValue key" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">To be added.</typeparam>
+        <param name="key">To be added.</param>
+        <summary>
+            Gets the 'value' corresponding to key from the JWT payload transformed as type 'T'.
+            </summary>
+        <returns>The value as <typeparamref name="T" />.</returns>
+        <remarks>
+            The expectation is that the 'value' corresponds to a type are expected in a JWT token.
+            The 5 basic types: number, string, true / false, nil, array (of basic types).
+            This is not a general purpose translation layer for complex types.
+            </remarks>
+        <exception cref="T:System.ArgumentException">if claim is not found or a transformation to <typeparamref name="T" /> cannot be made.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public override string Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Id" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Id" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property Id As String" />
+      <MemberSignature Language="F#" Value="member this.Id : string" Usage="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the 'value' of the 'jti' claim from the payload.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Provides a unique identifier for the JWT.
+            see: https://datatracker.ietf.org/doc/html/rfc7519#section-4.1.7
+            <para>
+            If the 'jti' claim is not found, an empty string is returned.
+            </para></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializationVector">
+      <MemberSignature Language="C#" Value="public string InitializationVector { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InitializationVector" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.InitializationVector" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InitializationVector As String" />
+      <MemberSignature Language="F#" Value="member this.InitializationVector : string" Usage="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.InitializationVector" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the Initialization Vector used when encrypting the plaintext.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            see: https://datatracker.ietf.org/doc/html/rfc7516#appendix-A.1.4
+            <para>
+            Some algorithms may not use an Initialization Vector.
+            If not found an empty string is returned.
+            </para></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InnerToken">
+      <MemberSignature Language="C#" Value="public Microsoft.IdentityModel.JsonWebTokens.JsonWebToken InnerToken { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.IdentityModel.JsonWebTokens.JsonWebToken InnerToken" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.InnerToken" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InnerToken As JsonWebToken" />
+      <MemberSignature Language="F#" Value="member this.InnerToken : Microsoft.IdentityModel.JsonWebTokens.JsonWebToken" Usage="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.InnerToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.JsonWebTokens.JsonWebToken</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the <see cref="T:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken" /> associated with this instance.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            see: https://datatracker.ietf.org/doc/html/rfc7516#section-2
+            For encrypted tokens {JWE}, this represents the JWT that was encrypted.
+            <para>
+            If the JWT is not encrypted, this value will be null.
+            </para></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEncrypted">
+      <MemberSignature Language="C#" Value="public bool IsEncrypted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEncrypted" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.IsEncrypted" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsEncrypted As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsEncrypted : bool" Usage="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.IsEncrypted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns true if this JsonWebToken was encrypted a JWE.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSigned">
+      <MemberSignature Language="C#" Value="public bool IsSigned { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSigned" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.IsSigned" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsSigned As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsSigned : bool" Usage="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.IsSigned" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns true if this JsonWebToken was signed a JWS.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IssuedAt">
+      <MemberSignature Language="C#" Value="public DateTime IssuedAt { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime IssuedAt" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.IssuedAt" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IssuedAt As DateTime" />
+      <MemberSignature Language="F#" Value="member this.IssuedAt : DateTime" Usage="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.IssuedAt" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the 'value' of the 'iat' claim converted to a <see cref="T:System.DateTime" /> from the payload.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Identifies the time at which the JWT was issued.
+            see: https://datatracker.ietf.org/doc/html/rfc7519#section-4.1.6
+            <para>
+            If the 'iat' claim is not found, then <see cref="F:System.DateTime.MinValue" /> is returned.
+            </para></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Issuer">
+      <MemberSignature Language="C#" Value="public override string Issuer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Issuer" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Issuer" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property Issuer As String" />
+      <MemberSignature Language="F#" Value="member this.Issuer : string" Usage="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Issuer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the 'value' of the 'iss' claim from the payload.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Identifies the principal that issued the JWT.
+            see: https://datatracker.ietf.org/doc/html/rfc7519#section-4.1.1
+            <para>
+            If the 'iss' claim is not found, an empty string is returned.
+            </para></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Kid">
+      <MemberSignature Language="C#" Value="public string Kid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Kid" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Kid" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Kid As String" />
+      <MemberSignature Language="F#" Value="member this.Kid : string" Usage="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Kid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the 'value' of the 'kid' claim from the header.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            'kid'is a hint indicating which key was used to secure the JWS.
+            see: https://datatracker.ietf.org/doc/html/rfc7515#section-4.1.4 (JWS)
+            see: https://datatracker.ietf.org/doc/html/rfc7516#section-4.1.6 (JWE)
+            <para>
+            If the 'kid' claim is not found, an empty string is returned.
+            </para></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityKey">
+      <MemberSignature Language="C#" Value="public override Microsoft.IdentityModel.Tokens.SecurityKey SecurityKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.IdentityModel.Tokens.SecurityKey SecurityKey" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.SecurityKey" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property SecurityKey As SecurityKey" />
+      <MemberSignature Language="F#" Value="member this.SecurityKey : Microsoft.IdentityModel.Tokens.SecurityKey" Usage="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.SecurityKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Tokens.SecurityKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Not implemented.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SigningKey">
+      <MemberSignature Language="C#" Value="public override Microsoft.IdentityModel.Tokens.SecurityKey SigningKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.IdentityModel.Tokens.SecurityKey SigningKey" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.SigningKey" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property SigningKey As SecurityKey" />
+      <MemberSignature Language="F#" Value="member this.SigningKey : Microsoft.IdentityModel.Tokens.SecurityKey with get, set" Usage="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.SigningKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Tokens.SecurityKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the <see cref="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.SecurityKey" /> that was used to sign this token.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            If the JWT was not signed or validated, this value will be null.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Subject">
+      <MemberSignature Language="C#" Value="public string Subject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Subject" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Subject" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Subject As String" />
+      <MemberSignature Language="F#" Value="member this.Subject : string" Usage="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Subject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the 'value' of the 'sub' claim from the payload.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            see: https://datatracker.ietf.org/doc/html/rfc7519#section-4.1.2
+            Identifies the principal that is the subject of the JWT.
+            <para>
+            If the 'sub' claim is not found, an empty string is returned.
+            </para></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetClaim">
+      <MemberSignature Language="C#" Value="public bool TryGetClaim (string key, out System.Security.Claims.Claim value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetClaim(string key, [out] class System.Security.Claims.Claim&amp; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.TryGetClaim(System.String,System.Security.Claims.Claim@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryGetClaim (key As String, ByRef value As Claim) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryGetClaim : string * Claim -&gt; bool" Usage="jsonWebToken.TryGetClaim (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Security.Claims.Claim" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="key">To be added.</param>
+        <param name="value">To be added.</param>
+        <summary>
+            Try to get a <see cref="T:System.Security.Claims.Claim" /> representing the { key, 'value' } pair corresponding to the provided <paramref name="key" />.
+            The value is obtained from the Payload.
+            </summary>
+        <returns>true if successful, false otherwise.</returns>
+        <remarks>
+            A <see cref="T:System.Security.Claims.Claim" /> requires each value to be represented as a string. If the value was not a string, then <see cref="P:System.Security.Claims.Claim.Type" /> contains the json type.
+            <see cref="T:Microsoft.IdentityModel.JsonWebTokens.JsonClaimValueTypes" /> and <see cref="T:System.Security.Claims.ClaimValueTypes" /> to determine the json type.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetHeaderValue&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public bool TryGetHeaderValue&lt;T&gt; (string key, out T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetHeaderValue&lt;T&gt;(string key, [out] !!T&amp; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.TryGetHeaderValue``1(System.String,``0@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryGetHeaderValue(Of T) (key As String, ByRef value As T) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryGetHeaderValue : string * 'T -&gt; bool" Usage="jsonWebToken.TryGetHeaderValue (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="T" RefType="out" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">To be added.</typeparam>
+        <param name="key">To be added.</param>
+        <param name="value">To be added.</param>
+        <summary>
+            Tries to get the value corresponding to the provided key from the JWT header { key, 'value' }.
+            </summary>
+        <returns>true if successful, false otherwise.</returns>
+        <remarks>
+            The expectation is that the 'value' corresponds to a type expected in a JWT token.
+            The 5 basic types: number, string, true / false, nil, array (of basic types).
+            This is not a general purpose translation layer for complex types.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetPayloadValue&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public bool TryGetPayloadValue&lt;T&gt; (string key, out T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetPayloadValue&lt;T&gt;(string key, [out] !!T&amp; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.TryGetPayloadValue``1(System.String,``0@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryGetPayloadValue(Of T) (key As String, ByRef value As T) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryGetPayloadValue : string * 'T -&gt; bool" Usage="jsonWebToken.TryGetPayloadValue (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="T" RefType="out" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">To be added.</typeparam>
+        <param name="key">To be added.</param>
+        <param name="value">To be added.</param>
+        <summary>
+            Try to get the 'value' corresponding to key from the JWT payload transformed as type 'T'.
+            </summary>
+        <returns>true if successful, false otherwise.</returns>
+        <remarks>
+            The expectation is that the 'value' corresponds to a type are expected in a JWT token.
+            The 5 basic types: number, string, true / false, nil, array (of basic types).
+            This is not a general purpose translation layer for complex types.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetValue&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public bool TryGetValue&lt;T&gt; (string key, out T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetValue&lt;T&gt;(string key, [out] !!T&amp; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.TryGetValue``1(System.String,``0@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryGetValue(Of T) (key As String, ByRef value As T) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryGetValue : string * 'T -&gt; bool" Usage="jsonWebToken.TryGetValue (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="T" RefType="out" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">To be added.</typeparam>
+        <param name="key">To be added.</param>
+        <param name="value">To be added.</param>
+        <summary>
+            Tries to get the value
+            </summary>
+        <returns>true if successful, false otherwise.</returns>
+        <remarks>
+            The expectation is that the 'value' corresponds to a type expected in a JWT token.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Typ">
+      <MemberSignature Language="C#" Value="public string Typ { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Typ" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Typ" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Typ As String" />
+      <MemberSignature Language="F#" Value="member this.Typ : string" Usage="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Typ" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the 'value' of the 'typ' claim from the header.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Is used by JWT applications to declare the media type.
+            see: https://datatracker.ietf.org/doc/html/rfc7519#section-5.1
+            <para>
+            If the 'typ' claim is not found, an empty string is returned.
+            </para></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidFrom">
+      <MemberSignature Language="C#" Value="public override DateTime ValidFrom { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime ValidFrom" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ValidFrom" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property ValidFrom As DateTime" />
+      <MemberSignature Language="F#" Value="member this.ValidFrom : DateTime" Usage="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ValidFrom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the 'value' of the 'nbf' claim converted to a <see cref="T:System.DateTime" /> from the payload.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Identifies the time before which the JWT MUST NOT be accepted for processing.
+            see: https://datatracker.ietf.org/doc/html/rfc7519#section-4.1.5
+            <para>
+            If the 'nbf' claim is not found, then <see cref="F:System.DateTime.MinValue" /> is returned.
+            </para></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidTo">
+      <MemberSignature Language="C#" Value="public override DateTime ValidTo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime ValidTo" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ValidTo" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property ValidTo As DateTime" />
+      <MemberSignature Language="F#" Value="member this.ValidTo : DateTime" Usage="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ValidTo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the 'value' of the 'exp' claim converted to a <see cref="T:System.DateTime" /> from the payload.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Identifies the expiration time on or after which the JWT MUST NOT be accepted for processing.
+            see: https://datatracker.ietf.org/doc/html/rfc7519#section-4.1.4
+            <para>
+            If the 'exp' claim is not found, then <see cref="F:System.DateTime.MinValue" /> is returned.
+            </para></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="X5t">
+      <MemberSignature Language="C#" Value="public string X5t { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string X5t" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.X5t" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property X5t As String" />
+      <MemberSignature Language="F#" Value="member this.X5t : string" Usage="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.X5t" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the 'value' of the 'x5t' claim from the header.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Is the base64url-encoded SHA-1 thumbprint(a.k.a.digest) of the DER encoding of the X.509 certificate used to sign this token.
+            see : https://datatracker.ietf.org/doc/html/rfc7515#section-4.1.7
+            <para>
+            If the 'x5t' claim is not found, an empty string is returned.
+            </para></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Zip">
+      <MemberSignature Language="C#" Value="public string Zip { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Zip" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Zip" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Zip As String" />
+      <MemberSignature Language="F#" Value="member this.Zip : string" Usage="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Zip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the 'value' of the 'zip' claim from the header.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            The "zip" (compression algorithm) applied to the plaintext before encryption, if any.
+            see: https://datatracker.ietf.org/doc/html/rfc7516#section-4.1.3
+            <para>
+            If the 'zip' claim is not found, an empty string is returned.
+            </para></remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

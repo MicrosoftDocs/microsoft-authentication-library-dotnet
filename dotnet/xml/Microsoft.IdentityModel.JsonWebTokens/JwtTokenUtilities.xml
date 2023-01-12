@@ -1,0 +1,202 @@
+<Type Name="JwtTokenUtilities" FullName="Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities">
+  <TypeSignature Language="C#" Value="public class JwtTokenUtilities" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit JwtTokenUtilities extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities" />
+  <TypeSignature Language="VB.NET" Value="Public Class JwtTokenUtilities" />
+  <TypeSignature Language="F#" Value="type JwtTokenUtilities = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+    <AssemblyVersion>6.25.0.0</AssemblyVersion>
+    <AssemblyVersion>6.25.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            A class which contains useful methods for processing JWT tokens.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public JwtTokenUtilities ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateEncodedSignature">
+      <MemberSignature Language="C#" Value="public static string CreateEncodedSignature (string input, Microsoft.IdentityModel.Tokens.SigningCredentials signingCredentials);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string CreateEncodedSignature(string input, class Microsoft.IdentityModel.Tokens.SigningCredentials signingCredentials) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(System.String,Microsoft.IdentityModel.Tokens.SigningCredentials)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateEncodedSignature (input As String, signingCredentials As SigningCredentials) As String" />
+      <MemberSignature Language="F#" Value="static member CreateEncodedSignature : string * Microsoft.IdentityModel.Tokens.SigningCredentials -&gt; string" Usage="Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature (input, signingCredentials)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.String" />
+        <Parameter Name="signingCredentials" Type="Microsoft.IdentityModel.Tokens.SigningCredentials" />
+      </Parameters>
+      <Docs>
+        <param name="input">String to be signed</param>
+        <param name="signingCredentials">The <see cref="T:Microsoft.IdentityModel.Tokens.SigningCredentials" /> that contain crypto specs used to sign the token.</param>
+        <summary>
+            Produces a signature over the <paramref name="input" />.
+            </summary>
+        <returns>The bse64urlendcoded signature over the bytes obtained from UTF8Encoding.GetBytes( 'input' ).</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">'input' or 'signingCredentials' is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateEncodedSignature">
+      <MemberSignature Language="C#" Value="public static string CreateEncodedSignature (string input, Microsoft.IdentityModel.Tokens.SigningCredentials signingCredentials, bool cacheProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string CreateEncodedSignature(string input, class Microsoft.IdentityModel.Tokens.SigningCredentials signingCredentials, bool cacheProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(System.String,Microsoft.IdentityModel.Tokens.SigningCredentials,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateEncodedSignature (input As String, signingCredentials As SigningCredentials, cacheProvider As Boolean) As String" />
+      <MemberSignature Language="F#" Value="static member CreateEncodedSignature : string * Microsoft.IdentityModel.Tokens.SigningCredentials * bool -&gt; string" Usage="Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature (input, signingCredentials, cacheProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.String" />
+        <Parameter Name="signingCredentials" Type="Microsoft.IdentityModel.Tokens.SigningCredentials" />
+        <Parameter Name="cacheProvider" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="input">String to be signed</param>
+        <param name="signingCredentials">The <see cref="T:Microsoft.IdentityModel.Tokens.SigningCredentials" /> that contain crypto specs used to sign the token.</param>
+        <param name="cacheProvider">should the <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> be cached.</param>
+        <summary>
+            Produces a signature over the <paramref name="input" />.
+            </summary>
+        <returns>The bse64urlendcoded signature over the bytes obtained from UTF8Encoding.GetBytes( 'input' ).</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="input" /> or <paramref name="signingCredentials" /> is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateKeyBytes">
+      <MemberSignature Language="C#" Value="public static byte[] GenerateKeyBytes (int sizeInBits);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] GenerateKeyBytes(int32 sizeInBits) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.GenerateKeyBytes(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GenerateKeyBytes (sizeInBits As Integer) As Byte()" />
+      <MemberSignature Language="F#" Value="static member GenerateKeyBytes : int -&gt; byte[]" Usage="Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.GenerateKeyBytes sizeInBits" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sizeInBits" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="sizeInBits">To be added.</param>
+        <summary>
+            Generates key bytes.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllDecryptionKeys">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IEnumerable&lt;Microsoft.IdentityModel.Tokens.SecurityKey&gt; GetAllDecryptionKeys (Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.IdentityModel.Tokens.SecurityKey&gt; GetAllDecryptionKeys(class Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.GetAllDecryptionKeys(Microsoft.IdentityModel.Tokens.TokenValidationParameters)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetAllDecryptionKeys (validationParameters As TokenValidationParameters) As IEnumerable(Of SecurityKey)" />
+      <MemberSignature Language="F#" Value="static member GetAllDecryptionKeys : Microsoft.IdentityModel.Tokens.TokenValidationParameters -&gt; seq&lt;Microsoft.IdentityModel.Tokens.SecurityKey&gt;" Usage="Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.GetAllDecryptionKeys validationParameters" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.IdentityModel.Tokens.SecurityKey&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="validationParameters" Type="Microsoft.IdentityModel.Tokens.TokenValidationParameters" />
+      </Parameters>
+      <Docs>
+        <param name="validationParameters">To be added.</param>
+        <summary>
+            Gets all decryption keys.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegexJwe">
+      <MemberSignature Language="C#" Value="public static System.Text.RegularExpressions.Regex RegexJwe;" />
+      <MemberSignature Language="ILAsm" Value=".field public static class System.Text.RegularExpressions.Regex RegexJwe" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.RegexJwe" />
+      <MemberSignature Language="VB.NET" Value="Public Shared RegexJwe As Regex " />
+      <MemberSignature Language="F#" Value=" staticval mutable RegexJwe : System.Text.RegularExpressions.Regex" Usage="Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.RegexJwe" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.RegularExpressions.Regex</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Regex that is used to figure out if a token is in JWE format.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegexJws">
+      <MemberSignature Language="C#" Value="public static System.Text.RegularExpressions.Regex RegexJws;" />
+      <MemberSignature Language="ILAsm" Value=".field public static class System.Text.RegularExpressions.Regex RegexJws" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.RegexJws" />
+      <MemberSignature Language="VB.NET" Value="Public Shared RegexJws As Regex " />
+      <MemberSignature Language="F#" Value=" staticval mutable RegexJws : System.Text.RegularExpressions.Regex" Usage="Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.RegexJws" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>6.25.0.0</AssemblyVersion>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.RegularExpressions.Regex</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Regex that is used to figure out if a token is in JWS format.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

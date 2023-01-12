@@ -1,0 +1,184 @@
+<Type Name="DownstreamRestApiOptions" FullName="Microsoft.Identity.Abstractions.DownstreamRestApiOptions">
+  <TypeSignature Language="C#" Value="public class DownstreamRestApiOptions : Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DownstreamRestApiOptions extends Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Abstractions.DownstreamRestApiOptions" />
+  <TypeSignature Language="VB.NET" Value="Public Class DownstreamRestApiOptions&#xA;Inherits AuthorizationHeaderProviderOptions" />
+  <TypeSignature Language="F#" Value="type DownstreamRestApiOptions = class&#xA;    inherit AuthorizationHeaderProviderOptions" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Options passed-in to call downstream web APIs.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DownstreamRestApiOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.DownstreamRestApiOptions.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Default constructor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DownstreamRestApiOptions (Microsoft.Identity.Abstractions.DownstreamRestApiOptions other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Identity.Abstractions.DownstreamRestApiOptions other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.DownstreamRestApiOptions.#ctor(Microsoft.Identity.Abstractions.DownstreamRestApiOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (other As DownstreamRestApiOptions)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Identity.Abstractions.DownstreamRestApiOptions : Microsoft.Identity.Abstractions.DownstreamRestApiOptions -&gt; Microsoft.Identity.Abstractions.DownstreamRestApiOptions" Usage="new Microsoft.Identity.Abstractions.DownstreamRestApiOptions other" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="other" Type="Microsoft.Identity.Abstractions.DownstreamRestApiOptions" />
+      </Parameters>
+      <Docs>
+        <param name="other" />
+        <summary>
+            Copy constructor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public Microsoft.Identity.Abstractions.DownstreamRestApiOptions Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Identity.Abstractions.DownstreamRestApiOptions Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.DownstreamRestApiOptions.Clone" />
+      <MemberSignature Language="VB.NET" Value="Public Function Clone () As DownstreamRestApiOptions" />
+      <MemberSignature Language="F#" Value="override this.Clone : unit -&gt; Microsoft.Identity.Abstractions.DownstreamRestApiOptions" Usage="downstreamRestApiOptions.Clone " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Abstractions.DownstreamRestApiOptions</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Clone the options (to be able to override them).
+            </summary>
+        <returns>A clone of the options.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneInternal">
+      <MemberSignature Language="C#" Value="protected override Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions CloneInternal ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions CloneInternal() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.DownstreamRestApiOptions.CloneInternal" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function CloneInternal () As AuthorizationHeaderProviderOptions" />
+      <MemberSignature Language="F#" Value="override this.CloneInternal : unit -&gt; Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions" Usage="downstreamRestApiOptions.CloneInternal " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Deserializer">
+      <MemberSignature Language="C#" Value="public Func&lt;System.Net.Http.HttpContent?,object?&gt;? Deserializer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Func`2&lt;class System.Net.Http.HttpContent, object&gt; Deserializer" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.DownstreamRestApiOptions.Deserializer" />
+      <MemberSignature Language="VB.NET" Value="Public Property Deserializer As Func(Of HttpContent, Object)" />
+      <MemberSignature Language="F#" Value="member this.Deserializer : Func&lt;System.Net.Http.HttpContent, obj&gt; with get, set" Usage="Microsoft.Identity.Abstractions.DownstreamRestApiOptions.Deserializer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;System.Net.Http.HttpContent,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional de-serializer. Will de-serialize the output from the web API (if any).
+            When not provided, the following is returned:
+            <code>JsonSerializer.Deserialize&lt;TOutput&gt;(content, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });</code></summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scopes">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;string&gt;? Scopes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; Scopes" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.DownstreamRestApiOptions.Scopes" />
+      <MemberSignature Language="VB.NET" Value="Public Property Scopes As IEnumerable(Of String)" />
+      <MemberSignature Language="F#" Value="member this.Scopes : seq&lt;string&gt; with get, set" Usage="Microsoft.Identity.Abstractions.DownstreamRestApiOptions.Scopes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Scopes required to call the downstream web API.
+            For instance "user.read mail.read".
+            For Microsoft identity, in the case of application tokens (token 
+            requested by the app on behalf of itself), there should be only one scope, and it
+            should end in "./default")
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Serializer">
+      <MemberSignature Language="C#" Value="public Func&lt;object?,System.Net.Http.HttpContent?&gt;? Serializer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Func`2&lt;object, class System.Net.Http.HttpContent&gt; Serializer" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.DownstreamRestApiOptions.Serializer" />
+      <MemberSignature Language="VB.NET" Value="Public Property Serializer As Func(Of Object, HttpContent)" />
+      <MemberSignature Language="F#" Value="member this.Serializer : Func&lt;obj, System.Net.Http.HttpContent&gt; with get, set" Usage="Microsoft.Identity.Abstractions.DownstreamRestApiOptions.Serializer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;System.Object,System.Net.Http.HttpContent&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional serializer. Will serialize the input to the web API (if any).
+            By default, when not provided:
+            <list type="bullet"><item><description>If the input derives from <c>HttpInput</c>, it's used as is</description></item><item><description>If the input is a string it's used as is an considered a media type json.</description></item><item><description>Otherwise, the object is serialized in JSON, with a UTF8 encoding, and a media
+            type of application/json:
+            <code>
+            new StringContent(JsonSerializer.Serialize(input), Encoding.UTF8, "application/json")
+            </code></description></item></list></summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,276 @@
+<Type Name="TelemetryEventDetails" FullName="Microsoft.IdentityModel.Abstractions.TelemetryEventDetails">
+  <TypeSignature Language="C#" Value="public abstract class TelemetryEventDetails" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TelemetryEventDetails extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.IdentityModel.Abstractions.TelemetryEventDetails" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class TelemetryEventDetails" />
+  <TypeSignature Language="F#" Value="type TelemetryEventDetails = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.IdentityModel.Abstractions</AssemblyName>
+    <AssemblyVersion>6.25.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Details of the telemetry event.
+            </summary>
+    <remarks>
+            This implementation is not meant to be thread-safe. This implementation would either need to be overridden or
+            usage should not be concurrently operated on.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TelemetryEventDetails ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Abstractions.TelemetryEventDetails.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Abstractions</AssemblyName>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public virtual string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Abstractions.TelemetryEventDetails.Name" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property Name As String" />
+      <MemberSignature Language="F#" Value="member this.Name : string with get, set" Usage="Microsoft.IdentityModel.Abstractions.TelemetryEventDetails.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Abstractions</AssemblyName>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name of the telemetry event, should be unique between events.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IReadOnlyDictionary&lt;string,object&gt; Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, object&gt; Properties" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Abstractions.TelemetryEventDetails.Properties" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Properties As IReadOnlyDictionary(Of String, Object)" />
+      <MemberSignature Language="F#" Value="member this.Properties : System.Collections.Generic.IReadOnlyDictionary&lt;string, obj&gt;" Usage="Microsoft.IdentityModel.Abstractions.TelemetryEventDetails.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Abstractions</AssemblyName>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IReadOnlyDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Properties which describe the event.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyValues">
+      <MemberSignature Language="C#" Value="protected internal System.Collections.Generic.IDictionary&lt;string,object&gt; PropertyValues { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, object&gt; PropertyValues" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Abstractions.TelemetryEventDetails.PropertyValues" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend ReadOnly Property PropertyValues As IDictionary(Of String, Object)" />
+      <MemberSignature Language="F#" Value="member this.PropertyValues : System.Collections.Generic.IDictionary&lt;string, obj&gt;" Usage="Microsoft.IdentityModel.Abstractions.TelemetryEventDetails.PropertyValues" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Abstractions</AssemblyName>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The underlying properties making up the <see cref="T:Microsoft.IdentityModel.Abstractions.TelemetryEventDetails" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetProperty">
+      <MemberSignature Language="C#" Value="public virtual void SetProperty (string key, bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetProperty(string key, bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Abstractions.TelemetryEventDetails.SetProperty(System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub SetProperty (key As String, value As Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member SetProperty : string * bool -&gt; unit&#xA;override this.SetProperty : string * bool -&gt; unit" Usage="telemetryEventDetails.SetProperty (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Abstractions</AssemblyName>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="key">Property key.</param>
+        <param name="value">Property value.</param>
+        <summary>
+            Sets a property on the event details.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">'key' is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetProperty">
+      <MemberSignature Language="C#" Value="public virtual void SetProperty (string key, DateTime value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetProperty(string key, valuetype System.DateTime value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Abstractions.TelemetryEventDetails.SetProperty(System.String,System.DateTime)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub SetProperty (key As String, value As DateTime)" />
+      <MemberSignature Language="F#" Value="abstract member SetProperty : string * DateTime -&gt; unit&#xA;override this.SetProperty : string * DateTime -&gt; unit" Usage="telemetryEventDetails.SetProperty (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Abstractions</AssemblyName>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="key">Property key.</param>
+        <param name="value">Property value.</param>
+        <summary>
+            Sets a property on the event details.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">'key' is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetProperty">
+      <MemberSignature Language="C#" Value="public virtual void SetProperty (string key, double value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetProperty(string key, float64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Abstractions.TelemetryEventDetails.SetProperty(System.String,System.Double)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub SetProperty (key As String, value As Double)" />
+      <MemberSignature Language="F#" Value="abstract member SetProperty : string * double -&gt; unit&#xA;override this.SetProperty : string * double -&gt; unit" Usage="telemetryEventDetails.SetProperty (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Abstractions</AssemblyName>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="key">Property key.</param>
+        <param name="value">Property value.</param>
+        <summary>
+            Sets a property on the event details.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">'key' is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetProperty">
+      <MemberSignature Language="C#" Value="public virtual void SetProperty (string key, Guid value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetProperty(string key, valuetype System.Guid value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Abstractions.TelemetryEventDetails.SetProperty(System.String,System.Guid)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub SetProperty (key As String, value As Guid)" />
+      <MemberSignature Language="F#" Value="abstract member SetProperty : string * Guid -&gt; unit&#xA;override this.SetProperty : string * Guid -&gt; unit" Usage="telemetryEventDetails.SetProperty (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Abstractions</AssemblyName>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="key">Property key.</param>
+        <param name="value">Property value.</param>
+        <summary>
+            Sets a property on the event details.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">'key' is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetProperty">
+      <MemberSignature Language="C#" Value="public virtual void SetProperty (string key, long value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetProperty(string key, int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Abstractions.TelemetryEventDetails.SetProperty(System.String,System.Int64)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub SetProperty (key As String, value As Long)" />
+      <MemberSignature Language="F#" Value="abstract member SetProperty : string * int64 -&gt; unit&#xA;override this.SetProperty : string * int64 -&gt; unit" Usage="telemetryEventDetails.SetProperty (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Abstractions</AssemblyName>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="key">Property key.</param>
+        <param name="value">Property value.</param>
+        <summary>
+            Sets a property on the event details.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">'key' is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetProperty">
+      <MemberSignature Language="C#" Value="public virtual void SetProperty (string key, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetProperty(string key, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Abstractions.TelemetryEventDetails.SetProperty(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub SetProperty (key As String, value As String)" />
+      <MemberSignature Language="F#" Value="abstract member SetProperty : string * string -&gt; unit&#xA;override this.SetProperty : string * string -&gt; unit" Usage="telemetryEventDetails.SetProperty (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Abstractions</AssemblyName>
+        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Property key.</param>
+        <param name="value">Property value.</param>
+        <summary>
+            Sets a property on the event details.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">'key' is null.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,56 @@
+<Type Name="DesktopExtensions" FullName="Microsoft.Identity.Client.Desktop.DesktopExtensions">
+  <TypeSignature Language="C#" Value="public static class DesktopExtensions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit DesktopExtensions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Client.Desktop.DesktopExtensions" />
+  <TypeSignature Language="VB.NET" Value="Public Module DesktopExtensions" />
+  <TypeSignature Language="F#" Value="type DesktopExtensions = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Client.Desktop</AssemblyName>
+    <AssemblyVersion>4.48.1.0</AssemblyVersion>
+    <AssemblyVersion>4.49.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            MSAL extensions for desktop apps
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="WithDesktopFeatures">
+      <MemberSignature Language="C#" Value="public static Microsoft.Identity.Client.PublicClientApplicationBuilder WithDesktopFeatures (this Microsoft.Identity.Client.PublicClientApplicationBuilder builder);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Identity.Client.PublicClientApplicationBuilder WithDesktopFeatures(class Microsoft.Identity.Client.PublicClientApplicationBuilder builder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.Desktop.DesktopExtensions.WithDesktopFeatures(Microsoft.Identity.Client.PublicClientApplicationBuilder)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function WithDesktopFeatures (builder As PublicClientApplicationBuilder) As PublicClientApplicationBuilder" />
+      <MemberSignature Language="F#" Value="static member WithDesktopFeatures : Microsoft.Identity.Client.PublicClientApplicationBuilder -&gt; Microsoft.Identity.Client.PublicClientApplicationBuilder" Usage="Microsoft.Identity.Client.Desktop.DesktopExtensions.WithDesktopFeatures builder" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client.Desktop</AssemblyName>
+        <AssemblyVersion>4.48.1.0</AssemblyVersion>
+        <AssemblyVersion>4.49.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.PublicClientApplicationBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="builder" Type="Microsoft.Identity.Client.PublicClientApplicationBuilder" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="builder">To be added.</param>
+        <summary>
+            Adds enhanced support for desktop applications, e.g. CLI, WinForms, WPF apps.
+            
+            Support added is around: 
+            
+            - Windows Authentication Manager (WAM) broker, the recommended authentication mechanism on Windows 10 - https://aka.ms/msal-net-wam
+            - WebView2 embedded web view, based on Microsoft Edge - https://aka.ms/msal-net-webview2
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>These extensions live in a separate package to avoid adding dependencies to MSAL</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
