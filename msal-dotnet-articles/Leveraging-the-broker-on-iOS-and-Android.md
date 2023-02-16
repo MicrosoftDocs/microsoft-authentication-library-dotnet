@@ -1,0 +1,1 @@
+## **Documentation moved to [docs.microsoft.com](https://docs.microsoft.com/azure/active-directory/develop/msal-net-use-brokers-with-xamarin-apps)**

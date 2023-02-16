@@ -1,0 +1,2 @@
+The documentation has now moved to https://docs.microsoft.com/azure/active-directory/develop/msal-net-client-assertions
+the previous wiki page is available from [Client Assertions.old](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Client-Assertions.old)
