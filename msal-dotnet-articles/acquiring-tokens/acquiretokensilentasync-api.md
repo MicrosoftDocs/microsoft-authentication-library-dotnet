@@ -1,3 +1,5 @@
+# Understanding the AcquireTokenAsync API
+
 ### Tokens are cached
 
 #### Public client application
@@ -59,6 +61,85 @@ if (result != null)
  string accessToken = result.AccessToken;
  // Use the token
 }
+```
+
+For the code in context, see the [active-directory-dotnet-desktop-msgraph-v2](https://github.com/Azure-Samples/active-directory-dotnet-desktop-msgraph-v2/blob/master/active-directory-wpf-msgraph-v2/MainWindow.xaml.cs#L45-L67) sample.
+
+#### Recommended call pattern in public client applications with MSAL.NET 2.x
+
+```CSharp
+AuthenticationResult result = null;
+var accounts = await app.GetAccountsAsync();
+
+try
+{
+ result = await app.AcquireTokenSilentAsync(scopes, accounts.FirstOrDefault());
+}
+catch (MsalUiRequiredException ex)
+{
+ // A MsalUiRequiredException happened on AcquireTokenSilentAsync.
+ // This indicates you need to call AcquireTokenAsync to acquire a token
+ System.Diagnostics.Debug.WriteLine($"MsalUiRequiredException: {ex.Message}");
+
+ try
+ {
+    result = await app.AcquireTokenAsync(scopes);
+ }
+ catch (MsalException msalex)
+ {
+    ResultText.Text = $"Error Acquiring Token:{System.Environment.NewLine}{msalex}";
+ }
+}
+catch (Exception ex)
+{
+ ResultText.Text = $"Error Acquiring Token Silently:{System.Environment.NewLine}{ex}";
+ return;
+}
+
+if (result != null)
+{
+ string accessToken = result.AccessToken;
+ // Use the token
+}
+```
+
+#### Recommended call pattern in public client applications with  MSAL.NET 1.x
+
+Previous versions of MSAL.NET were using `IUser` instead of `IAccount`. The code was as follows:
+
+```CSharp
+AuthenticationResult result = null;
+try
+{
+    result = await app.AcquireTokenSilentAsync(scopes, app.Users.FirstOrDefault());
+}
+catch (MsalUiRequiredException ex)
+{
+    // A MsalUiRequiredException happened on AcquireTokenSilentAsync.
+    // This indicates you need to call AcquireTokenAsync to acquire a token
+    System.Diagnostics.Debug.WriteLine($"MsalUiRequiredException: {ex.Message}");
+
+    try
+    {
+        result = await app.AcquireTokenAsync(scopes);
+    }
+    catch (MsalException msalex)
+    {
+        ResultText.Text = $"Error Acquiring Token:{System.Environment.NewLine}{msalex}";
+    }
+}
+catch (Exception ex)
+{
+    ResultText.Text = $"Error Acquiring Token Silently:{System.Environment.NewLine}{ex}";
+    return;
+}
+
+if (result != null)
+{
+    string accessToken = result.AccessToken;
+    // Use the token
+}
+
 ```
 
 For the code in context, see the [active-directory-dotnet-desktop-msgraph-v2](https://github.com/Azure-Samples/active-directory-dotnet-desktop-msgraph-v2/blob/master/active-directory-wpf-msgraph-v2/MainWindow.xaml.cs#L45-L67) sample

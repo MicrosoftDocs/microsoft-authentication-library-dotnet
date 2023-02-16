@@ -1,3 +1,5 @@
+# Microsoft Authentication Library for .NET
+
 MSAL.NET ([Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client)) is an authentication library which enables you to acquire tokens from Azure AD, to access protected Web APIs (Microsoft APIs or applications registered with Azure Active Directory). MSAL.NET is available on several .NET platforms (Desktop, Universal Windows Platform, Xamarin Android, Xamarin iOS, Windows 8.1, and .NET Core).
 
 - [Getting Started](#conceptual-documentation)
@@ -10,27 +12,34 @@ MSAL.NET ([Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.I
 - [FAQ](#faq)
 
 ## Conceptual documentation
+
 ### Getting started with MSAL.NET
+
 1. What are the authentication [scenarios](scenarios), [why use MSAL.NET](MSAL.NET-supports-multiple-application-architectures-and-multiple-platforms)? for which application architectures?, and which platforms / target OS?
 1. Prerequisite: you need to [Register your app](Register-your-application-with-Azure-Active-Directory) with Azure Active Directory
 1. Type of [Client Applications](Client-Applications): public client applications and confidential client applications
 1. [Acquiring Tokens](Acquiring-Tokens) to access a protected API
 
 ### Details on the ways to acquire tokens
+
 #### Acquiring tokens from cache in any app
+
 - [AcquireTokenSilentAsync](AcquireTokenSilentAsync-using-a-cached-token) enables you to get a previously cached token
 
 #### Acquiring tokens in Desktop/Mobile apps (public client applications)
+
 - [Acquiring a token interactively](Acquiring-tokens-interactively) enables the application to acquire a token after authenticating the user through an interactive sign-in. There are specificities, though depending on the platforms ([Xamarin Android](Xamarin-android-specificities), [Xamarin iOS](Xamarin-ios-specificities), or [UWP](uwp-specificities))
 - Acquiring a token silently, on a Windows domain or AAD joined machine with [Integrated Windows Authentication](https://aka.ms/msal-net-iwa), or by using [Username/passwords](https://aka.ms/msal-net-up) (not recommended)
 - Acquiring a token on a text only device, by directing the user to sign-in on another device, by leveraging the [Device Code Flow](https://aka.ms/msal-net-device-code-flow)
 
 #### Acquiring tokens in Web Apps / Web APIs / daemon apps (confidential client applications)
+
 - Acquiring a token for the app (without a user) with [client credential flows](Client-credential-flows) 
 - Acquiring a token [on behalf of a user](on-behalf-of) in services to services calls
 - Acquiring a token for the signed-in user [by authorization code](Acquiring-tokens-with-authorization-codes-on-web-apps) in Web Apps
 
 ### Advanced topics
+
 - [Handling Exceptions in MSAL](exceptions) in MSAL.Net
   - [Retry-After](retry-after)
 - How to customize the [Token cache serialization](token-cache-serialization)
@@ -52,16 +61,8 @@ They are not available on the mobile platforms, because the OAuth2 spec states t
 - UWP
 
 ### Testimonials
-We've seen a lot of successful ADAL to MSAL migrations from a wide variety of partner teams. We provide [migration documentation](https://docs.microsoft.com/azure/active-directory/develop/msal-net-migration), and will assist with the migration as much as possible, if needed. Here are some testimonials from our happy partner teams! 
 
-“The Azure Portal had a mighty task of migrating from ADAL to MSAL with the constraint of maintaining the current Auth architecture. The MSAL team followed a very systematic migration process. They understood the Azure Portal's auth architecture, recommended solutions that fit in the current architecture. Following those guidelines, the Portal team was able to build a successful prototype, both teams did a final design review and eventually the changes were formalized for production. All questions, issues and blockers that came along the way were dealt with in a timely manner and with great patience and communication. Eventually the Azure Portal was able to successfully migrate from ADAL to MSAL without causing any outages in production.” 
-_-Akshay, Azure Portal Team_
-
-“Our success rate went up about 8% overall but the biggest gain was for Android with over 10% gain thanks to the added support for broker scenarios.” 
-_– Benoit, Azure Mobile App_
-
-"Converting Visual Studio from ADAL to MSAL has allowed us to better support Conditional access and Multi-factor authentication. Converting Visual Studio from ADAL to MSAL was made possible through the great support of the MSAL team. MSAL provides us a path forward for accessing new AAD features which benefit our customers."
-_- Chris, Visual Studio_
+See our [Testimonials document](resources/testimonials.md).
 
 ## Roadmap
 Date | Release | Blog post| Main features
@@ -110,15 +111,13 @@ February 10th, 2021 | [4.26.0](https://github.com/AzureAD/microsoft-authenticati
 January 20th, 2021 | [4.25.0](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/milestone/72?closed=1) | [MSAL 4.25.0](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/releases/tag/4.25.0) | Improvements to WAM and regional auth. WAM support moved to `Microsoft.Identity.Client.Desktop` package. Bug fixes.
 *History* |  |  | [Memory lane](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Roadmap-History) 
  
-
 For previous, or intermediate releases, see [releases](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/releases). See also [Semantic versioning - API change management](Semantic-versioning.-API-change-management) to understand changes in MSAL.NET public API, and [ADAL Release Cadence](msal-release-cadence) to understand when MSAL.NET is released
 
 ## Samples
 
-At the bottom of each article for a given flow, you will find a table of samples relevant for this flow.
-
-See also [Azure AD v2.0 samples by scenario](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-code-samples). All the .NET | ASP.NET | .NET Core | ASP.NET Core samples which acquire tokens leverage MSAL.NET
+See [our comprehensive sample list](https://docs.microsoft.com/azure/active-directory/develop/active-directory-v2-code-samples).
 
 ## FAQ
+
 - How MSAL.NET uses [Web browsers](MSAL.NET-uses-web-browser) for interactive authentication
 - if you have issues with Xamarin.Forms applications leveraging MSAL.NET please read [Troubleshooting-Xamarin.Android-issues-with-MSAL](./Troubleshooting-Xamarin.Android-issues-with-MSAL)
