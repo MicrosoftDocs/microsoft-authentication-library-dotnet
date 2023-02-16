@@ -1,10 +1,5 @@
 MSAL 4.48.0 and above stopped using reflection on its net6 target. This is the only path forward with Unity. 
 
-
-
-
-
-
 ## Member not found at runtime
 
 ### The issue

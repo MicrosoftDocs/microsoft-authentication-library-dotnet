@@ -1,1 +1,0 @@
-Now see [Sample code - case of ASP.NET Core applications](Client-Applications#sample-code---case-of-aspnet-core-applications)

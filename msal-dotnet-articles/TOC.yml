@@ -1,16 +1,17 @@
-### Getting started with MSAL.NET
+- name: Microsoft Authentication Library for .NET
+  href: index.md
 - name: Getting Started
   items:
-  - name: Introduction to MSAL.NET
-    href: getting-started/introduction.md
-  - name: Is MSAL.NET right for me
+  - name: Overview
+    href: getting-started/overview.md
+  - name: Is MSAL.NET right for me?
     href: getting-started/choosing-msal-dotnet.md
   - name: Scenarios
     href: getting-started/scenarios.md
   - name: Register your app with Azure Active Directory
     href: getting-started/register-your-application.md
-
-### Acquiring tokens
+  - name: Best practices
+    href: getting-started/best-practices.md
 - name: Acquiring Tokens
   items:
   - name: Overview
@@ -51,90 +52,116 @@
       href: acquiring-tokens/web-apps-apis/on-behalf-of-flow.md
     - name: Acquiring a token by authorization code in Web Apps
       href: acquiring-tokens/web-apps-apis/authorization-code.md
-
 - name: Advanced Topics
   items:
   - name: High Availability
-    href: High-availability.md
+    href: advanced/high-availability.md
   - name: Token cache serialization
-    href: token-cache-serialization.md
+    href: advanced/token-cache-serialization.md
   - name: Logging
-    href: logging.md
-  - name: Handling Exceptions
+    href: advanced/logging.md
+  - name: Handling exceptions and errors
     items:
     - name: Overview
-      href: exceptions.md
+      href: advanced/exceptions/overview.md
     - name: Retry Policy
-      href: Retry-Policy.md
-    - name: UiRequired exception classification
-      href: MsalUiRequiredException-classification.md
+      href: advanced/exceptions/retry-policy.md
+    - name: Understanding MsalUiRequiredException
+      href: advanced/exceptions/understanding-msaluirequiredexception.md
     - name: State Mismatch Error
-      href: StateMismatchError.md
-  - name: Provide your own Httpclient and proxy
-    href: httpclient.md
+      href: advanced/exceptions/understanding-statemismatcherror.md
+    - name: Device authentication errors
+      href: advanced/exceptions/device-authentication-errors.md
+    - name: TLS issues
+      href: advanced/exceptions/tls-issues.md
+    - name: Handling Unity issues with MSAL.NET
+      href: advanced/exceptions/unity.md
+    - name: Troubleshooting the broker
+      href: advanced/exceptions/broker.md
+  - name: Providing your own HttpClient and proxy
+    href: advanced/httpclient.md
   - name: Extensibility Points
-    href: Extensibility-Points.md
-  - name: Clearing the cache
-    href: clearing-token-cache.md
-  - name: Client Credentials Multi-Tenant guidance
-    href: Multi-tenant-client_credential-use.md
-  - name: Performance perspectives
-    href: Performance-testing.md
+    href: advanced/extensibility-points.md
+  - name: Clearing the token cache
+    href: advanced/clearing-token-cache.md
+  - name: Client credential multi-tenant guidance
+    href: advanced/client-credential-multitenant.md
+  - name: Performance terspectives
+    href: advanced/performance-testing.md
   - name: Differences between ADAL.NET and MSAL.NET Apps
-    href: Adal-to-Msal.md
+    href: advanced/differences-adal-msal.md
   - name: PowerShell support
-    href: PowerShell-support.md
-  - name: Testing apps that use MSAL
-    href: Testing-an-app-using-MSAL.md
+    href: advanced/powerShell-support.md
+  - name: Testing apps using MSAL
+    href: advanced/testing-apps-using-msal.md
   - name: Experimental Features
-    href: Experimental-Features.md
+    href: advanced/experimental-features.md
   - name: Proof of Possession (PoP) tokens
-    href: Proof-Of-Possession-(PoP)-tokens.md
+    href: advanced/proof-of-possession-tokens.md
   - name: Using in Azure functions
-    href: msal-net-in-azure-functions.md
-  - name: Extract info from WWW-Authenticate headers
-    href: WWW-Authenticate-parameters.md
+    href: advanced/using-in-azure-functions.md
+  - name: Extracting info from WWW-Authenticate headers
+    href: advanced/extract-authentication-parameters.md
   - name: SPA Authorization Code
-    href: SPA-Authorization-Code.md
-
-- name: FAQ
+    href: advanced/spa-authorization-code.md
+  - name: Android and iOS emulators with MSAL
+    href: advanced/android-ios-emulator.md
+  - name: Monitoring
+    href: advanced/monitoring.md
+  - name: Multi-cloud support/instance awareness
+    href: advanced/multicloud-support-instance-awareness.md
+  - name: Managed identity
+    href: advanced/managed-identity.md
+  - name: Custom authority aliases
+    href: advanced/custom-authority-aliases.md
+  - name: SSH certificates
+    href: advanced/ssh-certificates.md
+  - name: Backup authentication system
+    href: advanced/backup-authentication-system.md
+- name: How-to
   items:
-  - name: Device authentication errors
-    href: device-authentication-errors.md
   - name: Moving from MSAL 2.x to MSAL 3.x and above
-    href: MSAL.NET-2.x-to-MSAL.NET-3.x.md
+    href: how-to/moving-from-msal-2-to-msal-3.md
   - name: Usage of Web browsers
-    href: MSAL.NET-uses-web-browser.md
-  - name: Troubleshooting Unity issues with MSAL.NET
-    href: Troubleshooting-unity.md
+    href: how-to-usage-of-web-browsers.md
   - name: Install NuGet package from other sources
-    href: Installing-a-nuget-package-from-a-source-other-than-NuGet.org.md
-  - name: Getting scopes / consent for several Web APIs
-    href: Acquiring-tokens-interactively#withextrascopetoconsent.md
-  - name: TLS issues
-    href: tls-issues.md
-  - name: Troubleshooting
-    href: troubleshooting.md
+    href: how-to/install-nuget-custom-source.md
   - name: Synchronous programming
-    href: Synchronous-Programming.md
-  - name: Target Framework Override
-    href: Override-the-target-framework.md
+    href: how-to/synchronous-programming.md
+  - name: Override the target framework
+    href: how-to/override-target-framework.md
+  - name: Setting the default reply URI
+    href: how-to/default-reply-uri.md
+  - name: Protect resources in iOS and Android applications using Intune MAM and MSAL.NET
+    href: how-to/protect-ios-android-mam-intune.md
+  - name: Custom token cache for a public client application
+    href: how-to/custom-token-cache-in-public-client-applications.md
 
 ### Contribute
 - name: Contribute
   items:
   - name: Overview
-    href: Contributing-overview.md
+    href: contribute/overview.md
+  - name: Prerequisites to build MSAL.NET
+    href: contribute/prerequisites-to-buildmd
   - name: Build & test MSAL.NET
-    href: build-and-test.md
+    href: contribute/build-and-test.md
   - name: Submitting Bugs and Feature Requests
-    href: Submitting-Bugs-and-Feature-Requests.md
+    href: contribute/bugs-and-feature-requests.md
 
 ### Other resources
 - name: Additional Resources
   items:
+  - name: Release cadence
+    href: resources/release-cadence.md
+  - name: Semantic versioning and API change management
+    href: resources/semantic-versioning-api-change-management.md
+  - name: Troubleshooting
+    href: resources/troubleshooting.md
+  - name: Region discovery troubleshooting
+    href: resources/region-discovery-troubleshooting.md
   - name: iOS12 Security Advisory
-    href: iOS12.md
+    href: resources/ios12-security-advisory.md
   - name: Releases
     href: https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/releases
   - name: MSAL.NET reference documentation
@@ -144,4 +171,6 @@
   - name: Code Samples
     href: https://docs.microsoft.com/azure/active-directory/develop/sample-v2-code
   - name: Known Issues
-    href: known-issues.md
+    href: resources/known-issues.md
+  - name: Testimonials
+    href: resources/testimonials.md
