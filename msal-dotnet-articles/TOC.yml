@@ -1,61 +1,55 @@
 ### Getting started with MSAL.NET
 - name: Getting Started
   items:
-  - name: Why use MSAL.NET
-    href: MSAL.NET-supports-multiple-application-architectures-and-multiple-platforms.md
+  - name: Introduction to MSAL.NET
+    href: getting-started/introduction.md
   - name: Is MSAL.NET right for me
-    href: MSAL.NET-or-Microsoft.Identity.Web.md
+    href: getting-started/choosing-msal-dotnet.md
   - name: Scenarios
-    href: scenarios.md
-  - name: Register your app with AAD
-    href: Register-your-application-with-Azure-Active-Directory.md
-  - name: Client Applications
-    href: Client-Applications.md
-  - name: Acquiring Tokens
-    href: Acquiring-Tokens.md
-  - name: MSAL Samples
-    href: https://docs.microsoft.com/azure/active-directory/develop/sample-v2-code
-  - name: Known Issues
-    href: known-issues.md
+    href: getting-started/scenarios.md
+  - name: Register your app with Azure Active Directory
+    href: getting-started/register-your-application.md
 
 ### Acquiring tokens
 - name: Acquiring Tokens
   items:
-  - name: AcquireTokenSilent
-    href: AcquireTokenSilentAsync-using-a-cached-token.md
+  - name: Overview
+    href: acquiring-tokens/overview.md
+  - name: AcquireTokenSilentAsync API
+    href: acquiring-tokens/acquiretokensilentasync-api.md
   - name: Desktop/Mobile Apps
     items:
-    - name: AcquireTokenInteractive
-      href: Acquiring-tokens-interactively.md
+    - name: Acquiring tokens interactivtely
+      href: acquiring-tokens/desktop-mobile/acquiring-tokens-interactively.md
     - name: WAM - the Windows broker
-      href: wam.md
+      href: acquiring-tokens/desktop-mobile/wam.md
     - name: .NET Core
-      href: System-Browser-on-.Net-Core.md
-    - name: Xamarin Docs
-      href: Xamarin-Docs.md
-    - name: UWP
-      href: UWP-specifics.md
+      href: acquiring-tokens/desktop-mobile/dotnet-core.md
+    - name: Xamarin
+      href: acquiring-tokens/desktop-mobile/xamarin.md
+    - name: Universal Windows Platform
+      href: acquiring-tokens/desktop-mobile/uwp.md
     - name: Custom Browser
-      href: CustomWebUi.md
-    - name: Applying an AAD B2C policy
-      href: AAD-B2C-specifics.md
-    - name: Integrated Windows Authentication
-      href: Integrated-Windows-Authentication.md
-    - name: Username / Password
-      href: Username-Password-Authentication.md
-    - name: Device Code Flow
-      href: Device-Code-Flow-in-MSAL-2.x.md
+      href: acquiring-tokens/desktop-mobile/custom-web-browser-ui.md
+    - name: Sign-in users with social identities
+      href: acquiring-tokens/desktop-mobile/social-identities.md
+    - name: Integrated Windows Authentication for domain or AAD joined machines
+      href: acquiring-tokens/desktop-mobile/integrated-windows-authentication.md
+    - name: Username/password authentication
+      href: acquiring-tokens/desktop-mobile/username-password-authentication.md
+    - name: Device Code Flow for devices without a Web browser
+      href: acquiring-tokens/desktop-mobile/device-code-flow.md
     - name: ADFS support
-      href: ADFS-support.md
+      href: acquiring-tokens/desktop-mobile/adfs.md
     - name: MSAL with Unity
-      href: Troubleshooting-Unity.md
+      href: acquiring-tokens/desktop-mobile/unity.md
   - name: Web Apps/Web APIs/Daemon Apps
     items:
     - name: Acquiring a token for the app
       href: Client-credential-flows.md
-    - name: Acquiring a token on behalf of a user
+    - name: Acquiring a token on behalf of a user Service to Services calls
       href: on-behalf-of.md
-    - name: Acquiring a token by authorization code
+    - name: Acquiring a token by authorization code in Web Apps
       href: Acquiring-tokens-with-authorization-codes-on-web-apps-MSAL-2.x.md
 
 - name: Advanced Topics
@@ -147,3 +141,7 @@
     href: https://docs.microsoft.com/active-directory/adal/microsoft.identity.client
   - name: Azure AD v2.0 Developer guide
     href: https://aka.ms/aadv2
+  - name: Code Samples
+    href: https://docs.microsoft.com/azure/active-directory/develop/sample-v2-code
+  - name: Known Issues
+    href: known-issues.md
