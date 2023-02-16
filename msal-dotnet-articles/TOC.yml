@@ -1,2 +1,149 @@
-- name: Index
-  href: index.md
+### Getting started with MSAL.NET
+- name: Getting Started
+  items:
+  - name: Why use MSAL.NET
+    href: MSAL.NET-supports-multiple-application-architectures-and-multiple-platforms.md
+  - name: Is MSAL.NET right for me
+    href: MSAL.NET-or-Microsoft.Identity.Web.md
+  - name: Scenarios
+    href: scenarios.md
+  - name: Register your app with AAD
+    href: Register-your-application-with-Azure-Active-Directory.md
+  - name: Client Applications
+    href: Client-Applications.md
+  - name: Acquiring Tokens
+    href: Acquiring-Tokens.md
+  - name: MSAL Samples
+    href: https://docs.microsoft.com/azure/active-directory/develop/sample-v2-code
+  - name: Known Issues
+    href: known-issues.md
+
+### Acquiring tokens
+- name: Acquiring Tokens
+  items:
+  - name: AcquireTokenSilent
+    href: AcquireTokenSilentAsync-using-a-cached-token.md
+  - name: Desktop/Mobile Apps
+    items:
+    - name: AcquireTokenInteractive
+      href: Acquiring-tokens-interactively.md
+    - name: WAM - the Windows broker
+      href: wam.md
+    - name: .NET Core
+      href: System-Browser-on-.Net-Core.md
+    - name: Xamarin Docs
+      href: Xamarin-Docs.md
+    - name: UWP
+      href: UWP-specifics.md
+    - name: Custom Browser
+      href: CustomWebUi.md
+    - name: Applying an AAD B2C policy
+      href: AAD-B2C-specifics.md
+    - name: Integrated Windows Authentication
+      href: Integrated-Windows-Authentication.md
+    - name: Username / Password
+      href: Username-Password-Authentication.md
+    - name: Device Code Flow
+      href: Device-Code-Flow-in-MSAL-2.x.md
+    - name: ADFS support
+      href: ADFS-support.md
+    - name: MSAL with Unity
+      href: Troubleshooting-Unity.md
+  - name: Web Apps/Web APIs/Daemon Apps
+    items:
+    - name: Acquiring a token for the app
+      href: Client-credential-flows.md
+    - name: Acquiring a token on behalf of a user
+      href: on-behalf-of.md
+    - name: Acquiring a token by authorization code
+      href: Acquiring-tokens-with-authorization-codes-on-web-apps-MSAL-2.x.md
+
+- name: Advanced Topics
+  items:
+  - name: High Availability
+    href: High-availability.md
+  - name: Token cache serialization
+    href: token-cache-serialization.md
+  - name: Logging
+    href: logging.md
+  - name: Handling Exceptions
+    items:
+    - name: Overview
+      href: exceptions.md
+    - name: Retry Policy
+      href: Retry-Policy.md
+    - name: UiRequired exception classification
+      href: MsalUiRequiredException-classification.md
+    - name: State Mismatch Error
+      href: StateMismatchError.md
+  - name: Provide your own Httpclient and proxy
+    href: httpclient.md
+  - name: Extensibility Points
+    href: Extensibility-Points.md
+  - name: Clearing the cache
+    href: clearing-token-cache.md
+  - name: Client Credentials Multi-Tenant guidance
+    href: Multi-tenant-client_credential-use.md
+  - name: Performance perspectives
+    href: Performance-testing.md
+  - name: Differences between ADAL.NET and MSAL.NET Apps
+    href: Adal-to-Msal.md
+  - name: PowerShell support
+    href: PowerShell-support.md
+  - name: Testing apps that use MSAL
+    href: Testing-an-app-using-MSAL.md
+  - name: Experimental Features
+    href: Experimental-Features.md
+  - name: Proof of Possession (PoP) tokens
+    href: Proof-Of-Possession-(PoP)-tokens.md
+  - name: Using in Azure functions
+    href: msal-net-in-azure-functions.md
+  - name: Extract info from WWW-Authenticate headers
+    href: WWW-Authenticate-parameters.md
+  - name: SPA Authorization Code
+    href: SPA-Authorization-Code.md
+
+- name: FAQ
+  items:
+  - name: Device authentication errors
+    href: device-authentication-errors.md
+  - name: Moving from MSAL 2.x to MSAL 3.x and above
+    href: MSAL.NET-2.x-to-MSAL.NET-3.x.md
+  - name: Usage of Web browsers
+    href: MSAL.NET-uses-web-browser.md
+  - name: Troubleshooting Unity issues with MSAL.NET
+    href: Troubleshooting-unity.md
+  - name: Install NuGet package from other sources
+    href: Installing-a-nuget-package-from-a-source-other-than-NuGet.org.md
+  - name: Getting scopes / consent for several Web APIs
+    href: Acquiring-tokens-interactively#withextrascopetoconsent.md
+  - name: TLS issues
+    href: tls-issues.md
+  - name: Troubleshooting
+    href: troubleshooting.md
+  - name: Synchronous programming
+    href: Synchronous-Programming.md
+  - name: Target Framework Override
+    href: Override-the-target-framework.md
+
+### Contribute
+- name: Contribute
+  items:
+  - name: Overview
+    href: Contributing-overview.md
+  - name: Build & test MSAL.NET
+    href: build-and-test.md
+  - name: Submitting Bugs and Feature Requests
+    href: Submitting-Bugs-and-Feature-Requests.md
+
+### Other resources
+- name: Additional Resources:
+  items:
+  - name: iOS12 Security Advisory
+    href: iOS12.md
+  - name: Releases
+    href: https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/releases
+  - name: MSAL.NET reference documentation
+    href: https://docs.microsoft.com/active-directory/adal/microsoft.identity.client
+  - name: Azure AD v2.0 Developer guide
+    href: https://aka.ms/aadv2
