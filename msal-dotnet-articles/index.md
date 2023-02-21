@@ -1,12 +1,12 @@
 # Microsoft Authentication Library for .NET
 
-MSAL.NET ([Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client)) is an authentication library which enables you to acquire tokens from Azure AD, to access protected Web APIs (Microsoft APIs or applications registered with Azure Active Directory). MSAL.NET is available on several .NET platforms (Desktop, Universal Windows Platform, Xamarin Android, Xamarin iOS, Windows 8.1, and .NET Core).
+MSAL.NET ([Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client)) is an authentication library that enables you to acquire tokens from Azure AD, to access protected Web APIs (Microsoft APIs or applications registered with Azure Active Directory). MSAL.NET is available on several .NET platforms (Desktop, Universal Windows Platform, Xamarin Android, Xamarin iOS, Windows 8.1, and .NET Core).
 
 - [Getting Started](#conceptual-documentation)
-    - [Getting started with MSAL.NET](#getting-started-with-msalnet)
-    - [Details on the ways to acquire tokens](#details-on-the-ways-to-acquire-tokens)
-    - [Advanced topics](#advanced-topics)
-    - [Testimonials](#testimonials)
+  - [Getting started with MSAL.NET](#getting-started-with-msalnet)
+  - [Details on the ways to acquire tokens](#details-on-the-ways-to-acquire-tokens)
+  - [Advanced topics](#advanced-topics)
+  - [Testimonials](#testimonials)
 - [Roadmap](#roadmap)
 - [Samples](#samples)
 - [FAQ](#faq)
@@ -15,20 +15,20 @@ MSAL.NET ([Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.I
 
 ### Getting started with MSAL.NET
 
-1. What are the authentication [scenarios](scenarios), [why use MSAL.NET](MSAL.NET-supports-multiple-application-architectures-and-multiple-platforms)? for which application architectures?, and which platforms / target OS?
-1. Prerequisite: you need to [Register your app](Register-your-application-with-Azure-Active-Directory) with Azure Active Directory
-1. Type of [Client Applications](Client-Applications): public client applications and confidential client applications
-1. [Acquiring Tokens](Acquiring-Tokens) to access a protected API
+1. Learn about [authentication scenarios](scenarios) and [why use MSAL.NET](getting-started/overview.md).
+1. You will need to [Register your app](getting-started/register-your-application.md) with Azure Active Directory.
+1. Learn about the [types of client Applications](https://learn.microsoft.com/azure/active-directory/develop/msal-client-applications): public client and confidential client.
+1. Learn about [Acquiring Tokens](acquiring-tokens/overview.md) to access a protected API.
 
-### Details on the ways to acquire tokens
+### Acquiring Tokens
 
 #### Acquiring tokens from cache in any app
 
-- [AcquireTokenSilentAsync](AcquireTokenSilentAsync-using-a-cached-token) enables you to get a previously cached token
+- [AcquireTokenSilentAsync](acquiring-tokens/acquiretokensilentasync-api.md) enables you to get a previously cached token.
 
 #### Acquiring tokens in Desktop/Mobile apps (public client applications)
 
-- [Acquiring a token interactively](Acquiring-tokens-interactively) enables the application to acquire a token after authenticating the user through an interactive sign-in. There are specificities, though depending on the platforms ([Xamarin Android](Xamarin-android-specificities), [Xamarin iOS](Xamarin-ios-specificities), or [UWP](uwp-specificities))
+- [Acquiring a token interactively](acquiring-tokens/desktop-mobile/acquiring-tokens-interactively.md) enables the application to acquire a token after authenticating the user through an interactive sign-in. There are implementation-specific details depending on the target platforms, such as [Xamarin Android](acquiring-tokens/desktop-mobile/xamarin.md) or [UWP](acquiring-tokens/desktop-mobile/uwp.md).
 - Acquiring a token silently, on a Windows domain or AAD joined machine with [Integrated Windows Authentication](https://aka.ms/msal-net-iwa), or by using [Username/passwords](https://aka.ms/msal-net-up) (not recommended)
 - Acquiring a token on a text only device, by directing the user to sign-in on another device, by leveraging the [Device Code Flow](https://aka.ms/msal-net-device-code-flow)
 
