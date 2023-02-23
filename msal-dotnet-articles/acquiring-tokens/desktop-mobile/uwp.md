@@ -1,3 +1,5 @@
+# Using MSAL.NET with UWP applications
+
 ## Recommended approach use WAM (broker)
 
 Please see https://aka.ms/msal-net-wam for how to configure your UWP app to handle auth. 

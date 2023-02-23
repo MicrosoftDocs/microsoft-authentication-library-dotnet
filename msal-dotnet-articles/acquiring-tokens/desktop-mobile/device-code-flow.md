@@ -1,4 +1,7 @@
-> Device code flow is not supported by Azure AD B2C
+# Using Device Code Flow in MSAL.NET
+
+>[!NOTE]
+>Device code flow is not supported by Azure AD B2C.
 
 ## Why would you use Device Code Flow?
 

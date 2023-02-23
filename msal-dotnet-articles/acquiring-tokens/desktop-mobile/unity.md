@@ -1,4 +1,4 @@
-### Unity UWP dev app
+# Using MSAL.NET with Unity UWP applications
 
 This wiki describes how to build a Unity app build for UWP that uses MSAL.NET. Also see [Troubleshooting Unity](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Troubleshooting-Unity) wiki on related errors with Unity UWP apps.
 

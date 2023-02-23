@@ -1,4 +1,4 @@
-## Getting tokens by authorization code (Web Sites)
+# Using MSAL.NET to get tokens by authorization code (for web sites)
 
 When users login to Web applications (web sites) using Open Id connect, the web application receives an authorization code which it can redeem to acquire a token to call Web APIs. In ASP.NET / ASP.NET core web apps, the only goal of `AcquireTokenByAuthorizationCode` is to add a token to the token cache, so that it can then be used by the application (usually in the controllers) which just get a token for an API using `AcquireTokenSilent`.
 

@@ -1,4 +1,4 @@
-# Understanding the AcquireTokenAsync API
+# Understanding the `AcquireTokenAsync` API
 
 ### Tokens are cached
 

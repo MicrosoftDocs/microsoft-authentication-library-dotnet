@@ -1,4 +1,7 @@
-_Note_: this feature is available from version 4.0.0 on .NET Core and from version 4.1.0 on .NET Classic. 
+# Using MSAL.NET with .NET Core
+
+>[!NOTE]
+>This feature is available from version 4.0.0 on .NET Core and from version 4.1.0 on .NET Classic. 
 
 ## Embedded vs System Web UI
 

@@ -1,6 +1,9 @@
+# Using MSAL.NET with Web Account Manager (WAM)
+
 MSAL is able to call Web Account Manager (WAM), a Windows 10+ component that ships with the OS. This component acts as an authentication broker allowing the users of your app benefit from integration with accounts known to Windows, such as the account you signed into your Windows session.
 
 ## New WAM Preview in MSAL 4.44+
+
 The new MSAL WAM Preview is an abstraction layer based on MSAL C++ which fixes a number of issues with the existing WAM implementation and provides other benefits. **New applications should use this implementation** (also see [WAM limitations](#wam-limitations)).
 
 - New implementation is more stable, easier to add new features, less chance of regressions.
@@ -8,7 +11,7 @@ The new MSAL WAM Preview is an abstraction layer based on MSAL C++ which fixes a
 - Adds support for Proof-of-Possession tokens.
 - Fixes assembly size issues.
 
-### To enable WAM preview 
+### To enable WAM preview
 
 - add a reference to [Microsoft.Identity.Client.Broker](https://www.nuget.org/packages/Microsoft.Identity.Client.Broker) (and you can remove any reference to Microsoft.Identity.Client.Desktop)
 - instead of `.WithBroker()`, call `.WithBrokerPreview()`.
@@ -23,6 +26,7 @@ var pca = PublicClientApplicationBuilder
               .WithBrokerPreview(true)   // this method exists in Microsoft.Identity.Client.Broker package
               .Build();
 ```
+
 ## Parent Window Handles
 
 It is now mandatory to tell MSAL the window the interactive experience should be parented to, using `WithParentActivityOrWindow` APIs. Trying to infer a window is not feasible and in the past, this has led to bad user experience where the auth window is hidden behind the application. 

@@ -1,4 +1,4 @@
-## Use MSAL.NET to sign-in users with social identities
+# Using MSAL.NET to sign-in users with social identities
 
 You can use MSAL.NET to sign-in users with social identities by using [Azure AD B2C](https://aka.ms/aadb2c). AAD B2C is built around the notion of policies. In MSAL.NET, specifying a policy translates to providing an authority.
 

@@ -1,8 +1,9 @@
 # ADFS support in MSAL.NET
 
 There are two cases:
+
 - MSAL.NET talks to Azure Active Directory, which itself is **federated** with other identity providers (IdPs). In the case we are interested in the federation happens through ADFS.
-- MSAL.NET talks **directly** to an ADFS authority. This is only supported from AD FS 2019 and above. One of the scenarios this highlights is [Azure Stack](https://azure.microsoft.com/en-us/overview/azure-stack/) support
+- MSAL.NET talks **directly** to an ADFS authority. This is only supported from AD FS 2019 and above. One of the scenarios this highlights is [Azure Stack](https://azure.microsoft.com/overview/azure-stack/) support.
 
 ## Cases where identity providers are federated with Azure AD
 
