@@ -1,31 +1,28 @@
-## AcquireTokenInteractive
+# AcquireTokenInteractive API
 
 The method to use to acquire a token interactively is `IPublicClientApplication.AcquireTokenInteractive`
 
-![image](https://user-images.githubusercontent.com/13203188/56017770-94d6d080-5d00-11e9-89f3-f3a7a1d6f2e8.png)
-
 The following example shows minimal code to get a token for reading the user's profile with Microsoft Graph.
 
-```CSharp
-string[] scopes = new string[] {"user.read"};
+```csharp
+string[] scopes = new string[] {
+  "user.read"
+};
 var app = PublicClientApplicationBuilder.Create(clientId).Build();
 var accounts = await app.GetAccountsAsync();
 AuthenticationResult result;
-try
-{
- result = await app.AcquireTokenSilent(scopes, accounts.FirstOrDefault())
-             .ExecuteAsync();
-}
-catch(MsalUiRequiredException)
-{
- result = await app.AcquireTokenInteractive(scopes)
-             .ExecuteAsync();
+try {
+  result = await app.AcquireTokenSilent(scopes, accounts.FirstOrDefault())
+    .ExecuteAsync();
+} catch (MsalUiRequiredException) {
+  result = await app.AcquireTokenInteractive(scopes)
+    .ExecuteAsync();
 }
 ```
 
 ## Mandatory parameters
 
-`AcquireTokenInteractive` has only one mandatory parameter ``scopes``, which contains an enumeration of strings which define the scopes for which a token is required. If the token is for the Microsoft Graph, the required scopes can be found in api reference of each Microsoft graph API in the section named "Permissions". For instance, to [list the user's contacts](https://developer.microsoft.com/en-us/graph/docs/api-reference/v1.0/api/user_list_contacts), the scope "User.Read", "Contacts.Read" will need to be used. See also [Microsoft Graph permissions reference](https://developer.microsoft.com/en-us/graph/docs/concepts/permissions_reference).
+`AcquireTokenInteractive` has only one mandatory parameter ``scopes``, which contains an enumeration of strings which define the scopes for which a token is required. If the token is for the Microsoft Graph, the required scopes can be found in api reference of each Microsoft graph API in the section named "Permissions". For instance, to [list the user's contacts](https://learn.microsoft.com/graph/api/user-list-contacts?view=graph-rest-1.0&tabs=http), the scope "User.Read", "Contacts.Read" will need to be used. See also [Microsoft Graph permissions reference](https://learn.microsoft.com/graph/permissions-reference).
 
 On Android, you need to also specify the parent activity (using `.WithParentActivityOrWindow`, see below) so that the token gets back to that parent activity after the interaction. If you don't specify it, an exception will be thrown when calling `.ExecuteAsync()`.
 
@@ -69,9 +66,7 @@ Remarks:
 
 ### WithPrompt
 
-With Prompt is used to control the interactivity with the user by specifying a Prompt
-
-<img src="https://user-images.githubusercontent.com/34331512/112267137-3f1c3a00-8c32-11eb-97fb-33604311329a.png" width="25%" />
+With Prompt is used to control the interactivity with the user by specifying a Prompt.
 
 The class defines the following constants:
 

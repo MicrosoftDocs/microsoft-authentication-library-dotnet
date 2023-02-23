@@ -119,5 +119,5 @@ See [our comprehensive sample list](https://learn.microsoft.com/azure/active-dir
 
 ## FAQ
 
-- How MSAL.NET uses [Web browsers](how-to/usage-of-web-browsers.md) for interactive authentication.
+- How MSAL.NET uses [web browsers](how-to/usage-of-web-browsers.md) for interactive authentication.
 - If you have issues with Xamarin.Forms applications leveraging MSAL.NET please read [Troubleshooting-Xamarin.Android-issues-with-MSAL](https://learn.microsoft.com/azure/active-directory/develop/msal-net-xamarin-android-considerations).
