@@ -21,6 +21,7 @@
       "template_folder": "_themes",
       "customized_tasks": {
         "docset_prebuild": [
+          "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1",
           "_dependentPackages/ECMA2Yaml/tools/Run.ps1",
           "_dependentPackages/CommonPlugins/tools/SplitTOC.ps1",
           "_dependentPackages/CommonPlugins/tools/DiffFolder.ps1"
@@ -50,6 +51,11 @@
       "locale": "en-us",
       "monikers": [],
       "moniker_ranges": [],
+      "customized_tasks": {
+        "docset_prebuild": [
+          "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1"
+        ]
+      },
       "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content"
@@ -77,8 +83,10 @@
   "skip_source_output_uploading": false,
   "JoinTOCPlugin": [
     {
+      "ReferenceTOC": "api/toc.yml",
+      "ReferenceTOCUrl": "/dotnet/api/microsoft-authentication-library-dotnet/toc.json",
       "ConceptualTOC": "msal-dotnet-articles/TOC.yml",
-      "ReferenceTOCUrl": "/dotnet/api/microsoft-authentication-library-dotnet/toc.json"
+      "ConceptualTOCUrl": "/entra/msal/dotnet/toc.json"
     }
   ],
   "dependent_packages": [
