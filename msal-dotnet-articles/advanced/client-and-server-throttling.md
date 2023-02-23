@@ -1,3 +1,5 @@
+# Understanding client and server throttling in MSAL.NET
+
 ## Server Throttling
 
 AAD throttles applications when you call it too often. Most often this happens when token caching is not used, for example, because:

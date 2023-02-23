@@ -1,3 +1,5 @@
+# MSAL.NET extensibility points
+
 MSAL adopts the strategy of "make simple scenarios simple, make complex scenarios possible". 
 
 ## Use your own HttpClient
@@ -37,7 +39,9 @@ private static Task ModifyRequestAsync(OnBeforeTokenRequestData requestData)
 }
    
 ```
-Available from MSAL 4.41+
+
+>[!NOTE]
+>Available from MSAL 4.41+.
 
 ## Inject extra query parameters
 

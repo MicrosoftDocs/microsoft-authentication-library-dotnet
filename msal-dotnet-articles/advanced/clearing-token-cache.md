@@ -1,3 +1,5 @@
+# Clearning the token cache
+
 Clearing the cache is achieved by removing the accounts from the cache.
 
 This does not remove the session cookie which is in the browser, though.

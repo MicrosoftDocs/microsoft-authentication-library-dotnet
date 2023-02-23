@@ -1,8 +1,11 @@
-> See also: [Logging in MSAL.NET](https://learn.microsoft.com/en-us/azure/active-directory/develop/msal-logging-dotnet) on Microsoft Docs.
+# Logging infrastructure in MSAL.NET
+
+>[!NOTE]
+>See also: [Logging in MSAL.NET](https://learn.microsoft.com/azure/active-directory/develop/msal-logging-dotnet) on Microsoft Learn.
 
 ## Identity Logger Interface
 
-MSAL.NET uses an interface named `IIdentityLogger` to provide logging for messages (MSAL.NET 4.45.0+). This comes with the benefit of enabling one logger implementation to be sharable between our partner SDKs (Microsoft.Identity.Web, Microsoft.IdentityModel). In order to take advantage of this new API you will need to provide an implementation of the `IIdentityLogger` interface. 
+MSAL.NET uses an interface named `IIdentityLogger` to provide logging for messages (MSAL.NET 4.45.0+). This comes with the benefit of enabling one logger implementation to be sharable between our partner SDKs (Microsoft.Identity.Web, Microsoft.IdentityModel). In order to take advantage of this new API you will need to provide an implementation of the `IIdentityLogger` interface.
 
 This interface enables you to dynamically change the behavior of the logger without having to rebuild your MSAL implementation. For example, you could configure the `IsEnabled` method to the log level from an environment variable or app configuration for greater flexibility during debugging.
 

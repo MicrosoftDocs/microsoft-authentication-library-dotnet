@@ -1,4 +1,4 @@
-## Extract authentication parameters from WWW-Authenticate headers
+# Extract authentication parameters from WWW-Authenticate headers
 
 This article is both a conceptual article of why you'd want to get information from WWW-authenticate headers, and how to do it.
 

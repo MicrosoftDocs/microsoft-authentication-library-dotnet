@@ -1,1 +1,0 @@
-See [Migrating applications to MSAL.NET or Microsoft.Identity.Web](https://docs.microsoft.com/en-us/azure/active-directory/develop/msal-net-migration)

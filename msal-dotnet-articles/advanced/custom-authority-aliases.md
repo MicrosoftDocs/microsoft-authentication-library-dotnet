@@ -1,4 +1,7 @@
-Note: Feature available from: 4.2
+# Custom authority aliases
+
+>[!NOTE]
+>Feature available from: 4.2
 
 ## What is Instance Discovery 
 

@@ -1,4 +1,4 @@
-## Performance
+# Performance testing of MSAL.NET code paths
 
 [Microsoft.Identity.Test.Performance](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/tree/master/tests/Microsoft.Identity.Test.Performance) project uses [BenchmarkDotNet](https://benchmarkdotnet.org/articles/overview.html) library for performance testing of MSAL methods. [Program.cs](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/master/tests/Microsoft.Identity.Test.Performance/Program.cs) lists the classes which have the benchmark methods which test the cache for different scenarios.
 

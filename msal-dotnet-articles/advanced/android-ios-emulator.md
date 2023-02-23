@@ -1,4 +1,7 @@
-### The MSAL .NET team recommends testing with an Android or iOS device whenever possible, as there are subtle differences between authentication with an emulator and a device.
+# Using MSAL.NET with Android and iOS emulators
+
+>[!NOTE]
+>The MSAL .NET team recommends testing with an Android or iOS device whenever possible, as there are subtle differences between authentication with an emulator and a device.
 
 Some of those issues are documented here in the [native Android MSAL library wiki](https://github.com/AzureAD/microsoft-authentication-library-for-android/wiki/Android-Emulator-with-MSAL). 
 

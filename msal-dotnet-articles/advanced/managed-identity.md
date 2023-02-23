@@ -1,10 +1,15 @@
-> This is an experimental feature for 1st party use only.
+# Managed identity with MSAL.NET
 
-# Managed Identity for Confidential Client
+>[!NOTE]
+>This is an experimental feature for 1st party use only.
+
+## Managed Identity for Confidential Client
+
 A common challenge for developers is the management of secrets, credentials, certificates, and keys used to secure communication between services. Managed identities eliminate the need for developers to manage these credentials.
 
-# How to use managed identity in MSAL
-```
+## How to use managed identity in MSAL
+
+```csharp
 IConfidentialClientApplication cca = ConfidentialClientApplicationBuilder.Create(clientId)
     .WithExperimentalFeatures()
     .Build();
@@ -20,18 +25,23 @@ AuthenticationResult result = await cca.AcquireTokenForClient(scopes)
 * For system assigned managed identity the parameter userAssignedClientIdOrResourceId need not be passed.
 * For failed requests, the error response contains a correlation id that can be used for further investigation. The MSAL's correlation id generated in MSAL or passed in to MSAL is different than the one returned in server error response as MSAL cannot pass the correlation id to managed identity token acquisition endpoints.
 
-# Supported by MSAL
+## Supported by MSAL
+
 MSAL supports the following sources for managed identity
 
-Supported: 
+Supported:
+
 * App services
 * IMDS (VMs)
 * Azure Arc
 
 In Progress:
+
 * Cloud Shell
 * Service Fabric
 
-# Common Exceptions
+## Common Exceptions
+
 ### MsalServiceException Error Code: managed_identity_failed_response Error Message: An unexpected error occurred while fetching the AAD token
+
 This exception might mean that the scope added is either not supported or is in wrong format. An example of expected scope is `https://management.azure.com/.default`

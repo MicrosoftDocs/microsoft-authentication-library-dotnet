@@ -1,3 +1,5 @@
+# Monitoring of applications using MSAL.NET
+
 In order to ensure authentication services using MSAL.NET are running correctly, MSAL provides a number of ways to monitor its behavior so that issues can be identified and addressed before they occur in production. The incorrect use of MSAL (lifecycle and token cache) does not lead to immediate failures. But sometimes, they will bubble up under high traffic scenarios after the app is in production for a period of time. For example, if only one instance of confidential client application is used and MSAL is not configured serialize the token cache, the cache will grow forever. Another issue can arise when creating a new confidential client application and not utilizing the cache which will lead to various issues such as throttling from the identity provider. For recommendations on how to utilize MSAL appropriately, See [High Availability](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/High-availability#add-monitoring-around-msal-operations)
 
 ## Logging
