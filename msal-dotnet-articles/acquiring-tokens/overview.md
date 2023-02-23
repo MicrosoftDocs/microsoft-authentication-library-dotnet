@@ -1,18 +1,22 @@
-## Acquiring a token: this depends on the kind of application
+# Token Acquisition
 
-As explained in [Scenarios](Scenarios), there are many ways of acquiring a token. They are detailed in the next topics. Some require user interactions through a web browser. Some don't require any user interactions. 
+## Application type dependency
+
+As explained in [Scenarios](../getting-started/scenarios.md), there are many ways of acquiring a token. They are detailed in the next topics. Some require user interactions through a web browser. Some don't require any user interactions.
+
 In general the way to acquire a token is different depending on if the application is a public client application (Desktop / Mobile) or a confidential client application (Web App, Web API, daemon application like a windows service)
 
-### MSAL.NET caches tokens
+## Token caching
+
 For both Public client and confidential client applications, MSAL.NET maintains a token cache (or two caches in the case of confidential client applications), and applications should [try to get a token from the cache](AcquireTokenSilentAsync-using-a-cached-token) first before any other means, except in the case of [Client Credentials](https://aka.ms/msal-net-client-credentials), which does look at the application cache by itself. 
 
 In the case of UWP, Xamarin iOS and Xamarin Android, the token cache serialization to an isolated storage is provided by MSAL.NET. In the case of .NET Desktop (.NET Framework and .NET Core) platforms, though, the application needs to customize the [token cache serialization](token-cache-serialization).
 
-### Token acquisition methods
+## Token acquisition methods
 
-#### Public client application:
+### Public client applications
 
-##### Public flows
+#### Flows
 
 - will often [acquire token interactively](Acquiring-tokens-interactively), having the user sign-in.
   > Remember that this is not possible yet in .NET Core as .NET core does not provide UI capabilities and this is required for interactive authentication 
@@ -21,7 +25,7 @@ In the case of UWP, Xamarin iOS and Xamarin Android, the token cache serializati
   > Note that you should not use username/password in confidential client applications
 - Finally, for applications running on devices which don't have a Web browser, it's possible to acquire a token through the [device code flow](https://aka.ms/msal-net-device-code-flow) mechanism, which provides the user with a URL and a code. The user goes to a web browser on another device, enters the code and signs-in, which has Azure AD get them a token back on the browser-less device.
 
-##### Summary for public client applications
+#### Summary
 
 The following table summarizes the ways available to acquire tokens in public client applications depending on the Operating system, and therefore the chosen platform, and the kind of application.
 
@@ -33,14 +37,16 @@ Operating System | Library Platform | Kind of App | [Interactive Auth](Acquiring
 <img src="https://docs.microsoft.com/en-us/azure/active-directory/develop/media/index/logo_ios.svg" width="40" />| <img src="https://docs.microsoft.com/en-us/azure/active-directory/develop/media/index/logo_xamarin.svg" width="40" /> <img src="https://docs.microsoft.com/en-us/azure/active-directory/develop/media/index/logo_ios.svg" width="40" /><br/> Xamarin iOS	| Mobile	| Y	| 	| 	| Y
 Mac OS, Linux, Windows	| <img src="https://docs.microsoft.com/en-us/azure/active-directory/develop/media/index/logo_netcore.svg" width="40" /> <br/> .NET Core 	| Console	| N/A see [1](https://aka.ms/msal-net-uses-web-browser)	| Y	| Y	| Y
 
-#### Confidential client applications 
+### Confidential client applications
 
-##### the flows will rather:
+#### Flows
+
 - Acquire token **for the application itself**, not for a user, using [client credentials](Client-credential-flows). This can be used for syncing tools, or tools which process users in general, not a particular user. 
 - In the case of Web APIs calling and API on behalf of the user, using the [On Behalf Of flow](on-behalf-of) and still identifying the application itself with client credentials to acquire a token based on some User assertion (SAML for instance, or a JWT token). This can be used for applications which need to access resources of a particular user in service to service calls.
 - **For Web apps**, acquire tokens [by authorization code](Acquiring-tokens-with-authorization-codes-on-web-apps) after letting the user sign-in through the authorization request URL. This is typically the mechanism used by an open id connect application, which lets the user sign-in using Open ID connect, but then wants to access Web APIs on behalf of this particular user.
 
-##### summary for confidential client applications
+#### Summary
+
 The following table summarizes the ways available to acquire tokens in confidential client applications depending on the Operating system, and therefore the chosen platform, and the kind of application.
 
 Operating System | Library Platform | Kind of App | [Client Credential](Client-credential-flows) | [On behalf of](on-behalf-of) | [Auth Code](Acquiring-tokens-with-authorization-codes-on-web-apps)
@@ -67,7 +73,7 @@ AuthenticationResult result = app.AcquireTokenXXX(mandatory-parameters)
  .ExecuteAsync();
 ```
 
-## AuthenticationResult properties in MSAL.NET 
+## `AuthenticationResult` properties in MSAL.NET
 
 In all cases above, methods to acquire tokens return an ``AuthenticationResult`` (or in the case of the async methods a ``Task<AuthenticationResult>``.
 
@@ -80,7 +86,7 @@ When the token is delivered in the name of a user, ``AuthenticationResult`` also
 - The ``Scopes`` for which the token was issued (See [Scopes not resources](Adal-to-Msal#scopes-not-resources))
 - The unique Id for the user.
 
-### IAccount
+## `IAccount`
 
 MSAL.NET defines the notion of Account (through the `IAccount` interface). This breaking change provides the right semantics: the fact that the same user can have several accounts, in different Azure AD directories. Also MSAL.NET provides better information in the case of guest scenarios, as home account information is provided.
 The following diagram shows the structure of the `IAccount` interface:
