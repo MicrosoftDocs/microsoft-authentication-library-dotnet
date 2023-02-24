@@ -21,7 +21,7 @@ This flow, named the On-Behalf-Of flow (OBO), is illustrated by the top part of 
 
 ### How to call OBO 
 
-The OBO call is done by calling the [AcquireTokenOnBehalf](https://docs.microsoft.com/en-us/dotnet/api/microsoft.identity.client.iconfidentialclientapplication.acquiretokenonbehalfof?view=azure-dotnet) method on the `IConfidentialClientApplication` interface.
+The OBO call is done by calling the [AcquireTokenOnBehalf](https://docs.microsoft.com/dotnet/api/microsoft.identity.client.iconfidentialclientapplication.acquiretokenonbehalfof?view=azure-dotnet) method on the `IConfidentialClientApplication` interface.
 
 This call looks in the cache by itself - so you do not need to call `AcquireTokenSilent` and does not store refresh tokens. 
 
@@ -68,7 +68,7 @@ var authResult = await ((ILongRunningWebApi)confidentialClientApp)
               ref sessionKey)
          .ExecuteAsync();
 ```
-`userAccessToken` is a user access token used to call this web API. `sessionKey` will be used as a key when caching and retrieving the OBO token. If set to `null`, MSAL will set it to the assertion hash of the passed-in user token. It can also be set by the developer to something that identifies a specific user session, like the optional `sid` claim from the user token (for more information, see [Provide optional claims to your app](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-optional-claims)).
+`userAccessToken` is a user access token used to call this web API. `sessionKey` will be used as a key when caching and retrieving the OBO token. If set to `null`, MSAL will set it to the assertion hash of the passed-in user token. It can also be set by the developer to something that identifies a specific user session, like the optional `sid` claim from the user token (for more information, see [Provide optional claims to your app](https://docs.microsoft.com/azure/active-directory/develop/active-directory-optional-claims)).
 If the cache already contains a valid OBO token with this `sessionKey`, `InitiateLongRunningProcessInWebApi` will return it. Otherwise, the user token will be used to acquire a new OBO token from AAD, which will then be cached and returned.
 
 2. In the long-running process, whenever OBO token is needed, call:
@@ -83,7 +83,7 @@ Pass the `sessionKey` which is associated with the current user's session and wi
 
 ### Cache eviction for long-running OBO processes
 
-It is strongly recommended to [use a distributed persisted cache](https://docs.microsoft.com/en-us/azure/active-directory/develop/msal-net-token-cache-serialization?tabs=aspnetcore) in a web API scenario. Since these APIs store the refresh token, MSAL will not suggest an expiration, as refresh tokens have a long lifetime and can be used over and over again.
+It is strongly recommended to [use a distributed persisted cache](https://docs.microsoft.com/azure/active-directory/develop/msal-net-token-cache-serialization?tabs=aspnetcore) in a web API scenario. Since these APIs store the refresh token, MSAL will not suggest an expiration, as refresh tokens have a long lifetime and can be used over and over again.
 
 It is recommended that you set L1 and L2 eviction policies manually, for example a max size for the L1 cache and a sliding expiration for the L2. 
 
@@ -97,9 +97,9 @@ MSAL cannot perform account removal for OBO when using L2 caches. It is recommen
 
 ## App registration - specificities for Web APIs
 
-- Web APIs expose scopes. For more information, see [Quickstart: Configure an application to expose web APIs (Preview)](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-configure-app-expose-web-apis).
+- Web APIs expose scopes. For more information, see [Quickstart: Configure an application to expose web APIs (Preview)](https://docs.microsoft.com/azure/active-directory/develop/quickstart-configure-app-expose-web-apis).
 
-- Web APIs decide which version of token they want to accept. For your own web API, you can change the property in the manifest named `accessTokenAcceptedVersion` (to 1 or 2). For more information, see [Azure Active Directory app manifest](https://docs.microsoft.com/en-us/azure/active-directory/develop/reference-app-manifest).
+- Web APIs decide which version of token they want to accept. For your own web API, you can change the property in the manifest named `accessTokenAcceptedVersion` (to 1 or 2). For more information, see [Azure Active Directory app manifest](https://docs.microsoft.com/azure/active-directory/develop/reference-app-manifest).
 
 ## Practical usage of OBO in an ASP.NET / ASP.NET Core application
 
@@ -176,7 +176,7 @@ public static string GetMsalAccountId(this ClaimsPrincipal claimsPrincipal)
 
 ## Protocol
 
-For more information about the On-Behalf-Of protocol, see [Azure Active Directory v2.0 and OAuth 2.0 On-Behalf-Of flow](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow).
+For more information about the On-Behalf-Of protocol, see [Azure Active Directory v2.0 and OAuth 2.0 On-Behalf-Of flow](https://docs.microsoft.com/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow).
 
 ## Samples illustrating the on-behalf of flow
 

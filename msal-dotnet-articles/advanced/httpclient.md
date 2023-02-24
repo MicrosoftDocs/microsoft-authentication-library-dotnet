@@ -1,6 +1,6 @@
 # Providing your own HttpClient, supporting HTTP proxies and customization of user agent headers
 
-We understand that there are cases where you want fine grained control on the Http proxy for instance, which we had not been able to provide you at all (on .NET core), or in a limited way (.NET framework). Also, ASP.NET Core has some very efficient ways of pooling the `HttpClient` instance, and MSAL.NET clearly did not benefit from it (for details see [Use HttpClientFactory to implement resilient HTTP requests](https://docs.microsoft.com/en-us/dotnet/standard/microservices-architecture/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests))
+We understand that there are cases where you want fine grained control on the Http proxy for instance, which we had not been able to provide you at all (on .NET core), or in a limited way (.NET framework). Also, ASP.NET Core has some very efficient ways of pooling the `HttpClient` instance, and MSAL.NET clearly did not benefit from it (for details see [Use HttpClientFactory to implement resilient HTTP requests](https://docs.microsoft.com/dotnet/standard/microservices-architecture/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests))
 
 ```csharp
 IMsalHttpClientFactory httpClientFactory = new MyHttpClientFactory();
@@ -54,7 +54,7 @@ MSAL will **not** call Dispose() on the HttpClient. The thinking behind this bas
 
 ### .NET Core IHttpClientFactory
 
-It is recommended to adapt [ASP.NET Core's IHttpClientFactory](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.0) to improve scalability in Web App / Web Api scenarios.
+It is recommended to adapt [ASP.NET Core's IHttpClientFactory](https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.0) to improve scalability in Web App / Web Api scenarios.
 
 #### Proxy Troubleshooting
 

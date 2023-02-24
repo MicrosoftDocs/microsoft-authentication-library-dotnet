@@ -4,11 +4,11 @@ MSAL adopts the strategy of "make simple scenarios simple, make complex scenario
 
 ## Use your own HttpClient
 
-Allows apps to adapt highly scalable HttpClient factories such as ASP.NET Core's [IHttpClientFactory](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-6.0). 
+Allows apps to adapt highly scalable HttpClient factories such as ASP.NET Core's [IHttpClientFactory](https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-6.0). 
 Helps desktop and mobile apps which have to deal with complex proxy configurations. 
 Allows apps to fully control the HTTP messages.
 
-Details [here](https://docs.microsoft.com/en-us/dotnet/api/microsoft.identity.client.imsalhttpclientfactory?view=azure-dotnet#remarks)
+Details [here](https://docs.microsoft.com/dotnet/api/microsoft.identity.client.imsalhttpclientfactory?view=azure-dotnet#remarks)
 
 
 ## Modify the /token request
@@ -49,11 +49,11 @@ Allows apps to add query (GET) parameters to applications, customizing the exper
 
 Useful to target AAD service slices where new features or bug fixes are deployed first and to customize the UX experience with features not exposed by MSAL. Note that MSAL doesn't perform the `/authorize` request in ASP.NET / ASP.NET Core scenarios, so those calls are not affected!
 
-Details [here](https://docs.microsoft.com/en-us/dotnet/api/microsoft.identity.client.abstractacquiretokenparameterbuilder-1.withextraqueryparameters?view=azure-dotnet#microsoft-identity-client-abstractacquiretokenparameterbuilder-1-withextraqueryparameters(system-string))
+Details [here](https://docs.microsoft.com/dotnet/api/microsoft.identity.client.abstractacquiretokenparameterbuilder-1.withextraqueryparameters?view=azure-dotnet#microsoft-identity-client-abstractacquiretokenparameterbuilder-1-withextraqueryparameters(system-string))
 
 ## Desktop / Mobile Apps - ICustomWebUi
 
 Allows desktop and mobile apps to use their own browser instead of the embedded / system browsers provided by MSAL.
 
-Details [here](https://docs.microsoft.com/en-us/dotnet/api/microsoft.identity.client.extensibility.icustomwebui?view=azure-dotnet)
+Details [here](https://docs.microsoft.com/dotnet/api/microsoft.identity.client.extensibility.icustomwebui?view=azure-dotnet)
 

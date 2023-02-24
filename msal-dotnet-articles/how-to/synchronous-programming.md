@@ -5,7 +5,7 @@ MSAL.NET is based on Task-based Asynchronous Pattern (TAP). This page provides l
 
 ## Asynchronous programming
 If you are not familiar with asynchronous programming, this article will get you familiarized with it:
-[Asynchronous programming with async and await](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/).
+[Asynchronous programming with async and await](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/async/).
 
 You can check for courses on LinkedIn:
 [Advanced Programming in C#](https://www.linkedin.com/learning/async-programming-in-c-sharp/introduction?u=3322).
@@ -13,7 +13,7 @@ You can check for courses on LinkedIn:
 ## Calling Asynchronous methods from Synchronous code
 There are several ways to run asynchronous code from a synchronous code. Various links are listed here.
 
-[Task.RunSynchronously](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task.runsynchronously?view=net-5.0)
+[Task.RunSynchronously](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task.runsynchronously?view=net-5.0)
 ```CSharp
 var getAcctsTasks = PCA.RemoveAsync(acct);
 // there is no timeout for RunSynchronously
@@ -23,21 +23,21 @@ if (!getAcctsTasks.IsCompleted)
 }
 ```
 
-[Wait for a task to complete with Task.Wait](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task.wait?view=net-5.0)
+[Wait for a task to complete with Task.Wait](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task.wait?view=net-5.0)
 ```CSharp
 // wait can optionally have timeout, and cancellation token (not shown)
 int timeoutMilliSec = 3000;
 PCA.RemoveAsync(acct).Wait(timeoutMilliSec);
 ```
 
-[Wait to get result with Task.Result](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1.result?view=net-5.0#remarks)
+[Wait to get result with Task.Result](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1.result?view=net-5.0#remarks)
 ```CSharp
 var authResult = PCA.AcquireTokenSilent(Scopes, acct).ExecuteAsync().Result;
 return authResult;
 ```
 
 If you need to run multiple tasks at a time prior to wrapping them, it may be useful to take a look at 
-[Consuming the Task-based Asynchronous Pattern](https://docs.microsoft.com/en-us/dotnet/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern).
+[Consuming the Task-based Asynchronous Pattern](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern).
 
 ## Watch out for exceptions and deadlocks
 Here is how to catch exceptions and prevent deadlocks with `.ConfigureAwait(false)`.

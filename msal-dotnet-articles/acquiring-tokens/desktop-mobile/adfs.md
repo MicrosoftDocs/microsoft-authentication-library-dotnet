@@ -22,13 +22,13 @@ Supported ADFS versions in this federated scenario are ADFS v2 , ADFS v3 (Window
 
 ### Acquiring a token using `AcquireTokenByIntegratedAuthentication` or `AcquireTokenByUsernamePassword`
 
-In that case, from the username, MSAL.NET goes to Azure Active Directory (userrealm endpoint) passing the username, and it gets information about the IdP to contact. It does, passing the username (and the password in the case of AcquireTokenByUsernamePassword) and receives a [SAML 1.1 token](https://docs.microsoft.com/en-us/azure/active-directory/develop/reference-saml-tokens), which it provides to Azure Active Directory as a user assertion (similar to the [on-behalf-of](https://aka.ms/msal-net-on-behalf-of) flow) to get back a JWT.
+In that case, from the username, MSAL.NET goes to Azure Active Directory (userrealm endpoint) passing the username, and it gets information about the IdP to contact. It does, passing the username (and the password in the case of AcquireTokenByUsernamePassword) and receives a [SAML 1.1 token](https://docs.microsoft.com/azure/active-directory/develop/reference-saml-tokens), which it provides to Azure Active Directory as a user assertion (similar to the [on-behalf-of](https://aka.ms/msal-net-on-behalf-of) flow) to get back a JWT.
 
 ## Case where MSAL connects directly to ADFS
 
 In that case the authority you'll want to use to build your application is something like `https://somesite.contoso.com/adfs/`
  
-MSAL.NET supports ADFS 2019 (PR is [ADFS Compatibility with MSAL #834](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/pull/834)), which understands PKCE and scopes, after a service pack [KB 4490481](https://support.microsoft.com/en-us/help/4490481/windows-10-update-kb4490481) is applied to Windows Server
+MSAL.NET supports ADFS 2019 (PR is [ADFS Compatibility with MSAL #834](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/pull/834)), which understands PKCE and scopes, after a service pack [KB 4490481](https://support.microsoft.com/help/4490481/windows-10-update-kb4490481) is applied to Windows Server
 
 However for MSAL.NET we have no plans to support, a direct connection to ADFS 2016 (it does not support PKCE and still uses resources, not scope). If you need to support today scenarios requiring a direct connection to ADFS 2016, please use the latest version of ADAL. When you have upgraded your on-premise system to ADFS 2019, you'll be able to use MSAL.NET.
 
@@ -36,5 +36,5 @@ MSAL does not support Integrated Windows Authentication (by calling AcquireToken
 
 ## See also
 
-- [Troubleshooting IWA/ADFS Setup](https://docs.microsoft.com/en-us/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-iwa)
-- For the federated case, see [Configure Azure Active Directory sign in behavior for an application by using a Home Realm Discovery policy](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/configure-authentication-for-federated-users-portal)
+- [Troubleshooting IWA/ADFS Setup](https://docs.microsoft.com/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-iwa)
+- For the federated case, see [Configure Azure Active Directory sign in behavior for an application by using a Home Realm Discovery policy](https://docs.microsoft.com/azure/active-directory/manage-apps/configure-authentication-for-federated-users-portal)

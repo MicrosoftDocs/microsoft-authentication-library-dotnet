@@ -23,14 +23,14 @@ public async Task<AuthenticationResult> GetTokenAsync()
                                                     .WithClientSecret(ClientSecret)
                                                     .WithHttpClientFactory(
         // consider using a higly scalable HttpClient, the default one is not great.
-        // See https://learn.microsoft.com/en-us/dotnet/fundamentals/networking/http/httpclient-guidelines#recommended-use 
+        // See https://learn.microsoft.com/dotnet/fundamentals/networking/http/httpclient-guidelines#recommended-use 
         httpClientFactory: null,
 
         // Disable MSAL's internal simple retry policy
         retryOnceOn5xx: false)
         .Build();
     
-    // For caching see https://learn.microsoft.com/en-us/azure/active-directory/develop/msal-net-token-cache-serialization?tabs=aspnet#in-memory-token-cache-1
+    // For caching see https://learn.microsoft.com/azure/active-directory/develop/msal-net-token-cache-serialization?tabs=aspnet#in-memory-token-cache-1
     app.AddInMemoryCache(); 
 
     AsyncRetryPolicy retryPolicy = GetMsalRetryPolicy();
@@ -113,7 +113,7 @@ private static TimeSpan GetRetryAfterValue(HttpResponseHeaders headers)
 The example above shows how to introduce a retry policy at MSAL level, since MSAL transforms HTTP errors 5xx into MSAL specific exceptions.
 It is also possible, to use an HTTP level retry policy, which can be introduced directly via the HttpClient.
 
-Both possibilities are valid, with a slight preference for library-level retry policy. The reason for this is that we are trying to classify more exceptions as retry-able, for example AAD error AADSTS50087 (see [AAD error codes](https://learn.microsoft.com/en-us/azure/active-directory/develop/reference-aadsts-error-codes#aadsts-error-codes) for full list). Tracking [work item](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/issues/3649).
+Both possibilities are valid, with a slight preference for library-level retry policy. The reason for this is that we are trying to classify more exceptions as retry-able, for example AAD error AADSTS50087 (see [AAD error codes](https://learn.microsoft.com/azure/active-directory/develop/reference-aadsts-error-codes#aadsts-error-codes) for full list). Tracking [work item](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/issues/3649).
 
 ## Fallback instead of retry
 
@@ -124,6 +124,6 @@ Client applications do not need to do anything to benefit from these measures.
 
 ## What is the Retry-After header?
 
-When the Security Token Service (STS) is too busy or having problems, it returns an HTTP error [429](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429). It may also return other HTTP error codes, such as 503. Alongside the response it will add a [Retry-After header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Retry-After), which indicates that the client should wait before calling again. The wait delay is in seconds, as per spec. 
+When the Security Token Service (STS) is too busy or having problems, it returns an HTTP error [429](https://developer.mozilla.org/docs/Web/HTTP/Status/429). It may also return other HTTP error codes, such as 503. Alongside the response it will add a [Retry-After header](https://developer.mozilla.org/docs/Web/HTTP/Headers/Retry-After), which indicates that the client should wait before calling again. The wait delay is in seconds, as per spec. 
 
 `MsalServiceException` surfaces `System.Net.Http.Headers.HttpResponseHeaders` as a property named `Headers`. You can therefore leverage additional information to the Error code to improve the reliability of your applications. In the case we just described, you can use the `RetryAfter` property (of type `RetryConditionHeaderValue`) and compute when to retry.

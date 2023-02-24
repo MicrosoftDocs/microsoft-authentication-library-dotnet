@@ -132,7 +132,7 @@ private async Task<AuthenticationResult> AcquireByDeviceCodeAsync(IPublicClientA
     {
         // If you use a CancellationToken, and call the Cancel() method on it, then this *may* be triggered
         // to indicate that the operation was cancelled. 
-        // See https://docs.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads 
+        // See https://docs.microsoft.com/dotnet/standard/threading/cancellation-in-managed-threads 
         // for more detailed information on how C# supports cancellation in managed threads.
     }
     catch (MsalClientException ex)
@@ -156,5 +156,5 @@ In case you want to learn more about Device code flow:
 - How this was done with the V1 endpoint: [Device code flow in ADAL.NET](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet/wiki/Device-profile-for-devices-without-web-browsers)
 
 <!-- 
-- [2.0 Protocols - OAuth 2.0 device code flow](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-device-code-flow) to come
+- [2.0 Protocols - OAuth 2.0 device code flow](https://docs.microsoft.com/azure/active-directory/develop/v2-oauth2-device-code-flow) to come
 -->

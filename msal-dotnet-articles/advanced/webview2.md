@@ -6,7 +6,7 @@ A modern embedded browser based on Microsoft Edge, capable of performing Windows
 
 - All Windows versions
 - MSAL version 4.28.0 and higher
-- [WebView2 runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2/) must be installed on the machine 
+- [WebView2 runtime](https://developer.microsoft.com/microsoft-edge/webview2/) must be installed on the machine 
 
 ## Evergreen runtime
 WebView2 runtime is available on most Windows 10 and Windows 11 machines by default. But it may not be available on older platforms.

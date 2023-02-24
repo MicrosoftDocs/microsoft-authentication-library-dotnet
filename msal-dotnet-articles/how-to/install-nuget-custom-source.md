@@ -14,6 +14,6 @@ Easiest is to use local folder as a nuget source - see details in this [SO post]
 
 ## Check the signatures
 
-You should check that a package is signed, in this case MSAL has to be signed by Microsoft. NuGet will display this, and you can always check a package with [this amazing tool](https://www.microsoft.com/en-us/p/nuget-package-explorer/9wzdncrdmdm3?activetab=pivot%3Aoverviewtab). Microsoft will always sign both packages and DLLs inside packages, even for non-official releases. 
+You should check that a package is signed, in this case MSAL has to be signed by Microsoft. NuGet will display this, and you can always check a package with [this amazing tool](https://www.microsoft.com/p/nuget-package-explorer/9wzdncrdmdm3?activetab=pivot%3Aoverviewtab). Microsoft will always sign both packages and DLLs inside packages, even for non-official releases. 
 
 

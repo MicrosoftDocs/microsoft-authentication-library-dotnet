@@ -255,7 +255,7 @@ static async Task GetATokenForGraph()
 
 ## Protocol documentation
 
-See [Azure Active Directory v2.0 and the OAuth 2.0 resource owner password credential](https://review.docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth-ropc) to learn more about the underlying protocol
+See [Azure Active Directory v2.0 and the OAuth 2.0 resource owner password credential](https://review.docs.microsoft.com/azure/active-directory/develop/v2-oauth-ropc) to learn more about the underlying protocol
 
 ## Sample illustrating acquiring tokens through Username/Password with MSAL.NET
 

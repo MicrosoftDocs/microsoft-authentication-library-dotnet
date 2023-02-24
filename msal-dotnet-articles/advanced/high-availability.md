@@ -74,14 +74,14 @@ By default, Azure AD issues access tokens with 1 hour expiration. If an Azure AD
 
 To improve availability MSAL tries to ensure than an app always has fresh unexpired tokens. AAD outages rarely take more than a few hours, so if MSAL can guarantee that a token always has at least a few hours of availability left, the application will not be impacted by the AAD outage. 
 
-To get long lived tokens, you must configure your tenant (note: internal Microsoft tenants are already configured). For client_credentials (service 2 service), this is enough. For user credentials, you must also configure CAE - https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/concept-continuous-access-evaluation.
+To get long lived tokens, you must configure your tenant (note: internal Microsoft tenants are already configured). For client_credentials (service 2 service), this is enough. For user credentials, you must also configure CAE - https://docs.microsoft.com/azure/active-directory/conditional-access/concept-continuous-access-evaluation.
 
 When Azure AD returns a long lived token, it includes a `refresh_in` field. It is generally set to half the expiration of the access token.
 ![image](https://user-images.githubusercontent.com/12273384/108714872-05acbd80-7512-11eb-855d-a42b6ff01b0c.png)
 
 Note: From MSAL 4.37.0 and above, you can observe this value by inspecting the `AuthenticationResult.AuthenticationResultMetadata.RefreshOn`.
 
-Additionally, you can configure a token lifetime of more than the default 1 hour, as described [here](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-configurable-token-lifetimes.
+Additionally, you can configure a token lifetime of more than the default 1 hour, as described [here](https://docs.microsoft.com/azure/active-directory/develop/active-directory-configurable-token-lifetimes.
 
 Whenever you make **requests for the same token**, i.e. whenever MSAL is able to serve a token from its cache, then MSAL will automatically check the `refresh_in` value. If it has elapsed, MSAL will issue a token request to AAD in the background, but will return the existing, valid token to the application. In the unlikely event that the background refresh fails (e.g. AAD outage), the app is not affected.
 

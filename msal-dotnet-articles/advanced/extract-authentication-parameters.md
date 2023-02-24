@@ -86,7 +86,7 @@ For the first scenario, you just call `WwwAuthenticateParameters.CreateFromResou
      .WithAuthority(parameters.Authority)     
      .Build();
 
-   // Token Caching explained at: https://docs.microsoft.com/en-us/azure/active-directory/develop/msal-net-token-cache-serialization
+   // Token Caching explained at: https://docs.microsoft.com/azure/active-directory/develop/msal-net-token-cache-serialization
    app.AppTokenCache.SetCacheOptions(CacheOptions.EnableSharedCacheOptions);
 
    AuthenticationResult result = await app.AcquireTokenForClient(new[] {"you_should_know_the_scope_in_advance")

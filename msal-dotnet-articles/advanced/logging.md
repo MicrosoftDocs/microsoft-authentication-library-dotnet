@@ -37,7 +37,7 @@ This interface enables you to dynamically change the behavior of the logger with
 
 #### Log level from configuration file
 
-It's highly recommended to configure your code to use a configuration file in your environment to set the log level as it will enable your code to change the MSAL logging level without needing to rebuild or restart the application. This is critical for diagnostic purposes, enabling us to quickly gather the required logs from the application that is currently deployed and in production. Verbose logging can be costly so it's best to use the *Information* level by default and enable verbose logging when an issue is encountered. [See JSON configuration provider](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-7.0#json-configuration-provider) for an example on how to load data from a configuration file without restarting the application.
+It's highly recommended to configure your code to use a configuration file in your environment to set the log level as it will enable your code to change the MSAL logging level without needing to rebuild or restart the application. This is critical for diagnostic purposes, enabling us to quickly gather the required logs from the application that is currently deployed and in production. Verbose logging can be costly so it's best to use the *Information* level by default and enable verbose logging when an issue is encountered. [See JSON configuration provider](https://learn.microsoft.com/aspnet/core/fundamentals/configuration/?view=aspnetcore-7.0#json-configuration-provider) for an example on how to load data from a configuration file without restarting the application.
 
 #### Log Level as Environment Variable
 
@@ -122,7 +122,7 @@ Example of logs - [logs with PII](files/example_logging_pii.txt) and [logs witho
 ## Logging in a distributed token cache
 If you use Microsoft.Identity.Web's token cache serializers in .NET Framework or .NET Core, you can still benefit from detailed token cache logs.
 
-To enable detailed logging for Microsoft.Identity.Web's token cache serializers in .NET Framework or .NET Core, set the [LoggerFilterOptions.MinLevel](https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.logging.loggerfilteroptions.minlevel?view=dotnet-plat-ext-7.0#microsoft-extensions-logging-loggerfilteroptions-minlevel) property to [LogLevel.Debug](https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.logging.loglevel?view=dotnet-plat-ext-7.0):
+To enable detailed logging for Microsoft.Identity.Web's token cache serializers in .NET Framework or .NET Core, set the [LoggerFilterOptions.MinLevel](https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.loggerfilteroptions.minlevel?view=dotnet-plat-ext-7.0#microsoft-extensions-logging-loggerfilteroptions-minlevel) property to [LogLevel.Debug](https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.loglevel?view=dotnet-plat-ext-7.0):
 
 ```csharp
 // more code here
@@ -135,7 +135,7 @@ To enable detailed logging for Microsoft.Identity.Web's token cache serializers 
 // more code here
 ```
 
-See more sample code using Microsoft Identity Web token cache serializers in the [ConfidentialClientTokenCache sample](https://github.com/Azure-Samples/active-directory-dotnet-v1-to-v2/blob/master/ConfidentialClientTokenCache/Program.cs). Also see [Implement a custom logging provider](https://learn.microsoft.com/en-us/dotnet/core/extensions/custom-logging-provider) for more details.
+See more sample code using Microsoft Identity Web token cache serializers in the [ConfidentialClientTokenCache sample](https://github.com/Azure-Samples/active-directory-dotnet-v1-to-v2/blob/master/ConfidentialClientTokenCache/Program.cs). Also see [Implement a custom logging provider](https://learn.microsoft.com/dotnet/core/extensions/custom-logging-provider) for more details.
 
 ## Network traces
 

@@ -6,4 +6,4 @@ For apps when using a long Facebook Id observed to be 33 characters or more for 
 To mitigate please use `.WithUseEmbeddedWebView(false)` and refer to https://aka.ms/msal-net-os-browser.
 
 # References
-* https://support.microsoft.com/en-us/help/208427/maximum-url-length-is-2-083-characters-in-internet-explorer
+* https://support.microsoft.com/help/208427/maximum-url-length-is-2-083-characters-in-internet-explorer

@@ -36,7 +36,7 @@ A workaround is to make sure that WAB (the underlying Windows component) allows 
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\authhost.exe\EnablePrivateNetwork = 00000001
 ```
 
-For details see See https://docs.microsoft.com/en-us/windows/uwp/security/web-authentication-broker#fiddler
+For details see See https://docs.microsoft.com/windows/uwp/security/web-authentication-broker#fiddler
 
 
 ## Sample illustrating UWP specific properties

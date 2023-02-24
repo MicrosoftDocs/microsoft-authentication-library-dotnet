@@ -49,7 +49,7 @@ For native clients, there are several approaches to testing:
 
 ### Xamarin Apps
 
-The MSAL team are currently running tests on a Xamarin app that uses MSAL.net; We are using [App Center](https://appcenter.ms/apps) to manage devices, test runs etc. The test framework is [Xamarin.UITest](https://docs.microsoft.com/en-us/appcenter/test-cloud/uitest/). A limitation that we have found is that we are unable to test system browsers, only embedded browsers. 
+The MSAL team are currently running tests on a Xamarin app that uses MSAL.net; We are using [App Center](https://appcenter.ms/apps) to manage devices, test runs etc. The test framework is [Xamarin.UITest](https://docs.microsoft.com/appcenter/test-cloud/uitest/). A limitation that we have found is that we are unable to test system browsers, only embedded browsers. 
 
 ## Feedback 
 

@@ -17,7 +17,7 @@ The new MSAL WAM Preview is an abstraction layer based on MSAL C++ which fixes a
 - instead of `.WithBroker()`, call `.WithBrokerPreview()`.
 
 > **Note:** The old WAM experience is documented at [Acquire a token using WAM
-](https://docs.microsoft.com/en-us/azure/active-directory/develop/scenario-desktop-acquire-token-wam) and showcases details about redirect URI, fallback experience on older Windows, Mac and Linux, etc. which remain valid.
+](https://docs.microsoft.com/azure/active-directory/develop/scenario-desktop-acquire-token-wam) and showcases details about redirect URI, fallback experience on older Windows, Mac and Linux, etc. which remain valid.
 
 ```csharp
 var pca = PublicClientApplicationBuilder
@@ -124,7 +124,7 @@ The DLL search order is,
 
 - same directory as the app (executing assembly directory)
 - other directories like system and windows
-- `runtimes` folder under the NuGet [global-packages](https://learn.microsoft.com/en-us/nuget/consume-packages/managing-the-global-packages-and-cache-folders) folder where [Microsoft.Identity.Client.NativeInterop](https://www.nuget.org/packages/Microsoft.Identity.Client.NativeInterop) is installed. 
+- `runtimes` folder under the NuGet [global-packages](https://learn.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders) folder where [Microsoft.Identity.Client.NativeInterop](https://www.nuget.org/packages/Microsoft.Identity.Client.NativeInterop) is installed. 
 
 ![image](https://user-images.githubusercontent.com/90415114/193084876-f67638a2-7a10-4b6e-8943-43c851be8687.png)
 
@@ -149,4 +149,4 @@ if (-not (Get-AppxPackage Microsoft.AccountsControl)) { Add-AppxPackage -Registe
 
 ### Connection issues
 
-The application user sees an error message similar to "Please check your connection and try again". If this issue occurs regularly, see the [troubleshooting guide for Office](https://learn.microsoft.com/en-us/microsoft-365/troubleshoot/authentication/connection-issue-when-sign-in-office-2016), which also uses WAM.
+The application user sees an error message similar to "Please check your connection and try again". If this issue occurs regularly, see the [troubleshooting guide for Office](https://learn.microsoft.com/microsoft-365/troubleshoot/authentication/connection-issue-when-sign-in-office-2016), which also uses WAM.

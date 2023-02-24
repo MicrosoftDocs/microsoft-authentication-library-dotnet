@@ -26,13 +26,13 @@ This does not require complex setup and it even works for Personal accounts.
   - or the tenant admin must have previously consented to all users in the tenant to use the application.
   - This means that:
      - either you as a developer have pressed the **Grant** button on the Azure portal for yourself, 
-     - or a tenant admin has pressed the **Grant/revoke admin consent for {tenant domain}** button in the **API permissions** tab of the registration for the application (See [Add permissions to access web APIs](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-configure-app-access-web-apis#add-permissions-to-access-web-apis))
-     - or you have provided a way for users to consent to the application (See [Requesting individual user consent](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-permissions-and-consent#requesting-individual-user-consent))
-     - or you have provided a way for the tenant admin to consent for the application (See [admin consent](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-permissions-and-consent#requesting-consent-for-an-entire-tenant))
+     - or a tenant admin has pressed the **Grant/revoke admin consent for {tenant domain}** button in the **API permissions** tab of the registration for the application (See [Add permissions to access web APIs](https://docs.microsoft.com/azure/active-directory/develop/quickstart-configure-app-access-web-apis#add-permissions-to-access-web-apis))
+     - or you have provided a way for users to consent to the application (See [Requesting individual user consent](https://docs.microsoft.com/azure/active-directory/develop/v2-permissions-and-consent#requesting-individual-user-consent))
+     - or you have provided a way for the tenant admin to consent for the application (See [admin consent](https://docs.microsoft.com/azure/active-directory/develop/v2-permissions-and-consent#requesting-consent-for-an-entire-tenant))
 
 - This flow is enabled for .net desktop, .net core and Windows Universal Apps.
   
-For more details on consent see [v2.0 permissions and consent](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-permissions-and-consent)
+For more details on consent see [v2.0 permissions and consent](https://docs.microsoft.com/azure/active-directory/develop/v2-permissions-and-consent)
 
 ## How to use it?
 
@@ -48,7 +48,7 @@ During the **[App registration](https://go.microsoft.com/fwlink/?linkid=2083908)
 
 `IPublicClientApplication` contains a method called `AcquireTokenByIntegratedWindowsAuth`
 
-[![image](https://user-images.githubusercontent.com/13203188/56017770-94d6d080-5d00-11e9-89f3-f3a7a1d6f2e8.png)](https://docs.microsoft.com/en-us/dotnet/api/microsoft.identity.client.publicclientapplication.acquiretokenbyintegratedwindowsauth?view=azure-dotnet)
+[![image](https://user-images.githubusercontent.com/13203188/56017770-94d6d080-5d00-11e9-89f3-f3a7a1d6f2e8.png)](https://docs.microsoft.com/dotnet/api/microsoft.identity.client.publicclientapplication.acquiretokenbyintegratedwindowsauth?view=azure-dotnet)
 
 ```csharp
 AcquireTokenByIntegratedWindowsAuth(IEnumerable<string> scopes)
@@ -160,4 +160,4 @@ Some of those issues include:
 - Proxy or configuration issues prevent NTLM protocol (usually the case for 401 [Negotiate](https://www.ietf.org/rfc/rfc4559.txt)/NTLM challenge presented by the endpoint for Windows authentication. You may be able to try using your own [HttpClient](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/HttpClient) or changing the current version of .NET to work around this issue).
 - In case the Error Message is "Object reference not set to an instance of an object." [enable MSAL logging](https://aka.ms/msal-net-logging) at Warning level to see more details.
 
-For more information see [AD FS Troubleshooting - Integrated Windows Authentication](https://docs.microsoft.com/en-us/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-iwa)
+For more information see [AD FS Troubleshooting - Integrated Windows Authentication](https://docs.microsoft.com/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-iwa)

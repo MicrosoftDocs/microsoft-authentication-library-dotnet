@@ -8,7 +8,7 @@ If you use ASP.NET Core, you are encouraged to adopt [Microsoft.Indentity.Web](h
 
 MSAL maintains a token cache which grows with each token acquired. MSAL manages token lifetimes in a smart way, so you should use its cache. You have the option of using in-memory caching or distributed caching. 
 
-See https://docs.microsoft.com/en-us/azure/active-directory/develop/msal-net-token-cache-serialization?tabs=aspnet
+See https://docs.microsoft.com/azure/active-directory/develop/msal-net-token-cache-serialization?tabs=aspnet
 
 We recommend using persisted distributed caches (e.g. Redis, Cosmos etc.) for all user flows. 
 We also recommend that multi-tenant service 2 service apps use persisted distributed caches. But you may get away with using a memory cache with evictions if you know that your service needs app tokens for a limited number of tenants. 

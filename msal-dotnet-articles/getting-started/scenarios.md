@@ -33,7 +33,7 @@ To enable this interaction, MSAL.NET leverages a [web browser](MSAL.NET-uses-web
 ![image](https://user-images.githubusercontent.com/13203188/44857487-c2b14e00-ac24-11e8-95bc-55d559c7c17b.png)
 
 ##### Protecting the app itself with Intune
-Your mobile app (written in Xamarin.iOS or Xamarin.Android) can have app protection policies applied to it, so that it can be [managed by Intune](https://docs.microsoft.com/en-gb/intune/app-sdk) and recognized by Intune as a managed app. The [Intune SDK](https://docs.microsoft.com/en-gb/intune/app-sdk-get-started) is separate from MSAL, and it talks to AAD on its own.
+Your mobile app (written in Xamarin.iOS or Xamarin.Android) can have app protection policies applied to it, so that it can be [managed by Intune](https://docs.microsoft.com/intune/app-sdk) and recognized by Intune as a managed app. The [Intune SDK](https://docs.microsoft.com/intune/app-sdk-get-started) is separate from MSAL, and it talks to AAD on its own.
 
 #### Desktop/service daemon application calling Web API in without a user (in its own name)
 
@@ -79,10 +79,10 @@ like in the case of a desktop/service daemon application, a daemon Web API (or a
 In all the scenarios you might want to:
 
 - troubleshoot yourself by activating [logs](logging) or Telemetry
-- understand how to react to [exceptions](exceptions#exceptions-in-msalnet) due to the Azure AD service [MsalServiceException](https://docs.microsoft.com/en-us/dotnet/api/microsoft.identity.client.msalserviceexception?view=azure-dotnet-preview#fields), or to something wrong happening in the client itself [MsalClientException](https://docs.microsoft.com/en-us/dotnet/api/microsoft.identity.client.msalclientexception?view=azure-dotnet-preview#fields)
+- understand how to react to [exceptions](exceptions#exceptions-in-msalnet) due to the Azure AD service [MsalServiceException](https://docs.microsoft.com/dotnet/api/microsoft.identity.client.msalserviceexception?view=azure-dotnet-preview#fields), or to something wrong happening in the client itself [MsalClientException](https://docs.microsoft.com/dotnet/api/microsoft.identity.client.msalclientexception?view=azure-dotnet-preview#fields)
 - use MSAL.NET with a [proxy](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/httpclient)
 
 ### Protecting the app itself with Intune
 
-Your mobile app (written in Xamarin.iOS or Xamarin.Android) can have app protection policies applied to it, so that it can be [managed by Intune](https://docs.microsoft.com/en-gb/intune/app-sdk) and recognized by Intune as a managed app. The [Intune SDK](https://docs.microsoft.com/en-gb/intune/app-sdk-get-started) is separate from MSAL, and it talks to AAD on its own.
+Your mobile app (written in Xamarin.iOS or Xamarin.Android) can have app protection policies applied to it, so that it can be [managed by Intune](https://docs.microsoft.com/intune/app-sdk) and recognized by Intune as a managed app. The [Intune SDK](https://docs.microsoft.com/intune/app-sdk-get-started) is separate from MSAL, and it talks to AAD on its own.
 
