@@ -1,20 +1,21 @@
-**Note:** this feature will be available from MSAL 4.3.2 onward
+# Using SSH certificates with MSAL.NET
+
+>[!NOTE]
+>This feature will be available from MSAL 4.3.2 onward
 
 AAD is capable of issuing SSH certificates instead of bearer tokens. These are not the same as SSH public keys. Currently this is available as an extension method on `AcquireTokenSilent` and `AcquireTokenInteractive`.
 
 ```csharp
-
 var result = await pca
     .AcquireTokenSilent(s_scopes, account)
     .WithSSHCertificateAuthenticationScheme(jwk, "keyID1")
     .ExecuteAsync();
-
 ```
 
-Paramters: 
+Paramters:
 
-- jwk = The public SSH key in JWK format as described at https://tools.ietf.org/html/rfc7517 . Currently only RSA with a minimum key size of 2048 bytes is supported.
-- keyID = Any string that distinguishes between keys (usually hash of the key, but format is not important)
+- `jwk` - The public SSH key in JWK format as described at https://tools.ietf.org/html/rfc7517 . Currently only RSA with a minimum key size of 2048 bytes is supported.
+- `keyID` - Any string that distinguishes between keys (usually hash of the key, but format is not important)
 
 Example creating a JWK
 

@@ -1,4 +1,5 @@
-## Proof of Possession Confidential Clients
+# Proof of Possession (PoP) Tokens
+
 Bearer tokens are the norm in modern identity flows, however they are vulnerable to being stolen and used to access a protected resource. 
 
 Proof of Possession (PoP) tokens mitigate this threat via 2 mechanisms: 

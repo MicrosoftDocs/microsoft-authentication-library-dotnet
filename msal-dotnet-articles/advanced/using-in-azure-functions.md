@@ -1,4 +1,6 @@
-When using MSAL.NET in Azure functions, it can happen that libraries are not copied to the directory.
+# Using MSAL.NET with Azure Functions
+
+When using MSAL.NET in Azure Functions, it can happen that libraries are not copied to the directory.
 
 You can add `<_FunctionsSkipCleanOutput>true</_FunctionsSkipCleanOutput>` to your .csproj file to prevent that.
 

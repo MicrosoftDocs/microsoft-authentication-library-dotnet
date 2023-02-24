@@ -1,14 +1,16 @@
-### Follow the decision tree to see if MSAL.NET alone is enough, or if you need [Microsoft Identity Web](https://github.com/AzureAD/microsoft-identity-web), or both.
+# Choosing a version of MSAL.NET
+
+Follow the decision tree to see if MSAL.NET alone is enough, or if you need [Microsoft Identity Web](https://github.com/AzureAD/microsoft-identity-web), or both.
 
 ![image](https://user-images.githubusercontent.com/19942418/110971276-83910700-830f-11eb-8c89-35bf10291ef3.png)
 
-# Use MSAL.NET
+## Use MSAL.NET
 
 You're building a desktop or mobile app. Use MSAL.NET directly and start acquiring tokens for your public client application. For details see:
 - [Acquiring token in a desktop app](https://docs.microsoft.com/azure/active-directory/develop/scenario-desktop-acquire-token?tabs=dotnet), and using [WAM](wam)
 - [Acquiring token in a mobile application](https://docs.microsoft.com/azure/active-directory/develop/scenario-mobile-acquire-token)
 
-# Use **hybrid model** MSAL.NET and [Microsoft Identity Web](https://github.com/AzureAD/microsoft-identity-web/)
+## Use **hybrid model** MSAL.NET and [Microsoft Identity Web](https://github.com/AzureAD/microsoft-identity-web/)
 
 You're building a web app or a web API, or a daemon application (a confidential client application) running on .NET Framework or pure .NET Core (not ASP.NET Core). In MSAL.NET, an in-memory token cache is provided by default, however, in the case of web apps or web APIs, caching should be handled differently than for public client applications (desktop or mobile apps) as it requires to be partitioned correctly. It's highly recommended to leverage a token cache serializer, which can be a distributed cache, (e.g. Redis, Cosmos, or SQL Server, distributed in memory cache), or a correctly partitioned in memory cache.
 
@@ -26,12 +28,11 @@ Examples of how to use token caches for web apps and web APIs are available in t
 
 Microsoft Identity Web also helps with [certificate loading](https://github.com/AzureAD/microsoft-identity-web/wiki/asp-net#help-loading-certificates). 
 
-# Use [Microsoft Identity Web](https://github.com/AzureAD/microsoft-identity-web/)
+## Use [Microsoft Identity Web](https://github.com/AzureAD/microsoft-identity-web/)
 
 I'm using ASP.NET Core. See what Microsoft Identity Web has to offer:
 
 ![image](https://user-images.githubusercontent.com/19942418/125811549-88eedf0f-81ab-456e-9503-3393a5ba0306.png)
-
 
 ### I'm building a new application
 
