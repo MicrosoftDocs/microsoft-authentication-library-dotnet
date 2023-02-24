@@ -50,7 +50,7 @@ To remediate, call an AcquireToken* method that prompts the user, for example `A
 
 ### Continous Access Evaluation
 
-See https://learn.microsoft.com/azure/active-directory/develop/app-resilience-continuous-access-evaluation?tabs=dotnet
+See /azure/active-directory/develop/app-resilience-continuous-access-evaluation?tabs=dotnet
 
 ### Handling Claim challenge exceptions in MSAL.NET
 

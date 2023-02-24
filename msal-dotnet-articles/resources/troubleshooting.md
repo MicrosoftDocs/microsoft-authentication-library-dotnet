@@ -1,3 +1,5 @@
+# Troubleshooting MSAL.NET
+
 For issues using WAM, see https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/wam
 
 ## JavaScript errors in the embedded browser

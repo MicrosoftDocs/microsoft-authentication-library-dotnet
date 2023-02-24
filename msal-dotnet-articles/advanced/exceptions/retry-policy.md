@@ -23,14 +23,14 @@ public async Task<AuthenticationResult> GetTokenAsync()
                                                     .WithClientSecret(ClientSecret)
                                                     .WithHttpClientFactory(
         // consider using a higly scalable HttpClient, the default one is not great.
-        // See https://learn.microsoft.com/dotnet/fundamentals/networking/http/httpclient-guidelines#recommended-use 
+        // See /dotnet/fundamentals/networking/http/httpclient-guidelines#recommended-use 
         httpClientFactory: null,
 
         // Disable MSAL's internal simple retry policy
         retryOnceOn5xx: false)
         .Build();
     
-    // For caching see https://learn.microsoft.com/azure/active-directory/develop/msal-net-token-cache-serialization?tabs=aspnet#in-memory-token-cache-1
+    // For caching see /azure/active-directory/develop/msal-net-token-cache-serialization?tabs=aspnet#in-memory-token-cache-1
     app.AddInMemoryCache(); 
 
     AsyncRetryPolicy retryPolicy = GetMsalRetryPolicy();
@@ -113,7 +113,7 @@ private static TimeSpan GetRetryAfterValue(HttpResponseHeaders headers)
 The example above shows how to introduce a retry policy at MSAL level, since MSAL transforms HTTP errors 5xx into MSAL specific exceptions.
 It is also possible, to use an HTTP level retry policy, which can be introduced directly via the HttpClient.
 
-Both possibilities are valid, with a slight preference for library-level retry policy. The reason for this is that we are trying to classify more exceptions as retry-able, for example AAD error AADSTS50087 (see [AAD error codes](https://learn.microsoft.com/azure/active-directory/develop/reference-aadsts-error-codes#aadsts-error-codes) for full list). Tracking [work item](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/issues/3649).
+Both possibilities are valid, with a slight preference for library-level retry policy. The reason for this is that we are trying to classify more exceptions as retry-able, for example AAD error AADSTS50087 (see [AAD error codes](/azure/active-directory/develop/reference-aadsts-error-codes#aadsts-error-codes) for full list). Tracking [work item](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/issues/3649).
 
 ## Fallback instead of retry
 

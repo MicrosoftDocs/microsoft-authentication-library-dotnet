@@ -35,7 +35,7 @@ MSAL exposes token acquisition metrics as part of [AuthenticationResult.Authenti
 **Meaning**: Time spent loading or saving the token cache, which is customized by the app developer (for example, save to Redis).
 **Suggestion**: Alarm on spikes.
 
-Note: To understand how to customize token caching, see https://learn.microsoft.com/azure/active-directory/develop/msal-net-token-cache-serialization?tabs=aspnet
+Note: To understand how to customize token caching, see /azure/active-directory/develop/msal-net-token-cache-serialization?tabs=aspnet
 
 ## DurationInHttpInMs
 

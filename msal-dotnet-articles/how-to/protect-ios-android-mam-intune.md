@@ -1,6 +1,6 @@
 # Scenario
 There are scenarios when just user authentication may not be sufficient to protect certain resources. The device that accesses it should also be compliant as per policies defined in Intune.  
-Azure Active Directory (AAD) ensures that the access token is not issued till the device is compliant as per the conditional access policy. This page explains how a resource can be reached by MSAL.NET while being protected by Intune [Mobile Application Management (MAM)](https://learn.microsoft.com/mem/intune/fundamentals/deployment-guide-enrollment-mamwe).
+Azure Active Directory (AAD) ensures that the access token is not issued till the device is compliant as per the conditional access policy. This page explains how a resource can be reached by MSAL.NET while being protected by Intune [Mobile Application Management (MAM)](/mem/intune/fundamentals/deployment-guide-enrollment-mamwe).
 
 # Overview of the system configuration
 The system comprises of two apps: a backend app that provides access to a hosted resource and a client App that needs to access the resource.The resource is defined by scope. When the client app needs the resource, it will request access to the scope.  

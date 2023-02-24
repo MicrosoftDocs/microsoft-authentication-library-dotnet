@@ -49,7 +49,7 @@ It also adds value by:
 
 MSAL.NET is used to acquire tokens. It's not used to protect a Web API. If you are interested in protecting a Web API with Azure AD, you might want to check out:
 
-- [Azure Active Directory with ASP.NET Core](https://learn.microsoft.com/aspnet/core/security/authentication/azure-active-directory/). Note that some of these examples present Web Apps which also call a Web API with ADAL.NET or MSAL.NET.
+- [Azure Active Directory with ASP.NET Core](/aspnet/core/security/authentication/azure-active-directory/). Note that some of these examples present Web Apps which also call a Web API with ADAL.NET or MSAL.NET.
 - [active-directory-dotnet-native-aspnetcore-v2](https://github.com/azure-samples/active-directory-dotnet-native-aspnetcore-v2) which demoes calling a ASP.NET Core Web API from a WPF application using Azure AD V2
 - The [IdentityModel extensions for .Net](https://github.com/AzureAD/azure-activedirectory-identitymodel-extensions-for-dotnet) open source library providing middleware used by ASP.NET and ASP.NET Core to protect APIs
 
@@ -59,7 +59,7 @@ MSAL.NET is used to acquire tokens. It's not used to protect a Web API. If you a
 
 1. Learn about [authentication scenarios](scenarios) and [why use MSAL.NET](getting-started/overview.md).
 1. You will need to [Register your app](getting-started/register-your-application.md) with Azure Active Directory.
-1. Learn about the [types of client Applications](https://learn.microsoft.com/azure/active-directory/develop/msal-client-applications): public client and confidential client.
+1. Learn about the [types of client Applications](/azure/active-directory/develop/msal-client-applications): public client and confidential client.
 1. Learn about [Acquiring Tokens](acquiring-tokens/overview.md) to access a protected API.
 
 ### Acquiring Tokens
@@ -86,7 +86,7 @@ MSAL.NET is used to acquire tokens. It's not used to protect a Web API. If you a
   - [Retry policy](advanced/exceptions/retry-policy.md)
 - How to customize the [token cache serialization](advanced/token-cache-serialization.md)
 - How to enable [diagnostics and logging](advanced/logging.md) in MSAL.NET apps.
-- [Differences between ADAL.NET and MSAL.NET apps](https://learn.microsoft.com/azure/active-directory/develop/msal-net-migration) and how to migrate and ADAL.NET app to MSAL.NET.
+- [Differences between ADAL.NET and MSAL.NET apps](/azure/active-directory/develop/msal-net-migration) and how to migrate and ADAL.NET app to MSAL.NET.
 
 #### Confidential client availability
 
@@ -157,9 +157,9 @@ For previous, or intermediate releases, see [releases](https://github.com/AzureA
 
 ## Samples
 
-See [our comprehensive sample list](https://learn.microsoft.com/azure/active-directory/develop/active-directory-v2-code-samples).
+See [our comprehensive sample list](/azure/active-directory/develop/active-directory-v2-code-samples).
 
 ## FAQ
 
 - How MSAL.NET uses [web browsers](how-to/usage-of-web-browsers.md) for interactive authentication.
-- If you have issues with Xamarin.Forms applications leveraging MSAL.NET please read [Troubleshooting-Xamarin.Android-issues-with-MSAL](https://learn.microsoft.com/azure/active-directory/develop/msal-net-xamarin-android-considerations).
+- If you have issues with Xamarin.Forms applications leveraging MSAL.NET please read [Troubleshooting-Xamarin.Android-issues-with-MSAL](/azure/active-directory/develop/msal-net-xamarin-android-considerations).

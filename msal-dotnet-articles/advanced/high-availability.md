@@ -58,7 +58,7 @@ In web app and web API scenarios, it is recommended to use a new `ConfidentialCl
 
 **Default behaviour**: MSAL's creating HttpClient does not scale well for web sites / web API where we recommend to have a `ClientApplication` object for each user session.
 
-**Recommendation**: Provide your own scalable HttpClientFactory. On .NET Core we recommend that you inject the [System.Net.Http.IHttpClientFactory](/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.0). This is described in more detail [here](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/HttpClient) and in the [official docs](https://learn.microsoft.com/dotnet/api/system.net.http.httpclient?view=net-7.0#net-framework--mono)
+**Recommendation**: Provide your own scalable HttpClientFactory. On .NET Core we recommend that you inject the [System.Net.Http.IHttpClientFactory](/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.0). This is described in more detail [here](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/HttpClient) and in the [official docs](/dotnet/api/system.net.http.httpclient?view=net-7.0#net-framework--mono)
 
 ## Proactive Token renewal
 
