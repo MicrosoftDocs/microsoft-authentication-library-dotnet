@@ -10,7 +10,7 @@ Exceptions in MSAL.NET are intended for app developers to troubleshoot and not f
 |-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | MsalException           | Base class for MSAL exceptions.                                                                                                                                                                                |
 | MsalClientException     | Errors which occur in the library itself, for example an incomplete configuration.                                                                                                                             |
-| MsalServiceException    | Represents errors transmitted by the token provider (AAD). See [AAD errors](https://docs.microsoft.com/azure/active-directory/develop/reference-aadsts-error-codes#handling-error-codes-in-your-application). Servince unavialble errors (e.g. HTTP 500), indicating a problem with the service, have the error code `service_not_available` |
+| MsalServiceException    | Represents errors transmitted by the token provider (AAD). See [AAD errors](/azure/active-directory/develop/reference-aadsts-error-codes#handling-error-codes-in-your-application). Servince unavialble errors (e.g. HTTP 500), indicating a problem with the service, have the error code `service_not_available` |
 | MsalUiRequiredException | Special AAD error which indicates that the user must interactively login.                                                                                                                                      |
 
 No other exception is caught by MSAL. Any network issues, cancellations etc. are bubbled up to the application.
@@ -33,11 +33,11 @@ See also [Simple retry for errors with HTTP error codes 500-600](retry-after#sim
 
 ### Exception types
 
-When processing exceptions, you can use the exception type itself and the `ErrorCode` member to distinguish between exceptions. The values of `ErrorCode` are constants of [MsalError](https://docs.microsoft.com/dotnet/api/microsoft.identity.client.msalerror?view=azure-dotnet#fields)
+When processing exceptions, you can use the exception type itself and the `ErrorCode` member to distinguish between exceptions. The values of `ErrorCode` are constants of [MsalError](/dotnet/api/microsoft.identity.client.msalerror?view=azure-dotnet#fields)
 
-You can also have a look at the fields of [MsalClientException](https://docs.microsoft.com/dotnet/api/microsoft.identity.client.msalexception?view=azure-dotnet#fields), [MsalServiceException](https://docs.microsoft.com/dotnet/api/microsoft.identity.client.msalserviceexception?view=azure-dotnet#fields), [MsalUIRequiredException](https://docs.microsoft.com/dotnet/api/microsoft.identity.client.msaluirequiredexception?view=azure-dotnet#fields)
+You can also have a look at the fields of [MsalClientException](/dotnet/api/microsoft.identity.client.msalexception?view=azure-dotnet#fields), [MsalServiceException](/dotnet/api/microsoft.identity.client.msalserviceexception?view=azure-dotnet#fields), [MsalUIRequiredException](/dotnet/api/microsoft.identity.client.msaluirequiredexception?view=azure-dotnet#fields)
 
-In the case of `MsalServiceException`, the error code might contain a code which you can find in [Authentication and authorization error codes](https://docs.microsoft.com/azure/active-directory/develop/reference-aadsts-error-codes)
+In the case of `MsalServiceException`, the error code might contain a code which you can find in [Authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes)
 
 #### MsalUiRequiredException
 

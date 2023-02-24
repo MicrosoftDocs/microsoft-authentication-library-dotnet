@@ -4,16 +4,16 @@ MSAL.NET ([Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.I
 
 ## Why use MSAL.NET ?
 
-MSAL.NET ([Microsoft Authentication Library for .NET](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet)) enables developers of .NET applications to **acquire [tokens](https://docs.microsoft.com/azure/active-directory/develop/active-directory-dev-glossary#security-token) in order to call secured Web APIs**. These Web APIs can be the Microsoft Graph, other Microsoft APIS, 3rd party Web APIs, or your own Web API. 
+MSAL.NET ([Microsoft Authentication Library for .NET](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet)) enables developers of .NET applications to **acquire [tokens](/azure/active-directory/develop/active-directory-dev-glossary#security-token) in order to call secured Web APIs**. These Web APIs can be the Microsoft Graph, other Microsoft APIS, 3rd party Web APIs, or your own Web API. 
 
 ### MSAL.NET supports multiple application architectures
 
 MSAL.NET supports all the possible application topologies including:
-- [native client](https://docs.microsoft.com/azure/active-directory/develop/active-directory-dev-glossary#native-client)  (mobile/desktop applications) calling the Microsoft Graph in the name of the user, 
-- daemons/services or [web clients](https://docs.microsoft.com/azure/active-directory/develop/active-directory-dev-glossary#web-client)  (Web Apps/ Web APIs) calling the Microsoft Graph in the name of a user, or without a user. 
+- [native client](/azure/active-directory/develop/active-directory-dev-glossary#native-client)  (mobile/desktop applications) calling the Microsoft Graph in the name of the user, 
+- daemons/services or [web clients](/azure/active-directory/develop/active-directory-dev-glossary#web-client)  (Web Apps/ Web APIs) calling the Microsoft Graph in the name of a user, or without a user. 
 
 With the exception of:
-- [User-agent based client](https://docs.microsoft.com/azure/active-directory/develop/active-directory-dev-glossary#user-agent-based-client) which is only supported in JavaScript
+- [User-agent based client](/azure/active-directory/develop/active-directory-dev-glossary#user-agent-based-client) which is only supported in JavaScript
 
 For details about the supported scenarios see [Scenarios](https://aka.ms/msal-net-scenarios)
 
@@ -23,7 +23,7 @@ For details about the supported scenarios see [Scenarios](https://aka.ms/msal-ne
 - [.NET Core](https://www.microsoft.com/net/learn/get-started/windows)(including .NET 6), 
 - [Xamarin](https://www.xamarin.com/) Android, 
 - Xamarin iOS,
-- [UWP](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)
+- [UWP](/windows/uwp/get-started/universal-application-platform-guide)
 
 >[!NOTE]
 > Not all the authentication features are available in all platforms, mostly because:

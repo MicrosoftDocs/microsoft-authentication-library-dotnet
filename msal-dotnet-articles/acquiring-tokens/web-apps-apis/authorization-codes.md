@@ -30,7 +30,7 @@ The [active-directory-dotnetcore-daemon-v2](https://github.com/Azure-Samples/act
 
 ### Construction of ConfidentialClientApplication with client credentials
 
-This flow is only available in the confidential client flow; therefore the protected Web API provides client credentials (client secret or certificate) to the [ConfidentialClientApplicationBuilder](https://docs.microsoft.com/dotnet/api/microsoft.identity.client.appconfig.confidentialclientapplicationbuilder?view=azure-dotnet-preview) via the or the `WithClientSecret` or `WithCertificate` methods respectively.
+This flow is only available in the confidential client flow; therefore the protected Web API provides client credentials (client secret or certificate) to the [ConfidentialClientApplicationBuilder](/dotnet/api/microsoft.identity.client.appconfig.confidentialclientapplicationbuilder?view=azure-dotnet-preview) via the or the `WithClientSecret` or `WithCertificate` methods respectively.
 
 ![image](https://user-images.githubusercontent.com/13203188/55967244-3d8e1d00-5c7a-11e9-8285-a54b05597ec9.png)
 
@@ -93,8 +93,8 @@ This principle is illustrated below the code performing the application initiali
   // Set the nameClaimType to be preferred_username.
   // This change is needed because certain token claims from Azure AD v1.0 endpoint
   // (on which the original .NET core template is based) are different in Azure AD v2.0 endpoint. 
-  // For more details see [ID Tokens](https://docs.microsoft.com/azure/active-directory/develop/id-tokens) 
-  // and [Access Tokens](https://docs.microsoft.com/azure/active-directory/develop/access-tokens)
+  // For more details see [ID Tokens](/azure/active-directory/develop/id-tokens) 
+  // and [Access Tokens](/azure/active-directory/develop/access-tokens)
   options.TokenValidationParameters.NameClaimType = "preferred_username";
 
   // Handling the auth redemption by MSAL.NET so that a token is available in the token cache
@@ -186,7 +186,7 @@ This very operation will add a token to the token cache, and therefore the contr
 
 ### Protocol documentation
 
-For details about the protocol, see [v2.0 Protocols - OAuth 2.0 authorization code flow](https://docs.microsoft.com/azure/active-directory/develop/v2-oauth2-auth-code-flow)
+For details about the protocol, see [v2.0 Protocols - OAuth 2.0 authorization code flow](/azure/active-directory/develop/v2-oauth2-auth-code-flow)
 
 ### Interesting samples using the authorization code flow
 

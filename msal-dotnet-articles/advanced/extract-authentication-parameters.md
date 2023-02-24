@@ -32,7 +32,7 @@ For instance:
 
 #### Continuous Access Evaluation (CAE)
 
-[Continuous access evaluation](https://docs.microsoft.com/azure/active-directory/conditional-access/concept-continuous-access-evaluation) enabled web APIs also send a wwwAuthenticate header when more claims are needed. For details see [How to use Continuous Access Evaluation enabled APIs in your applications](https://docs.microsoft.com/azure/active-directory/develop/app-resilience-continuous-access-evaluation). The wwwAuthenticate header will have the following form:
+[Continuous access evaluation](/azure/active-directory/conditional-access/concept-continuous-access-evaluation) enabled web APIs also send a wwwAuthenticate header when more claims are needed. For details see [How to use Continuous Access Evaluation enabled APIs in your applications](/azure/active-directory/develop/app-resilience-continuous-access-evaluation). The wwwAuthenticate header will have the following form:
 ```Text
 HTTP 401; Unauthorized
 WWW-Authenticate=Bearer
@@ -46,7 +46,7 @@ The way the client application processes it is, when the error is "insufficient_
 #### CA auth context
 
 CA auth context relies on web APIs sending back a wwwAuthenticate header. For details about CA auth context see:
-- [Developers’ guide to Conditional Access authentication context](https://docs.microsoft.com/azure/active-directory/develop/developer-guide-conditional-access-authentication-context)
+- [Developers’ guide to Conditional Access authentication context](/azure/active-directory/develop/developer-guide-conditional-access-authentication-context)
 - [Code sample to use CA Auth context in a web API](https://github.com/Azure-Samples/ms-identity-ca-auth-context/blob/main/README.md)
 - [Recorded session: Use Conditional Access Auth Context in your app for step-up authentication – May 2021](https://www.youtube.com/watch?v=_iO7CfoktTY)
 
@@ -65,7 +65,7 @@ The processing will be the same.
 
 #### Web APIs using Microsoft identity web and reacting to claims challenges
 
-Microsoft.Identity.web can send, a wwwAuthenticate header through one of the overrides of the [ITokenAcquisition.ReplyForbiddenWithWwwAuthenticateHeader](https://docs.microsoft.com/dotnet/api/microsoft.identity.web.itokenacquisition.replyforbiddenwithwwwauthenticateheader?view=azure-dotnet-preview) method.
+Microsoft.Identity.web can send, a wwwAuthenticate header through one of the overrides of the [ITokenAcquisition.ReplyForbiddenWithWwwAuthenticateHeader](/dotnet/api/microsoft.identity.web.itokenacquisition.replyforbiddenwithwwwauthenticateheader?view=azure-dotnet-preview) method.
 
 It sends non-standard parameters:
 - consent Url, in order to help multi-tenant web API developers to provide a link so that the tenant users or admins can consent for the web API to be installed in their tenant.
@@ -86,7 +86,7 @@ For the first scenario, you just call `WwwAuthenticateParameters.CreateFromResou
      .WithAuthority(parameters.Authority)     
      .Build();
 
-   // Token Caching explained at: https://docs.microsoft.com/azure/active-directory/develop/msal-net-token-cache-serialization
+   // Token Caching explained at: /azure/active-directory/develop/msal-net-token-cache-serialization
    app.AppTokenCache.SetCacheOptions(CacheOptions.EnableSharedCacheOptions);
 
    AuthenticationResult result = await app.AcquireTokenForClient(new[] {"you_should_know_the_scope_in_advance")

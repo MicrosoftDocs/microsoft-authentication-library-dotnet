@@ -50,7 +50,7 @@ Details about logging can be found [here](https://github.com/AzureAD/microsoft-a
 
 # One Confidential Client per session
 
-In web app and web API scenarios, it is recommended to use a new `ConfidentialClientApplication` on each session and to serialize in the same way - one token cache per session. This scales well and also increases security. The [official samples](https://docs.microsoft.com/azure/active-directory/develop/sample-v2-code) show how to do this.
+In web app and web API scenarios, it is recommended to use a new `ConfidentialClientApplication` on each session and to serialize in the same way - one token cache per session. This scales well and also increases security. The [official samples](/azure/active-directory/develop/sample-v2-code) show how to do this.
 
 > Note: Microsoft.Identity.Web does this.
 
@@ -58,7 +58,7 @@ In web app and web API scenarios, it is recommended to use a new `ConfidentialCl
 
 **Default behaviour**: MSAL's creating HttpClient does not scale well for web sites / web API where we recommend to have a `ClientApplication` object for each user session.
 
-**Recommendation**: Provide your own scalable HttpClientFactory. On .NET Core we recommend that you inject the [System.Net.Http.IHttpClientFactory](https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.0). This is described in more detail [here](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/HttpClient) and in the [official docs](https://learn.microsoft.com/dotnet/api/system.net.http.httpclient?view=net-7.0#net-framework--mono)
+**Recommendation**: Provide your own scalable HttpClientFactory. On .NET Core we recommend that you inject the [System.Net.Http.IHttpClientFactory](/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.0). This is described in more detail [here](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/HttpClient) and in the [official docs](https://learn.microsoft.com/dotnet/api/system.net.http.httpclient?view=net-7.0#net-framework--mono)
 
 ## Proactive Token renewal
 
@@ -74,14 +74,14 @@ By default, Azure AD issues access tokens with 1 hour expiration. If an Azure AD
 
 To improve availability MSAL tries to ensure than an app always has fresh unexpired tokens. AAD outages rarely take more than a few hours, so if MSAL can guarantee that a token always has at least a few hours of availability left, the application will not be impacted by the AAD outage. 
 
-To get long lived tokens, you must configure your tenant (note: internal Microsoft tenants are already configured). For client_credentials (service 2 service), this is enough. For user credentials, you must also configure CAE - https://docs.microsoft.com/azure/active-directory/conditional-access/concept-continuous-access-evaluation.
+To get long lived tokens, you must configure your tenant (note: internal Microsoft tenants are already configured). For client_credentials (service 2 service), this is enough. For user credentials, you must also configure CAE - /azure/active-directory/conditional-access/concept-continuous-access-evaluation.
 
 When Azure AD returns a long lived token, it includes a `refresh_in` field. It is generally set to half the expiration of the access token.
 ![image](https://user-images.githubusercontent.com/12273384/108714872-05acbd80-7512-11eb-855d-a42b6ff01b0c.png)
 
 Note: From MSAL 4.37.0 and above, you can observe this value by inspecting the `AuthenticationResult.AuthenticationResultMetadata.RefreshOn`.
 
-Additionally, you can configure a token lifetime of more than the default 1 hour, as described [here](https://docs.microsoft.com/azure/active-directory/develop/active-directory-configurable-token-lifetimes.
+Additionally, you can configure a token lifetime of more than the default 1 hour, as described [here](/azure/active-directory/develop/active-directory-configurable-token-lifetimes.
 
 Whenever you make **requests for the same token**, i.e. whenever MSAL is able to serve a token from its cache, then MSAL will automatically check the `refresh_in` value. If it has elapsed, MSAL will issue a token request to AAD in the background, but will return the existing, valid token to the application. In the unlikely event that the background refresh fails (e.g. AAD outage), the app is not affected.
 
@@ -121,4 +121,4 @@ At this stage your app should try to reload the KeyVault certificate.
 
 4. Re-create the CCA object
 
-Create a new ConfidentialClientApplication object on each request. But make sure to point it to the same token cache! https://docs.microsoft.com/azure/active-directory/develop/msal-net-token-cache-serialization?tabs=aspnetcore
+Create a new ConfidentialClientApplication object on each request. But make sure to point it to the same token cache! /azure/active-directory/develop/msal-net-token-cache-serialization?tabs=aspnetcore

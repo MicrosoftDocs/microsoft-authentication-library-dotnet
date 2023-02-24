@@ -55,7 +55,7 @@ app.AcquireTokenSilent(scopes, account)
 
 ### Constructors of PublicClientApplication
 
-Instead of calling the constructor of PublicClientApplication directly, use the `PublicClientApplicationBuilder.Create()` or the `PublicClientApplicationBuilder.CreateWithOptions()` methods. The reference documentation page for [PublicClientApplicationBuilder](https://docs.microsoft.com/dotnet/api/microsoft.identity.client.appconfig.publicclientapplicationbuilder?view=azure-dotnet-preview) shows all the options that you can use.
+Instead of calling the constructor of PublicClientApplication directly, use the `PublicClientApplicationBuilder.Create()` or the `PublicClientApplicationBuilder.CreateWithOptions()` methods. The reference documentation page for [PublicClientApplicationBuilder](/dotnet/api/microsoft.identity.client.appconfig.publicclientapplicationbuilder?view=azure-dotnet-preview) shows all the options that you can use.
 
 ```CSharp
 string clientId;
@@ -354,7 +354,7 @@ app=AcquireTokenInteractive(scopes,
 </td></tr>
 </table>
 
-For the list of all the .With operations applicable on AcquireTokenInteractive see [AcquireTokenInteractiveParameterBuilder](https://docs.microsoft.com/dotnet/api/microsoft.identity.client.apiconfig.acquiretokeninteractiveparameterbuilder?view=azure-dotnet-preview)
+For the list of all the .With operations applicable on AcquireTokenInteractive see [AcquireTokenInteractiveParameterBuilder](/dotnet/api/microsoft.identity.client.apiconfig.acquiretokeninteractiveparameterbuilder?view=azure-dotnet-preview)
 
 ### Acquire Token by username password
 
@@ -379,7 +379,7 @@ app.AcquireTokenByUsernamePassword(scopes,
 </td></tr>
 </table>
 
-For the list of all the .With parameters on `AcquireTokenByUsernamePassword`, see [AcquireTokenByUsernamePasswordParameterBuilder](https://docs.microsoft.com/dotnet/api/microsoft.identity.client.apiconfig.acquiretokenbyusernamepasswordparameterbuilder?view=azure-dotnet-preview)
+For the list of all the .With parameters on `AcquireTokenByUsernamePassword`, see [AcquireTokenByUsernamePasswordParameterBuilder](/dotnet/api/microsoft.identity.client.apiconfig.acquiretokenbyusernamepasswordparameterbuilder?view=azure-dotnet-preview)
 
 ### Acquire token with device code flow
 
@@ -444,7 +444,7 @@ app
 </td></tr>
 </table>
 
-For the list of all the .With parameters on `AcquireTokenWithDeviceCode`, see [AcquireTokenWithDeviceCodeParameterBuilder](https://docs.microsoft.com/dotnet/api/microsoft.identity.client.apiconfig.acquiretokenwithdevicecodeparameterbuilder?view=azure-dotnet-preview)
+For the list of all the .With parameters on `AcquireTokenWithDeviceCode`, see [AcquireTokenWithDeviceCodeParameterBuilder](/dotnet/api/microsoft.identity.client.apiconfig.acquiretokenwithdevicecodeparameterbuilder?view=azure-dotnet-preview)
 
 ### Acquire Token by refresh token
 
@@ -475,7 +475,7 @@ brt
 
 ### Constructors of ConfidentialClientApplication
 
-Similar to the PublicClientApplication, use the `ConfidentialClientApplicationBuilder.Create()` or the `ConfidentialClientApplicationBuilder.CreateWithOptions()` methods to construct the ConfidentialClientApplication. The reference documentation page for [ConfidentialClientApplicationBuilder](https://docs.microsoft.com/dotnet/api/microsoft.identity.client.appconfig.publicclientapplicationbuilder?view=azure-dotnet-preview) shows all the options that you can use.
+Similar to the PublicClientApplication, use the `ConfidentialClientApplicationBuilder.Create()` or the `ConfidentialClientApplicationBuilder.CreateWithOptions()` methods to construct the ConfidentialClientApplication. The reference documentation page for [ConfidentialClientApplicationBuilder](/dotnet/api/microsoft.identity.client.appconfig.publicclientapplicationbuilder?view=azure-dotnet-preview) shows all the options that you can use.
 
 ```CSharp
 string clientId;

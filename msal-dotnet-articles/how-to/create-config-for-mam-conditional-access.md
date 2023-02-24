@@ -1,7 +1,7 @@
 ## Scenario
 There is a scenario when a user of a client application wants to access resources protected by specific permissions (i.e. scopes) in a backend application. The resource is accessible only when certain app protection policies and access conditions are met. In such situation, an access token is issued only when the conditions are met.  
 
-This scenario includes a backend application, and an iOS and Android client applications. The setup for the two platforms is slightly different. This article describes the steps to correctly configure these applications for the above scenario to work. At the same time, the article avoids going into granular details. Read more in [Code example](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Protect-your-resources-in-iOS-application-using-Intune-MAM-and-MSAL.NET) and [Intune Mobile App Management](https://docs.microsoft.com/mem/intune/apps/app-management).
+This scenario includes a backend application, and an iOS and Android client applications. The setup for the two platforms is slightly different. This article describes the steps to correctly configure these applications for the above scenario to work. At the same time, the article avoids going into granular details. Read more in [Code example](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Protect-your-resources-in-iOS-application-using-Intune-MAM-and-MSAL.NET) and [Intune Mobile App Management](/mem/intune/apps/app-management).
 
 ### Setup User and Group for testing
 1. Sign in to [Azure Active Directory](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview).

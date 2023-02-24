@@ -7,8 +7,8 @@ Follow the decision tree to see if MSAL.NET alone is enough, or if you need [Mic
 ## Use MSAL.NET
 
 You're building a desktop or mobile app. Use MSAL.NET directly and start acquiring tokens for your public client application. For details see:
-- [Acquiring token in a desktop app](https://docs.microsoft.com/azure/active-directory/develop/scenario-desktop-acquire-token?tabs=dotnet), and using [WAM](wam)
-- [Acquiring token in a mobile application](https://docs.microsoft.com/azure/active-directory/develop/scenario-mobile-acquire-token)
+- [Acquiring token in a desktop app](/azure/active-directory/develop/scenario-desktop-acquire-token?tabs=dotnet), and using [WAM](wam)
+- [Acquiring token in a mobile application](/azure/active-directory/develop/scenario-mobile-acquire-token)
 
 ## Use **hybrid model** MSAL.NET and [Microsoft Identity Web](https://github.com/AzureAD/microsoft-identity-web/)
 
@@ -24,7 +24,7 @@ Microsoft Identity Web provides token cache serialization for you.  See [Token c
 
 Another example of leveraging Microsoft Identity Web from .NET classic (MVC) can be found in that [ConfidentialClientTokenCache sample](https://github.com/Azure-Samples/active-directory-dotnet-v1-to-v2/tree/master/ConfidentialClientTokenCache).
 
-Examples of how to use token caches for web apps and web APIs are available in the [ASP.NET Core web app tutorial](https://docs.microsoft.com/samples/azure-samples/active-directory-aspnetcore-webapp-openidconnect-v2/enable-webapp-signin/) in the phase [2-2 Token Cache](https://github.com/Azure-Samples/active-directory-aspnetcore-webapp-openidconnect-v2/tree/master/2-WebApp-graph-user/2-2-TokenCache). For implementations have a look at the [TokenCacheProviders](https://github.com/AzureAD/microsoft-identity-web/tree/master/src/Microsoft.Identity.Web/TokenCacheProviders) folder in the [Microsoft.Identity.Web](https://github.com/AzureAD/microsoft-identity-web) repository.
+Examples of how to use token caches for web apps and web APIs are available in the [ASP.NET Core web app tutorial](/samples/azure-samples/active-directory-aspnetcore-webapp-openidconnect-v2/enable-webapp-signin/) in the phase [2-2 Token Cache](https://github.com/Azure-Samples/active-directory-aspnetcore-webapp-openidconnect-v2/tree/master/2-WebApp-graph-user/2-2-TokenCache). For implementations have a look at the [TokenCacheProviders](https://github.com/AzureAD/microsoft-identity-web/tree/master/src/Microsoft.Identity.Web/TokenCacheProviders) folder in the [Microsoft.Identity.Web](https://github.com/AzureAD/microsoft-identity-web) repository.
 
 Microsoft Identity Web also helps with [certificate loading](https://github.com/AzureAD/microsoft-identity-web/wiki/asp-net#help-loading-certificates). 
 

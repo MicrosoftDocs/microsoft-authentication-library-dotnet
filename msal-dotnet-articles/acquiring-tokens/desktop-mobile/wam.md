@@ -17,7 +17,7 @@ The new MSAL WAM Preview is an abstraction layer based on MSAL C++ which fixes a
 - instead of `.WithBroker()`, call `.WithBrokerPreview()`.
 
 > **Note:** The old WAM experience is documented at [Acquire a token using WAM
-](https://docs.microsoft.com/azure/active-directory/develop/scenario-desktop-acquire-token-wam) and showcases details about redirect URI, fallback experience on older Windows, Mac and Linux, etc. which remain valid.
+](/azure/active-directory/develop/scenario-desktop-acquire-token-wam) and showcases details about redirect URI, fallback experience on older Windows, Mac and Linux, etc. which remain valid.
 
 ```csharp
 var pca = PublicClientApplicationBuilder

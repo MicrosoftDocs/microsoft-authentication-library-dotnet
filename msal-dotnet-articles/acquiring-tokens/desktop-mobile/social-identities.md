@@ -12,7 +12,7 @@ The authority to use is `https://login.microsoftonline.com/tfp/{tenant}/{policyN
 - `tenant` is the name of the Azure AD B2C tenant, 
 - `policyName` the name of the policy to apply (for instance "b2c_1_susi" for sign-in/sign-up).
 
-The current guidance from B2C is to use `b2clogin.com` as the authority. For example, `$"https://{your-tenant-name}.b2clogin.com/tfp/{your-tenant-ID}/{policyname}"`. For more information, see this [documentation](https://docs.microsoft.com/azure/active-directory-b2c/b2clogin).
+The current guidance from B2C is to use `b2clogin.com` as the authority. For example, `$"https://{your-tenant-name}.b2clogin.com/tfp/{your-tenant-ID}/{policyname}"`. For more information, see this [documentation](/azure/active-directory-b2c/b2clogin).
 
 ```CSharp
 // Azure AD B2C Coordinates
@@ -111,7 +111,7 @@ private async void EditProfileButton_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-Now in preview, is [Self-service password reset](https://docs.microsoft.com/azure/active-directory-b2c/add-password-reset-policy?pivots=b2c-user-flow#self-service-password-reset-recommended), which means the new password reset experience is now part of the sign-in or sign-up/sign-in (Recommended) user flows. This also means, once you have enabled this preview feature, you can remove this section of code:
+Now in preview, is [Self-service password reset](/azure/active-directory-b2c/add-password-reset-policy?pivots=b2c-user-flow#self-service-password-reset-recommended), which means the new password reset experience is now part of the sign-in or sign-up/sign-in (Recommended) user flows. This also means, once you have enabled this preview feature, you can remove this section of code:
 
 ```csharp
  if (ex.Message.Contains("AADB2C90118"))
@@ -138,7 +138,7 @@ This flow is **not recommended** because your application asking a user for thei
 > - Users won't be able to do single sign-on
 
 #### Configure the ROPC flow in AzureAD B2C
-In your AzureAD B2C tenant, create a new user flow and select **Sign in using ROPC**. This will enable the ROPC policy for your tenant. See [Configure the resource owner password credentials flow](https://docs.microsoft.com/azure/active-directory-b2c/configure-ropc) for more details.
+In your AzureAD B2C tenant, create a new user flow and select **Sign in using ROPC**. This will enable the ROPC policy for your tenant. See [Configure the resource owner password credentials flow](/azure/active-directory-b2c/configure-ropc) for more details.
 
 `IPublicClientApplication` contains a method called
 ```csharp
@@ -168,7 +168,7 @@ We will provide an update to the wiki and this [issue](https://github.com/AzureA
 
 ### Known issue with Azure B2C:
 
-MSAL.Net supports a [token cache](https://docs.microsoft.com/dotnet/api/microsoft.identity.client.tokencache?view=azure-dotnet). The token caching key is based on the claims returned by the Identity Provider. Currently MSAL.Net needs two claims to build a token cache key: : 
+MSAL.Net supports a [token cache](/dotnet/api/microsoft.identity.client.tokencache?view=azure-dotnet). The token caching key is based on the claims returned by the Identity Provider. Currently MSAL.Net needs two claims to build a token cache key: : 
 1) `tid` which is the Azure AD Tenant Id and 
 2) `preferred_username` 
 
@@ -182,14 +182,14 @@ The customer impact is that when trying to display the username field, are you g
 
 The suggested workaround  is to use the [Caching by Policy](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/AAD-B2C-specifics#acquiring-a-token-to-apply-a-policy).
 
-Alternatively, you can use the `tid` claim, if you are using the [B2C custom policies](https://aka.ms/ief), because it provides the capability to return additional claims to the application. To learn more about [Claims Transformation](https://docs.microsoft.com/azure/active-directory-b2c/claims-transformation-technical-profile).
+Alternatively, you can use the `tid` claim, if you are using the [B2C custom policies](https://aka.ms/ief), because it provides the capability to return additional claims to the application. To learn more about [Claims Transformation](/azure/active-directory-b2c/claims-transformation-technical-profile).
 
 #### Mitigation for "Missing from the token response"
-One option is to use the "name" claim as the preferred username. The process is generally mentioned in this [B2C doc](https://docs.microsoft.com/azure/active-directory-b2c/active-directory-b2c-reference-policies#frequently-asked-questions):
+One option is to use the "name" claim as the preferred username. The process is generally mentioned in this [B2C doc](/azure/active-directory-b2c/active-directory-b2c-reference-policies#frequently-asked-questions):
 > "In the Return claim column, choose the claims you want returned in the authorization tokens sent back to your application after a successful profile editing experience. For example, select Display Name, Postal Code.”
 
 ## Customizing the UI
-[Customize the user interface with AAD B2C](https://docs.microsoft.com/azure/active-directory-b2c/customize-ui-overview).
+[Customize the user interface with AAD B2C](/azure/active-directory-b2c/customize-ui-overview).
 
 ## Samples illustrating acquiring tokens interactively with MSAL.NET for B2C applications
 

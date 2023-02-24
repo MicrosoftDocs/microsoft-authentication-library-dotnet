@@ -16,17 +16,17 @@ Users are unable to login interactively and a "Device is not compliant" error is
 
 #### Mitigation
 * the recommended approach is to use [WAM](wam)
-* Otherwise, you can also configure MSAL to use the system (default OS) browser (details [here](https://docs.microsoft.com/azure/active-directory/develop/msal-net-web-browsers#how-to-use-the-default-os-browser)). Both Chrome and Microsoft Edge browsers are able to satisfy the device policy. 
+* Otherwise, you can also configure MSAL to use the system (default OS) browser (details [here](/azure/active-directory/develop/msal-net-web-browsers#how-to-use-the-default-os-browser)). Both Chrome and Microsoft Edge browsers are able to satisfy the device policy. 
 * if using ADAL, migrate to MSAL first. There is no mitigation for ADAL use.
 
 ### Android 
 
 On Android, an `AndroidActivityNotFound` exception is thrown when the device does not have a browser with tabs 
-https://docs.microsoft.com/azure/active-directory/develop/msal-net-system-browser-android-considerations#known-issues
+/azure/active-directory/develop/msal-net-system-browser-android-considerations#known-issues
 
 ### iOS
 
-Please see: https://docs.microsoft.com/azure/active-directory/develop/msal-net-xamarin-ios-considerations#known-issues-with-ios-12-and-authentication
+Please see: /azure/active-directory/develop/msal-net-xamarin-ios-considerations#known-issues-with-ios-12-and-authentication
 
 ### UWP
 
@@ -34,7 +34,7 @@ The recommended approach is to use [WAM](wam)
 
 Most issues on UWP occur due to network problems, such as proxies that block the traffic etc. Integrated Windows Auth may also be blocked by admins. For more details see: 
 
-https://docs.microsoft.com/azure/active-directory/develop/msal-net-uwp-considerations#troubleshooting
+/azure/active-directory/develop/msal-net-uwp-considerations#troubleshooting
 
 ### Desktop
 

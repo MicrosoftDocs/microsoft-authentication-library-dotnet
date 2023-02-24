@@ -8,4 +8,4 @@ MSAL.NET already supports TLS 2.0 (as previous versions). Some of you have propo
 
 ## What is the right fix?
 
-We suggest you read [Transport Layer Security (TLS) best practices with the .NET Framework](https://docs.microsoft.com/dotnet/framework/network-programming/tls). The simplest fix would be, if you can, to make sure  your app moves to .NET Framework 4.7+, otherwise the best practices document details your options.
+We suggest you read [Transport Layer Security (TLS) best practices with the .NET Framework](/dotnet/framework/network-programming/tls). The simplest fix would be, if you can, to make sure  your app moves to .NET Framework 4.7+, otherwise the best practices document details your options.

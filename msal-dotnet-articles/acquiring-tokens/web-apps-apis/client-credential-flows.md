@@ -144,6 +144,6 @@ Sample | Platform | Description
 
 You can find more information in:
 
-- The protocol documentation: [Azure Active Directory v2.0 and the OAuth 2.0 client credentials flow](https://docs.microsoft.com/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow)
+- The protocol documentation: [Azure Active Directory v2.0 and the OAuth 2.0 client credentials flow](/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow)
 
 > Vanity URL: [https://aka.ms/msal-net-client-credentials](https://aka.ms/msal-net-client-credentials)
