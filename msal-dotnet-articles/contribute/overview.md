@@ -1,26 +1,24 @@
-Microsoft Authentication Library (MSAL) for .NET welcomes new contributors.  This document will guide you
-through the process.
+# Contributing to MSAL.NET
 
-### Contributor License agreement
+Microsoft Authentication Library (MSAL) for .NET welcomes new contributors.  This document will guide you through the process.
 
-Please visit [https://cla.microsoft.com/](https://cla.microsoft.com/) and sign the Contributor License
-Agreement.  You only need to do that once. We can not look at your code until you've submitted this request.
+## Contributor License agreement
 
-### Setup, Building and Testing 
+Please visit [https://cla.microsoft.com/](https://cla.microsoft.com/) and sign the Contributor License Agreement.  You only need to do that once. We can not look at your code until you've submitted this request.
 
-Please see the [Build & Run](build-and-test) wiki page. 
+## Setup, Building and Testing
 
-### Tests
+Please see the [Build and test](build-and-test.md) page.
+
+## Tests
 
 It's all standard stuff, but please note that you won't be able to run integration tests locally because they connect to a KeyVault to fetch some test users and passwords. The CI will run them for you.
 
-### How the MSAL team deals with forks
+## How the MSAL team deals with forks
 
-The CI build will not run on a PR opened from a fork, as a security measure. The MSAL team will manually move your branch from your fork to the main repository, to be able to run the CI. This will preserve the identity of the commit. 
+The CI build will not run on a PR opened from a fork, as a security measure. The MSAL team will manually move your branch from your fork to the main repository, to be able to run the CI. This will preserve the identity of the commit.
 
-
-
-```
+```bash
 # list existing remotes
 git remote -v 
 
@@ -37,6 +35,3 @@ git checkout joes_feature_branch
 git push origin
 
 ```
-
-
-

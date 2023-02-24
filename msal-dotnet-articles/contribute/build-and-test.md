@@ -1,3 +1,5 @@
+# Building and testing MSAL.NET
+
 ## Prerequisites to Build MSAL.NET
 Prerequisites to build MSAL.NET can be found [here](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Pre-requisites-to-build-MSAL.NET)
 
