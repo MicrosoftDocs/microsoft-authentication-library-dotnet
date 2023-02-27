@@ -5,7 +5,7 @@ You can use MSAL.NET to sign-in users with social identities by using [Azure AD 
 - When you instantiate the Public client application, you need to specify the policy in authority
 - When you want to apply a policy, you need to call an override of `AcquireTokenInteractive` containing an `authority` parameter
 
-### Authority for a B2C tenant and policy
+## Authority for a B2C tenant and policy
 
 The authority to use is `https://login.microsoftonline.com/tfp/{tenant}/{policyName}` where:
 
@@ -38,7 +38,7 @@ application = PublicClientApplicationBuilder.Create(ClientID)
                .Build();
 ```
 
-### Acquiring a token to apply a policy
+## Acquiring a token to apply a policy
 
 > Starting with MSAL .NET 4.15.0, developers will no longer have to write their own cache filtering logic.
 
@@ -87,7 +87,7 @@ private IAccount GetAccountByPolicy(IEnumerable<IAccount> accounts, string polic
 Applying a policy (for instance letting the end user edit their profile or reset their password) is currently done by calling AcquireTokenInteractive.
 > Note that in the case of these two policies you don't use the returned token / authentication result.
 
-### Special case of EditProfile and ResetPassword policies
+## Special case of EditProfile and ResetPassword policies
 
 When you want to provide an experience where your end users sign-in with a social identity, and then edit their profile you want to apply the B2C EditProfile policy. The way to do this, is by calling `AcquireTokenInteractive` with
 the specific authority for that policy and a Prompt set to `Prompt.NoPrompt` to avoid the account selection dialog to be displayed (as the user is already signed-in)
@@ -123,13 +123,16 @@ Now in preview, is [Self-service password reset](/azure/active-directory-b2c/add
               .ExecuteAsync();
 }
 ```
+
 Or whichever special logic you were doing to process the `AADB2C90118` error.
 
-### Resource Owner Password Credentials (ROPC) With B2C
-For more details on the ROPC flow, please see this [documentation](Username-Password-Authentication).
+## Resource Owner Password Credentials (ROPC) With B2C
 
-#### This flow is not recommended
-This flow is **not recommended** because your application asking a user for their password is not secure. For more information about this problem, see [this article](https://news.microsoft.com/features/whats-solution-growing-problem-passwords-says-microsoft/). 
+For more details on the ROPC flow, please see this [documentation](./username-password-authentication.md).
+
+### This flow is not recommended
+
+This flow is **not recommended** because your application asking a user for their password is not secure. For more information about this problem, see [this article](https://news.microsoft.com/features/whats-solution-growing-problem-passwords-says-microsoft/).
 
 > By using username/password you are giving-up a number of things:
 > - core tenants of modern identity: password gets fished, replayed. Because we have this concept of a share secret that can be intercepted.
@@ -158,15 +161,15 @@ Remember to use the authority which contains the ROPC policy.
 #### **Limitations of the ROPC flow**
  - This **only works for local accounts** (where you register with B2C using an email or username). This flow does not work if federating to any of the IdPs supported by B2C (Facebook, Google, etc...).
 
-### Google Auth and Embedded Webview
+## Google Auth and Embedded Webview
 
 If you are a B2C developer using Google as an identity provider we recommand you use the system browser, as Google does not allow [authentication from embedded webviews](https://developers.googleblog.com/2016/08/modernizing-oauth-interactions-in-native-apps.html). Currently, `login.microsoftonline.com` is a trusted authority with Google. Using this authority will work with embedded webview. However using `b2clogin.com` is not a trusted authority with Google, so users will not be able to authenticate.
 
 We will provide an update to the wiki and this [issue](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/issues/688) if things change.
 
-## Caching with B2C in MSAL.Net 
+## Caching with B2C in MSAL.NET
 
-### Known issue with Azure B2C:
+### Known issue with Azure B2C
 
 MSAL.Net supports a [token cache](/dotnet/api/microsoft.identity.client.tokencache?view=azure-dotnet). The token caching key is based on the claims returned by the Identity Provider. Currently MSAL.Net needs two claims to build a token cache key: : 
 1) `tid` which is the Azure AD Tenant Id and 
@@ -176,7 +179,7 @@ Both these claims are missing in many of the Azure AD B2C scenarios.
 
 The customer impact is that when trying to display the username field, are you getting "Missing from the token response" as the value? If so, this is because B2C does not return a value in the IdToken for the preferred_username because of limitations with the social accounts and external identity providers (IdPs). Azure AD returns a value for preferred_username because it knows who the user is, but for B2C, because the user can sign in with a local account, Facebook, Google, GitHub, etc...there is not a consistent value for B2C to use for preferred_username. To unblock MSAL from rolling out cache compatibility with ADAL, we decided to use "Missing from the token response" on our end when dealing with the B2C accounts when the IdToken returns nothing for preferred_username. MSAL must return a value for preferred_username to maintain cache compatibility across libraries.
 
-### Work arounds
+### Workarounds
 
 #### Mitigation of the lack of `tid`
 
@@ -185,10 +188,12 @@ The suggested workaround  is to use the [Caching by Policy](https://github.com/A
 Alternatively, you can use the `tid` claim, if you are using the [B2C custom policies](https://aka.ms/ief), because it provides the capability to return additional claims to the application. To learn more about [Claims Transformation](/azure/active-directory-b2c/claims-transformation-technical-profile).
 
 #### Mitigation for "Missing from the token response"
+
 One option is to use the "name" claim as the preferred username. The process is generally mentioned in this [B2C doc](/azure/active-directory-b2c/active-directory-b2c-reference-policies#frequently-asked-questions):
 > "In the Return claim column, choose the claims you want returned in the authorization tokens sent back to your application after a successful profile editing experience. For example, select Display Name, Postal Code.”
 
 ## Customizing the UI
+
 [Customize the user interface with AAD B2C](/azure/active-directory-b2c/customize-ui-overview).
 
 ## Samples illustrating acquiring tokens interactively with MSAL.NET for B2C applications

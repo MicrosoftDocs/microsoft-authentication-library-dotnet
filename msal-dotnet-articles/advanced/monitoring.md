@@ -13,7 +13,7 @@ The following errors will be logged in MSAL:
 - When using an authority ending in `/common` or `/organizations` for client credential authentication. `AcquireTokenForClient` (This will be available in 4.37.0)
   - The current authority is targeting the `/common` or `/organizations` endpoint which is not recommended. See [Client credential flows](../acquiring-tokens/web-apps-apis/client-credential-flows.md) for more details.
 - When the default internal token cache is used when using confidential client applications.
-  - The default token cache provided by MSAL is not designed to be performant when used in confidential client applications. Please use token cache serialization. See [Token cache serialization in MSAL.NET](https://learn.microsoft.com/azure/active-directory/develop/msal-net-token-cache-serialization?tabs=aspnetcore).
+  - The default token cache provided by MSAL is not designed to be performant when used in confidential client applications. Please use token cache serialization. See [Token cache serialization in MSAL.NET](/azure/active-directory/develop/msal-net-token-cache-serialization?tabs=aspnetcore).
 
 ## Metrics
 
@@ -35,7 +35,7 @@ MSAL exposes token acquisition metrics as part of [AuthenticationResult.Authenti
 **Suggestion**: Alarm on spikes.
 
 >[!NOTE]
->To understand how to customize token caching, see [Token cache serialization in MSAL.NET](https://learn.microsoft.com//azure/active-directory/develop/msal-net-token-cache-serialization).
+>To understand how to customize token caching, see [Token cache serialization in MSAL.NET](/azure/active-directory/develop/msal-net-token-cache-serialization).
 
 ## DurationInHttpInMs
 

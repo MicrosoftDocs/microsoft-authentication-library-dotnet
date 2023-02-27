@@ -1,3 +1,5 @@
+# TLS issues
+
 ## What is happening
 
 Microsoft has an initiative to disable anything less that TLS 1.2 for security reasons. The [Microsoft TLS 1.0 implementation](https://support.microsoft.com/help/3117336/schannel-implementation-of-tls-1-0-in-windows-security-status-update-n) has no known security vulnerabilities. But because of the potential for future protocol downgrade attacks and other TLS vulnerabilities, Office, for instance are [discontinuing](https://support.microsoft.com/help/4057306/preparing-for-tls-1-2-in-office-365) support for TLS 1.0 and 1.1 in Microsoft Office 365.

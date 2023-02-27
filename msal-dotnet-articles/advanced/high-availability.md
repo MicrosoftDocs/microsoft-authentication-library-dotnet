@@ -48,13 +48,14 @@ Details about logging can be found [here](https://github.com/AzureAD/microsoft-a
 
 - See https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Retry-Policy for writing a retry policy with Polly
 
-# One Confidential Client per session
+## One Confidential Client per session
 
 In web app and web API scenarios, it is recommended to use a new `ConfidentialClientApplication` on each session and to serialize in the same way - one token cache per session. This scales well and also increases security. The [official samples](/azure/active-directory/develop/sample-v2-code) show how to do this.
 
-> Note: Microsoft.Identity.Web does this.
+>[!NOTE]
+>Microsoft.Identity.Web does this.
 
-## HttpClient 
+## HttpClient
 
 **Default behaviour**: MSAL's creating HttpClient does not scale well for web sites / web API where we recommend to have a `ClientApplication` object for each user session.
 

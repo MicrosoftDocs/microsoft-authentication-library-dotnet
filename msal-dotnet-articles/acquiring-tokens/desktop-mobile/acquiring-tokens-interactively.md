@@ -75,11 +75,11 @@ The class defines the following constants:
 - ``ForceLogin``: enables the application developer to have the user prompted for credentials by the service even if this would not be needed. This can be useful if Acquiring a token fails, to let the user re-sign-in. This is done by sending `prompt=login` to the identity provider. Again, we've seen it used in some security focused applications where the organization governance demands that the user re-logs-in each time they access specific parts of an application.
 - ``Create`` triggers a sign-up experience, which is used for External Identities, by sending `prompt=create` to the identity provider. This is available in MSAL.NET 4.29.0+. This prompt should not be sent for Azure AD B2C apps. For more information, see [Add a self-service sign-up user flow to an app](https://aka.ms/msal-net-prompt-create).
 - ``Never`` (for .NET 4.5 and WinRT only) will not prompt the user, but instead will try to use the cookie stored in the hidden embedded web view (See below: Web Views in MSAL.NET). This might fail, and in that case `AcquireTokenInteractive` will throw an exception to notify that a UI interaction is needed, and you'll need to use another `Prompt` parameter.
-- ``NoPrompt``: Won't send any prompt to the identity provider. This is actually only useful in the case of B2C edit profile policies (See [B2C specifics](AAD-B2C-specifics)).
+- ``NoPrompt``: Won't send any prompt to the identity provider. This is actually only useful in the case of B2C edit profile policies (See [B2C specifics](./social-identities.md)).
 
 ### WithUseEmbeddedWebView
 
-Enables you to specify if you want to force the usage of an embedded web view or the system web view (when available). For more details see [Usage of Web browsers](MSAL.NET-uses-web-browser)
+Enables you to specify if you want to force the usage of an embedded web view or the system web view (when available). For more details see [Usage of Web browsers](../../how-to/usage-of-web-browsers.md).
 
  ```CSharp
  result = await app.AcquireTokenInteractive(scopes)
@@ -109,7 +109,7 @@ WithLoginHint(string) | ``loginHint`` (optional) offers a hint to the STS about 
 WithClaims(string) | Requests additional claims. This normally is in reaction to an MsalClaimChallengeException which has a Claim member (Conditional Access)
 WithPrompt(Prompt) | Is the way to control, in MSAL.NET, the interaction between the user and the STS to enter credentials. It's different depending on the platform (See below). Note that MSAL 3.x is taking a breaking change here. Prompt used to be named ``UIBehavior`` in MSAL 1.x and 2.x
 WithExtraQueryParameters(dictionary) | A dictionary of keys / values.
-WithExtraScopesToConsent(extraScopes) | Enables application developers to specify additional scopes for which users will pre-consent. This can be in order to avoid having them see incremental consent screens when the Web API require them. This is also indispensable in the case where you want to provide scopes for several resources. See [the paragraph on getting consent for several resources](#how-to-get-consent-for-several-resources) below for more details.
+WithExtraScopesToConsent(extraScopes) | Enables application developers to specify additional scopes for which users will pre-consent. This can be in order to avoid having them see incremental consent screens when the Web API require them. This is also indispensable in the case where you want to provide scopes for several resources. See [the paragraph on getting consent for several resources](#have-the-user-consent-upfront-for-several-resources) below for more details.
 
 ## The different browsers
 |                                       | **Pro**                                                                                                                                                                                                                                                 | **Con**                                                                                                                                                                       |
@@ -172,9 +172,9 @@ For Microsoft personal accounts users, re-prompting for consent on each native c
 
 Depending on the platforms, you will need to do a bit of extra work to use MSAL.NET. For more details on each platform, see:
 
-- [Xamarin Android specifics](Xamarin-Android-specifics-2x)
-- [Xamarin iOS specifics](Xamarin-iOS-Specifics) 
-- [UWP specifics](UWP-Specifics) 
+- [Configuration requirements and troubleshooting tips for Xamarin Android with MSAL.NET](/azure/active-directory/develop/msal-net-xamarin-android-considerations)
+- [Considerations for using Xamarin iOS with MSAL.NET](/azure/active-directory/develop/msal-net-xamarin-ios-considerations)
+- [UWP specifics](./uwp.md)
 
 ## Samples illustrating acquiring tokens interactively with MSAL.NET
 

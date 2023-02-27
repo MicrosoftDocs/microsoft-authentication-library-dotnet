@@ -168,9 +168,10 @@ private IConfidentialClientApplication BuildConfidentialClientApplication(HttpCo
 }
 ```
 
-The web app should also implement token cache serialization. This is explained in [Token cache serialization](Token-cache-serialization)
+The web app should also implement token cache serialization. This is explained in [Token cache serialization in MSAL.NET](/azure/active-directory/develop/msal-net-token-cache-serialization).
 
 #### Guest users
+
 A guest user in a tenant is a user account that was not originally created in that tenant, but in some other tenant. When acquiring tokens in MSAL, in order for home account ID to show the correct home tenant of the user, certain set up has to be done in ASP.NET Core and ASP.NET OWIN. Microsoft.Identity.Web simplifies logging in guest users for both of those platforms. See [OWIN sample app](https://github.com/AzureAD/microsoft-identity-web/tree/master/tests/DevApps/aspnet-mvc) for details.
 
 ### Troubleshooting

@@ -1,4 +1,6 @@
-## Troubleshooting tips for Android brokered authentication
+# Troubleshooting brokered applications
+
+## Tips for Android brokered authentication
 
 Here are a few tips on avoiding issues when you implement brokered authentication on Android:
 

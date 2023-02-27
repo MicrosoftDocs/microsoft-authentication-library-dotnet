@@ -1,4 +1,4 @@
-# Providing your own HttpClient, supporting HTTP proxies and customization of user agent headers
+# Providing your own HttpClient, supporting HTTP proxies, and customization of user agent headers
 
 We understand that there are cases where you want fine grained control on the Http proxy for instance, which we had not been able to provide you at all (on .NET core), or in a limited way (.NET framework). Also, ASP.NET Core has some very efficient ways of pooling the `HttpClient` instance, and MSAL.NET clearly did not benefit from it (for details see [Use HttpClientFactory to implement resilient HTTP requests](/dotnet/standard/microservices-architecture/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests))
 

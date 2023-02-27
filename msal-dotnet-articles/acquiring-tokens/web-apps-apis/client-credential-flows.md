@@ -11,9 +11,10 @@ MSAL.NET supports 2 types of client credentials, which must be registered in the
 - Application secrets (not recommended for production scenarios)
 - Certificates
 
-For advanced scenarios, 2 more types of credentials can be used. See details at [Client assertions](Client-Assertions).
-- Signed client assertions 
-- Certificate + additional claims to be sent 
+For advanced scenarios, 2 more types of credentials can be used. See details at [Confidential client assertions](/azure/active-directory/develop/msal-net-client-assertions).
+
+- Signed client assertions
+- Certificate + additional claims to be sent
 
 ## Code snippet
 
@@ -34,6 +35,7 @@ var authResult = await app.AcquireTokenForClient(scopes: new [] {  "some_app_id_
                    .ExecuteAsync();
 
 ```
+
 **Important: do not use `common` or `organizations` authority for client credential flows.**
 
 For more information, see [AuthenticationConfig.cs](https://github.com/Azure-Samples/active-directory-dotnetcore-daemon-v2/blob/5199032b352a912e7cc0fce143f81664ba1a8c26/daemon-console/AuthenticationConfig.cs#L67-L87)
@@ -53,11 +55,12 @@ Please see [distributed cache implementations](https://github.com/AzureAD/micros
 
 This [sample](https://github.com/Azure-Samples/active-directory-dotnet-v1-to-v2/blob/b48c10180665260a1aec78a9acf7d1b1ff97e5ba/ConfidentialClientTokenCache/Program.cs) shows token cache serialization.
 
-## High Availability 
+## High Availability
 
 **Problem:**
-My service is running out of memory. 
-**Solution:** 
+My service is running out of memory.
+
+**Solution:**
 See [MSAL for client credential flow in multi-tenant services](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Multi-tenant-client_credential-use).
 Provision enough RAM on the machines running your service or use a distributed cache. 
 A single token is a only a few KB in size, but there is 1 token for each tenant! A multi-tenant service sometimes needs tokens for 0.5M tenants. 
@@ -78,8 +81,6 @@ authResult.AuthenticationResultMetadata.TokenSource == TokenSource.Cache
 **Problem:** `AcquireTokenClient` latency is too high
 **Possible Solutions:** Please ensure you have a high token cache hit rate. 
 The in-memory cache is optimized for searching through tokens that come from different client_id or different tenant_id. It is not optimized for storing tokens with different scopes. You need to use a different cache key that includes the scope. See https://aka.ms/msal-net-performance-testing
-
-
 
 ### Registration of application secret or certificate with Azure AD
 
@@ -105,10 +106,9 @@ In MSAL.NET client credentials are passed as a parameter at the application cons
 
 Then, once the confidential client application is constructed, acquiring the token is a question of calling overrides of ``AcquireTokenForClient``, passing the scope, and forcing or not a refresh of the token.
 
-
 ### Client assertions
 
-Instead of a client secret or a certificate, the confidential client application can also prove its identity using client assertions. This advanced scenario is detailed in [Client assertions](Client-Assertions)
+Instead of a client secret or a certificate, the confidential client application can also prove its identity using client assertions. This advanced scenario is detailed in [Confidential client assertions](/azure/active-directory/develop/msal-net-client-assertions).
 
 ### Remarks
 

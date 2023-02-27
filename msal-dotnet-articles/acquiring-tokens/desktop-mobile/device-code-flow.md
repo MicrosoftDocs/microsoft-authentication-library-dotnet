@@ -5,9 +5,9 @@
 
 ## Why would you use Device Code Flow?
 
-Interactive authentication with Azure AD requires a web browser (for details see [Usage of web browsers](MSAL.NET-uses-web-browser)). However, in the case of devices and operating systems that do not provide a Web browser, Device code flow lets the user use another device (for instance another computer or a mobile phone) to sign-in interactively. By using the device code flow, the application obtains tokens through a two-step process especially designed for these devices/OS. Examples of such applications are applications running on iOT, or Command-Line tools (CLI). The idea is that:
+Interactive authentication with Azure AD requires a web browser (for details see [Usage of web browsers](../../how-to/usage-of-web-browsers.md)). However, in the case of devices and operating systems that do not provide a Web browser, Device code flow lets the user use another device (for instance another computer or a mobile phone) to sign-in interactively. By using the device code flow, the application obtains tokens through a two-step process especially designed for these devices/OS. Examples of such applications are applications running on iOT, or Command-Line tools (CLI). The idea is that:
 
-1. Whenever user authentication is required, the app provides a code and asks the user to use another device (such as an internet-connected smartphone) to navigate to a URL (for instance, http://microsoft.com/devicelogin), where the user will be prompted to enter the code. That done, the web page will lead the user through a normal authentication experience, including consent prompts and multi-factor authentication if necessary.
+1. Whenever user authentication is required, the app provides a code and asks the user to use another device (such as an internet-connected smartphone) to navigate to a URL (for instance, `https://microsoft.com/devicelogin`), where the user will be prompted to enter the code. That done, the web page will lead the user through a normal authentication experience, including consent prompts and multi-factor authentication if necessary.
 
 2. Upon successful authentication, the command-line app will receive the required tokens through a back channel and will use it to perform the web API calls it needs.
 
@@ -18,17 +18,20 @@ Interactive authentication with Azure AD requires a web browser (for details see
   - tenanted (of the form `https://login.microsoftonline.com/{tenant}/` where `tenant` is either the guid representing the tenant ID or a domain associated with the tenant.
 
 ### Device code flow with Microsoft Personal Accounts
+
 Starting with MSAL.NET 4.5 release, the device code flow is possible with Microsoft Personal Accounts. This means the device code flow will work with:
-  - Any work and school accounts (`https://login.microsoftonline.com/organizations/`), and
-  - Microsoft personal accounts (`/common` or `/consumers` tenants)
+
+- Any work and school accounts (`https://login.microsoftonline.com/organizations/`), and
+- Microsoft personal accounts (`/common` or `/consumers` tenants)
 
 ## How to use it?
 
 ### Application registration
 
 During the **[App registration](https://go.microsoft.com/fwlink/?linkid=2083908)** , in the **Authentication** section for your application:
-- the Reply URI should be `https://login.microsoftonline.com/common/oauth2/nativeclient`
-- but you need to choose **Yes**, to the question **Treat application as a public client** (in the **Default client type** paragraph)
+
+- The Reply URI should be `https://login.microsoftonline.com/common/oauth2/nativeclient`
+- You need to choose **Yes** to the question **Treat application as a public client** (in the **Default client type** paragraph)
 
   ![image](https://user-images.githubusercontent.com/13203188/56017514-cac78500-5cff-11e9-93a3-00e78d6f5240.png)
 
@@ -37,24 +40,27 @@ During the **[App registration](https://go.microsoft.com/fwlink/?linkid=2083908)
 ![image](https://user-images.githubusercontent.com/13203188/56017770-94d6d080-5d00-11e9-89f3-f3a7a1d6f2e8.png)
 
 `IPublicClientApplication`contains a method named `AcquireTokenWithDeviceCode`
-```CSharp
+
+```csharp
  AcquireTokenWithDeviceCode(IEnumerable<string> scopes, 
                             Func<DeviceCodeResult, Task> deviceCodeResultCallback)
 ```
 
 This method takes as parameters:
+
 - The `scopes` to request an access token for
 - A callback that will receive the `DeviceCodeResult`
 
   ![image](https://user-images.githubusercontent.com/13203188/56024968-7af1b980-5d11-11e9-84c2-5be2ef306dc5.png)
 
 You can pass optional parameters, by calling:
+
 - `.WithExtraQueryParameters(Dictionary{string, string})` to pass additional query parameters. This can be useful to target test environments, or for globalization (see below). You can pass `string.Empty`.
 - `.WithAuthority(string, bool)` in order to override the default authority set at the application construction. Note that the overriding authority needs to be part of the known authorities added to the application construction.
 
 ## Code snippet
 
-The following sample code presents the most current case, with explanations of the kind of exceptions you can get, and their mitigations.
+The following sample code presents the most current case, with explanations of the kind of exceptions you can get, and their mitigation.
 
 ```CSharp
 private const string ClientId = "<client_guid>";
