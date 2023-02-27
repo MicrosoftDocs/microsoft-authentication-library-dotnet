@@ -2,13 +2,14 @@
 
 A modern embedded browser based on Microsoft Edge, capable of performing Windows Hello, log-in with FIDO keys, etc. This browser replaces the old embedded WebView, based on an outdated version of Internet Explorer.
 
-## Where is it available? 
+## Where is it available?
 
 - All Windows versions
-- MSAL version 4.28.0 and higher
+- MSAL.NET version 4.28.0 and higher
 - [WebView2 runtime](https://developer.microsoft.com/microsoft-edge/webview2/) must be installed on the machine 
 
 ## Evergreen runtime
+
 WebView2 runtime is available on most Windows 10 and Windows 11 machines by default. But it may not be available on older platforms.
 
 ## Changes to call pattern
@@ -26,17 +27,17 @@ var pca = PublicClientApplicationBuilder
 
 ## Behaviour
 
-|  	|  Embedded WebView	| Default WebView 	|  	
-|-	|-	|-	|
-|  .NET Fx         | WebView2, fallback to Legacy |  Embedded 		|  
-|  .NET Core 	| WebView2, fallback to Legacy* | Embedded |  	
-|  .NET 5 | WebView2, fallback to Legacy* | Embedded |  	
+|  Framework      | Embedded WebView              | Default WebView |
+|-----------------|-------------------------------|-----------------|
+|  .NET Framework | WebView2, fallback to Legacy  | Embedded |  
+|  .NET Core      | WebView2, fallback to Legacy* | Embedded |
+|  .NET 5         | WebView2, fallback to Legacy* | Embedded |
 
 *_In .NET Core and .NET 5, fallback to legacy WebView is available starting in MSAL 4.30.0._
 
 ## Troubleshooting
 
-#### WebView2 on .NET Framework
+### WebView2 on .NET Framework
 
 There's a scenario when an app that targets .NET Framework and references MSAL.NET NuGet package tries to acquire token interactively with WebView2 embedded browser, WebView2 will throw exceptions. These errors can be `System.BadImageFormatException: An attempt was made to load a program with an incorrect format.` or `System.DllNotFoundException: 'Unable to load DLL 'WebView2Loader.dll': The specified module could not be found.` (As of MSAL.NET 4.32.0 these exceptions are wrapped into `MsalClientException`.)
 

@@ -1,4 +1,6 @@
-### Introduction
+# MSAL.NET Scenarios
+
+## Introduction
 
 The .NET authentication libraries support scenarios involving Protecting a Web API ![image](https://user-images.githubusercontent.com/13203188/44856754-0c993480-ac23-11e8-82ef-e0eaa586b9c8.png) and **Acquiring tokens** for a protected Web API ![image](https://user-images.githubusercontent.com/13203188/44856748-060abd00-ac23-11e8-8b69-cbe928bec23c.png). MSAL.NET is only about the later. 
 
@@ -11,13 +13,13 @@ MSAL.NET supports acquiring tokens either in the name of a **user** ![image](htt
 
 MSAL.NET supports a number of **platforms** (.NET Framework, .NET Core, Windows 10/UWP, Xamarin.iOS, Xamarin.Android). .NET Core apps can also run on different operating systems (Windows, but also Linux and MacOs). The scenarios can be different depending on the platforms
 
-### The Scenarios
+## The Scenarios
 
 The picture below summarizes the supported scenarios and shows on which platform, and to which Azure AD protocol this corresponds:
 
 ![image](https://user-images.githubusercontent.com/13203188/44857925-ad88ef00-ac25-11e8-8ef1-b9fca3671323.png)
 
-#### Web Application signing in a user and calling a Web API in the name of the user
+### Web Application signing in a user and calling a Web API in the name of the user
 
 To protected a Web App (signing in the user) you'll use ASP.NET or ASP.NET Core with the ASP.NET Open ID Connect middleware. Under the hood. This involves validating the token which is done by the [IdentityModel extensions for .NET](https://github.com/AzureAD/azure-activedirectory-identitymodel-extensions-for-dotnet/wiki) library, not MSAL.NET
 
@@ -25,23 +27,24 @@ To call the Web API in the name of the user you'll use MSAL.NET ConfidentialClie
 
 ![image](https://user-images.githubusercontent.com/13203188/44857464-b6c58c00-ac24-11e8-9509-103ada932b09.png)
 
-#### Mobile application calling a Web API in the name of the user who's signed-in interactively. 
+### Mobile application calling a Web API in the name of the user who's signed-in interactively. 
 
 To call a Web API from a mobile application, you will use MSAL.NET's PublicClientApplication's [interactive](Acquiring-tokens-interactively) token acquisition methods. These interactive methods enable you to control the [sign-in UI experience](Acquiring-tokens-interactively#controlling-the-interactivity-with-the-user-with-the-behavior-parameter-uibehavior), as well as the [location](#controlling-the-location-of-the-dialog-with-the-parent-parameters-uiparent) of the interactive dialog on some platforms.
 To enable this interaction, MSAL.NET leverages a [web browser](MSAL.NET-uses-web-browser). There are specificities depending on the mobile platform [UWP](uwp-specificities), [iOS](Xamarin-ios-specificities), [Android](Xamarin-android-specificities)). On iOS and Android, you can even [choose](MSAL.NET-uses-web-browser#by-default-msalnet-supports-a-system-web-browser-on-xamarinios-and-xamarinandroid) if you want to leverage the system browser (the default), or an embedded web browser. You can enable some kind of token cache sharing on iOS
 
 ![image](https://user-images.githubusercontent.com/13203188/44857487-c2b14e00-ac24-11e8-95bc-55d559c7c17b.png)
 
-##### Protecting the app itself with Intune
+#### Protecting the app itself with Intune
+
 Your mobile app (written in Xamarin.iOS or Xamarin.Android) can have app protection policies applied to it, so that it can be [managed by Intune](/intune/app-sdk) and recognized by Intune as a managed app. The [Intune SDK](/intune/app-sdk-get-started) is separate from MSAL, and it talks to AAD on its own.
 
-#### Desktop/service daemon application calling Web API in without a user (in its own name)
+### Desktop/service daemon application calling Web API in without a user (in its own name)
 
 You can write a daemon app acquiring a token for the app on top using MSAL.NET's ConfidentialClientApplication's [client credentials](Client-credential-flows) acquisition methods. These suppose that the app has previously registered a secret (application password or certificate) with Azure AD, which it then shares with this call.
 
 ![image](https://user-images.githubusercontent.com/13203188/44857500-ccd34c80-ac24-11e8-8438-be5e329c6126.png)
 
-#### Desktop application calling a Web API in the name of the signed-in user
+### Desktop application calling a Web API in the name of the signed-in user
 
 Desktop applications can use the same [interactive authentication](https://aka.ms/msal-net-acquire-token-interactively) as the [mobile applications](#mobile-application-calling-a-web-api-in-the-name-of-the-user-whos-signed-in-interactively). 
 
@@ -55,13 +58,13 @@ Finally, and although it's not recommended, you can use [Username/Password](http
 
 In desktop applications, if you want the token cache to be persistent, you should [customize the token cache serialization](https://aka.ms/msal-net-token-cache-serialization). You can even enable backward and forward compatible token caches with ADAL.NET 3.x and 4.x by implementing [dual token cache serialization](https://aka.ms/msal-net-dual-cache-serialization).
 
-#### Application without a browser, or iOT application calling an API in the name of the user 
+### Application without a browser, or iOT application calling an API in the name of the user 
 
 Applications running on a device without a browser will still be able to call an API in the name of a user, after having the user sign-in on another device which has a Web browser. For this you'll need to use the [Device Code flow](Device-Code-Flow)
 
 ![image](https://user-images.githubusercontent.com/13203188/44857536-dbb9ff00-ac24-11e8-9d03-37b06bd36a5b.png)
 
-#### Web API calling another downstream Web API in the name of the user for whom it was called
+### Web API calling another downstream Web API in the name of the user for whom it was called
 
 If you want your ASP.NET or ASP.NET Core protected Web API to call another Web API on behalf of the user represented by the access token was used to call you API, you will need to:
 - validate the token. For this you'll use the ASP.NET JWT middleware. Under the hood. This also involves validating the token which is done by the [IdentityModel extensions for .NET](https://github.com/AzureAD/azure-activedirectory-identitymodel-extensions-for-dotnet/wiki) library, not MSAL.NET
@@ -70,19 +73,14 @@ If you want your ASP.NET or ASP.NET Core protected Web API to call another Web A
 
 ![image](https://user-images.githubusercontent.com/13203188/44857544-dfe61c80-ac24-11e8-8682-f697d6fe07c6.png)
 
-#### Web API calling another API in its own name.
+### Web API calling another API in its own name
 
 like in the case of a desktop/service daemon application, a daemon Web API (or a daemon Web App) can use MSAL.NET's ConfidentialClientApplication's [client credentials](Client-credential-flows) acquisition methods
 
-### Transverse features
+## Transverse features
 
 In all the scenarios you might want to:
 
 - troubleshoot yourself by activating [logs](logging) or Telemetry
 - understand how to react to [exceptions](exceptions#exceptions-in-msalnet) due to the Azure AD service [MsalServiceException](/dotnet/api/microsoft.identity.client.msalserviceexception?view=azure-dotnet-preview#fields), or to something wrong happening in the client itself [MsalClientException](/dotnet/api/microsoft.identity.client.msalclientexception?view=azure-dotnet-preview#fields)
 - use MSAL.NET with a [proxy](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/httpclient)
-
-### Protecting the app itself with Intune
-
-Your mobile app (written in Xamarin.iOS or Xamarin.Android) can have app protection policies applied to it, so that it can be [managed by Intune](/intune/app-sdk) and recognized by Intune as a managed app. The [Intune SDK](/intune/app-sdk-get-started) is separate from MSAL, and it talks to AAD on its own.
-
