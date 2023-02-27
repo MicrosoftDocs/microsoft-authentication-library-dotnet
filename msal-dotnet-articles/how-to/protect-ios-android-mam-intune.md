@@ -31,7 +31,7 @@ This will return the access token.
 
 App code that seeks access to protected scope "Hello.World"
 
-```CSharp
+```csharp
 // The following parameters are for sample app in lab4. Please configure them as per your app registration.
             // And also update corresponding entries in info.plist -> IntuneMAMSettings -> ADALClientID and ADALRedirectUri
             string clientId = "bd9933c9-a825-4f9a-82a0-bbf23c9049fd";
@@ -77,7 +77,7 @@ App code that seeks access to protected scope "Hello.World"
 
 App code catches the exception and calls MAM SDK to make the App compliant. It will wait for the compliance.
 
-```CSharp
+```csharp
  catch (IntuneAppProtectionPolicyRequiredException ex)
             {
                 _manualReset.Reset();
@@ -89,7 +89,7 @@ App code catches the exception and calls MAM SDK to make the App compliant. It w
 
 After the App becomes compliant, it will be notified in a delegate. The delegate will set the flag on the semaphore.
 
-```CSharp
+```csharp
 public async override void IdentityHasComplianceStatus(string identity, IntuneMAMComplianceStatus status, string errorMessage, string errorTitle)
         {
             if (status == IntuneMAMComplianceStatus.Compliant)
@@ -101,7 +101,7 @@ public async override void IdentityHasComplianceStatus(string identity, IntuneMA
 
 When the semaphore is released, App should call the Silent token acquisition method.
 
-```CSharp
+```csharp
  var accts = await PCA.GetAccountsAsync().ConfigureAwait(false);
         var acct = accts.FirstOrDefault();
         if (acct != null)
@@ -135,7 +135,7 @@ This will return the access token.
 
 Register callback ```OnMAMCreate()```
 
-```CSharp
+```csharp
             IMAMEnrollmentManager mgr = MAMComponents.Get<IMAMEnrollmentManager>();
             mgr.RegisterAuthenticationCallback(new MAMWEAuthCallback());
 
@@ -147,7 +147,7 @@ Register callback ```OnMAMCreate()```
 
 App code that seeks access to protected scope "Hello.World" calls method in a wrapper class that wraps PCA.
 
-```CSharp
+```csharp
             try
             {
                 // attempt silent login.
@@ -190,7 +190,7 @@ App code that seeks access to protected scope "Hello.World" calls method in a wr
 
 Code for MAM registration is as follows
 
-```CSharp
+```csharp
         private async Task DoMAMRegister(IntuneAppProtectionPolicyRequiredException exProtection)
         {
             // reset the registered event
@@ -212,7 +212,7 @@ Code for MAM registration is as follows
 
 After the App becomes compliant, it will be notified in a callback. The callback will set the flag on the semaphore. This will unblock `DoMAMRegister`.
 
-```CSharp
+```csharp
             if (notification.Type == MAMNotificationType.MamEnrollmentResult)
             {
                 IMAMEnrollmentNotification enrollmentNotification = notification.JavaCast<IMAMEnrollmentNotification>();

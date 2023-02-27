@@ -1,6 +1,6 @@
 This page explains how to change the code to move from the MSAL 2.x to MSAL 3.x
 
-```CSharp
+```csharp
 IEnumerable<string> scopes = new string[]{"user.read"};
 IAccount account;
 string authority;
@@ -17,13 +17,13 @@ Used to acquire an access token from the user cache, and refresh it if needed
 <tr><td>Instead of</td><td>use</td></tr>
 <tr><td>
 
-```CSharp
+```csharp
 app.AcquireTokenSilentAsync(scopes,
                             account)
 ```
 </td><td>
 
-```CSharp
+```csharp
 app.AcquireTokenSilent(scopes,
                        account)   
    .ExecuteAsync()
@@ -33,7 +33,7 @@ app.AcquireTokenSilent(scopes,
 
 <tr><td>
 
-```CSharp
+```csharp
 app.AcquireTokenSilentAsync(scopes,
                             account, 
                             authority,
@@ -41,7 +41,7 @@ app.AcquireTokenSilentAsync(scopes,
 ```
 </td><td>
 
-```CSharp
+```csharp
 app.AcquireTokenSilent(scopes, account)
    .WithAuthority(authority)
    .WithForceRefresh(forceRefresh)    
@@ -57,7 +57,7 @@ app.AcquireTokenSilent(scopes, account)
 
 Instead of calling the constructor of PublicClientApplication directly, use the `PublicClientApplicationBuilder.Create()` or the `PublicClientApplicationBuilder.CreateWithOptions()` methods. The reference documentation page for [PublicClientApplicationBuilder](/dotnet/api/microsoft.identity.client.appconfig.publicclientapplicationbuilder?view=azure-dotnet-preview) shows all the options that you can use.
 
-```CSharp
+```csharp
 string clientId;
 PublicClientApplicationOptions options;
 ```
@@ -66,12 +66,12 @@ PublicClientApplicationOptions options;
 <tr><td>Instead of</td><td>use</td></tr>
 <tr><td>
 
-```CSharp
+```csharp
 app=new PublicClientApplication(clientId);
 ```
 </td><td>
 
-```CSharp
+```csharp
 app=PublicClientApplicationBuilder
     .Create(clientId)
     .Build();
@@ -80,13 +80,13 @@ app=PublicClientApplicationBuilder
 
 <tr><td>
 
-```CSharp
+```csharp
 app=new PublicClientApplication(clientId,
                                 authority);
 ```
 </td><td>
 
-```CSharp
+```csharp
 app=PublicClientApplicationBuilder
    .Create(clientId)
    .WithAuthority(authority)
@@ -94,7 +94,7 @@ app=PublicClientApplicationBuilder
 ```
 
 or
-```CSharp
+```csharp
 options = new PublicClientApplicationOptions()
 {
  ClientId = client,
@@ -117,12 +117,12 @@ MSAL.NET 2.x had twelve overrides of `AcquireTokenAsync`
 <tr><td>Instead of</td><td>use</td></tr>
 <tr><td>
 
-```CSharp
+```csharp
 app.AcquireTokenAsync(scopes)
 ```
 </td><td>
 
-```CSharp
+```csharp
 app=AcquireTokenInteractive(scopes, null)
     .ExecuteAsync().
     .ConfigureAwait(false);
@@ -130,12 +130,12 @@ app=AcquireTokenInteractive(scopes, null)
 </td></tr>
 <tr><td>
 
-```CSharp
+```csharp
 app.AcquireTokenAsync(scopes, loginHint)
 ```
 </td><td>
 
-```CSharp
+```csharp
 app=AcquireTokenInteractive(scopes, null)
     .WithLoginHint(loginHint)
     .ExecuteAsync()
@@ -144,12 +144,12 @@ app=AcquireTokenInteractive(scopes, null)
 </td></tr>
 <tr><td>
 
-```CSharp
+```csharp
 app.AcquireTokenAsync(scopes, account)
 ```
 </td><td>
 
-```CSharp
+```csharp
 app=AcquireTokenInteractive(scopes, null)
     .WithAccount(account)
     .ExecuteAsync()
@@ -158,7 +158,7 @@ app=AcquireTokenInteractive(scopes, null)
 </td></tr>
 <tr><td>
 
-```CSharp
+```csharp
 app.AcquireTokenAsync(scopes,
                       loginHint,
                       uiBehavior,
@@ -166,7 +166,7 @@ app.AcquireTokenAsync(scopes,
 ```
 </td><td>
 
-```CSharp
+```csharp
 app=AcquireTokenInteractive(scopes, null)
     .WithLoginHint(account)
     .WithPrompt(prompt)
@@ -177,7 +177,7 @@ app=AcquireTokenInteractive(scopes, null)
 </td></tr>
 <tr><td>
 
-```CSharp
+```csharp
 app.AcquireTokenAsync(scopes,
                       loginHint,
                       uiBehavior,
@@ -187,7 +187,7 @@ app.AcquireTokenAsync(scopes,
 ```
 </td><td>
 
-```CSharp
+```csharp
 app=AcquireTokenInteractive(scopes, null)
     .WithLoginHint(loginHint)
     .WithPrompt(prompt)
@@ -202,7 +202,7 @@ but of course you only need to specify the parameters that you need
 </td></tr>
 <tr><td>
 
-```CSharp
+```csharp
 app.AcquireTokenAsync(scopes,
                       account,
                       uiBehavior,
@@ -212,7 +212,7 @@ app.AcquireTokenAsync(scopes,
 ```
 </td><td>
 
-```CSharp
+```csharp
 app=AcquireTokenInteractive(scopes, null)
     .WithAccount(account)
     .WithPrompt(prompt)
@@ -226,13 +226,13 @@ app=AcquireTokenInteractive(scopes, null)
 </td></tr>
 <tr><td>
 
-```CSharp
+```csharp
 app.AcquireTokenAsync(scopes,
                       uiParent)
 ```
 </td><td>
 
-```CSharp
+```csharp
 app=AcquireTokenInteractive(scopes,
                             parentObject)
     .WithUseEmbeddedWebView(useEmbeddedWebView)
@@ -242,14 +242,14 @@ app=AcquireTokenInteractive(scopes,
 </td></tr>
 <tr><td>
 
-```CSharp
+```csharp
 app.AcquireTokenAsync(scopes, 
                       loginHint,
                       uiParent)
 ```
 </td><td>
 
-```CSharp
+```csharp
 app=AcquireTokenInteractive(scopes,
                             parentObject)
     .WithUseEmbeddedWebView(useEmbeddedWebView)
@@ -260,14 +260,14 @@ app=AcquireTokenInteractive(scopes,
 </td></tr>
 <tr><td>
 
-```CSharp
+```csharp
 app.AcquireTokenAsync(scopes,
                       account,
                       uiParent)
 ```
 </td><td>
 
-```CSharp
+```csharp
 app=AcquireTokenInteractive(scopes,
                             parentObject)
     .WithUseEmbeddedWebView(useEmbeddedWebView)
@@ -278,7 +278,7 @@ app=AcquireTokenInteractive(scopes,
 </td></tr>
 <tr><td>
 
-```CSharp
+```csharp
 app.AcquireTokenAsync(scopes,
                       loginHint,
                       uiBehavior,
@@ -287,7 +287,7 @@ app.AcquireTokenAsync(scopes,
 ```
 </td><td>
 
-```CSharp
+```csharp
 app=AcquireTokenInteractive(scopes,
                             parentObject)
     .WithUseEmbeddedWebView(useEmbeddedWebView)
@@ -300,7 +300,7 @@ app=AcquireTokenInteractive(scopes,
 </td></tr>
 <tr><td>
 
-```CSharp
+```csharp
 app.AcquireTokenAsync(scopes,
                       loginHint,
                       uiBehavior,
@@ -311,7 +311,7 @@ app.AcquireTokenAsync(scopes,
 ```
 </td><td>
 
-```CSharp
+```csharp
 app=AcquireTokenInteractive(scopes,
                             parentObject)
     .WithUseEmbeddedWebView(useEmbeddedWebView)
@@ -327,7 +327,7 @@ app=AcquireTokenInteractive(scopes,
 </td></tr>
 <tr><td>
 
-```CSharp
+```csharp
 app.AcquireTokenAsync(scopes,
                       account,
                       uiBehavior,
@@ -338,7 +338,7 @@ app.AcquireTokenAsync(scopes,
 ```
 </td><td>
 
-```CSharp
+```csharp
 app=AcquireTokenInteractive(scopes,
                             parentObject)
     .WithUseEmbeddedWebView(useEmbeddedWebView)
@@ -362,14 +362,14 @@ For the list of all the .With operations applicable on AcquireTokenInteractive s
 <tr><td>Instead of</td><td>use</td></tr>
 <tr><td>
 
-```CSharp
+```csharp
 app.AcquireTokenByUsernamePasswordAsync(scopes,
                                         username,
                                         securePassword)
 ```
 </td><td>
 
-```CSharp
+```csharp
 app.AcquireTokenByUsernamePassword(scopes,
                                    username,
                                    password)   
@@ -388,14 +388,14 @@ For the list of all the .With parameters on `AcquireTokenByUsernamePassword`, se
 <tr><td>Instead of</td><td>use</td></tr>
 <tr><td>
 
-```CSharp
+```csharp
 app
 .AcquireTokenWithDeviceCodeAsync(scopes,
                                  deviceCodeResultCallback)
 ```
 </td><td>
 
-```CSharp
+```csharp
 app
 .AcquireTokenWithDeviceCode(scopes,
                             deviceCodeResultCallback)
@@ -405,7 +405,7 @@ app
 </td></tr>
 <tr><td>
 
-```CSharp
+```csharp
 app
 .AcquireTokenWithDeviceCodeAsync(scopes,
                                  extraQueryParameters
@@ -413,7 +413,7 @@ app
 ```
 </td><td>
 
-```CSharp
+```csharp
 app
 .AcquireTokenWithDeviceCode(scopes,
                             deviceCodeResultCallback)
@@ -424,7 +424,7 @@ app
 </td></tr>
 <tr><td>
 
-```CSharp
+```csharp
 app
 .AcquireTokenWithDeviceCodeAsync(scopes,
                                  extraQueryParameters
@@ -433,7 +433,7 @@ app
 ```
 </td><td>
 
-```CSharp
+```csharp
 app
 .AcquireTokenWithDeviceCode(scopes,
                             deviceCodeResultCallback)
@@ -452,14 +452,14 @@ For the list of all the .With parameters on `AcquireTokenWithDeviceCode`, see [A
 <tr><td>Instead of</td><td>use</td></tr>
 <tr><td>
 
-```CSharp
+```csharp
 app
 .AcquireTokenByRefreshTokenAsync(scopes,
                                  refreshToken)
 ```
 </td><td>
 
-```CSharp
+```csharp
 IByRefreshToken brt = app as IByRefreshToken;
 brt
 .AcquireTokenByRefreshToken(scopes,
@@ -477,7 +477,7 @@ brt
 
 Similar to the PublicClientApplication, use the `ConfidentialClientApplicationBuilder.Create()` or the `ConfidentialClientApplicationBuilder.CreateWithOptions()` methods to construct the ConfidentialClientApplication. The reference documentation page for [ConfidentialClientApplicationBuilder](/dotnet/api/microsoft.identity.client.appconfig.publicclientapplicationbuilder?view=azure-dotnet-preview) shows all the options that you can use.
 
-```CSharp
+```csharp
 string clientId;
 ConfidentialClientApplicationOptions options;
 ```
@@ -486,12 +486,12 @@ ConfidentialClientApplicationOptions options;
 <tr><td>Instead of</td><td>use</td></tr>
 <tr><td>
 
-```CSharp
+```csharp
 app=new ConfidentialClientApplication(clientId);
 ```
 </td><td>
 
-```CSharp
+```csharp
 app=ConfidentialClientApplicationBuilder
     .Create(clientId)
     .Build();
@@ -500,13 +500,13 @@ app=ConfidentialClientApplicationBuilder
 
 <tr><td>
 
-```CSharp
+```csharp
 app=new ConfidentialClientApplication(clientId,
                                 authority);
 ```
 </td><td>
 
-```CSharp
+```csharp
 app=ConfidentialClientApplicationBuilder
    .Create(clientId)
    .WithAuthority(authority)
@@ -514,7 +514,7 @@ app=ConfidentialClientApplicationBuilder
 ```
 
 or
-```CSharp
+```csharp
 options = new ConfidentialClientApplicationOptions()
 {
  ClientId = client,
@@ -537,12 +537,12 @@ MSAL.NET 2.x had twelve overrides of `AcquireTokenForClientAsync`
 <tr><td>Instead of</td><td>use</td></tr>
 <tr><td>
 
-```CSharp
+```csharp
 app.AcquireTokenForClientAsync(scopes)
 ```
 </td><td>
 
-```CSharp
+```csharp
 app=AcquireTokenForClientAsync(scopes, null)
     .ExecuteAsync().
     .ConfigureAwait(false);
@@ -550,12 +550,12 @@ app=AcquireTokenForClientAsync(scopes, null)
 </td></tr>
 <tr><td>
 
-```CSharp
+```csharp
 app.AcquireTokenForClientWithCertificateAsync(scopes)
 ```
 </td><td>
 
-```CSharp
+```csharp
 app=AcquireTokenForClientAsync(scopes)
     .ExecuteAsync()
     .ConfigureAwait(false);
@@ -569,12 +569,12 @@ app=AcquireTokenForClientAsync(scopes)
 <tr><td>Instead of</td><td>use</td></tr>
 <tr><td>
 
-```CSharp
+```csharp
 app.AcquireTokenByAuthorizationCodeAsync(authorizationCode, scopes)
 ```
 </td><td>
 
-```CSharp
+```csharp
 app=AcquireTokenByAuthorizationCodeAsync(scopes, null)
     .ExecuteAsync()
     .ConfigureAwait(false);
@@ -583,12 +583,12 @@ app=AcquireTokenByAuthorizationCodeAsync(scopes, null)
 
 <tr><td>
 
-```CSharp
+```csharp
 app.AcquireTokenByAuthorizationCodeAsync(authorizationCode, scopes, authority)
 ```
 </td><td>
 
-```CSharp
+```csharp
 app=AcquireTokenByAuthorizationCodeAsync(scopes, null)
     .WithAuthority(authority)
     .ExecuteAsync()
@@ -604,12 +604,12 @@ app=AcquireTokenByAuthorizationCodeAsync(scopes, null)
 <tr><td>Instead of</td><td>use</td></tr>
 <tr><td>
 
-```CSharp
+```csharp
 app.AcquireTokenOnBehalfOfAsync(scopes, userAssertion)
 ```
 </td><td>
 
-```CSharp
+```csharp
 app=AcquireTokenOnBehalfOfAsync(scopes, userAssertion)
     .ExecuteAsync()
     .ConfigureAwait(false);
@@ -618,12 +618,12 @@ app=AcquireTokenOnBehalfOfAsync(scopes, userAssertion)
 
 <tr><td>
 
-```CSharp
+```csharp
 app.AcquireTokenOnBehalfOfAsync(scopes, userAssertion, authority)
 ```
 </td><td>
 
-```CSharp
+```csharp
 app=AcquireTokenOnBehalfOfAsync(scopes, userAssertion)
     .WithAuthority(authority)
     .ExecuteAsync()
@@ -632,12 +632,12 @@ app=AcquireTokenOnBehalfOfAsync(scopes, userAssertion)
 </td></tr>
 <tr><td>
 
-```CSharp
+```csharp
 app.AcquireTokenOnBehalfOfWithCertificateAsync(scopes, userAssertion)
 ```
 </td><td>
 
-```CSharp
+```csharp
 app=AcquireTokenOnBehalfOfAsync(scopes, userAssertion)
     .ExecuteAsync()
     .ConfigureAwait(false);
@@ -646,12 +646,12 @@ app=AcquireTokenOnBehalfOfAsync(scopes, userAssertion)
 
 <tr><td>
 
-```CSharp
+```csharp
 app.AcquireTokenOnBehalfOfWithCertificateAsync(scopes, userAssertion, authority)
 ```
 </td><td>
 
-```CSharp
+```csharp
 app=AcquireTokenOnBehalfOfAsync(scopes, userAssertion)
     .ExecuteAsync()
     .ConfigureAwait(false);

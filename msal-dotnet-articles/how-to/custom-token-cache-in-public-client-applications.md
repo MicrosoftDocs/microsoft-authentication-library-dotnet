@@ -1,6 +1,6 @@
 # Custom Token cache for a public client application
 
-This article is about custom token cache implementations for public client applications. For context and more general information about token cache serialization see the parent page:[Token cache serialization](token-cache-serialization)
+This article is about custom token cache implementations for public client applications. For context and more general information about token cache serialization see [Token cache serialization](/azure/active-directory/develop/msal-net-token-cache-serialization).
 
 ## Simple token cache serialization (MSAL only)
 
@@ -8,7 +8,7 @@ Below is an example of a naive implementation of custom serialization of a token
 
 After you build the application, you enable the serialization by calling ``TokenCacheHelper.EnableSerialization()`` passing the application `UserTokenCache`
 
-```CSharp
+```csharp
 app = PublicClientApplicationBuilder.Create(ClientId)
     .Build();
 TokenCacheHelper.EnableSerialization(app.UserTokenCache);
@@ -16,7 +16,7 @@ TokenCacheHelper.EnableSerialization(app.UserTokenCache);
 
 This helper class looks like the following:
 
-```CSharp
+```csharp
 static class TokenCacheHelper
  {
   public static void EnableSerialization(ITokenCache tokenCache)
@@ -72,7 +72,7 @@ A preview of a product quality token cache file based serializer for public clie
 
 If you want to implement token cache serialization both with the Unified cache format (common to ADAL.NET 4.x and MSAL.NET 2.x, and with other MSALs of the same generation or older, on the same platform), you can get inspired by the following code:
 
-```CSharp
+```csharp
 string appLocation = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location;
 string cacheFolder = Path.GetFullPath(appLocation) + @"..\..\..\..");
 string adalV3cacheFileName = Path.Combine(cacheFolder, "cacheAdalV3.bin");
@@ -89,7 +89,7 @@ FilesBasedTokenCacheHelper.EnableSerialization(app.UserTokenCache,
 
 This time the helper class looks like the following:
 
-```CSharp
+```csharp
 using System;
 using System.IO;
 using System.Security.Cryptography;

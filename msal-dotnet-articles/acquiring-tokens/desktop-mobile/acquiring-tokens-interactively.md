@@ -34,7 +34,7 @@ Being interactive, UI is important. `AcquireTokenInteractive` has one specific o
 
 `.WithParentActivityOrWindow` has a different type depending on the platform:
 
-```CSharp
+```csharp
 // Android
 WithParentActivityOrWindow(Activity activity)
 
@@ -58,7 +58,7 @@ Remarks:
 - On Windows, you must call `AcquireTokenInteractive` from the UI thread so that the embedded browser gets the appropriate UI synchronization context.  Not calling from the UI thread may cause messages to not pump properly and/or deadlock scenarios with the UI. One way of achieving this, if you are not on the UI thread is to use the `Dispatcher` on WPF.
 - If you are using WPF, to get a window from a WPF control, you can use  `WindowInteropHelper.Handle` class. The call is then, from a WPF control (this):
   
-  ```CSharp
+  ```csharp
   result = await app.AcquireTokenInteractive(scopes)
                     .WithParentActivityOrWindow(new WindowInteropHelper(this).Handle)
                     .ExecuteAsync();
@@ -81,7 +81,7 @@ The class defines the following constants:
 
 Enables you to specify if you want to force the usage of an embedded web view or the system web view (when available). For more details see [Usage of Web browsers](/azure/active-directory/develop/msal-net-web-browsers).
 
- ```CSharp
+ ```csharp
  result = await app.AcquireTokenInteractive(scopes)
                    .WithUseEmbeddedWebView(true)
                    .ExecuteAsync();
@@ -91,7 +91,7 @@ Enables you to specify if you want to force the usage of an embedded web view or
 
 This is used in an advanced scenario where you want the user to pre-consent to several resources upfront (and don't want to use the incremental consent which is normally used with MSAL.NET / the Microsoft identity platform v2.0). For details see [How-to : have the user consent upfront for several resources](#have-the-user-consent-upfront-for-several-resources) below
 
-```CSharp
+```csharp
 var result = await app.AcquireTokenInteractive(scopesForCustomerApi)
                      .WithExtraScopeToConsent(scopesForVendorApi)
                      .ExecuteAsync();
@@ -136,7 +136,7 @@ you should use the .WithAdditionalPromptToConsent modifier which has the `extraS
 
 For instance:
 
-```CSharp
+```csharp
 string[] scopesForCustomerApi = new string[]
 {
   "https://mytenant.onmicrosoft.com/customerapi/customer.read",
@@ -158,7 +158,7 @@ var result = await app.AcquireTokenInteractive(scopesForCustomerApi)
 This will get you an access token for the first Web API.
 Then when you need to call the second one, you can call
 
-```CSharp
+```csharp
 AcquireTokenSilent(scopesForVendorApi, accounts.FirstOrDefault()).ExecuteAsync();
 ```
 

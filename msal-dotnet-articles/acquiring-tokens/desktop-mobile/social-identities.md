@@ -14,7 +14,7 @@ The authority to use is `https://login.microsoftonline.com/tfp/{tenant}/{policyN
 
 The current guidance from B2C is to use `b2clogin.com` as the authority. For example, `$"https://{your-tenant-name}.b2clogin.com/tfp/{your-tenant-ID}/{policyname}"`. For more information, see this [documentation](/azure/active-directory-b2c/b2clogin).
 
-```CSharp
+```csharp
 // Azure AD B2C Coordinates
 public static string Tenant = "fabrikamb2c.onmicrosoft.com";
 public static string ClientID = "90c0fe63-bcf2-44d5-8fb7-b8bbc0b29dc6";
@@ -32,7 +32,7 @@ public static string AuthorityPasswordReset = $"{AuthorityBase}{PolicyResetPassw
 
 When building the application, you need to provide, as usual, the authority, built as above
 
-```CSharp
+```csharp
 application = PublicClientApplicationBuilder.Create(ClientID)
                .WithB2CAuthority(Authority)
                .Build();
@@ -92,7 +92,7 @@ Applying a policy (for instance letting the end user edit their profile or reset
 When you want to provide an experience where your end users sign-in with a social identity, and then edit their profile you want to apply the B2C EditProfile policy. The way to do this, is by calling `AcquireTokenInteractive` with
 the specific authority for that policy and a Prompt set to `Prompt.NoPrompt` to avoid the account selection dialog to be displayed (as the user is already signed-in)
 
-```CSharp
+```csharp
 private async void EditProfileButton_Click(object sender, RoutedEventArgs e)
 {
  IEnumerable<IAccount> accounts = await app.GetAccountsAsync();

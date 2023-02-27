@@ -43,9 +43,9 @@ In the top left side, **Hierarchy** tab lists the components that are used in th
 Select **Canvas** component. The **Inspector** tab on the right will populate with the component properties. At the bottom, it shows that there's **MSAL Script** that's linked to this component. Scripts are behaviors that run along with this component.<br/>
 <img src="https://user-images.githubusercontent.com/34331512/113494817-e7d36080-94a0-11eb-9157-d6a4774e38c9.png" width="300" />
 
-`MSALScript.cs` is located in `..Unity\Assets\Scripts` folder. Open `Assembly-CSharp.csproj` with Visual Studio to edit the script. The script file must inherit from `MonoBehavior`, that's how Unity knows to execute it. Script files can have specific methods that Unity knows to call at specific frequencies. In this case, `Start` method gets called once when component is first executed and `Update` gets called once per frame. The `Start` method invokes the behavior to login using MSAL.
+`MSALScript.cs` is located in `..Unity\Assets\Scripts` folder. Open `Assembly-csharp.csproj` with Visual Studio to edit the script. The script file must inherit from `MonoBehavior`, that's how Unity knows to execute it. Script files can have specific methods that Unity knows to call at specific frequencies. In this case, `Start` method gets called once when component is first executed and `Update` gets called once per frame. The `Start` method invokes the behavior to login using MSAL.
 
-If `Assembly-CSharp.csproj` was not generated, go to **Edit** > **Preferences** > **External Tools**. Check **Embedded packages** and **Local packages**.
+If `Assembly-csharp.csproj` was not generated, go to **Edit** > **Preferences** > **External Tools**. Check **Embedded packages** and **Local packages**.
 
 MSAL dependency itself has to be placed in `..\Unity\Assets\Plugins`. It has to be a .NET Standard DLL.
 

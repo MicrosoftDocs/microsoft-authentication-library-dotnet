@@ -14,7 +14,7 @@ You can check for courses on LinkedIn:
 There are several ways to run asynchronous code from a synchronous code. Various links are listed here.
 
 [Task.RunSynchronously](/dotnet/api/system.threading.tasks.task.runsynchronously?view=net-5.0)
-```CSharp
+```csharp
 var getAcctsTasks = PCA.RemoveAsync(acct);
 // there is no timeout for RunSynchronously
 if (!getAcctsTasks.IsCompleted)
@@ -24,14 +24,14 @@ if (!getAcctsTasks.IsCompleted)
 ```
 
 [Wait for a task to complete with Task.Wait](/dotnet/api/system.threading.tasks.task.wait?view=net-5.0)
-```CSharp
+```csharp
 // wait can optionally have timeout, and cancellation token (not shown)
 int timeoutMilliSec = 3000;
 PCA.RemoveAsync(acct).Wait(timeoutMilliSec);
 ```
 
 [Wait to get result with Task.Result](/dotnet/api/system.threading.tasks.task-1.result?view=net-5.0#remarks)
-```CSharp
+```csharp
 var authResult = PCA.AcquireTokenSilent(Scopes, acct).ExecuteAsync().Result;
 return authResult;
 ```
@@ -41,7 +41,7 @@ If you need to run multiple tasks at a time prior to wrapping them, it may be us
 
 ## Watch out for exceptions and deadlocks
 Here is how to catch exceptions and prevent deadlocks with `.ConfigureAwait(false)`.
-```CSharp
+```csharp
 try
 {
 	Console.WriteLine("Pre AcquireTokenInteractive");

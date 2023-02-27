@@ -17,7 +17,7 @@ The redirect_uri used to acquire the spa auth code must be of type web.
 
 In MSAL.Net, using the new `WithSpaAuthorizationCode` API get the `SpaAuthCode`. 
 
-```CSharp
+```csharp
 private async Task OnAuthorizationCodeReceived(AuthorizationCodeReceivedNotification context)
 {
  try

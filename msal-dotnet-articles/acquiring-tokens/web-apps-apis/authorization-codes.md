@@ -35,7 +35,7 @@ This flow is only available in the confidential client flow; therefore the prote
 ![image](https://user-images.githubusercontent.com/13203188/55967244-3d8e1d00-5c7a-11e9-8285-a54b05597ec9.png)
 
 
-```CSharp
+```csharp
 IConfidentialClientApplication app;
 
 #if !VariationWithCertificateCredentials
@@ -63,7 +63,7 @@ AcquireTokenByAuthorizationCode(
 
 This principle is illustrated below the code performing the application initialization located in the `Startup.cs` file, and, to add authentication with the Microsoft Identity platform (formerly Azure AD) v2.0, you'll need to add the following code  (The comments in the code should be self-explanatory):
 
-```CSharp
+```csharp
  services.AddAuthentication(AzureADDefaults.AuthenticationScheme)
          .AddAzureAD(options => configuration.Bind("AzureAd", options));
 
@@ -129,7 +129,7 @@ This principle is illustrated below the code performing the application initiali
 
 In ASP.NET Core, building the confidential client application leverages information that is in the `HttpContext`, which, in particular contains the URL for the Web site, which helps building the `RedirectUri`.
 
-```CSharp
+```csharp
 /// <summary>
 /// Creates an MSAL Confidential client application
 /// </summary>

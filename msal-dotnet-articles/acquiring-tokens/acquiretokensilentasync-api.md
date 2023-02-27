@@ -26,7 +26,7 @@ The recommended call pattern is to first try to call `AcquireTokenSilent`, and i
 
 #### Recommended call pattern in public client applications with MSAL.NET 4.x
 
-```CSharp
+```csharp
 AuthenticationResult result = null;
 var accounts = await app.GetAccountsAsync();
 
@@ -68,7 +68,7 @@ For the code in context, see the [active-directory-dotnet-desktop-msgraph-v2](ht
 
 #### Recommended call pattern in public client applications with MSAL.NET 2.x
 
-```CSharp
+```csharp
 AuthenticationResult result = null;
 var accounts = await app.GetAccountsAsync();
 
@@ -108,7 +108,7 @@ if (result != null)
 
 Previous versions of MSAL.NET were using `IUser` instead of `IAccount`. The code was as follows:
 
-```CSharp
+```csharp
 AuthenticationResult result = null;
 try
 {

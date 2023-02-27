@@ -78,7 +78,7 @@ It sends non-standard parameters:
 #### Calling a protected API, unauthenticated
 For the first scenario, you just call `WwwAuthenticateParameters.CreateFromResourceResponse` passing the URI of the web API.
 
-```CSharp
+```csharp
  WwwAuthenticateParameters parameters = 
    await WwwAuthenticateParameters.CreateFromResourceResponseAsync("https://yourVault.vault.azure.net/secrets/secret/version");
 
@@ -96,7 +96,7 @@ For the first scenario, you just call `WwwAuthenticateParameters.CreateFromResou
 
 #### Claim challenge, CAE, CA auth context
 
-```CSharp
+```csharp
 HttpResponseMessage response;
 using (HttpRequestMessage httpRequestMessage = new HttpRequestMessage(
                 effectiveOptions.HttpMethod,

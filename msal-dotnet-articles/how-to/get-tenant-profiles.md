@@ -1,8 +1,9 @@
+# Getting tenant profiles with MSAL.NET
 
 Here is a code sample that acquires tokens for the same account, but in different tenant, and then displays the tenants
 and the claims of the ID token in each tenant
 
-```CSharp
+```csharp
 using Microsoft.Identity.Client;
 using System;
 using System.Threading.Tasks;

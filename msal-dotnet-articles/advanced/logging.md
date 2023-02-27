@@ -10,7 +10,7 @@ MSAL.NET uses an interface named `IIdentityLogger` to provide logging for messag
 This interface enables you to dynamically change the behavior of the logger without having to rebuild your MSAL implementation. For example, you could configure the `IsEnabled` method to the log level from an environment variable or app configuration for greater flexibility during debugging.
 
 ### IIdentityLogger Interface
-```CSharp
+```csharp
     public interface IIdentityLogger
     {
         //
@@ -47,7 +47,7 @@ See [EventLogLevel](https://github.com/AzureAD/azure-activedirectory-identitymod
 
 Sample `IIdentityLogger`implementation: 
 
-```CSharp
+```csharp
     class MyIdentityLogger : IIdentityLogger
     {
         public EventLogLevel MinLogLevel { get; }
@@ -82,7 +82,7 @@ Sample `IIdentityLogger`implementation:
 ```
 
 Using `IIdentityLogger` implementation in MSAL:
-```CSharp
+```csharp
     MyIdentityLogger myLogger = new MyIdentityLogger(logLevel);
 
     var app = ConfidentialClientApplicationBuilder
@@ -97,7 +97,7 @@ An app also has the option to configure logging with a few lines of code, and ha
 
 Create a logging callback:
 
-```CSharp
+```csharp
 void MyLoggingMethod(LogLevel level, string message, bool containsPii)
 {
     Console.WriteLine($"MSAL {level} {containsPii} {message}");
@@ -106,7 +106,7 @@ void MyLoggingMethod(LogLevel level, string message, bool containsPii)
 
 Then provide the callback to `WithLogging` method when creating the `PublicClientApplication` or `ConfidentialClientApplication`:
 
-```CSharp
+```csharp
 var app = ConfidentialClientApplicationBuilder.Create(config.ClientId)
           .WithLogging(MyLoggingMethod, LogLevel.Info,
                        enablePiiLogging: true, 

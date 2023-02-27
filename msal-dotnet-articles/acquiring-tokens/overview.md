@@ -67,7 +67,7 @@ All the Acquire Token methods in MSAL.NET have the following pattern:
 
 Here is the pattern:
 
-```CSharp
+```csharp
 AuthenticationResult result = app.AcquireTokenXXX(mandatory-parameters)
  .WithYYYParameter(optional-parameter)
  .ExecuteAsync();

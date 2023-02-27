@@ -52,7 +52,7 @@ During the **[App registration](https://go.microsoft.com/fwlink/?linkid=2083908)
 
 The following sample presents a simplified case
 
-```CSharp
+```csharp
 static async Task GetATokenForGraph()
 {
  string authority = "https://login.microsoftonline.com/contoso.com";
@@ -93,7 +93,7 @@ static async Task GetATokenForGraph()
 
 The following sample presents the most current case, with explanations of the kind of exceptions you can get, and their mitigations
 
-```CSharp
+```csharp
 static async Task GetATokenForGraph()
 {
  string authority = "https://login.microsoftonline.com/contoso.com";

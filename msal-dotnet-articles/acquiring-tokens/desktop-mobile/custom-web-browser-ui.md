@@ -33,7 +33,7 @@ To leverage this you need to:
   1. Implement the `ICustomWebUi`  interface (See [here](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/053a98d16596be7e9ca1ab916924e5736e341fe8/src/Microsoft.Identity.Client/Extensibility/ICustomWebUI.cs#L32-L70). You'll need to implement a single method `AcquireAuthorizationCodeAsync` accepting the authorization code URL (computed by MSAL.NET), letting the user go through the interaction with the identity provider, and then returning back the URL by which the identity provider would have called your implementation back (including the authorization code). This is a long running operations, so don't forget to check for cancellation and throw `OperationCancelledException` to allow apps consuming the custom web ui to transmit cancellation.
   2. In your `AcquireTokenInteractive` call you can use `.WithCustomUI()` modifier passing the instance of your custom web UI
 
-```CSharp
+```csharp
 using Microsoft.Identity.Client.Extensions;
 
      result = await app.AcquireTokenInteractive(scopes)

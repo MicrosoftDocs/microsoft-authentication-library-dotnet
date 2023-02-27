@@ -6,7 +6,7 @@ This does not remove the session cookie which is in the browser, though.
 
 The code is the following where app is a `IClientApplicationBase`
 
-```CSharp
+```csharp
    // clear the cache
    var accounts = await app.GetAccountsAsync();
    while (accounts.Any())

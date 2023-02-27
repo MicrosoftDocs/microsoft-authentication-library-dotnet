@@ -29,7 +29,7 @@ For scenarios where continuous access is needed without an assertion, see [OBO f
 
 > **Note:** Make sure to pass an access token, not an ID token, into the `AcquireTokenOnBehalfOf` method. The purpose of an ID token is as a confirmation that a user was authenticated and it contains some user-related information. While an access token determines whether a user has access to a resource, which is more appropriate in this On-Behalf-Of scenario. MSAL is focused on getting good access tokens. ID tokens are also obtained and cached but their expiry is not tracked. So it's possible for an ID token to expire and `AcquireTokenSilent` will not refresh it.
 
-```CSharp
+```csharp
 private void AddAccountToCacheFromJwt(IEnumerable<string> scopes, JwtSecurityToken jwtToken, ClaimsPrincipal principal, HttpContext httpContext)
 {
   UserAssertion userAssertion;
@@ -109,7 +109,7 @@ In an ASP.NET / ASP.NET Core Web API, OBO is typically called on the `OnTokenVal
 
 Here is what happens when a Jwt bearer token is received end validated by the Web API:
 
-```CSharp
+```csharp
 public static IServiceCollection AddProtectedApiCallsWebApis(this IServiceCollection services, IConfiguration configuration, IEnumerable<string> scopes)
 {
  ...
@@ -131,7 +131,7 @@ public static IServiceCollection AddProtectedApiCallsWebApis(this IServiceCollec
 
 And here is the code in the actions of the API controllers, calling downstream APIs:
 
-```CSharp
+```csharp
 private async Task GetTodoList(bool isAppStarting)
 {
  ...
@@ -159,7 +159,7 @@ HttpResponseMessage response = await _httpClient.GetAsync(TodoListBaseAddress + 
 
 the GetAccountIdentifier method uses the claims associated with the identity of the user for which the Web API received the JWT:
 
-```CSharp
+```csharp
 public static string GetMsalAccountId(this ClaimsPrincipal claimsPrincipal)
 {
  string userObjectId = GetObjectId(claimsPrincipal);

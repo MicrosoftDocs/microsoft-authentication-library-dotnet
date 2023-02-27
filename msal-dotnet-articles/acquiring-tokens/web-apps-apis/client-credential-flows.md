@@ -1,10 +1,10 @@
 # Client credential flows in MSAL.NET
 
-### Availability by platform
+## Availability by platform
 
 MSAL is a multi-framework library. Confidential Client flows are not available on the mobile platforms (UWP, Xamarin.iOS, and Xamarin.Android) since there is no secure way of deploying a secret there.
 
-### Credentials
+## Credentials
 
 MSAL.NET supports 2 types of client credentials, which must be registered in the AAD app registration portal
 
@@ -16,7 +16,7 @@ For advanced scenarios, 2 more types of credentials can be used. See details at 
 - Signed client assertions
 - Certificate + additional claims to be sent
 
-## Code snippet
+### Code snippet
 
 ```csharp
 
@@ -42,7 +42,7 @@ For more information, see [AuthenticationConfig.cs](https://github.com/Azure-Sam
 
 Note: Token cache performance was significantly improved in MSAL 4.30.0.
 
-### Custom Cache Serialization
+## Custom Cache Serialization
 
 If your service is multi-tenant (i.e. it needs tokens for a resource that is in different tenants), see [MSAL for client credential flow in multi-tenant services](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Multi-tenant-client_credential-use).
 
@@ -62,74 +62,72 @@ My service is running out of memory.
 
 **Solution:**
 See [MSAL for client credential flow in multi-tenant services](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Multi-tenant-client_credential-use).
-Provision enough RAM on the machines running your service or use a distributed cache. 
-A single token is a only a few KB in size, but there is 1 token for each tenant! A multi-tenant service sometimes needs tokens for 0.5M tenants. 
+Provision enough RAM on the machines running your service or use a distributed cache.
+A single token is a only a few KB in size, but there is 1 token for each tenant! A multi-tenant service sometimes needs tokens for 0.5M tenants.
 
 **Problem:** How can I avoid requesting new tokens on each machine of my distributed service?
 **Solution:** Use a distributed cache like Redis.
 
 **Problem:** I customized my cache. How can I monitor the hit rate?
-**Solution:** The result object will tell you if the token comes from the cache or not: 
+**Solution:** The result object will tell you if the token comes from the cache or not:
 
 ```csharp
 authResult.AuthenticationResultMetadata.TokenSource == TokenSource.Cache
 ```
 
 **Problem:** I am getting "loop detected" errors
-**Solution:** You are calling AAD for a token to often and AAD is throttling you. You need to use a cache - either the in-memory one (as per the sample above) or a persisted one. 
+**Solution:** You are calling AAD for a token to often and AAD is throttling you. You need to use a cache - either the in-memory one (as per the sample above) or a persisted one.
 
 **Problem:** `AcquireTokenClient` latency is too high
 **Possible Solutions:** Please ensure you have a high token cache hit rate. 
 The in-memory cache is optimized for searching through tokens that come from different client_id or different tenant_id. It is not optimized for storing tokens with different scopes. You need to use a different cache key that includes the scope. See https://aka.ms/msal-net-performance-testing
 
-### Registration of application secret or certificate with Azure AD
+## Registration of application secret or certificate with Azure AD
 
 You can register your application secrets either through the interactive experience in the [Azure portal](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredAppsPreview), or using command-line tools (like PowerShell)
 
-#### Registering client secrets using the application registration portal
+### Registering client secrets using the application registration portal
 
 The management of client credentials happens in the **certificates & secrets** page for an application:
 
 ![image](https://user-images.githubusercontent.com/13203188/49435190-4f385300-f7b6-11e8-8a83-7e468e5fd124.png)
 
-
-#### Registering client secrets using PowerShell
+### Registering client secrets using PowerShell
 
 The [active-directory-dotnetcore-daemon-v2](https://github.com/Azure-Samples/active-directory-dotnetcore-daemon-v2) sample shows how to register an application secret or a certificate with an Azure AD application:
 
 - For details on how to register an application secret, see [AppCreationScripts/Configure.ps1](https://github.com/Azure-Samples/active-directory-dotnetcore-daemon-v2/blob/5199032b352a912e7cc0fce143f81664ba1a8c26/AppCreationScripts/Configure.ps1#L190)
 - For details on how to register a certificate with the application, see [AppCreationScripts-withCert/Configure.ps1](https://github.com/Azure-Samples/active-directory-dotnetcore-daemon-v2/blob/5199032b352a912e7cc0fce143f81664ba1a8c26/AppCreationScripts-withCert/Configure.ps1#L162-L178)
 
-### Construction of ConfidentialClientApplication with client credentials
+## Construction of ConfidentialClientApplication with client credentials
 
 In MSAL.NET client credentials are passed as a parameter at the application construction
 
 Then, once the confidential client application is constructed, acquiring the token is a question of calling overrides of ``AcquireTokenForClient``, passing the scope, and forcing or not a refresh of the token.
 
-### Client assertions
+## Client assertions
 
 Instead of a client secret or a certificate, the confidential client application can also prove its identity using client assertions. This advanced scenario is detailed in [Confidential client assertions](/azure/active-directory/develop/msal-net-client-assertions).
 
-### Remarks
+## Remarks
 
-#### AcquireTokenForClient uses the application token cache
+### AcquireTokenForClient uses the application token cache
 
 `AcquireTokenForClient` uses the **application token cache** (not the user token cache)
 Don't call `AcquireTokenSilent` before calling `AcquireTokenForClient` as `AcquireTokenSilent` uses the **user** token cache. `AcquireTokenForClient` checks the **application** token cache itself and updates it.
 
-
-#### Scopes to request
+### Scopes to request
 
 The scope to request for a client credential flow is the name of the resource followed by `/.default`. This notation tells Azure AD to use the **application level permissions** declared statically during the application registration. Also these API permissions must be granted by a tenant administrator
 
-```CSharp
+```csharp
 ResourceId = "someAppIDURI";
 var scopes = new [] {  ResourceId+"/.default"};
 
 var result = app.AcquireTokenForClient(scopes);
 ```
 
-#### No need to pass a Reply URL at app construction if your app is only a daemon
+### No need to pass a Reply URL at app construction if your app is only a daemon
 
 In the case where your confidential client application uses **only** client credentials flow, you don't need to pass a reply URL passed in the constructor.
 

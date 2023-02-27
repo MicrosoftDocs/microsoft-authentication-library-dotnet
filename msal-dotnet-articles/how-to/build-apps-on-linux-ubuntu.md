@@ -1,6 +1,6 @@
 # Test App for Linux
 Create a console app for linux testing. Right now, it tests [#2839](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/issues/2839)
-```CSharp
+```csharp
 class Program
     {
         public static string ClientID = "your client id"; //msidentity-samples-testing tenant

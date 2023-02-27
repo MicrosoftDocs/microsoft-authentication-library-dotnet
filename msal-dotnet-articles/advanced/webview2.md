@@ -17,7 +17,7 @@ WebView2 runtime is available on most Windows 10 and Windows 11 machines by defa
 - On .NET5-windows10.xxx, there is no change
 - On .NET Classic and .NET Core 3.1, add a reference to [Microsoft.Identity.Client.Desktop]( https://www.nuget.org/packages/Microsoft.Identity.Client.Desktop/) and call `.WithDesktopFeatures()`
 
-```CSharp
+```csharp
 
 var pca = PublicClientApplicationBuilder
     .Create("client_id")

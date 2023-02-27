@@ -62,7 +62,7 @@ You can pass optional parameters, by calling:
 
 The following sample code presents the most current case, with explanations of the kind of exceptions you can get, and their mitigation.
 
-```CSharp
+```csharp
 private const string ClientId = "<client_guid>";
 private const string Authority = "https://login.microsoftonline.com/contoso.com";
 private readonly string[] Scopes = new string[] { "user.read" };
