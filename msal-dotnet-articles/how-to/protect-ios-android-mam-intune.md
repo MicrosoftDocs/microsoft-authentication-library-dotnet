@@ -1,8 +1,12 @@
-# Scenario
+# Protecting iOS and Android applications with InTune
+
+## Scenario
+
 There are scenarios when just user authentication may not be sufficient to protect certain resources. The device that accesses it should also be compliant as per policies defined in Intune.  
 Azure Active Directory (AAD) ensures that the access token is not issued till the device is compliant as per the conditional access policy. This page explains how a resource can be reached by MSAL.NET while being protected by Intune [Mobile Application Management (MAM)](/mem/intune/fundamentals/deployment-guide-enrollment-mamwe).
 
-# Overview of the system configuration
+## Overview of the system configuration
+
 The system comprises of two apps: a backend app that provides access to a hosted resource and a client App that needs to access the resource.The resource is defined by scope. When the client app needs the resource, it will request access to the scope.  
 
 Azure Active Directory (AAD) protects the resource by applying conditional access on the resource. One of the conditions of the access is to have App Protection Policy on the client App.  
@@ -11,7 +15,8 @@ An App protection policy can be created in the Intune Portal for an App and it c
 
 Here are the detail [setup steps](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Steps-to-create-config-for-MAM-(Conditional-access))  .
 
-# Workflow for iOS
+## Workflow for iOS
+
 As a result of the setup, when App attempts to reach the resource and if the device is not compliant, AAD returns ```protection_policy_required``` suberror.  
 
 MSAL.NET catches the error and throw ```IntuneAppProtectionPolicyRequiredException```.  
@@ -22,8 +27,10 @@ The App can then call the silent token acquisition method of MSAL.NET to obtain 
 
 This will return the access token.
 
-# Code snippets
+### Code snippets
+
 App code that seeks access to protected scope "Hello.World"
+
 ```CSharp
 // The following parameters are for sample app in lab4. Please configure them as per your app registration.
             // And also update corresponding entries in info.plist -> IntuneMAMSettings -> ADALClientID and ADALRedirectUri
@@ -79,7 +86,9 @@ App code catches the exception and calls MAM SDK to make the App compliant. It w
                 _manualReset.WaitOne();
             }
 ```
+
 After the App becomes compliant, it will be notified in a delegate. The delegate will set the flag on the semaphore.
+
 ```CSharp
 public async override void IdentityHasComplianceStatus(string identity, IntuneMAMComplianceStatus status, string errorMessage, string errorTitle)
         {
@@ -89,7 +98,9 @@ public async override void IdentityHasComplianceStatus(string identity, IntuneMA
             }
         }
 ```
+
 When the semaphore is released, App should call the Silent token acquisition method.
+
 ```CSharp
  var accts = await PCA.GetAccountsAsync().ConfigureAwait(false);
         var acct = accts.FirstOrDefault();
@@ -106,8 +117,8 @@ When the semaphore is released, App should call the Silent token acquisition met
 
 The complete sample can be found [Here](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/tree/d813f674da88d37272d7bd8fe81318d4243e7583/tests/devapps/Intune-xamarin-ios)
 
+## Workflow for Android
 
-# Workflow for Android
 As a result of the setup, when App attempts to reach the resource and if the device is not compliant, AAD returns ```protection_policy_required``` suberror.  
 
 MSAL.NET catches the error and throws ```IntuneAppProtectionPolicyRequiredException```.  
@@ -120,7 +131,8 @@ The app should also register callback for ```MAMNotificationType.MamEnrollmentRe
 
 This will return the access token.
 
-# Code snippets
+### Code snippets
+
 Register callback ```OnMAMCreate()```
 
 ```CSharp
@@ -134,6 +146,7 @@ Register callback ```OnMAMCreate()```
 ```
 
 App code that seeks access to protected scope "Hello.World" calls method in a wrapper class that wraps PCA.
+
 ```CSharp
             try
             {
@@ -196,7 +209,9 @@ Code for MAM registration is as follows
             IntuneSampleApp.MAMRegsiteredEvent.WaitOne();
         }
 ```
-After the App becomes compliant, it will be notified in a callback. The callback will set the flag on the semaphore. This will unblock ```DoMAMRegister```.
+
+After the App becomes compliant, it will be notified in a callback. The callback will set the flag on the semaphore. This will unblock `DoMAMRegister`.
+
 ```CSharp
             if (notification.Type == MAMNotificationType.MamEnrollmentResult)
             {
@@ -211,4 +226,4 @@ After the App becomes compliant, it will be notified in a callback. The callback
             }}
 ```
 
-The complete sample can be found [Here](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/tree/master/tests/devapps/Intune-xamarin-Android)
+The complete sample can be found [here](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/tree/master/tests/devapps/Intune-xamarin-Android).
