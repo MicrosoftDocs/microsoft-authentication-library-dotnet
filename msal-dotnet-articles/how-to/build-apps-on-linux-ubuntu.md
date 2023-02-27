@@ -1,5 +1,7 @@
-# Test App for Linux
+# Building MSAL.NET applications on Linux
+
 Create a console app for linux testing. Right now, it tests [#2839](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/issues/2839)
+
 ```csharp
 class Program
     {
@@ -20,14 +22,16 @@ class Program
         }
     }
 ```
+## How to setup
 
-# How to setup
-In a Ubuntu machine
+On an Ubuntu machine
+
 - Download VS Code
 - Copy the files from the download folder to an "App" folder.
 - Download the NuGet package in ~/LocalNuget folder.
 
-# How to build
+## How to build
+
 From the VS Code terminal
 - Go to the "App" folder
 - Run command
@@ -37,8 +41,10 @@ This will add the latest package to the project
 ```dotnet build```
 This will build the app in debug mode
 
-# How to run
-From the Powershell terminal
+## How to run
+
+From the PowerShell terminal
+
 - Got to "App"/bin/Debug/net6 folder
 - Run command
 ```dotnet TestApp.dll```

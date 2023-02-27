@@ -1,3 +1,5 @@
+# Moving from MSAL 2 to MSAL 3
+
 This page explains how to change the code to move from the MSAL 2.x to MSAL 3.x
 
 ```csharp
