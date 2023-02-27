@@ -1,9 +1,15 @@
+# Creating configuration for InTune Mobile App Management conditional access
+
 ## Scenario
+
 There is a scenario when a user of a client application wants to access resources protected by specific permissions (i.e. scopes) in a backend application. The resource is accessible only when certain app protection policies and access conditions are met. In such situation, an access token is issued only when the conditions are met.  
 
-This scenario includes a backend application, and an iOS and Android client applications. The setup for the two platforms is slightly different. This article describes the steps to correctly configure these applications for the above scenario to work. At the same time, the article avoids going into granular details. Read more in [Code example](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Protect-your-resources-in-iOS-application-using-Intune-MAM-and-MSAL.NET) and [Intune Mobile App Management](/mem/intune/apps/app-management).
+This scenario includes a backend application, and an iOS and Android client applications. The setup for the two platforms is slightly different. This article describes the steps to correctly configure these applications for the above scenario to work. At the same time, the article avoids going into granular details. Read more in [Intune Mobile App Management](/mem/intune/apps/app-management).
+
+## Setup application
 
 ### Setup User and Group for testing
+
 1. Sign in to [Azure Active Directory](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview).
 2. Create a test user (e.g. `XamTestuser@XamTester.onmicrosoft.com`).
 3. On the user profile page, go to **Licenses**.
@@ -12,13 +18,20 @@ This scenario includes a backend application, and an iOS and Android client appl
     - Enterprise Mobility + Security
     - Intune
     - Microsoft 365 Business standard
-<br/>_Note: These policies do not apply to guest users._
+
+    >[!NOTE]
+    >These policies do not apply to guest users.
 5. Create a test group (e.g. `MAM_Test_Users`).
-<br/>_Note the name of the group. This will need to be assigned at later stages._
+
+    >[!NOTE]
+    >Remember the name of the group. This will need to be assigned at later stages.
+
 6. Add the new user to this group.
 
 ### Setup Enterprise App and Conditional Access policy
+
 Register a backend application:
+
 1. In [Azure Active Directory](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview), go to Enterprise Applications section.
 2. Click on **New application**.
 3. Click **Create your own application**.
@@ -28,6 +41,7 @@ Register a backend application:
 7. This will take you to the screen in #1.
 
 Enable conditional access:
+
 1. Navigate to **Enterprise Applications**.
 2. Select the application that you created.
 3. Assign the user group that was created earlier.
@@ -43,6 +57,7 @@ Enable conditional access:
 6. Click **Create**.
 
 Configure permissions (e.e. scopes):
+
 1. Navigate to **App registrations**. (Note: This is not **Enterprise applications**.)
 2. Select the app you created.
 3. Click on "**Add Application ID URI**".
@@ -59,6 +74,7 @@ Configure permissions (e.e. scopes):
 14. **Grant Admin** consent.
 
 ### Setup Client Apps
+
 1. In [Azure Active Directory](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview), go to **App registration**.
 2. Create a new app and choose **multitenant** option.
 3. Add platform URI for iOS.
@@ -75,18 +91,23 @@ Configure permissions (e.e. scopes):
     8. Select **Grant admin consent for your tenant** (even if **Admin consent required** column shows **No**).
 
 ## Setup in Intune
+
 ### Build the iOS Client App
+
 1. Build a skeleton app with the client ID from the Azure AD.
 2. Make sure that the iOS app references **Xamarin.Intune.MAM.SDK.iOS** package.
 3. For iOS, the IPA file should be built.
 
 ### Build the Android Client App
+
 1. Build a skeleton app with the client ID from the Azure AD.
 2. Make sure that the Android app references **Microsoft.Intune.MAM.Xamarin.Android** package.
 3. For Android, the APK file should be built.
 
 ### Setup Apps in Intune
+
 You will have to follow the same steps twice, once for the iOS app and again for the Android app with the differences as noted.
+
 1. Go to In **[Intune Portal](https://endpoint.microsoft.com/).**
 2. Create an app:
     - For iOS, click on **Apps** > **iOS Apps** section.
@@ -105,7 +126,9 @@ You will have to follow the same steps twice, once for the iOS app and again for
 9. Select **Create** to complete the client application registration.
 
 ### Setup App Protection Policy in Intune
+
 You will have to follow the same steps twice, once for the iOS app and again for the Android app with the differences as noted.
+
 1. Go to In **[Intune Portal](https://endpoint.microsoft.com/).**
 2. Go to **Apps** > **App Protection policies**:
     - For iOS, click **Create Policy iOS/MacOS**.
