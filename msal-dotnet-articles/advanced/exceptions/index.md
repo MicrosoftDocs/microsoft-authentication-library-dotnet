@@ -21,7 +21,7 @@ No other exception is caught by MSAL. Any network issues, cancellations etc. are
 
 MSAL throws `MsalClientException` for things that go wrong inside the library (e.g. bad configuration) and `MsalServiceException` for things that go wrong service side or in the broker (e.g. a secret expired).
 
-### Common exceptions 
+### Common exceptions
 
 1. User cancelled authentication (public client only)
 
@@ -31,9 +31,7 @@ On Android, this exception can also occur if a [browser with tabs](https://githu
 
 2. HTTP Exceptions
 
-Developers are expected to implement their own retry policies when calling MSAL. MSAL makes HTTP calls to the AAD service, and occasional failures can occur, for example the network can go down or the server is overloaded. HTTP 5xx status code responses are retried once. 
-
-See also [Simple retry for errors with HTTP error codes 500-600](retry-after#simple-retry-for-errors-with-http-error-codes-500-600) and [Http 429 (Retry After)](retry-after#http-429-retry-after)
+Developers are expected to implement their own retry policies when calling MSAL. MSAL makes HTTP calls to the AAD service, and occasional failures can occur, for example the network can go down or the server is overloaded. HTTP 5xx status code responses are retried once.
 
 ### Exception types
 
@@ -46,6 +44,7 @@ In the case of `MsalServiceException`, the error code might contain a code which
 #### MsalUiRequiredException
 
 The "Ui Required" is proposed as a specialization of ``MsalServiceException`` named ``MsalUiRequiredException``. This means you have attempted to use a non-interactive method of acquiring a token (e.g. AcquireTokenSilent), but MSAL could not do it silently. this can be because:
+
 - you need to sign-in
 - you need to consent
 - you need to go through a multi-factor authentication experience.
@@ -65,6 +64,3 @@ To handle the claim challenge, you will need to use the `.WithClaims(claims)` me
 ### Retry policies
 
 See [Retry-Policy](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Retry-Policy)
-
-
-

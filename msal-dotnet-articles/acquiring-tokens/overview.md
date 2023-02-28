@@ -12,9 +12,9 @@ In general the way to acquire a token is different depending on if the applicati
 
 ## Token caching
 
-For both Public client and confidential client applications, MSAL.NET maintains a token cache (or two caches in the case of confidential client applications), and applications should [try to get a token from the cache](AcquireTokenSilentAsync-using-a-cached-token) first before any other means, except in the case of [Client Credentials](https://aka.ms/msal-net-client-credentials), which does look at the application cache by itself. 
+For both Public client and confidential client applications, MSAL.NET maintains a token cache (or two caches in the case of confidential client applications), and applications should [try to get a token from the cache](./acquiretokensilentasync-api.md) first before any other means, except in the case of [Client Credentials](https://aka.ms/msal-net-client-credentials), which does look at the application cache by itself.
 
-In the case of UWP, Xamarin iOS and Xamarin Android, the token cache serialization to an isolated storage is provided by MSAL.NET. In the case of .NET Desktop (.NET Framework and .NET Core) platforms, though, the application needs to customize the [token cache serialization](token-cache-serialization).
+In the case of UWP, Xamarin iOS and Xamarin Android, the token cache serialization to an isolated storage is provided by MSAL.NET. In the case of .NET Desktop (.NET Framework and .NET Core) platforms, though, the application needs to customize the [token cache serialization](/azure/active-directory/develop/msal-net-token-cache-serialization).
 
 ## Token acquisition methods
 
@@ -22,7 +22,7 @@ In the case of UWP, Xamarin iOS and Xamarin Android, the token cache serializati
 
 #### Flows
 
-- will often [acquire token interactively](Acquiring-tokens-interactively), having the user sign-in.
+- will often [acquire token interactively](./desktop-mobile/acquiring-tokens-interactively.md), having the user sign-in.
   > Remember that this is not possible yet in .NET Core as .NET core does not provide UI capabilities and this is required for interactive authentication 
 - But it's also possible for a desktop application running on a Windows machine which is joined to a domain or to Azure AD, to [get a token silently for the user signed-in on the machine](https://aka.ms/msal-net-iwa), leveraging Integrated Windows Authentication (IWA/Kerberos). 
 - On .NET framework desktop client applications , it's also possible (but not recommended) to [get a token with a username and password](https://aka.ms/msal-net-up) (U/P).
@@ -33,7 +33,7 @@ In the case of UWP, Xamarin iOS and Xamarin Android, the token cache serializati
 
 The following table summarizes the ways available to acquire tokens in public client applications depending on the Operating system, and therefore the chosen platform, and the kind of application.
 
-Operating System | Library Platform | Kind of App | [Interactive Auth](Acquiring-tokens-interactively) | [IWA](https://aka.ms/msal-net-iwa) | [U/P](https://aka.ms/msal-net-up) | [Device Code](https://aka.ms/msal-net-device-code-flow)
+Operating System | Library Platform | Kind of App | [Interactive Auth](./desktop-mobile/acquiring-tokens-interactively.md) | [IWA](https://aka.ms/msal-net-iwa) | [U/P](https://aka.ms/msal-net-up) | [Device Code](https://aka.ms/msal-net-device-code-flow)
 -- | -------- | --- | ----------  | --- | --- | ----------------- 
 <img src="/azure/active-directory/develop/media/index/logo_windows.svg" width="40" /> <br/> Windows desktop	| <img src="/azure/active-directory/develop/media/index/logo_net.svg" width="40" /> <br/> .NET| Desktop (WPF,<br/>  Windows.Forms,<br/>  Console) | Y | Y | Y | (Y)
 <img src="/azure/active-directory/develop/media/index/logo_windows.svg" width="40" /> <br/>Windows 10	| <img src="/azure/active-directory/develop/media/index/logo_windows.svg" width="40" /> <br/> UWP	| Store app	| Y	| Y	| 	
@@ -45,15 +45,15 @@ Mac OS, Linux, Windows	| <img src="/azure/active-directory/develop/media/index/l
 
 #### Flows
 
-- Acquire token **for the application itself**, not for a user, using [client credentials](Client-credential-flows). This can be used for syncing tools, or tools which process users in general, not a particular user. 
-- In the case of Web APIs calling and API on behalf of the user, using the [On Behalf Of flow](on-behalf-of) and still identifying the application itself with client credentials to acquire a token based on some User assertion (SAML for instance, or a JWT token). This can be used for applications which need to access resources of a particular user in service to service calls.
-- **For Web apps**, acquire tokens [by authorization code](Acquiring-tokens-with-authorization-codes-on-web-apps) after letting the user sign-in through the authorization request URL. This is typically the mechanism used by an open id connect application, which lets the user sign-in using Open ID connect, but then wants to access Web APIs on behalf of this particular user.
+- Acquire token **for the application itself**, not for a user, using [client credentials](./web-apps-apis/client-credential-flows.md). This can be used for syncing tools, or tools which process users in general, not a particular user. 
+- In the case of Web APIs calling and API on behalf of the user, using the [On Behalf Of flow](./web-apps-apis/on-behalf-of-flow.md) and still identifying the application itself with client credentials to acquire a token based on some User assertion (SAML for instance, or a JWT token). This can be used for applications which need to access resources of a particular user in service to service calls.
+- **For Web apps**, acquire tokens [by authorization code](./web-apps-apis/authorization-codes.md) after letting the user sign-in through the authorization request URL. This is typically the mechanism used by an open id connect application, which lets the user sign-in using Open ID connect, but then wants to access Web APIs on behalf of this particular user.
 
 #### Summary
 
 The following table summarizes the ways available to acquire tokens in confidential client applications depending on the Operating system, and therefore the chosen platform, and the kind of application.
 
-Operating System | Library Platform | Kind of App | [Client Credential](Client-credential-flows) | [On behalf of](on-behalf-of) | [Auth Code](Acquiring-tokens-with-authorization-codes-on-web-apps)
+Operating System | Library Platform | Kind of App | [Client Credential](./web-apps-apis/client-credential-flows.md) | [On behalf of](./web-apps-apis/on-behalf-of-flow.md) | [Auth Code](./web-apps-apis/authorization-codes.md)
  -- | -------- | --- | ----------  | --- | --- 
 Windows	| <img src="/azure/active-directory/develop/media/index/logo_net.svg" width="40"/> <br/> .NET Framework | ![image](https://user-images.githubusercontent.com/13203188/53402109-60f25680-39b1-11e9-868a-0dcad865cb31.png) | Y | | Y
 Windows, MacOS, Linux | <img src="/azure/active-directory/develop/media/index/logo_netcore.svg" width="40" /> <br/> ASP.NET Core  | ![image](https://user-images.githubusercontent.com/13203188/53425607-a6c91200-39e5-11e9-9a1d-c533bf546156.png) | Y | | Y | 	
@@ -87,7 +87,7 @@ In MSAL.NET, AuthenticationResult exposes:
 - ``ExpiresOn`` tells the date/time when the token expires
 - ``TenantId`` contains the tenant in which the user was found. Note that in the case of guest users (Azure AD B2B scenarios), the TenantId is the guest tenant, not the unique tenant.
 When the token is delivered in the name of a user, ``AuthenticationResult`` also contains information about this user. For confidential client flows where tokens are requested with no user (for the application), this User information is null.
-- The ``Scopes`` for which the token was issued (See [Scopes not resources](Adal-to-Msal#scopes-not-resources))
+- The ``Scopes`` for which the token was issued (See [Scopes not resources](/azure/active-directory/develop/msal-net-differences-adal-net))
 - The unique Id for the user.
 
 ## `IAccount`

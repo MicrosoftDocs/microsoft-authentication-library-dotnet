@@ -8,7 +8,7 @@ Before using MSAL.NET you will have to [register your applications](/azure/activ
 
 #### Choosing between ADAL.NET (Azure AD v1.0) and MSAL.NET (Azure AD v2.0)
 
-In most cases you'll want to use MSAL.NET, which is the latest generation of Microsoft authentication libraries. It will allow you to acquire tokens for users signing-in to your application with Azure AD (work and school accounts), Microsoft (personal) accounts (MSA) or [Azure AD B2C](aka.ms/aadb2c). It will also soon support a direct connection to ADFS 2019.
+In most cases you'll want to use MSAL.NET, which is the latest generation of Microsoft authentication libraries. It will allow you to acquire tokens for users signing-in to your application with Azure AD (work and school accounts), Microsoft (personal) accounts (MSA) or [Azure AD B2C](/azure/active-directory-b2c/overview). It will also soon support a direct connection to ADFS 2019.
 
 ![image](https://user-images.githubusercontent.com/13203188/53400353-f5f35080-39ad-11e9-8270-7e12e34a4ac4.png)
 
