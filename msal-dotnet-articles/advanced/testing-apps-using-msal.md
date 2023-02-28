@@ -1,14 +1,14 @@
 ---
-title: Testing applications using MSAL
+title: Testing applications using MSAL.NET
 ---
 
-# Testing applications using MSAL
+# Testing applications using MSAL.NET
 
-## Unit Testing
+## Unit testing
 
 MSAL.NET's API uses the builder pattern heavily. Builders are difficult / tedious to mock. Instead, we recommend that you wrap all your authentication logic behind an interface and mock that in your app.
 
-## End To End Testing
+## End-to-end testing
 
 For end to end testing, you can setup test accounts, test applications or even separate directories. Username and passwords can be deployed via the Continuous Integration pipeline (e.g. secret build variables in Azure DevOps). Another strategy is to keep test credentials in KeyVault and configure the machine that runs the tests to access KeyVault, for example by installing a certificate. Feel free to use MSAL's [strategy for accessing KeyVault](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/master/tests/Microsoft.Identity.Test.LabInfrastructure/KeyVaultSecretsProvider.cs#L112).
 
@@ -16,7 +16,7 @@ Note that once token acquisition occurs, both an Access Token and a Refresh Toke
 
 If you have Conditional Access configured, automating around it will be difficult. It will be easier to have a manual step that deals with Conditional Access (e.g. MFA), which will add tokens to the MSAL cache and then rely on silent token acquisitions, i.e. rely on a pre-logged in user.
 
-### Web Apps
+### Web apps
 
 **Strategy 1**: Use Selenium or an equivalent technology to automate your web app. Fetch usernames and password from KeyVault.
 
@@ -38,11 +38,11 @@ Cons: some Conditional Access policies will not work cross machine; some manual 
 
 Sample showcasing token cache sharing between apps: https://github.com/Azure-Samples/ms-identity-dotnet-advanced-token-cache
 
-### Daemon Apps
+### Daemon apps
 
 Daemon apps use pre-deployed secrets (passwords or certificates) to talk to AAD. You can deploy a secret to your test environment or use the token caching technique to provision your tests. Note that the Client Credential Grant, used by daemon apps, does NOT fetch refresh tokens, just access tokens, which expire in 1h.
 
-### Native Client Apps
+### Native client apps
 
 For native clients, there are several approaches to testing:
 
@@ -52,10 +52,10 @@ For native clients, there are several approaches to testing:
 
 - MSAL exposes an extensibility point that allows developers to inject their own browser experience. The MSAL team uses this internally to test interactive auth scenarios. Have a look at [this test](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/master/tests/Microsoft.Identity.Test.Integration.net45/SeleniumTests/InteractiveFlowTests.cs) project to see how to inject a [Selenium powered browser](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/tree/master/tests/Microsoft.Identity.Test.Integration.net45/Infrastructure) that can handle authentication.
 
-### Xamarin Apps
+### Xamarin apps
 
 The MSAL team are currently running tests on a Xamarin app that uses MSAL.net; We are using [App Center](https://appcenter.ms/apps) to manage devices, test runs etc. The test framework is [Xamarin.UITest](/appcenter/test-cloud/uitest/). A limitation that we have found is that we are unable to test system browsers, only embedded browsers.
 
-## Feedback
+## Library feedback
 
 Please log issues or ask questions related to testing. Providing a good test experience is one of the goals of the team.

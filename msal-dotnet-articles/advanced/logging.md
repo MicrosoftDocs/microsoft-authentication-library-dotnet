@@ -183,7 +183,7 @@ If using Fiddler, please configure it as if capturing from an UWP app:
 
 ## Full WAM logs
 
-Go to http://aka.ms/icesdptool, which will automatically download a .cab file containing the Office Sign-in and Authentication Diagnostic tool.
+Go to https://aka.ms/icesdptool, which will automatically download a .cab file containing the Office Sign-in and Authentication Diagnostic tool.
 Run the tool and repro your scenario, once the repro is complete. Finish the process.
 
 Note: If do not want to give Fiddler traces simply reject the certificate requests that will pop up.
