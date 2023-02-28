@@ -169,7 +169,7 @@ The correlation ID can be obtained in three ways:
 
 ## Windows Broker (WAM) logging
 
-If you are using WAM, collect the MSAL verbose logs first. If more investigation is needed, follow: https://aka.ms/wamhot - this will use a tool created by Office that collects WAM traces. You can use the tool with any program.
+If you are using WAM, collect the MSAL verbose logs first. If more investigation is needed, [download](https://aka.ms/wamhot) the required diagnostic tooling - this will allow you to use a tool created by Office that collects WAM traces. You can use the tool with any program.
 
 ## Windows Broker (WAM) network traces
 
@@ -183,7 +183,8 @@ If using Fiddler, please configure it as if capturing from an UWP app:
 
 ## Full WAM logs
 
-Go to https://aka.ms/icesdptool, which will automatically download a .cab file containing the Office Sign-in and Authentication Diagnostic tool.
+[Download](https://aka.ms/icesdptool) the Office Sign-in and Authentication Diagnostic tool.
+
 Run the tool and repro your scenario, once the repro is complete. Finish the process.
 
 Note: If do not want to give Fiddler traces simply reject the certificate requests that will pop up.

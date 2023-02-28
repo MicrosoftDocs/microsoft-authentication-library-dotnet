@@ -4,7 +4,7 @@ title: Using MSAL.NET to sign-in users with social identities
 
 # Using MSAL.NET to sign-in users with social identities
 
-You can use MSAL.NET to sign-in users with social identities by using [Azure AD B2C](https://aka.ms/aadb2c). AAD B2C is built around the notion of policies. In MSAL.NET, specifying a policy translates to providing an authority.
+You can use MSAL.NET to sign-in users with social identities by using [Azure AD B2C](/azure/active-directory-b2c/overview). AAD B2C is built around the notion of policies. In MSAL.NET, specifying a policy translates to providing an authority.
 
 - When you instantiate the Public client application, you need to specify the policy in authority
 - When you want to apply a policy, you need to call an override of `AcquireTokenInteractive` containing an `authority` parameter
@@ -175,11 +175,12 @@ We will provide an update to the wiki and this [issue](https://github.com/AzureA
 
 ### Known issue with Azure B2C
 
-MSAL.Net supports a [token cache](/dotnet/api/microsoft.identity.client.tokencache?view=azure-dotnet). The token caching key is based on the claims returned by the Identity Provider. Currently MSAL.Net needs two claims to build a token cache key: : 
-1) `tid` which is the Azure AD Tenant Id and 
-2) `preferred_username` 
+MSAL.Net supports a [token cache](/dotnet/api/microsoft.identity.client.tokencache?view=azure-dotnet). The token caching key is based on the claims returned by the Identity Provider. Currently MSAL.Net needs two claims to build a token cache key:
 
-Both these claims are missing in many of the Azure AD B2C scenarios. 
+1. `tid` which is the Azure AD Tenant Id
+1. `preferred_username`
+
+Both these claims are missing in many of the Azure AD B2C scenarios.
 
 The customer impact is that when trying to display the username field, are you getting "Missing from the token response" as the value? If so, this is because B2C does not return a value in the IdToken for the preferred_username because of limitations with the social accounts and external identity providers (IdPs). Azure AD returns a value for preferred_username because it knows who the user is, but for B2C, because the user can sign in with a local account, Facebook, Google, GitHub, etc...there is not a consistent value for B2C to use for preferred_username. To unblock MSAL from rolling out cache compatibility with ADAL, we decided to use "Missing from the token response" on our end when dealing with the B2C accounts when the IdToken returns nothing for preferred_username. MSAL must return a value for preferred_username to maintain cache compatibility across libraries.
 
@@ -189,7 +190,7 @@ The customer impact is that when trying to display the username field, are you g
 
 The suggested workaround  is to use the [Caching by Policy](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/AAD-B2C-specifics#acquiring-a-token-to-apply-a-policy).
 
-Alternatively, you can use the `tid` claim, if you are using the [B2C custom policies](https://aka.ms/ief), because it provides the capability to return additional claims to the application. To learn more about [Claims Transformation](/azure/active-directory-b2c/claims-transformation-technical-profile).
+Alternatively, you can use the `tid` claim, if you are using the [B2C custom policies](/azure/active-directory-b2c/tutorial-create-user-flows?pivots=b2c-custom-policy), because it provides the capability to return additional claims to the application. To learn more about [Claims Transformation](/azure/active-directory-b2c/claims-transformation-technical-profile).
 
 #### Mitigation for "Missing from the token response"
 

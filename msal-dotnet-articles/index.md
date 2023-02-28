@@ -75,8 +75,8 @@ MSAL.NET is used to acquire tokens. It's not used to protect a Web API. If you a
 #### Acquiring tokens in Desktop/Mobile apps (public client applications)
 
 - [Acquiring a token interactively](acquiring-tokens/desktop-mobile/acquiring-tokens-interactively.md) enables the application to acquire a token after authenticating the user through an interactive sign-in. There are implementation-specific details depending on the target platforms, such as [Xamarin Android](acquiring-tokens/desktop-mobile/xamarin.md) or [UWP](acquiring-tokens/desktop-mobile/uwp.md).
-- Acquiring a token silently on a Windows domain or Azure Active Directory joined machine with [Integrated Windows Authentication](https://aka.ms/msal-net-iwa) or by using [Username/passwords](https://aka.ms/msal-net-up) (not recommended).
-- Acquiring a token on a text-only device, by directing the user to sign-in on another device with the [Device Code Flow](https://aka.ms/msal-net-device-code-flow).
+- Acquiring a token silently on a Windows domain or Azure Active Directory joined machine with [Integrated Windows Authentication](./acquiring-tokens/desktop-mobile/integrated-windows-authentication.md) or by using [Username/passwords](./acquiring-tokens/desktop-mobile/username-password-authentication.md) (not recommended).
+- Acquiring a token on a text-only device, by directing the user to sign-in on another device with the [Device Code Flow](./acquiring-tokens/desktop-mobile/device-code-flow.md).
 
 #### Acquiring tokens in web apps/web APIs/daemon apps (confidential client applications)
 

@@ -51,11 +51,11 @@ You can write a daemon app acquiring a token for the app on top using MSAL.NET's
 
 ### Desktop application calling a Web API in the name of the signed-in user
 
-Desktop applications can use the same [interactive authentication](https://aka.ms/msal-net-acquire-token-interactively) as the [mobile applications](#mobile-application-calling-a-web-api-in-the-name-of-the-user-whos-signed-in-interactively).
+Desktop applications can use the same [interactive authentication](../acquiring-tokens/desktop-mobile/acquiring-tokens-interactively.md) as the [mobile applications](#mobile-application-calling-a-web-api-in-the-name-of-the-user-whos-signed-in-interactively).
 
 ![image](https://user-images.githubusercontent.com/13203188/44857519-d52b8780-ac24-11e8-943c-684b3e9114ce.png)
 
-For Windows hosted applications, it's also possible for applications running on computers joined to a Windows domain or AAD joined to acquire a token silently by using [Integrated Windows Authentication](https://aka.ms/msal-net-iwa)
+For Windows hosted applications, it's also possible for applications running on computers joined to a Windows domain or AAD joined to acquire a token silently by using [Integrated Windows Authentication](../acquiring-tokens/desktop-mobile/integrated-windows-authentication.md).
 
 If your desktop application is a .NET Core application running on Linux or Mac, you will be able to use neither the interactive authentication (as .NET Core does not provide a [Web browser](/azure/active-directory/develop/msal-net-web-browsers)), nor Integrated Windows Authentication. The best option in that case is to use device code flow (See [Application without a browser, or iOT application calling an API in the name of the user](#application-without-a-browser-or-iot-application-calling-an-api-in-the-name-of-the-user)) below
 

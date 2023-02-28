@@ -23,7 +23,7 @@ WebView1 (WebBrowser) control is used by MSAL on Windows. By default it uses a v
 
 ### Long term fix
 
-Move to login with WAM, which is available on Win 10+ and on Win Server 2019+ - https://aka.ms/msal-net-wam 
+Move to login with [WAM](../acquiring-tokens/desktop-mobile/wam.md), which is available on Win 10+ and on Win Server 2019+.
 
 ### Workaround
 

@@ -102,10 +102,9 @@ https://github.com/AzureAD/microsoft-identity-web/wiki/Certificates#getting-cert
 
 This is the preferred solution for non-Microsoft internal services using ASP.NET Core.
 
-2. (internal only) Rely on Subject Name / Issuer certificates
+2. (**Internal only**) Rely on [Subject Name/Issuer certificates](./subject-name-and-issuer-authentication.md).
 
-This mechanism allows AAD to identify a cert based on SN/I instead of x5t. It is a stop-gap solution, there are no plans to make it available to 3p.
-https://aka.ms/msal-net-sni
+This mechanism allows AAD to identify a cert based on SN/I instead of x5t. It is a stop-gap solution, there are no plans to make it available to third-parties.
 
 This is the preferred solution for Microsoft internal services.
 

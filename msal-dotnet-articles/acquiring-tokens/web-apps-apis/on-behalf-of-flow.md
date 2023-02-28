@@ -188,4 +188,4 @@ Sample | Platform | Description
 ------ | -------- | -----------
 [active-directory-aspnetcore-webapi-tutorial-v2](https://github.com/Azure-Samples/active-directory-dotnet-native-aspnetcore-v2/tree/master/2.%20Web%20API%20now%20calls%20Microsoft%20Graph) | ASP.NET Core 2.2 Web API, Desktop (WPF) | ASP.NET Core 2.1 Web API calling Microsoft Graph, itself called from a WPF application using Azure AD V2 ![topology](https://github.com/Azure-Samples/active-directory-dotnet-native-aspnetcore-v2/blob/master/2.%20Web%20API%20now%20calls%20Microsoft%20Graph/ReadmeFiles/topology.png)
 
-> Vanity URL: https://aka.ms/msal-net-on-behalf-of
+See [On-behalf-of flows in MSAL.NET](./on-behalf-of-flow.md).

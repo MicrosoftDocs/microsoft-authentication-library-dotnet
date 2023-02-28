@@ -8,9 +8,10 @@ In your desktop application, you can use the Username/Password flow to acquire a
 
 ### This flow is not recommended
 
-This flow is **not recommended** because your application asking a user for their password is not secure. For more information about this problem, see [this article](https://news.microsoft.com/features/whats-solution-growing-problem-passwords-says-microsoft/). The preferred flow for acquiring a token silently on Windows domain joined machines is [Integrated Windows Authentication](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Integrated-Windows-Authentication). Otherwise you can also use [Device code flow](https://aka.ms/msal-net-device-code-flow)
+This flow is **not recommended** because your application asking a user for their password is not secure. For more information about this problem, see [this article](https://news.microsoft.com/features/whats-solution-growing-problem-passwords-says-microsoft/). The preferred flow for acquiring a token silently on Windows domain joined machines is [Integrated Windows Authentication](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Integrated-Windows-Authentication). Otherwise you can also use [Device code flow](../desktop-mobile/device-code-flow.md)
 
 > Although this is useful in some cases (DevOps scenarios), if you want to use Username/password in interactive scenarios where you provide your onw UI, you should really think about how to move away from it. By using username/password you are giving-up a number of things:
+
 > - core tenants of modern identity: password gets fished, replayed. Because we have this concept of a share secret that can be intercepted.
 > This is incompatible with passwordless.
 > - users who need to do MFA won't be able to sign-in (as there is no interaction)
@@ -267,4 +268,4 @@ Sample | Platform | Description
 ------ | -------- | -----------
 [active-directory-dotnetcore-console-up-v2](https://github.com/Azure-Samples/active-directory-dotnetcore-console-up-v2) | Console (.NET Core) | .NET Core console application letting a user signed-in with the Azure AD v2.0 endpoint using username/password to acquire a token for the Microsoft Graph ![topology](https://github.com/Azure-Samples/active-directory-dotnetcore-console-up-v2/blob/master/ReadmeFiles/Topology.png)
 
-> Vanity URL: https://aka.ms/msal-net-up
+See [Username and password authentication in MSAL.NET](./username-password-authentication.md).

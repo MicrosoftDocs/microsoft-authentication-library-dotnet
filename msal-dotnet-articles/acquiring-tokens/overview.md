@@ -12,7 +12,7 @@ In general the way to acquire a token is different depending on if the applicati
 
 ## Token caching
 
-For both Public client and confidential client applications, MSAL.NET maintains a token cache (or two caches in the case of confidential client applications), and applications should [try to get a token from the cache](./acquiretokensilentasync-api.md) first before any other means, except in the case of [Client Credentials](https://aka.ms/msal-net-client-credentials), which does look at the application cache by itself.
+For both Public client and confidential client applications, MSAL.NET maintains a token cache (or two caches in the case of confidential client applications), and applications should [try to get a token from the cache](./acquiretokensilentasync-api.md) first before any other means, except in the case of [Client Credentials](./web-apps-apis/client-credential-flows.md), which does look at the application cache by itself.
 
 In the case of UWP, Xamarin iOS and Xamarin Android, the token cache serialization to an isolated storage is provided by MSAL.NET. In the case of .NET Desktop (.NET Framework and .NET Core) platforms, though, the application needs to customize the [token cache serialization](/azure/active-directory/develop/msal-net-token-cache-serialization).
 
@@ -24,22 +24,22 @@ In the case of UWP, Xamarin iOS and Xamarin Android, the token cache serializati
 
 - will often [acquire token interactively](./desktop-mobile/acquiring-tokens-interactively.md), having the user sign-in.
   > Remember that this is not possible yet in .NET Core as .NET core does not provide UI capabilities and this is required for interactive authentication 
-- But it's also possible for a desktop application running on a Windows machine which is joined to a domain or to Azure AD, to [get a token silently for the user signed-in on the machine](https://aka.ms/msal-net-iwa), leveraging Integrated Windows Authentication (IWA/Kerberos). 
-- On .NET framework desktop client applications , it's also possible (but not recommended) to [get a token with a username and password](https://aka.ms/msal-net-up) (U/P).
+- But it's also possible for a desktop application running on a Windows machine which is joined to a domain or to Azure AD, to [get a token silently for the user signed-in on the machine](./desktop-mobile/integrated-windows-authentication.md), leveraging Integrated Windows Authentication (IWA/Kerberos). 
+- On .NET framework desktop client applications , it's also possible (but not recommended) to [get a token with a username and password](./desktop-mobile/username-password-authentication.md) (U/P).
   > Note that you should not use username/password in confidential client applications
-- Finally, for applications running on devices which don't have a Web browser, it's possible to acquire a token through the [device code flow](https://aka.ms/msal-net-device-code-flow) mechanism, which provides the user with a URL and a code. The user goes to a web browser on another device, enters the code and signs-in, which has Azure AD get them a token back on the browser-less device.
+- Finally, for applications running on devices which don't have a Web browser, it's possible to acquire a token through the [device code flow](./desktop-mobile/device-code-flow.md) mechanism, which provides the user with a URL and a code. The user goes to a web browser on another device, enters the code and signs-in, which has Azure AD get them a token back on the browser-less device.
 
 #### Summary
 
 The following table summarizes the ways available to acquire tokens in public client applications depending on the Operating system, and therefore the chosen platform, and the kind of application.
 
-Operating System | Library Platform | Kind of App | [Interactive Auth](./desktop-mobile/acquiring-tokens-interactively.md) | [IWA](https://aka.ms/msal-net-iwa) | [U/P](https://aka.ms/msal-net-up) | [Device Code](https://aka.ms/msal-net-device-code-flow)
+Operating System | Library Platform | Kind of App | [Interactive Auth](./desktop-mobile/acquiring-tokens-interactively.md) | [IWA](./desktop-mobile/integrated-windows-authentication.md) | [U/P](./desktop-mobile/username-password-authentication.md) | [Device Code](./desktop-mobile/device-code-flow.md)
 -- | -------- | --- | ----------  | --- | --- | ----------------- 
 <img src="/azure/active-directory/develop/media/index/logo_windows.svg" width="40" /> <br/> Windows desktop	| <img src="/azure/active-directory/develop/media/index/logo_net.svg" width="40" /> <br/> .NET| Desktop (WPF,<br/>  Windows.Forms,<br/>  Console) | Y | Y | Y | (Y)
 <img src="/azure/active-directory/develop/media/index/logo_windows.svg" width="40" /> <br/>Windows 10	| <img src="/azure/active-directory/develop/media/index/logo_windows.svg" width="40" /> <br/> UWP	| Store app	| Y	| Y	| 	
 <img src="/azure/active-directory/develop/media/index/logo_android.svg" width="40" /> <br/> Android	| <img src="/azure/active-directory/develop/media/index/logo_xamarin.svg" width="40" /> <img src="/azure/active-directory/develop/media/index/logo_android.svg" width="40" /> <br/> Xamarin Android	| Mobile	| Y	| 	| Y	
 <img src="/azure/active-directory/develop/media/index/logo_ios.svg" width="40" />| <img src="/azure/active-directory/develop/media/index/logo_xamarin.svg" width="40" /> <img src="/azure/active-directory/develop/media/index/logo_ios.svg" width="40" /><br/> Xamarin iOS	| Mobile	| Y	| 	| 	| Y
-Mac OS, Linux, Windows	| <img src="/azure/active-directory/develop/media/index/logo_netcore.svg" width="40" /> <br/> .NET Core 	| Console	| N/A see [1](https://aka.ms/msal-net-uses-web-browser)	| Y	| Y	| Y
+Mac OS, Linux, Windows	| <img src="/azure/active-directory/develop/media/index/logo_netcore.svg" width="40" /> <br/> .NET Core 	| Console	| N/A see [1](/azure/active-directory/develop/msal-net-web-browsers)	| Y	| Y	| Y
 
 ### Confidential client applications
 

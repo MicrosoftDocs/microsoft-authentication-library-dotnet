@@ -84,7 +84,7 @@ authResult.AuthenticationResultMetadata.TokenSource == TokenSource.Cache
 
 **Problem:** `AcquireTokenClient` latency is too high
 **Possible Solutions:** Please ensure you have a high token cache hit rate. 
-The in-memory cache is optimized for searching through tokens that come from different client_id or different tenant_id. It is not optimized for storing tokens with different scopes. You need to use a different cache key that includes the scope. See https://aka.ms/msal-net-performance-testing
+The in-memory cache is optimized for searching through tokens that come from different client_id or different tenant_id. It is not optimized for storing tokens with different scopes. You need to use a different cache key that includes the scope. See [Performance testing](../../advanced/performance-testing.md).
 
 ## Registration of application secret or certificate with Azure AD
 
@@ -148,4 +148,4 @@ You can find more information in:
 
 - The protocol documentation: [Azure Active Directory v2.0 and the OAuth 2.0 client credentials flow](/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow)
 
-> Vanity URL: [https://aka.ms/msal-net-client-credentials](https://aka.ms/msal-net-client-credentials)
+See [Client credentials in MSAL.NET](./client-credential-flows.md).

@@ -8,7 +8,7 @@ title: Understanding client and server throttling in MSAL.NET
 
 AAD throttles applications when you call it too often. Most often this happens when token caching is not used, for example, because:
 
-1. Token caching is not setup correctly (see [Token cache serialization](https://aka.ms/msal-net-token-cache-serialization)).
+1. Token caching is not setup correctly (see [Token cache serialization](/azure/active-directory/develop/msal-net-token-cache-serialization)).
 2. Not calling `AcquireTokenSilent` before calling `AcquireTokenInteractive`, `AcquireTokenByUsernamePassword` (see [AcquireTokenSilent](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/AcquireTokenSilentAsync-using-a-cached-token)).
 3. If you are asking for a scope which does not make sense for MSA users like `User.ReadBasic.All`, which causes cache misses.
 
@@ -28,7 +28,7 @@ MSAL detects certain conditions (see below) where the application should not mak
 
 If the server is having problems or if an application is requesting tokens too often, AAD will respond with `HTTP 429 (Too Many Requests)` and with `Retry-After` header, `Retry-After X seconds`. The application will see an `MsalServiceException` with [header details](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/retry-after). The throttling state is maintained for the X seconds. Affects all flows. Introduced in 4.13.0.
 
-The most likely culprit is that you have not setup token caching. See https://aka.ms/msal-net-token-cache-serialization.
+The most likely culprit is that you have not setup token caching. See [Token cache serialization in MSAL.NET](/azure/active-directory/develop/msal-net-token-cache-serialization).
 
 #### AAD is having problems
 
