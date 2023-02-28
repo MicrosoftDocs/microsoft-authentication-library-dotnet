@@ -74,14 +74,14 @@ Applications running on a device without a browser will still be able to call an
 If you want your ASP.NET or ASP.NET Core protected Web API to call another Web API on behalf of the user represented by the access token was used to call you API, you will need to:
 
 - Validate the token. For this you'll use the ASP.NET JWT middleware. Under the hood. This also involves validating the token which is done by the [IdentityModel extensions for .NET](https://github.com/AzureAD/azure-activedirectory-identitymodel-extensions-for-dotnet/wiki) library, not MSAL.NET
-- Then you will need to acquire a token for the downstream Web API by using the ConfidentialClientApplication's method Acquiring a token on [behalf of a user](on-behalf-of) in Service to Services calls.
-- Web APIs calling other web API will also need to provide a [custom cache serialization](token-cache-serialization#token-cache-for-a-web-app-confidential-client-application)
+- Then you will need to acquire a token for the downstream Web API by using the ConfidentialClientApplication's method Acquiring a token on [behalf of a user](../acquiring-tokens/web-apps-apis/on-behalf-of-flow.md) in Service to Services calls.
+- Web APIs calling other web API will also need to provide a [custom cache serialization](/azure/active-directory/develop/msal-net-token-cache-serialization)
 
 ![image](https://user-images.githubusercontent.com/13203188/44857544-dfe61c80-ac24-11e8-8682-f697d6fe07c6.png)
 
 ### Web API calling another API in its own name
 
-like in the case of a desktop/service daemon application, a daemon Web API (or a daemon Web App) can use MSAL.NET's ConfidentialClientApplication's [client credentials](Client-credential-flows) acquisition methods
+like in the case of a desktop/service daemon application, a daemon Web API (or a daemon Web App) can use MSAL.NET's ConfidentialClientApplication's [client credentials](../acquiring-tokens/web-apps-apis/client-credential-flows.md) acquisition methods
 
 ## Transverse features
 
