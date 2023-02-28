@@ -1,4 +1,9 @@
-# Overview
+---
+title: Synchronous programming with MSAL.NET
+---
+
+# Synchronous programming with MSAL.NET
+
 It is strongly recommended to use async programming practices for better performance and responsive apps. However, some legacy apps cannot use asynchronous programming. 
 
 MSAL.NET is based on Task-based Asynchronous Pattern (TAP). This page provides links to guidance about how to use async methods in a synchronous way. This has no one solution that fits all. So various best practices are recommended.

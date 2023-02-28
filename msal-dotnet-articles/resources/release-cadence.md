@@ -1,3 +1,7 @@
+---
+title: Library release cadence
+---
+
 # Library release cadence
 
 Major/minor releases are published twice per year. A feature could be included in a release or not dependent on the complexity and integration of the feature.

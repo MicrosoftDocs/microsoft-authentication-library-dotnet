@@ -1,3 +1,7 @@
+---
+title: Client credential flows in MSAL.NET
+---
+
 # Client credential flows in MSAL.NET
 
 ## Availability by platform

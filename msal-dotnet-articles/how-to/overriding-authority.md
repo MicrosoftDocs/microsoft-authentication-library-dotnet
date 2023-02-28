@@ -1,3 +1,7 @@
+---
+title: Overriding authority
+---
+
 # Overriding authority
 
 In many scenarios, such as [client credential flow in multi-tenant apps](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Multi-tenant-client_credential-use), it is useful to specify the Azure AD tenant in the request builder instead of the application builder. `WithTenantId` is the recommended API to use in this scenario, which accepts the tenant ID string. `WithTenantIdFromAuthority` is another similar method that is available in MSAL 4.46.0+. You can also use `WithAuthority`, however, the authority in the application and the request builders must always be for the same cloud, i.e. the host of the authority URL must not be different.

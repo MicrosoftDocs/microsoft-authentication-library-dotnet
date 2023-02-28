@@ -1,3 +1,7 @@
+---
+title: Device authentication errors
+---
+
 # Device authentication errors
 
 ## What are the symptoms?

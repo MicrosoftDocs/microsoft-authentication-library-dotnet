@@ -1,3 +1,7 @@
+---
+title: Choosing a version of MSAL.NET
+---
+
 # Choosing a version of MSAL.NET
 
 Follow the decision tree to see if MSAL.NET alone is enough, or if you need [Microsoft Identity Web](https://github.com/AzureAD/microsoft-identity-web), or both.
@@ -7,7 +11,8 @@ Follow the decision tree to see if MSAL.NET alone is enough, or if you need [Mic
 ## Use MSAL.NET
 
 You're building a desktop or mobile app. Use MSAL.NET directly and start acquiring tokens for your public client application. For details see:
-- [Acquiring token in a desktop app](/azure/active-directory/develop/scenario-desktop-acquire-token?tabs=dotnet), and using [WAM](wam)
+
+- [Acquiring token in a desktop app](/azure/active-directory/develop/scenario-desktop-acquire-token?tabs=dotnet), and using [WAM](../acquiring-tokens/desktop-mobile/wam.md)
 - [Acquiring token in a mobile application](/azure/active-directory/develop/scenario-mobile-acquire-token)
 
 ## Use **hybrid model** MSAL.NET and [Microsoft Identity Web](https://github.com/AzureAD/microsoft-identity-web/)
@@ -57,11 +62,8 @@ Just take the code you need from Microsoft Identity Web to update your app. Here
 
 ![image](https://user-images.githubusercontent.com/13203188/95241144-aaea2200-080d-11eb-8633-51e7796750ce.png)
 
-
 ![image](https://user-images.githubusercontent.com/13203188/95241423-03212400-080e-11eb-99a3-6fbb7a38cd0c.png)
 
-
 ![image](https://user-images.githubusercontent.com/13203188/95241601-47142900-080e-11eb-9c0c-6ebf2febb9db.png)
-
 
 ![image](https://user-images.githubusercontent.com/13203188/95241777-8e9ab500-080e-11eb-92d7-dca52d37ec8b.png)

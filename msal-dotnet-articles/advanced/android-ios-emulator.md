@@ -1,3 +1,7 @@
+---
+title: Using MSAL.NET with Android and iOS emulators
+---
+
 # Using MSAL.NET with Android and iOS emulators
 
 >[!NOTE]

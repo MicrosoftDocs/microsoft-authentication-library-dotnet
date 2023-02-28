@@ -1,3 +1,7 @@
+---
+title: Troubleshooting MSAL.NET
+---
+
 # Troubleshooting MSAL.NET
 
 For issues using WAM, see [Web Account Manager](../acquiring-tokens/desktop-mobile/wam.md).

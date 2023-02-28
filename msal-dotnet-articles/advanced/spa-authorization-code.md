@@ -1,3 +1,7 @@
+---
+title: Single-page applications (SPA) and authorization codes
+---
+
 # Single-page applications (SPA) and authorization codes
 
 This flow enables confidential client applications to request an additional "spa auth code" from the eSTS /token endpoint, and this authorization code can be redeemed silently by the front end running in the browser. This feature is intended for applications that perform server-side (web apps) and browser-side (SPA) authentication, using a confidential SDK such as MSAL.net or MSAL Node server-side, and MSAL.js in the browser (e.g., an ASP.net web application hosting a React single-page application). In these scenarios, the application will likely need authentication both browser-side (e.g., a public client using MSAL.js) and server-side (e.g., a confidential client using MSAL.net), and each application context will need to acquire its own tokens.

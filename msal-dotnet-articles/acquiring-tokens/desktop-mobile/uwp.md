@@ -1,3 +1,7 @@
+---
+title: Using MSAL.NET with UWP applications
+---
+
 # Using MSAL.NET with UWP applications
 
 ## Recommended approach use WAM (broker)

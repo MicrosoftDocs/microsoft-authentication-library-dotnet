@@ -1,3 +1,7 @@
+---
+title: AcquireTokenInteractive API
+---
+
 # `AcquireTokenInteractive` API
 
 The method to use to acquire a token interactively is `IPublicClientApplication.AcquireTokenInteractive`

@@ -1,4 +1,8 @@
-# Retry Policies
+---
+title: Retry policies
+---
+
+# Retry policies
 
 This document explains how to implement a custom retry policy around token acquisition operations. For other tips on how to increase the availability of your service, see [High Availability](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/High-availability).
 

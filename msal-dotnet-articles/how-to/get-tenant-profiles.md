@@ -1,3 +1,7 @@
+---
+title: Getting tenant profiles with MSAL.NET
+---
+
 # Getting tenant profiles with MSAL.NET
 
 Here is a code sample that acquires tokens for the same account, but in different tenant, and then displays the tenants

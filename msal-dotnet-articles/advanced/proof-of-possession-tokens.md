@@ -1,4 +1,8 @@
-# Proof of Possession (PoP) Tokens
+---
+title: Proof of Possession (PoP) tokens
+---
+
+# Proof of Possession (PoP) tokens
 
 Bearer tokens are the norm in modern identity flows, however they are vulnerable to being stolen and used to access a protected resource. 
 

@@ -1,3 +1,9 @@
+---
+title: Installing MSAL.NET from custom NuGet package source
+---
+
+# Installing MSAL.NET from custom NuGet package source
+
 There are times when you need to take a dependency on a non official version of MSAL: 
 
 * an MSAL developer hands has put in a fix for a bug and would like you to validate it

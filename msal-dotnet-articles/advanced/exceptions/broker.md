@@ -1,3 +1,7 @@
+---
+title: Troubleshooting brokered applications
+---
+
 # Troubleshooting brokered applications
 
 ## Tips for Android brokered authentication

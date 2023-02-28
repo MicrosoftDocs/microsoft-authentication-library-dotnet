@@ -1,3 +1,9 @@
+---
+title: Cache options in MSAL.NET
+---
+
+# Cache options in MSAL.NET
+
 ## Setting cache options
 
 ```csharp

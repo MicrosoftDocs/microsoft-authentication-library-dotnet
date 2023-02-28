@@ -1,3 +1,7 @@
+---
+title: Using MSAL.NET with .NET Core
+---
+
 # Using MSAL.NET with .NET Core
 
 >[!NOTE]

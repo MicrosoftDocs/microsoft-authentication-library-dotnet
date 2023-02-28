@@ -1,3 +1,7 @@
+---
+title: Multicloud support and instance awareness
+---
+
 # Multicloud support and instance awareness
 
 >[!WARNING]

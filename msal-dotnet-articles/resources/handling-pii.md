@@ -1,3 +1,7 @@
+---
+title: Handling of personally-identifiable information in MSAL.NET
+---
+
 # Handling of personally-identifiable information in MSAL.NET
 
 ## What MSAL will never log

@@ -1,3 +1,7 @@
+---
+title: MSAL.NET Scenarios
+---
+
 # MSAL.NET Scenarios
 
 ## Introduction

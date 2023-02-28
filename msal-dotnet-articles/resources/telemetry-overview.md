@@ -1,3 +1,7 @@
+---
+title: MSAL.NET telemetry overview
+---
+
 # MSAL.NET telemetry overview
 
 MSAL.NET sends basic telemetry about the client side state on requests to the Azure AD token endpoint. Telemetry data will be logged by Azure AD. This telemetry will give us visibility into both 1st and 3rd party app health without introducing an additional telemetry pipeline dependency into the open source SDK. MSAL.NET collects this telemetry to proactively detect server side failures or library regressions, in order to provide a better service.

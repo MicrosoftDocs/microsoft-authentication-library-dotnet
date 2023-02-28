@@ -1,3 +1,7 @@
+---
+title: What is WebView2
+---
+
 # What is WebView2
 
 A modern embedded browser based on Microsoft Edge, capable of performing Windows Hello, log-in with FIDO keys, etc. This browser replaces the old embedded WebView, based on an outdated version of Internet Explorer.

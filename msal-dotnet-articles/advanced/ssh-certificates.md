@@ -1,3 +1,7 @@
+---
+title: Using SSH certificates with MSAL.NET
+---
+
 # Using SSH certificates with MSAL.NET
 
 >[!NOTE]

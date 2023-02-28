@@ -1,3 +1,7 @@
+---
+title: Understanding client and server throttling in MSAL.NET
+---
+
 # Understanding client and server throttling in MSAL.NET
 
 ## Server Throttling

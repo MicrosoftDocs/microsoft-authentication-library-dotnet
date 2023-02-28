@@ -1,3 +1,7 @@
+---
+title: Troubleshooting MSAL.NET in Unity applications
+---
+
 # Troubleshooting MSAL.NET in Unity applications
 
 MSAL 4.48.0 and above stopped using reflection on its `net6` target. This is the only path forward with Unity.

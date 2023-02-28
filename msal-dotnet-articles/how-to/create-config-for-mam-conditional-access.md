@@ -1,3 +1,7 @@
+---
+title: Creating configuration for InTune Mobile App Management conditional access
+---
+
 # Creating configuration for InTune Mobile App Management conditional access
 
 ## Scenario

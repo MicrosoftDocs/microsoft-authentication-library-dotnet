@@ -1,3 +1,7 @@
+---
+title: Using MSAL.NET with Web Account Manager (WAM)
+---
+
 # Using MSAL.NET with Web Account Manager (WAM)
 
 MSAL is able to call Web Account Manager (WAM), a Windows 10+ component that ships with the OS. This component acts as an authentication broker allowing the users of your app benefit from integration with accounts known to Windows, such as the account you signed into your Windows session.

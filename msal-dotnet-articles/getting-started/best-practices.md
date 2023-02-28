@@ -1,3 +1,7 @@
+---
+title: Best practices for MSAL.NET
+---
+
 # Best practices for MSAL.NET
 
 ## Never parse an access token

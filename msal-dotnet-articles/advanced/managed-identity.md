@@ -1,3 +1,7 @@
+---
+title: Managed identity with MSAL.NET
+---
+
 # Managed identity with MSAL.NET
 
 >[!NOTE]

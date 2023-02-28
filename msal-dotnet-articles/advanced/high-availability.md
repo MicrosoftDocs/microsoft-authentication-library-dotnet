@@ -1,3 +1,7 @@
+---
+title: High availability considerations in MSAL.NET
+---
+
 # High availability considerations in MSAL.NET
 
 For client credential (app 2 app) flow, please see https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Client-credential-flows which has a topic on High-Availablity first.

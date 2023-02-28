@@ -1,3 +1,7 @@
+---
+title: Semantic versioning and API change management
+---
+
 # Semantic versioning and API change management
 
 MSAL.NET has adopted [semantic versioning](https://semver.org/), the industry standard for OSS projects.

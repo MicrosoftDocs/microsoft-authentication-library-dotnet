@@ -1,4 +1,8 @@
-# Username / Password Authentication
+---
+title: Username and password authentication with MSAL.NET
+---
+
+# Username and password authentication with MSAL.NET
 
 In your desktop application, you can use the Username/Password flow to acquire a token silently. No UI is required when using the application.
 

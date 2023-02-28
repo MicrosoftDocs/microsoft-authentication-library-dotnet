@@ -1,3 +1,7 @@
+---
+title: Using Device Code Flow in MSAL.NET
+---
+
 # Using Device Code Flow in MSAL.NET
 
 >[!NOTE]

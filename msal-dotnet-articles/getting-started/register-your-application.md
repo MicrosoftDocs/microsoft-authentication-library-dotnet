@@ -1,3 +1,7 @@
+---
+title: Registering your application with the Microsoft identity platform for developers
+---
+
 # Registering your application with the Microsoft identity platform for developers
 
 Before using MSAL.NET you will have to [register your applications](/azure/active-directory/develop/quickstart-register-app) with the Microsoft Identity platform for developers (formerly named Azure AD v2.0)
@@ -14,4 +18,4 @@ However, you still need to use ADAL.NET if your application needs to sign-in use
 
 If you are already familiar with the Azure AD v1.0 endpoint (and ADAL.NET), you might want to read [Comparing the Azure AD v2.0 endpoint with the v1.0 endpoint](/azure/active-directory/develop/active-directory-v2-compare)
 
-See also [ADAL.NET to MSAL.NET](adal-to-msal), which explains how to port an application using ADAL.NET to MSAL.NET
+See also [ADAL.NET to MSAL.NET](/azure/active-directory/develop/msal-net-migration), which explains how to port an application using ADAL.NET to MSAL.NET

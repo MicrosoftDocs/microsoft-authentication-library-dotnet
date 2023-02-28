@@ -1,3 +1,7 @@
+---
+title: Testing applications using MSAL
+---
+
 # Testing applications using MSAL
 
 ## Unit Testing

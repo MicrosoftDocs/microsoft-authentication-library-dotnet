@@ -1,3 +1,7 @@
+---
+title: Using MSAL.NET with Azure Functions
+---
+
 # Using MSAL.NET with Azure Functions
 
 When using MSAL.NET in Azure Functions, it can happen that libraries are not copied to the directory.

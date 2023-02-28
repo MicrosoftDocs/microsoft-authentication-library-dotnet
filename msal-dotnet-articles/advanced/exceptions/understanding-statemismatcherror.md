@@ -1,3 +1,7 @@
+---
+title: Understanding StateMismatchError
+---
+
 # Understanding `StateMismatchError`
 
 MSAL verifies the state returned by the server with the original state as a security protocol. In case the state is different this exception is thrown.

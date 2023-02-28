@@ -1,3 +1,7 @@
+---
+title: Use your own browser with MSAL.NET
+---
+
 # Use your own browser with MSAL.NET
 
 A Web UI is a mechanism to invoke a browser. This can be a dedicated UI WebBrowser control or a way to delegate opening the browser.

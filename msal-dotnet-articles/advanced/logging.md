@@ -1,3 +1,7 @@
+---
+title: Logging infrastructure in MSAL.NET
+---
+
 # Logging infrastructure in MSAL.NET
 
 >[!NOTE]

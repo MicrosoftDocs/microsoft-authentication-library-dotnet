@@ -1,6 +1,10 @@
+---
+title: Exceptions in MSAL.NET
+---
+
 # Exceptions in MSAL.NET
 
-Exceptions in MSAL.NET are intended for app developers to troubleshoot and not for displaying to end-users. Exception messages are not localized. 
+Exceptions in MSAL.NET are intended for app developers to troubleshoot and not for displaying to end-users. Exception messages are not localized.
 
 ## The different types of exceptions
 

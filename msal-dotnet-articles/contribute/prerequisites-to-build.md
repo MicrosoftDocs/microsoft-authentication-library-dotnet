@@ -1,3 +1,7 @@
+---
+title: Prerequisites to build MSAL.NET
+---
+
 # Prerequisites to build MSAL.NET
 
 ## Components required to build the library

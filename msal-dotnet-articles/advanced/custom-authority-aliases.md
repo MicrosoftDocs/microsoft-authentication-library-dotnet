@@ -1,3 +1,7 @@
+---
+title: Custom authority aliases
+---
+
 # Custom authority aliases
 
 >[!NOTE]
@@ -21,7 +25,6 @@ The validation is important if you obtain your authority dynamically, for exampl
 MSAL libraries already employ a variety of caching mechanisms for this data. You may still want to bypass the Instance Discovery network call to further optimize performance in some PublicClientApplication scearios, but you you should only do this if you understand the security risk outlined above. If you provide your own instance metadata, MSAL will always use it and it will never go to the network for this kind of data. 
 
 ```csharp
-
 var app = PublicClientApplicationBuilder
     .Create(MsalTestConstants.ClientId)
      // or a Guid instead of common
@@ -29,6 +32,7 @@ var app = PublicClientApplicationBuilder
     .WithInstanceDicoveryMetadata(instanceMetadataJson) // a json string similar to https://aka.ms/aad-instance-discovery
     .Build();
 ```
+
 Note: You have to set the validateAuthority flag to false because validation is only made against your custom discovery metadata.
 
 ### Example instance metadata

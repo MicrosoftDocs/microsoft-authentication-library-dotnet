@@ -1,3 +1,7 @@
+---
+title: Contributing to MSAL.NET
+---
+
 # Contributing to MSAL.NET
 
 Microsoft Authentication Library (MSAL) for .NET welcomes new contributors.  This document will guide you through the process.

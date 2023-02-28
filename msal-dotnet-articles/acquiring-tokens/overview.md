@@ -1,3 +1,7 @@
+---
+title: Token Acquisition
+---
+
 # Token Acquisition
 
 ## Application type dependency

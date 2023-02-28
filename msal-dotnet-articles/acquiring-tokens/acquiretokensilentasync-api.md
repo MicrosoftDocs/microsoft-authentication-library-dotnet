@@ -1,12 +1,16 @@
+---
+title: Understanding the AcquireTokenAsync API
+---
+
 # Understanding the `AcquireTokenAsync` API
 
-### Tokens are cached
+## Tokens are cached
 
-#### Public client application
+### Public client application
 
 Once MSAL.NET has acquired a user token to call a Web API, it caches it. If you are building a public client application and want to acquire a token, first call `AcquireTokenSilent``, to verify if an acceptable token is in the cache, can be refreshed, or can get derived. If not, call the AcquireToken*ForFlow* method depending on the flow you are interested in.
 
-#### Confidential client application
+### Confidential client application
 
 If you are build an ASP.NET Core application, use [Microsoft.Identity.Web](https://github.com/AzureAD/microsoft-identity-web/wiki), which handles all these for you.
 
@@ -16,7 +20,7 @@ Otherwise, in confidential client applications, you should not call `AcquireToke
 - `AcquireTokenByAuthorizationCode` in Web Apps, as it redeems a code that the application got by signing-in the user, and having them consent for more scopes. Since a code is passed as a parameter, and not an account, the method cannot look in the cache before redeeming the code, which requires, anyway, a call to the service.
 - `AcquireTokenOnBehalfOf` in web APIs, as it uses the token coming to the web API and verifies and updates the token cache with this token as a key. `AcquireTokenSilent` doesn't have the necessary information (the incoming token).
 
-### AcquireTokenXYZ don't get token from the cache
+## AcquireTokenXYZ don't get token from the cache
 
 In public client applications, contrary to what happens in ADAL.NET, the design of MSAL.NET is such that `AcquireTokenInteractive` never looks at the cache. As an application developer, you need to call `AcquireTokenSilent` first. `AcquireTokenSilent` is capable, in many cases, of silently getting another token with more scopes, based on a token in the cache. It's also capable of refreshing a token when it's getting close to expiration (as the token cache also contains a refresh token)
 
@@ -24,7 +28,7 @@ In public client applications, contrary to what happens in ADAL.NET, the design 
 
 The recommended call pattern is to first try to call `AcquireTokenSilent`, and if it fails with a `MsalUiRequiredException`, call `AcquireTokenXYZ`.
 
-#### Recommended call pattern in public client applications with MSAL.NET 4.x
+### Recommended call pattern in public client applications with MSAL.NET 4.x
 
 ```csharp
 AuthenticationResult result = null;
@@ -104,7 +108,7 @@ if (result != null)
 }
 ```
 
-#### Recommended call pattern in public client applications with  MSAL.NET 1.x
+### Recommended call pattern in public client applications with  MSAL.NET 1.x
 
 Previous versions of MSAL.NET were using `IUser` instead of `IAccount`. The code was as follows:
 

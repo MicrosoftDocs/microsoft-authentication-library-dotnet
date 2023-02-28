@@ -1,3 +1,7 @@
+---
+title: MSAL.NET extensibility points
+---
+
 # MSAL.NET extensibility points
 
 MSAL adopts the strategy of "make simple scenarios simple, make complex scenarios possible". 

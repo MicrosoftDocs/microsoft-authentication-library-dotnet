@@ -1,3 +1,7 @@
+---
+title: Using MSAL.NET for client credential flow in multi-tenant services
+---
+
 # Using MSAL.NET for client credential flow in multi-tenant services
 
 ## Decision point - Microsoft.Identity.Web or Microsoft.Identity.Client (MSAL)?

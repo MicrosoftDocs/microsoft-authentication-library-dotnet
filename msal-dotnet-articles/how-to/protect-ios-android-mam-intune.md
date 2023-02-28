@@ -1,3 +1,7 @@
+---
+title: Protecting iOS and Android applications with InTune
+---
+
 # Protecting iOS and Android applications with InTune
 
 ## Scenario

@@ -1,3 +1,7 @@
+---
+title: On-behalf-of flows with MSAL.NET
+---
+
 # On-behalf-of flows with MSAL.NET
 
 ## If you are using ASP.NET Core.

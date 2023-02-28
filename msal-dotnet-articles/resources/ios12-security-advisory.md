@@ -1,3 +1,7 @@
+---
+title: iOS 12 security advisory
+---
+
 # iOS 12 security advisory
 
 There is a known issue with iOS12 and social, WSFed, and OIDC Logins. The asp.net team has issued a [security advisory](https://github.com/aspnet/Security/issues/1864).

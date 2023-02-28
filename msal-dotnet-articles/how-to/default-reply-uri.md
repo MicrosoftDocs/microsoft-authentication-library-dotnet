@@ -1,3 +1,7 @@
+---
+title: Default reply URI
+---
+
 # Default reply URI
 
 In MSAL.NET 4.1+ The default redirect URI(Reply URI) can now be set with the `public PublicClientApplicationBuilder WithDefaultRedirectUri()` method. This method will set the public client applications redirect uri property to the default recommended redirect uri for public client applications. 

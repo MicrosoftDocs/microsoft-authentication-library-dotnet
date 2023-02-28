@@ -1,4 +1,8 @@
-# Custom Token cache for a public client application
+---
+title: Custom token cache for a public client application
+---
+
+# Custom token cache for a public client application
 
 This article is about custom token cache implementations for public client applications. For context and more general information about token cache serialization see [Token cache serialization](/azure/active-directory/develop/msal-net-token-cache-serialization).
 

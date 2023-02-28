@@ -1,3 +1,7 @@
+---
+title: Experimental features in MSAL.NET
+---
+
 # Experimental features in MSAL.NET
 
 ## API promise

@@ -1,3 +1,7 @@
+---
+title: Known issues with MSAL.NET
+---
+
 # Known issues with MSAL.NET
 
 MSAL throws a few types of exceptions, please see [Exceptions](../advanced/exceptions/index.md).

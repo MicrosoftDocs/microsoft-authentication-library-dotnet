@@ -1,3 +1,7 @@
+---
+title: Monitoring of applications using MSAL.NET
+---
+
 # Monitoring of applications using MSAL.NET
 
 In order to ensure authentication services using MSAL.NET are running correctly, MSAL provides a number of ways to monitor its behavior so that issues can be identified and addressed before they occur in production. The incorrect use of MSAL (lifecycle and token cache) does not lead to immediate failures; however sometimes they will bubble up under high traffic scenarios after the app is in production for a period of time.
