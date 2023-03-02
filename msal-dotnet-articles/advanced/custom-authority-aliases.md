@@ -9,16 +9,16 @@ title: Custom authority aliases
 
 ## What is Instance Discovery 
 
-Before acquiring tokens, MSAL makes a network call to the AAD authority [discovery endpoint](https://login.microsoftonline.com/common/discovery/instance?api-version=1.1&authorization_endpoint=https%3A%2F%2Flogin.microsoftonline.com%2Fcommon%2Foauth2%2Fv2.0%2Fauthorize). The information returned is used to:
+Before acquiring tokens, MSAL makes a network call to the Azure AD authority [discovery endpoint](https://login.microsoftonline.com/common/discovery/instance?api-version=1.1&authorization_endpoint=https%3A%2F%2Flogin.microsoftonline.com%2Fcommon%2Foauth2%2Fv2.0%2Fauthorize). The information returned is used to:
 
 - discover a list of aliases for each cloud (Azure Public, German Cloud, China Cloud etc.). A token issued to an authority in the set is valid for all other authorities in the set. 
-- use the preferred_network alias for communication with AAD
+- use the preferred_network alias for communication with Azure AD
 - use the preferred_cache alias to store tokens in the cache
-- provide a level of validation for the authority - if a non-existent authority is used, then AAD returns an "invalid_instance" [error](https://login.microsoftonline.com/common/discovery/instance?api-version=1.1&authorization_endpoint=https%3A%2F%2Fbogus.microsoftonline.com%2Fcommon%2Foauth2%2Fv2.0%2Fauthorize) 
+- provide a level of validation for the authority - if a non-existent authority is used, then Azure AD returns an "invalid_instance" [error](https://login.microsoftonline.com/common/discovery/instance?api-version=1.1&authorization_endpoint=https%3A%2F%2Fbogus.microsoftonline.com%2Fcommon%2Foauth2%2Fv2.0%2Fauthorize) 
 
 #### Instance Validation 
 
-The validation is important if you obtain your authority dynamically, for example when you call a protect API, it returns a 401 Unauthorized HTTP response which can include a header pointing to an authority that is able to generate a token. If the API is hacked, it could advertise an authority that does not belong to AAD and that could steal user credentials. 
+The validation is important if you obtain your authority dynamically, for example when you call a protect API, it returns a 401 Unauthorized HTTP response which can include a header pointing to an authority that is able to generate a token. If the API is hacked, it could advertise an authority that does not belong to Azure AD and that could steal user credentials. 
 
 ## Disabling Instance Discovery
 

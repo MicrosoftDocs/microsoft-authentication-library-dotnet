@@ -111,4 +111,4 @@ Property | Description
 --- | ----
 `Username` | A string containing the displayable value in UserPrincipalName (UPN) format, for example, john.doe@contoso.com. This can be null, whereas the HomeAccountId and HomeAccountId.Identifier won’t be null. This property replaces the `DisplayableId` property of `IUser` in previous versions of MSAL.NET.
 `Environment` | A string containing the identity provider for this account, for example, `login.microsoftonline.com`. This property replaces the `IdentityProvider` property of `IUser`, except that `IdentityProvider` also had information about the tenant (in addition to the cloud environment), whereas here this is only the host.
-`HomeAccountId` | AccountId of the home account for the user. This uniquely identifies the user across Azure ADtenants.
+`HomeAccountId` | AccountId of the home account for the user. This uniquely identifies the user across Azure AD tenants.

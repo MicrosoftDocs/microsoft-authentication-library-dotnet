@@ -73,7 +73,7 @@ var authResult = await ((ILongRunningWebApi)confidentialClientApp)
          .ExecuteAsync();
 ```
 `userAccessToken` is a user access token used to call this web API. `sessionKey` will be used as a key when caching and retrieving the OBO token. If set to `null`, MSAL will set it to the assertion hash of the passed-in user token. It can also be set by the developer to something that identifies a specific user session, like the optional `sid` claim from the user token (for more information, see [Provide optional claims to your app](/azure/active-directory/develop/active-directory-optional-claims)).
-If the cache already contains a valid OBO token with this `sessionKey`, `InitiateLongRunningProcessInWebApi` will return it. Otherwise, the user token will be used to acquire a new OBO token from AAD, which will then be cached and returned.
+If the cache already contains a valid OBO token with this `sessionKey`, `InitiateLongRunningProcessInWebApi` will return it. Otherwise, the user token will be used to acquire a new OBO token from Azure AD, which will then be cached and returned.
 
 2. In the long-running process, whenever OBO token is needed, call:
 ```csharp
@@ -83,7 +83,7 @@ var authResult = await ((ILongRunningWebApi)confidentialClientApp)
               sessionKey)
          .ExecuteAsync();
 ```
-Pass the `sessionKey` which is associated with the current user's session and will be used to retrieve the related OBO token. If the token is expired, MSAL will use the cached refresh token to acquire a new OBO access token from AAD and cache it. If no token is found with this `sessionKey`, MSAL will throw a `MsalClientException`. Make sure to call `InitiateLongRunningProcessInWebApi` first.
+Pass the `sessionKey` which is associated with the current user's session and will be used to retrieve the related OBO token. If the token is expired, MSAL will use the cached refresh token to acquire a new OBO access token from Azure AD and cache it. If no token is found with this `sessionKey`, MSAL will throw a `MsalClientException`. Make sure to call `InitiateLongRunningProcessInWebApi` first.
 
 ### Cache eviction for long-running OBO processes
 
@@ -93,7 +93,7 @@ It is recommended that you set L1 and L2 eviction policies manually, for example
 
 ### Exception handling
 
-In a case when `AcquireTokenInLongRunningProcess` throws an exception when it cannot find a token and the L2 cache has a cache entry for the same cache key, verify that the L2 cache read operation completed successfully. `AcquireTokenInLongRunningProcess` is different from the `InitiateLongRunningProcessInWebApi` and `AcquireTokenOnBehalfOf`, in that it is if the cache read fails, this method is unable to acquire a new token from AAD because it does not have an original user assertion. If using Microsoft.Identity.Web.TokenCache to enable distributed cache, set [OnL2CacheFailure](https://github.com/AzureAD/microsoft-identity-web/wiki/Token-Cache-Troubleshooting#i-configured-a-distributed-l2-cache-but-nothings-gets-written-to-it) event to retry the L2 call and/or add extra logs, which can be enabled [like this](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Logging#logging-in-a-distributed-token-cache).
+In a case when `AcquireTokenInLongRunningProcess` throws an exception when it cannot find a token and the L2 cache has a cache entry for the same cache key, verify that the L2 cache read operation completed successfully. `AcquireTokenInLongRunningProcess` is different from the `InitiateLongRunningProcessInWebApi` and `AcquireTokenOnBehalfOf`, in that it is if the cache read fails, this method is unable to acquire a new token from Azure AD because it does not have an original user assertion. If using Microsoft.Identity.Web.TokenCache to enable distributed cache, set [OnL2CacheFailure](https://github.com/AzureAD/microsoft-identity-web/wiki/Token-Cache-Troubleshooting#i-configured-a-distributed-l2-cache-but-nothings-gets-written-to-it) event to retry the L2 call and/or add extra logs, which can be enabled [like this](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Logging#logging-in-a-distributed-token-cache).
 
 ### Removing accounts
 

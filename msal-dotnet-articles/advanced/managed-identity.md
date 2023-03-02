@@ -46,6 +46,6 @@ In Progress:
 
 ## Common Exceptions
 
-### MsalServiceException Error Code: managed_identity_failed_response Error Message: An unexpected error occurred while fetching the AAD token
+### MsalServiceException Error Code: managed_identity_failed_response Error Message: An unexpected error occurred while fetching the Azure AD token
 
 This exception might mean that the scope added is either not supported or is in wrong format. An example of expected scope is `https://management.azure.com/.default`

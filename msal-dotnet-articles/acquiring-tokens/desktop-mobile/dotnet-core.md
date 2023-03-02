@@ -35,7 +35,7 @@ MSAL cannot detect if the user navigates away or simply closes the browser. Apps
 
 ## How to use the System Browser (i.e. the default browser of the OS)
 
-MSAL needs to listen on on `http://localhost:port` and intercept the code that AAD sends when the user is done authenticating. 
+MSAL needs to listen on on `http://localhost:port` and intercept the code that Azure AD  sends when the user is done authenticating. 
 
 To achieve this: 
 
