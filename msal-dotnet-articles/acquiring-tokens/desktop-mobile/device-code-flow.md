@@ -89,7 +89,7 @@ static async Task<AuthenticationResult> GetATokenForGraph()
     }
     catch (MsalUiRequiredException ex)
     {
-        // No token found in the cache or AAD insists that a form interactive auth is required (e.g. the tenant admin turned on MFA)
+        // No token found in the cache or Azure AD insists that a form interactive auth is required (e.g. the tenant admin turned on MFA)
         // If you want to provide a more complex user experience, check out ex.Classification 
 
         return await AcquireByDeviceCodeAsync(pca);

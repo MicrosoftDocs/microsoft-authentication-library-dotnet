@@ -43,12 +43,12 @@ MSAL exposes token acquisition metrics as part of [AuthenticationResult.Authenti
 
 ## DurationInHttpInMs
 
-**Meaning**: Time spent making HTTP calls to the identity provider (AAD).
+**Meaning**: Time spent making HTTP calls to the identity provider (Azure AD).
 **Suggestion**: Alarm on spikes.
 
 ## TokenSource
 
-**Meaning**: Indicates the source of the token - typically cache or identity provider (AAD). Tokens are retrieved from the cache much faster (for example, ~100 ms versus ~700 ms). Can be used to monitor and alarm the cache hit ratio.
+**Meaning**: Indicates the source of the token - typically cache or identity provider (Azure AD). Tokens are retrieved from the cache much faster (for example, ~100 ms versus ~700 ms). Can be used to monitor and alarm the cache hit ratio.
 
 ## CacheRefreshReason
 

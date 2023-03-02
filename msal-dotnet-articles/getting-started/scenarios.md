@@ -41,7 +41,7 @@ To enable this interaction, MSAL.NET leverages a [web browser](/azure/active-dir
 
 #### Protecting the app itself with Intune
 
-Your mobile app (written in Xamarin.iOS or Xamarin.Android) can have app protection policies applied to it, so that it can be [managed by InTune](/intune/app-sdk) and recognized by InTune as a managed app. The [InTune SDK](/intune/app-sdk-get-started) is separate from MSAL, and it talks to AAD on its own.
+Your mobile app (written in Xamarin.iOS or Xamarin.Android) can have app protection policies applied to it, so that it can be [managed by InTune](/intune/app-sdk) and recognized by InTune as a managed app. The [InTune SDK](/intune/app-sdk-get-started) is separate from MSAL, and it talks to Azure AD on its own.
 
 ### Desktop/service daemon application calling Web API in without a user (in its own name)
 
@@ -55,7 +55,7 @@ Desktop applications can use the same [interactive authentication](../acquiring-
 
 ![image](https://user-images.githubusercontent.com/13203188/44857519-d52b8780-ac24-11e8-943c-684b3e9114ce.png)
 
-For Windows hosted applications, it's also possible for applications running on computers joined to a Windows domain or AAD joined to acquire a token silently by using [Integrated Windows Authentication](../acquiring-tokens/desktop-mobile/integrated-windows-authentication.md).
+For Windows hosted applications, it's also possible for applications running on computers joined to a Windows domain or Azure AD joined to acquire a token silently by using [Integrated Windows Authentication](../acquiring-tokens/desktop-mobile/integrated-windows-authentication.md).
 
 If your desktop application is a .NET Core application running on Linux or Mac, you will be able to use neither the interactive authentication (as .NET Core does not provide a [Web browser](/azure/active-directory/develop/msal-net-web-browsers)), nor Integrated Windows Authentication. The best option in that case is to use device code flow (See [Application without a browser, or iOT application calling an API in the name of the user](#application-without-a-browser-or-iot-application-calling-an-api-in-the-name-of-the-user)) below
 

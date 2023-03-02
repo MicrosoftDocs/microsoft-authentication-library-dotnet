@@ -14,8 +14,8 @@ Exceptions in MSAL.NET are intended for app developers to troubleshoot and not f
 |-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | MsalException           | Base class for MSAL exceptions.                                                                                                                                                                                |
 | MsalClientException     | Errors which occur in the library itself, for example an incomplete configuration.                                                                                                                             |
-| MsalServiceException    | Represents errors transmitted by the token provider (AAD). See [AAD errors](/azure/active-directory/develop/reference-aadsts-error-codes#handling-error-codes-in-your-application). Servince unavialble errors (e.g. HTTP 500), indicating a problem with the service, have the error code `service_not_available` |
-| MsalUiRequiredException | Special AAD error which indicates that the user must interactively login.                                                                                                                                      |
+| MsalServiceException    | Represents errors transmitted by the token provider (Azure AD). See [Azure AD errors](/azure/active-directory/develop/reference-aadsts-error-codes#handling-error-codes-in-your-application). Servince unavialble errors (e.g. HTTP 500), indicating a problem with the service, have the error code `service_not_available` |
+| MsalUiRequiredException | Special Azure AD error which indicates that the user must interactively login.                                                                                                                                      |
 
 No other exception is caught by MSAL. Any network issues, cancellations etc. are bubbled up to the application.
 
@@ -31,7 +31,7 @@ On Android, this exception can also occur if a [browser with tabs](https://githu
 
 2. HTTP Exceptions
 
-Developers are expected to implement their own retry policies when calling MSAL. MSAL makes HTTP calls to the AAD service, and occasional failures can occur, for example the network can go down or the server is overloaded. HTTP 5xx status code responses are retried once.
+Developers are expected to implement their own retry policies when calling MSAL. MSAL makes HTTP calls to the Azure AD service, and occasional failures can occur, for example the network can go down or the server is overloaded. HTTP 5xx status code responses are retried once.
 
 ### Exception types
 

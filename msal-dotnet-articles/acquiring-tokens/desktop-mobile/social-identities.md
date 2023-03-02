@@ -4,7 +4,7 @@ title: Using MSAL.NET to sign-in users with social identities
 
 # Using MSAL.NET to sign-in users with social identities
 
-You can use MSAL.NET to sign-in users with social identities by using [Azure AD B2C](/azure/active-directory-b2c/overview). AAD B2C is built around the notion of policies. In MSAL.NET, specifying a policy translates to providing an authority.
+You can use MSAL.NET to sign-in users with social identities by using [Azure AD B2C](/azure/active-directory-b2c/overview). Azure AD B2C is built around the notion of policies. In MSAL.NET, specifying a policy translates to providing an authority.
 
 - When you instantiate the Public client application, you need to specify the policy in authority
 - When you want to apply a policy, you need to call an override of `AcquireTokenInteractive` containing an `authority` parameter
@@ -199,7 +199,7 @@ One option is to use the "name" claim as the preferred username. The process is 
 
 ## Customizing the UI
 
-[Customize the user interface with AAD B2C](/azure/active-directory-b2c/customize-ui-overview).
+[Customize the user interface with Azure AD B2C](/azure/active-directory-b2c/customize-ui-overview).
 
 ## Samples illustrating acquiring tokens interactively with MSAL.NET for B2C applications
 

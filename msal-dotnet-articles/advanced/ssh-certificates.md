@@ -7,7 +7,7 @@ title: Using SSH certificates with MSAL.NET
 >[!NOTE]
 >This feature will be available from MSAL 4.3.2 onward
 
-AAD is capable of issuing SSH certificates instead of bearer tokens. These are not the same as SSH public keys. Currently this is available as an extension method on `AcquireTokenSilent` and `AcquireTokenInteractive`.
+Azure AD is capable of issuing SSH certificates instead of bearer tokens. These are not the same as SSH public keys. Currently this is available as an extension method on `AcquireTokenSilent` and `AcquireTokenInteractive`.
 
 ```csharp
 var result = await pca
