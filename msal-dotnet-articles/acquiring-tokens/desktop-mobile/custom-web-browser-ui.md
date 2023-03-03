@@ -6,7 +6,7 @@ title: Use your own browser with MSAL.NET
 
 A Web UI is a mechanism to invoke a browser. This can be a dedicated UI WebBrowser control or a way to delegate opening the browser.
 
-#### Why?
+## Why?
 
 MSAL provides Web UI implementations for most platforms, but there are still cases where may want to host the browser yourself: 
 
@@ -14,14 +14,14 @@ MSAL provides Web UI implementations for most platforms, but there are still cas
 - you want to UI test your application and want to use an automated browser that can be used with Selenium 
 - the browser and the app running MSAL are in separate processes
 
-#### At a glance
+## At a glance
 
 To achieve this, MSAL  gives the developer a `start Url`, which needs to displayed in a browser of choice so that the end-user can enter his username etc. Once authentication completes, the developer needs to pass back to MSAL the `end Url`, which contains a code. The host of the `end Url` is always the `redirectUri`. To intercept the `end Url` you can: 
 
 - monitor browser redirects until the `redirect Url` is hit OR
 - have the browser redirect to an URL which you monitor
 
-#### WithCustomWebUi is an extensibility point
+## WithCustomWebUi is an extensibility point
 
 `WithCustomWebUi` is an extensibility point that allows you provide your own UI in public client applications, and to let the user go through the /Authorize endpoint of the identity provider and let them sign-in and consent. MSAL.NET will then be able to redeem the authentication code and get a token. 
 
@@ -30,7 +30,7 @@ MSAL runs as part of Visual Studio to maintain the user cache. You can also use 
 
 Note that, in public client applications, MSAL.NET leverages the PKCE standard ([RFC 7636 - Proof Key for Code Exchange by OAuth Public Clients](https://tools.ietf.org/html/rfc7636)) to ensure that security is respected: Only MSAL.NET can redeem the code.
 
-#### How to use WithCustomWebUi
+## How to use WithCustomWebUi
 
 To leverage this you need to:
   
@@ -45,7 +45,6 @@ using Microsoft.Identity.Client.Extensions;
                        .ExecuteAsync();
 ```
 
-#### Examples of implementation of ICustomWebUi in test automation - SeleniumWebUI
+## Examples of implementation of ICustomWebUi in test automation - SeleniumWebUI
 
-We have rewritten our UI tests to leverage this extensibility mechanism. In case you are interested you can have a look at the [SeleniumWebUI](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/053a98d16596be7e9ca1ab916924e5736e341fe8/tests/Microsoft.Identity.Test.Integration/Infrastructure/SeleniumWebUI.cs#L15-L160) class in the MSAL.NET source code
-
+We have rewritten our UI tests to leverage this extensibility mechanism. In case you are interested you can have a look at the [SeleniumWebUI](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/053a98d16596be7e9ca1ab916924e5736e341fe8/tests/Microsoft.Identity.Test.Integration/Infrastructure/SeleniumWebUI.cs#L15-L160) class in the MSAL.NET source code.

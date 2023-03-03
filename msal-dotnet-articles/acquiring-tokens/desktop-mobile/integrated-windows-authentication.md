@@ -4,14 +4,12 @@ title: Using MSAL.NET with Integrated Windows Authentication (IWA)
 
 # Using MSAL.NET with Integrated Windows Authentication (IWA)
 
-If your desktop or mobile application runs on Windows, and on a machine connected to a Windows domain - AD or AAD joined - it is possible to use the Integrated Windows Authentication (IWA) to acquire a token silently. No UI is required when using the application.
+>![NOTE]
+>Public client applications should use [WAM](wam.md) on Windows. WAM can login the current windows user silently. This workflow does not require complex setup and it even works for personal (Microsoft) accounts.
 
-### Use WAM instead
+If your desktop or mobile application runs on Windows and on a machine connected to a Windows domain (AD or AAD joined) it is possible to use the Integrated Windows Authentication (IWA) to acquire a token silently. No UI is required when using the application.
 
-Public client applications should use WAM on Windows. WAM can login the current windows user silently. See [WAM](./wam.md).
-This does not require complex setup and it even works for Personal accounts.
-
-### Constraints
+### IWA Constraints
 
 - **Federated** users only, i.e. those created in an Active Directory and backed by Azure Active Directory. Users created directly in AAD, without AD backing - **managed** users - cannot use this auth flow. This limitation does not affect the Username/Password flow.
 - Does not work for MSA users. For MSA uses try out [WAM](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/wam)
@@ -138,12 +136,14 @@ static async Task GetATokenForGraph()
  Console.WriteLine(result.Account.Username);
 }
 ```
+
 Note: if you encounter the following error: 
 _"Microsoft.Identity.Client.MsalClientException: Failed to get user name ---> System.ComponentModel.Win32Exception: No mapping between account names and security IDs was done"_
 
 It means that you may be singed into the device with a local computer account as opposed to an Active Directory(AD) account. Please ensure that the device is added to the domain and that the currently signed in user backed by AD. It is not enough to have a computer joined to a domain alone as local accounts on the device wont be able to access your AD credentials.
 
 ## Sample illustrating acquiring tokens through Integrated Windows Authentication with MSAL.NET
+
 Sample | Platform | Description 
 ------ | -------- | -----------
 [active-directory-dotnet-iwa-v2](https://github.com/Azure-Samples/active-directory-dotnet-iwa-v2) | Console (.NET) | .NET Core console application letting the user signed-in in Windows, acquire, with the Azure AD v2.0 endpoint, a token for the Microsoft Graph ![](https://github.com/Azure-Samples/active-directory-dotnet-iwa-v2/blob/master/ReadmeFiles/Topology.png)

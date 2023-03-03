@@ -89,7 +89,7 @@ Enables you to specify if you want to force the usage of an embedded web view or
  result = await app.AcquireTokenInteractive(scopes)
                    .WithUseEmbeddedWebView(true)
                    .ExecuteAsync();
-  ```
+```
 
 ### WithExtraScopeToConsent
 
