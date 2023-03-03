@@ -106,10 +106,6 @@ They are not available on the mobile platforms, because the OAuth2 spec states t
 - Xamarin.iOS
 - UWP
 
-### Testimonials
-
-See our [testimonials page](resources/testimonials.md).
-
 ## Roadmap
 
 | Date                 | Release                                                                                                              | Blog post                                                                                                                 | Main features |
