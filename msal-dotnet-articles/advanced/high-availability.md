@@ -31,9 +31,9 @@ MSAL exposes important metrics as part of [AuthenticationResult.AuthenticationRe
 
 | Metric       | Meaning     | When to trigger an alarm?    |
 | :-------------: | :----------: | :-----------: |
-|  `DurationTotalInMs`| Total time spent in MSAL, including network calls and cache   | Alarm on overall high latency (> 1 s). Value depends on token source. From the cache: one cache access. From AAD: two cache accesses + one HTTP call. First ever call (per-process) will take longer because of one extra HTTP call. |
+|  `DurationTotalInMs`| Total time spent in MSAL, including network calls and cache   | Alarm on overall high latency (> 1 s). Value depends on token source. From the cache: one cache access. From Azure AD: two cache accesses + one HTTP call. First ever call (per-process) will take longer because of one extra HTTP call. |
 |  `DurationInCacheInMs` | Time spent loading or saving the token cache, which is customized by the app developer (for example, save to Redis).| Alarm on spikes. |
-|  `DurationInHttpInMs` | Time spent making HTTP calls to AAD.  | Alarm on spikes.|
+|  `DurationInHttpInMs` | Time spent making HTTP calls to Azure AD.  | Alarm on spikes.|
 |  `TokenSource` | Indicates the source of the token. Tokens are retrieved from the cache much faster (for example, ~100 ms versus ~700 ms). Can be used to monitor and alarm the cache hit ratio. | Use with `DurationTotalInMs`. |
 |  `CacheRefreshReason` | Specifies the reason for fetching the access token from the identity provider. See [Possible Values](see https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/master/src/client/Microsoft.Identity.Client/Cache/CacheRefreshReason.cs) . | Use with `TokenSource`. |
 
@@ -77,7 +77,7 @@ By default, Azure AD issues access tokens with 1 hour expiration. If an Azure AD
 
 ### Process
 
-To improve availability MSAL tries to ensure than an app always has fresh unexpired tokens. AAD outages rarely take more than a few hours, so if MSAL can guarantee that a token always has at least a few hours of availability left, the application will not be impacted by the AAD outage. 
+To improve availability MSAL tries to ensure than an app always has fresh unexpired tokens. Azure AD outages rarely take more than a few hours, so if MSAL can guarantee that a token always has at least a few hours of availability left, the application will not be impacted by the Azure AD outage. 
 
 To get long lived tokens, you must configure your tenant (note: internal Microsoft tenants are already configured). For client_credentials (service 2 service), this is enough. For user credentials, you must also configure CAE - /azure/active-directory/conditional-access/concept-continuous-access-evaluation.
 
@@ -88,7 +88,7 @@ Note: From MSAL 4.37.0 and above, you can observe this value by inspecting the `
 
 Additionally, you can configure a token lifetime of more than the default 1 hour, as described [here](/azure/active-directory/develop/active-directory-configurable-token-lifetimes.
 
-Whenever you make **requests for the same token**, i.e. whenever MSAL is able to serve a token from its cache, then MSAL will automatically check the `refresh_in` value. If it has elapsed, MSAL will issue a token request to AAD in the background, but will return the existing, valid token to the application. In the unlikely event that the background refresh fails (e.g. AAD outage), the app is not affected.
+Whenever you make **requests for the same token**, i.e. whenever MSAL is able to serve a token from its cache, then MSAL will automatically check the `refresh_in` value. If it has elapsed, MSAL will issue a token request to Azure AD in the background, but will return the existing, valid token to the application. In the unlikely event that the background refresh fails (e.g. Azure AD outage), the app is not affected.
 
 ## Certificate Rotation
 
@@ -104,13 +104,13 @@ This is the preferred solution for non-Microsoft internal services using ASP.NET
 
 2. (**Internal only**) Rely on [Subject Name/Issuer certificates](./subject-name-and-issuer-authentication.md).
 
-This mechanism allows AAD to identify a cert based on SN/I instead of x5t. It is a stop-gap solution, there are no plans to make it available to third-parties.
+This mechanism allows Azure AD to identify a cert based on SN/I instead of x5t. It is a stop-gap solution, there are no plans to make it available to third-parties.
 
 This is the preferred solution for Microsoft internal services.
 
 3. Write your own simple cert reload logic
 
-AAD will reject an expired certificate with an error, which MSAL will report as an `MsalServiceException`
+Azure AD will reject an expired certificate with an error, which MSAL will report as an `MsalServiceException`
 
 ```csharp
         private bool IsInvalidClientCertificateError(MsalServiceException exMsal)

@@ -11,7 +11,7 @@ If your desktop or mobile application runs on Windows and on a machine connected
 
 ### IWA Constraints
 
-- **Federated** users only, i.e. those created in an Active Directory and backed by Azure Active Directory. Users created directly in AAD, without AD backing - **managed** users - cannot use this auth flow. This limitation does not affect the Username/Password flow.
+- **Federated** users only, i.e. those created in an Active Directory and backed by Azure Active Directory. Users created directly in Azure AD, without AD backing - **managed** users - cannot use this auth flow. This limitation does not affect the Username/Password flow.
 - Does not work for MSA users. For MSA uses try out [WAM](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/wam)
 - IWA is for apps written for .NET Framework, .NET Core and UWP platforms
 - IWA does NOT bypass MFA (multi factor authentication). If MFA is configured, IWA might fail if an MFA challenge is required, because MFA requires user interaction. 
@@ -97,7 +97,7 @@ static async Task GetATokenForGraph()
    // to a URL to consent: https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id={clientId}&response_type=code&scope=user.read
 
    // AADSTS50079: The user is required to use multi-factor authentication.
-   // There is no mitigation - if MFA is configured for your tenant and AAD decides to enforce it, 
+   // There is no mitigation - if MFA is configured for your tenant and Azure AD decides to enforce it, 
    // you need to fallback to an interactive flows such as AcquireTokenInteractive or AcquireTokenByDeviceCode
    }
    catch (MsalServiceException ex)
@@ -115,7 +115,7 @@ static async Task GetATokenForGraph()
    catch (MsalClientException ex)
    {
       // Error Code: unknown_user Message: Could not identify logged in user
-      // Explanation: the library was unable to query the current Windows logged-in user or this user is not AD or AAD 
+      // Explanation: the library was unable to query the current Windows logged-in user or this user is not AD or Azure AD
       // joined (work-place joined users are not supported). 
 
       // Mitigation 1: on UWP, check that the application has the following capabilities: Enterprise Authentication, 
@@ -127,7 +127,7 @@ static async Task GetATokenForGraph()
       // Error Code: integrated_windows_auth_not_supported_managed_user
       // Explanation: This method relies on an a protocol exposed by Active Directory (AD). If a user was created in Azure 
       // Active Directory without AD backing ("managed" user), this method will fail. Users created in AD and backed by 
-      // AAD ("federated" users) can benefit from this non-interactive method of authentication.
+      // Azure AD ("federated" users) can benefit from this non-interactive method of authentication.
       // Mitigation: Use interactive authentication
    }
  }

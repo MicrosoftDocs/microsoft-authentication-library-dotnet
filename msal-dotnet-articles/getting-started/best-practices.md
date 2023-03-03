@@ -8,14 +8,14 @@ title: Best practices for MSAL.NET
 
 Even if you can have a look at what is contained in an Access token (for instance using https://jwt.ms), for education, or debugging purposes, you should never parse an access token part of your client code. The access token is only meant for the Web API (resource) it's acquired for, and this Web API is the only one should crack open it. Most of the time the Web apis will use a middleware layer (for instance [Identity model extension for .NET](https://github.com/AzureAD/azure-activedirectory-identitymodel-extensions-for-dotnet/wiki) in .NET), as this is complex code, about the protection of your web apps and Web apis, and you don't want to introduce security vulnerabilities by forgetting some important paths.
 
-## Don't acquire tokens from AAD too often
+## Don't acquire tokens from Azure AD too often
 
 The standard pattern of acquiring tokens is:
 
 - Acquire token silently (from the cache).
-- If that doesn't work, acquire a token from the AAD.
+- If that doesn't work, acquire a token from the Azure AD.
 
-If you skip step 1, your app may be asking for tokens from AAD very often. This provides a bad user experience, because it is slow. And it is error prone, because AAD might throttle you.
+If you skip step 1, your app may be asking for tokens from Azure AD too often. This provides a bad user experience, because it is slow and error prone as the identity provider might throttle you.
 
 ## Don't handle token expiration on your own
 

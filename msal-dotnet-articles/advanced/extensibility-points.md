@@ -51,7 +51,7 @@ private static Task ModifyRequestAsync(OnBeforeTokenRequestData requestData)
 
 Allows apps to add query (GET) parameters to applications, customizing the experience. This mainly controls the UX login experience exposed by the `/authorize` endpoint, but the parameters are sent to the `/token` endpoint request as well. 
 
-Useful to target AAD service slices where new features or bug fixes are deployed first and to customize the UX experience with features not exposed by MSAL. Note that MSAL doesn't perform the `/authorize` request in ASP.NET / ASP.NET Core scenarios, so those calls are not affected!
+Useful to target Azure AD service slices where new features or bug fixes are deployed first and to customize the UX experience with features not exposed by MSAL. Note that MSAL doesn't perform the `/authorize` request in ASP.NET / ASP.NET Core scenarios, so those calls are not affected!
 
 Details [here](/dotnet/api/microsoft.identity.client.abstractacquiretokenparameterbuilder-1.withextraqueryparameters?view=azure-dotnet#microsoft-identity-client-abstractacquiretokenparameterbuilder-1-withextraqueryparameters(system-string))
 

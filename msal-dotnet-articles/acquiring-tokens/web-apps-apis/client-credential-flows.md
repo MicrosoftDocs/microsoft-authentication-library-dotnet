@@ -10,7 +10,7 @@ MSAL is a multi-framework library. Confidential Client flows are not available o
 
 ## Credentials
 
-MSAL.NET supports 2 types of client credentials, which must be registered in the AAD app registration portal
+MSAL.NET supports 2 types of client credentials, which must be registered in the Azure AD app registration portal
 
 - Application secrets (not recommended for production scenarios)
 - Certificates
@@ -80,7 +80,7 @@ authResult.AuthenticationResultMetadata.TokenSource == TokenSource.Cache
 ```
 
 **Problem:** I am getting "loop detected" errors
-**Solution:** You are calling AAD for a token to often and AAD is throttling you. You need to use a cache - either the in-memory one (as per the sample above) or a persisted one.
+**Solution:** You are calling Azure AD for a token to often and Azure ADis throttling you. You need to use a cache - either the in-memory one (as per the sample above) or a persisted one.
 
 **Problem:** `AcquireTokenClient` latency is too high
 **Possible Solutions:** Please ensure you have a high token cache hit rate. 
