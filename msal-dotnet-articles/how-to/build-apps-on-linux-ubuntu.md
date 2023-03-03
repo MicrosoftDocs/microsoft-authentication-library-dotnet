@@ -36,7 +36,8 @@ On an Ubuntu machine
 
 ## How to build
 
-From the VS Code terminal
+From the VS Code terminal:
+
 - Go to the "App" folder
 - Run command
 ```dotnet add package Microsoft.Identity.Client --prerelease -s ~/LocalNuget```
@@ -47,7 +48,7 @@ This will build the app in debug mode
 
 ## How to run
 
-From the PowerShell terminal
+From the PowerShell terminal:
 
 - Got to "App"/bin/Debug/net6 folder
 - Run command

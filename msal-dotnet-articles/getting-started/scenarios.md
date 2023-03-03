@@ -6,7 +6,7 @@ title: MSAL.NET Scenarios
 
 ## Introduction
 
-The .NET authentication libraries support scenarios involving Protecting a Web API ![image](https://user-images.githubusercontent.com/13203188/44856754-0c993480-ac23-11e8-82ef-e0eaa586b9c8.png) and **Acquiring tokens** for a protected Web API ![image](https://user-images.githubusercontent.com/13203188/44856748-060abd00-ac23-11e8-8b69-cbe928bec23c.png). MSAL.NET is only about the later. 
+The .NET authentication libraries support scenarios involving Protecting a Web API ![image](https://user-images.githubusercontent.com/13203188/44856754-0c993480-ac23-11e8-82ef-e0eaa586b9c8.png) and **Acquiring tokens** for a protected Web API ![image](https://user-images.githubusercontent.com/13203188/44856748-060abd00-ac23-11e8-8b69-cbe928bec23c.png). MSAL.NET is only about the later.
 
 The token can be acquired from a number of **application types**: Web applications, Mobile or Desktop applications, Web APIs, and application running on devices that don't have a browser (or iOT). Applications tend to be separated into two categories:
 
@@ -27,7 +27,7 @@ The picture below summarizes the supported scenarios and shows on which platform
 
 To protected a Web App (signing in the user) you'll use ASP.NET or ASP.NET Core with the ASP.NET Open ID Connect middleware. Under the hood. This involves validating the token which is done by the [IdentityModel extensions for .NET](https://github.com/AzureAD/azure-activedirectory-identitymodel-extensions-for-dotnet/wiki) library, not MSAL.NET.
 
-To call the Web API in the name of the user you'll use MSAL.NET ConfidentialClientApplication, leveraging the [Authorization code flow](Acquiring-tokens-with-authorization-codes-on-web-apps), then storing the acquired token in the token cache, and [acquiring silently a token](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/AcquireTokenSilentAsync-using-a-cached-token#recommended-call-pattern-in-web-apps-using-the-authorization-code-flow-to-authenticate-the-user) from the cache when needed. MSAL refreshes the token if needed.
+To call the Web API in the name of the user you'll use MSAL.NET `ConfidentialClientApplication`, leveraging the [Authorization code flow](../acquiring-tokens/web-apps-apis/authorization-codes.md), then storing the acquired token in the token cache, and [acquiring silently a token](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/AcquireTokenSilentAsync-using-a-cached-token#recommended-call-pattern-in-web-apps-using-the-authorization-code-flow-to-authenticate-the-user) from the cache when needed. MSAL refreshes the token if needed.
 
 ![image](https://user-images.githubusercontent.com/13203188/44857464-b6c58c00-ac24-11e8-9509-103ada932b09.png)
 
@@ -39,7 +39,7 @@ To enable this interaction, MSAL.NET leverages a [web browser](/azure/active-dir
 
 ![image](https://user-images.githubusercontent.com/13203188/44857487-c2b14e00-ac24-11e8-95bc-55d559c7c17b.png)
 
-#### Protecting the app itself with Intune
+#### Protecting the app itself with InTune
 
 Your mobile app (written in Xamarin.iOS or Xamarin.Android) can have app protection policies applied to it, so that it can be [managed by InTune](/intune/app-sdk) and recognized by InTune as a managed app. The [InTune SDK](/intune/app-sdk-get-started) is separate from MSAL, and it talks to Azure AD on its own.
 
