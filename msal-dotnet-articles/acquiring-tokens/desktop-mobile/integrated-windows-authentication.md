@@ -2,7 +2,11 @@
 title: Using MSAL.NET with Integrated Windows Authentication (IWA)
 ---
 
-# Using MSAL.NET with Integrated Windows Authentication (IWA)
+# There's a better way to use Integrated Windows Authentication (IWA)
+
+Integrated Windows Authentication has been replaced with a more reliable way of getting tokens silently - the Windows broker, see https://aka.ms/msal-net-wam
+
+Internally, the Windows Broker (WAM) will try several strategies to get a token for the current Windows user, including IWA and redeeming the PRT. This eliminates most of the limitations below. 
 
 >![NOTE]
 >Public client applications should use [WAM](wam.md) on Windows. WAM can login the current windows user silently. This workflow does not require complex setup and it even works for personal (Microsoft) accounts.
