@@ -52,7 +52,7 @@ IPublicClientApplication pca = PublicClientApplicationBuilder
 
 Note: If you configure `http://localhost`, internally MSAL will find a random open port and use it.
 
-## Integration with WAM
+## Integration with Windows Broker
 
 WAM - Windows Authentication Manager is a Windows component that can provide additional context to the authentication session. It is mandatory to use WAM for certain Conditional Access scenarios.
 
