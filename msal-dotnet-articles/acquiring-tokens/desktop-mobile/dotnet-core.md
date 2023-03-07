@@ -2,7 +2,7 @@
 title: Using MSAL.NET with .NET Core
 ---
 
-# Using MSAL.NET with .NET Core
+# Using MSAL.NET with .NET (aka .NET Core)
 
 >[!NOTE]
 >This feature is available from version 4.0.0 on .NET Core and from version 4.1.0 on .NET Classic. 
