@@ -2,7 +2,7 @@
 title: Cleaning the token cache
 ---
 
-# Clearning the token cache
+# Clearing the token cache
 
 Clearing the cache is achieved by removing the accounts from the cache.
 
