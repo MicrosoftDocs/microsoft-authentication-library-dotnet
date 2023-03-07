@@ -6,7 +6,9 @@ title: Using MSAL.NET with .NET Core
 
 >[!NOTE]
 >This feature is available from version 4.0.0 on .NET Core and from version 4.1.0 on .NET Classic. 
+## Use a broker
 
+Microsoft recommends to use a broker instead of a browser, as this is more secure. See https://aka.ms/msal-net-wam 
 ## Embedded vs System Web UI
 
 MSAL is a multi-framework library and has framework specific code to host a browser in a UI control (e.g. on .NET Classic it uses WinForms, on Xamarin it uses native mobile controls etc.). This is called `embedded` web UI. 
