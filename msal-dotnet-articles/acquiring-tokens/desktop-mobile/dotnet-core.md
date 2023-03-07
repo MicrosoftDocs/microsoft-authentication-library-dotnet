@@ -21,7 +21,7 @@ B2C and ADFS 2019 do not yet implement the "any port" option. So you cannot set 
 UWP doesn't support listening to a port and thus doesn't support System Browsers, [Read more](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/MSAL.NET-uses-web-browser#uwp-does-not-use-the-system-webview).
 
 ## System Browser Experience
-
+To use the embedded browser on Windows in .NET applications, you need to reference `Microsoft.Identity.Client.Desktop` and to use `WithWindowsDesktopFeatures` API when constructing the public client application object.
 On .NET Core, MSAL will start the system browser as a separate process. MSAL does not have control over this browser, but once the user finishes authentication, the web page is redirected in such a way that MSAL can intercept the Uri. 
 
 You can also configure apps written for .NET Classic to use this browser, by specifying
