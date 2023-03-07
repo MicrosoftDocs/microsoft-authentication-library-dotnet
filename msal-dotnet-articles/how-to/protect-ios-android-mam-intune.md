@@ -23,7 +23,7 @@ Here are the detail [setup steps](https://github.com/AzureAD/microsoft-authentic
 
 As a result of the setup, when App attempts to reach the resource and if the device is not compliant, Azure AD returns ```protection_policy_required``` suberror.  
 
-MSAL.NET catches the error and throw ```IntuneAppProtectionPolicyRequiredException```.  
+MSAL.NET catches the error and throw `IntuneAppProtectionPolicyRequiredException`.  
 
 It is app's responsibility to catch the error and invoke Intune MAM SDK to make the device compliant. When the device becomes compliant, Intune MAM SDK will write enrollmentID in the keychain.  
 
