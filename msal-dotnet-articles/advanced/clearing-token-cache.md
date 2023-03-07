@@ -1,5 +1,5 @@
 ---
-title: Clearning the token cache
+title: Cleaning the token cache
 ---
 
 # Clearning the token cache
