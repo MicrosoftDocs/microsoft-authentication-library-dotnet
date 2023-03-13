@@ -129,7 +129,7 @@ The DLL search order is,
 - other directories like system and windows
 - `runtimes` folder under the NuGet [global-packages](/nuget/consume-packages/managing-the-global-packages-and-cache-folders) folder where [Microsoft.Identity.Client.NativeInterop](https://www.nuget.org/packages/Microsoft.Identity.Client.NativeInterop) is installed. 
 
-![image](https://user-images.githubusercontent.com/90415114/193084876-f67638a2-7a10-4b6e-8943-43c851be8687.png)
+![image](../../media/nativeinterop-library.png)
 
 ### "MsalClientException (ErrCode 5376): At least one scope needs to be requested for this authentication flow." error message
 

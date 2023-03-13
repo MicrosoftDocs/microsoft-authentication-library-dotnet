@@ -8,7 +8,7 @@ Exceptions in MSAL.NET are intended for app developers to troubleshoot and not f
 
 ## The different types of exceptions
 
-![image](https://user-images.githubusercontent.com/12273384/189374111-e1e788dd-89c3-4ff3-a808-fc7924f9c4a0.png)
+![image](../../media/msal-exceptions.png)
 
 | Exception               | Description                                                                                                                                                                                                    |
 |-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

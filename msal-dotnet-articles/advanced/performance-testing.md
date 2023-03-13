@@ -77,7 +77,7 @@ We regularly work on improving MSAL.NET performance. Performance related GitHub 
 **PR [#2834](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/pull/2834)** improved performance by removing unnecessary serialization and adding partitioning in default app token cache used in client credentials flow. Released in MSAL [4.36.0](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/releases/tag/4.36.0).
 Diagram shows a performance improvement for P99 latency in milliseconds for client credentials call.
 
-<img src="https://user-images.githubusercontent.com/34331512/136514824-83f14e3f-9cfa-43b1-8419-39fd4b6de54d.png" width="400" />
+![Latency diagram for MSAL.NET](../media/latency-diagram.png)
 
 **PR [#2881](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/pull/2881)** significantly improved caching performance by adding partitioning to the default in-memory user cache used in user flows (like acquire token on-behalf-of, by authorization code). Released in MSAL [4.37.0](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/releases/tag/4.37.0).
 

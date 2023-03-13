@@ -12,7 +12,7 @@ Jump to [How to - use the WwwAuthenticateParameters class](https://github.com/Az
 
 Diagram:
 
-<img src="https://user-images.githubusercontent.com/19942418/124992678-245ead00-dff8-11eb-816c-aaf3edc70aa3.png" width="550" height="400">
+![Flow between web API and a client](../media/auth-parameters-diagram.png)
 
 Sometimes, you call a web API without being authenticated with the intension to get the parameters that you'll need to use to authenticate the user (for instance the authority and the scopes). This is done, for APIs that support it, by replying with a WWW-Authenticate header.
 
@@ -23,6 +23,7 @@ There are also scenarios where a web API needs more claims from the user. But gi
 Some web APIs, when called unauthenticated, send back an HTTP 401 (Unauthenticated) with a wwwAuthenticate header. Note that this is not a response from Azure AD, but really from a web API that the client app would call without authentication or with the wrong authentication. 
 
 For instance:
+
 - if you navigate, in your browser, to https://graph.microsoft.com/v1.0/me, you'll get an HTTP 401 (Unauthorized) error, but the wwwAuthenticate header will tell you: get a token using this IdP (defined by its authorize endpoint URI), for this resource (Graph):
   ```Text
   HTTP 401; Unauthorized

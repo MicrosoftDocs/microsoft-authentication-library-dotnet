@@ -37,11 +37,11 @@ During the **[App registration](https://go.microsoft.com/fwlink/?linkid=2083908)
 - The Reply URI should be `https://login.microsoftonline.com/common/oauth2/nativeclient`
 - You need to choose **Yes** to the question **Treat application as a public client** (in the **Default client type** paragraph)
 
-  ![image](https://user-images.githubusercontent.com/13203188/56017514-cac78500-5cff-11e9-93a3-00e78d6f5240.png)
+  ![image](../../media/azure-ad-client-type.png)
 
 ### Code
 
-![image](https://user-images.githubusercontent.com/13203188/56017770-94d6d080-5d00-11e9-89f3-f3a7a1d6f2e8.png)
+![image](../../media/ipublicclientapplication-interface.png)
 
 `IPublicClientApplication`contains a method named `AcquireTokenWithDeviceCode`
 
@@ -55,7 +55,7 @@ This method takes as parameters:
 - The `scopes` for which to request an access token
 - A callback that will receive the `DeviceCodeResult`
 
-  ![image](https://user-images.githubusercontent.com/13203188/56024968-7af1b980-5d11-11e9-84c2-5be2ef306dc5.png)
+  ![image](../../media/devicecoderesult-class.png)
 
 You can pass optional parameters, by calling:
 

@@ -54,20 +54,21 @@ Mac OS, Linux, Windows	| <img src="/azure/active-directory/develop/media/index/l
 The following table summarizes the ways available to acquire tokens in confidential client applications depending on the Operating system, and therefore the chosen platform, and the kind of application.
 
 Operating System | Library Platform | Kind of App | [Client Credential](./web-apps-apis/client-credential-flows.md) | [On behalf of](./web-apps-apis/on-behalf-of-flow.md) | [Auth Code](./web-apps-apis/authorization-codes.md)
- -- | -------- | --- | ----------  | --- | --- 
-Windows	| <img src="/azure/active-directory/develop/media/index/logo_net.svg" width="40"/> <br/> .NET Framework | ![image](https://user-images.githubusercontent.com/13203188/53402109-60f25680-39b1-11e9-868a-0dcad865cb31.png) | Y | | Y
-Windows, MacOS, Linux | <img src="/azure/active-directory/develop/media/index/logo_netcore.svg" width="40" /> <br/> ASP.NET Core  | ![image](https://user-images.githubusercontent.com/13203188/53425607-a6c91200-39e5-11e9-9a1d-c533bf546156.png) | Y | | Y | 	
-Windows | <img src="/azure/active-directory/develop/media/index/logo_net.svg" width="40"/> <br/> .NET Framework | ![image](https://user-images.githubusercontent.com/13203188/53402132-6ea7dc00-39b1-11e9-8c59-79d39e38f6bd.png) | Y | Y | 	
-Windows, MacOS, Linux | <img src="/azure/active-directory/develop/media/index/logo_netcore.svg" width="40" /><br/> ASP.NET Core | ![image](https://user-images.githubusercontent.com/13203188/53425997-6f0e9a00-39e6-11e9-9517-18dfdd359e37.png) | Y | Y | 	
-Windows	| <img src="/azure/active-directory/develop/media/index/logo_net.svg" width="40"/> <br/> .NET Framework | ![image](https://user-images.githubusercontent.com/13203188/53402143-74052680-39b1-11e9-9c8e-57cdca0a9c1d.png) <br/> (windows service) | Y | |
-Windows, MacOS, Linux | <img src="/azure/active-directory/develop/media/index/logo_netcore.svg" width="40" /> <br/> .NET Core | ![image](https://user-images.githubusercontent.com/13203188/53426315-0bd13780-39e7-11e9-8ac2-0ae9f6746370.png)| Y | | 	
+ -- | -------- | --- | ----------  | --- | ---
+Windows | <img src="/azure/active-directory/develop/media/index/logo_net.svg" width="40"/> <br/> .NET Framework | ![image](../media/web-app-icon.png) | Y | | Y
+Windows, MacOS, Linux | <img src="/azure/active-directory/develop/media/index/logo_netcore.svg" width="40" /> <br/> ASP.NET Core  | ![image](../media/web-app-icon.png) | Y | | Y |
+Windows | <img src="/azure/active-directory/develop/media/index/logo_net.svg" width="40"/> <br/> .NET Framework | ![image](../media/web-api-icon.png) | Y | Y |
+Windows, MacOS, Linux | <img src="/azure/active-directory/develop/media/index/logo_netcore.svg" width="40" /><br/> ASP.NET Core | ![image](../media/web-api-icon.png) | Y | Y |
+Windows | <img src="/azure/active-directory/develop/media/index/logo_net.svg" width="40"/> <br/> .NET Framework | ![image](../media/daemon-icon.png) <br/> (windows service) | Y | |
+Windows, MacOS, Linux | <img src="/azure/active-directory/develop/media/index/logo_netcore.svg" width="40" /> <br/> .NET Core | ![image](../media/daemon-icon.png)| Y | |
 
 ### Pattern to acquire tokens in MSAL.NET
 
 All the Acquire Token methods in MSAL.NET have the following pattern:
-- from the application, you call the AcquireToken*XXX* method corresponding to the flow you want to use, passing the mandatory parameters for this flow (in general flow)
-- this returns a command builder, on which you can add optional parameters using .With*YYY* methods
-- then you call ExecuteAsync() to get your authentication result.
+
+- From the application, you call the AcquireToken*XXX* method corresponding to the flow you want to use, passing the mandatory parameters for this flow (in general flow)
+- This returns a command builder, on which you can add optional parameters using .With*YYY* methods
+- Then you call ExecuteAsync() to get your authentication result.
 
 Here is the pattern:
 
@@ -82,6 +83,7 @@ AuthenticationResult result = app.AcquireTokenXXX(mandatory-parameters)
 In all cases above, methods to acquire tokens return an ``AuthenticationResult`` (or in the case of the async methods a ``Task<AuthenticationResult>``.
 
 In MSAL.NET, AuthenticationResult exposes:
+
 - ``AccessToken`` for the Web API to access resources. This is a string, usually a base64 encoded JWT but the client should never look inside the access token. The format isn't guaranteed to remain stable and it can be encrypted for the resource. People writing code depending on access token content on the client is one of the biggest sources of errors and client logic breaks 
 - ``IdToken`` for the user (this is a JWT)
 - ``ExpiresOn`` tells the date/time when the token expires
@@ -95,7 +97,7 @@ When the token is delivered in the name of a user, ``AuthenticationResult`` also
 MSAL.NET defines the notion of Account (through the `IAccount` interface). This breaking change provides the right semantics: the fact that the same user can have several accounts, in different Azure AD directories. Also MSAL.NET provides better information in the case of guest scenarios, as home account information is provided.
 The following diagram shows the structure of the `IAccount` interface:
 
-![image](https://user-images.githubusercontent.com/13203188/44657759-4f2df780-a9fe-11e8-97d1-1abbffade340.png)
+![image](../media/authenticationresult-graph.png)
 
 The `AccountId` class identifies an account in a specific tenant. It has the following properties:
 

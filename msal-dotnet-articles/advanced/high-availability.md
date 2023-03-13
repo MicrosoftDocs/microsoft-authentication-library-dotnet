@@ -82,7 +82,8 @@ To improve availability MSAL tries to ensure than an app always has fresh unexpi
 To get long lived tokens, you must configure your tenant (note: internal Microsoft tenants are already configured). For client_credentials (service 2 service), this is enough. For user credentials, you must also configure CAE - /azure/active-directory/conditional-access/concept-continuous-access-evaluation.
 
 When Azure AD returns a long lived token, it includes a `refresh_in` field. It is generally set to half the expiration of the access token.
-![image](https://user-images.githubusercontent.com/12273384/108714872-05acbd80-7512-11eb-855d-a42b6ff01b0c.png)
+
+![image](../media/access-token-fiddler.png)
 
 Note: From MSAL 4.37.0 and above, you can observe this value by inspecting the `AuthenticationResult.AuthenticationResultMetadata.RefreshOn`.
 

@@ -12,7 +12,7 @@ A community project for a PowerShell wrapper exists at https://www.powershellgal
 
 After you download the [MSAL nuget package](https://www.nuget.org/packages/Microsoft.Identity.Client/), unzip it, and take a look inside. In the `lib` folder there are the DLLs you are looking for: 
 
-![](https://user-images.githubusercontent.com/12273384/74335125-5fbd6380-4d93-11ea-951d-b904b4d6edef.png)
+![](../media/msal-folder-content.png)
 
 If you are writing modules for the new PowerShell Core, then you should load the `netcoreapp2.1` version. If you are writing a module for PowerShell classic, then look into the `net45` directory. If you aren't sure, start with the `net45` version, which only works on Windows.
 

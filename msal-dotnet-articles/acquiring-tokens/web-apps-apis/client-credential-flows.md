@@ -94,7 +94,7 @@ You can register your application secrets either through the interactive experie
 
 The management of client credentials happens in the **certificates & secrets** page for an application:
 
-![image](https://user-images.githubusercontent.com/13203188/49435190-4f385300-f7b6-11e8-8a83-7e468e5fd124.png)
+![image](../../media/azure-ad-certificates.png)
 
 ### Registering client secrets using PowerShell
 

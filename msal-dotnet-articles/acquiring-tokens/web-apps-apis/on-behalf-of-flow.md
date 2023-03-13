@@ -17,13 +17,11 @@ You might want to check the decision tree: [Is MSAL.NET right for me?](https://g
 - A client (web, desktop, mobile, single-page application) - not represented on the picture below - calls a protected web API, providing a JWT bearer token in its "Authorization" HTTP header.
 - The protected web API validates the incoming user token, and uses MSAL.NET `AcquireTokenOnBehalfOf` method to request from Azure AD another token so that it can, itself, call another web API (named the downstream web API) on behalf of the user.
 
-
 This flow, named the On-Behalf-Of flow (OBO), is illustrated by the top part of the picture below. The bottom part is a daemon scenario, also possible for web APIs.
 
-![image](https://user-images.githubusercontent.com/13203188/44857544-dfe61c80-ac24-11e8-8682-f697d6fe07c6.png)
+![image](../../media/on-behalf-flow.png)
 
-
-### How to call OBO 
+### How to call OBO
 
 The OBO call is done by calling the [AcquireTokenOnBehalf](/dotnet/api/microsoft.identity.client.iconfidentialclientapplication.acquiretokenonbehalfof?view=azure-dotnet) method on the `IConfidentialClientApplication` interface.
 

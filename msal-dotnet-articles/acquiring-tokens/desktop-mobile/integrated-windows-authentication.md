@@ -44,13 +44,13 @@ During the **[App registration](https://go.microsoft.com/fwlink/?linkid=2083908)
 - you don't need to provide a Reply URI
 - but you need to choose **Yes**, to the question **Treat application as a public client** (in the **Default client type** paragraph)
 
-  ![image](https://user-images.githubusercontent.com/13203188/56017514-cac78500-5cff-11e9-93a3-00e78d6f5240.png)
+  ![image](../../media/azure-ad-client-type.png)
 
 ### Code
 
 `IPublicClientApplication` contains a method called `AcquireTokenByIntegratedWindowsAuth`
 
-[![image](https://user-images.githubusercontent.com/13203188/56017770-94d6d080-5d00-11e9-89f3-f3a7a1d6f2e8.png)](/dotnet/api/microsoft.identity.client.publicclientapplication.acquiretokenbyintegratedwindowsauth?view=azure-dotnet)
+[![image](../../media/ipublicclientapplication-interface.png)](/dotnet/api/microsoft.identity.client.publicclientapplication.acquiretokenbyintegratedwindowsauth?view=azure-dotnet)
 
 ```csharp
 AcquireTokenByIntegratedWindowsAuth(IEnumerable<string> scopes)
