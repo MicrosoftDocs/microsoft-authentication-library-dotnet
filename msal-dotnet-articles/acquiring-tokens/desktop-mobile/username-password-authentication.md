@@ -37,7 +37,7 @@ Apart from the [Integrated Windows Authentication constraints](https://github.co
 
 ### B2C specifics
 
-[More information on using ROPC with B2C](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/AAD-B2C-specifics#resource-owner-password-credentials-ropc-with-b2c).
+[More information on using ROPC with B2C](/azure/active-directory/develop/msal-net-aad-b2c-considerations).
 
 ## How to use it?
 
