@@ -6,8 +6,9 @@ title: Protecting iOS and Android applications with InTune
 
 ## Scenario
 
-There are scenarios when just user authentication may not be sufficient to protect certain resources. The device that accesses it should also be compliant as per policies defined in Intune.  
-Azure Active Directory (Azure AD) ensures that the access token is not issued till the device is compliant as per the conditional access policy. This page explains how a resource can be reached by MSAL.NET while being protected by Intune [Mobile Application Management (MAM)](/mem/intune/fundamentals/deployment-guide-enrollment-mamwe).
+There are scenarios when just user authentication may not be sufficient to protect certain resources. The device that accesses it should also be compliant as per policies defined in InTune.
+
+Azure Active Directory (Azure AD) ensures that the access token is not issued till the device is compliant as per the conditional access policy. This page explains how a resource can be reached by MSAL.NET while being protected by InTune [Mobile Application Management (MAM)](/mem/intune/fundamentals/deployment-guide-enrollment-mamwe).
 
 ## Overview of the system configuration
 
@@ -15,17 +16,17 @@ The system comprises of two apps: a backend app that provides access to a hosted
 
 Azure Active Directory (Azure AD) protects the resource by applying conditional access on the resource. One of the conditions of the access is to have App Protection Policy on the client App.  
 
-An App protection policy can be created in the Intune Portal for an App and it can be applied to one or more user groups.  
+An App protection policy can be created in the InTune Portal for an App and it can be applied to one or more user groups.  
 
-Here are the detail [setup steps](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Steps-to-create-config-for-MAM-(Conditional-access))  .
+Here are the detail [setup steps](./create-config-for-mam-conditional-access.md).
 
 ## Workflow for iOS
 
-As a result of the setup, when App attempts to reach the resource and if the device is not compliant, Azure AD returns ```protection_policy_required``` suberror.  
+As a result of the setup, when App attempts to reach the resource and if the device is not compliant, Azure AD returns `protection_policy_required` sub-error.  
 
 MSAL.NET catches the error and throw `IntuneAppProtectionPolicyRequiredException`.  
 
-It is app's responsibility to catch the error and invoke Intune MAM SDK to make the device compliant. When the device becomes compliant, Intune MAM SDK will write enrollmentID in the keychain.  
+It is app's responsibility to catch the error and invoke InTune MAM SDK to make the device compliant. When the device becomes compliant, InTune MAM SDK will write enrollmentID in the keychain.  
 
 The App can then call the silent token acquisition method of MSAL.NET to obtain the token. MSAL.NET will retrieve the enrollment ID from the keychain and call the backend.
 
@@ -128,7 +129,7 @@ MSAL.NET catches the error and throws ```IntuneAppProtectionPolicyRequiredExcept
 
 It is app's responsibility to catch the error and invoke Intune MAM SDK to make the device compliant. In order for the device to become compliant, the app must register a callback for ```IMAMEnrollmentManager```.  
 
-The callback is provided `upn`, `aaid` and `resourceID`. The resourc`eID points to the MAM API and callback must return token for the resource using silent token acquisition.  
+The callback is provided `upn`, `aaid` and `resourceID`. The `resourceID` points to the MAM API and callback must return token for the resource using silent token acquisition.  
 
 The app should also register callback for ```MAMNotificationType.MamEnrollmentResult```. After the enrollment succeeds, the App can then call the silent token acquisition method of MSAL.NET to obtain the token. 
 

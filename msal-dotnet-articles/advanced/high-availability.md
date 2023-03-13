@@ -63,7 +63,7 @@ In web app and web API scenarios, it is recommended to use a new `ConfidentialCl
 
 **Default behaviour**: MSAL's creating HttpClient does not scale well for web sites / web API where we recommend to have a `ClientApplication` object for each user session.
 
-**Recommendation**: Provide your own scalable HttpClientFactory. On .NET Core we recommend that you inject the [System.Net.Http.IHttpClientFactory](/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.0). This is described in more detail [here](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/HttpClient) and in the [official docs](/dotnet/api/system.net.http.httpclient?view=net-7.0#net-framework--mono)
+**Recommendation**: Provide your own scalable HttpClientFactory. On .NET Core we recommend that you inject the [System.Net.Http.IHttpClientFactory](/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.0). This is described in more detail in the [Providing your own HttpClient, supporting HTTP proxies, and customization of user agent headers](httpclient.md) guide and in the [.NET documentation](/dotnet/api/system.net.http.httpclient?view=net-7.0#net-framework--mono)
 
 ## Proactive Token renewal
 
@@ -98,7 +98,7 @@ Certs for the confidential client app must be rotated for security reasons (don'
 
 In web app / web api scenarios, you should use Microsoft.Identity.Web, a higher-level API over MSAL. It handles certificate rotation for when the certificate is stored in KeyVault and handles Managed Identity for you as well.
 
-https://github.com/AzureAD/microsoft-identity-web/wiki/Certificates#getting-certificates-from-key-vault
+Learn more in the [Certificates in Microsoft.Identity.Web](https://github.com/AzureAD/microsoft-identity-web/wiki/Certificates#getting-certificates-from-key-vault) guide.
 
 This is the preferred solution for non-Microsoft internal services using ASP.NET Core.
 

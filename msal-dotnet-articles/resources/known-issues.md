@@ -8,7 +8,7 @@ MSAL throws a few types of exceptions, please see [Exceptions](../advanced/excep
 
 ## Confidential Client
 
-Please read the guide on [High Availability](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/High-availability)
+Please read the guide on [High Availability](../advanced/high-availability.md).
 
 ## Public Client
 
