@@ -12,7 +12,7 @@ In general the way to acquire a token is different depending on if the applicati
 
 ## Token caching
 
-For both Public client and confidential client applications, MSAL.NET maintains a token cache (or two caches in the case of confidential client applications), and applications should [try to get a token from the cache](./acquiretokensilentasync-api.md) first before any other means, except in the case of [Client Credentials](./web-apps-apis/client-credential-flows.md), which does look at the application cache by itself.
+For both Public client and Confidential client applications, MSAL.NET maintains a token cache. For details, see [MSAL.NET token cache serialization](/azure/active-directory/develop/msal-net-token-cache-serialization).
 
 In the case of UWP, Xamarin iOS and Xamarin Android, the token cache serialization to an isolated storage is provided by MSAL.NET. In the case of .NET Desktop (.NET Framework and .NET Core) platforms, though, the application needs to customize the [token cache serialization](/azure/active-directory/develop/msal-net-token-cache-serialization).
 
