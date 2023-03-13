@@ -17,9 +17,9 @@ The [authority](/azure/active-directory/develop/msal-client-applications) you'll
 
 ### Acquiring a token interactively
 
-When you call `AcquireTokenInteractive()`, in term of user experience:
+When you call <xref:microsoft.identity.client.ipublicclientapplication.acquiretokeninteractive>, in term of user experience:
 
-- the user enter their upn (or the account or `loginHint` is provided part of the call to `AcquireTokenAsync`)
+- the user enter their upn (or the account or `loginHint` is provided part of the call to <xref:microsoft.identity.client.ipublicclientapplication.acquiretokenasync>)
 - Azure AD displays briefly "Taking you to your organization's page"
 - and then redirects the user is to the sign-in page of the identity provider (usually customized with the logo of the organization)
 
@@ -27,7 +27,7 @@ Supported ADFS versions in this federated scenario are ADFS v2 , ADFS v3 (Window
 
 ### Acquiring a token using `AcquireTokenByIntegratedAuthentication` or `AcquireTokenByUsernamePassword`
 
-In that case, from the username, MSAL.NET goes to Azure Active Directory (`userrealm` endpoint) passing the username, and it gets information about the IdP to contact. It does, passing the username (and the password in the case of `AcquireTokenByUsernamePassword`) and receives a [SAML 1.1 token](/azure/active-directory/develop/reference-saml-tokens), which it provides to Azure Active Directory as a user assertion (similar to the [on-behalf-of](../web-apps-apis/on-behalf-of-flow.md) flow) to get back a JWT.
+In that case, from the username, MSAL.NET goes to Azure Active Directory (`userrealm` endpoint) passing the username, and it gets information about the IdP to contact. It does, passing the username (and the password in the case of <xref:microsoft.identity.client.ipublicclientapplication.acquiretokenbyusernamepassword>) and receives a [SAML 1.1 token](/azure/active-directory/develop/reference-saml-tokens), which it provides to Azure Active Directory as a user assertion (similar to the [on-behalf-of](../web-apps-apis/on-behalf-of-flow.md) flow) to get back a JWT.
 
 ## Case where MSAL connects directly to ADFS
 
