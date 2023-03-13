@@ -6,17 +6,17 @@ title: Using MSAL.NET to get tokens by authorization code (for web sites)
 
 When users login to Web applications (web sites) using Open Id connect, the web application receives an authorization code which it can redeem to acquire a token to call Web APIs. In ASP.NET / ASP.NET core web apps, the only goal of `AcquireTokenByAuthorizationCode` is to add a token to the token cache, so that it can then be used by the application (usually in the controllers) which just get a token for an API using `AcquireTokenSilent`.
 
-### ASP.NET and ASP.NET Core: use Microsoft.Identity.Web
+## ASP.NET and ASP.NET Core: use Microsoft.Identity.Web
 
 If you are building a web app on ASP.NET Core, the recommendation is to use [Microsoft.Identity.Web](https://github.com/AzureAD/microsoft-identity-web/wiki)
 
-### Application registration
+## Application registration
 
 You need to register a Reply URI so that Azure AD gets the authorization code and the token back to your application.
 
 You should also register your application secrets either through the interactive experience in the [Azure portal](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredAppsPreview), or using command-line tools (like PowerShell)
 
-#### Registering client secrets using the application registration portal
+### Registering client secrets using the application registration portal
 
 The management of client credentials happens in the **certificates & secrets** page for an application:
 
@@ -38,7 +38,6 @@ This flow is only available in the confidential client flow; therefore the prote
 
 ![image](https://user-images.githubusercontent.com/13203188/55967244-3d8e1d00-5c7a-11e9-8285-a54b05597ec9.png)
 
-
 ```csharp
 IConfidentialClientApplication app;
 
@@ -55,15 +54,15 @@ app = ConfidentialClientApplicationBuilder.Create(config.ClientId)
 #endif
 ```
 
-
 ### Getting tokens by authorization code in MSAL.NET
 
-To redeem an authorization code and get a token, and cache it, the `IConfidentialClientApplication` contains a method called 
-```cscharp
+To redeem an authorization code and get a token, and cache it, the `IConfidentialClientApplication` contains a method called `AcquireTokenByAuthorizationCode`:
+
+```csharp
 AcquireTokenByAuthorizationCode(
             IEnumerable<string> scopes,
             string authorizationCode)
-``` 
+```
 
 This principle is illustrated below the code performing the application initialization located in the `Startup.cs` file, and, to add authentication with the Microsoft Identity platform (formerly Azure AD) v2.0, you'll need to add the following code  (The comments in the code should be self-explanatory):
 

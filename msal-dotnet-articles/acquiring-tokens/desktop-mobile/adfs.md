@@ -1,8 +1,8 @@
 ---
-title: ADFS support in MSAL.NET
+title: ADFS Support in MSAL.NET
 ---
 
-# ADFS support in MSAL.NET
+# ADFS Support in MSAL.NET
 
 There are two cases:
 

@@ -32,7 +32,7 @@ On Android, an `AndroidActivityNotFound` exception is thrown when the device doe
 
 ### iOS
 
-Please see: /azure/active-directory/develop/msal-net-xamarin-ios-considerations#known-issues-with-ios-12-and-authentication
+Please see [Xamarin iOS Considerations](/azure/active-directory/develop/msal-net-xamarin-ios-considerations#known-issues-with-ios-12-and-authentication).
 
 ### UWP
 

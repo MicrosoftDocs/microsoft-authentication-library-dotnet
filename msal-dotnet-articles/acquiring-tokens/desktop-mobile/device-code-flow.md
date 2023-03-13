@@ -21,7 +21,7 @@ Interactive authentication with Azure AD requires a web browser (for details see
 - The authority passed in the `PublicClientApplicationBuilder` needs to be:
   - tenanted (of the form `https://login.microsoftonline.com/{tenant}/` where `tenant` is either the guid representing the tenant ID or a domain associated with the tenant.
 
-### Device code flow with Microsoft Personal Accounts
+### Device Code Flow with Microsoft personal accounts
 
 Starting with MSAL.NET 4.5 release, the device code flow is possible with Microsoft Personal Accounts. This means the device code flow will work with:
 

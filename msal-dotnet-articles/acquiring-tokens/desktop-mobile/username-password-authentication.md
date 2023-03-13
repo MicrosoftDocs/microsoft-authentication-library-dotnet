@@ -78,7 +78,7 @@ static async Task GetATokenForGraph()
  {
   try
   {
-   var securePassword = new SecureString();
+   var securePassword = new string();
    foreach (char c in "dummy")        // you should fetch the password
     securePassword.AppendChar(c);  // keystroke by keystroke
 
