@@ -89,7 +89,7 @@ MSAL.NET is used to acquire tokens. It's not used to protect a Web API. If you a
 - [Handling Exceptions in MSAL](advanced/exceptions/index.md) in MSAL.NET
   - [Retry policy](advanced/exceptions/retry-policy.md)
 - How to customize the [token cache serialization](/azure/active-directory/develop/msal-net-token-cache-serialization)
-- How to enable [diagnostics and logging](./advanced/logging.md) in MSAL.NET apps.
+- How to enable [diagnostics and logging](/azure/active-directory/develop/msal-logging-dotnet) in MSAL.NET apps.
 - [Differences between ADAL.NET and MSAL.NET apps](/azure/active-directory/develop/msal-net-migration) and how to migrate and ADAL.NET app to MSAL.NET.
 
 #### Confidential client availability

@@ -162,6 +162,6 @@ Some of those issues include:
 - An account is not being available to perform IWA
 - An IWA policy is preventing auto-IWA authentication
 - Proxy or configuration issues prevent NTLM protocol (usually the case for 401 [Negotiate](https://www.ietf.org/rfc/rfc4559.txt)/NTLM challenge presented by the endpoint for Windows authentication. You may be able to try using your own [HttpClient](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/HttpClient) or changing the current version of .NET to work around this issue).
-- In case the Error Message is "Object reference not set to an instance of an object." [enable MSAL logging](../../advanced/logging.md) at Warning level to see more details.
+- In case the Error Message is "Object reference not set to an instance of an object." [enable MSAL logging](/azure/active-directory/develop/msal-logging-dotnet) at Warning level to see more details.
 
 For more information see [AD FS Troubleshooting - Integrated Windows Authentication](/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-iwa)

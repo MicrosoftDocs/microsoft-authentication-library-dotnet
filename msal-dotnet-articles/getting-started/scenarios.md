@@ -87,6 +87,6 @@ like in the case of a desktop/service daemon application, a daemon Web API (or a
 
 In all the scenarios you might want to:
 
-- Troubleshoot yourself by activating [logs](../advanced/logging.md) or Telemetry
+- Troubleshoot yourself by activating [logs](/azure/active-directory/develop/msal-logging-dotnet) or Telemetry
 - Understand how to react to [exceptions](../advanced/exceptions/index.md) due to the Azure AD service [`MsalServiceException`](/dotnet/api/microsoft.identity.client.msalserviceexception?view=azure-dotnet-preview#fields), or to something wrong happening in the client itself [`MsalClientException`](/dotnet/api/microsoft.identity.client.msalclientexception?view=azure-dotnet-preview#fields)
 - Use MSAL.NET with a [proxy](../advanced/httpclient.md)

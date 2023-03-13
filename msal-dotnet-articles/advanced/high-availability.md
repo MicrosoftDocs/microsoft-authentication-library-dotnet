@@ -42,7 +42,7 @@ MSAL exposes important metrics as part of [AuthenticationResult.AuthenticationRe
 Listen to `Warning` and `Error` level messages coming from MSAL logs. These can be silent errors or strong recommendations to use a different config. 
 It is not recommended to set `Verbose` logging in production, as it produces a lot of messages and it impacts perf.
 
-Details about logging can be found [here](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/logging).
+Details about logging can be found in the [Logging in MSAL.NET](/azure/active-directory/develop/msal-logging-dotnet) guide.
 
 ## Retry Policy
 

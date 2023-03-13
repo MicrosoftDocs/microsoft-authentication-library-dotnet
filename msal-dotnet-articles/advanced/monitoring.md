@@ -10,7 +10,7 @@ For example, if only one instance of confidential client application is used and
 
 ## Logging
 
-One of the tools MSAL provides to combat these issues is logging errors when MSAL in not configured correctly. It is critical to enable logging whenever possible to not only monitor logs for these monitoring errors but also help in the diagnosis of issues that may occur. See [Logging](./logging.md).
+One of the tools MSAL provides to combat these issues is logging errors when MSAL in not configured correctly. It is critical to enable logging whenever possible to not only monitor logs for these monitoring errors but also help in the diagnosis of issues that may occur. See [Logging](/azure/active-directory/develop/msal-logging-dotnet).
 
 The following errors will be logged in MSAL:
 
