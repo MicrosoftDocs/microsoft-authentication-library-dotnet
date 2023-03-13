@@ -42,11 +42,11 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execu
 
 For details see [Web authentication broker debugging with Fiddler](/windows/uwp/security/web-authentication-broker#fiddler).
 
-
 ## Sample illustrating UWP specific properties
+
 More details are provided in the following samples:
 
-Sample | Platform | Description 
+Sample | Platform | Description
 ------ | -------- | -----------
 [active-directory-dotnet-native-uwp-v2](https://github.com/azure-samples/active-directory-dotnet-native-uwp-v2) | UWP | A Windows Universal Platform client application using msal.net, accessing the Microsoft Graph for a user authenticating with Azure AD v2.0 endpoint. ![](https://github.com/Azure-Samples/active-directory-dotnet-native-uwp-v2/blob/master/ReadmeFiles/Topology.png)
 [https://github.com/Azure-Samples/active-directory-xamarin-native-v2](https://github.com/Azure-Samples/active-directory-xamarin-native-v2) | Xamarin iOS, Android, UWP | A simple Xamarin Forms app showcasing how to use MSAL to authenticate MSA and Azure AD via the Azure AD v2.0 endpoint, and access the Microsoft Graph with the resulting token. ![](https://github.com/Azure-Samples/active-directory-xamarin-native-v2/blob/master/ReadmeFiles/Topology.png)

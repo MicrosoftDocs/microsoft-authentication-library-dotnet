@@ -81,14 +81,13 @@ public IntPtr GetConsoleOrTerminalWindow()
 
 > The logic below will eventually be added as a helper in MSAL, tracking work item [3590](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/issues/3590). For now, copy this into your app.
 
+## Proof of Possession (PoP) Access Tokens
 
-## Proof of Possession Access Tokens
+MSAL supports PoP tokens in confidential client flows starting MSAL 4.8+. With the new [MSAL WAM Broker](wam.md) you can acquire [PoP tokens for public client flows](../../advanced/proof-of-possession-tokens.md) as well.
 
-MSAL already supports [PoP tokens in confidential client flows](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Proof-Of-Possession-%28PoP%29-tokens) starting MSAL 4.8+, With the new MSAL WAM Broker you can acquire [PoP tokens for public client flows](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Proof-Of-Possession-(PoP)-tokens) as well. 
+Bearer tokens are the norm in modern identity flows, however they are vulnerable to being stolen and used to access a protected resource.
 
-Bearer tokens are the norm in modern identity flows, however they are vulnerable to being stolen and used to access a protected resource. 
-
-Proof of Possession (PoP) tokens mitigate this threat via 2 mechanisms: 
+Proof of Possession (PoP) tokens mitigate this threat via 2 mechanisms:
 
 - they are bound to the user / machine that wants to access a protected resource, via a public / private key pair
 - they are bound to the protected resource itself, i.e. a token that is used to access `GET https://contoso.com/transactions` cannot be used to access `GET https://contoso.com/tranfer/100`
@@ -101,13 +100,13 @@ For more details, see [RFC 7800](https://tools.ietf.org/html/rfc7800)
 
 WAM redirect URIs do not need to be configured in MSAL, but they must be configured in the app registration.
 
-```
+```bash
 ms-appx-web://microsoft.aad.brokerplugin/{client_id}
 ```
 
-## Username / Password flow 
+## Username/password flow
 
-This flow is not recommended except in test scenarios or in scenarios where service principal access to a resource gives it too much access and you can only scope it down with user flows. When using WAM, `AcquireTokenByUsernamePassword` will let WAM handle the protocol and fetch tokens. 
+This flow is not recommended except in test scenarios or in scenarios where service principal access to a resource gives it too much access and you can only scope it down with user flows. When using WAM, `AcquireTokenByUsernamePassword` will let WAM handle the protocol and fetch tokens.
 
 ## WAM limitations
 
@@ -136,18 +135,18 @@ The DLL search order is,
 
 This message indicates that you need to request at least one application scope (e.g. user.read) along with other OIDC scopes (profile, email or offline_access). 
 
-```
+```csharp
 var authResult = await pca.AcquireTokenInteractive(new[] { "user.read" })
                                       .ExecuteAsync();
-``` 
+```
 
 ### Account Picker does not show up
 
-Sometimes a Windows update messes up the Account Picker component - which shows the list of acccounts in Windows and the option to add new accounts. The symptom is that the picker does not come up for a small number of users. 
+Sometimes a Windows update messes up the Account Picker component - which shows the list of acccounts in Windows and the option to add new accounts. The symptom is that the picker does not come up for a small number of users.
 
 A possible workaround is to re-register this component. Run this script from an Admin powershell console:
 
-```powerhsell
+```powershell
 if (-not (Get-AppxPackage Microsoft.AccountsControl)) { Add-AppxPackage -Register "$env:windir\SystemApps\Microsoft.AccountsControl_cw5n1h2txyewy\AppxManifest.xml" -DisableDevelopmentMode -ForceApplicationShutdown } Get-AppxPackage Microsoft.AccountsControl
 ```
 
