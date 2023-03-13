@@ -6,16 +6,16 @@ title: Username and password authentication with MSAL.NET
 
 In your desktop application, you can use the Username/Password flow to acquire a token silently. No UI is required when using the application.
 
-### This flow is not recommended
+### Recommendation
 
-This flow is **not recommended** because your application asking a user for their password is not secure. For more information about this problem, see [this article](https://news.microsoft.com/features/whats-solution-growing-problem-passwords-says-microsoft/). The preferred flow for acquiring a token silently on Windows domain joined machines is [Integrated Windows Authentication](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Integrated-Windows-Authentication). Otherwise you can also use [Device code flow](../desktop-mobile/device-code-flow.md)
+>[!WARNING]
+> This flow is **not recommended** because your application will be asking a user for their password directly, which is not secure. For more information about the problem, see [this article](https://news.microsoft.com/features/whats-solution-growing-problem-passwords-says-microsoft/). The preferred flow for acquiring a token silently on Windows is the [Windows broker](wam.md). Otherwise you can also use [Device code flow](../desktop-mobile/device-code-flow.md).
 
-> Although this is useful in some cases (DevOps scenarios), if you want to use Username/password in interactive scenarios where you provide your onw UI, you should really think about how to move away from it. By using username/password you are giving-up a number of things:
+Although this is useful in some cases (DevOps scenarios), if you want to use Username/password in interactive scenarios where you provide your onw UI, you should really think about how to move away from it. By using username/password you are giving-up a number of things:
 
-> - core tenants of modern identity: password gets fished, replayed. Because we have this concept of a share secret that can be intercepted.
-> This is incompatible with passwordless.
-> - users who need to do MFA won't be able to sign-in (as there is no interaction)
-> - Users won't be able to do single sign-on
+- Core tenants of modern identity: password gets phished, replayed. Because we have the concept of a shared secret that can be intercepted, this approach is incompatible with passwordless guidelines.
+- Users who need to do MFA won't be able to sign-in (as there is no interaction)
+- Users won't be able to do single sign-on
 
 ### Constraints
 
