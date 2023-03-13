@@ -52,7 +52,7 @@ During the **[App registration](https://go.microsoft.com/fwlink/?linkid=2083908)
 
 This method takes as parameters:
 
-- The `scopes` to request an access token for
+- The `scopes` for which to request an access token
 - A callback that will receive the `DeviceCodeResult`
 
   ![image](https://user-images.githubusercontent.com/13203188/56024968-7af1b980-5d11-11e9-84c2-5be2ef306dc5.png)
