@@ -17,7 +17,7 @@ The [authority](/azure/active-directory/develop/msal-client-applications) you'll
 
 ### Acquiring a token interactively
 
-When you call <xref:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenInteractive>, in term of user experience:
+When you call <xref:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenInteractive(System.Collections.Generic.IEnumerable{System.String})>, in term of user experience:
 
 - the user enter their upn (or the account or `loginHint` is provided part of the call to <xref:microsoft.identity.client.ipublicclientapplication.acquiretokenasync>)
 - Azure AD displays briefly "Taking you to your organization's page"
