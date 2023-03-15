@@ -92,7 +92,7 @@ Proof of Possession (PoP) tokens mitigate this threat via 2 mechanisms:
 - they are bound to the user / machine that wants to access a protected resource, via a public / private key pair
 - they are bound to the protected resource itself, i.e. a token that is used to access `GET https://contoso.com/transactions` cannot be used to access `GET https://contoso.com/tranfer/100`
 
-In order to utilize the new broker to perform POP, see the code snippet [here](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Proof-Of-Possession-(PoP)-tokens#proof-of-possession-for-public-clients).
+In order to utilize the new broker to perform POP, see the code snippet [here](../../advanced/proof-of-possession-tokens.md#proof-of-possession-for-public-clients).
 
 For more details, see [RFC 7800](https://tools.ietf.org/html/rfc7800)
 
