@@ -49,8 +49,9 @@ application = PublicClientApplicationBuilder.Create(ClientID)
 In Azure AD B2C, each policy, or user flow, is a separate authorization server. They issue their own tokens. So a token acquired using the `b2c_1_editprofile` user flow will not work with a resource protected behind a `b2c_1_susi` user flow. Therefore, when calling a protected API, application developers must let MSAL know which token to use from the cache, based on the user flow that will be targeted.
 
 Acquiring a token for an Azure AD B2C protected API in a public client application requires you to use:
-- the override of GetAccountsAsync() with a user flow before calling AcquireTokenSilent,
-- the overrides AcquireTokenInteractive with a B2C authority:
+
+- The override of GetAccountsAsync() with a user flow before calling AcquireTokenSilent,
+- The overrides AcquireTokenInteractive with a B2C authority:
 
 ```csharp
 IEnumerable<IAccount> accounts = await application.GetAccountsAsync(B2CConstants.PolicySignUpSignIn);
@@ -138,13 +139,14 @@ For more details on the ROPC flow, please see this [documentation](./username-pa
 
 This flow is **not recommended** because your application asking a user for their password is not secure. For more information about this problem, see [this article](https://news.microsoft.com/features/whats-solution-growing-problem-passwords-says-microsoft/).
 
-> By using username/password you are giving-up a number of things:
-> - core tenants of modern identity: password gets fished, replayed. Because we have this concept of a share secret that can be intercepted.
-> This is incompatible with passwordless.
-> - users who need to do MFA won't be able to sign-in (as there is no interaction)
-> - Users won't be able to do single sign-on
+By using username/password you are giving-up a number of things:
 
-#### Configure the ROPC flow in AzureAD B2C
+- Core tenants of modern identity: password gets fished, replayed. Because we have this concept of a share secret that can be intercepted. This is incompatible with passwordless.
+- Users who need to do MFA won't be able to sign-in (as there is no interaction)
+- Users won't be able to do single sign-on
+
+### Configure the ROPC flow in AzureAD B2C
+
 In your AzureAD B2C tenant, create a new user flow and select **Sign in using ROPC**. This will enable the ROPC policy for your tenant. See [Configure the resource owner password credentials flow](/azure/active-directory-b2c/configure-ropc) for more details.
 
 `IPublicClientApplication` contains a method called
@@ -162,12 +164,13 @@ This method takes as parameters:
 
 Remember to use the authority which contains the ROPC policy.
 
-#### **Limitations of the ROPC flow**
- - This **only works for local accounts** (where you register with B2C using an email or username). This flow does not work if federating to any of the IdPs supported by B2C (Facebook, Google, etc...).
+### Limitations of the ROPC flow
+
+This flow **only works for local accounts** (where you register with B2C using an email or username). This flow does not work if federating to any of the IdPs supported by B2C (Facebook, Google, etc.).
 
 ## Google Auth and Embedded Webview
 
-If you are a B2C developer using Google as an identity provider we recommand you use the system browser, as Google does not allow [authentication from embedded webviews](https://developers.googleblog.com/2016/08/modernizing-oauth-interactions-in-native-apps.html). Currently, `login.microsoftonline.com` is a trusted authority with Google. Using this authority will work with embedded webview. However using `b2clogin.com` is not a trusted authority with Google, so users will not be able to authenticate.
+If you are a B2C developer using Google as an identity provider we recommend you use the system browser, as Google does not allow [authentication from embedded webviews](https://developers.googleblog.com/2016/08/modernizing-oauth-interactions-in-native-apps.html). Currently, `login.microsoftonline.com` is a trusted authority with Google. Using this authority will work with embedded webview. However using `b2clogin.com` is not a trusted authority with Google, so users will not be able to authenticate.
 
 We will provide an update to the wiki and this [issue](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/issues/688) if things change.
 
@@ -195,6 +198,7 @@ Alternatively, you can use the `tid` claim, if you are using the [B2C custom pol
 #### Mitigation for "Missing from the token response"
 
 One option is to use the "name" claim as the preferred username. The process is generally mentioned in this [B2C doc](/azure/active-directory-b2c/active-directory-b2c-reference-policies#frequently-asked-questions):
+
 > "In the Return claim column, choose the claims you want returned in the authorization tokens sent back to your application after a successful profile editing experience. For example, select Display Name, Postal Code.”
 
 ## Customizing the UI

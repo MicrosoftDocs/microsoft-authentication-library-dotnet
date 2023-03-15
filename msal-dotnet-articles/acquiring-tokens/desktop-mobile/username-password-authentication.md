@@ -6,7 +6,7 @@ title: Username and password authentication with MSAL.NET
 
 In your desktop application, you can use the Username/Password flow to acquire a token silently. No UI is required when using the application.
 
-### Recommendation
+## Recommendation
 
 >[!WARNING]
 > This flow is **not recommended** because your application will be asking a user for their password directly, which is not secure. For more information about the problem, see [this article](https://news.microsoft.com/features/whats-solution-growing-problem-passwords-says-microsoft/). The preferred flow for acquiring a token silently on Windows is the [Windows broker](wam.md). Otherwise you can also use [Device code flow](../desktop-mobile/device-code-flow.md).
@@ -17,7 +17,7 @@ Although this is useful in some cases (DevOps scenarios), if you want to use Use
 - Users who need to do MFA won't be able to sign-in (as there is no interaction)
 - Users won't be able to do single sign-on
 
-### Constraints
+## Constraints
 
 Apart from the [Integrated Windows Authentication constraints](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Integrated-Windows-Authentication#constraints), the following constraints also apply:
 
@@ -26,7 +26,7 @@ Apart from the [Integrated Windows Authentication constraints](https://github.co
 - It works only for Work and school accounts (not MSA)
 - The flow is available on .net desktop and .net core, but not on UWP
 
-#### Authority implications
+### Authority implications
 
 |Tenant|Meaning|supports ROPC|
 |--|--|--|
@@ -35,7 +35,7 @@ Apart from the [Integrated Windows Authentication constraints](https://github.co
 |consumers|live accounts|no|
 |an actual tenant / directory ID (guid or `contoso.onmicrosoft.com`)|corporate accounts from your tenant only|yes|
 
-### B2C specifics
+## B2C specifics
 
 [More information on using ROPC with B2C](/azure/active-directory/develop/msal-net-aad-b2c-considerations).
 
@@ -44,8 +44,9 @@ Apart from the [Integrated Windows Authentication constraints](https://github.co
 ### Application registration
 
 During the **[App registration](https://go.microsoft.com/fwlink/?linkid=2083908)** , in the **Authentication** section for your application:
-- you don't need to provide a Reply URI
-- but you need to choose **Yes**, to the question **Treat application as a public client** (in the **Default client type** paragraph)
+
+- You don't need to provide a Reply URI
+- You need to choose **Yes** as the answer to the question **Treat application as a public client** (in the **Default client type** paragraph)
 
   ![image](../../media/azure-ad-client-type.png)
 

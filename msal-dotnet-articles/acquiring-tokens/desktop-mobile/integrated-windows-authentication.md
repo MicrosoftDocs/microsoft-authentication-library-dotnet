@@ -9,7 +9,7 @@ title: Using MSAL.NET with Integrated Windows Authentication (IWA)
 
 If your desktop or mobile application runs on Windows and on a machine connected to a Windows domain (AD or AAD joined) it is possible to use the Integrated Windows Authentication (IWA) to acquire a token silently. No UI is required when using the application.
 
-### IWA Constraints
+## IWA Constraints
 
 - **Federated** users only, i.e. those created in an Active Directory and backed by Azure Active Directory. Users created directly in Azure AD, without AD backing - **managed** users - cannot use this auth flow. This limitation does not affect the Username/Password flow.
 - Does not work for MSA users. For MSA uses try out [WAM](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/wam)
@@ -27,10 +27,10 @@ If your desktop or mobile application runs on Windows and on a machine connected
   - the user of your application must have previously consented to use the application 
   - or the tenant admin must have previously consented to all users in the tenant to use the application.
   - This means that:
-     - either you as a developer have pressed the **Grant** button on the Azure portal for yourself, 
-     - or a tenant admin has pressed the **Grant/revoke admin consent for {tenant domain}** button in the **API permissions** tab of the registration for the application (See [Add permissions to access web APIs](/azure/active-directory/develop/quickstart-configure-app-access-web-apis#add-permissions-to-access-web-apis))
-     - or you have provided a way for users to consent to the application (See [Requesting individual user consent](/azure/active-directory/develop/v2-permissions-and-consent#requesting-individual-user-consent))
-     - or you have provided a way for the tenant admin to consent for the application (See [admin consent](/azure/active-directory/develop/v2-permissions-and-consent#requesting-consent-for-an-entire-tenant))
+    - either you as a developer have pressed the **Grant** button on the Azure portal for yourself, 
+    - or a tenant admin has pressed the **Grant/revoke admin consent for {tenant domain}** button in the **API permissions** tab of the registration for the application (See [Add permissions to access web APIs](/azure/active-directory/develop/quickstart-configure-app-access-web-apis#add-permissions-to-access-web-apis))
+    - or you have provided a way for users to consent to the application (See [Requesting individual user consent](/azure/active-directory/develop/v2-permissions-and-consent#requesting-individual-user-consent))
+    - or you have provided a way for the tenant admin to consent for the application (See [admin consent](/azure/active-directory/develop/v2-permissions-and-consent#requesting-consent-for-an-entire-tenant))
 
 - This flow is enabled for .net desktop, .net core and Windows Universal Apps.
   
@@ -41,14 +41,15 @@ For more details on consent see [v2.0 permissions and consent](/azure/active-dir
 ### Application registration
 
 During the **[App registration](https://go.microsoft.com/fwlink/?linkid=2083908)** , in the **Authentication** section for your application:
-- you don't need to provide a Reply URI
-- but you need to choose **Yes**, to the question **Treat application as a public client** (in the **Default client type** paragraph)
+
+- You don't need to provide a Reply URI
+- You need to choose **Yes** as the answer to the question **Treat application as a public client** (in the **Default client type** paragraph)
 
   ![image](../../media/azure-ad-client-type.png)
 
 ### Code
 
-`IPublicClientApplication` contains a method called `AcquireTokenByIntegratedWindowsAuth`
+<xref:Microsoft.Identity.Client.IPublicClientApplication> contains a method called `AcquireTokenByIntegratedWindowsAuth`
 
 [![image](../../media/ipublicclientapplication-interface.png)](/dotnet/api/microsoft.identity.client.publicclientapplication.acquiretokenbyintegratedwindowsauth?view=azure-dotnet)
 
@@ -58,7 +59,7 @@ AcquireTokenByIntegratedWindowsAuth(IEnumerable<string> scopes)
 
 You should normally use only one parameter (`scopes`). However depending on the way your Windows administrator has setup the policies, it can be possible that applications on your windows machine are not allowed to lookup the logged-in user. In that case, use a second method `.WithUsername()` and pass in the username of the logged in user as a UPN format - `joe@contoso.com`.
 
-The following sample presents the most current case, with explanations of the kind of exceptions you can get, and their mitigations
+The following sample presents the most current case, with explanations of the kind of exceptions you can get, and their mitigation.
 
 ```csharp
 static async Task GetATokenForGraph()
@@ -137,20 +138,22 @@ static async Task GetATokenForGraph()
 }
 ```
 
-Note: if you encounter the following error: 
+Note: if you encounter the following error:
+
 _"Microsoft.Identity.Client.MsalClientException: Failed to get user name ---> System.ComponentModel.Win32Exception: No mapping between account names and security IDs was done"_
 
 It means that you may be singed into the device with a local computer account as opposed to an Active Directory(AD) account. Please ensure that the device is added to the domain and that the currently signed in user backed by AD. It is not enough to have a computer joined to a domain alone as local accounts on the device wont be able to access your AD credentials.
 
 ## Sample illustrating acquiring tokens through Integrated Windows Authentication with MSAL.NET
 
-Sample | Platform | Description 
+Sample | Platform | Description
 ------ | -------- | -----------
 [active-directory-dotnet-iwa-v2](https://github.com/Azure-Samples/active-directory-dotnet-iwa-v2) | Console (.NET) | .NET Core console application letting the user signed-in in Windows, acquire, with the Azure AD v2.0 endpoint, a token for the Microsoft Graph ![](https://github.com/Azure-Samples/active-directory-dotnet-iwa-v2/blob/master/ReadmeFiles/Topology.png)
 
 ## Additional information
 
 In case you want to learn more about Integrated Windows Authentication:
+
 - How this was done with the V1 endpoint: [AcquireTokenSilent using Integrated authentication on Windows (Kerberos) in ADAL.NET](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet/wiki/AcquireTokenSilentAsync-using-Integrated-authentication-on-Windows-(Kerberos))
 
 ## Troubleshooting
