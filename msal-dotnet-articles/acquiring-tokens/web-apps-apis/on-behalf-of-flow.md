@@ -4,7 +4,7 @@ title: On-behalf-of flows with MSAL.NET
 
 # On-behalf-of flows with MSAL.NET
 
-## If you are using ASP.NET Core.
+## If you are using ASP.NET Core
 
 If you are building a web API on to of ASP.NET Core, we recommend that you use Microsoft.Identity.Web. See [Web APIs with Microsoft.Identity.Web](https://github.com/AzureAD/microsoft-identity-web/wiki/web-apis).
 
@@ -57,10 +57,12 @@ private void AddAccountToCacheFromJwt(IEnumerable<string> scopes, JwtSecurityTok
 }
 ```
 
-
 ## Long-running OBO processes
+
 One OBO scenario is when a web API runs long running processes on behalf of the user (for example, OneDrive which creates albums for you). Starting with MSAL.NET 4.38.0, this can be implemented as such:
+
 1. Before you start a long running process, call:
+
 ```csharp
 string sessionKey = // custom key or null
 var authResult = await ((ILongRunningWebApi)confidentialClientApp)
@@ -70,10 +72,12 @@ var authResult = await ((ILongRunningWebApi)confidentialClientApp)
               ref sessionKey)
          .ExecuteAsync();
 ```
+
 `userAccessToken` is a user access token used to call this web API. `sessionKey` will be used as a key when caching and retrieving the OBO token. If set to `null`, MSAL will set it to the assertion hash of the passed-in user token. It can also be set by the developer to something that identifies a specific user session, like the optional `sid` claim from the user token (for more information, see [Provide optional claims to your app](/azure/active-directory/develop/active-directory-optional-claims)).
 If the cache already contains a valid OBO token with this `sessionKey`, `InitiateLongRunningProcessInWebApi` will return it. Otherwise, the user token will be used to acquire a new OBO token from Azure AD, which will then be cached and returned.
 
 2. In the long-running process, whenever OBO token is needed, call:
+
 ```csharp
 var authResult = await ((ILongRunningWebApi)confidentialClientApp)
          .AcquireTokenInLongRunningProcess(
@@ -81,6 +85,7 @@ var authResult = await ((ILongRunningWebApi)confidentialClientApp)
               sessionKey)
          .ExecuteAsync();
 ```
+
 Pass the `sessionKey` which is associated with the current user's session and will be used to retrieve the related OBO token. If the token is expired, MSAL will use the cached refresh token to acquire a new OBO access token from Azure AD and cache it. If no token is found with this `sessionKey`, MSAL will throw a `MsalClientException`. Make sure to call `InitiateLongRunningProcessInWebApi` first.
 
 ### Cache eviction for long-running OBO processes

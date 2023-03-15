@@ -80,16 +80,16 @@ AuthenticationResult result = app.AcquireTokenXXX(mandatory-parameters)
 
 ## `AuthenticationResult` properties in MSAL.NET
 
-In all cases above, methods to acquire tokens return an ``AuthenticationResult`` (or in the case of the async methods a ``Task<AuthenticationResult>``.
+In all cases above, methods to acquire tokens return an `AuthenticationResult` (or in the case of the async methods a `Task<AuthenticationResult>`.
 
 In MSAL.NET, AuthenticationResult exposes:
 
-- ``AccessToken`` for the Web API to access resources. This is a string, usually a base64 encoded JWT but the client should never look inside the access token. The format isn't guaranteed to remain stable and it can be encrypted for the resource. People writing code depending on access token content on the client is one of the biggest sources of errors and client logic breaks 
-- ``IdToken`` for the user (this is a JWT)
-- ``ExpiresOn`` tells the date/time when the token expires
-- ``TenantId`` contains the tenant in which the user was found. Note that in the case of guest users (Azure AD B2B scenarios), the TenantId is the guest tenant, not the unique tenant.
-When the token is delivered in the name of a user, ``AuthenticationResult`` also contains information about this user. For confidential client flows where tokens are requested with no user (for the application), this User information is null.
-- The ``Scopes`` for which the token was issued (See [Scopes not resources](/azure/active-directory/develop/msal-net-differences-adal-net))
+- `AccessToken` for the Web API to access resources. This is a string, usually a base64 encoded JWT but the client should never look inside the access token. The format isn't guaranteed to remain stable and it can be encrypted for the resource. People writing code depending on access token content on the client is one of the biggest sources of errors and client logic breaks 
+- `IdToken` for the user (this is a JWT)
+- `ExpiresOn` tells the date/time when the token expires
+- `TenantId` contains the tenant in which the user was found. Note that in the case of guest users (Azure AD B2B scenarios), the TenantId is the guest tenant, not the unique tenant.
+When the token is delivered in the name of a user, `AuthenticationResult` also contains information about this user. For confidential client flows where tokens are requested with no user (for the application), this User information is null.
+- The `Scopes` for which the token was issued (See [Scopes not resources](/azure/active-directory/develop/msal-net-differences-adal-net))
 - The unique Id for the user.
 
 ## `IAccount`

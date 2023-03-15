@@ -4,16 +4,15 @@ title: MSAL.NET extensibility points
 
 # MSAL.NET extensibility points
 
-MSAL adopts the strategy of "make simple scenarios simple, make complex scenarios possible". 
+MSAL adopts the strategy of "make simple scenarios simple, make complex scenarios possible".
 
 ## Use your own HttpClient
 
-Allows apps to adapt highly scalable HttpClient factories such as ASP.NET Core's [IHttpClientFactory](/aspnet/core/fundamentals/http-requests?view=aspnetcore-6.0). 
-Helps desktop and mobile apps which have to deal with complex proxy configurations. 
+Allows apps to adapt highly scalable HttpClient factories such as ASP.NET Core's [IHttpClientFactory](/aspnet/core/fundamentals/http-requests?view=aspnetcore-6.0).
+Helps desktop and mobile apps which have to deal with complex proxy configurations.
 Allows apps to fully control the HTTP messages.
 
-Details [here](/dotnet/api/microsoft.identity.client.imsalhttpclientfactory?view=azure-dotnet#remarks)
-
+Details in <xref:Microsoft.Identity.Client.IMsalHttpClientFactory>.
 
 ## Modify the /token request
 
@@ -44,12 +43,9 @@ private static Task ModifyRequestAsync(OnBeforeTokenRequestData requestData)
    
 ```
 
->[!NOTE]
->Available from MSAL 4.41+.
-
 ## Inject extra query parameters
 
-Allows apps to add query (GET) parameters to applications, customizing the experience. This mainly controls the UX login experience exposed by the `/authorize` endpoint, but the parameters are sent to the `/token` endpoint request as well. 
+Allows apps to add query (GET) parameters to applications, customizing the experience. This mainly controls the UX login experience exposed by the `/authorize` endpoint, but the parameters are sent to the `/token` endpoint request as well.
 
 Useful to target Azure AD service slices where new features or bug fixes are deployed first and to customize the UX experience with features not exposed by MSAL. Note that MSAL doesn't perform the `/authorize` request in ASP.NET / ASP.NET Core scenarios, so those calls are not affected!
 
@@ -60,4 +56,3 @@ Details [here](/dotnet/api/microsoft.identity.client.abstractacquiretokenparamet
 Allows desktop and mobile apps to use their own browser instead of the embedded / system browsers provided by MSAL.
 
 Details [here](/dotnet/api/microsoft.identity.client.extensibility.icustomwebui?view=azure-dotnet)
-

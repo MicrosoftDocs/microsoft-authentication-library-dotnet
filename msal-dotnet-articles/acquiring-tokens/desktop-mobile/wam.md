@@ -20,8 +20,8 @@ The new MSAL WAM Preview is an abstraction layer based on MSAL C++ which fixes a
 - add a reference to [Microsoft.Identity.Client.Broker](https://www.nuget.org/packages/Microsoft.Identity.Client.Broker) (and you can remove any reference to Microsoft.Identity.Client.Desktop)
 - instead of `.WithBroker()`, call `.WithBrokerPreview()`.
 
-> **Note:** The old WAM experience is documented at [Acquire a token using WAM
-](/azure/active-directory/develop/scenario-desktop-acquire-token-wam) and showcases details about redirect URI, fallback experience on older Windows, Mac and Linux, etc. which remain valid.
+>[!NOTE]
+> The old WAM experience is documented at [Acquire a token using WAM](/azure/active-directory/develop/scenario-desktop-acquire-token-wam) and showcases details about redirect URI, fallback experience on older Windows, Mac and Linux, etc. which remain valid.
 
 ```csharp
 var pca = PublicClientApplicationBuilder
@@ -33,10 +33,9 @@ var pca = PublicClientApplicationBuilder
 
 ## Parent Window Handles
 
-It is now mandatory to tell MSAL the window the interactive experience should be parented to, using `WithParentActivityOrWindow` APIs. Trying to infer a window is not feasible and in the past, this has led to bad user experience where the auth window is hidden behind the application. 
+It is now mandatory to tell MSAL the window the interactive experience should be parented to, using `WithParentActivityOrWindow` APIs. Trying to infer a window is not feasible and in the past, this has led to bad user experience where the auth window is hidden behind the application.
 
 ```csharp
-
 // In a WinForms app, in a Form
 IntPtr windowHandle = this.Handle;
 
@@ -44,7 +43,7 @@ IntPtr windowHandle = this.Handle;
 IntPtr windowHandle = new System.Windows.Interop.WindowInteropHelper(this).Handle;
 ```
 
-For console applications it is a bit more involved, because of the terminal window and its tabs. 
+For console applications it is a bit more involved because of the terminal window and its tabs.
 
 ```csharp
 enum GetAncestorFlags
@@ -79,7 +78,8 @@ public IntPtr GetConsoleOrTerminalWindow()
 }
 ```
 
-> The logic below will eventually be added as a helper in MSAL, tracking work item [3590](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/issues/3590). For now, copy this into your app.
+>[!NOTE]
+>The logic below will eventually be added as a helper in MSAL, tracking work item [3590](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/issues/3590). For now, copy this into your app.
 
 ## Proof of Possession (PoP) Access Tokens
 
@@ -89,18 +89,18 @@ Bearer tokens are the norm in modern identity flows, however they are vulnerable
 
 Proof of Possession (PoP) tokens mitigate this threat via 2 mechanisms:
 
-- they are bound to the user / machine that wants to access a protected resource, via a public / private key pair
-- they are bound to the protected resource itself, i.e. a token that is used to access `GET https://contoso.com/transactions` cannot be used to access `GET https://contoso.com/tranfer/100`
+- They are bound to the user / machine that wants to access a protected resource, via a public / private key pair
+- They are bound to the protected resource itself, i.e. a token that is used to access `GET https://contoso.com/transactions` cannot be used to access `GET https://contoso.com/tranfer/100`
 
 In order to utilize the new broker to perform POP, see the code snippet [here](../../advanced/proof-of-possession-tokens.md#proof-of-possession-for-public-clients).
 
-For more details, see [RFC 7800](https://tools.ietf.org/html/rfc7800)
+For more details, see [RFC 7800](https://tools.ietf.org/html/rfc7800).
 
 ## Redirect URI
 
 WAM redirect URIs do not need to be configured in MSAL, but they must be configured in the app registration.
 
-```bash
+```text
 ms-appx-web://microsoft.aad.brokerplugin/{client_id}
 ```
 
@@ -116,18 +116,18 @@ This flow is not recommended except in test scenarios or in scenarios where serv
 
 ## Troubleshooting
 
-### "Unable to load DLL 'msalruntime' or one of its dependencies: The specified module could not be found." error message
+### "Unable to load DLL `msalruntime` or one of its dependencies: The specified module could not be found." error message
 
-This message indicates that either the [Microsoft.Identity.Client.NativeInterop](https://www.nuget.org/packages/Microsoft.Identity.Client.NativeInterop) package was not properly installed or the WAM runtimes DLL was not restored in the appropriate folders. To resolve this issue: 
+This message indicates that either the [Microsoft.Identity.Client.NativeInterop](https://www.nuget.org/packages/Microsoft.Identity.Client.NativeInterop) package was not properly installed or the WAM runtime DLL was not restored in the appropriate folders. To resolve this issue:
 
 1. Ensure that [Microsoft.Identity.Client.NativeInterop](https://www.nuget.org/packages/Microsoft.Identity.Client.NativeInterop) package has been restored properly, and
-1. the runtimes folders are also restored and placed under the package path
+1. The `runtimes` folders are also restored and placed under the package path
 
 The DLL search order is,
 
-- same directory as the app (executing assembly directory)
-- other directories like system and windows
-- `runtimes` folder under the NuGet [global-packages](/nuget/consume-packages/managing-the-global-packages-and-cache-folders) folder where [Microsoft.Identity.Client.NativeInterop](https://www.nuget.org/packages/Microsoft.Identity.Client.NativeInterop) is installed. 
+- Same directory as the app (executing assembly directory)
+- Other directories like `system` and `windows`
+- `runtimes` folder under the NuGet [global-packages](/nuget/consume-packages/managing-the-global-packages-and-cache-folders) folder where [Microsoft.Identity.Client.NativeInterop](https://www.nuget.org/packages/Microsoft.Identity.Client.NativeInterop) is installed.
 
 ![image](../../media/nativeinterop-library.png)
 

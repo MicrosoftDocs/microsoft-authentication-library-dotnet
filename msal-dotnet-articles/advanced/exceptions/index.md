@@ -10,12 +10,12 @@ Exceptions in MSAL.NET are intended for app developers to troubleshoot and not f
 
 ![image](../../media/msal-exceptions.png)
 
-| Exception               | Description                                                                                                                                                                                                    |
-|-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| MsalException           | Base class for MSAL exceptions.                                                                                                                                                                                |
-| MsalClientException     | Errors which occur in the library itself, for example an incomplete configuration.                                                                                                                             |
-| MsalServiceException    | Represents errors transmitted by the token provider (Azure AD). See [Azure AD errors](/azure/active-directory/develop/reference-aadsts-error-codes#handling-error-codes-in-your-application). Servince unavialble errors (e.g. HTTP 500), indicating a problem with the service, have the error code `service_not_available` |
-| MsalUiRequiredException | Special Azure AD error which indicates that the user must interactively login.                                                                                                                                      |
+| Exception                 | Description                                                                                                                                                                                                    |
+|---------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `MsalException`           | Base class for MSAL exceptions.                                                                                                                                                                                |
+| `MsalClientException`     | Errors which occur in the library itself, for example an incomplete configuration.                                                                                                                             |
+| `MsalServiceException`    | Represents errors transmitted by the token provider (Azure AD). See [Azure AD errors](/azure/active-directory/develop/reference-aadsts-error-codes#handling-error-codes-in-your-application). Servince unavialble errors (e.g. HTTP 500), indicating a problem with the service, have the error code `service_not_available` |
+| `MsalUiRequiredException` | Special Azure AD error which indicates that the user must interactively login.                                                                                                                                      |
 
 No other exception is caught by MSAL. Any network issues, cancellations etc. are bubbled up to the application.
 

@@ -4,25 +4,22 @@ title: Custom authority aliases
 
 # Custom authority aliases
 
->[!NOTE]
->Feature available from: 4.2
-
-## What is Instance Discovery 
+## What is Instance Discovery
 
 Before acquiring tokens, MSAL makes a network call to the Azure AD authority [discovery endpoint](https://login.microsoftonline.com/common/discovery/instance?api-version=1.1&authorization_endpoint=https%3A%2F%2Flogin.microsoftonline.com%2Fcommon%2Foauth2%2Fv2.0%2Fauthorize). The information returned is used to:
 
-- discover a list of aliases for each cloud (Azure Public, German Cloud, China Cloud etc.). A token issued to an authority in the set is valid for all other authorities in the set. 
-- use the preferred_network alias for communication with Azure AD
-- use the preferred_cache alias to store tokens in the cache
-- provide a level of validation for the authority - if a non-existent authority is used, then Azure AD returns an "invalid_instance" [error](https://login.microsoftonline.com/common/discovery/instance?api-version=1.1&authorization_endpoint=https%3A%2F%2Fbogus.microsoftonline.com%2Fcommon%2Foauth2%2Fv2.0%2Fauthorize) 
+- Discover a list of aliases for each cloud (Azure Public, German Cloud, China Cloud etc.). A token issued to an authority in the set is valid for all other authorities in the set.
+- Use the preferred_network alias for communication with Azure AD
+- Use the preferred_cache alias to store tokens in the cache
+- Provide a level of validation for the authority - if a non-existent authority is used, then Azure AD returns an "invalid_instance" [error](https://login.microsoftonline.com/common/discovery/instance?api-version=1.1&authorization_endpoint=https%3A%2F%2Fbogus.microsoftonline.com%2Fcommon%2Foauth2%2Fv2.0%2Fauthorize).
 
-#### Instance Validation 
+## Instance validation
 
-The validation is important if you obtain your authority dynamically, for example when you call a protect API, it returns a 401 Unauthorized HTTP response which can include a header pointing to an authority that is able to generate a token. If the API is hacked, it could advertise an authority that does not belong to Azure AD and that could steal user credentials. 
+The validation is important if you obtain your authority dynamically, for example when you call a protect API, it returns a 401 Unauthorized HTTP response which can include a header pointing to an authority that is able to generate a token. If the API is hacked, it could advertise an authority that does not belong to Azure AD and that could steal user credentials.
 
 ## Disabling Instance Discovery
 
-MSAL libraries already employ a variety of caching mechanisms for this data. You may still want to bypass the Instance Discovery network call to further optimize performance in some PublicClientApplication scearios, but you you should only do this if you understand the security risk outlined above. If you provide your own instance metadata, MSAL will always use it and it will never go to the network for this kind of data. 
+MSAL libraries already employ a variety of caching mechanisms for this data. You may still want to bypass the Instance Discovery network call to further optimize performance in some PublicClientApplication scenarios, but you you should only do this if you understand the security risk outlined above. If you provide your own instance metadata, MSAL will always use it and it will never go to the network for this kind of data.
 
 ```csharp
 var app = PublicClientApplicationBuilder
@@ -57,7 +54,7 @@ Assuming that your authority is `https://login.contoso.net` then a valid instanc
 
 ## Related MsalError constants
 
-The MsalError you can get when using this feature are the following:
+The `MsalError` you can get when using this feature are the following:
 
 |Error | Description |
 |:-----|:------------|

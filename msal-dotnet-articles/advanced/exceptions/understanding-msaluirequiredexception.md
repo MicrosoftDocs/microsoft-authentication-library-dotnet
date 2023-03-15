@@ -12,14 +12,13 @@ The interaction aims at having the user do an action. Some of those conditions a
 
 ## `MsalUiRequiredException` Classification
 
-MSAL exposes a `Classification` field, which you can read to provide a better user experience, for example to tell the user that his password expired or that he will need to provide consent to use some resources. The supported values are part of the `UiRequiredExceptionClassification` enum: 
-
+MSAL exposes a `Classification` field, which you can read to provide a better user experience, for example to tell the user that his password expired or that he will need to provide consent to use some resources. The supported values are part of the `UiRequiredExceptionClassification` enum:
 
 | Classification    | Meaning           | Recommended handling |
 |-------------------|-------------------|----------------------|
 | BasicAction | Condition can be resolved by user interaction during the interactive authentication flow. | Call AcquireTokenInteractively(). |
 | AdditionalAction | Condition can be resolved by additional remedial interaction with the system, outside of the interactive authentication flow. | Call AcquireTokenInteractively() to show a message that explains the remedial action. Calling application may choose to hide flows that require additional_action if the user is unlikely to complete the remedial action. |
-| MessageOnly      | Condition cannot be resolved at this time. Launching interactive authentication flow will show a message explaining the condition. | Call AcquireTokenInteractively() to show a message that explains the condition. AcquireTokenInteractively() will return UserCanceled error after the user reads the message and closes the window. Calling application may choose to hide flows that result in message_only if the user is unlikely to benefit from the message.| 
+| MessageOnly      | Condition cannot be resolved at this time. Launching interactive authentication flow will show a message explaining the condition. | Call AcquireTokenInteractively() to show a message that explains the condition. AcquireTokenInteractively() will return UserCanceled error after the user reads the message and closes the window. Calling application may choose to hide flows that result in message_only if the user is unlikely to benefit from the message.|
 | ConsentRequired  | User consent is missing, or has been revoked. | Call AcquireTokenInteractively() for user to give consent. |
 | UserPasswordExpired | User's password has expired. | Call AcquireTokenInteractively() so that user can reset their password. |
 | PromptNeverFailed| Interactive Authentication was called with the parameter prompt=never, forcing MSAL to rely on browser cookies and not to display the browser. This has failed. | Call AcquireTokenInteractively() without Prompt.None |

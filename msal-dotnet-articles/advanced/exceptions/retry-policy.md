@@ -18,8 +18,6 @@ Note that Azure Active Directory (Azure AD) may return a Retry-After header indi
 
 ## Example Retry policy
 
-Note: You must use MSAL 4.47.2 or higher for this.
-
 ```csharp
 public async Task<AuthenticationResult> GetTokenAsync()
 {
@@ -125,9 +123,8 @@ Internally, Azure AD uses several fallback mechanisms which help applications re
 
 Client applications do not need to do anything to benefit from these measures.
 
-
 ## What is the Retry-After header?
 
-When the Security Token Service (STS) is too busy or having problems, it returns an HTTP error [429](https://developer.mozilla.org/docs/Web/HTTP/Status/429). It may also return other HTTP error codes, such as 503. Alongside the response it will add a [Retry-After header](https://developer.mozilla.org/docs/Web/HTTP/Headers/Retry-After), which indicates that the client should wait before calling again. The wait delay is in seconds, as per spec. 
+When the Security Token Service (STS) is too busy or having problems, it returns an HTTP error [429](https://developer.mozilla.org/docs/Web/HTTP/Status/429). It may also return other HTTP error codes, such as 503. Alongside the response it will add a [Retry-After header](https://developer.mozilla.org/docs/Web/HTTP/Headers/Retry-After), which indicates that the client should wait before calling again. The wait delay is in seconds, as per spec.
 
 `MsalServiceException` surfaces `System.Net.Http.Headers.HttpResponseHeaders` as a property named `Headers`. You can therefore leverage additional information to the Error code to improve the reliability of your applications. In the case we just described, you can use the `RetryAfter` property (of type `RetryConditionHeaderValue`) and compute when to retry.
