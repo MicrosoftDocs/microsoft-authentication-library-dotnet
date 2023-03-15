@@ -55,12 +55,12 @@ The following table summarizes the ways available to acquire tokens in confident
 
 Operating System | Library Platform | Kind of App | [Client Credential](./web-apps-apis/client-credential-flows.md) | [On behalf of](./web-apps-apis/on-behalf-of-flow.md) | [Auth Code](./web-apps-apis/authorization-codes.md)
  -- | -------- | --- | ----------  | --- | ---
-Windows | <img src="/azure/active-directory/develop/media/index/logo_net.svg" width="40"/> <br/> .NET Framework | ![image](../media/web-app-icon.png) | Y | | Y
-Windows, MacOS, Linux | <img src="/azure/active-directory/develop/media/index/logo_netcore.svg" width="40" /> <br/> ASP.NET Core  | ![image](../media/web-app-icon.png) | Y | | Y |
-Windows | <img src="/azure/active-directory/develop/media/index/logo_net.svg" width="40"/> <br/> .NET Framework | ![image](../media/web-api-icon.png) | Y | Y |
-Windows, MacOS, Linux | <img src="/azure/active-directory/develop/media/index/logo_netcore.svg" width="40" /><br/> ASP.NET Core | ![image](../media/web-api-icon.png) | Y | Y |
-Windows | <img src="/azure/active-directory/develop/media/index/logo_net.svg" width="40"/> <br/> .NET Framework | ![image](../media/daemon-icon.png) <br/> (windows service) | Y | |
-Windows, MacOS, Linux | <img src="/azure/active-directory/develop/media/index/logo_netcore.svg" width="40" /> <br/> .NET Core | ![image](../media/daemon-icon.png)| Y | |
+Windows | <img alt=".NET Logo" src="/azure/active-directory/develop/media/index/logo_net.svg" width="40"/> <br/> .NET Framework | ![image](../media/web-app-icon.png) | Y | | Y
+Windows, MacOS, Linux | <img alt=".NET Core Logo" src="/azure/active-directory/develop/media/index/logo_netcore.svg" width="40" /> <br/> ASP.NET Core  | ![image](../media/web-app-icon.png) | Y | | Y |
+Windows | <img alt=".NET Logo" src="/azure/active-directory/develop/media/index/logo_net.svg" width="40"/> <br/> .NET Framework | ![image](../media/web-api-icon.png) | Y | Y |
+Windows, MacOS, Linux | <img alt=".NET Core Logo" src="/azure/active-directory/develop/media/index/logo_netcore.svg" width="40" /><br/> ASP.NET Core | ![image](../media/web-api-icon.png) | Y | Y |
+Windows | <img alt=".NET Logo" src="/azure/active-directory/develop/media/index/logo_net.svg" width="40"/> <br/> .NET Framework | ![image](../media/daemon-icon.png) <br/> (windows service) | Y | |
+Windows, MacOS, Linux | <img alt=".NET Core Logo" src="/azure/active-directory/develop/media/index/logo_netcore.svg" width="40" /> <br/> .NET Core | ![image](../media/daemon-icon.png)| Y | |
 
 ### Pattern to acquire tokens in MSAL.NET
 

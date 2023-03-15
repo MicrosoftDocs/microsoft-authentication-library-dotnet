@@ -56,6 +56,6 @@ Assuming that your authority is `https://login.contoso.net` then a valid instanc
 
 The `MsalError` you can get when using this feature are the following:
 
-|Error | Description |
-|:-----|:------------|
+| Error | Description |
+|:------|:------------|
 | `InvalidUserInstanceMetadata ` | You have configured your [own custom instance discovery metadata](./custom-authority-aliases.md), but the JSON you provided seems to  be invalid. See the page above for an example of a valid `ValidateAuthorityOrCustomMetadata`. | You have configured your own instance metadata, but have been requesting authority validation. You need to set the validate authority flag to false. See [MSAL.NET custom authority aliases](./custom-authority-aliases.md) for more details. |
