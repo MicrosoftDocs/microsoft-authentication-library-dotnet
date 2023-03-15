@@ -2,9 +2,9 @@
 title: How to use MSAL.NET form PowerShell
 ---
 
-# How to use MSAL.NET form PowerShell
+# How to use MSAL.NET from PowerShell
 
-There is no Microsoft official PoswerShell module or wrapper for MSAL libraries. However, PowerShell was designed to be able to call into .NET code and there are numerous [resources](https://stackoverflow.com/questions/3079346/how-to-reference-net-assemblies-using-powershell) that describe how to do this.
+There is no Microsoft official PowerShell module or wrapper for MSAL libraries. However, PowerShell was designed to be able to call into .NET code and there are numerous [resources](https://stackoverflow.com/questions/3079346/how-to-reference-net-assemblies-using-powershell) that describe how to do this.
 
 A community project for a PowerShell wrapper exists at https://www.powershellgallery.com/packages/MSAL.PS/ 
 
