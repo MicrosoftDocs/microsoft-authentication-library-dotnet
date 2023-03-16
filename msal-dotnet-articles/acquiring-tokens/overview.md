@@ -35,11 +35,11 @@ The following table summarizes the ways available to acquire tokens in public cl
 
 Operating System | Library Platform | Kind of App | [Interactive Auth](./desktop-mobile/acquiring-tokens-interactively.md) | [IWA](./desktop-mobile/integrated-windows-authentication.md) | [U/P](./desktop-mobile/username-password-authentication.md) | [Device Code](./desktop-mobile/device-code-flow.md)
 -- | -------- | --- | ----------  | --- | --- | ----------------- 
-<img src="/azure/active-directory/develop/media/index/logo_windows.svg" width="40" /> <br/> Windows desktop	| <img src="/azure/active-directory/develop/media/index/logo_net.svg" width="40" /> <br/> .NET| Desktop (WPF,<br/>  Windows.Forms,<br/>  Console) | Y | Y | Y | (Y)
-<img src="/azure/active-directory/develop/media/index/logo_windows.svg" width="40" /> <br/>Windows 10	| <img src="/azure/active-directory/develop/media/index/logo_windows.svg" width="40" /> <br/> UWP	| Store app	| Y	| Y	| 	
-<img src="/azure/active-directory/develop/media/index/logo_android.svg" width="40" /> <br/> Android	| <img src="/azure/active-directory/develop/media/index/logo_xamarin.svg" width="40" /> <img src="/azure/active-directory/develop/media/index/logo_android.svg" width="40" /> <br/> Xamarin Android	| Mobile	| Y	| 	| Y	
-<img src="/azure/active-directory/develop/media/index/logo_ios.svg" width="40" />| <img src="/azure/active-directory/develop/media/index/logo_xamarin.svg" width="40" /> <img src="/azure/active-directory/develop/media/index/logo_ios.svg" width="40" /><br/> Xamarin iOS	| Mobile	| Y	| 	| 	| Y
-Mac OS, Linux, Windows	| <img src="/azure/active-directory/develop/media/index/logo_netcore.svg" width="40" /> <br/> .NET Core 	| Console	| N/A see [1](/azure/active-directory/develop/msal-net-web-browsers)	| Y	| Y	| Y
+<img alt="Windows Logo" src="/azure/active-directory/develop/media/index/logo_windows.svg" width="40" /> <br/> Windows desktop	| <img alt=".NET Logo" src="/azure/active-directory/develop/media/index/logo_net.svg" width="40" /> <br/> .NET| Desktop (WPF,<br/>  Windows.Forms,<br/>  Console) | Y | Y | Y | (Y)
+<img alt="Windows Logo" src="/azure/active-directory/develop/media/index/logo_windows.svg" width="40" /> <br/>Windows 10	| <img alt="Windows Logo" src="/azure/active-directory/develop/media/index/logo_windows.svg" width="40" /> <br/> UWP	| Store app	| Y	| Y	| 	
+<img alt="Android Logo" src="/azure/active-directory/develop/media/index/logo_android.svg" width="40" /> <br/> Android	| <img alt="Xamarin Logo" src="/azure/active-directory/develop/media/index/logo_xamarin.svg" width="40" /> <img alt="Android Logo" src="/azure/active-directory/develop/media/index/logo_android.svg" width="40" /> <br/> Xamarin Android	| Mobile	| Y	| 	| Y	
+<img alt="iOS Logo" src="/azure/active-directory/develop/media/index/logo_ios.svg" width="40" />| <img src="/azure/active-directory/develop/media/index/logo_xamarin.svg" width="40" /> <img  alt="iOS Logo" src="/azure/active-directory/develop/media/index/logo_ios.svg" width="40" /><br/> Xamarin iOS	| Mobile	| Y	| 	| 	| Y
+Mac OS, Linux, Windows	| <img alt=".NET Core Logo" src="/azure/active-directory/develop/media/index/logo_netcore.svg" width="40" /> <br/> .NET Core 	| Console	| N/A see [1](/azure/active-directory/develop/msal-net-web-browsers)	| Y	| Y	| Y
 
 ### Confidential client applications
 
