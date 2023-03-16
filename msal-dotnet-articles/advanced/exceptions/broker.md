@@ -10,7 +10,7 @@ Here are a few tips on avoiding issues when you implement brokered authenticatio
 
 - **Redirect URI** - Add a redirect URI to your application registration in the [Azure portal](https://portal.azure.com/). A missing or incorrect redirect URI is a common issue encountered by developers.
 - **Broker version** - Install the minimum required version of the broker apps. Either of these two apps can be used for brokered authentication on Android.
-  - [Intune Company Portal](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) (version 5.0.4689.0 or greater)
+  - [InTune Company Portal](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) (version 5.0.4689.0 or greater)
   - [Microsoft Authenticator](https://play.google.com/store/apps/details?id=com.azure.authenticator) (version 6.2001.0140 or greater).
 - **Broker precedence** - MSAL communicates with the *first broker installed* on the device when multiple brokers are installed.
 

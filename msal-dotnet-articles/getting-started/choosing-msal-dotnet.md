@@ -41,10 +41,9 @@ I'm using ASP.NET Core. See what Microsoft Identity Web has to offer:
 
 ### I'm building a new application
 
-Use the Project Templates and the msidentity-app-sync tool. We have web app templates for web MVC, Razor, Blazor server, Blazorwasm hosted and not hosted. All for Azure AD or Azure AD B2C.
+Use the Project Templates and the `msidentity-app-sync` tool. We have web app templates for web MVC, Razor, Blazor server, Blazorwasm hosted and not hosted. All for Azure AD or Azure AD B2C.
 
 ![image](../media/aspnet-core-project-templates.png)
-
 
 [Web app project templates](https://github.com/AzureAD/microsoft-identity-web/wiki/web-app-template).
 

@@ -12,14 +12,13 @@ Today, applications using this architecture will first interactively authenticat
 
 MSAL 4.40+ supports confidential clients to request an additional "spa auth code" from the eSTS / token endpoint
 
-## Required Redirect URI setup to support the flow 
+## Required Redirect URI setup to support the flow
 
 The redirect_uri used to acquire the spa auth code must be of type web.
 
-
 ## Acquire SPA Auth Code in the backend
 
-In MSAL.Net, using the new `WithSpaAuthorizationCode` API get the `SpaAuthCode`. 
+In MSAL.Net, using the new `WithSpaAuthorizationCode` API get the `SpaAuthCode`.
 
 ```csharp
 private async Task OnAuthorizationCodeReceived(AuthorizationCodeReceivedNotification context)
@@ -41,7 +40,7 @@ private async Task OnAuthorizationCodeReceived(AuthorizationCodeReceivedNotifica
 }
 ```
 
-## Using Spa Auth Code in the Front End 
+## Using SPA Auth Code in the Front End
 
 Configure a PublicClientApplication from MSAL.js in your single-page application:
 
@@ -104,6 +103,7 @@ function callMSGraph(endpoint, token, callback) {
         .catch(error => console.log(error))
 }
 ```
+
 ## Sample
 
 [ASP.NET MVC project that uses the SPA Authorization Code in the Front End](https://github.com/Azure-Samples/ms-identity-aspnet-webapp-openidconnect)

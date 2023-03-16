@@ -37,5 +37,4 @@ git checkout joes_feature_branch
 
 # push it to the original repository (AzureAD/MSAL)
 git push origin
-
 ```

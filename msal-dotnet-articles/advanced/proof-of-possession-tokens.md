@@ -4,12 +4,12 @@ title: Proof of Possession (PoP) tokens
 
 # Proof of Possession (PoP) tokens
 
-Bearer tokens are the norm in modern identity flows, however they are vulnerable to being stolen and used to access a protected resource. 
+Bearer tokens are the norm in modern identity flows, however they are vulnerable to being stolen and used to access a protected resource.
 
-Proof of Possession (PoP) tokens mitigate this threat via 2 mechanisms: 
+Proof of Possession (PoP) tokens mitigate this threat via 2 mechanisms:
 
-- they are bound to the user / machine that wants to access a protected resource, via a public / private key pair
-- they are bound to the protected resource itself, i.e. a token that is used to access `GET https://contoso.com/transactions` cannot be used to access `GET https://contoso.com/tranfer/100`
+- They are bound to the user/machine that wants to access a protected resource, via a public/private key pair
+- They are bound to the protected resource itself, i.e. a token that is used to access `GET https://contoso.com/transactions` cannot be used to access `GET https://contoso.com/tranfer/100`
 
 For more details, see [RFC 7800](https://tools.ietf.org/html/rfc7800)
 
@@ -133,4 +133,3 @@ var result = await pca.AcquireTokenSilent(new[] { "scope"}, accounts.FirstOrDefa
        .ConfigureAwait(false);
 
 ```
-

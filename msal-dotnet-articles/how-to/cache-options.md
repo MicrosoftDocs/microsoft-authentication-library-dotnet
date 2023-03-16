@@ -21,4 +21,4 @@ app.UserTokenCache.SetCacheOptions(CacheOptions.EnableSharedCacheOptions);
 
 ## Cache options
 
-`EnableSharedCacheOptions` - makes the cache static, so that it is shared between all instances of `ConfidentialClientApplication`
+`EnableSharedCacheOptions` - makes the cache static, so that it is shared between all instances of `ConfidentialClientApplication`.

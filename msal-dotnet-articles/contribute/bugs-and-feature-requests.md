@@ -20,7 +20,8 @@ If you cannot find an existing issue that describes your bug or feature request,
 
 ## Write Detailed Bug Reports and Feature Requests
 
-File a single issue per bug and feature request
+File a single issue per bug and feature request:
+
 - Do not enumerate multiple bugs or feature requests in the same issue.
 - Do not add your issue as a comment to an existing issue unless it's for the identical input. Many issues look similar, but have different causes.
 
@@ -33,7 +34,7 @@ Please use the [Bug Report template](https://github.com/AzureAD/microsoft-authen
 
 Remember to do the following:
 
-- Search the issue repository to see if there exists a duplicate issue. 
+- Search the issue repository to see if there exists a duplicate issue.
 - Update to the latest version of the library to see if the issue still exists.
 - Submit an issue by filling out all as much of the information in the Bug Report as possible.
 

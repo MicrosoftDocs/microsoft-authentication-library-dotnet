@@ -41,7 +41,7 @@ You might have to do it for Powershell.exe / Powershell_ISE.exe were added as we
 
 ### Symptom 
 
-You hit the global ESTS endpoint instead of a regional endpoint. 
+You hit the global ESTS endpoint instead of a regional endpoint.
 
 ### Possible causes
 
@@ -50,7 +50,7 @@ You hit the global ESTS endpoint instead of a regional endpoint.
 
 ### How to debug the issue
 
-Auto-discovery happens once and only once before the first call to acquire token. The outcome is stored in memory and auto-discovery is not attempted again, for performance reasons. So to understand why auto-discovery fails, you need to capture the logs when the application starts. 
+Auto-discovery happens once and only once before the first call to acquire token. The outcome is stored in memory and auto-discovery is not attempted again, for performance reasons. So to understand why auto-discovery fails, you need to capture the logs when the application starts.
 
 1. To understand what endpoint is hit, monitor `AuthenticationResult.AuthenticationResultMetadata.TokenEndpoint` and `AuthenticationResult.AuthenticationResultMetadata.RegionDetails`. Regionalized endpoints are in the format `<region>.login.microsoft.com/<tenant>/oauth2/v2.0/token`.
 2. Add verbose logging to MSAL.
@@ -68,7 +68,8 @@ On ARM64 (for example a Surface Pro X), the app crashes with an unrecoverable ex
 ### Workaround
 
 Add this to the .csproj file:
-```Xml
+
+```xml
 <UseDotNetNativeSharedAssemblyFrameworkPackage>false</UseDotNetNativeSharedAssemblyFrameworkPackage>
 ```
 
@@ -111,5 +112,7 @@ A `Keyset does not exist` cryptographic exception is thrown when MSAL tries to u
 One possible solution is to make sure the certificate provided has a private key and correct permissions are given to the running applications to view it.
 
 Another scenario is when the app is deployed to App Service or Azure Function instance and the certificate is rotated. The default behavior of App Service is to delete the old certificate from the certificate store, along with the key container, and install the new certificate. If the app has cached the old certificate instance, there can be a time when the old certificate gets deleted due to rotation but the code still uses the cache. So when the cached certificate tries to access the key container, which is now deleted, it gets “Keyset not found” error.
-Set the app setting `WEBSITE_RECYCLE_ON_CERT_ROTATION` to `1`, which will ensure that your worker processes are recycled after a certificate rotation. If you do not set the above app setting, or cannot for some reason (like needing to minimize recycles on a heavy app where recycles have impact on availability), then you can use the app setting `WEBSITE_DELAY_CERT_DELETION` to `1`. You will need to use this setting in conjunction with making sure to pick the right certificate when you look up your certificate (e.g., by looking for the certificate with the latest expiration date). 
+
+Set the app setting `WEBSITE_RECYCLE_ON_CERT_ROTATION` to `1`, which will ensure that your worker processes are recycled after a certificate rotation. If you do not set the above app setting, or cannot for some reason (like needing to minimize recycles on a heavy app where recycles have impact on availability), then you can use the app setting `WEBSITE_DELAY_CERT_DELETION` to `1`. You will need to use this setting in conjunction with making sure to pick the right certificate when you look up your certificate (e.g., by looking for the certificate with the latest expiration date).
+
 With this setting present, upon certificate rotation, we will keep the old certificate around until any worker processes that started prior to the rotation (and so may have a handle to the old certificate) have not exited. Note that with this setting, in case of emergency certificate rotation scenarios (where you want your app to stop using an old certificate as soon as possible because it may be compromised), you will need to force a worker process recycle (the easiest way to do this would be to use the site-restart API or Portal’s Restart button).

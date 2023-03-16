@@ -14,6 +14,7 @@ var pca = PublicClientApplicationBuilder.Create(MsalTestConstants.ClientId)
                                         .Build();
 
 ```
+
 A simple implementation of `IMsalHttpClientFactory`
 
 ```csharp
@@ -47,20 +48,20 @@ A simple implementation of `IMsalHttpClientFactory`
     }
 
 ```
-#### Interactive Auth with proxy
+
+## Interactive Auth with proxy
 
 When you call `.AcquireTokenInteractive`, MSAL pops up a browser and instructs it to navigate to the authorization uri. MSAL does not call the /authorize endpoint on its own, so any HttpClient configuration you've made is not taken into account. However, for all the other required calls, MSAL uses HttpClient.
 
-
-#### Dispose guarantee
+## Dispose guarantee
 
 MSAL will **not** call Dispose() on the HttpClient. The thinking behind this based on https://stackoverflow.com/questions/15705092/do-httpclient-and-httpclienthandler-have-to-be-disposed
 
-### .NET Core IHttpClientFactory
+## .NET Core IHttpClientFactory
 
 It is recommended to adapt [ASP.NET Core's IHttpClientFactory](/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.0) to improve scalability in Web App / Web Api scenarios.
 
-#### Proxy Troubleshooting
+## Proxy Troubleshooting
 
 **Problem**: I need to use a proxy different from the IE proxy
 
@@ -77,6 +78,6 @@ This cannot be achived on .NET Core, where only the system browser is available.
 </system.net>
 ```
 
-#### Additional Information
+## Additional Information
 
 * Prior to the changes needed in order to make MSAL's httpClients thread safe (https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/pull/2046/files), the httpClient had the possibility to throw an exception stating "Properties can only be modified before sending the first request". MSAL's httpClient will no longer throw this exception after 4.19.0 (https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/releases/tag/4.19.0)

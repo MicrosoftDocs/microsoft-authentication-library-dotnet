@@ -18,9 +18,9 @@ title: Multicloud support and instance awareness
 
 With multi-cloud support enabled, user will have the option to create a `PublicClientApplication` with global authority and if a user enters a username from a national cloud, MSAL will return the token to access resource on the national cloud.
 
-Currently, multi-cloud support is available for `Interactive flows` for web. 
+Currently, multi-cloud support is available for `Interactive flows` for web.
 
-## Sample to enable multi-cloud support:
+## Sample to enable multi-cloud support
 
 ```csharp
     IPublicClientApplication pca = PublicClientApplicationBuilder
