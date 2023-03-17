@@ -65,7 +65,7 @@ You can write a daemon app that acquires a token using its own identity on top u
 
 ### Desktop app that calls a web API on behalf of a signed-in user
 
-Desktop applications can use the same [interactive authentication](../acquiring-tokens/desktop-mobile/acquiring-tokens-interactively.md) as the [mobile applications](#Mobile-app-that-calls-a-web-API-on-behalf-of-the-user-whos-signed-in-interactively).
+Desktop applications can use the same [interactive authentication](../acquiring-tokens/desktop-mobile/acquiring-tokens-interactively.md) as the [mobile applications](#mobile-app-that-calls-a-web-API-on-behalf-of-the-user-whos-signed-in-interactively).
 
 ![Image showing the flow in a desktop app that calls a web API on behalf of a signed-in user ](../media/net-desktop-api.png)
 
