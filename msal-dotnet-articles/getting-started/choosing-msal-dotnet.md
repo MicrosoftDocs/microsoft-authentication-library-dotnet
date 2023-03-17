@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.workload: identity
 ms.date: 03/17/2023
 ms.author: dmwendia
-ms.reviewer: localden, jmprieur
+ms.reviewer: localden
 ms.custom: devx-track-csharp, aaddev, engagement-fy23
 # Customer intent: As an application developer, I want to know which version of MSAL.NET I'll use for my scenario based on the type of app I'm building and the platform I'm using. 
 ---
@@ -55,22 +55,35 @@ Microsoft Identity Web also helps with [certificate loading](https://github.com/
 
 I'm using ASP.NET Core. See what Microsoft Identity Web has to offer:
 
-
-
 | Feature | ASP.NET Core 3.1 templates| Microsoft.Identity.Web templates | ASP.NET Framework + Id.Web |
 |----------|----------|----------|----------|
-| Sign in users in web apps | Row 1, Column 2 | Row 1, Column 3 | Row 1, Column 4 |
-| Protected web API | Row 2, Column 2 | Row 2, Column 3 | Row 2, Column 4 |
-| Row 3, Column 1 | Row 3, Column 2 | Row 3, Column 3 | Row 3, Column 4 |
-| Row 4, Column 1 | Row 4, Column 2 | Row 4, Column 3 | Row 4, Column 4 |
-| Row 5, Column 1 | Row 5, Column 2 | Row 5, Column 3 | Row 5, Column 4 |
-| Row 6, Column 1 | Row 6, Column 2 | Row 6, Column 3 | Row 6, Column 4 |
-| Row 7, Column 1 | Row 7, Column 2 | Row 7, Column 3 | Row 7, Column 4 |
-| Row 8, Column 1 | Row 8, Column 2 | Row 8, Column 3 | Row 8, Column 4 |
-| Row 9, Column 1 | Row 9, Column 2 | Row 9, Column 3
+| Sign in users in web apps | Supported | Supported | Supported |
+| Protected web API | Supported  | Supported | Supported  |
+| B2C support in web apps and web APIs | Supported 2 | Supported | Supported  |
+| Support Microsoft personal accounts | Not supported | Supported | Supported  |
+| Web app/API call APIs(including graph except for B2C) | Not supported | Supported | Not supported  |
+| Incremental consent and conditional access in web apps | Not supported | Supported | Not supported  |
+| Protect gRPC services and Azure functions | Not supported | Supported | Not supported  |
+| Handle SameSite| Not supported | Supported | Not supported  |
+| Easy Auth Integration| Not supported | Supported | Not supported |
+| Multiple Authentication schemes | Not supported | Supported | Not supported  |
+| Issuer validation(including in-multi-tenant apps, any cloud)| Not supported | Supported | Not supported  |
+| Certificates fetched from Key Vault with MSI, auto rotation| Not supported | Supported | Supported  |
+| Certificate credentials| Not supported | Supported | Supported |
+| Token decrypt certificates in Web APIs| Not supported | Supported | Not supported |
+| Scope/ app role validations in Web APIs | Not supported | Supported | Not supported |
+| WWW-authenticate headers generation in APIs (CA, CAE)| Not supported | Supported | Not supported  |
+| Proof of possession| Not supported | Supported | Not supported  |
+| PKCE for confidential client applications | Not supported | Supported | Not supported  |
+| Performant token cache serializers, including distributed | Not supported | Supported | Supported  |
+| ESTS-R| Not supported | Supported | Not supported |
+| CCS routing hint| Not supported | Supported | Not supported |
 
+<!---
+Built the table above from this image
 
 ![image](../media/msal-templates-support.png)
+-->
 
 ### I'm building a new application
 
