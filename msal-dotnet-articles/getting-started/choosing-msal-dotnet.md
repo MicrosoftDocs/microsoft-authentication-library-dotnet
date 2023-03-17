@@ -1,21 +1,39 @@
 ---
 title: Choosing a version of MSAL.NET
+description: Learn how to choose a version of MSAL.NET that suits your development scenario, based on the type of application and the underlying platform. 
+services: active-directory
+author: Dickson-Mwendia
+manager: CelesteDG
+
+ms.service: active-directory
+ms.subservice: develop
+ms.topic: conceptual
+ms.workload: identity
+ms.date: 03/17/2023
+ms.author: dmwendia
+ms.reviewer: localden, jmprieur
+ms.custom: devx-track-csharp, aaddev, engagement-fy23
+# Customer intent: As an application developer, I want to know which version of MSAL.NET I'll use for my scenario based on the type of app I'm building and the platform I'm using. 
 ---
 
 # Choosing a version of MSAL.NET
 
-Follow the decision tree to see if MSAL.NET alone is enough, or if you need [Microsoft Identity Web](https://github.com/AzureAD/microsoft-identity-web), or both.
+Depending on the type of application you're building, and its underlying platform, you can choose to use MSAL.NET, [Microsoft Identity Web](https://github.com/AzureAD/microsoft-identity-web), or both.
 
-![image](../media/idweb-msal.png)
+Microsoft Identity Web is a set of ASP.NET Core libraries that simplifies adding authentication and authorization support to web apps and web APIs integrating with the Microsoft identity platform. It provides a single-surface API convenience layer that ties together ASP.NET Core, its authentication middleware, and the Microsoft Authentication Library (MSAL) for .NET.
 
-## Use MSAL.NET
+Follow the decision tree below to determine whether your scenario requires MSAL.NET, Microsoft Identity Web, or both.
+
+![Image of the .NET auth client libraries decision tree](../media/idweb-msal.png)
+
+## When do I use MSAL.NET
 
 You're building a desktop or mobile app. Use MSAL.NET directly and start acquiring tokens for your public client application. For details see:
 
 - [Acquiring token in a desktop app](/azure/active-directory/develop/scenario-desktop-acquire-token?tabs=dotnet), and using [WAM](../acquiring-tokens/desktop-mobile/wam.md)
 - [Acquiring token in a mobile application](/azure/active-directory/develop/scenario-mobile-acquire-token)
 
-## Use **hybrid model** MSAL.NET and [Microsoft Identity Web](https://github.com/AzureAD/microsoft-identity-web/)
+## When do I use the hybrid model (MSAL.NET and [Microsoft Identity Web](https://github.com/AzureAD/microsoft-identity-web/))
 
 You're building a web app or a web API, or a daemon application (a confidential client application) running on .NET Framework or pure .NET Core (not ASP.NET Core). In MSAL.NET, an in-memory token cache is provided by default, however, in the case of web apps or web APIs, caching should be handled differently than for public client applications (desktop or mobile apps) as it requires to be partitioned correctly. It's highly recommended to leverage a token cache serializer, which can be a distributed cache, (e.g. Redis, Cosmos, or SQL Server, distributed in memory cache), or a correctly partitioned in memory cache.
 
@@ -36,6 +54,21 @@ Microsoft Identity Web also helps with [certificate loading](https://github.com/
 ## Use [Microsoft Identity Web](https://github.com/AzureAD/microsoft-identity-web/)
 
 I'm using ASP.NET Core. See what Microsoft Identity Web has to offer:
+
+
+
+| Feature | ASP.NET Core 3.1 templates| Microsoft.Identity.Web templates | ASP.NET Framework + Id.Web |
+|----------|----------|----------|----------|
+| Sign in users in web apps | Row 1, Column 2 | Row 1, Column 3 | Row 1, Column 4 |
+| Protected web API | Row 2, Column 2 | Row 2, Column 3 | Row 2, Column 4 |
+| Row 3, Column 1 | Row 3, Column 2 | Row 3, Column 3 | Row 3, Column 4 |
+| Row 4, Column 1 | Row 4, Column 2 | Row 4, Column 3 | Row 4, Column 4 |
+| Row 5, Column 1 | Row 5, Column 2 | Row 5, Column 3 | Row 5, Column 4 |
+| Row 6, Column 1 | Row 6, Column 2 | Row 6, Column 3 | Row 6, Column 4 |
+| Row 7, Column 1 | Row 7, Column 2 | Row 7, Column 3 | Row 7, Column 4 |
+| Row 8, Column 1 | Row 8, Column 2 | Row 8, Column 3 | Row 8, Column 4 |
+| Row 9, Column 1 | Row 9, Column 2 | Row 9, Column 3
+
 
 ![image](../media/msal-templates-support.png)
 
