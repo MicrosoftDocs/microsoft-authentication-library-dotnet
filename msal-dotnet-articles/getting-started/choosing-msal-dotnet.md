@@ -24,7 +24,7 @@ Microsoft Identity Web is a set of ASP.NET Core libraries that simplifies adding
 
 Follow the decision tree below to determine whether your scenario requires MSAL.NET, Microsoft Identity Web, or both.
 
-![Image of the .NET auth client libraries decision tree](../media/idweb-msal.png)
+![Image of the decision tree when working with .NET auth libraries](../media/idweb-msal.png)
 
 ## When do I use MSAL.NET
 
@@ -39,7 +39,7 @@ You're building a web app or a web API, or a daemon application (a confidential 
 
 By using token cache serializers you partition the token caches depending on the cache key that is used because the cache is swapped between the storage and MSAL's memory. This cache key is computed by MSAL.NET as a function of the flow you use
 
-![image](../media/msal-serializers.png)
+![Image showing token caches with and without custom serializers](../media/msal-serializers.png)
 
 ### Why do I need Microsoft Identity Web?
 
@@ -89,7 +89,7 @@ Built the table above from this image
 
 Use the Project Templates and the `msidentity-app-sync` tool. We have web app templates for web MVC, Razor, Blazor server, Blazorwasm hosted and not hosted. All for Azure AD or Azure AD B2C.
 
-![image](../media/aspnet-core-project-templates.png)
+![Image showing ASP.NET Core projects templates for building web apps](../media/aspnet-core-project-templates.png)
 
 [Web app project templates](https://github.com/AzureAD/microsoft-identity-web/wiki/web-app-template).
 
@@ -105,10 +105,10 @@ It's available on [NuGet](https://www.nuget.org/packages/msidentity-app-sync/).
 
 Just take the code you need from Microsoft Identity Web to update your app. Here's an example:
 
-![image](../media/azure-ad-calling-api.png)
+![image showing code updates when building a web app that calls a web API](../media/azure-ad-calling-api.png)
 
-![image](../media/configureservices-startup.png)
+![image showing code updates when building a B2C web app or API](../media/configureservices-startup.png)
 
-![image](../media/azure-ad-b2c-appsettings.png)
+![image showing code updates for a B2C web app that signs in users and a protected web API](../media/azure-ad-b2c-appsettings.png)
 
-![image](../media/azure-ad-b2c-controller.png)
+![image showing code updates in a web app or web API that calls a downstream API](../media/azure-ad-b2c-controller.png)

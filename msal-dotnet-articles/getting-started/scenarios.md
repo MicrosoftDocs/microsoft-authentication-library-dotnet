@@ -27,7 +27,7 @@ As a developer, you can acquire a token from a number of **application types**, 
 - Public client applications (desktop and Mmbile) use the <xref:Microsoft.Identity.Client.PublicClientApplication> class
 - Confidential client applications (web apps, web APIs, and daemon applications - desktop or web). These type of apps use the <xref:Microsoft.Identity.Client.ConfidentialClientApplication>.
 
-MSAL.NET supports acquiring tokens either in the name of a **user** ![image](../media/user-icon.png), or, (and only for confidential client applications), in the name of the application itself (for no user). In that case the confidential client application shares a secret with Azure AD ![image](../media/certificate-icon.png)
+MSAL.NET supports acquiring tokens either in the name of a **user** ![user icon](../media/user-icon.png), or, (and only for confidential client applications), in the name of the application itself (for no user). In that case the confidential client application shares a secret with Azure AD ![Azure AD icon](../media/certificate-icon.png)
 
 MSAL.NET supports a number of **platforms** (.NET Framework, .NET Core, Windows 10/UWP, Xamarin.iOS, Xamarin.Android). .NET Core apps can also run on different operating systems (Windows, but also Linux and MacOs). The scenarios can be different depending on the platforms.
 
@@ -65,7 +65,7 @@ You can write a daemon app that acquires a token using its own identity on top u
 
 ### Desktop app that calls a web API on behalf of a signed-in user
 
-Desktop applications can use the same [interactive authentication](../acquiring-tokens/desktop-mobile/acquiring-tokens-interactively.md) as the [mobile applications](#mobile-application-calling-a-web-api-in-the-name-of-the-user-whos-signed-in-interactively).
+Desktop applications can use the same [interactive authentication](../acquiring-tokens/desktop-mobile/acquiring-tokens-interactively.md) as the [mobile applications](#Mobile-app-that-calls-a-web-API-on-behalf-of-the-user-who's-signed-in-interactively).
 
 ![Image showing the flow in a desktop app that calls a web API on behalf of a signed-in user ](../media/net-desktop-api.png)
 
@@ -102,5 +102,5 @@ Like in desktop or service daemon applications, a daemon web API (or a daemon we
 In all the scenarios you might want to:
 
 - Troubleshoot yourself by activating [logs](/azure/active-directory/develop/msal-logging-dotnet) or Telemetry
-- Understand how to react to [exceptions](../advanced/exceptions/index.md) due to the Azure AD service [`MsalServiceException`](/dotnet/api/microsoft.identity.client.msalserviceexception?view=azure-dotnet-preview#fields), or to something wrong happening in the client itself [`MsalClientException`](/dotnet/api/microsoft.identity.client.msalclientexception?view=azure-dotnet-preview#fields)
+- Understand how to react to [exceptions](../advanced/exceptions/index.md) due to the Azure AD service [`MsalServiceException`](/dotnet/api/microsoft.identity.client.msalserviceexception?view=azure-dotnet-preview#fields&preserve-view=true), or to something wrong happening in the client itself [`MsalClientException`](/dotnet/api/microsoft.identity.client.msalclientexception?view=azure-dotnet-preview#fields&preserve-view=true )
 - Use MSAL.NET with a [proxy](../advanced/httpclient.md)
