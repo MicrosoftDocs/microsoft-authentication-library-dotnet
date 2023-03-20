@@ -100,7 +100,7 @@ In a case when `AcquireTokenInLongRunningProcess` throws an exception when it ca
 
 ### Removing accounts
 
-MSAL cannot perform account removal for OBO when using L2 caches. It is recommended to use eviction policies. If immediate removal is needed, delete the L2 cache node associated with the `sessionKey`.
+Starting with MSAL 4.51.0, to remove cached tokens call `StopLongRunningProcessInWebApiAsync` passing in a cache key. With earlier MSAL versions, it is recommended to use L2 cache eviction policies. If immediate removal is needed, delete the L2 cache node associated with the `sessionKey`.
 
 ## App registration - specificities for Web APIs
 
