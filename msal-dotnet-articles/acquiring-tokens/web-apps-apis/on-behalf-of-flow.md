@@ -73,8 +73,7 @@ var authResult = await ((ILongRunningWebApi)confidentialClientApp)
          .ExecuteAsync();
 ```
 
-`userAccessToken` is a user access token used to call this web API. `sessionKey` will be used as a key when caching and retrieving the OBO token. If set to `null`, MSAL will set it to the assertion hash of the passed-in user token. It can also be set by the developer to something that identifies a specific user session, like the optional `sid` claim from the user token (for more information, see [Provide optional claims to your app](/azure/active-directory/develop/active-directory-optional-claims)).
-If the cache already contains a valid OBO token with this `sessionKey`, `InitiateLongRunningProcessInWebApi` will return it. Otherwise, the user token will be used to acquire a new OBO token from Azure AD, which will then be cached and returned.
+`userAccessToken` is a user access token used to call this web API. `sessionKey` will be used as a key when caching and retrieving the OBO token. If set to `null`, MSAL will set it to the assertion hash of the passed-in user token. It can also be set by the developer to something that identifies a specific user session, like the optional `sid` claim from the user token (for more information, see [Provide optional claims to your app](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-optional-claims)). `InitiateLongRunningProcessInWebApi` doesn't check the cache; it will use the user token to acquire a new OBO token from AAD, which will then be cached and returned.
 
 2. In the long-running process, whenever OBO token is needed, call:
 
