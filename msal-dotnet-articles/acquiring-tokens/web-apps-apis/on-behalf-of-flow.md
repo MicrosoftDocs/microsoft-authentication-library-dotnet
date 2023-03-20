@@ -59,7 +59,7 @@ private void AddAccountToCacheFromJwt(IEnumerable<string> scopes, JwtSecurityTok
 
 ## Long-running OBO processes
 
-One OBO scenario is when a web API runs long running processes on behalf of the user (for example, OneDrive which creates albums for you). Starting with MSAL.NET 4.38.0, this can be implemented as such:
+One OBO scenario is when a web API runs long running processes on behalf of the user (for example, OneDrive which creates albums for you). This can be implemented as such:
 
 1. Before you start a long running process, call:
 
