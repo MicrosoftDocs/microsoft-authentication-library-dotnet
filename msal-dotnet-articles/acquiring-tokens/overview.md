@@ -1,18 +1,30 @@
 ---
 title: Token Acquisition
----
+description: Learn how to acquire security tokens in public and confidential client applications using MSAL.NET
+author: Dickson-Mwendia
+manager: CelesteDG
 
-# Token Acquisition
+ms.service: active-directory
+ms.subservice: develop
+ms.topic: reference
+ms.workload: identity
+ms.date: 03/17/2023
+ms.author: dmwendia
+ms.reviewer: localden
+ms.custom: devx-track-csharp, aaddev, engagement-fy23
+# Customer intent: As an application developer, I want to learn how to acquire security tokens in public and confidential client applications using MSAL.NET
+---
+# Token acquisition
 
 ## Application type dependency
 
-As explained in [Scenarios](../getting-started/scenarios.md), there are many ways of acquiring a token. They are detailed in the next topics. Some require user interactions through a web browser. Some don't require any user interactions.
+As explained in [Scenarios](../getting-started/scenarios.md), there are many ways of acquiring a token.  Some require user interactions through a web browser. Some don't require any user interactions.
 
 In general the way to acquire a token is different depending on if the application is a public client application (Desktop / Mobile) or a confidential client application (Web App, Web API, daemon application like a windows service)
 
 ## Token caching
 
-For both Public client and Confidential client applications, MSAL.NET maintains a token cache. For details, see [MSAL.NET token cache serialization](/azure/active-directory/develop/msal-net-token-cache-serialization).
+For both public client and confidential client applications, MSAL.NET maintains a token cache. For details, see [MSAL.NET token cache serialization](/azure/active-directory/develop/msal-net-token-cache-serialization).
 
 In the case of UWP, Xamarin iOS and Xamarin Android, the token cache serialization to an isolated storage is provided by MSAL.NET. In the case of .NET Desktop (.NET Framework and .NET Core) platforms, though, the application needs to customize the [token cache serialization](/azure/active-directory/develop/msal-net-token-cache-serialization).
 
