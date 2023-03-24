@@ -158,11 +158,11 @@ private async Task<AuthenticationResult> AcquireByDeviceCodeAsync(IPublicClientA
 
 Sample | Platform | Description
 ------ | -------- | -----------
-[active-directory-dotnetcore-devicecodeflow-v2](https://github.com/Azure-Samples/active-directory-dotnetcore-devicecodeflow-v2) | Console (.NET Core) | .NET Core 2.1 console application letting a user acquire, with the Azure AD v2.0 endpoint, a token for the Microsoft Graph by singing in through another device having a Web browser ![](https://github.com/Azure-Samples/active-directory-dotnetcore-devicecodeflow-v2/blob/master/ReadmeFiles/Topology.png)
+[active-directory-dotnetcore-devicecodeflow-v2](https://github.com/Azure-Samples/active-directory-dotnetcore-devicecodeflow-v2) | Console (.NET Core) | .NET Core 2.1 console application letting a user acquire, with the Azure AD v2.0 endpoint, a token for the Microsoft Graph by singing in through another device having a Web browser ![Device code flow topology](../../media/device-code-flow-topology.png)
 
 ## Additional information
 
 In case you want to learn more about Device code flow:
 
 - [OAuth standard - device flow](https://tools.ietf.org/html/draft-ietf-oauth-device-flow-07#section-3.4)
-- How this was done with the V1 endpoint: [Device code flow in ADAL.NET](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet/wiki/Device-profile-for-devices-without-web-browsers)
+- (_Legacy library_) How this was done with the V1 endpoint: [Device code flow in ADAL.NET](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet/wiki/Device-profile-for-devices-without-web-browsers)
