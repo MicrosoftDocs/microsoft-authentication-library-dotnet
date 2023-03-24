@@ -24,7 +24,7 @@ This flow, named the On-Behalf-Of flow (OBO), is illustrated by the top part of 
 
 ### How to call OBO
 
-The OBO call is done by calling the [AcquireTokenOnBehalf](/dotnet/api/microsoft.identity.client.iconfidentialclientapplication.acquiretokenonbehalfof?view=azure-dotnet) method on the `IConfidentialClientApplication` interface.
+The OBO call is done by calling the <xref:Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenOnBehalfOf(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.UserAssertion)> method on the `IConfidentialClientApplication` interface.
 
 This call looks in the cache by itself - so you do not need to call `AcquireTokenSilent` and does not store refresh tokens. 
 
