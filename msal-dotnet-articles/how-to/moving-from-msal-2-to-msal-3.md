@@ -1,10 +1,11 @@
 ---
 title: Moving from MSAL 2 to MSAL 3
+description: "This page explains how to change the code to move from the MSAL 2.x to MSAL 3.x."
 ---
 
 # Moving from MSAL 2 to MSAL 3
 
-This page explains how to change the code to move from the MSAL 2.x to MSAL 3.x
+This page explains how to change the code to move from the MSAL 2.x to MSAL 3.x.
 
 ```csharp
 IEnumerable<string> scopes = new string[]{"user.read"};
@@ -61,7 +62,7 @@ app.AcquireTokenSilent(scopes, account)
 
 ### Constructors of PublicClientApplication
 
-Instead of calling the constructor of PublicClientApplication directly, use the `PublicClientApplicationBuilder.Create()` or the `PublicClientApplicationBuilder.CreateWithOptions()` methods. The reference documentation page for [PublicClientApplicationBuilder](/dotnet/api/microsoft.identity.client.appconfig.publicclientapplicationbuilder?view=azure-dotnet-preview) shows all the options that you can use.
+Instead of calling the constructor of PublicClientApplication directly, use the `PublicClientApplicationBuilder.Create()` or the `PublicClientApplicationBuilder.CreateWithOptions()` methods. The reference documentation page for <xref:Microsoft.Identity.Client.PublicClientApplicationBuilder> shows all the options that you can use.
 
 ```csharp
 string clientId;
@@ -360,7 +361,7 @@ app=AcquireTokenInteractive(scopes,
 </td></tr>
 </table>
 
-For the list of all the .With operations applicable on AcquireTokenInteractive see [AcquireTokenInteractiveParameterBuilder](/dotnet/api/microsoft.identity.client.apiconfig.acquiretokeninteractiveparameterbuilder?view=azure-dotnet-preview)
+For the list of all the .With operations applicable on AcquireTokenInteractive see <xref:Microsoft.Identity.Client.AcquireTokenInteractiveParameterBuilder>.
 
 ### Acquire Token by username password
 
@@ -385,7 +386,7 @@ app.AcquireTokenByUsernamePassword(scopes,
 </td></tr>
 </table>
 
-For the list of all the .With parameters on `AcquireTokenByUsernamePassword`, see [AcquireTokenByUsernamePasswordParameterBuilder](/dotnet/api/microsoft.identity.client.apiconfig.acquiretokenbyusernamepasswordparameterbuilder?view=azure-dotnet-preview)
+For the list of all the .With parameters on `AcquireTokenByUsernamePassword`, see <xref:Microsoft.Identity.Client.AcquireTokenByUsernamePasswordParameterBuilder>.
 
 ### Acquire token with device code flow
 
@@ -450,7 +451,7 @@ app
 </td></tr>
 </table>
 
-For the list of all the .With parameters on `AcquireTokenWithDeviceCode`, see [AcquireTokenWithDeviceCodeParameterBuilder](/dotnet/api/microsoft.identity.client.apiconfig.acquiretokenwithdevicecodeparameterbuilder?view=azure-dotnet-preview)
+For the list of all the .With parameters on `AcquireTokenWithDeviceCode`, see <xref:Microsoft.Identity.Client.AcquireTokenWithDeviceCodeParameterBuilder>.
 
 ### Acquire Token by refresh token
 
@@ -481,7 +482,7 @@ brt
 
 ### Constructors of ConfidentialClientApplication
 
-Similar to the PublicClientApplication, use the `ConfidentialClientApplicationBuilder.Create()` or the `ConfidentialClientApplicationBuilder.CreateWithOptions()` methods to construct the ConfidentialClientApplication. The reference documentation page for [ConfidentialClientApplicationBuilder](/dotnet/api/microsoft.identity.client.appconfig.publicclientapplicationbuilder?view=azure-dotnet-preview) shows all the options that you can use.
+Similar to the PublicClientApplication, use the `ConfidentialClientApplicationBuilder.Create()` or the `ConfidentialClientApplicationBuilder.CreateWithOptions()` methods to construct the ConfidentialClientApplication. The reference documentation page for <xref:Microsoft.Identity.Client.ConfidentialClientApplicationBuilder> shows all the options that you can use.
 
 ```csharp
 string clientId;

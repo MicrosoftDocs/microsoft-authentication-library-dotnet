@@ -1,5 +1,6 @@
 ---
 title: Using Device Code Flow in MSAL.NET
+description: "Interactive authentication with Azure AD requires a web browser. However, in the case of devices and operating systems that do not provide a Web browser, Device Code Flow lets the user use another device (for instance another computer or a mobile phone) to sign-in interactively."
 ---
 
 # Using Device Code Flow in MSAL.NET
@@ -9,7 +10,7 @@ title: Using Device Code Flow in MSAL.NET
 
 ## Why would you use Device Code Flow?
 
-Interactive authentication with Azure AD requires a web browser (for details see [Usage of web browsers](/azure/active-directory/develop/msal-net-web-browsers)). However, in the case of devices and operating systems that do not provide a Web browser, Device code flow lets the user use another device (for instance another computer or a mobile phone) to sign-in interactively. By using the device code flow, the application obtains tokens through a two-step process especially designed for these devices/OS. Examples of such applications are applications running on IoT, or Command-Line tools (CLI). The idea is that:
+Interactive authentication with Azure AD requires a web browser (for details see [Usage of web browsers](/azure/active-directory/develop/msal-net-web-browsers)). However, in the case of devices and operating systems that do not provide a Web browser, Device Code Flow lets the user use another device (for instance another computer or a mobile phone) to sign-in interactively. By using the device code flow, the application obtains tokens through a two-step process especially designed for these devices/OS. Examples of such applications are applications running on IoT, or Command-Line tools (CLI). The idea is that:
 
 1. Whenever user authentication is required, the app provides a code and asks the user to use another device (such as an internet-connected smartphone) to navigate to a URL (for instance, `https://microsoft.com/devicelogin`), where the user will be prompted to enter the code. That done, the web page will lead the user through a normal authentication experience, including consent prompts and multi-factor authentication if necessary.
 
@@ -37,11 +38,11 @@ During the **[App registration](https://go.microsoft.com/fwlink/?linkid=2083908)
 - The Reply URI should be `https://login.microsoftonline.com/common/oauth2/nativeclient`
 - You need to choose **Yes** to the question **Treat application as a public client** (in the **Default client type** paragraph)
 
-  ![image](../../media/azure-ad-client-type.png)
+  ![Azure AD client type](../../media/azure-ad-client-type.png)
 
 ### Code
 
-![image](../../media/ipublicclientapplication-interface.png)
+![IPublicClientApplication interface](../../media/ipublicclientapplication-interface.png)
 
 `IPublicClientApplication`contains a method named `AcquireTokenWithDeviceCode`
 
@@ -55,7 +56,7 @@ This method takes as parameters:
 - The `scopes` for which to request an access token
 - A callback that will receive the `DeviceCodeResult`
 
-  ![image](../../media/devicecoderesult-class.png)
+  ![DeviceCoreResult class](../../media/devicecoderesult-class.png)
 
 You can pass optional parameters, by calling:
 
@@ -158,11 +159,11 @@ private async Task<AuthenticationResult> AcquireByDeviceCodeAsync(IPublicClientA
 
 Sample | Platform | Description
 ------ | -------- | -----------
-[active-directory-dotnetcore-devicecodeflow-v2](https://github.com/Azure-Samples/active-directory-dotnetcore-devicecodeflow-v2) | Console (.NET Core) | .NET Core 2.1 console application letting a user acquire, with the Azure AD v2.0 endpoint, a token for the Microsoft Graph by singing in through another device having a Web browser ![](https://github.com/Azure-Samples/active-directory-dotnetcore-devicecodeflow-v2/blob/master/ReadmeFiles/Topology.png)
+[active-directory-dotnetcore-devicecodeflow-v2](https://github.com/Azure-Samples/active-directory-dotnetcore-devicecodeflow-v2) | Console (.NET Core) | .NET Core 2.1 console application letting a user acquire, with the Azure AD v2.0 endpoint, a token for the Microsoft Graph by singing in through another device having a Web browser ![Device code flow topology](../../media/device-code-flow-topology.png)
 
 ## Additional information
 
 In case you want to learn more about Device code flow:
 
 - [OAuth standard - device flow](https://tools.ietf.org/html/draft-ietf-oauth-device-flow-07#section-3.4)
-- How this was done with the V1 endpoint: [Device code flow in ADAL.NET](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet/wiki/Device-profile-for-devices-without-web-browsers)
+- (_Legacy library_) How this was done with the V1 endpoint: [Device code flow in ADAL.NET](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet/wiki/Device-profile-for-devices-without-web-browsers)

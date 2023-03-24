@@ -1,5 +1,6 @@
 ---
 title: Using MSAL.NET with Web Account Manager (WAM)
+description: "MSAL is able to call Web Account Manager (WAM), a Windows 10+ component that ships with the OS. This component acts as an authentication broker allowing the users of your app benefit from integration with accounts known to Windows, such as the account you signed into your Windows session."
 ---
 
 # Using MSAL.NET with Web Account Manager (WAM)
@@ -133,7 +134,7 @@ The DLL search order is,
 
 ### "MsalClientException (ErrCode 5376): At least one scope needs to be requested for this authentication flow." error message
 
-This message indicates that you need to request at least one application scope (e.g. user.read) along with other OIDC scopes (profile, email or offline_access). 
+This message indicates that you need to request at least one application scope (e.g. user.read) along with other OIDC scopes (profile, email or offline_access).
 
 ```csharp
 var authResult = await pca.AcquireTokenInteractive(new[] { "user.read" })
@@ -142,7 +143,7 @@ var authResult = await pca.AcquireTokenInteractive(new[] { "user.read" })
 
 ### Account Picker does not show up
 
-Sometimes a Windows update messes up the Account Picker component - which shows the list of acccounts in Windows and the option to add new accounts. The symptom is that the picker does not come up for a small number of users.
+Sometimes a Windows update messes up the Account Picker component - which shows the list of accounts in Windows and the option to add new accounts. The symptom is that the picker does not come up for a small number of users.
 
 A possible workaround is to re-register this component. Run this script from an Admin powershell console:
 

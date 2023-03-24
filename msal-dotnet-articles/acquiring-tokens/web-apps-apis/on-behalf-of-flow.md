@@ -1,5 +1,6 @@
 ---
 title: On-behalf-of flows with MSAL.NET
+description: "How to use MSAL.NET to authenticate on behalf of a user."
 ---
 
 # On-behalf-of flows with MSAL.NET
@@ -23,7 +24,7 @@ This flow, named the On-Behalf-Of flow (OBO), is illustrated by the top part of 
 
 ### How to call OBO
 
-The OBO call is done by calling the [AcquireTokenOnBehalf](/dotnet/api/microsoft.identity.client.iconfidentialclientapplication.acquiretokenonbehalfof?view=azure-dotnet) method on the `IConfidentialClientApplication` interface.
+The OBO call is done by calling the <xref:Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenOnBehalfOf(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.UserAssertion)> method on the `IConfidentialClientApplication` interface.
 
 This call looks in the cache by itself - so you do not need to call `AcquireTokenSilent` and does not store refresh tokens. 
 
@@ -73,7 +74,7 @@ var authResult = await ((ILongRunningWebApi)confidentialClientApp)
          .ExecuteAsync();
 ```
 
-`userAccessToken` is a user access token used to call this web API. `sessionKey` will be used as a key when caching and retrieving the OBO token. If set to `null`, MSAL will set it to the assertion hash of the passed-in user token. It can also be set by the developer to something that identifies a specific user session, like the optional `sid` claim from the user token (for more information, see [Provide optional claims to your app](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-optional-claims)). `InitiateLongRunningProcessInWebApi` doesn't check the cache; it will use the user token to acquire a new OBO token from AAD, which will then be cached and returned.
+`userAccessToken` is a user access token used to call this web API. `sessionKey` will be used as a key when caching and retrieving the OBO token. If set to `null`, MSAL will set it to the assertion hash of the passed-in user token. It can also be set by the developer to something that identifies a specific user session, like the optional `sid` claim from the user token (for more information, see [Provide optional claims to your app](/azure/active-directory/develop/active-directory-optional-claims)). `InitiateLongRunningProcessInWebApi` doesn't check the cache; it will use the user token to acquire a new OBO token from AAD, which will then be cached and returned.
 
 2. In the long-running process, whenever OBO token is needed, call:
 
@@ -188,6 +189,4 @@ For more information about the On-Behalf-Of protocol, see [Azure Active Director
 
 Sample | Platform | Description
 ------ | -------- | -----------
-[active-directory-aspnetcore-webapi-tutorial-v2](https://github.com/Azure-Samples/active-directory-dotnet-native-aspnetcore-v2/tree/master/2.%20Web%20API%20now%20calls%20Microsoft%20Graph) | ASP.NET Core 2.2 Web API, Desktop (WPF) | ASP.NET Core 2.1 Web API calling Microsoft Graph, itself called from a WPF application using Azure AD V2 ![topology](https://github.com/Azure-Samples/active-directory-dotnet-native-aspnetcore-v2/blob/master/2.%20Web%20API%20now%20calls%20Microsoft%20Graph/ReadmeFiles/topology.png)
-
-See [On-behalf-of flows in MSAL.NET](./on-behalf-of-flow.md).
+[active-directory-aspnetcore-webapi-tutorial-v2](https://github.com/Azure-Samples/active-directory-dotnet-native-aspnetcore-v2/tree/master/2.%20Web%20API%20now%20calls%20Microsoft%20Graph) | ASP.NET Core 2.2 Web API, Desktop (WPF) | ASP.NET Core 2.1 Web API calling Microsoft Graph, itself called from a WPF application using Azure AD V2 ![On-behalf-of flow topology](../../media/obo-flow-topology.png)

@@ -1,10 +1,11 @@
 ---
 title: Username and password authentication with MSAL.NET
+description: "In your desktop application, you can use the username and password flow to acquire a token silently. No UI is required when using the application."
 ---
 
 # Username and password authentication with MSAL.NET
 
-In your desktop application, you can use the Username/Password flow to acquire a token silently. No UI is required when using the application.
+In your desktop application, you can use the username and password flow to acquire a token silently. No UI is required when using the application.
 
 ## Recommendation
 
@@ -48,7 +49,7 @@ During the **[App registration](https://go.microsoft.com/fwlink/?linkid=2083908)
 - You don't need to provide a Reply URI
 - You need to choose **Yes** as the answer to the question **Treat application as a public client** (in the **Default client type** paragraph)
 
-  ![image](../../media/azure-ad-client-type.png)
+  ![Azure AD client types](../../media/azure-ad-client-type.png)
 
 ### Code
 
@@ -267,6 +268,4 @@ See [Azure Active Directory v2.0 and the OAuth 2.0 resource owner password crede
 
 Sample | Platform | Description
 ------ | -------- | -----------
-[active-directory-dotnetcore-console-up-v2](https://github.com/Azure-Samples/active-directory-dotnetcore-console-up-v2) | Console (.NET Core) | .NET Core console application letting a user signed-in with the Azure AD v2.0 endpoint using username/password to acquire a token for the Microsoft Graph ![topology](https://github.com/Azure-Samples/active-directory-dotnetcore-console-up-v2/blob/master/ReadmeFiles/Topology.png)
-
-See [Username and password authentication in MSAL.NET](./username-password-authentication.md).
+[active-directory-dotnetcore-console-up-v2](https://github.com/Azure-Samples/active-directory-dotnetcore-console-up-v2) | Console (.NET Core) | .NET Core console application letting a user signed-in with the Azure AD v2.0 endpoint using username/password to acquire a token for the Microsoft Graph ![Console app topology](../../media/console-app-topology.png)

@@ -1,5 +1,6 @@
 ---
 title: Extract authentication parameters from WWW-Authenticate headers
+description: "This article is both a conceptual article of why you'd want to get information from WWW-authenticate headers, and how to do it."
 ---
 
 # Extract authentication parameters from WWW-Authenticate headers
@@ -24,7 +25,7 @@ Some web APIs, when called unauthenticated, send back an `HTTP 401 (Unauthorized
 
 For instance:
 
-- if you navigate, in your browser, to https://graph.microsoft.com/v1.0/me, you'll get an HTTP 401 (Unauthorized) error, but the wwwAuthenticate header will tell you: get a token using this IdP (defined by its authorize endpoint URI), for this resource (Graph):
+- If you use your browser to havigate to `https://graph.microsoft.com/v1.0/me`, you'll get an HTTP 401 (Unauthorized) error, but the wwwAuthenticate header will tell you: get a token using this IdP (defined by its authorize endpoint URI), for this resource (Graph):
 
   ```text
   HTTP 401; Unauthorized
@@ -75,7 +76,7 @@ The processing will be the same.
 
 ### Web APIs using Microsoft identity web and reacting to claims challenges
 
-Microsoft.Identity.web can send, a wwwAuthenticate header through one of the overrides of the [ITokenAcquisition.ReplyForbiddenWithWwwAuthenticateHeader](/dotnet/api/microsoft.identity.web.itokenacquisition.replyforbiddenwithwwwauthenticateheader?view=azure-dotnet-preview) method.
+Microsoft.Identity.web can send, a wwwAuthenticate header through one of the overrides of the <xref:Microsoft.Identity.Web.ITokenAcquisition.ReplyForbiddenWithWwwAuthenticateHeader(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.MsalUiRequiredException,Microsoft.AspNetCore.Http.HttpResponse)> method.
 
 It sends non-standard parameters:
 

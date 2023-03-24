@@ -50,7 +50,7 @@ Operating System | Library Platform | Kind of App | [Interactive Auth](./desktop
 <img alt="Windows Logo" src="/azure/active-directory/develop/media/index/logo_windows.svg" width="40" /> <br/> Windows desktop	| <img alt=".NET Logo" src="/azure/active-directory/develop/media/index/logo_net.svg" width="40" /> <br/> .NET| Desktop (WPF,<br/>  Windows.Forms,<br/>  Console) | Y | Y | Y | (Y)
 <img alt="Windows Logo" src="/azure/active-directory/develop/media/index/logo_windows.svg" width="40" /> <br/>Windows 10	| <img alt="Windows Logo" src="/azure/active-directory/develop/media/index/logo_windows.svg" width="40" /> <br/> UWP	| Store app	| Y	| Y	| 	
 <img alt="Android Logo" src="/azure/active-directory/develop/media/index/logo_android.svg" width="40" /> <br/> Android	| <img alt="Xamarin Logo" src="/azure/active-directory/develop/media/index/logo_xamarin.svg" width="40" /> <img alt="Android Logo" src="/azure/active-directory/develop/media/index/logo_android.svg" width="40" /> <br/> Xamarin Android	| Mobile	| Y	| 	| Y	
-<img alt="iOS Logo" src="/azure/active-directory/develop/media/index/logo_ios.svg" width="40" />| <img src="/azure/active-directory/develop/media/index/logo_xamarin.svg" width="40" /> <img  alt="iOS Logo" src="/azure/active-directory/develop/media/index/logo_ios.svg" width="40" /><br/> Xamarin iOS	| Mobile	| Y	| 	| 	| Y
+<img alt="iOS Logo" src="/azure/active-directory/develop/media/index/logo_ios.svg" width="40" />| <img alt="Xamarin logo" src="/azure/active-directory/develop/media/index/logo_xamarin.svg" width="40" /> <img  alt="iOS Logo" src="/azure/active-directory/develop/media/index/logo_ios.svg" width="40" /><br/> Xamarin iOS	| Mobile	| Y	| 	| 	| Y
 Mac OS, Linux, Windows	| <img alt=".NET Core Logo" src="/azure/active-directory/develop/media/index/logo_netcore.svg" width="40" /> <br/> .NET Core 	| Console	| N/A see [1](/azure/active-directory/develop/msal-net-web-browsers)	| Y	| Y	| Y
 
 ### Confidential client applications
@@ -67,12 +67,12 @@ The following table summarizes the ways available to acquire tokens in confident
 
 Operating System | Library Platform | Kind of App | [Client Credential](./web-apps-apis/client-credential-flows.md) | [On behalf of](./web-apps-apis/on-behalf-of-flow.md) | [Auth Code](./web-apps-apis/authorization-codes.md)
  -- | -------- | --- | ----------  | --- | ---
-Windows | <img alt=".NET Logo" src="/azure/active-directory/develop/media/index/logo_net.svg" width="40"/> <br/> .NET Framework | ![image](../media/web-app-icon.png) | Y | | Y
-Windows, MacOS, Linux | <img alt=".NET Core Logo" src="/azure/active-directory/develop/media/index/logo_netcore.svg" width="40" /> <br/> ASP.NET Core  | ![image](../media/web-app-icon.png) | Y | | Y |
-Windows | <img alt=".NET Logo" src="/azure/active-directory/develop/media/index/logo_net.svg" width="40"/> <br/> .NET Framework | ![image](../media/web-api-icon.png) | Y | Y |
-Windows, MacOS, Linux | <img alt=".NET Core Logo" src="/azure/active-directory/develop/media/index/logo_netcore.svg" width="40" /><br/> ASP.NET Core | ![image](../media/web-api-icon.png) | Y | Y |
-Windows | <img alt=".NET Logo" src="/azure/active-directory/develop/media/index/logo_net.svg" width="40"/> <br/> .NET Framework | ![image](../media/daemon-icon.png) <br/> (windows service) | Y | |
-Windows, MacOS, Linux | <img alt=".NET Core Logo" src="/azure/active-directory/develop/media/index/logo_netcore.svg" width="40" /> <br/> .NET Core | ![image](../media/daemon-icon.png)| Y | |
+Windows | <img alt=".NET Logo" src="/azure/active-directory/develop/media/index/logo_net.svg" width="40"/> <br/> .NET Framework | ![Web application icon](../media/web-app-icon.png) | Y | | Y
+Windows, MacOS, Linux | <img alt=".NET Core Logo" src="/azure/active-directory/develop/media/index/logo_netcore.svg" width="40" /> <br/> ASP.NET Core  | ![Web application icon](../media/web-app-icon.png) | Y | | Y |
+Windows | <img alt=".NET Logo" src="/azure/active-directory/develop/media/index/logo_net.svg" width="40"/> <br/> .NET Framework | ![Web API icon](../media/web-api-icon.png) | Y | Y |
+Windows, MacOS, Linux | <img alt=".NET Core Logo" src="/azure/active-directory/develop/media/index/logo_netcore.svg" width="40" /><br/> ASP.NET Core | ![Web API icon](../media/web-api-icon.png) | Y | Y |
+Windows | <img alt=".NET Logo" src="/azure/active-directory/develop/media/index/logo_net.svg" width="40"/> <br/> .NET Framework | ![Daemon icon](../media/daemon-icon.png) <br/> (windows service) | Y | |
+Windows, MacOS, Linux | <img alt=".NET Core Logo" src="/azure/active-directory/develop/media/index/logo_netcore.svg" width="40" /> <br/> .NET Core | ![Daemon icon](../media/daemon-icon.png)| Y | |
 
 ### Pattern to acquire tokens in MSAL.NET
 

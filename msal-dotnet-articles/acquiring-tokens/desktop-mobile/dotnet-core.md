@@ -1,5 +1,6 @@
 ---
 title: Using MSAL.NET with .NET Core
+description: "How to use MSAL.NET with .NET applications."
 ---
 
 # Using MSAL.NET with .NET (aka .NET Core)
@@ -62,7 +63,7 @@ MSAL supports integration with the Windows Broker (WAM). See [our document on WA
 
 ## Linux and Mac
 
-On Linux, MSAL will open the default OS browser using the `xdg-open`, `gnome-open`, or `kfmclient` utilities. To troubleshoot, run the tool from a terminal e.g. `xdg-open "https://www.bing.com"`  .
+On Linux, MSAL will open the default OS browser using the `xdg-open`, `gnome-open`, or `kfmclient` utilities. To troubleshoot, run the tool from a terminal e.g. `xdg-open "https://www.bing.com"`.
 
 On Mac, the browser is opened by invoking `open <url>`.
 
