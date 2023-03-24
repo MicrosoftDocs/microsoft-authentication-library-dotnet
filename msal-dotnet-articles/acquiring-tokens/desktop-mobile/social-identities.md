@@ -149,7 +149,8 @@ By using username/password you are giving-up a number of things:
 
 In your AzureAD B2C tenant, create a new user flow and select **Sign in using ROPC**. This will enable the ROPC policy for your tenant. See [Configure the resource owner password credentials flow](/azure/active-directory-b2c/configure-ropc) for more details.
 
-`IPublicClientApplication` contains a method called
+`IPublicClientApplication` contains a method called `AcquireTokenByUsernamePassword`:
+
 ```csharp
 AcquireTokenByUsernamePassword(
             IEnumerable<string> scopes,
@@ -158,8 +159,9 @@ AcquireTokenByUsernamePassword(
 ```
 
 This method takes as parameters:
+
 - The `scopes` to request an access token for
-- A username 
+- A username
 - A SecureString password for the user
 
 Remember to use the authority which contains the ROPC policy.

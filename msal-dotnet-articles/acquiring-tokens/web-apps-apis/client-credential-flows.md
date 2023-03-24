@@ -6,11 +6,11 @@ title: Client credential flows in MSAL.NET
 
 ## Availability by platform
 
-MSAL is a multi-framework library. Confidential Client flows are not available on the mobile platforms (UWP, Xamarin.iOS, and Xamarin.Android) since there is no secure way of deploying a secret there.
+MSAL is a multi-framework library. Confidential Client flows are not available on mobile platforms (UWP, Xamarin.iOS, and Xamarin.Android) since there is no secure way of deploying a secret there.
 
 ## Credentials
 
-MSAL.NET supports 2 types of client credentials, which must be registered in the Azure AD app registration portal
+MSAL.NET supports two types of client credentials, which must be registered in the Azure AD app registration portal
 
 - Application secrets (not recommended for production scenarios)
 - Certificates

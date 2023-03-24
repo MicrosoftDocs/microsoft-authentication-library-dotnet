@@ -48,7 +48,7 @@ During the **[App registration](https://go.microsoft.com/fwlink/?linkid=2083908)
 - You don't need to provide a Reply URI
 - You need to choose **Yes** as the answer to the question **Treat application as a public client** (in the **Default client type** paragraph)
 
-  ![image](../../media/azure-ad-client-type.png)
+  ![Azure AD client types](../../media/azure-ad-client-type.png)
 
 ### Code
 

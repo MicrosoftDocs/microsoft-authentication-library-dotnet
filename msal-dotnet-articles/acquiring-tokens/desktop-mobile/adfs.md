@@ -37,7 +37,7 @@ MSAL.NET supports ADFS 2019 (PR is [ADFS Compatibility with MSAL #834](https://g
 
 However for MSAL.NET we have no plans to support a direct connection to ADFS 2016 (it does not support PKCE and still uses resources, not scope). If you need to support today scenarios requiring a direct connection to ADFS 2016, please use the latest version of ADAL. When you have upgraded your on-premise system to ADFS 2019, you'll be able to use MSAL.NET.
 
-MSAL does not support Integrated Windows Authentication (by calling AcquireTokenByIntegratedWindowsAuth) directly to ADFS.
+MSAL does not support Integrated Windows Authentication (by calling `AcquireTokenByIntegratedWindowsAuth`) directly to ADFS.
 
 ## See also
 
