@@ -17,6 +17,14 @@
           "LICENSE-CODE",
           "ThirdPartyNotices"
         ]
+      },
+      {
+        "files": [
+          "**/*.md"
+        ],
+        "exclude": [],
+        "src": "api/overview/msal-public-client",
+        "dest": "api/overview/msal-public-client"
       }
     ],
     "resource": [
@@ -45,18 +53,35 @@
     },
     "fileMetadata": {
       "author": {
-        "api/**.yml": "dotnet-bot"
+        "api/**.yml": "dotnet-bot",
+        "api/**.md": "dotnet-bot"
       },
       "ms.author": {
-        "api/**.yml": "dmwendia"
+        "api/**.yml": "dmwendia",
+        "api/**.md": "dmwendia"
       },
       "ms.service": {
-        "api/**.yml": "active-directory"
-      }
+        "api/**.yml": "active-directory",
+        "api/**.md": "active-directory"
+      },
+      "titleSuffix": {
+        "api/**.md": "Microsoft Authentication Library for .NET",
+        "api/**.yml": "Microsoft Authentication Library for .NET"
+      },
+      "ms.topic": {
+        "api/**.md": "conceptual",
+        "api/**.yml": "reference"
+      },
+      "open_to_public_contributors": {
+        "api/**.md": false
+      } 
     },
     "template": [],
     "isCanonicalUrlWithMoniker": true,
     "dest": "_site",
-    "lruSize": 0
+    "lruSize": 0,
+    "xrefService": [
+      "https://xref.docs.microsoft.com/query?uid={uid}"
+    ]
   }
 }

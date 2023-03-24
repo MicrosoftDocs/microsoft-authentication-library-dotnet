@@ -23,7 +23,8 @@
         "docset_prebuild": [
           "_dependentPackages/ECMA2Yaml/tools/Run.ps1",
           "_dependentPackages/CommonPlugins/tools/SplitTOC.ps1",
-          "_dependentPackages/CommonPlugins/tools/DiffFolder.ps1"
+          "_dependentPackages/CommonPlugins/tools/DiffFolder.ps1",
+          "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1"
         ],
         "docset_postbuild": [
           "_dependentPackages/ECMA2Yaml/tools/PostBuild.ps1"
@@ -41,6 +42,9 @@
       ],
       "DiffFolder": [
         "dotnet/api"
+      ],
+      "xref_query_tags": [
+        "/dotnet"
       ]
     },
     {
@@ -50,12 +54,20 @@
       "locale": "en-us",
       "monikers": [],
       "moniker_ranges": [],
+      "customized_tasks": {
+        "docset_prebuild": [
+          "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1"
+        ]
+      },
       "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content"
       },
       "build_entry_point": "docs",
-      "template_folder": "_themes"
+      "template_folder": "_themes",
+      "xref_query_tags": [
+        "/dotnet"
+      ]
     }
   ],
   "notification_subscribers": [],
@@ -75,6 +87,15 @@
   "need_generate_pdf": false,
   "need_generate_intellisense": false,
   "skip_source_output_uploading": false,
+  "JoinTOCPlugin": [
+    {
+      "TopLevelTOC": "dotnet/docs-ref-toc/toc.yml",
+      "ReferenceTOC": "dotnet/api/microsoft-authentication-library-dotnet/toc.yml",
+      "ReferenceTOCUrl": "/dotnet/api/microsoft-authentication-library-dotnet/toc.json",
+      "ConceptualTOC": "msal-dotnet-articles/TOC.yml",
+      "ConceptualTOCUrl": "/entra/msal/dotnet/toc.json"
+    }
+  ],
   "dependent_packages": [
     {
       "id": "Microsoft.OpenPublishing.CommonPlugins",
@@ -91,5 +112,5 @@
       "version": "latest"
     }
   ],
-  "need_generate_pdf_url_template": false
+  "need_generate_pdf_url_template": true
 }

@@ -1,0 +1,34 @@
+Info (False) MSAL 4.0.0.0 MSAL.NetCore Microsoft Windows 10.0.18362  [08/02/2019 08:50:22 - 3518b10a-d79f-4c9e-8b3d-f13560ed16f7] (UnknownClient: 0.0.0.0) MSAL MSAL.NetCore with assembly version '4.0.0.0'. CorrelationId(3518b10a-d79f-4c9e-8b3d-f13560ed16f7)
+Info (False) MSAL 4.0.0.0 MSAL.NetCore Microsoft Windows 10.0.18362  [08/02/2019 08:50:22 - 3518b10a-d79f-4c9e-8b3d-f13560ed16f7] (UnknownClient: 0.0.0.0) === InteractiveParameters Data ===
+LoginHint provided: False
+User provided: False
+UseEmbeddedWebView: NotSpecified
+ExtraScopesToConsent:
+Prompt: select_account
+HasCustomWebUi: True
+
+Info (False) MSAL 4.0.0.0 MSAL.NetCore Microsoft Windows 10.0.18362  [08/02/2019 08:50:22 - 3518b10a-d79f-4c9e-8b3d-f13560ed16f7] (UnknownClient: 0.0.0.0) === InteractiveParameters Data ===
+LoginHint provided: False
+User provided: False
+UseEmbeddedWebView: NotSpecified
+ExtraScopesToConsent:
+Prompt: select_account
+HasCustomWebUi: True
+
+Verbose (False) MSAL 4.0.0.0 MSAL.NetCore Microsoft Windows 10.0.18362  [08/02/2019 08:50:22 - 3518b10a-d79f-4c9e-8b3d-f13560ed16f7] (UnknownClient: 0.0.0.0) [Instance Discovery] Tried to use network cache provider for login.microsoftonline.com. Success? False
+Verbose (False) MSAL 4.0.0.0 MSAL.NetCore Microsoft Windows 10.0.18362  [08/02/2019 08:50:24 - 3518b10a-d79f-4c9e-8b3d-f13560ed16f7] (UnknownClient: 0.0.0.0) [Instance Discovery] Tried to use network cache provider for login.microsoftonline.com. Success? True
+Verbose (False) MSAL 4.0.0.0 MSAL.NetCore Microsoft Windows 10.0.18362  [08/02/2019 08:50:24 - 3518b10a-d79f-4c9e-8b3d-f13560ed16f7] (UnknownClient: 0.0.0.0) [Instance Discovery] After hitting the discovery endpoint, the network provider found an entry for login.microsoftonline.com ? True
+Info (False) MSAL 4.0.0.0 MSAL.NetCore Microsoft Windows 10.0.18362  [08/02/2019 08:50:24 - 3518b10a-d79f-4c9e-8b3d-f13560ed16f7] (UnknownClient: 0.0.0.0) Resolving authority endpoints... Already resolved? - FALSE
+Info (False) MSAL 4.0.0.0 MSAL.NetCore Microsoft Windows 10.0.18362  [08/02/2019 08:50:24 - 3518b10a-d79f-4c9e-8b3d-f13560ed16f7] (UnknownClient: 0.0.0.0) Using CustomWebUi to acquire the authorization code
+Error Specified argument was out of the range of valid values.
+Parameter name: Expected a valid port number, > 0, not 80
+Error    at NetCoreTestApp.Experimental.SingleMessageTcpListener..ctor(Int32 port) in C:\g\msal\tests\devapps\NetCoreTestApp\Experimental\SingleMessageTcpListener.cs:line 31
+   at NetCoreTestApp.Experimental.DefaultOsBrowserWebUi.InterceptAuthorizationUriAsync(Uri authorizationUri, Uri redirectUri, CancellationToken cancellationToken) in C:\g\msal\tests\devapps\NetCoreTestApp\Experimental\DefaultOsBrowserWebUi.cs:line 132
+   at NetCoreTestApp.Experimental.DefaultOsBrowserWebUi.AcquireAuthorizationCodeAsync(Uri authorizationUri, Uri redirectUri, CancellationToken cancellationToken) in C:\g\msal\tests\devapps\NetCoreTestApp\Experimental\DefaultOsBrowserWebUi.cs:line 51
+   at Microsoft.Identity.Client.UI.CustomWebUiHandler.AcquireAuthorizationAsync(Uri authorizationUri, Uri redirectUri, RequestContext requestContext, CancellationToken cancellationToken) in C:\g\msal\src\Microsoft.Identity.Client\UI\CustomWebUiHandler.cs:line 39
+   at Microsoft.Identity.Client.Internal.Requests.InteractiveRequest.AcquireAuthorizationAsync(CancellationToken cancellationToken) in C:\g\msal\src\Microsoft.Identity.Client\Internal\Requests\InteractiveRequest.cs:line 111
+   at Microsoft.Identity.Client.Internal.Requests.InteractiveRequest.ExecuteAsync(CancellationToken cancellationToken) in C:\g\msal\src\Microsoft.Identity.Client\Internal\Requests\InteractiveRequest.cs:line 68
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.RunAsync(CancellationToken cancellationToken) in C:\g\msal\src\Microsoft.Identity.Client\Internal\Requests\RequestBase.cs:line 132
+   at Microsoft.Identity.Client.ApiConfig.Executors.PublicClientExecutor.ExecuteAsync(AcquireTokenCommonParameters commonParameters, AcquireTokenInteractiveParameters interactiveParameters, CancellationToken cancellationToken) in C:\g\msal\src\Microsoft.Identity.Client\ApiConfig\Executors\PublicClientExecutor.cs:line 45
+   at NetCoreTestApp.Program.FetchTokenAndCallGraphAsync(IPublicClientApplication pca, Task`1 authTask) in C:\g\msal\tests\devapps\NetCoreTestApp\Program.cs:line 217
+   at NetCoreTestApp.Program.RunConsoleAppLogicAsync(IPublicClientApplication pca) in C:\g\msal\tests\devapps\NetCoreTestApp\Program.cs:line 138
