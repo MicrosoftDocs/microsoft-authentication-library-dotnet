@@ -1,5 +1,6 @@
 ---
 title: On-behalf-of flows with MSAL.NET
+description: "How to use MSAL.NET to authenticate on behalf of a user."
 ---
 
 # On-behalf-of flows with MSAL.NET
@@ -188,6 +189,4 @@ For more information about the On-Behalf-Of protocol, see [Azure Active Director
 
 Sample | Platform | Description
 ------ | -------- | -----------
-[active-directory-aspnetcore-webapi-tutorial-v2](https://github.com/Azure-Samples/active-directory-dotnet-native-aspnetcore-v2/tree/master/2.%20Web%20API%20now%20calls%20Microsoft%20Graph) | ASP.NET Core 2.2 Web API, Desktop (WPF) | ASP.NET Core 2.1 Web API calling Microsoft Graph, itself called from a WPF application using Azure AD V2 ![topology](https://github.com/Azure-Samples/active-directory-dotnet-native-aspnetcore-v2/blob/master/2.%20Web%20API%20now%20calls%20Microsoft%20Graph/ReadmeFiles/topology.png)
-
-See [On-behalf-of flows in MSAL.NET](./on-behalf-of-flow.md).
+[active-directory-aspnetcore-webapi-tutorial-v2](https://github.com/Azure-Samples/active-directory-dotnet-native-aspnetcore-v2/tree/master/2.%20Web%20API%20now%20calls%20Microsoft%20Graph) | ASP.NET Core 2.2 Web API, Desktop (WPF) | ASP.NET Core 2.1 Web API calling Microsoft Graph, itself called from a WPF application using Azure AD V2 ![On-behalf-of flow topology](../../media/obo-flow-topology.png)

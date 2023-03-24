@@ -1,5 +1,6 @@
 ---
 title: How to use MSAL.NET form PowerShell
+description: "How to use MSAL.NET to acquire tokens from a PowerShell script."
 ---
 
 # How to use MSAL.NET from PowerShell

@@ -35,7 +35,7 @@ The [active-directory-dotnetcore-daemon-v2](https://github.com/Azure-Samples/act
 
 ### Construction of ConfidentialClientApplication with client credentials
 
-This flow is only available in the confidential client flow; therefore the protected Web API provides client credentials (client secret or certificate) to the <xref:microsoft.identity.client.confidentialclientapplicationbuilder> via the or the `WithClientSecret` or `WithCertificate` methods respectively.
+This flow is only available in the confidential client flow; therefore the protected Web API provides client credentials (client secret or certificate) to the <xref:Microsoft.Identity.Client.ConfidentialClientApplicationBuilder> via the or the `WithClientSecret` or `WithCertificate` methods respectively.
 
 ![IConfidentialClientApplication interface](../../media/iconfidentialclientapplication-interface.png)
 

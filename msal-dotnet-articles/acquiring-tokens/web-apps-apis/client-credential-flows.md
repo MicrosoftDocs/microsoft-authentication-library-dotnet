@@ -1,5 +1,6 @@
 ---
 title: Client credential flows in MSAL.NET
+description: "MSAL is a multi-framework library. Confidential Client flows are not available on mobile platforms (UWP, Xamarin.iOS, and Xamarin.Android) since there is no secure way of deploying a secret there."
 ---
 
 # Client credential flows in MSAL.NET
@@ -139,8 +140,8 @@ In the case where your confidential client application uses **only** client cred
 
 Sample | Platform | Description
 ------ | -------- | -----------
-[active-directory-dotnetcore-daemon-v2](https://github.com/Azure-Samples/active-directory-dotnetcore-daemon-v2) | .NET Core 2.1 Console | <p>A simple .NET Core application that displays the users of a tenant querying the Microsoft Graph using the identity of the application, instead of on behalf of a user.</p> ![topology](https://github.com/Azure-Samples/active-directory-dotnetcore-daemon-v2/blob/master/1-Call-MSGraph/ReadmeFiles/topology.png) <p>The sample also illustrates the variation with certificates.<p/> ![topology](https://github.com/Azure-Samples/active-directory-dotnetcore-daemon-v2/blob/master/1-Call-MSGraph/ReadmeFiles/topology-certificates.png)
-[active-directory-dotnet-daemon-v2](https://github.com/Azure-Samples/active-directory-dotnet-daemon-v2) | ASP.NET MVC | <p>A web application that sync's data from the Microsoft Graph using the identity of the application, instead of on behalf of a user.<p/>![topology](https://github.com/Azure-Samples/active-directory-dotnet-daemon-v2/blob/master/ReadmeFiles/topology.png)
+[active-directory-dotnetcore-daemon-v2](https://github.com/Azure-Samples/active-directory-dotnetcore-daemon-v2) | .NET Core 2.1 Console | <p>A simple .NET Core application that displays the users of a tenant querying the Microsoft Graph using the identity of the application, instead of on behalf of a user.</p> ![Daemon app topology](../../media/daemon-app-topology.png) <p>The sample also illustrates the variation with certificates.<p/> ![Daemon certificate-based auth topology](../../media/daemon-certificate-topology.png)
+[active-directory-dotnet-daemon-v2](https://github.com/Azure-Samples/active-directory-dotnet-daemon-v2) | ASP.NET MVC | <p>A web application that sync's data from the Microsoft Graph using the identity of the application, instead of on behalf of a user.<p/>![UserSync app topology](../../media/user-sync-app-topology.png)
 
 ## More info
 

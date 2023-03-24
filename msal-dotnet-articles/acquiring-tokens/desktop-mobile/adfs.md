@@ -1,5 +1,6 @@
 ---
 title: ADFS Support in MSAL.NET
+description: "Support of Azure Directory Federation Services with the MSAL.NET library."
 ---
 
 # ADFS Support in MSAL.NET

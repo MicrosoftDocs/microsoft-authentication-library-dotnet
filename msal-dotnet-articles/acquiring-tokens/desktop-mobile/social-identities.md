@@ -1,5 +1,6 @@
 ---
 title: Using MSAL.NET to sign-in users with social identities
+description: "You can use MSAL.NET to sign-in users with social identities by using Azure AD B2C. Azure AD B2C is built around the notion of policies. In MSAL.NET, specifying a policy translates to providing an authority."
 ---
 
 # Using MSAL.NET to sign-in users with social identities
@@ -180,7 +181,7 @@ We will provide an update to the wiki and this [issue](https://github.com/AzureA
 
 ### Known issue with Azure B2C
 
-MSAL.Net supports a [token cache](/dotnet/api/microsoft.identity.client.tokencache?view=azure-dotnet). The token caching key is based on the claims returned by the Identity Provider. Currently MSAL.Net needs two claims to build a token cache key:
+MSAL.Net supports a [token cache](/dotnet/api/microsoft.identity.client.tokencache). The token caching key is based on the claims returned by the Identity Provider. Currently MSAL.Net needs two claims to build a token cache key:
 
 1. `tid` which is the Azure AD Tenant Id
 1. `preferred_username`

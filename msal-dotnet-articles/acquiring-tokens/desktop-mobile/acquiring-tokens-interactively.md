@@ -1,8 +1,9 @@
 ---
-title: AcquireTokenInteractive API
+title: Acquiring tokens interactively
+description: "How to acquire tokens with MSAL.NET and user interaction."
 ---
 
-# `AcquireTokenInteractive` API
+# Acquiring tokens interactively
 
 The method to use to acquire a token interactively is `IPublicClientApplication.AcquireTokenInteractive`
 

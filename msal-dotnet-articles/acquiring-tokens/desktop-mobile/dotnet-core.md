@@ -1,5 +1,6 @@
 ---
 title: Using MSAL.NET with .NET Core
+description: "How to use MSAL.NET with .NET applications."
 ---
 
 # Using MSAL.NET with .NET (aka .NET Core)
