@@ -1,10 +1,11 @@
 ---
 title: Username and password authentication with MSAL.NET
+description: "In your desktop application, you can use the username and password flow to acquire a token silently. No UI is required when using the application."
 ---
 
 # Username and password authentication with MSAL.NET
 
-In your desktop application, you can use the Username/Password flow to acquire a token silently. No UI is required when using the application.
+In your desktop application, you can use the username and password flow to acquire a token silently. No UI is required when using the application.
 
 ## Recommendation
 
@@ -267,6 +268,4 @@ See [Azure Active Directory v2.0 and the OAuth 2.0 resource owner password crede
 
 Sample | Platform | Description
 ------ | -------- | -----------
-[active-directory-dotnetcore-console-up-v2](https://github.com/Azure-Samples/active-directory-dotnetcore-console-up-v2) | Console (.NET Core) | .NET Core console application letting a user signed-in with the Azure AD v2.0 endpoint using username/password to acquire a token for the Microsoft Graph ![topology](https://github.com/Azure-Samples/active-directory-dotnetcore-console-up-v2/blob/master/ReadmeFiles/Topology.png)
-
-See [Username and password authentication in MSAL.NET](./username-password-authentication.md).
+[active-directory-dotnetcore-console-up-v2](https://github.com/Azure-Samples/active-directory-dotnetcore-console-up-v2) | Console (.NET Core) | .NET Core console application letting a user signed-in with the Azure AD v2.0 endpoint using username/password to acquire a token for the Microsoft Graph ![Console app topology](../../media/console-app-topology.png)
