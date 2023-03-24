@@ -24,7 +24,7 @@ Some web APIs, when called unauthenticated, send back an `HTTP 401 (Unauthorized
 
 For instance:
 
-- if you navigate, in your browser, to https://graph.microsoft.com/v1.0/me, you'll get an HTTP 401 (Unauthorized) error, but the wwwAuthenticate header will tell you: get a token using this IdP (defined by its authorize endpoint URI), for this resource (Graph):
+- If you use your browser to havigate to `https://graph.microsoft.com/v1.0/me`, you'll get an HTTP 401 (Unauthorized) error, but the wwwAuthenticate header will tell you: get a token using this IdP (defined by its authorize endpoint URI), for this resource (Graph):
 
   ```text
   HTTP 401; Unauthorized

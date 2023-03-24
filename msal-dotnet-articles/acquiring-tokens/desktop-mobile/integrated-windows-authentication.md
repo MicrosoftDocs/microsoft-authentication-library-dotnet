@@ -148,7 +148,7 @@ It means that you may be singed into the device with a local computer account as
 
 Sample | Platform | Description
 ------ | -------- | -----------
-[active-directory-dotnet-iwa-v2](https://github.com/Azure-Samples/active-directory-dotnet-iwa-v2) | Console (.NET) | .NET Core console application letting the user signed-in in Windows, acquire, with the Azure AD v2.0 endpoint, a token for the Microsoft Graph ![](https://github.com/Azure-Samples/active-directory-dotnet-iwa-v2/blob/master/ReadmeFiles/Topology.png)
+[active-directory-dotnet-iwa-v2](https://github.com/Azure-Samples/active-directory-dotnet-iwa-v2) | Console (.NET) | .NET Core console application letting the user signed-in in Windows, acquire, with the Azure AD v2.0 endpoint, a token for the Microsoft Graph ![Topology for an IWA console application](../../media/iwa-console-topology.png)
 
 ## Additional information
 
