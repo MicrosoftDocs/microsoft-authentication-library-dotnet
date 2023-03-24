@@ -1,5 +1,6 @@
 ---
 title: Using MSAL.NET with Integrated Windows Authentication (IWA)
+description: "If your desktop or mobile application runs on Windows and on a machine connected to a Windows domain (AD or AAD joined) it is possible to use the Integrated Windows Authentication (IWA) to acquire a token silently. No UI is required when using the application."
 ---
 
 # Using MSAL.NET with Integrated Windows Authentication (IWA)
@@ -45,13 +46,13 @@ During the **[App registration](https://go.microsoft.com/fwlink/?linkid=2083908)
 - You don't need to provide a Reply URI
 - You need to choose **Yes** as the answer to the question **Treat application as a public client** (in the **Default client type** paragraph)
 
-  ![image](../../media/azure-ad-client-type.png)
+  ![Azure AD client type](../../media/azure-ad-client-type.png)
 
 ### Code
 
 <xref:Microsoft.Identity.Client.IPublicClientApplication> contains a method called `AcquireTokenByIntegratedWindowsAuth`
 
-[![image](../../media/ipublicclientapplication-interface.png)](/dotnet/api/microsoft.identity.client.publicclientapplication.acquiretokenbyintegratedwindowsauth?view=azure-dotnet)
+[![IPublicClientApplication interface](../../media/ipublicclientapplication-interface.png)](/dotnet/api/microsoft.identity.client.publicclientapplication.acquiretokenbyintegratedwindowsauth)
 
 ```csharp
 AcquireTokenByIntegratedWindowsAuth(IEnumerable<string> scopes)

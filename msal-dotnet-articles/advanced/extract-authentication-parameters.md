@@ -1,5 +1,6 @@
 ---
 title: Extract authentication parameters from WWW-Authenticate headers
+description: "This article is both a conceptual article of why you'd want to get information from WWW-authenticate headers, and how to do it."
 ---
 
 # Extract authentication parameters from WWW-Authenticate headers
@@ -75,7 +76,7 @@ The processing will be the same.
 
 ### Web APIs using Microsoft identity web and reacting to claims challenges
 
-Microsoft.Identity.web can send, a wwwAuthenticate header through one of the overrides of the [ITokenAcquisition.ReplyForbiddenWithWwwAuthenticateHeader](/dotnet/api/microsoft.identity.web.itokenacquisition.replyforbiddenwithwwwauthenticateheader?view=azure-dotnet-preview) method.
+Microsoft.Identity.web can send, a wwwAuthenticate header through one of the overrides of the <xref:Microsoft.Identity.Web.ITokenAcquisition.ReplyForbiddenWithWwwAuthenticateHeader(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.MsalUiRequiredException,Microsoft.AspNetCore.Http.HttpResponse)> method.
 
 It sends non-standard parameters:
 
