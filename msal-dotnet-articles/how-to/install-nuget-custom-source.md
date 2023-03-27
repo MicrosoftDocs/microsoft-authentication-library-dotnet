@@ -7,7 +7,7 @@ description: "How to install NuGet from a source other than the NuGet package fe
 
 There are times when you need to take a dependency on a non official version of MSAL:
 
-* An MSAL developer hands has put in a fix for a bug and would like you to validate it
+* A MSAL developer hands has put in a fix for a bug and would like you to validate it
 * You are making changes to MSAL on your own, package MSAL and want to try it out with an app
 
 ## Install a package from a local source
