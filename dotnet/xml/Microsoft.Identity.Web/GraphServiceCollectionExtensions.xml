@@ -1,0 +1,78 @@
+<Type Name="GraphServiceCollectionExtensions" FullName="Microsoft.Identity.Web.GraphServiceCollectionExtensions">
+  <TypeSignature Language="C#" Value="public static class GraphServiceCollectionExtensions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit GraphServiceCollectionExtensions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Web.GraphServiceCollectionExtensions" />
+  <TypeSignature Language="VB.NET" Value="Public Module GraphServiceCollectionExtensions" />
+  <TypeSignature Language="F#" Value="type GraphServiceCollectionExtensions = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Web.MicrosoftGraph</AssemblyName>
+    <AssemblyVersion>2.6.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Extensions methods on a MicrosoftIdentityAppCallingWebApiAuthenticationBuilder builder
+            to add support to call Microsoft Graph.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddMicrosoftGraph">
+      <MemberSignature Language="C#" Value="public static Microsoft.Extensions.DependencyInjection.IServiceCollection AddMicrosoftGraph (this Microsoft.Extensions.DependencyInjection.IServiceCollection services);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Extensions.DependencyInjection.IServiceCollection AddMicrosoftGraph(class Microsoft.Extensions.DependencyInjection.IServiceCollection services) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.GraphServiceCollectionExtensions.AddMicrosoftGraph(Microsoft.Extensions.DependencyInjection.IServiceCollection)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function AddMicrosoftGraph (services As IServiceCollection) As IServiceCollection" />
+      <MemberSignature Language="F#" Value="static member AddMicrosoftGraph : Microsoft.Extensions.DependencyInjection.IServiceCollection -&gt; Microsoft.Extensions.DependencyInjection.IServiceCollection" Usage="Microsoft.Identity.Web.GraphServiceCollectionExtensions.AddMicrosoftGraph services" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.MicrosoftGraph</AssemblyName>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="services" Type="Microsoft.Extensions.DependencyInjection.IServiceCollection" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="services">Builder.</param>
+        <summary>
+            Add support to call Microsoft Graph. From a named option and a configuration section.
+            </summary>
+        <returns>The service collection to chain.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddMicrosoftGraph">
+      <MemberSignature Language="C#" Value="public static Microsoft.Extensions.DependencyInjection.IServiceCollection AddMicrosoftGraph (this Microsoft.Extensions.DependencyInjection.IServiceCollection services, Action&lt;Microsoft.Identity.Web.MicrosoftGraphOptions&gt; configureMicrosoftGraphOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Extensions.DependencyInjection.IServiceCollection AddMicrosoftGraph(class Microsoft.Extensions.DependencyInjection.IServiceCollection services, class System.Action`1&lt;class Microsoft.Identity.Web.MicrosoftGraphOptions&gt; configureMicrosoftGraphOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.GraphServiceCollectionExtensions.AddMicrosoftGraph(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Microsoft.Identity.Web.MicrosoftGraphOptions})" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function AddMicrosoftGraph (services As IServiceCollection, configureMicrosoftGraphOptions As Action(Of MicrosoftGraphOptions)) As IServiceCollection" />
+      <MemberSignature Language="F#" Value="static member AddMicrosoftGraph : Microsoft.Extensions.DependencyInjection.IServiceCollection * Action&lt;Microsoft.Identity.Web.MicrosoftGraphOptions&gt; -&gt; Microsoft.Extensions.DependencyInjection.IServiceCollection" Usage="Microsoft.Identity.Web.GraphServiceCollectionExtensions.AddMicrosoftGraph (services, configureMicrosoftGraphOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.MicrosoftGraph</AssemblyName>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="services" Type="Microsoft.Extensions.DependencyInjection.IServiceCollection" RefType="this" />
+        <Parameter Name="configureMicrosoftGraphOptions" Type="System.Action&lt;Microsoft.Identity.Web.MicrosoftGraphOptions&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="services">Builder.</param>
+        <param name="configureMicrosoftGraphOptions">Delegate to configure the graph service options</param>
+        <summary>
+            Add support to call Microsoft Graph. From a base Graph URL and a default scope.
+            </summary>
+        <returns>The service collection to chain.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

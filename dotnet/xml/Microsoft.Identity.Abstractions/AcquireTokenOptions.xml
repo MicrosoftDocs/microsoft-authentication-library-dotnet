@@ -1,0 +1,368 @@
+<Type Name="AcquireTokenOptions" FullName="Microsoft.Identity.Abstractions.AcquireTokenOptions">
+  <TypeSignature Language="C#" Value="public class AcquireTokenOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AcquireTokenOptions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Abstractions.AcquireTokenOptions" />
+  <TypeSignature Language="VB.NET" Value="Public Class AcquireTokenOptions" />
+  <TypeSignature Language="F#" Value="type AcquireTokenOptions = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Options directing the token acquisition.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AcquireTokenOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.AcquireTokenOptions.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            constructor.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AcquireTokenOptions (Microsoft.Identity.Abstractions.AcquireTokenOptions other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Identity.Abstractions.AcquireTokenOptions other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.AcquireTokenOptions.#ctor(Microsoft.Identity.Abstractions.AcquireTokenOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (other As AcquireTokenOptions)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Identity.Abstractions.AcquireTokenOptions : Microsoft.Identity.Abstractions.AcquireTokenOptions -&gt; Microsoft.Identity.Abstractions.AcquireTokenOptions" Usage="new Microsoft.Identity.Abstractions.AcquireTokenOptions other" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="other" Type="Microsoft.Identity.Abstractions.AcquireTokenOptions" />
+      </Parameters>
+      <Docs>
+        <param name="other">To be added.</param>
+        <summary>
+            Copy constructor for <see cref="T:Microsoft.Identity.Abstractions.AcquireTokenOptions" /></summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthenticationOptionsName">
+      <MemberSignature Language="C#" Value="public string? AuthenticationOptionsName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AuthenticationOptionsName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.AuthenticationOptionsName" />
+      <MemberSignature Language="VB.NET" Value="Public Property AuthenticationOptionsName As String" />
+      <MemberSignature Language="F#" Value="member this.AuthenticationOptionsName : string with get, set" Usage="Microsoft.Identity.Abstractions.AcquireTokenOptions.AuthenticationOptionsName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the parameters describing the confidential client application (ClientId,
+            Region, Authority, client credentials) from a particular 
+            (ASP.NET Core) authentication scheme / settings.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Claims">
+      <MemberSignature Language="C#" Value="public string? Claims { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Claims" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.Claims" />
+      <MemberSignature Language="VB.NET" Value="Public Property Claims As String" />
+      <MemberSignature Language="F#" Value="member this.Claims : string with get, set" Usage="Microsoft.Identity.Abstractions.AcquireTokenOptions.Claims" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            A string with one or multiple claims to request. It's a json blob (encoded or not)
+            Normally used with Conditional Access. It receives the Claims member of the UiRequiredException.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public virtual Microsoft.Identity.Abstractions.AcquireTokenOptions Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Identity.Abstractions.AcquireTokenOptions Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.AcquireTokenOptions.Clone" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function Clone () As AcquireTokenOptions" />
+      <MemberSignature Language="F#" Value="abstract member Clone : unit -&gt; Microsoft.Identity.Abstractions.AcquireTokenOptions&#xA;override this.Clone : unit -&gt; Microsoft.Identity.Abstractions.AcquireTokenOptions" Usage="acquireTokenOptions.Clone " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Abstractions.AcquireTokenOptions</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Performs a shallow Clone the options (to be able to override them).
+            </summary>
+        <returns>A shallow Clone of the options.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CorrelationId">
+      <MemberSignature Language="C#" Value="public Guid? CorrelationId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.Guid&gt; CorrelationId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.CorrelationId" />
+      <MemberSignature Language="VB.NET" Value="Public Property CorrelationId As Nullable(Of Guid)" />
+      <MemberSignature Language="F#" Value="member this.CorrelationId : Nullable&lt;Guid&gt; with get, set" Usage="Microsoft.Identity.Abstractions.AcquireTokenOptions.CorrelationId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Guid&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Sets the correlation id to be used in the request to the STS "/token" endpoint.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtraHeadersParameters">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,string&gt;? ExtraHeadersParameters { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, string&gt; ExtraHeadersParameters" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.ExtraHeadersParameters" />
+      <MemberSignature Language="VB.NET" Value="Public Property ExtraHeadersParameters As IDictionary(Of String, String)" />
+      <MemberSignature Language="F#" Value="member this.ExtraHeadersParameters : System.Collections.Generic.IDictionary&lt;string, string&gt; with get, set" Usage="Microsoft.Identity.Abstractions.AcquireTokenOptions.ExtraHeadersParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtraQueryParameters">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,string&gt;? ExtraQueryParameters { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, string&gt; ExtraQueryParameters" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.ExtraQueryParameters" />
+      <MemberSignature Language="VB.NET" Value="Public Property ExtraQueryParameters As IDictionary(Of String, String)" />
+      <MemberSignature Language="F#" Value="member this.ExtraQueryParameters : System.Collections.Generic.IDictionary&lt;string, string&gt; with get, set" Usage="Microsoft.Identity.Abstractions.AcquireTokenOptions.ExtraQueryParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Sets query parameters for the query string in the HTTP request to the 
+            "/token" endpoint.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForceRefresh">
+      <MemberSignature Language="C#" Value="public bool ForceRefresh { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ForceRefresh" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.ForceRefresh" />
+      <MemberSignature Language="VB.NET" Value="Public Property ForceRefresh As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ForceRefresh : bool with get, set" Usage="Microsoft.Identity.Abstractions.AcquireTokenOptions.ForceRefresh" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies if the token request will ignore the access token in the token cache
+            and will attempt to acquire a new access token.
+            If <c>true</c>, the request will ignore the token cache. The default is <c>false</c>.
+            Use this option with care and only when needed, for instance, if you know that conditional access policies have changed,
+            for it induces performance degradation, as the token cache is not utilized, and the STS might throttle the app.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="JwkClaim">
+      <MemberSignature Language="C#" Value="public string? JwkClaim { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string JwkClaim" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.JwkClaim" />
+      <MemberSignature Language="VB.NET" Value="Public Property JwkClaim As String" />
+      <MemberSignature Language="F#" Value="member this.JwkClaim : string with get, set" Usage="Microsoft.Identity.Abstractions.AcquireTokenOptions.JwkClaim" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            In addition to the <see cref="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.PopPublicKey" />, specificy the JwkClaim when needed in specific POP protocols. 
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LongRunningWebApiSessionKey">
+      <MemberSignature Language="C#" Value="public string? LongRunningWebApiSessionKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LongRunningWebApiSessionKey" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.LongRunningWebApiSessionKey" />
+      <MemberSignature Language="VB.NET" Value="Public Property LongRunningWebApiSessionKey As String" />
+      <MemberSignature Language="F#" Value="member this.LongRunningWebApiSessionKey : string with get, set" Usage="Microsoft.Identity.Abstractions.AcquireTokenOptions.LongRunningWebApiSessionKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Key used for long running web APIs that need to call downstream web
+            APIs on behalf of the user. Can be null, if you are not developing a long
+            running web API, <see cref="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.LongRunningWebApiSessionKeyAuto" /> if you want
+            the token acquirer to allocate a session key for you, or your own string
+            if you want to associate the session with some information you have externally
+            (for instance a Microsoft Graph hook identifier).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LongRunningWebApiSessionKeyAuto">
+      <MemberSignature Language="C#" Value="public static string LongRunningWebApiSessionKeyAuto { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string LongRunningWebApiSessionKeyAuto" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.LongRunningWebApiSessionKeyAuto" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property LongRunningWebApiSessionKeyAuto As String" />
+      <MemberSignature Language="F#" Value="static member LongRunningWebApiSessionKeyAuto : string" Usage="Microsoft.Identity.Abstractions.AcquireTokenOptions.LongRunningWebApiSessionKeyAuto" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Value that can be used for <see cref="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.LongRunningWebApiSessionKey" /> so that
+            the token acquirer allocates the long running web api session key for the developer.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PopPublicKey">
+      <MemberSignature Language="C#" Value="public string? PopPublicKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PopPublicKey" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.PopPublicKey" />
+      <MemberSignature Language="VB.NET" Value="Public Property PopPublicKey As String" />
+      <MemberSignature Language="F#" Value="member this.PopPublicKey : string with get, set" Usage="Microsoft.Identity.Abstractions.AcquireTokenOptions.PopPublicKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Modifies the token acquisition request so that the acquired token is a Proof of Possession token (PoP),
+            rather than a Bearer token.
+            PoP tokens are similar to Bearer tokens, but are bound to the HTTP request and to a cryptographic key,
+            which MSAL can manage. See https://aka.ms/msal-net-pop.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tenant">
+      <MemberSignature Language="C#" Value="public string? Tenant { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Tenant" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.Tenant" />
+      <MemberSignature Language="VB.NET" Value="Public Property Tenant As String" />
+      <MemberSignature Language="F#" Value="member this.Tenant : string with get, set" Usage="Microsoft.Identity.Abstractions.AcquireTokenOptions.Tenant" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            (Microsoft identity specific)
+            Enables to override the tenant/account for which to get a token. 
+            This is useful in multi-tenant apps in the cases where a given user account is a guest 
+            in other tenants, and you want to acquire tokens for a specific tenant.
+            </summary>
+        <value>To be added.</value>
+        <remarks>Can be the tenant ID or domain name.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserFlow">
+      <MemberSignature Language="C#" Value="public string? UserFlow { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserFlow" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.UserFlow" />
+      <MemberSignature Language="VB.NET" Value="Public Property UserFlow As String" />
+      <MemberSignature Language="F#" Value="member this.UserFlow : string with get, set" Usage="Microsoft.Identity.Abstractions.AcquireTokenOptions.UserFlow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            (Microsoft identity specific)
+            In the case of AzureAD B2C, uses a particular user flow.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

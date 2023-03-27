@@ -1,0 +1,132 @@
+<Type Name="KeyVaultSecurityKey" FullName="Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey">
+  <TypeSignature Language="C#" Value="public class KeyVaultSecurityKey : Microsoft.IdentityModel.Tokens.SecurityKey" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit KeyVaultSecurityKey extends Microsoft.IdentityModel.Tokens.SecurityKey" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey" />
+  <TypeSignature Language="VB.NET" Value="Public Class KeyVaultSecurityKey&#xA;Inherits SecurityKey" />
+  <TypeSignature Language="F#" Value="type KeyVaultSecurityKey = class&#xA;    inherit SecurityKey" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.IdentityModel.KeyVaultExtensions</AssemblyName>
+    <AssemblyVersion>6.27.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.IdentityModel.Tokens.SecurityKey</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Provides signing and verifying operations using Azure Key Vault.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected KeyVaultSecurityKey ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.KeyVaultExtensions</AssemblyName>
+        <AssemblyVersion>6.27.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KeyVaultSecurityKey (string keyIdentifier, Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey.AuthenticationCallback callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string keyIdentifier, class Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey/AuthenticationCallback callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey.#ctor(System.String,Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey.AuthenticationCallback)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (keyIdentifier As String, callback As KeyVaultSecurityKey.AuthenticationCallback)" />
+      <MemberSignature Language="F#" Value="new Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey : string * Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey.AuthenticationCallback -&gt; Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey" Usage="new Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey (keyIdentifier, callback)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.KeyVaultExtensions</AssemblyName>
+        <AssemblyVersion>6.27.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="keyIdentifier" Type="System.String" />
+        <Parameter Name="callback" Type="Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey+AuthenticationCallback" />
+      </Parameters>
+      <Docs>
+        <param name="keyIdentifier">The key identifier that is recognized by KeyVault.</param>
+        <param name="callback">The authentication callback that will obtain the access_token for KeyVault.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">if <paramref name="callback" />is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Callback">
+      <MemberSignature Language="C#" Value="public Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey.AuthenticationCallback Callback { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey/AuthenticationCallback Callback" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey.Callback" />
+      <MemberSignature Language="VB.NET" Value="Public Property Callback As KeyVaultSecurityKey.AuthenticationCallback" />
+      <MemberSignature Language="F#" Value="member this.Callback : Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey.AuthenticationCallback with get, set" Usage="Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey.Callback" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.KeyVaultExtensions</AssemblyName>
+        <AssemblyVersion>6.27.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey+AuthenticationCallback</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The authentication callback delegate that retrieves an access token for the KeyVault.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyId">
+      <MemberSignature Language="C#" Value="public override string KeyId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string KeyId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey.KeyId" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property KeyId As String" />
+      <MemberSignature Language="F#" Value="member this.KeyId : string with get, set" Usage="Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey.KeyId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.KeyVaultExtensions</AssemblyName>
+        <AssemblyVersion>6.27.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The uniform resource identifier of the security key.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeySize">
+      <MemberSignature Language="C#" Value="public override int KeySize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 KeySize" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey.KeySize" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property KeySize As Integer" />
+      <MemberSignature Language="F#" Value="member this.KeySize : int" Usage="Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey.KeySize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.KeyVaultExtensions</AssemblyName>
+        <AssemblyVersion>6.27.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The size of the security key.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

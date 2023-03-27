@@ -1,0 +1,94 @@
+<Type Name="AzureIdentityForKubernetesClientAssertion" FullName="Microsoft.Identity.Web.AzureIdentityForKubernetesClientAssertion">
+  <TypeSignature Language="C#" Value="public class AzureIdentityForKubernetesClientAssertion : Microsoft.Identity.Web.ClientAssertionProviderBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AzureIdentityForKubernetesClientAssertion extends Microsoft.Identity.Web.ClientAssertionProviderBase" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Web.AzureIdentityForKubernetesClientAssertion" />
+  <TypeSignature Language="VB.NET" Value="Public Class AzureIdentityForKubernetesClientAssertion&#xA;Inherits ClientAssertionProviderBase" />
+  <TypeSignature Language="F#" Value="type AzureIdentityForKubernetesClientAssertion = class&#xA;    inherit ClientAssertionProviderBase" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
+    <AssemblyVersion>2.6.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Identity.Web.ClientAssertionProviderBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Gets a signed assertion from Azure workload identity for kubernetes when an app is running in a container
+            in Azure Kubernetes Services. See https://aka.ms/ms-id-web/certificateless and
+            https://learn.microsoft.com/azure/aks/workload-identity-overview
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AzureIdentityForKubernetesClientAssertion ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.AzureIdentityForKubernetesClientAssertion.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets a signed assertion from Azure workload identity for kubernetes. The file path is provided
+            by an environment variable ("AZURE_FEDERATED_TOKEN_FILE")
+            See https://aka.ms/ms-id-web/certificateless.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AzureIdentityForKubernetesClientAssertion (string? filePath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string filePath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.AzureIdentityForKubernetesClientAssertion.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (filePath As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Identity.Web.AzureIdentityForKubernetesClientAssertion : string -&gt; Microsoft.Identity.Web.AzureIdentityForKubernetesClientAssertion" Usage="new Microsoft.Identity.Web.AzureIdentityForKubernetesClientAssertion filePath" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="filePath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filePath" />
+        <summary>
+            Gets a signed assertion from a file.
+            See https://aka.ms/ms-id-web/certificateless.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetClientAssertion">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task&lt;Microsoft.Identity.Web.ClientAssertion&gt; GetClientAssertion (System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Identity.Web.ClientAssertion&gt; GetClientAssertion(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.AzureIdentityForKubernetesClientAssertion.GetClientAssertion(System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetClientAssertion (cancellationToken As CancellationToken) As Task(Of ClientAssertion)" />
+      <MemberSignature Language="F#" Value="override this.GetClientAssertion : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Web.ClientAssertion&gt;" Usage="azureIdentityForKubernetesClientAssertion.GetClientAssertion cancellationToken" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Identity.Web.ClientAssertion&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Get the signed assertion from a file.
+            </summary>
+        <returns>The signed assertion.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
