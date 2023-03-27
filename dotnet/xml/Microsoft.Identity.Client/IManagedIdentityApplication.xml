@@ -1,0 +1,77 @@
+<Type Name="IManagedIdentityApplication" FullName="Microsoft.Identity.Client.IManagedIdentityApplication">
+  <TypeSignature Language="C#" Value="public interface IManagedIdentityApplication : Microsoft.Identity.Client.IApplicationBase" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IManagedIdentityApplication implements class Microsoft.Identity.Client.IApplicationBase" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Client.IManagedIdentityApplication" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IManagedIdentityApplication&#xA;Implements IApplicationBase" />
+  <TypeSignature Language="F#" Value="type IManagedIdentityApplication = interface&#xA;    interface IApplicationBase" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+    <AssemblyVersion>4.51.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Identity.Client.IApplicationBase</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Component to be used with managed identity applications for Azure resources.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AcquireTokenForManagedIdentity">
+      <MemberSignature Language="C#" Value="public Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder AcquireTokenForManagedIdentity (string resource);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder AcquireTokenForManagedIdentity(string resource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.IManagedIdentityApplication.AcquireTokenForManagedIdentity(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function AcquireTokenForManagedIdentity (resource As String) As AcquireTokenForManagedIdentityParameterBuilder" />
+      <MemberSignature Language="F#" Value="abstract member AcquireTokenForManagedIdentity : string -&gt; Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder" Usage="iManagedIdentityApplication.AcquireTokenForManagedIdentity resource" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resource" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="resource">resource requested to access the protected API. For this flow (managed identity), the resource
+            should be of the form "{ResourceIdUri}" or {ResourceIdUri/.default} for instance <c>https://management.azure.net</c> or, for Microsoft
+            Graph, <c>https://graph.microsoft.com/.default</c>.</param>
+        <summary>
+            Acquires token for a managed identity configured on Azure resource. See https://aka.ms/msal-net-managed-identity.
+            </summary>
+        <returns>A builder enabling you to add optional parameters before executing the token request</returns>
+        <remarks>You can also chain the following optional parameters:
+            <see cref="M:Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder.WithForceRefresh(System.Boolean)" /></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppTokenCache">
+      <MemberSignature Language="C#" Value="public Microsoft.Identity.Client.ITokenCache AppTokenCache { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Identity.Client.ITokenCache AppTokenCache" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.IManagedIdentityApplication.AppTokenCache" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AppTokenCache As ITokenCache" />
+      <MemberSignature Language="F#" Value="member this.AppTokenCache : Microsoft.Identity.Client.ITokenCache" Usage="Microsoft.Identity.Client.IManagedIdentityApplication.AppTokenCache" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.ITokenCache</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Application token cache. This case holds access tokens for the application. It's maintained
+            and updated silently if needed when calling <see cref="M:Microsoft.Identity.Client.IManagedIdentityApplication.AcquireTokenForManagedIdentity(System.String)" /></summary>
+        <value>To be added.</value>
+        <remarks>On .NET Framework and .NET Core you can also customize the token cache serialization.
+            See https://aka.ms/msal-net-token-cache-serialization. This is taken care of by MSAL.NET on other platforms.
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

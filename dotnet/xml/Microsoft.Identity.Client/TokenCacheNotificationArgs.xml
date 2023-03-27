@@ -8,6 +8,7 @@
     <AssemblyName>Microsoft.Identity.Client</AssemblyName>
     <AssemblyVersion>4.48.1.0</AssemblyVersion>
     <AssemblyVersion>4.49.1.0</AssemblyVersion>
+    <AssemblyVersion>4.51.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -34,6 +35,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="tokenCache" Type="Microsoft.Identity.Client.ITokenCacheSerializer" />
@@ -73,6 +75,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="tokenCache" Type="Microsoft.Identity.Client.ITokenCacheSerializer" />
@@ -114,6 +117,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="tokenCache" Type="Microsoft.Identity.Client.ITokenCacheSerializer" />
@@ -159,6 +163,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="tokenCache" Type="Microsoft.Identity.Client.ITokenCacheSerializer" />
@@ -208,6 +213,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.IAccount</ReturnType>
@@ -231,6 +237,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.CancellationToken</ReturnType>
@@ -255,6 +262,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -278,13 +286,14 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Guid</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            The correlation id associated with the request. See <see cref="M:Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithCorrelationId(System.Guid)" /></summary>
+            The correlation id associated with the request. See <see cref="M:Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder`1.WithCorrelationId(System.Guid)" /></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -300,6 +309,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -324,6 +334,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -334,8 +345,9 @@
             </summary>
         <value>To be added.</value>
         <remarks>  
-            If this flag is false in the OnAfterAccessAsync notification, the *application* token cache - used by client_credentials flow / AcquireTokenForClient -  can be deleted.        
-            MSAL takes into consideration access tokens expiration when computing this flag, but not refresh token expiration, which is not known to MSAL.
+            If this flag is false in the OnAfterAccessAsync notification - the node can be deleted from the underlying storage (e.g. IDistributedCache).
+            MSAL takes into consideration access tokens expiration when computing this flag. Use in conjunction with SuggestedCacheExpiry.
+            If a refresh token exists in the cache, this proprety will always be true. 
             </remarks>
       </Docs>
     </Member>
@@ -350,6 +362,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Abstractions.IIdentityLogger</ReturnType>
@@ -374,6 +387,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -400,6 +414,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -423,6 +438,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
@@ -448,6 +464,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -473,6 +490,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.DateTimeOffset&gt;</ReturnType>
@@ -481,9 +499,8 @@
         <summary>
             Suggested value of the expiry, to help determining the cache eviction time. 
             This value is <b>only</b> set on the <code>OnAfterAccess</code> delegate, on a cache write
-            operation (that is when <code>args.HasStateChanged</code> is <code>true</code>) and when the cache write 
-            is triggered from the <code>AcquireTokenForClient</code> method. In all other cases it's <code>null</code>, as there is a refresh token, and therefore the
-            access tokens are refreshable.
+            operation (that is when <code>args.HasStateChanged</code> is <code>true</code>) and when the cache node contains only access tokens.        
+            In all other cases it's <code>null</code>. 
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -500,6 +517,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -528,6 +546,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ITokenCacheSerializer</ReturnType>
@@ -552,6 +571,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>

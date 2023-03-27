@@ -1,18 +1,22 @@
 <Type Name="ClientApplicationBase" FullName="Microsoft.Identity.Client.ClientApplicationBase">
-  <TypeSignature Language="C#" Value="public abstract class ClientApplicationBase : Microsoft.Identity.Client.IClientApplicationBase" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ClientApplicationBase extends System.Object implements class Microsoft.Identity.Client.IClientApplicationBase" />
+  <TypeSignature Language="C#" Value="public abstract class ClientApplicationBase : Microsoft.Identity.Client.ApplicationBase, Microsoft.Identity.Client.IClientApplicationBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ClientApplicationBase extends Microsoft.Identity.Client.ApplicationBase implements class Microsoft.Identity.Client.IApplicationBase, class Microsoft.Identity.Client.IClientApplicationBase" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Client.ClientApplicationBase" />
-  <TypeSignature Language="VB.NET" Value="Public MustInherit Class ClientApplicationBase&#xA;Implements IClientApplicationBase" />
-  <TypeSignature Language="F#" Value="type ClientApplicationBase = class&#xA;    interface IClientApplicationBase" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class ClientApplicationBase&#xA;Inherits ApplicationBase&#xA;Implements IClientApplicationBase" />
+  <TypeSignature Language="F#" Value="type ClientApplicationBase = class&#xA;    inherit ApplicationBase&#xA;    interface IClientApplicationBase&#xA;    interface IApplicationBase" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Identity.Client</AssemblyName>
     <AssemblyVersion>4.48.1.0</AssemblyVersion>
     <AssemblyVersion>4.49.1.0</AssemblyVersion>
+    <AssemblyVersion>4.51.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
-    <BaseTypeName>System.Object</BaseTypeName>
+    <BaseTypeName>Microsoft.Identity.Client.ApplicationBase</BaseTypeName>
   </Base>
   <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Identity.Client.IApplicationBase</InterfaceName>
+    </Interface>
     <Interface>
       <InterfaceName>Microsoft.Identity.Client.IClientApplicationBase</InterfaceName>
     </Interface>
@@ -40,6 +44,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenSilentParameterBuilder</ReturnType>
@@ -90,6 +95,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenSilentParameterBuilder</ReturnType>
@@ -142,6 +148,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -192,6 +199,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -251,6 +259,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.IAppConfig</ReturnType>
@@ -277,6 +286,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -285,7 +295,7 @@
         <summary>
             Gets the URL of the authority, or security token service (STS) from which MSAL.NET will acquire security tokens
             The return value of this property is either the value provided by the developer in the constructor of the application, or otherwise
-            the value of the <see cref="F:Microsoft.Identity.Client.ClientApplicationBase.DefaultAuthority" /> static member (that is <c>https://login.microsoftonline.com/common/</c>)
+            the value of the <see cref="F:Microsoft.Identity.Client.ApplicationBase.DefaultAuthority" /> static member (that is <c>https://login.microsoftonline.com/common/</c>)
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -305,6 +315,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -342,6 +353,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -379,6 +391,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.IAccount&gt;</ReturnType>
@@ -409,6 +422,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.IAccount&gt;</ReturnType>
@@ -444,6 +458,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.Identity.Client.IAccount&gt;&gt;</ReturnType>
@@ -471,6 +486,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.Identity.Client.IAccount&gt;&gt;</ReturnType>
@@ -500,6 +516,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.Identity.Client.IAccount&gt;&gt;</ReturnType>
@@ -527,6 +544,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.Identity.Client.IAccount&gt;&gt;</ReturnType>
@@ -561,6 +579,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -602,6 +621,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -646,6 +666,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -686,6 +707,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -713,6 +735,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -745,6 +768,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -783,6 +807,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -824,6 +849,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ITokenCache</ReturnType>
@@ -854,6 +880,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>

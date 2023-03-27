@@ -1,8 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.Identity.Client.Desktop" Version="4.49.1.0" />
-    <Assembly Name="Microsoft.Identity.Client" Version="4.49.1.0" />
+    <Assembly Name="Microsoft.Identity.Client.Broker" Version="4.51.0.0" />
+    <Assembly Name="Microsoft.Identity.Client.Desktop" Version="4.51.0.0" />
+    <Assembly Name="Microsoft.Identity.Client" Version="4.51.0.0" />
+    <Assembly Name="Microsoft.Identity.Web" Version="2.6.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.JsonWebTokens" Version="6.27.0.0" />
   </Assemblies>
   <Namespace Name="Microsoft.Identity.Client">
     <Type Name="Microsoft.Identity.Client.AadAuthorityAudience" Id="T:Microsoft.Identity.Client.AadAuthorityAudience">
@@ -14,9 +17,6 @@
     </Type>
     <Type Name="Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1" Id="T:Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1">
       <Member Id="M:Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.#ctor" />
-      <Member Id="M:Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.ExecuteAsync" />
-      <Member Id="M:Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.ExecuteAsync(System.Threading.CancellationToken)" />
-      <Member Id="M:Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.Validate" />
       <Member Id="M:Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithAdfsAuthority(System.String,System.Boolean)" />
       <Member Id="M:Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithAuthority(Microsoft.Identity.Client.AadAuthorityAudience,System.Boolean)" />
       <Member Id="M:Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithAuthority(Microsoft.Identity.Client.AzureCloudInstance,Microsoft.Identity.Client.AadAuthorityAudience,System.Boolean)" />
@@ -27,7 +27,6 @@
       <Member Id="M:Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithAuthority(System.String,System.String,System.Boolean)" />
       <Member Id="M:Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithB2CAuthority(System.String)" />
       <Member Id="M:Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithClaims(System.String)" />
-      <Member Id="M:Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithCorrelationId(System.Guid)" />
       <Member Id="M:Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithExtraQueryParameters(System.Collections.Generic.Dictionary{System.String,System.String})" />
       <Member Id="M:Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithExtraQueryParameters(System.String)" />
       <Member Id="M:Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithScopes(System.Collections.Generic.IEnumerable{System.String})" />
@@ -45,25 +44,18 @@
       <Member Id="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithAuthority(System.String,System.String,System.Boolean)" />
       <Member Id="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithAuthority(System.Uri,System.Boolean)" />
       <Member Id="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithB2CAuthority(System.String)" />
-      <Member Id="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithCacheOptions(Microsoft.Identity.Client.CacheOptions)" />
       <Member Id="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithClientCapabilities(System.Collections.Generic.IEnumerable{System.String})" />
       <Member Id="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithClientId(System.String)" />
       <Member Id="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithClientName(System.String)" />
       <Member Id="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithClientVersion(System.String)" />
-      <Member Id="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithDebugLoggingCallback(Microsoft.Identity.Client.LogLevel,System.Boolean,System.Boolean)" />
-      <Member Id="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithExperimentalFeatures(System.Boolean)" />
       <Member Id="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithExtraQueryParameters(System.Collections.Generic.IDictionary{System.String,System.String})" />
       <Member Id="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithExtraQueryParameters(System.String)" />
-      <Member Id="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithHttpClientFactory(Microsoft.Identity.Client.IMsalHttpClientFactory)" />
-      <Member Id="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithHttpClientFactory(Microsoft.Identity.Client.IMsalHttpClientFactory,System.Boolean)" />
       <Member Id="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithInstanceDicoveryMetadata(System.String)" />
       <Member Id="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithInstanceDicoveryMetadata(System.Uri)" />
       <Member Id="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithInstanceDiscovery(System.Boolean)" />
       <Member Id="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithInstanceDiscoveryMetadata(System.String)" />
       <Member Id="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithInstanceDiscoveryMetadata(System.Uri)" />
       <Member Id="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithLegacyCacheCompatibility(System.Boolean)" />
-      <Member Id="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithLogging(Microsoft.Identity.Client.LogCallback,System.Nullable{Microsoft.Identity.Client.LogLevel},System.Nullable{System.Boolean},System.Nullable{System.Boolean})" />
-      <Member Id="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithLogging(Microsoft.IdentityModel.Abstractions.IIdentityLogger,System.Boolean)" />
       <Member Id="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithOptions(Microsoft.Identity.Client.ApplicationOptions)" />
       <Member Id="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithRedirectUri(System.String)" />
       <Member Id="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithTelemetry(Microsoft.Identity.Client.ITelemetryConfig)" />
@@ -76,6 +68,10 @@
       <Member Id="M:Microsoft.Identity.Client.AbstractConfidentialClientAcquireTokenParameterBuilder`1.ExecuteAsync(System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.Identity.Client.AbstractConfidentialClientAcquireTokenParameterBuilder`1.Validate" />
       <Member Id="M:Microsoft.Identity.Client.AbstractConfidentialClientAcquireTokenParameterBuilder`1.WithProofOfPossession(Microsoft.Identity.Client.AppConfig.PoPAuthenticationConfiguration)" />
+    </Type>
+    <Type Name="Microsoft.Identity.Client.AbstractManagedIdentityAcquireTokenParameterBuilder`1" Id="T:Microsoft.Identity.Client.AbstractManagedIdentityAcquireTokenParameterBuilder`1">
+      <Member Id="M:Microsoft.Identity.Client.AbstractManagedIdentityAcquireTokenParameterBuilder`1.#ctor" />
+      <Member Id="M:Microsoft.Identity.Client.AbstractManagedIdentityAcquireTokenParameterBuilder`1.ExecuteAsync(System.Threading.CancellationToken)" />
     </Type>
     <Type Name="Microsoft.Identity.Client.AbstractPublicClientAcquireTokenParameterBuilder`1" Id="T:Microsoft.Identity.Client.AbstractPublicClientAcquireTokenParameterBuilder`1">
       <Member Id="M:Microsoft.Identity.Client.AbstractPublicClientAcquireTokenParameterBuilder`1.ExecuteAsync(System.Threading.CancellationToken)" />
@@ -117,9 +113,11 @@
       <Member Id="M:Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder.Validate" />
       <Member Id="M:Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder.WithAzureRegion(System.Boolean)" />
       <Member Id="M:Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder.WithForceRefresh(System.Boolean)" />
-      <Member Id="M:Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder.WithManagedIdentity(System.String)" />
       <Member Id="M:Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder.WithPreferredAzureRegion(System.Boolean,System.String,System.Boolean)" />
       <Member Id="M:Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder.WithSendX5C(System.Boolean)" />
+    </Type>
+    <Type Name="Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder" Id="T:Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder">
+      <Member Id="M:Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder.WithForceRefresh(System.Boolean)" />
     </Type>
     <Type Name="Microsoft.Identity.Client.AcquireTokenInteractiveParameterBuilder" Id="T:Microsoft.Identity.Client.AcquireTokenInteractiveParameterBuilder">
       <Member Id="M:Microsoft.Identity.Client.AcquireTokenInteractiveParameterBuilder.Validate" />
@@ -152,6 +150,7 @@
       <Member Id="M:Microsoft.Identity.Client.AcquireTokenWithDeviceCodeParameterBuilder.Validate" />
       <Member Id="M:Microsoft.Identity.Client.AcquireTokenWithDeviceCodeParameterBuilder.WithDeviceCodeResultCallback(System.Func{Microsoft.Identity.Client.DeviceCodeResult,System.Threading.Tasks.Task})" />
     </Type>
+    <Type Name="Microsoft.Identity.Client.ApplicationBase" Id="T:Microsoft.Identity.Client.ApplicationBase" />
     <Type Name="Microsoft.Identity.Client.ApplicationOptions" Id="T:Microsoft.Identity.Client.ApplicationOptions">
       <Member Id="M:Microsoft.Identity.Client.ApplicationOptions.#ctor" />
       <Member Id="P:Microsoft.Identity.Client.ApplicationOptions.AadAuthorityAudience" />
@@ -161,12 +160,9 @@
       <Member Id="P:Microsoft.Identity.Client.ApplicationOptions.ClientName" />
       <Member Id="P:Microsoft.Identity.Client.ApplicationOptions.ClientVersion" />
       <Member Id="P:Microsoft.Identity.Client.ApplicationOptions.Component" />
-      <Member Id="P:Microsoft.Identity.Client.ApplicationOptions.EnablePiiLogging" />
       <Member Id="P:Microsoft.Identity.Client.ApplicationOptions.Instance" />
-      <Member Id="P:Microsoft.Identity.Client.ApplicationOptions.IsDefaultPlatformLoggingEnabled" />
       <Member Id="P:Microsoft.Identity.Client.ApplicationOptions.KerberosServicePrincipalName" />
       <Member Id="P:Microsoft.Identity.Client.ApplicationOptions.LegacyCacheCompatibilityEnabled" />
-      <Member Id="P:Microsoft.Identity.Client.ApplicationOptions.LogLevel" />
       <Member Id="P:Microsoft.Identity.Client.ApplicationOptions.RedirectUri" />
       <Member Id="P:Microsoft.Identity.Client.ApplicationOptions.TenantId" />
       <Member Id="P:Microsoft.Identity.Client.ApplicationOptions.TicketContainer" />
@@ -229,6 +225,29 @@
       <Member Id="F:Microsoft.Identity.Client.AzureCloudInstance.AzurePublic" />
       <Member Id="F:Microsoft.Identity.Client.AzureCloudInstance.AzureUsGovernment" />
       <Member Id="F:Microsoft.Identity.Client.AzureCloudInstance.None" />
+    </Type>
+    <Type Name="Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder`1" Id="T:Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder`1">
+      <Member Id="M:Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder`1.#ctor" />
+      <Member Id="M:Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder`1.ExecuteAsync" />
+      <Member Id="M:Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder`1.ExecuteAsync(System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder`1.Validate" />
+      <Member Id="M:Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder`1.WithCorrelationId(System.Guid)" />
+    </Type>
+    <Type Name="Microsoft.Identity.Client.BaseAbstractApplicationBuilder`1" Id="T:Microsoft.Identity.Client.BaseAbstractApplicationBuilder`1">
+      <Member Id="M:Microsoft.Identity.Client.BaseAbstractApplicationBuilder`1.WithCacheOptions(Microsoft.Identity.Client.CacheOptions)" />
+      <Member Id="M:Microsoft.Identity.Client.BaseAbstractApplicationBuilder`1.WithDebugLoggingCallback(Microsoft.Identity.Client.LogLevel,System.Boolean,System.Boolean)" />
+      <Member Id="M:Microsoft.Identity.Client.BaseAbstractApplicationBuilder`1.WithExperimentalFeatures(System.Boolean)" />
+      <Member Id="M:Microsoft.Identity.Client.BaseAbstractApplicationBuilder`1.WithHttpClientFactory(Microsoft.Identity.Client.IMsalHttpClientFactory)" />
+      <Member Id="M:Microsoft.Identity.Client.BaseAbstractApplicationBuilder`1.WithHttpClientFactory(Microsoft.Identity.Client.IMsalHttpClientFactory,System.Boolean)" />
+      <Member Id="M:Microsoft.Identity.Client.BaseAbstractApplicationBuilder`1.WithLogging(Microsoft.Identity.Client.LogCallback,System.Nullable{Microsoft.Identity.Client.LogLevel},System.Nullable{System.Boolean},System.Nullable{System.Boolean})" />
+      <Member Id="M:Microsoft.Identity.Client.BaseAbstractApplicationBuilder`1.WithLogging(Microsoft.IdentityModel.Abstractions.IIdentityLogger,System.Boolean)" />
+      <Member Id="M:Microsoft.Identity.Client.BaseAbstractApplicationBuilder`1.WithOptions(Microsoft.Identity.Client.BaseApplicationOptions)" />
+    </Type>
+    <Type Name="Microsoft.Identity.Client.BaseApplicationOptions" Id="T:Microsoft.Identity.Client.BaseApplicationOptions">
+      <Member Id="M:Microsoft.Identity.Client.BaseApplicationOptions.#ctor" />
+      <Member Id="P:Microsoft.Identity.Client.BaseApplicationOptions.EnablePiiLogging" />
+      <Member Id="P:Microsoft.Identity.Client.BaseApplicationOptions.IsDefaultPlatformLoggingEnabled" />
+      <Member Id="P:Microsoft.Identity.Client.BaseApplicationOptions.LogLevel" />
     </Type>
     <Type Name="Microsoft.Identity.Client.CacheOptions" Id="T:Microsoft.Identity.Client.CacheOptions">
       <Member Id="M:Microsoft.Identity.Client.CacheOptions.#ctor" />
@@ -300,6 +319,7 @@
       <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplication.Microsoft#Identity#Client#IConfidentialClientApplicationWithCertificate#AcquireTokenForClientWithCertificateAsync(System.Collections.Generic.IEnumerable{System.String},System.Boolean)" />
       <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplication.Microsoft#Identity#Client#IConfidentialClientApplicationWithCertificate#AcquireTokenOnBehalfOfWithCertificateAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.UserAssertion)" />
       <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplication.Microsoft#Identity#Client#IConfidentialClientApplicationWithCertificate#AcquireTokenOnBehalfOfWithCertificateAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.UserAssertion,System.String)" />
+      <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplication.StopLongRunningProcessInWebApiAsync(System.String,System.Threading.CancellationToken)" />
       <Member Id="P:Microsoft.Identity.Client.ConfidentialClientApplication.AppTokenCache" />
       <Member Id="P:Microsoft.Identity.Client.ConfidentialClientApplication.Certificate" />
     </Type>
@@ -378,6 +398,7 @@
       <Member Id="P:Microsoft.Identity.Client.IAppConfig.TelemetryConfig" />
       <Member Id="P:Microsoft.Identity.Client.IAppConfig.TenantId" />
     </Type>
+    <Type Name="Microsoft.Identity.Client.IApplicationBase" Id="T:Microsoft.Identity.Client.IApplicationBase" />
     <Type Name="Microsoft.Identity.Client.IByRefreshToken" Id="T:Microsoft.Identity.Client.IByRefreshToken">
       <Member Id="M:Microsoft.Identity.Client.IByRefreshToken.AcquireTokenByRefreshToken(System.Collections.Generic.IEnumerable{System.String},System.String)" />
       <Member Id="M:Microsoft.Identity.Client.IByRefreshToken.AcquireTokenByRefreshTokenAsync(System.Collections.Generic.IEnumerable{System.String},System.String)" />
@@ -428,6 +449,10 @@
     <Type Name="Microsoft.Identity.Client.ILongRunningWebApi" Id="T:Microsoft.Identity.Client.ILongRunningWebApi">
       <Member Id="M:Microsoft.Identity.Client.ILongRunningWebApi.AcquireTokenInLongRunningProcess(System.Collections.Generic.IEnumerable{System.String},System.String)" />
       <Member Id="M:Microsoft.Identity.Client.ILongRunningWebApi.InitiateLongRunningProcessInWebApi(System.Collections.Generic.IEnumerable{System.String},System.String,System.String@)" />
+    </Type>
+    <Type Name="Microsoft.Identity.Client.IManagedIdentityApplication" Id="T:Microsoft.Identity.Client.IManagedIdentityApplication">
+      <Member Id="M:Microsoft.Identity.Client.IManagedIdentityApplication.AcquireTokenForManagedIdentity(System.String)" />
+      <Member Id="P:Microsoft.Identity.Client.IManagedIdentityApplication.AppTokenCache" />
     </Type>
     <Type Name="Microsoft.Identity.Client.IMsalHttpClientFactory" Id="T:Microsoft.Identity.Client.IMsalHttpClientFactory">
       <Member Id="M:Microsoft.Identity.Client.IMsalHttpClientFactory.GetHttpClient" />
@@ -528,6 +553,23 @@
       <Member Id="F:Microsoft.Identity.Client.LogLevel.Verbose" />
       <Member Id="F:Microsoft.Identity.Client.LogLevel.Warning" />
     </Type>
+    <Type Name="Microsoft.Identity.Client.ManagedIdentityApplication" Id="T:Microsoft.Identity.Client.ManagedIdentityApplication">
+      <Member Id="M:Microsoft.Identity.Client.ManagedIdentityApplication.AcquireTokenForManagedIdentity(System.String)" />
+      <Member Id="P:Microsoft.Identity.Client.ManagedIdentityApplication.AppTokenCache" />
+    </Type>
+    <Type Name="Microsoft.Identity.Client.ManagedIdentityApplicationBuilder" Id="T:Microsoft.Identity.Client.ManagedIdentityApplicationBuilder">
+      <Member Id="M:Microsoft.Identity.Client.ManagedIdentityApplicationBuilder.Build" />
+      <Member Id="M:Microsoft.Identity.Client.ManagedIdentityApplicationBuilder.Create" />
+      <Member Id="M:Microsoft.Identity.Client.ManagedIdentityApplicationBuilder.Create(System.String)" />
+      <Member Id="M:Microsoft.Identity.Client.ManagedIdentityApplicationBuilder.CreateWithApplicationOptions(Microsoft.Identity.Client.ManagedIdentityApplicationOptions)" />
+      <Member Id="M:Microsoft.Identity.Client.ManagedIdentityApplicationBuilder.WithCacheSynchronization(System.Boolean)" />
+      <Member Id="M:Microsoft.Identity.Client.ManagedIdentityApplicationBuilder.WithTelemetryClient(Microsoft.IdentityModel.Abstractions.ITelemetryClient[])" />
+    </Type>
+    <Type Name="Microsoft.Identity.Client.ManagedIdentityApplicationOptions" Id="T:Microsoft.Identity.Client.ManagedIdentityApplicationOptions">
+      <Member Id="M:Microsoft.Identity.Client.ManagedIdentityApplicationOptions.#ctor" />
+      <Member Id="P:Microsoft.Identity.Client.ManagedIdentityApplicationOptions.EnableCacheSynchronization" />
+      <Member Id="P:Microsoft.Identity.Client.ManagedIdentityApplicationOptions.UserAssignedClientId" />
+    </Type>
     <Type Name="Microsoft.Identity.Client.Metrics" Id="T:Microsoft.Identity.Client.Metrics">
       <Member Id="P:Microsoft.Identity.Client.Metrics.TotalAccessTokensFromBroker" />
       <Member Id="P:Microsoft.Identity.Client.Metrics.TotalAccessTokensFromCache" />
@@ -569,6 +611,7 @@
       <Member Id="F:Microsoft.Identity.Client.MsalError.ClientCredentialAuthenticationTypesAreMutuallyExclusive" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.ClientIdMustBeAGuid" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.CodeExpired" />
+      <Member Id="F:Microsoft.Identity.Client.MsalError.CombinedUserAppCacheNotSupported" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.CryptoNet45" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.CurrentBrokerAccount" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.CustomMetadataInstanceOrUri" />
@@ -666,6 +709,7 @@
       <Member Id="F:Microsoft.Identity.Client.MsalError.UnknownUserType" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.UpnRequired" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.UserAssertionNullError" />
+      <Member Id="F:Microsoft.Identity.Client.MsalError.UserAssignedManagedIdentityNotConfigurableAtRuntime" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.UserAssignedManagedIdentityNotSupported" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.UserMismatch" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.UserNullError" />
@@ -975,6 +1019,11 @@
       <Member Id="P:Microsoft.Identity.Client.AuthScheme.PoP.IPoPCryptoProvider.CryptographicAlgorithm" />
     </Type>
   </Namespace>
+  <Namespace Name="Microsoft.Identity.Client.Broker">
+    <Type Name="Microsoft.Identity.Client.Broker.BrokerExtension" Id="T:Microsoft.Identity.Client.Broker.BrokerExtension">
+      <Member Id="M:Microsoft.Identity.Client.Broker.BrokerExtension.WithBrokerPreview(Microsoft.Identity.Client.PublicClientApplicationBuilder,System.Boolean)" />
+    </Type>
+  </Namespace>
   <Namespace Name="Microsoft.Identity.Client.Cache">
     <Type Name="Microsoft.Identity.Client.Cache.CacheData" Id="T:Microsoft.Identity.Client.Cache.CacheData">
       <Member Id="M:Microsoft.Identity.Client.Cache.CacheData.#ctor" />
@@ -1016,6 +1065,9 @@
     </Type>
     <Type Name="Microsoft.Identity.Client.Extensibility.ConfidentialClientApplicationBuilderExtensions" Id="T:Microsoft.Identity.Client.Extensibility.ConfidentialClientApplicationBuilderExtensions">
       <Member Id="M:Microsoft.Identity.Client.Extensibility.ConfidentialClientApplicationBuilderExtensions.WithAppTokenProvider(Microsoft.Identity.Client.ConfidentialClientApplicationBuilder,System.Func{Microsoft.Identity.Client.Extensibility.AppTokenProviderParameters,System.Threading.Tasks.Task{Microsoft.Identity.Client.Extensibility.AppTokenProviderResult}})" />
+    </Type>
+    <Type Name="Microsoft.Identity.Client.Extensibility.ConfidentialClientApplicationExtensions" Id="T:Microsoft.Identity.Client.Extensibility.ConfidentialClientApplicationExtensions">
+      <Member Id="M:Microsoft.Identity.Client.Extensibility.ConfidentialClientApplicationExtensions.StopLongRunningProcessInWebApiAsync(Microsoft.Identity.Client.ILongRunningWebApi,System.String,System.Threading.CancellationToken)" />
     </Type>
     <Type Name="Microsoft.Identity.Client.Extensibility.ICustomWebUi" Id="T:Microsoft.Identity.Client.Extensibility.ICustomWebUi">
       <Member Id="M:Microsoft.Identity.Client.Extensibility.ICustomWebUi.AcquireAuthorizationCodeAsync(System.Uri,System.Uri,System.Threading.CancellationToken)" />
@@ -1100,6 +1152,154 @@
     <Type Name="Microsoft.Identity.Client.Utils.Windows.WindowsNativeUtils" Id="T:Microsoft.Identity.Client.Utils.Windows.WindowsNativeUtils">
       <Member Id="M:Microsoft.Identity.Client.Utils.Windows.WindowsNativeUtils.InitializeProcessSecurity" />
       <Member Id="M:Microsoft.Identity.Client.Utils.Windows.WindowsNativeUtils.IsElevatedUser" />
+    </Type>
+  </Namespace>
+  <Namespace Name="Microsoft.IdentityModel.JsonWebTokens">
+    <Type Name="Microsoft.IdentityModel.JsonWebTokens.JsonClaimValueTypes" Id="T:Microsoft.IdentityModel.JsonWebTokens.JsonClaimValueTypes">
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JsonClaimValueTypes.Json" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JsonClaimValueTypes.JsonArray" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JsonClaimValueTypes.JsonNull" />
+    </Type>
+    <Type Name="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken" Id="T:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken">
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.#ctor(System.String)" />
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.#ctor(System.String,System.String)" />
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.GetClaim(System.String)" />
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.GetHeaderValue``1(System.String)" />
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.GetPayloadValue``1(System.String)" />
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.TryGetClaim(System.String,System.Security.Claims.Claim@)" />
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.TryGetHeaderValue``1(System.String,``0@)" />
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.TryGetPayloadValue``1(System.String,``0@)" />
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.TryGetValue``1(System.String,``0@)" />
+      <Member Id="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Actor" />
+      <Member Id="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Alg" />
+      <Member Id="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Audiences" />
+      <Member Id="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.AuthenticationTag" />
+      <Member Id="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Ciphertext" />
+      <Member Id="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Claims" />
+      <Member Id="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Cty" />
+      <Member Id="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Enc" />
+      <Member Id="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.EncodedHeader" />
+      <Member Id="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.EncodedPayload" />
+      <Member Id="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.EncodedSignature" />
+      <Member Id="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.EncodedToken" />
+      <Member Id="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.EncryptedKey" />
+      <Member Id="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Id" />
+      <Member Id="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.InitializationVector" />
+      <Member Id="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.InnerToken" />
+      <Member Id="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.IsEncrypted" />
+      <Member Id="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.IsSigned" />
+      <Member Id="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.IssuedAt" />
+      <Member Id="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Issuer" />
+      <Member Id="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Kid" />
+      <Member Id="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.SecurityKey" />
+      <Member Id="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.SigningKey" />
+      <Member Id="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Subject" />
+      <Member Id="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Typ" />
+      <Member Id="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ValidFrom" />
+      <Member Id="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ValidTo" />
+      <Member Id="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.X5t" />
+      <Member Id="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Zip" />
+    </Type>
+    <Type Name="Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler" Id="T:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler">
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.Base64UrlEncodedUnsignedJWSHeader" />
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.#ctor" />
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CanReadToken(System.String)" />
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateClaimsIdentity(Microsoft.IdentityModel.JsonWebTokens.JsonWebToken,Microsoft.IdentityModel.Tokens.TokenValidationParameters)" />
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateClaimsIdentity(Microsoft.IdentityModel.JsonWebTokens.JsonWebToken,Microsoft.IdentityModel.Tokens.TokenValidationParameters,System.String)" />
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateToken(Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor)" />
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateToken(System.String)" />
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateToken(System.String,Microsoft.IdentityModel.Tokens.EncryptingCredentials)" />
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateToken(System.String,Microsoft.IdentityModel.Tokens.EncryptingCredentials,System.Collections.Generic.IDictionary{System.String,System.Object})" />
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateToken(System.String,Microsoft.IdentityModel.Tokens.EncryptingCredentials,System.String)" />
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateToken(System.String,Microsoft.IdentityModel.Tokens.SigningCredentials)" />
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateToken(System.String,Microsoft.IdentityModel.Tokens.SigningCredentials,Microsoft.IdentityModel.Tokens.EncryptingCredentials)" />
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateToken(System.String,Microsoft.IdentityModel.Tokens.SigningCredentials,Microsoft.IdentityModel.Tokens.EncryptingCredentials,System.Collections.Generic.IDictionary{System.String,System.Object})" />
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateToken(System.String,Microsoft.IdentityModel.Tokens.SigningCredentials,Microsoft.IdentityModel.Tokens.EncryptingCredentials,System.String)" />
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateToken(System.String,Microsoft.IdentityModel.Tokens.SigningCredentials,Microsoft.IdentityModel.Tokens.EncryptingCredentials,System.String,System.Collections.Generic.IDictionary{System.String,System.Object})" />
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateToken(System.String,Microsoft.IdentityModel.Tokens.SigningCredentials,Microsoft.IdentityModel.Tokens.EncryptingCredentials,System.String,System.Collections.Generic.IDictionary{System.String,System.Object},System.Collections.Generic.IDictionary{System.String,System.Object})" />
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateToken(System.String,Microsoft.IdentityModel.Tokens.SigningCredentials,System.Collections.Generic.IDictionary{System.String,System.Object})" />
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateToken(System.String,System.Collections.Generic.IDictionary{System.String,System.Object})" />
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.DecryptToken(Microsoft.IdentityModel.JsonWebTokens.JsonWebToken,Microsoft.IdentityModel.Tokens.TokenValidationParameters)" />
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.EncryptToken(System.String,Microsoft.IdentityModel.Tokens.EncryptingCredentials)" />
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.EncryptToken(System.String,Microsoft.IdentityModel.Tokens.EncryptingCredentials,System.Collections.Generic.IDictionary{System.String,System.Object})" />
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.EncryptToken(System.String,Microsoft.IdentityModel.Tokens.EncryptingCredentials,System.String)" />
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.EncryptToken(System.String,Microsoft.IdentityModel.Tokens.EncryptingCredentials,System.String,System.Collections.Generic.IDictionary{System.String,System.Object})" />
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadJsonWebToken(System.String)" />
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(System.String)" />
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ResolveTokenDecryptionKey(System.String,Microsoft.IdentityModel.JsonWebTokens.JsonWebToken,Microsoft.IdentityModel.Tokens.TokenValidationParameters)" />
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateToken(System.String,Microsoft.IdentityModel.Tokens.TokenValidationParameters)" />
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenAsync(System.String,Microsoft.IdentityModel.Tokens.TokenValidationParameters)" />
+      <Member Id="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CanValidateToken" />
+      <Member Id="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.TokenType" />
+    </Type>
+    <Type Name="Microsoft.IdentityModel.JsonWebTokens.JwtConstants" Id="T:Microsoft.IdentityModel.JsonWebTokens.JwtConstants">
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtConstants.DirectKeyUseAlg" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtConstants.HeaderType" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtConstants.HeaderTypeAlt" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtConstants.JsonCompactSerializationRegex" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtConstants.JweCompactSerializationRegex" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtConstants.JweSegmentCount" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtConstants.JwsSegmentCount" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtConstants.MaxJwtSegmentCount" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtConstants.TokenType" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtConstants.TokenTypeAlt" />
+    </Type>
+    <Type Name="Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames" Id="T:Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames">
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.Alg" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.Apu" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.Apv" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.Cty" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.Enc" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.Epk" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.IV" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.Jku" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.Jwk" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.Kid" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.Typ" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.X5c" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.X5t" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.X5u" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.Zip" />
+    </Type>
+    <Type Name="Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames" Id="T:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames">
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Acr" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Actort" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Amr" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.AtHash" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Aud" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.AuthTime" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Azp" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Birthdate" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.CHash" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Email" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Exp" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.FamilyName" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Gender" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.GivenName" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Iat" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Iss" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Jti" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Name" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.NameId" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Nbf" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Nonce" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.PhoneNumber" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.PhoneNumberVerified" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Prn" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Sid" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Sub" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Typ" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.UniqueName" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Website" />
+    </Type>
+    <Type Name="Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities" Id="T:Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities">
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.RegexJwe" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.RegexJws" />
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.#ctor" />
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(System.String,Microsoft.IdentityModel.Tokens.SigningCredentials)" />
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(System.String,Microsoft.IdentityModel.Tokens.SigningCredentials,System.Boolean)" />
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.GenerateKeyBytes(System.Int32)" />
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.GetAllDecryptionKeys(Microsoft.IdentityModel.Tokens.TokenValidationParameters)" />
     </Type>
   </Namespace>
 </Framework>

@@ -8,6 +8,7 @@
     <AssemblyName>Microsoft.Identity.Client</AssemblyName>
     <AssemblyVersion>4.48.1.0</AssemblyVersion>
     <AssemblyVersion>4.49.1.0</AssemblyVersion>
+    <AssemblyVersion>4.51.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces />
   <Docs>
@@ -28,6 +29,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenOnBehalfOfParameterBuilder</ReturnType>
@@ -42,7 +44,8 @@
         <summary>
             Retrieves an access token from the cache using the provided cache key that can be used to
             access another downstream protected web API on behalf of a user using the OAuth 2.0 On-Behalf-Of flow.
-            See https://aka.ms/msal-net-long-running-obo .
+            See https://aka.ms/msal-net-long-running-obo.
+            Use <seealso cref="M:Microsoft.Identity.Client.Extensibility.ConfidentialClientApplicationExtensions.StopLongRunningProcessInWebApiAsync(Microsoft.Identity.Client.ILongRunningWebApi,System.String,System.Threading.CancellationToken)" /> to stop the long running process.
             </summary>
         <returns>A builder enabling you to add optional parameters before executing the token request</returns>
         <remarks>
@@ -63,6 +66,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenOnBehalfOfParameterBuilder</ReturnType>
@@ -84,6 +88,7 @@
             See https://aka.ms/msal-net-long-running-obo .
             This confidential client application was itself called with a token which will be provided in the
             <paramref name="userToken">userToken</paramref> parameter.
+            Use <seealso cref="M:Microsoft.Identity.Client.Extensibility.ConfidentialClientApplicationExtensions.StopLongRunningProcessInWebApiAsync(Microsoft.Identity.Client.ILongRunningWebApi,System.String,System.Threading.CancellationToken)" /> to stop the long running process.
             </summary>
         <returns>A builder enabling you to add optional parameters before executing the token request</returns>
         <remarks>To be added.</remarks>

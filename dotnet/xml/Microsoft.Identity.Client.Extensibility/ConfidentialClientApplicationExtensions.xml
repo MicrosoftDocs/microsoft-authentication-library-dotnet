@@ -1,0 +1,54 @@
+<Type Name="ConfidentialClientApplicationExtensions" FullName="Microsoft.Identity.Client.Extensibility.ConfidentialClientApplicationExtensions">
+  <TypeSignature Language="C#" Value="public static class ConfidentialClientApplicationExtensions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ConfidentialClientApplicationExtensions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Client.Extensibility.ConfidentialClientApplicationExtensions" />
+  <TypeSignature Language="VB.NET" Value="Public Module ConfidentialClientApplicationExtensions" />
+  <TypeSignature Language="F#" Value="type ConfidentialClientApplicationExtensions = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+    <AssemblyVersion>4.51.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Extensibility methods for <see cref="T:Microsoft.Identity.Client.IConfidentialClientApplication" /></summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="StopLongRunningProcessInWebApiAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;bool&gt; StopLongRunningProcessInWebApiAsync (this Microsoft.Identity.Client.ILongRunningWebApi clientApp, string longRunningProcessSessionKey, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;bool&gt; StopLongRunningProcessInWebApiAsync(class Microsoft.Identity.Client.ILongRunningWebApi clientApp, string longRunningProcessSessionKey, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.Extensibility.ConfidentialClientApplicationExtensions.StopLongRunningProcessInWebApiAsync(Microsoft.Identity.Client.ILongRunningWebApi,System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function StopLongRunningProcessInWebApiAsync (clientApp As ILongRunningWebApi, longRunningProcessSessionKey As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Boolean)" />
+      <MemberSignature Language="F#" Value="static member StopLongRunningProcessInWebApiAsync : Microsoft.Identity.Client.ILongRunningWebApi * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;bool&gt;" Usage="Microsoft.Identity.Client.Extensibility.ConfidentialClientApplicationExtensions.StopLongRunningProcessInWebApiAsync (clientApp, longRunningProcessSessionKey, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="clientApp" Type="Microsoft.Identity.Client.ILongRunningWebApi" RefType="this" />
+        <Parameter Name="longRunningProcessSessionKey" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="clientApp">Client app to remove tokens from</param>
+        <param name="longRunningProcessSessionKey">OBO cache key used to remove the tokens</param>
+        <param name="cancellationToken">Cancellation token</param>
+        <summary>
+            Stops an in progress long running OBO session by removing the tokens associated with the provided cache key.
+            See https://aka.ms/msal-net-long-running-obo.
+            </summary>
+        <returns>Returns true if tokens are removed from the cache. False otherwise.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="longRunningProcessSessionKey" /> is not set.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

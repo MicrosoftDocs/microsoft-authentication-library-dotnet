@@ -1,0 +1,153 @@
+<Type Name="BaseAbstractAcquireTokenParameterBuilder&lt;T&gt;" FullName="Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public abstract class BaseAbstractAcquireTokenParameterBuilder&lt;T&gt; where T : BaseAbstractAcquireTokenParameterBuilder&lt;T&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit BaseAbstractAcquireTokenParameterBuilder`1&lt;(class Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder`1&lt;!T&gt;) T&gt; extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder`1" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class BaseAbstractAcquireTokenParameterBuilder(Of T)" />
+  <TypeSignature Language="F#" Value="type BaseAbstractAcquireTokenParameterBuilder&lt;'T (requires 'T :&gt; BaseAbstractAcquireTokenParameterBuilder&lt;'T&gt;)&gt; = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+    <AssemblyVersion>4.51.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T">
+      <Constraints>
+        <BaseTypeName>Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder&lt;T&gt;</BaseTypeName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="T" />
+    <summary>
+            Base class for builders of token requests, which attempt to acquire a token
+            based on the provided parameters.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BaseAbstractAcquireTokenParameterBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder`1.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Default constructor for AbstractAcquireTokenParameterBuilder.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt; ExecuteAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Identity.Client.AuthenticationResult&gt; ExecuteAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder`1.ExecuteAsync" />
+      <MemberSignature Language="VB.NET" Value="Public Function ExecuteAsync () As Task(Of AuthenticationResult)" />
+      <MemberSignature Language="F#" Value="member this.ExecuteAsync : unit -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;" Usage="baseAbstractAcquireTokenParameterBuilder.ExecuteAsync " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Executes the Token request asynchronously.
+            </summary>
+        <returns>Authentication result containing a token for the requested scopes and parameters
+            set in the builder.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteAsync">
+      <MemberSignature Language="C#" Value="public abstract System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt; ExecuteAsync (System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Identity.Client.AuthenticationResult&gt; ExecuteAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder`1.ExecuteAsync(System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function ExecuteAsync (cancellationToken As CancellationToken) As Task(Of AuthenticationResult)" />
+      <MemberSignature Language="F#" Value="abstract member ExecuteAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;" Usage="baseAbstractAcquireTokenParameterBuilder.ExecuteAsync cancellationToken" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">Cancellation token. See <see cref="T:System.Threading.CancellationToken" /></param>
+        <summary>
+            Executes the Token request asynchronously, with a possibility of cancelling the
+            asynchronous method.
+            </summary>
+        <returns>Authentication result containing a token for the requested scopes and parameters
+            set in the builder.</returns>
+        <remarks>Cancellation is not guaranteed, it is best effort. If the operation reaches a point of no return, e.g.
+            tokens are acquired and written to the cache, the task will complete even if cancellation was requested.
+            Do not rely on cancellation tokens for strong consistency.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="protected virtual void Validate ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Validate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder`1.Validate" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Validate ()" />
+      <MemberSignature Language="F#" Value="abstract member Validate : unit -&gt; unit&#xA;override this.Validate : unit -&gt; unit" Usage="baseAbstractAcquireTokenParameterBuilder.Validate " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Validates the parameters of the AcquireToken operation.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithCorrelationId">
+      <MemberSignature Language="C#" Value="public T WithCorrelationId (Guid correlationId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !T WithCorrelationId(valuetype System.Guid correlationId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder`1.WithCorrelationId(System.Guid)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithCorrelationId (correlationId As Guid) As T" />
+      <MemberSignature Language="F#" Value="member this.WithCorrelationId : Guid -&gt; 'T" Usage="baseAbstractAcquireTokenParameterBuilder.WithCorrelationId correlationId" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="correlationId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="correlationId">Correlation id of the authentication request.</param>
+        <summary>
+            Sets the correlation id to be used in the authentication request. Used to track a request in the logs of both the SDK and the Identity Provider service.
+            If not set, a random one will be generated. 
+            </summary>
+        <returns>The builder to chain the .With methods.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
