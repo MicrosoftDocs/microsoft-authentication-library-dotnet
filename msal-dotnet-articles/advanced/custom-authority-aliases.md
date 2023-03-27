@@ -7,7 +7,13 @@ description: "How to use custom authority aliases with your MSAL.NET application
 
 ## What is Instance Discovery
 
-Before acquiring tokens, MSAL makes a network call to the Azure AD authority [discovery endpoint](https://login.microsoftonline.com/common/discovery/instance?api-version=1.1&authorization_endpoint=https%3A%2F%2Flogin.microsoftonline.com%2Fcommon%2Foauth2%2Fv2.0%2Fauthorize). The information returned is used to:
+Before acquiring tokens, MSAL makes a network call to the Azure AD authority discovery endpoint:
+
+```text
+https://login.microsoftonline.com/common/discovery/instance?api-version=1.1&authorization_endpoint=https%3A%2F%2Flogin.microsoftonline.com%2Fcommon%2Foauth2%2Fv2.0%2Fauthorize
+```
+
+The information returned is used to:
 
 - Discover a list of aliases for each cloud (Azure Public, German Cloud, China Cloud etc.). A token issued to an authority in the set is valid for all other authorities in the set.
 - Use the preferred_network alias for communication with Azure AD
