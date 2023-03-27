@@ -1,8 +1,9 @@
 ---
-title: What is WebView2
+title: Using WebView2 with MSAL.NET
+description: "How to use the modern embedded browser based on Microsoft Edge with MSAL.NET applications."
 ---
 
-# What is WebView2
+# Using WebView2 with MSAL.NET
 
 A modern embedded browser based on Microsoft Edge, capable of performing Windows Hello, log-in with FIDO keys, etc. This browser replaces the old embedded WebView, based on an outdated version of Internet Explorer.
 
@@ -10,7 +11,7 @@ A modern embedded browser based on Microsoft Edge, capable of performing Windows
 
 - All Windows versions
 - MSAL.NET version 4.28.0 and higher
-- [WebView2 runtime](https://developer.microsoft.com/microsoft-edge/webview2/) must be installed on the machine.
+- [WebView2 runtime](/microsoft-edge/webview2/) must be installed on the machine.
 
 ## Evergreen runtime
 
@@ -19,7 +20,7 @@ WebView2 runtime is available on most Windows 10 and Windows 11 machines by defa
 ## Changes to call pattern
 
 - On .NET5-windows10.xxx, there is no change.
-- On .NET Classic and .NET Core 3.1, add a reference to [Microsoft.Identity.Client.Desktop]( https://www.nuget.org/packages/Microsoft.Identity.Client.Desktop/) and call `.WithDesktopFeatures()`.
+- On .NET Classic and .NET Core 3.1, add a reference to [Microsoft.Identity.Client.Desktop](https://www.nuget.org/packages/Microsoft.Identity.Client.Desktop/) and call `.WithDesktopFeatures()`.
 
 ```csharp
 var pca = PublicClientApplicationBuilder

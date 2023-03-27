@@ -19,11 +19,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
         with:
-          args: --verbose --no-progress './**/*.md' --exclude-mail
+          args: --verbose --exclude-file .lycheeignore --no-progress './**/*.md' --exclude-mail
           fail: true
 
       - name: Create Issue From File
-        if: always() && env.lychee_exit_code != 0
+        if: always() && env.lychee_exit_code != 0 && github.event_name != 'pull_request'
         uses: peter-evans/create-issue-from-file@v4
         with:
           title: Link Checker Report
