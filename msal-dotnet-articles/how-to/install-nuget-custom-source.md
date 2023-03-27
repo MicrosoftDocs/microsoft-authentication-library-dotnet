@@ -1,5 +1,6 @@
 ---
 title: Installing MSAL.NET from custom NuGet package source
+description: "How to install NuGet from a source other than the NuGet package feed."
 ---
 
 # Installing MSAL.NET from custom NuGet package source
@@ -9,15 +10,15 @@ There are times when you need to take a dependency on a non official version of 
 * An MSAL developer hands has put in a fix for a bug and would like you to validate it
 * You are making changes to MSAL on your own, package MSAL and want to try it out with an app
 
-## Install a package from a different source
+## Install a package from a local source
 
-Easiest is to use local folder as a NuGet source - see details in this [Stack Overflow post](https://stackoverflow.com/questions/10240029/how-do-i-install-a-nuget-package-nupkg-file-locally)  (from my experience you don't need to use `nuget init` and `nuget add` for simple scenarios like this)
+The easiest approach is to use a [local folder](/nuget/hosting-packages/local-feeds) as a NuGet package source. This enables developers to read content from their own machine without uploading the package to a remote server.
 
 ## What not to do
 
-* Do not unzip the `*.nupkg` file and take a reference to the dll itself - there are many DLLs in the package and you might use the wrong one. 
-* Do not try to copy-paste and rename the new package over an existing package in the NuGet cache - you'll have problems moving away from the non-official version back to an official version / clearing out the cache etc.
+* Do not extract the `*.nupkg` file and take a reference on the dynamic linked library (DLL) itself - there are many DLLs in the package and you might use the wrong one.
+* Do not try to copy, paste, or rename the new package over an existing package in the NuGet cache - you'll have problems moving away from the non-official version back to an official version and clearing out the cache properly.
 
 ## Check the signatures
 
-You should check that a package is signed, in this case MSAL has to be signed by Microsoft. NuGet will display this, and you can always check a package with [this amazing tool](https://www.microsoft.com/p/nuget-package-explorer/9wzdncrdmdm3?activetab=pivot%3Aoverviewtab). Microsoft will always sign both packages and DLLs inside packages, even for non-official releases. 
+You should check that a package is signed. MSAL has to be signed by Microsoft. NuGet will display this information and you can always check a package with a tool such as [NuGet Package Explorer](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer). Microsoft will always sign both packages as well as the DLLs inside, even for non-official and preview releases.

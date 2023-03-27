@@ -1,5 +1,6 @@
 ---
 title: Protecting iOS and Android applications with InTune
+description: "How to use InTune with Android and iOS applications that depend on MSAL.NET."
 ---
 
 # Protecting iOS and Android applications with InTune
@@ -119,25 +120,25 @@ if (acct != null)
 }
 ```
 
-The complete sample can be found [Here](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/tree/d813f674da88d37272d7bd8fe81318d4243e7583/tests/devapps/Intune-xamarin-ios)
+The complete sample can be found [on GitHub](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/tree/d813f674da88d37272d7bd8fe81318d4243e7583/tests/devapps/Intune-xamarin-ios)
 
 ## Workflow for Android
 
-As a result of the setup, when App attempts to reach the resource and if the device is not compliant, Azure AD returns ```protection_policy_required``` suberror.  
+As a result of the setup, when App attempts to reach the resource and if the device is not compliant, Azure AD returns `protection_policy_required` suberror.  
 
-MSAL.NET catches the error and throws ```IntuneAppProtectionPolicyRequiredException```.  
+MSAL.NET catches the error and throws `IntuneAppProtectionPolicyRequiredException`.  
 
-It is app's responsibility to catch the error and invoke Intune MAM SDK to make the device compliant. In order for the device to become compliant, the app must register a callback for ```IMAMEnrollmentManager```.  
+It is app's responsibility to catch the error and invoke Intune MAM SDK to make the device compliant. In order for the device to become compliant, the app must register a callback for `IMAMEnrollmentManager`.  
 
 The callback is provided `upn`, `aaid` and `resourceID`. The `resourceID` points to the MAM API and callback must return token for the resource using silent token acquisition.  
 
-The app should also register callback for ```MAMNotificationType.MamEnrollmentResult```. After the enrollment succeeds, the App can then call the silent token acquisition method of MSAL.NET to obtain the token. 
+The app should also register callback for `MAMNotificationType.MamEnrollmentResult`. After the enrollment succeeds, the App can then call the silent token acquisition method of MSAL.NET to obtain the token. 
 
 This will return the access token.
 
 ### Code snippets
 
-Register callback ```OnMAMCreate()```
+Register callback `OnMAMCreate()`
 
 ```csharp
 IMAMEnrollmentManager mgr = MAMComponents.Get<IMAMEnrollmentManager>();
