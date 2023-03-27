@@ -1,0 +1,114 @@
+<Type Name="ClientAssertionProviderBase" FullName="Microsoft.Identity.Web.ClientAssertionProviderBase">
+  <TypeSignature Language="C#" Value="public abstract class ClientAssertionProviderBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ClientAssertionProviderBase extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Web.ClientAssertionProviderBase" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class ClientAssertionProviderBase" />
+  <TypeSignature Language="F#" Value="type ClientAssertionProviderBase = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
+    <AssemblyVersion>2.6.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Description of a client assertion in the application configuration.
+            See https://aka.ms/ms-id-web/client-assertions.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ClientAssertionProviderBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.ClientAssertionProviderBase.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Expiry">
+      <MemberSignature Language="C#" Value="public DateTimeOffset? Expiry { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; Expiry" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Web.ClientAssertionProviderBase.Expiry" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Expiry As Nullable(Of DateTimeOffset)" />
+      <MemberSignature Language="F#" Value="member this.Expiry : Nullable&lt;DateTimeOffset&gt;" Usage="Microsoft.Identity.Web.ClientAssertionProviderBase.Expiry" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.DateTimeOffset&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Expiry of the client assertion.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetClientAssertion">
+      <MemberSignature Language="C#" Value="public abstract System.Threading.Tasks.Task&lt;Microsoft.Identity.Web.ClientAssertion&gt; GetClientAssertion (System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Identity.Web.ClientAssertion&gt; GetClientAssertion(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.ClientAssertionProviderBase.GetClientAssertion(System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetClientAssertion (cancellationToken As CancellationToken) As Task(Of ClientAssertion)" />
+      <MemberSignature Language="F#" Value="abstract member GetClientAssertion : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Web.ClientAssertion&gt;" Usage="clientAssertionProviderBase.GetClientAssertion cancellationToken" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Identity.Web.ClientAssertion&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken" />
+        <summary>
+            Gets the Client assertion
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSignedAssertion">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;string&gt; GetSignedAssertion (System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;string&gt; GetSignedAssertion(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.ClientAssertionProviderBase.GetSignedAssertion(System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetSignedAssertion (cancellationToken As CancellationToken) As Task(Of String)" />
+      <MemberSignature Language="F#" Value="member this.GetSignedAssertion : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;string&gt;" Usage="clientAssertionProviderBase.GetSignedAssertion cancellationToken" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">Cancellation token.</param>
+        <summary>
+            Get the signed assertion (and refreshes it if needed).
+            </summary>
+        <returns>The signed assertion.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

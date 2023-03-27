@@ -1,15 +1,15 @@
 <Type Name="DefaultCertificateLoader" FullName="Microsoft.Identity.Web.DefaultCertificateLoader">
-  <TypeSignature Language="C#" Value="public class DefaultCertificateLoader : Microsoft.Identity.Web.ICertificateLoader" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DefaultCertificateLoader extends System.Object implements class Microsoft.Identity.Web.ICertificateLoader" />
+  <TypeSignature Language="C#" Value="public class DefaultCertificateLoader : Microsoft.Identity.Web.DefaultCredentialsLoader, Microsoft.Identity.Web.ICertificateLoader" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DefaultCertificateLoader extends Microsoft.Identity.Web.DefaultCredentialsLoader implements class Microsoft.Identity.Web.ICertificateLoader" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Web.DefaultCertificateLoader" />
-  <TypeSignature Language="VB.NET" Value="Public Class DefaultCertificateLoader&#xA;Implements ICertificateLoader" />
-  <TypeSignature Language="F#" Value="type DefaultCertificateLoader = class&#xA;    interface ICertificateLoader" />
+  <TypeSignature Language="VB.NET" Value="Public Class DefaultCertificateLoader&#xA;Inherits DefaultCredentialsLoader&#xA;Implements ICertificateLoader" />
+  <TypeSignature Language="F#" Value="type DefaultCertificateLoader = class&#xA;    inherit DefaultCredentialsLoader&#xA;    interface ICertificateLoader" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-    <AssemblyVersion>1.25.10.0</AssemblyVersion>
+    <AssemblyVersion>2.6.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
-    <BaseTypeName>System.Object</BaseTypeName>
+    <BaseTypeName>Microsoft.Identity.Web.DefaultCredentialsLoader</BaseTypeName>
   </Base>
   <Interfaces>
     <Interface>
@@ -42,7 +42,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -59,12 +59,12 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName Language="C#">[System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.Identity.Web.DefaultCertificateLoader+&lt;LoadAllCertificates&gt;d__6))]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.Identity.Web.DefaultCertificateLoader+&lt;LoadAllCertificates&gt;d__6))&gt;]</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.Identity.Web.DefaultCertificateLoader+&lt;LoadAllCertificates&gt;d__4))]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.Identity.Web.DefaultCertificateLoader+&lt;LoadAllCertificates&gt;d__4))&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -91,7 +91,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate2</ReturnType>
@@ -120,7 +120,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -145,7 +145,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -171,15 +171,14 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            User assigned managed identity client ID (as opposed to system assigned managed identity)
-            See https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/how-to-manage-ua-identity-portal.
+             This default is overridable at the level of the credential description (for the certificate from KeyVault).
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>

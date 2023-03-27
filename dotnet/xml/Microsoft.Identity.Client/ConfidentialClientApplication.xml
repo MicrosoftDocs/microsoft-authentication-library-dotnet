@@ -1,18 +1,22 @@
 <Type Name="ConfidentialClientApplication" FullName="Microsoft.Identity.Client.ConfidentialClientApplication">
   <TypeSignature Language="C#" Value="public sealed class ConfidentialClientApplication : Microsoft.Identity.Client.ClientApplicationBase, Microsoft.Identity.Client.IByRefreshToken, Microsoft.Identity.Client.IConfidentialClientApplication, Microsoft.Identity.Client.IConfidentialClientApplicationWithCertificate, Microsoft.Identity.Client.ILongRunningWebApi" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ConfidentialClientApplication extends Microsoft.Identity.Client.ClientApplicationBase implements class Microsoft.Identity.Client.IByRefreshToken, class Microsoft.Identity.Client.IClientApplicationBase, class Microsoft.Identity.Client.IConfidentialClientApplication, class Microsoft.Identity.Client.IConfidentialClientApplicationWithCertificate, class Microsoft.Identity.Client.ILongRunningWebApi" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ConfidentialClientApplication extends Microsoft.Identity.Client.ClientApplicationBase implements class Microsoft.Identity.Client.IApplicationBase, class Microsoft.Identity.Client.IByRefreshToken, class Microsoft.Identity.Client.IClientApplicationBase, class Microsoft.Identity.Client.IConfidentialClientApplication, class Microsoft.Identity.Client.IConfidentialClientApplicationWithCertificate, class Microsoft.Identity.Client.ILongRunningWebApi" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Client.ConfidentialClientApplication" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ConfidentialClientApplication&#xA;Inherits ClientApplicationBase&#xA;Implements IByRefreshToken, IConfidentialClientApplication, IConfidentialClientApplicationWithCertificate, ILongRunningWebApi" />
-  <TypeSignature Language="F#" Value="type ConfidentialClientApplication = class&#xA;    inherit ClientApplicationBase&#xA;    interface IConfidentialClientApplication&#xA;    interface IClientApplicationBase&#xA;    interface IConfidentialClientApplicationWithCertificate&#xA;    interface IByRefreshToken&#xA;    interface ILongRunningWebApi" />
+  <TypeSignature Language="F#" Value="type ConfidentialClientApplication = class&#xA;    inherit ClientApplicationBase&#xA;    interface IConfidentialClientApplication&#xA;    interface IClientApplicationBase&#xA;    interface IApplicationBase&#xA;    interface IConfidentialClientApplicationWithCertificate&#xA;    interface IByRefreshToken&#xA;    interface ILongRunningWebApi" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Identity.Client</AssemblyName>
     <AssemblyVersion>4.48.1.0</AssemblyVersion>
     <AssemblyVersion>4.49.1.0</AssemblyVersion>
+    <AssemblyVersion>4.51.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Identity.Client.ClientApplicationBase</BaseTypeName>
   </Base>
   <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Identity.Client.IApplicationBase</InterfaceName>
+    </Interface>
     <Interface>
       <InterfaceName>Microsoft.Identity.Client.IByRefreshToken</InterfaceName>
     </Interface>
@@ -53,6 +57,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -83,7 +88,7 @@
         <param name="appTokenCache">Token cache for saving application (that is client token). Can be set to <c>null</c> except if the application
              uses the client credentials grants</param>
         <summary>
-             [V2 API] Constructor for a confidential client application requesting tokens with the default authority (<see cref="F:Microsoft.Identity.Client.ClientApplicationBase.DefaultAuthority" />)
+             [V2 API] Constructor for a confidential client application requesting tokens with the default authority (<see cref="F:Microsoft.Identity.Client.ApplicationBase.DefaultAuthority" />)
              </summary>
         <remarks>
              See https://aka.ms/msal-net-client-applications for a description of confidential client applications (and public client applications)
@@ -106,6 +111,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -169,6 +175,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenByAuthorizationCodeParameterBuilder</ReturnType>
@@ -208,6 +215,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -255,6 +263,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder</ReturnType>
@@ -290,6 +299,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -334,6 +344,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -382,6 +393,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenOnBehalfOfParameterBuilder</ReturnType>
@@ -413,6 +425,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenOnBehalfOfParameterBuilder</ReturnType>
@@ -451,6 +464,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -499,6 +513,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -549,6 +564,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ITokenCache</ReturnType>
@@ -574,6 +590,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -596,6 +613,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate2</ReturnType>
@@ -622,6 +640,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.GetAuthorizationRequestUrlParameterBuilder</ReturnType>
@@ -656,6 +675,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -705,6 +725,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -762,6 +783,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenOnBehalfOfParameterBuilder</ReturnType>
@@ -795,6 +817,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenByRefreshTokenParameterBuilder</ReturnType>
@@ -825,6 +848,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -872,6 +896,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -918,6 +943,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -967,6 +993,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1015,6 +1042,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1049,6 +1077,36 @@
         <returns>Authentication result containing a token for the requested scopes and account</returns>
         <remarks>To be added.</remarks>
         <altmember cref="M:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenOnBehalfOf(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.UserAssertion)" />
+      </Docs>
+    </Member>
+    <Member MemberName="StopLongRunningProcessInWebApiAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;bool&gt; StopLongRunningProcessInWebApiAsync (string longRunningProcessSessionKey, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;bool&gt; StopLongRunningProcessInWebApiAsync(string longRunningProcessSessionKey, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.ConfidentialClientApplication.StopLongRunningProcessInWebApiAsync(System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function StopLongRunningProcessInWebApiAsync (longRunningProcessSessionKey As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Boolean)" />
+      <MemberSignature Language="F#" Value="member this.StopLongRunningProcessInWebApiAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;bool&gt;" Usage="confidentialClientApplication.StopLongRunningProcessInWebApiAsync (longRunningProcessSessionKey, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="longRunningProcessSessionKey" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="longRunningProcessSessionKey">OBO cache key used to remove the tokens</param>
+        <param name="cancellationToken">Cancellation token</param>
+        <summary>
+            Stops an in progress long running OBO session by removing the tokens associated with the provided cache key.
+            See https://aka.ms/msal-net-long-running-obo.
+            </summary>
+        <returns>Returns true if tokens are removed from the cache. False otherwise.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="longRunningProcessSessionKey" /> is not set.</exception>
       </Docs>
     </Member>
   </Members>

@@ -1,0 +1,196 @@
+<Type Name="ManagedIdentityApplicationBuilder" FullName="Microsoft.Identity.Client.ManagedIdentityApplicationBuilder">
+  <TypeSignature Language="C#" Value="public sealed class ManagedIdentityApplicationBuilder : Microsoft.Identity.Client.BaseAbstractApplicationBuilder&lt;Microsoft.Identity.Client.ManagedIdentityApplicationBuilder&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ManagedIdentityApplicationBuilder extends Microsoft.Identity.Client.BaseAbstractApplicationBuilder`1&lt;class Microsoft.Identity.Client.ManagedIdentityApplicationBuilder&gt;" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Client.ManagedIdentityApplicationBuilder" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ManagedIdentityApplicationBuilder&#xA;Inherits BaseAbstractApplicationBuilder(Of ManagedIdentityApplicationBuilder)" />
+  <TypeSignature Language="F#" Value="type ManagedIdentityApplicationBuilder = class&#xA;    inherit BaseAbstractApplicationBuilder&lt;ManagedIdentityApplicationBuilder&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+    <AssemblyVersion>4.51.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Identity.Client.BaseAbstractApplicationBuilder&lt;Microsoft.Identity.Client.ManagedIdentityApplicationBuilder&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="T">Microsoft.Identity.Client.ManagedIdentityApplicationBuilder</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Builder for managed identity applications.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Build">
+      <MemberSignature Language="C#" Value="public Microsoft.Identity.Client.IManagedIdentityApplication Build ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Identity.Client.IManagedIdentityApplication Build() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.ManagedIdentityApplicationBuilder.Build" />
+      <MemberSignature Language="VB.NET" Value="Public Function Build () As IManagedIdentityApplication" />
+      <MemberSignature Language="F#" Value="member this.Build : unit -&gt; Microsoft.Identity.Client.IManagedIdentityApplication" Usage="managedIdentityApplicationBuilder.Build " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.IManagedIdentityApplication</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Builds the ManagedIdentityApplication from the parameters set
+            in the builder
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Microsoft.Identity.Client.ManagedIdentityApplicationBuilder Create ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Identity.Client.ManagedIdentityApplicationBuilder Create() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.ManagedIdentityApplicationBuilder.Create" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create () As ManagedIdentityApplicationBuilder" />
+      <MemberSignature Language="F#" Value="static member Create : unit -&gt; Microsoft.Identity.Client.ManagedIdentityApplicationBuilder" Usage="Microsoft.Identity.Client.ManagedIdentityApplicationBuilder.Create " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.ManagedIdentityApplicationBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a ManagedIdentityApplicationBuilder.
+            See https://aka.ms/msal-net-application-configuration
+            </summary>
+        <returns>A <see cref="T:Microsoft.Identity.Client.ManagedIdentityApplicationBuilder" /> from which to set more
+            parameters, and to create a managed identity application instance</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Microsoft.Identity.Client.ManagedIdentityApplicationBuilder Create (string userAssignedId);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Identity.Client.ManagedIdentityApplicationBuilder Create(string userAssignedId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.ManagedIdentityApplicationBuilder.Create(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (userAssignedId As String) As ManagedIdentityApplicationBuilder" />
+      <MemberSignature Language="F#" Value="static member Create : string -&gt; Microsoft.Identity.Client.ManagedIdentityApplicationBuilder" Usage="Microsoft.Identity.Client.ManagedIdentityApplicationBuilder.Create userAssignedId" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.ManagedIdentityApplicationBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userAssignedId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="userAssignedId">Client ID / Resource ID of the user assigned managed identity assigned to the resource.</param>
+        <summary>
+            Creates a ManagedIdentityApplicationBuilder from a user assigned managed identity clientID / resourceId.
+            See https://aka.ms/msal-net-managed-identity
+            </summary>
+        <returns>A <see cref="T:Microsoft.Identity.Client.ManagedIdentityApplicationBuilder" /> from which to set more
+            parameters, and to create a managed identity application instance</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateWithApplicationOptions">
+      <MemberSignature Language="C#" Value="public static Microsoft.Identity.Client.ManagedIdentityApplicationBuilder CreateWithApplicationOptions (Microsoft.Identity.Client.ManagedIdentityApplicationOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Identity.Client.ManagedIdentityApplicationBuilder CreateWithApplicationOptions(class Microsoft.Identity.Client.ManagedIdentityApplicationOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.ManagedIdentityApplicationBuilder.CreateWithApplicationOptions(Microsoft.Identity.Client.ManagedIdentityApplicationOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateWithApplicationOptions (options As ManagedIdentityApplicationOptions) As ManagedIdentityApplicationBuilder" />
+      <MemberSignature Language="F#" Value="static member CreateWithApplicationOptions : Microsoft.Identity.Client.ManagedIdentityApplicationOptions -&gt; Microsoft.Identity.Client.ManagedIdentityApplicationBuilder" Usage="Microsoft.Identity.Client.ManagedIdentityApplicationBuilder.CreateWithApplicationOptions options" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.ManagedIdentityApplicationBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.Identity.Client.ManagedIdentityApplicationOptions" />
+      </Parameters>
+      <Docs>
+        <param name="options">Managed identity applications configuration options</param>
+        <summary>
+            Constructor of a ManagedIdentityApplicationBuilder from application configuration options.
+            See https://aka.ms/msal-net-application-configuration
+            </summary>
+        <returns>A <see cref="T:Microsoft.Identity.Client.ManagedIdentityApplicationBuilder" /> from which to set more
+            parameters, and to create a managed identity application instance</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithCacheSynchronization">
+      <MemberSignature Language="C#" Value="public Microsoft.Identity.Client.ManagedIdentityApplicationBuilder WithCacheSynchronization (bool enableCacheSynchronization);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Identity.Client.ManagedIdentityApplicationBuilder WithCacheSynchronization(bool enableCacheSynchronization) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.ManagedIdentityApplicationBuilder.WithCacheSynchronization(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithCacheSynchronization (enableCacheSynchronization As Boolean) As ManagedIdentityApplicationBuilder" />
+      <MemberSignature Language="F#" Value="member this.WithCacheSynchronization : bool -&gt; Microsoft.Identity.Client.ManagedIdentityApplicationBuilder" Usage="managedIdentityApplicationBuilder.WithCacheSynchronization enableCacheSynchronization" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.ManagedIdentityApplicationBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enableCacheSynchronization" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="enableCacheSynchronization">To be added.</param>
+        <summary>
+            When set to <c>true</c>, MSAL will lock cache access at the <see cref="T:Microsoft.Identity.Client.ManagedIdentityApplication" /> level, i.e.
+            the block of code between BeforeAccessAsync and AfterAccessAsync callbacks will be synchronized. 
+            Apps can set this flag to <c>false</c> to enable an optimistic cache locking strategy, which may result in better performance, especially 
+            when ConfidentialClientApplication or ManagedIdentityApplication objects are reused.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+            False by default.
+            Not recommended for apps that call RemoveAsync
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithTelemetryClient">
+      <MemberSignature Language="C#" Value="public Microsoft.Identity.Client.ManagedIdentityApplicationBuilder WithTelemetryClient (params Microsoft.IdentityModel.Abstractions.ITelemetryClient[] telemetryClients);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Identity.Client.ManagedIdentityApplicationBuilder WithTelemetryClient(class Microsoft.IdentityModel.Abstractions.ITelemetryClient[] telemetryClients) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.ManagedIdentityApplicationBuilder.WithTelemetryClient(Microsoft.IdentityModel.Abstractions.ITelemetryClient[])" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithTelemetryClient (ParamArray telemetryClients As ITelemetryClient()) As ManagedIdentityApplicationBuilder" />
+      <MemberSignature Language="F#" Value="member this.WithTelemetryClient : Microsoft.IdentityModel.Abstractions.ITelemetryClient[] -&gt; Microsoft.Identity.Client.ManagedIdentityApplicationBuilder" Usage="managedIdentityApplicationBuilder.WithTelemetryClient telemetryClients" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.ManagedIdentityApplicationBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="telemetryClients" Type="Microsoft.IdentityModel.Abstractions.ITelemetryClient[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.ParamArray]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.ParamArray&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="telemetryClients">List of telemetry clients to add telemetry logs.</param>
+        <summary>
+            Sets telemetry client for the application.
+            </summary>
+        <returns>The builder to chain the .With methods</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

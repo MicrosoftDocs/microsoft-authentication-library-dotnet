@@ -1,23 +1,27 @@
 <Type Name="AbstractApplicationBuilder&lt;T&gt;" FullName="Microsoft.Identity.Client.AbstractApplicationBuilder&lt;T&gt;">
-  <TypeSignature Language="C#" Value="public abstract class AbstractApplicationBuilder&lt;T&gt; where T : AbstractApplicationBuilder&lt;T&gt;" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit AbstractApplicationBuilder`1&lt;(class Microsoft.Identity.Client.AbstractApplicationBuilder`1&lt;!T&gt;) T&gt; extends System.Object" />
+  <TypeSignature Language="C#" Value="public abstract class AbstractApplicationBuilder&lt;T&gt; : Microsoft.Identity.Client.BaseAbstractApplicationBuilder&lt;T&gt; where T : BaseAbstractApplicationBuilder&lt;T&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit AbstractApplicationBuilder`1&lt;(class Microsoft.Identity.Client.BaseAbstractApplicationBuilder`1&lt;!T&gt;) T&gt; extends Microsoft.Identity.Client.BaseAbstractApplicationBuilder`1&lt;!T&gt;" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Client.AbstractApplicationBuilder`1" />
-  <TypeSignature Language="VB.NET" Value="Public MustInherit Class AbstractApplicationBuilder(Of T)" />
-  <TypeSignature Language="F#" Value="type AbstractApplicationBuilder&lt;'T (requires 'T :&gt; AbstractApplicationBuilder&lt;'T&gt;)&gt; = class" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class AbstractApplicationBuilder(Of T)&#xA;Inherits BaseAbstractApplicationBuilder(Of T)" />
+  <TypeSignature Language="F#" Value="type AbstractApplicationBuilder&lt;'T (requires 'T :&gt; BaseAbstractApplicationBuilder&lt;'T&gt;)&gt; = class&#xA;    inherit BaseAbstractApplicationBuilder&lt;'T (requires 'T :&gt; BaseAbstractApplicationBuilder&lt;'T&gt;)&gt;" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Identity.Client</AssemblyName>
     <AssemblyVersion>4.48.1.0</AssemblyVersion>
     <AssemblyVersion>4.49.1.0</AssemblyVersion>
+    <AssemblyVersion>4.51.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeParameters>
     <TypeParameter Name="T">
       <Constraints>
-        <BaseTypeName>Microsoft.Identity.Client.AbstractApplicationBuilder&lt;T&gt;</BaseTypeName>
+        <BaseTypeName>Microsoft.Identity.Client.BaseAbstractApplicationBuilder&lt;T&gt;</BaseTypeName>
       </Constraints>
     </TypeParameter>
   </TypeParameters>
   <Base>
-    <BaseTypeName>System.Object</BaseTypeName>
+    <BaseTypeName>Microsoft.Identity.Client.BaseAbstractApplicationBuilder&lt;T&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="T">T</BaseTypeArgument>
+    </BaseTypeArguments>
   </Base>
   <Interfaces />
   <Docs>
@@ -37,6 +41,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -66,6 +71,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -98,6 +104,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -132,6 +139,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -163,6 +171,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -198,6 +207,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -232,6 +242,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -267,6 +278,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -299,6 +311,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -336,6 +349,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -354,45 +368,6 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="WithCacheOptions">
-      <MemberSignature Language="C#" Value="public T WithCacheOptions (Microsoft.Identity.Client.CacheOptions options);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !T WithCacheOptions(class Microsoft.Identity.Client.CacheOptions options) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithCacheOptions(Microsoft.Identity.Client.CacheOptions)" />
-      <MemberSignature Language="VB.NET" Value="Public Function WithCacheOptions (options As CacheOptions) As T" />
-      <MemberSignature Language="F#" Value="member this.WithCacheOptions : Microsoft.Identity.Client.CacheOptions -&gt; 'T" Usage="abstractApplicationBuilder.WithCacheOptions options" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>T</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="options" Type="Microsoft.Identity.Client.CacheOptions" />
-      </Parameters>
-      <Docs>
-        <param name="options">Options for the internal MSAL token caches. </param>
-        <summary>
-            Options for MSAL token caches. 
-            
-            MSAL maintains a token cache internally in memory. By default, this cache object is part of each instance of <see cref="T:Microsoft.Identity.Client.PublicClientApplication" /> or <see cref="T:Microsoft.Identity.Client.ConfidentialClientApplication" />.
-            This method allows customization of the in-memory token cache of MSAL. 
-            
-            MSAL's memory cache is different than token cache serialization. Cache serialization pulls the tokens from a cache (e.g. Redis, Cosmos, or a file on disk), 
-            where they are stored in JSON format, into MSAL's internal memory cache. Memory cache operations do not involve JSON operations. 
-            
-            External cache serialization remains the recommended way to handle desktop apps, web site and web APIs, as it provides persistence. These options
-            do not currently control external cache serialization.
-            
-            Detailed guidance for each application type and platform:
-            https://aka.ms/msal-net-token-cache-serialization
-            </summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
     <Member MemberName="WithClientCapabilities">
       <MemberSignature Language="C#" Value="public T WithClientCapabilities (System.Collections.Generic.IEnumerable&lt;string&gt; clientCapabilities);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !T WithClientCapabilities(class System.Collections.Generic.IEnumerable`1&lt;string&gt; clientCapabilities) cil managed" />
@@ -404,6 +379,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -436,6 +412,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -464,6 +441,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -491,6 +469,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -507,79 +486,6 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="WithDebugLoggingCallback">
-      <MemberSignature Language="C#" Value="public T WithDebugLoggingCallback (Microsoft.Identity.Client.LogLevel logLevel = Microsoft.Identity.Client.LogLevel.Info, bool enablePiiLogging = false, bool withDefaultPlatformLoggingEnabled = false);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !T WithDebugLoggingCallback(valuetype Microsoft.Identity.Client.LogLevel logLevel, bool enablePiiLogging, bool withDefaultPlatformLoggingEnabled) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithDebugLoggingCallback(Microsoft.Identity.Client.LogLevel,System.Boolean,System.Boolean)" />
-      <MemberSignature Language="VB.NET" Value="Public Function WithDebugLoggingCallback (Optional logLevel As LogLevel = Microsoft.Identity.Client.LogLevel.Info, Optional enablePiiLogging As Boolean = false, Optional withDefaultPlatformLoggingEnabled As Boolean = false) As T" />
-      <MemberSignature Language="F#" Value="member this.WithDebugLoggingCallback : Microsoft.Identity.Client.LogLevel * bool * bool -&gt; 'T" Usage="abstractApplicationBuilder.WithDebugLoggingCallback (logLevel, enablePiiLogging, withDefaultPlatformLoggingEnabled)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>T</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="logLevel" Type="Microsoft.Identity.Client.LogLevel" />
-        <Parameter Name="enablePiiLogging" Type="System.Boolean" />
-        <Parameter Name="withDefaultPlatformLoggingEnabled" Type="System.Boolean" />
-      </Parameters>
-      <Docs>
-        <param name="logLevel">Desired level of logging.  The default is LogLevel.Info</param>
-        <param name="enablePiiLogging">Boolean used to enable/disable logging of
-            Personally Identifiable Information (PII).
-            PII logs are never written to default outputs like Console, Logcat or NSLog
-            Default is set to <c>false</c>, which ensures that your application is compliant with GDPR.
-            You can set it to <c>true</c> for advanced debugging requiring PII
-            </param>
-        <param name="withDefaultPlatformLoggingEnabled">Flag to enable/disable logging to platform defaults.
-            In Desktop/UWP, Event Tracing is used. In iOS, NSLog is used.
-            In android, logcat is used. The default value is <c>false</c></param>
-        <summary>
-            Sets the Debug logging callback to a default debug method which displays
-            the level of the message and the message itself. For details see https://aka.ms/msal-net-logging
-            </summary>
-        <returns>The builder to chain the .With methods</returns>
-        <remarks>To be added.</remarks>
-        <exception cref="T:System.InvalidOperationException" />
-        <see cref="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithLogging(Microsoft.Identity.Client.LogCallback,System.Nullable{Microsoft.Identity.Client.LogLevel},System.Nullable{System.Boolean},System.Nullable{System.Boolean})" />
-        <altmember cref="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithLogging(Microsoft.Identity.Client.LogCallback,System.Nullable{Microsoft.Identity.Client.LogLevel},System.Nullable{System.Boolean},System.Nullable{System.Boolean})" />
-      </Docs>
-    </Member>
-    <Member MemberName="WithExperimentalFeatures">
-      <MemberSignature Language="C#" Value="public T WithExperimentalFeatures (bool enableExperimentalFeatures = true);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !T WithExperimentalFeatures(bool enableExperimentalFeatures) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithExperimentalFeatures(System.Boolean)" />
-      <MemberSignature Language="VB.NET" Value="Public Function WithExperimentalFeatures (Optional enableExperimentalFeatures As Boolean = true) As T" />
-      <MemberSignature Language="F#" Value="member this.WithExperimentalFeatures : bool -&gt; 'T" Usage="abstractApplicationBuilder.WithExperimentalFeatures enableExperimentalFeatures" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>T</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="enableExperimentalFeatures" Type="System.Boolean" />
-      </Parameters>
-      <Docs>
-        <param name="enableExperimentalFeatures">To be added.</param>
-        <summary>
-            Allows usage of experimental features and APIs. If this flag is not set, experimental features 
-            will throw an exception. For details see https://aka.ms/msal-net-experimental-features
-            </summary>
-        <returns>To be added.</returns>
-        <remarks>
-            Changes in the public API of experimental features will not result in an increment of the major version of this library.
-            For these reason we advise against using these features in production.
-            </remarks>
-      </Docs>
-    </Member>
     <Member MemberName="WithExtraQueryParameters">
       <MemberSignature Language="C#" Value="public T WithExtraQueryParameters (System.Collections.Generic.IDictionary&lt;string,string&gt; extraQueryParameters);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !T WithExtraQueryParameters(class System.Collections.Generic.IDictionary`2&lt;string, string&gt; extraQueryParameters) cil managed" />
@@ -591,6 +497,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -620,6 +527,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -638,78 +546,6 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="WithHttpClientFactory">
-      <MemberSignature Language="C#" Value="public T WithHttpClientFactory (Microsoft.Identity.Client.IMsalHttpClientFactory httpClientFactory);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !T WithHttpClientFactory(class Microsoft.Identity.Client.IMsalHttpClientFactory httpClientFactory) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithHttpClientFactory(Microsoft.Identity.Client.IMsalHttpClientFactory)" />
-      <MemberSignature Language="VB.NET" Value="Public Function WithHttpClientFactory (httpClientFactory As IMsalHttpClientFactory) As T" />
-      <MemberSignature Language="F#" Value="member this.WithHttpClientFactory : Microsoft.Identity.Client.IMsalHttpClientFactory -&gt; 'T" Usage="abstractApplicationBuilder.WithHttpClientFactory httpClientFactory" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>T</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="httpClientFactory" Type="Microsoft.Identity.Client.IMsalHttpClientFactory" />
-      </Parameters>
-      <Docs>
-        <param name="httpClientFactory">HTTP client factory</param>
-        <summary>
-            Uses a specific <see cref="T:Microsoft.Identity.Client.IMsalHttpClientFactory" /> to communicate
-            with the IdP. This enables advanced scenarios such as setting a proxy,
-            or setting the Agent.
-            </summary>
-        <returns>The builder to chain the .With methods</returns>
-        <remarks>MSAL does not guarantee that it will not modify the HttpClient, for example by adding new headers.
-            Prior to the changes needed in order to make MSAL's httpClients thread safe (https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/pull/2046/files),
-            the httpClient had the possibility of throwing an exception stating "Properties can only be modified before sending the first request".
-            MSAL's httpClient will no longer throw this exception after 4.19.0 (https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/releases/tag/4.19.0)
-            see (https://aka.ms/msal-httpclient-info) for more information.
-            </remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="WithHttpClientFactory">
-      <MemberSignature Language="C#" Value="public T WithHttpClientFactory (Microsoft.Identity.Client.IMsalHttpClientFactory httpClientFactory, bool retryOnceOn5xx);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !T WithHttpClientFactory(class Microsoft.Identity.Client.IMsalHttpClientFactory httpClientFactory, bool retryOnceOn5xx) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithHttpClientFactory(Microsoft.Identity.Client.IMsalHttpClientFactory,System.Boolean)" />
-      <MemberSignature Language="VB.NET" Value="Public Function WithHttpClientFactory (httpClientFactory As IMsalHttpClientFactory, retryOnceOn5xx As Boolean) As T" />
-      <MemberSignature Language="F#" Value="member this.WithHttpClientFactory : Microsoft.Identity.Client.IMsalHttpClientFactory * bool -&gt; 'T" Usage="abstractApplicationBuilder.WithHttpClientFactory (httpClientFactory, retryOnceOn5xx)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>T</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="httpClientFactory" Type="Microsoft.Identity.Client.IMsalHttpClientFactory" />
-        <Parameter Name="retryOnceOn5xx" Type="System.Boolean" />
-      </Parameters>
-      <Docs>
-        <param name="httpClientFactory">HTTP client factory</param>
-        <param name="retryOnceOn5xx">Configures MSAL to retry on 5xx server errors. When enabled (on by default), MSAL will wait 1 second after recieving
-            a 5xx error and then retry the http request again.</param>
-        <summary>
-            Uses a specific <see cref="T:Microsoft.Identity.Client.IMsalHttpClientFactory" /> to communicate
-            with the IdP. This enables advanced scenarios such as setting a proxy,
-            or setting the Agent.
-            </summary>
-        <returns>The builder to chain the .With methods</returns>
-        <remarks>MSAL does not guarantee that it will not modify the HttpClient, for example by adding new headers.
-            Prior to the changes needed in order to make MSAL's httpClients thread safe (https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/pull/2046/files),
-            the httpClient had the possibility of throwing an exception stating "Properties can only be modified before sending the first request".
-            MSAL's httpClient will no longer throw this exception after 4.19.0 (https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/releases/tag/4.19.0)
-            see (https://aka.ms/msal-httpclient-info) for more information.
-            If you only want to configure the retryOnceOn5xx parameter, set httpClientFactory to null and MSAL will use the default http client.
-            </remarks>
-      </Docs>
-    </Member>
     <Member MemberName="WithInstanceDicoveryMetadata">
       <MemberSignature Language="C#" Value="public T WithInstanceDicoveryMetadata (string instanceDiscoveryJson);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !T WithInstanceDicoveryMetadata(string instanceDiscoveryJson) cil managed" />
@@ -721,6 +557,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -763,6 +600,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -804,6 +642,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -835,6 +674,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -867,6 +707,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -899,6 +740,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -921,94 +763,18 @@
             </remarks>
       </Docs>
     </Member>
-    <Member MemberName="WithLogging">
-      <MemberSignature Language="C#" Value="public T WithLogging (Microsoft.IdentityModel.Abstractions.IIdentityLogger identityLogger, bool enablePiiLogging = false);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !T WithLogging(class Microsoft.IdentityModel.Abstractions.IIdentityLogger identityLogger, bool enablePiiLogging) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithLogging(Microsoft.IdentityModel.Abstractions.IIdentityLogger,System.Boolean)" />
-      <MemberSignature Language="VB.NET" Value="Public Function WithLogging (identityLogger As IIdentityLogger, Optional enablePiiLogging As Boolean = false) As T" />
-      <MemberSignature Language="F#" Value="member this.WithLogging : Microsoft.IdentityModel.Abstractions.IIdentityLogger * bool -&gt; 'T" Usage="abstractApplicationBuilder.WithLogging (identityLogger, enablePiiLogging)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>T</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="identityLogger" Type="Microsoft.IdentityModel.Abstractions.IIdentityLogger" />
-        <Parameter Name="enablePiiLogging" Type="System.Boolean" />
-      </Parameters>
-      <Docs>
-        <param name="identityLogger">IdentityLogger</param>
-        <param name="enablePiiLogging">Boolean used to enable/disable logging of
-            Personally Identifiable Information (PII).
-            PII logs are never written to default outputs like Console, Logcat or NSLog
-            Default is set to <c>false</c>, which ensures that your application is compliant with GDPR.
-            You can set it to <c>true</c> for advanced debugging requiring PII
-            If both WithLogging apis are set, this one will override the other
-            </param>
-        <summary>
-            Sets the Identity Logger. For details see https://aka.ms/msal-net-logging
-            </summary>
-        <returns>The builder to chain the .With methods</returns>
-        <remarks>This is an experimental API. The method signature may change in the future without involving a major version upgrade.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="WithLogging">
-      <MemberSignature Language="C#" Value="public T WithLogging (Microsoft.Identity.Client.LogCallback loggingCallback, Microsoft.Identity.Client.LogLevel? logLevel = default, bool? enablePiiLogging = default, bool? enableDefaultPlatformLogging = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !T WithLogging(class Microsoft.Identity.Client.LogCallback loggingCallback, valuetype System.Nullable`1&lt;valuetype Microsoft.Identity.Client.LogLevel&gt; logLevel, valuetype System.Nullable`1&lt;bool&gt; enablePiiLogging, valuetype System.Nullable`1&lt;bool&gt; enableDefaultPlatformLogging) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithLogging(Microsoft.Identity.Client.LogCallback,System.Nullable{Microsoft.Identity.Client.LogLevel},System.Nullable{System.Boolean},System.Nullable{System.Boolean})" />
-      <MemberSignature Language="VB.NET" Value="Public Function WithLogging (loggingCallback As LogCallback, Optional logLevel As Nullable(Of LogLevel) = Nothing, Optional enablePiiLogging As Nullable(Of Boolean) = Nothing, Optional enableDefaultPlatformLogging As Nullable(Of Boolean) = Nothing) As T" />
-      <MemberSignature Language="F#" Value="member this.WithLogging : Microsoft.Identity.Client.LogCallback * Nullable&lt;Microsoft.Identity.Client.LogLevel&gt; * Nullable&lt;bool&gt; * Nullable&lt;bool&gt; -&gt; 'T" Usage="abstractApplicationBuilder.WithLogging (loggingCallback, logLevel, enablePiiLogging, enableDefaultPlatformLogging)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>T</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="loggingCallback" Type="Microsoft.Identity.Client.LogCallback" />
-        <Parameter Name="logLevel" Type="System.Nullable&lt;Microsoft.Identity.Client.LogLevel&gt;" />
-        <Parameter Name="enablePiiLogging" Type="System.Nullable&lt;System.Boolean&gt;" />
-        <Parameter Name="enableDefaultPlatformLogging" Type="System.Nullable&lt;System.Boolean&gt;" />
-      </Parameters>
-      <Docs>
-        <param name="loggingCallback" />
-        <param name="logLevel">Desired level of logging.  The default is LogLevel.Info</param>
-        <param name="enablePiiLogging">Boolean used to enable/disable logging of
-            Personally Identifiable Information (PII).
-            PII logs are never written to default outputs like Console, Logcat or NSLog
-            Default is set to <c>false</c>, which ensures that your application is compliant with GDPR.
-            You can set it to <c>true</c> for advanced debugging requiring PII
-            If both WithLogging apis are set, the other one will overide the this one
-            </param>
-        <param name="enableDefaultPlatformLogging">Flag to enable/disable logging to platform defaults.
-            In Desktop/UWP, Event Tracing is used. In iOS, NSLog is used.
-            In android, Logcat is used. The default value is <c>false</c></param>
-        <summary>
-            Sets the logging callback. For details see https://aka.ms/msal-net-logging
-            </summary>
-        <returns>The builder to chain the .With methods</returns>
-        <remarks>To be added.</remarks>
-        <exception cref="T:System.InvalidOperationException" />
-      </Docs>
-    </Member>
     <Member MemberName="WithOptions">
       <MemberSignature Language="C#" Value="protected T WithOptions (Microsoft.Identity.Client.ApplicationOptions applicationOptions);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance !T WithOptions(class Microsoft.Identity.Client.ApplicationOptions applicationOptions) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithOptions(Microsoft.Identity.Client.ApplicationOptions)" />
       <MemberSignature Language="VB.NET" Value="Protected Function WithOptions (applicationOptions As ApplicationOptions) As T" />
-      <MemberSignature Language="F#" Value="member this.WithOptions : Microsoft.Identity.Client.ApplicationOptions -&gt; 'T" Usage="abstractApplicationBuilder.WithOptions applicationOptions" />
+      <MemberSignature Language="F#" Value="override this.WithOptions : Microsoft.Identity.Client.ApplicationOptions -&gt; 'T" Usage="abstractApplicationBuilder.WithOptions applicationOptions" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -1037,6 +803,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -1068,6 +835,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1105,6 +873,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>

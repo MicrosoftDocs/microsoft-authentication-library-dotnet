@@ -6,7 +6,7 @@
   <TypeSignature Language="F#" Value="type TokenHandler = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-    <AssemblyVersion>6.25.1.0</AssemblyVersion>
+    <AssemblyVersion>6.27.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -27,7 +27,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+        <AssemblyVersion>6.27.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -44,17 +44,17 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+        <AssemblyVersion>6.27.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Default lifetime of tokens created. When creating tokens, if 'expires' and 'notbefore' are both null, 
-            then a default will be set to: expires = DateTime.UtcNow, notbefore = DateTime.UtcNow + TimeSpan.FromMinutes(TokenLifetimeInMinutes).
+            Default lifetime of tokens created. When creating tokens, if 'expires', 'notbefore' or 'issuedat' are null, 
+            then a default will be set to: issuedat = DateTime.UtcNow, notbefore = DateTime.UtcNow, expires = DateTime.UtcNow + TimeSpan.FromMinutes(TokenLifetimeInMinutes).
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>See: <see cref="P:Microsoft.IdentityModel.Tokens.TokenHandler.SetDefaultTimesOnTokenCreation" /> for configuration.</remarks>
       </Docs>
     </Member>
     <Member MemberName="MaximumTokenSizeInBytes">
@@ -66,7 +66,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+        <AssemblyVersion>6.27.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -89,7 +89,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+        <AssemblyVersion>6.27.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.SecurityToken</ReturnType>
@@ -118,7 +118,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+        <AssemblyVersion>6.27.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -146,7 +146,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+        <AssemblyVersion>6.27.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -169,7 +169,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+        <AssemblyVersion>6.27.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.TokenValidationResult&gt;</ReturnType>

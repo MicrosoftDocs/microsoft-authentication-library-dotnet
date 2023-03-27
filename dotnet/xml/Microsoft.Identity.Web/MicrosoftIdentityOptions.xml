@@ -1,16 +1,15 @@
 <Type Name="MicrosoftIdentityOptions" FullName="Microsoft.Identity.Web.MicrosoftIdentityOptions">
-  <TypeSignature Language="C#" Value="public class MicrosoftIdentityOptions : Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectOptions" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MicrosoftIdentityOptions extends Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectOptions" />
+  <TypeSignature Language="C#" Value="public class MicrosoftIdentityOptions : Microsoft.Identity.Web.OpenIdConnectOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MicrosoftIdentityOptions extends Microsoft.Identity.Web.OpenIdConnectOptions" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Web.MicrosoftIdentityOptions" />
   <TypeSignature Language="VB.NET" Value="Public Class MicrosoftIdentityOptions&#xA;Inherits OpenIdConnectOptions" />
   <TypeSignature Language="F#" Value="type MicrosoftIdentityOptions = class&#xA;    inherit OpenIdConnectOptions" />
   <AssemblyInfo>
-    <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-    <AssemblyVersion>1.25.9.0</AssemblyVersion>
-    <AssemblyVersion>1.25.10.0</AssemblyVersion>
+    <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+    <AssemblyVersion>2.6.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
-    <BaseTypeName>Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectOptions</BaseTypeName>
+    <BaseTypeName>Microsoft.Identity.Web.OpenIdConnectOptions</BaseTypeName>
   </Base>
   <Interfaces />
   <Docs>
@@ -27,9 +26,8 @@
       <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>1.25.9.0</AssemblyVersion>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -45,9 +43,8 @@
       <MemberSignature Language="F#" Value="member this.AllowWebApiToBeAuthorizedByACL : bool with get, set" Usage="Microsoft.Identity.Web.MicrosoftIdentityOptions.AllowWebApiToBeAuthorizedByACL" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>1.25.9.0</AssemblyVersion>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -72,9 +69,8 @@
       <MemberSignature Language="F#" Value="member this.ClientCertificates : seq&lt;Microsoft.Identity.Web.CertificateDescription&gt; with get, set" Usage="Microsoft.Identity.Web.MicrosoftIdentityOptions.ClientCertificates" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>1.25.9.0</AssemblyVersion>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.Identity.Web.CertificateDescription&gt;</ReturnType>
@@ -99,6 +95,26 @@
               </example>
       </Docs>
     </Member>
+    <Member MemberName="ClientCredentials">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Microsoft.Identity.Abstractions.CredentialDescription&gt;? ClientCredentials { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Identity.Abstractions.CredentialDescription&gt; ClientCredentials" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Web.MicrosoftIdentityOptions.ClientCredentials" />
+      <MemberSignature Language="VB.NET" Value="Public Property ClientCredentials As IEnumerable(Of CredentialDescription)" />
+      <MemberSignature Language="F#" Value="member this.ClientCredentials : seq&lt;Microsoft.Identity.Abstractions.CredentialDescription&gt; with get, set" Usage="Microsoft.Identity.Web.MicrosoftIdentityOptions.ClientCredentials" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.Identity.Abstractions.CredentialDescription&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary />
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="ClientCredentialsUsingManagedIdentity">
       <MemberSignature Language="C#" Value="public Microsoft.Identity.Web.CertificatelessOptions? ClientCredentialsUsingManagedIdentity { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Identity.Web.CertificatelessOptions ClientCredentialsUsingManagedIdentity" />
@@ -107,9 +123,8 @@
       <MemberSignature Language="F#" Value="member this.ClientCredentialsUsingManagedIdentity : Microsoft.Identity.Web.CertificatelessOptions with get, set" Usage="Microsoft.Identity.Web.MicrosoftIdentityOptions.ClientCredentialsUsingManagedIdentity" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>1.25.9.0</AssemblyVersion>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Web.CertificatelessOptions</ReturnType>
@@ -130,9 +145,8 @@
       <MemberSignature Language="F#" Value="member this.DefaultUserFlow : string" Usage="Microsoft.Identity.Web.MicrosoftIdentityOptions.DefaultUserFlow" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>1.25.9.0</AssemblyVersion>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -153,9 +167,8 @@
       <MemberSignature Language="F#" Value="member this.Domain : string with get, set" Usage="Microsoft.Identity.Web.MicrosoftIdentityOptions.Domain" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>1.25.9.0</AssemblyVersion>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -176,9 +189,8 @@
       <MemberSignature Language="F#" Value="member this.EditProfilePolicyId : string with get, set" Usage="Microsoft.Identity.Web.MicrosoftIdentityOptions.EditProfilePolicyId" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>1.25.9.0</AssemblyVersion>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -192,19 +204,18 @@
       </Docs>
     </Member>
     <Member MemberName="ErrorPath">
-      <MemberSignature Language="C#" Value="public Microsoft.AspNetCore.Http.PathString ErrorPath { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.AspNetCore.Http.PathString ErrorPath" />
+      <MemberSignature Language="C#" Value="public string? ErrorPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ErrorPath" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Web.MicrosoftIdentityOptions.ErrorPath" />
-      <MemberSignature Language="VB.NET" Value="Public Property ErrorPath As PathString" />
-      <MemberSignature Language="F#" Value="member this.ErrorPath : Microsoft.AspNetCore.Http.PathString with get, set" Usage="Microsoft.Identity.Web.MicrosoftIdentityOptions.ErrorPath" />
+      <MemberSignature Language="VB.NET" Value="Public Property ErrorPath As String" />
+      <MemberSignature Language="F#" Value="member this.ErrorPath : string with get, set" Usage="Microsoft.Identity.Web.MicrosoftIdentityOptions.ErrorPath" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>1.25.9.0</AssemblyVersion>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>Microsoft.AspNetCore.Http.PathString</ReturnType>
+        <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
@@ -224,9 +235,8 @@
       <MemberSignature Language="F#" Value="member this.Instance : string with get, set" Usage="Microsoft.Identity.Web.MicrosoftIdentityOptions.Instance" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>1.25.9.0</AssemblyVersion>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -247,9 +257,8 @@
       <MemberSignature Language="F#" Value="member this.LegacyCacheCompatibilityEnabled : bool with get, set" Usage="Microsoft.Identity.Web.MicrosoftIdentityOptions.LegacyCacheCompatibilityEnabled" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>1.25.9.0</AssemblyVersion>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -266,19 +275,18 @@
       </Docs>
     </Member>
     <Member MemberName="ResetPasswordPath">
-      <MemberSignature Language="C#" Value="public Microsoft.AspNetCore.Http.PathString ResetPasswordPath { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.AspNetCore.Http.PathString ResetPasswordPath" />
+      <MemberSignature Language="C#" Value="public string? ResetPasswordPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ResetPasswordPath" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Web.MicrosoftIdentityOptions.ResetPasswordPath" />
-      <MemberSignature Language="VB.NET" Value="Public Property ResetPasswordPath As PathString" />
-      <MemberSignature Language="F#" Value="member this.ResetPasswordPath : Microsoft.AspNetCore.Http.PathString with get, set" Usage="Microsoft.Identity.Web.MicrosoftIdentityOptions.ResetPasswordPath" />
+      <MemberSignature Language="VB.NET" Value="Public Property ResetPasswordPath As String" />
+      <MemberSignature Language="F#" Value="member this.ResetPasswordPath : string with get, set" Usage="Microsoft.Identity.Web.MicrosoftIdentityOptions.ResetPasswordPath" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>1.25.9.0</AssemblyVersion>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>Microsoft.AspNetCore.Http.PathString</ReturnType>
+        <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
@@ -298,9 +306,8 @@
       <MemberSignature Language="F#" Value="member this.ResetPasswordPolicyId : string with get, set" Usage="Microsoft.Identity.Web.MicrosoftIdentityOptions.ResetPasswordPolicyId" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>1.25.9.0</AssemblyVersion>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -321,9 +328,8 @@
       <MemberSignature Language="F#" Value="member this.SendX5C : bool with get, set" Usage="Microsoft.Identity.Web.MicrosoftIdentityOptions.SendX5C" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>1.25.9.0</AssemblyVersion>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -350,9 +356,8 @@
       <MemberSignature Language="F#" Value="member this.SignUpSignInPolicyId : string with get, set" Usage="Microsoft.Identity.Web.MicrosoftIdentityOptions.SignUpSignInPolicyId" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>1.25.9.0</AssemblyVersion>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -373,9 +378,8 @@
       <MemberSignature Language="F#" Value="member this.TenantId : string with get, set" Usage="Microsoft.Identity.Web.MicrosoftIdentityOptions.TenantId" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>1.25.9.0</AssemblyVersion>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -396,9 +400,8 @@
       <MemberSignature Language="F#" Value="member this.TokenDecryptionCertificates : seq&lt;Microsoft.Identity.Web.CertificateDescription&gt; with get, set" Usage="Microsoft.Identity.Web.MicrosoftIdentityOptions.TokenDecryptionCertificates" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>1.25.9.0</AssemblyVersion>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.Identity.Web.CertificateDescription&gt;</ReturnType>
@@ -423,6 +426,26 @@
               </example>
       </Docs>
     </Member>
+    <Member MemberName="TokenDecryptionCredentials">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Microsoft.Identity.Abstractions.CredentialDescription&gt;? TokenDecryptionCredentials { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Identity.Abstractions.CredentialDescription&gt; TokenDecryptionCredentials" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Web.MicrosoftIdentityOptions.TokenDecryptionCredentials" />
+      <MemberSignature Language="VB.NET" Value="Public Property TokenDecryptionCredentials As IEnumerable(Of CredentialDescription)" />
+      <MemberSignature Language="F#" Value="member this.TokenDecryptionCredentials : seq&lt;Microsoft.Identity.Abstractions.CredentialDescription&gt; with get, set" Usage="Microsoft.Identity.Web.MicrosoftIdentityOptions.TokenDecryptionCredentials" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.Identity.Abstractions.CredentialDescription&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary />
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="UserAssignedManagedIdentityClientId">
       <MemberSignature Language="C#" Value="public string? UserAssignedManagedIdentityClientId { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string UserAssignedManagedIdentityClientId" />
@@ -431,9 +454,8 @@
       <MemberSignature Language="F#" Value="member this.UserAssignedManagedIdentityClientId : string with get, set" Usage="Microsoft.Identity.Web.MicrosoftIdentityOptions.UserAssignedManagedIdentityClientId" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>1.25.9.0</AssemblyVersion>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -455,9 +477,8 @@
       <MemberSignature Language="F#" Value="member this.WithSpaAuthCode : bool with get, set" Usage="Microsoft.Identity.Web.MicrosoftIdentityOptions.WithSpaAuthCode" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>1.25.9.0</AssemblyVersion>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>

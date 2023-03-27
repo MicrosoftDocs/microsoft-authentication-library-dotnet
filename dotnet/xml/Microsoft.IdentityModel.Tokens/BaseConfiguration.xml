@@ -6,7 +6,7 @@
   <TypeSignature Language="F#" Value="type BaseConfiguration = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-    <AssemblyVersion>6.25.1.0</AssemblyVersion>
+    <AssemblyVersion>6.27.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -27,7 +27,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+        <AssemblyVersion>6.27.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -44,7 +44,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+        <AssemblyVersion>6.27.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -66,7 +66,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
+        <AssemblyVersion>6.27.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.ICollection&lt;Microsoft.IdentityModel.Tokens.SecurityKey&gt;</ReturnType>
@@ -74,6 +74,30 @@
       <Docs>
         <summary>
             Gets the <see cref="T:System.Collections.Generic.ICollection`1" /> that the IdentityProvider indicates are to be used in order to sign tokens.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenEndpoint">
+      <MemberSignature Language="C#" Value="public virtual string TokenEndpoint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TokenEndpoint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Tokens.BaseConfiguration.TokenEndpoint" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property TokenEndpoint As String" />
+      <MemberSignature Language="F#" Value="member this.TokenEndpoint : string with get, set" Usage="Microsoft.IdentityModel.Tokens.BaseConfiguration.TokenEndpoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>6.27.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the token endpoint specified via the metadata endpoint.
+            This can be the fed:SecurityTokenServiceType in WS-Federation, http://docs.oasis-open.org/wsfed/federation/v1.2/os/ws-federation-1.2-spec-os.html#:~:text=fed%3ASecurityTokenSerivceEndpoint
+            Or the token_endpoint in the OIDC metadata.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
