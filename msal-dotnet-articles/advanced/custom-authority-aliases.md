@@ -18,7 +18,21 @@ The information returned is used to:
 - Discover a list of aliases for each cloud (Azure Public, German Cloud, China Cloud etc.). A token issued to an authority in the set is valid for all other authorities in the set.
 - Use the preferred_network alias for communication with Azure AD
 - Use the preferred_cache alias to store tokens in the cache
-- Provide a level of validation for the authority - if a non-existent authority is used, then Azure AD returns an "invalid_instance" [error](https://login.microsoftonline.com/common/discovery/instance?api-version=1.1&authorization_endpoint=https%3A%2F%2Fbogus.microsoftonline.com%2Fcommon%2Foauth2%2Fv2.0%2Fauthorize).
+- Provide a level of validation for the authority - if a non-existent authority is used, then Azure AD returns an "invalid_instance" error:
+
+  ```json
+  {
+      "error":"invalid_instance",
+      "error_description":"AADSTS50049: Unknown or invalid instance.\r\nTrace ID: 3adb62d2-11d5-4bb0-acac-7d97451c0000\r\nCorrelation ID: ce374500-8786-4739-ac5b-9a57f9cc0140\r\nTimestamp: 2023-03-27 16:25:19Z",
+      "error_codes":[
+          50049
+      ],
+      "timestamp":"2023-03-27 16:25:19Z",
+      "trace_id":"3adb62d2-11d5-4bb0-acac-7d97451c0000",
+      "correlation_id":"ce374500-8786-4739-ac5b-9a57f9cc0140",
+      "error_uri":"https://login.microsoftonline.com/error?code=50049"
+  }
+  ```
 
 ## Instance validation
 
