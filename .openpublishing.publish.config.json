@@ -1,12 +1,29 @@
 {
   "docsets_to_publish": [
     {
+      "docset_name": "entra-msal",
+      "build_source_folder": "entra-msal",
+      "build_output_subfolder": "entra-msal",
+      "locale": "en-us",
+      "monikers": [],
+      "moniker_ranges": [],
+      "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
+    },
+    {
       "docset_name": "microsoft-authentication-library-dotnet",
       "build_source_folder": "dotnet",
       "build_output_subfolder": "microsoft-authentication-library-dotnet",
       "locale": "en-us",
       "monikers": [],
       "moniker_ranges": [],
+      "xref_query_tags": [
+        "/dotnet"
+      ],
       "open_to_public_contributors": false,
       "type_mapping": {
         "Conceptual": "Content",
@@ -42,9 +59,6 @@
       ],
       "DiffFolder": [
         "dotnet/api"
-      ],
-      "xref_query_tags": [
-        "/dotnet"
       ]
     },
     {
@@ -54,20 +68,20 @@
       "locale": "en-us",
       "monikers": [],
       "moniker_ranges": [],
-      "customized_tasks": {
-        "docset_prebuild": [
-          "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1"
-        ]
-      },
+      "xref_query_tags": [
+        "/dotnet"
+      ],
       "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content"
       },
       "build_entry_point": "docs",
       "template_folder": "_themes",
-      "xref_query_tags": [
-        "/dotnet"
-      ]
+      "customized_tasks": {
+        "docset_prebuild": [
+          "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1"
+        ]
+      }
     }
   ],
   "notification_subscribers": [],
