@@ -6,8 +6,7 @@
   <TypeSignature Language="F#" Value="type AzureFunctionsAuthenticationHttpContextExtension = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-    <AssemblyVersion>1.25.9.0</AssemblyVersion>
-    <AssemblyVersion>1.25.10.0</AssemblyVersion>
+    <AssemblyVersion>2.6.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -29,8 +28,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>1.25.9.0</AssemblyVersion>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.ValueTuple&lt;System.Boolean,Microsoft.AspNetCore.Mvc.IActionResult&gt;&gt;</ReturnType>
@@ -41,7 +39,9 @@
       <Docs>
         <param name="httpContext">The current HTTP Context, such as req.HttpContext.</param>
         <summary>
-            Enables an Azure Function to act as/expose a protected web API, enabling bearer token authentication. Calling this method from your Azure function validates the token and exposes the identity of the user or app on behalf of which your function is called, in the HttpContext.User member, where your function can make use of it.
+            Enables an Azure Function to act as/expose a protected web API, enabling bearer token authentication.
+            Calling this method from your Azure function validates the token and exposes the identity of the user or app on behalf of which your function is called,
+            in the HttpContext.User member, where your function can make use of it.
             </summary>
         <returns>A task indicating success or failure. In case of failure <see cref="T:Microsoft.AspNetCore.Mvc.UnauthorizedObjectResult" />.</returns>
         <remarks>To be added.</remarks>

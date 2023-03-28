@@ -1,12 +1,13 @@
 ---
 title: Testing applications using MSAL.NET
+description: "How to test applications that use MSAL.NET for token acquisition."
 ---
 
 # Testing applications using MSAL.NET
 
 ## Unit testing
 
-MSAL.NET's API uses the builder pattern heavily. Builders are difficult / tedious to mock. Instead, we recommend that you wrap all your authentication logic behind an interface and mock that in your app.
+MSAL.NET's API uses the builder pattern heavily. Builders are difficult and tedious to mock. Instead, we recommend that you wrap all your authentication logic behind an interface and mock that in your app.
 
 ## End-to-end testing
 
@@ -50,7 +51,7 @@ For native clients, there are several approaches to testing:
 
 - Use a framework, like Appium or Xamarin.Test, that provides an automation interface for both your app and the MSAL created browser.
 
-- MSAL exposes an extensibility point that allows developers to inject their own browser experience. The MSAL team uses this internally to test interactive auth scenarios. Have a look at [this test](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/master/tests/Microsoft.Identity.Test.Integration.net45/SeleniumTests/InteractiveFlowTests.cs) project to see how to inject a [Selenium powered browser](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/tree/master/tests/Microsoft.Identity.Test.Integration.net45/Infrastructure) that can handle authentication.
+- MSAL exposes an extensibility point that allows developers to inject their own browser experience. The MSAL team uses this internally to test interactive auth scenarios. Have a look at [this test](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/main/tests/Microsoft.Identity.Test.Integration.netfx/SeleniumTests/InteractiveFlowTests.cs) project to see how to inject a [Selenium powered browser](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/tree/main/tests/Microsoft.Identity.Test.Integration.netfx/Infrastructure) that can handle authentication.
 
 ### Xamarin apps
 

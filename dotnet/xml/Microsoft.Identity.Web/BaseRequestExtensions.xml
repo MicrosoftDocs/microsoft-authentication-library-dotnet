@@ -6,7 +6,7 @@
   <TypeSignature Language="F#" Value="type BaseRequestExtensions = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Identity.Web.MicrosoftGraph</AssemblyName>
-    <AssemblyVersion>1.25.10.0</AssemblyVersion>
+    <AssemblyVersion>2.6.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -28,7 +28,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.MicrosoftGraph</AssemblyName>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -57,6 +57,43 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="WithAuthenticationOptions&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static T WithAuthenticationOptions&lt;T&gt; (this T baseRequest, Action&lt;Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions&gt; overrideAuthenticationOptions) where T : Microsoft.Graph.IBaseRequest;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!T WithAuthenticationOptions&lt;(class Microsoft.Graph.IBaseRequest) T&gt;(!!T baseRequest, class System.Action`1&lt;class Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions&gt; overrideAuthenticationOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.BaseRequestExtensions.WithAuthenticationOptions``1(``0,System.Action{Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions})" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function WithAuthenticationOptions(Of T As IBaseRequest) (baseRequest As T, overrideAuthenticationOptions As Action(Of AuthorizationHeaderProviderOptions)) As T" />
+      <MemberSignature Language="F#" Value="static member WithAuthenticationOptions : 'T * Action&lt;Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions&gt; -&gt; 'T (requires 'T :&gt; Microsoft.Graph.IBaseRequest)" Usage="Microsoft.Identity.Web.BaseRequestExtensions.WithAuthenticationOptions (baseRequest, overrideAuthenticationOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.MicrosoftGraph</AssemblyName>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <InterfaceName>Microsoft.Graph.IBaseRequest</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="baseRequest" Type="T" RefType="this" />
+        <Parameter Name="overrideAuthenticationOptions" Type="System.Action&lt;Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Request</typeparam>
+        <param name="baseRequest">Request.</param>
+        <param name="overrideAuthenticationOptions">Delegate to override
+            the authentication options</param>
+        <summary>
+            Overrides authentication options for a given request.
+            </summary>
+        <returns>Base request</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="WithAuthenticationScheme&lt;T&gt;">
       <MemberSignature Language="C#" Value="public static T WithAuthenticationScheme&lt;T&gt; (this T baseRequest, string authenticationScheme) where T : Microsoft.Graph.IBaseRequest;" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!T WithAuthenticationScheme&lt;(class Microsoft.Graph.IBaseRequest) T&gt;(!!T baseRequest, string authenticationScheme) cil managed" />
@@ -66,7 +103,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.MicrosoftGraph</AssemblyName>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -104,7 +141,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.MicrosoftGraph</AssemblyName>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>

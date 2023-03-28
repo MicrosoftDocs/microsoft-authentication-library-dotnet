@@ -6,10 +6,19 @@
   <TypeSignature Language="F#" Value="type IDownstreamWebApi = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-    <AssemblyVersion>1.25.9.0</AssemblyVersion>
-    <AssemblyVersion>1.25.10.0</AssemblyVersion>
+    <AssemblyVersion>2.6.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName Language="C#">[System.Obsolete("Use IDownstreamApi in Microsoft.Identity.Abstractions, implemented in Microsoft.Identity.Web.DownstreamApi.See aka.ms/id-web-downstream-api-v2 for migration details.", false)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Obsolete("Use IDownstreamApi in Microsoft.Identity.Abstractions, implemented in Microsoft.Identity.Web.DownstreamApi.See aka.ms/id-web-downstream-api-v2 for migration details.", false)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>
             Interface used to call a downstream web API, for instance from controllers.
@@ -26,8 +35,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>1.25.9.0</AssemblyVersion>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;</ReturnType>
@@ -62,8 +70,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>1.25.9.0</AssemblyVersion>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;</ReturnType>
@@ -101,8 +108,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>1.25.9.0</AssemblyVersion>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;</ReturnType>
@@ -142,8 +148,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>1.25.9.0</AssemblyVersion>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;</ReturnType>
@@ -186,8 +191,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>1.25.9.0</AssemblyVersion>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;TOutput&gt;</ReturnType>
@@ -264,8 +268,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>1.25.9.0</AssemblyVersion>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;TOutput&gt;</ReturnType>

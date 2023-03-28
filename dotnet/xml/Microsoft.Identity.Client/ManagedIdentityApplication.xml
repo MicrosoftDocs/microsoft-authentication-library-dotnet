@@ -1,0 +1,84 @@
+<Type Name="ManagedIdentityApplication" FullName="Microsoft.Identity.Client.ManagedIdentityApplication">
+  <TypeSignature Language="C#" Value="public sealed class ManagedIdentityApplication : Microsoft.Identity.Client.ApplicationBase, Microsoft.Identity.Client.IManagedIdentityApplication" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ManagedIdentityApplication extends Microsoft.Identity.Client.ApplicationBase implements class Microsoft.Identity.Client.IApplicationBase, class Microsoft.Identity.Client.IManagedIdentityApplication" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Client.ManagedIdentityApplication" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ManagedIdentityApplication&#xA;Inherits ApplicationBase&#xA;Implements IManagedIdentityApplication" />
+  <TypeSignature Language="F#" Value="type ManagedIdentityApplication = class&#xA;    inherit ApplicationBase&#xA;    interface IManagedIdentityApplication&#xA;    interface IApplicationBase" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+    <AssemblyVersion>4.51.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Identity.Client.ApplicationBase</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Identity.Client.IApplicationBase</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Microsoft.Identity.Client.IManagedIdentityApplication</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Class to be used for managed identity applications (on Azure resources like App Services, Virtual Machines, Azure Arc, Service Fabric and Cloud Shell).
+            </summary>
+    <remarks>
+            Managed identity can be enabled on Azure resources as a system assigned managed identity or a user assigned managed identity.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AcquireTokenForManagedIdentity">
+      <MemberSignature Language="C#" Value="public Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder AcquireTokenForManagedIdentity (string resource);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder AcquireTokenForManagedIdentity(string resource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.ManagedIdentityApplication.AcquireTokenForManagedIdentity(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function AcquireTokenForManagedIdentity (resource As String) As AcquireTokenForManagedIdentityParameterBuilder" />
+      <MemberSignature Language="F#" Value="abstract member AcquireTokenForManagedIdentity : string -&gt; Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder&#xA;override this.AcquireTokenForManagedIdentity : string -&gt; Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder" Usage="managedIdentityApplication.AcquireTokenForManagedIdentity resource" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Identity.Client.IManagedIdentityApplication.AcquireTokenForManagedIdentity(System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resource" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="resource">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="AppTokenCache">
+      <MemberSignature Language="C#" Value="public Microsoft.Identity.Client.ITokenCache AppTokenCache { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Identity.Client.ITokenCache AppTokenCache" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.ManagedIdentityApplication.AppTokenCache" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AppTokenCache As ITokenCache" />
+      <MemberSignature Language="F#" Value="member this.AppTokenCache : Microsoft.Identity.Client.ITokenCache" Usage="Microsoft.Identity.Client.ManagedIdentityApplication.AppTokenCache" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Identity.Client.IManagedIdentityApplication.AppTokenCache</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.ITokenCache</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

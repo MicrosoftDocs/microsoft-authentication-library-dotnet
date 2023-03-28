@@ -51,12 +51,12 @@ Note: Token cache performance was significantly improved in MSAL 4.30.0.
 
 If your service is multi-tenant (i.e. it needs tokens for a resource that is in different tenants), see [MSAL for client credential flow in multi-tenant services](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Multi-tenant-client_credential-use).
 
-You can serialize the token cache to a location of your choice for example in-memory or in distributed location like Redis. You would do this to: 
+You can serialize the token cache to a location of your choice for example in-memory or in distributed location like Redis. You would do this to:
 
 - share the token cache between several instances of `ConfidentialClientApplication` OR
 - persist the token cache to Redis to share it between different machines
 
-Please see [distributed cache implementations](https://github.com/AzureAD/microsoft-identity-web/tree/master/src/Microsoft.Identity.Web/TokenCacheProviders/Distributed) and [binding the token cache](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/token-cache-serialization#token-cache-for-a-daemon-app).
+Please see [distributed cache implementations](https://github.com/AzureAD/microsoft-identity-web/tree/master/src/Microsoft.Identity.Web.TokenCache/Distributed) and [binding the token cache](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/token-cache-serialization#token-cache-for-a-daemon-app).
 
 This [sample](https://github.com/Azure-Samples/active-directory-dotnet-v1-to-v2/blob/b48c10180665260a1aec78a9acf7d1b1ff97e5ba/ConfidentialClientTokenCache/Program.cs) shows token cache serialization.
 
@@ -84,7 +84,8 @@ authResult.AuthenticationResultMetadata.TokenSource == TokenSource.Cache
 **Solution:** You are calling Azure AD for a token to often and Azure ADis throttling you. You need to use a cache - either the in-memory one (as per the sample above) or a persisted one.
 
 **Problem:** `AcquireTokenClient` latency is too high
-**Possible Solutions:** Please ensure you have a high token cache hit rate. 
+**Possible Solutions:** Please ensure you have a high token cache hit rate.
+
 The in-memory cache is optimized for searching through tokens that come from different client_id or different tenant_id. It is not optimized for storing tokens with different scopes. You need to use a different cache key that includes the scope. See [Performance testing](../../advanced/performance-testing.md).
 
 ## Registration of application secret or certificate with Azure AD
@@ -140,8 +141,8 @@ In the case where your confidential client application uses **only** client cred
 
 Sample | Platform | Description
 ------ | -------- | -----------
-[active-directory-dotnetcore-daemon-v2](https://github.com/Azure-Samples/active-directory-dotnetcore-daemon-v2) | .NET Core 2.1 Console | <p>A simple .NET Core application that displays the users of a tenant querying the Microsoft Graph using the identity of the application, instead of on behalf of a user.</p> ![Daemon app topology](../../media/daemon-app-topology.png) <p>The sample also illustrates the variation with certificates.<p/> ![Daemon certificate-based auth topology](../../media/daemon-certificate-topology.png)
-[active-directory-dotnet-daemon-v2](https://github.com/Azure-Samples/active-directory-dotnet-daemon-v2) | ASP.NET MVC | <p>A web application that sync's data from the Microsoft Graph using the identity of the application, instead of on behalf of a user.<p/>![UserSync app topology](../../media/user-sync-app-topology.png)
+[active-directory-dotnetcore-daemon-v2](https://github.com/Azure-Samples/active-directory-dotnetcore-daemon-v2) | .NET Core 2.1 Console | <p>A simple .NET Core application that displays the users of a tenant querying the Microsoft Graph using the identity of the application, instead of on behalf of a user.</p> ![Daemon app topology](../../media/daemon-app-topology.png) <p>The sample also illustrates the variation with certificates.</p> ![Daemon certificate-based auth topology](../../media/daemon-certificate-topology.png)
+[active-directory-dotnet-daemon-v2](https://github.com/Azure-Samples/active-directory-dotnet-daemon-v2) | ASP.NET MVC | <p>A web application that sync's data from the Microsoft Graph using the identity of the application, instead of on behalf of a user.</p>![UserSync app topology](../../media/user-sync-app-topology.png)
 
 ## More info
 

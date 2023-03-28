@@ -1,16 +1,17 @@
 <Type Name="ApplicationOptions" FullName="Microsoft.Identity.Client.ApplicationOptions">
-  <TypeSignature Language="C#" Value="public abstract class ApplicationOptions" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ApplicationOptions extends System.Object" />
+  <TypeSignature Language="C#" Value="public abstract class ApplicationOptions : Microsoft.Identity.Client.BaseApplicationOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ApplicationOptions extends Microsoft.Identity.Client.BaseApplicationOptions" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Client.ApplicationOptions" />
-  <TypeSignature Language="VB.NET" Value="Public MustInherit Class ApplicationOptions" />
-  <TypeSignature Language="F#" Value="type ApplicationOptions = class" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class ApplicationOptions&#xA;Inherits BaseApplicationOptions" />
+  <TypeSignature Language="F#" Value="type ApplicationOptions = class&#xA;    inherit BaseApplicationOptions" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Identity.Client</AssemblyName>
     <AssemblyVersion>4.48.1.0</AssemblyVersion>
     <AssemblyVersion>4.49.1.0</AssemblyVersion>
+    <AssemblyVersion>4.51.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
-    <BaseTypeName>System.Object</BaseTypeName>
+    <BaseTypeName>Microsoft.Identity.Client.BaseApplicationOptions</BaseTypeName>
   </Base>
   <Interfaces />
   <Docs>
@@ -33,6 +34,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -51,6 +53,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AadAuthorityAudience</ReturnType>
@@ -75,6 +78,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AzureCloudInstance</ReturnType>
@@ -101,6 +105,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
@@ -129,6 +134,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -153,6 +159,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -176,6 +183,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -199,6 +207,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -222,33 +231,6 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="EnablePiiLogging">
-      <MemberSignature Language="C#" Value="public bool EnablePiiLogging { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance bool EnablePiiLogging" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.ApplicationOptions.EnablePiiLogging" />
-      <MemberSignature Language="VB.NET" Value="Public Property EnablePiiLogging As Boolean" />
-      <MemberSignature Language="F#" Value="member this.EnablePiiLogging : bool with get, set" Usage="Microsoft.Identity.Client.ApplicationOptions.EnablePiiLogging" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Boolean</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            Flag to enable/disable logging of Personally Identifiable Information (PII).
-            PII logs are never written to default outputs like Console, Logcat or NSLog
-            Default is set to <c>false</c>, which ensures that your application is compliant with GDPR. You can set
-            it to <c>true</c> for advanced debugging requiring PII. See https://aka.ms/msal-net-logging
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-        <altmember cref="P:Microsoft.Identity.Client.ApplicationOptions.IsDefaultPlatformLoggingEnabled" />
-      </Docs>
-    </Member>
     <Member MemberName="Instance">
       <MemberSignature Language="C#" Value="public string Instance { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string Instance" />
@@ -260,6 +242,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -275,31 +258,6 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="IsDefaultPlatformLoggingEnabled">
-      <MemberSignature Language="C#" Value="public bool IsDefaultPlatformLoggingEnabled { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance bool IsDefaultPlatformLoggingEnabled" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.ApplicationOptions.IsDefaultPlatformLoggingEnabled" />
-      <MemberSignature Language="VB.NET" Value="Public Property IsDefaultPlatformLoggingEnabled As Boolean" />
-      <MemberSignature Language="F#" Value="member this.IsDefaultPlatformLoggingEnabled : bool with get, set" Usage="Microsoft.Identity.Client.ApplicationOptions.IsDefaultPlatformLoggingEnabled" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Boolean</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            Flag to enable/disable logging to platform defaults. In Desktop/UWP, Event Tracing is used. In iOS, NSLog is used.
-            In Android, logcat is used. The default value is <c>false</c>. See https://aka.ms/msal-net-logging
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-        <altmember cref="P:Microsoft.Identity.Client.ApplicationOptions.EnablePiiLogging" />
-      </Docs>
-    </Member>
     <Member MemberName="KerberosServicePrincipalName">
       <MemberSignature Language="C#" Value="public string KerberosServicePrincipalName { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string KerberosServicePrincipalName" />
@@ -311,6 +269,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -334,6 +293,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -341,31 +301,6 @@
       <Docs>
         <summary>
             Enables legacy ADAL cache serialization and deserialization.
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="LogLevel">
-      <MemberSignature Language="C#" Value="public Microsoft.Identity.Client.LogLevel LogLevel { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Identity.Client.LogLevel LogLevel" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.ApplicationOptions.LogLevel" />
-      <MemberSignature Language="VB.NET" Value="Public Property LogLevel As LogLevel" />
-      <MemberSignature Language="F#" Value="member this.LogLevel : Microsoft.Identity.Client.LogLevel with get, set" Usage="Microsoft.Identity.Client.ApplicationOptions.LogLevel" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Microsoft.Identity.Client.LogLevel</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            Enables you to configure the level of logging you want. The default value is <see cref="F:Microsoft.Identity.Client.LogLevel.Info" />. Setting it to <see cref="F:Microsoft.Identity.Client.LogLevel.Error" /> will only get errors
-            Setting it to <see cref="F:Microsoft.Identity.Client.LogLevel.Warning" /> will get errors and warning, etc..
-            See https://aka.ms/msal-net-logging
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -382,6 +317,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -416,6 +352,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -443,6 +380,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.Kerberos.KerberosTicketContainer</ReturnType>

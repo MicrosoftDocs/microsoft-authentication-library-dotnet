@@ -6,8 +6,7 @@
   <TypeSignature Language="F#" Value="type AppServicesAuthenticationTokenAcquisition = class&#xA;    interface ITokenAcquisition" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-    <AssemblyVersion>1.25.9.0</AssemblyVersion>
-    <AssemblyVersion>1.25.10.0</AssemblyVersion>
+    <AssemblyVersion>2.6.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -33,8 +32,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>1.25.9.0</AssemblyVersion>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="tokenCacheProvider" Type="Microsoft.Identity.Web.TokenCacheProviders.IMsalTokenCacheProvider" />
@@ -52,10 +50,10 @@
       </Docs>
     </Member>
     <Member MemberName="GetAccessTokenForAppAsync">
-      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;string&gt; GetAccessTokenForAppAsync (string scope, string? authenticationScheme = default, string? tenant = default, Microsoft.Identity.Web.TokenAcquisitionOptions? tokenAcquisitionOptions = default);" />
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;string&gt; GetAccessTokenForAppAsync (string scope, string? authenticationScheme, string? tenant = default, Microsoft.Identity.Web.TokenAcquisitionOptions? tokenAcquisitionOptions = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;string&gt; GetAccessTokenForAppAsync(string scope, string authenticationScheme, string tenant, class Microsoft.Identity.Web.TokenAcquisitionOptions tokenAcquisitionOptions) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.AppServicesAuthenticationTokenAcquisition.GetAccessTokenForAppAsync(System.String,System.String,System.String,Microsoft.Identity.Web.TokenAcquisitionOptions)" />
-      <MemberSignature Language="VB.NET" Value="Public Function GetAccessTokenForAppAsync (scope As String, Optional authenticationScheme As String = Nothing, Optional tenant As String = Nothing, Optional tokenAcquisitionOptions As TokenAcquisitionOptions = Nothing) As Task(Of String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetAccessTokenForAppAsync (scope As String, authenticationScheme As String, Optional tenant As String = Nothing, Optional tokenAcquisitionOptions As TokenAcquisitionOptions = Nothing) As Task(Of String)" />
       <MemberSignature Language="F#" Value="abstract member GetAccessTokenForAppAsync : string * string * string * Microsoft.Identity.Web.TokenAcquisitionOptions -&gt; System.Threading.Tasks.Task&lt;string&gt;&#xA;override this.GetAccessTokenForAppAsync : string * string * string * Microsoft.Identity.Web.TokenAcquisitionOptions -&gt; System.Threading.Tasks.Task&lt;string&gt;" Usage="appServicesAuthenticationTokenAcquisition.GetAccessTokenForAppAsync (scope, authenticationScheme, tenant, tokenAcquisitionOptions)" />
       <MemberType>Method</MemberType>
       <Implements>
@@ -63,8 +61,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>1.25.9.0</AssemblyVersion>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.String&gt;</ReturnType>
@@ -87,10 +84,10 @@
       </Docs>
     </Member>
     <Member MemberName="GetAccessTokenForUserAsync">
-      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;string&gt; GetAccessTokenForUserAsync (System.Collections.Generic.IEnumerable&lt;string&gt; scopes, string? authenticationScheme = default, string? tenantId = default, string? userFlow = default, System.Security.Claims.ClaimsPrincipal? user = default, Microsoft.Identity.Web.TokenAcquisitionOptions? tokenAcquisitionOptions = default);" />
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;string&gt; GetAccessTokenForUserAsync (System.Collections.Generic.IEnumerable&lt;string&gt; scopes, string? authenticationScheme, string? tenantId = default, string? userFlow = default, System.Security.Claims.ClaimsPrincipal? user = default, Microsoft.Identity.Web.TokenAcquisitionOptions? tokenAcquisitionOptions = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;string&gt; GetAccessTokenForUserAsync(class System.Collections.Generic.IEnumerable`1&lt;string&gt; scopes, string authenticationScheme, string tenantId, string userFlow, class System.Security.Claims.ClaimsPrincipal user, class Microsoft.Identity.Web.TokenAcquisitionOptions tokenAcquisitionOptions) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.AppServicesAuthenticationTokenAcquisition.GetAccessTokenForUserAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String,System.Security.Claims.ClaimsPrincipal,Microsoft.Identity.Web.TokenAcquisitionOptions)" />
-      <MemberSignature Language="VB.NET" Value="Public Function GetAccessTokenForUserAsync (scopes As IEnumerable(Of String), Optional authenticationScheme As String = Nothing, Optional tenantId As String = Nothing, Optional userFlow As String = Nothing, Optional user As ClaimsPrincipal = Nothing, Optional tokenAcquisitionOptions As TokenAcquisitionOptions = Nothing) As Task(Of String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetAccessTokenForUserAsync (scopes As IEnumerable(Of String), authenticationScheme As String, Optional tenantId As String = Nothing, Optional userFlow As String = Nothing, Optional user As ClaimsPrincipal = Nothing, Optional tokenAcquisitionOptions As TokenAcquisitionOptions = Nothing) As Task(Of String)" />
       <MemberSignature Language="F#" Value="abstract member GetAccessTokenForUserAsync : seq&lt;string&gt; * string * string * string * System.Security.Claims.ClaimsPrincipal * Microsoft.Identity.Web.TokenAcquisitionOptions -&gt; System.Threading.Tasks.Task&lt;string&gt;&#xA;override this.GetAccessTokenForUserAsync : seq&lt;string&gt; * string * string * string * System.Security.Claims.ClaimsPrincipal * Microsoft.Identity.Web.TokenAcquisitionOptions -&gt; System.Threading.Tasks.Task&lt;string&gt;" Usage="appServicesAuthenticationTokenAcquisition.GetAccessTokenForUserAsync (scopes, authenticationScheme, tenantId, userFlow, user, tokenAcquisitionOptions)" />
       <MemberType>Method</MemberType>
       <Implements>
@@ -98,8 +95,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>1.25.9.0</AssemblyVersion>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.String&gt;</ReturnType>
@@ -126,10 +122,10 @@
       </Docs>
     </Member>
     <Member MemberName="GetAuthenticationResultForAppAsync">
-      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt; GetAuthenticationResultForAppAsync (string scope, string? authenticationScheme = default, string? tenant = default, Microsoft.Identity.Web.TokenAcquisitionOptions? tokenAcquisitionOptions = default);" />
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt; GetAuthenticationResultForAppAsync (string scope, string? authenticationScheme, string? tenant = default, Microsoft.Identity.Web.TokenAcquisitionOptions? tokenAcquisitionOptions = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Identity.Client.AuthenticationResult&gt; GetAuthenticationResultForAppAsync(string scope, string authenticationScheme, string tenant, class Microsoft.Identity.Web.TokenAcquisitionOptions tokenAcquisitionOptions) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.AppServicesAuthenticationTokenAcquisition.GetAuthenticationResultForAppAsync(System.String,System.String,System.String,Microsoft.Identity.Web.TokenAcquisitionOptions)" />
-      <MemberSignature Language="VB.NET" Value="Public Function GetAuthenticationResultForAppAsync (scope As String, Optional authenticationScheme As String = Nothing, Optional tenant As String = Nothing, Optional tokenAcquisitionOptions As TokenAcquisitionOptions = Nothing) As Task(Of AuthenticationResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetAuthenticationResultForAppAsync (scope As String, authenticationScheme As String, Optional tenant As String = Nothing, Optional tokenAcquisitionOptions As TokenAcquisitionOptions = Nothing) As Task(Of AuthenticationResult)" />
       <MemberSignature Language="F#" Value="abstract member GetAuthenticationResultForAppAsync : string * string * string * Microsoft.Identity.Web.TokenAcquisitionOptions -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;&#xA;override this.GetAuthenticationResultForAppAsync : string * string * string * Microsoft.Identity.Web.TokenAcquisitionOptions -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;" Usage="appServicesAuthenticationTokenAcquisition.GetAuthenticationResultForAppAsync (scope, authenticationScheme, tenant, tokenAcquisitionOptions)" />
       <MemberType>Method</MemberType>
       <Implements>
@@ -137,8 +133,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>1.25.9.0</AssemblyVersion>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;</ReturnType>
@@ -161,10 +156,10 @@
       </Docs>
     </Member>
     <Member MemberName="GetAuthenticationResultForUserAsync">
-      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt; GetAuthenticationResultForUserAsync (System.Collections.Generic.IEnumerable&lt;string&gt; scopes, string? authenticationScheme = default, string? tenantId = default, string? userFlow = default, System.Security.Claims.ClaimsPrincipal? user = default, Microsoft.Identity.Web.TokenAcquisitionOptions? tokenAcquisitionOptions = default);" />
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt; GetAuthenticationResultForUserAsync (System.Collections.Generic.IEnumerable&lt;string&gt; scopes, string? authenticationScheme, string? tenantId = default, string? userFlow = default, System.Security.Claims.ClaimsPrincipal? user = default, Microsoft.Identity.Web.TokenAcquisitionOptions? tokenAcquisitionOptions = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Identity.Client.AuthenticationResult&gt; GetAuthenticationResultForUserAsync(class System.Collections.Generic.IEnumerable`1&lt;string&gt; scopes, string authenticationScheme, string tenantId, string userFlow, class System.Security.Claims.ClaimsPrincipal user, class Microsoft.Identity.Web.TokenAcquisitionOptions tokenAcquisitionOptions) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.AppServicesAuthenticationTokenAcquisition.GetAuthenticationResultForUserAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String,System.Security.Claims.ClaimsPrincipal,Microsoft.Identity.Web.TokenAcquisitionOptions)" />
-      <MemberSignature Language="VB.NET" Value="Public Function GetAuthenticationResultForUserAsync (scopes As IEnumerable(Of String), Optional authenticationScheme As String = Nothing, Optional tenantId As String = Nothing, Optional userFlow As String = Nothing, Optional user As ClaimsPrincipal = Nothing, Optional tokenAcquisitionOptions As TokenAcquisitionOptions = Nothing) As Task(Of AuthenticationResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetAuthenticationResultForUserAsync (scopes As IEnumerable(Of String), authenticationScheme As String, Optional tenantId As String = Nothing, Optional userFlow As String = Nothing, Optional user As ClaimsPrincipal = Nothing, Optional tokenAcquisitionOptions As TokenAcquisitionOptions = Nothing) As Task(Of AuthenticationResult)" />
       <MemberSignature Language="F#" Value="abstract member GetAuthenticationResultForUserAsync : seq&lt;string&gt; * string * string * string * System.Security.Claims.ClaimsPrincipal * Microsoft.Identity.Web.TokenAcquisitionOptions -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;&#xA;override this.GetAuthenticationResultForUserAsync : seq&lt;string&gt; * string * string * string * System.Security.Claims.ClaimsPrincipal * Microsoft.Identity.Web.TokenAcquisitionOptions -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;" Usage="appServicesAuthenticationTokenAcquisition.GetAuthenticationResultForUserAsync (scopes, authenticationScheme, tenantId, userFlow, user, tokenAcquisitionOptions)" />
       <MemberType>Method</MemberType>
       <Implements>
@@ -172,8 +167,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>1.25.9.0</AssemblyVersion>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;</ReturnType>
@@ -211,8 +205,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>1.25.9.0</AssemblyVersion>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -229,10 +222,10 @@
       </Docs>
     </Member>
     <Member MemberName="ReplyForbiddenWithWwwAuthenticateHeader">
-      <MemberSignature Language="C#" Value="public void ReplyForbiddenWithWwwAuthenticateHeader (System.Collections.Generic.IEnumerable&lt;string&gt; scopes, Microsoft.Identity.Client.MsalUiRequiredException msalServiceException, string? authenticationScheme = default, Microsoft.AspNetCore.Http.HttpResponse? httpResponse = default);" />
+      <MemberSignature Language="C#" Value="public void ReplyForbiddenWithWwwAuthenticateHeader (System.Collections.Generic.IEnumerable&lt;string&gt; scopes, Microsoft.Identity.Client.MsalUiRequiredException msalServiceException, string? authenticationScheme, Microsoft.AspNetCore.Http.HttpResponse? httpResponse = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReplyForbiddenWithWwwAuthenticateHeader(class System.Collections.Generic.IEnumerable`1&lt;string&gt; scopes, class Microsoft.Identity.Client.MsalUiRequiredException msalServiceException, string authenticationScheme, class Microsoft.AspNetCore.Http.HttpResponse httpResponse) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.AppServicesAuthenticationTokenAcquisition.ReplyForbiddenWithWwwAuthenticateHeader(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.MsalUiRequiredException,System.String,Microsoft.AspNetCore.Http.HttpResponse)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub ReplyForbiddenWithWwwAuthenticateHeader (scopes As IEnumerable(Of String), msalServiceException As MsalUiRequiredException, Optional authenticationScheme As String = Nothing, Optional httpResponse As HttpResponse = Nothing)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ReplyForbiddenWithWwwAuthenticateHeader (scopes As IEnumerable(Of String), msalServiceException As MsalUiRequiredException, authenticationScheme As String, Optional httpResponse As HttpResponse = Nothing)" />
       <MemberSignature Language="F#" Value="abstract member ReplyForbiddenWithWwwAuthenticateHeader : seq&lt;string&gt; * Microsoft.Identity.Client.MsalUiRequiredException * string * Microsoft.AspNetCore.Http.HttpResponse -&gt; unit&#xA;override this.ReplyForbiddenWithWwwAuthenticateHeader : seq&lt;string&gt; * Microsoft.Identity.Client.MsalUiRequiredException * string * Microsoft.AspNetCore.Http.HttpResponse -&gt; unit" Usage="appServicesAuthenticationTokenAcquisition.ReplyForbiddenWithWwwAuthenticateHeader (scopes, msalServiceException, authenticationScheme, httpResponse)" />
       <MemberType>Method</MemberType>
       <Implements>
@@ -240,8 +233,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>1.25.9.0</AssemblyVersion>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -274,8 +266,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>1.25.9.0</AssemblyVersion>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>

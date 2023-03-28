@@ -1,0 +1,55 @@
+<Type Name="AcquireTokenForManagedIdentityParameterBuilder" FullName="Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder">
+  <TypeSignature Language="C#" Value="public sealed class AcquireTokenForManagedIdentityParameterBuilder : Microsoft.Identity.Client.AbstractManagedIdentityAcquireTokenParameterBuilder&lt;Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AcquireTokenForManagedIdentityParameterBuilder extends Microsoft.Identity.Client.AbstractManagedIdentityAcquireTokenParameterBuilder`1&lt;class Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder&gt;" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class AcquireTokenForManagedIdentityParameterBuilder&#xA;Inherits AbstractManagedIdentityAcquireTokenParameterBuilder(Of AcquireTokenForManagedIdentityParameterBuilder)" />
+  <TypeSignature Language="F#" Value="type AcquireTokenForManagedIdentityParameterBuilder = class&#xA;    inherit AbstractManagedIdentityAcquireTokenParameterBuilder&lt;AcquireTokenForManagedIdentityParameterBuilder&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+    <AssemblyVersion>4.51.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Identity.Client.AbstractManagedIdentityAcquireTokenParameterBuilder&lt;Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="T">Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Builder for AcquireTokenForManagedIdentity (used to get token for managed identities).
+            See https://aka.ms/msal-net-managed-identity
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="WithForceRefresh">
+      <MemberSignature Language="C#" Value="public Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder WithForceRefresh (bool forceRefresh);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder WithForceRefresh(bool forceRefresh) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder.WithForceRefresh(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithForceRefresh (forceRefresh As Boolean) As AcquireTokenForManagedIdentityParameterBuilder" />
+      <MemberSignature Language="F#" Value="member this.WithForceRefresh : bool -&gt; Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder" Usage="acquireTokenForManagedIdentityParameterBuilder.WithForceRefresh forceRefresh" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.51.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="forceRefresh" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="forceRefresh">If <c>true</c>, the request will ignore the token cache. The default is <c>false</c></param>
+        <summary>
+            Specifies if the token request will ignore the access token in the application token cache
+            and will attempt to acquire a new access token for managed identity.
+            By default the token is taken from the application token cache (forceRefresh=false)
+            </summary>
+        <returns>The builder to chain the .With methods</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

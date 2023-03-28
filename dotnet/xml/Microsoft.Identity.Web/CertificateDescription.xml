@@ -1,15 +1,15 @@
 <Type Name="CertificateDescription" FullName="Microsoft.Identity.Web.CertificateDescription">
-  <TypeSignature Language="C#" Value="public class CertificateDescription" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CertificateDescription extends System.Object" />
+  <TypeSignature Language="C#" Value="public class CertificateDescription : Microsoft.Identity.Abstractions.CredentialDescription" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CertificateDescription extends Microsoft.Identity.Abstractions.CredentialDescription" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Web.CertificateDescription" />
-  <TypeSignature Language="VB.NET" Value="Public Class CertificateDescription" />
-  <TypeSignature Language="F#" Value="type CertificateDescription = class" />
+  <TypeSignature Language="VB.NET" Value="Public Class CertificateDescription&#xA;Inherits CredentialDescription" />
+  <TypeSignature Language="F#" Value="type CertificateDescription = class&#xA;    inherit CredentialDescription" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-    <AssemblyVersion>1.25.10.0</AssemblyVersion>
+    <AssemblyVersion>2.6.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
-    <BaseTypeName>System.Object</BaseTypeName>
+    <BaseTypeName>Microsoft.Identity.Abstractions.CredentialDescription</BaseTypeName>
   </Base>
   <Interfaces />
   <Docs>
@@ -27,33 +27,35 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            Default constructor.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="Base64EncodedValue">
-      <MemberSignature Language="C#" Value="public string? Base64EncodedValue { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string Base64EncodedValue" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Web.CertificateDescription.Base64EncodedValue" />
-      <MemberSignature Language="VB.NET" Value="Public Property Base64EncodedValue As String" />
-      <MemberSignature Language="F#" Value="member this.Base64EncodedValue : string with get, set" Usage="Microsoft.Identity.Web.CertificateDescription.Base64EncodedValue" />
-      <MemberType>Property</MemberType>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CertificateDescription (Microsoft.Identity.Abstractions.CredentialDescription credentialDescription);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Identity.Abstractions.CredentialDescription credentialDescription) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.CertificateDescription.#ctor(Microsoft.Identity.Abstractions.CredentialDescription)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (credentialDescription As CredentialDescription)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Identity.Web.CertificateDescription : Microsoft.Identity.Abstractions.CredentialDescription -&gt; Microsoft.Identity.Web.CertificateDescription" Usage="new Microsoft.Identity.Web.CertificateDescription credentialDescription" />
+      <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
+      <Parameters>
+        <Parameter Name="credentialDescription" Type="Microsoft.Identity.Abstractions.CredentialDescription" />
+      </Parameters>
       <Docs>
+        <param name="credentialDescription" />
         <summary>
-            Base64 encoded certificate value.
+            Creates a certificate description from a credential description.
             </summary>
-        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -66,125 +68,14 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate2</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            The certificate, either provided directly in code
-            or loaded from the description.
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="CertificateDiskPath">
-      <MemberSignature Language="C#" Value="public string? CertificateDiskPath { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string CertificateDiskPath" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Web.CertificateDescription.CertificateDiskPath" />
-      <MemberSignature Language="VB.NET" Value="Public Property CertificateDiskPath As String" />
-      <MemberSignature Language="F#" Value="member this.CertificateDiskPath : string with get, set" Usage="Microsoft.Identity.Web.CertificateDescription.CertificateDiskPath" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            Path on disk to the certificate.
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="CertificateDistinguishedName">
-      <MemberSignature Language="C#" Value="public string? CertificateDistinguishedName { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string CertificateDistinguishedName" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Web.CertificateDescription.CertificateDistinguishedName" />
-      <MemberSignature Language="VB.NET" Value="Public Property CertificateDistinguishedName As String" />
-      <MemberSignature Language="F#" Value="member this.CertificateDistinguishedName : string with get, set" Usage="Microsoft.Identity.Web.CertificateDescription.CertificateDistinguishedName" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            Certificate distinguished name.
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="CertificatePassword">
-      <MemberSignature Language="C#" Value="public string? CertificatePassword { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string CertificatePassword" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Web.CertificateDescription.CertificatePassword" />
-      <MemberSignature Language="VB.NET" Value="Public Property CertificatePassword As String" />
-      <MemberSignature Language="F#" Value="member this.CertificatePassword : string with get, set" Usage="Microsoft.Identity.Web.CertificateDescription.CertificatePassword" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            Path on disk to the certificate password.
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="CertificateStorePath">
-      <MemberSignature Language="C#" Value="public string? CertificateStorePath { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string CertificateStorePath" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Web.CertificateDescription.CertificateStorePath" />
-      <MemberSignature Language="VB.NET" Value="Public Property CertificateStorePath As String" />
-      <MemberSignature Language="F#" Value="member this.CertificateStorePath : string with get, set" Usage="Microsoft.Identity.Web.CertificateDescription.CertificateStorePath" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            Certificate store path, for instance "CurrentUser/My".
-            </summary>
-        <value>To be added.</value>
-        <remarks>This property should only be used in conjunction with DistinguishedName or Thumbprint.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="CertificateThumbprint">
-      <MemberSignature Language="C#" Value="public string? CertificateThumbprint { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string CertificateThumbprint" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Web.CertificateDescription.CertificateThumbprint" />
-      <MemberSignature Language="VB.NET" Value="Public Property CertificateThumbprint As String" />
-      <MemberSignature Language="F#" Value="member this.CertificateThumbprint : string with get, set" Usage="Microsoft.Identity.Web.CertificateDescription.CertificateThumbprint" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            Certificate thumbprint.
+          <inheritdoc />.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -199,7 +90,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Web.CertificateDescription</ReturnType>
@@ -216,6 +107,34 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="FromBase64Encoded">
+      <MemberSignature Language="C#" Value="public static Microsoft.Identity.Web.CertificateDescription FromBase64Encoded (string base64EncodedValue, string password);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Identity.Web.CertificateDescription FromBase64Encoded(string base64EncodedValue, string password) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.CertificateDescription.FromBase64Encoded(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FromBase64Encoded (base64EncodedValue As String, password As String) As CertificateDescription" />
+      <MemberSignature Language="F#" Value="static member FromBase64Encoded : string * string -&gt; Microsoft.Identity.Web.CertificateDescription" Usage="Microsoft.Identity.Web.CertificateDescription.FromBase64Encoded (base64EncodedValue, password)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Web.CertificateDescription</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="base64EncodedValue" Type="System.String" />
+        <Parameter Name="password" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="base64EncodedValue">Base64 encoded certificate value.</param>
+        <param name="password">The password to use when decoding the certificate.</param>
+        <summary>
+            Creates a certificate description from a Base64 encoded value.
+            </summary>
+        <returns>A certificate description.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="FromCertificate">
       <MemberSignature Language="C#" Value="public static Microsoft.Identity.Web.CertificateDescription FromCertificate (System.Security.Cryptography.X509Certificates.X509Certificate2 x509certificate2);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Identity.Web.CertificateDescription FromCertificate(class System.Security.Cryptography.X509Certificates.X509Certificate2 x509certificate2) cil managed" />
@@ -225,7 +144,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Web.CertificateDescription</ReturnType>
@@ -251,7 +170,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Web.CertificateDescription</ReturnType>
@@ -279,7 +198,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Web.CertificateDescription</ReturnType>
@@ -307,7 +226,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Web.CertificateDescription</ReturnType>
@@ -338,7 +257,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Web.CertificateDescription</ReturnType>
@@ -356,86 +275,6 @@
             Creates a certificate description from a thumbprint and store location (Certificate Manager on Windows, for instance).
             </summary>
         <returns>A certificate description.</returns>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="FromStoreWithThumprint">
-      <MemberSignature Language="C#" Value="public static Microsoft.Identity.Web.CertificateDescription FromStoreWithThumprint (string certificateThumbprint, System.Security.Cryptography.X509Certificates.StoreLocation certificateStoreLocation = System.Security.Cryptography.X509Certificates.StoreLocation.CurrentUser, System.Security.Cryptography.X509Certificates.StoreName certificateStoreName = System.Security.Cryptography.X509Certificates.StoreName.My);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Identity.Web.CertificateDescription FromStoreWithThumprint(string certificateThumbprint, valuetype System.Security.Cryptography.X509Certificates.StoreLocation certificateStoreLocation, valuetype System.Security.Cryptography.X509Certificates.StoreName certificateStoreName) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.CertificateDescription.FromStoreWithThumprint(System.String,System.Security.Cryptography.X509Certificates.StoreLocation,System.Security.Cryptography.X509Certificates.StoreName)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function FromStoreWithThumprint (certificateThumbprint As String, Optional certificateStoreLocation As StoreLocation = System.Security.Cryptography.X509Certificates.StoreLocation.CurrentUser, Optional certificateStoreName As StoreName = System.Security.Cryptography.X509Certificates.StoreName.My) As CertificateDescription" />
-      <MemberSignature Language="F#" Value="static member FromStoreWithThumprint : string * System.Security.Cryptography.X509Certificates.StoreLocation * System.Security.Cryptography.X509Certificates.StoreName -&gt; Microsoft.Identity.Web.CertificateDescription" Usage="Microsoft.Identity.Web.CertificateDescription.FromStoreWithThumprint (certificateThumbprint, certificateStoreLocation, certificateStoreName)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
-      </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName Language="C#">[System.Obsolete("IDW10803: Use FromStoreWithThumbprint instead, due to spelling error. ", false)]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Obsolete("IDW10803: Use FromStoreWithThumbprint instead, due to spelling error. ", false)&gt;]</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>Microsoft.Identity.Web.CertificateDescription</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="certificateThumbprint" Type="System.String" />
-        <Parameter Name="certificateStoreLocation" Type="System.Security.Cryptography.X509Certificates.StoreLocation" />
-        <Parameter Name="certificateStoreName" Type="System.Security.Cryptography.X509Certificates.StoreName" />
-      </Parameters>
-      <Docs>
-        <param name="certificateThumbprint">Certificate thumbprint.</param>
-        <param name="certificateStoreLocation">Store location where to find the certificate.</param>
-        <param name="certificateStoreName">Store name where to find the certificate.</param>
-        <summary>
-            Creates a certificate description from a thumbprint and store location (Certificate Manager on Windows, for instance).
-            </summary>
-        <returns>A certificate description.</returns>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="KeyVaultCertificateName">
-      <MemberSignature Language="C#" Value="public string? KeyVaultCertificateName { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string KeyVaultCertificateName" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Web.CertificateDescription.KeyVaultCertificateName" />
-      <MemberSignature Language="VB.NET" Value="Public Property KeyVaultCertificateName As String" />
-      <MemberSignature Language="F#" Value="member this.KeyVaultCertificateName : string with get, set" Usage="Microsoft.Identity.Web.CertificateDescription.KeyVaultCertificateName" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            Name of the certificate in Key Vault.
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="KeyVaultUrl">
-      <MemberSignature Language="C#" Value="public string? KeyVaultUrl { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string KeyVaultUrl" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Web.CertificateDescription.KeyVaultUrl" />
-      <MemberSignature Language="VB.NET" Value="Public Property KeyVaultUrl As String" />
-      <MemberSignature Language="F#" Value="member this.KeyVaultUrl : string with get, set" Usage="Microsoft.Identity.Web.CertificateDescription.KeyVaultUrl" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            URL of the Key Vault, for instance https://msidentitywebsamples.vault.azure.net.
-            </summary>
-        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -448,14 +287,14 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Web.CertificateSource</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Type of the source of the certificate.
+          <inheritdoc />.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -470,7 +309,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Cryptography.X509Certificates.X509KeyStorageFlags</ReturnType>

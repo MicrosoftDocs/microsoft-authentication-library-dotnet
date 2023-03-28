@@ -1,8 +1,9 @@
 ---
-title: Custom token cache for a public client application
+title: Custom token cache for a public client applications
+description: "This article is about custom token cache implementations for public client applications."
 ---
 
-# Custom token cache for a public client application
+# Custom token cache for a public client applications
 
 This article is about custom token cache implementations for public client applications. For context and more general information about token cache serialization see [Token cache serialization](/azure/active-directory/develop/msal-net-token-cache-serialization).
 
@@ -72,9 +73,9 @@ A preview of a product quality token cache file based serializer for public clie
 
 > Disclaimer. The  Microsoft.Identity.Client.Extensions.Msal library is an extension over MSAL.NET. Classes in these libraries might make their way into MSAL.NET in the future, as is or with breaking changes.
 
-## Dual token cache serialization (MSAL unified cache + ADAL V3)
+## Dual token cache serialization (MSAL unified cache)
 
-If you want to implement token cache serialization both with the Unified cache format (common to ADAL.NET 4.x and MSAL.NET 2.x, and with other MSALs of the same generation or older, on the same platform), you can get inspired by the following code:
+If you want to implement token cache serialization with the unified cache format, refer to the sample below.
 
 ```csharp
 string appLocation = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location;

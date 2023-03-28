@@ -5,9 +5,8 @@
   <TypeSignature Language="VB.NET" Value="Public Class MicrosoftIdentityAppCallsWebApiAuthenticationBuilder&#xA;Inherits MicrosoftIdentityBaseAuthenticationBuilder" />
   <TypeSignature Language="F#" Value="type MicrosoftIdentityAppCallsWebApiAuthenticationBuilder = class&#xA;    inherit MicrosoftIdentityBaseAuthenticationBuilder" />
   <AssemblyInfo>
-    <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-    <AssemblyVersion>1.25.9.0</AssemblyVersion>
-    <AssemblyVersion>1.25.10.0</AssemblyVersion>
+    <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+    <AssemblyVersion>2.6.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Identity.Web.MicrosoftIdentityBaseAuthenticationBuilder</BaseTypeName>
@@ -29,9 +28,8 @@
       <MemberSignature Language="F#" Value="member this.AddDistributedTokenCaches : unit -&gt; Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder" Usage="microsoftIdentityAppCallsWebApiAuthenticationBuilder.AddDistributedTokenCaches " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>1.25.9.0</AssemblyVersion>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder</ReturnType>
@@ -53,9 +51,8 @@
       <MemberSignature Language="F#" Value="member this.AddInMemoryTokenCaches : Action&lt;Microsoft.Identity.Web.TokenCacheProviders.InMemory.MsalMemoryTokenCacheOptions&gt; * Action&lt;Microsoft.Extensions.Caching.Memory.MemoryCacheOptions&gt; -&gt; Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder" Usage="microsoftIdentityAppCallsWebApiAuthenticationBuilder.AddInMemoryTokenCaches (configureOptions, memoryCacheOptions)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>1.25.9.0</AssemblyVersion>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder</ReturnType>
@@ -70,31 +67,7 @@
         <param name="memoryCacheOptions">
           <see cref="T:Microsoft.Extensions.Caching.Memory.MemoryCacheOptions" /> to configure.</param>
         <summary>
-            Add in memory token caches.
-            </summary>
-        <returns>the service collection.</returns>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="AddSessionTokenCaches">
-      <MemberSignature Language="C#" Value="public Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder AddSessionTokenCaches ();" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder AddSessionTokenCaches() cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder.AddSessionTokenCaches" />
-      <MemberSignature Language="VB.NET" Value="Public Function AddSessionTokenCaches () As MicrosoftIdentityAppCallsWebApiAuthenticationBuilder" />
-      <MemberSignature Language="F#" Value="member this.AddSessionTokenCaches : unit -&gt; Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder" Usage="microsoftIdentityAppCallsWebApiAuthenticationBuilder.AddSessionTokenCaches " />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>1.25.9.0</AssemblyVersion>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder</ReturnType>
-      </ReturnValue>
-      <Parameters />
-      <Docs>
-        <summary>
-            Add session token caches.
+            Add in memory token caches, if no other implementation of IMsalTokenCacheProvider was already added.
             </summary>
         <returns>the service collection.</returns>
         <remarks>To be added.</remarks>

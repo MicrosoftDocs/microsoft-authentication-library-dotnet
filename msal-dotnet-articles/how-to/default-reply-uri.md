@@ -1,20 +1,21 @@
 ---
 title: Default reply URI
+description: "How to customize the reply URI in applications using MSAL.NET."
 ---
 
 # Default reply URI
 
-In MSAL.NET 4.1+ The default redirect URI(Reply URI) can now be set with the `public PublicClientApplicationBuilder WithDefaultRedirectUri()` method. This method will set the public client applications redirect uri property to the default recommended redirect uri for public client applications.
+In MSAL.NET The default redirect URI (also known as the reply URI) can be set with <xref:M:Microsoft.Identity.Client.PublicClientApplicationBuilder.WithDefaultRedirectUri>. This method will set the public client applications redirect uri property to the default recommended redirect uri for public client applications.
 
 This method's behavior is dependent upon the platform that you are using at the time. Here is a table that describes what redirect uri is set on certain platforms:
 
-Platform  | Redirect URI  
----------  | --------------
-desktop app (.NET FW) | `https://login.microsoftonline.com/common/oauth2/nativeclient`
-UWP | value of `WebAuthenticationBroker.GetCurrentApplicationCallbackUri()`
-.NET Core | `http://localhost`
+| Platform                         | Redirect URI                                                          |
+|----------------------------------|-----------------------------------------------------------------------|
+| Desktop (.NET Framework)         | `https://login.microsoftonline.com/common/oauth2/nativeclient`        |
+| Universal Windows Platform (UWP) | Value of `WebAuthenticationBroker.GetCurrentApplicationCallbackUri()` |
+| .NET Core                        | `http://localhost`                                                    |
 
-For the UWP platform, we want to enhance the experience by enabling SSO with the browser by setting the value to the result of WebAuthenticationBroker.GetCurrentApplicationCallbackUri(). 
+For the UWP platform, we want to enhance the experience by enabling SSO with the browser by setting the value to the result of [`WebAuthenticationBroker.GetCurrentApplicationCallbackUri()`](/uwp/api/windows.security.authentication.web.webauthenticationbroker.getcurrentapplicationcallbackuri).
 
 For .NET Core, we are setting the value to the local host to enable the user to use the system browser for interactive authentication since .NET Core does not have a UI for the embedded web view at the moment.
 

@@ -6,8 +6,7 @@
   <TypeSignature Language="F#" Value="type DownstreamWebApi = class&#xA;    interface IDownstreamWebApi" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-    <AssemblyVersion>1.25.9.0</AssemblyVersion>
-    <AssemblyVersion>1.25.10.0</AssemblyVersion>
+    <AssemblyVersion>2.6.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -17,6 +16,16 @@
       <InterfaceName>Microsoft.Identity.Web.IDownstreamWebApi</InterfaceName>
     </Interface>
   </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName Language="C#">[System.Obsolete("Use DownstreamApi in Microsoft.Identity.Abstractions, implemented in Microsoft.Identity.Web.DownstreamApi.See aka.ms/id-web-downstream-api-v2 for migration details.", false)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Obsolete("Use DownstreamApi in Microsoft.Identity.Abstractions, implemented in Microsoft.Identity.Web.DownstreamApi.See aka.ms/id-web-downstream-api-v2 for migration details.", false)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>
             Implementation for the downstream web API.
@@ -33,8 +42,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>1.25.9.0</AssemblyVersion>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="tokenAcquisition" Type="Microsoft.Identity.Web.ITokenAcquisition" />
@@ -54,10 +62,10 @@
       </Docs>
     </Member>
     <Member MemberName="CallWebApiForAppAsync">
-      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt; CallWebApiForAppAsync (string serviceName, string? authenticationScheme = default, Action&lt;Microsoft.Identity.Web.DownstreamWebApiOptions&gt;? downstreamWebApiOptionsOverride = default, System.Net.Http.StringContent? content = default);" />
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt; CallWebApiForAppAsync (string serviceName, string? authenticationScheme, Action&lt;Microsoft.Identity.Web.DownstreamWebApiOptions&gt;? downstreamWebApiOptionsOverride = default, System.Net.Http.StringContent? content = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Net.Http.HttpResponseMessage&gt; CallWebApiForAppAsync(string serviceName, string authenticationScheme, class System.Action`1&lt;class Microsoft.Identity.Web.DownstreamWebApiOptions&gt; downstreamWebApiOptionsOverride, class System.Net.Http.StringContent content) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.DownstreamWebApi.CallWebApiForAppAsync(System.String,System.String,System.Action{Microsoft.Identity.Web.DownstreamWebApiOptions},System.Net.Http.StringContent)" />
-      <MemberSignature Language="VB.NET" Value="Public Function CallWebApiForAppAsync (serviceName As String, Optional authenticationScheme As String = Nothing, Optional downstreamWebApiOptionsOverride As Action(Of DownstreamWebApiOptions) = Nothing, Optional content As StringContent = Nothing) As Task(Of HttpResponseMessage)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CallWebApiForAppAsync (serviceName As String, authenticationScheme As String, Optional downstreamWebApiOptionsOverride As Action(Of DownstreamWebApiOptions) = Nothing, Optional content As StringContent = Nothing) As Task(Of HttpResponseMessage)" />
       <MemberSignature Language="F#" Value="abstract member CallWebApiForAppAsync : string * string * Action&lt;Microsoft.Identity.Web.DownstreamWebApiOptions&gt; * System.Net.Http.StringContent -&gt; System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;&#xA;override this.CallWebApiForAppAsync : string * string * Action&lt;Microsoft.Identity.Web.DownstreamWebApiOptions&gt; * System.Net.Http.StringContent -&gt; System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;" Usage="downstreamWebApi.CallWebApiForAppAsync (serviceName, authenticationScheme, downstreamWebApiOptionsOverride, content)" />
       <MemberType>Method</MemberType>
       <Implements>
@@ -65,8 +73,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>1.25.9.0</AssemblyVersion>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;</ReturnType>
@@ -89,10 +96,10 @@
       </Docs>
     </Member>
     <Member MemberName="CallWebApiForUserAsync">
-      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt; CallWebApiForUserAsync (string serviceName, string? authenticationScheme = default, Action&lt;Microsoft.Identity.Web.DownstreamWebApiOptions&gt;? calledDownstreamWebApiOptionsOverride = default, System.Security.Claims.ClaimsPrincipal? user = default, System.Net.Http.StringContent? content = default);" />
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt; CallWebApiForUserAsync (string serviceName, string? authenticationScheme, Action&lt;Microsoft.Identity.Web.DownstreamWebApiOptions&gt;? calledDownstreamWebApiOptionsOverride = default, System.Security.Claims.ClaimsPrincipal? user = default, System.Net.Http.StringContent? content = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Net.Http.HttpResponseMessage&gt; CallWebApiForUserAsync(string serviceName, string authenticationScheme, class System.Action`1&lt;class Microsoft.Identity.Web.DownstreamWebApiOptions&gt; calledDownstreamWebApiOptionsOverride, class System.Security.Claims.ClaimsPrincipal user, class System.Net.Http.StringContent content) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.DownstreamWebApi.CallWebApiForUserAsync(System.String,System.String,System.Action{Microsoft.Identity.Web.DownstreamWebApiOptions},System.Security.Claims.ClaimsPrincipal,System.Net.Http.StringContent)" />
-      <MemberSignature Language="VB.NET" Value="Public Function CallWebApiForUserAsync (serviceName As String, Optional authenticationScheme As String = Nothing, Optional calledDownstreamWebApiOptionsOverride As Action(Of DownstreamWebApiOptions) = Nothing, Optional user As ClaimsPrincipal = Nothing, Optional content As StringContent = Nothing) As Task(Of HttpResponseMessage)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CallWebApiForUserAsync (serviceName As String, authenticationScheme As String, Optional calledDownstreamWebApiOptionsOverride As Action(Of DownstreamWebApiOptions) = Nothing, Optional user As ClaimsPrincipal = Nothing, Optional content As StringContent = Nothing) As Task(Of HttpResponseMessage)" />
       <MemberSignature Language="F#" Value="abstract member CallWebApiForUserAsync : string * string * Action&lt;Microsoft.Identity.Web.DownstreamWebApiOptions&gt; * System.Security.Claims.ClaimsPrincipal * System.Net.Http.StringContent -&gt; System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;&#xA;override this.CallWebApiForUserAsync : string * string * Action&lt;Microsoft.Identity.Web.DownstreamWebApiOptions&gt; * System.Security.Claims.ClaimsPrincipal * System.Net.Http.StringContent -&gt; System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;" Usage="downstreamWebApi.CallWebApiForUserAsync (serviceName, authenticationScheme, calledDownstreamWebApiOptionsOverride, user, content)" />
       <MemberType>Method</MemberType>
       <Implements>
@@ -100,8 +107,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>1.25.9.0</AssemblyVersion>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;</ReturnType>
@@ -126,10 +132,10 @@
       </Docs>
     </Member>
     <Member MemberName="CallWebApiForUserAsync&lt;TInput,TOutput&gt;">
-      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TOutput?&gt; CallWebApiForUserAsync&lt;TInput,TOutput&gt; (string serviceName, TInput input, string? authenticationScheme = default, Action&lt;Microsoft.Identity.Web.DownstreamWebApiOptions&gt;? downstreamWebApiOptionsOverride = default, System.Security.Claims.ClaimsPrincipal? user = default) where TOutput : class;" />
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TOutput?&gt; CallWebApiForUserAsync&lt;TInput,TOutput&gt; (string serviceName, TInput input, string? authenticationScheme, Action&lt;Microsoft.Identity.Web.DownstreamWebApiOptions&gt;? downstreamWebApiOptionsOverride = default, System.Security.Claims.ClaimsPrincipal? user = default) where TOutput : class;" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;!!TOutput&gt; CallWebApiForUserAsync&lt;TInput, class TOutput&gt;(string serviceName, !!TInput input, string authenticationScheme, class System.Action`1&lt;class Microsoft.Identity.Web.DownstreamWebApiOptions&gt; downstreamWebApiOptionsOverride, class System.Security.Claims.ClaimsPrincipal user) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.DownstreamWebApi.CallWebApiForUserAsync``2(System.String,``0,System.String,System.Action{Microsoft.Identity.Web.DownstreamWebApiOptions},System.Security.Claims.ClaimsPrincipal)" />
-      <MemberSignature Language="VB.NET" Value="Public Function CallWebApiForUserAsync(Of TInput, TOutput) (serviceName As String, input As TInput, Optional authenticationScheme As String = Nothing, Optional downstreamWebApiOptionsOverride As Action(Of DownstreamWebApiOptions) = Nothing, Optional user As ClaimsPrincipal = Nothing) As Task(Of TOutput)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CallWebApiForUserAsync(Of TInput, TOutput) (serviceName As String, input As TInput, authenticationScheme As String, Optional downstreamWebApiOptionsOverride As Action(Of DownstreamWebApiOptions) = Nothing, Optional user As ClaimsPrincipal = Nothing) As Task(Of TOutput)" />
       <MemberSignature Language="F#" Value="abstract member CallWebApiForUserAsync : string * 'Input * string * Action&lt;Microsoft.Identity.Web.DownstreamWebApiOptions&gt; * System.Security.Claims.ClaimsPrincipal -&gt; System.Threading.Tasks.Task&lt;'Output (requires 'Output : null)&gt; (requires 'Output : null)&#xA;override this.CallWebApiForUserAsync : string * 'Input * string * Action&lt;Microsoft.Identity.Web.DownstreamWebApiOptions&gt; * System.Security.Claims.ClaimsPrincipal -&gt; System.Threading.Tasks.Task&lt;'Output (requires 'Output : null)&gt; (requires 'Output : null)" Usage="downstreamWebApi.CallWebApiForUserAsync (serviceName, input, authenticationScheme, downstreamWebApiOptionsOverride, user)" />
       <MemberType>Method</MemberType>
       <Implements>
@@ -137,8 +143,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>1.25.9.0</AssemblyVersion>
-        <AssemblyVersion>1.25.10.0</AssemblyVersion>
+        <AssemblyVersion>2.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;TOutput&gt;</ReturnType>

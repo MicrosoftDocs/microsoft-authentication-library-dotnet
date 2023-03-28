@@ -8,6 +8,7 @@
     <AssemblyName>Microsoft.Identity.Client</AssemblyName>
     <AssemblyVersion>4.48.1.0</AssemblyVersion>
     <AssemblyVersion>4.49.1.0</AssemblyVersion>
+    <AssemblyVersion>4.51.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Delegate</BaseTypeName>
@@ -29,7 +30,7 @@
             Otherwise it will be <c>true</c> when the message contains PII.</param>
     <summary>
             Callback delegate that allows application developers to consume logs, and handle them in a custom manner. This
-            callback is set using <see cref="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithLogging(Microsoft.Identity.Client.LogCallback,System.Nullable{Microsoft.Identity.Client.LogLevel},System.Nullable{System.Boolean},System.Nullable{System.Boolean})" />.
+            callback is set using <see cref="M:Microsoft.Identity.Client.BaseAbstractApplicationBuilder`1.WithLogging(Microsoft.Identity.Client.LogCallback,System.Nullable{Microsoft.Identity.Client.LogLevel},System.Nullable{System.Boolean},System.Nullable{System.Boolean})" />.
             If <c>PiiLoggingEnabled</c> is set to <c>true</c>, when registering the callback this method will receive the messages twice:
             once with the <c>containsPii</c> parameter equals <c>false</c> and the message without PII,
             and a second time with the <c>containsPii</c> parameter equals to <c>true</c> and the message might contain PII.

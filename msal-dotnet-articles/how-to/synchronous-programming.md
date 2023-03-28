@@ -1,5 +1,6 @@
 ---
 title: Synchronous programming with MSAL.NET
+description: "MSAL.NET is based on Task-based Asynchronous Pattern (TAP). This page provides links to guidance about how to use async methods in a synchronous way. This has no one solution that fits all. So various best practices are recommended."
 ---
 
 # Synchronous programming with MSAL.NET
@@ -18,7 +19,7 @@ You can also check out the [Advanced Programming in C#](https://www.linkedin.com
 
 There are several ways to run asynchronous code from a synchronous code. Various links are listed here.
 
-[Task.RunSynchronously](/dotnet/api/system.threading.tasks.task.runsynchronously?view=net-5.0)
+[Task.RunSynchronously](/dotnet/api/system.threading.tasks.task.runsynchronously)
 
 ```csharp
 var getAcctsTasks = PCA.RemoveAsync(acct);
@@ -29,7 +30,7 @@ if (!getAcctsTasks.IsCompleted)
 }
 ```
 
-[Wait for a task to complete with Task.Wait](/dotnet/api/system.threading.tasks.task.wait?view=net-5.0)
+[Wait for a task to complete with Task.Wait](/dotnet/api/system.threading.tasks.task.wait)
 
 ```csharp
 // wait can optionally have timeout, and cancellation token (not shown)
@@ -37,7 +38,7 @@ int timeoutMilliSec = 3000;
 PCA.RemoveAsync(acct).Wait(timeoutMilliSec);
 ```
 
-[Wait to get result with Task.Result](/dotnet/api/system.threading.tasks.task-1.result?view=net-5.0#remarks)
+[Wait to get result with Task.Result](/dotnet/api/system.threading.tasks.task-1.result#remarks)
 
 ```csharp
 var authResult = PCA.AcquireTokenSilent(Scopes, acct).ExecuteAsync().Result;
