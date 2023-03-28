@@ -5,7 +5,7 @@ description: "How to customize the reply URI in applications using MSAL.NET."
 
 # Default reply URI
 
-In MSAL.NET The default redirect URI (also known as the reply URI) can be set with <xref:M:Microsoft.Identity.Client.PublicClientApplicationBuilder.WithDefaultRedirectUri>. This method will set the public client applications redirect uri property to the default recommended redirect uri for public client applications.
+In MSAL.NET The default redirect URI (also known as the reply URI) can be set with <xref:Microsoft.Identity.Client.PublicClientApplicationBuilder.WithDefaultRedirectUri>. This method will set the public client applications redirect uri property to the default recommended redirect uri for public client applications.
 
 This method's behavior is dependent upon the platform that you are using at the time. Here is a table that describes what redirect uri is set on certain platforms:
 
