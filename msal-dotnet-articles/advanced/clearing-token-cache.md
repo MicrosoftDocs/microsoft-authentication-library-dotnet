@@ -1,21 +1,20 @@
 ---
 title: Cleaning the token cache
+description: "How to clear the token cache used by MSAL.NET"
 ---
 
 # Clearing the token cache
 
-Clearing the cache is achieved by removing the accounts from the cache.
+Clearing the token cache is achieved by removing the accounts from the cache. This does not remove the session cookie which is in the browser.
 
-This does not remove the session cookie which is in the browser, though.
-
-The code is the following where app is a `IClientApplicationBase`
+The example below is using an instance of <xref:Microsoft.Identity.Client.IClientApplicationBase>.
 
 ```csharp
-   // clear the cache
-   var accounts = await app.GetAccountsAsync();
-   while (accounts.Any())
-   {
-    await app.RemoveAsync(accounts.First());
-    accounts = await app.GetAccountsAsync();
-   }
+// Clear the cache
+var accounts = await app.GetAccountsAsync();
+while (accounts.Any())
+{
+   await app.RemoveAsync(accounts.First());
+   accounts = await app.GetAccountsAsync();
+}
 ```
