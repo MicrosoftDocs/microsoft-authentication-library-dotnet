@@ -68,12 +68,12 @@ By default, MSAL.NET supports in-memory caching. To explore additional caching o
 
 For failed requests the error response contains a correlation ID that can be used for further diagnostics and log analysis. Keep in mind that the correlation IDs generated in MSAL.NET or passed into MSAL are different than the one returned in server error responses, as MSAL.NET cannot pass the correlation ID to managed identity token acquisition endpoints.
 
-## Potential errors
+### Potential errors
 
-### `MsalServiceException` Error Code: `managed_identity_failed_response` Error Message: An unexpected error occurred while fetching the AAD token
+#### `MsalServiceException` Error Code: `managed_identity_failed_response` Error Message: An unexpected error occurred while fetching the AAD token
 
 This exception might mean that the resource you are trying to acquire a token for is either not supported or is provided using the wrong resource ID format. Examples of correct resource ID formats include `https://management.azure.com/.default`, `https://management.azure.com`, and `https://graph.microsoft.com`.
 
-### `System.Net.Http.HttpRequestException`: A socket operation was attempted to an unreachable network
+#### `System.Net.Http.HttpRequestException`: A socket operation was attempted to an unreachable network
 
 This exception might mean that you are likely using a resource where MSAL.NET does not support acquiring token for managed identity or you are running the sample code from a development machine where the endpoint to acquire the token for managed identities is unreachable.
