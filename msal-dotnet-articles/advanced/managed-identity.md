@@ -62,7 +62,7 @@ AuthenticationResult result = await mi.AcquireTokenForManagedIdentity(resource)
 
 ## Caching
 
-By default, MSAL.NET supports in-memory caching. To explore additional caching options or implement a custom cache, see [Token cache serialization in MSAL.NET](/azure/active-directory/develop/msal-net-token-cache-serialization). We do not recommend sharing a cache between two or more Azure sources with system-assigned managed identities enabled as this can result in the same token being shared across the resources.
+By default, MSAL.NET supports in-memory caching. To explore additional caching options or implement a custom cache, see [Token cache serialization in MSAL.NET](/azure/active-directory/develop/msal-net-token-cache-serialization). We do not recommend sharing a cache between two or more Azure sources with managed identities enabled as this can result in the same token being shared across the resources.
 
 ## Troubleshooting
 
