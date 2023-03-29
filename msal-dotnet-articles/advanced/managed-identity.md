@@ -22,7 +22,7 @@ For a complete list, refer to [Azure services that can use managed identities to
 
 There are two types of managed identities available to developers - **system-assigned** and **user-assigned**. You can learn more about the differences in the [Managed identity types](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) article. MSAL.NET supports acquiring tokens through both. Standard [MSAL.NET logging](/azure/active-directory/develop/msal-logging-dotnet) is possible to keep track of requests and related metadata.
 
-Prior to using managed identities from MSAL.NET developers must enable them for the resources they want to use through Azure CLI or the Azure Portal.
+Prior to using managed identities from MSAL.NET, developers must enable them for the resources they want to use through Azure CLI or the Azure Portal.
 
 ## Examples
 
