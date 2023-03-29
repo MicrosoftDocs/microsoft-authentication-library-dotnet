@@ -32,7 +32,7 @@ For both user-assigned and system-assigned identities, developers can use the <x
 
 For system-assigned managed identities, the developer does not need to pass any additional information when creating an instance of <xref:Microsoft.Identity.Client.IManagedIdentityApplication>, as it will automatically infer the relevant metadata about the assigned identity.
 
-<xref:M:Microsoft.Identity.Client.IManagedIdentityApplication.AcquireTokenForManagedIdentity(System.String)> is called with the resource to acquire a token for, such as `https://management.azure.com`.
+<xref:Microsoft.Identity.Client.IManagedIdentityApplication.AcquireTokenForManagedIdentity(System.String)> is called with the resource to acquire a token for, such as `https://management.azure.com`.
 
 ```csharp
 IManagedIdentityApplication mi = ManagedIdentityApplicationBuilder.Create()
@@ -48,7 +48,7 @@ AuthenticationResult result = await mi.AcquireTokenForManagedIdentity(resource)
 
 For user-assigned managed identities, the developer needs to pass the managed identity client ID or the full resource identifier string when creating <xref:Microsoft.Identity.Client.IManagedIdentityApplication>.
 
-Like in the case for system-assigned managed identities, <xref:M:Microsoft.Identity.Client.IManagedIdentityApplication.AcquireTokenForManagedIdentity(System.String)> is called with the resource to acquire a token for, such as `https://management.azure.com`.
+Like in the case for system-assigned managed identities, <xref:Microsoft.Identity.Client.IManagedIdentityApplication.AcquireTokenForManagedIdentity(System.String)> is called with the resource to acquire a token for, such as `https://management.azure.com`.
 
 ```csharp
 IManagedIdentityApplication mi = ManagedIdentityApplicationBuilder.Create(userAssignedId)
