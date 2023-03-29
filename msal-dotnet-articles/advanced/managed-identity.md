@@ -20,9 +20,9 @@ For a complete list, refer to [Azure services that can use managed identities to
 
 ## How to use managed identities
 
-There are two types of managed identities available to developers - **system-assigned** and **user-assigned**. You can learn more about the differences in the [Managed identity types](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) article. MSAL.NET supports acquiring tokens through both. Standard [MSAL.NET logging](/azure/active-directory/develop/msal-logging-dotnet) is possible to keep track of requests and related metadata.
+There are two types of managed identities available to developers - **system-assigned** and **user-assigned**. You can learn more about the differences in the [Managed identity types](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) article. MSAL.NET supports acquiring tokens with both. [MSAL.NET logging](/azure/active-directory/develop/msal-logging-dotnet) allows to keep track of requests and related metadata.
 
-Prior to using managed identities from MSAL.NET developers must enable them for the resources they want to use through Azure CLI or the Azure Portal.
+Prior to using managed identities from MSAL.NET, developers must enable them for the resources they want to use through Azure CLI or the Azure Portal.
 
 ## Examples
 
@@ -46,7 +46,7 @@ AuthenticationResult result = await mi.AcquireTokenForManagedIdentity(resource)
 
 ### User-assigned managed identities
 
-For user-assigned managed identities, the developer needs to pass the managed identity client ID or the full resource identifier string when creating <xref:Microsoft.Identity.Client.IManagedIdentityApplication>.
+For user-assigned managed identities, the developer needs to pass the managed identity client ID or the full resource identifier string if client ID is not available when creating <xref:Microsoft.Identity.Client.IManagedIdentityApplication>.
 
 Like in the case for system-assigned managed identities, <xref:Microsoft.Identity.Client.IManagedIdentityApplication.AcquireTokenForManagedIdentity(System.String)> is called with the resource to acquire a token for, such as `https://management.azure.com`.
 
@@ -62,7 +62,7 @@ AuthenticationResult result = await mi.AcquireTokenForManagedIdentity(resource)
 
 ## Caching
 
-By default, MSAL.NET supports in-memory caching. To explore additional caching options or implement a custom cache, see [Token cache serialization in MSAL.NET](/azure/active-directory/develop/msal-net-token-cache-serialization). We do not recommend sharing a cache between two or more Azure sources with system-assigned managed identities enabled as this can result in the same token being shared across the resources.
+By default, MSAL.NET supports in-memory caching. To explore additional caching options or implement a custom cache, see [Token cache serialization in MSAL.NET](/azure/active-directory/develop/msal-net-token-cache-serialization). We do not recommend sharing a cache between two or more Azure sources with managed identities enabled as this can result in the same token being shared across the resources.
 
 ## Troubleshooting
 
