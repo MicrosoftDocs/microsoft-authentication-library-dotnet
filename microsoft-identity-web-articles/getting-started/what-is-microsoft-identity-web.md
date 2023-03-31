@@ -24,9 +24,7 @@ Microsoft.Identity.Web proposes a higher level API to protect web APIs, and acqu
 
 ## The Scenarios
 
-The picture below summarizes the supported scenarios and shows on which platform, and to which Azure AD protocol this corresponds:
-
-![Image showing supported scenarios and platforms](../media/net-oauth.png)
+Microsoft identity web is focused on services, and confidential client applications.
 
 ### Web app that signs in users and calls a web API on behalf of the user
 
@@ -35,8 +33,8 @@ To protect a web app (signing in the user) you'll use ASP.NET or ASP.NET Core wi
 If moreover, your web apps calls web APIs in the name of the user (or in its own name), you'll add the following NuGet packages:
 
 - [Microsoft.Identity.Web.MicrosoftGraph](https://www.nuget.org/packages/Microsoft.Identity.Web.MicrosoftGraph) if you want to call Microsoft Graph
-- [Microsoft.Identity.Web.Azure](https://www.nuget.org/packages/Microsoft.Identity.Azure) if you want to access an Azure resource with one of the Azure SDKs (Storage, etc ...)
-- [Microsoft.Identity.Web.DownstreamApi](https://www.nuget.org/packages/Microsoft.Identity.DownstreamApi) if you want to call a downstream web API
+- [Microsoft.Identity.Web.Azure](https://www.nuget.org/packages/Microsoft.Identity.Web.Azure) if you want to access an Azure resource with one of the Azure SDKs (Storage, etc ...)
+- [Microsoft.Identity.Web.DownstreamApi](https://www.nuget.org/packages/Microsoft.Identity.Web.DownstreamApi) if you want to call a downstream web API
 
 ### Desktop or service daemon app that calls a web API as itself (in its own name)
 
@@ -49,5 +47,5 @@ To protect a web API you'll use ASP.NET or ASP.NET Core. You'll reference the [M
 If moreover, your web apps calls web APIs in the name of the user (or in its own name), you'll add the following NuGet packages:
 
 - [Microsoft.Identity.Web.MicrosoftGraph](https://www.nuget.org/packages/Microsoft.Identity.Web.MicrosoftGraph) if you want to call Microsoft Graph
-- [Microsoft.Identity.Web.Azure](https://www.nuget.org/packages/Microsoft.Identity.Azure) if you want to access an Azure resource with one of the Azure SDKs (Storage, etc ...)
-- [Microsoft.Identity.Web.DownstreamApi](https://www.nuget.org/packages/Microsoft.Identity.DownstreamApi) if you want to call a downstream web API
+- [Microsoft.Identity.Web.Azure](https://www.nuget.org/packages/Microsoft.Identity.Web.Azure) if you want to access an Azure resource with one of the Azure SDKs (Storage, etc ...)
+- [Microsoft.Identity.Web.DownstreamApi](https://www.nuget.org/packages/Microsoft.Identity.Web.DownstreamApi) if you want to call a downstream web API
