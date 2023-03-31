@@ -76,8 +76,6 @@ dotnet new webapp --auth SingleOrg --calls-graph --client-id "00000000-0000-0000
 
 1. Learn about [Scenarios](./getting-started/scenarios.md).
 1. You will need to [register your app](/azure/active-directory/develop/quickstart-register-app) with Azure Active Directory.
-1. Learn about the [types of client Applications](/azure/active-directory/develop/msal-client-applications): public client and confidential client.
-1. Learn about [Acquiring Tokens](acquiring-tokens/overview.md) to access a protected API.
 
 ## Samples
 
