@@ -1,5 +1,5 @@
 ---
-title: MSAL.NET scenarios
+title: Microsoft Identity Web scenarios
 description: Learn the application scenarios and authentication flows supported by MSAL.NET
 services: active-directory
 author: Dickson-Mwendia
