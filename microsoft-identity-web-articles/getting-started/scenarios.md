@@ -20,7 +20,7 @@ ms.custom: devx-track-csharp, aaddev, engagement-fy23
 
 ## Introduction
 
-Microsoft.Identity.Web proposes a higher level API to protect web APIs, and acquire tokens in web apps, web APIs and services/daemon apps. You can choose to describe your application through a configuration file, or programmatically, or use a combination of both approaches.
+Microsoft.Identity.Web proposes a higher level API, over MSAL.NET, to protect web APIs, and acquire tokens in web apps, web APIs and services/daemon apps. You can choose to describe your application through a configuration file, or programmatically, or use a combination of both approaches.
 
 ## The Scenarios
 
