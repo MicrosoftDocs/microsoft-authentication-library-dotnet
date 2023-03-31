@@ -30,7 +30,7 @@ Microsoft identity web is focused on services, and confidential client applicati
 
 To protect a web app (signing in the user) you'll use ASP.NET or ASP.NET Core with the ASP.NET Open ID Connect middleware. You'll reference the [Microsoft.Identity.Web](https://www.nuget.org/packages/Microsoft.Identity.Web) NuGet package if you use ASP.NET Core, and [Microsoft.Identity.Web.OWIN](https://www.nuget.org/packages/Microsoft.Identity.Web.OWIN) if you are still using ASP.NET (OWIN).
 
-If moreover, your web apps calls web APIs in the name of the user (or in its own name), you'll add the following NuGet packages:
+If moreover, your web apps call web APIs in the name of the user (or as itself), you'll add the following NuGet packages:
 
 - [Microsoft.Identity.Web.MicrosoftGraph](https://www.nuget.org/packages/Microsoft.Identity.Web.MicrosoftGraph) if you want to call Microsoft Graph
 - [Microsoft.Identity.Web.Azure](https://www.nuget.org/packages/Microsoft.Identity.Web.Azure) if you want to access an Azure resource with one of the Azure SDKs (Storage, etc ...)
