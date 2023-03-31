@@ -1,6 +1,6 @@
 ---
 title: Microsoft Identity Web scenarios
-description: Learn the application scenarios and authentication flows supported by MSAL.NET
+description: Learn the application scenarios and authentication flows supported by Microsoft Identity Web.
 services: active-directory
 author: Dickson-Mwendia
 manager: CelesteDG
