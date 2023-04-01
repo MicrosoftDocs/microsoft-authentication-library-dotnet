@@ -16,7 +16,7 @@ ms.custom: devx-track-csharp, aaddev, engagement-fy23
 # Customer intent: As an application developer, I want to learn how Microsoft Identity Web can help me protect my services with the Microsoft identity platform. 
 ---
 
- Microsoft Identity Web authentication library
+# Microsoft Identity Web authentication library
 
 Microsoft Identity Web is a set of ASP.NET Core libraries that simplifies adding authentication and authorization support to web apps,  web APIs, and daemon apps integrating with the Microsoft identity platform. It provides a single-surface API convenience layer  that ties together ASP.NET or ASP.NET Core, their authentication middleware, and the [Microsoft Authentication Library (MSAL) for .NET](https://github.com/azuread/microsoft-authentication-library-for-dotnet) that acquires tokens. It can be installed via NuGet or by using a Visual Studio project template to create a new app project
 
