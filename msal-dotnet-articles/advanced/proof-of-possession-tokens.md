@@ -2,8 +2,6 @@
 title: Proof of Possession (PoP) tokens
 ---
 
-# Proof of Possession (PoP) tokens
-
 Bearer tokens are the norm in modern identity flows, however they are vulnerable to being stolen and used to access a protected resource.
 
 Proof of Possession (PoP) tokens mitigate this threat via 2 mechanisms:
@@ -80,7 +78,7 @@ Important: The 2 properties and the sign method on this interface will be called
 
 ## How to add more claims / How do I create the Signed Http Request (SHR) part of the POP token myself?
 
-If you want to do key management and to create the SHR yourlsef, please see: 
+If you want to do key management and to create the SHR yourself, please see:
 
 https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/main/tests/Microsoft.Identity.Test.Integration.netfx/HeadlessTests/PoPTests.cs#L288
 
