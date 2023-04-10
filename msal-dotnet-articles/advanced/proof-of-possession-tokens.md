@@ -17,7 +17,8 @@ For more details, see [RFC 7800](https://tools.ietf.org/html/rfc7800).
 
 See the [full code sample](https://github.com/Azure-Samples/active-directory-dotnetcore-daemon-v2/tree/master/4-Call-OwnApi-Pop) show casing a daemon app using AcquireTokenForClient with PoP to call an API protected with Proof-of-Possession.
 
-**Note:** Proof-of-Possession is still experimental for confidential clients.
+> [!NOTE]
+> Proof-of-Possession is still experimental for confidential clients.
 
 Example implementation:
 
@@ -67,7 +68,8 @@ If you are upgrading an existing API, consider supporting both Bearer and PoP to
 
 The PoP feature in MSAL allows users to provide their own key management for additional control over cryptographic operations. The interface is an abstraction over the asymmetric key operations needed by PoP that encapsulates a pair of public and private keys and some typical crypto operations. All symmetric operations use SHA256.
 
-**Important:** The 2 properties and the sign method on this interface will be called at different times but MUST return details of the same private / public key pair, i.e. do not change to a different key pair mid way. It is best to make this class immutable. Ideally there should be a single public and private key pair associated with a machine, so that implementers of this interface should consider exposing a singleton. See [IPoPCryptoProvider interface](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/master/src/client/Microsoft.Identity.Client/AuthScheme/PoP/IPoPCryptoProvider.cs), [Example RSA key implementation](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/9895855ac4fcf52893fbc2b06ee20ea3eda1549a/tests/Microsoft.Identity.Test.Integration.netfx/HeadlessTests/PoPTests.cs#L503), and [Example ECD key implementation](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/9895855ac4fcf52893fbc2b06ee20ea3eda1549a/tests/Microsoft.Identity.Test.Common/Core/Helpers/ECDCertificatePopCryptoProvider.cs#L11).
+> [!IMPORTANT]
+> Two properties and the sign method on this interface will be called at different times but MUST return details of the same private / public key pair, i.e. do not change to a different key pair mid way. It is best to make this class immutable. Ideally there should be a single public and private key pair associated with a machine, so that implementers of this interface should consider exposing a singleton. See [IPoPCryptoProvider interface](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/master/src/client/Microsoft.Identity.Client/AuthScheme/PoP/IPoPCryptoProvider.cs), [example RSA key implementation](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/9895855ac4fcf52893fbc2b06ee20ea3eda1549a/tests/Microsoft.Identity.Test.Integration.netfx/HeadlessTests/PoPTests.cs#L503), and [example ECD key implementation](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/9895855ac4fcf52893fbc2b06ee20ea3eda1549a/tests/Microsoft.Identity.Test.Common/Core/Helpers/ECDCertificatePopCryptoProvider.cs#L11).
 
 ## How to add more claims / How do I create the Signed HTTP Request (SHR) part of the PoP token myself?
 
