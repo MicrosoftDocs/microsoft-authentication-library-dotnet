@@ -77,7 +77,7 @@ If you want to do key management and to create the SHR yourself,  see [this exam
 
 ## Proof-of-Possession for public clients
 
-Proof-of-Possession on public client flows can be achieved with the use of the updated [Windows broker](https://learn.microsoft.com/en-us/entra/msal/dotnet/acquiring-tokens/desktop-mobile/wam) in MSAL 4.52.0 and above. Contrary to the confidential client flow, it is not possible to provide your own key to sign the PoP token.
+Proof-of-Possession on public client flows can be achieved with the use of the updated [Windows broker](/msal-dotnet-articles/acquiring-tokens/desktop-mobile/wam.md) in MSAL 4.52.0 and above. Contrary to the confidential client flow, it is not possible to provide your own key to sign the PoP token.
 
 Example implementation:
 
