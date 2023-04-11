@@ -49,8 +49,6 @@ Based on which platform the client application targets, different MSAL packages 
 | UWP            | &check;   | &cross;            | &cross;                   |
 | netcoreapp3.1  | &cross;   | &check;            | &check; (not recommended) |
 
-Because the .NET Core 3.1 target framework has reached the [end of life](/lifecycle/products/microsoft-net-and-net-core) on Dec 13, 2022, our team will no longer offer support for applications using MSAL with this specific version of .NET Core. We recommend upgrading to the latest version of the .NET platform where possible.
-
 After referencing the correct packages, simply call `WithBroker(BrokerOptions)` with options and pass a window handle.
 
 ```csharp
