@@ -24,7 +24,7 @@ MSAL.NET ([Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.I
 
 MSAL.NET supports different application topologies, including:
 
-- [Native clients](/azure/active-directory/develop/active-directory-dev-glossary#native-client)  (mobile or desktop applications) calling the Microsoft Graph API on behalf of a user, 
+- [Native clients](/azure/active-directory/develop/active-directory-dev-glossary#native-client)  (mobile or desktop applications) calling the Microsoft Graph API on behalf of a user,
 - Daemons, services, or [web clients](/azure/active-directory/develop/active-directory-dev-glossary#web-client) (web apps or web APIs) calling the Microsoft Graph API on behalf of a user, or without a user.
 
 With the exception of [User-agent based client](/azure/active-directory/develop/active-directory-dev-glossary#user-agent-based-client) which is only supported in JavaScript.
@@ -33,7 +33,7 @@ For more details about the supported scenarios, see [Scenarios](./getting-starte
 
 MSAL.NET supports multiple platforms, including .NET Framework, [.NET Core](https://www.microsoft.com/net/learn/get-started/windows)(including .NET 6), [Xamarin](https://www.xamarin.com/) Android, Xamarin iOS, and [UWP](/windows/uwp/get-started/universal-application-platform-guide).
 
->[!NOTE]
+> [!NOTE]
 > Not all the authentication features are available in all platforms, mostly because:
 >
 >- Mobile platforms (Xamarin and UWP) do not allow confidential client flows, because they are not meant to function as a backend and cannot  store secrets securely.
@@ -65,12 +65,12 @@ MSAL.NET is used to acquire tokens. It's not used to protect a Web API. If you a
 
 ### Getting started with MSAL.NET
 
-1. Learn about [Scenarios](./getting-started/scenarios.md).
+1. Learn about [MSAL.NET usage scenarios](./getting-started/scenarios.md).
 1. You will need to [register your app](/azure/active-directory/develop/quickstart-register-app) with Azure Active Directory.
-1. Learn about the [types of client Applications](/azure/active-directory/develop/msal-client-applications): public client and confidential client.
-1. Learn about [Acquiring Tokens](acquiring-tokens/overview.md) to access a protected API.
+1. Learn about the [types of client applications](/azure/active-directory/develop/msal-client-applications): public client and confidential client.
+1. Learn about [acquiring tokens](acquiring-tokens/overview.md) to access a protected API.
 
-### Acquiring Tokens
+### Acquiring tokens
 
 #### Acquiring tokens from cache in any app
 
@@ -90,19 +90,25 @@ MSAL.NET is used to acquire tokens. It's not used to protect a Web API. If you a
 
 #### Confidential client availability
 
-MSAL is a multi-framework library. All Confidential Client flows **are available on**: .NET Core, .NET Desktop, and .NET Standard. 
+MSAL.NET is a multi-framework library. All confidential client flows **are available on**:
 
-They are not available on the mobile platforms, because the OAuth2 spec states that there should be a secure, dedicated connection between the application and the identity provider. This secure connection can be achieved on web servers and web API back-ends by deploying a certificate (or a secret string, but this is not recommended for production). It cannot be achieved on mobile apps and other client applications that are distributed to users. As such, these flows **are not available on**:
+- .NET Core
+- .NET Desktop
+- .NET Standard
 
-- Xamarin.Android
-- Xamarin.iOS
+They are not available on the mobile platforms, because the OAuth2 spec states that there should be a secure, dedicated connection between the application and the identity provider. This secure connection can be achieved on web servers and web API back-ends by deploying a certificate (or a secret string, but this is not recommended for production). It cannot be achieved on mobile apps and other client applications that are distributed to users. As such, these confidential flows **are not available on**:
+
+- Xamarin.Android / MAUI Android
+- Xamarin.iOS / MAUI iOS
 - UWP
 
-## Changelog
+## Releases
 
-For previous or intermediate releases see the [Releases page on GitHub](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/releases).
+For previous releases, see the [Releases page on GitHub](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/releases). Minor (feature) releases are published every month. A feature could be included in a release or not depending on its complexity. Smaller patch or urgent fixes can be releases more frequently. Some of the security issues are back ported to the last major/minor release.
 
-For additional information on versioning, see [Semantic versioning - API change management](resources/semantic-versioning-api-change-management.md) to understand changes in MSAL.NET public API, as well as [MSAL Release Cadence](resources/release-cadence.md) to understand when MSAL.NET is released.
+For work-in-progress and future releases, see [Milestones](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/milestones).
+
+For additional information on versioning, see [Semantic versioning - API change management](resources/semantic-versioning-api-change-management.md) to understand changes in MSAL.NET public API.
 
 ## Samples
 
@@ -111,4 +117,4 @@ See [our comprehensive sample list](/azure/active-directory/develop/active-direc
 ## FAQ
 
 - How MSAL.NET uses [web browsers](/azure/active-directory/develop/msal-net-web-browsers) for interactive authentication.
-- If you have issues with Xamarin.Forms applications leveraging MSAL.NET please read [Troubleshooting-Xamarin.Android-issues-with-MSAL](/azure/active-directory/develop/msal-net-xamarin-android-considerations).
+- If you have issues with Xamarin.Forms applications leveraging MSAL.NET please read [Troubleshooting Xamarin.Android issues with MSAL](/azure/active-directory/develop/msal-net-xamarin-android-considerations).
