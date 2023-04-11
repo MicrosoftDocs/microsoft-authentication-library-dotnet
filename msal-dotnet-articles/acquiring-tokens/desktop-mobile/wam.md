@@ -37,7 +37,7 @@ Due to platform-specific and backwards compatibility requirements, WAM implement
 
 - [Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client/)(i.e. MSAL)
 - [Microsoft.Identity.Client.Broker](https://www.nuget.org/packages/Microsoft.Identity.Client.Broker/)(i.e. MSAL.Broker)
-- [Microsoft.Identity.Client.Desktop](https://www.nuget.org/packages/Microsoft.Identity.Client.Desktop/)(i.e. MSAL.Desktop)
+- [Microsoft.Identity.Client.Desktop](https://www.nuget.org/packages/Microsoft.Identity.Client.Desktop/) - WAM and WebView2 support
 
 Based on which platform the client application targets, different MSAL packages must be used.
 
