@@ -39,17 +39,7 @@ Due to platform-specific and backwards compatibility requirements, WAM implement
 - [Microsoft.Identity.Client.Broker](https://www.nuget.org/packages/Microsoft.Identity.Client.Broker/) - WAM support
 - [Microsoft.Identity.Client.Desktop](https://www.nuget.org/packages/Microsoft.Identity.Client.Desktop/) - WAM and WebView2 support
 
-Based on which platform the client application targets, different MSAL packages must be used.
-
-| Framework      | MSAL only | MSAL + MSAL.Broker | MSAL + MSAL.Desktop       |
-|----------------|:---------:|:------------------:|:-------------------------:|
-| net48          | &cross;   | &check;            | &check; (not recommended) |
-| net6.0         | &cross;   | &check;            | &cross;                   |
-| net6.0-windows | &check;   | &cross;            | &cross;                   |
-| UWP            | &check;   | &cross;            | &cross;                   |
-| netcoreapp3.1  | &cross;   | &check;            | &check; (not recommended) |
-
-After referencing the correct packages, simply call `WithBroker(BrokerOptions)` with options and pass a window handle.
+After referencing the correct packages, call `WithBroker(BrokerOptions)` with options and pass a window handle.
 
 ```csharp
 var pca = PublicClientApplicationBuilder.Create(CLIENT_ID)
