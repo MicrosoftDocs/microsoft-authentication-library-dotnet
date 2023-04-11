@@ -51,7 +51,7 @@ The following NuGet packages, which are referenced by the packages above, can al
 
 - [Microsoft.Identity.Web.TokenCache](https://www.nuget.org/packages/Microsoft.Identity.Web.TokenCache) - Provides simplified token cache serializers for MSAL.NET (In memory, distributed cache)
 - [Microsoft.Identity.Web.Certificate](https://www.nuget.org/packages/Microsoft.Identity.Web.Certificate) - Provides simplified interaction with certificates
-- [Microsoft.Identity.Web.Certificateless](https://www.nuget.org/packages/Microsoft.Identity.Web.Certificateless) - Provides simplified interaction with other forms of credentials not based on certificates (signed assertions from [workload identity federation](/azure/active-directory/workload-identities/workload-identity-federation.md), integration with Azure Kubernetes Services (AKS), ...)
+- [Microsoft.Identity.Web.Certificateless](https://www.nuget.org/packages/Microsoft.Identity.Web.Certificateless) - Provides simplified interaction with other forms of credentials not based on certificates (signed assertions from [workload identity federation](/azure/active-directory/workload-identities/workload-identity-federation), integration with Azure Kubernetes Services (AKS), ...)
 
 ## Install by using a Visual Studio project template
 
