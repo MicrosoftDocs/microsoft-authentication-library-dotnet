@@ -10,7 +10,7 @@ First, please do a search of [open issues](https://github.com/AzureAD/microsoft-
 
 If you find your issue already exists, add a relevant comment. You can also use an upvote or downvote reaction in place of a "+1" comment.
 
-If your issue is a question, and is not addressed in the wiki documentation, please ask the question on [Stack Overflow](https://stackoverflow.com/questions/tagged/msal) using the tag `msal`.
+If your issue is a question, and is not addressed in the wiki documentation, please ask the question on [Stack Overflow](https://stackoverflow.com/questions/tagged/azure-ad-msal) using the tag `azure-ad-msal`.
 
 If you cannot find an existing issue that describes your bug or feature request, submit an issue using the guidelines below.
 
