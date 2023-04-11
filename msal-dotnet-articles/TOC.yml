@@ -1,172 +1,180 @@
-- name: Microsoft Authentication Library for .NET
-  href: index.md
-- name: Getting started
+- name: Microsoft Authentication Libraries for .NET
   items:
-  - name: Is MSAL.NET right for me?
+  - name: Choosing the right library
     href: getting-started/choosing-msal-dotnet.md
-  - name: Scenarios
-    href: getting-started/scenarios.md
-  - name: Best practices
-    href: getting-started/best-practices.md
-- name: Acquiring Tokens
-  items:
-  - name: Overview
-    href: acquiring-tokens/overview.md
-  - name: AcquireTokenSilentAsync API
-    href: acquiring-tokens/acquiretokensilentasync-api.md
-  - name: Desktop/mobile apps
+  - name: Microsoft Authentication Library for .NET
+    href: index.md
     items:
-    - name: Acquiring tokens interactively
-      href: acquiring-tokens/desktop-mobile/acquiring-tokens-interactively.md
-    - name: WAM - the Windows broker
-      href: acquiring-tokens/desktop-mobile/wam.md
-    - name: .NET Core
-      href: acquiring-tokens/desktop-mobile/dotnet-core.md
-    - name: Xamarin
-      href: acquiring-tokens/desktop-mobile/xamarin.md
-    - name: Universal Windows Platform
-      href: acquiring-tokens/desktop-mobile/uwp.md
-    - name: Sign-in users with social identities
-      href: acquiring-tokens/desktop-mobile/social-identities.md
-    - name: Integrated Windows Authentication for domain or AAD joined machines
-      href: acquiring-tokens/desktop-mobile/integrated-windows-authentication.md
-    - name: Username/password authentication
-      href: acquiring-tokens/desktop-mobile/username-password-authentication.md
-    - name: Device Code Flow for devices without a Web browser
-      href: acquiring-tokens/desktop-mobile/device-code-flow.md
-    - name: ADFS support
-      href: acquiring-tokens/desktop-mobile/adfs.md
-  - name: Web apps/web APIs/daemon apps
+    - name: Getting started
+      items:
+      - name: Scenarios
+        href: getting-started/scenarios.md
+      - name: Best practices
+        href: getting-started/best-practices.md
+    - name: Acquiring Tokens
+      items:
+      - name: Overview
+        href: acquiring-tokens/overview.md
+      - name: AcquireTokenSilentAsync API
+        href: acquiring-tokens/acquiretokensilentasync-api.md
+      - name: Desktop/mobile apps
+        items:
+        - name: Acquiring tokens interactively
+          href: acquiring-tokens/desktop-mobile/acquiring-tokens-interactively.md
+        - name: WAM - the Windows broker
+          href: acquiring-tokens/desktop-mobile/wam.md
+        - name: .NET Core
+          href: acquiring-tokens/desktop-mobile/dotnet-core.md
+        - name: Xamarin
+          href: acquiring-tokens/desktop-mobile/xamarin.md
+        - name: Universal Windows Platform
+          href: acquiring-tokens/desktop-mobile/uwp.md
+        - name: Sign-in users with social identities
+          href: acquiring-tokens/desktop-mobile/social-identities.md
+        - name: Integrated Windows Authentication for domain or AAD joined machines
+          href: acquiring-tokens/desktop-mobile/integrated-windows-authentication.md
+        - name: Username/password authentication
+          href: acquiring-tokens/desktop-mobile/username-password-authentication.md
+        - name: Device Code Flow for devices without a Web browser
+          href: acquiring-tokens/desktop-mobile/device-code-flow.md
+        - name: ADFS support
+          href: acquiring-tokens/desktop-mobile/adfs.md
+      - name: Web apps/web APIs/daemon apps
+        items:
+        - name: Acquiring a token for the app
+          href: acquiring-tokens/web-apps-apis/client-credential-flows.md
+        - name: Acquiring a token on behalf of a user (service to service calls)
+          href: acquiring-tokens/web-apps-apis/on-behalf-of-flow.md
+        - name: Acquiring a token by authorization code in Web Apps
+          href: acquiring-tokens/web-apps-apis/authorization-codes.md
+    - name: Advanced topics
+      items:
+      - name: High availability
+        href: advanced/high-availability.md
+      - name: Handling exceptions and errors
+        items:
+        - name: Overview
+          href: advanced/exceptions/index.md
+        - name: Retry policy
+          href: advanced/exceptions/retry-policy.md
+        - name: Understanding MsalUiRequiredException
+          href: advanced/exceptions/understanding-msaluirequiredexception.md
+        - name: State mismatch error
+          href: advanced/exceptions/understanding-statemismatcherror.md
+        - name: Device authentication errors
+          href: advanced/exceptions/device-authentication-errors.md
+        - name: TLS issues
+          href: advanced/exceptions/tls-issues.md
+        - name: Handling Unity issues with MSAL.NET
+          href: advanced/exceptions/unity.md
+        - name: Troubleshooting the broker
+          href: advanced/exceptions/broker.md
+      - name: Providing your own HttpClient and proxy
+        href: advanced/httpclient.md
+      - name: Extensibility points
+        href: advanced/extensibility-points.md
+      - name: Clearing the token cache
+        href: advanced/clearing-token-cache.md
+      - name: Client credential multi-tenant guidance
+        href: advanced/client-credential-multi-tenant.md
+      - name: Performance testing
+        href: advanced/performance-testing.md
+      - name: PowerShell support
+        href: advanced/powerShell-support.md
+      - name: Testing apps using MSAL
+        href: advanced/testing-apps-using-msal.md
+      - name: Experimental features
+        href: advanced/experimental-features.md
+      - name: Proof-of-Possession (PoP) tokens
+        href: advanced/proof-of-possession-tokens.md
+      - name: Using in Azure functions
+        href: advanced/using-in-azure-functions.md
+      - name: Extracting info from WWW-Authenticate headers
+        href: advanced/extract-authentication-parameters.md
+      - name: SPA authorization code
+        href: advanced/spa-authorization-code.md
+      - name: Android and iOS emulators with MSAL
+        href: advanced/android-ios-emulator.md
+      - name: Monitoring
+        href: advanced/monitoring.md
+      - name: Multi-cloud support/instance awareness
+        href: advanced/multicloud-support-instance-awareness.md
+      - name: Managed identity
+        href: advanced/managed-identity.md
+      - name: Custom authority aliases
+        href: advanced/custom-authority-aliases.md
+      - name: SSH certificates
+        href: advanced/ssh-certificates.md
+      - name: Backup authentication system
+        href: advanced/backup-authentication-system.md
+      - name: Client and server throttling
+        href: advanced/client-and-server-throttling.md
+      - name: WebView2
+        href: advanced/webview2.md
+      - name: Subject name and issuer authentication
+        href: advanced/subject-name-and-issuer-authentication.md
+    - name: How-to
+      items:
+      - name: Install NuGet package from other sources
+        href: how-to/install-nuget-custom-source.md
+      - name: Synchronous programming
+        href: how-to/synchronous-programming.md
+      - name: Override the target framework
+        href: how-to/override-target-framework.md
+      - name: Setting the default reply URI
+        href: how-to/default-reply-uri.md
+      - name: Protect resources in iOS and Android applications using InTune MAM and MSAL.NET
+        href: how-to/protect-ios-android-mam-intune.md
+      - name: Custom token cache for a public client application
+        href: how-to/custom-token-cache-in-public-client-applications.md
+      - name: Building applications on Ubuntu Linux
+        href: how-to/build-apps-on-linux-ubuntu.md
+      - name: Overriding authority
+        href: how-to/overriding-authority.md
+      - name: Creating a configuration for MAM (conditional access)
+        href: how-to/create-config-for-mam-conditional-access.md
+      - name: Setting cache options
+        href: how-to/cache-options.md
+      - name: Getting tenant profiles
+        href: how-to/get-tenant-profiles.md
+    - name: Contribute
+      items:
+      - name: Overview
+        href: contribute/overview.md
+      - name: Prerequisites to build MSAL.NET
+        href: contribute/prerequisites-to-build.md
+      - name: Build and test MSAL.NET
+        href: contribute/build-and-test.md
+      - name: Submitting bugs and feature requests
+        href: contribute/bugs-and-feature-requests.md
+    - name: Additional resources
+      items:
+      - name: Semantic versioning and API change management
+        href: resources/semantic-versioning-api-change-management.md
+      - name: Troubleshooting
+        href: resources/troubleshooting.md
+      - name: Region discovery troubleshooting
+        href: resources/region-discovery-troubleshooting.md
+      - name: Telemetry overview
+        href: resources/telemetry-overview.md
+      - name: Handling of personally identifiable information
+        href: resources/handling-pii.md
+      - name: iOS12 security advisory
+        href: resources/ios12-security-advisory.md
+      - name: Releases
+        href: https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/releases
+      - name: MSAL.NET reference documentation
+        href: /active-directory/adal/microsoft.identity.client
+      - name: Azure AD v2.0 developer guide
+        href: /azure/active-directory/develop/
+      - name: Code samples
+        href: /azure/active-directory/develop/sample-v2-code
+      - name: Known issues
+        href: resources/known-issues.md
+  - name: Microsoft Identity Web
+    href: microsoft-identity-web/index.md
     items:
-    - name: Acquiring a token for the app
-      href: acquiring-tokens/web-apps-apis/client-credential-flows.md
-    - name: Acquiring a token on behalf of a user (service to service calls)
-      href: acquiring-tokens/web-apps-apis/on-behalf-of-flow.md
-    - name: Acquiring a token by authorization code in Web Apps
-      href: acquiring-tokens/web-apps-apis/authorization-codes.md
-- name: Advanced topics
-  items:
-  - name: High availability
-    href: advanced/high-availability.md
-  - name: Handling exceptions and errors
-    items:
-    - name: Overview
-      href: advanced/exceptions/index.md
-    - name: Retry policy
-      href: advanced/exceptions/retry-policy.md
-    - name: Understanding MsalUiRequiredException
-      href: advanced/exceptions/understanding-msaluirequiredexception.md
-    - name: State mismatch error
-      href: advanced/exceptions/understanding-statemismatcherror.md
-    - name: Device authentication errors
-      href: advanced/exceptions/device-authentication-errors.md
-    - name: TLS issues
-      href: advanced/exceptions/tls-issues.md
-    - name: Handling Unity issues with MSAL.NET
-      href: advanced/exceptions/unity.md
-    - name: Troubleshooting the broker
-      href: advanced/exceptions/broker.md
-  - name: Providing your own HttpClient and proxy
-    href: advanced/httpclient.md
-  - name: Extensibility points
-    href: advanced/extensibility-points.md
-  - name: Clearing the token cache
-    href: advanced/clearing-token-cache.md
-  - name: Client credential multi-tenant guidance
-    href: advanced/client-credential-multi-tenant.md
-  - name: Performance testing
-    href: advanced/performance-testing.md
-  - name: PowerShell support
-    href: advanced/powerShell-support.md
-  - name: Testing apps using MSAL
-    href: advanced/testing-apps-using-msal.md
-  - name: Experimental features
-    href: advanced/experimental-features.md
-  - name: Proof of Possession (PoP) tokens
-    href: advanced/proof-of-possession-tokens.md
-  - name: Using in Azure functions
-    href: advanced/using-in-azure-functions.md
-  - name: Extracting info from WWW-Authenticate headers
-    href: advanced/extract-authentication-parameters.md
-  - name: SPA authorization code
-    href: advanced/spa-authorization-code.md
-  - name: Android and iOS emulators with MSAL
-    href: advanced/android-ios-emulator.md
-  - name: Monitoring
-    href: advanced/monitoring.md
-  - name: Multi-cloud support/instance awareness
-    href: advanced/multicloud-support-instance-awareness.md
-  - name: Managed identity
-    href: advanced/managed-identity.md
-  - name: Custom authority aliases
-    href: advanced/custom-authority-aliases.md
-  - name: SSH certificates
-    href: advanced/ssh-certificates.md
-  - name: Backup authentication system
-    href: advanced/backup-authentication-system.md
-  - name: Client and server throttling
-    href: advanced/client-and-server-throttling.md
-  - name: WebView2
-    href: advanced/webview2.md
-  - name: Subject name and issuer authentication
-    href: advanced/subject-name-and-issuer-authentication.md
-- name: How-to
-  items:
-  - name: Install NuGet package from other sources
-    href: how-to/install-nuget-custom-source.md
-  - name: Synchronous programming
-    href: how-to/synchronous-programming.md
-  - name: Override the target framework
-    href: how-to/override-target-framework.md
-  - name: Setting the default reply URI
-    href: how-to/default-reply-uri.md
-  - name: Protect resources in iOS and Android applications using InTune MAM and MSAL.NET
-    href: how-to/protect-ios-android-mam-intune.md
-  - name: Custom token cache for a public client application
-    href: how-to/custom-token-cache-in-public-client-applications.md
-  - name: Building applications on Ubuntu Linux
-    href: how-to/build-apps-on-linux-ubuntu.md
-  - name: Overriding authority
-    href: how-to/overriding-authority.md
-  - name: Creating a configuration for MAM (conditional access)
-    href: how-to/create-config-for-mam-conditional-access.md
-  - name: Setting cache options
-    href: how-to/cache-options.md
-  - name: Getting tenant profiles
-    href: how-to/get-tenant-profiles.md
-- name: Contribute
-  items:
-  - name: Overview
-    href: contribute/overview.md
-  - name: Prerequisites to build MSAL.NET
-    href: contribute/prerequisites-to-build.md
-  - name: Build and test MSAL.NET
-    href: contribute/build-and-test.md
-  - name: Submitting bugs and feature requests
-    href: contribute/bugs-and-feature-requests.md
-- name: Additional resources
-  items:
-  - name: Release cadence
-    href: resources/release-cadence.md
-  - name: Semantic versioning and API change management
-    href: resources/semantic-versioning-api-change-management.md
-  - name: Troubleshooting
-    href: resources/troubleshooting.md
-  - name: Region discovery troubleshooting
-    href: resources/region-discovery-troubleshooting.md
-  - name: Telemetry overview
-    href: resources/telemetry-overview.md
-  - name: Handling of personally identifiable information
-    href: resources/handling-pii.md
-  - name: iOS12 security advisory
-    href: resources/ios12-security-advisory.md
-  - name: Releases
-    href: https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/releases
-  - name: MSAL.NET reference documentation
-    href: /active-directory/adal/microsoft.identity.client
-  - name: Azure AD v2.0 developer guide
-    href: /azure/active-directory/develop/
-  - name: Code samples
-    href: /azure/active-directory/develop/sample-v2-code
-  - name: Known issues
-    href: resources/known-issues.md
+    - name: Getting started
+      items:
+      - name: Scenarios
+        href: microsoft-identity-web/getting-started/scenarios.md
