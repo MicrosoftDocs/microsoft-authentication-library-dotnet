@@ -24,11 +24,11 @@ Microsoft Identity Web is a set of ASP.NET Core libraries that simplifies adding
 
 When building ASP.NET Core web apps or web APIs that use Azure Active Directory (Azure AD) or Azure AD B2C for identity and access management (IAM), Microsoft Identity Web is recommended for these scenarios:
 
-- [Service/Daemon applications](/azure/active-directory/develop/scenario-daemon-overview.md)
+- [Service/Daemon applications](/azure/active-directory/develop/scenario-daemon-overview)
 - [Web app that signs in users](/azure/active-directory/develop/scenario-web-app-sign-user-overview)
-- [Web app that signs in users and calls a web API on their behalf](/azure/active-directory/develop/scenario-web-app-call-api-overview.md)
-- [Protected web API that only authenticated users can access](/azure/active-directory/develop/scenario-protected-web-api-overview.md)
-- [Protected web API that calls another (downstream) web API on behalf of the signed-in user](/azure/active-directory/develop/scenario-web-api-call-api-overview.md)
+- [Web app that signs in users and calls a web API on their behalf](/azure/active-directory/develop/scenario-web-app-call-api-overview)
+- [Protected web API that only authenticated users can access](/azure/active-directory/develop/scenario-protected-web-api-overview)
+- [Protected web API that calls another (downstream) web API on behalf of the signed-in user](/azure/active-directory/develop/scenario-web-api-call-api-overview)
 
 ## Supported platforms
 
