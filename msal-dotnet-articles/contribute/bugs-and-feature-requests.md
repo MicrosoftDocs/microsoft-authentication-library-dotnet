@@ -1,5 +1,6 @@
 ---
 title: Submitting bugs and feature requests
+description: "How to contribute by filing bugs and feature requests for Microsoft Authentication Library for .NET."
 ---
 
 # Submitting bugs and feature requests
