@@ -9,6 +9,7 @@
     <AssemblyVersion>4.48.1.0</AssemblyVersion>
     <AssemblyVersion>4.49.1.0</AssemblyVersion>
     <AssemblyVersion>4.51.0.0</AssemblyVersion>
+    <AssemblyVersion>4.52.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -21,6 +22,39 @@
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
+    <Member MemberName="WithBroker">
+      <MemberSignature Language="C#" Value="public static Microsoft.Identity.Client.PublicClientApplicationBuilder WithBroker (this Microsoft.Identity.Client.PublicClientApplicationBuilder builder, Microsoft.Identity.Client.BrokerOptions brokerOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Identity.Client.PublicClientApplicationBuilder WithBroker(class Microsoft.Identity.Client.PublicClientApplicationBuilder builder, class Microsoft.Identity.Client.BrokerOptions brokerOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.Desktop.WamExtension.WithBroker(Microsoft.Identity.Client.PublicClientApplicationBuilder,Microsoft.Identity.Client.BrokerOptions)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function WithBroker (builder As PublicClientApplicationBuilder, brokerOptions As BrokerOptions) As PublicClientApplicationBuilder" />
+      <MemberSignature Language="F#" Value="static member WithBroker : Microsoft.Identity.Client.PublicClientApplicationBuilder * Microsoft.Identity.Client.BrokerOptions -&gt; Microsoft.Identity.Client.PublicClientApplicationBuilder" Usage="Microsoft.Identity.Client.Desktop.WamExtension.WithBroker (builder, brokerOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client.Desktop</AssemblyName>
+        <AssemblyVersion>4.52.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.PublicClientApplicationBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="builder" Type="Microsoft.Identity.Client.PublicClientApplicationBuilder" RefType="this" />
+        <Parameter Name="brokerOptions" Type="Microsoft.Identity.Client.BrokerOptions" />
+      </Parameters>
+      <Docs>
+        <param name="builder" />
+        <param name="brokerOptions">This provides cross platform options for broker.</param>
+        <summary>
+            Brokers enable Single-Sign-On, device identification, and enhanced security.
+            Use this API to enable brokers on desktop platforms.
+            
+            See https://aka.ms/msal-net-wam for more information on platform specific settings required to enable the broker such as redirect URIs.
+            
+            </summary>
+        <returns>A <see cref="T:Microsoft.Identity.Client.PublicClientApplicationBuilder" /> from which to set more
+            parameters, and to create a public client application instance</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="WithWindowsBroker">
       <MemberSignature Language="C#" Value="public static Microsoft.Identity.Client.PublicClientApplicationBuilder WithWindowsBroker (this Microsoft.Identity.Client.PublicClientApplicationBuilder builder, bool enableBroker = true);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Identity.Client.PublicClientApplicationBuilder WithWindowsBroker(class Microsoft.Identity.Client.PublicClientApplicationBuilder builder, bool enableBroker) cil managed" />
@@ -33,7 +67,14 @@
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
+        <AssemblyVersion>4.52.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("This API has been replaced with WithBroker(BrokerOptions)")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("This API has been replaced with WithBroker(BrokerOptions)")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.PublicClientApplicationBuilder</ReturnType>
       </ReturnValue>

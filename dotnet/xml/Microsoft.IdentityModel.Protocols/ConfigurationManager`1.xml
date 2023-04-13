@@ -7,6 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
     <AssemblyVersion>6.27.0.0</AssemblyVersion>
+    <AssemblyVersion>6.28.1.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeParameters>
     <TypeParameter Name="T">
@@ -41,6 +42,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
         <AssemblyVersion>6.27.0.0</AssemblyVersion>
+        <AssemblyVersion>6.28.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="metadataAddress" Type="System.String" />
@@ -65,6 +67,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
         <AssemblyVersion>6.27.0.0</AssemblyVersion>
+        <AssemblyVersion>6.28.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="metadataAddress" Type="System.String" />
@@ -92,6 +95,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
         <AssemblyVersion>6.27.0.0</AssemblyVersion>
+        <AssemblyVersion>6.28.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="metadataAddress" Type="System.String" />
@@ -109,6 +113,35 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConfigurationManager (string metadataAddress, Microsoft.IdentityModel.Protocols.IConfigurationRetriever&lt;T&gt; configRetriever, Microsoft.IdentityModel.Protocols.IDocumentRetriever docRetriever, Microsoft.IdentityModel.Protocols.Configuration.LastKnownGoodConfigurationCacheOptions lkgCacheOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string metadataAddress, class Microsoft.IdentityModel.Protocols.IConfigurationRetriever`1&lt;!T&gt; configRetriever, class Microsoft.IdentityModel.Protocols.IDocumentRetriever docRetriever, class Microsoft.IdentityModel.Protocols.Configuration.LastKnownGoodConfigurationCacheOptions lkgCacheOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Protocols.ConfigurationManager`1.#ctor(System.String,Microsoft.IdentityModel.Protocols.IConfigurationRetriever{`0},Microsoft.IdentityModel.Protocols.IDocumentRetriever,Microsoft.IdentityModel.Protocols.Configuration.LastKnownGoodConfigurationCacheOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (metadataAddress As String, configRetriever As IConfigurationRetriever(Of T), docRetriever As IDocumentRetriever, lkgCacheOptions As LastKnownGoodConfigurationCacheOptions)" />
+      <MemberSignature Language="F#" Value="new Microsoft.IdentityModel.Protocols.ConfigurationManager&lt;'T (requires 'T : null)&gt; : string * Microsoft.IdentityModel.Protocols.IConfigurationRetriever&lt;'T (requires 'T : null)&gt; * Microsoft.IdentityModel.Protocols.IDocumentRetriever * Microsoft.IdentityModel.Protocols.Configuration.LastKnownGoodConfigurationCacheOptions -&gt; Microsoft.IdentityModel.Protocols.ConfigurationManager&lt;'T (requires 'T : null)&gt;" Usage="new Microsoft.IdentityModel.Protocols.ConfigurationManager&lt;'T (requires 'T : null)&gt; (metadataAddress, configRetriever, docRetriever, lkgCacheOptions)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
+        <AssemblyVersion>6.28.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="metadataAddress" Type="System.String" />
+        <Parameter Name="configRetriever" Type="Microsoft.IdentityModel.Protocols.IConfigurationRetriever&lt;T&gt;" />
+        <Parameter Name="docRetriever" Type="Microsoft.IdentityModel.Protocols.IDocumentRetriever" />
+        <Parameter Name="lkgCacheOptions" Type="Microsoft.IdentityModel.Protocols.Configuration.LastKnownGoodConfigurationCacheOptions" />
+      </Parameters>
+      <Docs>
+        <param name="metadataAddress">The address to obtain configuration.</param>
+        <param name="configRetriever">The <see cref="T:Microsoft.IdentityModel.Protocols.IConfigurationRetriever`1" /></param>
+        <param name="docRetriever">The <see cref="T:Microsoft.IdentityModel.Protocols.IDocumentRetriever" /> that reaches out to obtain the configuration.</param>
+        <param name="lkgCacheOptions">The <see cref="T:Microsoft.IdentityModel.Protocols.Configuration.LastKnownGoodConfigurationCacheOptions" /></param>
+        <summary>
+            Instantiates a new <see cref="T:Microsoft.IdentityModel.Protocols.ConfigurationManager`1" /> that manages automatic and controls refreshing on configuration data.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">If 'lkgCacheOptions' is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public ConfigurationManager (string metadataAddress, Microsoft.IdentityModel.Protocols.IConfigurationRetriever&lt;T&gt; configRetriever, Microsoft.IdentityModel.Protocols.IDocumentRetriever docRetriever, Microsoft.IdentityModel.Protocols.IConfigurationValidator&lt;T&gt; configValidator);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string metadataAddress, class Microsoft.IdentityModel.Protocols.IConfigurationRetriever`1&lt;!T&gt; configRetriever, class Microsoft.IdentityModel.Protocols.IDocumentRetriever docRetriever, class Microsoft.IdentityModel.Protocols.IConfigurationValidator`1&lt;!T&gt; configValidator) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Protocols.ConfigurationManager`1.#ctor(System.String,Microsoft.IdentityModel.Protocols.IConfigurationRetriever{`0},Microsoft.IdentityModel.Protocols.IDocumentRetriever,Microsoft.IdentityModel.Protocols.IConfigurationValidator{`0})" />
@@ -118,6 +151,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
         <AssemblyVersion>6.27.0.0</AssemblyVersion>
+        <AssemblyVersion>6.28.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="metadataAddress" Type="System.String" />
@@ -137,6 +171,37 @@
         <exception cref="T:System.ArgumentNullException">If 'configValidator' is null.</exception>
       </Docs>
     </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConfigurationManager (string metadataAddress, Microsoft.IdentityModel.Protocols.IConfigurationRetriever&lt;T&gt; configRetriever, Microsoft.IdentityModel.Protocols.IDocumentRetriever docRetriever, Microsoft.IdentityModel.Protocols.IConfigurationValidator&lt;T&gt; configValidator, Microsoft.IdentityModel.Protocols.Configuration.LastKnownGoodConfigurationCacheOptions lkgCacheOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string metadataAddress, class Microsoft.IdentityModel.Protocols.IConfigurationRetriever`1&lt;!T&gt; configRetriever, class Microsoft.IdentityModel.Protocols.IDocumentRetriever docRetriever, class Microsoft.IdentityModel.Protocols.IConfigurationValidator`1&lt;!T&gt; configValidator, class Microsoft.IdentityModel.Protocols.Configuration.LastKnownGoodConfigurationCacheOptions lkgCacheOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Protocols.ConfigurationManager`1.#ctor(System.String,Microsoft.IdentityModel.Protocols.IConfigurationRetriever{`0},Microsoft.IdentityModel.Protocols.IDocumentRetriever,Microsoft.IdentityModel.Protocols.IConfigurationValidator{`0},Microsoft.IdentityModel.Protocols.Configuration.LastKnownGoodConfigurationCacheOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (metadataAddress As String, configRetriever As IConfigurationRetriever(Of T), docRetriever As IDocumentRetriever, configValidator As IConfigurationValidator(Of T), lkgCacheOptions As LastKnownGoodConfigurationCacheOptions)" />
+      <MemberSignature Language="F#" Value="new Microsoft.IdentityModel.Protocols.ConfigurationManager&lt;'T (requires 'T : null)&gt; : string * Microsoft.IdentityModel.Protocols.IConfigurationRetriever&lt;'T (requires 'T : null)&gt; * Microsoft.IdentityModel.Protocols.IDocumentRetriever * Microsoft.IdentityModel.Protocols.IConfigurationValidator&lt;'T (requires 'T : null)&gt; * Microsoft.IdentityModel.Protocols.Configuration.LastKnownGoodConfigurationCacheOptions -&gt; Microsoft.IdentityModel.Protocols.ConfigurationManager&lt;'T (requires 'T : null)&gt;" Usage="new Microsoft.IdentityModel.Protocols.ConfigurationManager&lt;'T (requires 'T : null)&gt; (metadataAddress, configRetriever, docRetriever, configValidator, lkgCacheOptions)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
+        <AssemblyVersion>6.28.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="metadataAddress" Type="System.String" />
+        <Parameter Name="configRetriever" Type="Microsoft.IdentityModel.Protocols.IConfigurationRetriever&lt;T&gt;" />
+        <Parameter Name="docRetriever" Type="Microsoft.IdentityModel.Protocols.IDocumentRetriever" />
+        <Parameter Name="configValidator" Type="Microsoft.IdentityModel.Protocols.IConfigurationValidator&lt;T&gt;" />
+        <Parameter Name="lkgCacheOptions" Type="Microsoft.IdentityModel.Protocols.Configuration.LastKnownGoodConfigurationCacheOptions" />
+      </Parameters>
+      <Docs>
+        <param name="metadataAddress">The address to obtain configuration.</param>
+        <param name="configRetriever">The <see cref="T:Microsoft.IdentityModel.Protocols.IConfigurationRetriever`1" /></param>
+        <param name="docRetriever">The <see cref="T:Microsoft.IdentityModel.Protocols.IDocumentRetriever" /> that reaches out to obtain the configuration.</param>
+        <param name="configValidator">The <see cref="T:Microsoft.IdentityModel.Protocols.IConfigurationValidator`1" /></param>
+        <param name="lkgCacheOptions">The <see cref="T:Microsoft.IdentityModel.Protocols.Configuration.LastKnownGoodConfigurationCacheOptions" /></param>
+        <summary>
+            Instantiates a new <see cref="T:Microsoft.IdentityModel.Protocols.ConfigurationManager`1" /> with cinfiguration validator that manages automatic and controls refreshing on configuration data.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">If 'configValidator' is null.</exception>
+      </Docs>
+    </Member>
     <Member MemberName="DefaultAutomaticRefreshInterval">
       <MemberSignature Language="C#" Value="public static readonly TimeSpan DefaultAutomaticRefreshInterval;" />
       <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.TimeSpan DefaultAutomaticRefreshInterval" />
@@ -147,6 +212,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
         <AssemblyVersion>6.27.0.0</AssemblyVersion>
+        <AssemblyVersion>6.28.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.TimeSpan</ReturnType>
@@ -168,6 +234,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
         <AssemblyVersion>6.27.0.0</AssemblyVersion>
+        <AssemblyVersion>6.28.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.TimeSpan</ReturnType>
@@ -189,6 +256,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
         <AssemblyVersion>6.27.0.0</AssemblyVersion>
+        <AssemblyVersion>6.28.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.BaseConfiguration&gt;</ReturnType>
@@ -215,6 +283,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
         <AssemblyVersion>6.27.0.0</AssemblyVersion>
+        <AssemblyVersion>6.28.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;T&gt;</ReturnType>
@@ -241,6 +310,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
         <AssemblyVersion>6.27.0.0</AssemblyVersion>
+        <AssemblyVersion>6.28.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;T&gt;</ReturnType>
@@ -267,6 +337,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
         <AssemblyVersion>6.27.0.0</AssemblyVersion>
+        <AssemblyVersion>6.28.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.TimeSpan</ReturnType>
@@ -288,6 +359,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
         <AssemblyVersion>6.27.0.0</AssemblyVersion>
+        <AssemblyVersion>6.28.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.TimeSpan</ReturnType>
@@ -312,6 +384,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
         <AssemblyVersion>6.27.0.0</AssemblyVersion>
+        <AssemblyVersion>6.28.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

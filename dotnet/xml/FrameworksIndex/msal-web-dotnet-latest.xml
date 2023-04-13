@@ -1,22 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-web-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.IdentityModel.Abstractions" Version="6.27.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.JsonWebTokens" Version="6.27.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.KeyVaultExtensions" Version="6.27.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Logging" Version="6.27.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.LoggingExtensions" Version="6.27.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.ManagedKeyVaultSecurityKey" Version="6.27.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols" Version="6.27.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="6.27.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.SignedHttpRequest" Version="6.27.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.WsFederation" Version="6.27.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.TestExtensions" Version="6.27.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Tokens" Version="6.27.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Tokens.Saml" Version="6.27.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Validators" Version="6.27.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Xml" Version="6.27.0.0" />
-    <Assembly Name="System.IdentityModel.Tokens.Jwt" Version="6.27.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Abstractions" Version="6.28.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.JsonWebTokens" Version="6.28.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.KeyVaultExtensions" Version="6.28.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.Logging" Version="6.28.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.LoggingExtensions" Version="6.28.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.ManagedKeyVaultSecurityKey" Version="6.28.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols" Version="6.28.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="6.28.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.SignedHttpRequest" Version="6.28.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.WsFederation" Version="6.28.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.TestExtensions" Version="6.28.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.Tokens" Version="6.28.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.Tokens.Saml" Version="6.28.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.Validators" Version="6.28.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.Xml" Version="6.28.1.0" />
+    <Assembly Name="System.IdentityModel.Tokens.Jwt" Version="6.28.1.0" />
   </Assemblies>
   <Namespace Name="Microsoft.IdentityModel.Abstractions">
     <Type Name="Microsoft.IdentityModel.Abstractions.EventLogLevel" Id="T:Microsoft.IdentityModel.Abstractions.EventLogLevel">
@@ -369,7 +369,9 @@
       <Member Id="F:Microsoft.IdentityModel.Protocols.ConfigurationManager`1.MinimumRefreshInterval" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.ConfigurationManager`1.#ctor(System.String,Microsoft.IdentityModel.Protocols.IConfigurationRetriever{`0})" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.ConfigurationManager`1.#ctor(System.String,Microsoft.IdentityModel.Protocols.IConfigurationRetriever{`0},Microsoft.IdentityModel.Protocols.IDocumentRetriever)" />
+      <Member Id="M:Microsoft.IdentityModel.Protocols.ConfigurationManager`1.#ctor(System.String,Microsoft.IdentityModel.Protocols.IConfigurationRetriever{`0},Microsoft.IdentityModel.Protocols.IDocumentRetriever,Microsoft.IdentityModel.Protocols.Configuration.LastKnownGoodConfigurationCacheOptions)" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.ConfigurationManager`1.#ctor(System.String,Microsoft.IdentityModel.Protocols.IConfigurationRetriever{`0},Microsoft.IdentityModel.Protocols.IDocumentRetriever,Microsoft.IdentityModel.Protocols.IConfigurationValidator{`0})" />
+      <Member Id="M:Microsoft.IdentityModel.Protocols.ConfigurationManager`1.#ctor(System.String,Microsoft.IdentityModel.Protocols.IConfigurationRetriever{`0},Microsoft.IdentityModel.Protocols.IDocumentRetriever,Microsoft.IdentityModel.Protocols.IConfigurationValidator{`0},Microsoft.IdentityModel.Protocols.Configuration.LastKnownGoodConfigurationCacheOptions)" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.ConfigurationManager`1.#ctor(System.String,Microsoft.IdentityModel.Protocols.IConfigurationRetriever{`0},System.Net.Http.HttpClient)" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetBaseConfigurationAsync(System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationAsync" />
@@ -425,6 +427,14 @@
     </Type>
     <Type Name="Microsoft.IdentityModel.Protocols.X509CertificateValidationMode" Id="T:Microsoft.IdentityModel.Protocols.X509CertificateValidationMode">
       <Member Id="M:Microsoft.IdentityModel.Protocols.X509CertificateValidationMode.#ctor" />
+    </Type>
+  </Namespace>
+  <Namespace Name="Microsoft.IdentityModel.Protocols.Configuration">
+    <Type Name="Microsoft.IdentityModel.Protocols.Configuration.LastKnownGoodConfigurationCacheOptions" Id="T:Microsoft.IdentityModel.Protocols.Configuration.LastKnownGoodConfigurationCacheOptions">
+      <Member Id="F:Microsoft.IdentityModel.Protocols.Configuration.LastKnownGoodConfigurationCacheOptions.DefaultLastKnownGoodConfigurationSizeLimit" />
+      <Member Id="M:Microsoft.IdentityModel.Protocols.Configuration.LastKnownGoodConfigurationCacheOptions.#ctor" />
+      <Member Id="P:Microsoft.IdentityModel.Protocols.Configuration.LastKnownGoodConfigurationCacheOptions.BaseConfigurationComparer" />
+      <Member Id="P:Microsoft.IdentityModel.Protocols.Configuration.LastKnownGoodConfigurationCacheOptions.LastKnownGoodConfigurationSizeLimit" />
     </Type>
   </Namespace>
   <Namespace Name="Microsoft.IdentityModel.Protocols.OpenIdConnect">
@@ -1217,6 +1227,7 @@
       <Member Id="M:Microsoft.IdentityModel.Tokens.BaseConfiguration.#ctor" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.BaseConfiguration.Issuer" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.BaseConfiguration.SigningKeys" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.BaseConfiguration.TokenDecryptionKeys" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.BaseConfiguration.TokenEndpoint" />
     </Type>
     <Type Name="Microsoft.IdentityModel.Tokens.BaseConfigurationManager" Id="T:Microsoft.IdentityModel.Tokens.BaseConfigurationManager">
