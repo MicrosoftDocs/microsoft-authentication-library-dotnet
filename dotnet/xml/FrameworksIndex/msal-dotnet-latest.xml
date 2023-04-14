@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.Identity.Client.Broker" Version="4.52.0.0" />
-    <Assembly Name="Microsoft.Identity.Client.Desktop" Version="4.52.0.0" />
-    <Assembly Name="Microsoft.Identity.Client" Version="4.52.0.0" />
+    <Assembly Name="Microsoft.Identity.Client.Broker" Version="4.53.0.0" />
+    <Assembly Name="Microsoft.Identity.Client.Desktop" Version="4.53.0.0" />
+    <Assembly Name="Microsoft.Identity.Client" Version="4.53.0.0" />
   </Assemblies>
   <Namespace Name="Microsoft.Identity.Client">
     <Type Name="Microsoft.Identity.Client.AadAuthorityAudience" Id="T:Microsoft.Identity.Client.AadAuthorityAudience">
@@ -700,6 +700,7 @@
       <Member Id="F:Microsoft.Identity.Client.MsalError.RopcDoesNotSupportMsaAccounts" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.ScopesRequired" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.ServiceNotAvailable" />
+      <Member Id="F:Microsoft.Identity.Client.MsalError.SetCiamAuthorityAtRequestLevelNotSupported" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.SSHCertUsedAsHttpHeader" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.StateMismatchError" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.StaticCacheWithExternalSerialization" />
@@ -1047,6 +1048,7 @@
     <Type Name="Microsoft.Identity.Client.Desktop.DesktopExtensions" Id="T:Microsoft.Identity.Client.Desktop.DesktopExtensions">
       <Member Id="M:Microsoft.Identity.Client.Desktop.DesktopExtensions.WithDesktopFeatures(Microsoft.Identity.Client.PublicClientApplicationBuilder)" />
       <Member Id="M:Microsoft.Identity.Client.Desktop.DesktopExtensions.WithWindowsDesktopFeatures(Microsoft.Identity.Client.PublicClientApplicationBuilder,Microsoft.Identity.Client.BrokerOptions)" />
+      <Member Id="M:Microsoft.Identity.Client.Desktop.DesktopExtensions.WithWindowsEmbeddedBrowserSupport(Microsoft.Identity.Client.PublicClientApplicationBuilder)" />
     </Type>
     <Type Name="Microsoft.Identity.Client.Desktop.WamExtension" Id="T:Microsoft.Identity.Client.Desktop.WamExtension">
       <Member Id="M:Microsoft.Identity.Client.Desktop.WamExtension.WithBroker(Microsoft.Identity.Client.PublicClientApplicationBuilder,Microsoft.Identity.Client.BrokerOptions)" />
