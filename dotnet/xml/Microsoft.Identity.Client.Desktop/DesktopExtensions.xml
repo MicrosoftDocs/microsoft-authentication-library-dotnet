@@ -9,6 +9,7 @@
     <AssemblyVersion>4.48.1.0</AssemblyVersion>
     <AssemblyVersion>4.49.1.0</AssemblyVersion>
     <AssemblyVersion>4.51.0.0</AssemblyVersion>
+    <AssemblyVersion>4.52.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -33,7 +34,14 @@
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
+        <AssemblyVersion>4.52.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("Use WithWindowsDesktopFeatures instead. For broker support only, use  WithBroker(BrokerOptions) from Microsoft.Identity.Client.Broker package.", false)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use WithWindowsDesktopFeatures instead. For broker support only, use  WithBroker(BrokerOptions) from Microsoft.Identity.Client.Broker package.", false)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.PublicClientApplicationBuilder</ReturnType>
       </ReturnValue>
@@ -49,6 +57,36 @@
             
             - Windows Authentication Manager (WAM) broker, the recommended authentication mechanism on Windows 10 - https://aka.ms/msal-net-wam
             - WebView2 embedded web view, based on Microsoft Edge - https://aka.ms/msal-net-webview2
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>These extensions live in a separate package to avoid adding dependencies to MSAL</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithWindowsDesktopFeatures">
+      <MemberSignature Language="C#" Value="public static Microsoft.Identity.Client.PublicClientApplicationBuilder WithWindowsDesktopFeatures (this Microsoft.Identity.Client.PublicClientApplicationBuilder builder, Microsoft.Identity.Client.BrokerOptions brokerOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Identity.Client.PublicClientApplicationBuilder WithWindowsDesktopFeatures(class Microsoft.Identity.Client.PublicClientApplicationBuilder builder, class Microsoft.Identity.Client.BrokerOptions brokerOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.Desktop.DesktopExtensions.WithWindowsDesktopFeatures(Microsoft.Identity.Client.PublicClientApplicationBuilder,Microsoft.Identity.Client.BrokerOptions)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function WithWindowsDesktopFeatures (builder As PublicClientApplicationBuilder, brokerOptions As BrokerOptions) As PublicClientApplicationBuilder" />
+      <MemberSignature Language="F#" Value="static member WithWindowsDesktopFeatures : Microsoft.Identity.Client.PublicClientApplicationBuilder * Microsoft.Identity.Client.BrokerOptions -&gt; Microsoft.Identity.Client.PublicClientApplicationBuilder" Usage="Microsoft.Identity.Client.Desktop.DesktopExtensions.WithWindowsDesktopFeatures (builder, brokerOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client.Desktop</AssemblyName>
+        <AssemblyVersion>4.52.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.PublicClientApplicationBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="builder" Type="Microsoft.Identity.Client.PublicClientApplicationBuilder" RefType="this" />
+        <Parameter Name="brokerOptions" Type="Microsoft.Identity.Client.BrokerOptions" />
+      </Parameters>
+      <Docs>
+        <param name="builder">To be added.</param>
+        <param name="brokerOptions">To be added.</param>
+        <summary>
+            Adds enhanced support for desktop applications, e.g. CLI, WinForms, WPF apps.
+            - Windows Authentication Manager (WAM) broker, the recommended authentication mechanism on Windows 10+ - https://aka.ms/msal-net-wam
+            - Embedded web view. AAD applications use the older WebBrowser control. B2C applications use WebView2, an embedded browser based on Microsoft Edge - https://aka.ms/msal-net-webview2
             </summary>
         <returns>To be added.</returns>
         <remarks>These extensions live in a separate package to avoid adding dependencies to MSAL</remarks>

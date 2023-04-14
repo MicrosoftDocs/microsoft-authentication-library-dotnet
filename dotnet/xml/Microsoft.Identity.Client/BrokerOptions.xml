@@ -1,0 +1,142 @@
+<Type Name="BrokerOptions" FullName="Microsoft.Identity.Client.BrokerOptions">
+  <TypeSignature Language="C#" Value="public class BrokerOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BrokerOptions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Client.BrokerOptions" />
+  <TypeSignature Language="VB.NET" Value="Public Class BrokerOptions" />
+  <TypeSignature Language="F#" Value="type BrokerOptions = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+    <AssemblyVersion>4.52.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The class specifies the options for broker across OperatingSystems
+            The common properties are direct members
+            Platform specific properties (if they exist) are part of the corresponding options
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BrokerOptions (Microsoft.Identity.Client.BrokerOptions.OperatingSystems enabledOn);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.Identity.Client.BrokerOptions/OperatingSystems enabledOn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.BrokerOptions.#ctor(Microsoft.Identity.Client.BrokerOptions.OperatingSystems)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (enabledOn As BrokerOptions.OperatingSystems)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Identity.Client.BrokerOptions : Microsoft.Identity.Client.BrokerOptions.OperatingSystems -&gt; Microsoft.Identity.Client.BrokerOptions" Usage="new Microsoft.Identity.Client.BrokerOptions enabledOn" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.52.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="enabledOn" Type="Microsoft.Identity.Client.BrokerOptions+OperatingSystems" />
+      </Parameters>
+      <Docs>
+        <param name="enabledOn">Choices of OperatingSystems</param>
+        <summary>
+            Constructor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnabledOn">
+      <MemberSignature Language="C#" Value="public Microsoft.Identity.Client.BrokerOptions.OperatingSystems EnabledOn { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Identity.Client.BrokerOptions/OperatingSystems EnabledOn" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.BrokerOptions.EnabledOn" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EnabledOn As BrokerOptions.OperatingSystems" />
+      <MemberSignature Language="F#" Value="member this.EnabledOn : Microsoft.Identity.Client.BrokerOptions.OperatingSystems" Usage="Microsoft.Identity.Client.BrokerOptions.EnabledOn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.52.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.BrokerOptions+OperatingSystems</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Operating systems on which broker is enabled.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ListOperatingSystemAccounts">
+      <MemberSignature Language="C#" Value="public bool ListOperatingSystemAccounts { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ListOperatingSystemAccounts" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.BrokerOptions.ListOperatingSystemAccounts" />
+      <MemberSignature Language="VB.NET" Value="Public Property ListOperatingSystemAccounts As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ListOperatingSystemAccounts : bool with get, set" Usage="Microsoft.Identity.Client.BrokerOptions.ListOperatingSystemAccounts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.52.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Currently only supported on Windows
+            Allows the Windows broker to list Work and School accounts as part of the <see cref="M:Microsoft.Identity.Client.ClientApplicationBase.GetAccountsAsync" /></summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MsaPassthrough">
+      <MemberSignature Language="C#" Value="public bool MsaPassthrough { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool MsaPassthrough" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.BrokerOptions.MsaPassthrough" />
+      <MemberSignature Language="VB.NET" Value="Public Property MsaPassthrough As Boolean" />
+      <MemberSignature Language="F#" Value="member this.MsaPassthrough : bool with get, set" Usage="Microsoft.Identity.Client.BrokerOptions.MsaPassthrough" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.52.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            A legacy option available only to Microsoft First-Party applications. Should be avoided where possible.
+            Support is experimental.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Title">
+      <MemberSignature Language="C#" Value="public string Title { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Title" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.BrokerOptions.Title" />
+      <MemberSignature Language="VB.NET" Value="Public Property Title As String" />
+      <MemberSignature Language="F#" Value="member this.Title : string with get, set" Usage="Microsoft.Identity.Client.BrokerOptions.Title" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.52.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Title of the broker window
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
