@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-model-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.Identity.Abstractions" Version="2.1.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.Certificate" Version="2.6.1.0" />
-    <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="2.6.1.0" />
-    <Assembly Name="Microsoft.Identity.Web" Version="2.6.1.0" />
-    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraph" Version="2.6.1.0" />
-    <Assembly Name="Microsoft.Identity.Web.OWIN" Version="2.6.1.0" />
-    <Assembly Name="Microsoft.Identity.Web.TokenAcquisition" Version="2.6.1.0" />
-    <Assembly Name="Microsoft.Identity.Web.TokenCache" Version="2.6.1.0" />
-    <Assembly Name="Microsoft.Identity.Web.UI" Version="2.6.1.0" />
+    <Assembly Name="Microsoft.Identity.Abstractions" Version="3.1.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.Certificate" Version="2.7.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="2.7.0.0" />
+    <Assembly Name="Microsoft.Identity.Web" Version="2.7.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraph" Version="2.7.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.OWIN" Version="2.7.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.TokenAcquisition" Version="2.7.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.TokenCache" Version="2.7.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.UI" Version="2.7.0.0" />
   </Assemblies>
   <Namespace Name="Microsoft.Identity.Abstractions">
     <Type Name="Microsoft.Identity.Abstractions.AcquireTokenOptions" Id="T:Microsoft.Identity.Abstractions.AcquireTokenOptions">
@@ -22,9 +22,9 @@
       <Member Id="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.ExtraHeadersParameters" />
       <Member Id="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.ExtraQueryParameters" />
       <Member Id="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.ForceRefresh" />
-      <Member Id="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.JwkClaim" />
       <Member Id="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.LongRunningWebApiSessionKey" />
       <Member Id="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.LongRunningWebApiSessionKeyAuto" />
+      <Member Id="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.PopClaim" />
       <Member Id="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.PopPublicKey" />
       <Member Id="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.Tenant" />
       <Member Id="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.UserFlow" />
@@ -137,6 +137,7 @@
       <Member Id="P:Microsoft.Identity.Abstractions.IdentityApplicationOptions.ClientCredentials" />
       <Member Id="P:Microsoft.Identity.Abstractions.IdentityApplicationOptions.ClientId" />
       <Member Id="P:Microsoft.Identity.Abstractions.IdentityApplicationOptions.EnablePiiLogging" />
+      <Member Id="P:Microsoft.Identity.Abstractions.IdentityApplicationOptions.ExtraQueryParameters" />
       <Member Id="P:Microsoft.Identity.Abstractions.IdentityApplicationOptions.TokenDecryptionCredentials" />
     </Type>
     <Type Name="Microsoft.Identity.Abstractions.IDownstreamApi" Id="T:Microsoft.Identity.Abstractions.IDownstreamApi">
@@ -718,6 +719,7 @@
       <Member Id="M:Microsoft.Identity.Web.TokenCacheProviders.MsalAbstractTokenCacheProvider.#ctor(Microsoft.AspNetCore.DataProtection.IDataProtector)" />
       <Member Id="M:Microsoft.Identity.Web.TokenCacheProviders.MsalAbstractTokenCacheProvider.#ctor(Microsoft.AspNetCore.DataProtection.IDataProtector,Microsoft.Extensions.Logging.ILogger{Microsoft.Identity.Web.TokenCacheProviders.MsalAbstractTokenCacheProvider})" />
       <Member Id="M:Microsoft.Identity.Web.TokenCacheProviders.MsalAbstractTokenCacheProvider.ClearAsync(System.String)" />
+      <Member Id="M:Microsoft.Identity.Web.TokenCacheProviders.MsalAbstractTokenCacheProvider.GetSuggestedCacheKey(Microsoft.Identity.Client.TokenCacheNotificationArgs)" />
       <Member Id="M:Microsoft.Identity.Web.TokenCacheProviders.MsalAbstractTokenCacheProvider.Initialize(Microsoft.Identity.Client.ITokenCache)" />
       <Member Id="M:Microsoft.Identity.Web.TokenCacheProviders.MsalAbstractTokenCacheProvider.InitializeAsync(Microsoft.Identity.Client.ITokenCache)" />
       <Member Id="M:Microsoft.Identity.Web.TokenCacheProviders.MsalAbstractTokenCacheProvider.OnBeforeWriteAsync(Microsoft.Identity.Client.TokenCacheNotificationArgs)" />

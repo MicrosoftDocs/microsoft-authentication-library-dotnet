@@ -9,6 +9,7 @@
     <AssemblyVersion>4.48.1.0</AssemblyVersion>
     <AssemblyVersion>4.49.1.0</AssemblyVersion>
     <AssemblyVersion>4.51.0.0</AssemblyVersion>
+    <AssemblyVersion>4.52.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeParameters>
     <TypeParameter Name="T">
@@ -44,6 +45,7 @@
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
+        <AssemblyVersion>4.52.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;</ReturnType>
@@ -71,6 +73,7 @@
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
+        <AssemblyVersion>4.52.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -96,6 +99,7 @@
         <AssemblyVersion>4.48.1.0</AssemblyVersion>
         <AssemblyVersion>4.49.1.0</AssemblyVersion>
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
+        <AssemblyVersion>4.52.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -104,9 +108,9 @@
         <Parameter Name="popAuthenticationConfiguration" Type="Microsoft.Identity.Client.AppConfig.PoPAuthenticationConfiguration" />
       </Parameters>
       <Docs>
-        <param name="popAuthenticationConfiguration">Configuration properties used to construct a proof of possession request.</param>
+        <param name="popAuthenticationConfiguration">Configuration properties used to construct a Proof-of-Possession request.</param>
         <summary>
-             Modifies the token acquisition request so that the acquired token is a Proof of Possession token (PoP), rather than a Bearer token. 
+             Modifies the token acquisition request so that the acquired token is a Proof-of-Possession token (PoP), rather than a Bearer token. 
              PoP tokens are similar to Bearer tokens, but are bound to the HTTP request and to a cryptographic key, which MSAL can manage on Windows.
              See https://aka.ms/msal-net-pop
             </summary>
@@ -114,7 +118,7 @@
         <remarks>
           <list type="bullet">
             <item>
-              <description>An Authentication header is automatically added to the request</description>
+              <description>An Authentication header is automatically added to the request.</description>
             </item>
             <item>
               <description>The PoP token is bound to the HTTP request, more specifically to the HTTP method (GET, POST, etc.) and to the Uri (path and query, but not query parameters).</description>
