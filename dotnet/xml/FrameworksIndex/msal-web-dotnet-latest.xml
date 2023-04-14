@@ -1,22 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-web-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.IdentityModel.Abstractions" Version="6.28.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.JsonWebTokens" Version="6.28.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.KeyVaultExtensions" Version="6.28.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.Logging" Version="6.28.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.LoggingExtensions" Version="6.28.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.ManagedKeyVaultSecurityKey" Version="6.28.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols" Version="6.28.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="6.28.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.SignedHttpRequest" Version="6.28.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.WsFederation" Version="6.28.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.TestExtensions" Version="6.28.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.Tokens" Version="6.28.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.Tokens.Saml" Version="6.28.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.Validators" Version="6.28.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.Xml" Version="6.28.1.0" />
-    <Assembly Name="System.IdentityModel.Tokens.Jwt" Version="6.28.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.Abstractions" Version="6.29.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.JsonWebTokens" Version="6.29.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.KeyVaultExtensions" Version="6.29.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Logging" Version="6.29.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.LoggingExtensions" Version="6.29.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.ManagedKeyVaultSecurityKey" Version="6.29.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols" Version="6.29.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="6.29.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.SignedHttpRequest" Version="6.29.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.WsFederation" Version="6.29.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.TestExtensions" Version="6.29.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Tokens" Version="6.29.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Tokens.Saml" Version="6.29.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Validators" Version="6.29.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Xml" Version="6.29.0.0" />
+    <Assembly Name="System.IdentityModel.Tokens.Jwt" Version="6.29.0.0" />
   </Assemblies>
   <Namespace Name="Microsoft.IdentityModel.Abstractions">
     <Type Name="Microsoft.IdentityModel.Abstractions.EventLogLevel" Id="T:Microsoft.IdentityModel.Abstractions.EventLogLevel">
@@ -433,8 +433,6 @@
     <Type Name="Microsoft.IdentityModel.Protocols.Configuration.LastKnownGoodConfigurationCacheOptions" Id="T:Microsoft.IdentityModel.Protocols.Configuration.LastKnownGoodConfigurationCacheOptions">
       <Member Id="F:Microsoft.IdentityModel.Protocols.Configuration.LastKnownGoodConfigurationCacheOptions.DefaultLastKnownGoodConfigurationSizeLimit" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.Configuration.LastKnownGoodConfigurationCacheOptions.#ctor" />
-      <Member Id="P:Microsoft.IdentityModel.Protocols.Configuration.LastKnownGoodConfigurationCacheOptions.BaseConfigurationComparer" />
-      <Member Id="P:Microsoft.IdentityModel.Protocols.Configuration.LastKnownGoodConfigurationCacheOptions.LastKnownGoodConfigurationSizeLimit" />
     </Type>
   </Namespace>
   <Namespace Name="Microsoft.IdentityModel.Protocols.OpenIdConnect">
@@ -1237,6 +1235,7 @@
       <Member Id="F:Microsoft.IdentityModel.Tokens.BaseConfigurationManager.MinimumAutomaticRefreshInterval" />
       <Member Id="F:Microsoft.IdentityModel.Tokens.BaseConfigurationManager.MinimumRefreshInterval" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.BaseConfigurationManager.#ctor" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.BaseConfigurationManager.#ctor(Microsoft.IdentityModel.Tokens.Configuration.LKGConfigurationCacheOptions)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.BaseConfigurationManager.GetBaseConfigurationAsync(System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.BaseConfigurationManager.RequestRefresh" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.BaseConfigurationManager.AutomaticRefreshInterval" />
@@ -2005,6 +2004,16 @@
       <Member Id="M:Microsoft.IdentityModel.Tokens.X509SigningCredentials.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.X509SigningCredentials.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2,System.String)" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.X509SigningCredentials.Certificate" />
+    </Type>
+  </Namespace>
+  <Namespace Name="Microsoft.IdentityModel.Tokens.Configuration">
+    <Type Name="Microsoft.IdentityModel.Tokens.Configuration.LKGConfigurationCacheOptions" Id="T:Microsoft.IdentityModel.Tokens.Configuration.LKGConfigurationCacheOptions">
+      <Member Id="F:Microsoft.IdentityModel.Tokens.Configuration.LKGConfigurationCacheOptions.DefaultLKGConfigurationSizeLimit" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Configuration.LKGConfigurationCacheOptions.#ctor" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Configuration.LKGConfigurationCacheOptions.BaseConfigurationComparer" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Configuration.LKGConfigurationCacheOptions.LastKnownGoodConfigurationSizeLimit" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Configuration.LKGConfigurationCacheOptions.RemoveExpiredValues" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Configuration.LKGConfigurationCacheOptions.TaskCreationOptions" />
     </Type>
   </Namespace>
   <Namespace Name="Microsoft.IdentityModel.Tokens.Saml">

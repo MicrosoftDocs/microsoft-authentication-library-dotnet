@@ -1,21 +1,24 @@
 <Type Name="LastKnownGoodConfigurationCacheOptions" FullName="Microsoft.IdentityModel.Protocols.Configuration.LastKnownGoodConfigurationCacheOptions">
-  <TypeSignature Language="C#" Value="public class LastKnownGoodConfigurationCacheOptions" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LastKnownGoodConfigurationCacheOptions extends System.Object" />
+  <TypeSignature Language="C#" Value="public class LastKnownGoodConfigurationCacheOptions : Microsoft.IdentityModel.Tokens.Configuration.LKGConfigurationCacheOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LastKnownGoodConfigurationCacheOptions extends Microsoft.IdentityModel.Tokens.Configuration.LKGConfigurationCacheOptions" />
   <TypeSignature Language="DocId" Value="T:Microsoft.IdentityModel.Protocols.Configuration.LastKnownGoodConfigurationCacheOptions" />
-  <TypeSignature Language="VB.NET" Value="Public Class LastKnownGoodConfigurationCacheOptions" />
-  <TypeSignature Language="F#" Value="type LastKnownGoodConfigurationCacheOptions = class" />
+  <TypeSignature Language="VB.NET" Value="Public Class LastKnownGoodConfigurationCacheOptions&#xA;Inherits LKGConfigurationCacheOptions" />
+  <TypeSignature Language="F#" Value="type LastKnownGoodConfigurationCacheOptions = class&#xA;    inherit LKGConfigurationCacheOptions" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
     <AssemblyVersion>6.28.1.0</AssemblyVersion>
+    <AssemblyVersion>6.29.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
-    <BaseTypeName>System.Object</BaseTypeName>
+    <BaseTypeName>Microsoft.IdentityModel.Tokens.Configuration.LKGConfigurationCacheOptions</BaseTypeName>
   </Base>
   <Interfaces />
   <Docs>
     <summary>
             Specifies the LastKnownGoodConfigurationCacheOptions which can be used to configure the internal LKG configuration cache.
             See <see cref="T:Microsoft.IdentityModel.Tokens.EventBasedLRUCache`2" /> for more details.
+            
+            All fields/properties are now defined in the Microsoft.IdentityModel.Tokens.Configuration.LKGConfigurationCacheOptions class so they are more accessible from other assemblies/classes.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -29,32 +32,11 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
         <AssemblyVersion>6.28.1.0</AssemblyVersion>
+        <AssemblyVersion>6.29.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
         <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="BaseConfigurationComparer">
-      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEqualityComparer&lt;Microsoft.IdentityModel.Tokens.BaseConfiguration&gt; BaseConfigurationComparer { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEqualityComparer`1&lt;class Microsoft.IdentityModel.Tokens.BaseConfiguration&gt; BaseConfigurationComparer" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Protocols.Configuration.LastKnownGoodConfigurationCacheOptions.BaseConfigurationComparer" />
-      <MemberSignature Language="VB.NET" Value="Public Property BaseConfigurationComparer As IEqualityComparer(Of BaseConfiguration)" />
-      <MemberSignature Language="F#" Value="member this.BaseConfigurationComparer : System.Collections.Generic.IEqualityComparer&lt;Microsoft.IdentityModel.Tokens.BaseConfiguration&gt; with get, set" Usage="Microsoft.IdentityModel.Protocols.Configuration.LastKnownGoodConfigurationCacheOptions.BaseConfigurationComparer" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Collections.Generic.IEqualityComparer&lt;Microsoft.IdentityModel.Tokens.BaseConfiguration&gt;</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            Gets or sets the BaseConfgiurationComparer that to compare <see cref="T:Microsoft.IdentityModel.Tokens.BaseConfiguration" />.
-            </summary>
-        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -68,6 +50,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
         <AssemblyVersion>6.28.1.0</AssemblyVersion>
+        <AssemblyVersion>6.29.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -77,28 +60,7 @@
             10 is the default size limit of the cache (in number of items) for last known good configuration.
             </summary>
         <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="LastKnownGoodConfigurationSizeLimit">
-      <MemberSignature Language="C#" Value="public int LastKnownGoodConfigurationSizeLimit { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance int32 LastKnownGoodConfigurationSizeLimit" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Protocols.Configuration.LastKnownGoodConfigurationCacheOptions.LastKnownGoodConfigurationSizeLimit" />
-      <MemberSignature Language="VB.NET" Value="Public Property LastKnownGoodConfigurationSizeLimit As Integer" />
-      <MemberSignature Language="F#" Value="member this.LastKnownGoodConfigurationSizeLimit : int with get, set" Usage="Microsoft.IdentityModel.Protocols.Configuration.LastKnownGoodConfigurationCacheOptions.LastKnownGoodConfigurationSizeLimit" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Int32</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            The size limit of the cache (in number of items) for last known good configuration.
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <inheritdoc />
       </Docs>
     </Member>
   </Members>
