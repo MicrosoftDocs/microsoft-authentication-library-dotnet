@@ -20,7 +20,7 @@ We recommend that you use the platform default, and this is typically the system
 
 B2C and ADFS 2019 do not yet implement the "any port" option. So you cannot set `http://localhost` (no port) redirect URI, but only `http://localhost:1234` (with port) URI. This means that you will have to do your own port management, for example you can reserve a few ports and configure them as redirect URIs. Then your app can cycle through them until a port is free - this can then be used by MSAL.
 
-UWP doesn't support listening to a port and thus doesn't support system browsers, [read more](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/MSAL.NET-uses-web-browser#uwp-does-not-use-the-system-webview).
+UWP doesn't support listening to a port and thus doesn't support system browsers, [read more](/azure/active-directory/develop/msal-net-web-browsers#how-to-use-the-default-os-browser).
 
 ## System browser experience
 
