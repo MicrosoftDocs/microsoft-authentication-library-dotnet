@@ -9,12 +9,21 @@
     <AssemblyVersion>6.27.0.0</AssemblyVersion>
     <AssemblyVersion>6.28.1.0</AssemblyVersion>
     <AssemblyVersion>6.29.0.0</AssemblyVersion>
+    <AssemblyVersion>6.30.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.IdentityModel.Tokens.SecurityTokenInvalidSignatureException</BaseTypeName>
   </Base>
   <Interfaces />
   <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName Language="C#">[System.Obsolete("This expception is no longer being thrown by Microsoft.IdentityModel and will be removed in the next major version see: https://aka.ms/SecurityTokenUnableToValidateException", false)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Obsolete("This expception is no longer being thrown by Microsoft.IdentityModel and will be removed in the next major version see: https://aka.ms/SecurityTokenUnableToValidateException", false)&gt;]</AttributeName>
+    </Attribute>
     <Attribute>
       <AttributeName Language="C#">[System.Serializable]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Serializable&gt;]</AttributeName>
@@ -26,7 +35,9 @@
             and when validation errors exist over the security token. This exception is not intended to be used as a signal
             to refresh keys.
             </summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+            This exception type is now considered obsolete and will be removed in the next major version (7.0.0).
+            </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -40,6 +51,7 @@
         <AssemblyVersion>6.27.0.0</AssemblyVersion>
         <AssemblyVersion>6.28.1.0</AssemblyVersion>
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
+        <AssemblyVersion>6.30.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -61,6 +73,7 @@
         <AssemblyVersion>6.27.0.0</AssemblyVersion>
         <AssemblyVersion>6.28.1.0</AssemblyVersion>
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
+        <AssemblyVersion>6.30.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="message" Type="System.String" />
@@ -85,6 +98,7 @@
         <AssemblyVersion>6.27.0.0</AssemblyVersion>
         <AssemblyVersion>6.28.1.0</AssemblyVersion>
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
+        <AssemblyVersion>6.30.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="validationFailure" Type="Microsoft.IdentityModel.Tokens.ValidationFailure" />
@@ -111,6 +125,7 @@
         <AssemblyVersion>6.27.0.0</AssemblyVersion>
         <AssemblyVersion>6.28.1.0</AssemblyVersion>
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
+        <AssemblyVersion>6.30.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
@@ -137,6 +152,7 @@
         <AssemblyVersion>6.27.0.0</AssemblyVersion>
         <AssemblyVersion>6.28.1.0</AssemblyVersion>
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
+        <AssemblyVersion>6.30.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="message" Type="System.String" />
@@ -163,6 +179,7 @@
         <AssemblyVersion>6.27.0.0</AssemblyVersion>
         <AssemblyVersion>6.28.1.0</AssemblyVersion>
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
+        <AssemblyVersion>6.30.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -191,6 +208,7 @@
         <AssemblyVersion>6.27.0.0</AssemblyVersion>
         <AssemblyVersion>6.28.1.0</AssemblyVersion>
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
+        <AssemblyVersion>6.30.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.ValidationFailure</ReturnType>
