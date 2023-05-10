@@ -6,9 +6,9 @@ description: "How to use Azure managed identities in MSAL.NET applications."
 # Managed identity with MSAL.NET
 
 >[!NOTE]
->This feature is experimental and available from [MSAL.NET](https://www.nuget.org/packages/Microsoft.Identity.Client/) version 4.51.0.
+>This feature is available starting with [MSAL.NET](https://www.nuget.org/packages/Microsoft.Identity.Client/) version 4.54.0.
 
-A common challenge for developers is the management of secrets, credentials, certificates, and keys used to secure communication between services. [Managed identities](/azure/active-directory/managed-identities-azure-resources/overview) in Azure eliminate the need for developers to manage these credentials manually. MSAL.NET supports acquiring tokens through the managed identity capability when used with applications running inside Azure infrastructure, such as:
+A common challenge for developers is the management of secrets, credentials, certificates, and keys used to secure communication between services. [Managed identities](/azure/active-directory/managed-identities-azure-resources/overview) in Azure eliminate the need for developers to handle these credentials manually. MSAL.NET supports acquiring tokens through the managed identity service when used with applications running inside Azure infrastructure, such as:
 
 * [Azure App Service](https://azure.microsoft.com/products/app-service/) (API version `2019-08-01` and above)
 * [Azure VMs](https://azure.microsoft.com/free/virtual-machines/)
@@ -35,7 +35,7 @@ For system-assigned managed identities, the developer does not need to pass any 
 <xref:Microsoft.Identity.Client.IManagedIdentityApplication.AcquireTokenForManagedIdentity(System.String)> is called with the resource to acquire a token for, such as `https://management.azure.com`.
 
 ```csharp
-IManagedIdentityApplication mi = ManagedIdentityApplicationBuilder.Create()
+IManagedIdentityApplication mi = ManagedIdentityApplicationBuilder.Create(ManagedIdentityId.SystemAssigned)
     .WithExperimentalFeatures()
     .Build();
 
@@ -51,7 +51,7 @@ For user-assigned managed identities, the developer needs to pass the managed id
 Like in the case for system-assigned managed identities, <xref:Microsoft.Identity.Client.IManagedIdentityApplication.AcquireTokenForManagedIdentity(System.String)> is called with the resource to acquire a token for, such as `https://management.azure.com`.
 
 ```csharp
-IManagedIdentityApplication mi = ManagedIdentityApplicationBuilder.Create(userAssignedId)
+IManagedIdentityApplication mi = ManagedIdentityApplicationBuilder.Create(ManagedIdentityId.WithUserAssignedClientId(clientIdOfUserAssignedManagedIdentity))
     .WithExperimentalFeatures()
     .Build();
 
@@ -62,7 +62,7 @@ AuthenticationResult result = await mi.AcquireTokenForManagedIdentity(resource)
 
 ## Caching
 
-By default, MSAL.NET supports in-memory caching. To explore additional caching options or implement a custom cache, see [Token cache serialization in MSAL.NET](/azure/active-directory/develop/msal-net-token-cache-serialization). We do not recommend sharing a cache between two or more Azure sources with managed identities enabled as this can result in the same token being shared across the resources.
+By default, MSAL.NET supports in-memory caching. MSAL does not support cache extensibility for managed identity.
 
 ## Troubleshooting
 
@@ -74,6 +74,6 @@ For failed requests the error response contains a correlation ID that can be use
 
 This exception might mean that the resource you are trying to acquire a token for is either not supported or is provided using the wrong resource ID format. Examples of correct resource ID formats include `https://management.azure.com/.default`, `https://management.azure.com`, and `https://graph.microsoft.com`.
 
-#### `System.Net.Http.HttpRequestException`: A socket operation was attempted to an unreachable network
+#### `MsalManagedIdentityException` Error Code: `managed_identity_unreachable_network`.
 
 This exception might mean that you are likely using a resource where MSAL.NET does not support acquiring token for managed identity or you are running the sample code from a development machine where the endpoint to acquire the token for managed identities is unreachable.
