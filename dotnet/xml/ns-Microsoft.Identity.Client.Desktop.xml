@@ -1,6 +1,70 @@
 <Namespace Name="Microsoft.Identity.Client.Desktop">
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+<summary overwrite="false">
+        <format type="text/markdown"><![CDATA[
+[![NuGet](https://img.shields.io/nuget/v/Microsoft.Identity.Client.Desktop.svg?style=flat-square&label=Microsoft.Identity.Client.Desktop&colorB=00b200)](https://www.nuget.org/packages/Microsoft.Identity.Client.Desktop/)  [![NuGet downloads](https://img.shields.io/nuget/dt/Microsoft.Identity.Client.Desktop?style=flat-square)](https://www.nuget.org/packages/Microsoft.Identity.Client.Desktop/) [![GitHub Repo stars](https://img.shields.io/github/stars/AzureAD/microsoft-authentication-library-for-dotnet?style=flat-square)](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet)
+
+`Microsoft.Identity.Client.Desktop` is the namespace for the Microsoft Authentication Library (MSAL) for .NET, available through the [`Microsoft.Identity.Client.Desktop`](https://www.nuget.org/packages/Microsoft.Identity.Client.Desktop/) package. This package contains binaries needed to use the [Windows authentication broker](/entra/msal/dotnet/acquiring-tokens/desktop-mobile/wam) and other features with MSAL.NET on older platforms such as .NET Framework and .NET Core 3.
+
+This package requires the use of [`Microsoft.Identity.Client`](xref:Microsoft.Identity.Client).
+
+>[!WARNING]
+>This package and namespace are intended for legacy applications that want to use the [Web Account Manager (WAM)](/windows/uwp/security/web-account-manager) in Windows. For modern applications, refer to [`Microsoft.Identity.Client.Broker`](xref:Microsoft.Identity.Client.Broker).
+
+## Installation
+
+Using the [.NET Command-Line Interface (CLI)](https://learn.microsoft.com/dotnet/core/tools/):
+
+```bash
+dotnet add package Microsoft.Identity.Client.Desktop
+```
+
+Using the [NuGet Command Line Interface (CLI)](https://learn.microsoft.com/nuget/tools/nuget-exe-cli-reference):
+
+```bash
+nuget install Microsoft.Identity.Client.Desktop
+```
+
+Using the [Package Manager Console](https://learn.microsoft.com/nuget/tools/package-manager-console):
+
+```powershell
+Install-Package Microsoft.Identity.Client.Desktop
+```
+
+Using [Visual Studio](https://learn.microsoft.com/visualstudio/):
+
+1. Open the Solution Explorer.
+2. Right-click on a project within the solution.
+3. Click on **Manage NuGet Packages...**
+4. Click on the Browse tab and search for `Microsoft.Identity.Client.Desktop`.
+5. Click on the `Microsoft.Identity.Client.Desktop` package and click **Install**.
+
+## Documentation
+
+To get started, check out the [Microsoft Authentication Library for .NET](/entra/msal/dotnet/) guide.
+
+## Samples
+
+Refer to [Microsoft identity platform code samples](/azure/active-directory/develop/sample-v2-code) and the [Samples Browser](/samples/browse/?products=microsoft-authentication-library&expanded=microsoft-authentication-library).
+]]>
+      </format>
+    </summary>
+    <remarks overwrite="false">
+      <format type="text/markdown"><![CDATA[
+## Remarks
+
+### Contributions
+
+We appreciate feedback and contributions to help make Microsoft Authentication Library for .NET better! Before you get started, please read the following documents:
+
+* [Microsoft Contributor License Agreements](https://opensource.microsoft.com/cla/)
+* [Contributing to MSAL.NET](/entra/msal/dotnet/contribute/overview)
+
+### Issues
+
+To provide library feedback or report a bug, please [open an issue on GitHub](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/issues).
+]]>
+      </format>
+    </remarks>
   </Docs>
 </Namespace>
