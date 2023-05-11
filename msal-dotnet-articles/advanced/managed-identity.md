@@ -26,7 +26,7 @@ Prior to using managed identities from MSAL.NET, developers must enable them for
 
 ## Examples
 
-For both user-assigned and system-assigned identities, developers can use the <xref:Microsoft.Identity.Client.ManagedIdentityApplicationBuilder> class. Because the feature is experimental, using <xref:Microsoft.Identity.Client.BaseAbstractApplicationBuilder%601.WithExperimentalFeatures(System.Boolean)> is required.
+For both user-assigned and system-assigned identities, developers can use the <xref:Microsoft.Identity.Client.ManagedIdentityApplicationBuilder> class. 
 
 ### System-assigned managed identities
 
@@ -36,7 +36,6 @@ For system-assigned managed identities, the developer does not need to pass any 
 
 ```csharp
 IManagedIdentityApplication mi = ManagedIdentityApplicationBuilder.Create(ManagedIdentityId.SystemAssigned)
-    .WithExperimentalFeatures()
     .Build();
 
 AuthenticationResult result = await mi.AcquireTokenForManagedIdentity(resource)
@@ -52,7 +51,6 @@ Like in the case for system-assigned managed identities, <xref:Microsoft.Identit
 
 ```csharp
 IManagedIdentityApplication mi = ManagedIdentityApplicationBuilder.Create(ManagedIdentityId.WithUserAssignedClientId(clientIdOfUserAssignedManagedIdentity))
-    .WithExperimentalFeatures()
     .Build();
 
 AuthenticationResult result = await mi.AcquireTokenForManagedIdentity(resource)
