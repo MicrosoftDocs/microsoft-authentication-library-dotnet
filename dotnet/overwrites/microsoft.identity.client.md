@@ -1,6 +1,5 @@
----
-uid: Microsoft.Identity.Client
-summary: *content
----
+# `Microsoft.Identity.Client`
 
-This is a test summary that should be overwritten in the default namespace file.
+## `summary`
+
+This is a test summary.
