@@ -11,6 +11,7 @@
     <AssemblyVersion>4.51.0.0</AssemblyVersion>
     <AssemblyVersion>4.52.0.0</AssemblyVersion>
     <AssemblyVersion>4.53.0.0</AssemblyVersion>
+    <AssemblyVersion>4.54.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Identity.Client.ClientApplicationBase</BaseTypeName>
@@ -35,15 +36,14 @@
             For details see https://aka.ms/msal-net-client-applications
             </summary>
     <remarks>
-      <list type="bullet">
-        <item>
-          <description>Contrary to <see cref="T:Microsoft.Identity.Client.ConfidentialClientApplication" />, public clients are unable to hold configuration time secrets,
-            and as a result have no client secret</description>
-        </item>
-        <item>
-          <description>The redirect URL is proposed by the library. It does not need to be passed in the constructor</description>
-        </item>
-      </list>
+      <para>
+            Unlike <see cref="T:Microsoft.Identity.Client.ConfidentialClientApplication" />, public clients are unable to hold configuration time secrets,
+            and as a result have no client secret.
+            </para>
+      <para>
+            The redirect URI needed for interactive authentication is automatically determined by the library. It does not need to be passed explicitly in the constructor. Depending
+            on the authentication strategy (e.g., through the Web Authentication Manager, Authentication app, browser, etc.), different redirect URIs will be used by MSAL. Redirect URIs must always be configured in the Azure Active Directory blade in the Azure Portal.
+            </para>
     </remarks>
   </Docs>
   <Members>
@@ -61,6 +61,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -98,6 +99,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -142,6 +144,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -185,6 +188,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -229,6 +233,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -274,6 +279,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -321,6 +327,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -366,6 +373,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -413,6 +421,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -461,6 +470,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -512,6 +522,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -563,6 +574,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -616,6 +628,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -669,6 +682,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -726,6 +740,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -783,6 +798,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -842,6 +858,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -901,6 +918,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenByIntegratedWindowsAuthParameterBuilder</ReturnType>
@@ -948,6 +966,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -997,6 +1016,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1045,6 +1065,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1100,6 +1121,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenByUsernamePasswordParameterBuilder</ReturnType>
@@ -1144,6 +1166,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1193,6 +1216,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1251,6 +1275,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenWithDeviceCodeParameterBuilder</ReturnType>
@@ -1298,6 +1323,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1349,6 +1375,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1402,6 +1429,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1457,6 +1485,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1511,6 +1540,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1557,6 +1587,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1587,6 +1618,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1617,6 +1649,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1646,6 +1679,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1676,6 +1710,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenByRefreshTokenParameterBuilder</ReturnType>
@@ -1709,6 +1744,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1756,6 +1792,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.IAccount</ReturnType>

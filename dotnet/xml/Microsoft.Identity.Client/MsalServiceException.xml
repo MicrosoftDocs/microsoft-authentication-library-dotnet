@@ -11,6 +11,7 @@
     <AssemblyVersion>4.51.0.0</AssemblyVersion>
     <AssemblyVersion>4.52.0.0</AssemblyVersion>
     <AssemblyVersion>4.53.0.0</AssemblyVersion>
+    <AssemblyVersion>4.54.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Identity.Client.MsalException</BaseTypeName>
@@ -38,6 +39,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="errorCode" Type="System.String" />
@@ -71,6 +73,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="errorCode" Type="System.String" />
@@ -109,6 +112,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="errorCode" Type="System.String" />
@@ -144,6 +148,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="errorCode" Type="System.String" />
@@ -184,6 +189,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="errorCode" Type="System.String" />
@@ -226,6 +232,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -240,7 +247,7 @@
         <summary>
             Additional claims requested by the service. When this property is not null or empty, this means that the service requires the user to
             provide additional claims, such as doing two factor authentication. The are two cases:
-            <list type="bullent"><item><description>
+            <list type="bullet"><item><description>
             If your application is a <see cref="T:Microsoft.Identity.Client.IPublicClientApplication" />, you should just call <see cref="M:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenInteractive(System.Collections.Generic.IEnumerable{System.String})" />
             and add the <see cref="M:Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithClaims(System.String)" /> modifier.
             </description></item><item>&gt;<description>If your application is a <see cref="T:Microsoft.Identity.Client.IConfidentialClientApplication" />, (therefore doing the On-Behalf-Of flow), you should throw an HTTP unauthorize
@@ -265,6 +272,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -291,6 +299,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Net.Http.Headers.HttpResponseHeaders</ReturnType>
@@ -320,6 +329,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -346,6 +356,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -375,6 +386,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -385,6 +397,28 @@
             Creates and returns a string representation of the current exception.
             </summary>
         <returns>A string representation of the current exception.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateIsRetryable">
+      <MemberSignature Language="C#" Value="protected virtual void UpdateIsRetryable ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void UpdateIsRetryable() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.MsalServiceException.UpdateIsRetryable" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub UpdateIsRetryable ()" />
+      <MemberSignature Language="F#" Value="abstract member UpdateIsRetryable : unit -&gt; unit&#xA;override this.UpdateIsRetryable : unit -&gt; unit" Usage="msalServiceException.UpdateIsRetryable " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            As per discussion with Evo, AAD 
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

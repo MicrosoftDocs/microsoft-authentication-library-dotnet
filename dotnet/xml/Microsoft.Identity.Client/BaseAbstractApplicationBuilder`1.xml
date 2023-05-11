@@ -9,6 +9,7 @@
     <AssemblyVersion>4.51.0.0</AssemblyVersion>
     <AssemblyVersion>4.52.0.0</AssemblyVersion>
     <AssemblyVersion>4.53.0.0</AssemblyVersion>
+    <AssemblyVersion>4.54.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeParameters>
     <TypeParameter Name="T">
@@ -27,46 +28,6 @@
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
-    <Member MemberName="WithCacheOptions">
-      <MemberSignature Language="C#" Value="public T WithCacheOptions (Microsoft.Identity.Client.CacheOptions options);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !T WithCacheOptions(class Microsoft.Identity.Client.CacheOptions options) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.BaseAbstractApplicationBuilder`1.WithCacheOptions(Microsoft.Identity.Client.CacheOptions)" />
-      <MemberSignature Language="VB.NET" Value="Public Function WithCacheOptions (options As CacheOptions) As T" />
-      <MemberSignature Language="F#" Value="member this.WithCacheOptions : Microsoft.Identity.Client.CacheOptions -&gt; 'T" Usage="baseAbstractApplicationBuilder.WithCacheOptions options" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>T</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="options" Type="Microsoft.Identity.Client.CacheOptions" />
-      </Parameters>
-      <Docs>
-        <param name="options">Options for the internal MSAL token caches. </param>
-        <summary>
-            Options for MSAL token caches. 
-            
-            MSAL maintains a token cache internally in memory. By default, this cache object is part of each instance of <see cref="T:Microsoft.Identity.Client.PublicClientApplication" /> or <see cref="T:Microsoft.Identity.Client.ConfidentialClientApplication" />.
-            This method allows customization of the in-memory token cache of MSAL. 
-            
-            MSAL's memory cache is different than token cache serialization. Cache serialization pulls the tokens from a cache (e.g. Redis, Cosmos, or a file on disk), 
-            where they are stored in JSON format, into MSAL's internal memory cache. Memory cache operations do not involve JSON operations. 
-            
-            External cache serialization remains the recommended way to handle desktop apps, web site and web APIs, as it provides persistence. These options
-            do not currently control external cache serialization.
-            
-            Detailed guidance for each application type and platform:
-            https://aka.ms/msal-net-token-cache-serialization
-            </summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
     <Member MemberName="WithDebugLoggingCallback">
       <MemberSignature Language="C#" Value="public T WithDebugLoggingCallback (Microsoft.Identity.Client.LogLevel logLevel = Microsoft.Identity.Client.LogLevel.Info, bool enablePiiLogging = false, bool withDefaultPlatformLoggingEnabled = false);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !T WithDebugLoggingCallback(valuetype Microsoft.Identity.Client.LogLevel logLevel, bool enablePiiLogging, bool withDefaultPlatformLoggingEnabled) cil managed" />
@@ -79,6 +40,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -122,6 +84,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -154,6 +117,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -189,6 +153,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -228,6 +193,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -264,6 +230,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -307,6 +274,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>

@@ -9,6 +9,7 @@
     <AssemblyVersion>4.51.0.0</AssemblyVersion>
     <AssemblyVersion>4.52.0.0</AssemblyVersion>
     <AssemblyVersion>4.53.0.0</AssemblyVersion>
+    <AssemblyVersion>4.54.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeParameters>
     <TypeParameter Name="T">
@@ -41,6 +42,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -62,6 +64,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;</ReturnType>
@@ -88,6 +91,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;</ReturnType>
@@ -103,9 +107,16 @@
             </summary>
         <returns>Authentication result containing a token for the requested scopes and parameters
             set in the builder.</returns>
-        <remarks>Cancellation is not guaranteed, it is best effort. If the operation reaches a point of no return, e.g.
+        <remarks>
+          <para>
+            Cancellation is not guaranteed, it is best effort. If the operation reaches a point of no return, e.g.
             tokens are acquired and written to the cache, the task will complete even if cancellation was requested.
-            Do not rely on cancellation tokens for strong consistency.</remarks>
+            Do not rely on cancellation tokens for strong consistency.
+            </para>
+          <para>
+            To learn more about potential exceptions thrown by the function, refer to <see href="https://aka.ms/msal-net-exceptions">Exceptions in MSAL.NET</see>.
+            </para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Validate">
@@ -120,6 +131,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -144,6 +156,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>

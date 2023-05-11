@@ -9,6 +9,7 @@
     <AssemblyVersion>4.51.0.0</AssemblyVersion>
     <AssemblyVersion>4.52.0.0</AssemblyVersion>
     <AssemblyVersion>4.53.0.0</AssemblyVersion>
+    <AssemblyVersion>4.54.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
     <Interface>
@@ -34,6 +35,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder</ReturnType>
@@ -51,32 +53,6 @@
         <returns>A builder enabling you to add optional parameters before executing the token request</returns>
         <remarks>You can also chain the following optional parameters:
             <see cref="M:Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder.WithForceRefresh(System.Boolean)" /></remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="AppTokenCache">
-      <MemberSignature Language="C#" Value="public Microsoft.Identity.Client.ITokenCache AppTokenCache { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Identity.Client.ITokenCache AppTokenCache" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.IManagedIdentityApplication.AppTokenCache" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AppTokenCache As ITokenCache" />
-      <MemberSignature Language="F#" Value="member this.AppTokenCache : Microsoft.Identity.Client.ITokenCache" Usage="Microsoft.Identity.Client.IManagedIdentityApplication.AppTokenCache" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Microsoft.Identity.Client.ITokenCache</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            Application token cache. This case holds access tokens for the application. It's maintained
-            and updated silently if needed when calling <see cref="M:Microsoft.Identity.Client.IManagedIdentityApplication.AcquireTokenForManagedIdentity(System.String)" /></summary>
-        <value>To be added.</value>
-        <remarks>On .NET Framework and .NET Core you can also customize the token cache serialization.
-            See https://aka.ms/msal-net-token-cache-serialization. This is taken care of by MSAL.NET on other platforms.
-            </remarks>
       </Docs>
     </Member>
   </Members>

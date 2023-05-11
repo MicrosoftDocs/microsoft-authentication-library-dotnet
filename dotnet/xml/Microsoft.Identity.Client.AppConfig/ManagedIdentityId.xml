@@ -1,0 +1,103 @@
+<Type Name="ManagedIdentityId" FullName="Microsoft.Identity.Client.AppConfig.ManagedIdentityId">
+  <TypeSignature Language="C#" Value="public class ManagedIdentityId" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ManagedIdentityId extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Client.AppConfig.ManagedIdentityId" />
+  <TypeSignature Language="VB.NET" Value="Public Class ManagedIdentityId" />
+  <TypeSignature Language="F#" Value="type ManagedIdentityId = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+    <AssemblyVersion>4.54.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Class to store configuration for a managed identity enabled on a resource.
+            For a system assigned managed identity use ManagedIdentityId.SystemAssigned.
+            For user assigned managed identity use ManagedIdentityId.WithUserAssignedClientId("clientId") or 
+            ManagedIdentityId.WithUserAssignedResourceId("resourceId").
+            For more details see https://aka.ms/msal-net-managed-identity
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="SystemAssigned">
+      <MemberSignature Language="C#" Value="public static Microsoft.Identity.Client.AppConfig.ManagedIdentityId SystemAssigned { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Microsoft.Identity.Client.AppConfig.ManagedIdentityId SystemAssigned" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.AppConfig.ManagedIdentityId.SystemAssigned" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property SystemAssigned As ManagedIdentityId" />
+      <MemberSignature Language="F#" Value="static member SystemAssigned : Microsoft.Identity.Client.AppConfig.ManagedIdentityId" Usage="Microsoft.Identity.Client.AppConfig.ManagedIdentityId.SystemAssigned" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.AppConfig.ManagedIdentityId</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Create an instance of ManagedIdentityId for a system assigned managed identity.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithUserAssignedClientId">
+      <MemberSignature Language="C#" Value="public static Microsoft.Identity.Client.AppConfig.ManagedIdentityId WithUserAssignedClientId (string clientId);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Identity.Client.AppConfig.ManagedIdentityId WithUserAssignedClientId(string clientId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.AppConfig.ManagedIdentityId.WithUserAssignedClientId(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function WithUserAssignedClientId (clientId As String) As ManagedIdentityId" />
+      <MemberSignature Language="F#" Value="static member WithUserAssignedClientId : string -&gt; Microsoft.Identity.Client.AppConfig.ManagedIdentityId" Usage="Microsoft.Identity.Client.AppConfig.ManagedIdentityId.WithUserAssignedClientId clientId" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.AppConfig.ManagedIdentityId</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="clientId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="clientId">Client id of the user assigned managed identity assigned to azure resource.</param>
+        <summary>
+            Create an instance of ManagedIdentityId for a user assigned managed identity from a client id.
+            </summary>
+        <returns>Instance of ManagedIdentityId.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException" />
+      </Docs>
+    </Member>
+    <Member MemberName="WithUserAssignedResourceId">
+      <MemberSignature Language="C#" Value="public static Microsoft.Identity.Client.AppConfig.ManagedIdentityId WithUserAssignedResourceId (string resourceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Identity.Client.AppConfig.ManagedIdentityId WithUserAssignedResourceId(string resourceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.AppConfig.ManagedIdentityId.WithUserAssignedResourceId(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function WithUserAssignedResourceId (resourceId As String) As ManagedIdentityId" />
+      <MemberSignature Language="F#" Value="static member WithUserAssignedResourceId : string -&gt; Microsoft.Identity.Client.AppConfig.ManagedIdentityId" Usage="Microsoft.Identity.Client.AppConfig.ManagedIdentityId.WithUserAssignedResourceId resourceId" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.AppConfig.ManagedIdentityId</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resourceId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="resourceId">Resource id of the user assigned managed identity assigned to azure resource.</param>
+        <summary>
+            Create an instance of ManagedIdentityId for a user assigned managed identity from a resource id.
+            </summary>
+        <returns>Instance of ManagedIdentityId.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException" />
+      </Docs>
+    </Member>
+  </Members>
+</Type>
