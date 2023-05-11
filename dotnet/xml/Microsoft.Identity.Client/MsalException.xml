@@ -11,6 +11,7 @@
     <AssemblyVersion>4.51.0.0</AssemblyVersion>
     <AssemblyVersion>4.52.0.0</AssemblyVersion>
     <AssemblyVersion>4.53.0.0</AssemblyVersion>
+    <AssemblyVersion>4.54.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Exception</BaseTypeName>
@@ -38,6 +39,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -61,6 +63,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="errorCode" Type="System.String" />
@@ -91,6 +94,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="errorCode" Type="System.String" />
@@ -123,6 +127,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="errorCode" Type="System.String" />
@@ -147,6 +152,112 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="AdditionalExceptionData">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; AdditionalExceptionData { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, string&gt; AdditionalExceptionData" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.MsalException.AdditionalExceptionData" />
+      <MemberSignature Language="VB.NET" Value="Public Property AdditionalExceptionData As IReadOnlyDictionary(Of String, String)" />
+      <MemberSignature Language="F#" Value="member this.AdditionalExceptionData : System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; with get, set" Usage="Microsoft.Identity.Client.MsalException.AdditionalExceptionData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IReadOnlyDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            A property bag with extra details for this exception.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BrokerErrorCode">
+      <MemberSignature Language="C#" Value="public const string BrokerErrorCode;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string BrokerErrorCode" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Client.MsalException.BrokerErrorCode" />
+      <MemberSignature Language="VB.NET" Value="Public Const BrokerErrorCode As String " />
+      <MemberSignature Language="F#" Value="val mutable BrokerErrorCode : string" Usage="Microsoft.Identity.Client.MsalException.BrokerErrorCode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            An <see cref="P:Microsoft.Identity.Client.MsalException.AdditionalExceptionData" /> property key, available when using desktop brokers.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BrokerErrorContext">
+      <MemberSignature Language="C#" Value="public const string BrokerErrorContext;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string BrokerErrorContext" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Client.MsalException.BrokerErrorContext" />
+      <MemberSignature Language="VB.NET" Value="Public Const BrokerErrorContext As String " />
+      <MemberSignature Language="F#" Value="val mutable BrokerErrorContext : string" Usage="Microsoft.Identity.Client.MsalException.BrokerErrorContext" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            An <see cref="P:Microsoft.Identity.Client.MsalException.AdditionalExceptionData" /> property key, available when using desktop brokers.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BrokerErrorStatus">
+      <MemberSignature Language="C#" Value="public const string BrokerErrorStatus;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string BrokerErrorStatus" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Client.MsalException.BrokerErrorStatus" />
+      <MemberSignature Language="VB.NET" Value="Public Const BrokerErrorStatus As String " />
+      <MemberSignature Language="F#" Value="val mutable BrokerErrorStatus : string" Usage="Microsoft.Identity.Client.MsalException.BrokerErrorStatus" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            An <see cref="P:Microsoft.Identity.Client.MsalException.AdditionalExceptionData" /> property key, available when using desktop brokers.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BrokerErrorTag">
+      <MemberSignature Language="C#" Value="public const string BrokerErrorTag;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string BrokerErrorTag" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Client.MsalException.BrokerErrorTag" />
+      <MemberSignature Language="VB.NET" Value="Public Const BrokerErrorTag As String " />
+      <MemberSignature Language="F#" Value="val mutable BrokerErrorTag : string" Usage="Microsoft.Identity.Client.MsalException.BrokerErrorTag" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            An <see cref="P:Microsoft.Identity.Client.MsalException.AdditionalExceptionData" /> property key, available when using desktop brokers.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="ErrorCode">
       <MemberSignature Language="C#" Value="public string ErrorCode { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string ErrorCode" />
@@ -161,6 +272,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -189,6 +301,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.MsalException</ReturnType>
@@ -219,6 +332,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -245,6 +359,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -272,6 +387,7 @@
         <AssemblyVersion>4.51.0.0</AssemblyVersion>
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
