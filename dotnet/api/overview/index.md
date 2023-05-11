@@ -2,6 +2,8 @@
 title: MSAL.NET API Reference Documentation
 ---
 
+# MSAL.NET API Reference Documentation
+
 This section covers the API reference documentation for MSAL.NET. It's a reflection of the **latest version** of MSAL.NET.
 
 ## Packages
