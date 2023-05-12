@@ -4,7 +4,9 @@ title: MSAL.NET API Reference Documentation
 
 # MSAL.NET API Reference Documentation
 
-This section covers the API reference documentation for MSAL.NET. It's a reflection of the **latest version** of MSAL.NET.
+This section covers the complete API reference documentation for MSAL.NET. It's a reflection of the **latest version** of all MSAL.NET component packages hosted on NuGet.
+
+Check out the [scenario overview](/entra/msal/dotnet/getting-started/scenarios) to learn more about the workloads where MSAL.NET can be useful. To find out which library you need to use for your scenario, refer to [Choosing a version of MSAL.NET](/entra/msal/dotnet/getting-started/choosing-msal-dotnet).
 
 ## Packages
 
