@@ -1,5 +1,6 @@
 ---
 title: MSAL.NET Public Client
+description: "Public client applications are applications that run on devices, desktop computers, or in a web browser, that cannot be trusted to securely store secrets required for authentication."
 ---
 
 # MSAL.NET Public Client

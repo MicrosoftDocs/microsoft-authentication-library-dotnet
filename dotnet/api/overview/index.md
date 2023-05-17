@@ -1,5 +1,6 @@
 ---
 title: MSAL.NET API Reference Documentation
+description: "The full overview of the MSAL.NET API surface."
 ---
 
 # MSAL.NET API Reference Documentation
