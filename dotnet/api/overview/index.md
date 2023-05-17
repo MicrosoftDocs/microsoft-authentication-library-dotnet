@@ -12,18 +12,18 @@ Check out the [scenario overview](/entra/msal/dotnet/getting-started/scenarios) 
 
 ### Public Client
 
-[![NuGet](https://img.shields.io/nuget/v/Microsoft.Identity.Client.svg?style=flat-square&label=Microsoft.Identity.Client&colorB=00b200)](https://www.nuget.org/packages/Microsoft.Identity.Client/)
+[![NuGet badge for Microsoft.Identity.Client](https://img.shields.io/nuget/v/Microsoft.Identity.Client.svg?style=flat-square&label=Microsoft.Identity.Client&colorB=00b200)](https://www.nuget.org/packages/Microsoft.Identity.Client/)
 
-[![NuGet](https://img.shields.io/nuget/v/Microsoft.Identity.Client.Broker.svg?style=flat-square&label=Microsoft.Identity.Client.Broker&colorB=00b200)](https://www.nuget.org/packages/Microsoft.Identity.Client.Broker/)
+[![NuGet badge for Microsoft.Identity.Client.Broker](https://img.shields.io/nuget/v/Microsoft.Identity.Client.Broker.svg?style=flat-square&label=Microsoft.Identity.Client.Broker&colorB=00b200)](https://www.nuget.org/packages/Microsoft.Identity.Client.Broker/)
 
-[![NuGet](https://img.shields.io/nuget/v/Microsoft.Identity.Client.Desktop.svg?style=flat-square&label=Microsoft.Identity.Client.Desktop&colorB=00b200)](https://www.nuget.org/packages/Microsoft.Identity.Client.Desktop/) 
+[![NuGe badget for Microsoft.Identity.Client.Desktop](https://img.shields.io/nuget/v/Microsoft.Identity.Client.Desktop.svg?style=flat-square&label=Microsoft.Identity.Client.Desktop&colorB=00b200)](https://www.nuget.org/packages/Microsoft.Identity.Client.Desktop/)
 
 ### Confidential Client
 
-[![NuGet](https://img.shields.io/nuget/v/Microsoft.Identity.Web.svg?style=flat-square&label=Microsoft.Identity.Web&colorB=00b200)](https://www.nuget.org/packages/Microsoft.Identity.Web/) 
+[![NuGet badge for Microsoft.Identity.Web](https://img.shields.io/nuget/v/Microsoft.Identity.Web.svg?style=flat-square&label=Microsoft.Identity.Web&colorB=00b200)](https://www.nuget.org/packages/Microsoft.Identity.Web/)
 
-[![NuGet](https://img.shields.io/nuget/v/Microsoft.Identity.Web.UI.svg?style=flat-square&label=Microsoft.Identity.Web.UI&colorB=00b200)](https://www.nuget.org/packages/Microsoft.Identity.Web.UI/) 
+[![NuGet badge for Microsoft.Identity.Web.UI](https://img.shields.io/nuget/v/Microsoft.Identity.Web.UI.svg?style=flat-square&label=Microsoft.Identity.Web.UI&colorB=00b200)](https://www.nuget.org/packages/Microsoft.Identity.Web.UI/)
 
-[![NuGet](https://img.shields.io/nuget/v/Microsoft.Identity.Web.MicrosoftGraph.svg?style=flat-square&label=Microsoft.Identity.Web.MicrosoftGraph&colorB=00b200)](https://www.nuget.org/packages/Microsoft.Identity.Web.MicrosoftGraph/) 
+[![NuGetMicrosoft.Identity.Web.MicrosoftGraph](https://img.shields.io/nuget/v/Microsoft.Identity.Web.MicrosoftGraph.svg?style=flat-square&label=Microsoft.Identity.Web.MicrosoftGraph&colorB=00b200)](https://www.nuget.org/packages/Microsoft.Identity.Web.MicrosoftGraph/)
 
-[![NuGet](https://img.shields.io/nuget/v/Microsoft.Identity.Web.MicrosoftGraphBeta.svg?style=flat-square&label=Microsoft.Identity.Web.MicrosoftGraphBeta&colorB=00b200)](https://www.nuget.org/packages/Microsoft.Identity.Web.MicrosoftGraphBeta/) 
+[![NuGet badge for Microsoft.Identity.Web.MicrosoftGraphBeta](https://img.shields.io/nuget/v/Microsoft.Identity.Web.MicrosoftGraphBeta.svg?style=flat-square&label=Microsoft.Identity.Web.MicrosoftGraphBeta&colorB=00b200)](https://www.nuget.org/packages/Microsoft.Identity.Web.MicrosoftGraphBeta/)
