@@ -102,6 +102,13 @@ They are not available on the mobile platforms, because the OAuth2 spec states t
 - Xamarin.iOS / MAUI iOS
 - UWP
 
+## Migration from Azure Active Directory Authentication Library (ADAL)
+
+Microsoft Authentication Library (MSAL) for .NET is the supported library that can be used for authentication token acquisition. If you or your organization are using the Azure Active Directory Authentication Library (ADAL), you should [migrate to MSAL](/azure/active-directory/develop/msal-migration). ADAL will reach end-of-life by **June 30, 2023**.
+
+> [!NOTE]
+> While ADAL will be deprecated on June 30, 2023, applications depending on ADAL should not break as the underlying endpoint will remain active. However, no new features or support will be offered for ADAL.
+
 ## Releases
 
 For previous releases, see the [Releases page on GitHub](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/releases). Minor (feature) releases are published every month. A feature could be included in a release or not depending on its complexity. Smaller patch or urgent fixes can be releases more frequently. Some of the security issues are back ported to the last major/minor release.
