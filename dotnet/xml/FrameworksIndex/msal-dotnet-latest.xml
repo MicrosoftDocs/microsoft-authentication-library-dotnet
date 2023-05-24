@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.Identity.Client.Broker" Version="4.54.0.0" />
-    <Assembly Name="Microsoft.Identity.Client.Desktop" Version="4.54.0.0" />
-    <Assembly Name="Microsoft.Identity.Client" Version="4.54.0.0" />
+    <Assembly Name="Microsoft.Identity.Client.Broker" Version="4.54.1.0" />
+    <Assembly Name="Microsoft.Identity.Client.Desktop" Version="4.54.1.0" />
+    <Assembly Name="Microsoft.Identity.Client" Version="4.54.1.0" />
   </Assemblies>
   <Namespace Name="Microsoft.Identity.Client">
     <Type Name="Microsoft.Identity.Client.AadAuthorityAudience" Id="T:Microsoft.Identity.Client.AadAuthorityAudience">
@@ -929,7 +929,7 @@
       <Member Id="M:Microsoft.Identity.Client.TokenCacheNotificationArgs.#ctor(Microsoft.Identity.Client.ITokenCacheSerializer,System.String,Microsoft.Identity.Client.IAccount,System.Boolean,System.Boolean,System.String,System.Boolean,System.Nullable{System.DateTimeOffset},System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.Identity.Client.TokenCacheNotificationArgs.#ctor(Microsoft.Identity.Client.ITokenCacheSerializer,System.String,Microsoft.Identity.Client.IAccount,System.Boolean,System.Boolean,System.String,System.Boolean,System.Nullable{System.DateTimeOffset},System.Threading.CancellationToken,System.Guid)" />
       <Member Id="M:Microsoft.Identity.Client.TokenCacheNotificationArgs.#ctor(Microsoft.Identity.Client.ITokenCacheSerializer,System.String,Microsoft.Identity.Client.IAccount,System.Boolean,System.Boolean,System.String,System.Boolean,System.Nullable{System.DateTimeOffset},System.Threading.CancellationToken,System.Guid,System.Collections.Generic.IEnumerable{System.String},System.String)" />
-      <Member Id="M:Microsoft.Identity.Client.TokenCacheNotificationArgs.#ctor(Microsoft.Identity.Client.ITokenCacheSerializer,System.String,Microsoft.Identity.Client.IAccount,System.Boolean,System.Boolean,System.String,System.Boolean,System.Nullable{System.DateTimeOffset},System.Threading.CancellationToken,System.Guid,System.Collections.Generic.IEnumerable{System.String},System.String,Microsoft.IdentityModel.Abstractions.IIdentityLogger,System.Boolean)" />
+      <Member Id="M:Microsoft.Identity.Client.TokenCacheNotificationArgs.#ctor(Microsoft.Identity.Client.ITokenCacheSerializer,System.String,Microsoft.Identity.Client.IAccount,System.Boolean,System.Boolean,System.String,System.Boolean,System.Nullable{System.DateTimeOffset},System.Threading.CancellationToken,System.Guid,System.Collections.Generic.IEnumerable{System.String},System.String,Microsoft.IdentityModel.Abstractions.IIdentityLogger,System.Boolean,Microsoft.Identity.Client.TelemetryCore.TelemetryClient.TelemetryData)" />
       <Member Id="P:Microsoft.Identity.Client.TokenCacheNotificationArgs.Account" />
       <Member Id="P:Microsoft.Identity.Client.TokenCacheNotificationArgs.CancellationToken" />
       <Member Id="P:Microsoft.Identity.Client.TokenCacheNotificationArgs.ClientId" />
@@ -943,6 +943,7 @@
       <Member Id="P:Microsoft.Identity.Client.TokenCacheNotificationArgs.RequestTenantId" />
       <Member Id="P:Microsoft.Identity.Client.TokenCacheNotificationArgs.SuggestedCacheExpiry" />
       <Member Id="P:Microsoft.Identity.Client.TokenCacheNotificationArgs.SuggestedCacheKey" />
+      <Member Id="P:Microsoft.Identity.Client.TokenCacheNotificationArgs.TelemetryData" />
       <Member Id="P:Microsoft.Identity.Client.TokenCacheNotificationArgs.TokenCache" />
       <Member Id="P:Microsoft.Identity.Client.TokenCacheNotificationArgs.User" />
     </Type>
@@ -1053,6 +1054,12 @@
       <Member Id="P:Microsoft.Identity.Client.Cache.CacheData.AdalV3State" />
       <Member Id="P:Microsoft.Identity.Client.Cache.CacheData.UnifiedState" />
     </Type>
+    <Type Name="Microsoft.Identity.Client.Cache.CacheLevel" Id="T:Microsoft.Identity.Client.Cache.CacheLevel">
+      <Member Id="F:Microsoft.Identity.Client.Cache.CacheLevel.L1Cache" />
+      <Member Id="F:Microsoft.Identity.Client.Cache.CacheLevel.L2Cache" />
+      <Member Id="F:Microsoft.Identity.Client.Cache.CacheLevel.None" />
+      <Member Id="F:Microsoft.Identity.Client.Cache.CacheLevel.Unknown" />
+    </Type>
   </Namespace>
   <Namespace Name="Microsoft.Identity.Client.Desktop">
     <Type Name="Microsoft.Identity.Client.Desktop.DesktopExtensions" Id="T:Microsoft.Identity.Client.Desktop.DesktopExtensions">
@@ -1074,6 +1081,9 @@
     </Type>
     <Type Name="Microsoft.Identity.Client.Extensibility.AcquireTokenInteractiveParameterBuilderExtensions" Id="T:Microsoft.Identity.Client.Extensibility.AcquireTokenInteractiveParameterBuilderExtensions">
       <Member Id="M:Microsoft.Identity.Client.Extensibility.AcquireTokenInteractiveParameterBuilderExtensions.WithCustomWebUi(Microsoft.Identity.Client.AcquireTokenInteractiveParameterBuilder,Microsoft.Identity.Client.Extensibility.ICustomWebUi)" />
+    </Type>
+    <Type Name="Microsoft.Identity.Client.Extensibility.AcquireTokenOnBehalfOfParameterBuilderExtensions" Id="T:Microsoft.Identity.Client.Extensibility.AcquireTokenOnBehalfOfParameterBuilderExtensions">
+      <Member Id="M:Microsoft.Identity.Client.Extensibility.AcquireTokenOnBehalfOfParameterBuilderExtensions.WithSearchInCacheForLongRunningProcess(Microsoft.Identity.Client.AcquireTokenOnBehalfOfParameterBuilder,System.Boolean)" />
     </Type>
     <Type Name="Microsoft.Identity.Client.Extensibility.AppTokenProviderParameters" Id="T:Microsoft.Identity.Client.Extensibility.AppTokenProviderParameters">
       <Member Id="M:Microsoft.Identity.Client.Extensibility.AppTokenProviderParameters.#ctor" />
@@ -1182,6 +1192,12 @@
     <Type Name="Microsoft.Identity.Client.SSHCertificates.SSHExtensions" Id="T:Microsoft.Identity.Client.SSHCertificates.SSHExtensions">
       <Member Id="M:Microsoft.Identity.Client.SSHCertificates.SSHExtensions.WithSSHCertificateAuthenticationScheme(Microsoft.Identity.Client.AcquireTokenInteractiveParameterBuilder,System.String,System.String)" />
       <Member Id="M:Microsoft.Identity.Client.SSHCertificates.SSHExtensions.WithSSHCertificateAuthenticationScheme(Microsoft.Identity.Client.AcquireTokenSilentParameterBuilder,System.String,System.String)" />
+    </Type>
+  </Namespace>
+  <Namespace Name="Microsoft.Identity.Client.TelemetryCore.TelemetryClient">
+    <Type Name="Microsoft.Identity.Client.TelemetryCore.TelemetryClient.TelemetryData" Id="T:Microsoft.Identity.Client.TelemetryCore.TelemetryClient.TelemetryData">
+      <Member Id="M:Microsoft.Identity.Client.TelemetryCore.TelemetryClient.TelemetryData.#ctor" />
+      <Member Id="P:Microsoft.Identity.Client.TelemetryCore.TelemetryClient.TelemetryData.CacheLevel" />
     </Type>
   </Namespace>
   <Namespace Name="Microsoft.Identity.Client.Utils.Windows">

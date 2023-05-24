@@ -1,0 +1,63 @@
+<Type Name="AcquireTokenOnBehalfOfParameterBuilderExtensions" FullName="Microsoft.Identity.Client.Extensibility.AcquireTokenOnBehalfOfParameterBuilderExtensions">
+  <TypeSignature Language="C#" Value="public static class AcquireTokenOnBehalfOfParameterBuilderExtensions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit AcquireTokenOnBehalfOfParameterBuilderExtensions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Client.Extensibility.AcquireTokenOnBehalfOfParameterBuilderExtensions" />
+  <TypeSignature Language="VB.NET" Value="Public Module AcquireTokenOnBehalfOfParameterBuilderExtensions" />
+  <TypeSignature Language="F#" Value="type AcquireTokenOnBehalfOfParameterBuilderExtensions = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+    <AssemblyVersion>4.54.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Extension methods for the <see cref="T:Microsoft.Identity.Client.AcquireTokenOnBehalfOfParameterBuilder" /></summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="WithSearchInCacheForLongRunningProcess">
+      <MemberSignature Language="C#" Value="public static Microsoft.Identity.Client.AcquireTokenOnBehalfOfParameterBuilder WithSearchInCacheForLongRunningProcess (this Microsoft.Identity.Client.AcquireTokenOnBehalfOfParameterBuilder builder, bool searchInCache = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Identity.Client.AcquireTokenOnBehalfOfParameterBuilder WithSearchInCacheForLongRunningProcess(class Microsoft.Identity.Client.AcquireTokenOnBehalfOfParameterBuilder builder, bool searchInCache) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.Extensibility.AcquireTokenOnBehalfOfParameterBuilderExtensions.WithSearchInCacheForLongRunningProcess(Microsoft.Identity.Client.AcquireTokenOnBehalfOfParameterBuilder,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function WithSearchInCacheForLongRunningProcess (builder As AcquireTokenOnBehalfOfParameterBuilder, Optional searchInCache As Boolean = true) As AcquireTokenOnBehalfOfParameterBuilder" />
+      <MemberSignature Language="F#" Value="static member WithSearchInCacheForLongRunningProcess : Microsoft.Identity.Client.AcquireTokenOnBehalfOfParameterBuilder * bool -&gt; Microsoft.Identity.Client.AcquireTokenOnBehalfOfParameterBuilder" Usage="Microsoft.Identity.Client.Extensibility.AcquireTokenOnBehalfOfParameterBuilderExtensions.WithSearchInCacheForLongRunningProcess (builder, searchInCache)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.54.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.AcquireTokenOnBehalfOfParameterBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="builder" Type="Microsoft.Identity.Client.AcquireTokenOnBehalfOfParameterBuilder" RefType="this" />
+        <Parameter Name="searchInCache" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="builder" />
+        <param name="searchInCache">Whether to search in cache.</param>
+        <summary>
+            Only affects <see cref="M:Microsoft.Identity.Client.ILongRunningWebApi.InitiateLongRunningProcessInWebApi(System.Collections.Generic.IEnumerable{System.String},System.String,System.String@)" />.
+            When enabled, mimics MSAL 4.50.0 and below behavior - checks in cache for cached tokens first, 
+            and if not found, then uses user assertion to request new tokens from AAD.
+            When disabled (default behavior), doesn't search in cache, but uses the user assertion to retrieve tokens from AAD.
+            </summary>
+        <returns>The builder to chain the .With methods</returns>
+        <remarks>
+            This method should only be used in specific cases for backwards compatibility. For most cases, rely on the default behavior
+            of <see cref="M:Microsoft.Identity.Client.ILongRunningWebApi.InitiateLongRunningProcessInWebApi(System.Collections.Generic.IEnumerable{System.String},System.String,System.String@)" /> and
+            <see cref="M:Microsoft.Identity.Client.ILongRunningWebApi.AcquireTokenInLongRunningProcess(System.Collections.Generic.IEnumerable{System.String},System.String)" /> described in https://aka.ms/msal-net-long-running-obo .
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
