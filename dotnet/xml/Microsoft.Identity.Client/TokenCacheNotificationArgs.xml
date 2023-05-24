@@ -12,6 +12,7 @@
     <AssemblyVersion>4.52.0.0</AssemblyVersion>
     <AssemblyVersion>4.53.0.0</AssemblyVersion>
     <AssemblyVersion>4.54.0.0</AssemblyVersion>
+    <AssemblyVersion>4.54.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -42,6 +43,7 @@
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="tokenCache" Type="Microsoft.Identity.Client.ITokenCacheSerializer" />
@@ -85,6 +87,7 @@
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="tokenCache" Type="Microsoft.Identity.Client.ITokenCacheSerializer" />
@@ -130,6 +133,7 @@
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="tokenCache" Type="Microsoft.Identity.Client.ITokenCacheSerializer" />
@@ -165,20 +169,15 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public TokenCacheNotificationArgs (Microsoft.Identity.Client.ITokenCacheSerializer tokenCache, string clientId, Microsoft.Identity.Client.IAccount account, bool hasStateChanged, bool isApplicationCache, string suggestedCacheKey, bool hasTokens, DateTimeOffset? suggestedCacheExpiry, System.Threading.CancellationToken cancellationToken, Guid correlationId, System.Collections.Generic.IEnumerable&lt;string&gt; requestScopes, string requestTenantId, Microsoft.IdentityModel.Abstractions.IIdentityLogger identityLogger, bool piiLoggingEnabled);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Identity.Client.ITokenCacheSerializer tokenCache, string clientId, class Microsoft.Identity.Client.IAccount account, bool hasStateChanged, bool isApplicationCache, string suggestedCacheKey, bool hasTokens, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; suggestedCacheExpiry, valuetype System.Threading.CancellationToken cancellationToken, valuetype System.Guid correlationId, class System.Collections.Generic.IEnumerable`1&lt;string&gt; requestScopes, string requestTenantId, class Microsoft.IdentityModel.Abstractions.IIdentityLogger identityLogger, bool piiLoggingEnabled) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.TokenCacheNotificationArgs.#ctor(Microsoft.Identity.Client.ITokenCacheSerializer,System.String,Microsoft.Identity.Client.IAccount,System.Boolean,System.Boolean,System.String,System.Boolean,System.Nullable{System.DateTimeOffset},System.Threading.CancellationToken,System.Guid,System.Collections.Generic.IEnumerable{System.String},System.String,Microsoft.IdentityModel.Abstractions.IIdentityLogger,System.Boolean)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (tokenCache As ITokenCacheSerializer, clientId As String, account As IAccount, hasStateChanged As Boolean, isApplicationCache As Boolean, suggestedCacheKey As String, hasTokens As Boolean, suggestedCacheExpiry As Nullable(Of DateTimeOffset), cancellationToken As CancellationToken, correlationId As Guid, requestScopes As IEnumerable(Of String), requestTenantId As String, identityLogger As IIdentityLogger, piiLoggingEnabled As Boolean)" />
-      <MemberSignature Language="F#" Value="new Microsoft.Identity.Client.TokenCacheNotificationArgs : Microsoft.Identity.Client.ITokenCacheSerializer * string * Microsoft.Identity.Client.IAccount * bool * bool * string * bool * Nullable&lt;DateTimeOffset&gt; * System.Threading.CancellationToken * Guid * seq&lt;string&gt; * string * Microsoft.IdentityModel.Abstractions.IIdentityLogger * bool -&gt; Microsoft.Identity.Client.TokenCacheNotificationArgs" Usage="new Microsoft.Identity.Client.TokenCacheNotificationArgs (tokenCache, clientId, account, hasStateChanged, isApplicationCache, suggestedCacheKey, hasTokens, suggestedCacheExpiry, cancellationToken, correlationId, requestScopes, requestTenantId, identityLogger, piiLoggingEnabled)" />
+      <MemberSignature Language="C#" Value="public TokenCacheNotificationArgs (Microsoft.Identity.Client.ITokenCacheSerializer tokenCache, string clientId, Microsoft.Identity.Client.IAccount account, bool hasStateChanged, bool isApplicationCache, string suggestedCacheKey, bool hasTokens, DateTimeOffset? suggestedCacheExpiry, System.Threading.CancellationToken cancellationToken, Guid correlationId, System.Collections.Generic.IEnumerable&lt;string&gt; requestScopes, string requestTenantId, Microsoft.IdentityModel.Abstractions.IIdentityLogger identityLogger, bool piiLoggingEnabled, Microsoft.Identity.Client.TelemetryCore.TelemetryClient.TelemetryData telemetryData = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Identity.Client.ITokenCacheSerializer tokenCache, string clientId, class Microsoft.Identity.Client.IAccount account, bool hasStateChanged, bool isApplicationCache, string suggestedCacheKey, bool hasTokens, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; suggestedCacheExpiry, valuetype System.Threading.CancellationToken cancellationToken, valuetype System.Guid correlationId, class System.Collections.Generic.IEnumerable`1&lt;string&gt; requestScopes, string requestTenantId, class Microsoft.IdentityModel.Abstractions.IIdentityLogger identityLogger, bool piiLoggingEnabled, class Microsoft.Identity.Client.TelemetryCore.TelemetryClient.TelemetryData telemetryData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.TokenCacheNotificationArgs.#ctor(Microsoft.Identity.Client.ITokenCacheSerializer,System.String,Microsoft.Identity.Client.IAccount,System.Boolean,System.Boolean,System.String,System.Boolean,System.Nullable{System.DateTimeOffset},System.Threading.CancellationToken,System.Guid,System.Collections.Generic.IEnumerable{System.String},System.String,Microsoft.IdentityModel.Abstractions.IIdentityLogger,System.Boolean,Microsoft.Identity.Client.TelemetryCore.TelemetryClient.TelemetryData)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (tokenCache As ITokenCacheSerializer, clientId As String, account As IAccount, hasStateChanged As Boolean, isApplicationCache As Boolean, suggestedCacheKey As String, hasTokens As Boolean, suggestedCacheExpiry As Nullable(Of DateTimeOffset), cancellationToken As CancellationToken, correlationId As Guid, requestScopes As IEnumerable(Of String), requestTenantId As String, identityLogger As IIdentityLogger, piiLoggingEnabled As Boolean, Optional telemetryData As TelemetryData = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Identity.Client.TokenCacheNotificationArgs : Microsoft.Identity.Client.ITokenCacheSerializer * string * Microsoft.Identity.Client.IAccount * bool * bool * string * bool * Nullable&lt;DateTimeOffset&gt; * System.Threading.CancellationToken * Guid * seq&lt;string&gt; * string * Microsoft.IdentityModel.Abstractions.IIdentityLogger * bool * Microsoft.Identity.Client.TelemetryCore.TelemetryClient.TelemetryData -&gt; Microsoft.Identity.Client.TokenCacheNotificationArgs" Usage="new Microsoft.Identity.Client.TokenCacheNotificationArgs (tokenCache, clientId, account, hasStateChanged, isApplicationCache, suggestedCacheKey, hasTokens, suggestedCacheExpiry, cancellationToken, correlationId, requestScopes, requestTenantId, identityLogger, piiLoggingEnabled, telemetryData)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="tokenCache" Type="Microsoft.Identity.Client.ITokenCacheSerializer" />
@@ -195,6 +194,7 @@
         <Parameter Name="requestTenantId" Type="System.String" />
         <Parameter Name="identityLogger" Type="Microsoft.IdentityModel.Abstractions.IIdentityLogger" />
         <Parameter Name="piiLoggingEnabled" Type="System.Boolean" />
+        <Parameter Name="telemetryData" Type="Microsoft.Identity.Client.TelemetryCore.TelemetryClient.TelemetryData" />
       </Parameters>
       <Docs>
         <param name="tokenCache">To be added.</param>
@@ -211,6 +211,7 @@
         <param name="requestTenantId">To be added.</param>
         <param name="identityLogger">To be added.</param>
         <param name="piiLoggingEnabled">To be added.</param>
+        <param name="telemetryData">To be added.</param>
         <summary>
             This constructor is for test purposes only. It allows apps to unit test their MSAL token cache implementation code.
             </summary>
@@ -232,6 +233,7 @@
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.IAccount</ReturnType>
@@ -259,6 +261,7 @@
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.CancellationToken</ReturnType>
@@ -287,6 +290,7 @@
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -314,6 +318,7 @@
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Guid</ReturnType>
@@ -340,6 +345,7 @@
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -368,6 +374,7 @@
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -399,6 +406,7 @@
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Abstractions.IIdentityLogger</ReturnType>
@@ -427,6 +435,7 @@
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -457,6 +466,7 @@
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -484,6 +494,7 @@
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
@@ -513,6 +524,7 @@
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -542,6 +554,7 @@
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.DateTimeOffset&gt;</ReturnType>
@@ -572,6 +585,7 @@
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -585,6 +599,28 @@
             The value is: 
             
             <list type="bullet"><item><description><c>homeAccountId</c> for <c>AcquireTokenSilent</c>, <c>GetAccount(homeAccountId)</c>, <c>RemoveAccount</c> and when writing tokens on confidential client calls</description></item><item><description><c>"{clientId}__AppTokenCache"</c> for <c>AcquireTokenForClient</c></description></item><item><description><c>"{clientId}_{tenantId}_AppTokenCache"</c> for <c>AcquireTokenForClient</c> when using a tenant specific authority</description></item><item><description>the hash of the original token for <c>AcquireTokenOnBehalfOf</c></description></item></list></summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TelemetryData">
+      <MemberSignature Language="C#" Value="public Microsoft.Identity.Client.TelemetryCore.TelemetryClient.TelemetryData TelemetryData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Identity.Client.TelemetryCore.TelemetryClient.TelemetryData TelemetryData" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.TokenCacheNotificationArgs.TelemetryData" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TelemetryData As TelemetryData" />
+      <MemberSignature Language="F#" Value="member this.TelemetryData : Microsoft.Identity.Client.TelemetryCore.TelemetryClient.TelemetryData" Usage="Microsoft.Identity.Client.TokenCacheNotificationArgs.TelemetryData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.54.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.TelemetryCore.TelemetryClient.TelemetryData</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Cache Details contains the details of L1/ L2 cache for telemetry logging.
+            </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -604,6 +640,7 @@
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ITokenCacheSerializer</ReturnType>
@@ -632,6 +669,7 @@
         <AssemblyVersion>4.52.0.0</AssemblyVersion>
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.0.0</AssemblyVersion>
+        <AssemblyVersion>4.54.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
