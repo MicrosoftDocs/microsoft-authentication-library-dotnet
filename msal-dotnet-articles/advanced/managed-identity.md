@@ -18,6 +18,13 @@ A common challenge for developers is the management of secrets, credentials, cer
 
 For a complete list, refer to [Azure services that can use managed identities to access other services](/azure/active-directory/managed-identities-azure-resources/managed-identities-status).
 
+## Quick start
+
+To quickly get started and see Azure Managed Identity in action, you can use one of the samples the team built for this purpose:
+
+> [!div class="nextstepaction"]
+> [Use Managed Identity sample](https://github.com/Azure-Samples/msal-managed-identity/tree/main/src/dotnet)
+
 ## How to use managed identities
 
 There are two types of managed identities available to developers - **system-assigned** and **user-assigned**. You can learn more about the differences in the [Managed identity types](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) article. MSAL.NET supports acquiring tokens with both. [MSAL.NET logging](/azure/active-directory/develop/msal-logging-dotnet) allows to keep track of requests and related metadata.
