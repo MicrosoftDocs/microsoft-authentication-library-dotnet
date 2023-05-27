@@ -24,12 +24,12 @@ The .NET authentication libraries support scenarios involving **protecting a Web
 
 As a developer, you can acquire a token from a number of **application types**, including web applications, mobile applications, desktop applications, web APIs, and application running on devices that don't have a browser (or iOT). These types of applications are separated into two categories:
 
-- Public client applications (desktop and Mmbile) use the <xref:Microsoft.Identity.Client.PublicClientApplication> class
+- Public client applications (desktop and Mobile) use the <xref:Microsoft.Identity.Client.PublicClientApplication> class
 - Confidential client applications (web apps, web APIs, and daemon applications - desktop or web). These type of apps use the <xref:Microsoft.Identity.Client.ConfidentialClientApplication>.
 
 MSAL.NET supports acquiring tokens either in the name of a **user** ![user icon](../media/user-icon.png), or, (and only for confidential client applications), in the name of the application itself (for no user). In that case the confidential client application shares a secret with Azure AD ![Azure AD icon](../media/certificate-icon.png)
 
-MSAL.NET supports a number of **platforms** (.NET Framework, .NET Core, Windows 10/UWP, Xamarin.iOS, Xamarin.Android). .NET Core apps can also run on different operating systems (Windows, but also Linux and MacOs). The scenarios can be different depending on the platforms.
+MSAL.NET supports a number of **platforms** (.NET Framework, .NET Core, Windows 10/UWP, MAUI, Xamarin.iOS, Xamarin.Android). .NET Core apps can also run on different operating systems (Windows, but also Linux and MacOs). The scenarios can be different depending on the platforms.
 
 ## The Scenarios
 
@@ -53,9 +53,9 @@ To enable this interaction, MSAL.NET leverages a [web browser](/azure/active-dir
 
 ![Image showing flows in a mobile app that calls a web API on behalf of the user](../media/net-mobile-api.png)
 
-#### Protecting the app itself with InTune
+#### Protecting the app itself with Intune
 
-Your mobile app (written in Xamarin.iOS or Xamarin.Android) can have app protection policies applied to it, so that it can be [managed by InTune](/intune/app-sdk) and recognized by InTune as a managed app. The [InTune SDK](/intune/app-sdk-get-started) is separate from MSAL, and it talks to Azure AD on its own.
+Your mobile app (written in Xamarin.iOS or Xamarin.Android) can have app protection policies applied to it, so that it can be [managed by InTune](/intune/app-sdk) and recognized by Intune as a managed app. The [InTune SDK](/intune/app-sdk-get-started) is separate from MSAL, and it talks to Azure AD on its own.
 
 ### Desktop or service daemon app that calls a web API as itself (in its own name)
 
