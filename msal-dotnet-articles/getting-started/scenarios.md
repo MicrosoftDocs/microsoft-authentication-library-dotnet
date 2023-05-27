@@ -24,7 +24,7 @@ The .NET authentication libraries support scenarios involving **protecting a Web
 
 As a developer, you can acquire a token from a number of **application types**, including web applications, mobile applications, desktop applications, web APIs, and application running on devices that don't have a browser (or iOT). These types of applications are separated into two categories:
 
-- Public client applications (desktop and Mobile) use the <xref:Microsoft.Identity.Client.PublicClientApplication> class
+- Public client applications (Desktop and Mobile) use the <xref:Microsoft.Identity.Client.PublicClientApplication> class
 - Confidential client applications (web apps, web APIs, and daemon applications - desktop or web). These type of apps use the <xref:Microsoft.Identity.Client.ConfidentialClientApplication>.
 
 MSAL.NET supports acquiring tokens either in the name of a **user** ![user icon](../media/user-icon.png), or, (and only for confidential client applications), in the name of the application itself (for no user). In that case the confidential client application shares a secret with Azure AD ![Azure AD icon](../media/certificate-icon.png)
