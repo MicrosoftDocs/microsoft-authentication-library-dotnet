@@ -95,7 +95,7 @@ Just take the code you need from Microsoft Identity Web to update your app. Here
 
 ## When do you use the hybrid model (MSAL.NET and [Microsoft Identity Web](https://github.com/AzureAD/microsoft-identity-web/))
 
-You are building a SDK for confidential client applications and want to use MSAL.NET low level APIs. In MSAL.NET, an in-memory token cache is provided by default, however, in the case of web apps or web APIs, caching should be handled differently than for public client applications (desktop or mobile apps) as it requires to be partitioned correctly. It is highly recommended to leverage a token cache serializer, which can be a distributed cache, (e.g., Redis, Cosmos, or SQL Server, distributed in memory cache), or a correctly partitioned in memory cache.
+You are building a SDK for confidential client applications and want to use MSAL.NET low level APIs. In MSAL.NET, an in-memory token cache is provided by default, however, in the case of web apps or web APIs, caching should be managed differently than for public client applications (desktop or mobile apps) as it requires to be partitioned correctly. It is highly recommended to leverage a token cache serializer, which can be a distributed cache, (e.g., Redis, Cosmos, or SQL Server, distributed in memory cache), or a correctly partitioned in memory cache.
 
 By using token cache serializers you partition the token caches depending on the cache key that is used because the cache is swapped between the storage and MSAL's memory. This cache key is computed by MSAL.NET as a function of the flow you use
 
