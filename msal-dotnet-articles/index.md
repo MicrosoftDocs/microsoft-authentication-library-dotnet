@@ -18,7 +18,7 @@ ms.custom: devx-track-csharp, aaddev, engagement-fy23
 
 # Microsoft Authentication Library for .NET
 
-MSAL.NET ([Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client)) is an authentication library that enables you to acquire tokens from Azure Active Directory (Azure AD), to access protected web APIs (Microsoft APIs or applications registered with Azure AD). MSAL.NET is available on several .NET platforms (Desktop, Universal Windows Platform, Xamarin Android, Xamarin iOS, Windows 8.1, and .NET Core).
+MSAL.NET ([Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client)) is an authentication library that enables you to acquire tokens from Azure Active Directory (Azure AD), to access protected web APIs (Microsoft APIs or applications registered with Azure AD). MSAL.NET is available on several .NET platforms (Desktop, Universal Windows Platform, MAUI, Xamarin Android, Xamarin iOS, Windows 8.1, and .NET Core).
 
 ## Supported platforms and application architectures
 
@@ -31,21 +31,21 @@ With the exception of [User-agent based client](/azure/active-directory/develop/
 
 For more details about the supported scenarios, see [Scenarios](./getting-started/scenarios.md).
 
-MSAL.NET supports multiple platforms, including .NET Framework, [.NET Core](https://www.microsoft.com/net/learn/get-started/windows)(including .NET 6), [Xamarin](https://www.xamarin.com/) Android, Xamarin iOS, and [UWP](/windows/uwp/get-started/universal-application-platform-guide).
+MSAL.NET supports multiple platforms, including .NET Framework, [.NET Core](https://www.microsoft.com/net/learn/get-started/windows)(including .NET 6), [MAUI](https://dotnet.microsoft.com/en-us/apps/maui), [Xamarin](https://www.xamarin.com/) Android, Xamarin iOS, and [UWP](/windows/uwp/get-started/universal-application-platform-guide).
 
-> [!NOTE]
-> Not all the authentication features are available in all platforms, mostly because:
->
->- Mobile platforms (Xamarin and UWP) do not allow confidential client flows, because they are not meant to function as a backend and cannot  store secrets securely.
->- On public clients (mobile and desktop), the default browser and redirect URIs are different from platform to platform and broker availability varies (details [here](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/MSAL.NET-uses-web-browser#at-a-glance)).
+  > [!NOTE]
+  > Not all the authentication features are available in all platforms, mostly because:
+  >
+  >- Mobile platforms (Xamarin, MAUI and UWP) do not allow confidential client flows, because they are not meant to function as a backend and cannot store secrets securely.
+  >- On public clients (mobile and desktop), the default browser and redirect URIs are different from platform to platform and broker availability varies (details [here](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/MSAL.NET-uses-web-browser#at-a-glance)).
 
-Most of the articles in this MSAL.NET reference content describe the most complete platform (.NET Framework), but, topic by topic, it occasionally calls out differences between platforms.
+  Most of the articles in this MSAL.NET reference content describe the most complete platform (.NET Framework), but, topic by topic, it occasionally calls out differences between platforms.
 
 ## Why use MSAL.NET ?
 
 MSAL.NET ([Microsoft Authentication Library for .NET](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet)) enables developers of .NET applications to acquire tokens in order to call secured web APIs. These web APIs can be the Microsoft Graph API, other Microsoft APIS, 3rd party Web APIs, or your own Web API.
 
-As a token acquisition library, MSAL.NET provides various ways of getting a token, with a consistent API for a number of platforms. Using MSAL.NET adds value over using OAuth libraries and coding against the protocol by:
+As a token acquisition library, MSAL.NET provides several ways of getting a token, with a consistent API for a number of platforms. Using MSAL.NET adds value over using OAuth libraries and coding against the protocol by:
 
 - Maintains a **token cache** and **refreshes tokens** for you when they are close to expire.
 - Eliminates the need for you to handle token expiration by yourself.
@@ -74,13 +74,14 @@ MSAL.NET is used to acquire tokens. It's not used to protect a Web API. If you a
 
 #### Acquiring tokens from cache in any app
 
-- [AcquireTokenSilentAsync](acquiring-tokens/acquiretokensilentasync-api.md) enables you to get a previously cached token.
+- [AcquireTokenSilent](acquiring-tokens/acquiretokensilentasync-api.md) enables you to get a previously cached token.
 
 #### Acquiring tokens in desktop and mobile apps (public client applications)
 
 - [Acquiring a token interactively](acquiring-tokens/desktop-mobile/acquiring-tokens-interactively.md) enables the application to acquire a token after authenticating the user through an interactive sign-in. There are implementation-specific details depending on the target platforms, such as [Xamarin Android](acquiring-tokens/desktop-mobile/xamarin.md) or [UWP](acquiring-tokens/desktop-mobile/uwp.md).
 - Acquiring a token silently on a Windows domain or Azure Active Directory joined machine with [Integrated Windows Authentication](./acquiring-tokens/desktop-mobile/integrated-windows-authentication.md) or by using [Username/passwords](./acquiring-tokens/desktop-mobile/username-password-authentication.md) (not recommended).
 - Acquiring a token on a text-only device, by directing the user to sign-in on another device with the [Device Code Flow](./acquiring-tokens/desktop-mobile/device-code-flow.md).
+- Acquiring a token using the [Web Account Manager (WAM)](./acquiring-tokens/desktop-mobile/wam.md), a Windows OS component that acts a broker allowing the users of your app benefit from integration with accounts known to Windows.
 
 #### Acquiring tokens in web apps, web APIs, and daemon apps (confidential client applications)
 
@@ -100,7 +101,7 @@ They are not available on the mobile platforms, because the OAuth2 spec states t
 
 - Xamarin.Android / MAUI Android
 - Xamarin.iOS / MAUI iOS
-- UWP
+- UWP / WINUI
 
 ## Migration from Azure Active Directory Authentication Library (ADAL)
 
