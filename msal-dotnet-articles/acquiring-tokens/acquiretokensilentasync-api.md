@@ -1,6 +1,6 @@
 ---
 title: Understanding the AcquireTokenAsync API
-description: Learn how to acquire security tokens in public and confidential client applications using MSAL.NET
+description: Learn how to acquire  tokens silently in public and confidential client applications using MSAL.NET
 author: Dickson-Mwendia
 manager: CelesteDG
 
