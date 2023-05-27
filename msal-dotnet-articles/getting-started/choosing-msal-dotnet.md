@@ -51,10 +51,10 @@ You're building a confidential client application (Web app, web API, daemon/serv
   - generates WWW-authenticate headers in APIs (CA, CAE)
   - Protect gRPC services and Azure functions
 - Web app/API calling downstream APIs (including graph except for B2C)
-  - Call downstream APIs without having to handle authentication/tokens yourself.
+  - Call downstream APIs without having to manage authentication/tokens yourself.
   - Integrates with the graph SDK, and the Azure SDKs
   - Describe the client credentials, and Microsoft.Identity.Web fetches them for you (for
-    instance certificates from KeyVault, or workload identity federation with AKS and MSI)
+    instance certificates from Key Vault, or workload identity federation with [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/en-us/products/kubernetes-service) and [Managed Identities](https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview))
 - Supports multiple Authentication schemes in ASP.NET Core
 - Supports Proof of possession protocol 
 - Resilient (supports regional token acquisition and  routing hint for the token backup system)
@@ -95,7 +95,7 @@ Just take the code you need from Microsoft Identity Web to update your app. Here
 
 ## When do you use the hybrid model (MSAL.NET and [Microsoft Identity Web](https://github.com/AzureAD/microsoft-identity-web/))
 
-You're building and SDK for confidential client applications and want to use MSAL.NET low level APIs. In MSAL.NET, an in-memory token cache is provided by default, however, in the case of web apps or web APIs, caching should be handled differently than for public client applications (desktop or mobile apps) as it requires to be partitioned correctly. It's highly recommended to leverage a token cache serializer, which can be a distributed cache, (e.g. Redis, Cosmos, or SQL Server, distributed in memory cache), or a correctly partitioned in memory cache.
+You are building a SDK for confidential client applications and want to use MSAL.NET low level APIs. In MSAL.NET, an in-memory token cache is provided by default, however, in the case of web apps or web APIs, caching should be handled differently than for public client applications (desktop or mobile apps) as it requires to be partitioned correctly. It is highly recommended to leverage a token cache serializer, which can be a distributed cache, (e.g., Redis, Cosmos, or SQL Server, distributed in memory cache), or a correctly partitioned in memory cache.
 
 By using token cache serializers you partition the token caches depending on the cache key that is used because the cache is swapped between the storage and MSAL's memory. This cache key is computed by MSAL.NET as a function of the flow you use
 
