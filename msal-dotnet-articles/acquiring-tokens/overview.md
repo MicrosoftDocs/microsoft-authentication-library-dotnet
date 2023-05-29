@@ -20,7 +20,7 @@ ms.custom: devx-track-csharp, aaddev, engagement-fy23
 
 As explained in [Scenarios](../getting-started/scenarios.md), there are many ways of acquiring a token.  Some require user interactions through a web browser. Some don't require any user interactions.
 
-In general the way to acquire a token is different depending on if the application is a public client application (Desktop / Mobile) or a confidential client application (Web App, Web API, daemon application like a windows service)
+In general, the way to acquire a token is different depending on if the application is a public client application (Desktop / Mobile) or a confidential client application (Web App, Web API, daemon application like a windows service)
 
 ## Token caching
 
@@ -35,11 +35,11 @@ In the case of UWP, Xamarin iOS and Xamarin Android, the token cache serializati
 #### Flows
 
 - will often [acquire token interactively](./desktop-mobile/acquiring-tokens-interactively.md), having the user sign-in.
-  > Remember that this is not possible yet in .NET Core as .NET core does not provide UI capabilities and this is required for interactive authentication 
+  > Remember that this is not possible yet in .NET Core as .NET core does not provide UI capabilities and this is required for interactive authentication. 
 - But it's also possible for a desktop application running on a Windows machine which is joined to a domain or to Azure AD, to [get a token silently for the user signed-in on the machine](./desktop-mobile/integrated-windows-authentication.md), leveraging Integrated Windows Authentication (IWA/Kerberos). 
 - On .NET framework desktop client applications , it's also possible (but not recommended) to [get a token with a username and password](./desktop-mobile/username-password-authentication.md) (U/P).
-  > Note that you should not use username/password in confidential client applications
-- Finally, for applications running on devices which don't have a Web browser, it's possible to acquire a token through the [device code flow](./desktop-mobile/device-code-flow.md) mechanism, which provides the user with a URL and a code. The user goes to a web browser on another device, enters the code and signs-in, which has Azure AD get them a token back on the browser-less device.
+  > Note that you should not use username/password in confidential client applications.
+- Finally, for applications running on devices which don't have a Web browser, it's possible to acquire a token through the [device code flow](./desktop-mobile/device-code-flow.md) mechanism, which provides the user with a URL and a code. The user goes to a web browser on another device, enters the code and signs-in, which has Azure AD to get them a token back on the browser-less device.
 
 #### Summary
 
@@ -96,7 +96,7 @@ In all cases above, methods to acquire tokens return an `AuthenticationResult` (
 
 In MSAL.NET, AuthenticationResult exposes:
 
-- `AccessToken` for the Web API to access resources. This is a string, usually a base64 encoded JWT but the client should never look inside the access token. The format isn't guaranteed to remain stable and it can be encrypted for the resource. People writing code depending on access token content on the client is one of the biggest sources of errors and client logic breaks 
+- `AccessToken` for the Web API to access resources. This is a string, usually a base64 encoded JWT but the client should never look inside the access token. The format isn't guaranteed to remain stable, and it can be encrypted for the resource. People writing code depending on access token content on the client is one of the biggest sources of errors and client logic breaks 
 - `IdToken` for the user (this is a JWT)
 - `ExpiresOn` tells the date/time when the token expires
 - `TenantId` contains the tenant in which the user was found. Note that in the case of guest users (Azure AD B2B scenarios), the TenantId is the guest tenant, not the unique tenant.
