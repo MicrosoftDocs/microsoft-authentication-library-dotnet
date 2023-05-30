@@ -18,6 +18,15 @@ A common challenge for developers is the management of secrets, credentials, cer
 
 For a complete list, refer to [Azure services that can use managed identities to access other services](/azure/active-directory/managed-identities-azure-resources/managed-identities-status).
 
+## Which SDK to use - Azure SDK or MSAL?
+
+Both MSAL.NET and Azure SDK allow to acquire tokens via Managed Identity. Internally, Azure SDK uses MSAL.NET, and it provides a higher level API via its [DefaultAzureCredential](https://learn.microsoft.com/dotnet/api/overview/azure/identity-readme?view=azure-dotnet#defaultazurecredential) abstraction. 
+
+If your application already uses one of the SDKs, continue using the same SDK. If you are writing a new application, use Azure SDK if you plan to call other Azure resources, as the SDK integrates better. Consider using MSAL if you need to call other downstream web APIs like Microsoft Graph or your own web api. 
+
+>[!Note] 
+>[Microsoft.Identity.Web](https://github.com/AzureAD/microsoft-identity-web) is a higher level API that offers integration with ASP.NET Core and ASP.NET Classic. Internally it uses MSAL. 
+
 ## Quick start
 
 To quickly get started and see Azure Managed Identity in action, you can use one of the samples the team built for this purpose:
