@@ -31,7 +31,7 @@ With the exception of [User-agent based client](/azure/active-directory/develop/
 
 For more details about the supported scenarios, see [Scenarios](./getting-started/scenarios.md).
 
-MSAL.NET supports multiple platforms, including .NET Framework, [.NET Core](https://www.microsoft.com/net/learn/get-started/windows)(including .NET 6), [MAUI](https://dotnet.microsoft.com/en-us/apps/maui), [Xamarin](https://www.xamarin.com/) Android, Xamarin iOS, and [UWP](/windows/uwp/get-started/universal-application-platform-guide).
+MSAL.NET supports multiple platforms, including .NET Framework, [.NET Core](https://www.microsoft.com/net/learn/get-started/windows)(including .NET 6), [MAUI](https://dotnet.microsoft.com/apps/maui), [Xamarin](https://www.xamarin.com/) Android, Xamarin iOS, and [UWP](/windows/uwp/get-started/universal-application-platform-guide).
 
   > [!NOTE]
   > Not all the authentication features are available in all platforms, mostly because:
