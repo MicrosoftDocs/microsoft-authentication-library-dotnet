@@ -51,7 +51,7 @@ You're building a confidential client application (Web app, web API, daemon/serv
   - generates WWW-authenticate headers in APIs (CA, CAE)
   - Protect gRPC services and Azure functions
 - Web app/API calling downstream APIs (including graph except for B2C)
-  - Call downstream APIs without having to manage authentication/tokens yourself.
+  - Call downstream APIs without having to manage authentication and tokens yourself.
   - Integrates with the graph SDK, and the Azure SDKs
   - Describe the client credentials, and Microsoft.Identity.Web fetches them for you (for
     instance certificates from Key Vault, or [workload identity federation](https://learn.microsoft.com/azure/active-directory/workload-identities/workload-identity-federation) with [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/products/kubernetes-service) and [Managed Identities](https://learn.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview))
