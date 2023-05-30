@@ -27,7 +27,7 @@ Both MSAL.NET and [Azure SDK](/dotnet/api/overview/azure/identity-readme?view=az
 If your application already uses one of the SDKs, continue using the same SDK. If you are writing a new application, use Azure SDK if you plan to call other Azure resources, as the SDK integrates better and provides a good developer experience by allowing the app to be ran on developer private machines where Managed Identity doesn't exist. Consider using MSAL if you need to call other downstream web APIs like Microsoft Graph or your own web api. 
 
 >[!Note] 
->[Microsoft.Identity.Web](https://github.com/AzureAD/microsoft-identity-web) is a higher level API that offers integration with ASP.NET Core and ASP.NET Classic. It supports Managed Identity as well. Internally it uses MSAL. 
+[Microsoft.Identity.Web](https://github.com/AzureAD/microsoft-identity-web) is a higher-level API that offers integration with ASP.NET Core and ASP.NET Classic, while using MSAL under the hood. The library also supports Managed Identity.
 
 ## Quick start
 
