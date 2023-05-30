@@ -54,7 +54,7 @@ You're building a confidential client application (Web app, web API, daemon/serv
   - Call downstream APIs without having to manage authentication/tokens yourself.
   - Integrates with the graph SDK, and the Azure SDKs
   - Describe the client credentials, and Microsoft.Identity.Web fetches them for you (for
-    instance certificates from Key Vault, or workload identity federation with [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/products/kubernetes-service) and [Managed Identities](https://learn.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview))
+    instance certificates from Key Vault, or [workload identity federation](https://learn.microsoft.com/azure/active-directory/workload-identities/workload-identity-federation) with [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/products/kubernetes-service) and [Managed Identities](https://learn.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview))
 - Supports multiple Authentication schemes in ASP.NET Core
 - Supports Proof of possession protocol 
 - Resilient (supports regional token acquisition and  routing hint for the token backup system)
