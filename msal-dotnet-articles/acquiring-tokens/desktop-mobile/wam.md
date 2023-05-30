@@ -5,24 +5,24 @@ description: "MSAL is able to call Web Account Manager (WAM), a Windows 10+ comp
 
 # Using MSAL.NET with Web Account Manager (WAM)
 
-MSAL is able to call Web Account Manager (WAM), a Windows 10+ component that ships with the OS. This component acts as an authentication broker allowing the users of your app benefit from integration with accounts known to Windows, such as the account you signed into your Windows session.
+MSAL is able to call Web Account Manager (WAM), a Windows 10+ component that ships with the OS. This component acts as an authentication broker allowing the users of your app  to benefit from integration with accounts known to Windows, such as the account you signed into your Windows session.
 
 ## What is a broker
 
-An authentication broker is an application that runs on a user’s machine that handles the authentication handshakes and token maintenance for connected accounts. As its authentication broker, the Windows operating system uses the Web Account Manager (WAM). It has many benefits for developers and customers alike including
+An authentication broker is an application that runs on a user’s machine that manages the authentication handshakes and token maintenance for connected accounts. Windows operating system uses the Web Account Manager (WAM) as its authentication broker. It has many benefits for developers and customers alike including.
 
 - **Enhanced security.** The client application does not need to manage the refresh token which can be used to obtain new authentication tokens without the user consent.
 - **Feature support.** With the help of the broker developers can access rich OS and service capabilities such as Windows Hello, conditional access policies, and FIDO keys without writing extra scaffolding code.
 - **System integration.** Applications that use the broker plug-and-play with the built-in account picker, allowing the user to quickly pick an existing account instead of reentering the same credentials over and over.
 
-With the help of a broker you need to write less code to handle token-related logic while also being able to use more advanced functionality, such as [Proof-of-Possession tokens](../../advanced/proof-of-possession-tokens.md). Moving forward, our team is continuing to invest in making sure that brokers are the de-facto approach to authenticate with MSAL-based applications, where possible.
+With the help of a broker you need to write less code to handle token-related logic while also being able to use more advanced functionality, such as [Proof-of-Possession tokens](../../advanced/proof-of-possession-tokens.md). Moving forward, our team is continuing to invest in making sure that brokers are the de facto approach to authenticate with MSAL-based applications, where possible.
 
 ## Improved Windows broker experience
 
 Recently, an updated authentication broker experience was made available for Windows systems. The new broker is written in C++, is well tested, and is significantly more performant and secure. One of the biggest consumers of the new broker experience is the Microsoft 365 suite of apps.
 
 > [!IMPORTANT]
-> With the introduction of the updated broker, we’ve also updated MSAL.NET to expose its capabilities under a simplified API. Starting with version 4.52.0, the improved broker experience in MSAL.NET will replace the existing broker flows by default.
+> With the introduction of the updated broker, we have also updated MSAL.NET to expose its capabilities under a simplified API. Starting with version 4.52.0, the improved broker experience in MSAL.NET will replace the existing broker flows by default.
 
 The improved WAM broker fixes a number of issues with the legacy WAM implementation and provides other benefits:
 
@@ -107,7 +107,7 @@ ms-appx-web://microsoft.aad.brokerplugin/{client_id}
 
 ## Username/password flow
 
-This flow is not recommended except in test scenarios or in scenarios where service principal access to a resource gives it too much access and you can only scope it down with user flows. When using WAM, `AcquireTokenByUsernamePassword` will let WAM handle the protocol and fetch tokens.
+This flow is not recommended except in test scenarios or in scenarios where service principal access to a resource gives it too much access and you can only scope it down with user flows. When using WAM, `AcquireTokenByUsernamePassword` will let WAM manage the protocol and fetch tokens.
 
 ## WAM limitations
 
