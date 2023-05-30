@@ -9,6 +9,7 @@
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
     <AssemblyVersion>3.1.0.0</AssemblyVersion>
     <AssemblyVersion>3.2.0.0</AssemblyVersion>
+    <AssemblyVersion>3.2.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -33,6 +34,7 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="accessToken" Type="System.String" />
@@ -69,6 +71,7 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -95,13 +98,15 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Guid</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the correlation id used for the request.
+            Gets the correlation id used for the request. If provided in <see cref="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.CorrelationId" />, this
+            will be the same, otherwise a new one will be created by the token acquirer.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -119,6 +124,7 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DateTimeOffset</ReturnType>
@@ -145,6 +151,7 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -169,6 +176,7 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
@@ -194,13 +202,14 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-             (Microsoft Identity specific) In the case of Azure AD or Azure AD B2C, 
+             (Microsoft Identity specific) In the case of Azure AD, Azure AD B2C, or Microsoft Entra External IDs, 
              gets an identifier for the tenant for which the token was acquired.
              This property will be null if tenant information is not returned by the service or the service
              is not Azure AD.
@@ -221,13 +230,14 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the access token type (Bearer or Pop).
+            Gets the protocol (Bearer or Pop).
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>

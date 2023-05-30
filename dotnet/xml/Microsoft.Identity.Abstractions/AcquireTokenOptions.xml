@@ -9,6 +9,7 @@
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
     <AssemblyVersion>3.1.0.0</AssemblyVersion>
     <AssemblyVersion>3.2.0.0</AssemblyVersion>
+    <AssemblyVersion>3.2.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -16,7 +17,8 @@
   <Interfaces />
   <Docs>
     <summary>
-            Options directing the token acquisition.
+            Options directing the token acquisition. These options are provided to the <see cref="T:Microsoft.Identity.Abstractions.ITokenAcquirer" /> methods, or
+            part of the <see cref="T:Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions" />, or <see cref="T:Microsoft.Identity.Abstractions.DownstreamApiOptions" />.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -32,11 +34,12 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
         <summary>
-            constructor.
+            Default constructor.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -53,6 +56,7 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="other" Type="Microsoft.Identity.Abstractions.AcquireTokenOptions" />
@@ -76,15 +80,16 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the parameters describing the confidential client application (ClientId,
-            Region, Authority, client credentials) from a particular 
-            (ASP.NET Core) authentication scheme / settings.
+            Gets the name of the options describing the confidential client application (ClientId,
+            Region, Authority, client credentials). In ASP.NET Core, the authenticatiopn options name 
+            is the same as the authentication scheme.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -102,6 +107,7 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -110,7 +116,8 @@
         <summary>
             A string with one or multiple claims to request. It's a json blob (encoded or not)
             Normally used with Conditional Access. It receives the Claims member of the UiRequiredException.
-            </summary>
+            It can also be used to request specific optional claims, and for 
+            <see href="https://learn.microsoft.com/en-us/azure/active-directory/conditional-access/concept-conditional-access-cloud-apps">CA Auth context</see></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -127,6 +134,7 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Abstractions.AcquireTokenOptions</ReturnType>
@@ -152,6 +160,7 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Guid&gt;</ReturnType>
@@ -176,6 +185,7 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
@@ -198,6 +208,7 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
@@ -223,6 +234,7 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -251,6 +263,7 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -280,6 +293,7 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -304,6 +318,7 @@
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -328,6 +343,7 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -355,6 +371,7 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -382,6 +399,7 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>

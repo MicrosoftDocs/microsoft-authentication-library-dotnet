@@ -9,6 +9,7 @@
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
     <AssemblyVersion>3.1.0.0</AssemblyVersion>
     <AssemblyVersion>3.2.0.0</AssemblyVersion>
+    <AssemblyVersion>3.2.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions</BaseTypeName>
@@ -19,6 +20,37 @@
             Options passed-in to call downstream web APIs.
             </summary>
     <remarks>To be added.</remarks>
+    <example>
+      <format type="text/markdown"><![CDATA[
+            Here is an example of a configuration of a downstream API that would retrieve
+            the user profile (it's illustrated with Microsoft Graph as this is a well-known API, but of course
+            to effectively call Microsoft graph, rather use Microsoft.Identity.Web.MicrosoftGraph)
+            
+            ```json
+             "DownstreamApis": [
+                "MyProfile": {
+                   "BaseUrl": "https://graph.microsoft.com/v1.0",
+                   "RelativePath": "/me/profile",
+                    "Scopes": [ "user.read"]
+                }
+              ]
+            ```
+            
+            The following describes a downstream web API called on behalf of the application itself (application token)
+            and using the Pop protocol:
+            ```json
+             "DownstreamApis": [
+                "AllBooks": {
+                   "BaseUrl": "https://mylibrary.com",
+                   "RelativePath": "/books/all",
+                   "RequestAppToken": true,
+                   "ProtocolScheme": "Pop",
+                    "Scopes": ["https://mylibrary.com/.default"]
+                }
+              ]
+            ```
+            ]]></format>
+    </example>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -32,6 +64,7 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -53,6 +86,7 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="other" Type="Microsoft.Identity.Abstractions.DownstreamApiOptions" />
@@ -77,6 +111,7 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Abstractions.DownstreamApiOptions</ReturnType>
@@ -102,6 +137,7 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions</ReturnType>
@@ -126,6 +162,7 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Func&lt;System.Net.Http.HttpContent,System.Object&gt;</ReturnType>
@@ -136,7 +173,7 @@
             When not provided, the following is returned:
             <code>JsonSerializer.Deserialize&lt;TOutput&gt;(content, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });</code></summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>This property cannot be set in the configuration. It's code only.</remarks>
       </Docs>
     </Member>
     <Member MemberName="Scopes">
@@ -151,6 +188,7 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
@@ -179,6 +217,7 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Func&lt;System.Object,System.Net.Http.HttpContent&gt;</ReturnType>
@@ -193,7 +232,7 @@
             new StringContent(JsonSerializer.Serialize(input), Encoding.UTF8, "application/json")
             </code></description></item></list></summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>This property cannot be set in the configuration. It's code only.</remarks>
       </Docs>
     </Member>
   </Members>
