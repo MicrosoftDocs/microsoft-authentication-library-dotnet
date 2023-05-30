@@ -101,7 +101,7 @@ They are not available on the mobile platforms, because the OAuth2 spec states t
 
 - Xamarin.Android / MAUI Android
 - Xamarin.iOS / MAUI iOS
-- UWP / WINUI
+- UWP and WinUI
 
 ## Migration from Azure Active Directory Authentication Library (ADAL)
 
