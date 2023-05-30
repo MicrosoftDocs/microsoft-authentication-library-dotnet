@@ -24,7 +24,7 @@ MSAL libraries provide lower level APIs that are closer to the OAuth2 and OIDC p
 
 Both MSAL.NET and [Azure SDK](/dotnet/api/overview/azure/identity-readme?view=azure-dotnet&preserve-view=true) allow to acquire tokens via Managed Identity. Internally, Azure SDK uses MSAL.NET, and it provides a higher-level API via its `DefaultAzureCredential` and `ManagedIdentityCredential` abstractions. 
 
-If your application already uses one of the SDKs, continue using the same SDK. If you are writing a new application, use Azure SDK if you plan to call other Azure resources, as the SDK integrates better and provides a good developer experience by allowing the app to be ran on developer private machines where Managed Identity doesn't exist. Consider using MSAL if you need to call other downstream web APIs like Microsoft Graph or your own web api. 
+If your application already uses one of the SDKs, continue using the same SDK. Use Azure SDK, if you are writing a new application and plan to call other Azure resources, as this SDK provides a better developer experience by allowing the app to run on private developer machines where managed identity doesn't exist. Consider using MSAL if you need to call other downstream web APIs like Microsoft Graph or your own web API. 
 
 >[!Note] 
 [Microsoft.Identity.Web](https://github.com/AzureAD/microsoft-identity-web) is a higher-level API that offers integration with ASP.NET Core and ASP.NET Classic, while using MSAL under the hood. The library also supports Managed Identity.
