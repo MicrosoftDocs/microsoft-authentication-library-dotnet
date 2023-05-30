@@ -20,7 +20,7 @@ For a complete list, refer to [Azure services that can use managed identities to
 
 ## Which SDK to use - Azure SDK or MSAL?
 
-MSAL libraries provide lower level APIs that are closer to the OAuth2 / OIDC protocols. 
+MSAL libraries provide lower level APIs that are closer to the OAuth2 and OIDC protocols. 
 
 Both MSAL.NET and [Azure SDK](/dotnet/api/overview/azure/identity-readme?view=azure-dotnet&preserve-view=true) allow to acquire tokens via Managed Identity. Internally, Azure SDK uses MSAL.NET, and it provides a higher-level API via its `DefaultAzureCredential` and `ManagedIdentityCredential` abstractions. 
 
