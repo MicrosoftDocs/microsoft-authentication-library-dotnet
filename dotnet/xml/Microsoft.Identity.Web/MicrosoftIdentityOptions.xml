@@ -1,6 +1,6 @@
 <Type Name="MicrosoftIdentityOptions" FullName="Microsoft.Identity.Web.MicrosoftIdentityOptions">
-  <TypeSignature Language="C#" Value="public class MicrosoftIdentityOptions : Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectOptions" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MicrosoftIdentityOptions extends Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectOptions" />
+  <TypeSignature Language="C#" Value="public class MicrosoftIdentityOptions : Microsoft.Identity.Web.OpenIdConnectOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MicrosoftIdentityOptions extends Microsoft.Identity.Web.OpenIdConnectOptions" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Web.MicrosoftIdentityOptions" />
   <TypeSignature Language="VB.NET" Value="Public Class MicrosoftIdentityOptions&#xA;Inherits OpenIdConnectOptions" />
   <TypeSignature Language="F#" Value="type MicrosoftIdentityOptions = class&#xA;    inherit OpenIdConnectOptions" />
@@ -14,7 +14,7 @@
     <AssemblyVersion>2.11.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
-    <BaseTypeName>Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectOptions</BaseTypeName>
+    <BaseTypeName>Microsoft.Identity.Web.OpenIdConnectOptions</BaseTypeName>
   </Base>
   <Interfaces />
   <Docs>
@@ -249,11 +249,11 @@
       </Docs>
     </Member>
     <Member MemberName="ErrorPath">
-      <MemberSignature Language="C#" Value="public Microsoft.AspNetCore.Http.PathString? ErrorPath { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype Microsoft.AspNetCore.Http.PathString&gt; ErrorPath" />
+      <MemberSignature Language="C#" Value="public string? ErrorPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ErrorPath" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Web.MicrosoftIdentityOptions.ErrorPath" />
-      <MemberSignature Language="VB.NET" Value="Public Property ErrorPath As Nullable(Of PathString)" />
-      <MemberSignature Language="F#" Value="member this.ErrorPath : Nullable&lt;Microsoft.AspNetCore.Http.PathString&gt; with get, set" Usage="Microsoft.Identity.Web.MicrosoftIdentityOptions.ErrorPath" />
+      <MemberSignature Language="VB.NET" Value="Public Property ErrorPath As String" />
+      <MemberSignature Language="F#" Value="member this.ErrorPath : string with get, set" Usage="Microsoft.Identity.Web.MicrosoftIdentityOptions.ErrorPath" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
@@ -265,7 +265,7 @@
         <AssemblyVersion>2.11.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>System.Nullable&lt;Microsoft.AspNetCore.Http.PathString&gt;</ReturnType>
+        <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
@@ -360,11 +360,11 @@
       </Docs>
     </Member>
     <Member MemberName="ResetPasswordPath">
-      <MemberSignature Language="C#" Value="public Microsoft.AspNetCore.Http.PathString? ResetPasswordPath { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype Microsoft.AspNetCore.Http.PathString&gt; ResetPasswordPath" />
+      <MemberSignature Language="C#" Value="public string? ResetPasswordPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ResetPasswordPath" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Web.MicrosoftIdentityOptions.ResetPasswordPath" />
-      <MemberSignature Language="VB.NET" Value="Public Property ResetPasswordPath As Nullable(Of PathString)" />
-      <MemberSignature Language="F#" Value="member this.ResetPasswordPath : Nullable&lt;Microsoft.AspNetCore.Http.PathString&gt; with get, set" Usage="Microsoft.Identity.Web.MicrosoftIdentityOptions.ResetPasswordPath" />
+      <MemberSignature Language="VB.NET" Value="Public Property ResetPasswordPath As String" />
+      <MemberSignature Language="F#" Value="member this.ResetPasswordPath : string with get, set" Usage="Microsoft.Identity.Web.MicrosoftIdentityOptions.ResetPasswordPath" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
@@ -376,7 +376,7 @@
         <AssemblyVersion>2.11.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>System.Nullable&lt;Microsoft.AspNetCore.Http.PathString&gt;</ReturnType>
+        <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>

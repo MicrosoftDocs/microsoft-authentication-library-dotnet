@@ -9,6 +9,7 @@
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
     <AssemblyVersion>3.1.0.0</AssemblyVersion>
     <AssemblyVersion>3.2.0.0</AssemblyVersion>
+    <AssemblyVersion>3.2.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -19,7 +20,8 @@
             Options for configuring authentication in a web app, web API or daemon app.
             <para>
             This class contains configuration properties for any OAuth 2.0 identity provider.
-            For Azure AD specific options see the derived class: <see cref="T:Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions" />.
+            For Azure AD specific options see the derived class: <see cref="T:Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions" />. This class
+            and its derived class are usually used as options, that are deserialized from a configuration file like appsettings.json
             </para></summary>
     <remarks>To be added.</remarks>
     <example />
@@ -36,6 +38,7 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -55,14 +58,17 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Web APIs called by daemon applications can validate a token based on roles (representing app permissions), 
-            or using the ACL-based authorization pattern for the client (daemon) to the web API. If using ACL-based authorization,
+            Web APIs called on behalf of a user can validate a token based on scopes (representing delegated permissions).
+            Web APIs called by daemon applications can validate a token based on roles (representing app permissions).
+            By default, the web API will validate the presence of roles and scopes. You can set this property to <c>false</c> to
+            use the ACL-based authorization pattern for the client (daemon) to the web API. If using ACL-based authorization,
             the implementation will not throw if roles or scopes are not in the Claims.
             For details see https://aka.ms/ms-identity-web/daemon-ACL.
             </summary>
@@ -83,6 +89,7 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -92,7 +99,8 @@
             In a web API, audience of the tokens that will be accepted by the web API.
             <para>If your web API accepts several audiences, see <see cref="P:Microsoft.Identity.Abstractions.IdentityApplicationOptions.Audiences" />.</para></summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>If both Audience and <see cref="P:Microsoft.Identity.Abstractions.IdentityApplicationOptions.Audiences" />, are expressed, the effective audiences is the
+            union of these properties.</remarks>
       </Docs>
     </Member>
     <Member MemberName="Audiences">
@@ -107,6 +115,7 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
@@ -114,9 +123,29 @@
       <Docs>
         <summary>
             In a web API, accepted audiences for the tokens received by the web API.
-            <para>See also <see cref="P:Microsoft.Identity.Abstractions.IdentityApplicationOptions.Audience" />.</para></summary>
+            <para>See also <see cref="P:Microsoft.Identity.Abstractions.IdentityApplicationOptions.Audience" />.</para>
+            The audience is the intended recipient of the token. You can usually assume that the ApplicationId of your web API
+            is a valid audience. It can, in general be any of the App ID URIs (or resource identitfier) you defined for your application
+            during its registration in the Azure portal.
+            </summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>If both Audiences and <see cref="P:Microsoft.Identity.Abstractions.IdentityApplicationOptions.Audience" />, are expressed, the effective audiences is the
+            union of these properties.</remarks>
+        <example>
+          <format type="text/markdown"><![CDATA[
+            Here is an example of client credentials in the AzureAd section of the *appsetting.json*. The app will try to use
+            workload identity federation from Managed identity (when setup and deployed in Azure), and otherwise, will use a certificate
+            from Key Vault, and otherwise, will use a client secret.
+            ```json
+             "Audiences": [
+               "api://a88bb933-319c-41b5-9f04-eff36d985612",
+               "a88bb933-319c-41b5-9f04-eff36d985612",
+               "https://mydomain.com/myapp"
+             ]
+            ```
+              See also https://aka.ms/ms-id-web-certificates.
+            ]]></format>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="Authority">
@@ -131,6 +160,7 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -139,14 +169,16 @@
         <summary>
             Gets or sets the authority to use when calling the identity provider. 
             For AzureAD or Azure AD B2C, rather use <see cref="P:Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions.Instance" />
-            and <see cref="P:Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions.TenantId" /></summary>
+            and <see cref="P:Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions.TenantId" />. For Microsoft Entra External IDs, use
+            the authority of the form <c>https://subdomain.ciamlogin.com</c>.
+            </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
         <example>
           <code>
-            AuthenticationOptions options = new 
+            IdentityApplicationOptions options = new 
             {
-             Authority = "https://login.microsoftonline.com/common/"
+             Authority = "https://subdomain.ciamlogin.com"
             };
             </code>
         </example>
@@ -164,29 +196,43 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.Identity.Abstractions.CredentialDescription&gt;</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Description of the client credentials provided to prove the identity of the web app,
-            web API, or daemon app.
+            Description of the client credentials that the app provides to prove its identity to the IdP,
+            See <see cref="T:Microsoft.Identity.Abstractions.CredentialSource" /> for the list of supported credential types.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
-        <example> An example in the appsetting.json:
-            <code>
-            "ClientCredentials": [
+        <example>
+          <format type="text/markdown"><![CDATA[
+            Here is an example of client credentials in the AzureAd section of the *appsetting.json*. The app will try to use
+            workload identity federation from Managed identity (when setup and deployed in Azure), and otherwise, will use a certificate
+            from Key Vault, and otherwise, will use a client secret.
+            ```json
+             "ClientCredentials": [
               {
-                "SourceType": "StoreWithDistinguishedName",
-                 "CertificateStorePath": "CurrentUser/My",
-                 "CertificateDistinguishedName": "CN=WebAppCallingWebApiCert"
-                }
-               ]
-              </code>
+               "SourceType": "SignedAssertionFromManagedIdentity",
+               "ManagedIdentityClientId": "Optional GUID of user assigned Managed identity"
+              },
+              {
+               "SourceType": "KeyVault",
+               "KeyVaultUrl": "https://webappsapistests.vault.azure.net",
+               "KeyVaultCertificateName": "Self-Signed-5-5-22"
+              },
+              {
+               "SourceType": "ClientSecret",
+               "ClientSecret": "***"
+              }
+             ]
+            ```
               See also https://aka.ms/ms-id-web-certificates.
-              </example>
+            ]]></format>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="ClientId">
@@ -201,6 +247,7 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -226,6 +273,7 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -252,13 +300,15 @@
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Sets query parameters for the query string in the HTTP request to the IdP.
+            Sets query parameters for the query string in the HTTP request to the IdP. This parameter is useful
+            if you want to send the request to a specific test slice, or a particular dc.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -276,6 +326,7 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.Identity.Abstractions.CredentialDescription&gt;</ReturnType>
@@ -287,8 +338,11 @@
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
-        <example> An example in the appsetting.json:
-            <code>
+        <example>
+          <format type="text/markdown"><![CDATA[
+            Here is how to specify a decrypt certificate read from the certificate store:
+            
+            ```json
             "TokenDecryptionCredentials": [
               {
                 "SourceType": "StoreWithDistinguishedName",
@@ -296,9 +350,10 @@
                  "CertificateDistinguishedName": "CN=WebAppCallingWebApiCert"
                 }
                ]
-              </code>
+            ```   
               See also https://aka.ms/ms-id-web-certificates.
-              </example>
+            ]]></format>
+        </example>
       </Docs>
     </Member>
   </Members>
