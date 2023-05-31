@@ -20,7 +20,7 @@ ms.custom: devx-track-csharp, aaddev, engagement-fy23
 
 As explained in [Scenarios](../getting-started/scenarios.md), there are many ways of acquiring a token.  Some require user interactions through a web browser. Some don't require any user interactions.
 
-In general, the way to acquire a token is different depending on if the application is a public client application (Desktop / Mobile) or a confidential client application (Web App, Web API, daemon application like a windows service)
+In general, the way to acquire a token is different depending on if the application is a public client application (desktop or mobile) or a confidential client application (web app, web API, or daemon application like a Windows service)
 
 ## Token caching
 
