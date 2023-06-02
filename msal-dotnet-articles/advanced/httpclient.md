@@ -1,20 +1,21 @@
 ---
 title: Providing your own HttpClient, supporting HTTP proxies, and customization of user agent headers
+description: 
 ---
 
 # Providing your own HttpClient, supporting HTTP proxies, and customization of user agent headers
 
-There are cases where developers want fine grained control on the HttpClient, such as configuring a proxy or using ASP.NET Core's efficient ways of pooling the HttpClient see - [HttpClientFactory to implement resilient HTTP requests](/dotnet/standard/microservices-architecture/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests)). To do this, implement `IMsalHttpClientFactory` - which MSAL will then use to get an HttpClient for each HTTP request.
+There are cases where developers want fine-grained control of the `HttpClient` instance, such as configuring a proxy or using ASP.NET Core's efficient ways of pooling the `HttpClient`. You can read more in the [HttpClientFactory to implement resilient HTTP requests](/dotnet/standard/microservices-architecture/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests) document. To customize `HttpClient`, developers will need to implement `IMsalHttpClientFactory`, which MSAL will then use to get a `HttpClient` for each HTTP request.
 
-## IMsalHttpClientFactory implementation guide
+## IMsalHttpClientFactory implementation guidelines
 
-- See [HttpClient Instancing docs](dotnet/api/system.net.http.httpclient#instancing) for examples of scalable .NET factories which can be adapted for this interface, such as [ASP.NET Core's IHttpClientFactory](/aspnet/core/fundamentals/http-requests)
-- Implementations must be thread safe
-- Do not create a new HttpClient in `GetHttpClient`, as this will lead to port exhaustion
-- MSAL will not call Dispose() on the HttpClient
-- If your app uses Integrated Windows Authentication, ensure <see cref="HttpClientHandler.UseDefaultCredentials"/> is set to true
+- See <xref:System.Net.Http.HttpClient?displayProperty=fullName> for examples of scalable .NET factories which can be adapted for this interface, such as [ASP.NET Core's `IHttpClientFactory`](/aspnet/core/fundamentals/http-requests).
+- Implementations must be thread-safe.
+- Do not create a new `HttpClient` in `GetHttpClient`, as this will lead to port exhaustion.
+- MSAL will not call `Dispose()` on the `HttpClient`.
+- If your app uses [Integrated Windows Authentication](../acquiring-tokens/desktop-mobile/integrated-windows-authentication.md), ensure <xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials?displayProperty=fullName> is set to `true`.
 
-## Example implementation 
+## Example implementation
 
 ```csharp
 IMsalHttpClientFactory httpClientFactory = new MyHttpClientFactory();
@@ -27,42 +28,41 @@ var pca = ConfidentialClientApplication.Create("client_id")
 A simple implementation of `IMsalHttpClientFactory`
 
 ```csharp
+public class StaticClientWithProxyFactory : IMsalHttpClientFactory
+{
+    private static readonly HttpClient s_httpClient;
 
-    public class StaticClientWithProxyFactory : IMsalHttpClientFactory
+    static StaticClientWithProxyFactory()
     {
-        private static readonly HttpClient s_httpClient;
+        var webProxy = new WebProxy(
+            new Uri("http://my.proxy"),
+            BypassOnLocal: false);
 
-        static StaticClientWithProxyFactory()
+        webProxy.Credentials = new NetworkCredential("user", "pass");
+
+        var proxyHttpClientHandler = new HttpClientHandler
         {
-            var webProxy = new WebProxy(
-                new Uri("http://my.proxy"),
-                BypassOnLocal: false);
+            Proxy = webProxy,
+            UseProxy = true,
+        };
 
-            webProxy.Credentials = new NetworkCredential("user", "pass");
-
-            var proxyHttpClientHandler = new HttpClientHandler
-            {
-                Proxy = webProxy,
-                UseProxy = true,
-            };
-
-            s_httpClient = new HttpClient(proxyHttpClientHandler);
-           
-        }
-
-        public HttpClient GetHttpClient()
-        {
-            return s_httpClient;
-        }
+        s_httpClient = new HttpClient(proxyHttpClientHandler);
+        
     }
 
+    public HttpClient GetHttpClient()
+    {
+        return s_httpClient;
+    }
+}
 ```
 
 ## Troubleshooting
 
 **Problem**: On a desktop application, the authorization experience do not use the HttpClient I defined
 
-**Solution**: 
+**Solution**:
+
 On desktop and mobile apps, MSAL opens a browser and navigates to the authorization URL. It does not use HttpClient
 When using the embedded browser, you can control the proxy for it by following the technique at:  https://blogs.msdn.microsoft.com/jpsanders/2011/04/26/how-to-set-the-proxy-for-the-webbrowser-control-in-net/
 This cannot be achived on .NET Core, where only the system browser is available. MSAL has no control over the system browser.
