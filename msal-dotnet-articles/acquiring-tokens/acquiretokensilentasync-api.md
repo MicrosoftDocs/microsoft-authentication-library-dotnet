@@ -1,14 +1,26 @@
 ---
 title: Understanding the AcquireTokenAsync API
----
+description: Learn how to acquire  tokens silently in public and confidential client applications using MSAL.NET
+author: Dickson-Mwendia
+manager: CelesteDG
 
+ms.service: active-directory
+ms.subservice: develop
+ms.topic: reference
+ms.workload: identity
+ms.date: 03/17/2023
+ms.author: dmwendia
+ms.reviewer: localden
+ms.custom: devx-track-csharp, aaddev, engagement-fy23
+# Customer intent: As an application developer, I want to learn how to acquire tokens silently in public and confidential client applications using MSAL.NET
+---
 # Understanding the `AcquireTokenAsync` API
 
 ## Tokens are cached
 
 ### Public client application
 
-Once MSAL.NET has acquired a user token to call a Web API, it caches it. If you are building a public client application and want to acquire a token, first call `AcquireTokenSilent``, to verify if an acceptable token is in the cache, can be refreshed, or can get derived. If not, call the AcquireToken*ForFlow* method depending on the flow you are interested in.
+Once MSAL.NET has acquired a user token to call a Web API, it caches it. If you are building a public client application and want to acquire a token, first call `AcquireTokenSilent`, to verify if an acceptable token is in the cache, can be refreshed, or can get derived. If not, call the AcquireToken*ForFlow* method depending on the flow you are interested in.
 
 ### Confidential client application
 
