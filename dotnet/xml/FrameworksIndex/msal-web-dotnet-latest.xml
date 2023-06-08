@@ -1,22 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-web-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.IdentityModel.Abstractions" Version="6.30.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.JsonWebTokens" Version="6.30.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.KeyVaultExtensions" Version="6.30.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.Logging" Version="6.30.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.LoggingExtensions" Version="6.30.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.ManagedKeyVaultSecurityKey" Version="6.30.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols" Version="6.30.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="6.30.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.SignedHttpRequest" Version="6.30.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.WsFederation" Version="6.30.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.TestExtensions" Version="6.30.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.Tokens" Version="6.30.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.Tokens.Saml" Version="6.30.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.Validators" Version="6.30.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.Xml" Version="6.30.1.0" />
-    <Assembly Name="System.IdentityModel.Tokens.Jwt" Version="6.30.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.Abstractions" Version="6.31.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.JsonWebTokens" Version="6.31.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.KeyVaultExtensions" Version="6.31.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Logging" Version="6.31.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.LoggingExtensions" Version="6.31.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.ManagedKeyVaultSecurityKey" Version="6.31.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols" Version="6.31.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="6.31.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.SignedHttpRequest" Version="6.31.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.WsFederation" Version="6.31.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.TestExtensions" Version="6.31.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Tokens" Version="6.31.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Tokens.Saml" Version="6.31.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Validators" Version="6.31.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Xml" Version="6.31.0.0" />
+    <Assembly Name="System.IdentityModel.Tokens.Jwt" Version="6.31.0.0" />
   </Assemblies>
   <Namespace Name="Microsoft.IdentityModel.Abstractions">
     <Type Name="Microsoft.IdentityModel.Abstractions.EventLogLevel" Id="T:Microsoft.IdentityModel.Abstractions.EventLogLevel">
@@ -90,10 +90,12 @@
       <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.GetClaim(System.String)" />
       <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.GetHeaderValue``1(System.String)" />
       <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.GetPayloadValue``1(System.String)" />
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ToString" />
       <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.TryGetClaim(System.String,System.Security.Claims.Claim@)" />
       <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.TryGetHeaderValue``1(System.String,``0@)" />
       <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.TryGetPayloadValue``1(System.String,``0@)" />
       <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.TryGetValue``1(System.String,``0@)" />
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.UnsafeToString" />
       <Member Id="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Actor" />
       <Member Id="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Alg" />
       <Member Id="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Audiences" />
@@ -126,6 +128,8 @@
     </Type>
     <Type Name="Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler" Id="T:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler">
       <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.Base64UrlEncodedUnsignedJWSHeader" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.DefaultInboundClaimTypeMap" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.DefaultMapInboundClaims" />
       <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.#ctor" />
       <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CanReadToken(System.String)" />
       <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateClaimsIdentity(Microsoft.IdentityModel.JsonWebTokens.JsonWebToken,Microsoft.IdentityModel.Tokens.TokenValidationParameters)" />
@@ -155,6 +159,9 @@
       <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenAsync(Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.TokenValidationParameters)" />
       <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenAsync(System.String,Microsoft.IdentityModel.Tokens.TokenValidationParameters)" />
       <Member Id="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CanValidateToken" />
+      <Member Id="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.InboundClaimTypeMap" />
+      <Member Id="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.MapInboundClaims" />
+      <Member Id="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ShortClaimTypeProperty" />
       <Member Id="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.TokenType" />
     </Type>
     <Type Name="Microsoft.IdentityModel.JsonWebTokens.JwtConstants" Id="T:Microsoft.IdentityModel.JsonWebTokens.JwtConstants">
@@ -277,6 +284,7 @@
       <Member Id="M:Microsoft.IdentityModel.Logging.IdentityModelEventSource.WriteWarning(System.String,System.Object[])" />
       <Member Id="P:Microsoft.IdentityModel.Logging.IdentityModelEventSource.HeaderWritten" />
       <Member Id="P:Microsoft.IdentityModel.Logging.IdentityModelEventSource.HiddenPIIString" />
+      <Member Id="P:Microsoft.IdentityModel.Logging.IdentityModelEventSource.LogCompleteSecurityArtifact" />
       <Member Id="P:Microsoft.IdentityModel.Logging.IdentityModelEventSource.Logger" />
       <Member Id="P:Microsoft.IdentityModel.Logging.IdentityModelEventSource.LogLevel" />
       <Member Id="P:Microsoft.IdentityModel.Logging.IdentityModelEventSource.ShowPII" />
@@ -286,6 +294,9 @@
       <Member Id="M:Microsoft.IdentityModel.Logging.IdentityModelTelemetryUtil.RemoveTelemetryData(System.String)" />
       <Member Id="P:Microsoft.IdentityModel.Logging.IdentityModelTelemetryUtil.ClientSku" />
       <Member Id="P:Microsoft.IdentityModel.Logging.IdentityModelTelemetryUtil.ClientVer" />
+    </Type>
+    <Type Name="Microsoft.IdentityModel.Logging.ISafeLogSecurityArtifact" Id="T:Microsoft.IdentityModel.Logging.ISafeLogSecurityArtifact">
+      <Member Id="M:Microsoft.IdentityModel.Logging.ISafeLogSecurityArtifact.UnsafeToString" />
     </Type>
     <Type Name="Microsoft.IdentityModel.Logging.LoggerContext" Id="T:Microsoft.IdentityModel.Logging.LoggerContext">
       <Member Id="M:Microsoft.IdentityModel.Logging.LoggerContext.#ctor" />
@@ -322,6 +333,7 @@
       <Member Id="M:Microsoft.IdentityModel.Logging.LogHelper.LogVerbose(System.String,System.Object[])" />
       <Member Id="M:Microsoft.IdentityModel.Logging.LogHelper.LogWarning(System.String,System.Object[])" />
       <Member Id="M:Microsoft.IdentityModel.Logging.LogHelper.MarkAsNonPII(System.Object)" />
+      <Member Id="M:Microsoft.IdentityModel.Logging.LogHelper.MarkAsSecurityArtifact(System.Object,System.Func{System.Object,System.String})" />
       <Member Id="P:Microsoft.IdentityModel.Logging.LogHelper.Logger" />
     </Type>
     <Type Name="Microsoft.IdentityModel.Logging.TextWriterEventListener" Id="T:Microsoft.IdentityModel.Logging.TextWriterEventListener">
@@ -431,6 +443,12 @@
     </Type>
   </Namespace>
   <Namespace Name="Microsoft.IdentityModel.Protocols.Configuration">
+    <Type Name="Microsoft.IdentityModel.Protocols.Configuration.InvalidConfigurationException" Id="T:Microsoft.IdentityModel.Protocols.Configuration.InvalidConfigurationException">
+      <Member Id="M:Microsoft.IdentityModel.Protocols.Configuration.InvalidConfigurationException.#ctor" />
+      <Member Id="M:Microsoft.IdentityModel.Protocols.Configuration.InvalidConfigurationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <Member Id="M:Microsoft.IdentityModel.Protocols.Configuration.InvalidConfigurationException.#ctor(System.String)" />
+      <Member Id="M:Microsoft.IdentityModel.Protocols.Configuration.InvalidConfigurationException.#ctor(System.String,System.Exception)" />
+    </Type>
     <Type Name="Microsoft.IdentityModel.Protocols.Configuration.LastKnownGoodConfigurationCacheOptions" Id="T:Microsoft.IdentityModel.Protocols.Configuration.LastKnownGoodConfigurationCacheOptions">
       <Member Id="F:Microsoft.IdentityModel.Protocols.Configuration.LastKnownGoodConfigurationCacheOptions.DefaultLastKnownGoodConfigurationSizeLimit" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.Configuration.LastKnownGoodConfigurationCacheOptions.#ctor" />
@@ -1323,6 +1341,11 @@
       <Member Id="P:Microsoft.IdentityModel.Tokens.DeflateCompressionProvider.Algorithm" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.DeflateCompressionProvider.CompressionLevel" />
     </Type>
+    <Type Name="Microsoft.IdentityModel.Tokens.EcdhKeyExchangeProvider" Id="T:Microsoft.IdentityModel.Tokens.EcdhKeyExchangeProvider">
+      <Member Id="M:Microsoft.IdentityModel.Tokens.EcdhKeyExchangeProvider.#ctor(Microsoft.IdentityModel.Tokens.SecurityKey,Microsoft.IdentityModel.Tokens.SecurityKey,System.String,System.String)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.EcdhKeyExchangeProvider.GenerateKdf(System.String,System.String)" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.EcdhKeyExchangeProvider.KeyDataLen" />
+    </Type>
     <Type Name="Microsoft.IdentityModel.Tokens.ECDsaSecurityKey" Id="T:Microsoft.IdentityModel.Tokens.ECDsaSecurityKey">
       <Member Id="M:Microsoft.IdentityModel.Tokens.ECDsaSecurityKey.#ctor(System.Security.Cryptography.ECDsa)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.ECDsaSecurityKey.CanComputeJwkThumbprint" />
@@ -1599,12 +1622,19 @@
     </Type>
     <Type Name="Microsoft.IdentityModel.Tokens.SecurityToken" Id="T:Microsoft.IdentityModel.Tokens.SecurityToken">
       <Member Id="M:Microsoft.IdentityModel.Tokens.SecurityToken.#ctor" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.SecurityToken.UnsafeToString" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.SecurityToken.Id" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.SecurityToken.Issuer" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.SecurityToken.SecurityKey" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.SecurityToken.SigningKey" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.SecurityToken.ValidFrom" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.SecurityToken.ValidTo" />
+    </Type>
+    <Type Name="Microsoft.IdentityModel.Tokens.SecurityTokenArgumentException" Id="T:Microsoft.IdentityModel.Tokens.SecurityTokenArgumentException">
+      <Member Id="M:Microsoft.IdentityModel.Tokens.SecurityTokenArgumentException.#ctor" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.SecurityTokenArgumentException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.SecurityTokenArgumentException.#ctor(System.String)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.SecurityTokenArgumentException.#ctor(System.String,System.Exception)" />
     </Type>
     <Type Name="Microsoft.IdentityModel.Tokens.SecurityTokenCompressionFailedException" Id="T:Microsoft.IdentityModel.Tokens.SecurityTokenCompressionFailedException">
       <Member Id="M:Microsoft.IdentityModel.Tokens.SecurityTokenCompressionFailedException.#ctor" />
@@ -1742,6 +1772,12 @@
       <Member Id="M:Microsoft.IdentityModel.Tokens.SecurityTokenKeyWrapException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.SecurityTokenKeyWrapException.#ctor(System.String)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.SecurityTokenKeyWrapException.#ctor(System.String,System.Exception)" />
+    </Type>
+    <Type Name="Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException" Id="T:Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException">
+      <Member Id="M:Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException.#ctor" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException.#ctor(System.String)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException.#ctor(System.String,System.Exception)" />
     </Type>
     <Type Name="Microsoft.IdentityModel.Tokens.SecurityTokenNoExpirationException" Id="T:Microsoft.IdentityModel.Tokens.SecurityTokenNoExpirationException">
       <Member Id="M:Microsoft.IdentityModel.Tokens.SecurityTokenNoExpirationException.#ctor" />
@@ -3294,6 +3330,7 @@
       <Member Id="M:System.IdentityModel.Tokens.Jwt.JwtSecurityToken.#ctor(System.String)" />
       <Member Id="M:System.IdentityModel.Tokens.Jwt.JwtSecurityToken.#ctor(System.String,System.String,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.Nullable{System.DateTime},System.Nullable{System.DateTime},Microsoft.IdentityModel.Tokens.SigningCredentials)" />
       <Member Id="M:System.IdentityModel.Tokens.Jwt.JwtSecurityToken.ToString" />
+      <Member Id="M:System.IdentityModel.Tokens.Jwt.JwtSecurityToken.UnsafeToString" />
       <Member Id="P:System.IdentityModel.Tokens.Jwt.JwtSecurityToken.Actor" />
       <Member Id="P:System.IdentityModel.Tokens.Jwt.JwtSecurityToken.Audiences" />
       <Member Id="P:System.IdentityModel.Tokens.Jwt.JwtSecurityToken.Claims" />
