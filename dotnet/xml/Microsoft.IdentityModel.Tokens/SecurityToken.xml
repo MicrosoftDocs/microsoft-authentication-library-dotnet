@@ -1,9 +1,9 @@
 <Type Name="SecurityToken" FullName="Microsoft.IdentityModel.Tokens.SecurityToken">
-  <TypeSignature Language="C#" Value="public abstract class SecurityToken" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SecurityToken extends System.Object" />
+  <TypeSignature Language="C#" Value="public abstract class SecurityToken : Microsoft.IdentityModel.Logging.ISafeLogSecurityArtifact" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SecurityToken extends System.Object implements class Microsoft.IdentityModel.Logging.ISafeLogSecurityArtifact" />
   <TypeSignature Language="DocId" Value="T:Microsoft.IdentityModel.Tokens.SecurityToken" />
-  <TypeSignature Language="VB.NET" Value="Public MustInherit Class SecurityToken" />
-  <TypeSignature Language="F#" Value="type SecurityToken = class" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class SecurityToken&#xA;Implements ISafeLogSecurityArtifact" />
+  <TypeSignature Language="F#" Value="type SecurityToken = class&#xA;    interface ISafeLogSecurityArtifact" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
     <AssemblyVersion>6.27.0.0</AssemblyVersion>
@@ -11,11 +11,16 @@
     <AssemblyVersion>6.29.0.0</AssemblyVersion>
     <AssemblyVersion>6.30.0.0</AssemblyVersion>
     <AssemblyVersion>6.30.1.0</AssemblyVersion>
+    <AssemblyVersion>6.31.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
-  <Interfaces />
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.IdentityModel.Logging.ISafeLogSecurityArtifact</InterfaceName>
+    </Interface>
+  </Interfaces>
   <Docs>
     <summary>
             Base class for security token.
@@ -36,6 +41,7 @@
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
+        <AssemblyVersion>6.31.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -57,6 +63,7 @@
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
+        <AssemblyVersion>6.31.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -83,6 +90,7 @@
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
+        <AssemblyVersion>6.31.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -109,6 +117,7 @@
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
+        <AssemblyVersion>6.31.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.SecurityKey</ReturnType>
@@ -135,6 +144,7 @@
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
+        <AssemblyVersion>6.31.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.SecurityKey</ReturnType>
@@ -146,6 +156,31 @@
         <value>To be added.</value>
         <remarks>
           <see cref="T:Microsoft.IdentityModel.Tokens.ISecurityTokenValidator" />.ValidateToken(...) can this value when a <see cref="P:Microsoft.IdentityModel.Tokens.SecurityToken.SecurityKey" /> is used to successfully validate a signature.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnsafeToString">
+      <MemberSignature Language="C#" Value="public virtual string UnsafeToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string UnsafeToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.SecurityToken.UnsafeToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function UnsafeToString () As String" />
+      <MemberSignature Language="F#" Value="abstract member UnsafeToString : unit -&gt; string&#xA;override this.UnsafeToString : unit -&gt; string" Usage="securityToken.UnsafeToString " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.IdentityModel.Logging.ISafeLogSecurityArtifact.UnsafeToString</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>6.31.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
       </Docs>
     </Member>
     <Member MemberName="ValidFrom">
@@ -162,6 +197,7 @@
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
+        <AssemblyVersion>6.31.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DateTime</ReturnType>
@@ -188,6 +224,7 @@
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
+        <AssemblyVersion>6.31.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DateTime</ReturnType>

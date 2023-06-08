@@ -2,17 +2,17 @@
 <Framework Name="msal-model-dotnet-latest">
   <Assemblies>
     <Assembly Name="Microsoft.Identity.Abstractions" Version="3.2.1.0" />
-    <Assembly Name="Microsoft.Identity.Web.Certificate" Version="2.11.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="2.11.0.0" />
-    <Assembly Name="Microsoft.Identity.Web" Version="2.11.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.Certificate" Version="2.11.1.0" />
+    <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="2.11.1.0" />
+    <Assembly Name="Microsoft.Identity.Web" Version="2.11.1.0" />
     <Assembly Name="Microsoft.Identity.Web.DownstreamRestApi" Version="2.0.8.0" />
-    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraph" Version="2.11.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraphBeta" Version="2.11.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.OWIN" Version="2.11.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.TokenAcquisition" Version="2.11.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.TokenCache" Version="2.11.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.UI" Version="2.11.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.UI.Views" Version="2.11.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraph" Version="2.11.1.0" />
+    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraphBeta" Version="2.11.1.0" />
+    <Assembly Name="Microsoft.Identity.Web.OWIN" Version="2.11.1.0" />
+    <Assembly Name="Microsoft.Identity.Web.TokenAcquisition" Version="2.11.1.0" />
+    <Assembly Name="Microsoft.Identity.Web.TokenCache" Version="2.11.1.0" />
+    <Assembly Name="Microsoft.Identity.Web.UI" Version="2.11.1.0" />
+    <Assembly Name="Microsoft.Identity.Web.UI.Views" Version="2.11.1.0" />
   </Assemblies>
   <Namespace Name="AspNetCore">
     <Type Name="AspNetCore.Areas_MicrosoftIdentity_Pages__ViewStart" Id="T:AspNetCore.Areas_MicrosoftIdentity_Pages__ViewStart">
@@ -304,8 +304,8 @@
       <Member Id="M:Microsoft.Identity.Web.AzureFunctionsAuthenticationHttpContextExtension.AuthenticateAzureFunctionAsync(Microsoft.AspNetCore.Http.HttpContext)" />
     </Type>
     <Type Name="Microsoft.Identity.Web.AzureIdentityForKubernetesClientAssertion" Id="T:Microsoft.Identity.Web.AzureIdentityForKubernetesClientAssertion">
-      <Member Id="M:Microsoft.Identity.Web.AzureIdentityForKubernetesClientAssertion.#ctor" />
-      <Member Id="M:Microsoft.Identity.Web.AzureIdentityForKubernetesClientAssertion.#ctor(System.String)" />
+      <Member Id="M:Microsoft.Identity.Web.AzureIdentityForKubernetesClientAssertion.#ctor(Microsoft.Extensions.Logging.ILogger)" />
+      <Member Id="M:Microsoft.Identity.Web.AzureIdentityForKubernetesClientAssertion.#ctor(System.String,Microsoft.Extensions.Logging.ILogger)" />
       <Member Id="M:Microsoft.Identity.Web.AzureIdentityForKubernetesClientAssertion.GetClientAssertion(System.Threading.CancellationToken)" />
     </Type>
     <Type Name="Microsoft.Identity.Web.BaseRequestExtensions" Id="T:Microsoft.Identity.Web.BaseRequestExtensions">
@@ -414,6 +414,7 @@
     </Type>
     <Type Name="Microsoft.Identity.Web.DefaultCertificateLoader" Id="T:Microsoft.Identity.Web.DefaultCertificateLoader">
       <Member Id="M:Microsoft.Identity.Web.DefaultCertificateLoader.#ctor" />
+      <Member Id="M:Microsoft.Identity.Web.DefaultCertificateLoader.#ctor(Microsoft.Extensions.Logging.ILogger{Microsoft.Identity.Web.DefaultCertificateLoader})" />
       <Member Id="M:Microsoft.Identity.Web.DefaultCertificateLoader.LoadAllCertificates(System.Collections.Generic.IEnumerable{Microsoft.Identity.Web.CertificateDescription})" />
       <Member Id="M:Microsoft.Identity.Web.DefaultCertificateLoader.LoadFirstCertificate(System.Collections.Generic.IEnumerable{Microsoft.Identity.Web.CertificateDescription})" />
       <Member Id="M:Microsoft.Identity.Web.DefaultCertificateLoader.LoadIfNeeded(Microsoft.Identity.Web.CertificateDescription)" />
@@ -422,6 +423,7 @@
     </Type>
     <Type Name="Microsoft.Identity.Web.DefaultCredentialsLoader" Id="T:Microsoft.Identity.Web.DefaultCredentialsLoader">
       <Member Id="M:Microsoft.Identity.Web.DefaultCredentialsLoader.#ctor" />
+      <Member Id="M:Microsoft.Identity.Web.DefaultCredentialsLoader.#ctor(Microsoft.Extensions.Logging.ILogger{Microsoft.Identity.Web.DefaultCredentialsLoader})" />
       <Member Id="M:Microsoft.Identity.Web.DefaultCredentialsLoader.LoadCredentialsIfNeededAsync(Microsoft.Identity.Abstractions.CredentialDescription,Microsoft.Identity.Abstractions.CredentialSourceLoaderParameters)" />
       <Member Id="M:Microsoft.Identity.Web.DefaultCredentialsLoader.LoadFirstValidCredentialsAsync(System.Collections.Generic.IEnumerable{Microsoft.Identity.Abstractions.CredentialDescription},Microsoft.Identity.Abstractions.CredentialSourceLoaderParameters)" />
       <Member Id="M:Microsoft.Identity.Web.DefaultCredentialsLoader.ResetCredentials(System.Collections.Generic.IEnumerable{Microsoft.Identity.Abstractions.CredentialDescription})" />
