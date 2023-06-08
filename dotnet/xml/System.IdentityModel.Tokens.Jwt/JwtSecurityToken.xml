@@ -11,6 +11,7 @@
     <AssemblyVersion>6.29.0.0</AssemblyVersion>
     <AssemblyVersion>6.30.0.0</AssemblyVersion>
     <AssemblyVersion>6.30.1.0</AssemblyVersion>
+    <AssemblyVersion>6.31.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.IdentityModel.Tokens.SecurityToken</BaseTypeName>
@@ -37,6 +38,7 @@
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
+        <AssemblyVersion>6.31.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="jwtEncodedString" Type="System.String" />
@@ -48,8 +50,9 @@
             </summary>
         <remarks>
             The contents of this <see cref="T:System.IdentityModel.Tokens.Jwt.JwtSecurityToken" /> have not been validated, the JSON Web Token is simply decoded. Validation can be accomplished using <see cref="M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(System.String,Microsoft.IdentityModel.Tokens.TokenValidationParameters,Microsoft.IdentityModel.Tokens.SecurityToken@)" /></remarks>
-        <exception cref="T:System.ArgumentNullException">'jwtEncodedString' is null.</exception>
         <exception cref="T:System.ArgumentException">'jwtEncodedString' is not in JWS Compact serialized format.</exception>
+        <exception cref="T:System.ArgumentNullException">'jwtEncodedString' is null or contains only whitespace.</exception>
+        <exception cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException">'jwtEncodedString' is not in JWS or JWE format.</exception>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -66,6 +69,7 @@
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
+        <AssemblyVersion>6.31.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="header" Type="System.IdentityModel.Tokens.Jwt.JwtHeader" />
@@ -95,6 +99,7 @@
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
+        <AssemblyVersion>6.31.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="header" Type="System.IdentityModel.Tokens.Jwt.JwtHeader" />
@@ -131,6 +136,7 @@
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
+        <AssemblyVersion>6.31.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="issuer" Type="System.String" />
@@ -168,6 +174,7 @@
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
+        <AssemblyVersion>6.31.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="header" Type="System.IdentityModel.Tokens.Jwt.JwtHeader" />
@@ -207,6 +214,7 @@
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
+        <AssemblyVersion>6.31.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -233,6 +241,7 @@
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
+        <AssemblyVersion>6.31.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
@@ -259,6 +268,7 @@
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
+        <AssemblyVersion>6.31.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Security.Claims.Claim&gt;</ReturnType>
@@ -290,6 +300,7 @@
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
+        <AssemblyVersion>6.31.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -316,6 +327,7 @@
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
+        <AssemblyVersion>6.31.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -342,6 +354,7 @@
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
+        <AssemblyVersion>6.31.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.EncryptingCredentials</ReturnType>
@@ -368,6 +381,7 @@
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
+        <AssemblyVersion>6.31.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.IdentityModel.Tokens.Jwt.JwtHeader</ReturnType>
@@ -394,6 +408,7 @@
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
+        <AssemblyVersion>6.31.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -420,6 +435,7 @@
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
+        <AssemblyVersion>6.31.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.IdentityModel.Tokens.Jwt.JwtSecurityToken</ReturnType>
@@ -446,6 +462,7 @@
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
+        <AssemblyVersion>6.31.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DateTime</ReturnType>
@@ -472,6 +489,7 @@
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
+        <AssemblyVersion>6.31.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -498,6 +516,7 @@
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
+        <AssemblyVersion>6.31.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.IdentityModel.Tokens.Jwt.JwtPayload</ReturnType>
@@ -527,6 +546,7 @@
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
+        <AssemblyVersion>6.31.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -554,6 +574,7 @@
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
+        <AssemblyVersion>6.31.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -581,6 +602,7 @@
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
+        <AssemblyVersion>6.31.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -608,6 +630,7 @@
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
+        <AssemblyVersion>6.31.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -635,6 +658,7 @@
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
+        <AssemblyVersion>6.31.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -662,6 +686,7 @@
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
+        <AssemblyVersion>6.31.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -689,6 +714,7 @@
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
+        <AssemblyVersion>6.31.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -716,6 +742,7 @@
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
+        <AssemblyVersion>6.31.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -743,6 +770,7 @@
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
+        <AssemblyVersion>6.31.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.SecurityKey</ReturnType>
@@ -769,6 +797,7 @@
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
+        <AssemblyVersion>6.31.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -795,6 +824,7 @@
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
+        <AssemblyVersion>6.31.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.SigningCredentials</ReturnType>
@@ -821,6 +851,7 @@
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
+        <AssemblyVersion>6.31.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.SecurityKey</ReturnType>
@@ -848,6 +879,7 @@
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
+        <AssemblyVersion>6.31.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -874,6 +906,7 @@
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
+        <AssemblyVersion>6.31.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -884,6 +917,28 @@
             Serializes the <see cref="T:System.IdentityModel.Tokens.Jwt.JwtHeader" /> and <see cref="T:System.IdentityModel.Tokens.Jwt.JwtPayload" /></summary>
         <returns>A string containing the header and payload in JSON format.</returns>
         <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnsafeToString">
+      <MemberSignature Language="C#" Value="public override string UnsafeToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string UnsafeToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.Jwt.JwtSecurityToken.UnsafeToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function UnsafeToString () As String" />
+      <MemberSignature Language="F#" Value="override this.UnsafeToString : unit -&gt; string" Usage="jwtSecurityToken.UnsafeToString " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Tokens.Jwt</AssemblyName>
+        <AssemblyVersion>6.31.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
       </Docs>
     </Member>
     <Member MemberName="ValidFrom">
@@ -900,6 +955,7 @@
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
+        <AssemblyVersion>6.31.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DateTime</ReturnType>
@@ -926,6 +982,7 @@
         <AssemblyVersion>6.29.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
+        <AssemblyVersion>6.31.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DateTime</ReturnType>

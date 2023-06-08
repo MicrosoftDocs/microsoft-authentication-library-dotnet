@@ -12,6 +12,7 @@
     <AssemblyVersion>2.9.0.0</AssemblyVersion>
     <AssemblyVersion>2.10.0.0</AssemblyVersion>
     <AssemblyVersion>2.11.0.0</AssemblyVersion>
+    <AssemblyVersion>2.11.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Identity.Web.DefaultCredentialsLoader</BaseTypeName>
@@ -53,10 +54,35 @@
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>2.10.0.0</AssemblyVersion>
         <AssemblyVersion>2.11.0.0</AssemblyVersion>
+        <AssemblyVersion>2.11.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            Default constuctor.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DefaultCertificateLoader (Microsoft.Extensions.Logging.ILogger&lt;Microsoft.Identity.Web.DefaultCertificateLoader&gt;? logger);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Extensions.Logging.ILogger`1&lt;class Microsoft.Identity.Web.DefaultCertificateLoader&gt; logger) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.DefaultCertificateLoader.#ctor(Microsoft.Extensions.Logging.ILogger{Microsoft.Identity.Web.DefaultCertificateLoader})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (logger As ILogger(Of DefaultCertificateLoader))" />
+      <MemberSignature Language="F#" Value="new Microsoft.Identity.Web.DefaultCertificateLoader : Microsoft.Extensions.Logging.ILogger&lt;Microsoft.Identity.Web.DefaultCertificateLoader&gt; -&gt; Microsoft.Identity.Web.DefaultCertificateLoader" Usage="new Microsoft.Identity.Web.DefaultCertificateLoader logger" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
+        <AssemblyVersion>2.11.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="logger" Type="Microsoft.Extensions.Logging.ILogger&lt;Microsoft.Identity.Web.DefaultCertificateLoader&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="logger" />
+        <summary>
+            Constructor with a logger.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -64,7 +90,7 @@
       <MemberSignature Language="C#" Value="public static System.Collections.Generic.IEnumerable&lt;System.Security.Cryptography.X509Certificates.X509Certificate2?&gt; LoadAllCertificates (System.Collections.Generic.IEnumerable&lt;Microsoft.Identity.Web.CertificateDescription&gt; certificateDescriptions);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IEnumerable`1&lt;class System.Security.Cryptography.X509Certificates.X509Certificate2&gt; LoadAllCertificates(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Identity.Web.CertificateDescription&gt; certificateDescriptions) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.DefaultCertificateLoader.LoadAllCertificates(System.Collections.Generic.IEnumerable{Microsoft.Identity.Web.CertificateDescription})" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Iterator Function LoadAllCertificates (certificateDescriptions As IEnumerable(Of CertificateDescription)) As IEnumerable(Of X509Certificate2)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function LoadAllCertificates (certificateDescriptions As IEnumerable(Of CertificateDescription)) As IEnumerable(Of X509Certificate2)" />
       <MemberSignature Language="F#" Value="static member LoadAllCertificates : seq&lt;Microsoft.Identity.Web.CertificateDescription&gt; -&gt; seq&lt;System.Security.Cryptography.X509Certificates.X509Certificate2&gt;" Usage="Microsoft.Identity.Web.DefaultCertificateLoader.LoadAllCertificates certificateDescriptions" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -75,13 +101,8 @@
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>2.10.0.0</AssemblyVersion>
         <AssemblyVersion>2.11.0.0</AssemblyVersion>
+        <AssemblyVersion>2.11.1.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName Language="C#">[System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.Identity.Web.DefaultCertificateLoader+&lt;LoadAllCertificates&gt;d__4))]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.Identity.Web.DefaultCertificateLoader+&lt;LoadAllCertificates&gt;d__4))&gt;]</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Security.Cryptography.X509Certificates.X509Certificate2&gt;</ReturnType>
       </ReturnValue>
@@ -112,6 +133,7 @@
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>2.10.0.0</AssemblyVersion>
         <AssemblyVersion>2.11.0.0</AssemblyVersion>
+        <AssemblyVersion>2.11.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate2</ReturnType>
@@ -146,6 +168,7 @@
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>2.10.0.0</AssemblyVersion>
         <AssemblyVersion>2.11.0.0</AssemblyVersion>
+        <AssemblyVersion>2.11.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -176,6 +199,7 @@
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>2.10.0.0</AssemblyVersion>
         <AssemblyVersion>2.11.0.0</AssemblyVersion>
+        <AssemblyVersion>2.11.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -207,6 +231,7 @@
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>2.10.0.0</AssemblyVersion>
         <AssemblyVersion>2.11.0.0</AssemblyVersion>
+        <AssemblyVersion>2.11.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
