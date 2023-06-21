@@ -1,5 +1,6 @@
 ---
 title: Multicloud support and instance awareness
+description: "The instance awareness feature helps complete the scenario where any an account from any cloud can be signed-in using the default value for environment."
 ---
 
 # Multicloud support and instance awareness
@@ -9,7 +10,7 @@ title: Multicloud support and instance awareness
 
 ## What is instance awareness?
 
-* Instance aware feature helps complete the scenario where any an account from any cloud can be signed-in using the default value for environment. If instance awareness is not activated, the calling app has to provide the correct environment for the account.
+* The instance awareness feature helps complete the scenario where any an account from any cloud can be signed-in using the default value for environment. If instance awareness is not activated, the calling app has to provide the correct environment for the account.
 * It enables applications to pass in a default public cloud authority to the library and can still get tokens for resources (Graph) from national clouds.
 * The user and the resource should belong to single national cloud.
 * It is applicable only when using `/organizations` or `/common` authority URL and not a tenanted URL.
