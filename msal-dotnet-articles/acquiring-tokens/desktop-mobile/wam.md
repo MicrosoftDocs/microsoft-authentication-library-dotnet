@@ -30,7 +30,7 @@ Latest Windows releases include an updated WAM. The new broker is written in C++
 The new WAM fixes a number of issues with the legacy implementation and provides other benefits, including:
 
 - New implementation is more stable, easier to add new features, and has less chance of regressions.
-- Works in apps that are ran under the Administrator user context.
+- Works in apps that are executed under the Administrator user context.
 - Adds support for [Proof-of-Possession tokens](../../advanced/proof-of-possession-tokens.md).
 - Decreases assembly size.
 
@@ -60,7 +60,7 @@ IPublicClientApplication app =
 var authResult = await app.AcquireTokenInteractive(new List<string>() { "User.Read" }).ExecuteAsync();
 ```
 
-When using the broker, if the authority used is targeting Azure AD as well as personal Microsoft accounts, the user will first be prompted to select an account using the built-in system account picker.
+When using the broker, if the [authority](/azure/active-directory/develop/msal-client-application-configuration#authority) used is targeting Azure AD as well as personal Microsoft accounts, the user will first be prompted to select an account using the built-in system account picker.
 
 ![Demo of the WAM component](../../media/wam/wam-demo.gif)
 
