@@ -57,6 +57,8 @@ var pca = PublicClientApplicationBuilder.Create(CLIENT_ID)
             .Build();
 ```
 
+![Demo of the WAM component](../../media/wam/wam-demo.gif)
+
 No changes are required for UWP applications. Because the platform does not support the updated broker, existing applications will continue to use the legacy WAM implementation, which is documented in [Acquire a token using WAM](/azure/active-directory/develop/scenario-desktop-acquire-token-wam).
 
 ## Parent window handles
