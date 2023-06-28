@@ -12,7 +12,7 @@ MSAL is able to call Web Account Manager (WAM), a Windows component that ships w
 
 ## What is a broker
 
-An authentication broker is an application that runs on a user’s machine that manages the authentication handshakes and token maintenance for connected accounts. The windows operating system uses the Web Account Manager (WAM) as its authentication broker. It has many benefits for developers and customers alike, including:
+An authentication broker is an application that runs on a user’s machine that manages the authentication handshakes and token maintenance for connected accounts. The Windows operating system uses the Web Account Manager (WAM) as its authentication broker. It has many benefits for developers and customers alike, including:
 
 - **Enhanced security.** The client application does not need to manage the refresh token which can be used to obtain new authentication tokens without user consent.
 - **Feature support.** With the help of the broker developers can access rich OS and service capabilities such as Windows Hello, conditional access policies, and FIDO keys without writing extra scaffolding code.
