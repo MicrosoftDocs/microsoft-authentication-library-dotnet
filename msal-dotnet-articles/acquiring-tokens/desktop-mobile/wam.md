@@ -68,7 +68,7 @@ If the configuration is set on a per-tenant basis by using [`WithTenantId`](xref
 
 ![Demo of the WAM component that is configured on a per-tenant basis and doesn't show the OS-based account picker](../../media/wam/wam-per-tenant.gif)
 
-Once the account is added or selected, the user will be prompted for additional consent if the have never used the application before or the application requires additional permissions.
+Once the account is added or selected, the user will be prompted for additional consent if they have never used the application before or the application requires additional permissions.
 
 >[!NOTE]
 >No changes are required for UWP applications. Because the platform does not support the updated broker, existing applications will continue to use the legacy WAM implementation, which is documented in [Acquire a token using WAM](/azure/active-directory/develop/scenario-desktop-acquire-token-wam).
