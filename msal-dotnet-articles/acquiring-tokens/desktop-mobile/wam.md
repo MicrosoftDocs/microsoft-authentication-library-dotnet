@@ -1,50 +1,58 @@
 ---
 title: Using MSAL.NET with Web Account Manager (WAM)
-description: "MSAL is able to call Web Account Manager (WAM), a Windows 10+ component that ships with the OS. This component acts as an authentication broker allowing the users of your app benefit from integration with accounts known to Windows, such as the account you signed into your Windows session."
+description: "MSAL is able to call Web Account Manager (WAM), a Windows component that ships with the OS. This component acts as an authentication broker allowing the users of your app  to benefit from integration with accounts known to Windows, such as the account you signed into your Windows session."
 ---
 
 # Using MSAL.NET with Web Account Manager (WAM)
 
-MSAL is able to call Web Account Manager (WAM), a Windows 10+ component that ships with the OS. This component acts as an authentication broker allowing the users of your app  to benefit from integration with accounts known to Windows, such as the account you signed into your Windows session.
+MSAL is able to call Web Account Manager (WAM), a Windows component that ships with the OS. This component acts as an authentication broker allowing the users of your app  to benefit from integration with accounts known to Windows, such as the account you signed into your Windows session.
+
+>[!NOTE]
+>WAM is only available on Windows 10 and above, as well as Windows Server 2019 and above.
 
 ## What is a broker
 
-An authentication broker is an application that runs on a user’s machine that manages the authentication handshakes and token maintenance for connected accounts. Windows operating system uses the Web Account Manager (WAM) as its authentication broker. It has many benefits for developers and customers alike including.
+An authentication broker is an application that runs on a user’s machine that manages the authentication handshakes and token maintenance for connected accounts. The windows operating system uses the Web Account Manager (WAM) as its authentication broker. It has many benefits for developers and customers alike, including:
 
-- **Enhanced security.** The client application does not need to manage the refresh token which can be used to obtain new authentication tokens without the user consent.
+- **Enhanced security.** The client application does not need to manage the refresh token which can be used to obtain new authentication tokens without user consent.
 - **Feature support.** With the help of the broker developers can access rich OS and service capabilities such as Windows Hello, conditional access policies, and FIDO keys without writing extra scaffolding code.
 - **System integration.** Applications that use the broker plug-and-play with the built-in account picker, allowing the user to quickly pick an existing account instead of reentering the same credentials over and over.
 
-With the help of a broker you need to write less code to handle token-related logic while also being able to use more advanced functionality, such as [Proof-of-Possession tokens](../../advanced/proof-of-possession-tokens.md). Moving forward, our team is continuing to invest in making sure that brokers are the de facto approach to authenticate with MSAL-based applications, where possible.
+With the help of a broker you need to write less code to handle token-related logic while also being able to use more advanced functionality, such as [Proof-of-Possession tokens](../../advanced/proof-of-possession-tokens.md). Moving forward, the MSAL team is continuing to invest in making sure that brokers are the de facto approach to authenticate inside applications.
 
 ## Improved Windows broker experience
 
-Recently, an updated authentication broker experience was made available for Windows systems. The new broker is written in C++, is well tested, and is significantly more performant and secure. One of the biggest consumers of the new broker experience is the Microsoft 365 suite of apps.
+Latest Windows releases include an updated WAM. The new broker is written in C++, is well-tested, and is significantly more performant and secure. One of the biggest consumers of the new broker experience is the Microsoft 365 suite of apps.
 
 > [!IMPORTANT]
-> With the introduction of the updated broker, we have also updated MSAL.NET to expose its capabilities under a simplified API. Starting with version 4.52.0, the improved broker experience in MSAL.NET will replace the existing broker flows by default.
+> With the introduction of the updated broker, we have also updated MSAL.NET to expose its capabilities under a simplified API. Starting with version 4.52.0, the new broker will be the default in MSAL.NET.
 
-The improved WAM broker fixes a number of issues with the legacy WAM implementation and provides other benefits:
+The new WAM fixes a number of issues with the legacy implementation and provides other benefits, including:
 
 - New implementation is more stable, easier to add new features, and has less chance of regressions.
-- Works in apps that are run-as-admin.
-- Adds support for Proof-of-Possession tokens.
-- Fixes assembly size issues.
+- Works in apps that are ran under the Administrator user context.
+- Adds support for [Proof-of-Possession tokens](../../advanced/proof-of-possession-tokens.md).
+- Decreases assembly size.
 
 ## Enabling WAM
 
-Due to platform-specific and backwards compatibility requirements, WAM implementation resides in three packages:
+Due to platform-specific and backwards compatibility requirements, WAM support is split across three packages:
 
-- [Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client/)(i.e. MSAL)
-- [Microsoft.Identity.Client.Broker](https://www.nuget.org/packages/Microsoft.Identity.Client.Broker/) - WAM support
-- [Microsoft.Identity.Client.Desktop](https://www.nuget.org/packages/Microsoft.Identity.Client.Desktop/) - WAM and WebView2 support
+- [Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client/) (i.e., MSAL) - core library for token acquisition.
+- [Microsoft.Identity.Client.Broker](https://www.nuget.org/packages/Microsoft.Identity.Client.Broker/) - adds support for authentication with the broker.
+- [Microsoft.Identity.Client.Desktop](https://www.nuget.org/packages/Microsoft.Identity.Client.Desktop/) - adds support for authentication with the broker on legacy platforms, like .NET Framework, .NET Core 3.1, and UWP.
 
-After referencing the correct packages, call `WithBroker(BrokerOptions)` with options and pass a window handle.
+After referencing the relevant packages, call [`WithBroker(BrokerOptions)`](xref:Microsoft.Identity.Client.Desktop.WamExtension.WithBroker*) with broker configuration options and [a window handle](#parent-window-handles) that the broker will be bound to.
 
 ```csharp
+BrokerOptions options = new BrokerOptions(BrokerOptions.OperatingSystems.Windows);
+
+options.Title = "My Awesome Application";
+options.ListOperatingSystemAccounts = true;
+
 var pca = PublicClientApplicationBuilder.Create(CLIENT_ID)
             .WithAuthority("https://login.microsoftonline.com/common")
-            .WithBroker(new BrokerOptions(BrokerOptions.OperatingSystems.Windows))
+            .WithBroker(options)
             .WithParentActivityOrWindow(() => WINDOW_HANDLE)
             .Build();
 ```
@@ -53,7 +61,7 @@ No changes are required for UWP applications. Because the platform does not supp
 
 ## Parent window handles
 
-It is now mandatory to provide MSAL the window to which the interactive experience should be parented using `WithParentActivityOrWindow` APIs. Trying to infer a window is not feasible and in the past, this has led to bad user experience where the authentication window was hidden behind the application.
+To use the broker, it is now required to provide the window handle to which the interactive experience should be parented using [`WithParentActivityOrWindow`](xref:Microsoft.Identity.Client.PublicClientApplicationBuilder.WithParentActivityOrWindow*) APIs. Trying to infer a window is not feasible and in the past, this has led to bad user experience where the authentication window was hidden behind the application.
 
 For UI apps like WinForms, WPF, WinUI3, see [Retrieve a window handle (HWND)](/windows/apps/develop/ui-input/retrieve-hwnd).
 
