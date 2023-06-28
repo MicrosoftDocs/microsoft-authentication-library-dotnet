@@ -24,7 +24,7 @@ MSAL is a multi-target library and at the time of writing, Visual Studio for Mac
 ### Visual Studio
 
 1. Load `LibsAndSamples.sln` for a bigger solution with lots of apps that showcase and exercise MSAL. Load `LibsNoSamples.sln` for a small solution that has the library and the tests.
-2. Build in Visual Studio (if configured) or via the command line with `msbuild /t:restore` and `msbuild`. If using the command line, developers might need to use the [Visual Studio Developer Command Prompt](/visualstudio/ide/reference/command-prompt-powershell?view=vs-2022).
+2. Build in Visual Studio (if configured) or via the command line with `msbuild /t:restore` and `msbuild`. If using the command line, developers might need to use the [Visual Studio Developer Command Prompt](/visualstudio/ide/reference/command-prompt-powershell).
 
 >[!NOTE]
 >If you run into strong name validation issues, please [log a bug](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/issues). Workaround is to disable strong name validation on your dev box by running the following command in the Visual Studio Developer Command Prompt with Administrator permissions:
