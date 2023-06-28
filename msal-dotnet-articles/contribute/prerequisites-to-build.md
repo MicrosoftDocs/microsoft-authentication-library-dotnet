@@ -18,7 +18,6 @@ The following are instructions to setup Visual Studio to build various MSAL.NET 
   * Mobile Development with .NET
   * .NET Core cross-platform development
 * From the **Individual Components** tab, make sure these items are selected:
-  * .NET Framework 4.5 targeting pack
   * .NET Framework 4.5.2 targeting pack
   * .NET Framework 4.6.1 SDK
   * .NET Framework 4.6.1 targeting pack
