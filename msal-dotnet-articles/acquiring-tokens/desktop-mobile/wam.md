@@ -53,10 +53,11 @@ options.ListOperatingSystemAccounts = true;
 IPublicClientApplication app =
     PublicClientApplicationBuilder.Create("YOUR_CLIENT_ID")
     .WithDefaultRedirectUri()
-    .WithAuthority(AadAuthorityAudience.AzureAdAndPersonalMicrosoftAccount)
     .WithParentActivityOrWindow(GetConsoleOrTerminalWindow)
     .WithBroker(options)
     .Build();
+
+var authResult = await app.AcquireTokenInteractive(new List<string>() { "User.Read" }).ExecuteAsync();
 ```
 
 When using the broker, if the authority used is targeting Azure AD as well as personal Microsoft accounts, the user will first be prompted to select an account using the built-in system account picker.
