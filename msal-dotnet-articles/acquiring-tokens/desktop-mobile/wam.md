@@ -77,7 +77,7 @@ Once the account is added or selected, the user will be prompted for additional 
 
 ## Parent window handles
 
-To use the broker, it is now required to provide the window handle to which the WAM modal dialog be parented using [`WithParentActivityOrWindow`](xref:Microsoft.Identity.Client.PublicClientApplicationBuilder.WithParentActivityOrWindow*) APIs. Trying to infer a window is not feasible and in the past this has led to bad user experiences where the authentication window was hidden behind the application window.
+To use the broker, it is now required to provide the window handle to which the WAM modal dialog be parented using [`WithParentActivityOrWindow`](xref:Microsoft.Identity.Client.PublicClientApplicationBuilder.WithParentActivityOrWindow*) APIs. The window handle must be provided by the developer because it's not feasible for MSAL itself to infer the parent window and in the past this has led to bad user experiences where the authentication window was hidden behind the application window.
 
 For UI apps, such as those using Windows Forms, Windows Presentation Foundation (WPF), or WinUI3, see [Retrieve a window handle (HWND)](/windows/apps/develop/ui-input/retrieve-hwnd).
 
@@ -137,7 +137,7 @@ ms-appx-web://microsoft.aad.brokerplugin/{client_id}
 This flow, also known as Resource Owner Password Credentials (ROPC), is not recommended except in test scenarios or in scenarios where service principal access to a resource gives it too much access and you can only scope it down with user flows. When using WAM, [`AcquireTokenByUsernamePassword`](xref:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenByUsernamePassword*) will let WAM manage the protocol and fetch tokens.
 
 >[!WARNING]
->There are a few important considerations that you need to account for when using the ROPC flow. One of the main ones is that it is **not supported for personal Microsoft accounts** and for **Azure AD accounts with multi-factor authentication enabled**. Check out [Microsoft identity platform and OAuth 2.0 Resource Owner Password Credentials](/azure/active-directory/develop/v2-oauth-ropc) for the full overview.
+>There are a few important considerations that you need to account for when using the ROPC flow. One of the main ones is that it **doesn't support personal Microsoft accounts** and **Azure AD accounts with enabled multi-factor authentication**. Check out [Microsoft identity platform and OAuth 2.0 Resource Owner Password Credentials](/azure/active-directory/develop/v2-oauth-ropc) for the full overview.
 
 ## WAM limitations
 
