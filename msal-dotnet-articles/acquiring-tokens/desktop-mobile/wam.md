@@ -177,4 +177,4 @@ The application user sees an error message similar to `Please check your connect
 
 ### WAM error codes
 
-When errors with WAM occur, we recommend logging data from [`AdditionalExceptionData`](xref:Microsoft.Identity.Client.MsalException.AdditionalExceptionData*) and specifically [`BrokerErrorCode`](xref:Microsoft.Identity.Client.MsalException.BrokerErrorCode). This can help pinpoint specific issues with the configuration or the WAM component.
+Because WAM is a relatively new component, when errors occur we recommend logging data from [`AdditionalExceptionData`](xref:Microsoft.Identity.Client.MsalException.AdditionalExceptionData*). This can help pinpoint specific issues with the configuration or the WAM component. When you run into WAM issues, please [log a bug](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/issues) - this will help us ensure we address the problem in a timely manner.
