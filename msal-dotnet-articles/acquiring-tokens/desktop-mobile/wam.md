@@ -134,7 +134,7 @@ ms-appx-web://microsoft.aad.brokerplugin/{client_id}
 
 ## Username/password flow
 
-This flow, also known as Resource Owner Password Credentials (ROPC), is not recommended except in test scenarios or in scenarios where service principal access to a resource gives it too much access and you can only scope it down with user flows. When using WAM, `AcquireTokenByUsernamePassword` will let WAM manage the protocol and fetch tokens.
+This flow, also known as Resource Owner Password Credentials (ROPC), is not recommended except in test scenarios or in scenarios where service principal access to a resource gives it too much access and you can only scope it down with user flows. When using WAM, [`AcquireTokenByUsernamePassword`](xref:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenByUsernamePassword*) will let WAM manage the protocol and fetch tokens.
 
 >[!WARNING]
 >There are a few important considerations that you need to account for when using the ROPC flow. One of the main ones is that it is **not supported for personal Microsoft accounts** and for **Azure AD accounts with multi-factor authentication enabled**. Check out [Microsoft identity platform and OAuth 2.0 Resource Owner Password Credentials](/azure/active-directory/develop/v2-oauth-ropc) for the full overview.
