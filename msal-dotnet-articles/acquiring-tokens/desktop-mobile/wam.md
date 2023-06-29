@@ -40,7 +40,6 @@ Due to platform-specific and backwards compatibility requirements, WAM support i
 
 - [Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client/) (i.e., MSAL) - core library for token acquisition.
 - [Microsoft.Identity.Client.Broker](https://www.nuget.org/packages/Microsoft.Identity.Client.Broker/) - adds support for authentication with the broker.
-- [Microsoft.Identity.Client.Desktop](https://www.nuget.org/packages/Microsoft.Identity.Client.Desktop/) - adds support for authentication with the broker on legacy platforms, like .NET Framework, .NET Core 3.1, and UWP.
 
 After referencing the relevant packages, call [`WithBroker(BrokerOptions)`](xref:Microsoft.Identity.Client.Desktop.WamExtension.WithBroker*) with broker configuration options and [a window handle](#parent-window-handles) that the broker will be bound to.
 
@@ -172,3 +171,7 @@ Get-AppxPackage Microsoft.AccountsControl
 ### Connection issues
 
 The application user sees an error message similar to `Please check your connection and try again`. If this issue occurs regularly, see the [troubleshooting guide for Office](/microsoft-365/troubleshoot/authentication/connection-issue-when-sign-in-office-2016), which also uses WAM.
+
+### WAM error codes
+
+When errors with WAM occur, we recommend logging data from [`AdditionalExceptionData`](xref:Microsoft.Identity.Client.MsalException.AdditionalExceptionData*) and specifically [`BrokerErrorCode`](xref:Microsoft.Identity.Client.MsalException.BrokerErrorCode). This can help pinpoint specific issues with the configuration or the WAM component.
