@@ -77,7 +77,7 @@ Once the account is added or selected, the user will be prompted for additional 
 
 ## Parent window handles
 
-To use the broker, it is now required to provide the window handle to which the WAM modal dialog be parented using [`WithParentActivityOrWindow`](xref:Microsoft.Identity.Client.PublicClientApplicationBuilder.WithParentActivityOrWindow*) APIs. Trying to infer a window is not feasible and in the past this has led to bad user experiences where the authentication window was hidden behind the application window.
+To use the broker, it is now required to provide the window handle to which the WAM modal dialog be parented using [`WithParentActivityOrWindow`](xref:Microsoft.Identity.Client.PublicClientApplicationBuilder.WithParentActivityOrWindow*) APIs. The window handle must be provided by the developer because it's not feasible for MSAL itself to infer the parent window and in the past this has led to bad user experiences where the authentication window was hidden behind the application window.
 
 For UI apps, such as those using Windows Forms, Windows Presentation Foundation (WPF), or WinUI3, see [Retrieve a window handle (HWND)](/windows/apps/develop/ui-input/retrieve-hwnd).
 
