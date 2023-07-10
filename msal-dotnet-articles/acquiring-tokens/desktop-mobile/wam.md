@@ -64,7 +64,7 @@ AuthenticationResult result = null;
 
 try
 {
-    // Try to sing-in the previously signed-in account
+    // Try to sign-in the previously signed-in account
     if (existingAccount != null)
     {
         result = await _pca.AcquireTokenSilent(scopes, existingAccount).ExecuteAsync();
