@@ -79,7 +79,7 @@ try
 // Can't get a token silently, go interactive
 catch (MsalUiRequiredException ex)
 {
-    result = await app.AcquireTokenInteractive(new List<string>() { "User.Read" }).ExecuteAsync();
+    result = await app.AcquireTokenInteractive(new List<string>() { scopes }).ExecuteAsync();
 }
 
 ```
