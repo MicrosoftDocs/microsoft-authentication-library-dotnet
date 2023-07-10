@@ -2,6 +2,7 @@
 <Framework Name="msal-model-dotnet-latest">
   <Assemblies>
     <Assembly Name="Microsoft.Identity.Abstractions" Version="3.2.1.0" />
+    <Assembly Name="Microsoft.Identity.Web.Azure" Version="2.12.4.0" />
     <Assembly Name="Microsoft.Identity.Web.Certificate" Version="2.12.4.0" />
     <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="2.12.4.0" />
     <Assembly Name="Microsoft.Identity.Web" Version="2.12.4.0" />
@@ -671,6 +672,11 @@
     <Type Name="Microsoft.Identity.Web.ServiceCollectionExtensions" Id="T:Microsoft.Identity.Web.ServiceCollectionExtensions">
       <Member Id="M:Microsoft.Identity.Web.ServiceCollectionExtensions.AddTokenAcquisition(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Boolean)" />
     </Type>
+    <Type Name="Microsoft.Identity.Web.TokenAcquirerAppTokenCredential" Id="T:Microsoft.Identity.Web.TokenAcquirerAppTokenCredential">
+      <Member Id="M:Microsoft.Identity.Web.TokenAcquirerAppTokenCredential.#ctor(Microsoft.Identity.Abstractions.ITokenAcquirer)" />
+      <Member Id="M:Microsoft.Identity.Web.TokenAcquirerAppTokenCredential.GetToken(Azure.Core.TokenRequestContext,System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.Identity.Web.TokenAcquirerAppTokenCredential.GetTokenAsync(Azure.Core.TokenRequestContext,System.Threading.CancellationToken)" />
+    </Type>
     <Type Name="Microsoft.Identity.Web.TokenAcquirerFactory" Id="T:Microsoft.Identity.Web.TokenAcquirerFactory">
       <Member Id="M:Microsoft.Identity.Web.TokenAcquirerFactory.#ctor" />
       <Member Id="M:Microsoft.Identity.Web.TokenAcquirerFactory.Build" />
@@ -684,6 +690,11 @@
       <Member Id="P:Microsoft.Identity.Web.TokenAcquirerFactory.Configuration" />
       <Member Id="P:Microsoft.Identity.Web.TokenAcquirerFactory.ServiceProvider" />
       <Member Id="P:Microsoft.Identity.Web.TokenAcquirerFactory.Services" />
+    </Type>
+    <Type Name="Microsoft.Identity.Web.TokenAcquirerTokenCredential" Id="T:Microsoft.Identity.Web.TokenAcquirerTokenCredential">
+      <Member Id="M:Microsoft.Identity.Web.TokenAcquirerTokenCredential.#ctor(Microsoft.Identity.Abstractions.ITokenAcquirer)" />
+      <Member Id="M:Microsoft.Identity.Web.TokenAcquirerTokenCredential.GetToken(Azure.Core.TokenRequestContext,System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.Identity.Web.TokenAcquirerTokenCredential.GetTokenAsync(Azure.Core.TokenRequestContext,System.Threading.CancellationToken)" />
     </Type>
     <Type Name="Microsoft.Identity.Web.TokenAcquisitionAppTokenCredential" Id="T:Microsoft.Identity.Web.TokenAcquisitionAppTokenCredential">
       <Member Id="M:Microsoft.Identity.Web.TokenAcquisitionAppTokenCredential.#ctor(Microsoft.Identity.Web.ITokenAcquisition)" />
