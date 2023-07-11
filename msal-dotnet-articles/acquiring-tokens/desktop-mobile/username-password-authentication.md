@@ -18,7 +18,7 @@ Although the ROPC flow is useful in limited cases where developers want to provi
 
 ## Constraints
 
-Apart from the [Integrated Windows Authentication constraints](integrated-windows-authentication.md#iwa-constraints), the following also apply:
+In addition to the [Integrated Windows Authentication constraints](integrated-windows-authentication.md#iwa-constraints), the following also apply:
 
 - Available starting with MSAL 2.1.0.
 - Not compatible with conditional access and multi-factor authentication. As a consequence, if the app runs in an Azure AD tenant where the tenant admin requires multi-factor authentication, the flow cannot be used.
