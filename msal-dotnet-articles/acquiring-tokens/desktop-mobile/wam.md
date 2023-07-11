@@ -59,17 +59,19 @@ IPublicClientApplication app =
     .WithBroker(options)
     .Build();
 
-IAccount existingAccount = await FetchExistingAccountFromCache().ConfigureAwait(false);
 AuthenticationResult result = null;
 
+// Try to use the previously signed-in account from the cache
+IEnumerable<IAccount> accounts = await app.GetAccountsAsync();
+IAccount existingAccount = accounts.FirstOrDefault();
+
 try
-{
-    // Try to sign-in the previously signed-in account
+{    
     if (existingAccount != null)
     {
         result = await _pca.AcquireTokenSilent(scopes, existingAccount).ExecuteAsync();
     }
-    // If it does not exist, try to sign in with the Windows account
+    // Next, try to sign in silently with the account that the user is signed into Windows
     else
     {    
         result = await _pca.AcquireTokenSilent(scopes, PublicClientApplication.OperatingSystemAccount)
