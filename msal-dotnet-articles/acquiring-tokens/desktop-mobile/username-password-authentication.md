@@ -69,8 +69,7 @@ static async Task GetATokenForGraph()
         "user.read"
     };
 
-    IPublicClientApplication app;
-    app = PublicClientApplicationBuilder.Create(clientId).WithAuthority(authority).Build();
+    IPublicClientApplication app = PublicClientApplicationBuilder.Create(clientId).WithAuthority(authority).Build();
 
     var accounts = await app.GetAccountsAsync();
     AuthenticationResult result = null;
