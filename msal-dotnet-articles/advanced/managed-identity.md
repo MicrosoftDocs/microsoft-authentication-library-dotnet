@@ -63,7 +63,7 @@ AuthenticationResult result = await mi.AcquireTokenForManagedIdentity(resource)
 
 ### User-assigned managed identities
 
-For user-assigned managed identities, the developer needs to pass the managed identity client ID or the full resource identifier string if client ID is not available when creating <xref:Microsoft.Identity.Client.IManagedIdentityApplication>.
+For user-assigned managed identities, the developer needs to pass either the client ID, full resource identifier, or the object ID of the managed identity when creating <xref:Microsoft.Identity.Client.IManagedIdentityApplication>.
 
 Like in the case for system-assigned managed identities, <xref:Microsoft.Identity.Client.IManagedIdentityApplication.AcquireTokenForManagedIdentity(System.String)> is called with the resource to acquire a token for, such as `https://management.azure.com`.
 
