@@ -12,6 +12,7 @@
     <AssemblyVersion>6.30.0.0</AssemblyVersion>
     <AssemblyVersion>6.30.1.0</AssemblyVersion>
     <AssemblyVersion>6.31.0.0</AssemblyVersion>
+    <AssemblyVersion>6.32.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -38,6 +39,7 @@
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
         <AssemblyVersion>6.31.0.0</AssemblyVersion>
+        <AssemblyVersion>6.32.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -62,6 +64,7 @@
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
         <AssemblyVersion>6.31.0.0</AssemblyVersion>
+        <AssemblyVersion>6.32.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -89,6 +92,7 @@
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
         <AssemblyVersion>6.31.0.0</AssemblyVersion>
+        <AssemblyVersion>6.32.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Protocols.WsFederation.WsFederationConfiguration</ReturnType>
@@ -124,6 +128,7 @@
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
         <AssemblyVersion>6.31.0.0</AssemblyVersion>
+        <AssemblyVersion>6.32.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Xml.KeyInfo</ReturnType>
@@ -159,6 +164,7 @@
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
         <AssemblyVersion>6.31.0.0</AssemblyVersion>
+        <AssemblyVersion>6.32.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Protocols.WsFederation.WsFederationConfiguration</ReturnType>
@@ -194,6 +200,7 @@
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
         <AssemblyVersion>6.31.0.0</AssemblyVersion>
+        <AssemblyVersion>6.32.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -212,6 +219,34 @@
         <exception cref="T:Microsoft.IdentityModel.Xml.XmlReadException">if error occurs when reading PassiveRequestorEndpoint</exception>
       </Docs>
     </Member>
+    <Member MemberName="ReadSecurityTokenServiceEndpoint">
+      <MemberSignature Language="C#" Value="protected virtual string ReadSecurityTokenServiceEndpoint (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string ReadSecurityTokenServiceEndpoint(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Protocols.WsFederation.WsFederationMetadataSerializer.ReadSecurityTokenServiceEndpoint(System.Xml.XmlReader)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function ReadSecurityTokenServiceEndpoint (reader As XmlReader) As String" />
+      <MemberSignature Language="F#" Value="abstract member ReadSecurityTokenServiceEndpoint : System.Xml.XmlReader -&gt; string&#xA;override this.ReadSecurityTokenServiceEndpoint : System.Xml.XmlReader -&gt; string" Usage="wsFederationMetadataSerializer.ReadSecurityTokenServiceEndpoint reader" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Protocols.WsFederation</AssemblyName>
+        <AssemblyVersion>6.32.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">
+          <see cref="T:System.Xml.XmlReader" /> used to read SecurityTokenServiceEndpoint.</param>
+        <summary>
+            Read fed:SecurityTokenServiceEndpoint element from metadata XML.
+            </summary>
+        <returns>Active token endpoint string</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Microsoft.IdentityModel.Xml.XmlReadException">If an error occurs while reading the SecurityTokenServiceEndpoint</exception>
+      </Docs>
+    </Member>
     <Member MemberName="ReadSecurityTokenServiceTypeRoleDescriptor">
       <MemberSignature Language="C#" Value="protected virtual Microsoft.IdentityModel.Protocols.WsFederation.SecurityTokenServiceTypeRoleDescriptor ReadSecurityTokenServiceTypeRoleDescriptor (System.Xml.XmlReader reader);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.IdentityModel.Protocols.WsFederation.SecurityTokenServiceTypeRoleDescriptor ReadSecurityTokenServiceTypeRoleDescriptor(class System.Xml.XmlReader reader) cil managed" />
@@ -227,6 +262,7 @@
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
         <AssemblyVersion>6.31.0.0</AssemblyVersion>
+        <AssemblyVersion>6.32.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Protocols.WsFederation.SecurityTokenServiceTypeRoleDescriptor</ReturnType>
@@ -262,6 +298,7 @@
         <AssemblyVersion>6.30.0.0</AssemblyVersion>
         <AssemblyVersion>6.30.1.0</AssemblyVersion>
         <AssemblyVersion>6.31.0.0</AssemblyVersion>
+        <AssemblyVersion>6.32.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
