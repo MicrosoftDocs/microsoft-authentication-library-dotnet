@@ -1,22 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-web-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.IdentityModel.Abstractions" Version="6.31.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.JsonWebTokens" Version="6.31.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.KeyVaultExtensions" Version="6.31.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Logging" Version="6.31.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.LoggingExtensions" Version="6.31.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.ManagedKeyVaultSecurityKey" Version="6.31.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols" Version="6.31.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="6.31.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.SignedHttpRequest" Version="6.31.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.WsFederation" Version="6.31.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.TestExtensions" Version="6.31.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Tokens" Version="6.31.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Tokens.Saml" Version="6.31.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Validators" Version="6.31.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Xml" Version="6.31.0.0" />
-    <Assembly Name="System.IdentityModel.Tokens.Jwt" Version="6.31.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Abstractions" Version="6.32.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.JsonWebTokens" Version="6.32.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.KeyVaultExtensions" Version="6.32.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Logging" Version="6.32.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.LoggingExtensions" Version="6.32.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.ManagedKeyVaultSecurityKey" Version="6.32.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols" Version="6.32.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="6.32.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.SignedHttpRequest" Version="6.32.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.WsFederation" Version="6.32.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.TestExtensions" Version="6.32.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Tokens" Version="6.32.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Tokens.Saml" Version="6.32.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Validators" Version="6.32.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Xml" Version="6.32.0.0" />
+    <Assembly Name="System.IdentityModel.Tokens.Jwt" Version="6.32.0.0" />
   </Assemblies>
   <Namespace Name="Microsoft.IdentityModel.Abstractions">
     <Type Name="Microsoft.IdentityModel.Abstractions.EventLogLevel" Id="T:Microsoft.IdentityModel.Abstractions.EventLogLevel">
@@ -492,6 +492,7 @@
       <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeUserInfoEndpointSigningAlgValuesSupported" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.Write(Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration)" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.AcrValuesSupported" />
+      <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ActiveTokenEndpoint" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.AdditionalData" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.AuthorizationEndpoint" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.CheckSessionIframe" />
@@ -1020,6 +1021,7 @@
   <Namespace Name="Microsoft.IdentityModel.Protocols.WsFederation">
     <Type Name="Microsoft.IdentityModel.Protocols.WsFederation.SecurityTokenServiceTypeRoleDescriptor" Id="T:Microsoft.IdentityModel.Protocols.WsFederation.SecurityTokenServiceTypeRoleDescriptor">
       <Member Id="M:Microsoft.IdentityModel.Protocols.WsFederation.SecurityTokenServiceTypeRoleDescriptor.#ctor" />
+      <Member Id="P:Microsoft.IdentityModel.Protocols.WsFederation.SecurityTokenServiceTypeRoleDescriptor.ActiveTokenEndpoint" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.WsFederation.SecurityTokenServiceTypeRoleDescriptor.KeyInfos" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.WsFederation.SecurityTokenServiceTypeRoleDescriptor.TokenEndpoint" />
     </Type>
@@ -1035,6 +1037,10 @@
       <Member Id="M:Microsoft.IdentityModel.Protocols.WsFederation.WsFederationConfigurationRetriever.GetAsync(System.String,System.Net.Http.HttpClient,System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.WsFederation.WsFederationConfigurationRetriever.GetAsync(System.String,System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.WsFederation.WsFederationConfigurationRetriever.GetConfigurationAsync(System.String,Microsoft.IdentityModel.Protocols.IDocumentRetriever,System.Threading.CancellationToken)" />
+    </Type>
+    <Type Name="Microsoft.IdentityModel.Protocols.WsFederation.WsFederationConfigurationValidator" Id="T:Microsoft.IdentityModel.Protocols.WsFederation.WsFederationConfigurationValidator">
+      <Member Id="M:Microsoft.IdentityModel.Protocols.WsFederation.WsFederationConfigurationValidator.#ctor" />
+      <Member Id="M:Microsoft.IdentityModel.Protocols.WsFederation.WsFederationConfigurationValidator.Validate(Microsoft.IdentityModel.Protocols.WsFederation.WsFederationConfiguration)" />
     </Type>
     <Type Name="Microsoft.IdentityModel.Protocols.WsFederation.WsFederationConstants" Id="T:Microsoft.IdentityModel.Protocols.WsFederation.WsFederationConstants">
       <Member Id="F:Microsoft.IdentityModel.Protocols.WsFederation.WsFederationConstants.MetadataNamespace" />
@@ -1054,6 +1060,7 @@
       <Member Id="F:Microsoft.IdentityModel.Protocols.WsFederation.WsFederationConstants.Elements.KeyDescriptor" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.WsFederation.WsFederationConstants.Elements.PassiveRequestorEndpoint" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.WsFederation.WsFederationConstants.Elements.RoleDescriptor" />
+      <Member Id="F:Microsoft.IdentityModel.Protocols.WsFederation.WsFederationConstants.Elements.SecurityTokenServiceEndpoint" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.WsFederation.WsFederationConstants.Elements.SpssoDescriptor" />
     </Type>
     <Type Name="Microsoft.IdentityModel.Protocols.WsFederation.WsFederationConstants/KeyUse" Id="T:Microsoft.IdentityModel.Protocols.WsFederation.WsFederationConstants.KeyUse">
@@ -1151,6 +1158,7 @@
       <Member Id="M:Microsoft.IdentityModel.Protocols.WsFederation.WsFederationMetadataSerializer.ReadKeyDescriptorForSigning(System.Xml.XmlReader)" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.WsFederation.WsFederationMetadataSerializer.ReadMetadata(System.Xml.XmlReader)" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.WsFederation.WsFederationMetadataSerializer.ReadPassiveRequestorEndpoint(System.Xml.XmlReader)" />
+      <Member Id="M:Microsoft.IdentityModel.Protocols.WsFederation.WsFederationMetadataSerializer.ReadSecurityTokenServiceEndpoint(System.Xml.XmlReader)" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.WsFederation.WsFederationMetadataSerializer.ReadSecurityTokenServiceTypeRoleDescriptor(System.Xml.XmlReader)" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.WsFederation.WsFederationMetadataSerializer.WriteMetadata(System.Xml.XmlWriter,Microsoft.IdentityModel.Protocols.WsFederation.WsFederationConfiguration)" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.WsFederation.WsFederationMetadataSerializer.PreferredPrefix" />
@@ -1242,6 +1250,7 @@
     </Type>
     <Type Name="Microsoft.IdentityModel.Tokens.BaseConfiguration" Id="T:Microsoft.IdentityModel.Tokens.BaseConfiguration">
       <Member Id="M:Microsoft.IdentityModel.Tokens.BaseConfiguration.#ctor" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.BaseConfiguration.ActiveTokenEndpoint" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.BaseConfiguration.Issuer" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.BaseConfiguration.SigningKeys" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.BaseConfiguration.TokenDecryptionKeys" />
@@ -2796,6 +2805,9 @@
       <Member Id="M:Microsoft.IdentityModel.Validators.AadIssuerValidator.GetAadIssuerValidator(System.String)" />
       <Member Id="M:Microsoft.IdentityModel.Validators.AadIssuerValidator.GetAadIssuerValidator(System.String,System.Net.Http.HttpClient)" />
       <Member Id="M:Microsoft.IdentityModel.Validators.AadIssuerValidator.Validate(System.String,Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.TokenValidationParameters)" />
+    </Type>
+    <Type Name="Microsoft.IdentityModel.Validators.AadTokenValidationParametersExtension" Id="T:Microsoft.IdentityModel.Validators.AadTokenValidationParametersExtension">
+      <Member Id="M:Microsoft.IdentityModel.Validators.AadTokenValidationParametersExtension.EnableAadSigningKeyIssuerValidation(Microsoft.IdentityModel.Tokens.TokenValidationParameters)" />
     </Type>
   </Namespace>
   <Namespace Name="Microsoft.IdentityModel.Xml">
