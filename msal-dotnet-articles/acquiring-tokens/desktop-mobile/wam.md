@@ -47,10 +47,10 @@ Due to platform-specific and backwards compatibility requirements, WAM support i
 After referencing the relevant packages, call [`WithBroker(BrokerOptions)`](xref:Microsoft.Identity.Client.Desktop.WamExtension.WithBroker*) with broker configuration options and [a window handle](#parent-window-handles) that the broker will be bound to.
 
 ```csharp
-BrokerOptions options = new BrokerOptions(BrokerOptions.OperatingSystems.Windows);
+var scopes = new[] { "User.Read" };
 
+BrokerOptions options = new BrokerOptions(BrokerOptions.OperatingSystems.Windows);
 options.Title = "My Awesome Application";
-options.ListOperatingSystemAccounts = true;
 
 IPublicClientApplication app =
     PublicClientApplicationBuilder.Create("YOUR_CLIENT_ID")
@@ -59,7 +59,31 @@ IPublicClientApplication app =
     .WithBroker(options)
     .Build();
 
-var authResult = await app.AcquireTokenInteractive(new List<string>() { "User.Read" }).ExecuteAsync();
+AuthenticationResult result = null;
+
+// Try to use the previously signed-in account from the cache
+IEnumerable<IAccount> accounts = await app.GetAccountsAsync();
+IAccount existingAccount = accounts.FirstOrDefault();
+
+try
+{    
+    if (existingAccount != null)
+    {
+        result = await _pca.AcquireTokenSilent(scopes, existingAccount).ExecuteAsync();
+    }
+    // Next, try to sign in silently with the account that the user is signed into Windows
+    else
+    {    
+        result = await _pca.AcquireTokenSilent(scopes, PublicClientApplication.OperatingSystemAccount)
+                            .ExecuteAsync();
+    }
+}
+// Can't get a token silently, go interactive
+catch (MsalUiRequiredException ex)
+{
+    result = await app.AcquireTokenInteractive(new List<string>() { scopes }).ExecuteAsync();
+}
+
 ```
 
 When using the broker, if the [authority](/azure/active-directory/develop/msal-client-application-configuration#authority) used is targeting Azure AD as well as personal Microsoft accounts, the user will first be prompted to select an account using the built-in system account picker.
