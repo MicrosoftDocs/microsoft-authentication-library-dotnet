@@ -69,19 +69,19 @@ try
 {    
     if (existingAccount != null)
     {
-        result = await _pca.AcquireTokenSilent(scopes, existingAccount).ExecuteAsync();
+        result = await app.AcquireTokenSilent(scopes, existingAccount).ExecuteAsync();
     }
     // Next, try to sign in silently with the account that the user is signed into Windows
     else
     {    
-        result = await _pca.AcquireTokenSilent(scopes, PublicClientApplication.OperatingSystemAccount)
+        result = await app.AcquireTokenSilent(scopes, PublicClientApplication.OperatingSystemAccount)
                             .ExecuteAsync();
     }
 }
 // Can't get a token silently, go interactive
 catch (MsalUiRequiredException ex)
 {
-    result = await app.AcquireTokenInteractive(new List<string>() { scopes }).ExecuteAsync();
+    result = await app.AcquireTokenInteractive(scopes).ExecuteAsync();
 }
 
 ```
