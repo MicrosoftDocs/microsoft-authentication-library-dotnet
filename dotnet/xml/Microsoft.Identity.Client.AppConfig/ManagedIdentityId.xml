@@ -8,6 +8,7 @@
     <AssemblyName>Microsoft.Identity.Client</AssemblyName>
     <AssemblyVersion>4.54.0.0</AssemblyVersion>
     <AssemblyVersion>4.54.1.0</AssemblyVersion>
+    <AssemblyVersion>4.55.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -18,7 +19,8 @@
             Class to store configuration for a managed identity enabled on a resource.
             For a system assigned managed identity use ManagedIdentityId.SystemAssigned.
             For user assigned managed identity use ManagedIdentityId.WithUserAssignedClientId("clientId") or 
-            ManagedIdentityId.WithUserAssignedResourceId("resourceId").
+            ManagedIdentityId.WithUserAssignedResourceId("resourceId") or 
+            ManagedIdentityId.WithUserAssignedObjectId("objectid").
             For more details see https://aka.ms/msal-net-managed-identity
             </summary>
     <remarks>To be added.</remarks>
@@ -35,6 +37,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.54.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.1.0</AssemblyVersion>
+        <AssemblyVersion>4.55.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AppConfig.ManagedIdentityId</ReturnType>
@@ -58,6 +61,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.54.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.1.0</AssemblyVersion>
+        <AssemblyVersion>4.55.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AppConfig.ManagedIdentityId</ReturnType>
@@ -66,9 +70,36 @@
         <Parameter Name="clientId" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="clientId">Client id of the user assigned managed identity assigned to azure resource.</param>
+        <param name="clientId">Client id of the user assigned managed identity assigned to the azure resource.</param>
         <summary>
             Create an instance of ManagedIdentityId for a user assigned managed identity from a client id.
+            </summary>
+        <returns>Instance of ManagedIdentityId.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException" />
+      </Docs>
+    </Member>
+    <Member MemberName="WithUserAssignedObjectId">
+      <MemberSignature Language="C#" Value="public static Microsoft.Identity.Client.AppConfig.ManagedIdentityId WithUserAssignedObjectId (string objectId);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Identity.Client.AppConfig.ManagedIdentityId WithUserAssignedObjectId(string objectId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.AppConfig.ManagedIdentityId.WithUserAssignedObjectId(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function WithUserAssignedObjectId (objectId As String) As ManagedIdentityId" />
+      <MemberSignature Language="F#" Value="static member WithUserAssignedObjectId : string -&gt; Microsoft.Identity.Client.AppConfig.ManagedIdentityId" Usage="Microsoft.Identity.Client.AppConfig.ManagedIdentityId.WithUserAssignedObjectId objectId" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.55.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.AppConfig.ManagedIdentityId</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objectId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="objectId">Object id of the user assigned managed identity assigned to the azure resource.</param>
+        <summary>
+            Create an instance of ManagedIdentityId for a user assigned managed identity from an object id.
             </summary>
         <returns>Instance of ManagedIdentityId.</returns>
         <remarks>To be added.</remarks>
@@ -86,6 +117,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.54.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.1.0</AssemblyVersion>
+        <AssemblyVersion>4.55.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AppConfig.ManagedIdentityId</ReturnType>
@@ -94,7 +126,7 @@
         <Parameter Name="resourceId" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="resourceId">Resource id of the user assigned managed identity assigned to azure resource.</param>
+        <param name="resourceId">Resource id of the user assigned managed identity assigned to the azure resource.</param>
         <summary>
             Create an instance of ManagedIdentityId for a user assigned managed identity from a resource id.
             </summary>

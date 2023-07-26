@@ -11,6 +11,7 @@
     <AssemblyVersion>4.53.0.0</AssemblyVersion>
     <AssemblyVersion>4.54.0.0</AssemblyVersion>
     <AssemblyVersion>4.54.1.0</AssemblyVersion>
+    <AssemblyVersion>4.55.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Identity.Client.BaseAbstractApplicationBuilder&lt;Microsoft.Identity.Client.ManagedIdentityApplicationBuilder&gt;</BaseTypeName>
@@ -40,6 +41,7 @@
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.1.0</AssemblyVersion>
+        <AssemblyVersion>4.55.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.IManagedIdentityApplication</ReturnType>
@@ -65,6 +67,7 @@
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
         <AssemblyVersion>4.54.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.1.0</AssemblyVersion>
+        <AssemblyVersion>4.55.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ManagedIdentityApplicationBuilder</ReturnType>
@@ -75,9 +78,11 @@
       <Docs>
         <param name="managedIdentityId">Configuration of the Managed Identity assigned to the resource.</param>
         <summary>
-            Creates a ManagedIdentityApplicationBuilder from a user assigned managed identity clientID / resourceId.
+            Creates a ManagedIdentityApplicationBuilder from a user assigned managed identity clientID / resourceId / objectId.
             For example, for a system assigned managed identity use ManagedIdentityApplicationBuilder.Create(ManagedIdentityId.SystemAssigned)
-            and for a user assigned managed identity use ManagedIdentityApplicationBuilder.Create(ManagedIdentityId.WithUserAssignedClientId(clientId)).
+            and for a user assigned managed identity use ManagedIdentityApplicationBuilder.Create(ManagedIdentityId.WithUserAssignedClientId(clientId)) or
+            ManagedIdentityId.WithUserAssignedResourceId("resourceId") or 
+            ManagedIdentityId.WithUserAssignedObjectId("objectid").
             For more details see https://aka.ms/msal-net-managed-identity
             </summary>
         <returns>A <see cref="T:Microsoft.Identity.Client.ManagedIdentityApplicationBuilder" /> from which to set more
@@ -99,6 +104,7 @@
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.1.0</AssemblyVersion>
+        <AssemblyVersion>4.55.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ManagedIdentityApplicationBuilder</ReturnType>
