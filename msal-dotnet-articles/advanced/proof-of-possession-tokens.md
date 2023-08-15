@@ -138,6 +138,6 @@ An end to end implementation would need to:
 1. [Enable the use of broker](https://learn.microsoft.com/entra/msal/dotnet/acquiring-tokens/desktop-mobile/wam)
 1. Check if the client is capable of creating PoP tokens using `publicClientApp.IsProofOfPossessionSupportedByClient()`
 2. Make an unauthenticated call to the service
-3. Parse the WWW-Authenticate headers and if PoP is supported, extract the nonce
+3. [Parse the WWW-Authenticate headers](https://learn.microsoft.com/entra/msal/dotnet/advanced/extract-authentication-parameters) and if PoP is supported, extract the nonce
 4. Request PoP tokens using the `AcquireTokenSilent` / `AcquireTokenInteractive` pattern, by adding the `.WithProofOfPossession(nonce, method, requestUri)` modifier
-5. Make the request to the protected resource. If the request results in 200 OK, parse the `Authenticate-Info` header and extract the new `nonce` - it needs to be used at step 4 when requesting a new token. If the request results in a 401 Unauthenticated, observe the error - it may be because of an expired nonce. In that case, repeat steps 3-5. 
+5. Make the request to the protected resource. If the request results in 200 OK, [parse the Authenticate-Info](https://learn.microsoft.com/entra/msal/dotnet/advanced/extract-authentication-parameters)  header and extract the new `nonce` - it needs to be used at step 4 when requesting a new token. If the request results in a 401 Unauthenticated, observe the error - it may be because of an expired nonce. In that case, repeat steps 3-5. 
