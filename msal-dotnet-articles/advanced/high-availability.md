@@ -6,6 +6,10 @@ title: High availability considerations in MSAL.NET
 
 For client credential (app 2 app) flow, please see https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Client-credential-flows which has a topic on High-Availablity first.
 
+## Use a higher level API
+
+MSAL is a lower level API. If you are writing a new app, consider using the higher level [Microsoft.Identitity.Web](https://github.com/AzureAD/microsoft-identity-web) which provides out of the box integration with ASP.NET Core and ASP.NET Classic.
+
 ## Use the latest MSAL
 
 Semantic versioning is followed to the letter. Use the latest MSAL to get the latest bug fixes.
@@ -54,7 +58,7 @@ Details about logging can be found in the [Logging in MSAL.NET](/azure/active-di
 
 ## One Confidential Client per session
 
-In web app and web API scenarios, it is recommended to use a new `ConfidentialClientApplication` on each session and to serialize in the same way - one token cache per session. This scales well and also increases security. The [official samples](/azure/active-directory/develop/sample-v2-code) show how to do this.
+It is recommended to use a new `ConfidentialClientApplication` on each session and to serialize in the same way - one token cache per session. This scales well and also increases security. The [official samples](/azure/active-directory/develop/sample-v2-code) show how to do this. But remember to configure token caching.
 
 >[!NOTE]
 >Microsoft.Identity.Web does this.
@@ -95,7 +99,11 @@ Whenever you make **requests for the same token**, i.e. whenever MSAL is able to
 
 Certs for the confidential client app must be rotated for security reasons (don't use secrets in prod!). There are several ways to handle cert rotation, listing is in ordered of most preferred to least preferred.
 
-1. Use Microsoft.Identity.Web's certificate handling logic
+1. Use Managed Identity
+
+With [Managed Identity](https://learn.microsoft.com/entra/msal/dotnet/advanced/managed-identity), trust is established through hosting your app in Azure. There are not secrets to maintain and no certificates to rotate. 
+
+2. Use Microsoft.Identity.Web's certificate handling logic
 
 In web app / web api scenarios, you should use Microsoft.Identity.Web, a higher-level API over MSAL. It handles certificate rotation for when the certificate is stored in KeyVault and handles Managed Identity for you as well.
 
@@ -103,27 +111,9 @@ Learn more in the [Certificates in Microsoft.Identity.Web](https://github.com/Az
 
 This is the preferred solution for non-Microsoft internal services using ASP.NET Core.
 
-2. (**Internal only**) Rely on [Subject Name/Issuer certificates](./subject-name-and-issuer-authentication.md).
+3. (**Internal only**) Rely on [Subject Name/Issuer certificates](./subject-name-and-issuer-authentication.md).
 
-This mechanism allows Azure AD to identify a cert based on SN/I instead of x5t. It is a stop-gap solution, there are no plans to make it available to third-parties.
+This mechanism allows Azure AD to identify a cert based on SN/I instead of thumbprint (x5t). It is a stop-gap solution, there are no plans to make it available to third-parties. 
 
-This is the preferred solution for Microsoft internal services.
+This is the preferred solution for Microsoft internal services who are not able to use Managed Identity.
 
-3. Write your own simple cert reload logic
-
-Azure AD will reject an expired certificate with an error, which MSAL will report as an `MsalServiceException`
-
-```csharp
-        private bool IsInvalidClientCertificateError(MsalServiceException exMsal)
-        {
-            return !_retryClientCertificate &&
-                string.Equals(exMsal.ErrorCode, "invalid_client", StringComparison.OrdinalIgnoreCase) &&
-                exMsal.Message.Contains("AADSTS700027", StringComparison.OrdinalIgnoreCase);
-        }
-```
-
-At this stage your app should try to reload the KeyVault certificate.
-
-4. Re-create the CCA object
-
-Create a new ConfidentialClientApplication object on each request. But make sure to point it to the same token cache! /azure/active-directory/develop/msal-net-token-cache-serialization?tabs=aspnetcore
