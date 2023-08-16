@@ -18,7 +18,7 @@ For more details, see [RFC 7800](https://tools.ietf.org/html/rfc7800).
 
 If you make an unauthenticated request to a protected API, it should repond with HTTP 401 (Unauthenticated) reponse, and with some [WWW-Authenticate](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/WWW-Authenticate) headers. These headers inform the clients of the available authentication schemes, such as Basic, NTLM, Bearer and POP. The MSAL family of libraries can help with Bearer and PoP.
 
-Programatically, MSAL.NET offers [a helper API](https://learn.microsoft.com/entra/msal/dotnet/advanced/extract-authentication-parameters) for parsing these headers.
+Programatically, MSAL.NET offers [a helper API](extract-authentication-parameters.md) for parsing these headers.
 
 ## Proof-of-Possession for confidential clients
 
