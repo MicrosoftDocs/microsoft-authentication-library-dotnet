@@ -88,9 +88,7 @@ Proof-of-Possession on public client flows can be achieved with the use of the u
 
 It is possible that a client does not support creating PoP tokens. This is due to the fact that brokers (WAM, Company Portal) are not always present on the device or that the SDK does not implement the protocol on a specific operating system. Currently, PoP tokens are available on Windows 10+ and Windows Server 2019+. Use the API `publicClientApp.IsProofOfPossessionSupportedByClient()` to understand if POP is supported by the client.
 
-### 
-
-Example simple implementation:
+Example implementation:
 
 ```csharp
 // Required for the use of the broker (on all supported platforms except .NET 6 Windows and above)
