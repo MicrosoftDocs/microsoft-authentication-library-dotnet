@@ -84,7 +84,7 @@ If you want to do key management and to create the SHR yourself,  see [this exam
 
 ## Proof-of-Possession for public clients
 
-Proof-of-Possession on public client flows can be achieved with the use of the updated [Windows broker](../acquiring-tokens/desktop-mobile/wam.md) in MSAL 4.52.0 and above. Contrary to the confidential client flow, it is not possible to provide your own key to sign the PoP token. MSAL will use the best available keys which exist on the machine, typically hardware keys (see [TPM](https://learn.microsoft.com/windows/security/hardware-security/tpm/tpm-fundamentals).
+Proof-of-Possession on public client flows can be achieved with the use of the updated [Windows broker](../acquiring-tokens/desktop-mobile/wam.md) in MSAL 4.52.0 and above. Contrary to the confidential client flow, it is not possible to provide your own key to sign the PoP token. MSAL will use the best available keys which exist on the machine, typically hardware keys (see [TPM](/windows/security/hardware-security/tpm/tpm-fundamentals)).
 
 It is possible that a client does not support creating PoP tokens. This is due to the fact that brokers (WAM, Company Portal) are not always present on the device or that the SDK does not implement the protocol on a specific operating system. Currently, PoP tokens are available on Windows 10+ and Windows Server 2019+. Use the API `publicClientApp.IsProofOfPossessionSupportedByClient()` to understand if POP is supported by the client.
 
