@@ -16,7 +16,7 @@ For more details, see [RFC 7800](https://tools.ietf.org/html/rfc7800).
 
 ## Does the protected resource accept PoP tokens?
 
-If you make an unauthenticated request to a protected API, it should repond with HTTP 401 (Unauthenticated) reponse, and with some [WWW-Authenticate](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/WWW-Authenticate) headers. These headers inform the clients of the available authentication schemes, such as Basic, NTLM, Bearer and POP. The MSAL family of libraries can help with Bearer and PoP.
+If you make an unauthenticated request to a protected API, it should reply with HTTP 401 Unauthorized response, and with some [WWW-Authenticate](https://developer.mozilla.org/docs/Web/HTTP/Headers/WWW-Authenticate) headers. These headers inform the clients of the available authentication schemes, such as Basic, NTLM, Bearer, and POP. The MSAL family of libraries can help with Bearer and PoP.
 
 Programatically, MSAL.NET offers [a helper API](extract-authentication-parameters.md) for parsing these headers.
 
