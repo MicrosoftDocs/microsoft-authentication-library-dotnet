@@ -7,16 +7,16 @@ description: "How to use MSAL.NET to authenticate on behalf of a user."
 
 ## If you are using ASP.NET Core
 
-If you are building a web API on to of ASP.NET Core, we recommend that you use Microsoft.Identity.Web. See [Web APIs with Microsoft.Identity.Web](https://github.com/AzureAD/microsoft-identity-web/wiki/web-apis).
+If you are building a Web API on top of ASP.NET Core or ASP.NET Classic, we recommend that you use Microsoft.Identity.Web. See [Web APIs with Microsoft.Identity.Web](https://github.com/AzureAD/microsoft-identity-web/wiki/web-apis).
 
-You might want to check the decision tree: [Is MSAL.NET right for me?](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Is-MSAL.NET-right-for-me%3F).
+Check the decision tree: [Is MSAL.NET right for me?](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Is-MSAL.NET-right-for-me%3F).
 
 ## Getting tokens on behalf of a user
 
 ### Scenario
 
-- A client (web, desktop, mobile, single-page application) - not represented on the picture below - calls a protected web API, providing a JWT bearer token in its "Authorization" HTTP header.
-- The protected web API validates the incoming user token, and uses MSAL.NET `AcquireTokenOnBehalfOf` method to request from Azure AD another token so that it can, itself, call another web API (named the downstream web API) on behalf of the user.
+- A client (web site, desktop, mobile, single-page application) - not represented on the picture below - calls a protected web API, providing a JWT bearer token in its "Authorization" HTTP header.
+- The protected web API validates the incoming user token, and uses MSAL.NET `AcquireTokenOnBehalfOf` method to request from Azure AD another token so that it can, itself, call another web API, for example Graph, named the downstream web API, on behalf of the user.
 
 This flow, named the On-Behalf-Of flow (OBO), is illustrated by the top part of the picture below. The bottom part is a daemon scenario, also possible for web APIs.
 
@@ -51,11 +51,53 @@ private void AddAccountToCacheFromJwt(IEnumerable<string> scopes, JwtSecurityTok
   var application = BuildConfidentialClientApplication(httpContext, principal);
 
   // .Result to make sure that the cache is filled-in before the controller tries to get access tokens
-  var result = await application.AcquireTokenOnBehalfOf(
-           requestedScopes.Except(scopesRequestedByMsalNet),
-           userAssertion)
-              .ExecuteAsync()                     
+  var result = await application.AcquireTokenOnBehalfOf(requestedScopes, userAssertion).ExecuteAsync()                     
 }
+```
+
+## Handling multi-factor auth (MFA), conditional access and incremental consent
+
+
+### Failure scenario
+
+It is a common scenario that a tenant administrator restricts access to the downstream API (for example to Graph), by requiring end-users to MFA. But often they do not place the same restrictions on the web api. 
+
+1. The client (e.g. desktop app or web site) asks for a token for your web api. MFA is not enforced at this point!
+2. The web api tries to exchange this token for a token for the downstream web api (e.g. Graph), through on-behalf-of. This fails, because access through Graph requires the user to have MFA-ed. The call to `AcquireTokenOnBehalfOf` will fail with an `MsalUiRequiredException` which will also have the `Claims` property set.
+
+### How to signal that MFA is needed to the client
+
+Conceptually, [the web api needs to send back the exception to the client](https://learn.microsoft.com/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow#error-response-example), with the claims string. 
+The [standard pattern](https://datatracker.ietf.org/doc/html/rfc6750#section-3.1) for signaling this failure to a client is to reply with HTTP 401 and with a WWW-Authenticate header which encapsulates the details of the failure. 
+
+
+#### The web api replies with 401 + WWW-Authenticate
+
+```csharp
+
+// This example is for an ASP.NET Core web api
+public void ReplyForbiddenWithWwwAuthenticateHeader(MsalUiRequiredException ex)
+{
+     httpResponse.StatusCode = (int)HttpStatusCode.Forbidden;
+     httpResponse.Headers[HeaderNames.WWWAuthenticate] = $"Bearer claims={ex.Claims}, error={ex.Message};
+}
+
+```
+
+#### The client 
+
+The client needs to interpret 401 messages and to parse WWW-Authenticate headers. MSAL.NET offers parsing APIs: 
+
+```csharp
+// assuming an HttpResponseMessage response with StatusCode=HttpStatusCode.Unauthorized
+WwwAuthenticateParameters wwwParams = WwwAuthenticateParameters.CreateFromAuthenticationHeaders(response.HttpResponseHeaders, "Bearer");
+string claims = wwwParams.Claims; // you may also extract other parameters such as Error and Authority
+
+// desktop or mobile app
+app.AcquireTokenInteractieve(scopes).WithClaims(wwwParams.Claims);
+
+// web app - redirect to login page and add the claims to the authorization URL
+RedirectToLogin(wwwParams.ConsentUri)
 ```
 
 ## Long-running OBO processes
