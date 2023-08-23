@@ -7,9 +7,9 @@ description: "How to use MSAL.NET to authenticate on behalf of a user."
 
 ## If you are using ASP.NET Core
 
-If you are building a Web API on top of ASP.NET Core or ASP.NET Classic, we recommend that you use Microsoft.Identity.Web. See [Web APIs with Microsoft.Identity.Web](https://github.com/AzureAD/microsoft-identity-web/wiki/web-apis).
+If you are building a web API on top of ASP.NET Core or ASP.NET Classic, we recommend that you use Microsoft.Identity.Web. See [Web APIs with Microsoft.Identity.Web](https://github.com/AzureAD/microsoft-identity-web/wiki/web-apis).
 
-Check the decision tree: [Is MSAL.NET right for me?](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Is-MSAL.NET-right-for-me%3F).
+Check the decision tree: [Is MSAL.NET right for me?](/entra/msal/dotnet/getting-started/choosing-msal-dotnet)
 
 ## Getting tokens on behalf of a user
 
@@ -60,33 +60,31 @@ private void AddAccountToCacheFromJwt(IEnumerable<string> scopes, JwtSecurityTok
 
 ### Failure scenario
 
-It is a common scenario that a tenant administrator restricts access to the downstream API (for example to Graph), by requiring end-users to MFA. But often they do not place the same restrictions on the web api. 
+It is a common scenario that a tenant administrator restricts access to the downstream API (for example, to Graph) by requiring end-users to complete a Multi-Factor Authentication (MFA) challenge; however, they often do not place the same restrictions on the web API. 
 
-1. The client (e.g. desktop app or web site) asks for a token for your web api. MFA is not enforced at this point!
-2. The web api tries to exchange this token for a token for the downstream web api (e.g. Graph), through on-behalf-of. This fails, because access through Graph requires the user to have MFA-ed. The call to `AcquireTokenOnBehalfOf` will fail with an `MsalUiRequiredException` which will also have the `Claims` property set.
+1. The client (e.g., desktop app or web site) asks for a token for your web API. MFA is not enforced at this point.
+2. The web API tries to exchange this token for a token for the downstream web API (e.g. Graph) via the on-behalf-of flow. This fails because access through Graph requires the user to have completed the MFA challenge. The call to `AcquireTokenOnBehalfOf` will fail with an `MsalUiRequiredException` which will also have the `Claims` property set.
 
 ### How to signal that MFA is needed to the client
 
-Conceptually, [the web api needs to send back the exception to the client](https://learn.microsoft.com/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow#error-response-example), with the claims string. 
+The web API needs to [send the exception back to the client](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow#error-response-example) with the claims string. 
 The [standard pattern](https://datatracker.ietf.org/doc/html/rfc6750#section-3.1) for signaling this failure to a client is to reply with HTTP 401 and with a WWW-Authenticate header which encapsulates the details of the failure. 
 
 
-#### The web api replies with 401 + WWW-Authenticate
+#### The web API replies with 401 + WWW-Authenticate
 
 ```csharp
-
 // This example is for an ASP.NET Core web api
 public void ReplyForbiddenWithWwwAuthenticateHeader(MsalUiRequiredException ex)
 {
      httpResponse.StatusCode = (int)HttpStatusCode.Forbidden;
      httpResponse.Headers[HeaderNames.WWWAuthenticate] = $"Bearer claims={ex.Claims}, error={ex.Message};
 }
-
 ```
 
-#### The client 
+#### Handling the failure on the client 
 
-The client needs to interpret 401 messages and to parse WWW-Authenticate headers. MSAL.NET offers parsing APIs: 
+The client needs to interpret 401 messages and parse WWW-Authenticate headers. MSAL.NET offers parsing APIs: 
 
 ```csharp
 // assuming an HttpResponseMessage response with StatusCode=HttpStatusCode.Unauthorized
