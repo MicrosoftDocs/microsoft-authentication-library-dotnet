@@ -4,7 +4,7 @@ title: High availability considerations in MSAL.NET
 
 # High availability considerations in MSAL.NET
 
-For client credential (app 2 app) flow, please see https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Client-credential-flows which has a topic on High-Availablity first.
+For client credentials flow, see this [High Availability](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Client-credential-flows#high-availability) doc first.
 
 ## Use a higher level API
 
@@ -58,10 +58,10 @@ Details about logging can be found in the [Logging in MSAL.NET](/azure/active-di
 
 ## One Confidential Client per session
 
-It is recommended to use a new `ConfidentialClientApplication` on each session and to serialize in the same way - one token cache per session. This scales well and also increases security. The [official samples](/azure/active-directory/develop/sample-v2-code) show how to do this. But remember to configure token caching.
+It is recommended to use a new `ConfidentialClientApplication` on each session and to serialize in the same way - one token cache per session. This scales well and also increases security. The [official samples](/azure/active-directory/develop/sample-v2-code) show how to do this. You must [configure token caching](https://aka.ms/msal-net-token-cache-serialization) for this to work properly.
 
 >[!NOTE]
->Microsoft.Identity.Web does this.
+>Microsoft.Identity.Web applies this approach - one confidential client app instance per request with enabled token caching.
 
 ## HttpClient
 
@@ -97,15 +97,15 @@ Whenever you make **requests for the same token**, i.e. whenever MSAL is able to
 
 ## Certificate Rotation
 
-Certs for the confidential client app must be rotated for security reasons (don't use secrets in prod!). There are several ways to handle cert rotation, listing is in ordered of most preferred to least preferred.
+Certificates for the confidential client app must be rotated for security reasons (don't use secrets in prod!). There are several ways to handle certificate rotation, in order of the most preferred to the least:
 
-1. Use Managed Identity
+1. Use managed identity
 
-With [Managed Identity](https://learn.microsoft.com/entra/msal/dotnet/advanced/managed-identity), trust is established through hosting your app in Azure. There are not secrets to maintain and no certificates to rotate. 
+With [managed identity](https://learn.microsoft.com/entra/msal/dotnet/advanced/managed-identity), trust is established through hosting your app in Azure. There are not secrets to maintain and no certificates to rotate. 
 
 2. Use Microsoft.Identity.Web's certificate handling logic
 
-In web app / web api scenarios, you should use Microsoft.Identity.Web, a higher-level API over MSAL. It handles certificate rotation for when the certificate is stored in KeyVault and handles Managed Identity for you as well.
+In web apps and web APIs, use Microsoft.Identity.Web, a higher-level API over MSAL. It handles certificate rotation when the certificate is stored in Azure Key Vault and handles managed identity case as well.
 
 Learn more in the [Certificates in Microsoft.Identity.Web](https://github.com/AzureAD/microsoft-identity-web/wiki/Certificates#getting-certificates-from-key-vault) guide.
 
@@ -113,7 +113,7 @@ This is the preferred solution for non-Microsoft internal services using ASP.NET
 
 3. (**Internal only**) Rely on [Subject Name/Issuer certificates](./subject-name-and-issuer-authentication.md).
 
-This mechanism allows Azure AD to identify a cert based on SN/I instead of thumbprint (x5t). It is a stop-gap solution, there are no plans to make it available to third-parties. 
+This mechanism allows Azure AD to identify a certtificate based on SN/I instead of a thumbprint (x5t). It is a stop-gap solution; there are no plans to make it available to non-Microsoft applications. 
 
-This is the preferred solution for Microsoft internal services who are not able to use Managed Identity.
+This is the preferred solution for Microsoft internal services which are not able to use managed identity.
 
