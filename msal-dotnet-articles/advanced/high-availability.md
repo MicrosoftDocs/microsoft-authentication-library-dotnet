@@ -69,7 +69,7 @@ It is recommended to use a new `ConfidentialClientApplication` on each session a
 
 **Default behaviour**: MSAL-created `HttpClient` does not scale well for web sites/web API where we recommend to have a `ClientApplication` object for each user session.
 
-**Recommendation**: Provide your own scalable HttpClientFactory. On .NET Core we recommend that you inject the [System.Net.Http.IHttpClientFactory](/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.0). This is described in more detail in the [Providing your own HttpClient, supporting HTTP proxies, and customization of user agent headers](httpclient.md) guide and in the [.NET documentation](/dotnet/api/system.net.http.httpclient#net-framework--mono)
+**Recommendation**: Provide your own scalable HttpClientFactory. On .NET Core we recommend that you inject the [System.Net.Http.IHttpClientFactory](/aspnet/core/fundamentals/http-requests). This is described in more detail in the [Providing your own HttpClient, supporting HTTP proxies, and customization of user agent headers](httpclient.md) guide and in the [.NET documentation](/dotnet/api/system.net.http.httpclient#net-framework--mono)
 
 ## Proactive Token renewal
 
@@ -103,7 +103,7 @@ Certificates for the confidential client app must be rotated for security reason
 
 1. Use managed identity
 
-With [managed identity](https://learn.microsoft.com/entra/msal/dotnet/advanced/managed-identity), trust is established through hosting your app in Azure. There are not secrets to maintain and no certificates to rotate. 
+With [managed identity](/entra/msal/dotnet/advanced/managed-identity), trust is established through hosting your app in Azure. There are not secrets to maintain and no certificates to rotate. 
 
 2. Use Microsoft.Identity.Web's certificate handling logic
 
