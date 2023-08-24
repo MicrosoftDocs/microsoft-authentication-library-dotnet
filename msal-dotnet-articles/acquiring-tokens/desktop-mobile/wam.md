@@ -8,35 +8,23 @@ description: "MSAL is able to call Web Account Manager (WAM), a Windows componen
 MSAL is able to call Web Account Manager (WAM), a Windows component that ships with the OS. This component acts as an authentication broker allowing the users of your app to benefit from integration with accounts known to Windows, such as the account you signed into your Windows session.
 
 >[!NOTE]
->WAM is only available on Windows 10 and above, as well as Windows Server 2019 and above.
+>WAM is available on Windows 10 and above, as well as Windows Server 2019 and above. MSAL will automatically fallback to a browser if WAM cannot be used.
 
 ## What is a broker
 
 An authentication broker is an application that runs on a user’s machine that manages the authentication handshakes and token maintenance for connected accounts. The Windows operating system uses the Web Account Manager (WAM) as its authentication broker. It has many benefits for developers and customers alike, including:
 
-- **Enhanced security.** The client application does not need to manage the refresh token which can be used to obtain new authentication tokens without user consent.
+- **Enhanced security.** Many security enhancements will be delivered with the broker, wihtout needing to update the application logic.
 - **Feature support.** With the help of the broker developers can access rich OS and service capabilities such as Windows Hello, conditional access policies, and FIDO keys without writing extra scaffolding code.
 - **System integration.** Applications that use the broker plug-and-play with the built-in account picker, allowing the user to quickly pick an existing account instead of reentering the same credentials over and over.
-
-With the help of a broker you need to write less code to handle token-related logic while also being able to use more advanced functionality, such as [Proof-of-Possession tokens](../../advanced/proof-of-possession-tokens.md). Moving forward, the MSAL team is continuing to invest in making sure that brokers are the de facto approach to authenticate inside applications.
-
-## Improved Windows broker experience
-
-Latest Windows releases include an updated WAM. The new broker is written in C++, is well-tested, and is significantly more performant and secure. One of the biggest consumers of the new broker experience is the Microsoft 365 suite of apps.
-
-> [!IMPORTANT]
-> With the introduction of the updated broker, we have also updated MSAL.NET to expose its capabilities under a simplified API. Starting with version 4.52.0, the new broker will be the default in MSAL.NET.
-
-The new WAM fixes a number of issues with the legacy implementation and provides other benefits, including:
-
-- New implementation is more stable, easier to add new features, and has less chance of regressions.
-- Works in apps that are executed under the Administrator user context.
-- Adds support for [Proof-of-Possession tokens](../../advanced/proof-of-possession-tokens.md).
-- Decreases assembly size.
+- **Token Protection.** WAM ensures that the refersh tokens are device bound and [enables apps](../../advanced/proof-of-possession-tokens.md) to acquire device bound access tokens. See [Token Protection](https://learn.microsoft.com/azure/active-directory/conditional-access/concept-token-protection)
 
 ## Enabling WAM
 
-Due to platform-specific and backwards compatibility requirements, WAM support is split across two packages:
+> [!IMPORTANT]
+> Use MSAL.NET 4.52.0 or higher to get broker support.
+
+WAM support is split across two packages:
 
 - [Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client/) (i.e., MSAL) - core library for token acquisition.
 - [Microsoft.Identity.Client.Broker](https://www.nuget.org/packages/Microsoft.Identity.Client.Broker/) - adds support for authentication with the broker.
