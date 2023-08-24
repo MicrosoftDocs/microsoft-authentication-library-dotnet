@@ -1,10 +1,11 @@
 ---
 title: High availability considerations in MSAL.NET
+description: "How to build highly available applications that use MSAL.NET."
 ---
 
 # High availability considerations in MSAL.NET
 
-For client credentials flow, see this [High Availability](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Client-credential-flows#high-availability) doc first.
+For client credentials flow, see this [High Availability](/entra/msal/dotnet/acquiring-tokens/web-apps-apis/client-credential-flows#high-availability) document first.
 
 ## Use a higher level API
 
@@ -14,15 +15,16 @@ MSAL is a lower level API. If you are writing a new app, consider using the high
 
 Semantic versioning is followed to the letter. Use the latest MSAL to get the latest bug fixes.
 
-You also want to check if you should use Microsoft Identity Web, a higher level library for web apps and web APIs, which does a lot of what is described below for your. See [Is MSAL right for me?](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Is-MSAL.NET-right-for-me%3F), which proposes a decision tree to choose the best solution depending on your platform and constraints.
+You also want to check if you should use Microsoft Identity Web, a higher level library for web apps and web APIs, which does a lot of what is described below for your. See [Choosing a version of MSAL.NET](/entra/msal/dotnet/getting-started/choosing-msal-dotnet), which proposes a decision tree to choose the best solution depending on your platform and constraints.
 
 ## Use the token cache
 
 **Default behaviour:** MSAL caches the tokens in memory. Each `ConfidentialClientApplication` instance has its own internal token cache. In-memory cache can be lost, for example, if the object instance is disposed or the whole application is stopped.
 
-**Recommendation:** All apps should persist their token caches. Web apps and Web APIs should use an L1 / L2 token cache where L2 is a distributed store like Redis to handle scale. Desktop apps should use [this token cache serialization strategy](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/token-cache-serialization#token-cache-for-a-public-client-application).
+**Recommendation:** All apps should persist their token caches. Web apps and Web APIs should use an L1 / L2 token cache where L2 is a distributed store like Redis to handle scale. Desktop apps should use [a proper token cache serialization strategy](/azure/active-directory/develop/msal-net-token-cache-serialization?tabs=desktop).
 
-> Note: if you use Microsoft.Identity.Web, you don't need to worry about the cache, as it implements the right cache behavior. If you don't use Microsoft.Identity.Web but are building a web app or web API, you'd want to consider an [hybrid approach](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Is-MSAL.NET-right-for-me%3F#use-hybrid-model-msalnet-and-microsoft-identity-web)
+>[!NOTE]
+>If you use Microsoft.Identity.Web, you don't need to worry about the cache as it implements the right cache behavior out-of-the-box. If you don't use Microsoft.Identity.Web but are building a web app or web API, you'd want to consider an [hybrid approach](/entra/msal/dotnet/getting-started/choosing-msal-dotnet#when-do-you-use-the-hybrid-model-msalnet-and-microsoft-identity-web)
 
 **Default behaviour:** MSAL maintains a secondary ADAL token cache for migration scenarios between ADAL and MSAL. ADAL cache operations are very slow.
 **Recommendation:** Disable ADAL cache if you are not interested in migrating from ADAL. This will make a **BIG** perf improvement - see perf measurements [here](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/pull/2309).
@@ -31,7 +33,7 @@ Add `WithLegacyCacheCompatibility(false)` when constructing your app to disable 
 
 ## Add monitoring around MSAL operations
 
-MSAL exposes important metrics as part of [AuthenticationResult.AuthenticationResultMetadata](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/master/src/client/Microsoft.Identity.Client/AuthenticationResultMetadata.cs#L9) object:
+MSAL exposes important metrics as part of [AuthenticationResult.AuthenticationResultMetadata](xref:Microsoft.Identity.Client.AuthenticationResult.AuthenticationResultMetadata*) object:
 
 | Metric       | Meaning     | When to trigger an alarm?    |
 | :-------------: | :----------: | :-----------: |
@@ -67,7 +69,7 @@ It is recommended to use a new `ConfidentialClientApplication` on each session a
 
 **Default behaviour**: MSAL-created `HttpClient` does not scale well for web sites/web API where we recommend to have a `ClientApplication` object for each user session.
 
-**Recommendation**: Provide your own scalable HttpClientFactory. On .NET Core we recommend that you inject the [System.Net.Http.IHttpClientFactory](/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.0). This is described in more detail in the [Providing your own HttpClient, supporting HTTP proxies, and customization of user agent headers](httpclient.md) guide and in the [.NET documentation](/dotnet/api/system.net.http.httpclient?view=net-7.0#net-framework--mono)
+**Recommendation**: Provide your own scalable HttpClientFactory. On .NET Core we recommend that you inject the [System.Net.Http.IHttpClientFactory](/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.0). This is described in more detail in the [Providing your own HttpClient, supporting HTTP proxies, and customization of user agent headers](httpclient.md) guide and in the [.NET documentation](/dotnet/api/system.net.http.httpclient#net-framework--mono)
 
 ## Proactive Token renewal
 
