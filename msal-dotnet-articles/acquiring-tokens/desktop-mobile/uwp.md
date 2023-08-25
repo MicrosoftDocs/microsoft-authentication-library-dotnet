@@ -1,9 +1,24 @@
 ---
-title: Using MSAL.NET with UWP applications
-description: "How to build MSAL.NET applications on the Universal Windows Platform."
----
+title:  Using MSAL.NET with UWP applications
+description: Learn how to build MSAL.NET applications on the Universal Windows Platform."
+services: active-directory
+author: Dickson-Mwendia
+manager: CelesteDG
+
+ms.service: active-directory
+ms.subservice: develop
+ms.topic: conceptual
+ms.workload: identity
+ms.date: 08/24/2023
+ms.author: dmwendia
+ms.reviewer: ddelimarsky
+ms.custom: devx-track-csharp, aaddev, devx-track-dotnet
+#Customer intent: As an application developer, I want to learn about considerations for using Universal Windows Platform and MSAL.NET so that I can decide if this platform meets my application development needs.
+------
 
 # Using MSAL.NET with UWP applications
+
+Developers of applications that use Universal Windows Platform (UWP) with MSAL.NET should consider the concepts this article presents.
 
 >[!NOTE]
 >Please see [WAM](./wam.md) for how to configure your UWP app to handle authentication through the Windows Broker.
@@ -12,7 +27,7 @@ description: "How to build MSAL.NET applications on the Universal Windows Platfo
 
 ### UseCorporateNetwork
 
-On UWP, <xref:Microsoft.Identity.Client.PublicClientApplication> has the following property `UseCorporateNetwork`. This is a boolean which enables the UWP application to benefit from Integrated Windows Authentication (and therefore SSO with the user signed-in with the operating system) if this user is signed-in with an account in a federated Azure AD tenant.
+On the Windows Runtime (WinRT) platform, <xref:Microsoft.Identity.Client.PublicClientApplication> has the boolean property `UseCorporateNetwork`. This property enables Windows 10 and UWP applications to benefit from Integrated Windows Authentication (and therefore SSO with the user signed-in with the operating system) if this user is signed-in with an account in a federated Azure AD tenant.
 
 **Important:**
 Setting this property to true assumes that the application developer has enabled Integrated Windows Authentication (IWA) in the application. For this:

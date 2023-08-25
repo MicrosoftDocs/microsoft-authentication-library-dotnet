@@ -1,23 +1,36 @@
 ---
 title: Using MSAL.NET to sign-in users with social identities
 description: "You can use MSAL.NET to sign-in users with social identities by using Azure AD B2C. Azure AD B2C is built around the notion of policies. In MSAL.NET, specifying a policy translates to providing an authority."
+services: active-directory
+author: henrymbuguakiarie
+manager: CelesteDG
+
+ms.service: active-directory
+ms.subservice: develop
+ms.topic: conceptual
+ms.workload: identity
+ms.date: 08/24/2023
+ms.author: dmwendia
+ms.reviewer: ddelimarsky, saeeda, jeferrie
+ms.custom: devx-track-csharp, aaddev, devx-track-dotnet
+# Customer intent: As an application developer, I want to learn about specific considerations when using Azure AD B2C and MSAL.NET so I can decide if this platform meets my application development needs and requirements.
 ---
 
 # Using MSAL.NET to sign-in users with social identities
 
 You can use MSAL.NET to sign-in users with social identities by using [Azure AD B2C](/azure/active-directory-b2c/overview). Azure AD B2C is built around the notion of policies. In MSAL.NET, specifying a policy translates to providing an authority.
 
-- When you instantiate the Public client application, you need to specify the policy in authority
+- When you instantiate the public client application, you need to specify the policy in authority
 - When you want to apply a policy, you need to call an override of `AcquireTokenInteractive` containing an `authority` parameter
 
-## Authority for a B2C tenant and policy
+## Authority for an Azure AD B2C tenant and policy
 
 The authority to use is `https://login.microsoftonline.com/tfp/{tenant}/{policyName}` where:
 
 - `tenant` is the name of the Azure AD B2C tenant, 
 - `policyName` the name of the policy to apply (for instance "b2c_1_susi" for sign-in/sign-up).
 
-The current guidance from B2C is to use `b2clogin.com` as the authority. For example, `$"https://{your-tenant-name}.b2clogin.com/tfp/{your-tenant-ID}/{policyname}"`. For more information, see this [documentation](/azure/active-directory-b2c/b2clogin).
+The current guidance from B2C is to use `b2clogin.com` as the authority. For example, `$"https://{your-tenant-name}.b2clogin.com/tfp/{your-tenant-ID}/{policyname}"`. For more information, see [Set redirect URLs to b2clogin.com.](/azure/active-directory-b2c/b2clogin).
 
 ```csharp
 // Azure AD B2C Coordinates
