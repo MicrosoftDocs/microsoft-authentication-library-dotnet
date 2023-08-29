@@ -17,7 +17,7 @@ ms.custom: devx-track-csharp, aaddev, has-adal-ref, kr2b-contr-experiment, devx-
 
 # Migrate confidential client applications from ADAL.NET to MSAL.NET
 
-In this how-to guide you'll migrate a confidential client application from Azure Active Directory Authentication Library for .NET (ADAL.NET) to Microsoft Authentication Library for .NET (MSAL.NET). Confidential client applications include web apps, web APIs, and daemon applications that call another service on their own behalf. For more information about confidential apps, see [Authentication flows and application scenarios](authentication-flows-app-scenarios.md). If your app is based on ASP.NET Core, see [Microsoft.Identity.Web](microsoft-identity-web.md).
+In this how-to guide you'll migrate a confidential client application from Azure Active Directory Authentication Library for .NET (ADAL.NET) to Microsoft Authentication Library for .NET (MSAL.NET). Confidential client applications include web apps, web APIs, and daemon applications that call another service on their own behalf. For more information about confidential apps, see [Authentication flows and application scenarios](/azure/active-directory/develop/authentication-flows-app-scenarios). If your app is based on ASP.NET Core, see [Microsoft.Identity.Web](microsoft-identity-web/index.md).
 
 For app registrations:
 
