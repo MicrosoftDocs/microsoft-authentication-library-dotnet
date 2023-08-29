@@ -29,9 +29,9 @@ In addition to the [Integrated Windows Authentication constraints](integrated-wi
 
 | Tenant                                                                         | Description                                        | Supports ROPC |
 |:-------------------------------------------------------------------------------|:---------------------------------------------------|:--------------|
-| `common`                                                                       | Work, school, and personal accounts.               | 🛑 No        |
+| `common`                                                                       | Work, school, and personal accounts.               | ❌ No        |
 | `organizations`                                                                | Work and school accounts.                          | ✅ Yes       |
-| `consumers`                                                                    | Personal Microsoft accounts.                       | 🛑 No        |
+| `consumers`                                                                    | Personal Microsoft accounts.                       | ❌ No        |
 | Specific tenant (GUID or fully-qualified name, like `contoso.onmicrosoft.com`) | Work and school accounts from the specific tenant. | ✅ Yes       |
 
 >[!NOTE]
