@@ -41,10 +41,7 @@ In addition to the [Integrated Windows Authentication constraints](integrated-wi
 
 ### Application registration
 
-During the [app registration](https://go.microsoft.com/fwlink/?linkid=2083908), in the **Authentication** section for your application:
-
-- Specify a reply URI.
-- Choose **Yes** as the answer to the question **Allow public client flows** (which includes **App collects plaintext password (Resource Owner Password Credential Flow)**).
+During the [app registration](https://go.microsoft.com/fwlink/?linkid=2083908), in the **Authentication** section for your application, choose **Yes** as the answer to the question **Allow public client flows** (which includes **App collects plaintext password (Resource Owner Password Credential Flow)**).
 
 ![Screenshot of the Azure Portal in Microsoft Edge, showing the ROPC flow flag](../../media/ropc-enable-azure-portal.png)
 
