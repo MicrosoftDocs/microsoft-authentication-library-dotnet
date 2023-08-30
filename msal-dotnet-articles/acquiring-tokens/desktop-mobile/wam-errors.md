@@ -23,7 +23,11 @@ The table below highlights some of the most common errors along with potential m
 | 2156265478 | To help protect your Online Id account you must signin again. | |
 | 2156265481 | Online Id signin name is not yet verified. Email verification is required before signin. | |
 | 2156265482 | We have noticed some unusual activity in your Online Id account. Your action is needed to make sure no one else is using your account. | |
-| 2156265484 | User interaction is required for authentication. | |
+| 2156265484 | User interaction is required for authentication. | When authenticating the user, WAM could not use a cached token. User needs to be prompted for authentication via <xref:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenInteractive*>. |
 | 558133255  | V2Error: invalid_grant AADSTS500341: The user account {ID} has been deleted from the {TENANT_ID} directory. To sign into this application, the account must be added to the directory.| |
-| 557973645  | V2Error: invalid_grant AADSTS50078: Presented multi-factor authentication has expired due to policies configured by your administrator, you must refresh your multi-factor authentication to access {API_TARGET}. |
+| 557973645  | V2Error: invalid_grant AADSTS50078: Presented multi-factor authentication has expired due to policies configured by your administrator, you must refresh your multi-factor authentication to access {API_TARGET}. | |
 | 525678464  | Account with id {ID} not found. | |
+
+## Unlisted errors
+
+Because WAM is a relatively new component, when errors occur we recommend logging data from [`AdditionalExceptionData`](xref:Microsoft.Identity.Client.MsalException.AdditionalExceptionData*) and [logging a bug](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/issues). We will document the issue as soon as possible.
