@@ -32,6 +32,7 @@ WAM support is split across two packages:
 
 >[!NOTE]
 >For migration purposes, and if you have a .NET 6, .NET Core, or a .NET Standard application that needs to use _both_ WAM and the [embedded browser](/azure/active-directory/develop/msal-net-web-browsers#embedded-vs-system-web-ui), you will also need to use the [Microsoft.Identity.Client.Desktop](https://www.nuget.org/packages/Microsoft.Identity.Client.Desktop/) package. Once added, developers can use [`WithWindowsDesktopFeatures`](xref:Microsoft.Identity.Client.Desktop.DesktopExtensions.WithWindowsDesktopFeatures*) when setting up their public client application.
+>If your application targets UWP or netX-windows, WAM is already in the MSAL.NET package
 
 After referencing the relevant packages, call [`WithBroker(BrokerOptions)`](xref:Microsoft.Identity.Client.Desktop.WamExtension.WithBroker*) with broker configuration options and [a window handle](#parent-window-handles) that the broker will be bound to.
 
@@ -84,9 +85,6 @@ If the configuration is set on a per-tenant basis by using [`WithTenantId`](xref
 ![Demo of the WAM component that is configured on a per-tenant basis and doesn't show the OS-based account picker](../../media/wam/wam-per-tenant.gif)
 
 Once the account is added or selected, the user will be prompted for additional consent if they have never used the application before or the application requires additional permissions.
-
->[!NOTE]
->No changes are required for UWP applications. Because the platform does not support the updated broker, existing applications will continue to use the legacy WAM implementation.
 
 ## Parent window handles
 
