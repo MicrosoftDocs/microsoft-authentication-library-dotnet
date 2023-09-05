@@ -21,13 +21,13 @@ ms.custom: devx-track-csharp, aaddev, devx-track-dotnet
 Developers of applications that use Universal Windows Platform (UWP) with MSAL.NET should consider the concepts this article presents.
 
 >[!NOTE]
->Please see [WAM](./wam.md) for how to configure your UWP app to handle authentication through the Windows Broker.
+>Please see [Using MSAL.NET with Web Account Manager (WAM)](./wam.md) for how to configure your UWP app to handle authentication through the Windows Broker.
 
 ## Legacy scenarios that do not use the broker / WAM
 
 ### UseCorporateNetwork
 
-On the Windows Runtime (WinRT) platform, <xref:Microsoft.Identity.Client.PublicClientApplication> has the boolean property `UseCorporateNetwork`. This property enables Windows 10 and UWP applications to benefit from Integrated Windows Authentication (and therefore SSO with the user signed-in with the operating system) if this user is signed-in with an account in a federated Azure AD tenant.
+In the context of UWP applications, <xref:Microsoft.Identity.Client.PublicClientApplication> has [`WithUseCorporateNetwork`](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/c9bdd0dd191ab2e658a1c949e43e3959fe3d1aa5/src/client/Microsoft.Identity.Client/AppConfig/PublicClientApplicationBuilder.cs#L244). This is a function that accepts a boolean value determining whether the application should use [Integrated Windows Authentication](./integrated-windows-authentication.md) (and therefore SSO with the user signed-in with the operating system) if this user is signed-in with an account in a federated Azure AD tenant.
 
 **Important:**
 Setting this property to true assumes that the application developer has enabled Integrated Windows Authentication (IWA) in the application. For this:
