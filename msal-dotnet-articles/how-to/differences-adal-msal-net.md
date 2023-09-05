@@ -24,7 +24,7 @@ You still need to use ADAL.NET if your application needs to sign in users with e
 
 ## Prerequisites
 
-Go through [MSAL overview](entra/msal/overview) to learn more about MSAL.
+Go through [MSAL overview](/entra/msal/overview) to learn more about MSAL.
 
 ## Differences
 
@@ -46,7 +46,7 @@ Below is a summary comparing MSAL.NET and ADAL.NET supported grants for both pub
 
 The following image summarizes some of the differences between ADAL.NET and MSAL.NET for a public client application.
 
-[![Screenshot showing some of the differences between ADAL.NET and MSAL.NET for a public client application.](../media/msal-compare-msaldotnet-and-adaldotnet/differences.png)](media/msal-compare-msaldotnet-and-adaldotnet/differences.png#lightbox)
+[![Screenshot showing some of the differences between ADAL.NET and MSAL.NET for a public client application.](../media/msal-compare-msaldotnet-and-adaldotnet/differences.png)](../media/msal-compare-msaldotnet-and-adaldotnet/differences.png#lightbox)
 
 Here are the grants supported in ADAL.NET and MSAL.NET for Desktop and Mobile applications.
 
@@ -171,7 +171,7 @@ Prompt behavior in MSAL.NET is equivalent to prompt behavior in ADAL.NET:
 | `PromptBehavior.Auto`| `NoPrompt`| Azure AD chooses the best behavior (signing in users silently if they are signed in with only one account, or displaying the account selector if they are signed in with several accounts). |
 | `PromptBehavior.Always`| `ForceLogin` | Resets the sign-in box and forces the user to reenter their credentials. |
 | `PromptBehavior.RefreshSession`| `Consent`| Forces the user to consent again to all permissions. |
-| `PromptBehavior.Never`| `Never`| Don't use; instead, use the [recommended pattern for public client apps](scenario-desktop-acquire-token.md?tabs=dotnet). |
+| `PromptBehavior.Never`| `Never`| Don't use; instead, use the [recommended pattern for public client apps](/azure/active-directory/develop/scenario-desktop-acquire-token?tabs=dotnet). |
 | `PromptBehavior.SelectAccount`| `SelectAccount`| Displays the account selector and forces the user to select an account. |
 
 ### Handling claim challenge exceptions

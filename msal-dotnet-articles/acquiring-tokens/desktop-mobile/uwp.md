@@ -14,7 +14,7 @@ ms.author: dmwendia
 ms.reviewer: ddelimarsky
 ms.custom: devx-track-csharp, aaddev, devx-track-dotnet
 #Customer intent: As an application developer, I want to learn about considerations for using Universal Windows Platform and MSAL.NET so that I can decide if this platform meets my application development needs.
-------
+---
 
 # Using MSAL.NET with UWP applications
 
