@@ -9,14 +9,18 @@
       items:
       - name: Scenarios
         href: getting-started/scenarios.md
+      - name: Initializing client applications
+        href: getting-started/initializing-client-applications.md
+      - name: Instantiate public client apps
+        href: getting-started/instantiate-public-client-config-options.md
+      - name: Instantiate confidential client apps
+        href: getting-started/instantiate-confidential-client-config-options.md        
       - name: Best practices
         href: getting-started/best-practices.md
     - name: Acquiring Tokens
       items:
       - name: Overview
         href: acquiring-tokens/overview.md
-      - name: AcquireTokenSilentAsync API
-        href: acquiring-tokens/acquiretokensilentasync-api.md
       - name: Desktop and mobile applications
         items:
         - name: Acquiring tokens interactively
@@ -31,22 +35,34 @@
           href: acquiring-tokens/desktop-mobile/uwp.md
         - name: Sign-in users with social identities
           href: acquiring-tokens/desktop-mobile/social-identities.md
-        - name: Integrated Windows Authentication for domain or AAD joined machines
+        - name: Integrated Windows Authentication for domain or Azure AD joined machines
           href: acquiring-tokens/desktop-mobile/integrated-windows-authentication.md
         - name: Username/password authentication
           href: acquiring-tokens/desktop-mobile/username-password-authentication.md
         - name: Device Code Flow for devices without a Web browser
           href: acquiring-tokens/desktop-mobile/device-code-flow.md
         - name: ADFS support
-          href: acquiring-tokens/desktop-mobile/adfs.md
+          href: acquiring-tokens/desktop-mobile/adfs-support.md
       - name: Web apps/web APIs/daemon apps
         items:
         - name: Acquiring a token for the app
           href: acquiring-tokens/web-apps-apis/client-credential-flows.md
         - name: Acquiring a token on behalf of a user (service to service calls)
           href: acquiring-tokens/web-apps-apis/on-behalf-of-flow.md
-        - name: Acquiring a token by authorization code in Web Apps
+        - name: Acquiring a token by authorization code in web apps
           href: acquiring-tokens/web-apps-apis/authorization-codes.md
+        - name: Confidential client assertions
+          href: acquiring-tokens/web-apps-apis/confidential-client-assertions.md
+      - name: AcquireTokenSilentAsync API
+        href: acquiring-tokens/acquiretokensilentasync-api.md
+      - name: Acquire a token from the cache 
+        href: acquiring-tokens/acquire-token-silently.md
+      - name: Clear the token cache
+        href: acquiring-tokens/clear-token-cache.md
+      - name: Get consent for several resources
+        href: acquiring-tokens/user-gets-consent-for-multiple-resources.md
+      - name: Using web browsers for interactive authentication
+        href: acquiring-tokens/using-web-browsers.md
     - name: Advanced topics
       items:
       - name: High availability
@@ -55,6 +71,10 @@
         items:
         - name: Overview
           href: advanced/exceptions/index.md
+        - name: Handle errors and exceptions in MSAL.NET
+          href: advanced/exceptions/msal-error-handling.md
+        - name: Retry policy
+          href: advanced/exceptions/msal-logging.md
         - name: Retry policy
           href: advanced/exceptions/retry-policy.md
         - name: Understanding MsalUiRequiredException
@@ -115,6 +135,20 @@
         href: advanced/subject-name-and-issuer-authentication.md
     - name: How-to
       items:
+      - name: Migrate to MSAL.NET
+        items:
+        - name: Migrate from ADAL.NET to MSAL.NET
+          href: how-to/msal-net-migration.md
+        - name: Migrate confidential client apps to MSAL.NET
+          href: how-to/migrate-confidential-client.md
+        - name: Migrate public client apps to MSAL.NET
+          href: how-to/migrate-public-client.md
+        - name: Differences between ADAL.NET and MSAL.NET
+          href: how-to/differences-adal-msal-net.md
+        - name: Migrate broker-enabled Xamarin Android app MSAL.NET
+          href: how-to/migrate-android-broker.md
+        - name: Migrate broker-enabled Xamarin iOS app MSAL.NET
+          href: how-to/migrate-ios-broker.md
       - name: Install NuGet package from other sources
         href: how-to/install-nuget-custom-source.md
       - name: Synchronous programming
@@ -123,20 +157,23 @@
         href: how-to/override-target-framework.md
       - name: Setting the default reply URI
         href: how-to/default-reply-uri.md
-      - name: Protect resources in iOS and Android applications using InTune MAM and MSAL.NET
+      - name: Protect resources in iOS and Android apps using InTune MAM and MSAL.NET
         href: how-to/protect-ios-android-mam-intune.md
+      - name: Setting cache options
+        href: how-to/cache-options.md
       - name: Custom token cache for a public client application
         href: how-to/custom-token-cache-in-public-client-applications.md
+      - name: Serialize the token cache
+        href: how-to/token-cache-serialization.md
       - name: Building applications on Ubuntu Linux
         href: how-to/build-apps-on-linux-ubuntu.md
       - name: Overriding authority
         href: how-to/overriding-authority.md
       - name: Creating a configuration for MAM (conditional access)
         href: how-to/create-config-for-mam-conditional-access.md
-      - name: Setting cache options
-        href: how-to/cache-options.md
       - name: Getting tenant profiles
         href: how-to/get-tenant-profiles.md
+
     - name: Contribute
       items:
       - name: Overview
