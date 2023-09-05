@@ -17,9 +17,7 @@ ms.custom: devx-track-csharp, aaddev, has-adal-ref, kr2b-contr-experiment, devx-
 
 # Migrate confidential client applications from ADAL.NET to MSAL.NET
 
-In this how-to guide you'll migrate a confidential client application from Azure Active Directory Authentication Library for .NET (ADAL.NET) to Microsoft Authentication Library for .NET (MSAL.NET). Confidential client applications include web apps, web APIs, and daemon applications that call another service on their own behalf. For more information about confidential apps, see [Authentication flows and application scenarios](/azure/active-directory/develop/authentication-flows-app-scenarios). If your app is based on ASP.NET Core, see [Microsoft.Identity.Web](../../msal-dotnet-articles/microsoft-identity-web/index.md
-
-microsoft-identity-web/index.md).
+In this how-to guide you'll migrate a confidential client application from Azure Active Directory Authentication Library for .NET (ADAL.NET) to Microsoft Authentication Library for .NET (MSAL.NET). Confidential client applications include web apps, web APIs, and daemon applications that call another service on their own behalf. For more information about confidential apps, see [Authentication flows and application scenarios](/azure/active-directory/develop/authentication-flows-app-scenarios). If your app is based on ASP.NET Core, see [Microsoft.Identity.Web](../microsoft-identity-web/index.md).
 
 For app registrations:
 
@@ -64,7 +62,7 @@ The ADAL code for your app uses daemon scenarios if it contains a call to `Authe
 
 #### Update the code of daemon scenarios
 
-[!INCLUDE [Common steps](../../includes/msal-net-adoption-steps-confidential-clients.md)]
+[!INCLUDE [Common steps](../includes/msal-net-adoption-steps-confidential-clients.md)]
 
 In this case, replace the call to `AuthenticationContext.AcquireTokenAsync` with a call to `IConfidentialClientApplication.AcquireTokenClient`.
 
@@ -191,7 +189,7 @@ The ADAL code for your app uses OBO if it contains a call to `AuthenticationCont
 
 #### Update the code by using OBO
 
-[!INCLUDE [Common steps](../../includes/msal-net-adoption-steps-confidential-clients.md)]
+[!INCLUDE [Common steps](../includes/msal-net-adoption-steps-confidential-clients.md)]
 
 In this case, we replace the call to `AuthenticationContext.AcquireTokenAsync` with a call to `IConfidentialClientApplication.AcquireTokenOnBehalfOf`.
 
@@ -328,7 +326,7 @@ The ADAL code for your app uses auth code flow if it contains a call to `Authent
 
 #### Update the code by using the authorization code flow
 
-[!INCLUDE [Common steps](../../includes/msal-net-adoption-steps-confidential-clients.md)] 
+[!INCLUDE [Common steps](../includes/msal-net-adoption-steps-confidential-clients.md)] 
 
 In this case, replace the call to `AuthenticationContext.AcquireTokenAsync` with a call to `IConfidentialClientApplication.AcquireTokenByAuthorizationCode`.
 
