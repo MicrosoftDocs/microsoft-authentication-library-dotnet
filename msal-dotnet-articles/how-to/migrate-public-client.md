@@ -18,7 +18,7 @@ ms.custom: devx-track-csharp, aaddev, has-adal-ref, devx-track-dotnet
 
 # Migrate public client applications from ADAL.NET to MSAL.NET
 
-This article describes how to migrate a public client application from Azure Active Directory Authentication Library for .NET (ADAL.NET) to Microsoft Authentication Library for .NET (MSAL.NET). Public client applications are desktop apps, including Win32, WPF, and UWP apps, and mobile apps, that call another service on the user's behalf. For more information about public client applications, see [Authentication flows and application scenarios](authentication-flows-app-scenarios.md).
+This article describes how to migrate a public client application from Azure Active Directory Authentication Library for .NET (ADAL.NET) to Microsoft Authentication Library for .NET (MSAL.NET). Public client applications are desktop apps, including Win32, WPF, and UWP apps, and mobile apps, that call another service on the user's behalf. For more information about public client applications, see [Authentication flows and application scenarios](/azure/active-directory/develop/authentication-flows-app-scenarios).
 
 ## Migration steps
 
@@ -35,11 +35,11 @@ This article describes how to migrate a public client application from Azure Act
 
    The public client scenarios are:
 
-   - [Web Authentication Manager](scenario-desktop-acquire-token-wam.md) the preferred broker-based authentication on Windows.
-   - [Interactive authentication](scenario-desktop-acquire-token-interactive.md) where the user is shown a web-based interface to complete the sign-in process.
-   - [Integrated Windows authentication](scenario-desktop-acquire-token-integrated-windows-authentication.md) where a user signs using the same identity they used to sign into a Windows domain (for domain-joined or Azure AD-joined machines).
-   - [Username/password](scenario-desktop-acquire-token-username-password.md) where the sign-in occurs by providing a username/password credential.
-   - [Device code flow](scenario-desktop-acquire-token-device-code-flow.md) where a device of limited UX shows you a device code to complete the authentication flow on an alternate device.
+   - [Web Authentication Manager](/azure/active-directory/develop/scenario-desktop-acquire-token-wam) the preferred broker-based authentication on Windows.
+   - [Interactive authentication](/azure/active-directory/develop/scenario-desktop-acquire-token-interactive) where the user is shown a web-based interface to complete the sign-in process.
+   - [Integrated Windows authentication](/azure/active-directory/develop/scenario-desktop-acquire-token-integrated-windows-authentication) where a user signs using the same identity they used to sign into a Windows domain (for domain-joined or Azure AD-joined machines).
+   - [Username/password](/azure/active-directory/develop/scenario-desktop-acquire-token-username-password) where the sign-in occurs by providing a username/password credential.
+   - [Device code flow](/azure/active-directory/develop/scenario-desktop-acquire-token-device-code-flow) where a device of limited UX shows you a device code to complete the authentication flow on an alternate device.
 
 
 ## [Interactive](#tab/interactive)
@@ -116,7 +116,7 @@ catch (MsalUiRequiredException) // no change in the pattern
    :::column-end:::
 :::row-end:::
 
-The MSAL code shown above uses WAM (Web authentication manager) which is the recommended approach. If you wish to use interactive authentication without WAM, see [Interactive Authentication](scenario-desktop-acquire-token-interactive.md).
+The MSAL code shown above uses WAM (Web authentication manager) which is the recommended approach. If you wish to use interactive authentication without WAM, see [Interactive Authentication](/azure/active-directory/develop/scenario-desktop-acquire-token-interactive).
 
 ## [Integrated Windows authentication](#tab/iwa)
 
@@ -470,7 +470,7 @@ Key benefits of MSAL.NET for your app include:
 - **Resilience**. MSAL.NET helps make your app resilient through the following:
 
    - Azure AD Cached Credential Service (CCS) benefits. CCS operates as an Azure AD backup.
-   - Proactive renewal of tokens if the API that you call enables long-lived tokens through [continuous access evaluation](app-resilience-continuous-access-evaluation.md).
+   - Proactive renewal of tokens if the API that you call enables long-lived tokens through [continuous access evaluation](/azure/active-directory/develop/app-resilience-continuous-access-evaluation).
 
 ### Troubleshooting
 
@@ -488,9 +488,9 @@ If you get an exception with either of the following messages:
 You can troubleshoot the exception by using these steps:
 
 1. Confirm that you're using the latest version of MSAL.NET.
-1. Confirm that the authority host that you set when building the confidential client application and the authority host that you used with ADAL are similar. In particular, is it the same [cloud](msal-national-cloud.md) (Azure Government, Microsoft Azure operated by 21Vianet, or Azure Germany)?
+1. Confirm that the authority host that you set when building the confidential client application and the authority host that you used with ADAL are similar. In particular, is it the same [cloud](/azure/active-directory/develop/msal-national-cloud) (Azure Government, Microsoft Azure operated by 21Vianet, or Azure Germany)?
 
 ## Next steps
 
-Learn more about the [differences between ADAL.NET and MSAL.NET apps](msal-net-differences-adal-net.md).
-Learn more about [token cache serialization in MSAL.NET](msal-net-token-cache-serialization.md)
+Learn more about the [differences between ADAL.NET and MSAL.NET apps](differences-adal-msal-net.md).
+Learn more about [token cache serialization in MSAL.NET](token-cache-serialization.md)
