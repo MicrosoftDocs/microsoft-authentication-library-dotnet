@@ -56,7 +56,7 @@ The ADAL code for your app in a public client application that uses interactive 
 
  #### Update the code for interactive scenarios
 
- [!INCLUDE [Common steps](includes/msal-net-adoption-steps-public-clients.md)]
+ [!INCLUDE [Common steps](../../includes/msal-net-adoption-steps-public-clients.md)]
 
 In this case, we replace the call to `AuthenticationContext.AcquireTokenAsync` with a call to `IPublicClientApplication.AcquireTokenInteractive`.
 
@@ -132,7 +132,7 @@ The ADAL code for your app uses integrated Windows authentication scenarios if i
 
 #### Update the code for integrated Windows authentication scenarios
 
- [!INCLUDE [Common steps](includes/msal-net-adoption-steps-public-clients.md)]
+ [!INCLUDE [Common steps](../../includes/msal-net-adoption-steps-public-clients.md)]
 
 In this case, we replace the call to `AuthenticationContext.AcquireTokenAsync` with a call to `IPublicClientApplication.AcquireTokenByIntegratedWindowsAuth`.
 
@@ -250,7 +250,7 @@ In this case, we replace the call to `AuthenticationContext.AcquireTokenAsync` w
 
 Here's a comparison of ADAL.NET and MSAL.NET code for username password scenarios:
 
- [!INCLUDE [Common steps](includes/msal-net-adoption-steps-public-clients.md)]
+ [!INCLUDE [Common steps](../../includes/msal-net-adoption-steps-public-clients.md)]
 
 :::row:::
 :::column span="":::
@@ -322,7 +322,7 @@ The ADAL code for your app uses device code flow scenarios if it contains a call
 
 #### Update the code for device code flow scenarios
 
- [!INCLUDE [Common steps](includes/msal-net-adoption-steps-public-clients.md)]
+ [!INCLUDE [Common steps](../../includes/msal-net-adoption-steps-public-clients.md)]
 
 In this case, we replace the call to `AuthenticationContext.AcquireTokenAsync` with a call to `IPublicClientApplication.AcquireTokenWithDeviceCode`.
 

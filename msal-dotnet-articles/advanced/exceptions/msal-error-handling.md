@@ -16,11 +16,12 @@ ms.custom: aaddev, devx-track-dotnet
 ---
 # Handle errors and exceptions in MSAL.NET
 
-[!INCLUDE [Active directory error handling introduction](./includes/error-handling-introduction.md)]
+[!INCLUDE [Active directory error handling introduction](../../includes/error-handling-introduction.md)]
 
 ## Error handling in MSAL.NET
 
 ### Exception types
+
 [MsalClientException](/dotnet/api/microsoft.identity.client.msalexception) is thrown when the library itself detects an error state, such as a bad configuration.
 
 [MsalServiceException](/dotnet/api/microsoft.identity.client.msalserviceexception) is thrown when the Identity Provider (Azure AD) returns an error. It's a translation of the server error.
@@ -130,13 +131,13 @@ catch (MsalUiRequiredException ex) when (ex.ErrorCode == MsalError.InvalidGrantE
  }
 }
 ```
-[!INCLUDE [Active directory error handling claims challenges](./includes/error-handling-claims-challenges.md)]
+[!INCLUDE [Active directory error handling claims challenges](../../includes/error-handling-claims-challenges.md)]
 
 When calling an API requiring Conditional Access from MSAL.NET, your application will need to handle claim challenge exceptions. This will appear as an [MsalServiceException](/dotnet/api/microsoft.identity.client.msalserviceexception) where the [Claims](/dotnet/api/microsoft.identity.client.msalserviceexception.claims) property won't be empty.
 
 To handle the claim challenge, you'll need to use the `.WithClaim()` method of the [`PublicClientApplicationBuilder`](/dotnet/api/microsoft.identity.client.publicclientapplicationbuilder) class.
 
-[!INCLUDE [Active directory error handling retries](./includes/error-handling-retries.md)]
+[!INCLUDE [Active directory error handling retries](../../includes/error-handling-retries.md)]
 
 ### HTTP error codes 500-600
 

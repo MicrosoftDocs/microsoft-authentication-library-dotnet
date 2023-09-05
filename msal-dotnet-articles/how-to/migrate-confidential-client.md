@@ -62,7 +62,7 @@ The ADAL code for your app uses daemon scenarios if it contains a call to `Authe
 
 #### Update the code of daemon scenarios
 
-[!INCLUDE [Common steps](includes/msal-net-adoption-steps-confidential-clients.md)]
+[!INCLUDE [Common steps](../../includes/msal-net-adoption-steps-confidential-clients.md)]
 
 In this case, replace the call to `AuthenticationContext.AcquireTokenAsync` with a call to `IConfidentialClientApplication.AcquireTokenClient`.
 
@@ -189,7 +189,7 @@ The ADAL code for your app uses OBO if it contains a call to `AuthenticationCont
 
 #### Update the code by using OBO
 
-[!INCLUDE [Common steps](includes/msal-net-adoption-steps-confidential-clients.md)]
+[!INCLUDE [Common steps](../../includes/msal-net-adoption-steps-confidential-clients.md)]
 
 In this case, we replace the call to `AuthenticationContext.AcquireTokenAsync` with a call to `IConfidentialClientApplication.AcquireTokenOnBehalfOf`.
 
@@ -326,7 +326,7 @@ The ADAL code for your app uses auth code flow if it contains a call to `Authent
 
 #### Update the code by using the authorization code flow
 
-[!INCLUDE [Common steps](includes/msal-net-adoption-steps-confidential-clients.md)] 
+[!INCLUDE [Common steps](../../includes/msal-net-adoption-steps-confidential-clients.md)] 
 
 In this case, replace the call to `AuthenticationContext.AcquireTokenAsync` with a call to `IConfidentialClientApplication.AcquireTokenByAuthorizationCode`.
 
