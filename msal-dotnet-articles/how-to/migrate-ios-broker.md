@@ -34,7 +34,7 @@ Brokers are applications provided by Microsoft on Android and iOS. (See the [Mic
 They enable:
 
 - Single sign-on.
-- Device identification, which is required by some [Conditional Access policies](../conditional-access/overview.md). For more information, see [Device management](../conditional-access/concept-conditional-access-conditions.md#device-platforms).
+- Device identification, which is required by some [Conditional Access policies](/azure/active-directory/conditional-access/overview.md). For more information, see [Device management](/azure/active-directory/conditional-access/concept-conditional-access-conditions.md#device-platforms).
 - Application identification verification, which is also required in some enterprise scenarios. For more information, see [Intune mobile application management (MAM)](/intune/mam-faq).
 
 ## Migrate from ADAL to MSAL
@@ -142,7 +142,7 @@ result = await app.AcquireTokenInteractive(scopes)
 </table>
 
 ### Step 3: Update AppDelegate to handle the callback
-Both ADAL and MSAL call the broker, and the broker in turn calls back to your application through the `OpenUrl` method of the `AppDelegate` class. For more information, see [this documentation](msal-net-use-brokers-with-xamarin-apps.md#step-3-update-appdelegate-to-handle-the-callback).
+Both ADAL and MSAL call the broker, and the broker in turn calls back to your application through the `OpenUrl` method of the `AppDelegate` class. For more information, see [this documentation](/azure/active-directory/develop/msal-net-use-brokers-with-xamarin-apps#step-3-update-appdelegate-to-handle-the-callback).
 
 There are no changes here between ADAL.NET and MSAL.NET.
 
@@ -243,7 +243,7 @@ Example:
 
 </table>
 
-For more information about how to register the redirect URI in the Azure portal, see [Step 7: Add a redirect URI to your app registration](msal-net-use-brokers-with-xamarin-apps.md#step-7-add-a-redirect-uri-to-your-app-registration).
+For more information about how to register the redirect URI in the Azure portal, see [Step 7: Add a redirect URI to your app registration](/azure/active-directory/develop/msal-net-use-brokers-with-xamarin-apps#step-7-add-a-redirect-uri-to-your-app-registration).
 
 ### **Step 7: Set the Entitlements.plist**
 
@@ -256,8 +256,8 @@ Enable keychain access in the *Entitlements.plist* file:
     </array>
 ```
 
-For more information about enabling keychain access, see [Enable keychain access](msal-net-xamarin-ios-considerations.md#enable-keychain-access).
+For more information about enabling keychain access, see [Enable keychain access](/azure/active-directory/develop/msal-net-xamarin-ios-considerations#enable-keychain-access).
 
 ## Next steps
 
-Learn about [Xamarin iOS-specific considerations with MSAL.NET](msal-net-xamarin-ios-considerations.md).
+Learn about [Xamarin iOS-specific considerations with MSAL.NET](/azure/active-directory/develop/msal-net-xamarin-ios-considerations).

@@ -34,11 +34,11 @@ MSAL comes with benefits over ADAL. Some of these benefits are listed below:
 
 ## Should you migrate to MSAL.NET or to Microsoft.Identity.Web
 
-Before digging in the details of MSAL.NET vs ADAL.NET, you might want to check if you want to use MSAL.NET or a higher-level abstraction like [Microsoft.Identity.Web](microsoft-identity-web.md).
+Before digging in the details of MSAL.NET vs ADAL.NET, you might want to check if you want to use MSAL.NET or a higher-level abstraction like [Microsoft.Identity.Web](../microsoft-identity-web/index.md).
 
 For details about the decision tree below, read [MSAL.NET or Microsoft.Identity.Web](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/MSAL.NET-or-Microsoft.Identity.Web).
 
-!["Block diagram explaining how to choose if you need to use MSAL.NET and Microsoft.Identity.Web or both when migrating from ADAL.NET"](media/msal-net-migration/decision-diagram.png)
+!["Block diagram explaining how to choose if you need to use MSAL.NET and Microsoft.Identity.Web or both when migrating from ADAL.NET"](../media/msal-net-migration/decision-diagram.png)
 
 <!-- 1P
 ## Examples of 1P Migrations
@@ -64,10 +64,10 @@ You might unknowingly consume ADAL dependencies from other Azure SDKs. Below are
 
 ## Next steps
 
-- Learn about [public client and confidential client applications](msal-client-applications.md).
-- Learn how to [migrate confidential client applications built on top of ASP.NET MVC or .NET classic from ADAL.NET to MSAL.NET](msal-net-migration-confidential-client.md).
-- Learn how to [migrate public client applications built on top of .NET or .NET classic from ADAL.NET to MSAL.NET](msal-net-migration-public-client.md).
-- Learn more about the [Differences between ADAL.NET and MSAL.NET apps](msal-net-differences-adal-net.md).
+- Learn about [public client and confidential client applications](/azure/active-directory/develop/msal-client-applications).
+- Learn how to [migrate confidential client applications built on top of ASP.NET MVC or .NET classic from ADAL.NET to MSAL.NET](migrate-confidential-client).
+- Learn how to [migrate public client applications built on top of .NET or .NET classic from ADAL.NET to MSAL.NET](migrate-public-client.md).
+- Learn more about the [Differences between ADAL.NET and MSAL.NET apps](msal-net-differences-adal-msal-net.md).
 - Learn how to migrate confidential client applications built on top of ASP.NET Core from ADAL.NET to Microsoft.Identity.Web:
   -  [Web apps](https://github.com/AzureAD/microsoft-identity-web/wiki/web-apps#migrating-from-previous-versions--adding-authentication)
   -  [Web APIs](https://github.com/AzureAD/microsoft-identity-web/wiki/web-apis)

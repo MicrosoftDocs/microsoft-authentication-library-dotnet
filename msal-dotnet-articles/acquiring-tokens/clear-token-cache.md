@@ -20,7 +20,7 @@ ms.custom: devx-track-csharp, aaddev, devx-track-dotnet
 
 ## Web API and daemon apps
 
-There is no API to remove the tokens from the cache. Cache size should be handled by setting eviction policies on the underlying storage. See [Cache Serialization](token-cache-serialization.md?tabs=aspnetcore) for details on how to use a memory cache or distributed cache.
+There is no API to remove the tokens from the cache. Cache size should be handled by setting eviction policies on the underlying storage. See [Cache Serialization](token-cache-serialization?tabs=aspnetcore) for details on how to use a memory cache or distributed cache.
 
 ## Desktop, command line and mobile applications
 
@@ -48,4 +48,4 @@ while (accounts.Any())
 
 ```
 
-To learn more about acquiring and caching tokens, read [acquire an access token](/azure/active-directory/develop/msal-acquire-cache-tokens.)
+To learn more about acquiring and caching tokens, read [acquire an access token](/azure/active-directory/develop/msal-acquire-cache-tokens)
