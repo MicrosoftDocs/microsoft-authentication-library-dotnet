@@ -28,7 +28,7 @@ It's important to understand that when acquiring a token interactively, the cont
 
 - The password (if one was typed) is never stored by the application, nor the authentication library.
 - Enables redirections to other identity providers (for instance login-in with a work school account or a personal account with MSAL, or with a social account with Azure AD B2C).
-- Lets the STS control Conditional Access, for example, by having the user do [multi-factor authentication (MFA)](../authentication/concept-mfa-howitworks.md) during the authentication phase (entering a Windows Hello pin, or being called on their phone, or on an authentication app on their phone). In cases where the required multi-factor authentication isn't set it up yet, the user can set it up just in time in the same dialog.  The user enters their mobile phone number and is guided to install an authentication application and scan a QR tag to add their account. This server driven interaction is a great experience!
+- Lets the STS control Conditional Access, for example, by having the user do [multi-factor authentication (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks) during the authentication phase (entering a Windows Hello pin, or being called on their phone, or on an authentication app on their phone). In cases where the required multi-factor authentication isn't set it up yet, the user can set it up just in time in the same dialog.  The user enters their mobile phone number and is guided to install an authentication application and scan a QR tag to add their account. This server driven interaction is a great experience!
 - Lets the user change their password in this same dialog when the password has expired (providing additional fields for the old password and the new password).
 - Enables branding of the tenant, or the application (images) controlled by the Azure AD tenant admin / application owner.
 - Enables the users to consent to let the application access resources / scopes in their name just after the authentication.
@@ -77,7 +77,7 @@ MSAL.NET cannot detect if the user navigates away or simply closes the browser. 
 
 ### How to use the Default OS Browser
 
-MSAL.NET needs to listen on `http://localhost:port` and intercept the code that AAD sends when the user is done authenticating (See [Authorization code](v2-oauth2-auth-code-flow.md) for details)
+MSAL.NET needs to listen on `http://localhost:port` and intercept the code that AAD sends when the user is done authenticating (See [Authorization code](/azure/active-directory/develop/v2-oauth2-auth-code-flow) for details)
 
 To enable the system browser:
 
@@ -146,17 +146,17 @@ There are some visual differences between embedded webview and system browser in
 
 **Interactive sign-in with MSAL.NET using the Embedded Webview:**
 
-![embedded](media/msal-net-web-browsers/embedded-webview.png)
+![embedded](../media/msal-net-web-browsers/embedded-webview.png)
 
 **Interactive sign-in with MSAL.NET using the System Browser:**
 
-![System browser](media/msal-net-web-browsers/system-browser.png)
+![System browser](../media/msal-net-web-browsers/system-browser.png)
 
 ### Developer Options
 
 As a developer using MSAL.NET, you have several options for displaying the interactive dialog from STS:
 
-- **System browser.** The system browser is set by default in the library. If using Android, read [system browsers](msal-net-system-browser-android-considerations.md) for specific information about which browsers are supported for authentication. When using the system browser in Android, we recommend the device has a browser that supports Chrome custom tabs.  Otherwise, authentication may fail.
+- **System browser.** The system browser is set by default in the library. If using Android, read [system browsers](/azure/active-directory/develop/msal-net-system-browser-android-considerations) for specific information about which browsers are supported for authentication. When using the system browser in Android, we recommend the device has a browser that supports Chrome custom tabs.  Otherwise, authentication may fail.
 - **Embedded webview.** To use only embedded webview in MSAL.NET, the `AcquireTokenInteractively` parameters builder contains a `WithUseEmbeddedWebView()` method.
 
     iOS
@@ -225,4 +225,4 @@ authResult = await App.PCA.AcquireTokenInteractive(App.Scopes)
 #### .NET Core doesn't support interactive authentication with an embedded browser
 
 For .NET Core, acquisition of tokens interactively is only available through the system web browser, not with embedded web views. Indeed, .NET Core doesn't provide UI yet.
-If you want to customize the browsing experience with the system web browser, you can implement the [IWithCustomUI](scenario-desktop-acquire-token-interactive.md#withcustomwebui) interface and even provide your own browser.
+If you want to customize the browsing experience with the system web browser, you can implement the [IWithCustomUI](/azure/active-directory/develop/scenario-desktop-acquire-token-interactive#withcustomwebui) interface and even provide your own browser.

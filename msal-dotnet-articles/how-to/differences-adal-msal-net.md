@@ -24,7 +24,7 @@ You still need to use ADAL.NET if your application needs to sign in users with e
 
 ## Prerequisites
 
-Go through [MSAL overview](./msal-overview.md) to learn more about MSAL.
+Go through [MSAL overview](entra/msal/overview) to learn more about MSAL.
 
 ## Differences
 
@@ -46,31 +46,31 @@ Below is a summary comparing MSAL.NET and ADAL.NET supported grants for both pub
 
 The following image summarizes some of the differences between ADAL.NET and MSAL.NET for a public client application.
 
-[![Screenshot showing some of the differences between ADAL.NET and MSAL.NET for a public client application.](media/msal-compare-msaldotnet-and-adaldotnet/differences.png)](media/msal-compare-msaldotnet-and-adaldotnet/differences.png#lightbox)
+[![Screenshot showing some of the differences between ADAL.NET and MSAL.NET for a public client application.](../media/msal-compare-msaldotnet-and-adaldotnet/differences.png)](media/msal-compare-msaldotnet-and-adaldotnet/differences.png#lightbox)
 
 Here are the grants supported in ADAL.NET and MSAL.NET for Desktop and Mobile applications.
 
 Grant                             | MSAL.NET                                                                                                                     | ADAL.NET                                                                                                                                                                                                   |
 --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-Interactive                       | [Acquiring tokens interactively in MSAL.NET](scenario-desktop-acquire-token-interactive.md)    | [Interactive Auth](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet/wiki/Acquiring-tokens-interactively---Public-client-application-flows)                                              |
-Integrated Windows authentication | [Integrated Windows authentication](scenario-desktop-acquire-token-integrated-windows-authentication.md)         | [Integrated authentication on Windows (Kerberos)](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet/wiki/AcquireTokenSilentAsync-using-Integrated-authentication-on-Windows-(Kerberos))  |
-Username / Password               | [Username-password authentication](scenario-desktop-acquire-token-username-password.md)                      | [Acquiring tokens with username and password](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet/wiki/Acquiring-tokens-with-username-and-password)                                        |
-Device code flow                  | [Device code flow](scenario-desktop-acquire-token-device-code-flow.md)                    | [Device profile for devices without web browsers](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet/wiki/Device-profile-for-devices-without-web-browsers)                                |
+Interactive                       | [Acquiring tokens interactively in MSAL.NET](/azure/active-directory/develop/scenario-desktop-acquire-token-interactive)    | [Interactive Auth](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet/wiki/Acquiring-tokens-interactively---Public-client-application-flows)                                              |
+Integrated Windows authentication | [Integrated Windows authentication](/azure/active-directory/develop/scenario-desktop-acquire-token-integrated-windows-authentication)         | [Integrated authentication on Windows (Kerberos)](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet/wiki/AcquireTokenSilentAsync-using-Integrated-authentication-on-Windows-(Kerberos))  |
+Username / Password               | [Username-password authentication](/azure/active-directory/develop/scenario-desktop-acquire-token-username-password)                      | [Acquiring tokens with username and password](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet/wiki/Acquiring-tokens-with-username-and-password)                                        |
+Device code flow                  | [Device code flow](/azure/active-directory/develop/scenario-desktop-acquire-token-device-code-flow)                    | [Device profile for devices without web browsers](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet/wiki/Device-profile-for-devices-without-web-browsers)                                |
 
 ### Confidential client applications
 
 The following image summarizes some of the differences between ADAL.NET and MSAL.NET for a confidential client application.
  
-[![Screenshot showing some of the differences between ADAL.NET and MSAL.NET for a confidential client application.](media/msal-net-migration/confidential-client-application.png)](media/msal-net-migration/confidential-client-application.png#lightbox)
+[![Screenshot showing some of the differences between ADAL.NET and MSAL.NET for a confidential client application.](../media/msal-net-migration/confidential-client-application.png)](../media/msal-net-migration/confidential-client-application.png#lightbox)
 
 
 Here are the grants supported in ADAL.NET, MSAL.NET, and Microsoft.Identity.Web for web applications, web APIs, and daemon applications.
 
 Type of App              | Grant              | MSAL.NET                                                                                                                             | ADAL.NET                                                                                                                                                                                              |
 ------------------------ | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-Web app, web API, daemon | Client Credentials | [Client credential flows in MSAL.NET](scenario-daemon-acquire-token.md#acquiretokenforclient-api)                        | [Client credential flows in ADAL.NET](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet/wiki/Client-credential-flows)                                                               |
+Web app, web API, daemon | Client Credentials | [Client credential flows in MSAL.NET](/azure/active-directory/develop/scenario-daemon-acquire-token#acquiretokenforclient-api)                        | [Client credential flows in ADAL.NET](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet/wiki/Client-credential-flows)                                                               |
 Web API                  | On behalf of       | [On behalf of in MSAL.NET](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/on-behalf-of)                 | [Service to service calls on behalf of the user with ADAL.NET](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet/wiki/Service-to-service-calls-on-behalf-of-the-user)               |
-Web app                  | Auth Code          | [Acquiring tokens with authorization codes on web apps with A MSAL.NET](scenario-web-app-call-api-acquire-token.md)  | [Acquiring tokens with authorization codes on web apps with ADAL.NET](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet/wiki/Acquiring-tokens-with-authorization-codes-on-web-apps) |
+Web app                  | Auth Code          | [Acquiring tokens with authorization codes on web apps with A MSAL.NET](/azure/active-directory/develop/scenario-web-app-call-api-acquire-token)  | [Acquiring tokens with authorization codes on web apps with ADAL.NET](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet/wiki/Acquiring-tokens-with-authorization-codes-on-web-apps) |
 
 ## Migrating from ADAL 2.x with refresh tokens
 
@@ -128,15 +128,15 @@ An access token and an ID token are returned in the `AuthenticationResult` value
 
 ## v1.0 and v2.0 tokens
 
-There are two versions of tokens: v1.0 tokens and  v2.0 tokens. The v1.0 endpoint (used by ADAL) emits v1.0 ID tokens while the v2.0 endpoint (used by MSAL) emits v2.0 ID tokens. However, both endpoints emit access tokens of the version of the token that the web API accepts. A property of the application manifest of the web API enables developers to choose which version of token is accepted. See `accessTokenAcceptedVersion` in the [application manifest](reference-app-manifest.md) reference documentation.
+There are two versions of tokens: v1.0 tokens and  v2.0 tokens. The v1.0 endpoint (used by ADAL) emits v1.0 ID tokens while the v2.0 endpoint (used by MSAL) emits v2.0 ID tokens. However, both endpoints emit access tokens of the version of the token that the web API accepts. A property of the application manifest of the web API enables developers to choose which version of token is accepted. See `accessTokenAcceptedVersion` in the [application manifest]/azure/active-directory/develop/(reference-app-manifest) reference documentation.
 
-For more information about v1.0 and v2.0 access tokens, see [Azure Active Directory access tokens](access-tokens.md).
+For more information about v1.0 and v2.0 access tokens, see [Azure Active Directory access tokens](/azure/active-directory/develop/access-tokens).
 
 ## Exceptions
 
 ### Interaction required exceptions
 
-Using MSAL.NET, you catch `MsalUiRequiredException` as described in [AcquireTokenSilent](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/AcquireTokenSilentAsync-using-a-cached-token).
+Using MSAL.NET, you catch `MsalUiRequiredException` as described in [AcquireTokenSilent](../acquiring-tokens/acquire-token-silently.md)
 
 ```csharp
 catch(MsalUiRequiredException exception)
@@ -145,7 +145,7 @@ catch(MsalUiRequiredException exception)
 }
 ```
 
-For details, see [Handle errors and exceptions in MSAL.NET](msal-error-handling-dotnet.md)
+For details, see [Handle errors and exceptions in MSAL.NET](../advanced/exceptions/index.md)
 
 ADAL.NET had less explicit exceptions. For example, when silent authentication failed in ADAL the procedure was to catch the exception and look for the `user_interaction_required` error code:
 
@@ -183,7 +183,7 @@ In MSAL.NET, claim challenge exceptions are handled in the following way:
 - The `Claims` are surfaced in the `MsalServiceException`.
 - There's a `.WithClaim(claims)` method that can apply to the `AcquireTokenXXX` builders.
 
-For details see [Handling MsalUiRequiredException](msal-error-handling-dotnet.md#msaluirequiredexception).
+For details see [Handling MsalUiRequiredException](../advanced/exceptions/msal-error-handling.md#msaluirequiredexception).
 
 In ADAL.NET, claim challenge exceptions were handled in the following way:
 
@@ -244,4 +244,4 @@ For a client credential flow, the scope to pass would also be `/.default`. This 
 ## Next steps
 
 [Migrate your apps from ADAL to MSAL](msal-net-migration.md)
-[Migrate your ADAL.NET confidential client apps to use MSAL.NET](msal-net-migration-confidential-client.md)
+[Migrate your ADAL.NET confidential client apps to use MSAL.NET](migrate-confidential-client.md)

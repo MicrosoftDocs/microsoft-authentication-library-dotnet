@@ -54,8 +54,6 @@ Currently, there are no plans to support a direct connection to:
 - AD FS 16, as it doesn't support PKCE and still uses resources, not scope
 - AD FS v2, which is not OIDC-compliant.
 
- If you need to support scenarios requiring a direct connection to AD FS 2016, use the latest version of [Azure Active Directory Authentication Library](../azuread-dev/active-directory-authentication-libraries.md#microsoft-supported-client-libraries). When you have upgraded your on-premises system to AD FS 2019, you'll be able to use MSAL.NET.
-
 However for MSAL.NET we have no plans to support a direct connection to ADFS 2016 (it does not support PKCE and still uses resources, not scope). When you have upgraded your on-premise system to ADFS 2019, you'll be able to use MSAL.NET.
 
 MSAL does not support Integrated Windows Authentication (by calling `AcquireTokenByIntegratedWindowsAuth`) directly to ADFS.

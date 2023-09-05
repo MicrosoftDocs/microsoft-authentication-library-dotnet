@@ -1,5 +1,5 @@
 ---
-title:  Using MSAL.NET with UWP applications
+title: Using MSAL.NET with UWP applications
 description: Learn how to build MSAL.NET applications on the Universal Windows Platform."
 services: active-directory
 author: Dickson-Mwendia

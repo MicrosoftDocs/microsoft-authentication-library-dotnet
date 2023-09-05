@@ -18,13 +18,13 @@ ms.custom: devx-track-csharp, aaddev, engagement-fy23, devx-track-dotnet
 
 # Initialize client applications using MSAL.NET
 
-This article describes initializing public client and confidential client applications using the Microsoft Authentication Library for .NET (MSAL.NET).  To learn more about the client application types, see [Public client and confidential client applications](msal-client-applications.md).
+This article describes initializing public client and confidential client applications using the Microsoft Authentication Library for .NET (MSAL.NET).  To learn more about the client application types, see [Public client and confidential client applications](/azure/active-directory/develop/msal-client-applications).
 
 With MSAL.NET 3.x, the recommended way to instantiate an application is by using the application builders: `PublicClientApplicationBuilder` and `ConfidentialClientApplicationBuilder`. They offer a powerful mechanism to configure the application from the code, a configuration file, or even by mixing both approaches.
 
 ## Prerequisites
 
-Before initializing an application, you first need to register it so that your app can be integrated with the Microsoft identity platform. Refer to the [Quickstart: Register an application with the Microsoft identity platform](quickstart-register-app.md) for more information. After registration, you may need the following information (which can be found in the Azure portal):
+Before initializing an application, you first need to register it so that your app can be integrated with the Microsoft identity platform. Refer to the [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app) for more information. After registration, you may need the following information (which can be found in the Azure portal):
 
 - **Application (client) ID** - This is a string representing a GUID.
 - **Directory (tenant) ID** - Provides identity and access management (IAM) capabilities to applications and resources used by your organization. It can specify if you're writing a line of business application solely for your organization (also named single-tenant application).
@@ -155,7 +155,7 @@ app = PublicClientApplicationBuilder.Create(clientId)
 
 [Library source code](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet) 
 
-[Code samples](sample-v2-code.md)
+[Code samples](/azure/active-directory/develop/sample-v2-code)
 
 ## Next steps
 
@@ -163,5 +163,5 @@ After you've initialized the client application, your next task is to add suppor
 
 Our application scenario documentation provides guidance for signing in a user and acquiring an access token to access an API on behalf of that user:
 
-- [Web app that signs in users: Sign-in and sign-out](scenario-web-app-sign-user-sign-in.md)
-- [Web app that calls web APIs: Acquire a token](scenario-web-app-call-api-acquire-token.md)
+- [Web app that signs in users: Sign-in and sign-out](/azure/active-directory/develop/scenario-web-app-sign-user-sign-in)
+- [Web app that calls web APIs: Acquire a token](/azure/active-directory/develop/scenario-web-app-call-api-acquire-token)
