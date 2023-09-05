@@ -17,7 +17,9 @@ ms.custom: devx-track-csharp, aaddev, has-adal-ref, kr2b-contr-experiment, devx-
 
 # Migrate confidential client applications from ADAL.NET to MSAL.NET
 
-In this how-to guide you'll migrate a confidential client application from Azure Active Directory Authentication Library for .NET (ADAL.NET) to Microsoft Authentication Library for .NET (MSAL.NET). Confidential client applications include web apps, web APIs, and daemon applications that call another service on their own behalf. For more information about confidential apps, see [Authentication flows and application scenarios](/azure/active-directory/develop/authentication-flows-app-scenarios). If your app is based on ASP.NET Core, see [Microsoft.Identity.Web](microsoft-identity-web/index.md).
+In this how-to guide you'll migrate a confidential client application from Azure Active Directory Authentication Library for .NET (ADAL.NET) to Microsoft Authentication Library for .NET (MSAL.NET). Confidential client applications include web apps, web APIs, and daemon applications that call another service on their own behalf. For more information about confidential apps, see [Authentication flows and application scenarios](/azure/active-directory/develop/authentication-flows-app-scenarios). If your app is based on ASP.NET Core, see [Microsoft.Identity.Web](../../msal-dotnet-articles/microsoft-identity-web/index.md
+
+microsoft-identity-web/index.md).
 
 For app registrations:
 
@@ -306,7 +308,7 @@ For token caching in OBOs, use a distributed token cache. For details, see [Toke
 app.UseInMemoryTokenCaches(); // or a distributed token cache.
 ```
 
-[Learn more about web APIs calling downstream web APIs](scenario-web-api-call-api-overview.md) and how they're implemented with MSAL.NET or Microsoft.Identity.Web in new apps.
+[Learn more about web APIs calling downstream web APIs](/azure/active-directory/develop/scenario-web-api-call-api-overview) and how they're implemented with MSAL.NET or Microsoft.Identity.Web in new apps.
 
 ## [Web app calling web APIs](#tab/authcode)
 
