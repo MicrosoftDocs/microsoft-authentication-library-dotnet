@@ -1,5 +1,6 @@
 ---
 title: Known issues with MSAL.NET
+description: "Known issues when integrating with MSAL.NET."
 ---
 
 # Known issues with MSAL.NET
