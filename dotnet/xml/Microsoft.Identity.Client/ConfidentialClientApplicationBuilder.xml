@@ -14,6 +14,7 @@
     <AssemblyVersion>4.54.0.0</AssemblyVersion>
     <AssemblyVersion>4.54.1.0</AssemblyVersion>
     <AssemblyVersion>4.55.0.0</AssemblyVersion>
+    <AssemblyVersion>4.56.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Identity.Client.AbstractApplicationBuilder&lt;Microsoft.Identity.Client.ConfidentialClientApplicationBuilder&gt;</BaseTypeName>
@@ -44,6 +45,7 @@
         <AssemblyVersion>4.54.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.1.0</AssemblyVersion>
         <AssemblyVersion>4.55.0.0</AssemblyVersion>
+        <AssemblyVersion>4.56.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.IConfidentialClientApplication</ReturnType>
@@ -75,6 +77,7 @@
         <AssemblyVersion>4.54.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.1.0</AssemblyVersion>
         <AssemblyVersion>4.55.0.0</AssemblyVersion>
+        <AssemblyVersion>4.56.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -111,6 +114,7 @@
         <AssemblyVersion>4.54.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.1.0</AssemblyVersion>
         <AssemblyVersion>4.55.0.0</AssemblyVersion>
+        <AssemblyVersion>4.56.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -146,6 +150,7 @@
         <AssemblyVersion>4.54.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.1.0</AssemblyVersion>
         <AssemblyVersion>4.55.0.0</AssemblyVersion>
+        <AssemblyVersion>4.56.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -191,6 +196,7 @@
         <AssemblyVersion>4.54.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.1.0</AssemblyVersion>
         <AssemblyVersion>4.55.0.0</AssemblyVersion>
+        <AssemblyVersion>4.56.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -203,13 +209,13 @@
         <summary>
             When set to <c>true</c>, MSAL will lock cache access at the <see cref="T:Microsoft.Identity.Client.ConfidentialClientApplication" /> level, i.e.
             the block of code between BeforeAccessAsync and AfterAccessAsync callbacks will be synchronized. 
-            Apps can set this flag to <c>false</c> to enable an optimistic cache locking strategy, which may result in better performance, especially 
-            when ConfidentialClientApplication objects are reused.
+            Apps can set this flag to <c>false</c> to enable an optimistic cache locking strategy, which may result in better performance
+            at the cost of cache consistency. 
+            Setting this flag to <c>false</c> is only recommended for apps which create a new <see cref="T:Microsoft.Identity.Client.ConfidentialClientApplication" /> per request.
             </summary>
         <returns>To be added.</returns>
         <remarks>
-            False by default.
-            Not recommended for apps that call RemoveAsync
+            This flag is <c>true</c> by default. The default behavior is recommended.
             </remarks>
       </Docs>
     </Member>
@@ -230,6 +236,7 @@
         <AssemblyVersion>4.54.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.1.0</AssemblyVersion>
         <AssemblyVersion>4.55.0.0</AssemblyVersion>
+        <AssemblyVersion>4.56.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -266,6 +273,7 @@
         <AssemblyVersion>4.54.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.1.0</AssemblyVersion>
         <AssemblyVersion>4.55.0.0</AssemblyVersion>
+        <AssemblyVersion>4.56.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -308,6 +316,7 @@
         <AssemblyVersion>4.54.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.1.0</AssemblyVersion>
         <AssemblyVersion>4.55.0.0</AssemblyVersion>
+        <AssemblyVersion>4.56.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -342,6 +351,7 @@
         <AssemblyVersion>4.54.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.1.0</AssemblyVersion>
         <AssemblyVersion>4.55.0.0</AssemblyVersion>
+        <AssemblyVersion>4.56.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -382,6 +392,7 @@
         <AssemblyVersion>4.54.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.1.0</AssemblyVersion>
         <AssemblyVersion>4.55.0.0</AssemblyVersion>
+        <AssemblyVersion>4.56.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -422,6 +433,7 @@
         <AssemblyVersion>4.54.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.1.0</AssemblyVersion>
         <AssemblyVersion>4.55.0.0</AssemblyVersion>
+        <AssemblyVersion>4.56.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -458,6 +470,7 @@
         <AssemblyVersion>4.54.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.1.0</AssemblyVersion>
         <AssemblyVersion>4.55.0.0</AssemblyVersion>
+        <AssemblyVersion>4.56.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -500,6 +513,7 @@
         <AssemblyVersion>4.54.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.1.0</AssemblyVersion>
         <AssemblyVersion>4.55.0.0</AssemblyVersion>
+        <AssemblyVersion>4.56.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -541,6 +555,7 @@
         <AssemblyVersion>4.54.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.1.0</AssemblyVersion>
         <AssemblyVersion>4.55.0.0</AssemblyVersion>
+        <AssemblyVersion>4.56.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -572,6 +587,7 @@
         <AssemblyVersion>4.54.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.1.0</AssemblyVersion>
         <AssemblyVersion>4.55.0.0</AssemblyVersion>
+        <AssemblyVersion>4.56.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -608,6 +624,7 @@
         <AssemblyVersion>4.54.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.1.0</AssemblyVersion>
         <AssemblyVersion>4.55.0.0</AssemblyVersion>
+        <AssemblyVersion>4.56.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
