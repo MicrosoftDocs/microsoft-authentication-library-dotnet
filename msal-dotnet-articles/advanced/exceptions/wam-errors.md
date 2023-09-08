@@ -13,21 +13,21 @@ The table below highlights some of the most common errors along with potential m
 >[!WARNING]
 >Error codes and error messages are presented for reference only. We do not recommend manually implementing exception handling strategies based on these and instead use the standard <xref:Microsoft.Identity.Client.MsalException>-based approach.
 
-| Error Code | Retry-able | Error message | Mitigation |
-|:-----------|:-----------|:------------|:-----------|
-| 2147943631 | ❌ | The network location cannot be reached. For information about network troubleshooting, see Windows Help. | Potentially an intermittent error. Try running the code later, and ensure that the computer has active Internet access. |
-| 2147943717 | ❌ | The specified account does not exist. | Ensure that the account used with WAM exists. |
-| 2148074254 | ❌ | No credentials are available in the security package | |
-| 2156265477 | ❌ | Online Id account properties must be updated before signin. | For the specified account, [log in to your account](https://account.microsoft.com/) to ensure it's fully set up. |
-| 2156265478 | ✅ | To help protect your Online Id account you must signin again. | Perform a sign in for the target account with WAM. |
-| 2156265481 | ❌ | Online Id signin name is not yet verified. Email verification is required before signin. | Verify the account via email to make sure that it can be used. |
-| 2156265482 | ❌ | We have noticed some unusual activity in your Online Id account. Your action is needed to make sure no one else is using your account. | [Log in to your account](https://account.microsoft.com/) and verify that the account is not suspended. |
-| 2156265483 | ❌ | We detected some suspicious activity with your Online Id account. To help protect you, we've temporarily blocked your account. | Selected account is not currently able to be used for authentication. |
-| 2156265484 | ✅ | User interaction is required for authentication. | When authenticating the user, WAM could not use a cached token. User needs to be prompted for authentication via <xref:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenInteractive*>. |
-| 3399548929 | ✅ | Need user interaction to continue. | When authenticating the user, WAM could not use a cached token. User needs to be prompted for authentication via <xref:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenInteractive*>. |
-| 3399614467 | ❌ | V2Error: invalid_grant AADSTS500341: The user account {ID} has been deleted from the {TENANT_ID} directory. To sign into this application, the account must be added to the directory.| Ensure that the account with which the user tries to sign in is registered in Microsoft Entra ID. |
-| 3399614476 | ❌ | V2Error: invalid_grant AADSTS50078: Presented multi-factor authentication has expired due to policies configured by your administrator, you must refresh your multi-factor authentication to access {API_TARGET}. | Account needs to be configured by the Microsoft Entra ID administrator with up-to-date MFA settings. |
+| Error Code | Error message | Mitigation |
+|:-----------|:--------------|:-----------|
+| 2147943631 | The network location cannot be reached. For information about network troubleshooting, see Windows Help. | Potentially an intermittent error. Try running the code later, and ensure that the computer has active Internet access. |
+| 2147943717 | The specified account does not exist. | Ensure that the account used with WAM exists. |
+| 2148074254 | No credentials are available in the security package | |
+| 2156265477 | Online Id account properties must be updated before signin. | For the specified account, [log in to your account](https://account.microsoft.com/) to ensure it's fully set up. |
+| 2156265478 | To help protect your Online Id account you must signin again. | Perform a sign in for the target account with WAM. |
+| 2156265481 | Online Id signin name is not yet verified. Email verification is required before signin. | Verify the account via email to make sure that it can be used. |
+| 2156265482 | We have noticed some unusual activity in your Online Id account. Your action is needed to make sure no one else is using your account. | [Log in to your account](https://account.microsoft.com/) and verify that the account is not suspended. |
+| 2156265483 | We detected some suspicious activity with your Online Id account. To help protect you, we've temporarily blocked your account. | Selected account is not currently able to be used for authentication. |
+| 2156265484 | User interaction is required for authentication. | When authenticating the user, WAM could not use a cached token. User needs to be prompted for authentication via <xref:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenInteractive*>. |
+| 3399548929 | Need user interaction to continue. | When authenticating the user, WAM could not use a cached token. User needs to be prompted for authentication via <xref:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenInteractive*>. |
+| 3399614467 | V2Error: invalid_grant AADSTS500341: The user account {ID} has been deleted from the {TENANT_ID} directory. To sign into this application, the account must be added to the directory.| Ensure that the account with which the user tries to sign in is registered in Microsoft Entra ID. |
+| 3399614476 | V2Error: invalid_grant AADSTS50078: Presented multi-factor authentication has expired due to policies configured by your administrator, you must refresh your multi-factor authentication to access {API_TARGET}. | Account needs to be configured by the Microsoft Entra ID administrator with up-to-date MFA settings. |
 
 ## Unlisted errors
 
-Because WAM is a relatively new component, when errors occur we recommend logging data from [`AdditionalExceptionData`](xref:Microsoft.Identity.Client.MsalException.AdditionalExceptionData*) and [logging a bug](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/issues). We will document the issue as soon as possible.
+Because WAM is a new component, when errors occur we recommend logging data from [`AdditionalExceptionData`](xref:Microsoft.Identity.Client.MsalException.AdditionalExceptionData*) and [logging a bug](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/issues). We will document the issue as soon as possible.
