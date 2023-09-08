@@ -11,7 +11,7 @@ Today, applications using this architecture will first interactively authenticat
 
 ## Availability
 
-MSAL 4.40+ supports confidential clients to request an additional SPA auth code from the eSTS/token endpoint
+MSAL 4.40+ enables confidential clients to request an additional SPA auth code from the Azure AD token endpoint.
 
 ## Required Redirect URI setup to support the flow
 
