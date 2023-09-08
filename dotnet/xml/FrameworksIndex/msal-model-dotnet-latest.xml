@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-model-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.Identity.Abstractions" Version="4.0.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.Azure" Version="2.13.3.0" />
-    <Assembly Name="Microsoft.Identity.Web.Certificate" Version="2.13.3.0" />
-    <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="2.13.3.0" />
-    <Assembly Name="Microsoft.Identity.Web" Version="2.13.3.0" />
+    <Assembly Name="Microsoft.Identity.Abstractions" Version="4.1.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.Azure" Version="2.13.4.0" />
+    <Assembly Name="Microsoft.Identity.Web.Certificate" Version="2.13.4.0" />
+    <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="2.13.4.0" />
+    <Assembly Name="Microsoft.Identity.Web" Version="2.13.4.0" />
     <Assembly Name="Microsoft.Identity.Web.DownstreamRestApi" Version="2.0.8.0" />
-    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraph" Version="2.13.3.0" />
-    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraphBeta" Version="2.13.3.0" />
-    <Assembly Name="Microsoft.Identity.Web.OWIN" Version="2.13.3.0" />
-    <Assembly Name="Microsoft.Identity.Web.TokenAcquisition" Version="2.13.3.0" />
-    <Assembly Name="Microsoft.Identity.Web.TokenCache" Version="2.13.3.0" />
-    <Assembly Name="Microsoft.Identity.Web.UI" Version="2.13.3.0" />
-    <Assembly Name="Microsoft.Identity.Web.UI.Views" Version="2.13.3.0" />
+    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraph" Version="2.13.4.0" />
+    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraphBeta" Version="2.13.4.0" />
+    <Assembly Name="Microsoft.Identity.Web.OWIN" Version="2.13.4.0" />
+    <Assembly Name="Microsoft.Identity.Web.TokenAcquisition" Version="2.13.4.0" />
+    <Assembly Name="Microsoft.Identity.Web.TokenCache" Version="2.13.4.0" />
+    <Assembly Name="Microsoft.Identity.Web.UI" Version="2.13.4.0" />
+    <Assembly Name="Microsoft.Identity.Web.UI.Views" Version="2.13.4.0" />
   </Assemblies>
   <Namespace Name="AspNetCore">
     <Type Name="AspNetCore.Areas_MicrosoftIdentity_Pages__ViewStart" Id="T:AspNetCore.Areas_MicrosoftIdentity_Pages__ViewStart">
@@ -117,6 +117,7 @@
       <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.Container" />
       <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.CredentialType" />
       <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.DecryptKeysAuthenticationOptions" />
+      <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.Id" />
       <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.KeyVaultCertificateName" />
       <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.KeyVaultUrl" />
       <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.ManagedIdentityClientId" />
@@ -834,6 +835,7 @@
     <Type Name="Microsoft.Identity.Web.TokenCacheProviders.InMemory.MsalMemoryTokenCacheProvider" Id="T:Microsoft.Identity.Web.TokenCacheProviders.InMemory.MsalMemoryTokenCacheProvider">
       <Member Id="M:Microsoft.Identity.Web.TokenCacheProviders.InMemory.MsalMemoryTokenCacheProvider.#ctor(Microsoft.Extensions.Caching.Memory.IMemoryCache,Microsoft.Extensions.Options.IOptions{Microsoft.Identity.Web.TokenCacheProviders.InMemory.MsalMemoryTokenCacheOptions})" />
       <Member Id="M:Microsoft.Identity.Web.TokenCacheProviders.InMemory.MsalMemoryTokenCacheProvider.ReadCacheBytesAsync(System.String)" />
+      <Member Id="M:Microsoft.Identity.Web.TokenCacheProviders.InMemory.MsalMemoryTokenCacheProvider.ReadCacheBytesAsync(System.String,Microsoft.Identity.Web.TokenCacheProviders.CacheSerializerHints)" />
       <Member Id="M:Microsoft.Identity.Web.TokenCacheProviders.InMemory.MsalMemoryTokenCacheProvider.RemoveKeyAsync(System.String)" />
       <Member Id="M:Microsoft.Identity.Web.TokenCacheProviders.InMemory.MsalMemoryTokenCacheProvider.WriteCacheBytesAsync(System.String,System.Byte[])" />
       <Member Id="M:Microsoft.Identity.Web.TokenCacheProviders.InMemory.MsalMemoryTokenCacheProvider.WriteCacheBytesAsync(System.String,System.Byte[],Microsoft.Identity.Web.TokenCacheProviders.CacheSerializerHints)" />
