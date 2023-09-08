@@ -20,6 +20,9 @@ ms.custom: devx-track-csharp, aaddev, engagement-fy23
 
 MSAL.NET ([Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client)) is an authentication library that enables you to acquire tokens from Azure Active Directory (Azure AD), to access protected web APIs (Microsoft APIs or applications registered with Azure AD). MSAL.NET is available on several .NET platforms (Desktop, Universal Windows Platform, MAUI, Xamarin Android, Xamarin iOS, Windows 8.1, and .NET Core).
 
+> [!div class="nextstepaction"]
+> [Get MSAL.NET >](https://www.nuget.org/packages/Microsoft.Identity.Client/)
+
 ## Supported platforms and application architectures
 
 MSAL.NET supports different application topologies, including:
