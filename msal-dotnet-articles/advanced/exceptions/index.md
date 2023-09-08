@@ -1,5 +1,6 @@
 ---
 title: Exceptions in MSAL.NET
+description: "Documentation on exceptions and their handling in MSAL.NET"
 ---
 
 # Exceptions in MSAL.NET
@@ -19,13 +20,13 @@ Exceptions in MSAL.NET are intended for app developers to troubleshoot and not f
 
 No other exception is caught by MSAL. Any network issues, cancellations etc. are bubbled up to the application.
 
-MSAL throws `MsalClientException` for things that go wrong inside the library (e.g. bad configuration) and `MsalServiceException` for things that go wrong service side or in the broker (e.g. a secret expired).
+MSAL throws `MsalClientException` for things that go wrong inside the library (e.g. bad configuration) and [`MsalServiceException`](xref:Microsoft.Identity.Client.MsalServiceException) for things that go wrong service side or in the broker (e.g. a secret expired).
 
 ### Common exceptions
 
 1. User cancelled authentication (public client only)
 
-When calling `AcquireTokenInteractive`, a browser or the broker is invoked to handle user interaction. If the user closes this process or if they hit the browser back button, MSAL generates an `MsalClientException` with the error code `authentication_canceled` (`MsalError.AuthenticationCanceledError`).
+When calling `AcquireTokenInteractive`, a browser or the broker is invoked to handle user interaction. If the user closes this process or if they hit the browser back button, MSAL generates an [`MsalClientException`](xref:Microsoft.Identity.Client.MsalClientException) with the error code `authentication_canceled` (`MsalError.AuthenticationCanceledError`).
 
 On Android, this exception can also occur if a [browser with tabs](/azure/active-directory/develop/msal-net-system-browser-android-considerations) is not available.
 
@@ -35,11 +36,11 @@ Developers are expected to implement their own retry policies when calling MSAL.
 
 ### Exception types
 
-When processing exceptions, you can use the exception type itself and the `ErrorCode` member to distinguish between exceptions. The values of `ErrorCode` are constants of [MsalError](/dotnet/api/microsoft.identity.client.msalerror?view=azure-dotnet#fields)
+When processing exceptions, you can use the exception type itself and the `ErrorCode` member to distinguish between exceptions. The values of `ErrorCode` are constants of [`MsalError`](xref:Microsoft.Identity.Client.MsalError)
 
-You can also have a look at the fields of [MsalClientException](/dotnet/api/microsoft.identity.client.msalexception?view=azure-dotnet#fields), [MsalServiceException](/dotnet/api/microsoft.identity.client.msalserviceexception?view=azure-dotnet#fields), [MsalUIRequiredException](/dotnet/api/microsoft.identity.client.msaluirequiredexception?view=azure-dotnet#fields)
+You can also have a look at the fields of [`MsalClientException`](xref:Microsoft.Identity.Client.MsalClientException), [`MsalServiceException`](xref:Microsoft.Identity.Client.MsalServiceException), [`MsalUIRequiredException`](xref:Microsoft.Identity.Client.MsalUIRequiredException)
 
-In the case of `MsalServiceException`, the error code might contain a code which you can find in [Authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes)
+In the case of [`MsalServiceException`](xref:Microsoft.Identity.Client.MsalServiceException), the error might contain a code which you can find in [Authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes)
 
 #### MsalUiRequiredException
 
