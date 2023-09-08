@@ -115,6 +115,6 @@ This is the preferred solution for non-Microsoft internal services using ASP.NET
 
 3. (**Microsoft internal only**) Rely on Subject Name/Issuer certificates.
 
-This mechanism allows Azure AD to identify a certtificate based on SN/I instead of a thumbprint (x5t). It is a stop-gap solution; there are no plans to make it available to non-Microsoft applications.
+This mechanism allows Azure AD to identify a certificate based on SN/I instead of a thumbprint (x5t). It is a stop-gap solution; there are no plans to make it available to non-Microsoft applications.
 
 This is the preferred solution for Microsoft internal services which are not able to use managed identity.
