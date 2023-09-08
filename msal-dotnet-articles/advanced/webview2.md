@@ -5,44 +5,47 @@ description: "How to use the modern embedded browser based on Microsoft Edge wit
 
 # Using WebView2 with MSAL.NET
 
-A modern embedded browser based on Microsoft Edge, capable of performing Windows Hello, log-in with FIDO keys, etc. This browser replaces the old embedded WebView, based on an outdated version of Internet Explorer.
+WebView2 is a modern embedded browser runtime based on Microsoft Edge, capable of performing Windows Hello authentication, log in with FIDO keys, and more. This browser replaces the legacy web view based on Internet Explorer.
 
-## Where is it available?
+## Availability
 
-- All Windows versions
-- MSAL.NET version 4.28.0 and higher
+To use WebView2 in your application, the following requirements must be met:
+
+- Windows 10 OS or newer (supported by the WebView2 runtime).
+- MSAL for .NET version 4.28.0 and higher.
 - [WebView2 runtime](/microsoft-edge/webview2/) must be installed on the machine.
 
-## Evergreen runtime
+## Call pattern
 
-WebView2 runtime is available on most Windows 10 and Windows 11 machines by default. But it may not be available on older platforms.
+When attempting to use the new WebView2 runtime, keep in mind the following required changes:
 
-## Changes to call pattern
-
-- On .NET5-windows10.xxx, there is no change.
-- On .NET Classic and .NET Core 3.1, add a reference to [Microsoft.Identity.Client.Desktop](https://www.nuget.org/packages/Microsoft.Identity.Client.Desktop/) and call `.WithDesktopFeatures()`.
+- In applications written against `.net5-windows10` (or newer), no changes are necessary.
+- In applications written against .NET Framework and .NET Core 3.1, add a reference to [`Microsoft.Identity.Client.Desktop`](https://www.nuget.org/packages/Microsoft.Identity.Client.Desktop/) and add [`.WithWindowsEmbeddedBrowserSupport()`](xref:Microsoft.Identity.Client.Desktop.DesktopExtensions.WithWindowsEmbeddedBrowserSupport*) when instantiating the public client application.
 
 ```csharp
 var pca = PublicClientApplicationBuilder
-    .Create("client_id")
-    .WithDesktopFeatures()
-    .Build()
+        .Create("0f887a65-3c78-4b16-9529-6209b8741c26")
+        .WithWindowsEmbeddedBrowserSupport()
+        .Build();
 ```
+
+>[!IMPORTANT]
+>WebView 2 is **not supported** for Microsoft Entra ID (formerly known as Azure Active Directory) authorities. Using [`.WithWindowsEmbeddedBrowserSupport()`](xref:Microsoft.Identity.Client.Desktop.DesktopExtensions.WithWindowsEmbeddedBrowserSupport*) in that context is always going to default to the legacy web view, regardless of the setting provided during the instantiation of the public client application. This is caused by stability bugs identified during MSAL development. For B2C and Active Directory Federation Services (ADFS) authorities, WebView2 will be shown.
 
 ## Behaviour
 
-|  Framework      | Embedded WebView              | Default WebView |
-|-----------------|-------------------------------|-----------------|
+|  Framework      | Embedded web view             | Default web view |
+|-----------------|-------------------------------|------------------|
 |  .NET Framework | WebView2, fallback to Legacy  | Embedded |  
 |  .NET Core      | WebView2, fallback to Legacy* | Embedded |
 |  .NET 5         | WebView2, fallback to Legacy* | Embedded |
 
-*_In .NET Core and .NET 5, fallback to legacy WebView is available starting in MSAL 4.30.0._
+*_In .NET Core and .NET 5+, fallback to legacy web view is available starting in MSAL 4.30.0._
 
 ## Troubleshooting
 
 ### WebView2 on .NET Framework
 
-There's a scenario when an app that targets .NET Framework and references MSAL.NET NuGet package tries to acquire token interactively with WebView2 embedded browser, WebView2 will throw exceptions. These errors can be `System.BadImageFormatException: An attempt was made to load a program with an incorrect format.` or `System.DllNotFoundException: 'Unable to load DLL 'WebView2Loader.dll': The specified module could not be found.` (As of MSAL.NET 4.32.0 these exceptions are wrapped into `MsalClientException`.)
+There's a scenario when an app that targets .NET Framework and references the [MSAL for .NET NuGet package](https://www.nuget.org/packages/Microsoft.Identity.Client/) tries to acquire token interactively with WebView2 embedded browser, WebView2 will throw exceptions. These errors can be `System.BadImageFormatException: An attempt was made to load a program with an incorrect format.` or `System.DllNotFoundException: 'Unable to load DLL 'WebView2Loader.dll': The specified module could not be found.` As of MSAL.NET 4.32.0 these exceptions are wrapped into [`MsalClientException`](xref:Microsoft.Identity.Client.MsalClientException).
 
-This occurs because of an existing bug in the WebView2 SDK on .NET Classic platform because it can't figure out the target platform of the dependencies. One possible workaround is to add a `<PlatformTarget>` with values `AnyCPU`, `x86`, or `x64` to your app's project file. (`x86` or `x64` have to match the target framework of the WebView2 installed on the machine.) Another workaround is to add `<PlatformTarget>AnyCPU</PlatformTarget>` in your app's project file and also directly reference WebView2 NuGet. For details, see issues [#2482](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/issues/2482), [#730](https://github.com/MicrosoftEdge/WebView2Feedback/issues/730#issuecomment-803132248).
+This occurs due to an existing bug in the WebView2 SDK on the .NET Framework platform because it the library cannot figure out the target platform of its dependencies. One workaround is to add a `<PlatformTarget>` with values `AnyCPU`, `x86`, or `x64` to your application project file. `x86` or `x64` have to match the target framework of the WebView2 installed on the machine. Another workaround is to add `<PlatformTarget>AnyCPU</PlatformTarget>` in your app's project file and also directly reference the [WebView2 NuGet package](https://www.nuget.org/packages/Microsoft.Web.WebView2). For details, see issues [#2482](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/issues/2482), [#730](https://github.com/MicrosoftEdge/WebView2Feedback/issues/730#issuecomment-803132248).
