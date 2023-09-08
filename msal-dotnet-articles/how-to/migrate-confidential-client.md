@@ -547,5 +547,5 @@ To remediate this issue, replace `.WithAuthority` on the AcquireTokenXXX express
 ## Next steps
 
 Learn more about:
-- [Differences between ADAL.NET and MSAL.NET apps](differences-adal-MSAL-net.md).
+- [Differences between ADAL.NET and MSAL.NET apps](/azure/active-directory/develop/msal-net-differences-adal-net).
 - [Token cache serialization in MSAL.NET](token-cache-serialization.md)
