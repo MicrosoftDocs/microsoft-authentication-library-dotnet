@@ -1,5 +1,6 @@
 ---
 title: Device authentication errors
+description: "Errors that can show up when using device authentication with MSAL.NET."
 ---
 
 # Device authentication errors
