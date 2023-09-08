@@ -9,49 +9,42 @@ ms.date: 06/29/2023
 MSAL is able to call Web Account Manager (WAM), a Windows component that ships with the OS. This component acts as an authentication broker allowing the users of your app to benefit from integration with accounts known to Windows, such as the account you signed into your Windows session.
 
 >[!NOTE]
->WAM is only available on Windows 10 and above, as well as Windows Server 2019 and above.
+>WAM is available on Windows 10 and above, as well as Windows Server 2019 and above. MSAL will automatically fallback to a browser if WAM cannot be used.
 
 ## What is a broker
 
 An authentication broker is an application that runs on a user’s machine that manages the authentication handshakes and token maintenance for connected accounts. The Windows operating system uses the Web Account Manager (WAM) as its authentication broker. It has many benefits for developers and customers alike, including:
 
-- **Enhanced security.** The client application does not need to manage the refresh token which can be used to obtain new authentication tokens without user consent.
+- **Enhanced security.** Many security enhancements will be delivered with the broker, without needing to update the application logic.
 - **Feature support.** With the help of the broker developers can access rich OS and service capabilities such as Windows Hello, conditional access policies, and FIDO keys without writing extra scaffolding code.
 - **System integration.** Applications that use the broker plug-and-play with the built-in account picker, allowing the user to quickly pick an existing account instead of reentering the same credentials over and over.
-
-With the help of a broker you need to write less code to handle token-related logic while also being able to use more advanced functionality, such as [Proof-of-Possession tokens](../../advanced/proof-of-possession-tokens.md). Moving forward, the MSAL team is continuing to invest in making sure that brokers are the de facto approach to authenticate inside applications.
-
-## Improved Windows broker experience
-
-Latest Windows releases include an updated WAM. The new broker is written in C++, is well-tested, and is significantly more performant and secure. One of the biggest consumers of the new broker experience is the Microsoft 365 suite of apps.
-
-> [!IMPORTANT]
-> With the introduction of the updated broker, we have also updated MSAL.NET to expose its capabilities under a simplified API. Starting with version 4.52.0, the new broker will be the default in MSAL.NET.
-
-The new WAM fixes a number of issues with the legacy implementation and provides other benefits, including:
-
-- New implementation is more stable, easier to add new features, and has less chance of regressions.
-- Works in apps that are executed under the Administrator user context.
-- Adds support for [Proof-of-Possession tokens](../../advanced/proof-of-possession-tokens.md).
-- Decreases assembly size.
+- **Token Protection.** WAM ensures that the refresh tokens are device bound and [enables apps](../../advanced/proof-of-possession-tokens.md) to acquire device bound access tokens. See [Token Protection](/azure/active-directory/conditional-access/concept-token-protection)
 
 ## Enabling WAM
 
-Due to platform-specific and backwards compatibility requirements, WAM support is split across two packages:
+> [!IMPORTANT]
+> Use MSAL.NET 4.52.0 or higher to get broker support.
+
+WAM support is split across two packages:
 
 - [Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client/) (i.e., MSAL) - core library for token acquisition.
 - [Microsoft.Identity.Client.Broker](https://www.nuget.org/packages/Microsoft.Identity.Client.Broker/) - adds support for authentication with the broker.
 
 >[!NOTE]
 >For migration purposes, and if you have a .NET 6, .NET Core, or a .NET Standard application that needs to use _both_ WAM and the [embedded browser](/azure/active-directory/develop/msal-net-web-browsers#embedded-vs-system-web-ui), you will also need to use the [Microsoft.Identity.Client.Desktop](https://www.nuget.org/packages/Microsoft.Identity.Client.Desktop/) package. Once added, developers can use [`WithWindowsDesktopFeatures`](xref:Microsoft.Identity.Client.Desktop.DesktopExtensions.WithWindowsDesktopFeatures*) when setting up their public client application.
+>
+>If your application targets UWP or `net-windows` (version-dependent Target Framework Moniker for Windows), WAM is included in the MSAL.NET package.
 
 After referencing the relevant packages, call [`WithBroker(BrokerOptions)`](xref:Microsoft.Identity.Client.Desktop.WamExtension.WithBroker*) with broker configuration options and [a window handle](#parent-window-handles) that the broker will be bound to.
 
-```csharp
-BrokerOptions options = new BrokerOptions(BrokerOptions.OperatingSystems.Windows);
+>[!NOTE]
+>Most apps need to reference the [`Microsoft.Identity.Client.Broker`](https://www.nuget.org/packages/Microsoft.Identity.Client.Broker/) package to use this integration. .NET MAUI and UWP applications don't need to add the dependency because the functionality is embedded into MSAL.
 
+```csharp
+var scopes = new[] { "User.Read" };
+
+BrokerOptions options = new BrokerOptions(BrokerOptions.OperatingSystems.Windows);
 options.Title = "My Awesome Application";
-options.ListOperatingSystemAccounts = true;
 
 IPublicClientApplication app =
     PublicClientApplicationBuilder.Create("YOUR_CLIENT_ID")
@@ -60,7 +53,31 @@ IPublicClientApplication app =
     .WithBroker(options)
     .Build();
 
-var authResult = await app.AcquireTokenInteractive(new List<string>() { "User.Read" }).ExecuteAsync();
+AuthenticationResult result = null;
+
+// Try to use the previously signed-in account from the cache
+IEnumerable<IAccount> accounts = await app.GetAccountsAsync();
+IAccount existingAccount = accounts.FirstOrDefault();
+
+try
+{    
+    if (existingAccount != null)
+    {
+        result = await app.AcquireTokenSilent(scopes, existingAccount).ExecuteAsync();
+    }
+    // Next, try to sign in silently with the account that the user is signed into Windows
+    else
+    {    
+        result = await app.AcquireTokenSilent(scopes, PublicClientApplication.OperatingSystemAccount)
+                            .ExecuteAsync();
+    }
+}
+// Can't get a token silently, go interactive
+catch (MsalUiRequiredException ex)
+{
+    result = await app.AcquireTokenInteractive(scopes).ExecuteAsync();
+}
+
 ```
 
 When using the broker, if the [authority](/azure/active-directory/develop/msal-client-application-configuration#authority) used is targeting Azure AD as well as personal Microsoft accounts, the user will first be prompted to select an account using the built-in system account picker.
@@ -72,9 +89,6 @@ If the configuration is set on a per-tenant basis by using [`WithTenantId`](xref
 ![Demo of the WAM component that is configured on a per-tenant basis and doesn't show the OS-based account picker](../../media/wam/wam-per-tenant.gif)
 
 Once the account is added or selected, the user will be prompted for additional consent if they have never used the application before or the application requires additional permissions.
-
->[!NOTE]
->No changes are required for UWP applications. Because the platform does not support the updated broker, existing applications will continue to use the legacy WAM implementation.
 
 ## Parent window handles
 

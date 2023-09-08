@@ -1,24 +1,30 @@
 ---
 title: High availability considerations in MSAL.NET
+description: "How to build highly available applications that use MSAL.NET."
 ---
 
 # High availability considerations in MSAL.NET
 
-For client credential (app 2 app) flow, please see https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Client-credential-flows which has a topic on High-Availablity first.
+For client credentials flow, see this [High Availability](/entra/msal/dotnet/acquiring-tokens/web-apps-apis/client-credential-flows#high-availability) document first.
+
+## Use a higher level API
+
+MSAL is a lower level API. If you are writing a new app, consider using the higher level [Microsoft.Identitity.Web](https://github.com/AzureAD/microsoft-identity-web) which provides out of the box integration with ASP.NET Core and ASP.NET Classic.
 
 ## Use the latest MSAL
 
 Semantic versioning is followed to the letter. Use the latest MSAL to get the latest bug fixes.
 
-You also want to check if you should use Microsoft Identity Web, a higher level library for web apps and web APIs, which does a lot of what is described below for your. See [Is MSAL right for me?](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Is-MSAL.NET-right-for-me%3F), which proposes a decision tree to choose the best solution depending on your platform and constraints.
+You also want to check if you should use Microsoft Identity Web, a higher level library for web apps and web APIs, which does a lot of what is described below for your. See [Choosing a version of MSAL.NET](/entra/msal/dotnet/getting-started/choosing-msal-dotnet), which proposes a decision tree to choose the best solution depending on your platform and constraints.
 
 ## Use the token cache
 
 **Default behaviour:** MSAL caches the tokens in memory. Each `ConfidentialClientApplication` instance has its own internal token cache. In-memory cache can be lost, for example, if the object instance is disposed or the whole application is stopped.
 
-**Recommendation:** All apps should persist their token caches. Web apps and Web APIs should use an L1 / L2 token cache where L2 is a distributed store like Redis to handle scale. Desktop apps should use [this token cache serialization strategy](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/token-cache-serialization#token-cache-for-a-public-client-application).
+**Recommendation:** All apps should persist their token caches. Web apps and Web APIs should use an L1 / L2 token cache where L2 is a distributed store like Redis to handle scale. Desktop apps should use [a proper token cache serialization strategy](/azure/active-directory/develop/msal-net-token-cache-serialization?tabs=desktop).
 
-> Note: if you use Microsoft.Identity.Web, you don't need to worry about the cache, as it implements the right cache behavior. If you don't use Microsoft.Identity.Web but are building a web app or web API, you'd want to consider an [hybrid approach](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Is-MSAL.NET-right-for-me%3F#use-hybrid-model-msalnet-and-microsoft-identity-web)
+>[!NOTE]
+>If you use Microsoft.Identity.Web, you don't need to worry about the cache as it implements the right cache behavior out-of-the-box. If you don't use Microsoft.Identity.Web but are building a web app or web API, you'd want to consider an [hybrid approach](/entra/msal/dotnet/getting-started/choosing-msal-dotnet#when-do-you-use-the-hybrid-model-msalnet-and-microsoft-identity-web)
 
 **Default behaviour:** MSAL maintains a secondary ADAL token cache for migration scenarios between ADAL and MSAL. ADAL cache operations are very slow.
 **Recommendation:** Disable ADAL cache if you are not interested in migrating from ADAL. This will make a **BIG** perf improvement - see perf measurements [here](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/pull/2309).
@@ -27,7 +33,7 @@ Add `WithLegacyCacheCompatibility(false)` when constructing your app to disable 
 
 ## Add monitoring around MSAL operations
 
-MSAL exposes important metrics as part of [AuthenticationResult.AuthenticationResultMetadata](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/master/src/client/Microsoft.Identity.Client/AuthenticationResultMetadata.cs#L9) object:
+MSAL exposes important metrics as part of [AuthenticationResult.AuthenticationResultMetadata](xref:Microsoft.Identity.Client.AuthenticationResult.AuthenticationResultMetadata*) object:
 
 | Metric       | Meaning     | When to trigger an alarm?    |
 | :-------------: | :----------: | :-----------: |
@@ -54,16 +60,16 @@ Details about logging can be found in the [Logging in MSAL.NET](/azure/active-di
 
 ## One Confidential Client per session
 
-In web app and web API scenarios, it is recommended to use a new `ConfidentialClientApplication` on each session and to serialize in the same way - one token cache per session. This scales well and also increases security. The [official samples](/azure/active-directory/develop/sample-v2-code) show how to do this.
+It is recommended to use a new `ConfidentialClientApplication` on each session and to serialize in the same way - one token cache per session. This scales well and also increases security. The [official samples](/azure/active-directory/develop/sample-v2-code) show how to do this. You must [configure token caching](https://aka.ms/msal-net-token-cache-serialization) for this to work properly.
 
 >[!NOTE]
->Microsoft.Identity.Web does this.
+>Microsoft.Identity.Web applies this approach - one confidential client app instance per request with enabled token caching.
 
 ## HttpClient
 
 **Default behaviour**: MSAL-created `HttpClient` does not scale well for web sites/web API where we recommend to have a `ClientApplication` object for each user session.
 
-**Recommendation**: Provide your own scalable HttpClientFactory. On .NET Core we recommend that you inject the [System.Net.Http.IHttpClientFactory](/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.0). This is described in more detail in the [Providing your own HttpClient, supporting HTTP proxies, and customization of user agent headers](httpclient.md) guide and in the [.NET documentation](/dotnet/api/system.net.http.httpclient?view=net-7.0#net-framework--mono)
+**Recommendation**: Provide your own scalable HttpClientFactory. On .NET Core we recommend that you inject the [System.Net.Http.IHttpClientFactory](/aspnet/core/fundamentals/http-requests). This is described in more detail in the [Providing your own HttpClient, supporting HTTP proxies, and customization of user agent headers](httpclient.md) guide and in the [.NET documentation](/dotnet/api/system.net.http.httpclient#net-framework--mono)
 
 ## Proactive Token renewal
 
@@ -93,37 +99,23 @@ Whenever you make **requests for the same token**, i.e. whenever MSAL is able to
 
 ## Certificate Rotation
 
-Certs for the confidential client app must be rotated for security reasons (don't use secrets in prod!). There are several ways to handle cert rotation, listing is in ordered of most preferred to least preferred.
+Certificates for the confidential client app must be rotated for security reasons (don't use secrets in prod!). There are several ways to handle certificate rotation, in order of the most preferred to the least:
 
-1. Use Microsoft.Identity.Web's certificate handling logic
+1. Use managed identity
 
-In web app / web api scenarios, you should use Microsoft.Identity.Web, a higher-level API over MSAL. It handles certificate rotation for when the certificate is stored in KeyVault and handles Managed Identity for you as well.
+With [managed identity](/entra/msal/dotnet/advanced/managed-identity), trust is established through hosting your app in Azure. There are not secrets to maintain and no certificates to rotate. 
+
+2. Use Microsoft.Identity.Web's certificate handling logic
+
+In web apps and web APIs, use Microsoft.Identity.Web, a higher-level API over MSAL. It handles certificate rotation when the certificate is stored in Azure Key Vault and handles managed identity case as well.
 
 Learn more in the [Certificates in Microsoft.Identity.Web](https://github.com/AzureAD/microsoft-identity-web/wiki/Certificates#getting-certificates-from-key-vault) guide.
 
 This is the preferred solution for non-Microsoft internal services using ASP.NET Core.
 
-2. (**Internal only**) Rely on [Subject Name/Issuer certificates](./subject-name-and-issuer-authentication.md).
+3. (**Internal only**) Rely on [Subject Name/Issuer certificates](./subject-name-and-issuer-authentication.md).
 
-This mechanism allows Azure AD to identify a cert based on SN/I instead of x5t. It is a stop-gap solution, there are no plans to make it available to third-parties.
+This mechanism allows Azure AD to identify a certtificate based on SN/I instead of a thumbprint (x5t). It is a stop-gap solution; there are no plans to make it available to non-Microsoft applications. 
 
-This is the preferred solution for Microsoft internal services.
+This is the preferred solution for Microsoft internal services which are not able to use managed identity.
 
-3. Write your own simple cert reload logic
-
-Azure AD will reject an expired certificate with an error, which MSAL will report as an `MsalServiceException`
-
-```csharp
-        private bool IsInvalidClientCertificateError(MsalServiceException exMsal)
-        {
-            return !_retryClientCertificate &&
-                string.Equals(exMsal.ErrorCode, "invalid_client", StringComparison.OrdinalIgnoreCase) &&
-                exMsal.Message.Contains("AADSTS700027", StringComparison.OrdinalIgnoreCase);
-        }
-```
-
-At this stage your app should try to reload the KeyVault certificate.
-
-4. Re-create the CCA object
-
-Create a new ConfidentialClientApplication object on each request. But make sure to point it to the same token cache! /azure/active-directory/develop/msal-net-token-cache-serialization?tabs=aspnetcore

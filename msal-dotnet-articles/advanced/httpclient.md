@@ -57,6 +57,11 @@ public class StaticClientWithProxyFactory : IMsalHttpClientFactory
 }
 ```
 
+
+## HttpClient and Xamarin iOS
+
+When using Xamarin iOS, it is recommended to create an `HttpClient` that explicitly uses the `NSURLSession`-based handler for iOS 7 and newer. MSAL.NET automatically creates an `HttpClient` that uses `NSURLSessionHandler` for iOS 7 and newer. For more information, read the [Xamarin iOS documentation for HttpClient](/xamarin/cross-platform/macios/http-stack).
+
 ## Troubleshooting
 
 **Problem**: On a desktop application, the authorization experience do not use the HttpClient I defined

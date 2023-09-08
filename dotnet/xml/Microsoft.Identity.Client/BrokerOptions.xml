@@ -10,6 +10,7 @@
     <AssemblyVersion>4.53.0.0</AssemblyVersion>
     <AssemblyVersion>4.54.0.0</AssemblyVersion>
     <AssemblyVersion>4.54.1.0</AssemblyVersion>
+    <AssemblyVersion>4.55.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -37,6 +38,7 @@
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.1.0</AssemblyVersion>
+        <AssemblyVersion>4.55.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="enabledOn" Type="Microsoft.Identity.Client.BrokerOptions+OperatingSystems" />
@@ -62,6 +64,7 @@
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.1.0</AssemblyVersion>
+        <AssemblyVersion>4.55.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.BrokerOptions+OperatingSystems</ReturnType>
@@ -87,6 +90,7 @@
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.1.0</AssemblyVersion>
+        <AssemblyVersion>4.55.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -112,6 +116,7 @@
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.1.0</AssemblyVersion>
+        <AssemblyVersion>4.55.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -125,10 +130,9 @@
       <Docs>
         <summary>
             A legacy option available only to Microsoft First-Party applications. Should be avoided where possible.
-            Support is experimental.
             </summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>This is a convenience API, the same can be achieved by using WithExtraQueryParameters and passing the extra query parameter "msal_request_type": "consumer_passthrough"</remarks>
       </Docs>
     </Member>
     <Member MemberName="Title">
@@ -144,6 +148,7 @@
         <AssemblyVersion>4.53.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.0.0</AssemblyVersion>
         <AssemblyVersion>4.54.1.0</AssemblyVersion>
+        <AssemblyVersion>4.55.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>

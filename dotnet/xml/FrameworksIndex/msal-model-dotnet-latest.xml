@@ -1,18 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-model-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.Identity.Abstractions" Version="3.2.1.0" />
-    <Assembly Name="Microsoft.Identity.Web.Certificate" Version="2.12.4.0" />
-    <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="2.12.4.0" />
-    <Assembly Name="Microsoft.Identity.Web" Version="2.12.4.0" />
+    <Assembly Name="Microsoft.Identity.Abstractions" Version="4.0.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.Azure" Version="2.13.3.0" />
+    <Assembly Name="Microsoft.Identity.Web.Certificate" Version="2.13.3.0" />
+    <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="2.13.3.0" />
+    <Assembly Name="Microsoft.Identity.Web" Version="2.13.3.0" />
     <Assembly Name="Microsoft.Identity.Web.DownstreamRestApi" Version="2.0.8.0" />
-    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraph" Version="2.12.4.0" />
-    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraphBeta" Version="2.12.4.0" />
-    <Assembly Name="Microsoft.Identity.Web.OWIN" Version="2.12.4.0" />
-    <Assembly Name="Microsoft.Identity.Web.TokenAcquisition" Version="2.12.4.0" />
-    <Assembly Name="Microsoft.Identity.Web.TokenCache" Version="2.12.4.0" />
-    <Assembly Name="Microsoft.Identity.Web.UI" Version="2.12.4.0" />
-    <Assembly Name="Microsoft.Identity.Web.UI.Views" Version="2.12.4.0" />
+    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraph" Version="2.13.3.0" />
+    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraphBeta" Version="2.13.3.0" />
+    <Assembly Name="Microsoft.Identity.Web.OWIN" Version="2.13.3.0" />
+    <Assembly Name="Microsoft.Identity.Web.TokenAcquisition" Version="2.13.3.0" />
+    <Assembly Name="Microsoft.Identity.Web.TokenCache" Version="2.13.3.0" />
+    <Assembly Name="Microsoft.Identity.Web.UI" Version="2.13.3.0" />
+    <Assembly Name="Microsoft.Identity.Web.UI.Views" Version="2.13.3.0" />
   </Assemblies>
   <Namespace Name="AspNetCore">
     <Type Name="AspNetCore.Areas_MicrosoftIdentity_Pages__ViewStart" Id="T:AspNetCore.Areas_MicrosoftIdentity_Pages__ViewStart">
@@ -646,6 +647,9 @@
       <Member Id="M:Microsoft.Identity.Web.PolicyBuilderExtensions.RequireScope(Microsoft.AspNetCore.Authorization.AuthorizationPolicyBuilder,System.String[])" />
       <Member Id="M:Microsoft.Identity.Web.PolicyBuilderExtensions.RequireScopeOrAppPermission(Microsoft.AspNetCore.Authorization.AuthorizationPolicyBuilder,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String})" />
     </Type>
+    <Type Name="Microsoft.Identity.Web.PrincipalExtensionsForSecurityTokens" Id="T:Microsoft.Identity.Web.PrincipalExtensionsForSecurityTokens">
+      <Member Id="M:Microsoft.Identity.Web.PrincipalExtensionsForSecurityTokens.GetBootstrapToken(System.Security.Principal.IPrincipal)" />
+    </Type>
     <Type Name="Microsoft.Identity.Web.RequiredScopeExtensions" Id="T:Microsoft.Identity.Web.RequiredScopeExtensions">
       <Member Id="M:Microsoft.Identity.Web.RequiredScopeExtensions.AddRequiredScopeAuthorization(Microsoft.Extensions.DependencyInjection.IServiceCollection)" />
       <Member Id="M:Microsoft.Identity.Web.RequiredScopeExtensions.RequireScope``1(``0,System.String[])" />
@@ -671,6 +675,11 @@
     <Type Name="Microsoft.Identity.Web.ServiceCollectionExtensions" Id="T:Microsoft.Identity.Web.ServiceCollectionExtensions">
       <Member Id="M:Microsoft.Identity.Web.ServiceCollectionExtensions.AddTokenAcquisition(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Boolean)" />
     </Type>
+    <Type Name="Microsoft.Identity.Web.TokenAcquirerAppTokenCredential" Id="T:Microsoft.Identity.Web.TokenAcquirerAppTokenCredential">
+      <Member Id="M:Microsoft.Identity.Web.TokenAcquirerAppTokenCredential.#ctor(Microsoft.Identity.Abstractions.ITokenAcquirer)" />
+      <Member Id="M:Microsoft.Identity.Web.TokenAcquirerAppTokenCredential.GetToken(Azure.Core.TokenRequestContext,System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.Identity.Web.TokenAcquirerAppTokenCredential.GetTokenAsync(Azure.Core.TokenRequestContext,System.Threading.CancellationToken)" />
+    </Type>
     <Type Name="Microsoft.Identity.Web.TokenAcquirerFactory" Id="T:Microsoft.Identity.Web.TokenAcquirerFactory">
       <Member Id="M:Microsoft.Identity.Web.TokenAcquirerFactory.#ctor" />
       <Member Id="M:Microsoft.Identity.Web.TokenAcquirerFactory.Build" />
@@ -684,6 +693,11 @@
       <Member Id="P:Microsoft.Identity.Web.TokenAcquirerFactory.Configuration" />
       <Member Id="P:Microsoft.Identity.Web.TokenAcquirerFactory.ServiceProvider" />
       <Member Id="P:Microsoft.Identity.Web.TokenAcquirerFactory.Services" />
+    </Type>
+    <Type Name="Microsoft.Identity.Web.TokenAcquirerTokenCredential" Id="T:Microsoft.Identity.Web.TokenAcquirerTokenCredential">
+      <Member Id="M:Microsoft.Identity.Web.TokenAcquirerTokenCredential.#ctor(Microsoft.Identity.Abstractions.ITokenAcquirer)" />
+      <Member Id="M:Microsoft.Identity.Web.TokenAcquirerTokenCredential.GetToken(Azure.Core.TokenRequestContext,System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.Identity.Web.TokenAcquirerTokenCredential.GetTokenAsync(Azure.Core.TokenRequestContext,System.Threading.CancellationToken)" />
     </Type>
     <Type Name="Microsoft.Identity.Web.TokenAcquisitionAppTokenCredential" Id="T:Microsoft.Identity.Web.TokenAcquisitionAppTokenCredential">
       <Member Id="M:Microsoft.Identity.Web.TokenAcquisitionAppTokenCredential.#ctor(Microsoft.Identity.Web.ITokenAcquisition)" />

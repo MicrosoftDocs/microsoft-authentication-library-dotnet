@@ -14,6 +14,12 @@ Proof-of-Possession (PoP) tokens mitigate this threat via 2 mechanisms:
 
 For more details, see [RFC 7800](https://tools.ietf.org/html/rfc7800).
 
+## Does the protected resource accept PoP tokens?
+
+If you make an unauthenticated request to a protected API, it should reply with HTTP 401 Unauthorized response, and with some [WWW-Authenticate](https://developer.mozilla.org/docs/Web/HTTP/Headers/WWW-Authenticate) headers. These headers inform the clients of the available authentication schemes, such as Basic, NTLM, Bearer, and POP. The MSAL family of libraries can help with Bearer and PoP.
+
+Programatically, MSAL.NET offers [a helper API](extract-authentication-parameters.md) for parsing these headers.
+
 ## Proof-of-Possession for confidential clients
 
 See the [full code sample](https://github.com/Azure-Samples/active-directory-dotnetcore-daemon-v2/tree/master/4-Call-OwnApi-Pop) show casing a daemon app using AcquireTokenForClient with PoP to call an API protected with Proof-of-Possession.
@@ -78,7 +84,9 @@ If you want to do key management and to create the SHR yourself,  see [this exam
 
 ## Proof-of-Possession for public clients
 
-Proof-of-Possession on public client flows can be achieved with the use of the updated [Windows broker](../acquiring-tokens/desktop-mobile/wam.md) in MSAL 4.52.0 and above. Contrary to the confidential client flow, it is not possible to provide your own key to sign the PoP token.
+Proof-of-Possession on public client flows can be achieved with the use of the updated [Windows broker](../acquiring-tokens/desktop-mobile/wam.md) in MSAL 4.52.0 and above. Contrary to the confidential client flow, it is not possible to provide your own key to sign the PoP token. MSAL will use the best available keys which exist on the machine, typically hardware keys (see [TPM](/windows/security/hardware-security/tpm/tpm-fundamentals)).
+
+It is possible that a client does not support creating PoP tokens. This is due to the fact that brokers (WAM, Company Portal) are not always present on the device or that the SDK does not implement the protocol on a specific operating system. Currently, PoP tokens are available on Windows 10+ and Windows Server 2019+. Use the API `publicClientApp.IsProofOfPossessionSupportedByClient()` to understand if POP is supported by the client.
 
 Example implementation:
 
@@ -122,3 +130,12 @@ var result = await pca.AcquireTokenSilent(new[] { "scope" }, accounts.FirstOrDef
        .ConfigureAwait(false);
 
 ```
+
+An end to end implementation would need to: 
+
+1. [Enable the use of broker](../acquiring-tokens/desktop-mobile/wam.md)
+1. Check if the client is capable of creating PoP tokens using `publicClientApp.IsProofOfPossessionSupportedByClient()`
+2. Make an unauthenticated call to the service
+3. [Parse the WWW-Authenticate headers](extract-authentication-parameters.md) and if PoP is supported, extract the nonce
+4. Request PoP tokens using the `AcquireTokenSilent` / `AcquireTokenInteractive` pattern, by adding the `.WithProofOfPossession(nonce, method, requestUri)` modifier
+5. Make the request to the protected resource. If the request results in 200 OK, [parse the Authenticate-Info](extract-authentication-parameters.md)  header and extract the new `nonce` - it needs to be used at step 4 when requesting a new token. If the request results in a 401 Unauthenticated, observe the error - it may be because of an expired nonce. In that case, repeat steps 3-5. 

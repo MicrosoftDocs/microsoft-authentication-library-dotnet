@@ -1,9 +1,24 @@
 ---
 title: Using MSAL.NET with UWP applications
-description: "How to build MSAL.NET applications on the Universal Windows Platform."
+description: Learn how to build MSAL.NET applications on the Universal Windows Platform."
+services: active-directory
+author: Dickson-Mwendia
+manager: CelesteDG
+
+ms.service: active-directory
+ms.subservice: develop
+ms.topic: conceptual
+ms.workload: identity
+ms.date: 08/24/2023
+ms.author: dmwendia
+ms.reviewer: ddelimarsky
+ms.custom: devx-track-csharp, aaddev, devx-track-dotnet
+#Customer intent: As an application developer, I want to learn about considerations for using Universal Windows Platform and MSAL.NET so that I can decide if this platform meets my application development needs.
 ---
 
 # Using MSAL.NET with UWP applications
+
+Developers of applications that use Universal Windows Platform (UWP) with MSAL.NET should consider the concepts this article presents.
 
 >[!NOTE]
 >Please see [Using MSAL.NET with Web Account Manager (WAM)](./wam.md) for how to configure your UWP app to handle authentication through the Windows Broker.
