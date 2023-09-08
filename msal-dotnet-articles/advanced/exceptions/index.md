@@ -38,7 +38,7 @@ Developers are expected to implement their own retry policies when calling MSAL.
 
 When processing exceptions, you can use the exception type itself and the `ErrorCode` member to distinguish between exceptions. The values of `ErrorCode` are constants of [`MsalError`](xref:Microsoft.Identity.Client.MsalError)
 
-You can also have a look at the fields of [`MsalClientException`](xref:Microsoft.Identity.Client.MsalClientException), [`MsalServiceException`](xref:Microsoft.Identity.Client.MsalServiceException), [`MsalUIRequiredException`](xref:Microsoft.Identity.Client.MsalUIRequiredException)
+You can also have a look at the fields of [`MsalClientException`](xref:Microsoft.Identity.Client.MsalClientException), [`MsalServiceException`](xref:Microsoft.Identity.Client.MsalServiceException), [`MsalUiRequiredException`](xref:Microsoft.Identity.Client.MsalUiRequiredException)
 
 In the case of [`MsalServiceException`](xref:Microsoft.Identity.Client.MsalServiceException), the error might contain a code which you can find in [Authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes)
 
