@@ -7,7 +7,7 @@ description: "This article is both a conceptual article of why you'd want to get
 
 This article is both a conceptual article of why you'd want to get information from WWW-authenticate headers, and how to do it.
 
-Jump to [How to - use the WwwAuthenticateParameters class](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/WWW-Authenticate-parameters#how-to---use-the-wwwauthenticateparameters-class) if you are not interested in the why.
+Jump to [How to - use the WwwAuthenticateParameters class](#how-to---use-the-wwwauthenticateparameters-class) for implementation details.
 
 ## Concepts - Why use WwwAuthenticateParameters
 

@@ -166,4 +166,3 @@ Sample | Platform | Description
 In case you want to learn more about Device code flow:
 
 - [OAuth standard - device flow](https://tools.ietf.org/html/draft-ietf-oauth-device-flow-07#section-3.4)
-- (_Legacy library_) How this was done with the V1 endpoint: [Device code flow in ADAL.NET](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet/wiki/Device-profile-for-devices-without-web-browsers)

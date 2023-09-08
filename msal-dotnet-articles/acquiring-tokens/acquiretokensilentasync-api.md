@@ -24,7 +24,7 @@ Once MSAL.NET has acquired a user token to call a Web API, it caches it. If you 
 
 ### Confidential client application
 
-If you are build an ASP.NET Core application, use [Microsoft.Identity.Web](https://github.com/AzureAD/microsoft-identity-web/wiki), which handles all these for you.
+If you are build an ASP.NET Core application, use [`Microsoft.Identity.Web`](https://github.com/AzureAD/microsoft-identity-web), which handles all these for you.
 
 Otherwise, in confidential client applications, you should not call `AcquireTokenSilent` before:
 

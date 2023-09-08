@@ -502,7 +502,7 @@ Key benefits of MSAL.NET for your app include:
   - Azure AD Cached Credential Service (CCS) benefits. CCS operates as an Azure AD backup.
   - Proactive renewal of tokens if the API that you call enables long-lived tokens through [continuous access evaluation](/azure/active-directory/develop/app-resilience-continuous-access-evaluation).
 
-- **Security**. You can acquire Proof of Possession (PoP) tokens if the web API that you want to call requires it. For details, see [Proof Of Possession tokens in MSAL.NET](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Proof-Of-Possession-(PoP)-tokens)
+- **Security**. You can acquire Proof of Possession (PoP) tokens if the web API that you want to call requires it. For details, see [Proof Of Possession tokens in MSAL.NET](../advanced/proof-of-possession-tokens.md)
 
 - **Performance and scalability**. If you don't need to share your cache with ADAL.NET, disable the legacy cache compatibility when you're creating the confidential client application (`.WithLegacyCacheCompatibility(false)`) to significantly increase performance.
   

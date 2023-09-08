@@ -27,7 +27,7 @@ MSAL throws `MsalClientException` for things that go wrong inside the library (e
 
 When calling `AcquireTokenInteractive`, a browser or the broker is invoked to handle user interaction. If the user closes this process or if they hit the browser back button, MSAL generates an `MsalClientException` with the error code `authentication_canceled` (`MsalError.AuthenticationCanceledError`).
 
-On Android, this exception can also occur if a [browser with tabs](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Android-system-browser#known-issues) is not available. 
+On Android, this exception can also occur if a [browser with tabs](/azure/active-directory/develop/msal-net-system-browser-android-considerations) is not available.
 
 2. HTTP Exceptions
 
@@ -63,4 +63,4 @@ To handle the claim challenge, you will need to use the `.WithClaims(claims)` me
 
 ### Retry policies
 
-See [Retry-Policy](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Retry-Policy)
+See [Retry-Policy](../exceptions/retry-policy.md)

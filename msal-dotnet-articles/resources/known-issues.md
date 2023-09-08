@@ -43,7 +43,7 @@ Most issues on UWP occur due to network problems, such as proxies that block the
 ### Desktop
 
 On a Desktop app, a `StateMismatchError` exception is thrown when the using a long Facebook ID (via B2C) in conjunction with the embedded browser.
-For more details, please refer: https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/StateMismatchError
+For more details, please [refer to our documentation](../advanced/exceptions/understanding-statemismatcherror.md).
 
 ## Build issues
 
