@@ -1,5 +1,6 @@
 ---
 title: Performance testing of MSAL.NET
+description: "Performance testing approach in MSAL.NET"
 ---
 
 # Performance testing of MSAL.NET
