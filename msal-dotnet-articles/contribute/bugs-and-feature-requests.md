@@ -11,7 +11,7 @@ First, please do a search of [open issues](https://github.com/AzureAD/microsoft-
 
 If you find your issue already exists, add a relevant comment. You can also use an upvote or downvote reaction in place of a "+1" comment.
 
-If your issue is a question, and is not addressed in the wiki documentation, please ask the question on [Stack Overflow](https://stackoverflow.com/questions/tagged/azure-ad-msal) using the tag `azure-ad-msal`.
+If your issue is a question, and is not addressed in the documentation, please ask the question on [Stack Overflow](https://stackoverflow.com/questions/tagged/azure-ad-msal) using the tag `azure-ad-msal`.
 
 If you cannot find an existing issue that describes your bug or feature request, submit an issue using the guidelines below.
 
@@ -37,12 +37,14 @@ Remember to do the following:
 
 ### Documentation Requests
 
-If you find our wiki or xml comments are lacking in necessary documentation to make your life easier using the library, submit a [Documentation request](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/issues/new?template=documentation.md) and let us know what you need, if you have found errors in the documentation, or if an example or code snippet is needed. Feel free to include suggestions.
+If you find our documentation or XML comments lacking in necessary detail, submit a [Documentation request](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/issues/new?template=documentation.md).
+
+If you have found errors in the documentation, or if an example or code snippet is needed, [open an issue in the documentation repository](https://github.com/MicrosoftDocs/microsoft-authentication-library-dotnet/issues).
 
 ### Feature requests
 
-Have a feature request for MSAL? Complete a [Feature Request](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/issues/new?template=feature_request.md) or consider making a [contribution](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Contributing-overview) to the library. Make sure your feature request is clear and concise and contains a detailed description of the problem. Please include any alternative solutions or features you may have considered.
+Have a feature request for MSAL? Complete a [Feature Request](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/issues/new?template=feature_request.md) or consider making a [contribution](../contribute/overview.md) to the library. Make sure your feature request is clear and concise and contains a detailed description of the problem. Please include any alternative solutions or features you may have considered.
 
 ## Contributing fixes
 
-If you are interested in fixing issues and contributing directly to the code base, please see the [Contributing overview](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Contributing-overview).
+If you are interested in fixing issues and contributing directly to the code base, please see the [Contributing overview](../contribute/overview.md).

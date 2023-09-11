@@ -13,7 +13,7 @@ If your desktop or mobile application runs on Windows and on a machine connected
 ## IWA Constraints
 
 - **Federated** users only, i.e. those created in an Active Directory and backed by Azure Active Directory. Users created directly in Azure AD, without AD backing - **managed** users - cannot use this auth flow. This limitation does not affect the Username/Password flow.
-- Does not work for MSA users. For MSA uses try out [WAM](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/wam)
+- Does not work for MSA users. For MSA uses try out [WAM](./wam.md)
 - IWA is for apps written for .NET Framework, .NET Core and UWP platforms
 - IWA does NOT bypass MFA (multi factor authentication). If MFA is configured, IWA might fail if an MFA challenge is required, because MFA requires user interaction. 
   > This one is tricky. IWA is non-interactive, but 2FA requires user interactivity. You do not control when the identity provider requests 2FA to be performed, the tenant admin does. From our observations, 2FA is required when you login from a different country, when not connected via VPN to a corporate network, and sometimes even when connected via VPN. Don’t expect a deterministic set of rules, Azure Active Directory uses AI to continuously learn if 2FA is required. You should fallback to a [user prompt](./acquiring-tokens-interactively.md) if IWA fails
@@ -165,7 +165,7 @@ Some of those issues include:
 
 - An account is not being available to perform IWA
 - An IWA policy is preventing auto-IWA authentication
-- Proxy or configuration issues prevent NTLM protocol (usually the case for 401 [Negotiate](https://www.ietf.org/rfc/rfc4559.txt)/NTLM challenge presented by the endpoint for Windows authentication. You may be able to try using your own [HttpClient](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/HttpClient) or changing the current version of .NET to work around this issue).
+- Proxy or configuration issues prevent NTLM protocol (usually the case for 401 [Negotiate](https://www.ietf.org/rfc/rfc4559.txt)/NTLM challenge presented by the endpoint for Windows authentication. You may be able to try using your own [HttpClient](../../advanced/httpclient.md) or changing the current version of .NET to work around this issue).
 - In case the Error Message is "Object reference not set to an instance of an object." [enable MSAL logging](/azure/active-directory/develop/msal-logging-dotnet) at Warning level to see more details.
 
 For more information see [AD FS Troubleshooting - Integrated Windows Authentication](/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-iwa)

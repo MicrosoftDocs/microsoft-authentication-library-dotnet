@@ -3,7 +3,6 @@ title: Using MSAL.NET with Azure Functions
 description: Learn how to use MSAL.NET in Azure Functions
 author: Dickson-Mwendia
 manager: CelesteDG
-
 ms.service: active-directory
 ms.subservice: develop
 ms.topic: reference

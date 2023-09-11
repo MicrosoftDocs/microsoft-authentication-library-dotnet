@@ -1,20 +1,21 @@
 ---
 title: Retry policies
+description: "This document explains how to implement a custom retry policy around token acquisition operations."
 ---
 
 # Retry policies
 
-This document explains how to implement a custom retry policy around token acquisition operations. For other tips on how to increase the availability of your service, see [High Availability](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/High-availability).
+This document explains how to implement a custom retry policy around token acquisition operations. For other tips on how to increase the availability of your service, see [High Availability](../high-availability.md).
 
 ## Better HTTP stack
 
-The default HTTP stack in .NET is not great. See [HttpClient tips](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/High-availability#httpclient) for details.
+The default HTTP stack in .NET is not great. See [HttpClient tips](../httpclient.md) for details.
 
 ## MSAL implements a simple "retry-once" for errors with HTTP error codes 5xx
 
 MSAL.NET implements a simple retry-once mechanism for errors with HTTP error codes 500-600. For more control / availability, consider disabling the default retry policy and define your own.
 
-Note that Azure Active Directory (Azure AD) may return a Retry-After header indicating to clients to pause for a few seconds, which needs to be taken into account. 
+Note that Azure Active Directory (Azure AD) may return a Retry-After header indicating to clients to pause for a few seconds, which needs to be taken into account.
 
 ## Example Retry policy
 

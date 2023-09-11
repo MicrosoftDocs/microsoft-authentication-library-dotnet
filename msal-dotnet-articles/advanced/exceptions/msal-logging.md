@@ -121,9 +121,6 @@ Using `MyIdentityLogger`:
         .Build();
 ```
 
-> [!TIP]
- > See the [MSAL.NET wiki](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki) for samples of MSAL.NET logging and more.
-
 ## Next steps
 
 For more code samples, refer to [Microsoft identity platform code samples](/azure/active-directory/develop/sample-v2-code).

@@ -20,6 +20,9 @@ ms.custom: devx-track-csharp, aaddev, engagement-fy23
 
 MSAL.NET ([Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client)) is an authentication library that enables you to acquire tokens from Azure Active Directory (Azure AD), to access protected web APIs (Microsoft APIs or applications registered with Azure AD). MSAL.NET is available on several .NET platforms (Desktop, Universal Windows Platform, MAUI, Xamarin Android, Xamarin iOS, Windows 8.1, and .NET Core).
 
+> [!div class="nextstepaction"]
+> [Get MSAL.NET >](https://www.nuget.org/packages/Microsoft.Identity.Client/)
+
 ## Supported platforms and application architectures
 
 MSAL.NET supports different application topologies, including:
@@ -37,7 +40,7 @@ MSAL.NET supports multiple platforms, including .NET Framework, [.NET Core](http
   > Not all the authentication features are available in all platforms, mostly because:
   >
   >- Mobile platforms (Xamarin, MAUI and UWP) do not allow confidential client flows, because they are not meant to function as a backend and cannot store secrets securely.
-  >- On public clients (mobile and desktop), the default browser and redirect URIs are different from platform to platform and broker availability varies (details [here](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/MSAL.NET-uses-web-browser#at-a-glance)).
+  >- On public clients (mobile and desktop), the default browser and redirect URIs are different from platform to platform and broker availability varies (details [in browser usage documentation](./acquiring-tokens/using-web-browsers.md)).
 
   Most of the articles in this MSAL.NET reference content describe the most complete platform (.NET Framework), but, topic by topic, it occasionally calls out differences between platforms.
 
