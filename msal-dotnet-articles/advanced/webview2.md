@@ -19,8 +19,8 @@ To use WebView2 in your application, the following requirements must be met:
 
 When attempting to use the new WebView2 runtime, keep in mind the following required changes:
 
-- In applications written against `.net5-windows10` (or newer), no changes are necessary.
-- In applications written against .NET Framework and .NET Core 3.1, add a reference to [`Microsoft.Identity.Client.Desktop`](https://www.nuget.org/packages/Microsoft.Identity.Client.Desktop/) and add [`.WithWindowsEmbeddedBrowserSupport()`](xref:Microsoft.Identity.Client.Desktop.DesktopExtensions.WithWindowsEmbeddedBrowserSupport*) when instantiating the public client application.
+- In applications written against `net6.0-windows` or newer, no changes are necessary.
+- In applications written against .NET Framework, .NET Core, or base .NET 5 or above, add a reference to [`Microsoft.Identity.Client.Desktop`](https://www.nuget.org/packages/Microsoft.Identity.Client.Desktop/) and add [`.WithWindowsEmbeddedBrowserSupport()`](xref:Microsoft.Identity.Client.Desktop.DesktopExtensions.WithWindowsEmbeddedBrowserSupport*) when instantiating the public client application.
 
 ```csharp
 var pca = PublicClientApplicationBuilder
