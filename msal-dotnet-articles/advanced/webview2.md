@@ -36,9 +36,10 @@ var pca = PublicClientApplicationBuilder
 
 |  Framework      | Embedded web view             | Default web view |
 |-----------------|-------------------------------|------------------|
-|  .NET Framework | WebView2, fallback to Legacy  | Embedded |  
-|  .NET Core      | WebView2, fallback to Legacy* | Embedded |
-|  .NET 5         | WebView2, fallback to Legacy* | Embedded |
+|  .NET Framework | Legacy, WebView2 with fallback to Legacy<sup>1</sup>  | Legacy embedded |  
+|  .NET Core      | WebView2 with fallback to Legacy<sup>2</sup> | System |
+|  .NET 6<sup>3</sup> | WebView2 with fallback to Legacy<sup>2</sup> | System |
+|  .NET 6 Windows | WebView2, fallback to Legacy | WebView2, embedded |
 
 <sup>1</sup> Legacy web view is the default in .NET Framework apps. WebView2 can be used via Microsoft.Identiy.Client.Desktop package.
 <sup>2</sup> .NET Core and .NET 6+ apps can only use web view via Microsoft.Identity.Client package.
