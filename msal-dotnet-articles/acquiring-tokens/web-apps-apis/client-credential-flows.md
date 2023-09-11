@@ -24,7 +24,6 @@ For advanced scenarios, 2 more types of credentials can be used. See details at 
 ### Code snippet
 
 ```csharp
-
 // this object will cache tokens in-memory - keep it as a singleton
 var singletonApp = ConfidentialClientApplicationBuilder.Create(config.ClientId)
            // don't specify authority here, we'll do it on the request 
@@ -38,7 +37,6 @@ var singletonApp = ConfidentialClientApplicationBuilder.Create(config.ClientId)
 var authResult = await app.AcquireTokenForClient(scopes: new [] {  "some_app_id_uri/.default"})        // uses the token cache automatically, which is optimized for multi-tenant access
                    .WithAuthority(AzureCloudInstance.AzurePublic, "{tenantID}")  // do not use "common" or "organizations"!
                    .ExecuteAsync();
-
 ```
 
 **Important: do not use `common` or `organizations` authority for client credential flows.**
@@ -49,16 +47,16 @@ Note: Token cache performance was significantly improved in MSAL 4.30.0.
 
 ## Custom Cache Serialization
 
-If your service is multi-tenant (i.e. it needs tokens for a resource that is in different tenants), see [MSAL for client credential flow in multi-tenant services](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Multi-tenant-client_credential-use).
+If your service is multi-tenant (i.e. it needs tokens for a resource that is in different tenants), see [MSAL for client credential flow in multi-tenant services](../../advanced/client-credential-multi-tenant.md).
 
 You can serialize the token cache to a location of your choice for example in-memory or in distributed location like Redis. You would do this to:
 
-- share the token cache between several instances of `ConfidentialClientApplication` OR
+- share the token cache between several instances of [`ConfidentialClientApplication`](xref:Microsoft.Identity.Client.ConfidentialClientApplication) OR
 - persist the token cache to Redis to share it between different machines
 
-Please see [distributed cache implementations](https://github.com/AzureAD/microsoft-identity-web/tree/master/src/Microsoft.Identity.Web.TokenCache/Distributed) and [binding the token cache](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/token-cache-serialization#token-cache-for-a-daemon-app).
+Please see [distributed cache implementations](https://github.com/AzureAD/microsoft-identity-web/tree/master/src/Microsoft.Identity.Web.TokenCache/Distributed) and [binding the token cache](/azure/active-directory/develop/msal-net-token-cache-serialization).
 
-This [sample](https://github.com/Azure-Samples/active-directory-dotnet-v1-to-v2/blob/b48c10180665260a1aec78a9acf7d1b1ff97e5ba/ConfidentialClientTokenCache/Program.cs) shows token cache serialization.
+Check our [sample](https://github.com/Azure-Samples/active-directory-dotnet-v1-to-v2/blob/b48c10180665260a1aec78a9acf7d1b1ff97e5ba/ConfidentialClientTokenCache/Program.cs) to see how token cache serialization works.
 
 ## High Availability
 
@@ -66,7 +64,7 @@ This [sample](https://github.com/Azure-Samples/active-directory-dotnet-v1-to-v2/
 My service is running out of memory.
 
 **Solution:**
-See [MSAL for client credential flow in multi-tenant services](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Multi-tenant-client_credential-use).
+See [MSAL for client credential flow in multi-tenant services](../../advanced/client-credential-multi-tenant.md).
 Provision enough RAM on the machines running your service or use a distributed cache.
 A single token is a only a few KB in size, but there is 1 token for each tenant! A multi-tenant service sometimes needs tokens for 0.5M tenants.
 

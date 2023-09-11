@@ -1,5 +1,6 @@
 ---
 title: Troubleshooting MSAL.NET
+description: "How to troubleshoot some of the more common MSAL.NET issues."
 ---
 
 # Troubleshooting MSAL.NET
@@ -53,8 +54,7 @@ You hit the global ESTS endpoint instead of a regional endpoint.
 Auto-discovery happens once and only once before the first call to acquire token. The outcome is stored in memory and auto-discovery is not attempted again, for performance reasons. So to understand why auto-discovery fails, you need to capture the logs when the application starts.
 
 1. To understand what endpoint is hit, monitor `AuthenticationResult.AuthenticationResultMetadata.TokenEndpoint` and `AuthenticationResult.AuthenticationResultMetadata.RegionDetails`. Regionalized endpoints are in the format `<region>.login.microsoft.com/<tenant>/oauth2/v2.0/token`.
-2. Add verbose logging to MSAL.
-Logging details are [here](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/logging#add-a-log-callback). Note that you should not run with Verbose logging for a long time in production, as it impacts performance.
+2. Add verbose logging to MSAL. Logging details are [in our documentation](../advanced/exceptions/msal-logging.md). Note that you should not run with Verbose logging for a long time in production as it impacts performance.
 3. Restart the service.
 
 Restart your service and capture logs. Look at `AuthenticationResult.AuthenticationResultMetadata.RegionDetails` to understand if auto-discovery failed. Send the logs to the MSAL team.

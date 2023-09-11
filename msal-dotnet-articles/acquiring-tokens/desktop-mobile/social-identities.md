@@ -188,8 +188,6 @@ This flow **only works for local accounts** (where you register with B2C using a
 
 If you are a B2C developer using Google as an identity provider we recommend you use the system browser, as Google does not allow [authentication from embedded webviews](https://developers.googleblog.com/2016/08/modernizing-oauth-interactions-in-native-apps.html). Currently, `login.microsoftonline.com` is a trusted authority with Google. Using this authority will work with embedded webview. However using `b2clogin.com` is not a trusted authority with Google, so users will not be able to authenticate.
 
-We will provide an update to the wiki and this [issue](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/issues/688) if things change.
-
 ## Caching with B2C in MSAL.NET
 
 ### Known issue with Azure B2C
@@ -207,7 +205,7 @@ The customer impact is that when trying to display the username field, are you g
 
 #### Mitigation of the lack of `tid`
 
-The suggested workaround  is to use the [Caching by Policy](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/AAD-B2C-specifics#acquiring-a-token-to-apply-a-policy).
+The suggested workaround is to use the [Caching by Policy](/azure/active-directory/develop/msal-net-b2c-considerations#known-issue-with-azure-ad-b2c).
 
 Alternatively, you can use the `tid` claim, if you are using the [B2C custom policies](/azure/active-directory-b2c/tutorial-create-user-flows?pivots=b2c-custom-policy), because it provides the capability to return additional claims to the application. To learn more about [Claims Transformation](/azure/active-directory-b2c/claims-transformation-technical-profile).
 

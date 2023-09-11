@@ -1,16 +1,17 @@
 ---
 title: Single-page applications (SPA) and authorization codes
+description: "This flow enables confidential client applications to request an additional SPA auth code from the eSTS /token endpoint, and this authorization code can be redeemed silently by the front end running in the browser."
 ---
 
 # Single-page applications (SPA) and authorization codes
 
-This flow enables confidential client applications to request an additional "spa auth code" from the eSTS /token endpoint, and this authorization code can be redeemed silently by the front end running in the browser. This feature is intended for applications that perform server-side (web apps) and browser-side (SPA) authentication, using a confidential SDK such as MSAL.net or MSAL Node server-side, and MSAL.js in the browser (e.g., an ASP.net web application hosting a React single-page application). In these scenarios, the application will likely need authentication both browser-side (e.g., a public client using MSAL.js) and server-side (e.g., a confidential client using MSAL.net), and each application context will need to acquire its own tokens.
+This flow enables confidential client applications to request an additional SPA auth code from the eSTS /token endpoint, and this authorization code can be redeemed silently by the front end running in the browser. This feature is intended for applications that perform server-side (web apps) and browser-side (SPA) authentication, using a confidential SDK such as MSAL.net or MSAL Node server-side, and MSAL.js in the browser (e.g., an ASP.net web application hosting a React single-page application). In these scenarios, the application will likely need authentication both browser-side (e.g., a public client using MSAL.js) and server-side (e.g., a confidential client using MSAL.net), and each application context will need to acquire its own tokens.
 
 Today, applications using this architecture will first interactively authenticate the user via the confidential client application, and then attempt to silently authenticate the user a second time with the public client. Unfortunately, this process is both relatively slow, and the silent network request made client-side (in a hidden iframe) will deterministically fail if third-party cookies are disabled/blocked. By acquiring a second authorization code server-side, MSAL.js can skip hidden iframe step, and immediately redeem the authorization code against the /token endpoint. This mitigates issued caused by third-party cookie blocking, and is also more performant
 
 ## Availability
 
-MSAL 4.40+ supports confidential clients to request an additional "spa auth code" from the eSTS / token endpoint
+MSAL 4.40+ enables confidential clients to request an additional SPA auth code from the Azure AD token endpoint.
 
 ## Required Redirect URI setup to support the flow
 

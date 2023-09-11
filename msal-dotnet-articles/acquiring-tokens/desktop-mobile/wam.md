@@ -192,4 +192,6 @@ The application user sees an error message similar to `Please check your connect
 
 ### WAM error codes
 
+Refer to [Errors associated with Web Account Manager (WAM)](../../advanced/exceptions/wam-errors.md) for details on WAM errors.
+
 Because WAM is a relatively new component, when errors occur we recommend logging data from [`AdditionalExceptionData`](xref:Microsoft.Identity.Client.MsalException.AdditionalExceptionData*). This can help pinpoint specific issues with the configuration or the WAM component. When you run into WAM issues, please [log a bug](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/issues) - this will help us ensure we address the problem in a timely manner.

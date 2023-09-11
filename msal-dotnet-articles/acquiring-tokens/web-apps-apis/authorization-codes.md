@@ -9,7 +9,7 @@ When users login to Web applications (web sites) using OpenID Connect, the web a
 
 ## ASP.NET and ASP.NET Core: use Microsoft.Identity.Web
 
-If you are building a web app on ASP.NET Core, the recommendation is to use [Microsoft.Identity.Web](https://github.com/AzureAD/microsoft-identity-web/wiki)
+If you are building a web app on ASP.NET Core, the recommendation is to use [`Microsoft.Identity.Web`](https://github.com/AzureAD/microsoft-identity-web/)
 
 ## Application registration
 

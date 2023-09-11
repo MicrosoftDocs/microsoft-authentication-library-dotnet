@@ -7,7 +7,7 @@ description: "How to use MSAL.NET to authenticate on behalf of a user."
 
 ## If you are using ASP.NET Core
 
-If you are building a web API on top of ASP.NET Core or ASP.NET Classic, we recommend that you use Microsoft.Identity.Web. See [Web APIs with Microsoft.Identity.Web](https://github.com/AzureAD/microsoft-identity-web/wiki/web-apis).
+If you are building a web API on top of ASP.NET Core or ASP.NET Classic, we recommend that you use `Microsoft.Identity.Web`. See [Web APIs with `Microsoft.Identity.Web`](https://github.com/AzureAD/microsoft-identity-web/wiki/web-apis).
 
 Check the decision tree: [Is MSAL.NET right for me?](/entra/msal/dotnet/getting-started/choosing-msal-dotnet)
 
@@ -26,9 +26,9 @@ This flow, named the On-Behalf-Of flow (OBO), is illustrated by the top part of 
 
 The OBO call is done by calling the <xref:Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenOnBehalfOf(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.UserAssertion)> method on the `IConfidentialClientApplication` interface.
 
-This call looks in the cache by itself - so you do not need to call `AcquireTokenSilent` and does not store refresh tokens. 
+This call looks in the cache by itself - so you do not need to call `AcquireTokenSilent` and does not store refresh tokens.
 
-For scenarios where continuous access is needed without an assertion, see [OBO for long lived processes](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/on-behalf-of#long-running-obo-processes)
+For scenarios where continuous access is needed without an assertion, see [OBO for long lived processes](../web-apps-apis/on-behalf-of-flow.md)
 
 > **Note:** Make sure to pass an access token, not an ID token, into the `AcquireTokenOnBehalfOf` method. The purpose of an ID token is as a confirmation that a user was authenticated and it contains some user-related information. While an access token determines whether a user has access to a resource, which is more appropriate in this On-Behalf-Of scenario. MSAL is focused on getting good access tokens. ID tokens are also obtained and cached but their expiry is not tracked. So it's possible for an ID token to expire and `AcquireTokenSilent` will not refresh it.
 
@@ -132,11 +132,11 @@ Pass the `sessionKey` which is associated with the current user's session and wi
 
 It is strongly recommended to [use a distributed persisted cache](/azure/active-directory/develop/msal-net-token-cache-serialization?tabs=aspnetcore) in a web API scenario. Since these APIs store the refresh token, MSAL will not suggest an expiration, as refresh tokens have a long lifetime and can be used over and over again.
 
-It is recommended that you set L1 and L2 eviction policies manually, for example a max size for the L1 cache and a sliding expiration for the L2. 
+It is recommended that you set L1 and L2 eviction policies manually, for example a max size for the L1 cache and a sliding expiration for the L2.
 
 ### Exception handling
 
-In a case when `AcquireTokenInLongRunningProcess` throws an exception when it cannot find a token and the L2 cache has a cache entry for the same cache key, verify that the L2 cache read operation completed successfully. `AcquireTokenInLongRunningProcess` is different from the `InitiateLongRunningProcessInWebApi` and `AcquireTokenOnBehalfOf`, in that it is if the cache read fails, this method is unable to acquire a new token from Azure AD because it does not have an original user assertion. If using Microsoft.Identity.Web.TokenCache to enable distributed cache, set [OnL2CacheFailure](https://github.com/AzureAD/microsoft-identity-web/wiki/Token-Cache-Troubleshooting#i-configured-a-distributed-l2-cache-but-nothings-gets-written-to-it) event to retry the L2 call and/or add extra logs, which can be enabled [like this](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Logging#logging-in-a-distributed-token-cache).
+In a case when `AcquireTokenInLongRunningProcess` throws an exception when it cannot find a token and the L2 cache has a cache entry for the same cache key, verify that the L2 cache read operation completed successfully. `AcquireTokenInLongRunningProcess` is different from the `InitiateLongRunningProcessInWebApi` and `AcquireTokenOnBehalfOf`, in that it is if the cache read fails, this method is unable to acquire a new token from Azure AD because it does not have an original user assertion. If using Microsoft.Identity.Web.TokenCache to enable distributed cache, set [OnL2CacheFailure](https://github.com/AzureAD/microsoft-identity-web/wiki/Token-Cache-Troubleshooting#i-configured-a-distributed-l2-cache-but-nothings-gets-written-to-it) event to retry the L2 call and/or add extra logs, which can be enabled [through built-in MSAL functionality](../../advanced/exceptions/msal-logging.md).
 
 ### Removing accounts
 
@@ -150,7 +150,7 @@ Starting with MSAL 4.51.0, to remove cached tokens call `StopLongRunningProcessI
 
 ## Practical usage of OBO in an ASP.NET / ASP.NET Core application
 
-If you are building a web API on to of ASP.NET Core, we recommend that you use Microsoft.Identity.Web. See [Web APIs with Microsoft.Identity.Web](https://github.com/AzureAD/microsoft-identity-web/wiki/web-apis).
+If you are building a web API on to of ASP.NET Core, we recommend that you use `Microsoft.Identity.Web`. See [Web APIs with `Microsoft.Identity.Web`](https://github.com/AzureAD/microsoft-identity-web/wiki/web-apis).
 
 In an ASP.NET / ASP.NET Core Web API, OBO is typically called on the `OnTokenValidated` event of the `JwtBearerOptions`. The token is then not used immediately, but this call has the effect of populating the user token cache. Later, the controllers will call `AcquireTokenSilent`, which will have the effect of hitting the cache, refreshing the access token if needed, or getting a new one for a new resource, but for still for the same user.
 
