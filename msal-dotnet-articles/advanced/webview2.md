@@ -40,7 +40,9 @@ var pca = PublicClientApplicationBuilder
 |  .NET Core      | WebView2, fallback to Legacy* | Embedded |
 |  .NET 5         | WebView2, fallback to Legacy* | Embedded |
 
-*_In .NET Core and .NET 5+, fallback to legacy web view is available starting in MSAL 4.30.0._
+<sup>1</sup> Legacy web view is the default in .NET Framework apps. WebView2 can be used via Microsoft.Identiy.Client.Desktop package.
+<sup>2</sup> .NET Core and .NET 6+ apps can only use web view via Microsoft.Identity.Client package.
+<sup>3</sup> MSAL.NET doesn't provide explicit `net5.0` binaries. .NET 5 apps will follow .NET Core behavior.
 
 ## Troubleshooting
 
