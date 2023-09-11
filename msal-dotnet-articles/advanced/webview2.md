@@ -12,7 +12,7 @@ WebView2 is a modern embedded browser runtime based on Microsoft Edge, capable o
 To use WebView2 in your application, the following requirements must be met:
 
 - Windows 10 OS or newer (supported by the WebView2 runtime).
-- MSAL for .NET version 4.28.0 and higher.
+- MSAL.NET version 4.28.0 and higher.
 - [WebView2 runtime](/microsoft-edge/webview2/) must be installed on the machine.
 
 ## Call pattern
