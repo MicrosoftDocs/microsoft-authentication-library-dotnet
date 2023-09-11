@@ -30,7 +30,7 @@ var pca = PublicClientApplicationBuilder
 ```
 
 >[!IMPORTANT]
->WebView 2 is **not supported** for Microsoft Entra ID (formerly known as Azure Active Directory) authorities. Using [`.WithWindowsEmbeddedBrowserSupport()`](xref:Microsoft.Identity.Client.Desktop.DesktopExtensions.WithWindowsEmbeddedBrowserSupport*) in that context is always going to default to the legacy web view, regardless of the setting provided during the instantiation of the public client application. This is caused by stability bugs identified during MSAL development. For B2C and Active Directory Federation Services (ADFS) authorities, WebView2 will be shown.
+>WebView2 is **not supported** for Microsoft Entra ID (formerly known as Azure Active Directory) authorities. Using [`.WithWindowsEmbeddedBrowserSupport()`](xref:Microsoft.Identity.Client.Desktop.DesktopExtensions.WithWindowsEmbeddedBrowserSupport*) in that context is always going to default to the legacy web view, regardless of the setting provided during the instantiation of the public client application. This is caused by stability bugs identified during MSAL development. For B2C and Active Directory Federation Services (ADFS) authorities, WebView2 will be shown.
 
 ## Behaviour
 
