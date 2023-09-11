@@ -1,10 +1,11 @@
 ---
-title: Performance testing of MSAL.NET code paths
+title: Performance testing of MSAL.NET
+description: "Performance testing approach in MSAL.NET"
 ---
 
-# Performance testing of MSAL.NET code paths
+# Performance testing of MSAL.NET
 
-[Microsoft.Identity.Test.Performance](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/tree/master/tests/Microsoft.Identity.Test.Performance) project uses [BenchmarkDotNet](https://benchmarkdotnet.org/articles/overview.html) library for performance testing of MSAL methods. [Program.cs](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/master/tests/Microsoft.Identity.Test.Performance/Program.cs) lists the classes which have the benchmark methods which test the cache for different scenarios.
+[Microsoft.Identity.Test.Performance](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/tree/main/tests/Microsoft.Identity.Test.Performance) project uses [BenchmarkDotNet](https://benchmarkdotnet.org/articles/overview.html) library for performance testing of MSAL functionality. [Program.cs](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/main/tests/Microsoft.Identity.Test.Performance/Program.cs) contains benchmark classes used to test different scenarios.
 
 This performance test project is a console app. Behind the scenes when the project is run, BenchmarkDotNet builds and outputs this test project into a temporary working directory. Then it creates a separate process where all the benchmarking measurements are done.
 
@@ -16,7 +17,7 @@ There are multiple ways to run the tests locally.
 
 One way:
 
-- Build Microsoft.Client.Test.Performance in `Release` mode.
+- Build Microsoft.Client.Test.Performance project in `Release` mode.
 - Go to the `{project directory}/bin/Release/{framework directory}/` and run the project executable.
 - The results will be printed to the console window.
 
@@ -27,18 +28,13 @@ Another way:
 
 `BenchmarkDotNet.Artifacts` folder with the exported results will be created in the directory from which the executable was run from.
 
-The test project can be ran multiple times using the methods above and then the results aggregated manually. Another way to run the project multiple times is to add `WithLaunchCount(this Job job, int count)` method in `Program.cs` when setting up the BenchmarkDotNet job. This will specify how many times the BenchmarkDotNet will launch the benchmark process.
-
-### Automated tests
-
-The process of running the tests described above is automated. The tests run as part of the build pipeline when changes are merged into the main branch and can also be run manually on a feature branch. Currently the results have to be compared manually.
+The test project can be ran multiple times using the methods above and then the results aggregated manually. Another way to run the project multiple times is to add `WithLaunchCount(this Job job, int count)` method in `Program.cs` when setting up the BenchmarkDotNet job. This will specify how many times the BenchmarkDotNet will launch the benchmark process. This can help reduce the variability between the test runs.
 
 ### Testing code changes
 
 When making code changes to a performance critical code, make sure to run the tests to check for regressions.
 
 To test locally:
-
 - Build and run the perf project with the 'before' code state to establish baseline numbers.
 - Make desired MSAL code changes.
 - Again build and run the perf project to get the results for the 'after' state.
@@ -64,7 +60,11 @@ Sample table with summary results:
 
 Results are consolidated across all the iterations and launches. They are written to the console at the end of the run and also exported into `.md`, `.csv`, and `.html` files in `BenchmarkDotNet.Artifacts` folder by default. The results are grouped by the benchmark method and any parameters. The main metrics to pay attention to are mean speed and allocated memory. Compare these value across runs, before and after code changes.  The run log, which contains how many times benchmarks were executed and general debug information, is also exported into the same folder.
 
-### Test cases
+## Test automation
+
+The process of running the tests described above is automated in two ways. The test suite runs as part of the Azure DevOps build pipeline when changes are merged into the main branch, and can also be run manually on a feature branch. Currently these results have to be compared manually. The test project is also run by a [Continuous Benchmark](https://github.com/marketplace/actions/continuous-benchmark) GitHub Action on merges into main branch or manually. If a regression is detected above a specified threshold, the action will fail. The test run results are uploaded to the GitHub Pages [dashboard](https://azuread.github.io/microsoft-authentication-library-for-dotnet/benchmarks/).
+
+## Test cases
 
 The tests cover common MSAL usage scenarios.
 
