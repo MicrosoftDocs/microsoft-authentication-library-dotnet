@@ -16,6 +16,7 @@
     <AssemblyVersion>6.32.1.0</AssemblyVersion>
     <AssemblyVersion>6.32.2.0</AssemblyVersion>
     <AssemblyVersion>6.32.3.0</AssemblyVersion>
+    <AssemblyVersion>7.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.IdentityModel.Tokens.BaseConfiguration</BaseTypeName>
@@ -46,6 +47,7 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -74,6 +76,7 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="json" Type="System.String" />
@@ -106,7 +109,14 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("acr_values_supported")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("acr_values_supported")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
       </ReturnValue>
@@ -131,7 +141,14 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -144,10 +161,10 @@
       </Docs>
     </Member>
     <Member MemberName="AdditionalData">
-      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IDictionary&lt;string,object&gt; AdditionalData { get; }" />
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,object&gt; AdditionalData { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, object&gt; AdditionalData" />
       <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.AdditionalData" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property AdditionalData As IDictionary(Of String, Object)" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AdditionalData As IDictionary(Of String, Object)" />
       <MemberSignature Language="F#" Value="member this.AdditionalData : System.Collections.Generic.IDictionary&lt;string, obj&gt;" Usage="Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.AdditionalData" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
@@ -162,7 +179,14 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonExtensionData]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonExtensionData&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
       </ReturnValue>
@@ -193,7 +217,18 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("authorization_endpoint")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("authorization_endpoint")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -224,7 +259,18 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("check_session_iframe")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("check_session_iframe")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -255,7 +301,14 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("claims_locales_supported")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("claims_locales_supported")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
       </ReturnValue>
@@ -286,7 +339,18 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("claims_parameter_supported")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("claims_parameter_supported")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
@@ -317,7 +381,14 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("claims_supported")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("claims_supported")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
       </ReturnValue>
@@ -348,7 +419,14 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("claims_supported")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("claims_supported")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
       </ReturnValue>
@@ -379,6 +457,7 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration</ReturnType>
@@ -417,7 +496,14 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("display_values_supported")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("display_values_supported")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
       </ReturnValue>
@@ -448,7 +534,18 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("end_session_endpoint")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("end_session_endpoint")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -479,7 +576,14 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("frontchannel_logout_session_supported")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("frontchannel_logout_session_supported")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -488,7 +592,10 @@
             Gets or sets the 'frontchannel_logout_session_supported'.
             </summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>Would be breaking to change, in 6x it was string, spec says bool.
+            TODO - add another property, obsolete and drop in 8x?
+            see: https://openid.net/specs/openid-connect-frontchannel-1_0.html
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="FrontchannelLogoutSupported">
@@ -510,7 +617,14 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("frontchannel_logout_supported")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("frontchannel_logout_supported")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -519,7 +633,10 @@
             Gets or sets the 'frontchannel_logout_supported'.
             </summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>Would be breaking to change, in 6x it was string, spec says bool.
+            TODO - add another property, obsolete and drop in 8x?
+            see: https://openid.net/specs/openid-connect-frontchannel-1_0.html
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="GrantTypesSupported">
@@ -541,7 +658,14 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("grant_types_supported")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("grant_types_supported")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
       </ReturnValue>
@@ -572,7 +696,18 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("http_logout_supported")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("http_logout_supported")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
@@ -603,7 +738,14 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("id_token_encryption_alg_values_supported")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("id_token_encryption_alg_values_supported")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
       </ReturnValue>
@@ -634,7 +776,14 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("id_token_encryption_enc_values_supported")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("id_token_encryption_enc_values_supported")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
       </ReturnValue>
@@ -665,7 +814,14 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("id_token_signing_alg_values_supported")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("id_token_signing_alg_values_supported")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
       </ReturnValue>
@@ -696,7 +852,18 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("introspection_endpoint")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("introspection_endpoint")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -727,7 +894,14 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("introspection_endpoint_auth_methods_supported")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("introspection_endpoint_auth_methods_supported")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
       </ReturnValue>
@@ -758,7 +932,14 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("introspection_endpoint_auth_signing_alg_values_supported")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("introspection_endpoint_auth_signing_alg_values_supported")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
       </ReturnValue>
@@ -789,7 +970,18 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("issuer")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("issuer")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -820,7 +1012,14 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.JsonWebKeySet</ReturnType>
       </ReturnValue>
@@ -850,7 +1049,18 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("jwks_uri")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("jwks_uri")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -881,7 +1091,14 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("logout_session_supported")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("logout_session_supported")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
@@ -912,7 +1129,18 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("op_policy_uri")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("op_policy_uri")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -943,7 +1171,18 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("op_tos_uri")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("op_tos_uri")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -974,7 +1213,18 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("registration_endpoint")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("registration_endpoint")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -1005,7 +1255,14 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("request_object_encryption_alg_values_supported")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("request_object_encryption_alg_values_supported")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
       </ReturnValue>
@@ -1036,7 +1293,14 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("request_object_encryption_enc_values_supported")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("request_object_encryption_enc_values_supported")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
       </ReturnValue>
@@ -1067,7 +1331,14 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("request_object_signing_alg_values_supported")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("request_object_signing_alg_values_supported")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
       </ReturnValue>
@@ -1098,7 +1369,18 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("request_parameter_supported")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("request_parameter_supported")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
@@ -1129,7 +1411,18 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("request_uri_parameter_supported")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("request_uri_parameter_supported")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
@@ -1160,7 +1453,18 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("require_request_uri_registration")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("require_request_uri_registration")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
@@ -1191,7 +1495,14 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("response_modes_supported")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("response_modes_supported")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
       </ReturnValue>
@@ -1222,7 +1533,14 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("response_types_supported")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("response_types_supported")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
       </ReturnValue>
@@ -1253,7 +1571,14 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("scopes_supported")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("scopes_supported")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
       </ReturnValue>
@@ -1284,7 +1609,18 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("service_documentation")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("service_documentation")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -1315,6 +1651,7 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1355,6 +1692,7 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1395,6 +1733,7 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1435,6 +1774,7 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1475,6 +1815,7 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1515,6 +1856,7 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1555,6 +1897,7 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1595,6 +1938,7 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1635,6 +1979,7 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1675,6 +2020,7 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1715,6 +2061,7 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1755,6 +2102,7 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1795,6 +2143,7 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1835,6 +2184,7 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1875,6 +2225,7 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1915,6 +2266,7 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1955,6 +2307,7 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1995,6 +2348,7 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2035,6 +2389,7 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2075,6 +2430,7 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2115,6 +2471,7 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2155,6 +2512,7 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2195,6 +2553,7 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2235,6 +2594,7 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2275,6 +2635,7 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2315,7 +2676,14 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.ICollection&lt;Microsoft.IdentityModel.Tokens.SecurityKey&gt;</ReturnType>
       </ReturnValue>
@@ -2346,7 +2714,14 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("subject_types_supported")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("subject_types_supported")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
       </ReturnValue>
@@ -2377,7 +2752,18 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("token_endpoint")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("token_endpoint")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -2408,7 +2794,14 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("token_endpoint_auth_methods_supported")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("token_endpoint_auth_methods_supported")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
       </ReturnValue>
@@ -2439,7 +2832,14 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("token_endpoint_auth_signing_alg_values_supported")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("token_endpoint_auth_signing_alg_values_supported")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
       </ReturnValue>
@@ -2470,7 +2870,14 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("ui_locales_supported")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("ui_locales_supported")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
       </ReturnValue>
@@ -2501,7 +2908,18 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("userinfo_endpoint")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("userinfo_endpoint")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -2532,7 +2950,14 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("userinfo_encryption_alg_values_supported")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("userinfo_encryption_alg_values_supported")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
       </ReturnValue>
@@ -2563,7 +2988,14 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("userinfo_encryption_enc_values_supported")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("userinfo_encryption_enc_values_supported")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
       </ReturnValue>
@@ -2594,7 +3026,14 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("userinfo_signing_alg_values_supported")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("userinfo_signing_alg_values_supported")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
       </ReturnValue>
@@ -2625,6 +3064,7 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
