@@ -16,6 +16,7 @@
     <AssemblyVersion>6.32.1.0</AssemblyVersion>
     <AssemblyVersion>6.32.2.0</AssemblyVersion>
     <AssemblyVersion>6.32.3.0</AssemblyVersion>
+    <AssemblyVersion>7.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.IdentityModel.Tokens.SecurityKey</BaseTypeName>
@@ -46,6 +47,7 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -74,6 +76,7 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="json" Type="System.String" />
@@ -89,10 +92,10 @@
       </Docs>
     </Member>
     <Member MemberName="AdditionalData">
-      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IDictionary&lt;string,object&gt; AdditionalData { get; }" />
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,object&gt; AdditionalData { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, object&gt; AdditionalData" />
       <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Tokens.JsonWebKey.AdditionalData" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property AdditionalData As IDictionary(Of String, Object)" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AdditionalData As IDictionary(Of String, Object)" />
       <MemberSignature Language="F#" Value="member this.AdditionalData : System.Collections.Generic.IDictionary&lt;string, obj&gt;" Usage="Microsoft.IdentityModel.Tokens.JsonWebKey.AdditionalData" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
@@ -107,7 +110,14 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonExtensionData]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonExtensionData&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
       </ReturnValue>
@@ -138,13 +148,24 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("alg")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("alg")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the 'alg' (KeyType)..
+            Gets or sets the 'alg' (KeyType).
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -169,6 +190,7 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -202,6 +224,7 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -209,9 +232,9 @@
       <Parameters />
       <Docs>
         <summary>
-            Computes a sha256 hash over the <see cref="T:Microsoft.IdentityModel.Tokens.JsonWebKey" />.
+            Computes the JWK thumprint per spec: https://datatracker.ietf.org/doc/html/rfc7638 /&gt;.
             </summary>
-        <returns>A JWK thumbprint.</returns>
+        <returns>A the JWK thumbprint.</returns>
         <remarks>https://datatracker.ietf.org/doc/html/rfc7638</remarks>
       </Docs>
     </Member>
@@ -234,6 +257,7 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.JsonWebKey</ReturnType>
@@ -273,13 +297,24 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("crv")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("crv")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the 'crv' (ECC - Curve)..
+            Gets or sets the 'crv' (ECC - Curve).
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -304,13 +339,24 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("d")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("d")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the 'd' (ECC - Private Key OR RSA - Private Exponent)..
+            Gets or sets the 'd' (ECC - Private Key OR RSA - Private Exponent).
             </summary>
         <value>To be added.</value>
         <remarks>Value is formated as: Base64urlUInt</remarks>
@@ -335,13 +381,24 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("dp")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("dp")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the 'dp' (RSA - First Factor CRT Exponent)..
+            Gets or sets the 'dp' (RSA - First Factor CRT Exponent).
             </summary>
         <value>To be added.</value>
         <remarks>Value is formated as: Base64urlUInt</remarks>
@@ -366,13 +423,24 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("dq")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("dq")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the 'dq' (RSA - Second Factor CRT Exponent)..
+            Gets or sets the 'dq' (RSA - Second Factor CRT Exponent).
             </summary>
         <value>To be added.</value>
         <remarks>Value is formated as: Base64urlUInt</remarks>
@@ -397,13 +465,24 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("e")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("e")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the 'e' (RSA - Exponent)..
+            Gets or sets the 'e' (RSA - Exponent).
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -428,7 +507,14 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
@@ -460,13 +546,24 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("k")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("k")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the 'k' (Symmetric - Key Value)..
+            Gets or sets the 'k' (Symmetric - Key Value).
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -491,7 +588,14 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -522,13 +626,24 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("key_ops")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("key_ops")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IList&lt;System.String&gt;</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the 'key_ops' (Key Operations)..
+            Gets the 'key_ops' (Key Operations).
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -553,7 +668,14 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
@@ -584,7 +706,18 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("kid")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("kid")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -615,13 +748,24 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("kty")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("kty")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the 'kty' (Key Type)..
+            Gets or sets the 'kty' (Key Type).
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -646,24 +790,35 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("n")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("n")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the 'n' (RSA - Modulus)..
+            Gets or sets the 'n' (RSA - Modulus).
             </summary>
         <value>To be added.</value>
-        <remarks>Value is formated as: Base64urlEncoding</remarks>
+        <remarks>Value is formatted as: Base64urlEncoding</remarks>
       </Docs>
     </Member>
     <Member MemberName="Oth">
-      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;string&gt; Oth { get; set; }" />
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;string&gt; Oth { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;string&gt; Oth" />
       <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Tokens.JsonWebKey.Oth" />
-      <MemberSignature Language="VB.NET" Value="Public Property Oth As IList(Of String)" />
-      <MemberSignature Language="F#" Value="member this.Oth : System.Collections.Generic.IList&lt;string&gt; with get, set" Usage="Microsoft.IdentityModel.Tokens.JsonWebKey.Oth" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Oth As IList(Of String)" />
+      <MemberSignature Language="F#" Value="member this.Oth : System.Collections.Generic.IList&lt;string&gt;" Usage="Microsoft.IdentityModel.Tokens.JsonWebKey.Oth" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
@@ -677,13 +832,24 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("oth")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("oth")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IList&lt;System.String&gt;</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the 'oth' (RSA - Other Primes Info)..
+            Gets or sets the 'oth' (RSA - Other Primes Info).
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -708,7 +874,18 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("p")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("p")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -717,7 +894,7 @@
             Gets or sets the 'p' (RSA - First Prime Factor)..
             </summary>
         <value>To be added.</value>
-        <remarks>Value is formated as: Base64urlUInt</remarks>
+        <remarks>Value is formatted as: Base64urlUInt</remarks>
       </Docs>
     </Member>
     <Member MemberName="Q">
@@ -739,7 +916,18 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("q")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("q")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -748,7 +936,7 @@
             Gets or sets the 'q' (RSA - Second  Prime Factor)..
             </summary>
         <value>To be added.</value>
-        <remarks>Value is formated as: Base64urlUInt</remarks>
+        <remarks>Value is formatted as: Base64urlUInt</remarks>
       </Docs>
     </Member>
     <Member MemberName="QI">
@@ -770,7 +958,18 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("qi")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("qi")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -779,75 +978,7 @@
             Gets or sets the 'qi' (RSA - First CRT Coefficient)..
             </summary>
         <value>To be added.</value>
-        <remarks>Value is formated as: Base64urlUInt</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="ShouldSerializeKeyOps">
-      <MemberSignature Language="C#" Value="public bool ShouldSerializeKeyOps ();" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeKeyOps() cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.JsonWebKey.ShouldSerializeKeyOps" />
-      <MemberSignature Language="VB.NET" Value="Public Function ShouldSerializeKeyOps () As Boolean" />
-      <MemberSignature Language="F#" Value="member this.ShouldSerializeKeyOps : unit -&gt; bool" Usage="jsonWebKey.ShouldSerializeKeyOps " />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Boolean</ReturnType>
-      </ReturnValue>
-      <Parameters />
-      <Docs>
-        <summary>
-            Gets a bool that determines if the 'key_ops' (Key Operations) property should be serialized.
-            This is used by Json.NET in order to conditionally serialize properties.
-            </summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
-        <return>true if 'key_ops' (Key Operations) is not empty; otherwise, false.</return>
-      </Docs>
-    </Member>
-    <Member MemberName="ShouldSerializeX5c">
-      <MemberSignature Language="C#" Value="public bool ShouldSerializeX5c ();" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeX5c() cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.JsonWebKey.ShouldSerializeX5c" />
-      <MemberSignature Language="VB.NET" Value="Public Function ShouldSerializeX5c () As Boolean" />
-      <MemberSignature Language="F#" Value="member this.ShouldSerializeX5c : unit -&gt; bool" Usage="jsonWebKey.ShouldSerializeX5c " />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Boolean</ReturnType>
-      </ReturnValue>
-      <Parameters />
-      <Docs>
-        <summary>
-             Gets a bool that determines if the 'x5c' collection (X.509 Certificate Chain) property should be serialized.
-             This is used by Json.NET in order to conditionally serialize properties.
-            </summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
-        <return>true if 'x5c' collection (X.509 Certificate Chain) is not empty; otherwise, false.</return>
+        <remarks>Value is formatted as: Base64urlUInt</remarks>
       </Docs>
     </Member>
     <Member MemberName="ToString">
@@ -869,6 +1000,7 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -901,7 +1033,18 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("use")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("use")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -932,7 +1075,18 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("x")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("x")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -941,7 +1095,7 @@
             Gets or sets the 'x' (ECC - X Coordinate)..
             </summary>
         <value>To be added.</value>
-        <remarks>Value is formated as: Base64urlEncoding</remarks>
+        <remarks>Value is formatted as: Base64urlEncoding</remarks>
       </Docs>
     </Member>
     <Member MemberName="X5c">
@@ -963,7 +1117,18 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("x5c")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("x5c")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IList&lt;System.String&gt;</ReturnType>
       </ReturnValue>
@@ -994,7 +1159,18 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("x5t")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("x5t")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -1025,13 +1201,24 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("x5t#S256")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("x5t#S256")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the 'x5t#S256' (X.509 Certificate SHA-1 thumbprint)..
+            Gets or sets the 'x5t#S256' (X.509 Certificate SHA-256 thumbprint)..
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -1056,7 +1243,18 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("x5u")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("x5u")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -1087,7 +1285,18 @@
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
         <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("y")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("y")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -1096,7 +1305,7 @@
             Gets or sets the 'y' (ECC - Y Coordinate)..
             </summary>
         <value>To be added.</value>
-        <remarks>Value is formated as: Base64urlEncoding</remarks>
+        <remarks>Value is formatted as: Base64urlEncoding</remarks>
       </Docs>
     </Member>
   </Members>
