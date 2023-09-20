@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting MSAL.NET
-description: "How to troubleshoot some of the more common MSAL.NET issues."
+description: Troubleshoot MSAL.NET issues with our comprehensive guide. Learn to fix JavaScript errors, region auto-discovery failures, and more on Microsoft's official site.
 ---
 
 # Troubleshooting MSAL.NET
