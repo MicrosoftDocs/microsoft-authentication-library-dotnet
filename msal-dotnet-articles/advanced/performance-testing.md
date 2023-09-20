@@ -1,6 +1,6 @@
 ---
 title: Performance testing of MSAL.NET
-description: "Performance testing approach in MSAL.NET"
+description: Explore performance testing of MSAL.NET with BenchmarkDotNet. Learn to run tests, view results, automate tests, and improve MSAL.NET performance.
 ---
 
 # Performance testing of MSAL.NET
