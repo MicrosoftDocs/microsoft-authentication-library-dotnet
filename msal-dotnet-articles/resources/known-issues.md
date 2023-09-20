@@ -1,6 +1,6 @@
 ---
 title: Known issues with MSAL.NET
-description: "Known issues when integrating with MSAL.NET."
+description: Troubleshoot MSAL.NET with our guide on known issues, including device compliance failures, AndroidActivityNotFound exceptions, and build issues.
 ---
 
 # Known issues with MSAL.NET
