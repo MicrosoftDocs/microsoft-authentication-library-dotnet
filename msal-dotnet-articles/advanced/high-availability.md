@@ -1,6 +1,6 @@
 ---
 title: High availability considerations in MSAL.NET
-description: "How to build highly available applications that use MSAL.NET."
+description: Explore high availability considerations in MSAL.NET, including token cache, monitoring MSAL operations, logging, retry policy, and certificate rotation. Learn more now.
 ---
 
 # High availability considerations in MSAL.NET
