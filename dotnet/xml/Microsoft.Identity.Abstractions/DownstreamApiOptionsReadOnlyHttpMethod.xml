@@ -12,6 +12,7 @@
     <AssemblyVersion>3.2.1.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>5.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Identity.Abstractions.DownstreamApiOptions</BaseTypeName>
@@ -24,28 +25,23 @@
             </summary>
     <remarks>This class is useful to provide a better developer experience on the specialized methods
             of <see cref="T:Microsoft.Identity.Abstractions.IDownstreamApi" /> where the HTTP method is provided already by the name of the 
-            method, and should not be overriden by the options. You shouldn't need to use it directly.</remarks>
+            method, and should not be overridden by the options. You shouldn't need to use it directly.</remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public DownstreamApiOptionsReadOnlyHttpMethod (Microsoft.Identity.Abstractions.DownstreamApiOptions options, System.Net.Http.HttpMethod httpMethod);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Identity.Abstractions.DownstreamApiOptions options, class System.Net.Http.HttpMethod httpMethod) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod.#ctor(Microsoft.Identity.Abstractions.DownstreamApiOptions,System.Net.Http.HttpMethod)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (options As DownstreamApiOptions, httpMethod As HttpMethod)" />
-      <MemberSignature Language="F#" Value="new Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod : Microsoft.Identity.Abstractions.DownstreamApiOptions * System.Net.Http.HttpMethod -&gt; Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod" Usage="new Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod (options, httpMethod)" />
+      <MemberSignature Language="C#" Value="public DownstreamApiOptionsReadOnlyHttpMethod (Microsoft.Identity.Abstractions.DownstreamApiOptions options, string httpMethod);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Identity.Abstractions.DownstreamApiOptions options, string httpMethod) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod.#ctor(Microsoft.Identity.Abstractions.DownstreamApiOptions,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (options As DownstreamApiOptions, httpMethod As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod : Microsoft.Identity.Abstractions.DownstreamApiOptions * string -&gt; Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod" Usage="new Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod (options, httpMethod)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>2.1.0.0</AssemblyVersion>
-        <AssemblyVersion>3.1.0.0</AssemblyVersion>
-        <AssemblyVersion>3.2.0.0</AssemblyVersion>
-        <AssemblyVersion>3.2.1.0</AssemblyVersion>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="options" Type="Microsoft.Identity.Abstractions.DownstreamApiOptions" />
-        <Parameter Name="httpMethod" Type="System.Net.Http.HttpMethod" />
+        <Parameter Name="httpMethod" Type="System.String" />
       </Parameters>
       <Docs>
         <param name="options">Options</param>
@@ -71,6 +67,7 @@
         <AssemblyVersion>3.2.1.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod</ReturnType>
@@ -99,6 +96,7 @@
         <AssemblyVersion>3.2.1.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions</ReturnType>
@@ -112,11 +110,11 @@
       </Docs>
     </Member>
     <Member MemberName="HttpMethod">
-      <MemberSignature Language="C#" Value="public System.Net.Http.HttpMethod HttpMethod { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Http.HttpMethod HttpMethod" />
+      <MemberSignature Language="C#" Value="public string HttpMethod { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HttpMethod" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod.HttpMethod" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HttpMethod As HttpMethod" />
-      <MemberSignature Language="F#" Value="member this.HttpMethod : System.Net.Http.HttpMethod" Usage="Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod.HttpMethod" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HttpMethod As String" />
+      <MemberSignature Language="F#" Value="member this.HttpMethod : string" Usage="Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod.HttpMethod" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
@@ -126,9 +124,10 @@
         <AssemblyVersion>3.2.1.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>System.Net.Http.HttpMethod</ReturnType>
+        <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
