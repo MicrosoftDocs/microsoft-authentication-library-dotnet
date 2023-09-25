@@ -1,5 +1,6 @@
 ---
 title: MSAL.NET telemetry overview
+description: Explore MSAL.NET's telemetry capabilities for Azure AD token endpoint requests. Learn about client-side state, error tracking, and SDK API usage metadata.
 ---
 
 # MSAL.NET telemetry overview

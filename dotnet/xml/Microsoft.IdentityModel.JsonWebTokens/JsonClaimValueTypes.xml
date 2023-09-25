@@ -17,6 +17,8 @@
     <AssemblyVersion>6.32.0.0</AssemblyVersion>
     <AssemblyVersion>6.32.1.0</AssemblyVersion>
     <AssemblyVersion>6.32.2.0</AssemblyVersion>
+    <AssemblyVersion>6.32.3.0</AssemblyVersion>
+    <AssemblyVersion>7.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -24,7 +26,7 @@
   <Interfaces />
   <Docs>
     <summary>
-            Constants for Json Web tokens.
+            Constants that indicate how the <see cref="P:System.Security.Claims.Claim.Value" /> should be evaluated.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -49,15 +51,18 @@
         <AssemblyVersion>6.32.0.0</AssemblyVersion>
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
+        <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            A URI that represents the JSON XML data type.
+            A value that indicates the <see cref="P:System.Security.Claims.Claim.Value" /> is a Json object.
             </summary>
-        <remarks>When mapping json to .Net Claim(s), if the value was not a string (or an enumeration of strings), the ClaimValue will serialized using the current JSON serializer, a property will be added with the .Net type and the ClaimTypeValue will be set to 'JsonClaimValueType'.</remarks>
+        <remarks>When creating a <see cref="T:System.Security.Claims.Claim" /> from Json if the value was not a simple type {String, Null, True, False, Number}
+            then <see cref="P:System.Security.Claims.Claim.Value" /> will contain the Json value. If the Json was a JsonObject, the <see cref="P:System.Security.Claims.Claim.ValueType" /> will be set to "JSON".</remarks>
       </Docs>
     </Member>
     <Member MemberName="JsonArray">
@@ -80,15 +85,18 @@
         <AssemblyVersion>6.32.0.0</AssemblyVersion>
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
+        <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            A URI that represents the JSON array XML data type.
+            A value that indicates the <see cref="P:System.Security.Claims.Claim.Value" /> is a Json object.
             </summary>
-        <remarks>When mapping json to .Net Claim(s), if the value was not a string (or an enumeration of strings), the ClaimValue will serialized using the current JSON serializer, a property will be added with the .Net type and the ClaimTypeValue will be set to 'JsonClaimValueType'.</remarks>
+        <remarks>When creating a <see cref="T:System.Security.Claims.Claim" /> from Json if the value was not a simple type {String, Null, True, False, Number}
+            then <see cref="P:System.Security.Claims.Claim.Value" /> will contain the Json value. If the Json was a JsonArray, the <see cref="P:System.Security.Claims.Claim.ValueType" /> will be set to "JSON_ARRAY".</remarks>
       </Docs>
     </Member>
     <Member MemberName="JsonNull">
@@ -111,15 +119,18 @@
         <AssemblyVersion>6.32.0.0</AssemblyVersion>
         <AssemblyVersion>6.32.1.0</AssemblyVersion>
         <AssemblyVersion>6.32.2.0</AssemblyVersion>
+        <AssemblyVersion>6.32.3.0</AssemblyVersion>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            A URI that represents the JSON null data type
+            A value that indicates the <see cref="P:System.Security.Claims.Claim.Value" /> is Json null.
             </summary>
-        <remarks>When mapping json to .Net Claim(s), we use empty string to represent the claim value and set the ClaimValueType to JsonNull</remarks>
+        <remarks>When creating a <see cref="T:System.Security.Claims.Claim" /> the <see cref="P:System.Security.Claims.Claim.Value" /> cannot be null. If the Json value was null, then the <see cref="P:System.Security.Claims.Claim.Value" />
+            will be set to <see cref="F:System.String.Empty" /> and the <see cref="P:System.Security.Claims.Claim.ValueType" /> will be set to "JSON_NULL".</remarks>
       </Docs>
     </Member>
   </Members>
