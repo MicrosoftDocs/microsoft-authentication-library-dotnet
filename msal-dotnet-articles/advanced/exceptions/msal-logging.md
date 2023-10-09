@@ -36,7 +36,7 @@ By default, the MSAL logger doesn't capture any highly sensitive personal or org
 
 ## Configure logging in MSAL.NET
 
-In MSAL, logging is set during application creation using the <xref:Microsoft.Identity.Client.BaseAbstractApplicationBuilder.WithLogging(Microsoft.IdentityModel.Abstractions.IIdentityLogger,System.Boolean)> builder. This method takes the following parameters:
+In MSAL, logging is set during application creation using the <xref:Microsoft.Identity.Client.BaseAbstractApplicationBuilder`1.WithLogging(Microsoft.IdentityModel.Abstractions.IIdentityLogger,System.Boolean)> builder. This method takes the following parameters:
 
 - `identityLogger` is the logging implementation used by MSAL.NET to produce logs for debugging or health check purposes. Logs are only sent if logging is enabled.
 - `enablePiiLogging` enables logging personal and organizational data (PII) if set to true. By default, this parameter is set to false, so that your application doesn't log sensitive data.
@@ -169,8 +169,8 @@ Logs help understand MSAL's behavior on the client side. To understand what's ha
 
 The correlation ID can be obtained in three ways:
 
-1. from a successful authentication result - <xref:Microsoft.Identity.Client.AuthenticationResult.CorrelationId>;
-2. from a service exception - <xref:Microsoft.Identity.Client.MsalServiceException.CorrelationId>, and
-3. by passing a custom correlation ID to <xref:Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder{T}.WithCorrelationId(System.Guid)> when building a token request.
+1. from a successful authentication result - <xref:Microsoft.Identity.Client.AuthenticationResult.CorrelationId?displayProperty=nameWithType>;
+2. from a service exception - <xref:Microsoft.Identity.Client.MsalServiceException.CorrelationId?displayProperty=nameWithType>, and
+3. by passing a custom correlation ID to <xref:Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder`1.WithCorrelationId(System.Guid)> when building a token request.
 
 When providing your own correlation ID, use a different ID value for each request. Don't use a constant as we won't be able to differentiate between the requests.
