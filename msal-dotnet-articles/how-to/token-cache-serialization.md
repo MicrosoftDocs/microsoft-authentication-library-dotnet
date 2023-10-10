@@ -563,17 +563,26 @@ MSAL exposes important metrics as part of [AuthenticationResult.AuthenticationRe
 
 When using a token cache, it's important to consider the potential size of the cache, especially for highly-available and distributed applications. The current estimates are:
 
-### Application flows (AcquireTokenForClient, AcquireTokenForManagedIdentity)
+### Application flows (`AcquireTokenForClient`, `AcquireTokenForManagedIdentity`)
 
 - Only access tokens are cached. One token about 2-3KB when persisted. There will be 1 token per _app client ID_ \* tenants \* downstream resources. For example a multi-tenanted app serving 1000 tenants and needing tokens for Graph and SharePoint will use: 3KB * 1000 * 2 i.e. approximately 6 MB.
 
-### Web site calling downstream web api (AcquireTokenByAuthCode)
+### Web site calling downstream web API (`AcquireTokenByAuthCode`)
 
 - **Access tokens** – 4KB; 1 token per _app client ID_ \* user \* tenant \* downstream resource.
 - **Refresh token** – 2KB; 1 token per _client app ID_ \* user.
 - **ID token** – 2KB; 1 token per _client app ID_ \* user \* number of tenants where that user logs in.
 
-Note: we strongly recommend using the higher level APIs from [Microsoft.Identity.Web](https://github.com/AzureAD/microsoft-identity-web/) for this and not MSAL directly. The caching considerations are the same.
+>[!NOTE]
+>We strongly recommend using the higher level APIs from [`Microsoft.Identity.Web`](https://github.com/AzureAD/microsoft-identity-web/) for this and not MSAL directly. The caching considerations are the same.
+
+### Web API calling other web API (`AcquireTokenOnBehalfOf`)
+
+Same as for web site scenario, but there will be 1 node for each session, not for each user. By default, MSAL identifies a session by hashing the upstream assertion, but this can be changed. See [Long Running OBO Processes.](/entra/msal/dotnet/acquiring-tokens/web-apps-apis/on-behalf-of-flow#long-running-obo-processes)
+
+>[!NOTE]
+>We strongly recommend using the higher level APIs from [`Microsoft.Identity.Web`](https://github.com/AzureAD/microsoft-identity-web/) for this and not MSAL directly. The caching considerations are the same.
+
 ## Next steps
 
 The following samples illustrate token cache serialization.
