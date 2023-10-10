@@ -573,6 +573,7 @@ When using a token cache, it's important to consider the potential size of the c
 - **Refresh token** – 2KB; 1 token per _client app ID_ \* user.
 - **ID token** – 2KB; 1 token per _client app ID_ \* user \* number of tenants where that user logs in.
 
+Note: we strongly recommend using the higher level APIs from [Microsoft.Identity.Web](https://github.com/AzureAD/microsoft-identity-web/) for this and not MSAL directly. The caching considerations are the same.
 ## Next steps
 
 The following samples illustrate token cache serialization.
