@@ -20,6 +20,7 @@
     <AssemblyVersion>2.13.3.0</AssemblyVersion>
     <AssemblyVersion>2.13.4.0</AssemblyVersion>
     <AssemblyVersion>2.14.0.0</AssemblyVersion>
+    <AssemblyVersion>2.15.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Identity.Web.DefaultCredentialsLoader</BaseTypeName>
@@ -69,6 +70,7 @@
         <AssemblyVersion>2.13.3.0</AssemblyVersion>
         <AssemblyVersion>2.13.4.0</AssemblyVersion>
         <AssemblyVersion>2.14.0.0</AssemblyVersion>
+        <AssemblyVersion>2.15.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -95,6 +97,7 @@
         <AssemblyVersion>2.13.3.0</AssemblyVersion>
         <AssemblyVersion>2.13.4.0</AssemblyVersion>
         <AssemblyVersion>2.14.0.0</AssemblyVersion>
+        <AssemblyVersion>2.15.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="logger" Type="Microsoft.Extensions.Logging.ILogger&lt;Microsoft.Identity.Web.DefaultCertificateLoader&gt;" />
@@ -130,6 +133,7 @@
         <AssemblyVersion>2.13.3.0</AssemblyVersion>
         <AssemblyVersion>2.13.4.0</AssemblyVersion>
         <AssemblyVersion>2.14.0.0</AssemblyVersion>
+        <AssemblyVersion>2.15.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Security.Cryptography.X509Certificates.X509Certificate2&gt;</ReturnType>
@@ -169,6 +173,7 @@
         <AssemblyVersion>2.13.3.0</AssemblyVersion>
         <AssemblyVersion>2.13.4.0</AssemblyVersion>
         <AssemblyVersion>2.14.0.0</AssemblyVersion>
+        <AssemblyVersion>2.15.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate2</ReturnType>
@@ -211,6 +216,7 @@
         <AssemblyVersion>2.13.3.0</AssemblyVersion>
         <AssemblyVersion>2.13.4.0</AssemblyVersion>
         <AssemblyVersion>2.14.0.0</AssemblyVersion>
+        <AssemblyVersion>2.15.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -222,6 +228,32 @@
         <param name="certificateDescription">Description of the certificate.</param>
         <summary>
             Load the certificate from the description, if needed.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetCertificates">
+      <MemberSignature Language="C#" Value="public static void ResetCertificates (System.Collections.Generic.IEnumerable&lt;Microsoft.Identity.Abstractions.CredentialDescription&gt;? credentialDescription);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ResetCertificates(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Identity.Abstractions.CredentialDescription&gt; credentialDescription) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.DefaultCertificateLoader.ResetCertificates(System.Collections.Generic.IEnumerable{Microsoft.Identity.Abstractions.CredentialDescription})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub ResetCertificates (credentialDescription As IEnumerable(Of CredentialDescription))" />
+      <MemberSignature Language="F#" Value="static member ResetCertificates : seq&lt;Microsoft.Identity.Abstractions.CredentialDescription&gt; -&gt; unit" Usage="Microsoft.Identity.Web.DefaultCertificateLoader.ResetCertificates credentialDescription" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
+        <AssemblyVersion>2.15.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="credentialDescription" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Identity.Abstractions.CredentialDescription&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="credentialDescription">Description of the certificates.</param>
+        <summary>
+            Resets all the certificates in the certificate description list.
+            Use, for example, before a retry.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -249,6 +281,7 @@
         <AssemblyVersion>2.13.3.0</AssemblyVersion>
         <AssemblyVersion>2.13.4.0</AssemblyVersion>
         <AssemblyVersion>2.14.0.0</AssemblyVersion>
+        <AssemblyVersion>2.15.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -288,6 +321,7 @@
         <AssemblyVersion>2.13.3.0</AssemblyVersion>
         <AssemblyVersion>2.13.4.0</AssemblyVersion>
         <AssemblyVersion>2.14.0.0</AssemblyVersion>
+        <AssemblyVersion>2.15.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
