@@ -567,7 +567,7 @@ When using a token cache, it's important to consider the potential size of the c
 
 - Only access tokens are cached. One token about 2-3KB when persisted. There will be 1 token per _app client ID_ \* tenants \* downstream resources. For example a multi-tenanted app serving 1000 tenants and needing tokens for Graph and SharePoint will use: 3KB * 1000 * 2 i.e. approximately 6 MB.
 
-### User
+### Web site calling downstream web api (AcquireTokenByAuthCode)
 
 - **Access tokens** – 4KB; 1 token per _app client ID_ \* user \* tenant \* downstream resource.
 - **Refresh token** – 2KB; 1 token per _client app ID_ \* user.
