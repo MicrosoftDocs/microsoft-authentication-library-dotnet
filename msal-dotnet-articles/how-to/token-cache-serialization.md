@@ -559,6 +559,20 @@ MSAL exposes important metrics as part of [AuthenticationResult.AuthenticationRe
 |  `TokenSource` | Source of the token. Tokens are retrieved from the cache much faster (for example, ~100 ms versus ~700 ms). Can be used to monitor and alarm the cache hit ratio. | Use with `DurationTotalInMs`. |
 |  `CacheRefreshReason` | Reason for fetching the access token from the identity provider. | Use with `TokenSource`. |
 
+## Size approximations
+
+When using a token cache, it's important to consider the potential size of the cache, especially for highly-available and distributed applications. The current estimates are:
+
+### Application
+
+- Access tokens are about 2-3KB; 1 token per _app client ID_ \* number of tenants \* downstream resources.
+
+### User
+
+- **Access tokens** – 4KB; 1 token per _app client ID_ \* user \* tenant \* downstream resource.
+- **Refresh token** – 2KB; 1 token per _client app ID_ \* user.
+- **ID token** – 2KB; 1 token per _client app ID_ \* user \* number of tenants where that user logs in.
+
 ## Next steps
 
 The following samples illustrate token cache serialization.
