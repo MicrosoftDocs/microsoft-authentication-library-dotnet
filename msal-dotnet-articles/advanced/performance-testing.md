@@ -35,6 +35,7 @@ The test project can be ran multiple times using the methods above and then the 
 When making code changes to a performance critical code, make sure to run the tests to check for regressions.
 
 To test locally:
+
 - Build and run the perf project with the 'before' code state to establish baseline numbers.
 - Make desired MSAL code changes.
 - Again build and run the perf project to get the results for the 'after' state.
@@ -46,17 +47,7 @@ The comparison can also be done using the build pipeline. Simply run the automat
 ### Viewing results
 
 Sample table with summary results:
-|                Method |   CacheSize | EnableCacheSerialization |          Mean |      Gen0 |   Allocated |
-|---------------------- |------------ |------------------------- |--------------:|----------:|------------:|
-| AcquireTokenForClient |           ? |                        ? |    261.408 us |         - |    69.58 KB |
-| AcquireTokenForClient |     (1, 10) |                    False |     16.461 us |    0.8850 |    22.13 KB |
-| AcquireTokenForClient |     (1, 10) |                     True |    163.788 us |   10.9863 |   271.28 KB |
-| AcquireTokenForClient | (10000, 10) |                    False |     33.558 us |    0.8545 |    22.14 KB |
-| AcquireTokenForClient | (10000, 10) |                     True |    176.403 us |   10.9863 |   271.28 KB |
-| AcquireTokenForClient |     (1, 10) |                    False |     16.461 us |    0.8850 |    22.13 KB |
-| AcquireTokenForClient |     (1, 10) |                     True |    163.788 us |   10.9863 |   271.28 KB |
-| AcquireTokenForClient |   (1, 1000) |                    False |    226.126 us |    5.1270 |   130.85 KB |
-| AcquireTokenForClient |   (1, 1000) |                     True | 25,559.469 us | 1093.7500 | 18362.87 KB |
+![Image of the sample performance results](../media/sample-perf-results.png)
 
 Results are consolidated across all the iterations and launches. They are written to the console at the end of the run and also exported into `.md`, `.csv`, and `.html` files in `BenchmarkDotNet.Artifacts` folder by default. The results are grouped by the benchmark method and any parameters. The main metrics to pay attention to are mean speed and allocated memory. Compare these value across runs, before and after code changes.  The run log, which contains how many times benchmarks were executed and general debug information, is also exported into the same folder.
 
