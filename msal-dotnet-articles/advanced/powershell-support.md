@@ -13,5 +13,3 @@ Consider using higher level APIs which are officially supported:
  -  [Azure PowerShell SDK](/powershell/azure/new-azureps-module-az)
 
 PowerShell was designed to be able to call into .NET code and there are [numerous resources](https://stackoverflow.com/questions/3079346/how-to-reference-net-assemblies-using-powershell) that describe how to do this.
-
-For non-production scenarios or cases where you have the ability to leverage community tools we recommend using [MSAL.PS](https://www.powershellgallery.com/packages/MSAL.PS/).
