@@ -47,7 +47,7 @@ The comparison can also be done using the build pipeline. Simply run the automat
 
 Sample table with summary results:
 |                Method |   CacheSize | EnableCacheSerialization |          Mean |      Gen0 |   Allocated |
-|---------------------- |------------ |------------------------- |--------------:|----------:|------------:|
+|----------------------:|------------:|-------------------------:|--------------:|----------:|------------:|
 | AcquireTokenForClient |           ? |                        ? |    261.408 us |         - |    69.58 KB |
 | AcquireTokenForClient |     (1, 10) |                    False |     16.461 us |    0.8850 |    22.13 KB |
 | AcquireTokenForClient |     (1, 10) |                     True |    163.788 us |   10.9863 |   271.28 KB |
