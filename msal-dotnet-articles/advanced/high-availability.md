@@ -13,7 +13,7 @@ MSAL is a lower level API. If you are writing a new app, consider using the high
 
 ## Use the latest MSAL
 
-Use the latest MSAL to get the bug fixes and performance improvements. [Semantic versioning](https://semver.org/) rules are followed
+Use the latest MSAL to get the bug fixes and performance improvements. [Semantic versioning](https://semver.org/) rules are followed.
 
 You also want to check if you should use Microsoft Identity Web, a higher level library for web apps and web APIs, which does a lot of what is described below for your. See [Choosing a version of MSAL.NET](../getting-started/choosing-msal-dotnet.md), which proposes a decision tree to choose the best solution depending on your platform and constraints.
 
