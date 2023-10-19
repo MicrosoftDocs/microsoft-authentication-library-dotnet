@@ -9,15 +9,18 @@
     <AssemblyVersion>4.54.1.0</AssemblyVersion>
     <AssemblyVersion>4.55.0.0</AssemblyVersion>
     <AssemblyVersion>4.56.0.0</AssemblyVersion>
+    <AssemblyVersion>4.57.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Enum</BaseTypeName>
   </Base>
   <Docs>
     <summary>
-            Identifies the type of cache that the token was read from. Cache implementations must provide this.
+            Identifies the type of cache that the token was read from.
             </summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+            Token cache serialization implementations must provide this value.
+            </remarks>
   </Docs>
   <Members>
     <Member MemberName="L1Cache">
@@ -32,6 +35,7 @@
         <AssemblyVersion>4.54.1.0</AssemblyVersion>
         <AssemblyVersion>4.55.0.0</AssemblyVersion>
         <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.57.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.Cache.CacheLevel</ReturnType>
@@ -39,7 +43,7 @@
       <MemberValue>2</MemberValue>
       <Docs>
         <summary>
-            Specifies if the L1 cache is used.
+            Indicates that the token was read from the L1 cache.
             </summary>
       </Docs>
     </Member>
@@ -55,6 +59,7 @@
         <AssemblyVersion>4.54.1.0</AssemblyVersion>
         <AssemblyVersion>4.55.0.0</AssemblyVersion>
         <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.57.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.Cache.CacheLevel</ReturnType>
@@ -62,7 +67,7 @@
       <MemberValue>3</MemberValue>
       <Docs>
         <summary>
-            Specifies if the L2 cache is used.
+            Indicates that the token was read from the L2 cache.
             </summary>
       </Docs>
     </Member>
@@ -78,6 +83,7 @@
         <AssemblyVersion>4.54.1.0</AssemblyVersion>
         <AssemblyVersion>4.55.0.0</AssemblyVersion>
         <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.57.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.Cache.CacheLevel</ReturnType>
@@ -85,8 +91,7 @@
       <MemberValue>0</MemberValue>
       <Docs>
         <summary>
-            Specifies that the cache level used is None.
-            Token was retrieved from ESTS
+            Indicates that the token was retrieved from the identity provider.
             </summary>
       </Docs>
     </Member>
@@ -102,6 +107,7 @@
         <AssemblyVersion>4.54.1.0</AssemblyVersion>
         <AssemblyVersion>4.55.0.0</AssemblyVersion>
         <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.57.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.Cache.CacheLevel</ReturnType>
@@ -109,7 +115,7 @@
       <MemberValue>1</MemberValue>
       <Docs>
         <summary>
-            Specifies that the cache level used is unknown.
+            Indicates that the cache level used is unknown.
             Token was retrieved from cache but the token cache implementation didn't specify which cache level was used.
             </summary>
       </Docs>
