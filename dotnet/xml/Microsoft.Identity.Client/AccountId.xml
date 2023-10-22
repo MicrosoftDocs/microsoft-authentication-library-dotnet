@@ -15,6 +15,7 @@
     <AssemblyVersion>4.54.1.0</AssemblyVersion>
     <AssemblyVersion>4.55.0.0</AssemblyVersion>
     <AssemblyVersion>4.56.0.0</AssemblyVersion>
+    <AssemblyVersion>4.57.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -44,14 +45,15 @@
         <AssemblyVersion>4.54.1.0</AssemblyVersion>
         <AssemblyVersion>4.55.0.0</AssemblyVersion>
         <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.57.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="adfsIdentifier" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="adfsIdentifier">Unique identifier for the account if authority is ADFS</param>
+        <param name="adfsIdentifier">Unique identifier for the account if authority is ADFS.</param>
         <summary>
-            Constructor of an AccountId meant for ADFS scenarios since ADFS instances lack tenant ids.
+            Constructor of an AccountId meant for Active Directory Federation Services (ADFS) scenarios since ADFS instances lack tenant IDs.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -74,6 +76,7 @@
         <AssemblyVersion>4.54.1.0</AssemblyVersion>
         <AssemblyVersion>4.55.0.0</AssemblyVersion>
         <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.57.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="identifier" Type="System.String" />
@@ -82,10 +85,10 @@
       </Parameters>
       <Docs>
         <param name="identifier">Unique identifier for the account.</param>
-        <param name="objectId">A string representation for a GUID which is the ID of the user owning the account in the tenant</param>
-        <param name="tenantId">A string representation for a GUID, which is the ID of the tenant where the account resides</param>
+        <param name="objectId">A string representation for a GUID which is the ID of the user owning the account in the tenant.</param>
+        <param name="tenantId">A string representation for a GUID which is the ID of the tenant where the account resides.</param>
         <summary>
-            Constructor of an AccountId
+            Constructor for an account ID.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -108,6 +111,7 @@
         <AssemblyVersion>4.54.1.0</AssemblyVersion>
         <AssemblyVersion>4.55.0.0</AssemblyVersion>
         <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.57.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -118,7 +122,7 @@
       <Docs>
         <param name="obj">To be added.</param>
         <summary>
-            Two accounts are equal when their <see cref="P:Microsoft.Identity.Client.AccountId.Identifier" /> properties match
+            Two accounts are equal when their <see cref="P:Microsoft.Identity.Client.AccountId.Identifier" /> properties match.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -142,6 +146,7 @@
         <AssemblyVersion>4.54.1.0</AssemblyVersion>
         <AssemblyVersion>4.55.0.0</AssemblyVersion>
         <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.57.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -149,7 +154,8 @@
       <Parameters />
       <Docs>
         <summary>
-            GetHashCode implementation to match <see cref="M:Microsoft.Identity.Client.AccountId.Equals(System.Object)" /></summary>
+            GetHashCode implementation to match <see cref="M:Microsoft.Identity.Client.AccountId.Equals(System.Object)" />.
+            </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -172,6 +178,7 @@
         <AssemblyVersion>4.54.1.0</AssemblyVersion>
         <AssemblyVersion>4.55.0.0</AssemblyVersion>
         <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.57.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -183,9 +190,9 @@
         <value>To be added.</value>
         <remarks>
             For the Microsoft identity platform (formerly named Azure AD v2.0), the identifier is the concatenation of
-            <see cref="P:Microsoft.Identity.Client.AccountId.ObjectId" /> and <see cref="P:Microsoft.Identity.Client.AccountId.TenantId" /> separated by a dot.
-            Contrary to what was happening in ADAL.NET, these two segments are no longer base64 encoded.
-            Note that there are some legitimate cases (for instance domain takeover), where the same ObjectId may show up in multiple tenants.
+            <see cref="P:Microsoft.Identity.Client.AccountId.ObjectId" /> and <see cref="P:Microsoft.Identity.Client.AccountId.TenantId" /> separated by a period.
+            Unlike in ADAL.NET, these two segments are no longer base64-encoded.
+            Note that there are some legitimate cases (for instance domain takeover) where the same <c>ObjectId</c> may show up in multiple tenants.
             </remarks>
       </Docs>
     </Member>
@@ -207,13 +214,14 @@
         <AssemblyVersion>4.54.1.0</AssemblyVersion>
         <AssemblyVersion>4.55.0.0</AssemblyVersion>
         <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.57.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            For Azure AD, a string representation for a GUID which is the Object ID of the user owning the account in the tenant
+            For Microsoft Entra ID, a string representation for a GUID which is the object ID of the user owning the account in the tenant
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -237,13 +245,14 @@
         <AssemblyVersion>4.54.1.0</AssemblyVersion>
         <AssemblyVersion>4.55.0.0</AssemblyVersion>
         <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.57.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            For Azure AD, a string representation for a GUID, which is the ID of the tenant where the account resides.
+            For Microsoft Entra ID, a string representation for a GUID which is the ID of the tenant where the account resides.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -267,6 +276,7 @@
         <AssemblyVersion>4.54.1.0</AssemblyVersion>
         <AssemblyVersion>4.55.0.0</AssemblyVersion>
         <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.57.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -274,7 +284,8 @@
       <Parameters />
       <Docs>
         <summary>
-            Textual description of an <see cref="T:Microsoft.Identity.Client.AccountId" /></summary>
+            Textual description of an <see cref="T:Microsoft.Identity.Client.AccountId" />.
+            </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>

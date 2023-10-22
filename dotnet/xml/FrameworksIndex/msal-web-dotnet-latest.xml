@@ -1,22 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-web-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.IdentityModel.Abstractions" Version="7.0.2.0" />
-    <Assembly Name="Microsoft.IdentityModel.JsonWebTokens" Version="7.0.2.0" />
-    <Assembly Name="Microsoft.IdentityModel.KeyVaultExtensions" Version="7.0.2.0" />
-    <Assembly Name="Microsoft.IdentityModel.Logging" Version="7.0.2.0" />
-    <Assembly Name="Microsoft.IdentityModel.LoggingExtensions" Version="7.0.2.0" />
-    <Assembly Name="Microsoft.IdentityModel.ManagedKeyVaultSecurityKey" Version="7.0.2.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols" Version="7.0.2.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="7.0.2.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.SignedHttpRequest" Version="7.0.2.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.WsFederation" Version="7.0.2.0" />
-    <Assembly Name="Microsoft.IdentityModel.TestExtensions" Version="7.0.2.0" />
-    <Assembly Name="Microsoft.IdentityModel.Tokens" Version="7.0.2.0" />
-    <Assembly Name="Microsoft.IdentityModel.Tokens.Saml" Version="7.0.2.0" />
-    <Assembly Name="Microsoft.IdentityModel.Validators" Version="7.0.2.0" />
-    <Assembly Name="Microsoft.IdentityModel.Xml" Version="7.0.2.0" />
-    <Assembly Name="System.IdentityModel.Tokens.Jwt" Version="7.0.2.0" />
+    <Assembly Name="Microsoft.IdentityModel.Abstractions" Version="7.0.3.0" />
+    <Assembly Name="Microsoft.IdentityModel.JsonWebTokens" Version="7.0.3.0" />
+    <Assembly Name="Microsoft.IdentityModel.KeyVaultExtensions" Version="7.0.3.0" />
+    <Assembly Name="Microsoft.IdentityModel.Logging" Version="7.0.3.0" />
+    <Assembly Name="Microsoft.IdentityModel.LoggingExtensions" Version="7.0.3.0" />
+    <Assembly Name="Microsoft.IdentityModel.ManagedKeyVaultSecurityKey" Version="7.0.3.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols" Version="7.0.3.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="7.0.3.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.SignedHttpRequest" Version="7.0.3.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.WsFederation" Version="7.0.3.0" />
+    <Assembly Name="Microsoft.IdentityModel.TestExtensions" Version="7.0.3.0" />
+    <Assembly Name="Microsoft.IdentityModel.Tokens" Version="7.0.3.0" />
+    <Assembly Name="Microsoft.IdentityModel.Tokens.Saml" Version="7.0.3.0" />
+    <Assembly Name="Microsoft.IdentityModel.Validators" Version="7.0.3.0" />
+    <Assembly Name="Microsoft.IdentityModel.Xml" Version="7.0.3.0" />
+    <Assembly Name="System.IdentityModel.Tokens.Jwt" Version="7.0.3.0" />
   </Assemblies>
   <Namespace Name="Microsoft.IdentityModel.Abstractions">
     <Type Name="Microsoft.IdentityModel.Abstractions.EventLogLevel" Id="T:Microsoft.IdentityModel.Abstractions.EventLogLevel">
@@ -285,6 +285,7 @@
       <Member Id="M:Microsoft.IdentityModel.Logging.IdentityModelEventSource.WriteWarning(System.String,System.Object[])" />
       <Member Id="P:Microsoft.IdentityModel.Logging.IdentityModelEventSource.HeaderWritten" />
       <Member Id="P:Microsoft.IdentityModel.Logging.IdentityModelEventSource.HiddenPIIString" />
+      <Member Id="P:Microsoft.IdentityModel.Logging.IdentityModelEventSource.HiddenSecurityArtifactString" />
       <Member Id="P:Microsoft.IdentityModel.Logging.IdentityModelEventSource.LogCompleteSecurityArtifact" />
       <Member Id="P:Microsoft.IdentityModel.Logging.IdentityModelEventSource.Logger" />
       <Member Id="P:Microsoft.IdentityModel.Logging.IdentityModelEventSource.LogLevel" />
@@ -336,6 +337,8 @@
       <Member Id="M:Microsoft.IdentityModel.Logging.LogHelper.LogWarning(System.String,System.Object[])" />
       <Member Id="M:Microsoft.IdentityModel.Logging.LogHelper.MarkAsNonPII(System.Object)" />
       <Member Id="M:Microsoft.IdentityModel.Logging.LogHelper.MarkAsSecurityArtifact(System.Object,System.Func{System.Object,System.String})" />
+      <Member Id="M:Microsoft.IdentityModel.Logging.LogHelper.MarkAsSecurityArtifact(System.Object,System.Func{System.Object,System.String},System.Func{System.Object,System.String})" />
+      <Member Id="M:Microsoft.IdentityModel.Logging.LogHelper.MarkAsUnsafeSecurityArtifact(System.Object,System.Func{System.Object,System.String})" />
       <Member Id="P:Microsoft.IdentityModel.Logging.LogHelper.Logger" />
     </Type>
     <Type Name="Microsoft.IdentityModel.Logging.TextWriterEventListener" Id="T:Microsoft.IdentityModel.Logging.TextWriterEventListener">
@@ -2817,6 +2820,7 @@
     </Type>
     <Type Name="Microsoft.IdentityModel.Xml.DelegatingXmlDictionaryReader" Id="T:Microsoft.IdentityModel.Xml.DelegatingXmlDictionaryReader">
       <Member Id="M:Microsoft.IdentityModel.Xml.DelegatingXmlDictionaryReader.#ctor" />
+      <Member Id="M:Microsoft.IdentityModel.Xml.DelegatingXmlDictionaryReader.Close" />
       <Member Id="M:Microsoft.IdentityModel.Xml.DelegatingXmlDictionaryReader.GetAttribute(System.Int32)" />
       <Member Id="M:Microsoft.IdentityModel.Xml.DelegatingXmlDictionaryReader.GetAttribute(System.String)" />
       <Member Id="M:Microsoft.IdentityModel.Xml.DelegatingXmlDictionaryReader.GetAttribute(System.String,System.String)" />
@@ -2832,6 +2836,7 @@
       <Member Id="M:Microsoft.IdentityModel.Xml.DelegatingXmlDictionaryReader.ReadAttributeValue" />
       <Member Id="M:Microsoft.IdentityModel.Xml.DelegatingXmlDictionaryReader.ReadContentAsBase64(System.Byte[],System.Int32,System.Int32)" />
       <Member Id="M:Microsoft.IdentityModel.Xml.DelegatingXmlDictionaryReader.ReadContentAsBinHex(System.Byte[],System.Int32,System.Int32)" />
+      <Member Id="M:Microsoft.IdentityModel.Xml.DelegatingXmlDictionaryReader.ReadContentAsUniqueId" />
       <Member Id="M:Microsoft.IdentityModel.Xml.DelegatingXmlDictionaryReader.ReadValueChunk(System.Char[],System.Int32,System.Int32)" />
       <Member Id="M:Microsoft.IdentityModel.Xml.DelegatingXmlDictionaryReader.ResolveEntity" />
       <Member Id="P:Microsoft.IdentityModel.Xml.DelegatingXmlDictionaryReader.AttributeCount" />
@@ -2901,13 +2906,21 @@
     </Type>
     <Type Name="Microsoft.IdentityModel.Xml.DSigSerializer" Id="T:Microsoft.IdentityModel.Xml.DSigSerializer">
       <Member Id="M:Microsoft.IdentityModel.Xml.DSigSerializer.#ctor" />
+      <Member Id="M:Microsoft.IdentityModel.Xml.DSigSerializer.CreateKeyInfo(System.Xml.XmlReader)" />
       <Member Id="M:Microsoft.IdentityModel.Xml.DSigSerializer.ReadCanonicalizationMethod(System.Xml.XmlReader)" />
       <Member Id="M:Microsoft.IdentityModel.Xml.DSigSerializer.ReadKeyInfo(System.Xml.XmlReader)" />
       <Member Id="M:Microsoft.IdentityModel.Xml.DSigSerializer.ReadReference(System.Xml.XmlReader)" />
+      <Member Id="M:Microsoft.IdentityModel.Xml.DSigSerializer.ReadReferences(System.Xml.XmlReader)" />
       <Member Id="M:Microsoft.IdentityModel.Xml.DSigSerializer.ReadSignature(System.Xml.XmlReader)" />
       <Member Id="M:Microsoft.IdentityModel.Xml.DSigSerializer.ReadSignatureMethod(System.Xml.XmlReader)" />
       <Member Id="M:Microsoft.IdentityModel.Xml.DSigSerializer.ReadSignedInfo(System.Xml.XmlReader)" />
       <Member Id="M:Microsoft.IdentityModel.Xml.DSigSerializer.ReadTransforms(System.Xml.XmlReader,Microsoft.IdentityModel.Xml.Reference)" />
+      <Member Id="M:Microsoft.IdentityModel.Xml.DSigSerializer.TryReadKeyInfoType(System.Xml.XmlReader,Microsoft.IdentityModel.Xml.KeyInfo@)" />
+      <Member Id="M:Microsoft.IdentityModel.Xml.DSigSerializer.TryReadKeyName(System.Xml.XmlReader,System.String@)" />
+      <Member Id="M:Microsoft.IdentityModel.Xml.DSigSerializer.TryReadKeyValueType(System.Xml.XmlReader,Microsoft.IdentityModel.Xml.KeyInfo@)" />
+      <Member Id="M:Microsoft.IdentityModel.Xml.DSigSerializer.TryReadRetrievalMethod(System.Xml.XmlReader,System.String@)" />
+      <Member Id="M:Microsoft.IdentityModel.Xml.DSigSerializer.TryReadRSAKeyValue(System.Xml.XmlReader,Microsoft.IdentityModel.Xml.RSAKeyValue@)" />
+      <Member Id="M:Microsoft.IdentityModel.Xml.DSigSerializer.TryReadX509Data(System.Xml.XmlReader,Microsoft.IdentityModel.Xml.X509Data@)" />
       <Member Id="M:Microsoft.IdentityModel.Xml.DSigSerializer.WriteKeyInfo(System.Xml.XmlWriter,Microsoft.IdentityModel.Xml.KeyInfo)" />
       <Member Id="M:Microsoft.IdentityModel.Xml.DSigSerializer.WriteReference(System.Xml.XmlWriter,Microsoft.IdentityModel.Xml.Reference)" />
       <Member Id="M:Microsoft.IdentityModel.Xml.DSigSerializer.WriteSignature(System.Xml.XmlWriter,Microsoft.IdentityModel.Xml.Signature)" />
