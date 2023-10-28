@@ -128,7 +128,7 @@ An access token and an ID token are returned in the `AuthenticationResult` value
 
 ## v1.0 and v2.0 tokens
 
-There are two versions of tokens: v1.0 tokens and  v2.0 tokens. The v1.0 endpoint (used by ADAL) emits v1.0 ID tokens while the v2.0 endpoint (used by MSAL) emits v2.0 ID tokens. However, both endpoints emit access tokens of the version of the token that the web API accepts. A property of the application manifest of the web API enables developers to choose which version of token is accepted. See `accessTokenAcceptedVersion` in the [application manifest]/azure/active-directory/develop/(reference-app-manifest) reference documentation.
+There are two versions of tokens: v1.0 tokens and  v2.0 tokens. The v1.0 endpoint (used by ADAL) emits v1.0 ID tokens while the v2.0 endpoint (used by MSAL) emits v2.0 ID tokens. However, both endpoints emit access tokens of the version of the token that the web API accepts. A property of the application manifest of the web API enables developers to choose which version of token is accepted. See `accessTokenAcceptedVersion` in the [application manifest](/azure/active-directory/develop/reference-app-manifest) reference documentation.
 
 For more information about v1.0 and v2.0 access tokens, see [Azure Active Directory access tokens](/azure/active-directory/develop/access-tokens).
 
