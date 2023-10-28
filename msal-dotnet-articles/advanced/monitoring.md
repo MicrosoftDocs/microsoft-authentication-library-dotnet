@@ -27,8 +27,8 @@ In addition to logging, MSAL exposes important metrics in <xref:Microsoft.Identi
 
 `DurationInCacheInMs` - time spent loading or saving the token cache, which is customized by the app developer (for example, save to Redis). Create an alert on spikes.
 
->[!NOTE]
->To understand how to customize token caching, see [Token cache serialization in MSAL.NET](/azure/active-directory/develop/msal-net-token-cache-serialization).
+> [!NOTE]
+> To understand how to customize token caching, see [Token cache serialization in MSAL.NET](/azure/active-directory/develop/msal-net-token-cache-serialization).
 
 `DurationInHttpInMs` - time spent making HTTP calls to the identity provider. Create an alert on spikes.
 
@@ -38,10 +38,10 @@ In addition to logging, MSAL exposes important metrics in <xref:Microsoft.Identi
 
 `TokenEndpoint` - the actual token endpoint URI used to fetch the token. Useful to understand how MSAL resolves the tenant in silent calls and the region in regional calls.
 
->[!NOTE]
->Regionalization is available only to internal Microsoft applications for now.
+> [!NOTE]
+> Regionalization is available only to internal Microsoft applications for now.
 
 `RegionDetails` - the details about the region used to make call, such as the region used and any auto-detection error.
 
->[!NOTE]
->Regionalization is available only to internal Microsoft applications for now.
+> [!NOTE]
+> Regionalization is available only to internal Microsoft applications for now.
