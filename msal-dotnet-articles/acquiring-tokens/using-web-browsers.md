@@ -35,9 +35,9 @@ It's important to understand that when acquiring a token interactively, the cont
 
 ### Embedded web view vs system browser
 
-MSAL.NET is a multi-framework library and has framework-specific code to host a browser in a UI control (for example, on .NET Classic it uses WinForms, on .NET 5.0+ it uses WebView2, on Xamarin it uses native mobile controls etc.). This control is called `embedded` web UI. Alternatively, MSAL.NET is also able to kick off the system OS browser.
+MSAL.NET is a multi-framework library and has framework-specific code to host a browser in a UI control (for example, on .NET either WinForms or WebView2; on Xamarin, native mobile controls, etc.). This control is called an *embedded* web view. Alternatively, MSAL.NET is also able to open a system web browser.
 
-Generally, it's recommended that you use the platform default, and this is typically the system browser. The system browser is better at remembering the users that have logged in before. To change this behavior, use `WithUseEmbeddedWebView(bool)`
+Generally, it's recommended that you use the platform default, and this is typically the system browser. The system browser is better at remembering the users that have logged in before. To change this behavior, use <xref:Microsoft.Identity.Client.AcquireTokenInteractiveParameterBuilder.WithUseEmbeddedWebView(System.Boolean)>
 
 ### Browser availability
 
@@ -58,7 +58,7 @@ Generally, it's recommended that you use the platform default, and this is typic
 
 **††** Target `net6.0-windows` or above to use the embedded browser.
 
-**†††** Reference [Microsoft.Identity.Client.Desktop](https://www.nuget.org/packages/Microsoft.Identity.Client.Desktop) to use the embedded browser.
+**†††** Reference [Microsoft.Identity.Client.Desktop](https://www.nuget.org/packages/Microsoft.Identity.Client.Desktop) and call <xref:Microsoft.Identity.Client.Desktop.DesktopExtensions.WithWindowsDesktopFeatures%2A> to use the embedded browser.
 
 ## System web browser
 
@@ -92,7 +92,15 @@ var result = await pca.AcquireTokenInteractive(s_scopes)
                     .ExecuteAsync();
 ```
 
-When you configure `http://localhost`, MSAL.NET will find a random open port and use it. Using `http://localhost` as a redirect URI is safe. Another process cannot listen on a local socket which is already being listened on by MSAL. No network communication happens when the browser redirects to this URI. Even if somehow a malicious app intercepts the authentication code (no such known attacks, but possible if malicious app has admin access to the machine), it cannot exchange it for a token because it needs a temporary secret which only your app knows, as described by the [PKCE](https://oauth.net/2/pkce/) protocol. `https://localhost` cannot be used because public client app, by definition, cannot be deployed with certificates.
+When you configure `http://localhost`, MSAL.NET will find a random open port and use it. Using `http://localhost` as a redirect URI is safe. Another process cannot listen on a local socket which is already being listened on by MSAL. No network communication happens when the browser redirects to this URI. Even if somehow a malicious app intercepts the authentication code (no such known attacks, but possible if malicious app has admin access to the machine), it cannot exchange it for a token because it needs a temporary secret which only your app knows, as described by the [PKCE](https://oauth.net/2/pkce/) protocol. `https://localhost` because port 443 is reserved and MSAL is unable to listen on it.
+
+#### Limitations
+
+Azure B2C and ADFS 2019 do not yet implement the *any port* option. So, you cannot set `http://localhost` (no port) redirect URI, but only `http://localhost:1234` (with port) URI. This means that you will have to do your own port management, for example you can reserve a few ports and configure them as redirect URIs. Then your app can cycle through them until a port is free - this can then be used by MSAL.
+
+UWP doesn't support listening to a port and thus doesn't support system browsers.
+
+For more details, see [Localhost exceptions](/azure/active-directory/develop/reply-url#localhost-exceptions).
 
 ### Linux and macOS
 
