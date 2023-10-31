@@ -1,16 +1,17 @@
 ---
 title: Monitoring of applications using MSAL.NET
+description: "How to use the metrics provided by MSAL.NET to monitor your application."
 ---
 
 # Monitoring of applications using MSAL.NET
 
 In order to ensure authentication services using MSAL.NET are running correctly, MSAL provides a number of ways to monitor its behavior so that issues can be identified and addressed before they occur in production. The incorrect use of MSAL (lifecycle and token cache) does not lead to immediate failures; however sometimes they will bubble up under high traffic scenarios after the app is in production for a period of time.
 
-For example, if only one instance of confidential client application is used and MSAL is not configured to serialize the token cache, the cache will grow forever. Another issue can arise when creating a new confidential client application and not utilizing the cache which will lead to various issues such as throttling from the identity provider. For recommendations on how to utilize MSAL appropriately, See [High Availability](./high-availability.md#add-monitoring-around-msal-operations)
+For example, if only one instance of confidential client application is used and MSAL is not configured to serialize the token cache, the cache will grow forever. Another issue can arise when creating a new confidential client application and not utilizing the cache which will lead to various issues such as throttling from the identity provider. For recommendations on how to utilize MSAL appropriately, see [High Availability](./high-availability.md)
 
 ## Logging
 
-One of the tools MSAL provides to combat these issues is logging errors when MSAL in not configured correctly. It is critical to enable logging whenever possible to not only monitor logs for these monitoring errors but also help in the diagnosis of issues that may occur. See [Logging](/azure/active-directory/develop/msal-logging-dotnet).
+One of the tools MSAL provides to combat these issues is logging errors when MSAL in not configured correctly. It is critical to enable logging whenever possible to not only monitor logs for these monitoring errors but also help in the diagnosis of issues that may occur. See [Logging in MSAL.NET](/azure/active-directory/develop/msal-logging-dotnet) for details.
 
 The following errors will be logged in MSAL:
 
@@ -21,49 +22,27 @@ The following errors will be logged in MSAL:
 
 ## Metrics
 
-In addition to logging, MSAL exposes important metrics as part of [AuthenticationResult.AuthenticationResultMetadata](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/master/src/client/Microsoft.Identity.Client/AuthenticationResultMetadata.cs#L9). See [Add monitoring around MSAL operations](high-availability.md#add-monitoring-around-msal-operations) for more details.
+In addition to logging, MSAL exposes important metrics in <xref:Microsoft.Identity.Client.AuthenticationResult.AuthenticationResultMetadata?displayProperty=nameWithType>. See [Add monitoring around MSAL operations](high-availability.md#add-monitoring-around-msal-operations) for more details.
 
-## Additional Information
+`DurationTotalInMs` - total time spent in MSAL acquiring a token, including network calls and cache operations. Create an alert on overall high latency (more than 1 second). Note that the first ever token acquisition call usually makes an extra HTTP call.
 
-MSAL exposes token acquisition metrics as part of [AuthenticationResult.AuthenticationResultMetadata](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/master/src/client/Microsoft.Identity.Client/AuthenticationResultMetadata.cs#L9) object.
+`DurationInCacheInMs` - time spent loading or saving the token cache, which is customized by the app developer (for example, save to Redis). Create an alert on spikes.
 
-## DurationTotalInMs
+> [!NOTE]
+> To understand how to customize token caching, see [Token cache serialization in MSAL.NET](/azure/active-directory/develop/msal-net-token-cache-serialization).
 
-**Meaning**: Total time spent in MSAL to acquire a token, including network calls and cache operations.
+`DurationInHttpInMs` - time spent making HTTP calls to the identity provider. Create an alert on spikes.
 
-**Suggestion**: Alarm on overall high latency (> 1 seconds). Note that the first ever token acquisition usually makes an extra HTTP call.
+`TokenSource`- indicates the source of the token - typically the cache or the identity provider. Tokens are retrieved from the cache much faster (for example, ~100 ms versus ~700 ms). This metric can be used to monitor the cache hit ratio.
 
-## DurationInCacheInMs
+`CacheRefreshReason` - specifies the reason for fetching the access token from the identity provider. See <xref:Microsoft.Identity.Client.CacheRefreshReason>. Use in conjunction with `TokenSource`.
 
-**Meaning**: Time spent loading or saving the token cache, which is customized by the app developer (for example, save to Redis).
-**Suggestion**: Alarm on spikes.
+`TokenEndpoint` - the actual token endpoint URI used to fetch the token. Useful to understand how MSAL resolves the tenant in silent calls and the region in regional calls.
 
->[!NOTE]
->To understand how to customize token caching, see [Token cache serialization in MSAL.NET](/azure/active-directory/develop/msal-net-token-cache-serialization).
+> [!NOTE]
+> Regionalization is available only to internal Microsoft applications for now.
 
-## DurationInHttpInMs
+`RegionDetails` - the details about the region used to make call, such as the region used and any auto-detection error.
 
-**Meaning**: Time spent making HTTP calls to the identity provider (Azure AD).
-**Suggestion**: Alarm on spikes.
-
-## TokenSource
-
-**Meaning**: Indicates the source of the token - typically cache or identity provider (Azure AD). Tokens are retrieved from the cache much faster (for example, ~100 ms versus ~700 ms). Can be used to monitor and alarm the cache hit ratio.
-
-## CacheRefreshReason
-
-**Meaning**: Specifies the reason for fetching the access token from the identity provider. See [Possible Values](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/master/src/client/Microsoft.Identity.Client/Cache/CacheRefreshReason.cs). Use in conjunction with `TokenSource`.
-
-## TokenEndpoint
-
-**Meaning**: The actual token endpoint uri used to fetch the token. Useful to understand how MSAL resolves the tenant in silent calls and the region in regionalized calls.
-
->[!NOTE]
->Regionalization is available only to 1P applications for now.
-
-## RegionDetails
-
-**Meaning**: Has details about the region used to make call, such as the region used and any auto-detection error. 
-
->[!NOTE]
->Regionalization is available only to 1P applications for now.
+> [!NOTE]
+> Regionalization is available only to internal Microsoft applications for now.

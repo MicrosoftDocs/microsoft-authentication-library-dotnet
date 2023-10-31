@@ -22,6 +22,7 @@
     <AssemblyVersion>2.14.0.0</AssemblyVersion>
     <AssemblyVersion>2.15.1.0</AssemblyVersion>
     <AssemblyVersion>2.15.2.0</AssemblyVersion>
+    <AssemblyVersion>2.15.3.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions</BaseTypeName>
@@ -30,7 +31,7 @@
   <Docs>
     <summary>
             Options for the MSAL token cache serialization adapter,
-            which delegates the serialization to the IDistributedCache implementations
+            which delegates the serialization to the <see cref="T:Microsoft.Extensions.Caching.Distributed.IDistributedCache" /> implementations
             available with .NET Core.
             </summary>
     <remarks>To be added.</remarks>
@@ -44,22 +45,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.TokenCache</AssemblyName>
-        <AssemblyVersion>2.6.1.0</AssemblyVersion>
-        <AssemblyVersion>2.7.0.0</AssemblyVersion>
-        <AssemblyVersion>2.8.0.0</AssemblyVersion>
-        <AssemblyVersion>2.9.0.0</AssemblyVersion>
-        <AssemblyVersion>2.10.0.0</AssemblyVersion>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.11.1.0</AssemblyVersion>
-        <AssemblyVersion>2.12.4.0</AssemblyVersion>
-        <AssemblyVersion>2.13.0.0</AssemblyVersion>
-        <AssemblyVersion>2.13.1.0</AssemblyVersion>
-        <AssemblyVersion>2.13.2.0</AssemblyVersion>
-        <AssemblyVersion>2.13.3.0</AssemblyVersion>
-        <AssemblyVersion>2.13.4.0</AssemblyVersion>
-        <AssemblyVersion>2.14.0.0</AssemblyVersion>
-        <AssemblyVersion>2.15.1.0</AssemblyVersion>
-        <AssemblyVersion>2.15.2.0</AssemblyVersion>
+        <AssemblyVersion>2.15.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -76,31 +62,16 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.TokenCache</AssemblyName>
-        <AssemblyVersion>2.6.1.0</AssemblyVersion>
-        <AssemblyVersion>2.7.0.0</AssemblyVersion>
-        <AssemblyVersion>2.8.0.0</AssemblyVersion>
-        <AssemblyVersion>2.9.0.0</AssemblyVersion>
-        <AssemblyVersion>2.10.0.0</AssemblyVersion>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.11.1.0</AssemblyVersion>
-        <AssemblyVersion>2.12.4.0</AssemblyVersion>
-        <AssemblyVersion>2.13.0.0</AssemblyVersion>
-        <AssemblyVersion>2.13.1.0</AssemblyVersion>
-        <AssemblyVersion>2.13.2.0</AssemblyVersion>
-        <AssemblyVersion>2.13.3.0</AssemblyVersion>
-        <AssemblyVersion>2.13.4.0</AssemblyVersion>
-        <AssemblyVersion>2.14.0.0</AssemblyVersion>
-        <AssemblyVersion>2.15.1.0</AssemblyVersion>
-        <AssemblyVersion>2.15.2.0</AssemblyVersion>
+        <AssemblyVersion>2.15.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Disable the L1 (InMemory) cache.
+            Disable the in-memory (L1) cache.
             Useful in scenarios where multiple apps share the same
-            L2 cache.
+            distributed (L2) cache.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -116,29 +87,14 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.TokenCache</AssemblyName>
-        <AssemblyVersion>2.6.1.0</AssemblyVersion>
-        <AssemblyVersion>2.7.0.0</AssemblyVersion>
-        <AssemblyVersion>2.8.0.0</AssemblyVersion>
-        <AssemblyVersion>2.9.0.0</AssemblyVersion>
-        <AssemblyVersion>2.10.0.0</AssemblyVersion>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.11.1.0</AssemblyVersion>
-        <AssemblyVersion>2.12.4.0</AssemblyVersion>
-        <AssemblyVersion>2.13.0.0</AssemblyVersion>
-        <AssemblyVersion>2.13.1.0</AssemblyVersion>
-        <AssemblyVersion>2.13.2.0</AssemblyVersion>
-        <AssemblyVersion>2.13.3.0</AssemblyVersion>
-        <AssemblyVersion>2.13.4.0</AssemblyVersion>
-        <AssemblyVersion>2.14.0.0</AssemblyVersion>
-        <AssemblyVersion>2.15.1.0</AssemblyVersion>
-        <AssemblyVersion>2.15.2.0</AssemblyVersion>
+        <AssemblyVersion>2.15.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Enable writing to the L2 cache to be async (fire and forget).
+            Enable writing to the distributed (L2) cache to be async (i.e. fire-and-forget).
             This improves performance as the MSAL.NET will not have to wait
             for the write to complete.
             </summary>
@@ -156,22 +112,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.TokenCache</AssemblyName>
-        <AssemblyVersion>2.6.1.0</AssemblyVersion>
-        <AssemblyVersion>2.7.0.0</AssemblyVersion>
-        <AssemblyVersion>2.8.0.0</AssemblyVersion>
-        <AssemblyVersion>2.9.0.0</AssemblyVersion>
-        <AssemblyVersion>2.10.0.0</AssemblyVersion>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.11.1.0</AssemblyVersion>
-        <AssemblyVersion>2.12.4.0</AssemblyVersion>
-        <AssemblyVersion>2.13.0.0</AssemblyVersion>
-        <AssemblyVersion>2.13.1.0</AssemblyVersion>
-        <AssemblyVersion>2.13.2.0</AssemblyVersion>
-        <AssemblyVersion>2.13.3.0</AssemblyVersion>
-        <AssemblyVersion>2.13.4.0</AssemblyVersion>
-        <AssemblyVersion>2.14.0.0</AssemblyVersion>
-        <AssemblyVersion>2.15.1.0</AssemblyVersion>
-        <AssemblyVersion>2.15.2.0</AssemblyVersion>
+        <AssemblyVersion>2.15.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -194,29 +135,14 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.TokenCache</AssemblyName>
-        <AssemblyVersion>2.6.1.0</AssemblyVersion>
-        <AssemblyVersion>2.7.0.0</AssemblyVersion>
-        <AssemblyVersion>2.8.0.0</AssemblyVersion>
-        <AssemblyVersion>2.9.0.0</AssemblyVersion>
-        <AssemblyVersion>2.10.0.0</AssemblyVersion>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.11.1.0</AssemblyVersion>
-        <AssemblyVersion>2.12.4.0</AssemblyVersion>
-        <AssemblyVersion>2.13.0.0</AssemblyVersion>
-        <AssemblyVersion>2.13.1.0</AssemblyVersion>
-        <AssemblyVersion>2.13.2.0</AssemblyVersion>
-        <AssemblyVersion>2.13.3.0</AssemblyVersion>
-        <AssemblyVersion>2.13.4.0</AssemblyVersion>
-        <AssemblyVersion>2.14.0.0</AssemblyVersion>
-        <AssemblyVersion>2.15.1.0</AssemblyVersion>
-        <AssemblyVersion>2.15.2.0</AssemblyVersion>
+        <AssemblyVersion>2.15.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.Caching.Memory.MemoryCacheOptions</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Options of the In Memory (L1) cache.
+            Options of the in-memory (L1) cache.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -231,22 +157,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.TokenCache</AssemblyName>
-        <AssemblyVersion>2.6.1.0</AssemblyVersion>
-        <AssemblyVersion>2.7.0.0</AssemblyVersion>
-        <AssemblyVersion>2.8.0.0</AssemblyVersion>
-        <AssemblyVersion>2.9.0.0</AssemblyVersion>
-        <AssemblyVersion>2.10.0.0</AssemblyVersion>
-        <AssemblyVersion>2.11.0.0</AssemblyVersion>
-        <AssemblyVersion>2.11.1.0</AssemblyVersion>
-        <AssemblyVersion>2.12.4.0</AssemblyVersion>
-        <AssemblyVersion>2.13.0.0</AssemblyVersion>
-        <AssemblyVersion>2.13.1.0</AssemblyVersion>
-        <AssemblyVersion>2.13.2.0</AssemblyVersion>
-        <AssemblyVersion>2.13.3.0</AssemblyVersion>
-        <AssemblyVersion>2.13.4.0</AssemblyVersion>
-        <AssemblyVersion>2.14.0.0</AssemblyVersion>
-        <AssemblyVersion>2.15.1.0</AssemblyVersion>
-        <AssemblyVersion>2.15.2.0</AssemblyVersion>
+        <AssemblyVersion>2.15.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Func&lt;System.Exception,System.Boolean&gt;</ReturnType>
@@ -255,9 +166,9 @@
         <summary>
             Callback offered to the app to be notified when the L2 cache fails.
             This way the app is given the possibility to act on the L2 cache,
-            for instance, in the case of Redis, to reconnect. This is left to the application as it's
+            for instance, in the case of Redis exception, to reconnect. This is left to the application as it's
             the only one that knows about the real implementation of the L2 cache.
-            The handler should return <c>true</c> if the cache should try again the operation, and
+            The handler should return <c>true</c> if the cache should try the operation again, and
             <c>false</c> otherwise. When <c>true</c> is passed and the retry fails, an exception
             will be thrown.
             </summary>

@@ -1,6 +1,6 @@
 ---
 title: Using web browsers (MSAL.NET)
-description: Learn about specific considerations when using Xamarin Android with the Microsoft Authentication Library for .NET (MSAL.NET).
+description: Learn about using browsers in Microsoft Authentication Library for .NET (MSAL.NET).
 services: active-directory
 author: Dickson-Mwendia
 manager: CelesteDG
@@ -18,92 +18,99 @@ ms.custom: devx-track-csharp, aaddev, has-adal-ref, devx-track-dotnet
 
 # Using web browsers (MSAL.NET)
 
-Web browsers are required for interactive authentication. By default, MSAL.NET supports the [system web browser](#system-web-browser-on-xamarinios-xamarinandroid) on Xamarin.iOS and Xamarin.Android. But [you can also enable the Embedded Web browser](#enable-embedded-webviews-on-ios-and-android) depending on your requirements (UX, need for single sign-on (SSO), security)  in [Xamarin.iOS](#choosing-between-embedded-web-browser-or-system-browser-on-xamarinios) and [Xamarin.Android](#detecting-the-presence-of-custom-tabs-on-xamarinandroid) apps. And you can even [choose dynamically](#detecting-the-presence-of-custom-tabs-on-xamarinandroid) which web browser to use based on the presence of Chrome or a browser supporting Chrome custom tabs in Android. MSAL.NET only supports the system browser in .NET Core desktop applications.
+We recommend using brokers to authenticate as they offer more benefits compared to the browsers. On Windows machines the broker is [Web Account Manager (WAM)](https://aka.ms/msal-net-wam), on Android and iOS - [Microsoft Authenticator or Intune Company Portal](/entra/identity-platform/msal-net-use-brokers-with-xamarin-apps). Interactive authentication requires using a broker or a web browser. MSAL.NET supports a system web browser or an embedded web view.
 
 ## Web browsers in MSAL.NET
 
-### Interaction happens in a Web browser
+### Interaction happens in a web browser
 
-It's important to understand that when acquiring a token interactively, the content of the dialog box isn't provided by the library but by the STS (Security Token Service). The authentication endpoint sends back some HTML and JavaScript that controls the interaction, which is rendered in a web browser or web control. Allowing the STS to handle the HTML interaction has many advantages:
+It's important to understand that when acquiring a token interactively, the content of the dialog box isn't provided by the library but by Microsoft Entra ID. The authentication endpoint sends back HTML and JavaScript that controls the interaction, which is rendered in a web browser or a web control. Allowing the Microsoft Entra ID to handle the HTML interaction has many advantages:
 
-- The password (if one was typed) is never stored by the application, nor the authentication library.
-- Enables redirections to other identity providers (for instance login-in with a work school account or a personal account with MSAL, or with a social account with Azure AD B2C).
-- Lets the STS control Conditional Access, for example, by having the user do [multi-factor authentication (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks) during the authentication phase (entering a Windows Hello pin, or being called on their phone, or on an authentication app on their phone). In cases where the required multi-factor authentication isn't set it up yet, the user can set it up just in time in the same dialog.  The user enters their mobile phone number and is guided to install an authentication application and scan a QR tag to add their account. This server driven interaction is a great experience!
-- Lets the user change their password in this same dialog when the password has expired (providing additional fields for the old password and the new password).
-- Enables branding of the tenant, or the application (images) controlled by the Azure AD tenant admin / application owner.
-- Enables the users to consent to let the application access resources / scopes in their name just after the authentication.
+- The password, if one was typed, is never stored by the application, nor the authentication library.
+- It enables redirection to other identity providers (for instance, sign-in with a work or school account, or a personal account with MSAL; or with a social account with Azure AD B2C).
+- It lets the Microsoft Entra ID control Conditional Access, for example, by having the user perform [multi-factor authentication (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks) during the authentication phase (like entering a Windows Hello PIN; or being called on their phone or on an authentication app on their phone). In cases where the required multi-factor authentication isn't set it up yet, the user can set it up just-in-time in the same dialog. The user enters their mobile phone number and is guided to install an authentication application and scan a QR tag to add their account. This server-driven interaction is a great experience!
+- It lets the user change their password in this same dialog when the password has expired (providing additional fields for the old password and the new password).
+- It enables branding of the tenant or the application (images) controlled by the Azure AD tenant admin or an application owner.
+- It enables the users to consent to let the application access resources and scopes in their name just after the authentication.
 
-### Embedded vs System Web UI
+### Embedded web view vs system browser
 
-MSAL.NET is a multi-framework library and has framework-specific code to host a browser in a UI control (for example, on .NET Classic it uses WinForms, on .NET 5.0+ it uses WebView2, on Xamarin it uses native mobile controls etc.). This control is called `embedded` web UI. Alternatively, MSAL.NET is also able to kick off the system OS browser.
+MSAL.NET is a multi-framework library and has framework-specific code to host a browser in a UI control (for example, on .NET either WinForms or WebView2; on Xamarin, native mobile controls, etc.). This control is called an *embedded* web view. Alternatively, MSAL.NET is also able to open a system web browser.
 
-Generally, it's recommended that you use the platform default, and this is typically the system browser. The system browser is better at remembering the users that have logged in before. To change this behavior, use `WithUseEmbeddedWebView(bool)`
+Generally, it's recommended that you use the platform default, and this is typically the system browser. The system browser is better at remembering the users that have logged in before. To change this behavior, use <xref:Microsoft.Identity.Client.AcquireTokenInteractiveParameterBuilder.WithUseEmbeddedWebView(System.Boolean)>
 
-### At a glance
+### Browser availability
 
 | Framework        | Embedded | System | Default |
 | ------------- |-------------| -----| ----- |
-| .NET 5.0+     | Yes†        | Yes^ | Embedded |
-| .NET Classic     | Yes | Yes^ | Embedded |
-| .NET Core     | No | Yes^ | System |
-| .NET Standard | No | Yes^ | System |
+| .NET 6.0+ Windows | Yes | Yes† | Embedded |
+| .NET 6.0+ | No†† | Yes† | System |
+| .NET 5.0 | No†† | Yes† | System |
+| .NET Classic | Yes | Yes† | Embedded |
+| .NET Core | No | Yes† | System |
+| .NET Standard | No††† | Yes† | System |
 | UWP | Yes | No | Embedded |
 | Xamarin.Android | Yes | Yes  | System |
 | Xamarin.iOS | Yes | Yes  | System |
 | Xamarin.Mac| Yes | No | Embedded |
 
-**†** Requires OS-specific target framework moniker (TFM) of at least [`net5.0-windows10.0.17763.0`](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/efc71473d668fdd42c21cef6a6cadc69e1907290/src/client/Microsoft.Identity.Client/Platforms/netcore/NetCoreWebUIFactory.cs#L28). Do _not_ use the `net5.0` or `net5.0-windows` TFMs. For more information about TFMs, see [Target frameworks in SDK-style projects](/dotnet/standard/frameworks).
+**†** Requires `http://localhost` redirect URI.
 
-**^** Requires redirect URI `http://localhost`
+**††** Target `net6.0-windows` or above to use the embedded browser.
 
-## System web browser on Xamarin.iOS, Xamarin.Android
+**†††** Reference [Microsoft.Identity.Client.Desktop](https://www.nuget.org/packages/Microsoft.Identity.Client.Desktop) and call <xref:Microsoft.Identity.Client.Desktop.DesktopExtensions.WithWindowsDesktopFeatures%2A> to use the embedded browser.
 
-By default, MSAL.NET supports the system web browser on Xamarin.iOS, Xamarin.Android, and .NET Core. For all the platforms that provide UI (that is, not .NET Core), a dialog is provided by the library embedding a Web browser control. MSAL.NET also uses an embedded web view for the .NET Desktop and WAB for the UWP platform. However, it leverages by default the **system web browser** for Xamarin iOS and Xamarin Android applications. On iOS, it even chooses the web view to use depending on the version of the Operating System (iOS12, iOS11, and earlier).
+## System web browser
 
-Using the system browser has the significant advantage of sharing the SSO state with other applications and with web applications without needing a broker (Company portal / Authenticator). The system browser was used, by default, in MSAL.NET for the Xamarin iOS and Xamarin Android platforms because, on these platforms, the system web browser occupies the whole screen, and the user experience is better. The system web view isn't distinguishable from a dialog. On iOS, though, the user might have to give consent for the browser to call back the application, which can be annoying.
+Using the system browser has the significant advantage of sharing the Single Sign-On (SSO) state with web applications and other applications without needing a broker (WAM, Company Portal, Authenticator, etc.).
 
-## System browser experience on .NET
+For desktop applications, however, launching a system browser leads to a subpar user experience, as the user sees the browser, where they might already have other tabs opened. And when authentication has happened, the users get a page asking them to close this window. If the user doesn't pay attention, they can close the entire process (including other tabs, which are unrelated to the authentication). Leveraging the system browser on desktop would also require opening local ports and listening on them, which might require advanced permissions for the application. You, as a developer, user, or administrator, might be reluctant about this requirement.
 
-On .NET Core, MSAL.NET will start the system browser as a separate process. MSAL.NET doesn't have control over this browser, but once the user finishes authentication, the web page is redirected in such a way that MSAL.NET can intercept the URI.
+### How to use the default system browser
 
-You can also configure apps written for .NET Classic or .NET 5 to use this browser by specifying:
+On .NET, MSAL will start the system browser as a separate process. MSAL.NET doesn't have control over this browser, but once the user finishes authentication, the web page is redirected in such a way that MSAL.NET can intercept the call to the redirect URI specified when creating a public client instance.
 
-```csharp
-await pca.AcquireTokenInteractive(s_scopes)
-         .WithUseEmbeddedWebView(false)
-```
+MSAL.NET cannot detect if the user navigates away or simply closes the browser. Apps using this technique are encouraged to define a timeout using a <xref:System.Threading.CancellationToken>. We recommend a timeout of at least a few minutes, to take into account cases where the user is prompted to change password or perform multi-factor authentication.
 
-MSAL.NET cannot detect if the user navigates away or simply closes the browser. Apps using this technique are encouraged to define a timeout (via `CancellationToken`). We recommend a timeout of at least a few minutes, to take into account cases where the user is prompted to change password or perform multi-factor-authentication.
-
-### How to use the Default OS Browser
-
-MSAL.NET needs to listen on `http://localhost:port` and intercept the code that AAD sends when the user is done authenticating (See [Authorization code](/azure/active-directory/develop/v2-oauth2-auth-code-flow) for details)
+MSAL.NET needs to listen on `http://localhost:port` to intercept the code that Microsoft Entra ID responds with when the user finishes authenticating. See [Authorization code flow](/azure/active-directory/develop/v2-oauth2-auth-code-flow) for details.
 
 To enable the system browser:
 
-1. During app registration, configure `http://localhost` as a redirect URI (not currently supported by B2C)
-2. When you construct your PublicClientApplication, specify this redirect URI:
+1. During app registration in the portal, configure `http://localhost` as a redirect URI (not currently supported by Azure B2C).
+2. When you construct your public client app, specify this redirect URI.
+3. Add `.WithUseEmbeddedWebView(false)`.
 
 ```csharp
-IPublicClientApplication pca = PublicClientApplicationBuilder
-                            .Create("<CLIENT_ID>")
-                             // or use a known port if you wish "http://localhost:1234"
-                            .WithRedirectUri("http://localhost")
-                            .Build();
+var pca = PublicClientApplicationBuilder
+            .Create("<CLIENT_ID>")
+            // or use a known port if you wish "http://localhost:1234"
+            .WithRedirectUri("http://localhost")
+            .Build();
+
+var result = await pca.AcquireTokenInteractive(s_scopes)
+                    .WithUseEmbeddedWebView(false)
+                    .ExecuteAsync();
 ```
 
-> [!Note]
-> If you configure `http://localhost`, internally MSAL.NET will find a random open port and use it.
+When you configure `http://localhost`, MSAL.NET will find a random open port and use it. Using `http://localhost` as a redirect URI is safe. Another process cannot listen on a local socket which is already being listened on by MSAL. No network communication happens when the browser redirects to this URI. Even if somehow a malicious app intercepts the authentication code (no such known attacks, but possible if malicious app has admin access to the machine), it cannot exchange it for a token because it needs a temporary secret which only your app knows, as described by the [PKCE](https://oauth.net/2/pkce/) protocol. `https://localhost` because port 443 is reserved and MSAL is unable to listen on it.
+
+#### Limitations
+
+Azure B2C and ADFS 2019 do not yet implement the *any port* option. So, you cannot set `http://localhost` (no port) redirect URI, but only `http://localhost:1234` (with port) URI. This means that you will have to do your own port management, for example you can reserve a few ports and configure them as redirect URIs. Then your app can cycle through them until a port is free - this can then be used by MSAL.
+
+UWP doesn't support listening to a port and thus doesn't support system browsers.
+
+For more details, see [Localhost exceptions](/azure/active-directory/develop/reply-url#localhost-exceptions).
 
 ### Linux and macOS
 
-On Linux, MSAL.NET opens the default OS browser with a tool like [xdg-open](http://manpages.ubuntu.com/manpages/focal/man1/xdg-open.1.html). Opening the browser with `sudo` is unsupported by MSAL and will cause MSAL to throw an exception.
+On Linux, MSAL.NET opens the default system browser with a tool like [xdg-open](http://manpages.ubuntu.com/manpages/focal/man1/xdg-open.1.html). Opening the browser with `sudo` is unsupported by MSAL and will cause MSAL to throw an exception.
 
 On macOS, the browser is opened by invoking `open <url>`.
 
 ### Customizing the experience
 
-MSAL.NET can respond with an HTTP message or HTTP redirect when a token is received or an error occurs.
+MSAL.NET can respond with an HTTP message or an HTTP redirect when a token is received or an error occurs.
 
 ```csharp
 var options = new SystemWebViewOptions()
@@ -118,9 +125,9 @@ await pca.AcquireTokenInteractive(s_scopes)
          .ExecuteAsync();
 ```
 
-### Opening a specific browser (Experimental)
+### Opening a specific browser
 
-You may customize the way MSAL.NET opens the browser. For example instead of using whatever browser is the default, you can force open a specific browser:
+You may customize the way MSAL.NET opens the browser. For example, instead of using whatever browser is the default, you can force open a specific browser:
 
 ```csharp
 var options = new SystemWebViewOptions()
@@ -129,63 +136,55 @@ var options = new SystemWebViewOptions()
 }
 ```
 
-### UWP doesn't use the System Webview
+## Web views on Xamarin.Android and Xamarin.iOS
 
-For desktop applications, however, launching a System Webview leads to a subpar user experience, as the user sees the browser, where they might already have other tabs opened. And when authentication has happened, the users gets a page asking them to close this window. If the user doesn't pay attention, they can close the entire process (including other tabs, which are unrelated to the authentication). Leveraging the system browser on desktop would also require opening local ports and listening on them, which might require advanced permissions for the application. You, as a developer, user, or administrator, might be reluctant about this requirement.
+Embedded web views can be enabled in Xamarin.Android and Xamarin.iOS apps. As a developer using MSAL.NET targeting Xamarin, you may choose to use either embedded web views or system browsers. This is your choice depending on the user experience and security concerns you want to target.
 
-## Enable embedded webviews on iOS and Android
+### Differences between embedded web view and system browser
 
-You can also enable embedded webviews in Xamarin.iOS and Xamarin.Android apps. Starting with MSAL.NET 2.0.0-preview, MSAL.NET also supports using the **embedded** webview option.
+There are some visual differences between the embedded web view and the system browser in MSAL.NET.
 
-As a developer using MSAL.NET targeting Xamarin, you may choose to use either embedded webviews or system browsers. This is your choice depending on the user experience and security concerns you want to target.
+**Interactive sign-in with MSAL.NET using the embedded web view:**
 
-Currently, MSAL.NET doesn't yet support the Android and iOS brokers. Therefore to provide single sign-on (SSO), the system browser might still be a better option. Supporting brokers with the embedded web browser is on the MSAL.NET backlog.
+![Embedded web view appearance](../media/msal-net-web-browsers/embedded-webview.png)
 
-### Differences between embedded webview and system browser
-There are some visual differences between embedded webview and system browser in MSAL.NET.
+**Interactive sign-in with MSAL.NET using the system browser:**
 
-**Interactive sign-in with MSAL.NET using the Embedded Webview:**
+![System browser appearance](../media/msal-net-web-browsers/system-browser.png)
 
-![embedded](../media/msal-net-web-browsers/embedded-webview.png)
+### Developer options
 
-**Interactive sign-in with MSAL.NET using the System Browser:**
+As a developer using MSAL.NET, you have several options for displaying the interactive sign-in dialog from Microsoft Entra ID:
 
-![System browser](../media/msal-net-web-browsers/system-browser.png)
+- **System browser.** The system browser is set by default in the library. If using Android, see [system browsers](/azure/active-directory/develop/msal-net-system-browser-android-considerations) for specific information about which browsers are supported for authentication. When using the system browser in Android, we recommend for the device to have a browser that supports Chrome custom tabs; otherwise, authentication may fail.
+- **Embedded web view.** To use only the embedded web view in MSAL.NET, the `AcquireTokenInteractive` builder contains a <xref:Microsoft.Identity.Client.AcquireTokenInteractiveParameterBuilder.WithUseEmbeddedWebView%2A> method.
 
-### Developer Options
+In an iOS app:
 
-As a developer using MSAL.NET, you have several options for displaying the interactive dialog from STS:
+```csharp
+var result = app.AcquireTokenInteractive(scopes)
+                .WithUseEmbeddedWebView(useEmbeddedWebview)
+                .ExecuteAsync();
+ ```
 
-- **System browser.** The system browser is set by default in the library. If using Android, read [system browsers](/azure/active-directory/develop/msal-net-system-browser-android-considerations) for specific information about which browsers are supported for authentication. When using the system browser in Android, we recommend the device has a browser that supports Chrome custom tabs.  Otherwise, authentication may fail.
-- **Embedded webview.** To use only embedded webview in MSAL.NET, the `AcquireTokenInteractively` parameters builder contains a `WithUseEmbeddedWebView()` method.
+In an Android app:
 
-    iOS
-
-    ```csharp
-    AuthenticationResult authResult;
-    authResult = app.AcquireTokenInteractively(scopes)
-                    .WithUseEmbeddedWebView(useEmbeddedWebview)
-                    .ExecuteAsync();
-    ```
-
-    Android:
-
-    ```csharp
-    authResult = app.AcquireTokenInteractively(scopes)
+```csharp
+var result = app.AcquireTokenInteractive(scopes)
                 .WithParentActivityOrWindow(activity)
                 .WithUseEmbeddedWebView(useEmbeddedWebview)
                 .ExecuteAsync();
-    ```
+```
 
-#### Choosing between embedded web browser or system browser on Xamarin.iOS
+#### Choosing between embedded web view or system browser on Xamarin.iOS
 
-In your iOS app, in `AppDelegate.cs` you can initialize the `ParentWindow` to `null`. It's not used in iOS
+In your iOS app, in `AppDelegate.cs` you can initialize the `ParentWindow` to `null`. It's not used in iOS.
 
 ```csharp
 App.ParentWindow = null; // no UI parent on iOS
 ```
 
-#### Choosing between embedded web browser or system browser on Xamarin.Android
+#### Choosing between embedded web view or system browser on Xamarin.Android
 
 In your Android app, in `MainActivity.cs` you can set the parent activity, so that the authentication result gets back to it:
 
@@ -196,7 +195,7 @@ In your Android app, in `MainActivity.cs` you can set the parent activity, so th
 Then in the `MainPage.xaml.cs`:
 
 ```csharp
-authResult = await App.PCA.AcquireTokenInteractive(App.Scopes)
+var result = await App.PCA.AcquireTokenInteractive(App.Scopes)
                       .WithParentActivityOrWindow(App.ParentWindow)
                       .WithUseEmbeddedWebView(true)
                       .ExecuteAsync();
@@ -204,25 +203,18 @@ authResult = await App.PCA.AcquireTokenInteractive(App.Scopes)
 
 #### Detecting the presence of custom tabs on Xamarin.Android
 
-If you want to use the system web browser to enable SSO with the apps running in the browser, but are worried about the user experience for Android devices not having a browser with custom tab support, you have the option to decide by calling the `IsSystemWebViewAvailable()` method in `IPublicClientApplication`. This method returns `true` if the PackageManager detects custom tabs and `false` if they aren't detected on the device.
+If you want to use the system web browser to enable Single-Sign On with the apps running in the browser, but are worried about the user experience for Android devices not having a browser with custom tab support, you have the option to decide by calling the <xref:Microsoft.Identity.Client.IPublicClientApplication.IsSystemWebViewAvailable%2A?displayProperty=nameWithType>. This method returns `true` if the Android package manager detects custom tabs and `false` if they aren't detected on the device.
 
 Based on the value returned by this method, and your requirements, you can make a decision:
 
-- You can return a custom error message to the user. For example: "Please install Chrome to continue with authentication" -OR-
-- You can fall back to the embedded webview option and launch the UI as an embedded webview.
-
-The code below shows the embedded webview option:
+- You can return a custom error message to the user, for example - "Please install Chrome to continue with authentication", or
+- You can fall back to launch the sign-in page in an embedded web view.
 
 ```csharp
-bool useSystemBrowser = app.IsSystemWebviewAvailable();
+bool useSystemBrowser = app.IsSystemWebViewAvailable();
 
 authResult = await App.PCA.AcquireTokenInteractive(App.Scopes)
                       .WithParentActivityOrWindow(App.ParentWindow)
                       .WithUseEmbeddedWebView(!useSystemBrowser)
                       .ExecuteAsync();
 ```
-
-#### .NET Core doesn't support interactive authentication with an embedded browser
-
-For .NET Core, acquisition of tokens interactively is only available through the system web browser, not with embedded web views. Indeed, .NET Core doesn't provide UI yet.
-If you want to customize the browsing experience with the system web browser, you can implement the [IWithCustomUI](/azure/active-directory/develop/scenario-desktop-acquire-token-interactive#withcustomwebui) interface and even provide your own browser.
