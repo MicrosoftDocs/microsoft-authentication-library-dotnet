@@ -20,4 +20,4 @@ var result = await app.AcquireTokenForClient(scopes)
                       .WithTenantIdFromAuthority("https://login.microsoftonline.com/123456-1234-2345-1234561234");
 ```
 
-A public or confidential client application instance can only be associated with one cloud. If your client application needs to handle multiple clouds at the same time, create a separate public of confidential client instance for each of them.
+A public or confidential client application instance can only be associated with one cloud. If your client application needs to handle multiple clouds at the same time, create a separate public or confidential client instance for each of them.
