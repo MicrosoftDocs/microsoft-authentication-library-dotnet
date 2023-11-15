@@ -37,7 +37,7 @@ This article describes how to migrate a public client application from Azure Act
 
    - [Web Authentication Manager](/azure/active-directory/develop/scenario-desktop-acquire-token-wam) the preferred broker-based authentication on Windows.
    - [Interactive authentication](/azure/active-directory/develop/scenario-desktop-acquire-token-interactive) where the user is shown a web-based interface to complete the sign-in process.
-   - [Integrated Windows authentication](/azure/active-directory/develop/scenario-desktop-acquire-token-integrated-windows-authentication) where a user signs using the same identity they used to sign into a Windows domain (for domain-joined or Azure AD-joined machines).
+   - [Integrated Windows authentication](/azure/active-directory/develop/scenario-desktop-acquire-token-integrated-windows-authentication) where a user signs using the same identity they used to sign into a Windows domain (for domain-joined or Microsoft Entra joined machines).
    - [Username/password](/azure/active-directory/develop/scenario-desktop-acquire-token-username-password) where the sign-in occurs by providing a username/password credential.
    - [Device code flow](/azure/active-directory/develop/scenario-desktop-acquire-token-device-code-flow) where a device of limited UX shows you a device code to complete the authentication flow on an alternate device.
 
@@ -120,7 +120,7 @@ The MSAL code shown above uses WAM (Web authentication manager) which is the rec
 
 ## [Integrated Windows authentication](#tab/iwa)
 
-Integrated Windows authentication is where your public client application signs in using the same identity they used to sign into a Windows domain (for domain-joined or Azure AD-joined machines).
+Integrated Windows authentication is where your public client application signs in using the same identity they used to sign into a Windows domain (for domain-joined or Microsoft Entra joined machines).
 
 #### Find out if your code uses integrated Windows authentication
 
@@ -469,7 +469,7 @@ Key benefits of MSAL.NET for your app include:
 
 - **Resilience**. MSAL.NET helps make your app resilient through the following:
 
-   - Azure AD Cached Credential Service (CCS) benefits. CCS operates as an Azure AD backup.
+   - Microsoft Entra ID Cached Credential Service (CCS) benefits. CCS operates as a Microsoft Entra backup.
    - Proactive renewal of tokens if the API that you call enables long-lived tokens through [continuous access evaluation](/azure/active-directory/develop/app-resilience-continuous-access-evaluation).
 
 ### Troubleshooting

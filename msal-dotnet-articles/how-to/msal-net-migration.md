@@ -20,7 +20,7 @@ ms.custom: devx-track-csharp, aaddev, has-adal-ref, engagement-fy23, devx-track-
 
 ## Why migrate to MSAL.NET or Microsoft.Identity.Web
 
-Both the Microsoft Authentication Library for .NET (MSAL.NET) and Azure AD Authentication Library for .NET (ADAL.NET) are used to authenticate Azure AD entities and request tokens from Azure AD. Up until now, most developers have requested tokens from Azure AD for developers platform (v1.0) using Azure AD Authentication Library (ADAL). These tokens are used to authenticate Azure AD identities (work and school accounts). 
+Both the Microsoft Authentication Library for .NET (MSAL.NET) and Azure AD Authentication Library for .NET (ADAL.NET) are used to authenticate Microsoft Entra entities and request tokens from Microsoft Entra ID. Up until now, most developers have requested tokens from Azure AD for developers platform (v1.0) using Azure AD Authentication Library (ADAL). These tokens are used to authenticate Microsoft Entra identities (work and school accounts). 
 
 MSAL comes with benefits over ADAL. Some of these benefits are listed below:
 

@@ -15,11 +15,11 @@ This scenario includes a backend application, and an iOS and Android client appl
 
 ### Setup User and Group for testing
 
-1. Sign in to [Azure Active Directory](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview).
+1. Sign in to [Microsoft Entra ID](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview).
 2. Create a test user (e.g. `XamTestuser@XamTester.onmicrosoft.com`).
 3. On the user profile page, go to **Licenses**.
 4. Click on **Assignments** and select the following:
-    - Azure Active Directory Premium License
+    - Microsoft Entra ID P1 or P2 License
     - Enterprise Mobility + Security
     - Intune
     - Microsoft 365 Business standard
@@ -37,10 +37,10 @@ This scenario includes a backend application, and an iOS and Android client appl
 
 Register a backend application:
 
-1. In [Azure Active Directory](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview), go to Enterprise Applications section.
+1. In [Microsoft Entra ID](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview), go to Enterprise Applications section.
 2. Click on **New application**.
 3. Click **Create your own application**.
-4. Select **Register an application to integrate with Azure AD (App you're developing)** option.
+4. Select **Register an application to integrate with Microsoft Entra ID (App you're developing)** option.
 5. After **Create** screen, it will take you to **Register An Application** screen.
 6. Select **Multitenant** and click **Register**.
 7. This will take you to the screen in #1.
@@ -80,7 +80,7 @@ Configure permissions (e.e. scopes):
 
 ### Setup Client Apps
 
-1. In [Azure Active Directory](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview), go to **App registration**.
+1. In [Microsoft Entra ID](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview), go to **App registration**.
 2. Create a new app and choose **multitenant** option.
 3. Add platform URI for iOS.
 4. Add platform URI for Android.
@@ -99,13 +99,13 @@ Configure permissions (e.e. scopes):
 
 ### Build the iOS Client App
 
-1. Build a skeleton app with the client ID from the Azure AD.
+1. Build a skeleton app with the client ID from the Microsoft Entra ID.
 2. Make sure that the iOS app references **Xamarin.Intune.MAM.SDK.iOS** package.
 3. For iOS, the IPA file should be built.
 
 ### Build the Android Client App
 
-1. Build a skeleton app with the client ID from the Azure AD.
+1. Build a skeleton app with the client ID from the Microsoft Entra ID.
 2. Make sure that the Android app references **Microsoft.Intune.MAM.Xamarin.Android** package.
 3. For Android, the APK file should be built.
 

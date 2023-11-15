@@ -37,9 +37,9 @@ MSAL exposes important metrics as part of [AuthenticationResult.AuthenticationRe
 
 | Metric       | Meaning     | When to trigger an alarm?    |
 | :-------------: | :----------: | :-----------: |
-|  `DurationTotalInMs`| Total time spent in MSAL, including network calls and cache   | Alarm on overall high latency (> 1 s). Value depends on token source. From the cache: one cache access. From Azure AD: two cache accesses + one HTTP call. First ever call (per-process) will take longer because of one extra HTTP call. |
+|  `DurationTotalInMs`| Total time spent in MSAL, including network calls and cache   | Alarm on overall high latency (> 1 s). Value depends on token source. From the cache: one cache access. From Microsoft Entra ID: two cache accesses + one HTTP call. First ever call (per-process) will take longer because of one extra HTTP call. |
 |  `DurationInCacheInMs` | Time spent loading or saving the token cache, which is customized by the app developer (for example, save to Redis).| Alarm on spikes. |
-|  `DurationInHttpInMs` | Time spent making HTTP calls to Azure AD.  | Alarm on spikes.|
+|  `DurationInHttpInMs` | Time spent making HTTP calls to Microsoft Entra ID.  | Alarm on spikes.|
 |  `TokenSource` | Indicates the source of the token. Tokens are retrieved from the cache much faster (for example, ~100 ms versus ~700 ms). Can be used to monitor and alarm the cache hit ratio. | Use with `DurationTotalInMs`. |
 |  `CacheRefreshReason` | Specifies the reason for fetching the access token from the identity provider. See [possible values](xref:Microsoft.Identity.Client.CacheRefreshReason). | Use with `TokenSource`. |
 
@@ -79,15 +79,15 @@ Increase application availability by issuing longer lived access tokens and ensu
 
 ### Status quo
 
-By default, Azure AD issues access tokens with 1 hour expiration. If an Azure AD outage occurs when a token needs to be refreshed, MSAL will fail. The failure propagates to the calling application and impacts availability.
+By default, Microsoft Entra ID issues access tokens with 1 hour expiration. If a Microsoft Entra outage occurs when a token needs to be refreshed, MSAL will fail. The failure propagates to the calling application and impacts availability.
 
 ### Process
 
-To improve availability MSAL tries to ensure than an app always has fresh unexpired tokens. Azure AD outages rarely take more than a few hours, so if MSAL can guarantee that a token always has at least a few hours of availability left, the application will not be impacted by the Azure AD outage. 
+To improve availability MSAL tries to ensure than an app always has fresh unexpired tokens. Microsoft Entra outages rarely take more than a few hours, so if MSAL can guarantee that a token always has at least a few hours of availability left, the application will not be impacted by the Microsoft Entra outage. 
 
 To get long lived tokens, you must configure your tenant (note: internal Microsoft tenants are already configured). For client_credentials (service 2 service), this is enough. For user credentials, you must also configure CAE - /azure/active-directory/conditional-access/concept-continuous-access-evaluation.
 
-When Azure AD returns a long lived token, it includes a `refresh_in` field. It is generally set to half the expiration of the access token.
+When Microsoft Entra ID returns a long lived token, it includes a `refresh_in` field. It is generally set to half the expiration of the access token.
 
 ![Fiddler trace of an access token request](../media/access-token-fiddler.png)
 
@@ -95,7 +95,7 @@ Note: From MSAL 4.37.0 and above, you can observe this value by inspecting the `
 
 Additionally, you can configure a token lifetime of more than the default 1 hour, as described in [Configurable token lifetimes in the Microsoft identity platform (preview)](/azure/active-directory/develop/active-directory-configurable-token-lifetimes).
 
-Whenever you make **requests for the same token**, i.e. whenever MSAL is able to serve a token from its cache, then MSAL will automatically check the `refresh_in` value. If it has elapsed, MSAL will issue a token request to Azure AD in the background, but will return the existing, valid token to the application. In the unlikely event that the background refresh fails (e.g. Azure AD outage), the app is not affected.
+Whenever you make **requests for the same token**, i.e. whenever MSAL is able to serve a token from its cache, then MSAL will automatically check the `refresh_in` value. If it has elapsed, MSAL will issue a token request to Microsoft Entra ID in the background, but will return the existing, valid token to the application. In the unlikely event that the background refresh fails (e.g. Microsoft Entra outage), the app is not affected.
 
 ## Certificate Rotation
 
@@ -115,6 +115,6 @@ This is the preferred solution for non-Microsoft internal services using ASP.NET
 
 3. (**Microsoft internal only**) Rely on Subject Name/Issuer certificates.
 
-This mechanism allows Azure AD to identify a certificate based on SN/I instead of a thumbprint (x5t). It is a stop-gap solution; there are no plans to make it available to non-Microsoft applications.
+This mechanism allows Microsoft Entra ID to identify a certificate based on SN/I instead of a thumbprint (x5t). It is a stop-gap solution; there are no plans to make it available to non-Microsoft applications.
 
 This is the preferred solution for Microsoft internal services which are not able to use managed identity.

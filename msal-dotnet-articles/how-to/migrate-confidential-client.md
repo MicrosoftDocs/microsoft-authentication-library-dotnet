@@ -499,7 +499,7 @@ Key benefits of MSAL.NET for your app include:
 
 - **Resilience**. MSAL.NET helps make your app resilient through:
 
-  - Azure AD Cached Credential Service (CCS) benefits. CCS operates as an Azure AD backup.
+  - Microsoft Entra ID Cached Credential Service (CCS) benefits. CCS operates as a Microsoft Entra backup.
   - Proactive renewal of tokens if the API that you call enables long-lived tokens through [continuous access evaluation](/azure/active-directory/develop/app-resilience-continuous-access-evaluation).
 
 - **Security**. You can acquire Proof of Possession (PoP) tokens if the web API that you want to call requires it. For details, see [Proof Of Possession tokens in MSAL.NET](../advanced/proof-of-possession-tokens.md)

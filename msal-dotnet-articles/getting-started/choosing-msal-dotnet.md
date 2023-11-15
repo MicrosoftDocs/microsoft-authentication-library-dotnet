@@ -36,7 +36,7 @@ You're building a desktop or mobile app. Use MSAL.NET directly and start acquiri
 ## Use [Microsoft Identity Web](https://github.com/AzureAD/microsoft-identity-web/)
 
 You're building a confidential client application (Web app, web API, daemon/service app) running on ASP.NET Core, ASP.NET OWIN, or .NET framework/.NET Core. See what Microsoft Identity Web has to offer:
-- Sign in users in web apps in Azure AD application, Azure AD B2C, and CIAM applications
+- Sign in users in web apps in Microsoft Entra application, Azure AD B2C, and CIAM applications
   - Support Microsoft personal accounts
   - Support guest users
   - Incremental consent and conditional access in web apps
@@ -44,7 +44,7 @@ You're building a confidential client application (Web app, web API, daemon/serv
   - Integrates with "App services authentication"
   - supports PKCE for confidential client applications
   - Brings performant token cache serializers, including distributed
-- Protect web API (with Azure AD, Azure AD B2C or CIAM)
+- Protect web API (with Microsoft Entra ID, Azure AD B2C or CIAM)
   - Validates the issuer (including in-multi-tenant apps, any cloud)
   - supports token decrypt certificates in Web APIs
   - Validates Scope and app role in Web APIs
@@ -67,7 +67,7 @@ Built the table above from this image
 
 ### You're building a new application
 
-Use the Project Templates and the `msidentity-app-sync` tool. We have web app templates for web MVC, Razor, Blazor server, Blazorwasm hosted and not hosted. All for Azure AD or Azure AD B2C.
+Use the Project Templates and the `msidentity-app-sync` tool. We have web app templates for web MVC, Razor, Blazor server, Blazorwasm hosted and not hosted. All for Microsoft Entra ID or Azure AD B2C.
 
 ![Image showing ASP.NET Core projects templates for building web apps](../media/aspnet-core-project-templates.png)
 
@@ -77,7 +77,7 @@ We have web API templates for gRPC and Azure Functions.
 
 [Web API project templates](https://github.com/AzureAD/microsoft-identity-web/wiki/web-api-template).
 
-Here's information on how to run the [msidentity-app-sync-tool](https://github.com/AzureAD/microsoft-identity-web/blob/master/tools/app-provisioning-tool/README.md) which is a command line tool which creates Microsoft identity platform applications in a tenant (Azure AD or Azure AD B2C) and updates the configuration code of your ASP.NET Core applications. The tool can also be used to update code from an existing Azure AD/Azure AD B2C application.
+Here's information on how to run the [msidentity-app-sync-tool](https://github.com/AzureAD/microsoft-identity-web/blob/master/tools/app-provisioning-tool/README.md) which is a command line tool which creates Microsoft identity platform applications in a tenant (Microsoft Entra ID or Azure AD B2C) and updates the configuration code of your ASP.NET Core applications. The tool can also be used to update code from an existing Microsoft Entra application or Azure AD B2C application.
 
 It's available on [NuGet](https://www.nuget.org/packages/msidentity-app-sync/).
 
