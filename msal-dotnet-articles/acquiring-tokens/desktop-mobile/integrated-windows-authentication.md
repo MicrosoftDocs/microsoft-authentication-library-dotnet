@@ -1,6 +1,6 @@
 ---
 title: Using MSAL.NET with Integrated Windows Authentication (IWA)
-description: "If your desktop or mobile application runs on Windows and on a machine connected to a Windows domain (AD or Azure AD joined) it is possible to use the Integrated Windows Authentication (IWA) to acquire a token silently. No UI is required when using the application."
+description: "If your desktop or mobile application runs on Windows and on a machine connected to a Windows domain (Active Directory or Microsoft Entra joined) it is possible to use the Integrated Windows Authentication (IWA) to acquire a token silently. No UI is required when using the application."
 ---
 
 # Using MSAL.NET with Integrated Windows Authentication (IWA)
@@ -8,15 +8,15 @@ description: "If your desktop or mobile application runs on Windows and on a mac
 >[!NOTE]
 >Integrated Windows Authentication has been replaced with a more reliable way of getting tokens silently - [WAM](wam.md). WAM can login the current windows user silently. This workflow does not require complex setup and it even works for personal (Microsoft) accounts. Internally, the Windows Broker (WAM) will try several strategies to get a token for the current Windows user, including IWA and redeeming the PRT. This eliminates most of the limitations with IWA.
 
-If your desktop or mobile application runs on Windows and on a machine connected to a Windows domain (AD or AAD joined) it is possible to use the Integrated Windows Authentication (IWA) to acquire a token silently. No UI is required when using the application.
+If your desktop or mobile application runs on Windows and on a machine connected to a Windows domain (Active Directory or Microsoft Entra joined) it is possible to use the Integrated Windows Authentication (IWA) to acquire a token silently. No UI is required when using the application.
 
 ## IWA Constraints
 
-- **Federated** users only, i.e. those created in an Active Directory and backed by Azure Active Directory. Users created directly in Azure AD, without AD backing - **managed** users - cannot use this auth flow. This limitation does not affect the Username/Password flow.
+- **Federated** users only, i.e. those created in an Active Directory and backed by Microsoft Entra ID. Users created directly in Microsoft Entra ID, without AD backing - **managed** users - cannot use this auth flow. This limitation does not affect the Username/Password flow.
 - Does not work for MSA users. For MSA uses try out [WAM](./wam.md)
 - IWA is for apps written for .NET Framework, .NET Core and UWP platforms
 - IWA does NOT bypass MFA (multi factor authentication). If MFA is configured, IWA might fail if an MFA challenge is required, because MFA requires user interaction. 
-  > This one is tricky. IWA is non-interactive, but 2FA requires user interactivity. You do not control when the identity provider requests 2FA to be performed, the tenant admin does. From our observations, 2FA is required when you login from a different country, when not connected via VPN to a corporate network, and sometimes even when connected via VPN. Don’t expect a deterministic set of rules, Azure Active Directory uses AI to continuously learn if 2FA is required. You should fallback to a [user prompt](./acquiring-tokens-interactively.md) if IWA fails
+  > This one is tricky. IWA is non-interactive, but 2FA requires user interactivity. You do not control when the identity provider requests 2FA to be performed, the tenant admin does. From our observations, 2FA is required when you login from a different country, when not connected via VPN to a corporate network, and sometimes even when connected via VPN. Don’t expect a deterministic set of rules, Microsoft Entra ID uses AI to continuously learn if 2FA is required. You should fallback to a [user prompt](./acquiring-tokens-interactively.md) if IWA fails
 
 - The authority passed in the `PublicClientApplicationBuilder` needs to be:
   - tenanted (of the form `https://login.microsoftonline.com/{tenant}/` where `tenant` is either the guid representing the tenant ID or a domain associated with the tenant.
@@ -46,7 +46,7 @@ During the **[App registration](https://go.microsoft.com/fwlink/?linkid=2083908)
 - You don't need to provide a Reply URI
 - You need to choose **Yes** as the answer to the question **Treat application as a public client** (in the **Default client type** paragraph)
 
-  ![Azure AD client type](../../media/azure-ad-client-type.png)
+  ![Microsoft Entra client type](../../media/azure-ad-client-type.png)
 
 ### Code
 

@@ -27,7 +27,7 @@ Developers of applications that use Universal Windows Platform (UWP) with MSAL.N
 
 ### UseCorporateNetwork
 
-In the context of UWP applications, <xref:Microsoft.Identity.Client.PublicClientApplication> has [`WithUseCorporateNetwork`](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/c9bdd0dd191ab2e658a1c949e43e3959fe3d1aa5/src/client/Microsoft.Identity.Client/AppConfig/PublicClientApplicationBuilder.cs#L244). This is a function that accepts a boolean value determining whether the application should use [Integrated Windows Authentication](./integrated-windows-authentication.md) (and therefore SSO with the user signed-in with the operating system) if this user is signed-in with an account in a federated Azure AD tenant.
+In the context of UWP applications, <xref:Microsoft.Identity.Client.PublicClientApplication> has [`WithUseCorporateNetwork`](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/c9bdd0dd191ab2e658a1c949e43e3959fe3d1aa5/src/client/Microsoft.Identity.Client/AppConfig/PublicClientApplicationBuilder.cs#L244). This is a function that accepts a boolean value determining whether the application should use [Integrated Windows Authentication](./integrated-windows-authentication.md) (and therefore SSO with the user signed-in with the operating system) if this user is signed-in with an account in a federated Microsoft Entra tenant.
 
 **Important:**
 Setting this property to true assumes that the application developer has enabled Integrated Windows Authentication (IWA) in the application. For this:
@@ -67,4 +67,4 @@ More details are provided in the following samples:
 Sample | Platform | Description
 ------ | -------- | -----------
 [active-directory-dotnet-native-uwp-v2](https://github.com/azure-samples/active-directory-dotnet-native-uwp-v2) | UWP | A Windows Universal Platform client application using MSAL.NET, accessing the Microsoft Graph for a user authenticating with Azure AD v2.0 endpoint. ![UWP app topology](../../media/uwp-app-topology.png)
-[https://github.com/Azure-Samples/active-directory-xamarin-native-v2](https://github.com/Azure-Samples/active-directory-xamarin-native-v2) | Xamarin iOS, Android, UWP | A simple Xamarin Forms app showcasing how to use MSAL to authenticate MSA and Azure AD via the Azure AD v2.0 endpoint, and access the Microsoft Graph with the resulting token. ![Xamarin Forms topology](../../media/xamarin-forms-topology.png)
+[https://github.com/Azure-Samples/active-directory-xamarin-native-v2](https://github.com/Azure-Samples/active-directory-xamarin-native-v2) | Xamarin iOS, Android, UWP | A simple Xamarin Forms app showcasing how to use MSAL to authenticate MSA and Microsoft Entra ID via the Azure AD v2.0 endpoint, and access the Microsoft Graph with the resulting token. ![Xamarin Forms topology](../../media/xamarin-forms-topology.png)

@@ -30,7 +30,7 @@ It's important to understand that when acquiring a token interactively, the cont
 - It enables redirection to other identity providers (for instance, sign-in with a work or school account, or a personal account with MSAL; or with a social account with Azure AD B2C).
 - It lets the Microsoft Entra ID control Conditional Access, for example, by having the user perform [multi-factor authentication (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks) during the authentication phase (like entering a Windows Hello PIN; or being called on their phone or on an authentication app on their phone). In cases where the required multi-factor authentication isn't set it up yet, the user can set it up just-in-time in the same dialog. The user enters their mobile phone number and is guided to install an authentication application and scan a QR tag to add their account. This server-driven interaction is a great experience!
 - It lets the user change their password in this same dialog when the password has expired (providing additional fields for the old password and the new password).
-- It enables branding of the tenant or the application (images) controlled by the Azure AD tenant admin or an application owner.
+- It enables branding of the tenant or the application (images) controlled by the Microsoft Entra tenant admin or an application owner.
 - It enables the users to consent to let the application access resources and scopes in their name just after the authentication.
 
 ### Embedded web view vs system browser

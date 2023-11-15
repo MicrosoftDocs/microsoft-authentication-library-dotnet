@@ -11,7 +11,7 @@ MSAL is a multi-framework library. Confidential Client flows are not available o
 
 ## Credentials
 
-MSAL.NET supports two types of client credentials, which must be registered in the Azure AD app registration portal
+MSAL.NET supports two types of client credentials, which must be registered in the Microsoft Entra app registration portal
 
 - Application secrets (not recommended for production scenarios)
 - Certificates
@@ -79,14 +79,16 @@ authResult.AuthenticationResultMetadata.TokenSource == TokenSource.Cache
 ```
 
 **Problem:** I am getting "loop detected" errors
-**Solution:** You are calling Azure AD for a token to often and Azure ADis throttling you. You need to use a cache - either the in-memory one (as per the sample above) or a persisted one.
+**Solution:** You are calling Microsoft Entra ID for a token to often and Azure ADis throttling you. You need to use a cache - either the in-memory one (as per the sample above) or a persisted one.
 
 **Problem:** `AcquireTokenClient` latency is too high
 **Possible Solutions:** Please ensure you have a high token cache hit rate.
 
 The in-memory cache is optimized for searching through tokens that come from different client_id or different tenant_id. It is not optimized for storing tokens with different scopes. You need to use a different cache key that includes the scope. See [Performance testing](../../advanced/performance-testing.md).
 
-## Registration of application secret or certificate with Azure AD
+<a name='registration-of-application-secret-or-certificate-with-azure-ad'></a>
+
+## Registration of application secret or certificate with Microsoft Entra ID
 
 You can register your application secrets either through the interactive experience in the [Azure portal](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredAppsPreview), or using command-line tools (like PowerShell)
 
@@ -98,7 +100,7 @@ The management of client credentials happens in the **certificates & secrets** p
 
 ### Registering client secrets using PowerShell
 
-The [active-directory-dotnetcore-daemon-v2](https://github.com/Azure-Samples/active-directory-dotnetcore-daemon-v2) sample shows how to register an application secret or a certificate with an Azure AD application:
+The [active-directory-dotnetcore-daemon-v2](https://github.com/Azure-Samples/active-directory-dotnetcore-daemon-v2) sample shows how to register an application secret or a certificate with a Microsoft Entra application:
 
 - For details on how to register an application secret, see [AppCreationScripts/Configure.ps1](https://github.com/Azure-Samples/active-directory-dotnetcore-daemon-v2/blob/5199032b352a912e7cc0fce143f81664ba1a8c26/AppCreationScripts/Configure.ps1#L190)
 - For details on how to register a certificate with the application, see [AppCreationScripts-withCert/Configure.ps1](https://github.com/Azure-Samples/active-directory-dotnetcore-daemon-v2/blob/5199032b352a912e7cc0fce143f81664ba1a8c26/AppCreationScripts-withCert/Configure.ps1#L162-L178)
@@ -122,7 +124,7 @@ Don't call `AcquireTokenSilent` before calling `AcquireTokenForClient` as `Acqui
 
 ### Scopes to request
 
-The scope to request for a client credential flow is the name of the resource followed by `/.default`. This notation tells Azure AD to use the **application level permissions** declared statically during the application registration. Also these API permissions must be granted by a tenant administrator
+The scope to request for a client credential flow is the name of the resource followed by `/.default`. This notation tells Microsoft Entra ID to use the **application level permissions** declared statically during the application registration. Also these API permissions must be granted by a tenant administrator
 
 ```csharp
 ResourceId = "someAppIDURI";

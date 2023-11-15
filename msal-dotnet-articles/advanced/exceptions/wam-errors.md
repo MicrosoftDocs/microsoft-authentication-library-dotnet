@@ -26,7 +26,7 @@ The table below highlights some of the most common errors along with potential m
 | 2156265484 | User interaction is required for authentication. | When authenticating the user, WAM could not use a cached token. User needs to be prompted for authentication via <xref:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenInteractive*>. |
 | 3399548929 | Need user interaction to continue. | When authenticating the user, WAM could not use a cached token. User needs to be prompted for authentication via <xref:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenInteractive*>. |
 | 3399614467 | V2Error: invalid_grant AADSTS500341: The user account {ID} has been deleted from the {TENANT_ID} directory. To sign into this application, the account must be added to the directory.| Ensure that the account with which the user tries to sign in is registered in Microsoft Entra ID. |
-| 3399614476 | V2Error: invalid_grant AADSTS50078: Presented multi-factor authentication has expired due to policies configured by your administrator, you must refresh your multi-factor authentication to access {API_TARGET}. | Account needs to be configured by the Microsoft Entra ID administrator with up-to-date MFA settings. |
+| 3399614476 | V2Error: invalid_grant AADSTS50078: Presented multi-factor authentication has expired due to policies configured by your administrator, you must refresh your multi-factor authentication to access {API_TARGET}. | Account needs to be configured by the Microsoft Entra administrator with up-to-date MFA settings. |
 
 ## Unlisted errors
 
