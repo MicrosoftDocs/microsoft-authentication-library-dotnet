@@ -65,7 +65,7 @@ AcquireTokenByAuthorizationCode(
             string authorizationCode)
 ```
 
-This principle is illustrated below the code performing the application initialization located in the `Startup.cs` file, and, to add authentication with the Microsoft identity platform (formerly Azure AD) v2.0, you'll need to add the following code  (The comments in the code should be self-explanatory):
+This principle is illustrated below the code performing the application initialization located in the `Startup.cs` file, and, to add authentication with the Microsoft identity platform, you'll need to add the following code  (The comments in the code should be self-explanatory):
 
 ```csharp
  services.AddAuthentication(AzureADDefaults.AuthenticationScheme)
