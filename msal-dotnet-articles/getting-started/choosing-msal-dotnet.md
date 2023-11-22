@@ -36,7 +36,7 @@ You're building a desktop or mobile app. Use MSAL.NET directly and start acquiri
 ## Use [Microsoft Identity Web](https://github.com/AzureAD/microsoft-identity-web/)
 
 You're building a confidential client application (Web app, web API, daemon/service app) running on ASP.NET Core, ASP.NET OWIN, or .NET framework/.NET Core. See what Microsoft Identity Web has to offer:
-- Sign in users in web apps in Microsoft Entra application, Azure AD B2C, and CIAM applications
+- Sign in users in web apps in Microsoft Entra application, Azure AD B2C, and Microsoft Entra External ID applications
   - Support Microsoft personal accounts
   - Support guest users
   - Incremental consent and conditional access in web apps
