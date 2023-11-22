@@ -194,12 +194,12 @@ If you are a B2C developer using Google as an identity provider we recommend you
 
 MSAL.Net supports a [token cache](/dotnet/api/microsoft.identity.client.tokencache). The token caching key is based on the claims returned by the Identity Provider. Currently MSAL.Net needs two claims to build a token cache key:
 
-1. `tid` which is the Azure AD Tenant Id
+1. `tid` which is the Microsoft Entra tenant Id
 1. `preferred_username`
 
 Both these claims are missing in many of the Azure AD B2C scenarios.
 
-The customer impact is that when trying to display the username field, are you getting "Missing from the token response" as the value? If so, this is because B2C does not return a value in the IdToken for the preferred_username because of limitations with the social accounts and external identity providers (IdPs). Azure AD returns a value for preferred_username because it knows who the user is, but for B2C, because the user can sign in with a local account, Facebook, Google, GitHub, etc...there is not a consistent value for B2C to use for preferred_username. To unblock MSAL from rolling out cache compatibility with ADAL, we decided to use "Missing from the token response" on our end when dealing with the B2C accounts when the IdToken returns nothing for preferred_username. MSAL must return a value for preferred_username to maintain cache compatibility across libraries.
+The customer impact is that when trying to display the username field, are you getting "Missing from the token response" as the value? If so, this is because B2C does not return a value in the IdToken for the preferred_username because of limitations with the social accounts and external identity providers (IdPs). Microsoft Entra ID returns a value for preferred_username because it knows who the user is, but for B2C, because the user can sign in with a local account, Facebook, Google, GitHub, etc...there is not a consistent value for B2C to use for preferred_username. To unblock MSAL from rolling out cache compatibility with ADAL, we decided to use "Missing from the token response" on our end when dealing with the B2C accounts when the IdToken returns nothing for preferred_username. MSAL must return a value for preferred_username to maintain cache compatibility across libraries.
 
 ### Workarounds
 
