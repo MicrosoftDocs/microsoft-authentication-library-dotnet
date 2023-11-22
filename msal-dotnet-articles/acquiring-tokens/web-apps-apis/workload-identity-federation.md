@@ -5,7 +5,7 @@ description: "How to acquire tokens with federated workload identity in MSAL.NET
 
 # Workload identity federation
 
-[Workload identity federation](/entra/workload-id/workload-identity-federation) allows you to access Microsoft Entra protected resources without needing to manage client application secrets. First, set up the workload identity federation in the app registration. In the application code, create a function which will fetch the tokens from the external provider, then pass it into <xref:Microsoft.Identity.Client.ConfidentialClientApplicationBuilder.WithClientAssertion(System.Func{Microsoft.Identity.Client.AssertionRequestOptions,System.Threading.Tasks.Task{System.String}})>. For each token request, MSAL will call this function to get an external token with which to acquire the Azure AD tokens. Make sure this function caches the token to avoid making too many calls to the external provider.
+[Workload identity federation](/entra/workload-id/workload-identity-federation) allows you to access Microsoft Entra protected resources without needing to manage client application secrets. First, set up the workload identity federation in the app registration. In the application code, create a function which will fetch the tokens from the external provider, then pass it into <xref:Microsoft.Identity.Client.ConfidentialClientApplicationBuilder.WithClientAssertion(System.Func{Microsoft.Identity.Client.AssertionRequestOptions,System.Threading.Tasks.Task{System.String}})>. For each token request, MSAL will call this function to get an external token with which to acquire the Microsoft Entra tokens. Make sure this function caches the token to avoid making too many calls to the external provider.
 
 ```csharp
 using Microsoft.Identity.Client;

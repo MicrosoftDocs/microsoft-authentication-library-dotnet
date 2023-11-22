@@ -1,6 +1,6 @@
 ---
 title: Using Device Code Flow in MSAL.NET
-description: "Interactive authentication with Azure AD requires a web browser. However, in the case of devices and operating systems that do not provide a Web browser, Device Code Flow lets the user use another device (for instance another computer or a mobile phone) to sign-in interactively."
+description: "Interactive authentication with Microsoft Entra ID requires a web browser. However, in the case of devices and operating systems that do not provide a Web browser, Device Code Flow lets the user use another device (for instance another computer or a mobile phone) to sign-in interactively."
 ---
 
 # Using Device Code Flow in MSAL.NET
@@ -10,7 +10,7 @@ description: "Interactive authentication with Azure AD requires a web browser. H
 
 ## Why would you use Device Code Flow?
 
-Interactive authentication with Azure AD requires a web browser (for details see [Usage of web browsers](/azure/active-directory/develop/msal-net-web-browsers)). However, in the case of devices and operating systems that do not provide a Web browser, Device Code Flow lets the user use another device (for instance another computer or a mobile phone) to sign-in interactively. By using the device code flow, the application obtains tokens through a two-step process especially designed for these devices/OS. Examples of such applications are applications running on IoT, or Command-Line tools (CLI). The idea is that:
+Interactive authentication with Microsoft Entra ID requires a web browser (for details see [Usage of web browsers](/azure/active-directory/develop/msal-net-web-browsers)). However, in the case of devices and operating systems that do not provide a Web browser, Device Code Flow lets the user use another device (for instance another computer or a mobile phone) to sign-in interactively. By using the device code flow, the application obtains tokens through a two-step process especially designed for these devices/OS. Examples of such applications are applications running on IoT, or Command-Line tools (CLI). The idea is that:
 
 1. Whenever user authentication is required, the app provides a code and asks the user to use another device (such as an internet-connected smartphone) to navigate to a URL (for instance, `https://microsoft.com/devicelogin`), where the user will be prompted to enter the code. That done, the web page will lead the user through a normal authentication experience, including consent prompts and multi-factor authentication if necessary.
 
@@ -38,7 +38,7 @@ During the **[App registration](https://go.microsoft.com/fwlink/?linkid=2083908)
 - The Reply URI should be `https://login.microsoftonline.com/common/oauth2/nativeclient`
 - You need to choose **Yes** to the question **Treat application as a public client** (in the **Default client type** paragraph)
 
-  ![Azure AD client type](../../media/azure-ad-client-type.png)
+  ![Microsoft Entra client type](../../media/azure-ad-client-type.png)
 
 ### Code
 

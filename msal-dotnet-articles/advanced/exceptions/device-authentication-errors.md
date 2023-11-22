@@ -21,4 +21,4 @@ To satisfy this requirement you will have to leverage WAM on Windows or the syst
 
 - If you are writing a desktop application running on Windows, see [WAM integration for Desktop applications](../../acquiring-tokens/desktop-mobile/wam.md).
 - [On iOS and Android](../../acquiring-tokens/desktop-mobile/xamarin.md), we recommend [enabling the authentication broker](/azure/active-directory/develop/msal-net-use-brokers-with-xamarin-apps)
-- The same principles apply to Web Applications, though given you are in a browser you must leverage a browser which can "talk to" WAM (that is either Edge on Chromium or Chrome with the Azure AD extensions). For details see [Conditional access conditions](/azure/active-directory/conditional-access/concept-conditional-access-conditions#chrome-support).
+- The same principles apply to Web Applications, though given you are in a browser you must leverage a browser which can "talk to" WAM (that is either Edge on Chromium or Chrome with the Microsoft Entra extensions). For details see [Conditional access conditions](/azure/active-directory/conditional-access/concept-conditional-access-conditions#chrome-support).

@@ -15,8 +15,8 @@ Exceptions in MSAL.NET are intended for app developers to troubleshoot and not f
 |---------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `MsalException`           | Base class for MSAL exceptions.                                                                                                                                                                                |
 | `MsalClientException`     | Errors which occur in the library itself, for example an incomplete configuration.                                                                                                                             |
-| `MsalServiceException`    | Represents errors transmitted by the token provider (Azure AD). See [Azure AD errors](/azure/active-directory/develop/reference-aadsts-error-codes#handling-error-codes-in-your-application). Servince unavialble errors (e.g. HTTP 500), indicating a problem with the service, have the error code `service_not_available` |
-| `MsalUiRequiredException` | Special Azure AD error which indicates that the user must interactively login.                                                                                                                                      |
+| `MsalServiceException`    | Represents errors transmitted by the token provider (Microsoft Entra ID). See [Microsoft Entra errors](/azure/active-directory/develop/reference-aadsts-error-codes#handling-error-codes-in-your-application). Servince unavialble errors (e.g. HTTP 500), indicating a problem with the service, have the error code `service_not_available` |
+| `MsalUiRequiredException` | Special Microsoft Entra error which indicates that the user must interactively login.                                                                                                                                      |
 
 No other exception is caught by MSAL. Any network issues, cancellations etc. are bubbled up to the application.
 
@@ -32,7 +32,7 @@ On Android, this exception can also occur if a [browser with tabs](/azure/active
 
 2. HTTP Exceptions
 
-Developers are expected to implement their own retry policies when calling MSAL. MSAL makes HTTP calls to the Azure AD service, and occasional failures can occur, for example the network can go down or the server is overloaded. HTTP 5xx status code responses are retried once.
+Developers are expected to implement their own retry policies when calling MSAL. MSAL makes HTTP calls to the Microsoft Entra service, and occasional failures can occur, for example the network can go down or the server is overloaded. HTTP 5xx status code responses are retried once.
 
 ### Exception types
 
@@ -58,7 +58,7 @@ See /azure/active-directory/develop/app-resilience-continuous-access-evaluation?
 
 ### Handling Claim challenge exceptions in MSAL.NET
 
-In some cases, when the Azure AD tenant admin has enabled conditional access policies, your application will need to handle claim challenge exceptions. This will appear as an `MsalServiceException` which `Claims` property won't be empty. For instance if the conditional access policy is to have a managed device (Intune) the error will be something like `AADSTS53000: Your device is required to be managed to access this resource` or something similar.
+In some cases, when the Microsoft Entra tenant admin has enabled conditional access policies, your application will need to handle claim challenge exceptions. This will appear as an `MsalServiceException` which `Claims` property won't be empty. For instance if the conditional access policy is to have a managed device (Intune) the error will be something like `AADSTS53000: Your device is required to be managed to access this resource` or something similar.
 
 To handle the claim challenge, you will need to use the `.WithClaims(claims)` method.
 

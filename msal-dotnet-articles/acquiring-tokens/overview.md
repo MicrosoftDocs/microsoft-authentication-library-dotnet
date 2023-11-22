@@ -36,10 +36,10 @@ In the case of UWP, Xamarin iOS and Xamarin Android, the token cache serializati
 
 - will often [acquire token interactively](./desktop-mobile/acquiring-tokens-interactively.md), having the user sign-in.
   > Remember that this is not possible yet in .NET Core as .NET core does not provide UI capabilities and this is required for interactive authentication. 
-- But it's also possible for a desktop application running on a Windows machine which is joined to a domain or to Azure AD, to [get a token silently for the user signed-in on the machine](./desktop-mobile/integrated-windows-authentication.md), leveraging Integrated Windows Authentication (IWA/Kerberos). 
+- But it's also possible for a desktop application running on a Windows machine which is joined to a domain or to Microsoft Entra ID, to [get a token silently for the user signed-in on the machine](./desktop-mobile/integrated-windows-authentication.md), leveraging Integrated Windows Authentication (IWA/Kerberos). 
 - On .NET framework desktop client applications , it's also possible (but not recommended) to [get a token with a username and password](./desktop-mobile/username-password-authentication.md) (U/P).
   > Note that you should not use username/password in confidential client applications.
-- Finally, for applications running on devices which don't have a Web browser, it's possible to acquire a token through the [device code flow](./desktop-mobile/device-code-flow.md) mechanism, which provides the user with a URL and a code. The user goes to a web browser on another device, enters the code and signs-in, which has Azure AD to get them a token back on the browser-less device.
+- Finally, for applications running on devices which don't have a Web browser, it's possible to acquire a token through the [device code flow](./desktop-mobile/device-code-flow.md) mechanism, which provides the user with a URL and a code. The user goes to a web browser on another device, enters the code and signs-in, which has Microsoft Entra ID to get them a token back on the browser-less device.
 
 #### Summary
 
@@ -59,7 +59,7 @@ Mac OS, Linux, Windows	| <img alt=".NET Core Logo" src="/azure/active-directory/
 
 - Acquire token **for the application itself**, not for a user, using [client credentials](./web-apps-apis/client-credential-flows.md). This can be used for syncing tools, or tools which process users in general, not a particular user. 
 - In the case of Web APIs calling and API on behalf of the user, using the [On Behalf Of flow](./web-apps-apis/on-behalf-of-flow.md) and still identifying the application itself with client credentials to acquire a token based on some User assertion (SAML for instance, or a JWT token). This can be used for applications which need to access resources of a particular user in service to service calls.
-- **For Web apps**, acquire tokens [by authorization code](./web-apps-apis/authorization-codes.md) after letting the user sign-in through the authorization request URL. This is typically the mechanism used by an open id connect application, which lets the user sign-in using Open ID connect, but then wants to access Web APIs on behalf of this particular user.
+- **For Web apps**, acquire tokens [by authorization code](./web-apps-apis/authorization-codes.md) after letting the user sign-in through the authorization request URL. This is typically the mechanism used by an OpenID Connect application, which lets the user sign-in using OpenID Connect, but then wants to access Web APIs on behalf of this particular user.
 
 #### Summary
 
@@ -99,14 +99,14 @@ In MSAL.NET, AuthenticationResult exposes:
 - `AccessToken` for the Web API to access resources. This is a string, usually a base64 encoded JWT but the client should never look inside the access token. The format isn't guaranteed to remain stable, and it can be encrypted for the resource. People writing code depending on access token content on the client is one of the biggest sources of errors and client logic breaks 
 - `IdToken` for the user (this is a JWT)
 - `ExpiresOn` tells the date/time when the token expires
-- `TenantId` contains the tenant in which the user was found. Note that in the case of guest users (Azure AD B2B scenarios), the TenantId is the guest tenant, not the unique tenant.
+- `TenantId` contains the tenant in which the user was found. Note that in the case of guest users (Microsoft Entra B2B scenarios), the TenantId is the guest tenant, not the unique tenant.
 When the token is delivered in the name of a user, `AuthenticationResult` also contains information about this user. For confidential client flows where tokens are requested with no user (for the application), this User information is null.
 - The `Scopes` for which the token was issued (See [Scopes not resources](/azure/active-directory/develop/msal-net-differences-adal-net))
 - The unique Id for the user.
 
 ## `IAccount`
 
-MSAL.NET defines the notion of Account (through the `IAccount` interface). This breaking change provides the right semantics: the fact that the same user can have several accounts, in different Azure AD directories. Also MSAL.NET provides better information in the case of guest scenarios, as home account information is provided.
+MSAL.NET defines the notion of Account (through the `IAccount` interface). This breaking change provides the right semantics: the fact that the same user can have several accounts, in different Microsoft Entra directories. Also MSAL.NET provides better information in the case of guest scenarios, as home account information is provided.
 The following diagram shows the structure of the `IAccount` interface:
 
 ![image](../media/authenticationresult-graph.png)
@@ -125,4 +125,4 @@ Property | Description
 --- | ----
 `Username` | A string containing the displayable value in UserPrincipalName (UPN) format, for example, john.doe@contoso.com. This can be null, whereas the HomeAccountId and HomeAccountId.Identifier won’t be null. This property replaces the `DisplayableId` property of `IUser` in previous versions of MSAL.NET.
 `Environment` | A string containing the identity provider for this account, for example, `login.microsoftonline.com`. This property replaces the `IdentityProvider` property of `IUser`, except that `IdentityProvider` also had information about the tenant (in addition to the cloud environment), whereas here this is only the host.
-`HomeAccountId` | AccountId of the home account for the user. This uniquely identifies the user across Azure AD tenants.
+`HomeAccountId` | AccountId of the home account for the user. This uniquely identifies the user across Microsoft Entra tenants.
