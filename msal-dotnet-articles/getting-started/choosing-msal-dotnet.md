@@ -44,7 +44,7 @@ You're building a confidential client application (Web app, web API, daemon/serv
   - Integrates with "App services authentication"
   - supports PKCE for confidential client applications
   - Brings performant token cache serializers, including distributed
-- Protect web API (with Microsoft Entra ID, Azure AD B2C or CIAM)
+- Protect web API (with Microsoft Entra ID, Azure AD B2C, or Microsoft Entra External ID)
   - Validates the issuer (including in-multi-tenant apps, any cloud)
   - supports token decrypt certificates in Web APIs
   - Validates Scope and app role in Web APIs
