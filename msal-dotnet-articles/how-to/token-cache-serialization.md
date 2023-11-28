@@ -382,7 +382,7 @@ In desktop applications, we recommend that you use the cross-platform token cach
 
 #### Referencing the NuGet package
 
-Add the [Microsoft.Identity.Client.Extensions.MSAL](https://www.nuget.org/packages/Microsoft.Identity.Client.Extensions.Msal/) NuGet package to your project.
+Add the [Microsoft.Identity.Client.Extensions.Msal](https://www.nuget.org/packages/Microsoft.Identity.Client.Extensions.Msal/) NuGet package to your project.
 
 #### Configuring the token cache
 
