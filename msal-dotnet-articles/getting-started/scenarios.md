@@ -27,19 +27,19 @@ As a developer, you can acquire a token from a number of **application types**, 
 - Public client applications (desktop and mobile) use the <xref:Microsoft.Identity.Client.PublicClientApplication> class
 - Confidential client applications (web apps, web APIs, and daemon applications - desktop or web). These type of apps use the <xref:Microsoft.Identity.Client.ConfidentialClientApplication>.
 
-MSAL.NET supports acquiring tokens either in the name of a **user** ![user icon](../media/user-icon.png), or, (and only for confidential client applications), in the name of the application itself (for no user). In that case the confidential client application shares a secret with Azure AD ![Azure AD icon](../media/certificate-icon.png)
+MSAL.NET supports acquiring tokens either in the name of a **user** ![user icon](../media/user-icon.png), or, (and only for confidential client applications), in the name of the application itself (for no user). In that case the confidential client application shares a secret with Microsoft Entra ID ![Microsoft Entra ID icon](../media/certificate-icon.png)
 
 MSAL.NET supports a number of **platforms** (.NET Framework, .NET Core, Windows 10/UWP, MAUI, Xamarin.iOS, Xamarin.Android). .NET Core apps can also run on different operating systems (Windows, but also Linux and MacOs). The scenarios can be different depending on the platforms.
 
 ## The Scenarios
 
-The picture below summarizes the supported scenarios and shows on which platform, and to which Azure AD protocol this corresponds:
+The picture below summarizes the supported scenarios and shows on which platform, and to which Microsoft Entra protocol this corresponds:
 
 ![Image showing supported scenarios and platforms](../media/net-oauth.png)
 
 ### Web app that signs in users and calls a web API on behalf of the user
 
-To protect a web app (signing in the user) you'll use ASP.NET or ASP.NET Core with the ASP.NET Open ID Connect middleware. This involves validating the token which is done by the [IdentityModel extensions for .NET](https://github.com/AzureAD/azure-activedirectory-identitymodel-extensions-for-dotnet/wiki) library, not MSAL.NET.
+To protect a web app (signing in the user) you'll use ASP.NET or ASP.NET Core with the ASP.NET OpenID Connect middleware. This involves validating the token which is done by the [IdentityModel extensions for .NET](https://github.com/AzureAD/azure-activedirectory-identitymodel-extensions-for-dotnet/wiki) library, not MSAL.NET.
 
 To call the web API in the name of the user, you'll use MSAL.NET `ConfidentialClientApplication`, leveraging the [Authorization code flow](../acquiring-tokens/web-apps-apis/authorization-codes.md), then storing the acquired token in the token cache, and [acquiring a token silently](../acquiring-tokens/acquiretokensilentasync-api.md#recommended-call-pattern-in-web-apps-using-the-authorization-code-flow-to-authenticate-the-user) from the cache when needed. MSAL refreshes the token if needed.
 
@@ -55,11 +55,11 @@ To enable this interaction, MSAL.NET leverages a [web browser](/azure/active-dir
 
 #### Protecting the app itself with Intune
 
-Your mobile app (written in Xamarin.iOS or Xamarin.Android) can have app protection policies applied to it, so that it can be [managed by InTune](/intune/app-sdk) and recognized by Intune as a managed app. The [InTune SDK](/intune/app-sdk-get-started) is separate from MSAL, and it talks to Azure AD on its own.
+Your mobile app (written in Xamarin.iOS or Xamarin.Android) can have app protection policies applied to it, so that it can be [managed by InTune](/intune/app-sdk) and recognized by Intune as a managed app. The [InTune SDK](/intune/app-sdk-get-started) is separate from MSAL, and it talks to Microsoft Entra ID on its own.
 
 ### Desktop or service daemon app that calls a web API as itself (in its own name)
 
-You can write a daemon app that acquires a token using its own identity on top using MSAL.NET's ConfidentialClientApplication's [client credentials](../acquiring-tokens/web-apps-apis/client-credential-flows.md) acquisition methods. These suppose that the app has previously registered a secret (application password or certificate) with Azure AD, which it then shares with this call.
+You can write a daemon app that acquires a token using its own identity on top using MSAL.NET's ConfidentialClientApplication's [client credentials](../acquiring-tokens/web-apps-apis/client-credential-flows.md) acquisition methods. These suppose that the app has previously registered a secret (application password or certificate) with Microsoft Entra ID, which it then shares with this call.
 
 ![Image showing a daemon app that calls a web API using its own identity](../media/net-daemon-api.png)
 
@@ -69,7 +69,7 @@ Desktop applications can use the same [interactive authentication](../acquiring-
 
 ![Image showing the flow in a desktop app that calls a web API on behalf of a signed-in user ](../media/net-desktop-api.png)
 
-For Windows hosted applications, it's also possible for applications running on computers joined to a Windows domain or Azure AD joined to acquire a token silently by using [Integrated Windows Authentication](../acquiring-tokens/desktop-mobile/integrated-windows-authentication.md).
+For Windows hosted applications, it's also possible for applications running on computers joined to a Windows domain or Microsoft Entra joined to acquire a token silently by using [Integrated Windows Authentication](../acquiring-tokens/desktop-mobile/integrated-windows-authentication.md).
 
 If your desktop application is a .NET Core application running on Linux or Mac, you can neither use the interactive authentication flow (as .NET Core does not provide a [web browser](/azure/active-directory/develop/msal-net-web-browsers)), nor Integrated Windows Authentication. The best option in that case is to use device code flow as explained in [Application without a browser, or iOT application calling an API in the name of the user](#application-without-a-browser-or-iot-application-calling-an-api-in-the-name-of-the-user).
 
@@ -102,5 +102,5 @@ Like in desktop or service daemon applications, a daemon web API (or a daemon we
 In all the scenarios you might want to:
 
 - Troubleshoot yourself by activating [logs](/azure/active-directory/develop/msal-logging-dotnet) or Telemetry
-- Understand how to react to [exceptions](../advanced/exceptions/index.md) due to the Azure AD service [`MsalServiceException`](/dotnet/api/microsoft.identity.client.msalserviceexception?view=azure-dotnet-preview#fields&preserve-view=true), or to something wrong happening in the client itself [`MsalClientException`](/dotnet/api/microsoft.identity.client.msalclientexception?view=azure-dotnet-preview#fields&preserve-view=true )
+- Understand how to react to [exceptions](../advanced/exceptions/index.md) due to the Microsoft Entra service [`MsalServiceException`](/dotnet/api/microsoft.identity.client.msalserviceexception?view=azure-dotnet-preview#fields&preserve-view=true), or to something wrong happening in the client itself [`MsalClientException`](/dotnet/api/microsoft.identity.client.msalclientexception?view=azure-dotnet-preview#fields&preserve-view=true )
 - Use MSAL.NET with a [proxy](../advanced/httpclient.md)

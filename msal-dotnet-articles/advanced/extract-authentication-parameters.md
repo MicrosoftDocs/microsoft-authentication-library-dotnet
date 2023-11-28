@@ -21,7 +21,7 @@ There are also scenarios where a web API needs more claims from the user. But gi
 
 ### Unauthenticated call to an API
 
-Some web APIs, when called unauthenticated, send back an `HTTP 401 (Unauthorized)` with a `wwwAuthenticate` header. Note that this is not a response from Azure AD, but really from a web API that the client app would call without authentication or with the wrong authentication.
+Some web APIs, when called unauthenticated, send back an `HTTP 401 (Unauthorized)` with a `wwwAuthenticate` header. Note that this is not a response from Microsoft Entra ID, but really from a web API that the client app would call without authentication or with the wrong authentication.
 
 For instance:
 
