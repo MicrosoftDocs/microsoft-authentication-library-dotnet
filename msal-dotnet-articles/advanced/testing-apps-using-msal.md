@@ -41,7 +41,7 @@ Sample showcasing token cache sharing between apps: https://github.com/Azure-Sam
 
 ### Daemon apps
 
-Daemon apps use pre-deployed secrets (passwords or certificates) to talk to Azure AD. You can deploy a secret to your test environment or use the token caching technique to provision your tests. Note that the Client Credential Grant, used by daemon apps, does NOT fetch refresh tokens, just access tokens, which expire in 1h.
+Daemon apps use pre-deployed secrets (passwords or certificates) to talk to Microsoft Entra ID. You can deploy a secret to your test environment or use the token caching technique to provision your tests. Note that the Client Credential Grant, used by daemon apps, does NOT fetch refresh tokens, just access tokens, which expire in 1h.
 
 ### Native client apps
 
