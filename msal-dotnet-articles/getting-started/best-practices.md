@@ -24,7 +24,7 @@ While you can have a look at the contents of an access token (for instance, usin
 
 <a name='dont-acquire-tokens-from-azure-ad-too-often'></a>
 
-## Don't acquire tokens from Microsoft Entra too often
+## Don't acquire tokens from Microsoft Entra ID too often
 
 The standard pattern of acquiring tokens is: (i) acquire a token from the cache silently and (ii) if it doesn't work, acquire a new token from Microsoft Entra ID. If you skip the first step, your app may be acquiring tokens from Microsoft Entra too often. This provides a bad user experience, because it is slow and error prone as the identity provider might throttle you.
 
