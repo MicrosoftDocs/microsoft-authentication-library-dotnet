@@ -54,7 +54,7 @@ Starting with MSAL 4.58.0, the library supports [OpenTelemetry](https://opentele
 >[!NOTE]
 >While the console exporter is a good start for local debugging and diagnostics, it's not the best choice for production-deployed applications. We recommend checking out the [official exporter documentation](https://opentelemetry.io/docs/instrumentation/net/exporters/) to learn more about available options. If you are hosting applications on Azure, you may consider ingesting OpenTelemetry data in [Azure Data Explorer](/azure/data-explorer/open-telemetry-connector?tabs=command-line) or [Azure Monitor](/azure/azure-monitor/app/opentelemetry-enable?tabs=aspnetcore).
 
-In your application initialization code, prior to bootstrapping the MSAL authentication client (e.g., PublicClientApplication or ConfidentialClientApplication), declare a new MeterProvider instance, like this:
+In your application initialization code, prior to bootstrapping the MSAL authentication client (e.g., `PublicClientApplication` or `ConfidentialClientApplication`), declare a new `meterProvider` instance, using the following code.
 
 ```csharp
 using var meterProvider = Sdk.CreateMeterProviderBuilder()
