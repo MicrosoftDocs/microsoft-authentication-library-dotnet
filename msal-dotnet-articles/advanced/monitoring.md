@@ -134,9 +134,9 @@ Histogram to capture L2 cache latency for token acquisition through MSAL.
 
 | Field              | Description |
 |:-------------------|:------------|
-| MsalVersion        | Version of MSAL used. |
-| Platform           | .NET SKU used.        |
-| ApiId              | ID for the API used for token acquisition. |
+| `MsalVersion`        | Version of MSAL used. |
+| `Platform`           | .NET SKU used.        |
+| `ApiId`              | ID for the API used for token acquisition. |
 	 
 #### `MsalDurationInHttp_1a_histogram`
 
