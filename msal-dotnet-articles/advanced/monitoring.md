@@ -122,9 +122,9 @@ Hitogram to capture latency when an L1 cache is used. Values are in microseconds
 
 | Field              | Description |
 |:-------------------|:------------|
-| MsalVersion        | Version of MSAL used. |
-| Platform           | .NET SKU used.        |
-| ApiId              | ID for the API used for token acquisition. |
+| `MsalVersion`        | Version of MSAL used. |
+| `Platform`           | .NET SKU used.        |
+| `ApiId`              | ID for the API used for token acquisition. |
 
 #### `MsalDurationInL2Cache_1a_histogram`
 
