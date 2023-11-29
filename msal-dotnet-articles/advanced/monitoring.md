@@ -11,7 +11,7 @@ For example, if only one instance of a [confidential client application](/entra/
 
 ## Logging
 
-One of the tools MSAL provides to combat production issues is logging errors when MSAL in not properly configured. It is critical to enable logging whenever possible to not only monitor logs for errors but also help in the diagnosis of problematic events. See [Logging in MSAL.NET](./exceptions/msal-logging.md) for details.
+One of the tools MSAL provides to combat production issues is logging errors when MSAL isn't properly configured. It's critical to enable logging whenever possible to monitor logs for errors and help in the diagnosis of problematic events. See [Logging in MSAL.NET](./exceptions/msal-logging.md) for details.
 
 The following errors will be logged in MSAL:
 
