@@ -47,9 +47,9 @@ In addition to logging, MSAL exposes important metrics in <xref:Microsoft.Identi
 
 Starting with MSAL 4.58.0, the library supports [OpenTelemetry](https://opentelemetry.io/) - a set of APIs that enable instrumentation, generation, and collection of telemetry data in a consistent and standardized manner. To get started, ensure that you;
 
-1. Installed the latest version of [MSAL.NET](https://www.nuget.org/packages/Microsoft.Identity.Client).
-1. Added the [OpenTelemetry](https://www.nuget.org/packages/OpenTelemetry#readme-body-tab) package dependency to your project.
-1. Added an exporter dependency, that will allow you to export logs. One such example is the [Console exporter for OpenTelemetry.NET](https://www.nuget.org/packages/OpenTelemetry.Exporter.Console/1.7.0-alpha.1).
+1. Install the latest version of [MSAL.NET](https://www.nuget.org/packages/Microsoft.Identity.Client).
+1. Add the [OpenTelemetry](https://www.nuget.org/packages/OpenTelemetry#readme-body-tab) package dependency to your project.
+1. Add an exporter dependency, that allows you to export logs, for example, the [Console exporter for OpenTelemetry.NET](https://www.nuget.org/packages/OpenTelemetry.Exporter.Console/1.7.0-alpha.1).
 
 >[!NOTE]
 >While the console exporter is a good start for local debugging and diagnostics, it's not the best choice for production-deployed applications. We recommend checking out the [official exporter documentation](https://opentelemetry.io/docs/instrumentation/net/exporters/) to learn more about available options. If you are hosting applications on Azure, you may consider ingesting OpenTelemetry data in [Azure Data Explorer](/azure/data-explorer/open-telemetry-connector?tabs=command-line) or [Azure Monitor](/azure/azure-monitor/app/opentelemetry-enable?tabs=aspnetcore).
