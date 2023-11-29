@@ -94,9 +94,9 @@ Counter to capture aggregation of failed requests in MSAL.
 
 | Field              | Description |
 |:-------------------|:------------|
-| MsalVersion        | Version of MSAL used. |
-| Platform           | .NET SKU used.        |
-| ErrorCode          | Microsoft Entra ID error code in case of MsalServiceException, MsalErrorCode in case of MsalClientException or name of the exception in case it is not an MsalException. |
+| `MsalVersion`        | Version of MSAL used. |
+| `Platform`           | .NET SKU used.        |
+| `ErrorCode`          | Microsoft Entra ID error code in case of `MsalServiceException`, `MsalErrorCode` in case of `MsalClientException` or name of the exception in case it isn't an `MsalException`. |
 
 ### Histograms
 
