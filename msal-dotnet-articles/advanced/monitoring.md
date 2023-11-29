@@ -146,9 +146,9 @@ Histogram to capture HTTP latency for token acquisition through MSAL.
 
 | Field              | Description |
 |:-------------------|:------------|
-| MsalVersion        | Version of MSAL used. |
-| Platform           | .NET SKU used.        |
-| ApiId              | ID for the API used for token acquisition. |
+| `MsalVersion`        | Version of MSAL used. |
+| `Platform`           | .NET SKU used.        |
+| `ApiId`              | ID for the API used for token acquisition. |
 
 ### Additional information
 
