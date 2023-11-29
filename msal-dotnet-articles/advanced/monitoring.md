@@ -7,7 +7,7 @@ description: "How to use the metrics provided by MSAL.NET to monitor your applic
 
 To ensure authentication services using MSAL.NET are running correctly, MSAL provides many ways to monitor its behavior so that issues can be identified and addressed before they occur in production. The incorrect use of MSAL (as it relates to token lifecycle and cache) doesn't lead to immediate failures, however sometimes they'll bubble up under high traffic scenarios after the app is in production for a period of time.
 
-For example, if only one instance of a [confidential client application](/entra/identity-platform/msal-client-applications#public-client-and-confidential-client-authorization) is used and MSAL is not configured to serialize the token cache, the cache will grow forever. Another issue can arise when creating a new confidential client application and not utilizing the cache which will lead to issues such as throttling from the identity provider. For recommendations on how to utilize MSAL appropriately, see [High Availability](./high-availability.md).
+For example, if only one instance of a [confidential client application](/entra/identity-platform/msal-client-applications#public-client-and-confidential-client-authorization) is used and MSAL isn't configured to serialize the token cache, the cache will grow forever. Another issue arises when creating a new confidential client application and not utilizing the cache which will lead to issues such as throttling from the identity provider. For recommendations on how to utilize MSAL appropriately, see [High Availability](./high-availability.md).
 
 ## Logging
 
