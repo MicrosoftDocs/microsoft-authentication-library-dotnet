@@ -15,7 +15,7 @@ One of the tools MSAL provides to combat production issues is logging errors whe
 
 The following errors will be logged in MSAL:
 
-- When using an authority ending in `/common` or `/organizations` for client credential authentication (<xref:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenForClient>).
+- When using an authority ending in `/common` or `/organizations` for client credential authentication (<xref:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenForClient(System.Collections.Generic.IEnumerable{System.String})>).
   - The current authority is targeting the `/common` or `/organizations` endpoint which is not recommended. See [Client credential flows](../acquiring-tokens/web-apps-apis/client-credential-flows.md) for more details.
 - When the default internal token cache is used while using confidential client applications.
   - The default token cache provided by MSAL is not designed to be performant when used in confidential client applications. Refer to [Token cache serialization in MSAL.NET](/entra/msal/dotnet/how-to/token-cache-serialization?tabs=aspnetcore) for more details.
@@ -63,6 +63,18 @@ using var meterProvider = Sdk.CreateMeterProviderBuilder()
     .Build();
 ```
 
-This will initialize the meter provider and from now on you will have access to standard MSAL telemetry. Because a console exporter is used, you should see the output being piped directly in the terminal:
+This will initialize the meter provider and use the built-in MSAL.NET meter (`MicrosoftIdentityClient_Common_Meter`) that captures core metrics, such as:
+
+- Number of successful token acquisition calls.
+- Number of failed token acquisition calls.
+- Performance of token acquisition calls:
+  - Total latency.
+  - Total latency in microseconds when L1 cache is used.
+  - Cache latency.
+  - Network latency.
+
+Because a console exporter is used, you should see the output being piped directly in the terminal:
 
 ![Example of OpenTelemetry outputting metrics to the terminal](../media/msal-net-logging/opentelemetry-logging.gif)
+
+For additional information on the use of OpenTelemetry with .NET applications, refer to [.NET observability with OpenTelemetry](/dotnet/core/diagnostics/observability-with-otel).
