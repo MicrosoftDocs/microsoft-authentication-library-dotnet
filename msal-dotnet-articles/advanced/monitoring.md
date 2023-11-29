@@ -108,11 +108,11 @@ Histogram to capture total latency for token acquisition through MSAL.
 
 | Field              | Description |
 |:-------------------|:------------|
-| MsalVersion        | Version of MSAL used. |
-| Platform           | .NET SKU used.        |
-| ApiId              | ID for the API used for token acquisition. |
-| CacheLevel         | L1, L2, or Unknown when the custom cache is used but level is not recorded. |
-| TokenSource        | Source of token (e.g., identity provider or cache). |
+| `MsalVersion`        | Version of MSAL used. |
+| `Platform`           | .NET SKU used.        |
+| `ApiId`              | ID for the API used for token acquisition. |
+| `CacheLevel`         | L1, L2, or Unknown when the custom cache is used but level is not recorded. |
+| `TokenSource`        | Source of token (e.g., identity provider or cache). |
 
 #### `MsalDurationInL1CacheInUs_1b_histogram`
 
