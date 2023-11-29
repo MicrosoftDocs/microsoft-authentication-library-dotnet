@@ -48,7 +48,7 @@ In addition to logging, MSAL exposes important metrics in <xref:Microsoft.Identi
 Starting with MSAL 4.58.0, the library supports [OpenTelemetry](https://opentelemetry.io/) - a set of APIs that enable instrumentation, generation, and collection of telemetry data in a consistent and standardized manner. To get started, ensure that you have:
 
 1. Installed the latest version of [MSAL.NET](https://www.nuget.org/packages/Microsoft.Identity.Client).
-1. Added the [OpenTelemetry](https://https://www.nuget.org/packages/OpenTelemetry#readme-body-tab) package dependency to your project.
+1. Added the [OpenTelemetry](https://www.nuget.org/packages/OpenTelemetry#readme-body-tab) package dependency to your project.
 1. Added an exporter dependency, that will allow you to export logs. One such example is the [Console exporter for OpenTelemetry.NET](https://www.nuget.org/packages/OpenTelemetry.Exporter.Console/1.7.0-alpha.1).
 
 >[!NOTE]
