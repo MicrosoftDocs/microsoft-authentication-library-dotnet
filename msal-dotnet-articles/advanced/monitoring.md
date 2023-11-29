@@ -63,18 +63,93 @@ using var meterProvider = Sdk.CreateMeterProviderBuilder()
     .Build();
 ```
 
-This will initialize the meter provider and use the built-in MSAL.NET meter (`MicrosoftIdentityClient_Common_Meter`) that captures core metrics, such as:
-
-- Number of successful token acquisition calls.
-- Number of failed token acquisition calls.
-- Performance of token acquisition calls:
-  - Total latency.
-  - Total latency in microseconds when L1 cache is used.
-  - Cache latency.
-  - Network latency.
-
-Because a console exporter is used, you should see the output being piped directly in the terminal:
+This will initialize the meter provider and use the built-in MSAL.NET meter (`MicrosoftIdentityClient_Common_Meter`) that captures a series of counters and histograms. When a console exporter is used, you should see the output being piped directly in the terminal:
 
 ![Example of OpenTelemetry outputting metrics to the terminal](../media/msal-net-logging/opentelemetry-logging.gif)
+
+The following section outlines the supported counters and histograms for the default meter.
+
+### Counters
+
+#### `msalsuccess_counter`
+
+Counter to capture aggregation of successful requests in MSAL.
+
+##### Metadata
+
+| Field              | Description |
+|:-------------------|:------------|
+| MsalVersion        | Version of MSAL used. |
+| Platform           | .NET SKU used.        |
+| ApiId              | ID for the API used for token acquisition. |
+| TokenSource        | Source of token (e.g., identity provider or cache). |
+| CacheRefreshReason | Reason for cache refresh. |
+| CacheLevel         | L1, L2, or Unknown when the custom cache is used but level is not recorded. |
+
+#### `msalfailure_counter`
+
+Counter to capture aggregation of failed requests in MSAL.
+
+##### Metadata
+
+| Field              | Description |
+|:-------------------|:------------|
+| MsalVersion        | Version of MSAL used. |
+| Platform           | .NET SKU used.        |
+| ErrorCode          | Microsoft Entra ID error code in case of MsalServiceException, MsalErrorCode in case of MsalClientException or name of the exception in case it is not an MsalException. |
+
+### Histograms
+
+#### `MsalTotalDuration_1a_histogram`
+
+Histogram to capture total latency for token acquisition through MSAL.
+
+##### Metadata
+
+| Field              | Description |
+|:-------------------|:------------|
+| MsalVersion        | Version of MSAL used. |
+| Platform           | .NET SKU used.        |
+| ApiId              | ID for the API used for token acquisition. |
+| CacheLevel         | L1, L2, or Unknown when the custom cache is used but level is not recorded. |
+| TokenSource        | Source of token (e.g., identity provider or cache). |
+
+#### `MsalDurationInL1CacheInUs_1b_histogram`
+
+Hitogram to capture latency when an L1 cache is used. Values are in microseconds for token acquisition through MSAL.
+
+##### Metadata
+
+| Field              | Description |
+|:-------------------|:------------|
+| MsalVersion        | Version of MSAL used. |
+| Platform           | .NET SKU used.        |
+| ApiId              | ID for the API used for token acquisition. |
+
+#### `MsalDurationInL2Cache_1a_histogram`
+
+Histogram to capture L2 cache latency for token acquisition through MSAL.
+
+##### Metadata
+
+| Field              | Description |
+|:-------------------|:------------|
+| MsalVersion        | Version of MSAL used. |
+| Platform           | .NET SKU used.        |
+| ApiId              | ID for the API used for token acquisition. |
+	 
+#### `MsalDurationInHttp_1a_histogram`
+
+Histogram to capture HTTP latency for token acquisition through MSAL.
+
+##### Metadata
+
+| Field              | Description |
+|:-------------------|:------------|
+| MsalVersion        | Version of MSAL used. |
+| Platform           | .NET SKU used.        |
+| ApiId              | ID for the API used for token acquisition. |
+
+### Additional information
 
 For additional information on the use of OpenTelemetry with .NET applications, refer to [.NET observability with OpenTelemetry](/dotnet/core/diagnostics/observability-with-otel).
