@@ -79,12 +79,12 @@ Counter to capture aggregation of successful requests in MSAL.
 
 | Field              | Description |
 |:-------------------|:------------|
-| MsalVersion        | Version of MSAL used. |
-| Platform           | .NET SKU used.        |
-| ApiId              | ID for the API used for token acquisition. |
-| TokenSource        | Source of token (e.g., identity provider or cache). |
-| CacheRefreshReason | Reason for cache refresh. |
-| CacheLevel         | L1, L2, or Unknown when the custom cache is used but level is not recorded. |
+| `MsalVersion`        | Version of MSAL used. |
+| `Platform`           | .NET SKU used.        |
+| `ApiId`              | ID for the API used for token acquisition. |
+| `TokenSource`        | Source of token (e.g., identity provider or cache). |
+| `CacheRefreshReason` | Reason for cache refresh. |
+| `CacheLevel`         | L1, L2, or Unknown when the custom cache is used but level is not recorded. |
 
 #### `msalfailure_counter`
 
