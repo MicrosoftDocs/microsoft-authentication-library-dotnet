@@ -140,7 +140,7 @@ Histogram to capture L2 cache latency in milliseconds for token acquisition thro
 	 
 #### `MsalDurationInHttp_1a_histogram`
 
-Histogram to capture HTTP latency for token acquisition through MSAL.
+Histogram to capture HTTP latency in milliseconds for token acquisition through MSAL.
 
 ##### Metadata
 
