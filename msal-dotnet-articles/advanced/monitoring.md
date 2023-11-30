@@ -65,7 +65,7 @@ using var meterProvider = Sdk.CreateMeterProviderBuilder()
 
 This will initialize the meter provider and use the built-in MSAL.NET meter (`MicrosoftIdentityClient_Common_Meter`) that captures a series of counters and histograms. When a console exporter is used, you should see the output being piped directly in the terminal:
 
-![Example of OpenTelemetry outputting metrics to the terminal](../media/msal-net-logging/opentelemetry-logging.gif)
+![Example of OpenTelemetry outputting metrics to the terminal](../media/msal-net-logging/otel.png)
 
 The following section outlines the supported counters and histograms for the default meter.
 
@@ -137,7 +137,7 @@ Histogram to capture L2 cache latency in milliseconds for token acquisition thro
 | `MsalVersion`        | Version of MSAL used. |
 | `Platform`           | .NET SKU used.        |
 | `ApiId`              | ID for the API used for token acquisition. |
-	 
+
 #### `MsalDurationInHttp_1a_histogram`
 
 Histogram to capture HTTP latency in milliseconds for token acquisition through MSAL.
