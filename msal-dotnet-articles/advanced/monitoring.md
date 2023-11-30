@@ -24,7 +24,7 @@ The following errors will be logged in MSAL:
 
 In addition to logging, MSAL exposes important metrics in <xref:Microsoft.Identity.Client.AuthenticationResult.AuthenticationResultMetadata?displayProperty=nameWithType>. See [Add monitoring around MSAL operations](high-availability.md#add-monitoring-around-msal-operations) for more details.
 
-- `DurationTotalInMs` - total time spent in MSAL acquiring a token, including network calls and cache operations. Create an alert on overall high latency (more than 1 second). Note that the first ever token acquisition call usually makes an extra HTTP call.
+- <xref:Microsoft.Identity.Client.AuthenticationResultMetadata.DurationTotalInMs> - total time spent in MSAL acquiring a token, including network calls and cache operations. Create an alert on overall high latency (more than 1 second). Note that the first ever token acquisition call usually makes an extra HTTP call.
 - `DurationInCacheInMs` - time spent loading or saving the token cache, which is customized by the app developer (for example, save to Redis). Create an alert on spikes.
 
     > [!NOTE]
@@ -54,7 +54,7 @@ Starting with MSAL 4.58.0, the library supports [OpenTelemetry](https://opentele
 >[!NOTE]
 >While the console exporter is a good start for local debugging and diagnostics, it's not the best choice for production-deployed applications. We recommend checking out the [official exporter documentation](https://opentelemetry.io/docs/instrumentation/net/exporters/) to learn more about available options. If you are hosting applications on Azure, you may consider ingesting OpenTelemetry data in [Azure Data Explorer](/azure/data-explorer/open-telemetry-connector?tabs=command-line) or [Azure Monitor](/azure/azure-monitor/app/opentelemetry-enable?tabs=aspnetcore).
 
-In your application initialization code, prior to bootstrapping the MSAL authentication client (e.g., `PublicClientApplication` or `ConfidentialClientApplication`), declare a new `meterProvider` instance, using the following code.
+In your application initialization code, prior to bootstrapping the MSAL authentication client (e.g., <xref:Microsoft.Identity.Client.PublicClientApplication> or <xref:Microsoft.Identity.Client.ConfidentialClientApplication>), declare a new [`MeterProvider`](https://opentelemetry.io/docs/specs/otel/metrics/api/#meterprovider) instance, using the following code.
 
 ```csharp
 using var meterProvider = Sdk.CreateMeterProviderBuilder()
