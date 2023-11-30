@@ -1,9 +1,9 @@
 ---
-title: Monitoring of applications using MSAL.NET
+title: Monitoring applications using MSAL.NET
 description: "How to use the metrics provided by MSAL.NET to monitor your application."
 ---
 
-# Monitoring of applications using MSAL.NET
+# Monitoring applications using MSAL.NET
 
 To ensure authentication services using MSAL.NET are running correctly, MSAL provides many ways to monitor its behavior so that issues can be identified and addressed before they occur in production. The incorrect use of MSAL (as it relates to token lifecycle and cache) doesn't lead to immediate failures, however sometimes they'll bubble up under high traffic scenarios after the app is in production for a period of time.
 
@@ -25,20 +25,20 @@ The following errors will be logged in MSAL:
 In addition to logging, MSAL exposes important metrics in <xref:Microsoft.Identity.Client.AuthenticationResult.AuthenticationResultMetadata?displayProperty=nameWithType>. See [Add monitoring around MSAL operations](high-availability.md#add-monitoring-around-msal-operations) for more details.
 
 - <xref:Microsoft.Identity.Client.AuthenticationResultMetadata.DurationTotalInMs> - total time spent in MSAL acquiring a token, including network calls and cache operations. Create an alert on overall high latency (more than 1 second). Note that the first ever token acquisition call usually makes an extra HTTP call.
-- `DurationInCacheInMs` - time spent loading or saving the token cache, which is customized by the app developer (for example, save to Redis). Create an alert on spikes.
+- <xref:Microsoft.Identity.Client.AuthenticationResultMetadata.DurationInCacheInMs> - time spent loading or saving the token cache, which is customized by the app developer (for example, save to Redis). Create an alert on spikes.
 
     > [!NOTE]
     > To understand how to customize token caching, see [Token cache serialization in MSAL.NET](/azure/active-directory/develop/msal-net-token-cache-serialization).
 
-- `DurationInHttpInMs` - time spent making HTTP calls to the identity provider. Create an alert on spikes.
-- `TokenSource`- indicates the source of the token - typically the cache or the identity provider. Tokens are retrieved from the cache much faster (for example, ~100 ms versus ~700 ms). This metric can be used to monitor the cache hit ratio.
-- `CacheRefreshReason` - specifies the reason for fetching the access token from the identity provider. See <xref:Microsoft.Identity.Client.CacheRefreshReason>. Use in conjunction with `TokenSource`.
-- `TokenEndpoint` - the actual token endpoint URI used to fetch the token. Useful to understand how MSAL resolves the tenant in silent calls and the region in regional calls.
+- <xref:Microsoft.Identity.Client.AuthenticationResultMetadata.DurationInHttpInMs> - time spent making HTTP calls to the identity provider. Create an alert on spikes.
+- <xref:Microsoft.Identity.Client.AuthenticationResultMetadata.TokenSource>- indicates the source of the token - typically the cache or the identity provider. Tokens are retrieved from the cache much faster (for example, ~100 ms versus ~700 ms). This metric can be used to monitor the cache hit ratio.
+- <xref:Microsoft.Identity.Client.AuthenticationResultMetadata.CacheRefreshReason> - specifies the reason for fetching the access token from the identity provider. See <xref:Microsoft.Identity.Client.CacheRefreshReason>. Use in conjunction with `TokenSource`.
+- <xref:Microsoft.Identity.Client.AuthenticationResultMetadata.TokenEndpoint> - the actual token endpoint URI used to fetch the token. Useful to understand how MSAL resolves the tenant in silent calls and the region in regional calls.
 
     > [!NOTE]
     > Regionalization is available only to internal Microsoft applications.
 
-- `RegionDetails` - the details about the region used to make call, such as the region used and any auto-detection error.
+- <xref:Microsoft.Identity.Client.AuthenticationResultMetadata.RegionDetails> - the details about the region used to make call, such as the region used and any auto-detection error.
 
     > [!NOTE]
     > Regionalization is available only to internal Microsoft applications.

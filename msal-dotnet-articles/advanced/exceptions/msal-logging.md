@@ -19,6 +19,9 @@ ms.custom: aaddev, devx-track-dotnet
 
 MSAL.NET apps generate log messages that can help diagnose issues. You can configure logging with a few lines of code, and have custom control over the level of detail and whether or not personal and organizational data is logged. Logging isn't enabled by default. We recommend you enable MSAL logging to provide a way for users to submit logs when they have authentication issues. Note that MSAL doesn't store any logs and emits logs to the destination provided in the logger implementation.
 
+>[!NOTE]
+>Starting with MSAL.NET 4.58.0 developers can also [use OpenTelemetry](../monitoring.md#opentelemetry) to aggregate logs and measure application performance.
+
 ## Logging levels
 
 There are several levels of logging detail:
