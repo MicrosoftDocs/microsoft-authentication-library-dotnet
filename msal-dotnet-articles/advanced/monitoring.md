@@ -102,7 +102,7 @@ Counter to capture aggregation of failed requests in MSAL.
 
 #### `MsalTotalDuration_1a_histogram`
 
-Histogram to capture total latency for token acquisition through MSAL.
+Histogram to capture total latency in milliseconds for token acquisition through MSAL.
 
 ##### Metadata
 
