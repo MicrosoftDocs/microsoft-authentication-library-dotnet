@@ -128,7 +128,7 @@ Histogram to capture latency when an L1 cache is used. Values are in microsecond
 
 #### `MsalDurationInL2Cache_1a_histogram`
 
-Histogram to capture L2 cache latency for token acquisition through MSAL.
+Histogram to capture L2 cache latency in milliseconds for token acquisition through MSAL.
 
 ##### Metadata
 
