@@ -17,6 +17,7 @@
     <AssemblyVersion>4.56.0.0</AssemblyVersion>
     <AssemblyVersion>4.57.0.0</AssemblyVersion>
     <AssemblyVersion>4.58.0.0</AssemblyVersion>
+    <AssemblyVersion>4.58.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
     <Interface>
@@ -41,7 +42,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.58.0.0</AssemblyVersion>
+        <AssemblyVersion>4.58.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenSilentParameterBuilder</ReturnType>
@@ -51,30 +52,22 @@
         <Parameter Name="account" Type="Microsoft.Identity.Client.IAccount" />
       </Parameters>
       <Docs>
-        <param name="scopes">Scopes requested to access a protected API</param>
+        <param name="scopes">Scopes requested to access a protected API.</param>
         <param name="account">Account for which the token is requested. <see cref="T:Microsoft.Identity.Client.IAccount" /></param>
         <summary>
-             Attempts to acquire an access token for the <paramref name="account" /> from the user token cache,
-             with advanced parameters controlling the network call. See https://aka.ms/msal-net-acquiretokensilent for more details
-             </summary>
+            Attempts to acquire an access token for the <paramref name="account" /> from the user token cache,
+            with advanced parameters controlling the network call. See <see href="https://aka.ms/msal-net-acquiretokensilent">Acquire tokens silently</see>.
+            </summary>
         <returns>An <see cref="T:Microsoft.Identity.Client.AcquireTokenSilentParameterBuilder" /> used to build the token request, adding optional
-             parameters</returns>
+            parameters.</returns>
         <remarks>
-             The access token is considered a match if it contains <b>at least</b> all the requested scopes. This means that an access token with more scopes than
-             requested could be returned as well. If the access token is expired or close to expiration (within a 5 minute window),
-             then the cached refresh token (if available) is used to acquire a new access token by making a silent network call.
-            
-             See also the additional parameters that you can set chain:
-             <see cref="M:Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithTenantId(System.String)" /> 
-             to request a token for a different authority than the one set at the application construction
-             <see cref="M:Microsoft.Identity.Client.AcquireTokenSilentParameterBuilder.WithForceRefresh(System.Boolean)" /> to bypass the user token cache and
-             force refreshing the token, as well as
-             <see cref="M:Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithExtraQueryParameters(System.Collections.Generic.Dictionary{System.String,System.String})" /> to
-             specify extra query parameters
-             </remarks>
-        <exception cref="T:Microsoft.Identity.Client.MsalUiRequiredException">will be thrown in the case where an interaction is required with the end user of the application,
-             for instance, if no refresh token was in the cache,a or the user needs to consent, or re-sign-in (for instance if the password expired),
-             or the user needs to perform two factor authentication</exception>
+            The access token is considered a match if it contains <b>at least</b> all the requested scopes. This means that an access token with more scopes than
+            requested could be returned as well. If the access token is expired or close to expiration (within a 5 minute window),
+            then the cached refresh token (if available) is used to acquire a new access token by making a silent network call.
+            </remarks>
+        <exception cref="T:Microsoft.Identity.Client.MsalUiRequiredException">When an interaction is required with the end user of the application,
+            for instance, if no refresh token was in the cache; the user needs to consent or to re-sign-in (for instance if the password expired);
+            or the user needs to perform two factor authentication.</exception>
       </Docs>
     </Member>
     <Member MemberName="AcquireTokenSilent">
@@ -86,7 +79,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.58.0.0</AssemblyVersion>
+        <AssemblyVersion>4.58.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenSilentParameterBuilder</ReturnType>
@@ -96,30 +89,22 @@
         <Parameter Name="loginHint" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="scopes">Scopes requested to access a protected API</param>
-        <param name="loginHint">Typically the username, in UPN format, e.g. johnd@contoso.com </param>
+        <param name="scopes">Scopes requested to access a protected API.</param>
+        <param name="loginHint">Typically the username, in UPN format, e.g. <c>johnd@contoso.com</c>.</param>
         <summary>
-             Attempts to acquire an access token for the <paramref name="loginHint" /> from the user token cache,
-             with advanced parameters controlling the network call. See https://aka.ms/msal-net-acquiretokensilent for more details
-             </summary>
+            Attempts to acquire an access token for the <paramref name="loginHint" /> from the user token cache,
+            with advanced parameters controlling the network call. See <see href="https://aka.ms/msal-net-acquiretokensilent">Acquire tokens silently</see>.
+            </summary>
         <returns>An <see cref="T:Microsoft.Identity.Client.AcquireTokenSilentParameterBuilder" /> used to build the token request, adding optional
-             parameters</returns>
+            parameters.</returns>
         <remarks>
-             The access token is considered a match if it contains <b>at least</b> all the requested scopes. This means that an access token with more scopes than
-             requested could be returned as well. If the access token is expired or close to expiration (within a 5 minute window),
-             then the cached refresh token (if available) is used to acquire a new access token by making a silent network call.
-            
-             See also the additional parameters that you can set chain:
-             <see cref="M:Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithTenantId(System.String)" />
-             to request a token for a different authority than the one set at the application construction
-             <see cref="M:Microsoft.Identity.Client.AcquireTokenSilentParameterBuilder.WithForceRefresh(System.Boolean)" /> to bypass the user token cache and
-             force refreshing the token, as well as
-             <see cref="M:Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithExtraQueryParameters(System.Collections.Generic.Dictionary{System.String,System.String})" /> to
-             specify extra query parameters
-             </remarks>
-        <exception cref="T:Microsoft.Identity.Client.MsalUiRequiredException">will be thrown in the case where an interaction is required with the end user of the application,
-             for instance, if no refresh token was in the cache,a or the user needs to consent, or re-sign-in (for instance if the password expired),
-             or the user needs to perform two factor authentication</exception>
+            The access token is considered a match if it contains <b>at least</b> all the requested scopes. This means that an access token with more scopes than
+            requested could be returned as well. If the access token is expired or close to expiration (within a 5 minute window),
+            then the cached refresh token (if available) is used to acquire a new access token by making a silent network call.
+            </remarks>
+        <exception cref="T:Microsoft.Identity.Client.MsalUiRequiredException">When an interaction is required with the end user of the application,
+            for instance, if no refresh token was in the cache; the user needs to consent or to re-sign-in (for instance if the password expired);
+            or the user needs to perform two factor authentication.</exception>
       </Docs>
     </Member>
     <Member MemberName="AcquireTokenSilentAsync">
@@ -131,7 +116,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.58.0.0</AssemblyVersion>
+        <AssemblyVersion>4.58.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -176,7 +161,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.58.0.0</AssemblyVersion>
+        <AssemblyVersion>4.58.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -229,7 +214,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.58.0.0</AssemblyVersion>
+        <AssemblyVersion>4.58.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.IAppConfig</ReturnType>
@@ -251,7 +236,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.58.0.0</AssemblyVersion>
+        <AssemblyVersion>4.58.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -260,7 +245,7 @@
         <summary>
             Gets the URL of the authority, or the security token service (STS) from which MSAL.NET will acquire security tokens.
             The return value of this property is either the value provided by the developer in the constructor of the application, or otherwise
-            the value of the <see cref="P:Microsoft.Identity.Client.ClientApplicationBase.Authority" /> static member (that is <c>https://login.microsoftonline.com/common/</c>)
+            the value of the <see cref="F:Microsoft.Identity.Client.ApplicationBase.DefaultAuthority" /> static member (that is <c>https://login.microsoftonline.com/common/</c>)
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -275,7 +260,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.58.0.0</AssemblyVersion>
+        <AssemblyVersion>4.58.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -308,7 +293,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.58.0.0</AssemblyVersion>
+        <AssemblyVersion>4.58.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -341,7 +326,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.58.0.0</AssemblyVersion>
+        <AssemblyVersion>4.58.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.IAccount&gt;</ReturnType>
@@ -352,10 +337,11 @@
       <Docs>
         <param name="identifier">Account identifier. The value of the identifier will probably have been stored value from the
             value of the <see cref="P:Microsoft.Identity.Client.AccountId.Identifier" /> property of <see cref="T:Microsoft.Identity.Client.AccountId" />.
-            You typically get the account id from an <see cref="T:Microsoft.Identity.Client.IAccount" /> by using the <see cref="P:Microsoft.Identity.Client.IAccount.HomeAccountId" /> property&gt;</param>
+            You typically get the account ID from an <see cref="T:Microsoft.Identity.Client.IAccount" /> by using the <see cref="P:Microsoft.Identity.Client.IAccount.HomeAccountId" /> property.</param>
         <summary>
             Get the <see cref="T:Microsoft.Identity.Client.IAccount" /> by its identifier among the accounts available in the token cache and of the same
-            environment (authority host) as <see cref="P:Microsoft.Identity.Client.IClientApplicationBase.Authority" /></summary>
+            environment (authority host) as <see cref="P:Microsoft.Identity.Client.IClientApplicationBase.Authority" />.
+            </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -369,7 +355,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.58.0.0</AssemblyVersion>
+        <AssemblyVersion>4.58.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.Identity.Client.IAccount&gt;&gt;</ReturnType>
@@ -392,7 +378,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.58.0.0</AssemblyVersion>
+        <AssemblyVersion>4.58.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.Identity.Client.IAccount&gt;&gt;</ReturnType>
@@ -401,11 +387,10 @@
         <Parameter Name="userFlow" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="userFlow">The identifier is the user flow being targeted by the specific B2C authority/&gt;.
-            </param>
+        <param name="userFlow">The identifier is the user flow being targeted by the specific B2C authority.</param>
         <summary>
-            Get the <see cref="T:Microsoft.Identity.Client.IAccount" /> collection by its identifier among the accounts available in the token cache,
-            based on the user flow. This is for Azure AD B2C scenarios.
+            Only for Azure AD B2C scenarios, get the <see cref="T:Microsoft.Identity.Client.IAccount" /> collection by its identifier
+            among the accounts available in the token cache based on the user flow.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -420,7 +405,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.58.0.0</AssemblyVersion>
+        <AssemblyVersion>4.58.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -457,7 +442,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.58.0.0</AssemblyVersion>
+        <AssemblyVersion>4.58.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -498,7 +483,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.58.0.0</AssemblyVersion>
+        <AssemblyVersion>4.58.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -534,7 +519,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.58.0.0</AssemblyVersion>
+        <AssemblyVersion>4.58.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -543,7 +528,7 @@
         <Parameter Name="account" Type="Microsoft.Identity.Client.IAccount" />
       </Parameters>
       <Docs>
-        <param name="account">instance of the account that needs to be removed</param>
+        <param name="account">Instance of the account that needs to be removed.</param>
         <summary>
             Removes all tokens in the cache for the specified account.
             </summary>
@@ -560,7 +545,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.58.0.0</AssemblyVersion>
+        <AssemblyVersion>4.58.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -594,7 +579,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.58.0.0</AssemblyVersion>
+        <AssemblyVersion>4.58.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -631,21 +616,22 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.58.0.0</AssemblyVersion>
+        <AssemblyVersion>4.58.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ITokenCache</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            User token cache. This case holds id tokens, access tokens and refresh tokens for accounts. It's used
+            User token cache which holds ID tokens, access tokens, and refresh tokens for accounts. It's used
             and updated silently if needed when calling <see cref="M:Microsoft.Identity.Client.ClientApplicationBase.AcquireTokenSilent(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount)" />
-            It is updated by each AcquireTokenXXX method, with the exception of <c>AcquireTokenForClient</c> which only uses the application
-            cache (see <c>IConfidentialClientApplication</c>).
+            It is updated by each acquire token method, with the exception of <see cref="M:Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenForClient(System.Collections.Generic.IEnumerable{System.String})" /> which only uses the application
+            cache (see <see cref="P:Microsoft.Identity.Client.IConfidentialClientApplication.AppTokenCache" />).
             </summary>
         <value>To be added.</value>
         <remarks>On .NET Framework and .NET Core you can also customize the token cache serialization.
-            See https://aka.ms/msal-net-token-cache-serialization. This is taken care of by MSAL.NET on other platforms.
+            See https://aka.ms/msal-net-token-cache-serialization. This is taken care of by MSAL.NET on mobile platforms and on UWP.
+            It is recommended to use token cache serialization for web site and web api scenarios.
             </remarks>
       </Docs>
     </Member>
@@ -658,7 +644,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.58.0.0</AssemblyVersion>
+        <AssemblyVersion>4.58.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
