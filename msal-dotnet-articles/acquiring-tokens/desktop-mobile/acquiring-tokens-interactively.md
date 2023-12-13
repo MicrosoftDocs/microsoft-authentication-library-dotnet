@@ -67,9 +67,13 @@ WithParentActivityOrWindow(object parent).
 
 Remarks:
 
-- On .NET Standard, the expected `object` is an `Activity` on Android, a `UIViewController` on iOS, an `NSWindow` on MAC, and a `IWin32Window` or `IntPr` on Windows.
-- On Windows, you must call `AcquireTokenInteractive` from the UI thread so that the embedded browser gets the appropriate UI synchronization context.  Not calling from the UI thread may cause messages to not pump properly and/or deadlock scenarios with the UI. One way of achieving this, if you are not on the UI thread is to use the `Dispatcher` on WPF.
-- If you are using WPF, to get a window from a WPF control, you can use  `WindowInteropHelper.Handle` class. The call is then, from a WPF control (this):
+- On .NET Standard, the expected `object` is:
+  - `Activity` on Android.
+  - `UIViewController` on iOS.
+  - `NSWindow` on macOS.
+  - `IWin32Window` or `IntPr` on Windows.
+- On Windows, you must call <xref:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenInteractive(System.Collections.Generic.IEnumerable{System.String})> from the UI thread so that the embedded browser gets the appropriate UI synchronization context.  Not calling from the UI thread may cause messages to not pump properly and/or deadlock scenarios with the UI. One way of achieving this if you are not on the UI thread is to use <xref:System.Windows.Threading.Dispatcher>.
+- If you are using WPF to get a window from a WPF control you can use  <xref:System.Windows.Interop.WindowInteropHelper.Handle>:
   
   ```csharp
   result = await app.AcquireTokenInteractive(scopes)
