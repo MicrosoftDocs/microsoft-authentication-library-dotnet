@@ -33,9 +33,9 @@ catch (MsalUiRequiredException)
 >[!NOTE]
 >To use <xref:Microsoft.Identity.Client.ClientApplicationBase.AcquireTokenSilent(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount)> the developer needs to set up a token cache. Without a token cache, the interactive prompt will always be shown, even if the user has previously logged in. To learn more about setting up a token cache, refer to [Token cache serialization in MSAL.NET](../../how-to/token-cache-serialization.md).
 
-## Mandatory parameters
+## Required parameters
 
-`AcquireTokenInteractive` has only one mandatory parameter - `scopes`, which contains an enumeration of strings that define the scopes for which a token is required. If the token is for Microsoft Graph, the required scopes can be found in the API reference of each Microsoft Graph API in the section named **Permissions**. For instance, to [list the user's contacts](/graph/api/user-list-contacts), the `User.Read` and `Contacts.Read` scopes will need to be used. For additional information, refer to the [Microsoft Graph permissions reference](/graph/permissions-reference).
+<xref:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenInteractive(System.Collections.Generic.IEnumerable{System.String})> has only one required parameter - `scopes`, which contains an enumeration of strings that define the scopes for which a token is required. If the token is for Microsoft Graph, the required scopes can be found in the API reference of each Microsoft Graph API in the section named **Permissions**. For instance, to [list the user's contacts](/graph/api/user-list-contacts), the `User.Read` and `Contacts.Read` scopes will need to be used. For additional information, refer to the [Microsoft Graph permissions reference](/graph/permissions-reference).
 
 On Android, you also need to specify the parent activity using <xref:Microsoft.Identity.Client.PublicClientApplicationBuilder.WithParentActivityOrWindow(System.Func{System.IntPtr})>, ensuring that the token gets back to the parent activity after the interaction is complete. If you don't specify it, an exception will be thrown.
 
@@ -133,18 +133,16 @@ var result = await app.AcquireTokenInteractive(scopesForCustomerApi)
 ### Have the user consent upfront for several resources
 
 >[!NOTE]
-> Getting consent for several resources works for Azure AD v2.0, but not for Azure AD B2C. B2C supports only admin consent, not user consent.
+> Getting consent for several resources works for Microsoft Entra ID, but not for Microsoft Entra B2C. In the B2C scenario, only admin consent is supported.
 
-The Azure AD v2.0 endpoint does not allow you to get a token for several resources at once. Therefore the scopes parameter should only contain scopes for a single resource. However, you can ensure that the user pre-consents to several resources by using the `extraScopesToConsent` parameter.
+The Microsoft Entra ID endpoint does not allow you to get a token for several resources at once. The scopes parameter should only contain scopes for a single resource. However, developers can ensure that the user pre-consents to several resources by using the `extraScopesToConsent` argument.
 
-For instance if you have two resources, which have 2 scopes each:
+For example, if there are two resources, which have two scopes each:
 
 - `https://mytenant.onmicrosoft.com/customerapi` (with 2 scopes `customer.read` and `customer.write`)
 - `https://mytenant.onmicrosoft.com/vendorapi` (with 2 scopes `vendor.read` and `vendor.write`)
 
-you should use the .WithAdditionalPromptToConsent modifier which has the `extraScopesToConsent` parameter
-
-For instance:
+The application should use the <xref:Microsoft.Identity.Client.AcquireTokenInteractiveParameterBuilder.WithExtraScopesToConsent(System.Collections.Generic.IEnumerable{System.String})> function when acquiring the token interactively, which has the `extraScopesToConsent` argument:
 
 ```csharp
 string[] scopesForCustomerApi = new string[]
@@ -152,6 +150,7 @@ string[] scopesForCustomerApi = new string[]
   "https://mytenant.onmicrosoft.com/customerapi/customer.read",
   "https://mytenant.onmicrosoft.com/customerapi/customer.write"
 };
+
 string[] scopesForVendorApi = new string[]
 {
  "https://mytenant.onmicrosoft.com/vendorapi/vendor.read",
@@ -161,31 +160,29 @@ string[] scopesForVendorApi = new string[]
 var accounts = await app.GetAccountsAsync();
 var result = await app.AcquireTokenInteractive(scopesForCustomerApi)
                      .WithAccount(accounts.FirstOrDefault())
-                     .WithExtraScopeToConsent(scopesForVendorApi)
+                     .WithExtraScopesToConsent(scopesForVendorApi)
                      .ExecuteAsync();
 ```
 
-This will get you an access token for the first Web API. Then when you need to call the second one, you can call
+This will get an access token for the first web API. When calling the second API, it can be done like this:
 
 ```csharp
 AcquireTokenSilent(scopesForVendorApi, accounts.FirstOrDefault()).ExecuteAsync();
 ```
 
-See [this](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/issues/550#issuecomment-383572227) GitHub issue for more context.
+## Microsoft personal accounts
 
-## Microsoft personal account require re-consenting each time the app is run
+For Microsoft personal accounts, re-prompting for consent on each native client call to authorize is the intended behavior. Native client identity is inherently insecure and the Microsoft identity platform chose to mitigate this for consumer services by prompting for consent each time the application is authorized.
 
-For Microsoft personal accounts users, re-prompting for consent on each native client call to authorize is the intended behavior. Native client identity is inherently insecure, and the Microsoft identity platform chose to mitigate this insecurity for consumer services by prompting for consent each time the application is authorized.
+## Platform-specific details
 
-## More specificities depending on the platforms
+Depending on the platform, additional configuration might be required for interactive prompts:
 
-Depending on the platforms, you will need to do a bit of extra work to use MSAL.NET. For more details on each platform, see:
+- [Configuration requirements and troubleshooting tips for Xamarin Android with MSAL.NET](/entra/identity-platform/msal-net-xamarin-android-considerations)
+- [Considerations for using Xamarin iOS with MSAL.NET](/entra/identity-platform/msal-net-xamarin-ios-considerations)
+- [Using MSAL.NET with UWP applications](./uwp.md)
 
-- [Configuration requirements and troubleshooting tips for Xamarin Android with MSAL.NET](/azure/active-directory/develop/msal-net-xamarin-android-considerations)
-- [Considerations for using Xamarin iOS with MSAL.NET](/azure/active-directory/develop/msal-net-xamarin-ios-considerations)
-- [UWP specifics](./uwp.md)
-
-## Samples illustrating acquiring tokens interactively with MSAL.NET
+## Samples
 
 | Sample | Platform | Description |
 |------ | -------- | ----------- |
