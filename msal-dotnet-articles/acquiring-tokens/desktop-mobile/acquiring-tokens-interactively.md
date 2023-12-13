@@ -5,31 +5,39 @@ description: "How to acquire tokens with MSAL.NET and user interaction."
 
 # Acquiring tokens interactively
 
-The method to use to acquire a token interactively is `IPublicClientApplication.AcquireTokenInteractive`
+Interactive token acquisition requires that the user _interacts_ with an authentication dialog that requests credentials as input and is only available for public client applications. In MSAL.NET, the method to use to acquire a token interactively is <xref:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenInteractive(System.Collections.Generic.IEnumerable{System.String})>.
 
-The following example shows minimal code to get a token for reading the user's profile with Microsoft Graph.
+The following example shows barebones code to get a token for reading the user's profile with Microsoft Graph:
 
 ```csharp
-string[] scopes = new string[] {
-  "user.read"
-};
-var app = PublicClientApplicationBuilder.Create(clientId).Build();
+string[] scopes = new string[] { "user.read" };
+
+var app = PublicClientApplicationBuilder.Create("YOUR_CLIENT_ID")
+    .WithDefaultRedirectUri()
+    .Build();
+
 var accounts = await app.GetAccountsAsync();
+
 AuthenticationResult result;
-try {
-  result = await app.AcquireTokenSilent(scopes, accounts.FirstOrDefault())
-    .ExecuteAsync();
-} catch (MsalUiRequiredException) {
-  result = await app.AcquireTokenInteractive(scopes)
-    .ExecuteAsync();
+try
+{
+    result = await app.AcquireTokenSilent(scopes, accounts.FirstOrDefault())
+      .ExecuteAsync();
+}
+catch (MsalUiRequiredException)
+{
+    result = await app.AcquireTokenInteractive(scopes).ExecuteAsync();
 }
 ```
 
+>[!NOTE]
+>To use <xref:Microsoft.Identity.Client.ClientApplicationBase.AcquireTokenSilent(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount)> the developer needs to set up a token cache. Without a token cache, the interactive prompt will always be shown, even if the user has previously logged in. To learn more about setting up a token cache, refer to [Token cache serialization in MSAL.NET](../../how-to/token-cache-serialization.md).
+
 ## Mandatory parameters
 
-`AcquireTokenInteractive` has only one mandatory parameter ``scopes``, which contains an enumeration of strings which define the scopes for which a token is required. If the token is for the Microsoft Graph, the required scopes can be found in api reference of each Microsoft graph API in the section named "Permissions". For instance, to [list the user's contacts](/graph/api/user-list-contacts), the scope "User.Read", "Contacts.Read" will need to be used. See also [Microsoft Graph permissions reference](/graph/permissions-reference).
+`AcquireTokenInteractive` has only one mandatory parameter - `scopes`, which contains an enumeration of strings that define the scopes for which a token is required. If the token is for Microsoft Graph, the required scopes can be found in the API reference of each Microsoft Graph API in the section named **Permissions**. For instance, to [list the user's contacts](/graph/api/user-list-contacts), the `User.Read` and `Contacts.Read` scopes will need to be used. For additional information, refer to the [Microsoft Graph permissions reference](/graph/permissions-reference).
 
-On Android, you need to also specify the parent activity (using `.WithParentActivityOrWindow`, see below) so that the token gets back to that parent activity after the interaction. If you don't specify it, an exception will be thrown when calling `.ExecuteAsync()`.
+On Android, you also need to specify the parent activity using <xref:Microsoft.Identity.Client.PublicClientApplicationBuilder.WithParentActivityOrWindow(System.Func{System.IntPtr})>, ensuring that the token gets back to the parent activity after the interaction is complete. If you don't specify it, an exception will be thrown.
 
 ## Specific optional parameters
 
