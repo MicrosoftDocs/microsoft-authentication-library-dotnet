@@ -47,7 +47,7 @@ catch (MsalUiRequiredException)
 
 ## Using brokers
 
-When building applications for Windows, the recommended approach for user authentication is to use the [Web Account Manager (WAM)](./wam.md). WAM enables developers to provide a seamless experience in connecting their application to personal or Microsoft Entra ID accounts already connected to Windows. Additionally, when using WAM developers do not need to worry about manually implementing support for modern authentication flows, such as Windows Hello, or building mechanisms for token protection.
+The recommended approach for user authentication is to use brokers and not browsers, for example [Web Account Manager (WAM)](./wam.md) on Windows. WAM enables developers to provide a seamless experience in connecting their application to personal or Microsoft Entra ID accounts already connected to Windows. Additionally, brokers offer improved security through token protection.
 
 ## Required parameters
 
