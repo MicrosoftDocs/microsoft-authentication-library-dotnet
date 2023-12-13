@@ -88,7 +88,7 @@ Remarks:
 - On .NET Standard, the expected `object` is:
   - `Activity` on Android.
   - `UIViewController` on iOS.
-  - `IWin32Window` or `IntPr` on Windows.
+ `IntPr` on Windows - see [guidelines](/msal/dotnet/acquiring-tokens/desktop-mobile/wam#parent-window-handles).
 - On Windows, you must call <xref:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenInteractive(System.Collections.Generic.IEnumerable{System.String})> from the UI thread so that the embedded browser gets the appropriate UI synchronization context.  Not calling from the UI thread may cause messages to not pump properly and/or deadlock scenarios with the UI. One way of achieving this if you are not on the UI thread is to use <xref:System.Windows.Threading.Dispatcher>.
   
   ```csharp
