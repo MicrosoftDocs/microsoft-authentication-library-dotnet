@@ -173,7 +173,7 @@ To use the new broker, developers will need to call <xref:Microsoft.Identity.Cli
 | .NET MAUI                       | ✅                       | ⛔                               | ⛔                               |
 | netcoreapp3.1 (not recommended) | ✅                       | ✅                               |✅ (not recommended)              |
 
-Because the `netcoreapp3.1` target framework has reached the end of life in December 2022, our team will no longer offer support for applications using MSAL with the specific version of .NET Core. We recommend upgrading to the latest version where possible.
+Because the `netcoreapp3.1` target framework has reached the end of life in December 2022, our team will no longer offer support for applications using MSAL with this specific version of .NET Core. We recommend upgrading to the latest version where possible.
 
 ## Troubleshooting
 
