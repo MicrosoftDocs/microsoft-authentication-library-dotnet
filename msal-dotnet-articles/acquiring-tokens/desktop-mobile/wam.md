@@ -162,7 +162,7 @@ This flow, also known as Resource Owner Password Credentials (ROPC), is not reco
 
 ## Package availability
 
-To use the new broker, developers will need to use the <xref:Microsoft.Identity.Client.Broker.BrokerExtension> class, hosted in the <xref:Microsoft.Identity.Client.Broker> package. Most of the .NET platform variants supported by MSAL.NET will need that package only, with a few exceptions. See the table below for a detailed mapping.
+To use the new broker, developers will need to call <xref:Microsoft.Identity.Client.Broker.BrokerExtension.WithBroker(Microsoft.Identity.Client.PublicClientApplicationBuilder,Microsoft.Identity.Client.BrokerOptions)>, hosted in the <xref:Microsoft.Identity.Client.Broker> package. Most of the .NET platform variants supported by MSAL.NET will need that package only, with a few exceptions. See the table below for a detailed mapping.
 
 | Framework                       | [Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client/) | [Microsoft.Identity.Client.Broker](https://www.nuget.org/packages/Microsoft.Identity.Client.Broker/) | [Microsoft.Identity.Client.Desktop](https://www.nuget.org/packages/Microsoft.Identity.Client.Desktop/) |
 |:--------------------------------|:--------------------------|:---------------------------------|:----------------------------------|
