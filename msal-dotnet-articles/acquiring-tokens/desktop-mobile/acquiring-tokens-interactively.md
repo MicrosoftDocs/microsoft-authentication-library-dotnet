@@ -43,25 +43,25 @@ On Android, you also need to specify the parent activity using <xref:Microsoft.I
 
 ### WithParentActivityOrWindow
 
-Being interactive, UI is important. `AcquireTokenInteractive` has one specific optional parameters enabling to specify, for platforms supporting it, the parent UI (window in Windows, Activity in Android). This parent UI is specified using `.WithParentActivityOrWindow()`. The UI dialog will typically be centered on that parent. As explained above, on Android the parent activity is a mandatory parameter.
+<xref:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenInteractive(System.Collections.Generic.IEnumerable{System.String})> has one optional parameter that enables developers to provide a reference to the parent UI component (e.g., window in Windows, activity in Android). This parent UI is specified using <xref:Microsoft.Identity.Client.PublicClientApplicationBuilder.WithParentActivityOrWindow(System.Func{System.IntPtr})>. The UI dialog will typically be centered on that parent. As explained above, on Android the parent activity is a _required_ parameter.
 
-`.WithParentActivityOrWindow` has a different type depending on the platform:
+<xref:Microsoft.Identity.Client.PublicClientApplicationBuilder.WithParentActivityOrWindow(System.Func{System.IntPtr})> has a different argument type, depending on the platform where it is used:
 
 ```csharp
 // Android
 WithParentActivityOrWindow(Activity activity)
 
-// net45
+// .NET Framework
 WithParentActivityOrWindow(IntPtr windowPtr)
 WithParentActivityOrWindow(IWin32Window window)
 
-// Mac
+// macOS
 WithParentActivityOrWindow(NSWindow window)
 
 // iOS
 WithParentActivityOrWindow(IUIViewController viewController)
 
-// .Net Standard (this will be on all platforms at runtime, but only on NetStandard at build time)
+// .NET Standard (this will be on all platforms at runtime, but only on .NET Standard at build time)
 WithParentActivityOrWindow(object parent).
 ```
 
@@ -180,7 +180,7 @@ Depending on the platforms, you will need to do a bit of extra work to use MSAL.
 
 | Sample | Platform | Description |
 |------ | -------- | ----------- |
-| [active-directory-dotnet-desktop-msgraph-v2](http://github.com/azure-samples/active-directory-dotnet-desktop-msgraph-v2) | Desktop (WPF) | Windows Desktop .NET (WPF) application calling the Microsoft Graph API. ![WPF app topology](../../media/wpf-app-topology.png) |
+| [active-directory-dotnet-desktop-msgraph-v2](https://github.com/azure-samples/active-directory-dotnet-desktop-msgraph-v2) | Desktop (WPF) | Windows Desktop .NET (WPF) application calling the Microsoft Graph API. ![WPF app topology](../../media/wpf-app-topology.png) |
 | [active-directory-dotnet-native-uwp-v2](https://github.com/azure-samples/active-directory-dotnet-native-uwp-v2) | UWP | A Windows Universal Platform client application using MSAL.NET, accessing the Microsoft Graph for a user authenticating with Azure AD v2.0 endpoint. ![UWP app topology](../../media/uwp-app-topology.png) |
 | [https://github.com/Azure-Samples/active-directory-xamarin-native-v2](https://github.com/Azure-Samples/active-directory-xamarin-native-v2) | Xamarin iOS, Android, UWP | A simple Xamarin Forms app showcasing how to use MSAL to authenticate Microsoft accounts and Microsoft Entra ID via the Microsoft identity platform endpoint, and access the Microsoft Graph with the resulting token. ![Xamarin Forms app topology](../../media/xamarin-forms-topology.png) |
 | [https://github.com/Azure-Samples/active-directory-dotnet-native-aspnetcore-v2](https://github.com/Azure-Samples/active-directory-dotnet-native-aspnetcore-v2) | WPF, ASP.NET Core 2.0 Web API | A WPF application calling an ASP.NET Core Web API using Azure AD v2.0. ![Desktop and web app interaction topology](../../media/desktop-web-topology.png) |
