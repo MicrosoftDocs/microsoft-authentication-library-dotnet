@@ -160,6 +160,21 @@ This flow, also known as Resource Owner Password Credentials (ROPC), is not reco
 - On Mac, Linux, and versions of Windows earlier than 10 or Windows Server 2019, MSAL will fall back to a browser.
 - Updated WAM broker is not available on UWP due to Windows API limitations. UWP apps will use the legacy WAM implementation.
 
+## Package availability
+
+To use the new broker, developers will need to use the <xref:Microsoft.Identity.Client.Broker.BrokerExtension> class, hosted in the <xref:Microsoft.Identity.Client.Broker> package. Most of the .NET platform variants supported by MSAL.NET will need that package only, with a few exceptions. See the table below for a detailed mapping.
+
+| Framework                       | [Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client/) | [Microsoft.Identity.Client.Broker](https://www.nuget.org/packages/Microsoft.Identity.Client.Broker/) | [Microsoft.Identity.Client.Desktop](https://www.nuget.org/packages/Microsoft.Identity.Client.Desktop/) |
+|:--------------------------------|:--------------------------|:---------------------------------|:----------------------------------|
+| net48                           | ✅                       | ✅                               | ✅ (not recommended)             |
+| net6.0                          | ✅                       | ✅                               | ⛔                               |
+| net6.0-windows                  | ✅                       | ⛔                               | ⛔                               |
+| UWP                             | ✅                       | ⛔                               | ⛔                               |
+| .NET MAUI                       | ✅                       | ⛔                               | ⛔                               |
+| netcoreapp3.1 (not recommended) | ✅                       | ✅                               |✅ (not recommended)              |
+
+Because the `netcoreapp3.1` target framework has reached the end of life in December 2022, our team will no longer offer support for applications using MSAL with the specific version of .NET Core. We recommend upgrading to the latest version where possible.
+
 ## Troubleshooting
 
 ### "MsalClientException (ErrCode 5376): At least one scope needs to be requested for this authentication flow." error message
