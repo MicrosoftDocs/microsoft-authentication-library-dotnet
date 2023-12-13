@@ -17,7 +17,9 @@ ms.custom: devx-track-csharp, aaddev, devx-track-dotnet
 
 # Acquiring tokens interactively
 
-Interactive token acquisition requires that the user _interacts_ with an authentication dialog that requests credentials as input and is only available for public client applications. In MSAL.NET, the method to use to acquire a token interactively is <xref:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenInteractive(System.Collections.Generic.IEnumerable{System.String})>.
+Interactive token acquisition requires that the user _interacts_ with an authentication dialog, hosted in a browser that MSAL starts. In contrast, in a web app, the user is redirected to the authorization page and a different API is used. The authentication dialog may request credentials, password changes, multi-factor auth etc. - the flow and visual content is driven by the service. 
+
+In MSAL.NET, the method to use to acquire a token interactively is <xref:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenInteractive(System.Collections.Generic.IEnumerable{System.String})>.
 
 The following example shows barebones code to get a token for reading the user's profile with Microsoft Graph:
 
