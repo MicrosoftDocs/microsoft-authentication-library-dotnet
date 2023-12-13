@@ -110,28 +110,14 @@ var result = await app.AcquireTokenInteractive(scopesForCustomerApi)
                      .ExecuteAsync();
 ```
 
-## Other optional parameters (common to many AcquireToken methods)
-
-Builder modifier | Description
--- | --
-WithAuthority (7 overrides) | Overrides the authority
-WithAdfsAuthority(string) | Overrides the authority
-WithB2CAuthority(string) | Overrides the authority
-WithAccount(IAccount) | ``account`` (optional) of type ``IAccount``, provides a hint to the STS about the user for which to get the token. This can be set from the `Account` member of a previous AuthenticationResult, or one of the elements of the collection returned by ``GetAccountsAsync()`` method of the ``PublicClientApplication``.
-WithLoginHint(string) | ``loginHint`` (optional) offers a hint to the STS about the user for which to get the token alternative to user. It's used like ``userIdentifier`` in ADAL. Needs to be passed the `preferred_username` of the IDToken (contrary to ADAL which was requiring the UPN)
-WithClaims(string) | Requests additional claims. This normally is in reaction to an MsalClaimChallengeException which has a Claim member (Conditional Access)
-WithPrompt(Prompt) | Is the way to control, in MSAL.NET, the interaction between the user and the STS to enter credentials. It's different depending on the platform (See below). Note that MSAL 3.x is taking a breaking change here. Prompt used to be named ``UIBehavior`` in MSAL 1.x and 2.x
-WithExtraQueryParameters(dictionary) | A dictionary of keys / values.
-WithExtraScopesToConsent(extraScopes) | Enables application developers to specify additional scopes for which users will pre-consent. This can be in order to avoid having them see incremental consent screens when the Web API require them. This is also indispensable in the case where you want to provide scopes for several resources. See [the paragraph on getting consent for several resources](#have-the-user-consent-upfront-for-several-resources) below for more details.
-
 ## The different browsers
 
-| **Browser**                                    | **Pro**                                                                                                                                                                                                                                                 | **Con**                                                                                                                                                                       |
-|------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Embedded WebView1 (based on Internet Explorer) | - Ships with all supported versions of Windows <br> - In use by identity libs for 10+ years                                                                                                                                                             | - No FIDO (e.g. YubiKeys) <br> - No Windows Hello <br> - Conditional Access problems on some older Windows versions <br> - Windows only                                       |
-| Embedded WebView2 (based on Microsoft Edge)    | - FIDO and Windows Hello support                                                                                                                                                                                                                        | - Does not ship in the box yet (?). Deployment is difficult. <br> - Conditional Access problems on some older Windows versions. <br> - Windows only                           |
-| System browser                                 | - Uses default system browser, to which customer is used to. <br> - Chrome, Edge (and possibly Mozilla) have integration with Conditional Access, Win Hello, FIDO <br> - Works on Mac and Linux and every possible version of Windows.                  | - User experience is not as good, for example if user navigates away from the browser, the app doesn’t know and keep on waiting.                                              |
-| WAM                                            | - FIDO, Hello, Conditional Access <br> - Fully integrated with Windows <br> - Better security <br> - This is the North Star of the Identity team; many experiences will light up with WAM use! <br> - See [WAM](./wam.md) for all benefits.             | - Legacy MSA-passthrough config does not work. We recommend creating a new app if to move away from MSA-passthrough. <br> - Windows only (10+, Server 2016 and Server 2019+). |
+| Browser           | Pro                  | Con                |
+|:------------------|:---------------------|:-------------------|
+| Embedded WebView1 (based on Internet Explorer) | - Ships with all supported versions of Windows <br>- In use by identity libraries for 10+ years | - No FIDO support (e.g., YubiKey)<br>- No support for Windows Hello<br>- Conditional Access problems on older Windows versions<br>- Windows only |
+| Embedded WebView2 (based on Microsoft Edge)    | - FIDO and Windows Hello support | - Conditional Access problems on some older Windows versions.<br>- Windows only |
+| System browser                                 | - Uses default system browser.<br>- Chrome, Edge, and Firefox have integration with Conditional Access, Windows Hello, and FIDO.<br>- Works on macOS, Linux, and every possible version of Windows. | - Somewhat disruptive user experience (context switches to the browser). |
+| [Windows Broker](./wam.md)                     | - Support for FIDO, Windows Hello, and Conditional Access policies.<br>- Fully integrated with Windows.<br>- Better security.<br>- Long-term strategic component for authentication on Windows.<br> | - Legacy MSA-passthrough configuration does not work. We recommend creating a new app if you move away from MSA-passthrough.<br>- Windows only (10+, Server 2016, and Server 2019+). |
 
 ## How to
 
