@@ -112,7 +112,7 @@ Inside the call, you can specify one of the possible <xref:Microsoft.Identity.Cl
 
 ### WithUseEmbeddedWebView
 
-Using <xref:Microsoft.Identity.Client.AcquireTokenInteractiveParameterBuilder.WithUseEmbeddedWebView(System.Boolean)> enables developers to specify whether they want to force the usage of an embedded web view or the system browser (when available). An embedded web view is effectively a popup that wraps either WebView1 or WebView2, depending on the client configuration. For more details see [Using web browsers (MSAL.NET)](../using-web-browsers.md) and [Using WebView2 with MSAL.NET](../../advanced/webview2.md).
+Using <xref:Microsoft.Identity.Client.AcquireTokenInteractiveParameterBuilder.WithUseEmbeddedWebView(System.Boolean)> enables developers to specify whether they want to force the usage of an embedded web view or the system browser (when available). An embedded web view is effectively a popup that contains either a WebView1 or a WebView2 component, depending on the client configuration. For more details see [Using web browsers (MSAL.NET)](../using-web-browsers.md) and [Using WebView2 with MSAL.NET](../../advanced/webview2.md).
 
 You can specify whether to use the embedded web view or not when acquiring the token:
 
