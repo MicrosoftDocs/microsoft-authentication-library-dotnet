@@ -1,67 +1,95 @@
 ---
 title: Acquiring tokens interactively
 description: "How to acquire tokens with MSAL.NET and user interaction."
+services: active-directory
+author: Dickson-Mwendia
+manager: CelesteDG
+
+ms.service: active-directory
+ms.subservice: develop
+ms.topic: conceptual
+ms.workload: identity
+ms.date: 12/13/2023
+ms.author: dmwendia
+ms.reviewer: ddelimarsky
+ms.custom: devx-track-csharp, aaddev, devx-track-dotnet
 ---
 
 # Acquiring tokens interactively
 
-The method to use to acquire a token interactively is `IPublicClientApplication.AcquireTokenInteractive`
+Interactive token acquisition requires that the user _interacts_ with an authentication dialog, hosted in a browser that MSAL starts. In contrast, in a web app, the user is redirected to the authorization page and a different API is used. The authentication dialog may request credentials, password changes, multi-factor auth etc. - the flow and visual content is driven by the service. 
 
-The following example shows minimal code to get a token for reading the user's profile with Microsoft Graph.
+In MSAL.NET, the method to use to acquire a token interactively is <xref:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenInteractive(System.Collections.Generic.IEnumerable{System.String})>.
+
+The following example shows barebones code to get a token for reading the user's profile with Microsoft Graph:
 
 ```csharp
-string[] scopes = new string[] {
-  "user.read"
-};
-var app = PublicClientApplicationBuilder.Create(clientId).Build();
+string[] scopes = new string[] { "user.read" };
+
+var app = PublicClientApplicationBuilder.Create("YOUR_CLIENT_ID")
+    .WithDefaultRedirectUri()
+    .Build();
+
 var accounts = await app.GetAccountsAsync();
+
 AuthenticationResult result;
-try {
-  result = await app.AcquireTokenSilent(scopes, accounts.FirstOrDefault())
-    .ExecuteAsync();
-} catch (MsalUiRequiredException) {
-  result = await app.AcquireTokenInteractive(scopes)
-    .ExecuteAsync();
+try
+{
+    result = await app.AcquireTokenSilent(scopes, accounts.FirstOrDefault())
+      .ExecuteAsync();
+}
+catch (MsalUiRequiredException)
+{
+    result = await app.AcquireTokenInteractive(scopes).ExecuteAsync();
 }
 ```
 
-## Mandatory parameters
+>[!NOTE]
+>To use <xref:Microsoft.Identity.Client.ClientApplicationBase.AcquireTokenSilent(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount)> the developer needs to set up a token cache. Without a token cache, the interactive prompt will always be shown after the app restarts, even if the user has previously logged in. To learn more about setting up a token cache, refer to [Token cache serialization in MSAL.NET](../../how-to/token-cache-serialization.md).
 
-`AcquireTokenInteractive` has only one mandatory parameter ``scopes``, which contains an enumeration of strings which define the scopes for which a token is required. If the token is for the Microsoft Graph, the required scopes can be found in api reference of each Microsoft graph API in the section named "Permissions". For instance, to [list the user's contacts](/graph/api/user-list-contacts), the scope "User.Read", "Contacts.Read" will need to be used. See also [Microsoft Graph permissions reference](/graph/permissions-reference).
+## Using brokers
 
-On Android, you need to also specify the parent activity (using `.WithParentActivityOrWindow`, see below) so that the token gets back to that parent activity after the interaction. If you don't specify it, an exception will be thrown when calling `.ExecuteAsync()`.
+The recommended approach for user authentication is to use brokers and not browsers, for example [Web Account Manager (WAM)](./wam.md) on Windows. WAM enables developers to provide a seamless experience in connecting their application to personal or Microsoft Entra ID accounts already connected to Windows. Additionally, brokers offer improved security through token protection.
 
-## Specific optional parameters
+## Required parameters
+
+<xref:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenInteractive(System.Collections.Generic.IEnumerable{System.String})> has only one required parameter - `scopes`, which contains an enumeration of strings that define the scopes for which a token is required. If the token is for Microsoft Graph, the required scopes can be found in the API reference of each Microsoft Graph API in the section named **Permissions**. For instance, to [list the user's contacts](/graph/api/user-list-contacts), the `User.Read` and `Contacts.Read` scopes will need to be used. For additional information, refer to the [Microsoft Graph permissions reference](/graph/permissions-reference).
+
+On Android, you also need to specify the parent activity using <xref:Microsoft.Identity.Client.PublicClientApplicationBuilder.WithParentActivityOrWindow(System.Func{System.IntPtr})>, ensuring that the token gets back to the parent activity after the interaction is complete. If you don't specify it, an exception will be thrown.
+
+## Optional parameters
 
 ### WithParentActivityOrWindow
 
-Being interactive, UI is important. `AcquireTokenInteractive` has one specific optional parameters enabling to specify, for platforms supporting it, the parent UI (window in Windows, Activity in Android). This parent UI is specified using `.WithParentActivityOrWindow()`. The UI dialog will typically be centered on that parent. As explained above, on Android the parent activity is a mandatory parameter.
+<xref:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenInteractive(System.Collections.Generic.IEnumerable{System.String})> has one optional parameter that enables developers to provide a reference to the parent UI component (e.g., window in Windows, activity in Android). This parent UI is specified using <xref:Microsoft.Identity.Client.PublicClientApplicationBuilder.WithParentActivityOrWindow(System.Func{System.IntPtr})>. The UI dialog will typically be centered on that parent. As explained above, on Android the parent activity is a _required_ parameter.
 
-`.WithParentActivityOrWindow` has a different type depending on the platform:
+<xref:Microsoft.Identity.Client.PublicClientApplicationBuilder.WithParentActivityOrWindow(System.Func{System.IntPtr})> has a different argument type, depending on the platform where it is used:
 
 ```csharp
 // Android
 WithParentActivityOrWindow(Activity activity)
 
-// net45
+// .NET Framework
 WithParentActivityOrWindow(IntPtr windowPtr)
 WithParentActivityOrWindow(IWin32Window window)
 
-// Mac
+// macOS
 WithParentActivityOrWindow(NSWindow window)
 
 // iOS
 WithParentActivityOrWindow(IUIViewController viewController)
 
-// .Net Standard (this will be on all platforms at runtime, but only on NetStandard at build time)
+// .NET Standard (this will be on all platforms at runtime, but only on .NET Standard at build time)
 WithParentActivityOrWindow(object parent).
 ```
 
 Remarks:
 
-- On .NET Standard, the expected `object` is an `Activity` on Android, a `UIViewController` on iOS, an `NSWindow` on MAC, and a `IWin32Window` or `IntPr` on Windows.
-- On Windows, you must call `AcquireTokenInteractive` from the UI thread so that the embedded browser gets the appropriate UI synchronization context.  Not calling from the UI thread may cause messages to not pump properly and/or deadlock scenarios with the UI. One way of achieving this, if you are not on the UI thread is to use the `Dispatcher` on WPF.
-- If you are using WPF, to get a window from a WPF control, you can use  `WindowInteropHelper.Handle` class. The call is then, from a WPF control (this):
+- On .NET Standard, the expected `object` is:
+  - `Activity` on Android.
+  - `UIViewController` on iOS.
+  - `IntPr` on Windows - see [guidelines on parent window handles](./wam.md#parent-window-handles).
+- On Windows, you must call <xref:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenInteractive(System.Collections.Generic.IEnumerable{System.String})> from the UI thread so that the embedded browser gets the appropriate UI synchronization context.  Not calling from the UI thread may cause messages to not pump properly and/or deadlock scenarios with the UI. One way of achieving this if you are not on the UI thread is to use <xref:System.Windows.Threading.Dispatcher>.
   
   ```csharp
   result = await app.AcquireTokenInteractive(scopes)
@@ -71,20 +99,22 @@ Remarks:
 
 ### WithPrompt
 
-With Prompt is used to control the interactivity with the user by specifying a Prompt.
+<xref:Microsoft.Identity.Client.AcquireTokenInteractiveParameterBuilder.WithPrompt(Microsoft.Identity.Client.Prompt)> is used to control the behavior of the interactive authentication prompt.
 
-The class defines the following constants:
+Inside the call, you can specify one of the possible <xref:Microsoft.Identity.Client.Prompt> values:
 
-- `SelectAccount`: will force the STS to present the account selection dialog containing accounts for which the user has a session. This is useful when applications developers want to let user choose among different identities. This is done by sending `prompt=select_account` to the identity provider. This is the default, and it does of good job of providing the best possible experience based on the available information (account, presence of a session for the user, etc ...). You should not change it unless you have good reason to do it.
-- `Consent`: enables the application developer to force the user be prompted for consent even if consent was granted before. This is done by sending `prompt=consent` to the identity provider. This can be used in some security focused applications where the organization governance demands that the user is presented the consent dialog each time the application is used.
-- `ForceLogin`: enables the application developer to have the user prompted for credentials by the service even if this would not be needed. This can be useful if Acquiring a token fails, to let the user re-sign-in. This is done by sending `prompt=login` to the identity provider. Again, we've seen it used in some security focused applications where the organization governance demands that the user re-logs-in each time they access specific parts of an application.
-- `Create` triggers a sign-up experience, which is used for External Identities, by sending `prompt=create` to the identity provider. This is available in MSAL.NET 4.29.0+. This prompt should not be sent for Azure AD B2C apps. For more information, see [Add a self-service sign-up user flow to an app](/azure/active-directory/external-identities/self-service-sign-up-user-flow).
-- `Never` (for .NET 4.5 and WinRT only) will not prompt the user, but instead will try to use the cookie stored in the hidden embedded web view (See below: Web Views in MSAL.NET). This might fail, and in that case `AcquireTokenInteractive` will throw an exception to notify that a UI interaction is needed, and you'll need to use another `Prompt` parameter.
-- `NoPrompt`: Won't send any prompt to the identity provider. This is actually only useful in the case of B2C edit profile policies (See [B2C specifics](./social-identities.md)).
+- `SelectAccount` - Will force the token service to present the account selection dialog containing accounts for which the user has a session. This is useful when applications developers want to let user choose among different identities available on the machine. This is done by sending `prompt=select_account` to the identity provider. This is the default configuration and provides the best possible experience based on the available information (e.g., account, presence of a session for the user). You should _generally_ not change this value.
+- `Consent` - Enables the application developer to force the user be prompted for consent even if consent was previously granted. This is done by sending `prompt=consent` to the identity provider. This can be used in some security-focused applications where the organization governance demands that the user is presented the consent dialog each time the application is used.
+- `ForceLogin` - Enables the application developer to have the user prompted for credentials by the service even if this would not be needed. This can be useful if acquiring a token fails and the developer wants to let the user sign in again. This is done by sending `prompt=login` to the identity provider. This is primarily used in some security focused applications where the organization governance demands that the user has to sign in each time they access specific parts of an application.
+- `Create` - Triggers a sign-up experience, which is used for External Identities, by sending `prompt=create` to the identity provider. This is available in MSAL.NET 4.29.0+. This prompt should not be sent for Azure AD B2C apps. For more information, see [Add a self-service sign-up user flow to an app](/entra/external-id/self-service-sign-up-user-flow).
+- `Never` (for .NET 4.5 and WinRT only) - Will not prompt the user but instead will try to use the cookie stored in the hidden embedded web view. This might fail, and in that case <xref:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenInteractive(System.Collections.Generic.IEnumerable{System.String})> will throw an exception to notify that a UI interaction is needed.
+- `NoPrompt` - Won't send any prompt to the identity provider. This is only useful in the case of Azure AD B2C edit profile policies (see [Using MSAL.NET to sign-in users with social identities](./social-identities.md)).
 
 ### WithUseEmbeddedWebView
 
-Enables you to specify if you want to force the usage of an embedded web view or the system web view (when available). For more details see [Usage of Web browsers](/azure/active-directory/develop/msal-net-web-browsers).
+Using <xref:Microsoft.Identity.Client.AcquireTokenInteractiveParameterBuilder.WithUseEmbeddedWebView(System.Boolean)> enables developers to specify whether they want to force the usage of an embedded web view or the system browser (when available). An embedded web view is effectively a popup that contains either a WebView1 or a WebView2 component, depending on the client configuration. For more details see [Using web browsers (MSAL.NET)](../using-web-browsers.md) and [Using WebView2 with MSAL.NET](../../advanced/webview2.md).
+
+You can specify whether to use the embedded web view or not when acquiring the token:
 
  ```csharp
  result = await app.AcquireTokenInteractive(scopes)
@@ -92,9 +122,12 @@ Enables you to specify if you want to force the usage of an embedded web view or
                    .ExecuteAsync();
 ```
 
-### WithExtraScopeToConsent
+>[!NOTE]
+>Using an embedded web view with Microsoft Entra ID authorities will always result in the legacy web view (WebView1) engine being used, which may break scenarios where developers are relying on Windows Hello or FIDO authentication.
 
-This is used in an advanced scenario where you want the user to pre-consent to several resources upfront (and don't want to use the incremental consent which is normally used with MSAL.NET / the Microsoft identity platform v2.0). For details see [How-to : have the user consent upfront for several resources](#have-the-user-consent-upfront-for-several-resources) below
+### WithExtraScopesToConsent
+
+<xref:Microsoft.Identity.Client.AcquireTokenInteractiveParameterBuilder.WithExtraScopesToConsent(System.Collections.Generic.IEnumerable{System.String})> is helpful in advanced scenario where the developer wants the user to pre-consent to several resources upfront and not have to use the incremental consent which is normally used with the Microsoft identity platform. For details see [How-to: have the user consent upfront for several resources](#have-the-user-consent-upfront-for-several-resources) below
 
 ```csharp
 var result = await app.AcquireTokenInteractive(scopesForCustomerApi)
@@ -102,46 +135,30 @@ var result = await app.AcquireTokenInteractive(scopesForCustomerApi)
                      .ExecuteAsync();
 ```
 
-## Other optional parameters (common to many AcquireToken methods)
+## Browser support
 
-Builder modifier | Description
--- | --
-WithAuthority (7 overrides) | Overrides the authority
-WithAdfsAuthority(string) | Overrides the authority
-WithB2CAuthority(string) | Overrides the authority
-WithAccount(IAccount) | ``account`` (optional) of type ``IAccount``, provides a hint to the STS about the user for which to get the token. This can be set from the `Account` member of a previous AuthenticationResult, or one of the elements of the collection returned by ``GetAccountsAsync()`` method of the ``PublicClientApplication``.
-WithLoginHint(string) | ``loginHint`` (optional) offers a hint to the STS about the user for which to get the token alternative to user. It's used like ``userIdentifier`` in ADAL. Needs to be passed the `preferred_username` of the IDToken (contrary to ADAL which was requiring the UPN)
-WithClaims(string) | Requests additional claims. This normally is in reaction to an MsalClaimChallengeException which has a Claim member (Conditional Access)
-WithPrompt(Prompt) | Is the way to control, in MSAL.NET, the interaction between the user and the STS to enter credentials. It's different depending on the platform (See below). Note that MSAL 3.x is taking a breaking change here. Prompt used to be named ``UIBehavior`` in MSAL 1.x and 2.x
-WithExtraQueryParameters(dictionary) | A dictionary of keys / values.
-WithExtraScopesToConsent(extraScopes) | Enables application developers to specify additional scopes for which users will pre-consent. This can be in order to avoid having them see incremental consent screens when the Web API require them. This is also indispensable in the case where you want to provide scopes for several resources. See [the paragraph on getting consent for several resources](#have-the-user-consent-upfront-for-several-resources) below for more details.
-
-## The different browsers
-
-| **Browser**                                    | **Pro**                                                                                                                                                                                                                                                 | **Con**                                                                                                                                                                       |
-|------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Embedded WebView1 (based on Internet Explorer) | - Ships with all supported versions of Windows <br> - In use by identity libs for 10+ years                                                                                                                                                             | - No FIDO (e.g. YubiKeys) <br> - No Windows Hello <br> - Conditional Access problems on some older Windows versions <br> - Windows only                                       |
-| Embedded WebView2 (based on Microsoft Edge)    | - FIDO and Windows Hello support                                                                                                                                                                                                                        | - Does not ship in the box yet (?). Deployment is difficult. <br> - Conditional Access problems on some older Windows versions. <br> - Windows only                           |
-| System browser                                 | - Uses default system browser, to which customer is used to. <br> - Chrome, Edge (and possibly Mozilla) have integration with Conditional Access, Win Hello, FIDO <br> - Works on Mac and Linux and every possible version of Windows.                  | - User experience is not as good, for example if user navigates away from the browser, the app doesn’t know and keep on waiting.                                              |
-| WAM                                            | - FIDO, Hello, Conditional Access <br> - Fully integrated with Windows <br> - Better security <br> - This is the North Star of the Identity team; many experiences will light up with WAM use! <br> - See [WAM](./wam.md) for all benefits.             | - Legacy MSA-passthrough config does not work. We recommend creating a new app if to move away from MSA-passthrough. <br> - Windows only (10+, Server 2016 and Server 2019+). |
+| Browser           | Pro                  | Con                |
+|:------------------|:---------------------|:-------------------|
+| Embedded WebView1 (based on Internet Explorer) | - Ships with all supported versions of Windows <br>- In use by identity libraries for 10+ years | - No FIDO support (e.g., YubiKey)<br>- No support for Windows Hello<br>- Conditional Access problems on older Windows versions<br>- Windows only |
+| Embedded WebView2 (based on Microsoft Edge)    | - FIDO and Windows Hello support | - Conditional Access problems on some older Windows versions.<br>- Windows only |
+| System browser                                 | - Uses default system browser.<br>- Chrome, Edge, and Firefox have integration with Conditional Access, Windows Hello, and FIDO.<br>- Works on macOS, Linux, and every possible version of Windows. | - Somewhat disruptive user experience (context switches to the browser). |
+| [Windows Broker](./wam.md)                     | - Support for FIDO, Windows Hello, and Conditional Access policies.<br>- Fully integrated with Windows.<br>- Better security.<br>- Long-term strategic component for authentication on Windows.<br> | - Legacy MSA-passthrough configuration does not work. We recommend creating a new app if you move away from MSA-passthrough.<br>- Windows only (10+, Server 2016, and Server 2019+). |
 
 ## How to
 
 ### Have the user consent upfront for several resources
 
 >[!NOTE]
-> Getting consent for several resources works for Azure AD v2.0, but not for Azure AD B2C. B2C supports only admin consent, not user consent.
+> Getting consent for several resources works for Microsoft Entra ID, but not for Microsoft Entra B2C. In the B2C scenario, only admin consent is supported.
 
-The Azure AD v2.0 endpoint does not allow you to get a token for several resources at once. Therefore the scopes parameter should only contain scopes for a single resource. However, you can ensure that the user pre-consents to several resources by using the `extraScopesToConsent` parameter.
+The Microsoft Entra ID endpoint does not allow you to get a token for several resources at once. The scopes parameter should only contain scopes for a single resource. However, developers can ensure that the user pre-consents to several resources by using the `extraScopesToConsent` argument.
 
-For instance if you have two resources, which have 2 scopes each:
+For example, if there are two resources, which have two scopes each:
 
 - `https://mytenant.onmicrosoft.com/customerapi` (with 2 scopes `customer.read` and `customer.write`)
 - `https://mytenant.onmicrosoft.com/vendorapi` (with 2 scopes `vendor.read` and `vendor.write`)
 
-you should use the .WithAdditionalPromptToConsent modifier which has the `extraScopesToConsent` parameter
-
-For instance:
+The application should use the <xref:Microsoft.Identity.Client.AcquireTokenInteractiveParameterBuilder.WithExtraScopesToConsent(System.Collections.Generic.IEnumerable{System.String})> function when acquiring the token interactively, which has the `extraScopesToConsent` argument:
 
 ```csharp
 string[] scopesForCustomerApi = new string[]
@@ -149,6 +166,7 @@ string[] scopesForCustomerApi = new string[]
   "https://mytenant.onmicrosoft.com/customerapi/customer.read",
   "https://mytenant.onmicrosoft.com/customerapi/customer.write"
 };
+
 string[] scopesForVendorApi = new string[]
 {
  "https://mytenant.onmicrosoft.com/vendorapi/vendor.read",
@@ -158,35 +176,33 @@ string[] scopesForVendorApi = new string[]
 var accounts = await app.GetAccountsAsync();
 var result = await app.AcquireTokenInteractive(scopesForCustomerApi)
                      .WithAccount(accounts.FirstOrDefault())
-                     .WithExtraScopeToConsent(scopesForVendorApi)
+                     .WithExtraScopesToConsent(scopesForVendorApi)
                      .ExecuteAsync();
 ```
 
-This will get you an access token for the first Web API. Then when you need to call the second one, you can call
+This will get an access token for the first web API. When calling the second API, it can be done like this:
 
 ```csharp
 AcquireTokenSilent(scopesForVendorApi, accounts.FirstOrDefault()).ExecuteAsync();
 ```
 
-See [this](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/issues/550#issuecomment-383572227) GitHub issue for more context.
+## Microsoft personal accounts
 
-## Microsoft personal account require re-consenting each time the app is run
+For Microsoft personal accounts, re-prompting for consent on each native client call to authorize is the intended behavior. Native client identity is inherently insecure and the Microsoft identity platform chose to mitigate this for consumer services by prompting for consent each time the application is authorized.
 
-For Microsoft personal accounts users, re-prompting for consent on each native client call to authorize is the intended behavior. Native client identity is inherently insecure, and the Microsoft identity platform chose to mitigate this insecurity for consumer services by prompting for consent each time the application is authorized.
+## Platform-specific details
 
-## More specificities depending on the platforms
+Depending on the platform, additional configuration might be required for interactive prompts:
 
-Depending on the platforms, you will need to do a bit of extra work to use MSAL.NET. For more details on each platform, see:
+- [Configuration requirements and troubleshooting tips for Xamarin Android with MSAL.NET](/entra/identity-platform/msal-net-xamarin-android-considerations)
+- [Considerations for using Xamarin iOS with MSAL.NET](/entra/identity-platform/msal-net-xamarin-ios-considerations)
+- [Using MSAL.NET with UWP applications](./uwp.md)
 
-- [Configuration requirements and troubleshooting tips for Xamarin Android with MSAL.NET](/azure/active-directory/develop/msal-net-xamarin-android-considerations)
-- [Considerations for using Xamarin iOS with MSAL.NET](/azure/active-directory/develop/msal-net-xamarin-ios-considerations)
-- [UWP specifics](./uwp.md)
-
-## Samples illustrating acquiring tokens interactively with MSAL.NET
+## Samples
 
 | Sample | Platform | Description |
 |------ | -------- | ----------- |
-| [active-directory-dotnet-desktop-msgraph-v2](http://github.com/azure-samples/active-directory-dotnet-desktop-msgraph-v2) | Desktop (WPF) | Windows Desktop .NET (WPF) application calling the Microsoft Graph API. ![WPF app topology](../../media/wpf-app-topology.png) |
+| [active-directory-dotnet-desktop-msgraph-v2](https://github.com/azure-samples/active-directory-dotnet-desktop-msgraph-v2) | Desktop (WPF) | Windows Desktop .NET (WPF) application calling the Microsoft Graph API. ![WPF app topology](../../media/wpf-app-topology.png) |
 | [active-directory-dotnet-native-uwp-v2](https://github.com/azure-samples/active-directory-dotnet-native-uwp-v2) | UWP | A Windows Universal Platform client application using MSAL.NET, accessing the Microsoft Graph for a user authenticating with Azure AD v2.0 endpoint. ![UWP app topology](../../media/uwp-app-topology.png) |
 | [https://github.com/Azure-Samples/active-directory-xamarin-native-v2](https://github.com/Azure-Samples/active-directory-xamarin-native-v2) | Xamarin iOS, Android, UWP | A simple Xamarin Forms app showcasing how to use MSAL to authenticate Microsoft accounts and Microsoft Entra ID via the Microsoft identity platform endpoint, and access the Microsoft Graph with the resulting token. ![Xamarin Forms app topology](../../media/xamarin-forms-topology.png) |
 | [https://github.com/Azure-Samples/active-directory-dotnet-native-aspnetcore-v2](https://github.com/Azure-Samples/active-directory-dotnet-native-aspnetcore-v2) | WPF, ASP.NET Core 2.0 Web API | A WPF application calling an ASP.NET Core Web API using Azure AD v2.0. ![Desktop and web app interaction topology](../../media/desktop-web-topology.png) |

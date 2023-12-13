@@ -160,6 +160,17 @@ This flow, also known as Resource Owner Password Credentials (ROPC), is not reco
 - On Mac, Linux, and versions of Windows earlier than 10 or Windows Server 2019, MSAL will fall back to a browser.
 - Updated WAM broker is not available on UWP due to Windows API limitations. UWP apps will use the legacy WAM implementation.
 
+## Package availability
+
+To use the broker, developers will need to call <xref:Microsoft.Identity.Client.Broker.BrokerExtension.WithBroker(Microsoft.Identity.Client.PublicClientApplicationBuilder,Microsoft.Identity.Client.BrokerOptions)>, hosted in the <xref:Microsoft.Identity.Client.Broker> package. Most of the .NET platform variants supported by MSAL.NET will need that package only, with a few exceptions. See the table below for a detailed mapping.
+
+| Framework                       | [Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client/) | [Microsoft.Identity.Client.Broker](https://www.nuget.org/packages/Microsoft.Identity.Client.Broker/) | [Microsoft.Identity.Client.Desktop](https://www.nuget.org/packages/Microsoft.Identity.Client.Desktop/) |
+|:--------------------------------|:--------------------------|:---------------------------------|:----------------------------------|
+| net48                           | ⛔                       | ✅                               | ✅ (not recommended)             |
+| net6.0                          | ⛔                       | ✅                               | ⛔                               |
+| net6.0-windows                  | ✅                       | ⛔                               | ⛔                               |
+| .NET MAUI                       | ✅                       | ⛔                               | ⛔                               |
+
 ## Troubleshooting
 
 ### "MsalClientException (ErrCode 5376): At least one scope needs to be requested for this authentication flow." error message
