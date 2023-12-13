@@ -1,6 +1,18 @@
 ---
 title: Acquiring tokens interactively
 description: "How to acquire tokens with MSAL.NET and user interaction."
+services: active-directory
+author: Dickson-Mwendia
+manager: CelesteDG
+
+ms.service: active-directory
+ms.subservice: develop
+ms.topic: conceptual
+ms.workload: identity
+ms.date: 12/13/2023
+ms.author: dmwendia
+ms.reviewer: ddelimarsky
+ms.custom: devx-track-csharp, aaddev, devx-track-dotnet
 ---
 
 # Acquiring tokens interactively
@@ -33,13 +45,17 @@ catch (MsalUiRequiredException)
 >[!NOTE]
 >To use <xref:Microsoft.Identity.Client.ClientApplicationBase.AcquireTokenSilent(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount)> the developer needs to set up a token cache. Without a token cache, the interactive prompt will always be shown, even if the user has previously logged in. To learn more about setting up a token cache, refer to [Token cache serialization in MSAL.NET](../../how-to/token-cache-serialization.md).
 
+## Using brokers
+
+When building applications for Windows, the recommended approach for user authentication is to use the [Web Account Manager (WAM)](./wam.md). WAM enables developers to provide a seamless experience in connecting their application to personal or Microsoft Entra ID accounts already connected to Windows. Additionally, when using WAM developers do not need to worry about manually implementing support for modern authentication flows, such as Windows Hello, or building mechanisms for token protection.
+
 ## Required parameters
 
 <xref:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenInteractive(System.Collections.Generic.IEnumerable{System.String})> has only one required parameter - `scopes`, which contains an enumeration of strings that define the scopes for which a token is required. If the token is for Microsoft Graph, the required scopes can be found in the API reference of each Microsoft Graph API in the section named **Permissions**. For instance, to [list the user's contacts](/graph/api/user-list-contacts), the `User.Read` and `Contacts.Read` scopes will need to be used. For additional information, refer to the [Microsoft Graph permissions reference](/graph/permissions-reference).
 
 On Android, you also need to specify the parent activity using <xref:Microsoft.Identity.Client.PublicClientApplicationBuilder.WithParentActivityOrWindow(System.Func{System.IntPtr})>, ensuring that the token gets back to the parent activity after the interaction is complete. If you don't specify it, an exception will be thrown.
 
-## Specific optional parameters
+## Optional parameters
 
 ### WithParentActivityOrWindow
 
