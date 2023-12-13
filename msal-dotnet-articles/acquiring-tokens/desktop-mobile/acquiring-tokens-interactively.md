@@ -96,7 +96,9 @@ Inside the call, you can specify one of the possible <xref:Microsoft.Identity.Cl
 
 ### WithUseEmbeddedWebView
 
-Enables you to specify if you want to force the usage of an embedded web view or the system web view (when available). For more details see [Usage of Web browsers](/azure/active-directory/develop/msal-net-web-browsers).
+Using <xref:Microsoft.Identity.Client.AcquireTokenInteractiveParameterBuilder.WithUseEmbeddedWebView(System.Boolean)> enables developers to specify whether they want to force the usage of an embedded web view or the system browser (when available). An embedded web view is effectively a popup that wraps either WebView1 or WebView2, depending on the client configuration. For more details see [Using web browsers (MSAL.NET)](../using-web-browsers.md) and [Using WebView2 with MSAL.NET](../../advanced/webview2.md).
+
+You can specify whether to use the embedded web view or not when acquiring the token:
 
  ```csharp
  result = await app.AcquireTokenInteractive(scopes)
@@ -104,9 +106,12 @@ Enables you to specify if you want to force the usage of an embedded web view or
                    .ExecuteAsync();
 ```
 
-### WithExtraScopeToConsent
+>[!NOTE]
+>Using an embedded web view with Microsoft Entra ID authorities will always result in the legacy web view (WebView1) engine being used, which may break scenarios where developers are relying on Windows Hello or FIDO authentication.
 
-This is used in an advanced scenario where you want the user to pre-consent to several resources upfront (and don't want to use the incremental consent which is normally used with MSAL.NET / the Microsoft identity platform v2.0). For details see [How-to : have the user consent upfront for several resources](#have-the-user-consent-upfront-for-several-resources) below
+### WithExtraScopesToConsent
+
+<xref:Microsoft.Identity.Client.AcquireTokenInteractiveParameterBuilder.WithExtraScopesToConsent(System.Collections.Generic.IEnumerable{System.String})> is helpful in advanced scenario where the developer wants the user to pre-consent to several resources upfront and not have to use the incremental consent which is normally used with the Microsoft identity platform. For details see [How-to: have the user consent upfront for several resources](#have-the-user-consent-upfront-for-several-resources) below
 
 ```csharp
 var result = await app.AcquireTokenInteractive(scopesForCustomerApi)
