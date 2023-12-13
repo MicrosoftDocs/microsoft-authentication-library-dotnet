@@ -83,16 +83,16 @@ Remarks:
 
 ### WithPrompt
 
-With Prompt is used to control the interactivity with the user by specifying a Prompt.
+<xref:Microsoft.Identity.Client.AcquireTokenInteractiveParameterBuilder.WithPrompt(Microsoft.Identity.Client.Prompt)> is used to control the behavior of the interactive authentication prompt.
 
-The class defines the following constants:
+Inside the call, you can specify one of the possible <xref:Microsoft.Identity.Client.Prompt> values:
 
-- `SelectAccount`: will force the STS to present the account selection dialog containing accounts for which the user has a session. This is useful when applications developers want to let user choose among different identities. This is done by sending `prompt=select_account` to the identity provider. This is the default, and it does of good job of providing the best possible experience based on the available information (account, presence of a session for the user, etc ...). You should not change it unless you have good reason to do it.
-- `Consent`: enables the application developer to force the user be prompted for consent even if consent was granted before. This is done by sending `prompt=consent` to the identity provider. This can be used in some security focused applications where the organization governance demands that the user is presented the consent dialog each time the application is used.
-- `ForceLogin`: enables the application developer to have the user prompted for credentials by the service even if this would not be needed. This can be useful if Acquiring a token fails, to let the user re-sign-in. This is done by sending `prompt=login` to the identity provider. Again, we've seen it used in some security focused applications where the organization governance demands that the user re-logs-in each time they access specific parts of an application.
-- `Create` triggers a sign-up experience, which is used for External Identities, by sending `prompt=create` to the identity provider. This is available in MSAL.NET 4.29.0+. This prompt should not be sent for Azure AD B2C apps. For more information, see [Add a self-service sign-up user flow to an app](/azure/active-directory/external-identities/self-service-sign-up-user-flow).
-- `Never` (for .NET 4.5 and WinRT only) will not prompt the user, but instead will try to use the cookie stored in the hidden embedded web view (See below: Web Views in MSAL.NET). This might fail, and in that case `AcquireTokenInteractive` will throw an exception to notify that a UI interaction is needed, and you'll need to use another `Prompt` parameter.
-- `NoPrompt`: Won't send any prompt to the identity provider. This is actually only useful in the case of B2C edit profile policies (See [B2C specifics](./social-identities.md)).
+- `SelectAccount` - Will force the token service to present the account selection dialog containing accounts for which the user has a session. This is useful when applications developers want to let user choose among different identities available on the machine. This is done by sending `prompt=select_account` to the identity provider. This is the default configuration and provides the best possible experience based on the available information (e.g., account, presence of a session for the user). You should _generally_ not change this value.
+- `Consent` - Enables the application developer to force the user be prompted for consent even if consent was previously granted. This is done by sending `prompt=consent` to the identity provider. This can be used in some security-focused applications where the organization governance demands that the user is presented the consent dialog each time the application is used.
+- `ForceLogin` - Enables the application developer to have the user prompted for credentials by the service even if this would not be needed. This can be useful if acquiring a token fails and the developer wants to let the user sign in again. This is done by sending `prompt=login` to the identity provider. This is primarily used in some security focused applications where the organization governance demands that the user has to sign in each time they access specific parts of an application.
+- `Create` - Triggers a sign-up experience, which is used for External Identities, by sending `prompt=create` to the identity provider. This is available in MSAL.NET 4.29.0+. This prompt should not be sent for Azure AD B2C apps. For more information, see [Add a self-service sign-up user flow to an app](/entra/external-id/self-service-sign-up-user-flow).
+- `Never` (for .NET 4.5 and WinRT only) - Will not prompt the user but instead will try to use the cookie stored in the hidden embedded web view. This might fail, and in that case <xref:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenInteractive(System.Collections.Generic.IEnumerable{System.String})> will throw an exception to notify that a UI interaction is needed.
+- `NoPrompt` - Won't send any prompt to the identity provider. This is only useful in the case of Azure AD B2C edit profile policies (see [Using MSAL.NET to sign-in users with social identities](./social-identities.md)).
 
 ### WithUseEmbeddedWebView
 
@@ -114,7 +114,7 @@ var result = await app.AcquireTokenInteractive(scopesForCustomerApi)
                      .ExecuteAsync();
 ```
 
-## The different browsers
+## Browser support
 
 | Browser           | Pro                  | Con                |
 |:------------------|:---------------------|:-------------------|
