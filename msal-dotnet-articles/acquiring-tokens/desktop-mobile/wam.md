@@ -166,12 +166,12 @@ To use the new broker, developers will need to call <xref:Microsoft.Identity.Cli
 
 | Framework                       | [Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client/) | [Microsoft.Identity.Client.Broker](https://www.nuget.org/packages/Microsoft.Identity.Client.Broker/) | [Microsoft.Identity.Client.Desktop](https://www.nuget.org/packages/Microsoft.Identity.Client.Desktop/) |
 |:--------------------------------|:--------------------------|:---------------------------------|:----------------------------------|
-| net48                           | ✅                       | ✅                               | ✅ (not recommended)             |
-| net6.0                          | ✅                       | ✅                               | ⛔                               |
+| net48                           | ⛔                       | ✅                               | ✅ (not recommended)             |
+| net6.0                          | ⛔                       | ✅                               | ⛔                               |
 | net6.0-windows                  | ✅                       | ⛔                               | ⛔                               |
 | UWP                             | ✅                       | ⛔                               | ⛔                               |
 | .NET MAUI                       | ✅                       | ⛔                               | ⛔                               |
-| netcoreapp3.1 (not recommended) | ✅                       | ✅                               |✅ (not recommended)              |
+| netcoreapp3.1 (not recommended) | ⛔                       | ✅                               |✅ (not recommended)              |
 
 Because the `netcoreapp3.1` target framework has reached the end of life in December 2022, our team will no longer offer support for applications using MSAL with this specific version of .NET Core. We recommend upgrading to the latest version where possible.
 
