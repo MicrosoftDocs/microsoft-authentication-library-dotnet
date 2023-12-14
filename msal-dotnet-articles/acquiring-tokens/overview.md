@@ -1,6 +1,6 @@
 ---
 title: Token Acquisition
-description: Learn how to acquire security tokens in public and confidential client applications using MSAL.NET
+description: "Learn how to acquire security tokens in public and confidential client applications using MSAL.NET."
 author: Dickson-Mwendia
 manager: CelesteDG
 
@@ -14,19 +14,18 @@ ms.reviewer: localden
 ms.custom: devx-track-csharp, aaddev, engagement-fy23
 # Customer intent: As an application developer, I want to learn how to acquire security tokens in public and confidential client applications using MSAL.NET
 ---
+
 # Token acquisition
 
-## Application type dependency
+## Application types
 
-As explained in [Scenarios](../getting-started/scenarios.md), there are many ways of acquiring a token.  Some require user interactions through a web browser. Some don't require any user interactions.
-
-In general, the way to acquire a token is different depending on if the application is a public client application (desktop or mobile) or a confidential client application (web app, web API, or daemon application like a Windows service)
+As explained in [Scenarios](../getting-started/scenarios.md), there are many ways of acquiring a token with MSAL.NET. Some require interaction and others are completely transparent to the user. The approach used to acquire a token is different depending on whether the developer is building a public client (desktop or mobile) or a confidential client application (web app, web API, or daemon like a Windows service). Public clients generally require user interaction while confidential clients rely on pre-provisioned credentials, like certificates and secrets.
 
 ## Token caching
 
-For both public client and confidential client applications, MSAL.NET maintains a token cache. For details, see [MSAL.NET token cache serialization](/azure/active-directory/develop/msal-net-token-cache-serialization).
+For both public and confidential client applications, MSAL.NET supports adding a token cache that preserves authentication and refresh tokens, as well as proactively refreshes those on an as-needed basis. For details, see [Token cache serialization in MSAL.NET](../how-to/token-cache-serialization.md).
 
-In the case of UWP, Xamarin iOS and Xamarin Android, the token cache serialization to an isolated storage is provided by MSAL.NET. In the case of .NET Desktop (.NET Framework and .NET Core) platforms, though, the application needs to customize the [token cache serialization](/azure/active-directory/develop/msal-net-token-cache-serialization).
+In the case of Universal Windows Platform (UWP) applications, Xamarin for iOS, and Xamarin for Android, token cache serialization to an isolated storage is automatically provided by MSAL.NET and developers do not need to add any custom caching logic. For .NET desktop applications (.NET, .NET Framework, and .NET Core) the application needs to handle the token cache serialization and storage directly; however, helper classes are available to help simplify the process.
 
 ## Token acquisition methods
 
