@@ -69,7 +69,7 @@ sub | {ClientID} | The "sub" (subject) claim identifies the subject of the JWT, 
 
 If you use a certificate as a client secret, the certificate must be deployed safely. We recommend that you store the certificate in a secure spot supported by the platform, such as in the certificate store on Windows or by using Azure Key Vault.
 
-### Crafting the asssertion
+### Crafting the assertion
 
 This is an example using [Microsoft.IdentityModel.JsonWebTokens](https://www.nuget.org/packages/Microsoft.IdentityModel.JsonWebTokens/) to create the assertion for you. 
 
