@@ -31,14 +31,10 @@ In the case of Universal Windows Platform (UWP) applications, Xamarin for iOS, a
 
 ### Public client applications
 
-#### Flows
-
 - Will often [acquire token interactively](./desktop-mobile/acquiring-tokens-interactively.md), having the user sign-in.
 - It's also possible for a desktop application running on a Windows machine joined to a domain or to Microsoft Entra ID to [use Integrated Windows Authentication (IWA/Kerberos)](./desktop-mobile/integrated-windows-authentication.md) to acquire a token silently.
 - For .NET Framework desktop applications, in limited scenarios it's possible to [get a token with a username and password](./desktop-mobile/username-password-authentication.md). Due to security considerations, this approach is not recommended.
 - Applications running on devices which don't have a web browser, a token can be acquired with the help of the [device code flow](./desktop-mobile/device-code-flow.md), which provides the application user with a URL and a code. The user will subsequently go to a web browser on another device, enter the code, and sign in. The authenticating device will then poll Microsoft Entra ID services until it receives confirmation of a successful sign in and an access token.
-
-#### Summary
 
 The following table summarizes the available approaches to acquire tokens in public client applications:
 
@@ -52,13 +48,9 @@ The following table summarizes the available approaches to acquire tokens in pub
 
 ### Confidential client applications
 
-#### Flows
-
-- Acquire token **for the application itself**, not for a user, using [client credentials](./web-apps-apis/client-credential-flows.md). This can be used for syncing tools, or tools which process users in general, not a particular user. 
-- In the case of Web APIs calling and API on behalf of the user, using the [On Behalf Of flow](./web-apps-apis/on-behalf-of-flow.md) and still identifying the application itself with client credentials to acquire a token based on some User assertion (SAML for instance, or a JWT token). This can be used for applications which need to access resources of a particular user in service to service calls.
-- **For Web apps**, acquire tokens [by authorization code](./web-apps-apis/authorization-codes.md) after letting the user sign-in through the authorization request URL. This is typically the mechanism used by an OpenID Connect application, which lets the user sign-in using OpenID Connect, but then wants to access Web APIs on behalf of this particular user.
-
-#### Summary
+- Acquires token **for the application itself**, not for a user. Token acquisition is done with the help of [client credentials](./web-apps-apis/client-credential-flows.md). This flow is useful for syncing tools or tools which process data or user information without a specific identity attached to it.
+- For web APIs calling an API on behalf of a user, developers can use [On Behalf Of flow](./web-apps-apis/on-behalf-of-flow.md). The application itself will use client credentials to acquire a token based on a user assertion (e.g., [SAML](/entra/identity-platform/single-sign-on-saml-protocol) or a [JWT](/entra/identity-platform/security-tokens#json-web-tokens-and-claims)). This flow can be used for applications which need to access resources of a particular user in service-to-service calls.
+- **For web apps**, token acquisition is done with the help of an [by authorization code](./web-apps-apis/authorization-codes.md) after signing the user in through the authorization request URL. This is typically the mechanism used by an application which lets the user sign-in using [OpenID Connect](https://openid.net/developers/how-connect-works/), but then wants to access web APIs on behalf of this particular user.
 
 The following table summarizes the ways available to acquire tokens in confidential client applications depending on the Operating system, and therefore the chosen platform, and the kind of application.
 
