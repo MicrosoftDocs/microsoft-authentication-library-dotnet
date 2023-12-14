@@ -40,15 +40,15 @@ In the case of Universal Windows Platform (UWP) applications, Xamarin for iOS, a
 
 #### Summary
 
-The following table summarizes the ways available to acquire tokens in public client applications:
+The following table summarizes the available approaches to acquire tokens in public client applications:
 
 | Operating system      | Platform        | App type | [Interactive](./desktop-mobile/acquiring-tokens-interactively.md) | [IWA](./desktop-mobile/integrated-windows-authentication.md) | [ROPC](./desktop-mobile/username-password-authentication.md) | [Device Code](./desktop-mobile/device-code-flow.md) |
 |:----------------------|:----------------|:---------|:------------------------------------------------------------------|:-------------------------------------------------------------|:-------------------------------------------------------------|:----------------------------------------------------|
-| Windows desktop	      | .NET            | Desktop (WPF, Windows Forms, Console) | Y | Y | Y | Y |
-| Windows 10	          | UWP	            | Store app	                            | Y	| Y	| 	|   |
-| Android	              | Xamarin Android	| Mobile	                              | Y	| 	| Y	|   |
-| iOS                   | Xamarin iOS	    | Mobile	                              | Y	| 	| 	| Y |
-| macOS, Linux, Windows	| .NET Core 	    | Console	                              | N/A see [1](/azure/active-directory/develop/msal-net-web-browsers)	| Y	| Y	| Y |
+| Windows desktop	      | .NET            | Desktop (WPF, Windows Forms, Console) | ✅ | ✅ | ✅ | ✅ |
+| Windows 10	          | UWP	            | Store app	                            | ✅	| ✅	| ❌	| ❌ |
+| Android	              | Xamarin Android	| Mobile	                              | ✅	| ❌	| ✅	| ❌ |
+| iOS                   | Xamarin iOS	    | Mobile	                              | ✅	| ❌	| ❌	| ✅ |
+| macOS, Linux, Windows	| .NET Core 	    | Console	                              | N/A see [Using web browsers](../acquiring-tokens/using-web-browsers.md)	| ✅	| ✅	| ✅ |
 
 ### Confidential client applications
 
