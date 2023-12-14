@@ -33,24 +33,22 @@ In the case of Universal Windows Platform (UWP) applications, Xamarin for iOS, a
 
 #### Flows
 
-- will often [acquire token interactively](./desktop-mobile/acquiring-tokens-interactively.md), having the user sign-in.
-  > Remember that this is not possible yet in .NET Core as .NET core does not provide UI capabilities and this is required for interactive authentication. 
-- But it's also possible for a desktop application running on a Windows machine which is joined to a domain or to Microsoft Entra ID, to [get a token silently for the user signed-in on the machine](./desktop-mobile/integrated-windows-authentication.md), leveraging Integrated Windows Authentication (IWA/Kerberos). 
-- On .NET framework desktop client applications , it's also possible (but not recommended) to [get a token with a username and password](./desktop-mobile/username-password-authentication.md) (U/P).
-  > Note that you should not use username/password in confidential client applications.
-- Finally, for applications running on devices which don't have a Web browser, it's possible to acquire a token through the [device code flow](./desktop-mobile/device-code-flow.md) mechanism, which provides the user with a URL and a code. The user goes to a web browser on another device, enters the code and signs-in, which has Microsoft Entra ID to get them a token back on the browser-less device.
+- Will often [acquire token interactively](./desktop-mobile/acquiring-tokens-interactively.md), having the user sign-in.
+- It's also possible for a desktop application running on a Windows machine joined to a domain or to Microsoft Entra ID to [use Integrated Windows Authentication (IWA/Kerberos)](./desktop-mobile/integrated-windows-authentication.md) to acquire a token silently.
+- For .NET Framework desktop applications, in limited scenarios it's possible to [get a token with a username and password](./desktop-mobile/username-password-authentication.md). Due to security considerations, this approach is not recommended.
+- Applications running on devices which don't have a web browser, a token can be acquired with the help of the [device code flow](./desktop-mobile/device-code-flow.md), which provides the application user with a URL and a code. The user will subsequently go to a web browser on another device, enter the code, and sign in. The authenticating device will then poll Microsoft Entra ID services until it receives confirmation of a successful sign in and an access token.
 
 #### Summary
 
-The following table summarizes the ways available to acquire tokens in public client applications depending on the Operating system, and therefore the chosen platform, and the kind of application.
+The following table summarizes the ways available to acquire tokens in public client applications:
 
-Operating System | Library Platform | Kind of App | [Interactive Auth](./desktop-mobile/acquiring-tokens-interactively.md) | [IWA](./desktop-mobile/integrated-windows-authentication.md) | [U/P](./desktop-mobile/username-password-authentication.md) | [Device Code](./desktop-mobile/device-code-flow.md)
--- | -------- | --- | ----------  | --- | --- | ----------------- 
-<img alt="Windows Logo" src="/azure/active-directory/develop/media/index/logo_windows.svg" width="40" /> <br/> Windows desktop	| <img alt=".NET Logo" src="/azure/active-directory/develop/media/index/logo_net.svg" width="40" /> <br/> .NET| Desktop (WPF,<br/>  Windows.Forms,<br/>  Console) | Y | Y | Y | (Y)
-<img alt="Windows Logo" src="/azure/active-directory/develop/media/index/logo_windows.svg" width="40" /> <br/>Windows 10	| <img alt="Windows Logo" src="/azure/active-directory/develop/media/index/logo_windows.svg" width="40" /> <br/> UWP	| Store app	| Y	| Y	| 	
-<img alt="Android Logo" src="/azure/active-directory/develop/media/index/logo_android.svg" width="40" /> <br/> Android	| <img alt="Xamarin Logo" src="/azure/active-directory/develop/media/index/logo_xamarin.svg" width="40" /> <img alt="Android Logo" src="/azure/active-directory/develop/media/index/logo_android.svg" width="40" /> <br/> Xamarin Android	| Mobile	| Y	| 	| Y	
-<img alt="iOS Logo" src="/azure/active-directory/develop/media/index/logo_ios.svg" width="40" />| <img alt="Xamarin logo" src="/azure/active-directory/develop/media/index/logo_xamarin.svg" width="40" /> <img  alt="iOS Logo" src="/azure/active-directory/develop/media/index/logo_ios.svg" width="40" /><br/> Xamarin iOS	| Mobile	| Y	| 	| 	| Y
-Mac OS, Linux, Windows	| <img alt=".NET Core Logo" src="/azure/active-directory/develop/media/index/logo_netcore.svg" width="40" /> <br/> .NET Core 	| Console	| N/A see [1](/azure/active-directory/develop/msal-net-web-browsers)	| Y	| Y	| Y
+| Operating system      | Platform        | App type | [Interactive](./desktop-mobile/acquiring-tokens-interactively.md) | [IWA](./desktop-mobile/integrated-windows-authentication.md) | [ROPC](./desktop-mobile/username-password-authentication.md) | [Device Code](./desktop-mobile/device-code-flow.md) |
+|:----------------------|:----------------|:---------|:------------------------------------------------------------------|:-------------------------------------------------------------|:-------------------------------------------------------------|:----------------------------------------------------|
+| Windows desktop	      | .NET            | Desktop (WPF, Windows Forms, Console) | Y | Y | Y | Y |
+| Windows 10	          | UWP	            | Store app	                            | Y	| Y	| 	|   |
+| Android	              | Xamarin Android	| Mobile	                              | Y	| 	| Y	|   |
+| iOS                   | Xamarin iOS	    | Mobile	                              | Y	| 	| 	| Y |
+| macOS, Linux, Windows	| .NET Core 	    | Console	                              | N/A see [1](/azure/active-directory/develop/msal-net-web-browsers)	| Y	| Y	| Y |
 
 ### Confidential client applications
 
