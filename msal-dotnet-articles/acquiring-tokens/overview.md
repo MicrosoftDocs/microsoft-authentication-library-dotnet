@@ -52,16 +52,16 @@ The following table summarizes the available approaches to acquire tokens in pub
 - For web APIs calling an API on behalf of a user, developers can use [On Behalf Of flow](./web-apps-apis/on-behalf-of-flow.md). The application itself will use client credentials to acquire a token based on a user assertion (e.g., [SAML](/entra/identity-platform/single-sign-on-saml-protocol) or a [JWT](/entra/identity-platform/security-tokens#json-web-tokens-and-claims)). This flow can be used for applications which need to access resources of a particular user in service-to-service calls.
 - **For web apps**, token acquisition is done with the help of an [by authorization code](./web-apps-apis/authorization-codes.md) after signing the user in through the authorization request URL. This is typically the mechanism used by an application which lets the user sign-in using [OpenID Connect](https://openid.net/developers/how-connect-works/), but then wants to access web APIs on behalf of this particular user.
 
-The following table summarizes the ways available to acquire tokens in confidential client applications depending on the Operating system, and therefore the chosen platform, and the kind of application.
+The following table summarizes the ways to acquire tokens in confidential client applications:
 
-Operating System | Library Platform | Kind of App | [Client Credential](./web-apps-apis/client-credential-flows.md) | [On behalf of](./web-apps-apis/on-behalf-of-flow.md) | [Auth Code](./web-apps-apis/authorization-codes.md)
- -- | -------- | --- | ----------  | --- | ---
-Windows | <img alt=".NET Logo" src="/azure/active-directory/develop/media/index/logo_net.svg" width="40"/> <br/> .NET Framework | ![Web application icon](../media/web-app-icon.png) | Y | | Y
-Windows, MacOS, Linux | <img alt=".NET Core Logo" src="/azure/active-directory/develop/media/index/logo_netcore.svg" width="40" /> <br/> ASP.NET Core  | ![Web application icon](../media/web-app-icon.png) | Y | | Y |
-Windows | <img alt=".NET Logo" src="/azure/active-directory/develop/media/index/logo_net.svg" width="40"/> <br/> .NET Framework | ![Web API icon](../media/web-api-icon.png) | Y | Y |
-Windows, MacOS, Linux | <img alt=".NET Core Logo" src="/azure/active-directory/develop/media/index/logo_netcore.svg" width="40" /><br/> ASP.NET Core | ![Web API icon](../media/web-api-icon.png) | Y | Y |
-Windows | <img alt=".NET Logo" src="/azure/active-directory/develop/media/index/logo_net.svg" width="40"/> <br/> .NET Framework | ![Daemon icon](../media/daemon-icon.png) <br/> (windows service) | Y | |
-Windows, MacOS, Linux | <img alt=".NET Core Logo" src="/azure/active-directory/develop/media/index/logo_netcore.svg" width="40" /> <br/> .NET Core | ![Daemon icon](../media/daemon-icon.png)| Y | |
+| Operating system      | Platform       | App type | [Client Credential](./web-apps-apis/client-credential-flows.md) | [On behalf of](./web-apps-apis/on-behalf-of-flow.md) | [Auth Code](./web-apps-apis/authorization-codes.md)
+|:----------------------|:---------------|:---------|:----------------------------------------------------------------|:-----------------------------------------------------|:---------------------------------------------------
+| Windows               | .NET Framework | Web app                  | ✅ | ❌ | ✅ |
+| Windows, macOS, Linux | ASP.NET Core   | Web app                  | ✅ | ❌ | ✅ |
+| Windows               | .NET Framework | Web API                  | ✅ | ✅ | ❌ |
+| Windows, macOS, Linux | ASP.NET Core   | Web API                  | ✅ | ✅ | ❌ |
+| Windows               | .NET Framework | Daemon (windows service) | ✅ | ❌ | ❌ |
+| Windows, macOS, Linux | .NET Core      | Daemon                   | ✅ | ❌ | ❌ |
 
 ### Pattern to acquire tokens in MSAL.NET
 
