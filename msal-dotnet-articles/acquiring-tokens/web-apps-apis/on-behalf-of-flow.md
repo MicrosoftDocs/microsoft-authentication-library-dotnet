@@ -5,7 +5,7 @@ description: "How to use MSAL.NET to authenticate on behalf of a user."
 
 # On-behalf-of flows with MSAL.NET
 
-## If you are using ASP.NET Core
+## If you are using ASP.NET Core or ASP.NET Classic
 
 If you are building a web API on top of ASP.NET Core or ASP.NET Classic, we recommend that you use `Microsoft.Identity.Web`. See [Web APIs with `Microsoft.Identity.Web`](https://github.com/AzureAD/microsoft-identity-web/wiki/web-apis).
 
