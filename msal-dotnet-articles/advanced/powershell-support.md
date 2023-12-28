@@ -9,7 +9,7 @@ There is no official PowerShell module or wrapper for MSAL libraries maintained 
 
 Consider using higher level APIs which are officially supported: 
 
- -  [Microsoft Graph PowerShell SDK](https://github.com/microsoftgraph/msgraph-sdk-powershell?tab=readme-ov-file)
+ -  [Microsoft Graph PowerShell SDK](https://github.com/microsoftgraph/msgraph-sdk-powershell)
  -  [Azure PowerShell SDK](https://github.com/Azure/azure-powershell)
 
 PowerShell was designed to be able to call into .NET code and there are [numerous resources](https://stackoverflow.com/questions/3079346/how-to-reference-net-assemblies-using-powershell) that describe how to do this.
