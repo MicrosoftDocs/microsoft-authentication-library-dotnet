@@ -54,7 +54,7 @@ The following table summarizes the available approaches to acquire tokens in pub
 
 The following table summarizes the ways to acquire tokens in confidential client applications:
 
-| Operating system      | Platform       | App type | [Client Credential](./web-apps-apis/client-credential-flows.md) | [On behalf of](./web-apps-apis/on-behalf-of-flow.md) | [Auth Code](./web-apps-apis/authorization-codes.md)
+| Operating system      | Platform       | App type | [Client Credential](./web-apps-apis/client-credential-flows.md) | [On-Behalf-Of](./web-apps-apis/on-behalf-of-flow.md) | [Auth Code](./web-apps-apis/authorization-codes.md)
 |:----------------------|:---------------|:---------|:----------------------------------------------------------------|:-----------------------------------------------------|:---------------------------------------------------
 | Windows               | .NET Framework | Web app                  | ✅ | ❌ | ✅ |
 | Windows, macOS, Linux | ASP.NET Core   | Web app                  | ✅ | ❌ | ✅ |
