@@ -60,7 +60,7 @@ The following table summarizes the ways to acquire tokens in confidential client
 | Windows, macOS, Linux | ASP.NET Core   | Web app                  | ✅ | ❌ | ✅ |
 | Windows               | .NET Framework | Web API                  | ✅ | ✅ | ❌ |
 | Windows, macOS, Linux | ASP.NET Core   | Web API                  | ✅ | ✅ | ❌ |
-| Windows               | .NET Framework | Daemon (windows service) | ✅ | ❌ | ❌ |
+| Windows               | .NET Framework | Daemon (Windows service) | ✅ | ❌ | ❌ |
 | Windows, macOS, Linux | .NET Core      | Daemon                   | ✅ | ❌ | ❌ |
 
 ### Pattern to acquire tokens in MSAL.NET
