@@ -33,6 +33,7 @@ In the case of Universal Windows Platform (UWP) applications, Xamarin for iOS, a
 
 - Will often [acquire token interactively](./desktop-mobile/acquiring-tokens-interactively.md), having the user sign-in.
 - It's also possible for a desktop application running on a Windows machine joined to a domain or to Microsoft Entra ID to [use Integrated Windows Authentication (IWA/Kerberos)](./desktop-mobile/integrated-windows-authentication.md) to acquire a token silently.
+  - Keep in mind that the IWA approach is **not recommended**. A more secure approach using the [Web Account Manager (WAM)](../acquiring-tokens/desktop-mobile/wam.md) is available.
 - For .NET Framework desktop applications, in limited scenarios it's possible to [get a token with a username and password](./desktop-mobile/username-password-authentication.md). Due to security considerations, this approach is not recommended.
 - Applications running on devices which don't have a web browser, a token can be acquired with the help of the [device code flow](./desktop-mobile/device-code-flow.md), which provides the application user with a URL and a code. The user will subsequently go to a web browser on another device, enter the code, and sign in. The authenticating device will then poll Microsoft Entra ID services until it receives confirmation of a successful sign in and an access token.
 
