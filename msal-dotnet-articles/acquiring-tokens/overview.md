@@ -41,11 +41,11 @@ The following table summarizes the available approaches to acquire tokens in pub
 
 | Operating system      | Platform        | App type | [Interactive](./desktop-mobile/acquiring-tokens-interactively.md) | [IWA](./desktop-mobile/integrated-windows-authentication.md) | [ROPC](./desktop-mobile/username-password-authentication.md) | [Device Code](./desktop-mobile/device-code-flow.md) |
 |:----------------------|:----------------|:---------|:------------------------------------------------------------------|:-------------------------------------------------------------|:-------------------------------------------------------------|:----------------------------------------------------|
-| Windows desktop	      | .NET            | Desktop (WPF, Windows Forms, Console) | ✅ | ✅ | ✅ | ✅ |
-| Windows 10	          | UWP	            | Store app	                            | ✅	| ✅	| ❌	| ❌ |
-| Android	              | Xamarin Android	| Mobile	                              | ✅	| ❌	| ✅	| ❌ |
-| iOS                   | Xamarin iOS	    | Mobile	                              | ✅	| ❌	| ❌	| ✅ |
-| macOS, Linux, Windows	| .NET Core 	    | Console	                              | N/A see [Using web browsers](../acquiring-tokens/using-web-browsers.md)	| ✅	| ✅	| ✅ |
+| Windows (desktop)     | .NET            | Desktop (WPF, Windows Forms, Console) | ✅ | ✅ | ✅ | ✅ |
+| Windows 10 and newer  | UWP             | Store app                             | ✅ | ✅ | ❌ | ❌ |
+| Android               | Xamarin Android | Mobile                                | ✅ | ❌ | ✅ | ❌ |
+| iOS                   | Xamarin iOS     | Mobile                                | ✅ | ❌ | ❌ | ✅ |
+| macOS, Linux, Windows | .NET Core       | Console                               | N/A see [Using web browsers](../acquiring-tokens/using-web-browsers.md)	| ✅	| ✅	| ✅ |
 
 ### Confidential client applications
 
