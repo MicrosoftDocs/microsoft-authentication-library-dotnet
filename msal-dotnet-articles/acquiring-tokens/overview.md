@@ -35,7 +35,7 @@ In the case of Universal Windows Platform (UWP) applications, Xamarin for iOS, a
 - It's also possible for a desktop application running on a Windows machine joined to a domain or to Microsoft Entra ID to [use Integrated Windows Authentication (IWA/Kerberos)](./desktop-mobile/integrated-windows-authentication.md) to acquire a token silently.
   - Keep in mind that the IWA approach is **not recommended**. A more secure approach using the [Web Account Manager (WAM)](../acquiring-tokens/desktop-mobile/wam.md) is available.
 - For .NET Framework desktop applications, in limited scenarios it's possible to [get a token with a username and password](./desktop-mobile/username-password-authentication.md). Due to security considerations, this approach is not recommended.
-- Applications running on devices which don't have a web browser, a token can be acquired with the help of the [device code flow](./desktop-mobile/device-code-flow.md), which provides the application user with a URL and a code. The user will subsequently go to a web browser on another device, enter the code, and sign in. The authenticating device will then poll Microsoft Entra ID services until it receives confirmation of a successful sign in and an access token.
+- In applications running on devices which don't have a web browser, a token can be acquired with the help of the [device code flow](./desktop-mobile/device-code-flow.md), which provides the application user with a URL and a code. The user will subsequently go to a web browser on another device, enter the code, and sign in. The authenticating device will then poll Microsoft Entra ID services until it receives confirmation of a successful sign in and an access token.
 
 The following table summarizes the available approaches to acquire tokens in public client applications:
 
@@ -51,17 +51,17 @@ The following table summarizes the available approaches to acquire tokens in pub
 
 - Acquires token **for the application itself**, not for a user. Token acquisition is done with the help of [client credentials](./web-apps-apis/client-credential-flows.md). This flow is useful for syncing tools or tools which process data or user information without a specific identity attached to it.
 - For web APIs calling an API on behalf of a user, developers can use [On Behalf Of flow](./web-apps-apis/on-behalf-of-flow.md). The application itself will use client credentials to acquire a token based on a user assertion (e.g., [SAML](/entra/identity-platform/single-sign-on-saml-protocol) or a [JWT](/entra/identity-platform/security-tokens#json-web-tokens-and-claims)). This flow can be used for applications which need to access resources of a particular user in service-to-service calls.
-- **For web apps**, token acquisition is done with the help of an [by authorization code](./web-apps-apis/authorization-codes.md) after signing the user in through the authorization request URL. This is typically the mechanism used by an application which lets the user sign-in using [OpenID Connect](https://openid.net/developers/how-connect-works/), but then wants to access web APIs on behalf of this particular user.
+- **For web apps**, token acquisition is done using an [authorization code](./web-apps-apis/authorization-codes.md) after signing the user in through the authorization request URL. This is typically the mechanism used by an application which lets the user sign-in using [OpenID Connect](https://openid.net/developers/how-connect-works/) and then accesses web APIs on behalf of this particular user.
 
 The following table summarizes the ways to acquire tokens in confidential client applications:
 
-| Operating system      | Platform       | App type | [Client Credential](./web-apps-apis/client-credential-flows.md) | [On behalf of](./web-apps-apis/on-behalf-of-flow.md) | [Auth Code](./web-apps-apis/authorization-codes.md)
+| Operating system      | Platform       | App type | [Client Credential](./web-apps-apis/client-credential-flows.md) | [On-Behalf-Of](./web-apps-apis/on-behalf-of-flow.md) | [Auth Code](./web-apps-apis/authorization-codes.md)
 |:----------------------|:---------------|:---------|:----------------------------------------------------------------|:-----------------------------------------------------|:---------------------------------------------------
 | Windows               | .NET Framework | Web app                  | ✅ | ❌ | ✅ |
 | Windows, macOS, Linux | ASP.NET Core   | Web app                  | ✅ | ❌ | ✅ |
 | Windows               | .NET Framework | Web API                  | ✅ | ✅ | ❌ |
 | Windows, macOS, Linux | ASP.NET Core   | Web API                  | ✅ | ✅ | ❌ |
-| Windows               | .NET Framework | Daemon (windows service) | ✅ | ❌ | ❌ |
+| Windows               | .NET Framework | Daemon (Windows service) | ✅ | ❌ | ❌ |
 | Windows, macOS, Linux | .NET Core      | Daemon                   | ✅ | ❌ | ❌ |
 
 ### Pattern to acquire tokens in MSAL.NET
