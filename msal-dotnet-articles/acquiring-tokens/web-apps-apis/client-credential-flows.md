@@ -135,9 +135,9 @@ var scopes = new [] {  ResourceId+"/.default"};
 var result = app.AcquireTokenForClient(scopes);
 ```
 
-### No need to pass a Reply URL at app construction if your app is only a daemon
+### No need for reply URL if app is a daemon
 
-In the case where your confidential client application uses **only** the client credentials flow, you don't need to specify a reply URL in the constructor.
+If your confidential client application uses **only** the client credentials flow, you don't need to specify a reply URL in the constructor.
 
 ## Samples
 
