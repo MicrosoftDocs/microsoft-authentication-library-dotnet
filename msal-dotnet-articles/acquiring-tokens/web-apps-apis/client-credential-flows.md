@@ -1,25 +1,27 @@
 ---
 title: Client credential flows in MSAL.NET
-description: "MSAL is a multi-framework library. Confidential Client flows are not available on mobile platforms (UWP, Xamarin.iOS, and Xamarin.Android) since there is no secure way of deploying a secret there."
+description: "Client credential authentication flows allow services, APIs, and daemon applications to acquire a token without direct user interaction."
 ---
 
 # Client credential flows in MSAL.NET
 
 ## Availability by platform
 
-MSAL is a multi-framework library. Confidential Client flows are not available on mobile platforms (UWP, Xamarin.iOS, and Xamarin.Android) since there is no secure way of deploying a secret there.
+MSAL is a multi-framework library. Confidential Client flows are not available on mobile and client-facing platforms (e.g., UWP, Xamarin.iOS, and Xamarin.Android) since there is no secure way of deploying a secret with an application.
 
 ## Credentials
 
-MSAL.NET supports two types of client credentials, which must be registered in the Microsoft Entra app registration portal
+MSAL.NET supports two types of client credentials, which must be registered in the Microsoft Entra portal:
 
-- Application secrets (not recommended for production scenarios)
-- Certificates
+- Application secrets (_not recommended for production scenarios_).
+- Certificates.
 
-For advanced scenarios, 2 more types of credentials can be used. See details at [Confidential client assertions](/azure/active-directory/develop/msal-net-client-assertions).
+For advanced scenarios, two other types credentials can be used:
 
-- Signed client assertions
-- Certificate + additional claims to be sent
+- Signed client assertions.
+- Certificate and additional claims to be sent.
+
+For additional details, refer to the [Confidential client assertions](/azure/active-directory/develop/msal-net-client-assertions) document.
 
 ### Code snippet
 
@@ -39,15 +41,14 @@ var authResult = await app.AcquireTokenForClient(scopes: new [] {  "some_app_id_
                    .ExecuteAsync();
 ```
 
-**Important: do not use `common` or `organizations` authority for client credential flows.**
+>[!IMPORTANT]
+>Do not use `common` or `organizations` authority for client credential flows.
 
-For more information, see [AuthenticationConfig.cs](https://github.com/Azure-Samples/active-directory-dotnetcore-daemon-v2/blob/5199032b352a912e7cc0fce143f81664ba1a8c26/daemon-console/AuthenticationConfig.cs#L67-L87)
-
-Note: Token cache performance was significantly improved in MSAL 4.30.0.
+For more information, see [AuthenticationConfig.cs](https://github.com/Azure-Samples/active-directory-dotnetcore-daemon-v2/blob/5199032b352a912e7cc0fce143f81664ba1a8c26/daemon-console/AuthenticationConfig.cs#L67-L87).
 
 ## Custom Cache Serialization
 
-If your service is multi-tenant (i.e. it needs tokens for a resource that is in different tenants), see [MSAL for client credential flow in multi-tenant services](../../advanced/client-credential-multi-tenant.md).
+If your service is multi-tenant (i.e., it needs tokens for a resource that is in a different tenant), see [MSAL for client credential flow in multi-tenant services](../../advanced/client-credential-multi-tenant.md).
 
 You can serialize the token cache to a location of your choice for example in-memory or in distributed location like Redis. You would do this to:
 
