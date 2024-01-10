@@ -44,8 +44,6 @@ var authResult = await app.AcquireTokenForClient(scopes: new [] {  "some_app_id_
 >[!IMPORTANT]
 >Do not use `common` or `organizations` authority for client credential flows.
 
-For more information, see [AuthenticationConfig.cs](https://github.com/Azure-Samples/active-directory-dotnetcore-daemon-v2/blob/5199032b352a912e7cc0fce143f81664ba1a8c26/daemon-console/AuthenticationConfig.cs#L67-L87).
-
 ## Custom cache serialization
 
 If your service is multi-tenant (i.e., it needs tokens for a resource that is in a different tenant), see [MSAL for client credential flow in multi-tenant services](../../advanced/client-credential-multi-tenant.md).
@@ -59,31 +57,33 @@ Please see [distributed cache implementations](https://github.com/AzureAD/micros
 
 Check our [sample](https://github.com/Azure-Samples/active-directory-dotnet-v1-to-v2/blob/b48c10180665260a1aec78a9acf7d1b1ff97e5ba/ConfidentialClientTokenCache/Program.cs) to see how token cache serialization works.
 
-## High Availability
+## Ensuring high availability of your applications
 
-**Problem:**
-My service is running out of memory.
+### Service is running out of memory
 
-**Solution:**
 See [MSAL for client credential flow in multi-tenant services](../../advanced/client-credential-multi-tenant.md).
 Provision enough RAM on the machines running your service or use a distributed cache.
 A single token is a only a few KB in size, but there is 1 token for each tenant! A multi-tenant service sometimes needs tokens for 0.5M tenants.
 
-**Problem:** How can I avoid requesting new tokens on each machine of my distributed service?
-**Solution:** Use a distributed cache like Redis.
+### Avoid requesting new tokens on each machine of a distributed service
 
-**Problem:** I customized my cache. How can I monitor the hit rate?
-**Solution:** The result object will tell you if the token comes from the cache or not:
+Use a distributed cache like Redis.
+
+### Monitoring cache hit rates
+
+The result object will tell you if the token comes from the cache or not:
 
 ```csharp
 authResult.AuthenticationResultMetadata.TokenSource == TokenSource.Cache
 ```
 
-**Problem:** I am getting "loop detected" errors
-**Solution:** You are calling Microsoft Entra ID for a token to often and Azure ADis throttling you. You need to use a cache - either the in-memory one (as per the sample above) or a persisted one.
+### Handling "loop detected" errors
 
-**Problem:** `AcquireTokenClient` latency is too high
-**Possible Solutions:** Please ensure you have a high token cache hit rate.
+You are calling Microsoft Entra ID for a token to often and Azure ADis throttling you. You need to use a cache - either the in-memory one (as per the sample above) or a persisted one.
+
+### High latency for token acquisition
+
+Please ensure you have a high token cache hit rate.
 
 The in-memory cache is optimized for searching through tokens that come from different client_id or different tenant_id. It is not optimized for storing tokens with different scopes. You need to use a different cache key that includes the scope. See [Performance testing](../../advanced/performance-testing.md).
 
