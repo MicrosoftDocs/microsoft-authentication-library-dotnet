@@ -108,7 +108,7 @@ In MSAL.NET, client credentials are passed as a parameter during <xref:Microsoft
 
 ## Client assertions
 
-Instead of a client secret or a certificate, the confidential client application can also prove its identity using client assertions. This scenario is outlined in detail in the [Confidential client assertions](../web-apps-apis/confidential-client-assertions) document.
+Instead of a client secret or a certificate, the confidential client application can also prove its identity using client assertions. This scenario is outlined in detail in the [Confidential client assertions](../web-apps-apis/confidential-client-assertions.md) document.
 
 ## Remarks
 
