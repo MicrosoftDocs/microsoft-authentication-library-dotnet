@@ -5,11 +5,11 @@ description: "Client credential authentication flows allow services, APIs, and d
 
 # Client credential flows
 
-## Availability by platform
+## Supported platforms
 
-MSAL is a multi-framework library. Confidential Client flows are not available on mobile and client-facing platforms (e.g., UWP, Xamarin.iOS, and Xamarin.Android) since there is no secure way of deploying a secret with an application.
+While MSAL.NET is a multi-framework library, Confidential Client flows are not available on mobile and client-facing platforms (e.g., UWP, Xamarin.iOS, and Xamarin.Android) since there is no secure way of deploying a secret with an application.
 
-## Using client credentials
+## Supported client credentials
 
 MSAL.NET supports two types of client credentials, which must be registered in the Microsoft Entra portal:
 
@@ -87,26 +87,24 @@ Please ensure you have a high token cache hit rate. The in-memory cache is optim
 
 ## Configuring application secrets or certificates with Microsoft Entra ID
 
-You can register your application secrets either through the interactive experience in the [Azure portal](https://portal.azure.com/), or using command-line tools like [Azure CLI](/cli/azure/).
+You can register your application secrets either through the interactive experience in the [Azure portal](https://portal.azure.com/), or using command-line tools like PowerShell.
 
 ### Registering client secrets using the application registration portal
 
 The management of client credentials happens in the **Certificates & secrets** page for a registered application in the Microsoft Entra portal:
 
-![image](../../media/azure-ad-certificates.png)
+![Certificates & secrets view in the Azure Portal](../../media/azure-ad-certificates.png)
 
 ### Registering client secrets using PowerShell
 
-The [active-directory-dotnetcore-daemon-v2](https://github.com/Azure-Samples/active-directory-dotnetcore-daemon-v2) sample shows how to register an application secret or a certificate with a Microsoft Entra application:
+The [`active-directory-dotnetcore-daemon-v2`](https://github.com/Azure-Samples/active-directory-dotnetcore-daemon-v2) sample shows how to register an application secret or a certificate with a Microsoft Entra application:
 
-- For details on how to register an application secret, see [AppCreationScripts/Configure.ps1](https://github.com/Azure-Samples/active-directory-dotnetcore-daemon-v2/blob/5199032b352a912e7cc0fce143f81664ba1a8c26/AppCreationScripts/Configure.ps1#L190)
-- For details on how to register a certificate with the application, see [AppCreationScripts-withCert/Configure.ps1](https://github.com/Azure-Samples/active-directory-dotnetcore-daemon-v2/blob/5199032b352a912e7cc0fce143f81664ba1a8c26/AppCreationScripts-withCert/Configure.ps1#L162-L178)
+- Register an application secret: [`AppCreationScripts/Configure.ps1`](https://github.com/Azure-Samples/active-directory-dotnetcore-daemon-v2/blob/5199032b352a912e7cc0fce143f81664ba1a8c26/AppCreationScripts/Configure.ps1#L190)
+- Register a certificate with the application: [`AppCreationScripts-withCert/Configure.ps1`](https://github.com/Azure-Samples/active-directory-dotnetcore-daemon-v2/blob/5199032b352a912e7cc0fce143f81664ba1a8c26/AppCreationScripts-withCert/Configure.ps1#L162-L178)
 
-## Construction of ConfidentialClientApplication with client credentials
+## Using client credentials
 
-In MSAL.NET client credentials are passed as a parameter at the application construction
-
-Then, once the confidential client application is constructed, acquiring the token is a question of calling overrides of ``AcquireTokenForClient``, passing the scope, and forcing or not a refresh of the token.
+In MSAL.NET, client credentials are passed as a parameter during <xref:Microsoft.Identity.Client.ConfidentialClientApplication> instantiation. Once the confidential client application is constructed, acquiring the token requires calling <xref:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenForClient(System.Collections.Generic.IEnumerable{System.String})> or one of its overloads, passing the scope and indicating whether a token refresh is required.
 
 ## Client assertions
 
