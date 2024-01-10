@@ -122,7 +122,9 @@ Don't call [AcquireTokenSilent](xref:Microsoft.Identity.Client.ClientApplication
 
 ### Scopes to request
 
-The scope to request for a client credential flow is the name of the resource followed by `/.default`. This notation tells Microsoft Entra ID to use the **application level permissions** declared statically during the application registration. Also these API permissions must be granted by a tenant administrator
+The scope to request for a client credential flow is the name of the resource followed by `/.default`. This notation tells Microsoft Entra ID to use **application level permissions** declared statically during the application registration. The API permissions must be granted by a tenant administrator.
+
+This configuration can look as such:
 
 ```csharp
 ResourceId = "someAppIDURI";
@@ -133,19 +135,15 @@ var result = app.AcquireTokenForClient(scopes);
 
 ### No need to pass a Reply URL at app construction if your app is only a daemon
 
-In the case where your confidential client application uses **only** client credentials flow, you don't need to pass a reply URL passed in the constructor.
+In the case where your confidential client application uses **only** the client credentials flow, you don't need to specify a reply URL in the constructor.
 
-## Samples illustrating acquiring tokens interactively with MSAL.NET
+## Samples
 
-Sample | Platform | Description
------- | -------- | -----------
-[active-directory-dotnetcore-daemon-v2](https://github.com/Azure-Samples/active-directory-dotnetcore-daemon-v2) | .NET Core 2.1 Console | <p>A simple .NET Core application that displays the users of a tenant querying the Microsoft Graph using the identity of the application, instead of on behalf of a user.</p> ![Daemon app topology](../../media/daemon-app-topology.png) <p>The sample also illustrates the variation with certificates.</p> ![Daemon certificate-based auth topology](../../media/daemon-certificate-topology.png)
-[active-directory-dotnet-daemon-v2](https://github.com/Azure-Samples/active-directory-dotnet-daemon-v2) | ASP.NET MVC | <p>A web application that sync's data from the Microsoft Graph using the identity of the application, instead of on behalf of a user.</p>![UserSync app topology](../../media/user-sync-app-topology.png)
+| Sample | Platform | Description |
+|:-------|:---------|:------------|
+| [active-directory-dotnetcore-daemon-v2](https://github.com/Azure-Samples/active-directory-dotnetcore-daemon-v2) | .NET        | <p>A simple .NET application that displays the users of a tenant querying Microsoft Graph using the identity of the application, instead of on behalf of a user.</p> ![Daemon app topology](../../media/daemon-app-topology.png) <p>The sample also illustrates the variation with certificates.</p> ![Daemon certificate-based auth topology](../../media/daemon-certificate-topology.png)
+| [active-directory-dotnet-daemon-v2](https://github.com/Azure-Samples/active-directory-dotnet-daemon-v2)         | ASP.NET MVC | <p>A web application that syncs data from Microsoft Graph using the identity of the application, instead of on behalf of a user.</p>![UserSync app topology](../../media/user-sync-app-topology.png)
 
 ## More info
 
-You can find more information in:
-
-- The protocol documentation: [Azure Active Directory v2.0 and the OAuth 2.0 client credentials flow](/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow)
-
-See [Client credentials in MSAL.NET](./client-credential-flows.md).
+You can find more information in the [protocol documentation](/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow).
