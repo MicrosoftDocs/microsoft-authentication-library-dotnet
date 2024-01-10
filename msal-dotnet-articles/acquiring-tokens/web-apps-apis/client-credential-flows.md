@@ -108,14 +108,17 @@ In MSAL.NET, client credentials are passed as a parameter during <xref:Microsoft
 
 ## Client assertions
 
-Instead of a client secret or a certificate, the confidential client application can also prove its identity using client assertions. This advanced scenario is detailed in [Confidential client assertions](/azure/active-directory/develop/msal-net-client-assertions).
+Instead of a client secret or a certificate, the confidential client application can also prove its identity using client assertions. This scenario is outlined in detail in the [Confidential client assertions](../web-apps-apis/confidential-client-assertions) document.
 
 ## Remarks
 
-### AcquireTokenForClient uses the application token cache
+### `AcquireTokenForClient` uses the application token cache
 
-`AcquireTokenForClient` uses the **application token cache** (not the user token cache)
-Don't call `AcquireTokenSilent` before calling `AcquireTokenForClient` as `AcquireTokenSilent` uses the **user** token cache. `AcquireTokenForClient` checks the **application** token cache itself and updates it.
+[AcquireTokenForClient](xref:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenForClient(System.Collections.Generic.IEnumerable{System.String})) uses the **application** token cache (not the user token cache).
+
+Don't call [AcquireTokenSilent](xref:Microsoft.Identity.Client.ClientApplicationBase.AcquireTokenSilent(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount)) before calling [AcquireTokenForClient](xref:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenForClient(System.Collections.Generic.IEnumerable{System.String})) as [AcquireTokenSilent](xref:Microsoft.Identity.Client.ClientApplicationBase.AcquireTokenSilent(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount)) uses the **user** token cache.
+
+[AcquireTokenForClient](xref:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenForClient(System.Collections.Generic.IEnumerable{System.String})) checks the **application** token cache itself and updates it.
 
 ### Scopes to request
 
