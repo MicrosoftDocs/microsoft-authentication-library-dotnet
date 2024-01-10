@@ -29,7 +29,7 @@ For additional details, refer to the [Confidential client assertions](/azure/act
 // this object will cache tokens in-memory - keep it as a singleton
 var singletonApp = ConfidentialClientApplicationBuilder.Create(config.ClientId)
            // don't specify authority here, we'll do it on the request 
-        .WithCertificate(certificate) // or .WithSecret(secret)
+        .WithCertificate(certificate) // or .WithClientSecret(secret)
         .Build();
 
 // If instead you need to re-create the ConfidentialClientApplication on each request, you MUST customize 
