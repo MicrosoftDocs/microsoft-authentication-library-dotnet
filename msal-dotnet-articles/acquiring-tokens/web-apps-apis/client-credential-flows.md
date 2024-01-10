@@ -9,7 +9,7 @@ description: "Client credential authentication flows allow services, APIs, and d
 
 MSAL is a multi-framework library. Confidential Client flows are not available on mobile and client-facing platforms (e.g., UWP, Xamarin.iOS, and Xamarin.Android) since there is no secure way of deploying a secret with an application.
 
-## Credentials
+## Using client credentials
 
 MSAL.NET supports two types of client credentials, which must be registered in the Microsoft Entra portal:
 
@@ -23,22 +23,22 @@ For advanced scenarios, two other types credentials can be used:
 
 For additional details, refer to the [Confidential client assertions](/azure/active-directory/develop/msal-net-client-assertions) document.
 
-### Code snippet
+### Example usage
 
 ```csharp
 // this object will cache tokens in-memory - keep it as a singleton
 var singletonApp = ConfidentialClientApplicationBuilder.Create(config.ClientId)
            // don't specify authority here, we'll do it on the request 
-           .WithCertificate(certificate) // or .WithSecret(secret)
-           .Build();
+        .WithCertificate(certificate) // or .WithSecret(secret)
+        .Build();
 
 // If instead you need to re-create the ConfidentialClientApplication on each request, you MUST customize 
 // the cache serialization (see below)
 
 // when making the request, specify the tenanted authority
 var authResult = await app.AcquireTokenForClient(scopes: new [] {  "some_app_id_uri/.default"})        // uses the token cache automatically, which is optimized for multi-tenant access
-                   .WithAuthority(AzureCloudInstance.AzurePublic, "{tenantID}")  // do not use "common" or "organizations"!
-                   .ExecuteAsync();
+        .WithAuthority(AzureCloudInstance.AzurePublic, "{tenantID}")  // do not use "common" or "organizations"!
+        .ExecuteAsync();
 ```
 
 >[!IMPORTANT]
@@ -46,16 +46,16 @@ var authResult = await app.AcquireTokenForClient(scopes: new [] {  "some_app_id_
 
 For more information, see [AuthenticationConfig.cs](https://github.com/Azure-Samples/active-directory-dotnetcore-daemon-v2/blob/5199032b352a912e7cc0fce143f81664ba1a8c26/daemon-console/AuthenticationConfig.cs#L67-L87).
 
-## Custom Cache Serialization
+## Custom cache serialization
 
 If your service is multi-tenant (i.e., it needs tokens for a resource that is in a different tenant), see [MSAL for client credential flow in multi-tenant services](../../advanced/client-credential-multi-tenant.md).
 
-You can serialize the token cache to a location of your choice for example in-memory or in distributed location like Redis. You would do this to:
+You can serialize the token cache to a location of your choice (e.g., in-memory or through a distributed system like Redis). You would do this to:
 
-- share the token cache between several instances of [`ConfidentialClientApplication`](xref:Microsoft.Identity.Client.ConfidentialClientApplication) OR
-- persist the token cache to Redis to share it between different machines
+- Share the token cache between several instances of [`ConfidentialClientApplication`](xref:Microsoft.Identity.Client.ConfidentialClientApplication).
+- Persist the token cache to share it between different machines.
 
-Please see [distributed cache implementations](https://github.com/AzureAD/microsoft-identity-web/tree/master/src/Microsoft.Identity.Web.TokenCache/Distributed) and [binding the token cache](/azure/active-directory/develop/msal-net-token-cache-serialization).
+Please see [distributed cache implementations](https://github.com/AzureAD/microsoft-identity-web/tree/master/src/Microsoft.Identity.Web.TokenCache/Distributed) and [binding the token cache](/azure/active-directory/develop/msal-net-token-cache-serialization) for additional implementation details.
 
 Check our [sample](https://github.com/Azure-Samples/active-directory-dotnet-v1-to-v2/blob/b48c10180665260a1aec78a9acf7d1b1ff97e5ba/ConfidentialClientTokenCache/Program.cs) to see how token cache serialization works.
 
