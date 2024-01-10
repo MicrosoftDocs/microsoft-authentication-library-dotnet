@@ -67,11 +67,11 @@ A single token is a only a few KB in size, but there is 1 token for each tenant!
 
 ### Avoid requesting new tokens on each machine of a distributed service
 
-Use a distributed cache like Redis.
+Use a distributed cache, like [Redis](https://redis.io/).
 
 ### Monitoring cache hit rates
 
-The result object will tell you if the token comes from the cache or not:
+The authentication result object can tell you if the token comes from the cache:
 
 ```csharp
 authResult.AuthenticationResultMetadata.TokenSource == TokenSource.Cache
@@ -79,15 +79,11 @@ authResult.AuthenticationResultMetadata.TokenSource == TokenSource.Cache
 
 ### Handling "loop detected" errors
 
-You are calling Microsoft Entra ID for a token to often and Azure ADis throttling you. You need to use a cache - either the in-memory one (as per the sample above) or a persisted one.
+You are calling Microsoft Entra ID for a token too often and the service is throttling you. To mitigate this issue, you need to use a cache - either the in-memory one (as per the sample above) or a persisted one.
 
 ### High latency for token acquisition
 
-Please ensure you have a high token cache hit rate.
-
-The in-memory cache is optimized for searching through tokens that come from different client_id or different tenant_id. It is not optimized for storing tokens with different scopes. You need to use a different cache key that includes the scope. See [Performance testing](../../advanced/performance-testing.md).
-
-<a name='registration-of-application-secret-or-certificate-with-azure-ad'></a>
+Please ensure you have a high token cache hit rate. The in-memory cache is optimized for searching through tokens that come from different client IDs or different tenant IDs. It is not optimized for storing tokens with different scopes. You need to use a different cache key that includes the scope. See [Performance testing](../../advanced/performance-testing.md) for additional recommendations.
 
 ## Registration of application secret or certificate with Microsoft Entra ID
 
