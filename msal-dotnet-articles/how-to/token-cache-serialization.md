@@ -1,5 +1,5 @@
 ---
-title: Token cache serialization (MSAL.NET)
+title: Token cache serialization
 description: Learn about serialization and custom serialization of the token cache using the Microsoft Authentication Library for .NET (MSAL.NET).
 services: active-directory
 author: Dickson-Mwendia
@@ -16,11 +16,19 @@ ms.custom: devx-track-csharp, aaddev, has-adal-ref, devx-track-dotnet
 #Customer intent: As an application developer, I want to learn about token cache serialization so I can have fine-grained control of the proxy.
 ---
 
-# Token cache serialization in MSAL.NET
+# Token cache serialization
 
 After Microsoft Authentication Library (MSAL) [acquires a token](/azure/active-directory/develop/msal-acquire-cache-tokens), it caches that token. Public client applications (desktop and mobile apps) should try to get a token from the cache before acquiring a token by another method. Acquisition methods on confidential client applications manage the cache themselves. This article discusses default and custom serialization of the token cache in MSAL.NET.
 
-## Quick summary
+## Token cache types
+
+MSAL.NET operates with two types of token caches - **user** and **application**.
+
+The **application token cache** which holds access tokens for this application. It's maintained and updated silently when calling [AcquireTokenForClient](xref:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenForClient(System.Collections.Generic.IEnumerable{System.String})).
+
+The **user token cache** holds ID tokens, access tokens, and refresh tokens for accounts MSAL.NET interacts with. It's used and updated silently if needed when calling [AcquireTokenSilent](xref:Microsoft.Identity.Client.ClientApplicationBase.AcquireTokenSilent(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount)). It is updated by each token acquisition method, with the exception of [AcquireTokenForClient](xref:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenForClient(System.Collections.Generic.IEnumerable{System.String})) which only uses the application cache.
+
+## Summary
 
 The recommendation is:
 - When writing a desktop application, use the cross-platform token cache as explained in [desktop apps](token-cache-serialization.md?tabs=desktop).

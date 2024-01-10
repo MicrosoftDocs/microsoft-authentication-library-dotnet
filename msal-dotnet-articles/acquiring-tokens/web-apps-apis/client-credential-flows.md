@@ -120,6 +120,8 @@ Don't call [AcquireTokenSilent](xref:Microsoft.Identity.Client.ClientApplication
 
 [AcquireTokenForClient](xref:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenForClient(System.Collections.Generic.IEnumerable{System.String})) checks the **application** token cache itself and updates it.
 
+See [Token cache types](../../how-to/token-cache-serialization.md#token-cache-types) for details on differences between application and user token caches.
+
 ### Scopes to request
 
 The scope to request for a client credential flow is the name of the resource followed by `/.default`. This notation tells Microsoft Entra ID to use **application level permissions** declared statically during the application registration. The API permissions must be granted by a tenant administrator.
