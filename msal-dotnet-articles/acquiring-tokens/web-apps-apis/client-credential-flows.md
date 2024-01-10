@@ -61,9 +61,9 @@ Check our [sample](https://github.com/Azure-Samples/active-directory-dotnet-v1-t
 
 ### Service is running out of memory
 
-See [MSAL for client credential flow in multi-tenant services](../../advanced/client-credential-multi-tenant.md).
-Provision enough RAM on the machines running your service or use a distributed cache.
-A single token is a only a few KB in size, but there is 1 token for each tenant! A multi-tenant service sometimes needs tokens for 0.5M tenants.
+See [Using MSAL.NET for client credential flow in multi-tenant services](../../advanced/client-credential-multi-tenant.md) for an in-depth overview of the multi-tenant architecture with MSAL.NET.
+
+Make sure to provision enough RAM on the machines running your service or use a distributed cache. A single token is a a few kilobytes (KB) in size, and one token is stored for each tenant with which the application interacts.
 
 ### Avoid requesting new tokens on each machine of a distributed service
 
@@ -85,13 +85,13 @@ You are calling Microsoft Entra ID for a token too often and the service is thro
 
 Please ensure you have a high token cache hit rate. The in-memory cache is optimized for searching through tokens that come from different client IDs or different tenant IDs. It is not optimized for storing tokens with different scopes. You need to use a different cache key that includes the scope. See [Performance testing](../../advanced/performance-testing.md) for additional recommendations.
 
-## Registration of application secret or certificate with Microsoft Entra ID
+## Configuring application secrets or certificates with Microsoft Entra ID
 
-You can register your application secrets either through the interactive experience in the [Azure portal](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredAppsPreview), or using command-line tools (like PowerShell)
+You can register your application secrets either through the interactive experience in the [Azure portal](https://portal.azure.com/), or using command-line tools like [Azure CLI](/cli/azure/).
 
 ### Registering client secrets using the application registration portal
 
-The management of client credentials happens in the **certificates & secrets** page for an application:
+The management of client credentials happens in the **Certificates & secrets** page for a registered application in the Microsoft Entra portal:
 
 ![image](../../media/azure-ad-certificates.png)
 
