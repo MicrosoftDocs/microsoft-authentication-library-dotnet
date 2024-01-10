@@ -26,18 +26,18 @@ For additional details, refer to the [Confidential client assertions](/azure/act
 ### Example usage
 
 ```csharp
-// this object will cache tokens in-memory - keep it as a singleton
+// This object will cache tokens in-memory - keep it as a singleton
 var singletonApp = ConfidentialClientApplicationBuilder.Create(config.ClientId)
-           // don't specify authority here, we'll do it on the request 
+        // Don't specify authority here, we'll do it on the request 
         .WithCertificate(certificate) // or .WithClientSecret(secret)
         .Build();
 
 // If instead you need to re-create the ConfidentialClientApplication on each request, you MUST customize 
 // the cache serialization (see below)
 
-// when making the request, specify the tenanted authority
-var authResult = await app.AcquireTokenForClient(scopes: new [] {  "some_app_id_uri/.default"})        // uses the token cache automatically, which is optimized for multi-tenant access
-        .WithAuthority(AzureCloudInstance.AzurePublic, "{tenantID}")  // do not use "common" or "organizations"!
+// When making the request, specify the tenant-based authority
+var authResult = await app.AcquireTokenForClient(scopes: new [] {  "some_app_id_uri/.default"})        // Uses the token cache automatically, which is optimized for multi-tenant access
+        .WithAuthority(AzureCloudInstance.AzurePublic, "{tenantID}")  // Do not use "common" or "organizations"!
         .ExecuteAsync();
 ```
 
