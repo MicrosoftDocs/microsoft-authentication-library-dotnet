@@ -1,9 +1,9 @@
 ---
-title: Client credential flows in MSAL.NET
+title: Client credential flows
 description: "Client credential authentication flows allow services, APIs, and daemon applications to acquire a token without direct user interaction."
 ---
 
-# Client credential flows in MSAL.NET
+# Client credential flows
 
 ## Availability by platform
 
