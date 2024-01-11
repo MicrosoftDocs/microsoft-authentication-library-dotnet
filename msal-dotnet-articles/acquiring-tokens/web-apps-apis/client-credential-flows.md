@@ -42,7 +42,7 @@ var authResult = await app.AcquireTokenForClient(scopes: new [] {  "some_app_id_
 ```
 
 >[!IMPORTANT]
->Do not use `common` or `organizations` authority for client credential flows.
+>Do not use `common` or `organizations` authority for client credential flows. Specify the tenant ID in the authority.
 
 ## Custom cache serialization
 
