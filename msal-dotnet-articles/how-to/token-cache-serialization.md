@@ -24,7 +24,7 @@ After Microsoft Authentication Library (MSAL) [acquires a token](/azure/active-d
 
 MSAL.NET operates with two types of token caches - **user** and **application**.
 
-The **application token cache** which holds access tokens for this application. It's maintained and updated silently when calling [AcquireTokenForClient](xref:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenForClient(System.Collections.Generic.IEnumerable{System.String})).
+The **application token cache** holds access tokens for this application. It's maintained and updated silently when calling [AcquireTokenForClient](xref:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenForClient(System.Collections.Generic.IEnumerable{System.String})).
 
 The **user token cache** holds ID tokens, access tokens, and refresh tokens for accounts MSAL.NET interacts with. It's used and updated silently if needed when calling [AcquireTokenSilent](xref:Microsoft.Identity.Client.ClientApplicationBase.AcquireTokenSilent(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount)). It is updated by each token acquisition method, with the exception of [AcquireTokenForClient](xref:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenForClient(System.Collections.Generic.IEnumerable{System.String})) which only uses the application cache.
 
