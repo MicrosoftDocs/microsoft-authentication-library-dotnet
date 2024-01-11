@@ -63,7 +63,7 @@ Check our [sample](https://github.com/Azure-Samples/active-directory-dotnet-v1-t
 
 See [Using MSAL.NET for client credential flow in multi-tenant services](../../advanced/client-credential-multi-tenant.md) for an in-depth overview of the multi-tenant architecture with MSAL.NET.
 
-Make sure to provision enough RAM on the machines running your service or use a distributed cache. A single token is a a few kilobytes (KB) in size, and one token is stored for each tenant with which the application interacts.
+Make sure to provision enough RAM on the machines running your service or use a distributed cache. A single token is a few kilobytes (KB) in size, and one token is stored for each tenant with which the application interacts.
 
 ### Avoid requesting new tokens on each machine of a distributed service
 
