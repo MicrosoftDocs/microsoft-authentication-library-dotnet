@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-model-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.Identity.Abstractions" Version="5.0.0.0" />
+    <Assembly Name="Microsoft.Identity.Abstractions" Version="5.1.0.0" />
     <Assembly Name="Microsoft.Identity.Web.Azure" Version="2.16.0.0" />
     <Assembly Name="Microsoft.Identity.Web.Certificate" Version="2.16.0.0" />
     <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="2.16.0.0" />
@@ -74,6 +74,7 @@
       <Member Id="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.ForceRefresh" />
       <Member Id="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.LongRunningWebApiSessionKey" />
       <Member Id="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.LongRunningWebApiSessionKeyAuto" />
+      <Member Id="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.ManagedIdentity" />
       <Member Id="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.PopClaim" />
       <Member Id="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.PopPublicKey" />
       <Member Id="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.Tenant" />
@@ -228,6 +229,11 @@
     <Type Name="Microsoft.Identity.Abstractions.ITokenAcquirerFactory" Id="T:Microsoft.Identity.Abstractions.ITokenAcquirerFactory">
       <Member Id="M:Microsoft.Identity.Abstractions.ITokenAcquirerFactory.GetTokenAcquirer(Microsoft.Identity.Abstractions.IdentityApplicationOptions)" />
       <Member Id="M:Microsoft.Identity.Abstractions.ITokenAcquirerFactory.GetTokenAcquirer(System.String)" />
+    </Type>
+    <Type Name="Microsoft.Identity.Abstractions.ManagedIdentityOptions" Id="T:Microsoft.Identity.Abstractions.ManagedIdentityOptions">
+      <Member Id="M:Microsoft.Identity.Abstractions.ManagedIdentityOptions.#ctor" />
+      <Member Id="M:Microsoft.Identity.Abstractions.ManagedIdentityOptions.Clone" />
+      <Member Id="P:Microsoft.Identity.Abstractions.ManagedIdentityOptions.UserAssignedClientId" />
     </Type>
     <Type Name="Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions" Id="T:Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions">
       <Member Id="M:Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions.#ctor" />
