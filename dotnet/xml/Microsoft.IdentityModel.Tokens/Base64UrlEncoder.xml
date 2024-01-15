@@ -19,6 +19,7 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>7.0.2.0</AssemblyVersion>
     <AssemblyVersion>7.0.3.0</AssemblyVersion>
+    <AssemblyVersion>7.2.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -40,7 +41,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.0.3.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -66,7 +67,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.0.3.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -91,7 +92,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.0.3.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -119,7 +120,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.0.3.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -140,6 +141,35 @@
       </Docs>
     </Member>
     <Member MemberName="Encode">
+      <MemberSignature Language="C#" Value="public static int Encode (ReadOnlySpan&lt;byte&gt; inArray, Span&lt;char&gt; output);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 Encode(valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; inArray, valuetype System.Span`1&lt;char&gt; output) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Encode(System.ReadOnlySpan{System.Byte},System.Span{System.Char})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Encode (inArray As ReadOnlySpan(Of Byte), output As Span(Of Char)) As Integer" />
+      <MemberSignature Language="F#" Value="static member Encode : ReadOnlySpan&lt;byte&gt; * Span&lt;char&gt; -&gt; int" Usage="Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Encode (inArray, output)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inArray" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+        <Parameter Name="output" Type="System.Span&lt;System.Char&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="inArray">A span of bytes.</param>
+        <param name="output">output for encoding.</param>
+        <summary>
+            Populates a <see cref="T:System.ReadOnlySpan`1" />Converts a <see cref="T:System.Span`1" /> encoded with base-64-url digits. Parameters specify
+            the subset as an offset in the input array, and the number of elements in the array to convert.
+            </summary>
+        <returns>The number of chars written to the output.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Encode">
       <MemberSignature Language="C#" Value="public static string Encode (byte[] inArray, int offset, int length);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig string Encode(unsigned int8[] inArray, int32 offset, int32 length) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Encode(System.Byte[],System.Int32,System.Int32)" />
@@ -148,7 +178,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.0.3.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
