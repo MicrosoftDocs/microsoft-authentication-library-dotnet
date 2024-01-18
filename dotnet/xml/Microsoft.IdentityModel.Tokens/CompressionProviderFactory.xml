@@ -19,6 +19,7 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>7.0.2.0</AssemblyVersion>
     <AssemblyVersion>7.0.3.0</AssemblyVersion>
+    <AssemblyVersion>7.2.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -39,7 +40,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.0.3.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -58,7 +59,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.0.3.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="other" Type="Microsoft.IdentityModel.Tokens.CompressionProviderFactory" />
@@ -81,7 +82,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.0.3.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.ICompressionProvider</ReturnType>
@@ -98,6 +99,34 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="CreateCompressionProvider">
+      <MemberSignature Language="C#" Value="public Microsoft.IdentityModel.Tokens.ICompressionProvider CreateCompressionProvider (string algorithm, int maximumDeflateSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.IdentityModel.Tokens.ICompressionProvider CreateCompressionProvider(string algorithm, int32 maximumDeflateSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.CompressionProviderFactory.CreateCompressionProvider(System.String,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateCompressionProvider (algorithm As String, maximumDeflateSize As Integer) As ICompressionProvider" />
+      <MemberSignature Language="F#" Value="member this.CreateCompressionProvider : string * int -&gt; Microsoft.IdentityModel.Tokens.ICompressionProvider" Usage="compressionProviderFactory.CreateCompressionProvider (algorithm, maximumDeflateSize)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Tokens.ICompressionProvider</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithm" Type="System.String" />
+        <Parameter Name="maximumDeflateSize" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="algorithm">the decompression algorithm.</param>
+        <param name="maximumDeflateSize">the maximum deflate size in chars that will be processed.</param>
+        <summary>
+            Returns a <see cref="T:Microsoft.IdentityModel.Tokens.ICompressionProvider" /> for a specific algorithm.
+            </summary>
+        <returns>a <see cref="T:Microsoft.IdentityModel.Tokens.ICompressionProvider" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="CustomCompressionProvider">
       <MemberSignature Language="C#" Value="public Microsoft.IdentityModel.Tokens.ICompressionProvider CustomCompressionProvider { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.IdentityModel.Tokens.ICompressionProvider CustomCompressionProvider" />
@@ -107,7 +136,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.0.3.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.ICompressionProvider</ReturnType>
@@ -129,7 +158,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.0.3.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.CompressionProviderFactory</ReturnType>
@@ -151,7 +180,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.0.3.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>

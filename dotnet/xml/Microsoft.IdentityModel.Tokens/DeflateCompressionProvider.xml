@@ -19,6 +19,7 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>7.0.2.0</AssemblyVersion>
     <AssemblyVersion>7.0.3.0</AssemblyVersion>
+    <AssemblyVersion>7.2.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -43,7 +44,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.0.3.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -62,7 +63,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.0.3.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="compressionLevel" Type="System.IO.Compression.CompressionLevel" />
@@ -87,7 +88,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.0.3.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -112,7 +113,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.0.3.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -138,7 +139,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.0.3.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.IO.Compression.CompressionLevel</ReturnType>
@@ -164,7 +165,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.0.3.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -193,7 +194,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.0.3.0</AssemblyVersion>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -208,6 +209,29 @@
             </summary>
         <returns>true if the compression algorithm is supported, false otherwise.</returns>
         <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumDeflateSize">
+      <MemberSignature Language="C#" Value="public int MaximumDeflateSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaximumDeflateSize" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Tokens.DeflateCompressionProvider.MaximumDeflateSize" />
+      <MemberSignature Language="VB.NET" Value="Public Property MaximumDeflateSize As Integer" />
+      <MemberSignature Language="F#" Value="member this.MaximumDeflateSize : int with get, set" Usage="Microsoft.IdentityModel.Tokens.DeflateCompressionProvider.MaximumDeflateSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>7.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets and sets the maximum deflate size in chars that will be processed.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">'value' less than 1.</exception>
       </Docs>
     </Member>
   </Members>

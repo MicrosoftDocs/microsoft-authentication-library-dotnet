@@ -1,22 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-web-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.IdentityModel.Abstractions" Version="7.0.3.0" />
-    <Assembly Name="Microsoft.IdentityModel.JsonWebTokens" Version="7.0.3.0" />
-    <Assembly Name="Microsoft.IdentityModel.KeyVaultExtensions" Version="7.0.3.0" />
-    <Assembly Name="Microsoft.IdentityModel.Logging" Version="7.0.3.0" />
-    <Assembly Name="Microsoft.IdentityModel.LoggingExtensions" Version="7.0.3.0" />
-    <Assembly Name="Microsoft.IdentityModel.ManagedKeyVaultSecurityKey" Version="7.0.3.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols" Version="7.0.3.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="7.0.3.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.SignedHttpRequest" Version="7.0.3.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.WsFederation" Version="7.0.3.0" />
-    <Assembly Name="Microsoft.IdentityModel.TestExtensions" Version="7.0.3.0" />
-    <Assembly Name="Microsoft.IdentityModel.Tokens" Version="7.0.3.0" />
-    <Assembly Name="Microsoft.IdentityModel.Tokens.Saml" Version="7.0.3.0" />
-    <Assembly Name="Microsoft.IdentityModel.Validators" Version="7.0.3.0" />
-    <Assembly Name="Microsoft.IdentityModel.Xml" Version="7.0.3.0" />
-    <Assembly Name="System.IdentityModel.Tokens.Jwt" Version="7.0.3.0" />
+    <Assembly Name="Microsoft.IdentityModel.Abstractions" Version="7.2.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.JsonWebTokens" Version="7.2.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.KeyVaultExtensions" Version="7.2.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Logging" Version="7.2.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.LoggingExtensions" Version="7.2.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.ManagedKeyVaultSecurityKey" Version="7.2.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols" Version="7.2.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="7.2.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.SignedHttpRequest" Version="7.2.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.WsFederation" Version="7.2.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.TestExtensions" Version="7.2.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Tokens" Version="7.2.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Tokens.Saml" Version="7.2.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Validators" Version="7.2.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Xml" Version="7.2.0.0" />
+    <Assembly Name="System.IdentityModel.Tokens.Jwt" Version="7.2.0.0" />
   </Assemblies>
   <Namespace Name="Microsoft.IdentityModel.Abstractions">
     <Type Name="Microsoft.IdentityModel.Abstractions.EventLogLevel" Id="T:Microsoft.IdentityModel.Abstractions.EventLogLevel">
@@ -992,6 +992,8 @@
       <Member Id="M:Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters.#ctor" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters.AcceptUnsignedHeaders" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters.AcceptUnsignedQueryParameters" />
+      <Member Id="P:Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters.AllowedDomainsForJkuRetrieval" />
+      <Member Id="P:Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters.AllowResolvingPopKeyFromJku" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters.ClaimsToValidateWhenPresent" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters.CnfDecryptionKeys" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters.CnfDecryptionKeysResolverAsync" />
@@ -1250,6 +1252,7 @@
       <Member Id="M:Microsoft.IdentityModel.Tokens.Base64UrlEncoder.DecodeBytes(System.String)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Encode(System.Byte[])" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Encode(System.Byte[],System.Int32,System.Int32)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Encode(System.ReadOnlySpan{System.Byte},System.Span{System.Char})" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Encode(System.String)" />
     </Type>
     <Type Name="Microsoft.IdentityModel.Tokens.BaseConfiguration" Id="T:Microsoft.IdentityModel.Tokens.BaseConfiguration">
@@ -1293,6 +1296,7 @@
       <Member Id="M:Microsoft.IdentityModel.Tokens.CompressionProviderFactory.#ctor" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.CompressionProviderFactory.#ctor(Microsoft.IdentityModel.Tokens.CompressionProviderFactory)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.CompressionProviderFactory.CreateCompressionProvider(System.String)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.CompressionProviderFactory.CreateCompressionProvider(System.String,System.Int32)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.CompressionProviderFactory.IsSupportedAlgorithm(System.String)" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.CompressionProviderFactory.CustomCompressionProvider" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.CompressionProviderFactory.Default" />
@@ -1353,6 +1357,7 @@
       <Member Id="M:Microsoft.IdentityModel.Tokens.DeflateCompressionProvider.IsSupportedAlgorithm(System.String)" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.DeflateCompressionProvider.Algorithm" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.DeflateCompressionProvider.CompressionLevel" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.DeflateCompressionProvider.MaximumDeflateSize" />
     </Type>
     <Type Name="Microsoft.IdentityModel.Tokens.EcdhKeyExchangeProvider" Id="T:Microsoft.IdentityModel.Tokens.EcdhKeyExchangeProvider">
       <Member Id="M:Microsoft.IdentityModel.Tokens.EcdhKeyExchangeProvider.#ctor(Microsoft.IdentityModel.Tokens.SecurityKey,Microsoft.IdentityModel.Tokens.SecurityKey,System.String,System.String)" />

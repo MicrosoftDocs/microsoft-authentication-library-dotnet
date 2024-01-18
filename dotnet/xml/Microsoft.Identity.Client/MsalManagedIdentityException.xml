@@ -13,14 +13,27 @@
     <AssemblyVersion>4.57.0.0</AssemblyVersion>
     <AssemblyVersion>4.58.0.0</AssemblyVersion>
     <AssemblyVersion>4.58.1.0</AssemblyVersion>
+    <AssemblyVersion>4.59.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Identity.Client.MsalServiceException</BaseTypeName>
   </Base>
   <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName Language="C#">[System.Obsolete("MsalManagedIdentityException is deprecated and will be removed in a future release. Catch MsalServiceException instead.", true)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Obsolete("MsalManagedIdentityException is deprecated and will be removed in a future release. Catch MsalServiceException instead.", true)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>
             This exception class is for exceptions generated from Managed Identity sources.
+            This class is deprecated and will be removed in a future release. 
+            Catch MsalServiceException instead.
             For more details, see https://aka.ms/msal-net-managed-identity
             </summary>
     <remarks>To be added.</remarks>
@@ -35,7 +48,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.58.1.0</AssemblyVersion>
+        <AssemblyVersion>4.59.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="errorCode" Type="System.String" />
@@ -65,7 +78,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.58.1.0</AssemblyVersion>
+        <AssemblyVersion>4.59.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="errorCode" Type="System.String" />
@@ -97,7 +110,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.58.1.0</AssemblyVersion>
+        <AssemblyVersion>4.59.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="errorCode" Type="System.String" />
@@ -129,7 +142,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.58.1.0</AssemblyVersion>
+        <AssemblyVersion>4.59.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="errorCode" Type="System.String" />
@@ -163,7 +176,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.58.1.0</AssemblyVersion>
+        <AssemblyVersion>4.59.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySource</ReturnType>
@@ -185,7 +198,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.58.1.0</AssemblyVersion>
+        <AssemblyVersion>4.59.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
