@@ -115,12 +115,10 @@ if (acct != null)
     {
         var silentParamBuilder = PCA.AcquireTokenSilent(Scopes, acct);
         var authResult = await silentParamBuilder.ExecuteAsync().ConfigureAwait(false);
-        ShowAlert("Success Silent 1", authResult.AccessToken);
+        ShowAlert("Success Silent", authResult.AccessToken);
     }
 }
 ```
-
-The complete sample can be found [on GitHub](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/tree/d813f674da88d37272d7bd8fe81318d4243e7583/tests/devapps/Intune-xamarin-ios)
 
 ## Workflow for Android
 
@@ -230,5 +228,3 @@ if (notification.Type == MAMNotificationType.MamEnrollmentResult)
     }
 }
 ```
-
-The complete sample can be found [in the MSAL.NET repository](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/tree/master/tests/devapps/Intune-xamarin-Android).
