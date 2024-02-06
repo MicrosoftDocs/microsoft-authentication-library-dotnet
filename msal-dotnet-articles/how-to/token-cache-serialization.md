@@ -177,7 +177,7 @@ Read on if you're using MSAL.NET directly.
 
 - memory cache without eviction
 - Memory cache with eviction
-- combined distributed cache and memory cache
+- Combined distributed and memory caches
 
 <a id="no-token-cache-serialization"></a>
 #### Memory Cache without eviction
