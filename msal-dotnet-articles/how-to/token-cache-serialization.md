@@ -176,7 +176,7 @@ Read on if you're using MSAL.NET directly.
 ### Available caching technologies
 
 - memory cache without eviction
-- memory cache with eviction
+- Memory cache with eviction
 - combined distributed cache and memory cache
 
 <a id="no-token-cache-serialization"></a>
