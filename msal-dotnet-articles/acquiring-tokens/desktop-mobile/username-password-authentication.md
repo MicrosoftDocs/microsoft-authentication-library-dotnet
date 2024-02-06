@@ -82,10 +82,7 @@ static async Task GetATokenForGraph()
     {
         try
         {
-            var securePassword = new SecureString();
-            foreach(char c in "dummy") // you should fetch the password keystroke
-            securePassword.AppendChar(c); // by keystroke
-            result = await app.AcquireTokenByUsernamePassword(scopes, "joe@contoso.com", securePassword).ExecuteAsync();
+            result = await app.AcquireTokenByUsernamePassword(scopes, "joe@contoso.com", "joepassword").ExecuteAsync();
         }
         catch (MsalException)
         {
