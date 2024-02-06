@@ -374,7 +374,7 @@ cacheHelper.RegisterCache(pca.UserTokenCache);
 
 #### Plain-text fallback mode
 
-The cross-platform token cache allows you to store unencrypted tokens in an ACL restricted plain text file. This is useful in case the encryption at rest fails, which ocassionally does due to operating system environmnental reasons. You can use the plain-text fallback mode by using the following code pattern. 
+The cross-platform token cache allows you to store unencrypted tokens in an ACL-restricted plain-text file. This is useful in cases where encryption at rest fails, which ocassionally happens due to environmnent-related reasons. You can use the plain-text fallback mode by using the following code pattern:
 
 ```csharp
 storageProperties =
