@@ -37,7 +37,7 @@ The recommendation is:
 
 When users log in, there will be a cache entry for each user, around 7KB in size. The size will be larger if you are calling several downstream APIs. For service-to-service authentication, there will be a cache entry for each tenant and downstream API, around 2KB in size. 
 
-## [Confidential Clients using Microsoft.Identity.Web](#tab/aspnetcore)
+## [Confidential clients using Microsoft.Identity.Web](#tab/aspnetcore)
 
 The [Microsoft.Identity.Web.TokenCache](https://www.nuget.org/packages/Microsoft.Identity.Web.TokenCache) NuGet package provides token cache serialization within the [Microsoft.Identity.Web](https://github.com/AzureAD/microsoft-identity-web) library. The library provides integration with both ASP.NET Core and ASP.NET Classic, and its abstractions can be used to drive other web app or API frameworks. 
 
