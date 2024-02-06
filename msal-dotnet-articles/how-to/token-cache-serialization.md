@@ -204,7 +204,7 @@ Use `.WithCacheOptions(CacheOptions.EnableSharedCacheOptions)` when building a s
 
 Reference the [Microsoft.Identity.Web.TokenCache](https://www.nuget.org/packages/Microsoft.Identity.Web.TokenCache) NuGet package to your project.
 
-The following code shows how to add an in-memory cache with eviction
+The following code shows how to add an in-memory cache with eviction:
 
 ```CSharp
 using Microsoft.Identity.Web;
