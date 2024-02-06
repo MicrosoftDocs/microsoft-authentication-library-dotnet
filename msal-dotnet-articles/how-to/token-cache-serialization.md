@@ -201,7 +201,7 @@ Use `.WithCacheOptions(CacheOptions.EnableSharedCacheOptions)` when building a s
 
 `WithCacheOptions(CacheOptions.EnableSharedCacheOptions)` makes the internal MSAL token cache shared between MSAL client application instances. Sharing a token cache is faster than using any token cache serialization, but the internal in-memory token cache doesn't have eviction policies. Existing tokens are refreshed in place, but fetching tokens for different users, tenants, and resources makes the cache grow accordingly. 
 
-### Memory Cache with eviction
+### Memory cache with eviction
 
 Reference the [Microsoft.Identity.Web.TokenCache](https://www.nuget.org/packages/Microsoft.Identity.Web.TokenCache) NuGet package to your project.
 
