@@ -181,7 +181,7 @@ The following material is relevant if you're using MSAL.NET directly.
 - Combined distributed and memory caches
 
 <a id="no-token-cache-serialization"></a>
-#### Memory Cache without eviction
+#### Memory cache without eviction
 
 Use `.WithCacheOptions(CacheOptions.EnableSharedCacheOptions)` when building a service-to-service application - `AcquireTokenForClient` that does not target many (more than 100,000) tenants.
 
