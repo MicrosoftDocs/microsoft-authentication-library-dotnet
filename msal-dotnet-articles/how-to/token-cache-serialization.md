@@ -33,7 +33,7 @@ The recommendation is:
 - [Service-to-service and daemon apps](token-cache-serialization.md?tabs=aspnet#distributed-caches) may rely on memory caching only. If your app serves many tenants, configure an eviction policy.
 - Managed Identity tokens are cached in memory only.
 
-### How large will this cache be?
+### Cache size
 
 When users log in, there will be a cache entry for each user, around 7 KB in size, more if you are calling several downstream APIs. For service to service authentication, there will be a cache entry for each tenant and downstream API, around 2 KB in size. 
 
