@@ -337,7 +337,7 @@ var app = ConfidentialClientApplicationBuilder
 
 ## [Desktop apps](#tab/desktop)
 
-In desktop applications, we recommend that you use the cross-platform token cache. MSAL.NET provides the cross-platform token cache in a separate library named [Microsoft.Identity.Client.Extensions.MSAL](https://github.com/AzureAD/microsoft-authentication-extensions-for-dotnet).
+In desktop applications, we recommend that you use the cross-platform token cache. MSAL.NET provides the cross-platform token cache in a separate library named [Microsoft.Identity.Client.Extensions.MSAL](https://www.nuget.org/packages/Microsoft.Identity.Client.Extensions.Msal).
 
 #### Referencing the NuGet package
 
