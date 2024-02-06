@@ -31,7 +31,7 @@ The recommendation is:
 - Encryption at rest can be optionally configured using [ASP.NET Core Data Protection](/aspnet/core/security/data-protection/introduction).
 - [Web apps](/azure/active-directory/develop/scenario-web-app-call-api-overview) may also rely on session cookies; however, this option is not recommended due to cookie size.
 - [Service-to-service and daemon apps](token-cache-serialization.md?tabs=aspnet#distributed-caches) may rely on memory caching only. If your app serves many tenants, configure an eviction policy.
-- Managed Identity tokens are cached in memory only.
+- Managed identity tokens are cached in memory only.
 
 ### Cache size
 
