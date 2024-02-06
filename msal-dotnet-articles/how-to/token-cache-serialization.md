@@ -170,7 +170,7 @@ The usage of distributed cache is featured in the [ASP.NET Core web app tutorial
 
 ## [Confidential Clients using MSAL](#tab/msal)
 
-.NET confidential clients are recommended to use [Microsoft.Identity.Web](../microsoft-identity-web/index.md), which is based on MSAL.NET, as higher level APIs are able to handle complex scenarios out of the box (guest users, conditional access evaluation, proof of posession tokens etc.). Apps needing to access Azure APIs are recommended to use [Azure SDK](https://azure.github.io/azure-sdk/), which also leverage MSAL internally.
+.NET confidential clients are recommended to use [Microsoft.Identity.Web](../microsoft-identity-web/index.md), which is based on MSAL.NET, as higher level APIs are able to handle complex scenarios out-of-the-box (e.g., guest users, Conditional Access Evaluation, Proof-of-Possession tokens). Applications that need to access Azure APIs should use [Azure SDK](https://azure.github.io/azure-sdk/), which leverages MSAL internally.
 
 Read on if you're using MSAL.NET directly.
 
