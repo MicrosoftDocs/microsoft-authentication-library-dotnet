@@ -39,13 +39,12 @@ In the case of Universal Windows Platform (UWP) applications, Xamarin for iOS, a
 
 The following table summarizes the available approaches to acquire tokens in public client applications:
 
-| Operating system      | Platform        | App type | [Interactive](./desktop-mobile/acquiring-tokens-interactively.md) | [IWA](./desktop-mobile/integrated-windows-authentication.md) | [ROPC](./desktop-mobile/username-password-authentication.md) | [Device Code](./desktop-mobile/device-code-flow.md) |
-|:----------------------|:----------------|:---------|:------------------------------------------------------------------|:-------------------------------------------------------------|:-------------------------------------------------------------|:----------------------------------------------------|
-| Windows (desktop)     | .NET            | Desktop (WPF, Windows Forms, Console) | ✅ | ✅ | ✅ | ✅ |
-| Windows 10 and newer  | UWP             | Store app                             | ✅ | ✅ | ❌ | ❌ |
-| Android               | Xamarin Android | Mobile                                | ✅ | ❌ | ✅ | ❌ |
-| iOS                   | Xamarin iOS     | Mobile                                | ✅ | ❌ | ❌ | ✅ |
-| macOS, Linux, Windows | .NET Core       | Console                               | N/A see [Using web browsers](../acquiring-tokens/using-web-browsers.md)	| ✅	| ✅	| ✅ |
+| Operating system      | Platform        | App type | [Interactive](./desktop-mobile/acquiring-tokens-interactively.md) | [IWA](./desktop-mobile/integrated-windows-authentication.md) | [Device Code](./desktop-mobile/device-code-flow.md) |
+|:----------------------|:----------------|:---------|:------------------------------------------------------------------|:-------------------------------------------------------------|:----------------------------------------------------|
+| Windows (desktop)     | .NET            | Desktop (WPF, Windows Forms, Console) | ✅ | ✅ | ✅ |
+| Android               | Xamarin Android | Mobile                                | ✅ | ❌ | ❌ |
+| iOS                   | Xamarin iOS     | Mobile                                | ✅ | ❌ | ✅ |
+| macOS, Linux, Windows | .NET Core       | Console                               | N/A see [Using web browsers](../acquiring-tokens/using-web-browsers.md)	| ✅	| ✅ |
 
 ### Confidential client applications
 
