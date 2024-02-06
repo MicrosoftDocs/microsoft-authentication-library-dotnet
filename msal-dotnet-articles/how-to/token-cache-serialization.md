@@ -33,10 +33,6 @@ The recommendation is:
 - [Service-to-service and daemon apps](token-cache-serialization.md?tabs=aspnet#distributed-caches) may rely on memory caching only. If your app serves many tenants, configure an eviction policy.
 - Managed identity tokens are cached in memory only.
 
-### Cache size
-
-When users log in, there will be a cache entry for each user, around 7KB in size. The size will be larger if you are calling several downstream APIs. For service-to-service authentication, there will be a cache entry for each tenant and downstream API, around 2KB in size. 
-
 ## [Confidential clients using Microsoft.Identity.Web](#tab/aspnetcore)
 
 The [Microsoft.Identity.Web.TokenCache](https://www.nuget.org/packages/Microsoft.Identity.Web.TokenCache) NuGet package provides token cache serialization within the [Microsoft.Identity.Web](https://github.com/AzureAD/microsoft-identity-web) library. The library provides integration with both ASP.NET Core and ASP.NET Classic, and its abstractions can be used to drive other web app or API frameworks. 
@@ -513,7 +509,9 @@ MSAL exposes important metrics as part of [AuthenticationResult.AuthenticationRe
 
 ## Size approximations
 
-When using a token cache, it's important to consider the potential size of the cache, especially for highly-available and distributed applications. The current estimates are:
+When using a token cache, it's important to consider the potential size of the cache, especially for highly-available and distributed applications. When users log in, there will be a cache entry for each user, around 7KB in size. The size will be larger if you are calling several downstream APIs. For service-to-service authentication, there will be a cache entry for each tenant and downstream API, around 2KB in size. 
+
+Detailed estimates are listed below.
 
 ### Application flows (`AcquireTokenForClient`, `AcquireTokenForManagedIdentity`)
 
@@ -526,14 +524,14 @@ When using a token cache, it's important to consider the potential size of the c
 - **ID token** – 2KB; 1 token per _client app ID_ \* user \* number of tenants where that user logs in.
 
 >[!NOTE]
->We strongly recommend using the higher level APIs from [`Microsoft.Identity.Web`](https://github.com/AzureAD/microsoft-identity-web/) for this and not MSAL directly. The caching considerations are the same.
+>We strongly recommend using the higher level APIs from [`Microsoft.Identity.Web`](https://www.nuget.org/packages/Microsoft.Identity.Web/) for this and not MSAL directly. The caching considerations are the same.
 
 ### Web API calling other web API (`AcquireTokenOnBehalfOf`)
 
-Same as for web site scenario, but there will be 1 node for each session, not for each user. By default, MSAL identifies a session by hashing the upstream assertion, but this can be changed. See [Long Running OBO Processes.](/entra/msal/dotnet/acquiring-tokens/web-apps-apis/on-behalf-of-flow#long-running-obo-processes)
+Same as for web site scenario, but there will be 1 node for each session, not for each user. By default, MSAL identifies a session by hashing the upstream assertion, but this can be changed. See [Long Running OBO Processes](/entra/msal/dotnet/acquiring-tokens/web-apps-apis/on-behalf-of-flow#long-running-obo-processes).
 
 >[!NOTE]
->We strongly recommend using the higher level APIs from [`Microsoft.Identity.Web`](https://github.com/AzureAD/microsoft-identity-web/) for this and not MSAL directly. The caching considerations are the same.
+>We strongly recommend using the higher level APIs from [`Microsoft.Identity.Web`](https://www.nuget.org/packages/Microsoft.Identity.Web/) for this and not MSAL directly. The caching considerations are the same.
 
 ## Token cache types
 
