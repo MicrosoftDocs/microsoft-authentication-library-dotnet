@@ -5,7 +5,7 @@ description: Explore high availability considerations in MSAL.NET, including tok
 
 # High availability considerations in MSAL.NET
 
-For client credentials flow, see the [High Availability](..//acquiring-tokens/web-apps-apis/client-credential-flows.md#high-availability) documentation first.
+For client credentials flow, see the [Client credentials flows](..//acquiring-tokens/web-apps-apis/client-credential-flows.md#ensuring-high-availability-of-your-applications) documentation first.
 
 ## Use a higher level API
 
