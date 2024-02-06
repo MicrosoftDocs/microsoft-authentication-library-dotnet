@@ -29,7 +29,7 @@ The recommendation is:
 - Existing confidential client applications that leverage MSAL.NET directly can continue to do so. 
 - [Web apps](/azure/active-directory/develop/scenario-web-app-call-api-overview) and [web APIs](/azure/active-directory/develop/scenario-web-api-call-api-overview) should use a [distributed token cache](token-cache-serialization.md?tabs=aspnet#distributed-caches) (e.g., Redis, SQL Server, Azure Cosmos DB) in conjunction with a contrained memory cache. 
 - Encryption at rest can be optionally configured using [ASP.NET Core Data Protection](/aspnet/core/security/data-protection/introduction).
-- [web apps](/azure/active-directory/develop/scenario-web-app-call-api-overview) may also rely on session cookies, but this option is not recommended due to cookie size.
+- [Web apps](/azure/active-directory/develop/scenario-web-app-call-api-overview) may also rely on session cookies; however, this option is not recommended due to cookie size.
 - [Service to service / daemon apps](token-cache-serialization.md?tabs=aspnet#distributed-caches) may rely on memory caching only. If your app serves many tenants, configure an eviction policy.
 - Managed Identity tokens are cached in memory only.
 
