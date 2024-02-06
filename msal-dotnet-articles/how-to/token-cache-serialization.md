@@ -182,7 +182,7 @@ Read on if you're using MSAL.NET directly.
 <a id="no-token-cache-serialization"></a>
 #### Memory Cache without eviction
 
-Use `.WithCacheOptions(CacheOptions.EnableSharedCacheOptions)` when building a Service to Service application - `AcquireTokenForClient` that does not target many (>100k) tenants.
+Use `.WithCacheOptions(CacheOptions.EnableSharedCacheOptions)` when building a service-to-service application - `AcquireTokenForClient` that does not target many (more than 100,000) tenants.
 
 > [!IMPORTANT]
 > There is no way to control the size of the cache with this option. If you are building a website, a web API, or a multi-tenant S2S app, then use the `In-memory token cache` option.
