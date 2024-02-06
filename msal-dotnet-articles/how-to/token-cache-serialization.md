@@ -168,7 +168,7 @@ For more information, see:
 
 The usage of distributed cache is featured in the [ASP.NET Core web app tutorial](/aspnet/core/tutorials/first-mvc-app/) in the [phase 2-2 token cache](https://github.com/Azure-Samples/active-directory-aspnetcore-webapp-openidconnect-v2/tree/master/2-WebApp-graph-user/2-2-TokenCache).
 
-## [Confidential Clients using MSAL](#tab/msal)
+## [Confidential clients using MSAL.NET](#tab/msal)
 
 .NET confidential clients are recommended to use [Microsoft.Identity.Web](../microsoft-identity-web/index.md), which is based on MSAL.NET, as higher level APIs are able to handle complex scenarios out-of-the-box (e.g., guest users, Conditional Access Evaluation, Proof-of-Possession tokens). Applications that need to access Azure APIs should use [Azure SDK](https://azure.github.io/azure-sdk/), which leverages MSAL internally.
 
