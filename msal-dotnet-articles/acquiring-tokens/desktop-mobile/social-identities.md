@@ -58,6 +58,7 @@ application = PublicClientApplicationBuilder.Create(ClientID)
 
 ## Acquiring a token to apply a policy
 
+>[!NOTE]
 > Starting with MSAL .NET 4.15.0, developers will no longer have to write their own cache filtering logic.
 
 In Azure AD B2C, each policy, or user flow, is a separate authorization server. They issue their own tokens. So a token acquired using the `b2c_1_editprofile` user flow will not work with a resource protected behind a `b2c_1_susi` user flow. Therefore, when calling a protected API, application developers must let MSAL know which token to use from the cache, based on the user flow that will be targeted.
