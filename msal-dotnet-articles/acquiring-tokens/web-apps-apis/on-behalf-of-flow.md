@@ -142,6 +142,10 @@ In a case when `AcquireTokenInLongRunningProcess` throws an exception when it ca
 
 Starting with MSAL 4.51.0, to remove cached tokens call `StopLongRunningProcessInWebApiAsync` passing in a cache key. With earlier MSAL versions, it is recommended to use L2 cache eviction policies. If immediate removal is needed, delete the L2 cache node associated with the `sessionKey`.
 
+### Troubleshooting
+
+If you are updating MSAL.NET from 4.50.0 to 4.51.0+, there is a chance that `InitiateLongRunningProcessInWebApi` will stop returning tokens and throw an exception if you are relying upon it to return tokens to you after the long running process is already initiated and there is a token in the cache for the specified cache key. There is a subtle change in behavior here where `InitiateLongRunningProcessInWebApi` no longer goes to the cache to acquire tokens. Please use `AcquireTokenInLongRunningProcess` to continue to access the currently active long running process.  The `InitiateLongRunningProcessInWebApi` should only be used to initiate the process in 4.51.0+. If it is not possible to make these changes quickly, and you are updating to 4.54.1+ you can use `InitiateLongRunningProcessInWebApi().WithSearchInCacheForLongRunningProcess()`. to temporarily revert the behavior of `InitiateLongRunningProcessInWebApi` to 4.50.0.
+
 ## App registration - specificities for Web APIs
 
 - Web APIs expose scopes. For more information, see [Quickstart: Configure an application to expose web APIs (Preview)](/azure/active-directory/develop/quickstart-configure-app-expose-web-apis).
