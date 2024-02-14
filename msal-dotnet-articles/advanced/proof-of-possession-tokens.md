@@ -20,12 +20,62 @@ If you make an unauthenticated request to a protected API, it should reply with 
 
 Programatically, MSAL.NET offers [a helper API](extract-authentication-parameters.md) for parsing these headers.
 
+## Proof-of-Possession for public clients
+
+Proof-of-Possession on public client flows can be achieved with the use of the updated [Windows broker](../acquiring-tokens/desktop-mobile/wam.md) in MSAL 4.52.0 and above. Contrary to the confidential client flow, it is not possible to provide your own key to sign the PoP token. MSAL will use the best available keys which exist on the machine, typically hardware keys (see [TPM](/windows/security/hardware-security/tpm/tpm-fundamentals)).
+
+It is possible that a client does not support creating PoP tokens. This is due to the fact that brokers (WAM, Company Portal) are not always present on the device or that the SDK does not implement the protocol on a specific operating system. Currently, PoP tokens are available on Windows 10+ and Windows Server 2019+. Use the API `publicClientApp.IsProofOfPossessionSupportedByClient()` to understand if POP is supported by the client.
+
+Example implementation:
+
+```csharp
+// Required for the use of the broker (on all supported platforms except .NET 6 Windows and above)
+using Microsoft.Identity.Client.Broker; 
+
+// The PoP token will be bound to this user / machine and to `GET https://www.contoso.com/tranfers` (the query parameters are not bound).
+// The nonce is a requirement in this case and needs to be acquired from the resource before using this API.
+
+// Server nonce is required
+string nonce = "nonce";
+
+//HttpMethod is optional
+HttpMethod method = HttpMethod.Get;
+
+//Request URI
+Uri requestUri = new Uri("https://www.contoso.com/tranfers?user=me");
+          
+var pca = PublicClientApplicationBuilder.Create(CLIENT_ID)
+    .WithBroker()  //Enables the use of broker on public clients only
+    .Build();
+
+//Interactive request
+AuthenticationResult result = await pca
+      .AcquireTokenInteractive(new[] { "scope" })
+      .WithProofOfPossession(nonce, method, requestUri)
+      .ExecuteAsync()
+      .ConfigureAwait(false);
+
+// The PoP token will be available in the AuthenticationResult.AccessToken returned form the acquire token call
+
+//To create the auth header
+var authHeader = new AuthenticationHeaderValue(result.TokenType, result.AccessToken);
+
+//Silent request
+var accounts = await pca.GetAccountsAsync().ConfigureAwait(false);
+var result = await pca.AcquireTokenSilent(new[] { "scope" }, accounts.FirstOrDefault())
+       .WithProofOfPossession(nonce, method, requestUri)
+       .ExecuteAsync()
+       .ConfigureAwait(false);
+
+```
+
 ## Proof-of-Possession for confidential clients
 
-See the [full code sample](https://github.com/Azure-Samples/active-directory-dotnetcore-daemon-v2/tree/master/4-Call-OwnApi-Pop) show casing a daemon app using AcquireTokenForClient with PoP to call an API protected with Proof-of-Possession.
-
 > [!NOTE]
-> Proof-of-Possession is still experimental for confidential clients.
+> Proof-of-Possession is still experimental for confidential clients. 
+>
+
+See the [full code sample](https://github.com/Azure-Samples/active-directory-dotnetcore-daemon-v2/tree/master/4-Call-OwnApi-Pop) show casing a daemon app using AcquireTokenForClient with PoP to call an API protected with Proof-of-Possession.
 
 Example implementation:
 
@@ -81,55 +131,6 @@ The PoP feature in MSAL allows users to provide their own key management for add
 ## How to add more claims / How do I create the Signed HTTP Request (SHR) part of the PoP token myself?
 
 If you want to do key management and to create the SHR yourself,  see [this example implementation](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/300fba16bd8096dceba3684311550b4b52a56177/tests/Microsoft.Identity.Test.Integration.netfx/HeadlessTests/PoPTests.cs#L286).
-
-## Proof-of-Possession for public clients
-
-Proof-of-Possession on public client flows can be achieved with the use of the updated [Windows broker](../acquiring-tokens/desktop-mobile/wam.md) in MSAL 4.52.0 and above. Contrary to the confidential client flow, it is not possible to provide your own key to sign the PoP token. MSAL will use the best available keys which exist on the machine, typically hardware keys (see [TPM](/windows/security/hardware-security/tpm/tpm-fundamentals)).
-
-It is possible that a client does not support creating PoP tokens. This is due to the fact that brokers (WAM, Company Portal) are not always present on the device or that the SDK does not implement the protocol on a specific operating system. Currently, PoP tokens are available on Windows 10+ and Windows Server 2019+. Use the API `publicClientApp.IsProofOfPossessionSupportedByClient()` to understand if POP is supported by the client.
-
-Example implementation:
-
-```csharp
-// Required for the use of the broker (on all supported platforms except .NET 6 Windows and above)
-using Microsoft.Identity.Client.Broker; 
-
-// The PoP token will be bound to this user / machine and to `GET https://www.contoso.com/tranfers` (the query parameters are not bound).
-// The nonce is a requirement in this case and needs to be acquired from the resource before using this API.
-
-// Server nonce is required
-string nonce = "nonce";
-
-//HttpMethod is optional
-HttpMethod method = HttpMethod.Get;
-
-//Request URI
-Uri requestUri = new Uri("https://www.contoso.com/tranfers?user=me");
-          
-var pca = PublicClientApplicationBuilder.Create(CLIENT_ID)
-    .WithBroker()  //Enables the use of broker on public clients only
-    .Build();
-
-//Interactive request
-AuthenticationResult result = await pca
-      .AcquireTokenInteractive(new[] { "scope" })
-      .WithProofOfPossession(nonce, method, requestUri)
-      .ExecuteAsync()
-      .ConfigureAwait(false);
-
-// The PoP token will be available in the AuthenticationResult.AccessToken returned form the acquire token call
-
-//To create the auth header
-var authHeader = new AuthenticationHeaderValue(result.TokenType, result.AccessToken);
-
-//Silent request
-var accounts = await pca.GetAccountsAsync().ConfigureAwait(false);
-var result = await pca.AcquireTokenSilent(new[] { "scope" }, accounts.FirstOrDefault())
-       .WithProofOfPossession(nonce, method, requestUri)
-       .ExecuteAsync()
-       .ConfigureAwait(false);
-
-```
 
 An end to end implementation would need to: 
 
