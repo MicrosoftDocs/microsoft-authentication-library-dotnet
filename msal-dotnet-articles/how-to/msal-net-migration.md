@@ -43,7 +43,7 @@ For details about the decision tree below, read [MSAL.NET or Microsoft.Identity.
 
 ### Deprecated ADAL.NET NuGet packages and their MSAL.NET equivalents
 
-You might unknowingly consume ADAL dependencies from other Azure SDKs. Below are few of the deprecated packages and their MSAL alternatives. For more detailed migration information, see [AppAuthentication to Azure.Identity Migration Guidance](/dotnet/api/overview/azure/app-auth-migration) and **Migration guide** links in the specific [Azure SDK for .NET](https://azure.github.io/azure-sdk-for-net/) library pages.
+You might unknowingly consume ADAL dependencies from other Azure SDKs. Below are few of the deprecated packages and their MSAL alternatives. For more detailed migration information, see [AppAuthentication to Azure.Identity Migration Guidance](/dotnet/api/overview/azure/app-auth-migration) and **Migration guide** links in the specific [Azure SDK for .NET](/dotnet/api/overview/azure/) library pages.
 
 |  ADAL.NET Package (Deprecated) | MSAL.NET Package (Current) |
 | ----------- | ----------- |
