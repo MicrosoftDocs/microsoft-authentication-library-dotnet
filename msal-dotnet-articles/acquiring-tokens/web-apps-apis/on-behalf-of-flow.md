@@ -116,17 +116,28 @@ var authResult = await ((ILongRunningWebApi)confidentialClientApp)
 
 `userAccessToken` is a user access token used to call this web API. `sessionKey` will be used as a key when caching and retrieving the OBO token. If set to `null`, MSAL will set it to the assertion hash of the passed-in user token. It can also be set by the developer to something that identifies a specific user session, like the optional `sid` claim from the user token (for more information, see [Provide optional claims to your app](/azure/active-directory/develop/active-directory-optional-claims)). `InitiateLongRunningProcessInWebApi` doesn't check the cache; it will use the user token to acquire a new OBO token from Microsoft Entra ID, which will then be cached and returned.
 
-2. In the long-running process, whenever OBO token is needed, call:
+2. In the long-running process, whenever OBO token is needed, you call `AcquireTokenInLongRunningProcess` in the following pattern:
 
 ```csharp
-var authResult = await ((ILongRunningWebApi)confidentialClientApp)
-         .AcquireTokenInLongRunningProcess(
-              scopes,
-              sessionKey)
-         .ExecuteAsync();
+try {  
+    var authResult = await ((ILongRunningWebApi)confidentialClientApp)  
+         .AcquireTokenInLongRunningProcess(  
+              scopes,  
+              sessionKey)  
+         .ExecuteAsync();  
+} catch (MsalClientException) {  
+    // No tokens were found with this cache key.  
+    // First call InitiateLongRunningProcessInWebApi with a valid user assertion  
+    // to acquire tokens from Microsoft Entra ID and cache them.  
+} catch (MsalUiRequiredException) {  
+    // A refresh token was used to acquire new tokens  
+    // but Microsoft Entra ID requires the user to sign-in again.  
+    // Trigger your app's user sign-in to acquire a fresh user assertion  
+    // and then call InitiateLongRunningProcessInWebApi.  
+}
 ```
 
-Pass the `sessionKey` which is associated with the current user's session and will be used to retrieve the related OBO token. If the token is expired, MSAL will use the cached refresh token to acquire a new OBO access token from Microsoft Entra ID and cache it. If no token is found with this `sessionKey`, MSAL will throw a `MsalClientException`. Make sure to call `InitiateLongRunningProcessInWebApi` first.
+Pass the `sessionKey` which is associated with the current user's session and will be used to retrieve the related OBO token. If the token is expired, MSAL will use the cached refresh token to acquire a new OBO access token from Microsoft Entra ID and cache it. If no token is found with this `sessionKey`, MSAL will throw a `MsalClientException` or a `MsalUiRequiredException`. Make sure to acquire a valid user token and call `InitiateLongRunningProcessInWebApi` if this is the case.
 
 ### Cache eviction for long-running OBO processes
 
