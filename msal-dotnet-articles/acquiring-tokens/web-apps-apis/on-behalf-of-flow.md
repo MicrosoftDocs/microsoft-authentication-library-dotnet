@@ -120,15 +120,26 @@ var authResult = await ((ILongRunningWebApi)confidentialClientApp)
 
 ```csharp
 try {  
-    var authResult = await ((ILongRunningWebApi)confidentialClientApp)  
+    authResult = await ((ILongRunningWebApi)confidentialClientApp)  
          .AcquireTokenInLongRunningProcess(  
               scopes,  
               sessionKey)  
          .ExecuteAsync();  
-} catch (MsalClientException) {  
+}
+catch (MsalClientException ex) {  
     // No tokens were found with this cache key.  
-    // First call InitiateLongRunningProcessInWebApi with a valid user assertion  
-    // to acquire tokens from Microsoft Entra ID and cache them.  
+    // First call InitiateLongRunningProcessInWebApi with a valid user assertion
+    // to acquire tokens from Microsoft Entra ID and cache them.
+    if (ex.ErrorCode == MsalError.OboCacheKeyNotInCacheError)
+    {
+          authResult = await ((ILongRunningWebApi)confidentialClientApp)
+         .InitiateLongRunningProcessInWebApi(
+              scopes,
+              userAccessToken,//Valid access token
+              ref sessionKey)
+         .ExecuteAsync();
+    }
+
 } catch (MsalUiRequiredException) {  
     // A refresh token was used to acquire new tokens  
     // but Microsoft Entra ID requires the user to sign-in again.  
