@@ -140,11 +140,13 @@ catch (MsalClientException ex) {
          .ExecuteAsync();
     }
 
-} catch (MsalUiRequiredException) {  
+} catch (MsalUiRequiredException ex) {  
     // A refresh token was used to acquire new tokens  
     // but Microsoft Entra ID requires the user to sign-in again.  
-    // Trigger your app's user sign-in to acquire a fresh user assertion  
-    // and then call InitiateLongRunningProcessInWebApi.  
+    // Trigger your app's user sign-in again by replying with a 401 + WWW-Authenticate  
+    // Then call InitiateLongRunningProcessInWebApi once a new access token is acquired from the user
+     httpResponse.StatusCode = (int)HttpStatusCode.Forbidden;
+     httpResponse.Headers[HeaderNames.WWWAuthenticate] = $"Bearer claims={ex.Claims}, error={ex.Message};
 }
 ```
 
