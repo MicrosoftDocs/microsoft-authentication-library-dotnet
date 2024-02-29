@@ -116,7 +116,7 @@ var authResult = await ((ILongRunningWebApi)confidentialClientApp)
 
 `userAccessToken` is a user access token used to call this web API. `sessionKey` will be used as a key when caching and retrieving the OBO token. If set to `null`, MSAL will set it to the assertion hash of the passed-in user token. It can also be set by the developer to something that identifies a specific user session, like the optional `sid` claim from the user token (for more information, see [Provide optional claims to your app](/azure/active-directory/develop/active-directory-optional-claims)). `InitiateLongRunningProcessInWebApi` doesn't check the cache; it will use the user token to acquire a new OBO token from Microsoft Entra ID, which will then be cached and returned.
 
-2. In the long-running process, whenever OBO token is needed, you call `AcquireTokenInLongRunningProcess` in the following pattern:
+2. In the long-running process, whenever OBO token is needed, call `AcquireTokenInLongRunningProcess` in the following pattern:
 
 ```csharp
 try {  
