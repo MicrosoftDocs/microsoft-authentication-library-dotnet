@@ -150,7 +150,7 @@ catch (MsalClientException ex) {
 }
 ```
 
-Pass the `sessionKey` which is associated with the current user's session and will be used to retrieve the related OBO token. If the token is expired, MSAL will use the cached refresh token to acquire a new OBO access token from Microsoft Entra ID and cache it. If no token is found with this `sessionKey`, MSAL will throw a `MsalClientException` or a `MsalUiRequiredException`. Make sure to acquire a valid user token and call `InitiateLongRunningProcessInWebApi` if this is the case.
+Pass the `sessionKey` which is associated with the current user's session and will be used to retrieve the related OBO token. If the token is expired, MSAL will use the cached refresh token to acquire a new OBO access token from Microsoft Entra ID and cache it. If no token is found with this `sessionKey`, MSAL will throw an `MsalClientException` or a `MsalUiRequiredException`. Make sure to acquire a valid user token and call `InitiateLongRunningProcessInWebApi` if this is the case.
 
 ### Cache eviction for long-running OBO processes
 
