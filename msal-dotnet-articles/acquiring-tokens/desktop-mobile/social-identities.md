@@ -5,8 +5,8 @@ services: active-directory
 author: henrymbuguakiarie
 manager: CelesteDG
 
-ms.service: active-directory
-ms.subservice: develop
+ms.service: msal
+ms.subservice: msal-dotnet
 ms.topic: conceptual
 ms.workload: identity
 ms.date: 08/24/2023

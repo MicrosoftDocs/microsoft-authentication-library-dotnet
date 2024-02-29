@@ -4,8 +4,8 @@ description: Learn how to migrate Xamarin iOS apps that use Microsoft Authentica
 author: Dickson-Mwendia
 manager: CelesteDG
 
-ms.service: active-directory
-ms.subservice: develop
+ms.service: msal
+ms.subservice: msal-dotnet
 ms.topic: conceptual
 ms.workload: identity
 ms.date: 09/08/2019

@@ -4,8 +4,8 @@ description: Learn how to migrate Xamarin Android apps that use the Microsoft Au
 author: henrymbuguakiarie
 manager: CelesteDG
 
-ms.service: active-directory
-ms.subservice: develop
+ms.service: msal
+ms.subservice: msal-dotnet
 ms.topic: conceptual
 ms.workload: identity
 ms.date: 08/31/2020

@@ -4,8 +4,8 @@ description: "Learn how to acquire security tokens in public and confidential cl
 author: Dickson-Mwendia
 manager: CelesteDG
 
-ms.service: active-directory
-ms.subservice: develop
+ms.service: msal
+ms.subservice: msal-dotnet
 ms.topic: reference
 ms.workload: identity
 ms.date: 03/17/2023
