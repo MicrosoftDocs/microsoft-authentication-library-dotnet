@@ -5,14 +5,13 @@ services: active-directory
 author: Dickson-Mwendia
 manager: CelesteDG
 
-ms.service: active-directory
-ms.subservice: develop
-ms.topic: reference
-ms.workload: identity
+ms.service: msal
+ms.subservice: msal-dotnet
+ms.topic: conceptual
 ms.date: 03/16/2023
 ms.author: dmwendia
 ms.reviewer: localden, jmprieur
-ms.custom: devx-track-csharp, aaddev, engagement-fy23
+ms.custom: devx-track-csharp, aaddev
 # Customer intent: As an application developer, I want to learn how MSAL.NET can help me acquire tokens from the Microsoft identity platform and access protected web APIs. 
 ---
 

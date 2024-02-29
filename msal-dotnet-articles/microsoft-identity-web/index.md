@@ -5,14 +5,14 @@ services: active-directory
 author: Dickson-Mwendia
 manager: CelesteDG
 
-ms.service: active-directory
-ms.subservice: develop
-ms.topic: reference
+ms.service: msal
+ms.subservice: microsoft-identity-web
+ms.topic: conceptual
 ms.workload: identity
 ms.date: 03/30/2023
 ms.author: jmprieur
 ms.reviewer: localden, jmprieur
-ms.custom: devx-track-csharp, aaddev, engagement-fy23
+ms.custom: devx-track-csharp, aaddev
 # Customer intent: As an application developer, I want to learn how Microsoft Identity Web can help me protect my services with the Microsoft identity platform. 
 ---
 
