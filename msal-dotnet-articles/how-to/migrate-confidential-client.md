@@ -1,13 +1,12 @@
 ---
 title: Migrate confidential client applications to MSAL.NET
 description: Learn how to migrate a confidential client application from Azure Active Directory Authentication Library for .NET to Microsoft Authentication Library for .NET.
-services: active-directory
 author: Dickson-Mwendia
 manager: CelesteDG
-ms.service: active-directory
-ms.subservice: develop
-ms.topic: how-to
-ms.workload: identity
+
+ms.service: msal
+ms.subservice: msal-dotnet
+ms.topic: conceptual
 ms.date: 08/24/2023
 ms.author: dmwendia
 ms.reviewer: ddelimarsky, jmprieur, saeeda, shermanouko

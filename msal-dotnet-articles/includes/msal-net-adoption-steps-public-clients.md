@@ -5,8 +5,8 @@ services: active-directory
 author: cilwerner
 manager: CelesteDG
 
-ms.service: active-directory
-ms.subservice: develop
+ms.service: msal
+ms.subservice: msal-dotnet
 ms.workload: identity
 ms.topic: include
 ms.date: 09/08/2021
