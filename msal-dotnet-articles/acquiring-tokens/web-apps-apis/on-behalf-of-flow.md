@@ -116,17 +116,41 @@ var authResult = await ((ILongRunningWebApi)confidentialClientApp)
 
 `userAccessToken` is a user access token used to call this web API. `sessionKey` will be used as a key when caching and retrieving the OBO token. If set to `null`, MSAL will set it to the assertion hash of the passed-in user token. It can also be set by the developer to something that identifies a specific user session, like the optional `sid` claim from the user token (for more information, see [Provide optional claims to your app](/azure/active-directory/develop/active-directory-optional-claims)). `InitiateLongRunningProcessInWebApi` doesn't check the cache; it will use the user token to acquire a new OBO token from Microsoft Entra ID, which will then be cached and returned.
 
-2. In the long-running process, whenever OBO token is needed, call:
+2. In the long-running process, whenever OBO token is needed, call `AcquireTokenInLongRunningProcess` in the following pattern:
 
 ```csharp
-var authResult = await ((ILongRunningWebApi)confidentialClientApp)
-         .AcquireTokenInLongRunningProcess(
+try {  
+    authResult = await ((ILongRunningWebApi)confidentialClientApp)  
+         .AcquireTokenInLongRunningProcess(  
+              scopes,  
+              sessionKey)  
+         .ExecuteAsync();  
+}
+catch (MsalClientException ex) {  
+    // No tokens were found with this cache key.  
+    // First call InitiateLongRunningProcessInWebApi with a valid user assertion
+    // to acquire tokens from Microsoft Entra ID and cache them.
+    if (ex.ErrorCode == MsalError.OboCacheKeyNotInCacheError)
+    {
+          authResult = await ((ILongRunningWebApi)confidentialClientApp)
+         .InitiateLongRunningProcessInWebApi(
               scopes,
-              sessionKey)
+              userAccessToken,//Valid access token
+              ref sessionKey)
          .ExecuteAsync();
+    }
+
+} catch (MsalUiRequiredException ex) {  
+    // A refresh token was used to acquire new tokens  
+    // but Microsoft Entra ID requires the user to sign-in again.  
+    // Trigger your app's user sign-in again by replying with a 401 + WWW-Authenticate  
+    // Then call InitiateLongRunningProcessInWebApi once a new access token is acquired from the user
+     httpResponse.StatusCode = (int)HttpStatusCode.Forbidden;
+     httpResponse.Headers[HeaderNames.WWWAuthenticate] = $"Bearer claims={ex.Claims}, error={ex.Message};
+}
 ```
 
-Pass the `sessionKey` which is associated with the current user's session and will be used to retrieve the related OBO token. If the token is expired, MSAL will use the cached refresh token to acquire a new OBO access token from Microsoft Entra ID and cache it. If no token is found with this `sessionKey`, MSAL will throw a `MsalClientException`. Make sure to call `InitiateLongRunningProcessInWebApi` first.
+Pass the `sessionKey` which is associated with the current user's session and will be used to retrieve the related OBO token. If the token is expired, MSAL will use the cached refresh token to acquire a new OBO access token from Microsoft Entra ID and cache it. If no token is found with this `sessionKey`, MSAL will throw an `MsalClientException` or a `MsalUiRequiredException`. Make sure to acquire a valid user token and call `InitiateLongRunningProcessInWebApi` if this is the case.
 
 ### Cache eviction for long-running OBO processes
 
@@ -141,6 +165,10 @@ In a case when `AcquireTokenInLongRunningProcess` throws an exception when it ca
 ### Removing accounts
 
 Starting with MSAL 4.51.0, to remove cached tokens call `StopLongRunningProcessInWebApiAsync` passing in a cache key. With earlier MSAL versions, it is recommended to use L2 cache eviction policies. If immediate removal is needed, delete the L2 cache node associated with the `sessionKey`.
+
+### Troubleshooting
+
+If you are updating MSAL.NET to 4.51.0+, there is a chance that `InitiateLongRunningProcessInWebApi` will stop returning tokens and throw an exception if you are relying upon it to return tokens to you after the long running process is already initiated and there is a token in the cache for the specified cache key. `InitiateLongRunningProcessInWebApi` no longer inspects the cache to acquire tokens. Please use `AcquireTokenInLongRunningProcess` to continue to access the currently active long running process.  The `InitiateLongRunningProcessInWebApi` should only be used to initiate the process. If it is not possible to make these changes quickly, and you are updating to MSAL 4.54.1 or higher, you can use `InitiateLongRunningProcessInWebApi().WithSearchInCacheForLongRunningProcess()` to revert the behavior of `InitiateLongRunningProcessInWebApi`
 
 ## App registration - specificities for Web APIs
 
