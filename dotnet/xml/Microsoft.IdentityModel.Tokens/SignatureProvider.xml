@@ -21,6 +21,7 @@
     <AssemblyVersion>7.0.3.0</AssemblyVersion>
     <AssemblyVersion>7.2.0.0</AssemblyVersion>
     <AssemblyVersion>7.3.1.0</AssemblyVersion>
+    <AssemblyVersion>7.4.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -46,7 +47,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.3.1.0</AssemblyVersion>
+        <AssemblyVersion>7.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="key" Type="Microsoft.IdentityModel.Tokens.SecurityKey" />
@@ -72,7 +73,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.3.1.0</AssemblyVersion>
+        <AssemblyVersion>7.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -94,7 +95,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.3.1.0</AssemblyVersion>
+        <AssemblyVersion>7.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -116,7 +117,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.3.1.0</AssemblyVersion>
+        <AssemblyVersion>7.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.CryptoProviderCache</ReturnType>
@@ -140,7 +141,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.3.1.0</AssemblyVersion>
+        <AssemblyVersion>7.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -161,7 +162,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.3.1.0</AssemblyVersion>
+        <AssemblyVersion>7.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -186,7 +187,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.3.1.0</AssemblyVersion>
+        <AssemblyVersion>7.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.SecurityKey</ReturnType>
@@ -208,7 +209,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.3.1.0</AssemblyVersion>
+        <AssemblyVersion>7.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -225,6 +226,66 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="Sign">
+      <MemberSignature Language="C#" Value="public virtual byte[] Sign (byte[] input, int offset, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] Sign(unsigned int8[] input, int32 offset, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.SignatureProvider.Sign(System.Byte[],System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function Sign (input As Byte(), offset As Integer, count As Integer) As Byte()" />
+      <MemberSignature Language="F#" Value="abstract member Sign : byte[] * int * int -&gt; byte[]&#xA;override this.Sign : byte[] * int * int -&gt; byte[]" Usage="signatureProvider.Sign (input, offset, count)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>7.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="input">The bytes to produce a signature over.</param>
+        <param name="offset">The offset to specify the beginning of the region.</param>
+        <param name="count">The count to specify the end of the region.</param>
+        <summary>
+            Produces a signature over the specified region of the <paramref name="input" />.
+            </summary>
+        <returns>The signature bytes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sign">
+      <MemberSignature Language="C#" Value="public virtual bool Sign (ReadOnlySpan&lt;byte&gt; data, Span&lt;byte&gt; destination, out int bytesWritten);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Sign(valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; data, valuetype System.Span`1&lt;unsigned int8&gt; destination, [out] int32&amp; bytesWritten) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.SignatureProvider.Sign(System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.Int32@)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function Sign (data As ReadOnlySpan(Of Byte), destination As Span(Of Byte), ByRef bytesWritten As Integer) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member Sign : ReadOnlySpan&lt;byte&gt; * Span&lt;byte&gt; * int -&gt; bool&#xA;override this.Sign : ReadOnlySpan&lt;byte&gt; * Span&lt;byte&gt; * int -&gt; bool" Usage="signatureProvider.Sign (data, destination, bytesWritten)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>7.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+        <Parameter Name="destination" Type="System.Span&lt;System.Byte&gt;" />
+        <Parameter Name="bytesWritten" Type="System.Int32" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="data">The bytes to produce a signature over.</param>
+        <param name="destination">The pre-allocated span where signature bytes will be placed.</param>
+        <param name="bytesWritten">The number of bytes written into the signature span.</param>
+        <summary>
+            Produces a signature over the <paramref name="data" /> and writes it to <paramref name="destination" />.
+            </summary>
+        <returns>returns <see langword="true" /> if creation of signature succeeded, <see langword="false" /> otherwise.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Verify">
       <MemberSignature Language="C#" Value="public abstract bool Verify (byte[] input, byte[] signature);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Verify(unsigned int8[] input, unsigned int8[] signature) cil managed" />
@@ -234,7 +295,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.3.1.0</AssemblyVersion>
+        <AssemblyVersion>7.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -246,7 +307,11 @@
       <Docs>
         <param name="input">the bytes that were signed.</param>
         <param name="signature">signature to compare against.</param>
-        <summary>To be added.</summary>
+        <summary>
+            Verifies that the <paramref name="signature" /> over <paramref name="input" /> using the
+            <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> and <see cref="P:Microsoft.IdentityModel.Tokens.SignatureProvider.Algorithm" /> specified by this
+            <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> are consistent.
+            </summary>
         <returns>true if the computed signature matches the signature parameter, false otherwise.</returns>
         <remarks>To be added.</remarks>
         <paramref name="signature" />
@@ -265,7 +330,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.3.1.0</AssemblyVersion>
+        <AssemblyVersion>7.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -305,7 +370,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.3.1.0</AssemblyVersion>
+        <AssemblyVersion>7.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
