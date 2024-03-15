@@ -1,22 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-web-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.IdentityModel.Abstractions" Version="7.3.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.JsonWebTokens" Version="7.3.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.KeyVaultExtensions" Version="7.3.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.Logging" Version="7.3.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.LoggingExtensions" Version="7.3.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.ManagedKeyVaultSecurityKey" Version="7.3.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols" Version="7.3.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="7.3.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.SignedHttpRequest" Version="7.3.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.WsFederation" Version="7.3.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.TestExtensions" Version="7.3.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.Tokens" Version="7.3.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.Tokens.Saml" Version="7.3.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.Validators" Version="7.3.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.Xml" Version="7.3.1.0" />
-    <Assembly Name="System.IdentityModel.Tokens.Jwt" Version="7.3.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.Abstractions" Version="7.4.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.JsonWebTokens" Version="7.4.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.KeyVaultExtensions" Version="7.4.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Logging" Version="7.4.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.LoggingExtensions" Version="7.4.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.ManagedKeyVaultSecurityKey" Version="7.4.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols" Version="7.4.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="7.4.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.SignedHttpRequest" Version="7.4.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.WsFederation" Version="7.4.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.TestExtensions" Version="7.4.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Tokens" Version="7.4.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Tokens.Saml" Version="7.4.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Validators" Version="7.4.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Xml" Version="7.4.0.0" />
+    <Assembly Name="System.IdentityModel.Tokens.Jwt" Version="7.4.0.0" />
   </Assemblies>
   <Namespace Name="Microsoft.IdentityModel.Abstractions">
     <Type Name="Microsoft.IdentityModel.Abstractions.EventLogLevel" Id="T:Microsoft.IdentityModel.Abstractions.EventLogLevel">
@@ -85,6 +85,7 @@
       <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JsonClaimValueTypes.JsonNull" />
     </Type>
     <Type Name="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken" Id="T:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken">
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.#ctor(System.ReadOnlyMemory{System.Char})" />
       <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.#ctor(System.String)" />
       <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.#ctor(System.String,System.String)" />
       <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.GetClaim(System.String)" />
@@ -1220,6 +1221,8 @@
       <Member Id="M:Microsoft.IdentityModel.Tokens.AsymmetricSignatureProvider.Dispose(System.Boolean)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.AsymmetricSignatureProvider.GetHashAlgorithmName(System.String)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.AsymmetricSignatureProvider.Sign(System.Byte[])" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.AsymmetricSignatureProvider.Sign(System.Byte[],System.Int32,System.Int32)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.AsymmetricSignatureProvider.Sign(System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.Int32@)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.AsymmetricSignatureProvider.ValidateAsymmetricSecurityKeySize(Microsoft.IdentityModel.Tokens.SecurityKey,System.String,System.Boolean)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.AsymmetricSignatureProvider.Verify(System.Byte[],System.Byte[])" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.AsymmetricSignatureProvider.Verify(System.Byte[],System.Int32,System.Int32,System.Byte[],System.Int32,System.Int32)" />
@@ -1846,6 +1849,8 @@
       <Member Id="M:Microsoft.IdentityModel.Tokens.SignatureProvider.Dispose" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.SignatureProvider.Dispose(System.Boolean)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.SignatureProvider.Sign(System.Byte[])" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.SignatureProvider.Sign(System.Byte[],System.Int32,System.Int32)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.SignatureProvider.Sign(System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.Int32@)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.SignatureProvider.Verify(System.Byte[],System.Byte[])" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.SignatureProvider.Verify(System.Byte[],System.Int32,System.Int32,System.Byte[],System.Int32,System.Int32)" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.SignatureProvider.Algorithm" />
@@ -1894,6 +1899,8 @@
       <Member Id="M:Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.GetKeyedHashAlgorithm(System.Byte[],System.String)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.ReleaseKeyedHashAlgorithm(System.Security.Cryptography.KeyedHashAlgorithm)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Sign(System.Byte[])" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Sign(System.Byte[],System.Int32,System.Int32)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Sign(System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.Int32@)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Verify(System.Byte[],System.Byte[])" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Verify(System.Byte[],System.Byte[],System.Int32)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Verify(System.Byte[],System.Int32,System.Int32,System.Byte[],System.Int32,System.Int32)" />
