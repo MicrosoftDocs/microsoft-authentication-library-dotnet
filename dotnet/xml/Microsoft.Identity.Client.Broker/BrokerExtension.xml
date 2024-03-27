@@ -16,6 +16,7 @@
     <AssemblyVersion>4.58.0.0</AssemblyVersion>
     <AssemblyVersion>4.58.1.0</AssemblyVersion>
     <AssemblyVersion>4.59.0.0</AssemblyVersion>
+    <AssemblyVersion>4.60.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -37,7 +38,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client.Broker</AssemblyName>
-        <AssemblyVersion>4.59.0.0</AssemblyVersion>
+        <AssemblyVersion>4.60.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.PublicClientApplicationBuilder</ReturnType>
@@ -70,7 +71,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client.Broker</AssemblyName>
-        <AssemblyVersion>4.59.0.0</AssemblyVersion>
+        <AssemblyVersion>4.60.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -104,6 +105,30 @@
             If a broker does not exist or cannot be used, MSAL will fallback to a browser.
             Make sure browser auth is enabled (e.g. if using system browser, register the "http://localhost" redirect URI, etc.)
             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithSsoPolicy">
+      <MemberSignature Language="C#" Value="public static Microsoft.Identity.Client.PublicClientApplicationBuilder WithSsoPolicy (this Microsoft.Identity.Client.PublicClientApplicationBuilder builder);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Identity.Client.PublicClientApplicationBuilder WithSsoPolicy(class Microsoft.Identity.Client.PublicClientApplicationBuilder builder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.Broker.BrokerExtension.WithSsoPolicy(Microsoft.Identity.Client.PublicClientApplicationBuilder)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function WithSsoPolicy (builder As PublicClientApplicationBuilder) As PublicClientApplicationBuilder" />
+      <MemberSignature Language="F#" Value="static member WithSsoPolicy : Microsoft.Identity.Client.PublicClientApplicationBuilder -&gt; Microsoft.Identity.Client.PublicClientApplicationBuilder" Usage="Microsoft.Identity.Client.Broker.BrokerExtension.WithSsoPolicy builder" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client.Broker</AssemblyName>
+        <AssemblyVersion>4.60.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.PublicClientApplicationBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="builder" Type="Microsoft.Identity.Client.PublicClientApplicationBuilder" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="builder">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
   </Members>
