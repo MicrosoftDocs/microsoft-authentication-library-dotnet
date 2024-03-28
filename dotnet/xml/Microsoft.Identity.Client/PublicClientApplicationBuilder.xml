@@ -19,6 +19,7 @@
     <AssemblyVersion>4.58.0.0</AssemblyVersion>
     <AssemblyVersion>4.58.1.0</AssemblyVersion>
     <AssemblyVersion>4.59.0.0</AssemblyVersion>
+    <AssemblyVersion>4.60.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Identity.Client.AbstractApplicationBuilder&lt;Microsoft.Identity.Client.PublicClientApplicationBuilder&gt;</BaseTypeName>
@@ -41,7 +42,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.59.0.0</AssemblyVersion>
+        <AssemblyVersion>4.60.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.IPublicClientApplication</ReturnType>
@@ -66,7 +67,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.59.0.0</AssemblyVersion>
+        <AssemblyVersion>4.60.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.PublicClientApplicationBuilder</ReturnType>
@@ -95,7 +96,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.59.0.0</AssemblyVersion>
+        <AssemblyVersion>4.60.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.PublicClientApplicationBuilder</ReturnType>
@@ -123,7 +124,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.59.0.0</AssemblyVersion>
+        <AssemblyVersion>4.60.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -165,7 +166,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.59.0.0</AssemblyVersion>
+        <AssemblyVersion>4.60.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.PublicClientApplicationBuilder</ReturnType>
@@ -200,7 +201,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.59.0.0</AssemblyVersion>
+        <AssemblyVersion>4.60.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.PublicClientApplicationBuilder</ReturnType>
@@ -210,7 +211,7 @@
         <summary>
             Configures the public client application to use the recommended reply URI for the platform. 
             See https://aka.ms/msal-net-default-reply-uri.
-            <list type="table"><listheader><term>Platform</term><Description>Default Reply URI</Description></listheader><item><term>.NET desktop</term><Description><c>https://login.microsoftonline.com/common/oauth2/nativeclient</c></Description></item><item><term>UWP</term><Description>value of <c>WebAuthenticationBroker.GetCurrentApplicationCallbackUri()</c></Description></item><item><term>For system browser on .NET Core</term><Description><c>http://localhost</c></Description></item></list>
+            <list type="table"><listheader><term>Platform</term><Description>Default Reply URI</Description></listheader><item><term>.NET desktop</term><Description><c>`https://login.microsoftonline.com/common/oauth2/nativeclient`</c></Description></item><item><term>UWP</term><Description>value of <c>WebAuthenticationBroker.GetCurrentApplicationCallbackUri()</c></Description></item><item><term>For system browser on .NET Core</term><Description><c>http://localhost</c></Description></item></list>
             NOTE:There will be an update to the default redirect URI in the future to accommodate for system browsers on the 
             .NET desktop and .NET Core platforms.
             </summary>
@@ -228,7 +229,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.59.0.0</AssemblyVersion>
+        <AssemblyVersion>4.60.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -264,7 +265,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.59.0.0</AssemblyVersion>
+        <AssemblyVersion>4.60.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.PublicClientApplicationBuilder</ReturnType>
@@ -292,7 +293,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.59.0.0</AssemblyVersion>
+        <AssemblyVersion>4.60.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -317,6 +318,39 @@
         <remarks>This feature is available to Microsoft applications, which have the same client id across all clouds</remarks>
       </Docs>
     </Member>
+    <Member MemberName="WithOidcAuthority">
+      <MemberSignature Language="C#" Value="public Microsoft.Identity.Client.PublicClientApplicationBuilder WithOidcAuthority (string authorityUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Identity.Client.PublicClientApplicationBuilder WithOidcAuthority(string authorityUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.PublicClientApplicationBuilder.WithOidcAuthority(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithOidcAuthority (authorityUri As String) As PublicClientApplicationBuilder" />
+      <MemberSignature Language="F#" Value="member this.WithOidcAuthority : string -&gt; Microsoft.Identity.Client.PublicClientApplicationBuilder" Usage="publicClientApplicationBuilder.WithOidcAuthority authorityUri" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.60.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.PublicClientApplicationBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="authorityUri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="authorityUri">To be added.</param>
+        <summary>
+            Adds a known authority corresponding to a generic OpenIdConnect Identity Provider. 
+            MSAL will append ".well-known/openid-configuration" to the authority and retrieve the OIDC 
+            metadata from there, to figure out the endpoints.
+            See https://openid.net/specs/openid-connect-core-1_0.html#Terminology
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+            Experimental on public clients.
+            Do not use this method with Entra ID authorities (e.g. https://login.microsfoftonline.com/common).
+            Use WithAuthority(string) instead.
+            </remarks>
+      </Docs>
+    </Member>
     <Member MemberName="WithParentActivityOrWindow">
       <MemberSignature Language="C#" Value="public Microsoft.Identity.Client.PublicClientApplicationBuilder WithParentActivityOrWindow (Func&lt;IntPtr&gt; windowFunc);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Identity.Client.PublicClientApplicationBuilder WithParentActivityOrWindow(class System.Func`1&lt;native int&gt; windowFunc) cil managed" />
@@ -326,7 +360,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.59.0.0</AssemblyVersion>
+        <AssemblyVersion>4.60.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -359,7 +393,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.59.0.0</AssemblyVersion>
+        <AssemblyVersion>4.60.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -395,7 +429,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.59.0.0</AssemblyVersion>
+        <AssemblyVersion>4.60.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
