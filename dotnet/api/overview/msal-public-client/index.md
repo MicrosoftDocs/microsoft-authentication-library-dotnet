@@ -15,7 +15,7 @@ MSAL.NET enables the development of public client applications with the help of 
 
 ## Confidential client applications
 
-Confidential client applications are apps that run on servers, such as web apps, web API apps, or service/daemon apps. Their internals are considered difficult to access, and therefore they can keep an application secret secure and out of sight of its users. Confidential clients can hold configuration-time secrets. The concept, just like public client applicatrions, also is following the definitions included in [RFC6749 Section 2.1 - Client Types](https://datatracker.ietf.org/doc/html/rfc6749#section-2.1).
+Confidential client applications are apps that run on servers, such as web apps, web API apps, or service/daemon apps. Their internals are considered difficult to access, and therefore they can keep an application secret secure and out of sight of its users. Confidential clients can hold configuration-time secrets. The concept, just like public client applications, also is following the definitions included in [RFC6749 Section 2.1 - Client Types](https://datatracker.ietf.org/doc/html/rfc6749#section-2.1).
 
 MSAL.NET enables the development of confidential client applications with the help of <xref:Microsoft.Identity.Client.ConfidentialClientApplicationBuilder> as well as included configuration and functions.
 
