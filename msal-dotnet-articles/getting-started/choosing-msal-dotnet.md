@@ -36,19 +36,20 @@ You're building a desktop or mobile app. Use MSAL.NET directly and start acquiri
 ## Use [Microsoft Identity Web](https://github.com/AzureAD/microsoft-identity-web/)
 
 You're building a confidential client application (Web app, web API, daemon/service app) running on ASP.NET Core, ASP.NET OWIN, or .NET framework/.NET Core. See what Microsoft Identity Web has to offer:
-- Sign in users in web apps in Microsoft Entra application, Azure AD B2C, and Microsoft Entra External ID applications
+
+- Sign users in voa web apps in Microsoft Entra ID, Azure AD B2C, and Microsoft Entra External ID applications
   - Support Microsoft personal accounts
   - Support guest users
   - Incremental consent and conditional access in web apps
   - Handle SameSite
   - Integrates with "App services authentication"
-  - supports PKCE for confidential client applications
+  - Supports PKCE for confidential client applications
   - Brings performant token cache serializers, including distributed
 - Protect web API (with Microsoft Entra ID, Azure AD B2C, or Microsoft Entra External ID)
   - Validates the issuer (including in-multi-tenant apps, any cloud)
   - supports token decrypt certificates in Web APIs
   - Validates Scope and app role in Web APIs
-  - generates WWW-authenticate headers in APIs (CA, CAE)
+  - Generates `WWW-authenticate` headers in APIs (CA, CAE)
   - Protect gRPC services and Azure functions
 - Web app/API calling downstream APIs (including graph except for B2C)
   - Call downstream APIs without having to manage authentication and tokens yourself.
@@ -56,14 +57,8 @@ You're building a confidential client application (Web app, web API, daemon/serv
   - Describe the client credentials, and Microsoft.Identity.Web fetches them for you (for
 instance certificates from Key Vault, or [workload identity federation](/azure/active-directory/workload-identities/workload-identity-federation) with [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/products/kubernetes-service) and [Managed Identities](/azure/active-directory/managed-identities-azure-resources/overview))
 - Supports multiple Authentication schemes in ASP.NET Core
-- Supports Proof of possession protocol 
+- Supports Proof of Possession protocol
 - Resilient (supports regional token acquisition and  routing hint for the token backup system)
-
-<!---
-Built the table above from this image
-
-![image](../media/msal-templates-support.png)
--->
 
 ### You're building a new application
 
