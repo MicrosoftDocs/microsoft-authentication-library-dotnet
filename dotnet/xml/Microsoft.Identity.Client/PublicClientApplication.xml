@@ -53,6 +53,12 @@
             on the authentication strategy (e.g., through the Web Authentication Manager, Authentication app, browser, etc.), different redirect URIs will be used by MSAL. Redirect URIs must always be configured in the Azure Active Directory blade in the Azure Portal.
             </para>
     </remarks>
+    <example>
+    <format type="text/markdown"><![CDATA[   
+Here is an example of how to use `PublicClientApplication` with an [authentication broker](/entra/msal/dotnet/acquiring-tokens/desktop-mobile/wam) and caching.
+:::code language="csharp" source="~/../msal-dotnet-source/tests/devapps/NetCoreTestApp/Program.cs" range="78-110" highlight="1-4":::
+ ]]></format>
+    </example>
     <inheritdoc cref="T:Microsoft.Identity.Client.IPublicClientApplication" />
   </Docs>
   <Members>
