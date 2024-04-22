@@ -14,6 +14,7 @@
     <AssemblyVersion>4.1.0.0</AssemblyVersion>
     <AssemblyVersion>5.0.0.0</AssemblyVersion>
     <AssemblyVersion>5.1.0.0</AssemblyVersion>
+    <AssemblyVersion>5.3.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -35,7 +36,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>5.1.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -54,7 +55,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>5.1.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="other" Type="Microsoft.Identity.Abstractions.AcquireTokenOptions" />
@@ -75,7 +76,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>5.1.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -99,7 +100,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>5.1.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -124,7 +125,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>5.1.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Abstractions.AcquireTokenOptions</ReturnType>
@@ -147,7 +148,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>5.1.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Guid&gt;</ReturnType>
@@ -169,7 +170,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>5.1.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
@@ -189,7 +190,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>5.1.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
@@ -212,7 +213,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>5.1.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -238,7 +239,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>5.1.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -265,7 +266,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>5.1.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -288,7 +289,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>5.1.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Abstractions.ManagedIdentityOptions</ReturnType>
@@ -308,16 +309,16 @@
         <example>
           <format type="text/markdown"><![CDATA[
             The Json fragment below describes how to use a system-assigned Managed Identity for authentication in a confidential client application :
-            :::code language="json" source="~/../abstractions-samples/test/Microsoft.Identity.Abstractions.Tests/AquireTokenOptions.cs" id="managedidentitysystem_json":::
+            :::code language="json" source="~/../abstractions-samples/test/Microsoft.Identity.Abstractions.Tests/AquireTokenOptionsTests.cs" id="managedidentitysystem_json":::
             
             The code below describes the same, programmatically in C#.
-            :::code language="csharp" source="~/../abstractions-samples/test/Microsoft.Identity.Abstractions.Tests/AquireTokenOptions.cs" id="managedidentitysystem_csharp":::
+            :::code language="csharp" source="~/../abstractions-samples/test/Microsoft.Identity.Abstractions.Tests/AquireTokenOptionsTests.cs" id="managedidentitysystem_csharp":::
             
             The Json fragment below describes how to use a user-assigned Managed Identity for authentication in a confidential client application :
-            :::code language="json" source="~/../abstractions-samples/test/Microsoft.Identity.Abstractions.Tests/AquireTokenOptions.cs" id="managedidentityuser_json":::
+            :::code language="json" source="~/../abstractions-samples/test/Microsoft.Identity.Abstractions.Tests/AquireTokenOptionsTests.cs" id="managedidentityuser_json":::
             
             The code below describes the same, programmatically in C#.
-            :::code language="csharp" source="~/../abstractions-samples/test/Microsoft.Identity.Abstractions.Tests/AquireTokenOptions.cs" id="managedidentityuser_csharp":::
+            :::code language="csharp" source="~/../abstractions-samples/test/Microsoft.Identity.Abstractions.Tests/AquireTokenOptionsTests.cs" id="managedidentityuser_csharp":::
             ]]></format>
         </example>
       </Docs>
@@ -331,7 +332,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>5.1.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -353,7 +354,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>5.1.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -378,7 +379,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>5.1.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -403,7 +404,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>5.1.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
