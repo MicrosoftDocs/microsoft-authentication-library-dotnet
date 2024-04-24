@@ -20,6 +20,9 @@
     <AssemblyVersion>4.58.1.0</AssemblyVersion>
     <AssemblyVersion>4.59.0.0</AssemblyVersion>
     <AssemblyVersion>4.60.0.0</AssemblyVersion>
+    <AssemblyVersion>4.60.1.0</AssemblyVersion>
+    <AssemblyVersion>4.60.2.0</AssemblyVersion>
+    <AssemblyVersion>4.60.3.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Enum</BaseTypeName>
@@ -27,7 +30,7 @@
   <Docs>
     <summary>
             Details about the cause of an <see cref="T:Microsoft.Identity.Client.MsalUiRequiredException" />, giving a hint about what the user can expect when 
-            they go through interactive authentication. See https://aka.ms/msal-net-UiRequiredException for details.
+            they go through interactive authentication. See <see href="https://aka.ms/msal-net-UiRequiredException">Understanding MsalUiRequiredException</see> for details.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -41,7 +44,7 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.60.0.0</AssemblyVersion>
+        <AssemblyVersion>4.60.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.UiRequiredExceptionClassification</ReturnType>
@@ -49,10 +52,10 @@
       <MemberValue>7</MemberValue>
       <Docs>
         <summary>
-            An <c>AcquireTokenSilent</c> call failed. This is usually part of the pattern 
-            of calling <c>AcquireTokenSilent</c> for getting a token from the cache, followed by an a different
-            <c>AcquireToken</c> call for getting a token from AAD. See the error message for details. 
-            See https://aka.ms/msal-net-UiRequiredException for details.
+            An <see cref="T:Microsoft.Identity.Client.AcquireTokenSilentParameterBuilder" /> call failed. This is usually part of the pattern 
+            of calling <see cref="T:Microsoft.Identity.Client.AcquireTokenSilentParameterBuilder" /> for getting a token from the cache, followed by an a different
+            <c>AcquireToken</c> call for getting a token from Microsoft Entra ID. See the error message for details. 
+            See <see href="https://aka.ms/msal-net-UiRequiredException">Understanding MsalUiRequiredException</see> for details.
             </summary>
       </Docs>
     </Member>
@@ -65,7 +68,7 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.60.0.0</AssemblyVersion>
+        <AssemblyVersion>4.60.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.UiRequiredExceptionClassification</ReturnType>
@@ -73,9 +76,9 @@
       <MemberValue>3</MemberValue>
       <Docs>
         <summary>
-            Issue can be resolved by additional remedial interaction with the system, outside of the interactive authentication flow.
-            Starting an interactive authentication flow will show the user what they need to do, but it is possible that the user is unable to complete the action.
-            See https://aka.ms/msal-net-UiRequiredException for details
+            Issue can be resolved by additional remedial interaction within the system, outside of the interactive authentication flow.
+            Starting an interactive authentication flow will show the user what they need to do but it is possible that the user will be unable to complete the action.
+            See <see href="https://aka.ms/msal-net-UiRequiredException">Understanding MsalUiRequiredException</see> for details.
             </summary>
       </Docs>
     </Member>
@@ -88,7 +91,7 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.60.0.0</AssemblyVersion>
+        <AssemblyVersion>4.60.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.UiRequiredExceptionClassification</ReturnType>
@@ -97,7 +100,7 @@
       <Docs>
         <summary>
             Issue can be resolved by user interaction during the interactive authentication flow.
-            See https://aka.ms/msal-net-UiRequiredException for details
+            See <see href="https://aka.ms/msal-net-UiRequiredException">Understanding MsalUiRequiredException</see> for details.
             </summary>
       </Docs>
     </Member>
@@ -110,7 +113,7 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.60.0.0</AssemblyVersion>
+        <AssemblyVersion>4.60.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.UiRequiredExceptionClassification</ReturnType>
@@ -118,8 +121,8 @@
       <MemberValue>4</MemberValue>
       <Docs>
         <summary>
-            User consent is missing, or has been revoked. Issue can be resolved by user consenting during the interactive authentication flow.
-            See https://aka.ms/msal-net-UiRequiredException for details
+            User consent is missing or has been revoked. Issue can be resolved by user consenting during the interactive authentication flow.
+            See <see href="https://aka.ms/msal-net-UiRequiredException">Understanding MsalUiRequiredException</see> for details.
             </summary>
       </Docs>
     </Member>
@@ -132,7 +135,7 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.60.0.0</AssemblyVersion>
+        <AssemblyVersion>4.60.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.UiRequiredExceptionClassification</ReturnType>
@@ -140,8 +143,8 @@
       <MemberValue>1</MemberValue>
       <Docs>
         <summary>
-            Issue cannot be resolved at this time. Launching interactive authentication flow will show a message explaining the condition.
-            See https://aka.ms/msal-net-UiRequiredException for details
+            Issue cannot be resolved. Launching interactive authentication flow will show a message explaining the condition.
+            See <see href="https://aka.ms/msal-net-UiRequiredException">Understanding MsalUiRequiredException</see> for details.
             </summary>
       </Docs>
     </Member>
@@ -154,7 +157,7 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.60.0.0</AssemblyVersion>
+        <AssemblyVersion>4.60.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.UiRequiredExceptionClassification</ReturnType>
@@ -162,8 +165,9 @@
       <MemberValue>0</MemberValue>
       <Docs>
         <summary>
-            No further details are provided. It is possible that the user will be able to resolve the issue by launching interactive authentication.
-            See https://aka.ms/msal-net-UiRequiredException for details
+            No details are provided. It is possible that the user will be able to resolve the issue by launching interactive authentication.
+            This is also the classification when no account or valid login hint is passed to <see cref="T:Microsoft.Identity.Client.AcquireTokenSilentParameterBuilder" />.
+            See <see href="https://aka.ms/msal-net-UiRequiredException">Understanding MsalUiRequiredException</see> for details.
             </summary>
         <remarks>This is also the classification when no account or valid login hint is passed to AcquireTokenSilent</remarks>
       </Docs>
@@ -177,7 +181,7 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.60.0.0</AssemblyVersion>
+        <AssemblyVersion>4.60.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.UiRequiredExceptionClassification</ReturnType>
@@ -185,9 +189,9 @@
       <MemberValue>6</MemberValue>
       <Docs>
         <summary>
-          <see cref="M:Microsoft.Identity.Client.AcquireTokenInteractiveParameterBuilder.WithPrompt(Microsoft.Identity.Client.Prompt)" /> was used with Prompt.Never value, 
-            however this could not be honored by the server. Please use a different prompt behavior, such as <see cref="F:Microsoft.Identity.Client.Prompt.SelectAccount" />
-            See https://aka.ms/msal-net-UiRequiredException for details.
+          <see cref="M:Microsoft.Identity.Client.AcquireTokenInteractiveParameterBuilder.WithPrompt(Microsoft.Identity.Client.Prompt)" /> was used with a <c>Prompt.Never</c> value, 
+            however this could not be honored by the server. Please use a different prompt behavior, such as <see cref="F:Microsoft.Identity.Client.Prompt.SelectAccount" />.
+            See <see href="https://aka.ms/msal-net-UiRequiredException">Understanding MsalUiRequiredException</see> for details.
             </summary>
       </Docs>
     </Member>
@@ -200,7 +204,7 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.60.0.0</AssemblyVersion>
+        <AssemblyVersion>4.60.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.UiRequiredExceptionClassification</ReturnType>
@@ -209,7 +213,7 @@
       <Docs>
         <summary>
             User's password has expired. Issue can be resolved by user during the interactive authentication flow.
-            See https://aka.ms/msal-net-UiRequiredException for details.
+            See <see href="https://aka.ms/msal-net-UiRequiredException">Understanding MsalUiRequiredException</see> for details.
             </summary>
       </Docs>
     </Member>

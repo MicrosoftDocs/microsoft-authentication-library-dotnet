@@ -124,9 +124,9 @@ static string GetSignedClientAssertion(X509Certificate2 certificate, string tena
     //x5t represents the certificate thumbprint base64 url encoded
     var header = new Dictionary<string, string>()
     {
-        { "alg", "RS256"},
+        { "alg", "PS256"},
         { "typ", "JWT" },
-        { "x5t", Base64UrlEncode(certificate.GetCertHash()) }
+        { "x5t#S256", Base64UrlHelpers.Encode(certificate.GetCertHash(HashAlgorithmName.SHA256))},
     };
 
     //Please see the previous code snippet on how to craft claims for the GetClaims() method
@@ -136,7 +136,7 @@ static string GetSignedClientAssertion(X509Certificate2 certificate, string tena
     var claimsBytes = JsonSerializer.SerializeToUtf8Bytes(claims);
     string token = Base64UrlEncode(headerBytes) + "." + Base64UrlEncode(claimsBytes);
 
-    string signature = Base64UrlEncode(rsa.SignData(Encoding.UTF8.GetBytes(token), HashAlgorithmName.SHA256, RSASignaturePadding.Pkcs1));
+    string signature = Base64UrlEncode(rsa.SignData(Encoding.UTF8.GetBytes(token), HashAlgorithmName.SHA256, RSASignaturePadding.Pss));
     string signedClientAssertion = string.Concat(token, ".", signature);
     return signedClientAssertion;
 }
