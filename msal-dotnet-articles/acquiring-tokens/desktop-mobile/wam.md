@@ -159,6 +159,7 @@ This flow, also known as Resource Owner Password Credentials (ROPC), is not reco
 - Azure B2C and Active Directory Federation Services (ADFS) authorities aren't supported. MSAL will fall back to using a browser for user authentication.
 - On Mac, Linux, and versions of Windows earlier than 10 or Windows Server 2019, MSAL will fall back to a browser.
 - Updated WAM broker is not available on UWP due to Windows API limitations. UWP apps will use the legacy WAM implementation.
+- At this time, WAM uses EdgeHTML as the browser engine for authentication flows. Organizations and identity providers need to ensure that EdgeHTML is an allowed browser engine on customer devices for WAM-based applications to work.
 
 ## Package availability
 
