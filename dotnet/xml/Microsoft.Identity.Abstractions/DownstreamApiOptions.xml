@@ -14,6 +14,7 @@
     <AssemblyVersion>4.1.0.0</AssemblyVersion>
     <AssemblyVersion>5.0.0.0</AssemblyVersion>
     <AssemblyVersion>5.1.0.0</AssemblyVersion>
+    <AssemblyVersion>5.3.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions</BaseTypeName>
@@ -65,12 +66,12 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>5.1.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
         <summary>
-            Default constructor
+            Default constructor.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -84,7 +85,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>5.1.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="other" Type="Microsoft.Identity.Abstractions.DownstreamApiOptions" />
@@ -92,9 +93,33 @@
       <Docs>
         <param name="other" />
         <summary>
-            Copy constructor
+            Copy constructor.
             </summary>
         <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceptHeader">
+      <MemberSignature Language="C#" Value="public string AcceptHeader { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AcceptHeader" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.DownstreamApiOptions.AcceptHeader" />
+      <MemberSignature Language="VB.NET" Value="Public Property AcceptHeader As String" />
+      <MemberSignature Language="F#" Value="member this.AcceptHeader : string with get, set" Usage="Microsoft.Identity.Abstractions.DownstreamApiOptions.AcceptHeader" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The HTTP Accept header is used to inform that server about the content type
+            that the client is expecting in the response.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <default>application/json</default>
       </Docs>
     </Member>
     <Member MemberName="Clone">
@@ -106,7 +131,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>5.1.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Abstractions.DownstreamApiOptions</ReturnType>
@@ -129,7 +154,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>5.1.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions</ReturnType>
@@ -142,6 +167,29 @@
         <inheritdoc />
       </Docs>
     </Member>
+    <Member MemberName="ContentType">
+      <MemberSignature Language="C#" Value="public string ContentType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContentType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.DownstreamApiOptions.ContentType" />
+      <MemberSignature Language="VB.NET" Value="Public Property ContentType As String" />
+      <MemberSignature Language="F#" Value="member this.ContentType : string with get, set" Usage="Microsoft.Identity.Abstractions.DownstreamApiOptions.ContentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Content type of the request body.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <default>application/json</default>
+      </Docs>
+    </Member>
     <Member MemberName="Deserializer">
       <MemberSignature Language="C#" Value="public Func&lt;System.Net.Http.HttpContent?,object?&gt;? Deserializer { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Func`2&lt;class System.Net.Http.HttpContent, object&gt; Deserializer" />
@@ -151,7 +199,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>5.1.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Func&lt;System.Net.Http.HttpContent,System.Object&gt;</ReturnType>
@@ -174,7 +222,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>5.1.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
@@ -200,7 +248,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>5.1.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Func&lt;System.Object,System.Net.Http.HttpContent&gt;</ReturnType>

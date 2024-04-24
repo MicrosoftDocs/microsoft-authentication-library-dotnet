@@ -17,6 +17,9 @@
     <AssemblyVersion>4.58.1.0</AssemblyVersion>
     <AssemblyVersion>4.59.0.0</AssemblyVersion>
     <AssemblyVersion>4.60.0.0</AssemblyVersion>
+    <AssemblyVersion>4.60.1.0</AssemblyVersion>
+    <AssemblyVersion>4.60.2.0</AssemblyVersion>
+    <AssemblyVersion>4.60.3.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -38,7 +41,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client.Broker</AssemblyName>
-        <AssemblyVersion>4.60.0.0</AssemblyVersion>
+        <AssemblyVersion>4.60.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.PublicClientApplicationBuilder</ReturnType>
@@ -71,7 +74,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client.Broker</AssemblyName>
-        <AssemblyVersion>4.60.0.0</AssemblyVersion>
+        <AssemblyVersion>4.60.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -116,7 +119,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client.Broker</AssemblyName>
-        <AssemblyVersion>4.60.0.0</AssemblyVersion>
+        <AssemblyVersion>4.60.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.PublicClientApplicationBuilder</ReturnType>
@@ -125,9 +128,15 @@
         <Parameter Name="builder" Type="Microsoft.Identity.Client.PublicClientApplicationBuilder" RefType="this" />
       </Parameters>
       <Docs>
-        <param name="builder">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="builder" />
+        <summary>
+            Use this API to enable SsoPolicy enforcement. 
+            Should only be utilized by Microsoft 1st party applications.
+            This is applicable only when broker is not enabled and embedded webview is the preferred choice.
+            By default, the broker supports SsoPolicy, and system webview SsoPolicy is also supported at the OS level.
+            </summary>
+        <returns>A <see cref="T:Microsoft.Identity.Client.PublicClientApplicationBuilder" /> from which to set more
+            parameters, and to create a public client application instance</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
