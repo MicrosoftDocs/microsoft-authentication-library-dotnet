@@ -181,7 +181,7 @@ At times when acquiring a token, Microsoft Entra ID throws an exception in case 
 In MSAL.NET, claim challenge exceptions are handled in the following way:
 
 - The `Claims` are surfaced in the `MsalServiceException`.
-- There's a `.WithClaim(claims)` method that can apply to the `AcquireTokenXXX` builders.
+- There's a <xref:Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder%601.WithClaims(System.String)> method that can apply to the `AcquireTokenXXX` builders.
 
 For details see [Handling MsalUiRequiredException](../advanced/exceptions/msal-error-handling.md#msaluirequiredexception).
 
