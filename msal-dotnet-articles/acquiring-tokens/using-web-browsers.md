@@ -60,7 +60,7 @@ Generally, it's recommended that you use the platform default, and this is typic
 
 **†††** Reference [Microsoft.Identity.Client.Desktop](https://www.nuget.org/packages/Microsoft.Identity.Client.Desktop) and call <xref:Microsoft.Identity.Client.Desktop.DesktopExtensions.WithWindowsDesktopFeatures%2A> to use the embedded browser.
 
-**††††**MSAL.NET versions 4.61.0 and above do not provide support for UWP, Xamarin Android, and Xamarin iOS.
+**††††** MSAL.NET versions 4.61.0 and above do not provide support for UWP, Xamarin Android, and Xamarin iOS.
 
 ## System web browser
 
