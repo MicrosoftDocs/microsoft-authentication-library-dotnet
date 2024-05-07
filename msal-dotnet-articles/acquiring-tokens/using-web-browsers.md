@@ -41,24 +41,26 @@ Generally, it's recommended that you use the platform default, and this is typic
 
 ### Browser availability
 
-| Framework        | Embedded | System | Default |
-| ------------- |-------------| -----| ----- |
-| .NET 6.0+ Windows | Yes | Yes† | Embedded |
-| .NET 6.0+ | No†† | Yes† | System |
-| .NET 5.0 | No†† | Yes† | System |
-| .NET Classic | Yes | Yes† | Embedded |
-| .NET Core | No | Yes† | System |
-| .NET Standard | No††† | Yes† | System |
-| UWP | Yes | No | Embedded |
-| Xamarin.Android | Yes | Yes  | System |
-| Xamarin.iOS | Yes | Yes  | System |
-| Xamarin.Mac| Yes | No | Embedded |
+| Framework                       | Embedded                 | System†                | Default               |
+|:--------------------------------|:-------------------------|:-----------------------|:----------------------|
+| .NET 6+††                       | ⛔ No                    | ✅ Yes                | System                |
+| .NET 6+ Windows                 | ⛔ No†††                 | ✅ Yes                | System                |
+| .NET MAUI                       | ✅ Yes                   | ✅ Yes                | System                |
+| .NET 5+††                       | ⛔ No                    | ✅ Yes                | System                |
+| .NET 4.6.2+                     | ✅ Yes                   | ✅ Yes                | Embedded              |
+| .NET Standard                   | ⛔ No†††                 | ✅ Yes                | System                |
+| .NET Core                       | ⛔ No†††                 | ✅ Yes                | System                |
+| UWP††††                         | ✅ Yes                   | ⛔ No                 | Embedded              |
+| Xamarin.Android††††             | ✅ Yes                   | ✅ Yes                | System                |
+| Xamarin.iOS††††                 | ✅ Yes                   | ✅ Yes                | System                |
 
-**†** Requires `http://localhost` redirect URI.
+**†** System browser requires `http://localhost` redirect URI.
 
 **††** Target `net6.0-windows` or above to use the embedded browser.
 
 **†††** Reference [Microsoft.Identity.Client.Desktop](https://www.nuget.org/packages/Microsoft.Identity.Client.Desktop) and call <xref:Microsoft.Identity.Client.Desktop.DesktopExtensions.WithWindowsDesktopFeatures%2A> to use the embedded browser.
+
+**††††**MSAL.NET versions 4.61.0 and above do not provide support for UWP, Xamarin Android, and Xamarin iOS.
 
 ## System web browser
 
@@ -137,6 +139,9 @@ var options = new SystemWebViewOptions()
 ```
 
 ## Web views on Xamarin.Android and Xamarin.iOS
+
+> [!NOTE]
+> MSAL.NET versions 4.61.0 and above do not provide support for Xamarin Android and Xamarin iOS.
 
 Embedded web views can be enabled in Xamarin.Android and Xamarin.iOS apps. As a developer using MSAL.NET targeting Xamarin, you may choose to use either embedded web views or system browsers. This is your choice depending on the user experience and security concerns you want to target.
 

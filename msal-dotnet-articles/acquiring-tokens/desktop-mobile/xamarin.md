@@ -8,7 +8,7 @@ description: "How to use MSAL.NET on mobile platforms."
 MSAL.NET can run on mobile devices (both iOS and Android) through applications built with [.NET Multi-platform App UI (MAUI)](https://dotnet.microsoft.com/apps/maui).
 
 >[!NOTE]
->The .NET team recommends [migrating existing Xamarin applications to MAUI](/dotnet/maui/migration/). New applications should always use MAUI.
+>The .NET team recommends [migrating existing Xamarin applications to MAUI](/dotnet/maui/migration/). New applications should always use MAUI. MSAL.NET versions 4.61.0 and above do not provide support for Xamarin Android and Xamarin iOS.
 
 ## Using MSAL.NET with brokers on mobile devices
 
