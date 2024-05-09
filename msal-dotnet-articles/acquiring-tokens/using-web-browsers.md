@@ -92,11 +92,11 @@ var result = await pca.AcquireTokenInteractive(s_scopes)
                     .ExecuteAsync();
 ```
 
-When you configure `http://localhost`, MSAL.NET will find a random open port and use it. Using `http://localhost` as a redirect URI is safe. Another process cannot listen on a local socket which is already being listened on by MSAL. No network communication happens when the browser redirects to this URI. Even if somehow a malicious app intercepts the authentication code (no such known attacks, but possible if malicious app has admin access to the machine), it cannot exchange it for a token because it needs a temporary secret which only your app knows, as described by the [PKCE](https://oauth.net/2/pkce/) protocol. `https://localhost` because port 443 is reserved and MSAL is unable to listen on it.
+When you configure `http://localhost`, MSAL.NET will find a random open port and use it. Using `http://localhost` as a redirect URI is safe. Another process cannot listen on a local socket which is already being listened on by MSAL. No network communication happens when the browser redirects to this URI. Even if somehow a malicious app intercepts the authentication code (no such known attacks, but it is possible if a malicious app has admin access to the machine), it cannot exchange it for a token because it needs a temporary secret that only your app knows, as described by the [PKCE](https://oauth.net/2/pkce/) protocol. The app is unable to listen on the https localhost (`https://localhost`) because port 443 is reserved and MSAL is unable to listen on it.
 
 #### Limitations
 
-Azure B2C and ADFS 2019 do not yet implement the *any port* option. So, you cannot set `http://localhost` (no port) redirect URI, but only `http://localhost:1234` (with port) URI. This means that you will have to do your own port management, for example you can reserve a few ports and configure them as redirect URIs. Then your app can cycle through them until a port is free - this can then be used by MSAL.
+Azure B2C and ADFS 2019 do not yet implement the *any port* option. So, you cannot set `http://localhost` (no port) redirect URI, but only `http://localhost:1234` (with port) URI. This means that you will have to do your own port management, for example, you can reserve a few ports and configure them as redirect URIs. Then your app can cycle through them until a port is free - this can then be used by MSAL.
 
 UWP doesn't support listening to a port and thus doesn't support system browsers.
 
@@ -186,7 +186,7 @@ App.ParentWindow = null; // no UI parent on iOS
 
 #### Choosing between embedded web view or system browser on Xamarin.Android
 
-In your Android app, in `MainActivity.cs` you can set the parent activity, so that the authentication result gets back to it:
+In your Android app, in `MainActivity.cs` you can set the parent activity so that the authentication result gets back to it:
 
 ```csharp
  App.ParentWindow = this;
