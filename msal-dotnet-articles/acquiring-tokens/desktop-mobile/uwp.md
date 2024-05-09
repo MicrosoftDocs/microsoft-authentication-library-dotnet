@@ -18,6 +18,9 @@ ms.custom: devx-track-csharp, aaddev, devx-track-dotnet
 
 # Using MSAL.NET with UWP applications
 
+> [!NOTE]
+> MSAL.NET versions 4.61.0 and above do not provide support for UWP.
+
 Developers of applications that use Universal Windows Platform (UWP) with MSAL.NET should consider the concepts this article presents.
 
 >[!NOTE]
