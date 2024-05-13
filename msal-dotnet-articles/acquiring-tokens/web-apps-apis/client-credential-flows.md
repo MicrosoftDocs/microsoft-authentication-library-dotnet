@@ -36,13 +36,14 @@ var singletonApp = ConfidentialClientApplicationBuilder.Create(config.ClientId)
 // the cache serialization (see below)
 
 // When making the request, specify the tenant-based authority
-var authResult = await app.AcquireTokenForClient(scopes: new [] {  "some_app_id_uri/.default"})        // Uses the token cache automatically, which is optimized for multi-tenant access
-        .WithAuthority(AzureCloudInstance.AzurePublic, "{tenantID}")  // Do not use "common" or "organizations"!
+var authResult = await app.AcquireTokenForClient(scopes: new [] {  "some_app_id_uri/.default"}) // Uses the token cache automatically, which is optimized for multi-tenant access
+        // Do not use "common" or "organizations"!
+        .WithTenantId("{tenantID}") // or .WithTenantIdFromAuthority({"authority"})
         .ExecuteAsync();
 ```
 
->[!IMPORTANT]
->Do not use `common` or `organizations` authority for client credential flows. Specify the tenant ID in the authority.
+> [!IMPORTANT]
+> Do not use `common` or `organizations` authority for client credential flows. Specify the tenant ID in the authority.
 
 ## Custom cache serialization
 
