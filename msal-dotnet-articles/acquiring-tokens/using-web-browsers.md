@@ -41,24 +41,26 @@ Generally, it's recommended that you use the platform default, and this is typic
 
 ### Browser availability
 
-| Framework        | Embedded | System | Default |
-| ------------- |-------------| -----| ----- |
-| .NET 6.0+ Windows | Yes | Yes† | Embedded |
-| .NET 6.0+ | No†† | Yes† | System |
-| .NET 5.0 | No†† | Yes† | System |
-| .NET Classic | Yes | Yes† | Embedded |
-| .NET Core | No | Yes† | System |
-| .NET Standard | No††† | Yes† | System |
-| UWP | Yes | No | Embedded |
-| Xamarin.Android | Yes | Yes  | System |
-| Xamarin.iOS | Yes | Yes  | System |
-| Xamarin.Mac| Yes | No | Embedded |
+| Framework                       | Embedded                 | System†                | Default               |
+|:--------------------------------|:-------------------------|:-----------------------|:----------------------|
+| .NET 6+††                       | ⛔ No                    | ✅ Yes                | System                |
+| .NET 6+ Windows                 | ⛔ No†††                 | ✅ Yes                | System                |
+| .NET MAUI                       | ✅ Yes                   | ✅ Yes                | System                |
+| .NET 5+††                       | ⛔ No                    | ✅ Yes                | System                |
+| .NET 4.6.2+                     | ✅ Yes                   | ✅ Yes                | Embedded              |
+| .NET Standard                   | ⛔ No†††                 | ✅ Yes                | System                |
+| .NET Core                       | ⛔ No†††                 | ✅ Yes                | System                |
+| UWP††††                         | ✅ Yes                   | ⛔ No                 | Embedded              |
+| Xamarin.Android††††             | ✅ Yes                   | ✅ Yes                | System                |
+| Xamarin.iOS††††                 | ✅ Yes                   | ✅ Yes                | System                |
 
-**†** Requires `http://localhost` redirect URI.
+**†** System browser requires `http://localhost` redirect URI.
 
 **††** Target `net6.0-windows` or above to use the embedded browser.
 
 **†††** Reference [Microsoft.Identity.Client.Desktop](https://www.nuget.org/packages/Microsoft.Identity.Client.Desktop) and call <xref:Microsoft.Identity.Client.Desktop.DesktopExtensions.WithWindowsDesktopFeatures%2A> to use the embedded browser.
+
+**††††** MSAL.NET versions 4.61.0 and above do not provide support for UWP, Xamarin Android, and Xamarin iOS.
 
 ## System web browser
 
@@ -92,11 +94,11 @@ var result = await pca.AcquireTokenInteractive(s_scopes)
                     .ExecuteAsync();
 ```
 
-When you configure `http://localhost`, MSAL.NET will find a random open port and use it. Using `http://localhost` as a redirect URI is safe. Another process cannot listen on a local socket which is already being listened on by MSAL. No network communication happens when the browser redirects to this URI. Even if somehow a malicious app intercepts the authentication code (no such known attacks, but possible if malicious app has admin access to the machine), it cannot exchange it for a token because it needs a temporary secret which only your app knows, as described by the [PKCE](https://oauth.net/2/pkce/) protocol. `https://localhost` because port 443 is reserved and MSAL is unable to listen on it.
+When you configure `http://localhost`, MSAL.NET will find a random open port and use it. Using `http://localhost` as a redirect URI is safe. Another process cannot listen on a local socket which is already being listened on by MSAL. No network communication happens when the browser redirects to this URI. Even if somehow a malicious app intercepts the authentication code (no such known attacks, but it is possible if a malicious app has admin access to the machine), it cannot exchange it for a token because it needs a temporary secret that only your app knows, as described by the [PKCE](https://oauth.net/2/pkce/) protocol. The app is unable to listen on the HTTPS localhost endpoint (`https://localhost`) because port 443 is reserved and MSAL is unable to listen on it.
 
 #### Limitations
 
-Azure B2C and ADFS 2019 do not yet implement the *any port* option. So, you cannot set `http://localhost` (no port) redirect URI, but only `http://localhost:1234` (with port) URI. This means that you will have to do your own port management, for example you can reserve a few ports and configure them as redirect URIs. Then your app can cycle through them until a port is free - this can then be used by MSAL.
+Azure B2C and ADFS 2019 do not yet implement the *any port* option. So, you cannot set `http://localhost` (no port) redirect URI, but only `http://localhost:1234` (with port) URI. This means that you will have to do your own port management, for example, you can reserve a few ports and configure them as redirect URIs. Then your app can cycle through them until a port is free - this can then be used by MSAL.
 
 UWP doesn't support listening to a port and thus doesn't support system browsers.
 
@@ -137,6 +139,9 @@ var options = new SystemWebViewOptions()
 ```
 
 ## Web views on Xamarin.Android and Xamarin.iOS
+
+> [!NOTE]
+> MSAL.NET versions 4.61.0 and above do not provide support for Xamarin Android and Xamarin iOS.
 
 Embedded web views can be enabled in Xamarin.Android and Xamarin.iOS apps. As a developer using MSAL.NET targeting Xamarin, you may choose to use either embedded web views or system browsers. This is your choice depending on the user experience and security concerns you want to target.
 
@@ -186,7 +191,7 @@ App.ParentWindow = null; // no UI parent on iOS
 
 #### Choosing between embedded web view or system browser on Xamarin.Android
 
-In your Android app, in `MainActivity.cs` you can set the parent activity, so that the authentication result gets back to it:
+In your Android app, in `MainActivity.cs` you can set the parent activity so that the authentication result gets back to it:
 
 ```csharp
  App.ParentWindow = this;
