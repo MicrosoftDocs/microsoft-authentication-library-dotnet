@@ -92,7 +92,7 @@ var result = await pca.AcquireTokenInteractive(s_scopes)
                     .ExecuteAsync();
 ```
 
-When you configure `http://localhost`, MSAL.NET will find a random open port and use it. Using `http://localhost` as a redirect URI is safe. Another process cannot listen on a local socket which is already being listened on by MSAL. No network communication happens when the browser redirects to this URI. Even if somehow a malicious app intercepts the authentication code (no such known attacks, but it is possible if a malicious app has admin access to the machine), it cannot exchange it for a token because it needs a temporary secret that only your app knows, as described by the [PKCE](https://oauth.net/2/pkce/) protocol. The app is unable to listen on the https localhost (`https://localhost`) because port 443 is reserved and MSAL is unable to listen on it.
+When you configure `http://localhost`, MSAL.NET will find a random open port and use it. Using `http://localhost` as a redirect URI is safe. Another process cannot listen on a local socket which is already being listened on by MSAL. No network communication happens when the browser redirects to this URI. Even if somehow a malicious app intercepts the authentication code (no such known attacks, but it is possible if a malicious app has admin access to the machine), it cannot exchange it for a token because it needs a temporary secret that only your app knows, as described by the [PKCE](https://oauth.net/2/pkce/) protocol. The app is unable to listen on the HTTPS localhost endpoint (`https://localhost`) because port 443 is reserved and MSAL is unable to listen on it.
 
 #### Limitations
 
