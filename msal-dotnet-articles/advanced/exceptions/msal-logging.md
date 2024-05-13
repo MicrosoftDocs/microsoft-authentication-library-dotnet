@@ -118,7 +118,7 @@ Example:
         public void Log(LogEntry entry)
         {
             //Log Message here:
-            Console.WriteLine(entry.message);
+            Console.WriteLine(entry.Message);
         }
     }
 ```
