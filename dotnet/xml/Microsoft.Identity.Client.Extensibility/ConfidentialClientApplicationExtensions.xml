@@ -13,6 +13,15 @@
     <AssemblyVersion>4.54.1.0</AssemblyVersion>
     <AssemblyVersion>4.55.0.0</AssemblyVersion>
     <AssemblyVersion>4.56.0.0</AssemblyVersion>
+    <AssemblyVersion>4.57.0.0</AssemblyVersion>
+    <AssemblyVersion>4.58.0.0</AssemblyVersion>
+    <AssemblyVersion>4.58.1.0</AssemblyVersion>
+    <AssemblyVersion>4.59.0.0</AssemblyVersion>
+    <AssemblyVersion>4.60.0.0</AssemblyVersion>
+    <AssemblyVersion>4.60.1.0</AssemblyVersion>
+    <AssemblyVersion>4.60.2.0</AssemblyVersion>
+    <AssemblyVersion>4.60.3.0</AssemblyVersion>
+    <AssemblyVersion>4.61.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -20,7 +29,8 @@
   <Interfaces />
   <Docs>
     <summary>
-            Extensibility methods for <see cref="T:Microsoft.Identity.Client.IConfidentialClientApplication" /></summary>
+            Extensibility methods for <see cref="T:Microsoft.Identity.Client.IConfidentialClientApplication" />.
+            </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -33,13 +43,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.1.0</AssemblyVersion>
-        <AssemblyVersion>4.55.0.0</AssemblyVersion>
-        <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Boolean&gt;</ReturnType>
@@ -50,16 +54,17 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="clientApp">Client app to remove tokens from</param>
-        <param name="longRunningProcessSessionKey">OBO cache key used to remove the tokens</param>
-        <param name="cancellationToken">Cancellation token</param>
+        <param name="clientApp">Client application to remove tokens from.</param>
+        <param name="longRunningProcessSessionKey">OBO cache key used to remove the tokens.</param>
+        <param name="cancellationToken">Cancellation token.</param>
         <summary>
-            Stops an in progress long running OBO session by removing the tokens associated with the provided cache key.
-            See https://aka.ms/msal-net-long-running-obo.
+            Stops an in-progress long-running on-behalf-of session by removing the tokens associated with the provided cache key.
+            See <see href="https://aka.ms/msal-net-long-running-obo">Long-running OBO in MSAL.NET</see>.
             </summary>
-        <returns>Returns true if tokens are removed from the cache. False otherwise.</returns>
+        <returns>True if tokens are removed from the cache; false, otherwise.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="longRunningProcessSessionKey" /> is not set.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="longRunningProcessSessionKey" /> is not set.</exception>
       </Docs>
     </Member>
   </Members>

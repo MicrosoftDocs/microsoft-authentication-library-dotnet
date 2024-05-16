@@ -2,15 +2,15 @@
 author: cilwerner
 ms.author: cwerner
 ms.date: 11/25/2020
-ms.service: active-directory
-ms.subservice: develop
+ms.service: msal
+ms.subservice: msal-dotnet
 ms.topic: include
 # Purpose:
 # Ingested by Microsoft identity platform articles in /articles/active-directory/develop/* that document the error handling retries for the different platforms.
 ---
 ## Retrying after errors and exceptions
 
-You're expected to implement your own retry policies when calling MSAL. MSAL makes HTTP calls to the Azure AD service, and occasionally failures can occur. For example the network can go down or the server is overloaded.  
+You're expected to implement your own retry policies when calling MSAL. MSAL makes HTTP calls to the Microsoft Entra service, and occasionally failures can occur. For example the network can go down or the server is overloaded.  
 
 ### HTTP 429
 

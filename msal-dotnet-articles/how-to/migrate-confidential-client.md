@@ -1,13 +1,12 @@
 ---
 title: Migrate confidential client applications to MSAL.NET
 description: Learn how to migrate a confidential client application from Azure Active Directory Authentication Library for .NET to Microsoft Authentication Library for .NET.
-services: active-directory
 author: Dickson-Mwendia
 manager: CelesteDG
-ms.service: active-directory
-ms.subservice: develop
-ms.topic: how-to
-ms.workload: identity
+
+ms.service: msal
+ms.subservice: msal-dotnet
+ms.topic: conceptual
 ms.date: 08/24/2023
 ms.author: dmwendia
 ms.reviewer: ddelimarsky, jmprieur, saeeda, shermanouko
@@ -499,7 +498,7 @@ Key benefits of MSAL.NET for your app include:
 
 - **Resilience**. MSAL.NET helps make your app resilient through:
 
-  - Azure AD Cached Credential Service (CCS) benefits. CCS operates as an Azure AD backup.
+  - Microsoft Entra ID Cached Credential Service (CCS) benefits. CCS operates as a Microsoft Entra backup.
   - Proactive renewal of tokens if the API that you call enables long-lived tokens through [continuous access evaluation](/azure/active-directory/develop/app-resilience-continuous-access-evaluation).
 
 - **Security**. You can acquire Proof of Possession (PoP) tokens if the web API that you want to call requires it. For details, see [Proof Of Possession tokens in MSAL.NET](../advanced/proof-of-possession-tokens.md)

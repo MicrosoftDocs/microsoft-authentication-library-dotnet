@@ -17,7 +17,7 @@
         href: getting-started/instantiate-confidential-client-config-options.md        
       - name: Best practices
         href: getting-started/best-practices.md
-    - name: Acquiring Tokens
+    - name: Acquiring tokens
       items:
       - name: Overview
         href: acquiring-tokens/overview.md
@@ -27,15 +27,13 @@
           href: acquiring-tokens/desktop-mobile/acquiring-tokens-interactively.md
         - name: Using MSAL.NET with Web Account Manager (WAM)
           href: acquiring-tokens/desktop-mobile/wam.md
-        - name: .NET Core
-          href: acquiring-tokens/desktop-mobile/dotnet-core.md
         - name: Xamarin
           href: acquiring-tokens/desktop-mobile/xamarin.md
         - name: Universal Windows Platform
           href: acquiring-tokens/desktop-mobile/uwp.md
         - name: Sign-in users with social identities
           href: acquiring-tokens/desktop-mobile/social-identities.md
-        - name: Integrated Windows Authentication for domain or Azure AD joined machines
+        - name: Integrated Windows Authentication for domain or Microsoft Entra joined machines
           href: acquiring-tokens/desktop-mobile/integrated-windows-authentication.md
         - name: Username/password authentication
           href: acquiring-tokens/desktop-mobile/username-password-authentication.md
@@ -45,12 +43,14 @@
           href: acquiring-tokens/desktop-mobile/adfs-support.md
       - name: Web apps/web APIs/daemon apps
         items:
-        - name: Acquiring a token for the app
+        - name: Client credential flows
           href: acquiring-tokens/web-apps-apis/client-credential-flows.md
         - name: Acquiring a token on behalf of a user (service to service calls)
           href: acquiring-tokens/web-apps-apis/on-behalf-of-flow.md
         - name: Acquiring a token by authorization code in web apps
           href: acquiring-tokens/web-apps-apis/authorization-codes.md
+        - name: Acquiring a token with federated workload identity
+          href: acquiring-tokens/web-apps-apis/workload-identity-federation.md
         - name: Confidential client assertions
           href: acquiring-tokens/web-apps-apis/confidential-client-assertions.md
       - name: AcquireTokenSilentAsync API

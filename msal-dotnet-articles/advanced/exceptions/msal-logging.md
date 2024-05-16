@@ -5,8 +5,8 @@ services: active-directory
 author: Dickson-Mwendia
 manager: CelesteDG
 
-ms.service: active-directory
-ms.subservice: develop
+ms.service: msal
+ms.subservice: msal-dotnet
 ms.topic: conceptual
 ms.workload: identity
 ms.date: 10/21/2022
@@ -17,20 +17,36 @@ ms.custom: aaddev, devx-track-dotnet
 
 # Logging in MSAL.NET
 
-[!INCLUDE [MSAL logging introduction](../../includes/error-logging-introduction.md)]
+MSAL.NET apps generate log messages that can help diagnose issues. You can configure logging with a few lines of code, and have custom control over the level of detail and whether or not personal and organizational data is logged. Logging isn't enabled by default. We recommend you enable MSAL logging to provide a way for users to submit logs when they have authentication issues. Note that MSAL doesn't store any logs and emits logs to the destination provided in the logger implementation.
+
+>[!NOTE]
+>Starting with MSAL.NET 4.58.0 developers can also [use OpenTelemetry](../monitoring.md#opentelemetry) to aggregate logs and measure application performance.
+
+## Logging levels
+
+There are several levels of logging detail:
+
+- `LogAlways`: Base level which includes logs of important health metrics to help with diagnostics of MSAL operations.
+- `Critical`: Logs that describe an unrecoverable application or system crash, or a catastrophic failure that requires immediate attention.
+- `Error`: Indicates something has gone wrong and an error was generated. Used for debugging and identifying problems.
+- `Warning`: Includes logs in scenarios when there hasn't necessarily been an error or failure, but are intended for diagnostics and pinpointing problems. This is the recommended minimum level that should be enabled in production apps.
+- `Informational`: MSAL will log events intended for informational purposes, not necessarily intended for debugging.
+- `Verbose`: MSAL logs the full details of library behavior. In production environment, verbose level should only be enabled temporarily to gather logs for a specific debugging purpose.
+
+## Personal and organizational data
+
+By default, the MSAL logger doesn't capture any highly sensitive personal or organizational data. The library provides the option to enable logging personal and organizational data if you decide to do so. For details, see [Handling of personally-identifiable information in MSAL.NET](/entra/msal/dotnet/resources/handling-pii).
 
 ## Configure logging in MSAL.NET
 
-In MSAL, logging is set at application creation using the `.WithLogging` builder modifier. This method takes optional parameters:
+In MSAL, logging is set during application creation using the <xref:Microsoft.Identity.Client.BaseAbstractApplicationBuilder`1.WithLogging(Microsoft.IdentityModel.Abstractions.IIdentityLogger,System.Boolean)> builder. This method takes the following parameters:
 
-- `IIdentityLogger` is the logging implementation used by MSAL.NET to produce logs for debugging or health check purposes. Logs are only sent if logging is enabled.
-- `Level` enables you to decide which level of logging you want. Setting it to Errors will only get errors
-- `PiiLoggingEnabled` enables you to log personal and organizational data (PII) if set to true. By default, this parameter is set to false, so that your application doesn't log personal data.
-- `LogCallback` is set to a delegate that does the logging. If `PiiLoggingEnabled` is true, this method will receive messages that can have PII, in which case the `containsPii` flag will be set to true.
-- `DefaultLoggingEnabled` enables the default logging for the platform. By default it's false. If you set it to true it uses Event Tracing in Desktop/UWP applications, NSLog on iOS and logcat on Android.
+- `identityLogger` is the logging implementation used by MSAL.NET to produce logs for debugging or health check purposes. Logs are only sent if logging is enabled.
+- `enablePiiLogging` enables logging personal and organizational data (PII) if set to true. By default, this parameter is set to false, so that your application doesn't log sensitive data.
 
-### IIdentityLogger Interface
-```CSharp
+### IIdentityLogger interface
+
+```csharp
 namespace Microsoft.IdentityModel.Abstractions
 {
     public interface IIdentityLogger
@@ -57,32 +73,30 @@ namespace Microsoft.IdentityModel.Abstractions
 ```
 
 > [!NOTE]
-> Partner libraries (`Microsoft.Identity.Web`, `Microsoft.IdentityModel`) provide implementations of this interface already for various environments (in particular ASP.NET Core)
+> Partner libraries (`Microsoft.Identity.Web`, `Microsoft.IdentityModel`) already provide implementations of this interface for various environments (in particular ASP.NET Core).
 
-### IIdentityLogger Implementation
+### IIdentityLogger implementation
 
-The following code snippets are examples of such an implementation. If you use the .NET core configuration, environment variable driven logs levels can be provided for free, in addition to the configuration file based log levels.
+#### Log level from a configuration file
 
-#### Log level from configuration file
+It's highly recommended to configure your code to use a configuration file in your environment to set the log level as it will enable your code to change the MSAL logging level without needing to rebuild or restart the application. This is critical for diagnostic purposes, enabling to quickly gather the required logs from the application that is currently deployed in production. Verbose logging can be costly, so it's best to use the `Informational` level by default and enable verbose logging when an issue is encountered. See [JSON configuration provider](/aspnet/core/fundamentals/configuration#json-configuration-provider) for an example on how to load data from a configuration file without restarting the application.
 
-It's highly recommended to configure your code to use a configuration file in your environment to set the log level as it will enable your code to change the MSAL logging level without needing to rebuild or restart the application. This is critical for diagnostic purposes, enabling us to quickly gather the required logs from the application that is currently deployed and in production. Verbose logging can be costly so it's best to use the *Information* level by default and enable verbose logging when an issue is encountered. [See JSON configuration provider](/aspnet/core/fundamentals/configuration#json-configuration-provider) for an example on how to load data from a configuration file without restarting the application.
+#### Log level from an environment variable
 
-#### Log Level as Environment Variable
+Another option we recommended is to configure your code to use an environment variable on the machine to set the log level as it will enable your code to change the MSAL logging level without needing to rebuild the application.
 
-Another option we recommended is to configure your code to use an environment variable on the machine to set the log level as it will enable your code to change the MSAL logging level without needing to rebuild the application. This is critical for diagnostic purposes, enabling us to quickly gather the required logs from the application that is currently deployed and in production.
+See <xref:Microsoft.IdentityModel.Abstractions.EventLogLevel> for details on the available log levels.
 
-See [EventLogLevel](https://github.com/AzureAD/azure-activedirectory-identitymodel-extensions-for-dotnet/blob/dev/src/Microsoft.IdentityModel.Abstractions/EventLogLevel.cs) for details on the available log levels.
+Example:
 
-Example: 
-
-```CSharp
+```csharp
     class MyIdentityLogger : IIdentityLogger
     {
         public EventLogLevel MinLogLevel { get; }
 
         public MyIdentityLogger()
         {
-            //Try to pull the log level from an environment variable
+            //Retrieve the log level from an environment variable
             var msalEnvLogLevel = Environment.GetEnvironmentVariable("MSAL_LOG_LEVEL");
 
             if (Enum.TryParse(msalEnvLogLevel, out EventLogLevel msalLogLevel))
@@ -104,23 +118,62 @@ Example:
         public void Log(LogEntry entry)
         {
             //Log Message here:
-            Console.WriteLine(entry.message);
+            Console.WriteLine(entry.Message);
         }
     }
 ```
 
 Using `MyIdentityLogger`:
-```CSharp
+
+```csharp
     MyIdentityLogger myLogger = new MyIdentityLogger(logLevel);
 
     var app = ConfidentialClientApplicationBuilder
         .Create(TestConstants.ClientId)
         .WithClientSecret("secret")
-        .WithExperimentalFeatures() //Currently an experimental feature, will be removed soon
-        .WithLogging(myLogger, piiLogging)
+        .WithLogging(myLogger, enablePiiLogging)
         .Build();
 ```
 
-## Next steps
+## Logging in a distributed token cache
 
-For more code samples, refer to [Microsoft identity platform code samples](/azure/active-directory/develop/sample-v2-code).
+If you use token cache serializers from [Microsoft.Identity.Web.TokenCache](https://www.nuget.org/packages/Microsoft.Identity.Web.TokenCache) package on .NET, you can enable additional caching logs.
+
+To enable distributed cache logging, set the <xref:Microsoft.Extensions.Logging.LoggerFilterOptions.MinLevel> property to <xref:Microsoft.Extensions.Logging.LogLevel.Debug>.
+
+```csharp
+     app.AddDistributedTokenCache(services =>
+     {
+          services.AddDistributedMemoryCache();
+          services.AddLogging(configure => configure.AddConsole())
+               .Configure<LoggerFilterOptions>(options => options.MinLevel = Microsoft.Extensions.Logging.LogLevel.Debug);
+     });
+```
+
+See more sample code using Microsoft Identity Web token cache serializers in the [ConfidentialClientTokenCache sample](https://github.com/Azure-Samples/active-directory-dotnet-v1-to-v2/blob/master/ConfidentialClientTokenCache/Program.cs). Also see [Implement a custom logging provider](/dotnet/core/extensions/custom-logging-provider) for more details.
+
+## Network traces
+
+> [!IMPORTANT]
+> Network traces typically contain personally-identifiable information. Remove these sensitive details before posting the logs on GitHub.
+
+In the case when verbose logs don't provide sufficient insight, you can get a network trace using tools like [Fiddler](https://www.telerik.com/fiddler). If such tool is not possible to use, for example on mobile, you can modify the `HttpClient` used by MSAL to log the HTTP traffic. See [this custom `HttpClient` implementation with logging](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/b259cf00936a11a9cff789bf094935d8d31aea7f/tests/Microsoft.Identity.Test.Common/Core/Helpers/HttpSnifferClientFactory.cs#L11). (This client should not be used in production, but only for logging). Custom `HttpClient` can be added as following:
+
+```csharp
+var msalPublicClient = PublicClientApplicationBuilder
+       .Create(ClientId)
+       .WithHttpClientFactory(new HttpSnifferClientFactory())
+       .Build();
+```
+
+## Correlation ID
+
+Logs help understand MSAL's behavior on the client side. To understand what's happening on the service side, the team needs a correlation ID. This ID traces an authentication request through the various back-end services.
+
+The correlation ID can be obtained in three ways:
+
+1. from a successful authentication result - <xref:Microsoft.Identity.Client.AuthenticationResult.CorrelationId?displayProperty=nameWithType>;
+2. from a service exception - <xref:Microsoft.Identity.Client.MsalServiceException.CorrelationId?displayProperty=nameWithType>, and
+3. by passing a custom correlation ID to <xref:Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder`1.WithCorrelationId(System.Guid)> when building a token request.
+
+When providing your own correlation ID, use a different ID value for each request. Don't use a constant as we won't be able to differentiate between the requests.

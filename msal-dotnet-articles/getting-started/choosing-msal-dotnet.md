@@ -5,8 +5,8 @@ services: active-directory
 author: Dickson-Mwendia
 manager: CelesteDG
 
-ms.service: active-directory
-ms.subservice: develop
+ms.service: msal
+ms.subservice: msal-dotnet
 ms.topic: reference
 ms.workload: identity
 ms.date: 03/17/2023
@@ -36,19 +36,20 @@ You're building a desktop or mobile app. Use MSAL.NET directly and start acquiri
 ## Use [Microsoft Identity Web](https://github.com/AzureAD/microsoft-identity-web/)
 
 You're building a confidential client application (Web app, web API, daemon/service app) running on ASP.NET Core, ASP.NET OWIN, or .NET framework/.NET Core. See what Microsoft Identity Web has to offer:
-- Sign in users in web apps in Azure AD application, Azure AD B2C, and CIAM applications
+
+- Sign users in voa web apps in Microsoft Entra ID, Azure AD B2C, and Microsoft Entra External ID applications
   - Support Microsoft personal accounts
   - Support guest users
   - Incremental consent and conditional access in web apps
   - Handle SameSite
   - Integrates with "App services authentication"
-  - supports PKCE for confidential client applications
+  - Supports PKCE for confidential client applications
   - Brings performant token cache serializers, including distributed
-- Protect web API (with Azure AD, Azure AD B2C or CIAM)
+- Protect web API (with Microsoft Entra ID, Azure AD B2C, or Microsoft Entra External ID)
   - Validates the issuer (including in-multi-tenant apps, any cloud)
   - supports token decrypt certificates in Web APIs
   - Validates Scope and app role in Web APIs
-  - generates WWW-authenticate headers in APIs (CA, CAE)
+  - Generates `WWW-authenticate` headers in APIs (CA, CAE)
   - Protect gRPC services and Azure functions
 - Web app/API calling downstream APIs (including graph except for B2C)
   - Call downstream APIs without having to manage authentication and tokens yourself.
@@ -56,18 +57,12 @@ You're building a confidential client application (Web app, web API, daemon/serv
   - Describe the client credentials, and Microsoft.Identity.Web fetches them for you (for
 instance certificates from Key Vault, or [workload identity federation](/azure/active-directory/workload-identities/workload-identity-federation) with [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/products/kubernetes-service) and [Managed Identities](/azure/active-directory/managed-identities-azure-resources/overview))
 - Supports multiple Authentication schemes in ASP.NET Core
-- Supports Proof of possession protocol 
+- Supports Proof of Possession protocol
 - Resilient (supports regional token acquisition and  routing hint for the token backup system)
-
-<!---
-Built the table above from this image
-
-![image](../media/msal-templates-support.png)
--->
 
 ### You're building a new application
 
-Use the Project Templates and the `msidentity-app-sync` tool. We have web app templates for web MVC, Razor, Blazor server, Blazorwasm hosted and not hosted. All for Azure AD or Azure AD B2C.
+Use the Project Templates and the `msidentity-app-sync` tool. We have web app templates for web MVC, Razor, Blazor server, Blazorwasm hosted and not hosted. All for Microsoft Entra ID or Azure AD B2C.
 
 ![Image showing ASP.NET Core projects templates for building web apps](../media/aspnet-core-project-templates.png)
 
@@ -77,7 +72,7 @@ We have web API templates for gRPC and Azure Functions.
 
 [Web API project templates](https://github.com/AzureAD/microsoft-identity-web/wiki/web-api-template).
 
-Here's information on how to run the [msidentity-app-sync-tool](https://github.com/AzureAD/microsoft-identity-web/blob/master/tools/app-provisioning-tool/README.md) which is a command line tool which creates Microsoft identity platform applications in a tenant (Azure AD or Azure AD B2C) and updates the configuration code of your ASP.NET Core applications. The tool can also be used to update code from an existing Azure AD/Azure AD B2C application.
+Here's information on how to run the [msidentity-app-sync-tool](https://github.com/AzureAD/microsoft-identity-web/blob/master/tools/app-provisioning-tool/README.md) which is a command line tool which creates Microsoft identity platform applications in a tenant (Microsoft Entra ID or Azure AD B2C) and updates the configuration code of your ASP.NET Core applications. The tool can also be used to update code from an existing Microsoft Entra application or Azure AD B2C application.
 
 It's available on [NuGet](https://www.nuget.org/packages/msidentity-app-sync/).
 
@@ -107,6 +102,6 @@ Microsoft Identity Web.TokenCache provides token cache serialization for you.  S
 
 Another example of leveraging Microsoft Identity Web from .NET classic (MVC) can be found in that [ConfidentialClientTokenCache sample](https://github.com/Azure-Samples/active-directory-dotnet-v1-to-v2/tree/master/ConfidentialClientTokenCache).
 
-Examples of how to use token caches for web apps and web APIs are available in the [ASP.NET Core web app tutorial](/samples/azure-samples/active-directory-aspnetcore-webapp-openidconnect-v2/enable-webapp-signin/) in the phase [2-2 Token Cache](https://github.com/Azure-Samples/active-directory-aspnetcore-webapp-openidconnect-v2/tree/master/2-WebApp-graph-user/2-2-TokenCache). For implementations have a look at the [TokenCacheProviders](https://github.com/AzureAD/microsoft-identity-web/tree/master/src/Microsoft.Identity.Web/TokenCacheProviders) folder in the [Microsoft.Identity.Web](https://github.com/AzureAD/microsoft-identity-web) repository.
+Examples of how to use token caches for web apps and web APIs are available in the [ASP.NET Core web app tutorial](https://github.com/Azure-Samples/active-directory-aspnetcore-webapp-openidconnect-v2/) in the phase [2-2 Token Cache](https://github.com/Azure-Samples/active-directory-aspnetcore-webapp-openidconnect-v2/tree/master/2-WebApp-graph-user/2-2-TokenCache). For implementations have a look at the [TokenCacheProviders](https://github.com/AzureAD/microsoft-identity-web/tree/master/src/Microsoft.Identity.Web/TokenCacheProviders) folder in the [Microsoft.Identity.Web](https://github.com/AzureAD/microsoft-identity-web) repository.
 
 Microsoft Identity Web also helps with [certificate loading](https://github.com/AzureAD/microsoft-identity-web/wiki/asp-net#help-loading-certificates). 

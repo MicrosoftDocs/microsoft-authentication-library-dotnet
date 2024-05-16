@@ -5,8 +5,8 @@ services: active-directory
 author: Dickson-Mwendia
 manager: CelesteDG
 
-ms.service: active-directory
-ms.subservice: develop
+ms.service: msal
+ms.subservice: msal-dotnet
 ms.topic: reference
 ms.workload: identity
 ms.date: 08/24/2023
@@ -18,7 +18,7 @@ ms.custom: devx-track-csharp, aaddev, has-adal-ref, devx-track-dotnet
 
 # Differences between ADAL.NET and MSAL.NET apps
 
-Migrating your applications from using ADAL to using MSAL comes with security and resiliency benefits. This article outlines differences between MSAL.NET and ADAL.NET. All new applications should use MSAL.NET and the Microsoft identity platform, which is the latest generation of Microsoft Authentication Libraries. Using MSAL.NET, you acquire tokens for users signing-in to your application with Azure AD (work and school accounts), Microsoft (personal) accounts (MSA), or Azure AD B2C. If you have an existing application that is using ADAL.NET, migrate it to MSAL.NET.
+Migrating your applications from using ADAL to using MSAL comes with security and resiliency benefits. This article outlines differences between MSAL.NET and ADAL.NET. All new applications should use MSAL.NET and the Microsoft identity platform, which is the latest generation of Microsoft Authentication Libraries. Using MSAL.NET, you acquire tokens for users signing-in to your application with Microsoft Entra ID (work and school accounts), Microsoft (personal) accounts (MSA), or Azure AD B2C. If you have an existing application that is using ADAL.NET, migrate it to MSAL.NET.
 
 You still need to use ADAL.NET if your application needs to sign in users with earlier versions of [Active Directory Federation Services (ADFS)](/windows-server/identity/active-directory-federation-services). For more information, see [ADFS support](https://aka.ms/msal-net-adfs-support).
 
@@ -34,9 +34,9 @@ Go through [MSAL overview](/entra/msal/overview) to learn more about MSAL.
 | **Scopes and resources**  | ADAL.NET acquires tokens for *resources*. |  MSAL.NET acquires tokens for *scopes*. Several MSAL.NET `AcquireTokenXXX` overrides require a parameter called scopes(`IEnumerable<string> scopes`). This parameter is a simple list of strings that declare the permissions and resources that are requested. Well-known scopes are the [Microsoft Graph's scopes](/graph/permissions-reference). You can also [access v1.0 resources using MSAL.NET](#scopes). |
 | **Core classes**  | ADAL.NET used [AuthenticationContext](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet/wiki/AuthenticationContext:-the-connection-to-Azure-AD) as the representation of your connection to the Security Token Service (STS) or authorization server, through an Authority. | MSAL.NET is designed around [client applications](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Client-Applications). It defines `IPublicClientApplication` interfaces for public client applications and `IConfidentialClientApplication` for confidential client applications, as well as a base interface `IClientApplicationBase` for the contract common to both types of applications.|
 | **Token acquisition**  | In public clients, ADAL uses `AcquireTokenAsync` and `AcquireTokenSilentAsync` for authentication calls. | In public clients, MSAL uses `AcquireTokenInteractive` and `AcquireTokenSilent` for the same authentication calls. The parameters are different from the ADAL ones. <br><br>In Confidential client applications, there are [token acquisition methods](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Acquiring-Tokens) with an explicit name depending on the scenario. Another difference is that, in MSAL.NET, you no longer have to pass in the `ClientID` of your application in every AcquireTokenXX call. The `ClientID` is set only once when building `IPublicClientApplication` or `IConfidentialClientApplication`.|
-|  **IAccount and IUser**  | ADAL defines the notion of user through the IUser interface. However, a user is a human or a software agent. As such, a user can own one or more accounts in the Microsoft identity platform (several Azure AD accounts, Azure AD B2C, Microsoft personal accounts). The user can also be responsible for one or more Microsoft identity platform accounts. | MSAL.NET defines the concept of account (through the IAccount interface). The IAccount interface represents information about a single account. The user can have several accounts in different tenants. MSAL.NET provides better information in guest scenarios, as home account information is provided. You can read more about the [differences between IUser and IAccount](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/msal-net-2-released#iuser-is-replaced-by-iaccount).|
+|  **IAccount and IUser**  | ADAL defines the notion of user through the IUser interface. However, a user is a human or a software agent. As such, a user can own one or more accounts in the Microsoft identity platform (several Microsoft Entra accounts, Azure AD B2C, Microsoft personal accounts). The user can also be responsible for one or more Microsoft identity platform accounts. | MSAL.NET defines the concept of account (through the IAccount interface). The IAccount interface represents information about a single account. The user can have several accounts in different tenants. MSAL.NET provides better information in guest scenarios, as home account information is provided. You can read more about the [differences between IUser and IAccount](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/msal-net-2-released#iuser-is-replaced-by-iaccount).|
 |  **Cache persistence**  | ADAL.NET allows you to extend the `TokenCache` class to implement the desired persistence functionality on platforms without a secure storage (.NET Framework and .NET core) by using the `BeforeAccess`, and `BeforeWrite` methods. For details, see [token cache serialization in ADAL.NET](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet/wiki/Token-cache-serialization). | MSAL.NET makes the token cache a sealed class, removing the ability to extend it. As such, your implementation of token cache persistence must be in the form of a helper class that interacts with the sealed token cache. This interaction is described in [token cache serialization in MSAL.NET](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/token-cache-serialization) article. The serialization for a public client application (See [token cache for a public client application](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/token-cache-serialization#token-cache-for-a-public-client-application)), is different from that of for a confidential client application (See [token cache for a web app or web API](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/token-cache-serialization#token-cache-for-a-public-client-application)). |
-| **Common authority** | ADAL uses Azure AD v1.0. `https://login.microsoftonline.com/common` authority in Azure AD v1.0 (which ADAL uses) allows users to sign in using any Azure AD organization (work or school) account. Azure AD v1.0 doesn't allow sign in with Microsoft personal accounts. For more information, see [authority validation in ADAL.NET](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet/wiki/AuthenticationContext:-the-connection-to-Azure-AD#authority-validation). | MSAL uses Azure AD v2.0. `https://login.microsoftonline.com/common` authority in Azure AD v2.0 (which MSAL uses) allows users to sign in with any Azure AD organization (work or school) account or with a Microsoft personal account. To restrict sign in using only organization accounts (work or school account) in MSAL, you'll need to use the `https://login.microsoftonline.com/organizations` endpoint.  For details, see the `authority` parameter in [public client application](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Client-Applications#publicclientapplication). |
+| **Common authority** | ADAL uses Azure AD v1.0. `https://login.microsoftonline.com/common` authority in Azure AD v1.0 (which ADAL uses) allows users to sign in using any Microsoft Entra organization (work or school) account. Azure AD v1.0 doesn't allow sign in with Microsoft personal accounts. For more information, see [authority validation in ADAL.NET](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet/wiki/AuthenticationContext:-the-connection-to-Azure-AD#authority-validation). | MSAL uses Azure AD v2.0. `https://login.microsoftonline.com/common` authority in Azure AD v2.0 (which MSAL uses) allows users to sign in with any Microsoft Entra organization (work or school) account or with a Microsoft personal account. To restrict sign in using only organization accounts (work or school account) in MSAL, you'll need to use the `https://login.microsoftonline.com/organizations` endpoint.  For details, see the `authority` parameter in [public client application](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Client-Applications#publicclientapplication). |
 
 ## Supported grants
 
@@ -128,9 +128,9 @@ An access token and an ID token are returned in the `AuthenticationResult` value
 
 ## v1.0 and v2.0 tokens
 
-There are two versions of tokens: v1.0 tokens and  v2.0 tokens. The v1.0 endpoint (used by ADAL) emits v1.0 ID tokens while the v2.0 endpoint (used by MSAL) emits v2.0 ID tokens. However, both endpoints emit access tokens of the version of the token that the web API accepts. A property of the application manifest of the web API enables developers to choose which version of token is accepted. See `accessTokenAcceptedVersion` in the [application manifest]/azure/active-directory/develop/(reference-app-manifest) reference documentation.
+There are two versions of tokens: v1.0 tokens and  v2.0 tokens. The v1.0 endpoint (used by ADAL) emits v1.0 ID tokens while the v2.0 endpoint (used by MSAL) emits v2.0 ID tokens. However, both endpoints emit access tokens of the version of the token that the web API accepts. A property of the application manifest of the web API enables developers to choose which version of token is accepted. See `accessTokenAcceptedVersion` in the [application manifest](/azure/active-directory/develop/reference-app-manifest) reference documentation.
 
-For more information about v1.0 and v2.0 access tokens, see [Azure Active Directory access tokens](/azure/active-directory/develop/access-tokens).
+For more information about v1.0 and v2.0 access tokens, see [Microsoft Entra access tokens](/azure/active-directory/develop/access-tokens).
 
 ## Exceptions
 
@@ -168,7 +168,7 @@ Prompt behavior in MSAL.NET is equivalent to prompt behavior in ADAL.NET:
 
 |  ADAL.NET | MSAL.NET | Description |
 | ----------- | ----------- | -------------|
-| `PromptBehavior.Auto`| `NoPrompt`| Azure AD chooses the best behavior (signing in users silently if they are signed in with only one account, or displaying the account selector if they are signed in with several accounts). |
+| `PromptBehavior.Auto`| `NoPrompt`| Microsoft Entra ID chooses the best behavior (signing in users silently if they are signed in with only one account, or displaying the account selector if they are signed in with several accounts). |
 | `PromptBehavior.Always`| `ForceLogin` | Resets the sign-in box and forces the user to reenter their credentials. |
 | `PromptBehavior.RefreshSession`| `Consent`| Forces the user to consent again to all permissions. |
 | `PromptBehavior.Never`| `Never`| Don't use; instead, use the [recommended pattern for public client apps](/azure/active-directory/develop/scenario-desktop-acquire-token?tabs=dotnet). |
@@ -176,12 +176,12 @@ Prompt behavior in MSAL.NET is equivalent to prompt behavior in ADAL.NET:
 
 ### Handling claim challenge exceptions
 
-At times when acquiring a token, Azure AD throws an exception in case a resource requires more claims from the user (for instance two-factor authentication).
+At times when acquiring a token, Microsoft Entra ID throws an exception in case a resource requires more claims from the user (for instance two-factor authentication).
 
 In MSAL.NET, claim challenge exceptions are handled in the following way:
 
 - The `Claims` are surfaced in the `MsalServiceException`.
-- There's a `.WithClaim(claims)` method that can apply to the `AcquireTokenXXX` builders.
+- There's a <xref:Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder%601.WithClaims(System.String)> method that can apply to the `AcquireTokenXXX` builders.
 
 For details see [Handling MsalUiRequiredException](../advanced/exceptions/msal-error-handling.md#msaluirequiredexception).
 
@@ -195,11 +195,11 @@ For details, including samples see [handling AdalClaimChallengeException](https:
 
 ## Scopes
 
-ADAL uses the concept of resources with `resourceId` string, MSAL.NET, however, uses scopes. The logic used by Azure AD is as follows:
+ADAL uses the concept of resources with `resourceId` string, MSAL.NET, however, uses scopes. The logic used by Microsoft Entra ID is as follows:
 
 - For ADAL (v1.0) endpoint with a v1.0 access token (the only possible), `aud=resource`.
 - For MSAL (v2.0 endpoint) asking an access token for a resource accepting v2.0 tokens, `aud=resource.AppId`.
-- For MSAL (v2.0 endpoint) asking an access token for a resource accepting a v1.0 access token, Azure AD parses the desired audience from the requested scope. This is done by taking everything before the last slash and using it as the resource identifier. As such, if `https://database.windows.net` expects an audience of `https://database.windows.net/`, you'll need to request a scope of `https://database.windows.net//.default` (notice the double slash before ./default). This is illustrated by examples 1 and 2 below.
+- For MSAL (v2.0 endpoint) asking an access token for a resource accepting a v1.0 access token, Microsoft Entra ID parses the desired audience from the requested scope. This is done by taking everything before the last slash and using it as the resource identifier. As such, if `https://database.windows.net` expects an audience of `https://database.windows.net/`, you'll need to request a scope of `https://database.windows.net//.default` (notice the double slash before ./default). This is illustrated by examples 1 and 2 below.
 
 ### Example 1
 
@@ -211,7 +211,7 @@ For instance, to access the name of the user via a v1.0 web API whose App ID URI
 var scopes = new [] { ResourceId+"/user_impersonation" };
 ```
 
-If you want to read and write with MSAL.NET Azure Active Directory using the Microsoft Graph API (`https://graph.microsoft.com/`), you'd create a list of scopes like in the code snippet below:
+If you want to read and write with MSAL.NET Microsoft Entra ID using the Microsoft Graph API (`https://graph.microsoft.com/`), you'd create a list of scopes like in the code snippet below:
 
 ```csharp
 string ResourceId = "https://graph.microsoft.com/"; 
@@ -239,7 +239,7 @@ ResourceId = "someAppIDURI";
 var scopes = new [] { ResourceId+"/.default" };
 ```
 
-For a client credential flow, the scope to pass would also be `/.default`. This scope tells to Azure AD: "all the app-level permissions that the admin has consented to in the application registration.
+For a client credential flow, the scope to pass would also be `/.default`. This scope tells to Microsoft Entra ID: "all the app-level permissions that the admin has consented to in the application registration.
 
 ## Next steps
 

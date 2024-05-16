@@ -7,7 +7,7 @@ description: Learn Microsoft's Advanced Client Credential Multi-Tenant with MSAL
 
 ## Decision point - Microsoft.Identity.Web or Microsoft.Identity.Client (MSAL)?
 
-If you use ASP.NET Core, you are encouraged to adopt [`Microsoft.Indentity.Web`](https://github.com/AzureAD/microsoft-identity-web/wiki), which provides a higher level API over token acquisition and has better defaults. See [Is MSAL.NET right for me?](../getting-started/choosing-msal-dotnet.md)
+If you use ASP.NET Core, you are encouraged to adopt [`Microsoft.Identity.Web`](https://github.com/AzureAD/microsoft-identity-web/wiki), which provides a higher level API over token acquisition and has better defaults. See [Is MSAL.NET right for me?](../getting-started/choosing-msal-dotnet.md)
 
 ## Decision point - token caching
 

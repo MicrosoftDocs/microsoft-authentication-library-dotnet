@@ -15,6 +15,15 @@
     <AssemblyVersion>4.54.1.0</AssemblyVersion>
     <AssemblyVersion>4.55.0.0</AssemblyVersion>
     <AssemblyVersion>4.56.0.0</AssemblyVersion>
+    <AssemblyVersion>4.57.0.0</AssemblyVersion>
+    <AssemblyVersion>4.58.0.0</AssemblyVersion>
+    <AssemblyVersion>4.58.1.0</AssemblyVersion>
+    <AssemblyVersion>4.59.0.0</AssemblyVersion>
+    <AssemblyVersion>4.60.0.0</AssemblyVersion>
+    <AssemblyVersion>4.60.1.0</AssemblyVersion>
+    <AssemblyVersion>4.60.2.0</AssemblyVersion>
+    <AssemblyVersion>4.60.3.0</AssemblyVersion>
+    <AssemblyVersion>4.61.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Identity.Client.ClientApplicationBase</BaseTypeName>
@@ -48,6 +57,12 @@
             on the authentication strategy (e.g., through the Web Authentication Manager, Authentication app, browser, etc.), different redirect URIs will be used by MSAL. Redirect URIs must always be configured in the Azure Active Directory blade in the Azure Portal.
             </para>
     </remarks>
+    <example>
+      <format type="text/markdown"><![CDATA[   
+Here is an example of how to use `PublicClientApplication` with an [authentication broker](/entra/msal/dotnet/acquiring-tokens/desktop-mobile/wam) and [caching](/entra/msal/dotnet/how-to/token-cache-serialization?tabs=aspnetcore).
+:::code language="csharp" source="~/../msal-dotnet-source/tests/devapps/NetCoreTestApp/Program.cs" range="78-110" highlight="1-4,16-17":::
+ ]]></format>
+    </example>
     <inheritdoc cref="T:Microsoft.Identity.Client.IPublicClientApplication" />
   </Docs>
   <Members>
@@ -60,15 +75,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.1.0</AssemblyVersion>
-        <AssemblyVersion>4.55.0.0</AssemblyVersion>
-        <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -87,7 +94,7 @@
         <param name="clientId">Client ID (also known as App ID) of the application as registered in the
             application registration portal (https://aka.ms/msal-net-register-app)/. REQUIRED</param>
         <summary>
-            Constructor of the application. It will use https://login.microsoftonline.com/common as the default authority.
+            Constructor of the application. It will use `https://login.microsoftonline.com/common` as the default authority.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -101,15 +108,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.1.0</AssemblyVersion>
-        <AssemblyVersion>4.55.0.0</AssemblyVersion>
-        <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -149,15 +148,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.1.0</AssemblyVersion>
-        <AssemblyVersion>4.55.0.0</AssemblyVersion>
-        <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -196,15 +187,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.1.0</AssemblyVersion>
-        <AssemblyVersion>4.55.0.0</AssemblyVersion>
-        <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -244,15 +227,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.1.0</AssemblyVersion>
-        <AssemblyVersion>4.55.0.0</AssemblyVersion>
-        <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -293,15 +268,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.1.0</AssemblyVersion>
-        <AssemblyVersion>4.55.0.0</AssemblyVersion>
-        <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -344,15 +311,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.1.0</AssemblyVersion>
-        <AssemblyVersion>4.55.0.0</AssemblyVersion>
-        <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -393,15 +352,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.1.0</AssemblyVersion>
-        <AssemblyVersion>4.55.0.0</AssemblyVersion>
-        <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -444,15 +395,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.1.0</AssemblyVersion>
-        <AssemblyVersion>4.55.0.0</AssemblyVersion>
-        <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -496,15 +439,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.1.0</AssemblyVersion>
-        <AssemblyVersion>4.55.0.0</AssemblyVersion>
-        <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -551,15 +486,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.1.0</AssemblyVersion>
-        <AssemblyVersion>4.55.0.0</AssemblyVersion>
-        <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -606,15 +533,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.1.0</AssemblyVersion>
-        <AssemblyVersion>4.55.0.0</AssemblyVersion>
-        <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -663,15 +582,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.1.0</AssemblyVersion>
-        <AssemblyVersion>4.55.0.0</AssemblyVersion>
-        <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -720,15 +631,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.1.0</AssemblyVersion>
-        <AssemblyVersion>4.55.0.0</AssemblyVersion>
-        <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -781,15 +684,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.1.0</AssemblyVersion>
-        <AssemblyVersion>4.55.0.0</AssemblyVersion>
-        <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -842,15 +737,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.1.0</AssemblyVersion>
-        <AssemblyVersion>4.55.0.0</AssemblyVersion>
-        <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -905,15 +792,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.1.0</AssemblyVersion>
-        <AssemblyVersion>4.55.0.0</AssemblyVersion>
-        <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -968,15 +847,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.1.0</AssemblyVersion>
-        <AssemblyVersion>4.55.0.0</AssemblyVersion>
-        <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenByIntegratedWindowsAuthParameterBuilder</ReturnType>
@@ -1020,15 +891,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.1.0</AssemblyVersion>
-        <AssemblyVersion>4.55.0.0</AssemblyVersion>
-        <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1057,7 +920,7 @@
         <remarks>
             On Windows Universal Platform, the following capabilities need to be provided:
             Enterprise Authentication, Private Networks (Client and Server), User Account Information
-            Supported on .net desktop and UWP
+            Supported on .net desktop 
             </remarks>
       </Docs>
     </Member>
@@ -1073,15 +936,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.1.0</AssemblyVersion>
-        <AssemblyVersion>4.55.0.0</AssemblyVersion>
-        <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1125,15 +980,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.1.0</AssemblyVersion>
-        <AssemblyVersion>4.55.0.0</AssemblyVersion>
-        <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1185,15 +1032,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.1.0</AssemblyVersion>
-        <AssemblyVersion>4.55.0.0</AssemblyVersion>
-        <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenByUsernamePasswordParameterBuilder</ReturnType>
@@ -1234,15 +1073,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.1.0</AssemblyVersion>
-        <AssemblyVersion>4.55.0.0</AssemblyVersion>
-        <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1287,15 +1118,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.1.0</AssemblyVersion>
-        <AssemblyVersion>4.55.0.0</AssemblyVersion>
-        <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1350,15 +1173,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.1.0</AssemblyVersion>
-        <AssemblyVersion>4.55.0.0</AssemblyVersion>
-        <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenWithDeviceCodeParameterBuilder</ReturnType>
@@ -1402,15 +1217,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.1.0</AssemblyVersion>
-        <AssemblyVersion>4.55.0.0</AssemblyVersion>
-        <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1457,15 +1264,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.1.0</AssemblyVersion>
-        <AssemblyVersion>4.55.0.0</AssemblyVersion>
-        <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1514,15 +1313,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.1.0</AssemblyVersion>
-        <AssemblyVersion>4.55.0.0</AssemblyVersion>
-        <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1573,15 +1364,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.1.0</AssemblyVersion>
-        <AssemblyVersion>4.55.0.0</AssemblyVersion>
-        <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1631,15 +1414,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.1.0</AssemblyVersion>
-        <AssemblyVersion>4.55.0.0</AssemblyVersion>
-        <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1681,15 +1456,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.1.0</AssemblyVersion>
-        <AssemblyVersion>4.55.0.0</AssemblyVersion>
-        <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1716,15 +1483,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.1.0</AssemblyVersion>
-        <AssemblyVersion>4.55.0.0</AssemblyVersion>
-        <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1750,15 +1509,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.1.0</AssemblyVersion>
-        <AssemblyVersion>4.55.0.0</AssemblyVersion>
-        <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1784,15 +1535,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.1.0</AssemblyVersion>
-        <AssemblyVersion>4.55.0.0</AssemblyVersion>
-        <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1819,15 +1562,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.1.0</AssemblyVersion>
-        <AssemblyVersion>4.55.0.0</AssemblyVersion>
-        <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenByRefreshTokenParameterBuilder</ReturnType>
@@ -1857,15 +1592,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.1.0</AssemblyVersion>
-        <AssemblyVersion>4.55.0.0</AssemblyVersion>
-        <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1908,15 +1635,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.1.0</AssemblyVersion>
-        <AssemblyVersion>4.55.0.0</AssemblyVersion>
-        <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.IAccount</ReturnType>
@@ -1925,7 +1644,7 @@
         <summary>
             A special account value that indicates that the current operating system account should be used 
             to log the user in. Not all operating systems and authentication flows support this concept, in which 
-            case calling `AcquireTokenSilent` will throw an <see cref="T:Microsoft.Identity.Client.MsalUiRequiredException" />. 
+            case calling <see cref="M:Microsoft.Identity.Client.IClientApplicationBase.AcquireTokenSilent(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount)" /> will throw an <see cref="T:Microsoft.Identity.Client.MsalUiRequiredException" />. 
             </summary>
         <value>To be added.</value>
         <remarks>

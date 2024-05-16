@@ -5,8 +5,8 @@ services: active-directory
 author: Dickson-Mwendia
 manager: CelesteDG
 
-ms.service: active-directory
-ms.subservice: develop
+ms.service: msal
+ms.subservice: msal-dotnet
 ms.topic: conceptual
 ms.workload: identity
 ms.date: 03/29/2023
@@ -18,7 +18,7 @@ ms.custom: devx-track-csharp, aaddev, devx-track-dotnet
 
 # Confidential client assertions
 
-In order to prove their identity, confidential client applications exchange a secret with Azure AD. The secret can be:
+In order to prove their identity, confidential client applications exchange a secret with Microsoft Entra ID. The secret can be:
 - A client secret (application password).
 - A certificate, which is used to build a signed assertion containing standard claims.
 
@@ -35,7 +35,7 @@ MSAL.NET has four methods to provide either credentials or assertions to the con
 
 ### Client assertions
 
-This is useful if you want to handle the certificate yourself. For example, if you wish to use Azure KeyVault's APIs for signing, which eliminates the need for downloading the certificates. A signed client assertion takes the form of a signed JWT with the payload containing the required authentication claims mandated by Azure AD, Base64 encoded. To use it:
+This is useful if you want to handle the certificate yourself. For example, if you wish to use Azure KeyVault's APIs for signing, which eliminates the need for downloading the certificates. A signed client assertion takes the form of a signed JWT with the payload containing the required authentication claims mandated by Microsoft Entra ID, Base64 encoded. To use it:
 
 ```csharp
 string signedClientAssertion = ComputeAssertion();
@@ -56,12 +56,12 @@ app = ConfidentialClientApplicationBuilder.Create(config.ClientId)
                                           .Build();
 ```
 
-The [claims expected by Azure AD](/azure/active-directory/develop/certificate-credentials) in the signed assertion are:
+The [claims expected by Microsoft Entra ID](/azure/active-directory/develop/certificate-credentials) in the signed assertion are:
 
 Claim type | Value | Description
 ---------- | ---------- | ----------
-aud | `https://login.microsoftonline.com/{tenantId}/v2.0/token` | The "aud" (audience) claim identifies the recipients that the JWT is intended for (here Azure AD) See [RFC 7519, Section 4.1.3](https://tools.ietf.org/html/rfc7519#section-4.1.3).  In this case, that recipient is the token endpoint of the identity provider
-exp | 1601519414 | The "exp" (expiration time) claim identifies the expiration time on or after which the JWT MUST NOT be accepted for processing. See [RFC 7519, Section 4.1.4](https://tools.ietf.org/html/rfc7519#section-4.1.4).  This allows the assertion to be used until then, so keep it short - 5-10 minutes after `nbf` at most.  Azure AD does not place restrictions on the `exp` time currently. 
+aud | `https://login.microsoftonline.com/{tenantId}/oauth2/v2.0/token` | The "aud" (audience) claim identifies the recipients that the JWT is intended for (here Microsoft Entra ID) See [RFC 7519, Section 4.1.3](https://tools.ietf.org/html/rfc7519#section-4.1.3).  In this case, that recipient is the token endpoint of the identity provider
+exp | 1601519414 | The "exp" (expiration time) claim identifies the expiration time on or after which the JWT MUST NOT be accepted for processing. See [RFC 7519, Section 4.1.4](https://tools.ietf.org/html/rfc7519#section-4.1.4).  This allows the assertion to be used until then, so keep it short - 5-10 minutes after `nbf` at most.  Microsoft Entra ID does not place restrictions on the `exp` time currently. 
 iss | {ClientID} | The "iss" (issuer) claim identifies the principal that issued the JWT, in this case your client application.  Use the GUID application ID.
 jti | (a Guid) | The "jti" (JWT ID) claim provides a unique identifier for the JWT. The identifier value MUST be assigned in a manner that ensures that there is a negligible probability that the same value will be accidentally assigned to a different data object; if the application uses multiple issuers, collisions MUST be prevented among values produced by different issuers as well. The "jti" value is a case-sensitive string. [RFC 7519, Section 4.1.7](https://tools.ietf.org/html/rfc7519#section-4.1.7)
 nbf | 1601519114 | The "nbf" (not before) claim identifies the time before which the JWT MUST NOT be accepted for processing. [RFC 7519, Section 4.1.5](https://tools.ietf.org/html/rfc7519#section-4.1.5).  Using the current time is appropriate. 
@@ -69,7 +69,7 @@ sub | {ClientID} | The "sub" (subject) claim identifies the subject of the JWT, 
 
 If you use a certificate as a client secret, the certificate must be deployed safely. We recommend that you store the certificate in a secure spot supported by the platform, such as in the certificate store on Windows or by using Azure Key Vault.
 
-### Crafting the asssertion
+### Crafting the assertion
 
 This is an example using [Microsoft.IdentityModel.JsonWebTokens](https://www.nuget.org/packages/Microsoft.IdentityModel.JsonWebTokens/) to create the assertion for you. 
 
@@ -124,9 +124,9 @@ static string GetSignedClientAssertion(X509Certificate2 certificate, string tena
     //x5t represents the certificate thumbprint base64 url encoded
     var header = new Dictionary<string, string>()
     {
-        { "alg", "RS256"},
+        { "alg", "PS256"},
         { "typ", "JWT" },
-        { "x5t", Base64UrlEncode(certificate.GetCertHash()) }
+        { "x5t#S256", Base64UrlHelpers.Encode(certificate.GetCertHash(HashAlgorithmName.SHA256))},
     };
 
     //Please see the previous code snippet on how to craft claims for the GetClaims() method
@@ -136,7 +136,7 @@ static string GetSignedClientAssertion(X509Certificate2 certificate, string tena
     var claimsBytes = JsonSerializer.SerializeToUtf8Bytes(claims);
     string token = Base64UrlEncode(headerBytes) + "." + Base64UrlEncode(claimsBytes);
 
-    string signature = Base64UrlEncode(rsa.SignData(Encoding.UTF8.GetBytes(token), HashAlgorithmName.SHA256, RSASignaturePadding.Pkcs1));
+    string signature = Base64UrlEncode(rsa.SignData(Encoding.UTF8.GetBytes(token), HashAlgorithmName.SHA256, RSASignaturePadding.Pss));
     string signedClientAssertion = string.Concat(token, ".", signature);
     return signedClientAssertion;
 }
@@ -146,7 +146,7 @@ static string GetSignedClientAssertion(X509Certificate2 certificate, string tena
 
 In some cases, developers want to inject some claims into the assertions, but would still like MSAL to handle the creation of the assertion and the signing.
 
-`WithClientClaims(X509Certificate2 certificate, IDictionary<string, string> claimsToSign, bool mergeWithDefaultClaims = true)` will produce a signed assertion containing the claims expected by Azure AD plus additional client claims that you want to send. 
+`WithClientClaims(X509Certificate2 certificate, IDictionary<string, string> claimsToSign, bool mergeWithDefaultClaims = true)` will produce a signed assertion containing the claims expected by Microsoft Entra ID plus additional client claims that you want to send. 
 
 ```csharp
 string ipAddress = "192.168.1.2";
@@ -161,4 +161,4 @@ app = ConfidentialClientApplicationBuilder.Create(config.ClientId)
 
 If one of the claims in the dictionary that you pass in is the same as one of the mandatory claims, the additional claim's value will be taken into account. It will override the claims computed by MSAL.NET.
 
-If you want to provide your own claims, including the mandatory claims expected by Azure AD, pass in `false` for the `mergeWithDefaultClaims` parameter.
+If you want to provide your own claims, including the mandatory claims expected by Microsoft Entra ID, pass in `false` for the `mergeWithDefaultClaims` parameter.

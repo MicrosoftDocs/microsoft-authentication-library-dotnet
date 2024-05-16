@@ -5,7 +5,7 @@ description: "How to use MSAL.NET to authenticate on behalf of a user."
 
 # On-behalf-of flows with MSAL.NET
 
-## If you are using ASP.NET Core
+## If you are using ASP.NET Core or ASP.NET Classic
 
 If you are building a web API on top of ASP.NET Core or ASP.NET Classic, we recommend that you use `Microsoft.Identity.Web`. See [Web APIs with `Microsoft.Identity.Web`](https://github.com/AzureAD/microsoft-identity-web/wiki/web-apis).
 
@@ -16,7 +16,7 @@ Check the decision tree: [Is MSAL.NET right for me?](/entra/msal/dotnet/getting-
 ### Scenario
 
 - A client (web site, desktop, mobile, single-page application) - not represented on the picture below - calls a protected web API, providing a JWT bearer token in its "Authorization" HTTP header.
-- The protected web API validates the incoming user token, and uses MSAL.NET `AcquireTokenOnBehalfOf` method to request from Azure AD another token so that it can, itself, call another web API, for example Graph, named the downstream web API, on behalf of the user.
+- The protected web API validates the incoming user token, and uses MSAL.NET `AcquireTokenOnBehalfOf` method to request from Microsoft Entra another token so that it can, itself, call another web API, for example Graph, named the downstream web API, on behalf of the user.
 
 This flow, named the On-Behalf-Of flow (OBO), is illustrated by the top part of the picture below. The bottom part is a daemon scenario, also possible for web APIs.
 
@@ -114,19 +114,43 @@ var authResult = await ((ILongRunningWebApi)confidentialClientApp)
          .ExecuteAsync();
 ```
 
-`userAccessToken` is a user access token used to call this web API. `sessionKey` will be used as a key when caching and retrieving the OBO token. If set to `null`, MSAL will set it to the assertion hash of the passed-in user token. It can also be set by the developer to something that identifies a specific user session, like the optional `sid` claim from the user token (for more information, see [Provide optional claims to your app](/azure/active-directory/develop/active-directory-optional-claims)). `InitiateLongRunningProcessInWebApi` doesn't check the cache; it will use the user token to acquire a new OBO token from AAD, which will then be cached and returned.
+`userAccessToken` is a user access token used to call this web API. `sessionKey` will be used as a key when caching and retrieving the OBO token. If set to `null`, MSAL will set it to the assertion hash of the passed-in user token. It can also be set by the developer to something that identifies a specific user session, like the optional `sid` claim from the user token (for more information, see [Provide optional claims to your app](/azure/active-directory/develop/active-directory-optional-claims)). `InitiateLongRunningProcessInWebApi` doesn't check the cache; it will use the user token to acquire a new OBO token from Microsoft Entra ID, which will then be cached and returned.
 
-2. In the long-running process, whenever OBO token is needed, call:
+2. In the long-running process, whenever OBO token is needed, call `AcquireTokenInLongRunningProcess` in the following pattern:
 
 ```csharp
-var authResult = await ((ILongRunningWebApi)confidentialClientApp)
-         .AcquireTokenInLongRunningProcess(
+try {  
+    authResult = await ((ILongRunningWebApi)confidentialClientApp)  
+         .AcquireTokenInLongRunningProcess(  
+              scopes,  
+              sessionKey)  
+         .ExecuteAsync();  
+}
+catch (MsalClientException ex) {  
+    // No tokens were found with this cache key.  
+    // First call InitiateLongRunningProcessInWebApi with a valid user assertion
+    // to acquire tokens from Microsoft Entra ID and cache them.
+    if (ex.ErrorCode == MsalError.OboCacheKeyNotInCacheError)
+    {
+          authResult = await ((ILongRunningWebApi)confidentialClientApp)
+         .InitiateLongRunningProcessInWebApi(
               scopes,
-              sessionKey)
+              userAccessToken,//Valid access token
+              ref sessionKey)
          .ExecuteAsync();
+    }
+
+} catch (MsalUiRequiredException ex) {  
+    // A refresh token was used to acquire new tokens  
+    // but Microsoft Entra ID requires the user to sign-in again.  
+    // Trigger your app's user sign-in again by replying with a 401 + WWW-Authenticate  
+    // Then call InitiateLongRunningProcessInWebApi once a new access token is acquired from the user
+     httpResponse.StatusCode = (int)HttpStatusCode.Forbidden;
+     httpResponse.Headers[HeaderNames.WWWAuthenticate] = $"Bearer claims={ex.Claims}, error={ex.Message};
+}
 ```
 
-Pass the `sessionKey` which is associated with the current user's session and will be used to retrieve the related OBO token. If the token is expired, MSAL will use the cached refresh token to acquire a new OBO access token from Azure AD and cache it. If no token is found with this `sessionKey`, MSAL will throw a `MsalClientException`. Make sure to call `InitiateLongRunningProcessInWebApi` first.
+Pass the `sessionKey` which is associated with the current user's session and will be used to retrieve the related OBO token. If the token is expired, MSAL will use the cached refresh token to acquire a new OBO access token from Microsoft Entra ID and cache it. If no token is found with this `sessionKey`, MSAL will throw an `MsalClientException` or a `MsalUiRequiredException`. Make sure to acquire a valid user token and call `InitiateLongRunningProcessInWebApi` if this is the case.
 
 ### Cache eviction for long-running OBO processes
 
@@ -136,17 +160,21 @@ It is recommended that you set L1 and L2 eviction policies manually, for example
 
 ### Exception handling
 
-In a case when `AcquireTokenInLongRunningProcess` throws an exception when it cannot find a token and the L2 cache has a cache entry for the same cache key, verify that the L2 cache read operation completed successfully. `AcquireTokenInLongRunningProcess` is different from the `InitiateLongRunningProcessInWebApi` and `AcquireTokenOnBehalfOf`, in that it is if the cache read fails, this method is unable to acquire a new token from Azure AD because it does not have an original user assertion. If using Microsoft.Identity.Web.TokenCache to enable distributed cache, set [OnL2CacheFailure](https://github.com/AzureAD/microsoft-identity-web/wiki/Token-Cache-Troubleshooting#i-configured-a-distributed-l2-cache-but-nothings-gets-written-to-it) event to retry the L2 call and/or add extra logs, which can be enabled [through built-in MSAL functionality](../../advanced/exceptions/msal-logging.md).
+In a case when `AcquireTokenInLongRunningProcess` throws an exception when it cannot find a token and the L2 cache has a cache entry for the same cache key, verify that the L2 cache read operation completed successfully. `AcquireTokenInLongRunningProcess` is different from the `InitiateLongRunningProcessInWebApi` and `AcquireTokenOnBehalfOf`, in that it is if the cache read fails, this method is unable to acquire a new token from Microsoft Entra ID because it does not have an original user assertion. If using Microsoft.Identity.Web.TokenCache to enable distributed cache, set [OnL2CacheFailure](https://github.com/AzureAD/microsoft-identity-web/wiki/Token-Cache-Troubleshooting#i-configured-a-distributed-l2-cache-but-nothings-gets-written-to-it) event to retry the L2 call and/or add extra logs, which can be enabled [through built-in MSAL functionality](../../advanced/exceptions/msal-logging.md).
 
 ### Removing accounts
 
 Starting with MSAL 4.51.0, to remove cached tokens call `StopLongRunningProcessInWebApiAsync` passing in a cache key. With earlier MSAL versions, it is recommended to use L2 cache eviction policies. If immediate removal is needed, delete the L2 cache node associated with the `sessionKey`.
 
+### Troubleshooting
+
+If you are updating MSAL.NET to 4.51.0+, there is a chance that `InitiateLongRunningProcessInWebApi` will stop returning tokens and throw an exception if you are relying upon it to return tokens to you after the long running process is already initiated and there is a token in the cache for the specified cache key. `InitiateLongRunningProcessInWebApi` no longer inspects the cache to acquire tokens. Please use `AcquireTokenInLongRunningProcess` to continue to access the currently active long running process.  The `InitiateLongRunningProcessInWebApi` should only be used to initiate the process. If it is not possible to make these changes quickly, and you are updating to MSAL 4.54.1 or higher, you can use `InitiateLongRunningProcessInWebApi().WithSearchInCacheForLongRunningProcess()` to revert the behavior of `InitiateLongRunningProcessInWebApi`
+
 ## App registration - specificities for Web APIs
 
 - Web APIs expose scopes. For more information, see [Quickstart: Configure an application to expose web APIs (Preview)](/azure/active-directory/develop/quickstart-configure-app-expose-web-apis).
 
-- Web APIs decide which version of token they want to accept. For your own web API, you can change the property in the manifest named `accessTokenAcceptedVersion` (to 1 or 2). For more information, see [Azure Active Directory app manifest](/azure/active-directory/develop/reference-app-manifest).
+- Web APIs decide which version of token they want to accept. For your own web API, you can change the property in the manifest named `accessTokenAcceptedVersion` (to 1 or 2). For more information, see [Microsoft Entra app manifest](/azure/active-directory/develop/reference-app-manifest).
 
 ## Practical usage of OBO in an ASP.NET / ASP.NET Core application
 
@@ -229,4 +257,4 @@ For more information about the On-Behalf-Of protocol, see [Azure Active Director
 
 Sample | Platform | Description
 ------ | -------- | -----------
-[active-directory-aspnetcore-webapi-tutorial-v2](https://github.com/Azure-Samples/active-directory-dotnet-native-aspnetcore-v2/tree/master/2.%20Web%20API%20now%20calls%20Microsoft%20Graph) | ASP.NET Core 2.2 Web API, Desktop (WPF) | ASP.NET Core 2.1 Web API calling Microsoft Graph, itself called from a WPF application using Azure AD V2 ![On-behalf-of flow topology](../../media/obo-flow-topology.png)
+[active-directory-aspnetcore-webapi-tutorial-v2](https://github.com/Azure-Samples/active-directory-dotnet-native-aspnetcore-v2/tree/master/2.%20Web%20API%20now%20calls%20Microsoft%20Graph) | ASP.NET Core 2.2 Web API, Desktop (WPF) | ASP.NET Core 2.1 Web API calling Microsoft Graph, itself called from a WPF application using Azure AD v2 ![On-behalf-of flow topology](../../media/obo-flow-topology.png)

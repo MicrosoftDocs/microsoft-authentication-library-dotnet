@@ -17,6 +17,14 @@
     <AssemblyVersion>6.32.2.0</AssemblyVersion>
     <AssemblyVersion>6.32.3.0</AssemblyVersion>
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
+    <AssemblyVersion>7.0.2.0</AssemblyVersion>
+    <AssemblyVersion>7.0.3.0</AssemblyVersion>
+    <AssemblyVersion>7.2.0.0</AssemblyVersion>
+    <AssemblyVersion>7.3.1.0</AssemblyVersion>
+    <AssemblyVersion>7.4.0.0</AssemblyVersion>
+    <AssemblyVersion>7.4.1.0</AssemblyVersion>
+    <AssemblyVersion>7.5.0.0</AssemblyVersion>
+    <AssemblyVersion>7.5.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -37,22 +45,38 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Xml</AssemblyName>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
         <summary>
             Initializes an instance of <see cref="T:Microsoft.IdentityModel.Xml.DSigSerializer" /></summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateKeyInfo">
+      <MemberSignature Language="C#" Value="protected virtual Microsoft.IdentityModel.Xml.KeyInfo CreateKeyInfo (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.IdentityModel.Xml.KeyInfo CreateKeyInfo(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Xml.DSigSerializer.CreateKeyInfo(System.Xml.XmlReader)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function CreateKeyInfo (reader As XmlReader) As KeyInfo" />
+      <MemberSignature Language="F#" Value="abstract member CreateKeyInfo : System.Xml.XmlReader -&gt; Microsoft.IdentityModel.Xml.KeyInfo&#xA;override this.CreateKeyInfo : System.Xml.XmlReader -&gt; Microsoft.IdentityModel.Xml.KeyInfo" Usage="dSigSerializer.CreateKeyInfo reader" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Xml</AssemblyName>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Xml.KeyInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">The current <see cref="T:System.Xml.XmlReader" />.</param>
+        <summary>
+            Creates a new <see cref="T:Microsoft.IdentityModel.Xml.KeyInfo" /> object.
+            </summary>
+        <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -65,17 +89,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Xml</AssemblyName>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Xml.DSigSerializer</ReturnType>
@@ -97,17 +111,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Xml</AssemblyName>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -136,17 +140,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Xml</AssemblyName>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -168,17 +162,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Xml</AssemblyName>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -206,17 +190,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Xml</AssemblyName>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Xml.KeyInfo</ReturnType>
@@ -245,17 +219,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Xml</AssemblyName>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Xml.Reference</ReturnType>
@@ -276,6 +240,35 @@
         <exception cref="T:Microsoft.IdentityModel.Xml.XmlReadException">if there is a problem reading the XML.</exception>
       </Docs>
     </Member>
+    <Member MemberName="ReadReferences">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IEnumerable&lt;Microsoft.IdentityModel.Xml.Reference&gt; ReadReferences (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.IdentityModel.Xml.Reference&gt; ReadReferences(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Xml.DSigSerializer.ReadReferences(System.Xml.XmlReader)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function ReadReferences (reader As XmlReader) As IEnumerable(Of Reference)" />
+      <MemberSignature Language="F#" Value="abstract member ReadReferences : System.Xml.XmlReader -&gt; seq&lt;Microsoft.IdentityModel.Xml.Reference&gt;&#xA;override this.ReadReferences : System.Xml.XmlReader -&gt; seq&lt;Microsoft.IdentityModel.Xml.Reference&gt;" Usage="dSigSerializer.ReadReferences reader" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Xml</AssemblyName>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.IdentityModel.Xml.Reference&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">a <see cref="T:System.Xml.XmlReader" />positioned on a &lt;Reference&gt; element.</param>
+        <summary>
+            Reads multiple XML elements conforming to https://www.w3.org/TR/2001/PR-xmldsig-core-20010820/#sec-Reference
+            </summary>
+        <returns>
+          <see cref="T:System.Collections.Generic.IEnumerable`1" /> of <seealso cref="T:Microsoft.IdentityModel.Xml.Reference" /></returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">if <paramref name="reader" /> is null.</exception>
+        <exception cref="T:Microsoft.IdentityModel.Xml.XmlReadException">if there is a problem reading the XML.</exception>
+      </Docs>
+    </Member>
     <Member MemberName="ReadSignature">
       <MemberSignature Language="C#" Value="public virtual Microsoft.IdentityModel.Xml.Signature ReadSignature (System.Xml.XmlReader reader);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.IdentityModel.Xml.Signature ReadSignature(class System.Xml.XmlReader reader) cil managed" />
@@ -285,17 +278,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Xml</AssemblyName>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Xml.Signature</ReturnType>
@@ -325,17 +308,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Xml</AssemblyName>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -363,17 +336,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Xml</AssemblyName>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Xml.SignedInfo</ReturnType>
@@ -403,17 +366,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Xml</AssemblyName>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -442,17 +395,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Xml</AssemblyName>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Xml.TransformFactory</ReturnType>
@@ -465,6 +408,174 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="TryReadKeyInfoType">
+      <MemberSignature Language="C#" Value="protected virtual bool TryReadKeyInfoType (System.Xml.XmlReader reader, ref Microsoft.IdentityModel.Xml.KeyInfo keyInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool TryReadKeyInfoType(class System.Xml.XmlReader reader, class Microsoft.IdentityModel.Xml.KeyInfo&amp; keyInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Xml.DSigSerializer.TryReadKeyInfoType(System.Xml.XmlReader,Microsoft.IdentityModel.Xml.KeyInfo@)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function TryReadKeyInfoType (reader As XmlReader, ByRef keyInfo As KeyInfo) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member TryReadKeyInfoType : System.Xml.XmlReader * KeyInfo -&gt; bool&#xA;override this.TryReadKeyInfoType : System.Xml.XmlReader * KeyInfo -&gt; bool" Usage="dSigSerializer.TryReadKeyInfoType (reader, keyInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Xml</AssemblyName>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+        <Parameter Name="keyInfo" Type="Microsoft.IdentityModel.Xml.KeyInfo" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="reader">A <see cref="T:System.Xml.XmlReader" /> positioned on a child of a <see cref="F:Microsoft.IdentityModel.Xml.XmlSignatureConstants.Elements.KeyInfo" /> element.</param>
+        <param name="keyInfo">The <see cref="T:Microsoft.IdentityModel.Xml.KeyInfo" /> object to populate.</param>
+        <summary>
+            Attempts to read the key info type which is the child of the &lt;KeyInfo&gt; element.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryReadKeyName">
+      <MemberSignature Language="C#" Value="protected virtual bool TryReadKeyName (System.Xml.XmlReader reader, out string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool TryReadKeyName(class System.Xml.XmlReader reader, [out] string&amp; name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Xml.DSigSerializer.TryReadKeyName(System.Xml.XmlReader,System.String@)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function TryReadKeyName (reader As XmlReader, ByRef name As String) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member TryReadKeyName : System.Xml.XmlReader * string -&gt; bool&#xA;override this.TryReadKeyName : System.Xml.XmlReader * string -&gt; bool" Usage="dSigSerializer.TryReadKeyName (reader, name)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Xml</AssemblyName>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+        <Parameter Name="name" Type="System.String" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="reader">A <see cref="T:System.Xml.XmlReader" /> positioned on a <see cref="F:Microsoft.IdentityModel.Xml.XmlSignatureConstants.Elements.KeyName" /> element.</param>
+        <param name="name">The parsed <see cref="F:Microsoft.IdentityModel.Xml.XmlSignatureConstants.Elements.KeyName" /> element.</param>
+        <summary>
+            Attempts to read the <see cref="F:Microsoft.IdentityModel.Xml.XmlSignatureConstants.Elements.KeyName" /> element conforming to https://www.w3.org/TR/2001/PR-xmldsig-core-20010820/#sec-KeyName.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryReadKeyValueType">
+      <MemberSignature Language="C#" Value="protected virtual bool TryReadKeyValueType (System.Xml.XmlReader reader, ref Microsoft.IdentityModel.Xml.KeyInfo keyInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool TryReadKeyValueType(class System.Xml.XmlReader reader, class Microsoft.IdentityModel.Xml.KeyInfo&amp; keyInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Xml.DSigSerializer.TryReadKeyValueType(System.Xml.XmlReader,Microsoft.IdentityModel.Xml.KeyInfo@)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function TryReadKeyValueType (reader As XmlReader, ByRef keyInfo As KeyInfo) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member TryReadKeyValueType : System.Xml.XmlReader * KeyInfo -&gt; bool&#xA;override this.TryReadKeyValueType : System.Xml.XmlReader * KeyInfo -&gt; bool" Usage="dSigSerializer.TryReadKeyValueType (reader, keyInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Xml</AssemblyName>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+        <Parameter Name="keyInfo" Type="Microsoft.IdentityModel.Xml.KeyInfo" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="reader">A <see cref="T:System.Xml.XmlReader" /> positioned on a child of <see cref="F:Microsoft.IdentityModel.Xml.XmlSignatureConstants.Elements.KeyValue" /> element.</param>
+        <param name="keyInfo">The <see cref="T:Microsoft.IdentityModel.Xml.KeyInfo" /> object to populate.</param>
+        <summary>
+            Attempts to read the <see cref="F:Microsoft.IdentityModel.Xml.XmlSignatureConstants.Elements.KeyValue" /> element conforming to https://www.w3.org/TR/2001/PR-xmldsig-core-20010820/#sec-KeyValue.
+            <para>Only supports <see cref="T:Microsoft.IdentityModel.Xml.RSAKeyValue" />, but can be extended to support more key value types.</para></summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryReadRetrievalMethod">
+      <MemberSignature Language="C#" Value="protected virtual bool TryReadRetrievalMethod (System.Xml.XmlReader reader, out string method);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool TryReadRetrievalMethod(class System.Xml.XmlReader reader, [out] string&amp; method) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Xml.DSigSerializer.TryReadRetrievalMethod(System.Xml.XmlReader,System.String@)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function TryReadRetrievalMethod (reader As XmlReader, ByRef method As String) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member TryReadRetrievalMethod : System.Xml.XmlReader * string -&gt; bool&#xA;override this.TryReadRetrievalMethod : System.Xml.XmlReader * string -&gt; bool" Usage="dSigSerializer.TryReadRetrievalMethod (reader, method)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Xml</AssemblyName>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+        <Parameter Name="method" Type="System.String" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="reader">A <see cref="T:System.Xml.XmlReader" /> positioned on a <see cref="F:Microsoft.IdentityModel.Xml.XmlSignatureConstants.Elements.RetrievalMethod" /> element.</param>
+        <param name="method">The parsed <see cref="F:Microsoft.IdentityModel.Xml.XmlSignatureConstants.Elements.RetrievalMethod" /> element.</param>
+        <summary>
+            Attempts to read the <see cref="F:Microsoft.IdentityModel.Xml.XmlSignatureConstants.Elements.RetrievalMethod" /> element conforming to https://www.w3.org/TR/2001/PR-xmldsig-core-20010820/#sec-RetrievalMethod.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryReadRSAKeyValue">
+      <MemberSignature Language="C#" Value="protected virtual bool TryReadRSAKeyValue (System.Xml.XmlReader reader, out Microsoft.IdentityModel.Xml.RSAKeyValue value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool TryReadRSAKeyValue(class System.Xml.XmlReader reader, [out] class Microsoft.IdentityModel.Xml.RSAKeyValue&amp; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Xml.DSigSerializer.TryReadRSAKeyValue(System.Xml.XmlReader,Microsoft.IdentityModel.Xml.RSAKeyValue@)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function TryReadRSAKeyValue (reader As XmlReader, ByRef value As RSAKeyValue) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member TryReadRSAKeyValue : System.Xml.XmlReader * RSAKeyValue -&gt; bool&#xA;override this.TryReadRSAKeyValue : System.Xml.XmlReader * RSAKeyValue -&gt; bool" Usage="dSigSerializer.TryReadRSAKeyValue (reader, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Xml</AssemblyName>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+        <Parameter Name="value" Type="Microsoft.IdentityModel.Xml.RSAKeyValue" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="reader">A <see cref="T:System.Xml.XmlReader" /> positioned on a <see cref="F:Microsoft.IdentityModel.Xml.XmlSignatureConstants.Elements.RSAKeyValue" /> element.</param>
+        <param name="value">The parsed <see cref="F:Microsoft.IdentityModel.Xml.XmlSignatureConstants.Elements.RSAKeyValue" /> element.</param>
+        <summary>
+            Attempts to read the <see cref="F:Microsoft.IdentityModel.Xml.XmlSignatureConstants.Elements.RSAKeyValue" /> element conforming to https://www.w3.org/TR/2001/PR-xmldsig-core-20010820/#sec-RSAKeyValue.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryReadX509Data">
+      <MemberSignature Language="C#" Value="protected virtual bool TryReadX509Data (System.Xml.XmlReader reader, out Microsoft.IdentityModel.Xml.X509Data data);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool TryReadX509Data(class System.Xml.XmlReader reader, [out] class Microsoft.IdentityModel.Xml.X509Data&amp; data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Xml.DSigSerializer.TryReadX509Data(System.Xml.XmlReader,Microsoft.IdentityModel.Xml.X509Data@)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function TryReadX509Data (reader As XmlReader, ByRef data As X509Data) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member TryReadX509Data : System.Xml.XmlReader * X509Data -&gt; bool&#xA;override this.TryReadX509Data : System.Xml.XmlReader * X509Data -&gt; bool" Usage="dSigSerializer.TryReadX509Data (reader, data)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Xml</AssemblyName>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+        <Parameter Name="data" Type="Microsoft.IdentityModel.Xml.X509Data" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="reader">A <see cref="T:System.Xml.XmlReader" /> positioned on a <see cref="F:Microsoft.IdentityModel.Xml.XmlSignatureConstants.Elements.X509Data" /> element.</param>
+        <param name="data">The parsed <see cref="F:Microsoft.IdentityModel.Xml.XmlSignatureConstants.Elements.X509Data" /> element.</param>
+        <summary>
+            Attempts to read the <see cref="F:Microsoft.IdentityModel.Xml.XmlSignatureConstants.Elements.X509Data" /> element conforming to https://www.w3.org/TR/2001/PR-xmldsig-core-20010820/#sec-X509Data.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="WriteKeyInfo">
       <MemberSignature Language="C#" Value="public virtual void WriteKeyInfo (System.Xml.XmlWriter writer, Microsoft.IdentityModel.Xml.KeyInfo keyInfo);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteKeyInfo(class System.Xml.XmlWriter writer, class Microsoft.IdentityModel.Xml.KeyInfo keyInfo) cil managed" />
@@ -474,17 +585,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Xml</AssemblyName>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -513,17 +614,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Xml</AssemblyName>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -552,17 +643,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Xml</AssemblyName>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -591,17 +672,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Xml</AssemblyName>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

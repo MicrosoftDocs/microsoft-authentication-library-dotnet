@@ -1,128 +1,133 @@
 ---
-title: Client credential flows in MSAL.NET
-description: "MSAL is a multi-framework library. Confidential Client flows are not available on mobile platforms (UWP, Xamarin.iOS, and Xamarin.Android) since there is no secure way of deploying a secret there."
+title: Client credential flows
+description: "Client credential authentication flows allow services, APIs, and daemon applications to acquire a token without direct user interaction."
 ---
 
-# Client credential flows in MSAL.NET
+# Client credential flows
 
-## Availability by platform
+## Supported platforms
 
-MSAL is a multi-framework library. Confidential Client flows are not available on mobile platforms (UWP, Xamarin.iOS, and Xamarin.Android) since there is no secure way of deploying a secret there.
+While MSAL.NET is a multi-framework library, Confidential Client flows are not available on mobile and client-facing platforms (e.g., UWP, Xamarin.iOS, and Xamarin.Android) since there is no secure way of deploying a secret with an application.
 
-## Credentials
+## Supported client credentials
 
-MSAL.NET supports two types of client credentials, which must be registered in the Azure AD app registration portal
+MSAL.NET supports two types of client credentials, which must be registered in the Microsoft Entra portal:
 
-- Application secrets (not recommended for production scenarios)
-- Certificates
+- Application secrets (_not recommended for production scenarios_).
+- Certificates.
 
-For advanced scenarios, 2 more types of credentials can be used. See details at [Confidential client assertions](/azure/active-directory/develop/msal-net-client-assertions).
+For advanced scenarios, two other types credentials can be used:
 
-- Signed client assertions
-- Certificate + additional claims to be sent
+- Signed client assertions.
+- Certificate and additional claims to be sent.
 
-### Code snippet
+For additional details, refer to the [Confidential client assertions](/azure/active-directory/develop/msal-net-client-assertions) document.
+
+### Example usage
 
 ```csharp
-// this object will cache tokens in-memory - keep it as a singleton
+// This object will cache tokens in-memory - keep it as a singleton
 var singletonApp = ConfidentialClientApplicationBuilder.Create(config.ClientId)
-           // don't specify authority here, we'll do it on the request 
-           .WithCertificate(certificate) // or .WithSecret(secret)
-           .Build();
+        // Don't specify authority here, we'll do it on the request 
+        .WithCertificate(certificate) // or .WithClientSecret(secret)
+        .Build();
 
 // If instead you need to re-create the ConfidentialClientApplication on each request, you MUST customize 
 // the cache serialization (see below)
 
-// when making the request, specify the tenanted authority
-var authResult = await app.AcquireTokenForClient(scopes: new [] {  "some_app_id_uri/.default"})        // uses the token cache automatically, which is optimized for multi-tenant access
-                   .WithAuthority(AzureCloudInstance.AzurePublic, "{tenantID}")  // do not use "common" or "organizations"!
-                   .ExecuteAsync();
+// When making the request, specify the tenant-based authority
+var authResult = await app.AcquireTokenForClient(scopes: new [] {  "some_app_id_uri/.default"}) // Uses the token cache automatically, which is optimized for multi-tenant access
+        // Do not use "common" or "organizations"!
+        .WithTenantId("{tenantID}") // or .WithTenantIdFromAuthority({"authority"})
+        .ExecuteAsync();
 ```
 
-**Important: do not use `common` or `organizations` authority for client credential flows.**
+> [!IMPORTANT]
+> Do not use `common` or `organizations` authority for client credential flows. Specify the tenant ID in the authority.
 
-For more information, see [AuthenticationConfig.cs](https://github.com/Azure-Samples/active-directory-dotnetcore-daemon-v2/blob/5199032b352a912e7cc0fce143f81664ba1a8c26/daemon-console/AuthenticationConfig.cs#L67-L87)
+## Custom cache serialization
 
-Note: Token cache performance was significantly improved in MSAL 4.30.0.
+If your service is multi-tenant (i.e., it needs tokens for a resource that is in a different tenant), see [MSAL for client credential flow in multi-tenant services](../../advanced/client-credential-multi-tenant.md).
 
-## Custom Cache Serialization
+You can serialize the token cache to a location of your choice (e.g., in-memory or through a distributed system like Redis). You would do this to:
 
-If your service is multi-tenant (i.e. it needs tokens for a resource that is in different tenants), see [MSAL for client credential flow in multi-tenant services](../../advanced/client-credential-multi-tenant.md).
+- Share the token cache between several instances of [`ConfidentialClientApplication`](xref:Microsoft.Identity.Client.ConfidentialClientApplication).
+- Persist the token cache to share it between different machines.
 
-You can serialize the token cache to a location of your choice for example in-memory or in distributed location like Redis. You would do this to:
-
-- share the token cache between several instances of [`ConfidentialClientApplication`](xref:Microsoft.Identity.Client.ConfidentialClientApplication) OR
-- persist the token cache to Redis to share it between different machines
-
-Please see [distributed cache implementations](https://github.com/AzureAD/microsoft-identity-web/tree/master/src/Microsoft.Identity.Web.TokenCache/Distributed) and [binding the token cache](/azure/active-directory/develop/msal-net-token-cache-serialization).
+Please see [distributed cache implementations](https://github.com/AzureAD/microsoft-identity-web/tree/master/src/Microsoft.Identity.Web.TokenCache/Distributed) and [binding the token cache](/azure/active-directory/develop/msal-net-token-cache-serialization) for additional implementation details.
 
 Check our [sample](https://github.com/Azure-Samples/active-directory-dotnet-v1-to-v2/blob/b48c10180665260a1aec78a9acf7d1b1ff97e5ba/ConfidentialClientTokenCache/Program.cs) to see how token cache serialization works.
 
-## High Availability
+## Ensuring high availability of your applications
 
-**Problem:**
-My service is running out of memory.
+### Service is running out of memory
 
-**Solution:**
-See [MSAL for client credential flow in multi-tenant services](../../advanced/client-credential-multi-tenant.md).
-Provision enough RAM on the machines running your service or use a distributed cache.
-A single token is a only a few KB in size, but there is 1 token for each tenant! A multi-tenant service sometimes needs tokens for 0.5M tenants.
+See [Using MSAL.NET for client credential flow in multi-tenant services](../../advanced/client-credential-multi-tenant.md) for an in-depth overview of the multi-tenant architecture with MSAL.NET.
 
-**Problem:** How can I avoid requesting new tokens on each machine of my distributed service?
-**Solution:** Use a distributed cache like Redis.
+Make sure to provision enough RAM on the machines running your service or use a distributed cache. A single token is a few kilobytes (KB) in size, and one token is stored for each tenant with which the application interacts.
 
-**Problem:** I customized my cache. How can I monitor the hit rate?
-**Solution:** The result object will tell you if the token comes from the cache or not:
+### Avoid requesting new tokens on each machine of a distributed service
+
+Use a distributed cache, like [Redis](https://redis.io/).
+
+### Monitoring cache hit rates
+
+The authentication result object can tell you if the token comes from the cache:
 
 ```csharp
 authResult.AuthenticationResultMetadata.TokenSource == TokenSource.Cache
 ```
 
-**Problem:** I am getting "loop detected" errors
-**Solution:** You are calling Azure AD for a token to often and Azure ADis throttling you. You need to use a cache - either the in-memory one (as per the sample above) or a persisted one.
+### Handling "loop detected" errors
 
-**Problem:** `AcquireTokenClient` latency is too high
-**Possible Solutions:** Please ensure you have a high token cache hit rate.
+You are calling Microsoft Entra ID for a token too often and the service is throttling you. To mitigate this issue, you need to use a cache - either the in-memory one (as per the sample above) or a persisted one.
 
-The in-memory cache is optimized for searching through tokens that come from different client_id or different tenant_id. It is not optimized for storing tokens with different scopes. You need to use a different cache key that includes the scope. See [Performance testing](../../advanced/performance-testing.md).
+### High latency for token acquisition
 
-## Registration of application secret or certificate with Azure AD
+Please ensure you have a high token cache hit rate. The in-memory cache is optimized for searching through tokens that come from different client IDs or different tenant IDs. It is not optimized for storing tokens with different scopes. You need to use a different cache key that includes the scope. See [Performance testing](../../advanced/performance-testing.md) for additional recommendations.
 
-You can register your application secrets either through the interactive experience in the [Azure portal](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredAppsPreview), or using command-line tools (like PowerShell)
+## Configuring application secrets or certificates with Microsoft Entra ID
+
+You can register your application secrets either through the interactive experience in the [Azure portal](https://portal.azure.com/), or using command-line tools like PowerShell.
 
 ### Registering client secrets using the application registration portal
 
-The management of client credentials happens in the **certificates & secrets** page for an application:
+The management of client credentials happens in the **Certificates & secrets** page for a registered application in the Microsoft Entra portal:
 
-![image](../../media/azure-ad-certificates.png)
+![Certificates & secrets view in the Azure Portal](../../media/azure-ad-certificates.png)
 
 ### Registering client secrets using PowerShell
 
-The [active-directory-dotnetcore-daemon-v2](https://github.com/Azure-Samples/active-directory-dotnetcore-daemon-v2) sample shows how to register an application secret or a certificate with an Azure AD application:
+The [`active-directory-dotnetcore-daemon-v2`](https://github.com/Azure-Samples/active-directory-dotnetcore-daemon-v2) sample shows how to register an application secret or a certificate with a Microsoft Entra application:
 
-- For details on how to register an application secret, see [AppCreationScripts/Configure.ps1](https://github.com/Azure-Samples/active-directory-dotnetcore-daemon-v2/blob/5199032b352a912e7cc0fce143f81664ba1a8c26/AppCreationScripts/Configure.ps1#L190)
-- For details on how to register a certificate with the application, see [AppCreationScripts-withCert/Configure.ps1](https://github.com/Azure-Samples/active-directory-dotnetcore-daemon-v2/blob/5199032b352a912e7cc0fce143f81664ba1a8c26/AppCreationScripts-withCert/Configure.ps1#L162-L178)
+- Register an application secret: [`AppCreationScripts/Configure.ps1`](https://github.com/Azure-Samples/active-directory-dotnetcore-daemon-v2/blob/5199032b352a912e7cc0fce143f81664ba1a8c26/AppCreationScripts/Configure.ps1#L190)
+- Register a certificate with the application: [`AppCreationScripts-withCert/Configure.ps1`](https://github.com/Azure-Samples/active-directory-dotnetcore-daemon-v2/blob/5199032b352a912e7cc0fce143f81664ba1a8c26/AppCreationScripts-withCert/Configure.ps1#L162-L178)
 
-## Construction of ConfidentialClientApplication with client credentials
+## Using client credentials
 
-In MSAL.NET client credentials are passed as a parameter at the application construction
-
-Then, once the confidential client application is constructed, acquiring the token is a question of calling overrides of ``AcquireTokenForClient``, passing the scope, and forcing or not a refresh of the token.
+In MSAL.NET, client credentials are passed as a parameter during <xref:Microsoft.Identity.Client.ConfidentialClientApplication> instantiation. Once the confidential client application is constructed, acquiring the token requires calling <xref:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenForClient(System.Collections.Generic.IEnumerable{System.String})> or one of its overloads, passing the scope and indicating whether a token refresh is required.
 
 ## Client assertions
 
-Instead of a client secret or a certificate, the confidential client application can also prove its identity using client assertions. This advanced scenario is detailed in [Confidential client assertions](/azure/active-directory/develop/msal-net-client-assertions).
+Instead of a client secret or a certificate, the confidential client application can also prove its identity using client assertions. This scenario is outlined in detail in the [Confidential client assertions](../web-apps-apis/confidential-client-assertions.md) document.
 
 ## Remarks
 
-### AcquireTokenForClient uses the application token cache
+### `AcquireTokenForClient` uses the application token cache
 
-`AcquireTokenForClient` uses the **application token cache** (not the user token cache)
-Don't call `AcquireTokenSilent` before calling `AcquireTokenForClient` as `AcquireTokenSilent` uses the **user** token cache. `AcquireTokenForClient` checks the **application** token cache itself and updates it.
+[AcquireTokenForClient](xref:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenForClient(System.Collections.Generic.IEnumerable{System.String})) uses the **application** token cache (not the user token cache).
+
+Don't call [AcquireTokenSilent](xref:Microsoft.Identity.Client.ClientApplicationBase.AcquireTokenSilent(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount)) before calling [AcquireTokenForClient](xref:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenForClient(System.Collections.Generic.IEnumerable{System.String})) as [AcquireTokenSilent](xref:Microsoft.Identity.Client.ClientApplicationBase.AcquireTokenSilent(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount)) uses the **user** token cache.
+
+[AcquireTokenForClient](xref:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenForClient(System.Collections.Generic.IEnumerable{System.String})) checks the **application** token cache itself and updates it.
+
+See [Token cache types](../../how-to/token-cache-serialization.md#token-cache-types) for details on differences between application and user token caches.
 
 ### Scopes to request
 
-The scope to request for a client credential flow is the name of the resource followed by `/.default`. This notation tells Azure AD to use the **application level permissions** declared statically during the application registration. Also these API permissions must be granted by a tenant administrator
+The scope to request for a client credential flow is the name of the resource followed by `/.default`. This notation tells Microsoft Entra ID to use **application level permissions** declared statically during the application registration. The API permissions must be granted by a tenant administrator.
+
+This configuration can look as such:
 
 ```csharp
 ResourceId = "someAppIDURI";
@@ -131,21 +136,17 @@ var scopes = new [] {  ResourceId+"/.default"};
 var result = app.AcquireTokenForClient(scopes);
 ```
 
-### No need to pass a Reply URL at app construction if your app is only a daemon
+### No need for reply URL if app is a daemon
 
-In the case where your confidential client application uses **only** client credentials flow, you don't need to pass a reply URL passed in the constructor.
+If your confidential client application uses **only** the client credentials flow, you don't need to specify a reply URL in the constructor.
 
-## Samples illustrating acquiring tokens interactively with MSAL.NET
+## Samples
 
-Sample | Platform | Description
------- | -------- | -----------
-[active-directory-dotnetcore-daemon-v2](https://github.com/Azure-Samples/active-directory-dotnetcore-daemon-v2) | .NET Core 2.1 Console | <p>A simple .NET Core application that displays the users of a tenant querying the Microsoft Graph using the identity of the application, instead of on behalf of a user.</p> ![Daemon app topology](../../media/daemon-app-topology.png) <p>The sample also illustrates the variation with certificates.</p> ![Daemon certificate-based auth topology](../../media/daemon-certificate-topology.png)
-[active-directory-dotnet-daemon-v2](https://github.com/Azure-Samples/active-directory-dotnet-daemon-v2) | ASP.NET MVC | <p>A web application that sync's data from the Microsoft Graph using the identity of the application, instead of on behalf of a user.</p>![UserSync app topology](../../media/user-sync-app-topology.png)
+| Sample | Platform | Description |
+|:-------|:---------|:------------|
+| [active-directory-dotnetcore-daemon-v2](https://github.com/Azure-Samples/active-directory-dotnetcore-daemon-v2) | .NET        | <p>A simple .NET application that displays the users of a tenant querying Microsoft Graph using the identity of the application, instead of on behalf of a user.</p> ![Daemon app topology](../../media/daemon-app-topology.png) <p>The sample also illustrates the variation with certificates.</p> ![Daemon certificate-based auth topology](../../media/daemon-certificate-topology.png)
+| [active-directory-dotnet-daemon-v2](https://github.com/Azure-Samples/active-directory-dotnet-daemon-v2)         | ASP.NET MVC | <p>A web application that syncs data from Microsoft Graph using the identity of the application, instead of on behalf of a user.</p>![UserSync app topology](../../media/user-sync-app-topology.png)
 
 ## More info
 
-You can find more information in:
-
-- The protocol documentation: [Azure Active Directory v2.0 and the OAuth 2.0 client credentials flow](/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow)
-
-See [Client credentials in MSAL.NET](./client-credential-flows.md).
+You can find more information in the [protocol documentation](/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow).

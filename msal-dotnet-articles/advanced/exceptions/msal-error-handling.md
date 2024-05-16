@@ -5,8 +5,8 @@ services: active-directory
 author: Dickson-Mwendia
 manager: CelesteDG
 
-ms.service: active-directory
-ms.subservice: develop
+ms.service: msal
+ms.subservice: msal-dotnet
 ms.topic: conceptual
 ms.workload: identity
 ms.date: 01/25/2023
@@ -24,7 +24,7 @@ ms.custom: aaddev, devx-track-dotnet
 
 [MsalClientException](/dotnet/api/microsoft.identity.client.msalexception) is thrown when the library itself detects an error state, such as a bad configuration.
 
-[MsalServiceException](/dotnet/api/microsoft.identity.client.msalserviceexception) is thrown when the Identity Provider (Azure AD) returns an error. It's a translation of the server error.
+[MsalServiceException](/dotnet/api/microsoft.identity.client.msalserviceexception) is thrown when the Identity Provider (Microsoft Entra ID) returns an error. It's a translation of the server error.
 
 [MsalUIRequiredException](/dotnet/api/microsoft.identity.client.msaluirequiredexception) is type of [MsalServiceException](/dotnet/api/microsoft.identity.client.msalserviceexception) and indicates that user interaction is required, for example because MFA is required or because the user has changed their password and a token can't be acquired silently. 
 
@@ -44,12 +44,12 @@ Here are the common exceptions that might be thrown and some possible mitigation
 
 | Exception | Error code | Mitigation|
 | --- | --- | --- |
-| [MsalUiRequiredException](/dotnet/api/microsoft.identity.client.msaluirequiredexception) | AADSTS65001: The user or administrator hasn't consented to use the application with ID '{appId}' named '{appName}'. Send an interactive authorization request for this user and resource.| Get user consent first. If you aren't using .NET Core (which doesn't have any Web UI), call (once only) `AcquireTokeninteractive`. If you're using .NET core or don't want to do an `AcquireTokenInteractive`, the user can navigate to a URL to give consent: `https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id={clientId}&response_type=code&scope=user.read`. to call `AcquireTokenInteractive`: `app.AcquireTokenInteractive(scopes).WithAccount(account).WithClaims(ex.Claims).ExecuteAsync();`|
-| [MsalUiRequiredException](/dotnet/api/microsoft.identity.client.msaluirequiredexception) | AADSTS50079: The user is required to use [multi-factor authentication (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks).| There's no mitigation. If MFA is configured for your tenant and Azure Active Directory (Azure AD) decides to enforce it, fall back to an interactive flow such as `AcquireTokenInteractive`.|
-| [MsalServiceException](/dotnet/api/microsoft.identity.client.msalserviceexception) |AADSTS90010: The grant type isn't supported over the */common* or */consumers* endpoints. Use the */organizations* or tenant-specific endpoint. You used */common*.| As explained in the message from Azure AD, the authority needs to have a tenant or otherwise */organizations*.|
-| [MsalServiceException](/dotnet/api/microsoft.identity.client.msalserviceexception) | AADSTS70002: The request body must contain the following parameter: `client_secret or client_assertion`.| This exception can be thrown if your application wasn't registered as a public client application in Azure AD. In the Azure portal, edit the manifest for your application and set `allowPublicClient` to `true`. |
-| [MsalClientException](/dotnet/api/microsoft.identity.client.msalclientexception)| `unknown_user Message`: Couldn't identify logged in user| The library was unable to query the current Windows logged-in user or this user isn't AD or Azure AD joined (work-place joined users aren't supported). Mitigation 1: on UWP, check that the application has the following capabilities: Enterprise Authentication, Private Networks (Client and Server), User Account Information. Mitigation 2: Implement your own logic to fetch the username (for example, john@contoso.com) and use the `AcquireTokenByIntegratedWindowsAuth` form that takes in the username.|
-| [MsalClientException](/dotnet/api/microsoft.identity.client.msalclientexception)|integrated_windows_auth_not_supported_managed_user| This method relies on a protocol exposed by Active Directory (AD). If a user was created in Azure AD without AD backing ("managed" user), this method will fail. Users created in AD and backed by Azure AD ("federated" users) can benefit from this non-interactive method of authentication. Mitigation: Use interactive authentication.|
+| [MsalUiRequiredException](/dotnet/api/microsoft.identity.client.msaluirequiredexception) | AADSTS65001: The user or administrator hasn't consented to use the application with ID '{appId}' named '{appName}'. Send an interactive authorization request for this user and resource.| Get user consent first. If you aren't using .NET Core (which doesn't have any Web UI), call (once only) `AcquireTokenInteractive`. If you're using .NET core or don't want to do an `AcquireTokenInteractive`, the user can navigate to a URL to give consent: `https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id={clientId}&response_type=code&scope=user.read`. to call `AcquireTokenInteractive`: `app.AcquireTokenInteractive(scopes).WithAccount(account).WithClaims(ex.Claims).ExecuteAsync();`|
+| [MsalUiRequiredException](/dotnet/api/microsoft.identity.client.msaluirequiredexception) | AADSTS50079: The user is required to use [multi-factor authentication (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks).| There's no mitigation. If MFA is configured for your tenant and Microsoft Entra ID decides to enforce it, fall back to an interactive flow such as `AcquireTokenInteractive`.|
+| [MsalServiceException](/dotnet/api/microsoft.identity.client.msalserviceexception) |AADSTS90010: The grant type isn't supported over the */common* or */consumers* endpoints. Use the */organizations* or tenant-specific endpoint. You used */common*.| As explained in the message from Microsoft Entra ID, the authority needs to have a tenant or otherwise */organizations*.|
+| [MsalServiceException](/dotnet/api/microsoft.identity.client.msalserviceexception) | AADSTS70002: The request body must contain the following parameter: `client_secret or client_assertion`.| This exception can be thrown if your application wasn't registered as a public client application in Microsoft Entra ID. In the Azure portal, edit the manifest for your application and set `allowPublicClient` to `true`. |
+| [MsalClientException](/dotnet/api/microsoft.identity.client.msalclientexception)| `unknown_user Message`: Couldn't identify logged in user| The library was unable to query the current Windows logged-in user or this user isn't Active Directory or Microsoft Entra joined (work-place joined users aren't supported). Mitigation 1: on UWP, check that the application has the following capabilities: Enterprise Authentication, Private Networks (Client and Server), User Account Information. Mitigation 2: Implement your own logic to fetch the username (for example, john@contoso.com) and use the `AcquireTokenByIntegratedWindowsAuth` form that takes in the username.|
+| [MsalClientException](/dotnet/api/microsoft.identity.client.msalclientexception)|integrated_windows_auth_not_supported_managed_user| This method relies on a protocol exposed by Active Directory (AD). If a user was created in Microsoft Entra ID without AD backing ("managed" user), this method will fail. Users created in AD and backed by Microsoft Entra ID ("federated" users) can benefit from this non-interactive method of authentication. Mitigation: Use interactive authentication.|
 
 ### `MsalUiRequiredException`
 
@@ -135,7 +135,7 @@ catch (MsalUiRequiredException ex) when (ex.ErrorCode == MsalError.InvalidGrantE
 
 When calling an API requiring Conditional Access from MSAL.NET, your application will need to handle claim challenge exceptions. This will appear as an [MsalServiceException](/dotnet/api/microsoft.identity.client.msalserviceexception) where the [Claims](/dotnet/api/microsoft.identity.client.msalserviceexception.claims) property won't be empty.
 
-To handle the claim challenge, you'll need to use the `.WithClaim()` method of the [`PublicClientApplicationBuilder`](/dotnet/api/microsoft.identity.client.publicclientapplicationbuilder) class.
+To handle the claim challenge, use <xref:Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder%601.WithClaims(System.String)>.
 
 [!INCLUDE [Active directory error handling retries](../../includes/error-handling-retries.md)]
 
@@ -143,7 +143,7 @@ To handle the claim challenge, you'll need to use the `.WithClaim()` method of t
 
 MSAL.NET implements a simple retry-once mechanism for errors with HTTP error codes 500-600.
 
-[MsalServiceException](/dotnet/api/microsoft.identity.client.msalserviceexception) surfaces `System.Net.Http.Headers.HttpResponseHeaders` as a property `namedHeaders`. You can use additional information from the error code to improve the reliability of your applications. In the case described, you can use the `RetryAfterproperty` (of type `RetryConditionHeaderValue`) and compute when to retry.
+[MsalServiceException](/dotnet/api/microsoft.identity.client.msalserviceexception) surfaces `System.Net.Http.Headers.HttpResponseHeaders` as a property `namedHeaders`. You can use additional information from the error code to improve the reliability of your applications. In the case described, you can use the `RetryAfter` property (of type `RetryConditionHeaderValue`) and compute when to retry.
 
 Here's an example for a daemon application using the client credentials flow. You can adapt this to any of the methods for acquiring a token.
 

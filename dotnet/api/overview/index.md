@@ -11,7 +11,7 @@ Check out the [scenario overview](/entra/msal/dotnet/getting-started/scenarios) 
 
 ## Packages
 
-### Public Client
+### Core MSAL.NET Libraries
 
 [![NuGet badge for Microsoft.Identity.Client](https://img.shields.io/nuget/v/Microsoft.Identity.Client.svg?style=flat-square&label=Microsoft.Identity.Client&colorB=00b200)](https://www.nuget.org/packages/Microsoft.Identity.Client/)
 
@@ -19,9 +19,9 @@ Check out the [scenario overview](/entra/msal/dotnet/getting-started/scenarios) 
 
 [![NuGet badget for Microsoft.Identity.Client.Desktop](https://img.shields.io/nuget/v/Microsoft.Identity.Client.Desktop.svg?style=flat-square&label=Microsoft.Identity.Client.Desktop&colorB=00b200)](https://www.nuget.org/packages/Microsoft.Identity.Client.Desktop/)
 
-[![NuGet badget for Microsoft.Identity.Client.Extensions.Msal](https://img.shields.io/nuget/v/Microsoft.Identity.Client.Extensions.Msal.svg?style=flat-square&label=Microsoft.Identity.Client.Extensions.Msal&colorB=00b200)](https://www.nuget.org/packages/Microsoft.Identity.Client.Extensions.Msal/)
+[![NuGet badge for Microsoft.Identity.Client.Extensions.Msal](https://img.shields.io/nuget/v/Microsoft.Identity.Client.Extensions.Msal.svg?style=flat-square&label=Microsoft.Identity.Client.Extensions.Msal&colorB=00b200)](https://www.nuget.org/packages/Microsoft.Identity.Client.Extensions.Msal/)
 
-### Confidential Client
+### Higher-Level Libraries
 
 [![NuGet badge for Microsoft.Identity.Web](https://img.shields.io/nuget/v/Microsoft.Identity.Web.svg?style=flat-square&label=Microsoft.Identity.Web&colorB=00b200)](https://www.nuget.org/packages/Microsoft.Identity.Web/)
 

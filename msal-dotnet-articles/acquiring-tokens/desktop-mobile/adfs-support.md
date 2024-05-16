@@ -5,8 +5,8 @@ services: active-directory
 author: Dickson-Mwendia
 manager: CelesteDG
 
-ms.service: active-directory
-ms.subservice: develop
+ms.service: msal
+ms.subservice: msal-dotnet
 ms.topic: conceptual
 ms.workload: identity
 ms.date: 08/24/2023
@@ -22,12 +22,14 @@ Active Directory Federation Services (AD FS) in Windows Server enables you to ad
 
 Microsoft Authentication Library for .NET (MSAL.NET) supports two scenarios for authenticating against AD FS:
 
-- MSAL.NET talks to Azure Active Directory, which itself is *federated* with AD FS.
+- MSAL.NET talks to Microsoft Entra ID, which itself is *federated* with AD FS.
 - MSAL.NET talks **directly** to an ADFS authority. This is only supported from AD FS 2019 and above. One of the scenarios this highlights is [Azure Stack](https://azure.microsoft.com/overview/azure-stack/) support
 
-## Cases where identity providers are federated with Azure AD
+<a name='cases-where-identity-providers-are-federated-with-azure-ad'></a>
 
-MSAL.NET supports talking to Azure AD, which itself signs-in managed users (users managed in Azure AD), or federated users (users managed by another identity provider, which, in the case we are interested is federated through ADFS). MSAL.NET does not know about the fact that users are federated. As far as it’s concerned, it talks to Azure AD.
+## Cases where identity providers are federated with Microsoft Entra ID
+
+MSAL.NET supports talking to Microsoft Entra ID, which itself signs-in managed users (users managed in Microsoft Entra ID), or federated users (users managed by another identity provider, which, in the case we are interested is federated through ADFS). MSAL.NET does not know about the fact that users are federated. As far as it’s concerned, it talks to Microsoft Entra ID.
 
 The [authority](/azure/active-directory/develop/msal-client-applications) you'll use in the case is the usual authority (common, organizations, or tenanted).
 
@@ -36,18 +38,18 @@ The [authority](/azure/active-directory/develop/msal-client-applications) you'll
 When you call the the `AcquireTokenInteractive`,the user experience is typically: 
 
 - The user enter their upn (or the account or `loginHint` is provided part of the call to <xref:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String})>)
-- Azure AD displays briefly "Taking you to your organization's page"
-- Azure AD then redirects the user to the sign-in page of the identity provider (usually customized with the logo of the organization)
+- Microsoft Entra ID displays briefly "Taking you to your organization's page"
+- Microsoft Entra ID then redirects the user to the sign-in page of the identity provider (usually customized with the logo of the organization)
 
 Supported ADFS versions in this federated scenario are ADFS v2 , ADFS v3 (Windows Server 2012 R2) and ADFS v4 (ADFS 2016)
 
 ### Acquiring a token using `AcquireTokenByIntegratedAuthentication` or `AcquireTokenByUsernamePassword`
 
-When acquiring a token using the `AcquireTokenByIntegratedAuthentication` or `AcquireTokenByUsernamePassword` methods, MSAL.NET gets the identity provider to contact based on the username.  MSAL.NET receives a [SAML 1.1 token](/azure/active-directory/develop/reference-saml-tokens) after contacting the identity provider.  MSAL.NET then provides the SAML token to Azure AD as a user assertion (similar to the [on-behalf-of flow](../web-apps-apis/on-behalf-of-flow.md) to get back a JWT.
+When acquiring a token using the `AcquireTokenByIntegratedAuthentication` or `AcquireTokenByUsernamePassword` methods, MSAL.NET gets the identity provider to contact based on the username.  MSAL.NET receives a [SAML 1.1 token](/azure/active-directory/develop/reference-saml-tokens) after contacting the identity provider.  MSAL.NET then provides the SAML token to Microsoft Entra ID as a user assertion (similar to the [on-behalf-of flow](../web-apps-apis/on-behalf-of-flow.md) to get back a JWT.
 
 ## Case where MSAL connects directly to ADFS
 
-MSAL.NET supports connecting to AD FS 2019, which is Open ID Connect compliant and understands PKCE and scopes. This support requires that a service pack [KB 4490481](https://support.microsoft.com/help/4490481/windows-10-update-kb4490481) is applied to Windows Server. When connecting directly to AD FS, the authority you'll want to use to build your application is similar to `https://mysite.contoso.com/adfs/`.
+MSAL.NET supports connecting to AD FS 2019, which is OpenID Connect compliant and understands PKCE and scopes. This support requires that a service pack [KB 4490481](https://support.microsoft.com/help/4490481/windows-10-update-kb4490481) is applied to Windows Server. When connecting directly to AD FS, the authority you'll want to use to build your application is similar to `https://mysite.contoso.com/adfs/`.
 
 Currently, there are no plans to support a direct connection to:
 
@@ -61,4 +63,4 @@ MSAL does not support Integrated Windows Authentication (by calling `AcquireToke
 ## See also
 
 - [Troubleshooting IWA/ADFS Setup](/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-iwa)
-- For the federated case, see [Configure Azure Active Directory sign in behavior for an application by using a Home Realm Discovery policy](/azure/active-directory/manage-apps/configure-authentication-for-federated-users-portal)
+- For the federated case, see [Configure Microsoft Entra sign-in behavior for an application by using a Home Realm Discovery policy](/azure/active-directory/manage-apps/configure-authentication-for-federated-users-portal)

@@ -1,11 +1,11 @@
 ---
 title: MSAL.NET telemetry overview
-description: Explore MSAL.NET's telemetry capabilities for Azure AD token endpoint requests. Learn about client-side state, error tracking, and SDK API usage metadata.
+description: Explore MSAL.NET's telemetry capabilities for Microsoft Entra token endpoint requests. Learn about client-side state, error tracking, and SDK API usage metadata.
 ---
 
 # MSAL.NET telemetry overview
 
-MSAL.NET sends basic telemetry about the client side state on requests to the Azure AD token endpoint. Telemetry data will be logged by Azure AD. This telemetry will give us visibility into both 1st and 3rd party app health without introducing an additional telemetry pipeline dependency into the open source SDK. MSAL.NET collects this telemetry to proactively detect server side failures or library regressions, in order to provide a better service.
+MSAL.NET sends basic telemetry about the client side state on requests to the Microsoft Entra token endpoint. Telemetry data will be logged by Microsoft Entra ID. This telemetry will give us visibility into both 1st and 3rd party app health without introducing an additional telemetry pipeline dependency into the open source SDK. MSAL.NET collects this telemetry to proactively detect server side failures or library regressions, in order to provide a better service.
 
 Basic telemetry includes:
 

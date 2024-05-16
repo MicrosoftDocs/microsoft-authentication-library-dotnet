@@ -9,13 +9,13 @@ description: "How to use InTune with Android and iOS applications that depend on
 
 There are scenarios when just user authentication may not be sufficient to protect certain resources. The device that accesses it should also be compliant as per policies defined in InTune.
 
-Azure Active Directory (Azure AD) ensures that the access token is not issued till the device is compliant as per the conditional access policy. This page explains how a resource can be reached by MSAL.NET while being protected by InTune [Mobile Application Management (MAM)](/mem/intune/fundamentals/deployment-guide-enrollment-mamwe).
+Microsoft Entra ID ensures that the access token is not issued till the device is compliant as per the conditional access policy. This page explains how a resource can be reached by MSAL.NET while being protected by InTune [Mobile Application Management (MAM)](/mem/intune/fundamentals/deployment-guide-enrollment-mamwe).
 
 ## Overview of the system configuration
 
 The system comprises of two apps: a backend app that provides access to a hosted resource and a client App that needs to access the resource.The resource is defined by scope. When the client app needs the resource, it will request access to the scope.  
 
-Azure Active Directory (Azure AD) protects the resource by applying conditional access on the resource. One of the conditions of the access is to have App Protection Policy on the client App.  
+Microsoft Entra ID protects the resource by applying conditional access on the resource. One of the conditions of the access is to have App Protection Policy on the client App.  
 
 An App protection policy can be created in the InTune Portal for an App and it can be applied to one or more user groups.  
 
@@ -23,7 +23,7 @@ Here are the detail [setup steps](./create-config-for-mam-conditional-access.md)
 
 ## Workflow for iOS
 
-As a result of the setup, when App attempts to reach the resource and if the device is not compliant, Azure AD returns `protection_policy_required` sub-error.  
+As a result of the setup, when App attempts to reach the resource and if the device is not compliant, Microsoft Entra ID returns `protection_policy_required` sub-error.  
 
 MSAL.NET catches the error and throw `IntuneAppProtectionPolicyRequiredException`.  
 
@@ -115,16 +115,14 @@ if (acct != null)
     {
         var silentParamBuilder = PCA.AcquireTokenSilent(Scopes, acct);
         var authResult = await silentParamBuilder.ExecuteAsync().ConfigureAwait(false);
-        ShowAlert("Success Silent 1", authResult.AccessToken);
+        ShowAlert("Success Silent", authResult.AccessToken);
     }
 }
 ```
 
-The complete sample can be found [on GitHub](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/tree/d813f674da88d37272d7bd8fe81318d4243e7583/tests/devapps/Intune-xamarin-ios)
-
 ## Workflow for Android
 
-As a result of the setup, when App attempts to reach the resource and if the device is not compliant, Azure AD returns `protection_policy_required` suberror.  
+As a result of the setup, when App attempts to reach the resource and if the device is not compliant, Microsoft Entra ID returns `protection_policy_required` suberror.  
 
 MSAL.NET catches the error and throws `IntuneAppProtectionPolicyRequiredException`.  
 
@@ -230,5 +228,3 @@ if (notification.Type == MAMNotificationType.MamEnrollmentResult)
     }
 }
 ```
-
-The complete sample can be found [in the MSAL.NET repository](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/tree/master/tests/devapps/Intune-xamarin-Android).

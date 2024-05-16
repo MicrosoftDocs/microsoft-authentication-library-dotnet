@@ -17,6 +17,14 @@
     <AssemblyVersion>6.32.2.0</AssemblyVersion>
     <AssemblyVersion>6.32.3.0</AssemblyVersion>
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
+    <AssemblyVersion>7.0.2.0</AssemblyVersion>
+    <AssemblyVersion>7.0.3.0</AssemblyVersion>
+    <AssemblyVersion>7.2.0.0</AssemblyVersion>
+    <AssemblyVersion>7.3.1.0</AssemblyVersion>
+    <AssemblyVersion>7.4.0.0</AssemblyVersion>
+    <AssemblyVersion>7.4.1.0</AssemblyVersion>
+    <AssemblyVersion>7.5.0.0</AssemblyVersion>
+    <AssemblyVersion>7.5.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -37,17 +45,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.SignedHttpRequest</AssemblyName>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -64,17 +62,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.SignedHttpRequest</AssemblyName>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -96,17 +84,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.SignedHttpRequest</AssemblyName>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -119,6 +97,57 @@
         <remarks>https://datatracker.ietf.org/doc/html/draft-ietf-oauth-signed-http-request-03#section-5.1</remarks>
       </Docs>
     </Member>
+    <Member MemberName="AllowedDomainsForJkuRetrieval">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;string&gt; AllowedDomainsForJkuRetrieval { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;string&gt; AllowedDomainsForJkuRetrieval" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters.AllowedDomainsForJkuRetrieval" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AllowedDomainsForJkuRetrieval As ICollection(Of String)" />
+      <MemberSignature Language="F#" Value="member this.AllowedDomainsForJkuRetrieval : System.Collections.Generic.ICollection&lt;string&gt;" Usage="Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters.AllowedDomainsForJkuRetrieval" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Protocols.SignedHttpRequest</AssemblyName>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets a list of allowed domains for 'jku' claim retrieval.
+            The domains are not directly compared with the 'jku' claim. Allowed domain would be
+            deemed valid if the host specified in the 'jku' claim ends with the domain value.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Domains should be provided in the following format:
+            "contoso.com"
+            "abc.fabrikam.com"
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowResolvingPopKeyFromJku">
+      <MemberSignature Language="C#" Value="public bool AllowResolvingPopKeyFromJku { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowResolvingPopKeyFromJku" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters.AllowResolvingPopKeyFromJku" />
+      <MemberSignature Language="VB.NET" Value="Public Property AllowResolvingPopKeyFromJku As Boolean" />
+      <MemberSignature Language="F#" Value="member this.AllowResolvingPopKeyFromJku : bool with get, set" Usage="Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters.AllowResolvingPopKeyFromJku" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Protocols.SignedHttpRequest</AssemblyName>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets a value indicating whether PoP key can be resolved from 'jku' claim.
+            If you set this property to true, you must set values in <see cref="P:Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters.AllowedDomainsForJkuRetrieval" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>https://datatracker.ietf.org/doc/html/rfc7800#section-3.5</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="ClaimsToValidateWhenPresent">
       <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;string&gt; ClaimsToValidateWhenPresent { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; ClaimsToValidateWhenPresent" />
@@ -128,17 +157,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.SignedHttpRequest</AssemblyName>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
@@ -162,17 +181,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.SignedHttpRequest</AssemblyName>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.IdentityModel.Tokens.SecurityKey&gt;</ReturnType>
@@ -194,17 +203,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.SignedHttpRequest</AssemblyName>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Protocols.SignedHttpRequest.CnfDecryptionKeysResolverAsync</ReturnType>
@@ -226,17 +225,7 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.SignedHttpRequest</AssemblyName>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.TimeSpan</ReturnType>
@@ -257,17 +246,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.SignedHttpRequest</AssemblyName>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Protocols.SignedHttpRequest.HttpClientProvider</ReturnType>
@@ -289,17 +268,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.SignedHttpRequest</AssemblyName>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Protocols.SignedHttpRequest.NonceValidatorAsync</ReturnType>
@@ -321,17 +290,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.SignedHttpRequest</AssemblyName>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Protocols.SignedHttpRequest.PopKeyResolverAsync</ReturnType>
@@ -353,17 +312,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.SignedHttpRequest</AssemblyName>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Protocols.SignedHttpRequest.PopKeyResolverFromKeyIdAsync</ReturnType>
@@ -385,17 +334,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.SignedHttpRequest</AssemblyName>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Protocols.SignedHttpRequest.ReplayValidatorAsync</ReturnType>
@@ -417,17 +356,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.SignedHttpRequest</AssemblyName>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -449,17 +378,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.SignedHttpRequest</AssemblyName>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignatureValidatorAsync</ReturnType>
@@ -481,17 +400,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.SignedHttpRequest</AssemblyName>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.TimeSpan</ReturnType>
@@ -513,17 +422,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.SignedHttpRequest</AssemblyName>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.TokenHandler</ReturnType>
@@ -545,17 +444,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.SignedHttpRequest</AssemblyName>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -577,17 +466,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.SignedHttpRequest</AssemblyName>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -609,17 +488,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.SignedHttpRequest</AssemblyName>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -641,17 +510,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.SignedHttpRequest</AssemblyName>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -673,17 +532,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.SignedHttpRequest</AssemblyName>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -707,17 +556,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.SignedHttpRequest</AssemblyName>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -739,17 +578,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.SignedHttpRequest</AssemblyName>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -771,17 +600,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.SignedHttpRequest</AssemblyName>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>

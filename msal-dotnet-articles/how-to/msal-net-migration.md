@@ -5,8 +5,8 @@ services: active-directory
 author: Dickson-Mwendia
 manager: CelesteDG
 
-ms.service: active-directory
-ms.subservice: develop
+ms.service: msal
+ms.subservice: msal-dotnet
 ms.topic: conceptual
 ms.workload: identity
 ms.date: 11/25/2022
@@ -20,7 +20,7 @@ ms.custom: devx-track-csharp, aaddev, has-adal-ref, engagement-fy23, devx-track-
 
 ## Why migrate to MSAL.NET or Microsoft.Identity.Web
 
-Both the Microsoft Authentication Library for .NET (MSAL.NET) and Azure AD Authentication Library for .NET (ADAL.NET) are used to authenticate Azure AD entities and request tokens from Azure AD. Up until now, most developers have requested tokens from Azure AD for developers platform (v1.0) using Azure AD Authentication Library (ADAL). These tokens are used to authenticate Azure AD identities (work and school accounts). 
+Both the Microsoft Authentication Library for .NET (MSAL.NET) and Azure AD Authentication Library for .NET (ADAL.NET) are used to authenticate Microsoft Entra entities and request tokens from Microsoft Entra ID. Up until now, most developers have requested tokens from Azure AD for developers platform (v1.0) using Azure AD Authentication Library (ADAL). These tokens are used to authenticate Microsoft Entra identities (work and school accounts). 
 
 MSAL comes with benefits over ADAL. Some of these benefits are listed below:
 
@@ -41,9 +41,9 @@ For details about the decision tree below, read [MSAL.NET or Microsoft.Identity.
 !["Block diagram explaining how to choose if you need to use MSAL.NET and Microsoft.Identity.Web or both when migrating from ADAL.NET"](../media/msal-net-migration/decision-diagram.png)
 
 
-### Deprecated ADAL.Net NuGet packages and their MSAL.Net equivalents
+### Deprecated ADAL.NET NuGet packages and their MSAL.NET equivalents
 
-You might unknowingly consume ADAL dependencies from other Azure SDKs. Below are few of the deprecated packages and their MSAL alternatives.
+You might unknowingly consume ADAL dependencies from other Azure SDKs. Below are few of the deprecated packages and their MSAL alternatives. For more detailed migration information, see [AppAuthentication to Azure.Identity Migration Guidance](/dotnet/api/overview/azure/app-auth-migration) and **Migration guide** links in the specific [Azure SDK for .NET](/dotnet/api/overview/azure/) library pages.
 
 |  ADAL.NET Package (Deprecated) | MSAL.NET Package (Current) |
 | ----------- | ----------- |

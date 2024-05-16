@@ -7,7 +7,7 @@ description: "How to use custom authority aliases with your MSAL.NET application
 
 ## What is Instance Discovery
 
-Before acquiring tokens, MSAL makes a network call to the Azure AD authority discovery endpoint:
+Before acquiring tokens, MSAL makes a network call to the Microsoft Entra authority discovery endpoint:
 
 ```text
 https://login.microsoftonline.com/common/discovery/instance?api-version=1.1&authorization_endpoint=https%3A%2F%2Flogin.microsoftonline.com%2Fcommon%2Foauth2%2Fv2.0%2Fauthorize
@@ -16,9 +16,9 @@ https://login.microsoftonline.com/common/discovery/instance?api-version=1.1&auth
 The information returned is used to:
 
 - Discover a list of aliases for each cloud (Azure Public, German Cloud, China Cloud etc.). A token issued to an authority in the set is valid for all other authorities in the set.
-- Use the preferred_network alias for communication with Azure AD
+- Use the preferred_network alias for communication with Microsoft Entra ID
 - Use the preferred_cache alias to store tokens in the cache
-- Provide a level of validation for the authority - if a non-existent authority is used, then Azure AD returns an "invalid_instance" error:
+- Provide a level of validation for the authority - if a non-existent authority is used, then Microsoft Entra ID returns an "invalid_instance" error:
 
   ```json
   {
@@ -36,7 +36,7 @@ The information returned is used to:
 
 ## Instance validation
 
-The validation is important if you obtain your authority dynamically, for example when you call a protect API, it returns a 401 Unauthorized HTTP response which can include a header pointing to an authority that is able to generate a token. If the API is hacked, it could advertise an authority that does not belong to Azure AD and that could steal user credentials.
+The validation is important if you obtain your authority dynamically, for example when you call a protect API, it returns a 401 Unauthorized HTTP response which can include a header pointing to an authority that is able to generate a token. If the API is hacked, it could advertise an authority that does not belong to Microsoft Entra ID and that could steal user credentials.
 
 ## Disabling Instance Discovery
 

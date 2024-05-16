@@ -5,20 +5,19 @@ services: active-directory
 author: Dickson-Mwendia
 manager: CelesteDG
 
-ms.service: active-directory
-ms.subservice: develop
-ms.topic: reference
-ms.workload: identity
+ms.service: msal
+ms.subservice: msal-dotnet
+ms.topic: conceptual
 ms.date: 03/16/2023
 ms.author: dmwendia
 ms.reviewer: localden, jmprieur
-ms.custom: devx-track-csharp, aaddev, engagement-fy23
+ms.custom: devx-track-csharp, aaddev
 # Customer intent: As an application developer, I want to learn how MSAL.NET can help me acquire tokens from the Microsoft identity platform and access protected web APIs. 
 ---
 
 # Microsoft Authentication Library for .NET
 
-MSAL.NET ([Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client)) is an authentication library that enables you to acquire tokens from Azure Active Directory (Azure AD), to access protected web APIs (Microsoft APIs or applications registered with Azure AD). MSAL.NET is available on several .NET platforms (Desktop, Universal Windows Platform, MAUI, Xamarin Android, Xamarin iOS, Windows 8.1, and .NET Core).
+MSAL.NET ([Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client)) is an authentication library that enables you to acquire tokens from Microsoft Entra ID, to access protected web APIs (Microsoft APIs or applications registered with Microsoft Entra ID). MSAL.NET is available on several .NET platforms (Desktop, Universal Windows Platform, MAUI, Xamarin Android, Xamarin iOS, Windows 8.1, and .NET Core).
 
 > [!div class="nextstepaction"]
 > [Get MSAL.NET >](https://www.nuget.org/packages/Microsoft.Identity.Client/)
@@ -58,10 +57,10 @@ As a token acquisition library, MSAL.NET provides several ways of getting a toke
 
 ### MSAL.NET is about acquiring tokens, not protecting an API
 
-MSAL.NET is used to acquire tokens. It's not used to protect a Web API. If you are interested in protecting a Web API with Azure AD, you might want to check out:
+MSAL.NET is used to acquire tokens. It's not used to protect a Web API. If you are interested in protecting a Web API with Microsoft Entra ID, you might want to check out:
 
-- [Azure Active Directory with ASP.NET Core](/aspnet/core/security/authentication/azure-active-directory/). Note that some of these examples present web apps which also call a web API with MSAL.NET.
-- [Active-directory-dotnet-native-aspnetcore-v2](https://github.com/azure-samples/active-directory-dotnet-native-aspnetcore-v2) which shows how to call an ASP.NET Core Web API from a WPF application using Azure AD V2.
+- [Microsoft Entra ID with ASP.NET Core](/aspnet/core/security/authentication/azure-active-directory/). Note that some of these examples present web apps which also call a web API with MSAL.NET.
+- [Active-directory-dotnet-native-aspnetcore-v2](https://github.com/azure-samples/active-directory-dotnet-native-aspnetcore-v2) which shows how to call an ASP.NET Core Web API from a WPF application using Azure AD v2.
 - The [IdentityModel extensions for .Net](https://github.com/AzureAD/azure-activedirectory-identitymodel-extensions-for-dotnet) open source library providing middleware used by ASP.NET and ASP.NET Core to protect APIs.
 
 ## Conceptual documentation
@@ -69,7 +68,7 @@ MSAL.NET is used to acquire tokens. It's not used to protect a Web API. If you a
 ### Getting started with MSAL.NET
 
 1. Learn about [MSAL.NET usage scenarios](./getting-started/scenarios.md).
-1. You will need to [register your app](/azure/active-directory/develop/quickstart-register-app) with Azure Active Directory.
+1. You will need to [register your app](/azure/active-directory/develop/quickstart-register-app) with Microsoft Entra ID.
 1. Learn about the [types of client applications](/azure/active-directory/develop/msal-client-applications): public client and confidential client.
 1. Learn about [acquiring tokens](acquiring-tokens/overview.md) to access a protected API.
 
@@ -82,7 +81,7 @@ MSAL.NET is used to acquire tokens. It's not used to protect a Web API. If you a
 #### Acquiring tokens in desktop and mobile apps (public client applications)
 
 - [Acquiring a token interactively](acquiring-tokens/desktop-mobile/acquiring-tokens-interactively.md) enables the application to acquire a token after authenticating the user through an interactive sign-in. There are implementation-specific details depending on the target platforms, such as [Xamarin Android](acquiring-tokens/desktop-mobile/xamarin.md) or [UWP](acquiring-tokens/desktop-mobile/uwp.md).
-- Acquiring a token silently on a Windows domain or Azure Active Directory joined machine with [Integrated Windows Authentication](./acquiring-tokens/desktop-mobile/integrated-windows-authentication.md) or by using [Username/passwords](./acquiring-tokens/desktop-mobile/username-password-authentication.md) (not recommended).
+- Acquiring a token silently on a Windows domain or Microsoft Entra joined machine with [Integrated Windows Authentication](./acquiring-tokens/desktop-mobile/integrated-windows-authentication.md) or by using [Username/passwords](./acquiring-tokens/desktop-mobile/username-password-authentication.md) (not recommended).
 - Acquiring a token on a text-only device, by directing the user to sign-in on another device with the [Device Code Flow](./acquiring-tokens/desktop-mobile/device-code-flow.md).
 - Acquiring a token using the [Web Account Manager (WAM)](./acquiring-tokens/desktop-mobile/wam.md), a Windows OS component that acts a broker allowing the users of your app benefit from integration with accounts known to Windows.
 

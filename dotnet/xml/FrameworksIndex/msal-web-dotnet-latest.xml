@@ -1,22 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-web-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.IdentityModel.Abstractions" Version="7.0.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.JsonWebTokens" Version="7.0.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.KeyVaultExtensions" Version="7.0.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Logging" Version="7.0.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.LoggingExtensions" Version="7.0.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.ManagedKeyVaultSecurityKey" Version="7.0.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols" Version="7.0.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="7.0.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.SignedHttpRequest" Version="7.0.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.WsFederation" Version="7.0.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.TestExtensions" Version="7.0.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Tokens" Version="7.0.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Tokens.Saml" Version="7.0.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Validators" Version="7.0.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Xml" Version="7.0.0.0" />
-    <Assembly Name="System.IdentityModel.Tokens.Jwt" Version="7.0.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Abstractions" Version="7.5.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.JsonWebTokens" Version="7.5.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.KeyVaultExtensions" Version="7.5.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.Logging" Version="7.5.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.LoggingExtensions" Version="7.5.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.ManagedKeyVaultSecurityKey" Version="7.5.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols" Version="7.5.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="7.5.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.SignedHttpRequest" Version="7.5.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.WsFederation" Version="7.5.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.TestExtensions" Version="7.5.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.Tokens" Version="7.5.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.Tokens.Saml" Version="7.5.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.Validators" Version="7.5.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.Xml" Version="7.5.1.0" />
+    <Assembly Name="System.IdentityModel.Tokens.Jwt" Version="7.5.1.0" />
   </Assemblies>
   <Namespace Name="Microsoft.IdentityModel.Abstractions">
     <Type Name="Microsoft.IdentityModel.Abstractions.EventLogLevel" Id="T:Microsoft.IdentityModel.Abstractions.EventLogLevel">
@@ -85,6 +85,7 @@
       <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JsonClaimValueTypes.JsonNull" />
     </Type>
     <Type Name="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken" Id="T:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken">
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.#ctor(System.ReadOnlyMemory{System.Char})" />
       <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.#ctor(System.String)" />
       <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.#ctor(System.String,System.String)" />
       <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.GetClaim(System.String)" />
@@ -285,6 +286,7 @@
       <Member Id="M:Microsoft.IdentityModel.Logging.IdentityModelEventSource.WriteWarning(System.String,System.Object[])" />
       <Member Id="P:Microsoft.IdentityModel.Logging.IdentityModelEventSource.HeaderWritten" />
       <Member Id="P:Microsoft.IdentityModel.Logging.IdentityModelEventSource.HiddenPIIString" />
+      <Member Id="P:Microsoft.IdentityModel.Logging.IdentityModelEventSource.HiddenSecurityArtifactString" />
       <Member Id="P:Microsoft.IdentityModel.Logging.IdentityModelEventSource.LogCompleteSecurityArtifact" />
       <Member Id="P:Microsoft.IdentityModel.Logging.IdentityModelEventSource.Logger" />
       <Member Id="P:Microsoft.IdentityModel.Logging.IdentityModelEventSource.LogLevel" />
@@ -336,6 +338,8 @@
       <Member Id="M:Microsoft.IdentityModel.Logging.LogHelper.LogWarning(System.String,System.Object[])" />
       <Member Id="M:Microsoft.IdentityModel.Logging.LogHelper.MarkAsNonPII(System.Object)" />
       <Member Id="M:Microsoft.IdentityModel.Logging.LogHelper.MarkAsSecurityArtifact(System.Object,System.Func{System.Object,System.String})" />
+      <Member Id="M:Microsoft.IdentityModel.Logging.LogHelper.MarkAsSecurityArtifact(System.Object,System.Func{System.Object,System.String},System.Func{System.Object,System.String})" />
+      <Member Id="M:Microsoft.IdentityModel.Logging.LogHelper.MarkAsUnsafeSecurityArtifact(System.Object,System.Func{System.Object,System.String})" />
       <Member Id="P:Microsoft.IdentityModel.Logging.LogHelper.Logger" />
     </Type>
     <Type Name="Microsoft.IdentityModel.Logging.TextWriterEventListener" Id="T:Microsoft.IdentityModel.Logging.TextWriterEventListener">
@@ -416,6 +420,7 @@
       <Member Id="M:Microsoft.IdentityModel.Protocols.HttpRequestData.#ctor" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.HttpRequestData.AppendHeaders(System.Net.Http.Headers.HttpHeaders)" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.HttpRequestData.Body" />
+      <Member Id="P:Microsoft.IdentityModel.Protocols.HttpRequestData.ClientCertificates" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.HttpRequestData.Headers" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.HttpRequestData.Method" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.HttpRequestData.PropertyBag" />
@@ -989,6 +994,8 @@
       <Member Id="M:Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters.#ctor" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters.AcceptUnsignedHeaders" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters.AcceptUnsignedQueryParameters" />
+      <Member Id="P:Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters.AllowedDomainsForJkuRetrieval" />
+      <Member Id="P:Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters.AllowResolvingPopKeyFromJku" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters.ClaimsToValidateWhenPresent" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters.CnfDecryptionKeys" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters.CnfDecryptionKeysResolverAsync" />
@@ -1214,6 +1221,8 @@
       <Member Id="M:Microsoft.IdentityModel.Tokens.AsymmetricSignatureProvider.Dispose(System.Boolean)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.AsymmetricSignatureProvider.GetHashAlgorithmName(System.String)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.AsymmetricSignatureProvider.Sign(System.Byte[])" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.AsymmetricSignatureProvider.Sign(System.Byte[],System.Int32,System.Int32)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.AsymmetricSignatureProvider.Sign(System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.Int32@)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.AsymmetricSignatureProvider.ValidateAsymmetricSecurityKeySize(Microsoft.IdentityModel.Tokens.SecurityKey,System.String,System.Boolean)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.AsymmetricSignatureProvider.Verify(System.Byte[],System.Byte[])" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.AsymmetricSignatureProvider.Verify(System.Byte[],System.Int32,System.Int32,System.Byte[],System.Int32,System.Int32)" />
@@ -1247,6 +1256,7 @@
       <Member Id="M:Microsoft.IdentityModel.Tokens.Base64UrlEncoder.DecodeBytes(System.String)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Encode(System.Byte[])" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Encode(System.Byte[],System.Int32,System.Int32)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Encode(System.ReadOnlySpan{System.Byte},System.Span{System.Char})" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Encode(System.String)" />
     </Type>
     <Type Name="Microsoft.IdentityModel.Tokens.BaseConfiguration" Id="T:Microsoft.IdentityModel.Tokens.BaseConfiguration">
@@ -1290,6 +1300,7 @@
       <Member Id="M:Microsoft.IdentityModel.Tokens.CompressionProviderFactory.#ctor" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.CompressionProviderFactory.#ctor(Microsoft.IdentityModel.Tokens.CompressionProviderFactory)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.CompressionProviderFactory.CreateCompressionProvider(System.String)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.CompressionProviderFactory.CreateCompressionProvider(System.String,System.Int32)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.CompressionProviderFactory.IsSupportedAlgorithm(System.String)" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.CompressionProviderFactory.CustomCompressionProvider" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.CompressionProviderFactory.Default" />
@@ -1350,6 +1361,7 @@
       <Member Id="M:Microsoft.IdentityModel.Tokens.DeflateCompressionProvider.IsSupportedAlgorithm(System.String)" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.DeflateCompressionProvider.Algorithm" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.DeflateCompressionProvider.CompressionLevel" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.DeflateCompressionProvider.MaximumDeflateSize" />
     </Type>
     <Type Name="Microsoft.IdentityModel.Tokens.EcdhKeyExchangeProvider" Id="T:Microsoft.IdentityModel.Tokens.EcdhKeyExchangeProvider">
       <Member Id="M:Microsoft.IdentityModel.Tokens.EcdhKeyExchangeProvider.#ctor(Microsoft.IdentityModel.Tokens.SecurityKey,Microsoft.IdentityModel.Tokens.SecurityKey,System.String,System.String)" />
@@ -1837,6 +1849,8 @@
       <Member Id="M:Microsoft.IdentityModel.Tokens.SignatureProvider.Dispose" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.SignatureProvider.Dispose(System.Boolean)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.SignatureProvider.Sign(System.Byte[])" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.SignatureProvider.Sign(System.Byte[],System.Int32,System.Int32)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.SignatureProvider.Sign(System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.Int32@)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.SignatureProvider.Verify(System.Byte[],System.Byte[])" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.SignatureProvider.Verify(System.Byte[],System.Int32,System.Int32,System.Byte[],System.Int32,System.Int32)" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.SignatureProvider.Algorithm" />
@@ -1885,6 +1899,8 @@
       <Member Id="M:Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.GetKeyedHashAlgorithm(System.Byte[],System.String)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.ReleaseKeyedHashAlgorithm(System.Security.Cryptography.KeyedHashAlgorithm)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Sign(System.Byte[])" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Sign(System.Byte[],System.Int32,System.Int32)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Sign(System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.Int32@)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Verify(System.Byte[],System.Byte[])" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Verify(System.Byte[],System.Byte[],System.Int32)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Verify(System.Byte[],System.Int32,System.Int32,System.Byte[],System.Int32,System.Int32)" />
@@ -2806,6 +2822,11 @@
     <Type Name="Microsoft.IdentityModel.Validators.AadTokenValidationParametersExtension" Id="T:Microsoft.IdentityModel.Validators.AadTokenValidationParametersExtension">
       <Member Id="M:Microsoft.IdentityModel.Validators.AadTokenValidationParametersExtension.EnableAadSigningKeyIssuerValidation(Microsoft.IdentityModel.Tokens.TokenValidationParameters)" />
     </Type>
+    <Type Name="Microsoft.IdentityModel.Validators.ProtocolVersion" Id="T:Microsoft.IdentityModel.Validators.ProtocolVersion">
+      <Member Id="F:Microsoft.IdentityModel.Validators.ProtocolVersion.V1" />
+      <Member Id="F:Microsoft.IdentityModel.Validators.ProtocolVersion.V11" />
+      <Member Id="F:Microsoft.IdentityModel.Validators.ProtocolVersion.V2" />
+    </Type>
   </Namespace>
   <Namespace Name="Microsoft.IdentityModel.Xml">
     <Type Name="Microsoft.IdentityModel.Xml.CanonicalizingTransfrom" Id="T:Microsoft.IdentityModel.Xml.CanonicalizingTransfrom">
@@ -2817,6 +2838,7 @@
     </Type>
     <Type Name="Microsoft.IdentityModel.Xml.DelegatingXmlDictionaryReader" Id="T:Microsoft.IdentityModel.Xml.DelegatingXmlDictionaryReader">
       <Member Id="M:Microsoft.IdentityModel.Xml.DelegatingXmlDictionaryReader.#ctor" />
+      <Member Id="M:Microsoft.IdentityModel.Xml.DelegatingXmlDictionaryReader.Close" />
       <Member Id="M:Microsoft.IdentityModel.Xml.DelegatingXmlDictionaryReader.GetAttribute(System.Int32)" />
       <Member Id="M:Microsoft.IdentityModel.Xml.DelegatingXmlDictionaryReader.GetAttribute(System.String)" />
       <Member Id="M:Microsoft.IdentityModel.Xml.DelegatingXmlDictionaryReader.GetAttribute(System.String,System.String)" />
@@ -2832,6 +2854,7 @@
       <Member Id="M:Microsoft.IdentityModel.Xml.DelegatingXmlDictionaryReader.ReadAttributeValue" />
       <Member Id="M:Microsoft.IdentityModel.Xml.DelegatingXmlDictionaryReader.ReadContentAsBase64(System.Byte[],System.Int32,System.Int32)" />
       <Member Id="M:Microsoft.IdentityModel.Xml.DelegatingXmlDictionaryReader.ReadContentAsBinHex(System.Byte[],System.Int32,System.Int32)" />
+      <Member Id="M:Microsoft.IdentityModel.Xml.DelegatingXmlDictionaryReader.ReadContentAsUniqueId" />
       <Member Id="M:Microsoft.IdentityModel.Xml.DelegatingXmlDictionaryReader.ReadValueChunk(System.Char[],System.Int32,System.Int32)" />
       <Member Id="M:Microsoft.IdentityModel.Xml.DelegatingXmlDictionaryReader.ResolveEntity" />
       <Member Id="P:Microsoft.IdentityModel.Xml.DelegatingXmlDictionaryReader.AttributeCount" />
@@ -2901,13 +2924,21 @@
     </Type>
     <Type Name="Microsoft.IdentityModel.Xml.DSigSerializer" Id="T:Microsoft.IdentityModel.Xml.DSigSerializer">
       <Member Id="M:Microsoft.IdentityModel.Xml.DSigSerializer.#ctor" />
+      <Member Id="M:Microsoft.IdentityModel.Xml.DSigSerializer.CreateKeyInfo(System.Xml.XmlReader)" />
       <Member Id="M:Microsoft.IdentityModel.Xml.DSigSerializer.ReadCanonicalizationMethod(System.Xml.XmlReader)" />
       <Member Id="M:Microsoft.IdentityModel.Xml.DSigSerializer.ReadKeyInfo(System.Xml.XmlReader)" />
       <Member Id="M:Microsoft.IdentityModel.Xml.DSigSerializer.ReadReference(System.Xml.XmlReader)" />
+      <Member Id="M:Microsoft.IdentityModel.Xml.DSigSerializer.ReadReferences(System.Xml.XmlReader)" />
       <Member Id="M:Microsoft.IdentityModel.Xml.DSigSerializer.ReadSignature(System.Xml.XmlReader)" />
       <Member Id="M:Microsoft.IdentityModel.Xml.DSigSerializer.ReadSignatureMethod(System.Xml.XmlReader)" />
       <Member Id="M:Microsoft.IdentityModel.Xml.DSigSerializer.ReadSignedInfo(System.Xml.XmlReader)" />
       <Member Id="M:Microsoft.IdentityModel.Xml.DSigSerializer.ReadTransforms(System.Xml.XmlReader,Microsoft.IdentityModel.Xml.Reference)" />
+      <Member Id="M:Microsoft.IdentityModel.Xml.DSigSerializer.TryReadKeyInfoType(System.Xml.XmlReader,Microsoft.IdentityModel.Xml.KeyInfo@)" />
+      <Member Id="M:Microsoft.IdentityModel.Xml.DSigSerializer.TryReadKeyName(System.Xml.XmlReader,System.String@)" />
+      <Member Id="M:Microsoft.IdentityModel.Xml.DSigSerializer.TryReadKeyValueType(System.Xml.XmlReader,Microsoft.IdentityModel.Xml.KeyInfo@)" />
+      <Member Id="M:Microsoft.IdentityModel.Xml.DSigSerializer.TryReadRetrievalMethod(System.Xml.XmlReader,System.String@)" />
+      <Member Id="M:Microsoft.IdentityModel.Xml.DSigSerializer.TryReadRSAKeyValue(System.Xml.XmlReader,Microsoft.IdentityModel.Xml.RSAKeyValue@)" />
+      <Member Id="M:Microsoft.IdentityModel.Xml.DSigSerializer.TryReadX509Data(System.Xml.XmlReader,Microsoft.IdentityModel.Xml.X509Data@)" />
       <Member Id="M:Microsoft.IdentityModel.Xml.DSigSerializer.WriteKeyInfo(System.Xml.XmlWriter,Microsoft.IdentityModel.Xml.KeyInfo)" />
       <Member Id="M:Microsoft.IdentityModel.Xml.DSigSerializer.WriteReference(System.Xml.XmlWriter,Microsoft.IdentityModel.Xml.Reference)" />
       <Member Id="M:Microsoft.IdentityModel.Xml.DSigSerializer.WriteSignature(System.Xml.XmlWriter,Microsoft.IdentityModel.Xml.Signature)" />

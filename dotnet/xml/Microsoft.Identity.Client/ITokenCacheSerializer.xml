@@ -1,6 +1,6 @@
 <Type Name="ITokenCacheSerializer" FullName="Microsoft.Identity.Client.ITokenCacheSerializer">
   <TypeSignature Language="C#" Value="public interface ITokenCacheSerializer" />
-  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITokenCacheSerializer" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit ITokenCacheSerializer" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Client.ITokenCacheSerializer" />
   <TypeSignature Language="VB.NET" Value="Public Interface ITokenCacheSerializer" />
   <TypeSignature Language="F#" Value="type ITokenCacheSerializer = interface" />
@@ -15,6 +15,15 @@
     <AssemblyVersion>4.54.1.0</AssemblyVersion>
     <AssemblyVersion>4.55.0.0</AssemblyVersion>
     <AssemblyVersion>4.56.0.0</AssemblyVersion>
+    <AssemblyVersion>4.57.0.0</AssemblyVersion>
+    <AssemblyVersion>4.58.0.0</AssemblyVersion>
+    <AssemblyVersion>4.58.1.0</AssemblyVersion>
+    <AssemblyVersion>4.59.0.0</AssemblyVersion>
+    <AssemblyVersion>4.60.0.0</AssemblyVersion>
+    <AssemblyVersion>4.60.1.0</AssemblyVersion>
+    <AssemblyVersion>4.60.2.0</AssemblyVersion>
+    <AssemblyVersion>4.60.3.0</AssemblyVersion>
+    <AssemblyVersion>4.61.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces />
   <Docs>
@@ -36,15 +45,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.1.0</AssemblyVersion>
-        <AssemblyVersion>4.55.0.0</AssemblyVersion>
-        <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -80,15 +81,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.1.0</AssemblyVersion>
-        <AssemblyVersion>4.55.0.0</AssemblyVersion>
-        <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -128,15 +121,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.1.0</AssemblyVersion>
-        <AssemblyVersion>4.55.0.0</AssemblyVersion>
-        <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -173,15 +158,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.1.0</AssemblyVersion>
-        <AssemblyVersion>4.55.0.0</AssemblyVersion>
-        <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -191,7 +168,7 @@
         <summary>
              Serializes a part of the token cache - the refresh tokens - to the ADAL.NET 3.x cache format. 
              If you need to maintain SSO between an application using ADAL 3.x and this application using MSAL 3.x or later,
-             use <see cref="M:Microsoft.Identity.Client.ITokenCacheSerializer.SerializeAdalV3" />/<see cref="M:Microsoft.Identity.Client.ITokenCacheSerializer.DeserializeAdalV3(System.Byte[])" /> in adition to <see cref="M:Microsoft.Identity.Client.ITokenCacheSerializer.SerializeMsalV3" />/<see cref="M:Microsoft.Identity.Client.ITokenCacheSerializer.DeserializeMsalV3(System.Byte[],System.Boolean)" />.
+             use <see cref="M:Microsoft.Identity.Client.ITokenCacheSerializer.SerializeAdalV3" />/<see cref="M:Microsoft.Identity.Client.ITokenCacheSerializer.DeserializeAdalV3(System.Byte[])" /> in addition to <see cref="M:Microsoft.Identity.Client.ITokenCacheSerializer.SerializeMsalV3" />/<see cref="M:Microsoft.Identity.Client.ITokenCacheSerializer.DeserializeMsalV3(System.Byte[],System.Boolean)" />.
             
              See https://aka.ms/adal-to-msal-net/cache for details on how to use this advanced API correctly.
              </summary>
@@ -215,15 +192,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.1.0</AssemblyVersion>
-        <AssemblyVersion>4.55.0.0</AssemblyVersion>
-        <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -261,15 +230,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.48.1.0</AssemblyVersion>
-        <AssemblyVersion>4.49.1.0</AssemblyVersion>
-        <AssemblyVersion>4.51.0.0</AssemblyVersion>
-        <AssemblyVersion>4.52.0.0</AssemblyVersion>
-        <AssemblyVersion>4.53.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.0.0</AssemblyVersion>
-        <AssemblyVersion>4.54.1.0</AssemblyVersion>
-        <AssemblyVersion>4.55.0.0</AssemblyVersion>
-        <AssemblyVersion>4.56.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>

@@ -19,6 +19,14 @@
     <AssemblyVersion>6.32.2.0</AssemblyVersion>
     <AssemblyVersion>6.32.3.0</AssemblyVersion>
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
+    <AssemblyVersion>7.0.2.0</AssemblyVersion>
+    <AssemblyVersion>7.0.3.0</AssemblyVersion>
+    <AssemblyVersion>7.2.0.0</AssemblyVersion>
+    <AssemblyVersion>7.3.1.0</AssemblyVersion>
+    <AssemblyVersion>7.4.0.0</AssemblyVersion>
+    <AssemblyVersion>7.4.1.0</AssemblyVersion>
+    <AssemblyVersion>7.5.0.0</AssemblyVersion>
+    <AssemblyVersion>7.5.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.IdentityModel.Tokens.SecurityToken</BaseTypeName>
@@ -32,6 +40,36 @@
   </Docs>
   <Members>
     <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public JsonWebToken (ReadOnlyMemory&lt;char&gt; encodedTokenMemory);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.ReadOnlyMemory`1&lt;char&gt; encodedTokenMemory) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.#ctor(System.ReadOnlyMemory{System.Char})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (encodedTokenMemory As ReadOnlyMemory(Of Char))" />
+      <MemberSignature Language="F#" Value="new Microsoft.IdentityModel.JsonWebTokens.JsonWebToken : ReadOnlyMemory&lt;char&gt; -&gt; Microsoft.IdentityModel.JsonWebTokens.JsonWebToken" Usage="new Microsoft.IdentityModel.JsonWebTokens.JsonWebToken encodedTokenMemory" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="encodedTokenMemory" Type="System.ReadOnlyMemory&lt;System.Char&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="encodedTokenMemory">A ReadOnlyMemory{char} containing the JSON Web Token serialized in JWS or JWE Compact format.</param>
+        <summary>
+            Initializes a new instance of <see cref="T:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken" /> from a ReadOnlyMemory{char} in JWS or JWE Compact serialized format.
+            </summary>
+        <remarks>
+            See: https://datatracker.ietf.org/doc/html/rfc7519 (JWT)
+            See: https://datatracker.ietf.org/doc/html/rfc7515 (JWS)
+            See: https://datatracker.ietf.org/doc/html/rfc7516 (JWE)
+            <para>
+            The contents of the returned <see cref="T:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken" /> have not been validated; the JSON Web Token is simply decoded. Validation can be performed using the methods in <see cref="T:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler" />.
+            </para></remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="encodedTokenMemory" /> is empty.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when <paramref name="encodedTokenMemory" /> does not represent a valid JWS or JWE Compact serialization format.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public JsonWebToken (string jwtEncodedString);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string jwtEncodedString) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.#ctor(System.String)" />
@@ -40,19 +78,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>6.25.0.0</AssemblyVersion>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="jwtEncodedString" Type="System.String" />
@@ -81,19 +107,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>6.25.0.0</AssemblyVersion>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="header" Type="System.String" />
@@ -123,19 +137,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>6.25.0.0</AssemblyVersion>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -159,19 +161,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>6.25.0.0</AssemblyVersion>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -199,19 +189,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>6.25.0.0</AssemblyVersion>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
@@ -238,19 +216,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>6.25.0.0</AssemblyVersion>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -277,7 +243,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -290,7 +256,9 @@
         <remarks>
             Identifies the authorized party for the id_token.
             see: https://openid.net/specs/openid-connect-core-1_0.html
-            </remarks>
+            <para>
+            If the 'azp' claim is not found, an empty string is returned.
+            </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Ciphertext">
@@ -302,19 +270,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>6.25.0.0</AssemblyVersion>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -341,19 +297,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>6.25.0.0</AssemblyVersion>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Security.Claims.Claim&gt;</ReturnType>
@@ -378,19 +322,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>6.25.0.0</AssemblyVersion>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -418,19 +350,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>6.25.0.0</AssemblyVersion>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -456,19 +376,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>6.25.0.0</AssemblyVersion>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -492,19 +400,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>6.25.0.0</AssemblyVersion>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -528,19 +424,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>6.25.0.0</AssemblyVersion>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -565,19 +449,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>6.25.0.0</AssemblyVersion>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -601,19 +473,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>6.25.0.0</AssemblyVersion>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -640,19 +500,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>6.25.0.0</AssemblyVersion>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Claims.Claim</ReturnType>
@@ -683,19 +531,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>6.25.0.0</AssemblyVersion>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -730,19 +566,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>6.25.0.0</AssemblyVersion>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -777,19 +601,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>6.25.0.0</AssemblyVersion>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -816,19 +628,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>6.25.0.0</AssemblyVersion>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -855,19 +655,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>6.25.0.0</AssemblyVersion>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.JsonWebTokens.JsonWebToken</ReturnType>
@@ -894,19 +682,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>6.25.0.0</AssemblyVersion>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -928,19 +704,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>6.25.0.0</AssemblyVersion>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -962,19 +726,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>6.25.0.0</AssemblyVersion>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DateTime</ReturnType>
@@ -1001,19 +753,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>6.25.0.0</AssemblyVersion>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1040,19 +780,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>6.25.0.0</AssemblyVersion>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1080,19 +808,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>6.25.0.0</AssemblyVersion>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.SecurityKey</ReturnType>
@@ -1114,19 +830,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>6.25.0.0</AssemblyVersion>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.SecurityKey</ReturnType>
@@ -1150,19 +854,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>6.25.0.0</AssemblyVersion>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1189,12 +881,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1217,19 +904,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>6.25.0.0</AssemblyVersion>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1261,19 +936,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>6.25.0.0</AssemblyVersion>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1309,19 +972,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>6.25.0.0</AssemblyVersion>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1357,19 +1008,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>6.25.0.0</AssemblyVersion>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1403,19 +1042,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>6.25.0.0</AssemblyVersion>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1442,12 +1069,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1469,19 +1091,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>6.25.0.0</AssemblyVersion>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DateTime</ReturnType>
@@ -1508,19 +1118,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>6.25.0.0</AssemblyVersion>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DateTime</ReturnType>
@@ -1547,19 +1145,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>6.25.0.0</AssemblyVersion>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1586,19 +1172,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>6.25.0.0</AssemblyVersion>
-        <AssemblyVersion>6.25.1.0</AssemblyVersion>
-        <AssemblyVersion>6.27.0.0</AssemblyVersion>
-        <AssemblyVersion>6.28.1.0</AssemblyVersion>
-        <AssemblyVersion>6.29.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.0.0</AssemblyVersion>
-        <AssemblyVersion>6.30.1.0</AssemblyVersion>
-        <AssemblyVersion>6.31.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.0.0</AssemblyVersion>
-        <AssemblyVersion>6.32.1.0</AssemblyVersion>
-        <AssemblyVersion>6.32.2.0</AssemblyVersion>
-        <AssemblyVersion>6.32.3.0</AssemblyVersion>
-        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+        <AssemblyVersion>7.5.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>

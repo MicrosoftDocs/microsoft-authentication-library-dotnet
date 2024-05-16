@@ -21,7 +21,7 @@ Although the ROPC flow is useful in limited cases where developers want to provi
 In addition to the [Integrated Windows Authentication constraints](integrated-windows-authentication.md#iwa-constraints), the following also apply:
 
 - Available starting with MSAL 2.1.0.
-- Not compatible with conditional access and multi-factor authentication. As a consequence, if the app runs in an Azure AD tenant where the tenant admin requires multi-factor authentication, the flow cannot be used.
+- Not compatible with conditional access and multi-factor authentication. As a consequence, if the app runs in a Microsoft Entra tenant where the tenant admin requires multi-factor authentication, the flow cannot be used.
 - Only available for work and school accounts and **not** personal Microsoft accounts.
 - Available on .NET Framework and .NET/.NET Core, but not for Universal Windows Platform (UWP) applications.
 
@@ -76,16 +76,13 @@ static async Task GetATokenForGraph()
 
     if (accounts.Any())
     {
-        result = await app.AcquireTokenSilent(scopes, accounts.FirstOrDefault()).ExecuteAync();
+        result = await app.AcquireTokenSilent(scopes, accounts.FirstOrDefault()).ExecuteAsync();
     }
     else
     {
         try
         {
-            var securePassword = new SecureString();
-            foreach(char c in "dummy") // you should fetch the password keystroke
-            securePassword.AppendChar(c); // by keystroke
-            result = await app.AcquireTokenByUsernamePassword(scopes, "joe@contoso.com", securePassword).ExecuteAsync();
+            result = await app.AcquireTokenByUsernamePassword(scopes, "joe@contoso.com", "joepassword").ExecuteAsync();
         }
         catch (MsalException)
         {

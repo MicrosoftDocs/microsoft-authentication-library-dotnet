@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.Identity.Client.Broker" Version="4.56.0.0" />
-    <Assembly Name="Microsoft.Identity.Client.Desktop" Version="4.56.0.0" />
-    <Assembly Name="Microsoft.Identity.Client" Version="4.56.0.0" />
+    <Assembly Name="Microsoft.Identity.Client.Broker" Version="4.61.0.0" />
+    <Assembly Name="Microsoft.Identity.Client.Desktop" Version="4.61.0.0" />
+    <Assembly Name="Microsoft.Identity.Client" Version="4.61.0.0" />
   </Assemblies>
   <Namespace Name="Microsoft.Identity.Client">
     <Type Name="Microsoft.Identity.Client.AadAuthorityAudience" Id="T:Microsoft.Identity.Client.AadAuthorityAudience">
@@ -158,7 +158,6 @@
       <Member Id="P:Microsoft.Identity.Client.ApplicationOptions.ClientId" />
       <Member Id="P:Microsoft.Identity.Client.ApplicationOptions.ClientName" />
       <Member Id="P:Microsoft.Identity.Client.ApplicationOptions.ClientVersion" />
-      <Member Id="P:Microsoft.Identity.Client.ApplicationOptions.Component" />
       <Member Id="P:Microsoft.Identity.Client.ApplicationOptions.Instance" />
       <Member Id="P:Microsoft.Identity.Client.ApplicationOptions.KerberosServicePrincipalName" />
       <Member Id="P:Microsoft.Identity.Client.ApplicationOptions.LegacyCacheCompatibilityEnabled" />
@@ -210,6 +209,7 @@
     </Type>
     <Type Name="Microsoft.Identity.Client.AuthenticationResultMetadata" Id="T:Microsoft.Identity.Client.AuthenticationResultMetadata">
       <Member Id="M:Microsoft.Identity.Client.AuthenticationResultMetadata.#ctor(Microsoft.Identity.Client.TokenSource)" />
+      <Member Id="P:Microsoft.Identity.Client.AuthenticationResultMetadata.CacheLevel" />
       <Member Id="P:Microsoft.Identity.Client.AuthenticationResultMetadata.CacheRefreshReason" />
       <Member Id="P:Microsoft.Identity.Client.AuthenticationResultMetadata.DurationInCacheInMs" />
       <Member Id="P:Microsoft.Identity.Client.AuthenticationResultMetadata.DurationInHttpInMs" />
@@ -350,6 +350,7 @@
       <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplicationBuilder.WithClientClaims(System.Security.Cryptography.X509Certificates.X509Certificate2,System.Collections.Generic.IDictionary{System.String,System.String},System.Boolean,System.Boolean)" />
       <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplicationBuilder.WithClientSecret(System.String)" />
       <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplicationBuilder.WithGenericAuthority(System.String)" />
+      <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplicationBuilder.WithOidcAuthority(System.String)" />
       <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplicationBuilder.WithTelemetryClient(Microsoft.IdentityModel.Abstractions.ITelemetryClient[])" />
     </Type>
     <Type Name="Microsoft.Identity.Client.ConfidentialClientApplicationOptions" Id="T:Microsoft.Identity.Client.ConfidentialClientApplicationOptions">
@@ -578,6 +579,11 @@
       <Member Id="P:Microsoft.Identity.Client.Metrics.TotalAccessTokensFromIdP" />
       <Member Id="P:Microsoft.Identity.Client.Metrics.TotalDurationInMs" />
     </Type>
+    <Type Name="Microsoft.Identity.Client.MsalClaimsChallengeException" Id="T:Microsoft.Identity.Client.MsalClaimsChallengeException">
+      <Member Id="M:Microsoft.Identity.Client.MsalClaimsChallengeException.#ctor(System.String,System.String)" />
+      <Member Id="M:Microsoft.Identity.Client.MsalClaimsChallengeException.#ctor(System.String,System.String,System.Exception)" />
+      <Member Id="M:Microsoft.Identity.Client.MsalClaimsChallengeException.#ctor(System.String,System.String,System.Exception,Microsoft.Identity.Client.UiRequiredExceptionClassification)" />
+    </Type>
     <Type Name="Microsoft.Identity.Client.MsalClientException" Id="T:Microsoft.Identity.Client.MsalClientException">
       <Member Id="M:Microsoft.Identity.Client.MsalClientException.#ctor(System.String)" />
       <Member Id="M:Microsoft.Identity.Client.MsalClientException.#ctor(System.String,System.String)" />
@@ -608,13 +614,14 @@
       <Member Id="F:Microsoft.Identity.Client.MsalError.BrokerResponseReturnedError" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.CannotAccessUserInformationOrUserNotDomainJoined" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.CannotInvokeBroker" />
+      <Member Id="F:Microsoft.Identity.Client.MsalError.CertificateNotRsa" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.CertWithoutPrivateKey" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.ClientCredentialAuthenticationTypeMustBeDefined" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.ClientCredentialAuthenticationTypesAreMutuallyExclusive" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.ClientIdMustBeAGuid" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.CodeExpired" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.CombinedUserAppCacheNotSupported" />
-      <Member Id="F:Microsoft.Identity.Client.MsalError.CryptoNet45" />
+      <Member Id="F:Microsoft.Identity.Client.MsalError.CryptographicError" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.CurrentBrokerAccount" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.CustomMetadataInstanceOrUri" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.CustomWebUiRedirectUriMismatch" />
@@ -737,6 +744,7 @@
       <Member Id="F:Microsoft.Identity.Client.MsalException.BrokerErrorStatus" />
       <Member Id="F:Microsoft.Identity.Client.MsalException.BrokerErrorTag" />
       <Member Id="F:Microsoft.Identity.Client.MsalException.BrokerTelemetry" />
+      <Member Id="F:Microsoft.Identity.Client.MsalException.ManagedIdentitySource" />
       <Member Id="M:Microsoft.Identity.Client.MsalException.#ctor" />
       <Member Id="M:Microsoft.Identity.Client.MsalException.#ctor(System.String)" />
       <Member Id="M:Microsoft.Identity.Client.MsalException.#ctor(System.String,System.String)" />
@@ -745,6 +753,7 @@
       <Member Id="M:Microsoft.Identity.Client.MsalException.ToJsonString" />
       <Member Id="M:Microsoft.Identity.Client.MsalException.ToString" />
       <Member Id="P:Microsoft.Identity.Client.MsalException.AdditionalExceptionData" />
+      <Member Id="P:Microsoft.Identity.Client.MsalException.CorrelationId" />
       <Member Id="P:Microsoft.Identity.Client.MsalException.ErrorCode" />
       <Member Id="P:Microsoft.Identity.Client.MsalException.IsRetryable" />
     </Type>
@@ -765,7 +774,6 @@
       <Member Id="M:Microsoft.Identity.Client.MsalServiceException.ToString" />
       <Member Id="M:Microsoft.Identity.Client.MsalServiceException.UpdateIsRetryable" />
       <Member Id="P:Microsoft.Identity.Client.MsalServiceException.Claims" />
-      <Member Id="P:Microsoft.Identity.Client.MsalServiceException.CorrelationId" />
       <Member Id="P:Microsoft.Identity.Client.MsalServiceException.Headers" />
       <Member Id="P:Microsoft.Identity.Client.MsalServiceException.ResponseBody" />
       <Member Id="P:Microsoft.Identity.Client.MsalServiceException.StatusCode" />
@@ -850,6 +858,7 @@
       <Member Id="M:Microsoft.Identity.Client.PublicClientApplicationBuilder.WithIosKeychainSecurityGroup(System.String)" />
       <Member Id="M:Microsoft.Identity.Client.PublicClientApplicationBuilder.WithKerberosTicketClaim(System.String,Microsoft.Identity.Client.Kerberos.KerberosTicketContainer)" />
       <Member Id="M:Microsoft.Identity.Client.PublicClientApplicationBuilder.WithMultiCloudSupport(System.Boolean)" />
+      <Member Id="M:Microsoft.Identity.Client.PublicClientApplicationBuilder.WithOidcAuthority(System.String)" />
       <Member Id="M:Microsoft.Identity.Client.PublicClientApplicationBuilder.WithParentActivityOrWindow(System.Func{System.IntPtr})" />
       <Member Id="M:Microsoft.Identity.Client.PublicClientApplicationBuilder.WithParentActivityOrWindow(System.Func{System.Object})" />
       <Member Id="M:Microsoft.Identity.Client.PublicClientApplicationBuilder.WithWindowsBrokerOptions(Microsoft.Identity.Client.WindowsBrokerOptions)" />
@@ -1049,6 +1058,7 @@
     <Type Name="Microsoft.Identity.Client.Broker.BrokerExtension" Id="T:Microsoft.Identity.Client.Broker.BrokerExtension">
       <Member Id="M:Microsoft.Identity.Client.Broker.BrokerExtension.WithBroker(Microsoft.Identity.Client.PublicClientApplicationBuilder,Microsoft.Identity.Client.BrokerOptions)" />
       <Member Id="M:Microsoft.Identity.Client.Broker.BrokerExtension.WithBrokerPreview(Microsoft.Identity.Client.PublicClientApplicationBuilder,System.Boolean)" />
+      <Member Id="M:Microsoft.Identity.Client.Broker.BrokerExtension.WithSsoPolicy(Microsoft.Identity.Client.PublicClientApplicationBuilder)" />
     </Type>
   </Namespace>
   <Namespace Name="Microsoft.Identity.Client.Cache">
@@ -1166,19 +1176,6 @@
     <Type Name="Microsoft.Identity.Client.Platforms.Features.DesktopOs.Kerberos.Credential" Id="T:Microsoft.Identity.Client.Platforms.Features.DesktopOs.Kerberos.Credential">
       <Member Id="M:Microsoft.Identity.Client.Platforms.Features.DesktopOs.Kerberos.Credential.#ctor" />
       <Member Id="M:Microsoft.Identity.Client.Platforms.Features.DesktopOs.Kerberos.Credential.Current" />
-    </Type>
-    <Type Name="Microsoft.Identity.Client.Platforms.Features.DesktopOs.Kerberos.TicketCacheReader" Id="T:Microsoft.Identity.Client.Platforms.Features.DesktopOs.Kerberos.TicketCacheReader">
-      <Member Id="M:Microsoft.Identity.Client.Platforms.Features.DesktopOs.Kerberos.TicketCacheReader.#ctor(System.String,System.Int64,System.String)" />
-      <Member Id="M:Microsoft.Identity.Client.Platforms.Features.DesktopOs.Kerberos.TicketCacheReader.Dispose" />
-      <Member Id="M:Microsoft.Identity.Client.Platforms.Features.DesktopOs.Kerberos.TicketCacheReader.Dispose(System.Boolean)" />
-      <Member Id="M:Microsoft.Identity.Client.Platforms.Features.DesktopOs.Kerberos.TicketCacheReader.RequestToken" />
-    </Type>
-    <Type Name="Microsoft.Identity.Client.Platforms.Features.DesktopOs.Kerberos.TicketCacheWriter" Id="T:Microsoft.Identity.Client.Platforms.Features.DesktopOs.Kerberos.TicketCacheWriter">
-      <Member Id="M:Microsoft.Identity.Client.Platforms.Features.DesktopOs.Kerberos.TicketCacheWriter.Connect(System.String)" />
-      <Member Id="M:Microsoft.Identity.Client.Platforms.Features.DesktopOs.Kerberos.TicketCacheWriter.Dispose" />
-      <Member Id="M:Microsoft.Identity.Client.Platforms.Features.DesktopOs.Kerberos.TicketCacheWriter.Dispose(System.Boolean)" />
-      <Member Id="M:Microsoft.Identity.Client.Platforms.Features.DesktopOs.Kerberos.TicketCacheWriter.Finalize" />
-      <Member Id="M:Microsoft.Identity.Client.Platforms.Features.DesktopOs.Kerberos.TicketCacheWriter.ImportCredential(System.Byte[],System.Int64)" />
     </Type>
   </Namespace>
   <Namespace Name="Microsoft.Identity.Client.Region">

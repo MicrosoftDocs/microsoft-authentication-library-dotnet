@@ -5,14 +5,14 @@ services: active-directory
 author: Dickson-Mwendia
 manager: CelesteDG
 
-ms.service: active-directory
-ms.subservice: develop
-ms.topic: reference
+ms.service: msal
+ms.subservice: microsoft-identity-web
+ms.topic: conceptual
 ms.workload: identity
 ms.date: 03/30/2023
 ms.author: jmprieur
 ms.reviewer: localden, jmprieur
-ms.custom: devx-track-csharp, aaddev, engagement-fy23
+ms.custom: devx-track-csharp, aaddev
 # Customer intent: As an application developer, I want to learn how Microsoft Identity Web can help me protect my services with the Microsoft identity platform. 
 ---
 
@@ -22,7 +22,7 @@ Microsoft Identity Web is a set of ASP.NET Core libraries that simplifies adding
 
 ## Supported application scenarios
 
-When building ASP.NET Core web apps or web APIs that use Azure Active Directory (Azure AD) or Azure AD B2C for identity and access management (IAM), Microsoft Identity Web is recommended for these scenarios:
+When building ASP.NET Core web apps or web APIs that use Microsoft Entra ID or Azure AD B2C for identity and access management (IAM), Microsoft Identity Web is recommended for these scenarios:
 
 - [Service/Daemon applications](/azure/active-directory/develop/scenario-daemon-overview)
 - [Web app that signs in users](/azure/active-directory/develop/scenario-web-app-sign-user-overview)
@@ -75,7 +75,7 @@ dotnet new webapp --auth SingleOrg --calls-graph --client-id "00001111-aaaa-2222
 ### Getting started with MSAL.NET
 
 1. Learn about [Scenarios](./getting-started/scenarios.md).
-1. You will need to [register your app](/azure/active-directory/develop/quickstart-register-app) with Azure Active Directory.
+1. You will need to [register your app](/azure/active-directory/develop/quickstart-register-app) with Microsoft Entra ID.
 
 ## Samples
 

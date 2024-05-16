@@ -18,7 +18,7 @@ An authentication broker is an application that runs on a user’s machine that 
 - **Enhanced security.** Many security enhancements will be delivered with the broker, without needing to update the application logic.
 - **Feature support.** With the help of the broker developers can access rich OS and service capabilities such as Windows Hello, conditional access policies, and FIDO keys without writing extra scaffolding code.
 - **System integration.** Applications that use the broker plug-and-play with the built-in account picker, allowing the user to quickly pick an existing account instead of reentering the same credentials over and over.
-- **Token Protection.** WAM ensures that the refresh tokens are device bound and [enables apps](../../advanced/proof-of-possession-tokens.md) to acquire device bound access tokens. See [Token Protection](/azure/active-directory/conditional-access/concept-token-protection)
+- **Token Protection.** WAM ensures that the refresh tokens are device bound and [enables apps](../../advanced/proof-of-possession-tokens.md) to acquire device bound access tokens. See [Token Protection](/azure/active-directory/conditional-access/concept-token-protection).
 
 ## Enabling WAM
 
@@ -33,7 +33,7 @@ WAM support is split across two packages:
 >[!NOTE]
 >For migration purposes, and if you have a .NET 6, .NET Core, or a .NET Standard application that needs to use _both_ WAM and the [embedded browser](/azure/active-directory/develop/msal-net-web-browsers#embedded-vs-system-web-ui), you will also need to use the [Microsoft.Identity.Client.Desktop](https://www.nuget.org/packages/Microsoft.Identity.Client.Desktop/) package. Once added, developers can use [`WithWindowsDesktopFeatures`](xref:Microsoft.Identity.Client.Desktop.DesktopExtensions.WithWindowsDesktopFeatures*) when setting up their public client application.
 >
->If your application targets UWP or `net-windows` (version-dependent Target Framework Moniker for Windows), WAM is included in the MSAL.NET package.
+>If your application targets UWP or `net-windows` (version-dependent Target Framework Moniker for Windows), WAM is included in the MSAL.NET package (applicable to versions 4.60.3 and below).
 
 After referencing the relevant packages, call [`WithBroker(BrokerOptions)`](xref:Microsoft.Identity.Client.Desktop.WamExtension.WithBroker*) with broker configuration options and [a window handle](#parent-window-handles) that the broker will be bound to.
 
@@ -80,7 +80,7 @@ catch (MsalUiRequiredException ex)
 
 ```
 
-When using the broker, if the [authority](/azure/active-directory/develop/msal-client-application-configuration#authority) used is targeting Azure AD as well as personal Microsoft accounts, the user will first be prompted to select an account using the built-in system account picker.
+When using the broker, if the [authority](/azure/active-directory/develop/msal-client-application-configuration#authority) used is targeting Microsoft Entra ID as well as personal Microsoft accounts, the user will first be prompted to select an account using the built-in system account picker.
 
 ![Demo of the WAM component](../../media/wam/wam-demo.gif)
 
@@ -152,13 +152,29 @@ ms-appx-web://microsoft.aad.brokerplugin/{client_id}
 This flow, also known as Resource Owner Password Credentials (ROPC), is not recommended except in test scenarios or in scenarios where service principal access to a resource gives it too much access and you can only scope it down with user flows. When using WAM, [`AcquireTokenByUsernamePassword`](xref:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenByUsernamePassword*) will let WAM manage the protocol and fetch tokens.
 
 >[!WARNING]
->There are a few important considerations that you need to account for when using the ROPC flow. One of the main ones is that it **doesn't support personal Microsoft accounts** and **Azure AD accounts with enabled multi-factor authentication**. Check out [Microsoft identity platform and OAuth 2.0 Resource Owner Password Credentials](/azure/active-directory/develop/v2-oauth-ropc) for the full overview.
+>There are a few important considerations that you need to account for when using the ROPC flow. One of the main ones is that it **doesn't support personal Microsoft accounts** and **Microsoft Entra accounts with enabled multi-factor authentication**. Check out [Microsoft identity platform and OAuth 2.0 Resource Owner Password Credentials](/azure/active-directory/develop/v2-oauth-ropc) for the full overview.
 
 ## WAM limitations
 
 - Azure B2C and Active Directory Federation Services (ADFS) authorities aren't supported. MSAL will fall back to using a browser for user authentication.
 - On Mac, Linux, and versions of Windows earlier than 10 or Windows Server 2019, MSAL will fall back to a browser.
 - Updated WAM broker is not available on UWP due to Windows API limitations. UWP apps will use the legacy WAM implementation.
+- At this time, WAM uses EdgeHTML as the browser engine for authentication flows. Organizations and identity providers need to ensure that EdgeHTML is an allowed browser engine on customer devices for WAM-based applications to work.
+
+## Package availability
+
+To use the broker, developers will need to call <xref:Microsoft.Identity.Client.Broker.BrokerExtension.WithBroker(Microsoft.Identity.Client.PublicClientApplicationBuilder,Microsoft.Identity.Client.BrokerOptions)>, hosted in the <xref:Microsoft.Identity.Client.Broker> package. Most of the .NET platform variants supported by MSAL.NET will need that package only, with a few exceptions. See the table below for a detailed mapping.
+
+| Framework                       | [Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client/) | [Microsoft.Identity.Client.Broker](https://www.nuget.org/packages/Microsoft.Identity.Client.Broker/) | [Microsoft.Identity.Client.Desktop](https://www.nuget.org/packages/Microsoft.Identity.Client.Desktop/) |
+|:--------------------------------|:--------------------------|:---------------------------------|:----------------------------------|
+| .NET 6+                         | ⛔ No                    | ✅ Yes                           | ⛔ No                            |
+| .NET 6+ Windows†                | ⛔ No                    | ✅ Yes                           | ✅ Yes (not recommended)         |
+| .NET MAUI                       | ✅ Yes                   | ⛔ No                            | ⛔ No                            |
+| .NET 4.6.2+                     | ⛔ No                    | ✅ Yes                           | ✅ Yes (not recommended)         |
+| .NET Standard                   | ⛔ No                    | ✅ Yes                           | ✅ Yes (not recommended)         |
+| .NET Core                       | ⛔ No                    | ✅ Yes                           | ✅ Yes (not recommended)         |
+
+**†** `Microsoft.Identity.Client` versions 4.61.0 and above no longer include `net6.0-windows7.0` binary. Existing desktop applications targeting `net6.0-windows` should reference `Microsoft.Identity.Client.Broker` when using interactive authentication with Windows Broker and call <xref:Microsoft.Identity.Client.Broker.BrokerExtension.WithBroker(Microsoft.Identity.Client.PublicClientApplicationBuilder,Microsoft.Identity.Client.BrokerOptions)>; or reference `Microsoft.Identity.Client.Desktop` when [authenticating with browser](https://aka.ms/msal-net-uses-web-browser) and call <xref:Microsoft.Identity.Client.Desktop.DesktopExtensions.WithWindowsEmbeddedBrowserSupport(Microsoft.Identity.Client.PublicClientApplicationBuilder)>.
 
 ## Troubleshooting
 
