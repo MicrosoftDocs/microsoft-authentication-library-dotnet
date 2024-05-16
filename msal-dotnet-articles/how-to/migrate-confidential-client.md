@@ -527,7 +527,7 @@ If you get an exception with either of the following messages:
 
 > `AADSTS700027: Client assertion contains an invalid signature. [Reason - The key was not found.]`
 
-> `AADSTS90002: Tenant 'cf61953b-e41a-46b3-b500-663d279ea744' not found. This may happen if there are no active`
+> `AADSTS90002: Tenant 'aaaabbbb-0000-cccc-1111-dddd2222eeee' not found. This may happen if there are no active`
 > `subscriptions for the tenant. Check to make sure you have the correct tenant ID. Check with your subscription`
 > `administrator.`
 

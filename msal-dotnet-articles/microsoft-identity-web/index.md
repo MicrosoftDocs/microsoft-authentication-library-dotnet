@@ -64,7 +64,7 @@ The Microsoft Identity Web project templates are included in .NET SDK versions 5
 In the following example, .NET CLI command creates a Blazor Server project that includes Microsoft Identity Web.
 
 ```dotnetcli
-dotnet new webapp --auth SingleOrg --calls-graph --client-id "00000000-0000-0000-0000-000000000000" --tenant-id "11111111-1111-1111-1111-111111111111" --output my-blazor-app
+dotnet new webapp --auth SingleOrg --calls-graph --client-id "00001111-aaaa-2222-bbbb-3333cccc4444" --tenant-id "aaaabbbb-0000-cccc-1111-dddd2222eeee" --output my-blazor-app
 ```
 <!-- 
 ## Conceptual documentation
