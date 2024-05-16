@@ -13,15 +13,16 @@ using Microsoft.Identity.Client;
 var app = ConfidentialClientApplicationBuilder
             .Create(clientId)
             .WithClientAssertion((AssertionRequestOptions options) => FetchExternalTokenAsync())
+            .WithCacheOptions(CacheOptions.EnableSharedCacheOptions) // for more cache options see https://learn.microsoft.com/entra/msal/dotnet/how-to/token-cache-serialization?tabs=msal
             .Build()
 
-var result = await app
-            .AcquireTokenForClient(scope).ExecuteAsync();
+var result = await app.AcquireTokenForClient(scope).ExecuteAsync();
 
 public async Task<string> FetchExternalTokenAsync() 
 {
-    // logic to get token from cache or other sources, like GitHub, Kubernetes, etc.
-     return token;
+    // Logic to get token from cache or other sources, like GitHub, Kubernetes, etc.
+    // Caching is the responsability of the implementer.
+    return token;
 }
 
 ```
