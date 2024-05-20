@@ -150,7 +150,7 @@ To enable distributed cache logging, set the <xref:Microsoft.Extensions.Logging.
      });
 ```
 
-See more sample code using Microsoft Identity Web token cache serializers in the [ConfidentialClientTokenCache sample](https://github.com/Azure-Samples/active-directory-dotnet-v1-to-v2/blob/master/ConfidentialClientTokenCache/Program.cs). Also see [Implement a custom logging provider](/dotnet/core/extensions/custom-logging-provider) for more details.
+See [Implement a custom logging provider](/dotnet/core/extensions/custom-logging-provider) for more details.
 
 ## Network traces
 

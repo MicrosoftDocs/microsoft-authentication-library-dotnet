@@ -168,7 +168,7 @@ public partial class AuthWrapper
 
 If you don't setup token caching, the token issuer will throttle you, resulting in errors. It also takes a lot less to get a token from the cache (10-20ms) than it is from ESTS (500-30000ms).
 
-If you want to implement a distributed token cache, see [Token cache for a web app or web API (confidential client application)](token-cache-serialization.md?tabs=aspnet) and the sample [active-directory-dotnet-v1-to-v2/ConfidentialClientTokenCache](https://github.com/Azure-Samples/active-directory-dotnet-v1-to-v2/tree/master/ConfidentialClientTokenCache).
+If you want to implement a distributed token cache, see [Token cache for a web app or web API (confidential client application)](token-cache-serialization.md?tabs=aspnet).
 
 [Learn more about the daemon scenario](/azure/active-directory/develop/scenario-daemon-overview) and how it's implemented with MSAL.NET or Microsoft.Identity.Web in new applications.
 
@@ -299,7 +299,7 @@ public partial class AuthWrapper
 
 #### Benefit from token caching
 
-For token caching in OBOs, use a distributed token cache. For details, see [Token cache for a web app or web API (confidential client app)](token-cache-serialization.md?tabs=aspnet) and read through [sample code](https://github.com/Azure-Samples/active-directory-dotnet-v1-to-v2/tree/master/ConfidentialClientTokenCache).
+For token caching in OBOs, use a distributed token cache. For details, see [Token cache for a web app or web API (confidential client app)](token-cache-serialization.md?tabs=aspnet).
 
 ```CSharp
 app.UseInMemoryTokenCaches(); // or a distributed token cache.
