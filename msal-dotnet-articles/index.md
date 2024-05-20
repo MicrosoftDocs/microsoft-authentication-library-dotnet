@@ -17,7 +17,9 @@ ms.custom: devx-track-csharp, aaddev
 
 # Microsoft Authentication Library for .NET
 
-MSAL.NET ([Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client)) is an authentication library that enables you to acquire tokens from Microsoft Entra ID, to access protected web APIs (Microsoft APIs or applications registered with Microsoft Entra ID). MSAL.NET is available on several .NET platforms (Desktop, MAUI, and web).
+MSAL.NET ([Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client)) is an authentication library that enables you to acquire tokens from Microsoft Entra ID to access protected web APIs (Microsoft APIs or applications registered with Microsoft Entra ID).
+
+MSAL.NET is available on several .NET platforms (desktop, mobile, and web).
 
 > [!div class="nextstepaction"]
 > [Get MSAL.NET >](https://www.nuget.org/packages/Microsoft.Identity.Client/)
@@ -26,20 +28,18 @@ MSAL.NET ([Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.I
 
 MSAL.NET supports different application topologies, including:
 
-- [Native clients](/azure/active-directory/develop/active-directory-dev-glossary#native-client)  (mobile or desktop applications) calling the Microsoft Graph API on behalf of a user,
+- [Native clients](/azure/active-directory/develop/active-directory-dev-glossary#native-client) (mobile or desktop applications) calling the Microsoft Graph API on behalf of a user.
 - Daemons, services, or [web clients](/azure/active-directory/develop/active-directory-dev-glossary#web-client) (web apps or web APIs) calling the Microsoft Graph API on behalf of a user, or without a user.
-
-With the exception of [User-agent based client](/azure/active-directory/develop/active-directory-dev-glossary#user-agent-based-client) which is only supported in JavaScript.
 
 For more details about the supported scenarios, see [Scenarios](./getting-started/scenarios.md).
 
-MSAL.NET supports multiple platforms, including .NET Framework, [.NET](https://www.microsoft.com/net/learn/get-started/windows), and [MAUI](https://dotnet.microsoft.com/apps/maui).
+MSAL.NET supports multiple platforms, including [.NET](https://dotnet.microsoft.com/), [.NET Framework](https://dotnet.microsoft.com/download/dotnet-framework), and [.NET MAUI](https://dotnet.microsoft.com/apps/maui).
 
 > [!NOTE]
-> Not all the authentication features are available in all platforms, mostly because:
+> Not all the authentication features are available in all platforms.
 >
->- Mobile platforms do not allow confidential client flows, because they are not meant to function as a backend and cannot store secrets securely.
->- On public clients (mobile and desktop), the default browser and redirect URIs are different from platform to platform and broker availability varies (details [in browser usage documentation](./acquiring-tokens/using-web-browsers.md)).
+>- Mobile platforms do not allow confidential client flows. They are not meant to function as a backend and cannot store secrets securely.
+>- On public clients (mobile and desktop) the default browser and redirect URIs are different from platform to platform, and broker availability varies (details [in browser usage documentation](./acquiring-tokens/using-web-browsers.md)).
 
 > [!NOTE]
 > MSAL.NET versions 4.61.0 and above do not provide support for Universal Windows Platform, Xamarin Android, and Xamarin iOS. Read more about the deprecation in [Announcing the Upcoming Deprecation of MSAL.NET for Xamarin and UWP](https://devblogs.microsoft.com/identity/uwp-xamarin-msal-net-deprecation/).
