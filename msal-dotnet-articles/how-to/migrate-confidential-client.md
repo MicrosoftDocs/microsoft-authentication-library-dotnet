@@ -474,8 +474,7 @@ public partial class AuthWrapper
 
 #### Benefit from token caching
 
-Because your web app uses `AcquireTokenByAuthorizationCode`, it needs to use a distributed token cache for token caching. For details, see [Token cache for a web app or web API](token-cache-serialization.md?tabs=aspnet) and read through [sample code](https://github.com/Azure-Samples/active-directory-dotnet-v1-to-v2/tree/master/ConfidentialClientTokenCache).
-
+Because your web app uses `AcquireTokenByAuthorizationCode`, it needs to use a distributed token cache for token caching. For details, see [Token cache for a web app or web API](token-cache-serialization.md?tabs=aspnet).
 
 ```CSharp
 app.UseInMemoryTokenCaches(); // or a distributed token cache.
