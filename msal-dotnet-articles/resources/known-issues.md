@@ -24,8 +24,8 @@ Users are unable to login interactively and a "Device is not compliant" error is
 #### Mitigation
 
 * The recommended approach is to use [WAM](../acquiring-tokens/desktop-mobile/wam.md).
-* Otherwise, you can also configure MSAL to use the system (default OS) browser (details in [Using web browsers (MSAL.NET)](/azure/active-directory/develop/msal-net-web-browsers#how-to-use-the-default-os-browser)). Both Chrome and Microsoft Edge browsers are able to satisfy the device policy.
-* If using ADAL, migrate to MSAL first. There is no mitigation for ADAL use.
+* You can also configure MSAL to use the system (default OS) browser. Details in [Using web browsers (MSAL.NET)](/azure/active-directory/develop/msal-net-web-browsers#how-to-use-the-default-os-browser). Both Microsoft Edge and Chrome browsers are able to satisfy the device policy.
+* If using ADAL, [**migrate to MSAL**](/entra/identity-platform/msal-migration). There is no mitigation for ADAL.
 
 ### Android
 
@@ -34,12 +34,6 @@ On Android, an `AndroidActivityNotFound` exception is thrown when the device doe
 ### iOS
 
 Please see [Xamarin iOS Considerations](/azure/active-directory/develop/msal-net-xamarin-ios-considerations#known-issues-with-ios-12-and-authentication).
-
-### UWP
-
-The recommended approach is to use [WAM](../acquiring-tokens/desktop-mobile/wam.md).
-
-Most issues on UWP occur due to network problems, such as proxies that block the traffic etc. Integrated Windows Auth may also be blocked by admins. For more details see [Considerations for using Universal Windows Platform with MSAL.NET](/azure/active-directory/develop/msal-net-uwp-considerations#troubleshooting).
 
 ### Desktop
 
@@ -50,4 +44,4 @@ For more details, please [refer to our documentation](../advanced/exceptions/und
 
 Behavior: an error similar to `Microsoft.Windows.SDK.Contracts.targets(4,5): error : Must use PackageReference` is thrown
 
-Starting with version 4.23, MSAL references `Microsoft.Windows.SDK.Contracts`. NuGet can only resolve this reference if the application consuming MSAL references it as `<PackageReference>` and not via the legacy `packages.config` mechanism. See #2247 for details on how to fix this.
+Starting with version 4.23, MSAL references `Microsoft.Windows.SDK.Contracts`. NuGet can only resolve this reference if the application consuming MSAL references it as `<PackageReference>` and not via the legacy `packages.config` mechanism. See [#2247](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/issues/2247) for details on how to fix this.
