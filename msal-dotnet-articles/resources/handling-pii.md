@@ -36,7 +36,7 @@ To read more about how MSAL.NET does logging, refer to [Logging in MSAL.NET](../
 
 ## What MSAL does not consider as PII
 
-- IDs related to an organization or tenant (not the user) like tenant ID, directory ID, or directory name (e.g. `contonso.onmicrosoft.com`).
+- IDs related to an organization or tenant (not the user) like tenant ID, directory ID, or directory name (e.g. `contoso.onmicrosoft.com`).
 - Authority.
 - Scopes and resource names.
 - Client (application) ID.
