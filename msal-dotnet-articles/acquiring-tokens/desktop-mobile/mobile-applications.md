@@ -1,9 +1,9 @@
 ---
-title: Using MSAL.NET With MAUI and Xamarin
+title: Using MSAL.NET With .NET MAUI
 description: "How to use MSAL.NET on mobile platforms."
 ---
 
-# Using MSAL.NET With MAUI and Xamarin
+# Using MSAL.NET With MAUI
 
 MSAL.NET can run on mobile devices (both iOS and Android) through applications built with [.NET Multi-platform App UI (MAUI)](https://dotnet.microsoft.com/apps/maui).
 
@@ -14,19 +14,19 @@ MSAL.NET can run on mobile devices (both iOS and Android) through applications b
 
 MSAL.NET can be used with authentication brokers on mobile devices, such as Microsoft Authenticator or the Company Portal. To learn more about how to configure applications to use brokers on iOS and Android, refer to [Use Microsoft Authenticator or Intune Company Portal on Xamarin applications](/azure/active-directory/develop/msal-net-use-brokers-with-xamarin-apps).
 
-## MAUI and Xamarin Android
+## MAUI on Android
 
 To get started with MSAL.NET integration on Android, refer to the following resources:
 
-- [How to migrate Xamarin ADAL apps to MSAL for Android](/azure/active-directory/develop/msal-net-migration-android-broker)
-- [Xamarin Android Configuration Tips + Troubleshooting](/azure/active-directory/develop/msal-net-xamarin-android-considerations)
-- [Xamarin Android System Browser Info](/azure/active-directory/develop/msal-net-system-browser-android-considerations)
+- [How to migrate Xamarin ADAL apps to MSAL for Android](/entra/identity-platform/msal-net-migration-android-broker)
+- [Xamarin Android Configuration Tips + Troubleshooting](/entra/identity-platform/msal-net-xamarin-android-considerations)
+- [Xamarin Android System Browser Info](/entra/identity-platform/msal-net-system-browser-android-considerations)
 
 To learn more about testing MSAL on Android devices, refer to the [MSAL for Android Wiki](https://github.com/AzureAD/microsoft-authentication-library-for-android/wiki/Android-Emulator-with-MSAL).
 
-## MAUI and Xamarin iOS
+## MAUI on iOS
 
 To get started with MSAL.NET integration on iOS, refer to the following resources:
 
-- [How to migrate Xamarin ADAL apps to MSAL for iOS](/azure/active-directory/develop/msal-net-migration-ios-broker)
-- [Xamarin iOS Configuration Tips + Troubleshooting](/azure/active-directory/develop/msal-net-xamarin-ios-considerations)
+- [How to migrate Xamarin ADAL apps to MSAL for iOS](/entra/identity-platform/msal-net-migration-ios-broker)
+- [Xamarin iOS Configuration Tips + Troubleshooting](/entra/identity-platform/msal-net-xamarin-ios-considerations)
