@@ -35,13 +35,14 @@ For more details about the supported scenarios, see [Scenarios](./getting-starte
 
 MSAL.NET supports multiple platforms, including .NET Framework, [.NET](https://www.microsoft.com/net/learn/get-started/windows), and [MAUI](https://dotnet.microsoft.com/apps/maui).
 
-  > [!NOTE]
-  > Not all the authentication features are available in all platforms, mostly because:
-  >
-  >- Mobile platforms do not allow confidential client flows, because they are not meant to function as a backend and cannot store secrets securely.
-  >- On public clients (mobile and desktop), the default browser and redirect URIs are different from platform to platform and broker availability varies (details [in browser usage documentation](./acquiring-tokens/using-web-browsers.md)).
+> [!NOTE]
+> Not all the authentication features are available in all platforms, mostly because:
+>
+>- Mobile platforms do not allow confidential client flows, because they are not meant to function as a backend and cannot store secrets securely.
+>- On public clients (mobile and desktop), the default browser and redirect URIs are different from platform to platform and broker availability varies (details [in browser usage documentation](./acquiring-tokens/using-web-browsers.md)).
 
-  Most of the articles in this MSAL.NET reference content describe the most complete platform (.NET Framework), but, topic by topic, it occasionally calls out differences between platforms.
+> [!NOTE]
+> MSAL.NET versions 4.61.0 and above do not provide support for Universal Windows Platform, Xamarin Android, and Xamarin iOS. Read more about the deprecation in [Announcing the Upcoming Deprecation of MSAL.NET for Xamarin and UWP](https://devblogs.microsoft.com/identity/uwp-xamarin-msal-net-deprecation/).
 
 ## Why use MSAL.NET ?
 
