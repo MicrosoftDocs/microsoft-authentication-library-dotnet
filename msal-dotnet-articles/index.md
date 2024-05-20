@@ -33,12 +33,12 @@ With the exception of [User-agent based client](/azure/active-directory/develop/
 
 For more details about the supported scenarios, see [Scenarios](./getting-started/scenarios.md).
 
-MSAL.NET supports multiple platforms, including .NET Framework, [.NET Core](https://www.microsoft.com/net/learn/get-started/windows)(including .NET 6), [MAUI](https://dotnet.microsoft.com/apps/maui), [Xamarin](https://www.xamarin.com/) Android, Xamarin iOS, and [UWP](/windows/uwp/get-started/universal-application-platform-guide).
+MSAL.NET supports multiple platforms, including .NET Framework, [.NET](https://www.microsoft.com/net/learn/get-started/windows), and [MAUI](https://dotnet.microsoft.com/apps/maui).
 
   > [!NOTE]
   > Not all the authentication features are available in all platforms, mostly because:
   >
-  >- Mobile platforms (Xamarin, MAUI and UWP) do not allow confidential client flows, because they are not meant to function as a backend and cannot store secrets securely.
+  >- Mobile platforms do not allow confidential client flows, because they are not meant to function as a backend and cannot store secrets securely.
   >- On public clients (mobile and desktop), the default browser and redirect URIs are different from platform to platform and broker availability varies (details [in browser usage documentation](./acquiring-tokens/using-web-browsers.md)).
 
   Most of the articles in this MSAL.NET reference content describe the most complete platform (.NET Framework), but, topic by topic, it occasionally calls out differences between platforms.
@@ -80,7 +80,7 @@ MSAL.NET is used to acquire tokens. It's not used to protect a Web API. If you a
 
 #### Acquiring tokens in desktop and mobile apps (public client applications)
 
-- [Acquiring a token interactively](acquiring-tokens/desktop-mobile/acquiring-tokens-interactively.md) enables the application to acquire a token after authenticating the user through an interactive sign-in. There are implementation-specific details depending on the target platforms, such as [Xamarin Android](acquiring-tokens/desktop-mobile/xamarin.md) or [UWP](acquiring-tokens/desktop-mobile/uwp.md).
+- [Acquiring a token interactively](acquiring-tokens/desktop-mobile/acquiring-tokens-interactively.md) enables the application to acquire a token after authenticating the user through an interactive sign-in.
 - Acquiring a token silently on a Windows domain or Microsoft Entra joined machine with [Integrated Windows Authentication](./acquiring-tokens/desktop-mobile/integrated-windows-authentication.md) or by using [Username/passwords](./acquiring-tokens/desktop-mobile/username-password-authentication.md) (not recommended).
 - Acquiring a token on a text-only device, by directing the user to sign-in on another device with the [Device Code Flow](./acquiring-tokens/desktop-mobile/device-code-flow.md).
 - Acquiring a token using the [Web Account Manager (WAM)](./acquiring-tokens/desktop-mobile/wam.md), a Windows OS component that acts a broker allowing the users of your app benefit from integration with accounts known to Windows.
@@ -101,9 +101,9 @@ MSAL.NET is a multi-framework library. All confidential client flows **are avail
 
 They are not available on the mobile platforms, because the OAuth2 spec states that there should be a secure, dedicated connection between the application and the identity provider. This secure connection can be achieved on web servers and web API back-ends by deploying a certificate (or a secret string, but this is not recommended for production). It cannot be achieved on mobile apps and other client applications that are distributed to users. As such, these confidential flows **are not available on**:
 
-- Xamarin.Android / MAUI Android
-- Xamarin.iOS / MAUI iOS
-- UWP and WinUI
+- MAUI Android
+- MAUI iOS
+- WinUI
 
 ## Migration from Azure Active Directory Authentication Library (ADAL)
 
