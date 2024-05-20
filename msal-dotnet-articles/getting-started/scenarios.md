@@ -29,7 +29,7 @@ As a developer, you can acquire a token from a number of **application types**, 
 
 MSAL.NET supports acquiring tokens either in the name of a **user** ![user icon](../media/user-icon.png), or, (and only for confidential client applications), in the name of the application itself (for no user). In that case the confidential client application shares a secret with Microsoft Entra ID ![Microsoft Entra ID icon](../media/certificate-icon.png)
 
-MSAL.NET supports a number of **platforms** (.NET Framework, .NET Core, Windows 10/UWP, MAUI, Xamarin.iOS, Xamarin.Android). .NET Core apps can also run on different operating systems (Windows, but also Linux and MacOs). The scenarios can be different depending on the platforms.
+MSAL.NET supports a number of **platforms** (.NET Framework, .NET, and .NET MAUI). .NET apps can also run on different operating systems (Windows, Linux, and macOS). The scenarios can be different depending on the platforms.
 
 ## The Scenarios
 
@@ -49,7 +49,7 @@ To call the web API in the name of the user, you'll use MSAL.NET `ConfidentialCl
 
 To call a web API from a mobile application, you use MSAL.NET's PublicClientApplication's [interactive](../acquiring-tokens/desktop-mobile/acquiring-tokens-interactively.md) token acquisition methods. These interactive methods enable you to control the sign-in UI experience, as well as the location of the interactive dialog on some platforms.
 
-To enable this interaction, MSAL.NET leverages a [web browser](/azure/active-directory/develop/msal-net-web-browsers). There are specificities depending on the mobile platform ([UWP](../acquiring-tokens/desktop-mobile/uwp.md), [iOS](/azure/active-directory/develop/msal-net-xamarin-ios-considerations), or [Android](/azure/active-directory/develop/msal-net-xamarin-android-considerations)). On iOS and Android, you can even choose if you want to leverage the system browser (the default), or an embedded web browser. You can enable some kind of token cache sharing on iOS.
+To enable this interaction, MSAL.NET leverages a [web browser](/azure/active-directory/develop/msal-net-web-browsers). There are specificities depending on the mobile platform. On iOS and Android, you can choose if you want to leverage the system browser (the default) or an embedded web browser. You can enable token cache sharing on iOS.
 
 ![Image showing flows in a mobile app that calls a web API on behalf of the user](../media/net-mobile-api.png)
 

@@ -196,13 +196,10 @@ Depending on the platform, additional configuration might be required for intera
 
 - [Configuration requirements and troubleshooting tips for Xamarin Android with MSAL.NET](/entra/identity-platform/msal-net-xamarin-android-considerations)
 - [Considerations for using Xamarin iOS with MSAL.NET](/entra/identity-platform/msal-net-xamarin-ios-considerations)
-- [Using MSAL.NET with UWP applications](./uwp.md)
 
 ## Samples
 
 | Sample | Platform | Description |
 |------ | -------- | ----------- |
 | [active-directory-dotnet-desktop-msgraph-v2](https://github.com/azure-samples/active-directory-dotnet-desktop-msgraph-v2) | Desktop (WPF) | Windows Desktop .NET (WPF) application calling the Microsoft Graph API. ![WPF app topology](../../media/wpf-app-topology.png) |
-| [active-directory-dotnet-native-uwp-v2](https://github.com/azure-samples/active-directory-dotnet-native-uwp-v2) | UWP | A Windows Universal Platform client application using MSAL.NET, accessing the Microsoft Graph for a user authenticating with Azure AD v2.0 endpoint. ![UWP app topology](../../media/uwp-app-topology.png) |
-| [https://github.com/Azure-Samples/active-directory-xamarin-native-v2](https://github.com/Azure-Samples/active-directory-xamarin-native-v2) | Xamarin iOS, Android, UWP | A simple Xamarin Forms app showcasing how to use MSAL to authenticate Microsoft accounts and Microsoft Entra ID via the Microsoft identity platform endpoint, and access the Microsoft Graph with the resulting token. ![Xamarin Forms app topology](../../media/xamarin-forms-topology.png) |
 | [https://github.com/Azure-Samples/active-directory-dotnet-native-aspnetcore-v2](https://github.com/Azure-Samples/active-directory-dotnet-native-aspnetcore-v2) | WPF, ASP.NET Core 2.0 Web API | A WPF application calling an ASP.NET Core Web API using Azure AD v2.0. ![Desktop and web app interaction topology](../../media/desktop-web-topology.png) |

@@ -49,7 +49,6 @@ Generally, it's recommended that you use the platform default, and this is typic
 | .NET Classic | Yes | Yes† | Embedded |
 | .NET Core | No | Yes† | System |
 | .NET Standard | No††† | Yes† | System |
-| UWP | Yes | No | Embedded |
 | Xamarin.Android | Yes | Yes  | System |
 | Xamarin.iOS | Yes | Yes  | System |
 | Xamarin.Mac| Yes | No | Embedded |
@@ -97,8 +96,6 @@ When you configure `http://localhost`, MSAL.NET will find a random open port and
 #### Limitations
 
 Azure B2C and ADFS 2019 do not yet implement the *any port* option. So, you cannot set `http://localhost` (no port) redirect URI, but only `http://localhost:1234` (with port) URI. This means that you will have to do your own port management, for example you can reserve a few ports and configure them as redirect URIs. Then your app can cycle through them until a port is free - this can then be used by MSAL.
-
-UWP doesn't support listening to a port and thus doesn't support system browsers.
 
 For more details, see [Localhost exceptions](/azure/active-directory/develop/reply-url#localhost-exceptions).
 

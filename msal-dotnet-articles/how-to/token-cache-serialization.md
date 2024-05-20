@@ -393,7 +393,7 @@ If you want to write your own token cache serializer, MSAL.NET provides custom t
 
 On confidential client applications that handle users (web apps that sign in users and call web APIs, and web APIs that call downstream web APIs), there can be many users. The users are processed in parallel. For security and performance reasons, our recommendation is to serialize one cache per user. Serialization events compute a cache key based on the identity of the processed user and serialize or deserialize a token cache for that user.
 
-Remember, custom serialization isn't available on mobile platforms (UWP, Xamarin.iOS, and Xamarin.Android). MSAL already defines a secure and performant serialization mechanism for these platforms. .NET desktop and .NET Core applications, however, have varied architectures. And MSAL can't implement a general-purpose serialization mechanism. 
+Remember, custom serialization isn't available on mobile platforms. MSAL already defines a secure and performant serialization mechanism for these platforms. .NET desktop and .NET Core applications, however, have varied architectures. And MSAL can't implement a general-purpose serialization mechanism. 
 
 For example, websites might choose to store tokens in a Redis cache, or desktop apps might store tokens in an encrypted file. So serialization isn't provided out of the box. To have a persistent token cache application in .NET desktop or .NET Core, customize the serialization.
 

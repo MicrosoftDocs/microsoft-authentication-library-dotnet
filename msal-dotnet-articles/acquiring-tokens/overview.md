@@ -25,7 +25,7 @@ As explained in [Scenarios](../getting-started/scenarios.md), there are many way
 
 For both public and confidential client applications, MSAL.NET supports adding a token cache that preserves authentication and refresh tokens, as well as proactively refreshes those on an as-needed basis. For details, see [Token cache serialization in MSAL.NET](../how-to/token-cache-serialization.md).
 
-In the case of Universal Windows Platform (UWP) applications, Xamarin for iOS, and Xamarin for Android, token cache serialization to an isolated storage is automatically provided by MSAL.NET and developers do not need to add any custom caching logic. For .NET desktop applications (.NET, .NET Framework, and .NET Core) the application needs to handle the token cache serialization and storage directly; however, helper classes are available to help simplify the process.
+For .NET desktop applications (.NET, .NET Framework, and .NET Core) the application needs to handle the token cache serialization and storage directly; however, helper classes are available to help simplify the process.
 
 ## Token acquisition methods
 
