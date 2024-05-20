@@ -40,9 +40,9 @@ App code that seeks access to protected scope "Hello.World"
 ```csharp
 // The following parameters are for sample app in lab4. Please configure them as per your app registration.
 // And also update corresponding entries in info.plist -> IntuneMAMSettings -> ADALClientID and ADALRedirectUri
-string clientId = "bd9933c9-a825-4f9a-82a0-bbf23c9049fd";
+string clientId = "00001111-aaaa-2222-bbbb-3333cccc4444";
 string redirectURI = $"msauth.com.xamarin.microsoftintunemamsample://auth";
-string tenantID = "f645ad92-e38d-4d1a-b510-d1b09a74a8ca";
+string tenantID = "aaaabbbb-0000-cccc-1111-dddd2222eeee";
 string[] Scopes = { "api://a8bf4bd3-c92d-44d0-8307-9753d975c21e/Hello.World" }; // needs admin consent
 string[] clientCapabilities = { "ProtApp" }; // Important: This must be passed to the PCABuilder
 

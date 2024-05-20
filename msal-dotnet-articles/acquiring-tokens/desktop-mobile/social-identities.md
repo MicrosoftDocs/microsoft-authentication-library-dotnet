@@ -35,7 +35,7 @@ The current guidance from B2C is to use `b2clogin.com` as the authority. For exa
 ```csharp
 // Azure AD B2C Coordinates
 public static string Tenant = "fabrikamb2c.onmicrosoft.com";
-public static string ClientID = "90c0fe63-bcf2-44d5-8fb7-b8bbc0b29dc6";
+public static string ClientID = "00001111-aaaa-2222-bbbb-3333cccc4444";
 public static string PolicySignUpSignIn = "b2c_1_susi";
 public static string PolicyEditProfile = "b2c_1_edit_profile";
 public static string PolicyResetPassword = "b2c_1_reset";

@@ -51,7 +51,7 @@ A .NET Core console application could have the following *appsettings.json* conf
   "Authentication": {
     "AzureCloudInstance": "AzurePublic",
     "AadAuthorityAudience": "AzureAdMultipleOrgs",
-    "ClientId": "ebe2ab4d-12b3-4446-8480-5c3828d04c50"
+    "ClientId": "00001111-aaaa-2222-bbbb-3333cccc4444"
   },
 
   "WebAPI": {

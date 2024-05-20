@@ -20,6 +20,10 @@
     <AssemblyVersion>4.58.1.0</AssemblyVersion>
     <AssemblyVersion>4.59.0.0</AssemblyVersion>
     <AssemblyVersion>4.60.0.0</AssemblyVersion>
+    <AssemblyVersion>4.60.1.0</AssemblyVersion>
+    <AssemblyVersion>4.60.2.0</AssemblyVersion>
+    <AssemblyVersion>4.60.3.0</AssemblyVersion>
+    <AssemblyVersion>4.61.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Identity.Client.AbstractApplicationBuilder&lt;Microsoft.Identity.Client.PublicClientApplicationBuilder&gt;</BaseTypeName>
@@ -42,7 +46,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.60.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.IPublicClientApplication</ReturnType>
@@ -67,7 +71,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.60.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.PublicClientApplicationBuilder</ReturnType>
@@ -96,7 +100,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.60.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.PublicClientApplicationBuilder</ReturnType>
@@ -124,7 +128,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.60.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -145,10 +149,7 @@
               <description>On Mac, Linux, and older versions of Windows a broker is not available.</description>
             </item>
             <item>
-              <description>In .NET 6 apps, target <c>net6.0-windows10.0.17763.0</c> for all Windows versions and target <c>net6.0</c> for Linux and Mac.</description>
-            </item>
-            <item>
-              <description>In .NET classic or .NET Core 3.1 apps, install Microsoft.Identity.Client.Desktop first and call <c>WithDesktopFeatures()</c>.</description>
+              <description>In .NET classic or .NET, install Microsoft.Identity.Client.Desktop first and call <c>WithDesktopFeatures()</c>.</description>
             </item>
             <item>
               <description>In mobile apps, the device must be Intune joined and Authenticator or Company Portal must be installed. See https://aka.ms/msal-brokers </description>
@@ -166,7 +167,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.60.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.PublicClientApplicationBuilder</ReturnType>
@@ -187,9 +188,8 @@
             </summary>
         <returns>A <see cref="T:Microsoft.Identity.Client.PublicClientApplicationBuilder" /> from which to set more
             parameters, and to create a public client application instance</returns>
-        <remarks>If your app uses .NET classic or .NET, and you wish to use the Windows broker, 
-            please install the NuGet package Microsoft.Identity.Client.Broker and call .WithBroker(BrokerOptions).
-            This is not needed if for MAUI apps or for apps targeting net6-windows or higher.</remarks>
+        <remarks>On desktop (.NET, .NET Framework) install the NuGet package Microsoft.Identity.Client.Broker and call .WithBroker(BrokerOptions).
+            This is not needed for MAUI apps.</remarks>
       </Docs>
     </Member>
     <Member MemberName="WithDefaultRedirectUri">
@@ -201,7 +201,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.60.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.PublicClientApplicationBuilder</ReturnType>
@@ -211,7 +211,7 @@
         <summary>
             Configures the public client application to use the recommended reply URI for the platform. 
             See https://aka.ms/msal-net-default-reply-uri.
-            <list type="table"><listheader><term>Platform</term><Description>Default Reply URI</Description></listheader><item><term>.NET desktop</term><Description><c>`https://login.microsoftonline.com/common/oauth2/nativeclient`</c></Description></item><item><term>UWP</term><Description>value of <c>WebAuthenticationBroker.GetCurrentApplicationCallbackUri()</c></Description></item><item><term>For system browser on .NET Core</term><Description><c>http://localhost</c></Description></item></list>
+            <list type="table"><listheader><term>Platform</term><Description>Default Reply URI</Description></listheader><item><term>.NET desktop</term><Description><c>`https://login.microsoftonline.com/common/oauth2/nativeclient`</c></Description></item><item><term>For system browser on .NET Core</term><Description><c>http://localhost</c></Description></item></list>
             NOTE:There will be an update to the default redirect URI in the future to accommodate for system browsers on the 
             .NET desktop and .NET Core platforms.
             </summary>
@@ -229,7 +229,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.60.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -265,7 +265,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.60.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.PublicClientApplicationBuilder</ReturnType>
@@ -276,12 +276,16 @@
       </Parameters>
       <Docs>
         <param name="servicePrincipalName">Service principal name to get Kerberos Service Ticket.</param>
-        <param name="ticketContainer">Container to use for Kerberos Ticket.</param>
+        <param name="ticketContainer">Specify where the Kerberos ticket will be returned - as a claim in the ID token or as a claim in the access token. 
+            If the ticket is for the client application, use the ID token. If the ticket is for the downstream API, use the access token.</param>
         <summary>
             Sets the parameters required to get a Kerberos Ticket from Azure AD service.
             </summary>
         <returns>The builder to chain the .With methods</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            The expiry of the Kerberos ticket is tied to the expiry of the token that contains it.
+            MSAL provides several helper APIs to read and write Kerberos tickets from the Windows Ticket Cache - see <see cref="T:Microsoft.Identity.Client.Kerberos.KerberosSupplementalTicketManager" />.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="WithMultiCloudSupport">
@@ -293,7 +297,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.60.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -327,7 +331,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.60.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.PublicClientApplicationBuilder</ReturnType>
@@ -360,7 +364,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.60.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -393,7 +397,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.60.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -410,7 +414,7 @@
       <Docs>
         <param name="parentActivityOrWindowFunc">The parent as an object, so that it can be used from shared NetStandard assemblies</param>
         <summary>
-             Sets a reference to the ViewController (if using Xamarin.iOS), Activity (if using Xamarin.Android)
+             Sets a reference to the ViewController (if using iOS), Activity (if using Android)
              IWin32Window or IntPtr (if using .Net Framework). Used for invoking the browser.
             </summary>
         <returns>The builder to chain the .With methods</returns>
@@ -429,7 +433,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.60.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>

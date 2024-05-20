@@ -30,6 +30,9 @@
     <AssemblyVersion>2.17.1.0</AssemblyVersion>
     <AssemblyVersion>2.17.2.0</AssemblyVersion>
     <AssemblyVersion>2.17.3.0</AssemblyVersion>
+    <AssemblyVersion>2.17.4.0</AssemblyVersion>
+    <AssemblyVersion>2.17.5.0</AssemblyVersion>
+    <AssemblyVersion>2.18.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Identity.Web.ClientAssertionProviderBase</BaseTypeName>
@@ -51,13 +54,37 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
-        <AssemblyVersion>2.17.3.0</AssemblyVersion>
+        <AssemblyVersion>2.18.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="managedIdentityClientId" Type="System.String" />
       </Parameters>
       <Docs>
         <param name="managedIdentityClientId">Optional ClientId of the Managed Identity or Workload Identity</param>
+        <summary>
+            See https://aka.ms/ms-id-web/certificateless.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManagedIdentityClientAssertion (string? managedIdentityClientId, string? tokenExchangeUrl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string managedIdentityClientId, string tokenExchangeUrl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.ManagedIdentityClientAssertion.#ctor(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (managedIdentityClientId As String, tokenExchangeUrl As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Identity.Web.ManagedIdentityClientAssertion : string * string -&gt; Microsoft.Identity.Web.ManagedIdentityClientAssertion" Usage="new Microsoft.Identity.Web.ManagedIdentityClientAssertion (managedIdentityClientId, tokenExchangeUrl)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
+        <AssemblyVersion>2.18.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="managedIdentityClientId" Type="System.String" />
+        <Parameter Name="tokenExchangeUrl" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="managedIdentityClientId">Optional ClientId of the Managed Identity or Workload Identity</param>
+        <param name="tokenExchangeUrl">Optional token exchange resource url. Default value is "api://AzureADTokenExchange/".</param>
         <summary>
             See https://aka.ms/ms-id-web/certificateless.
             </summary>
@@ -73,7 +100,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
-        <AssemblyVersion>2.17.3.0</AssemblyVersion>
+        <AssemblyVersion>2.18.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Identity.Web.ClientAssertion&gt;</ReturnType>

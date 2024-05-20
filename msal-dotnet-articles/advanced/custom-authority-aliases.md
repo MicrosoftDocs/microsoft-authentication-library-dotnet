@@ -28,8 +28,8 @@ The information returned is used to:
           50049
       ],
       "timestamp":"2023-03-27 16:25:19Z",
-      "trace_id":"3adb62d2-11d5-4bb0-acac-7d97451c0000",
-      "correlation_id":"ce374500-8786-4739-ac5b-9a57f9cc0140",
+      "trace_id":"0000aaaa-11bb-cccc-dd22-eeeeee333333",
+      "correlation_id":"aaaa0000-bb11-2222-33cc-444444dddddd",
       "error_uri":"https://login.microsoftonline.com/error?code=50049"
   }
   ```

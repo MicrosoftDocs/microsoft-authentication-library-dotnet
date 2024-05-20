@@ -19,7 +19,7 @@ Check out the [scenario overview](/entra/msal/dotnet/getting-started/scenarios) 
 
 [![NuGet badget for Microsoft.Identity.Client.Desktop](https://img.shields.io/nuget/v/Microsoft.Identity.Client.Desktop.svg?style=flat-square&label=Microsoft.Identity.Client.Desktop&colorB=00b200)](https://www.nuget.org/packages/Microsoft.Identity.Client.Desktop/)
 
-[![NuGet badget for Microsoft.Identity.Client.Extensions.Msal](https://img.shields.io/nuget/v/Microsoft.Identity.Client.Extensions.Msal.svg?style=flat-square&label=Microsoft.Identity.Client.Extensions.Msal&colorB=00b200)](https://www.nuget.org/packages/Microsoft.Identity.Client.Extensions.Msal/)
+[![NuGet badge for Microsoft.Identity.Client.Extensions.Msal](https://img.shields.io/nuget/v/Microsoft.Identity.Client.Extensions.Msal.svg?style=flat-square&label=Microsoft.Identity.Client.Extensions.Msal&colorB=00b200)](https://www.nuget.org/packages/Microsoft.Identity.Client.Extensions.Msal/)
 
 ### Higher-Level Libraries
 

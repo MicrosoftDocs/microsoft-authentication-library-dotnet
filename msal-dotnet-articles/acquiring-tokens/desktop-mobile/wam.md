@@ -18,7 +18,7 @@ An authentication broker is an application that runs on a user’s machine that 
 - **Enhanced security.** Many security enhancements will be delivered with the broker, without needing to update the application logic.
 - **Feature support.** With the help of the broker developers can access rich OS and service capabilities such as Windows Hello, conditional access policies, and FIDO keys without writing extra scaffolding code.
 - **System integration.** Applications that use the broker plug-and-play with the built-in account picker, allowing the user to quickly pick an existing account instead of reentering the same credentials over and over.
-- **Token Protection.** WAM ensures that the refresh tokens are device bound and [enables apps](../../advanced/proof-of-possession-tokens.md) to acquire device bound access tokens. See [Token Protection](/azure/active-directory/conditional-access/concept-token-protection)
+- **Token Protection.** WAM ensures that the refresh tokens are device bound and [enables apps](../../advanced/proof-of-possession-tokens.md) to acquire device bound access tokens. See [Token Protection](/azure/active-directory/conditional-access/concept-token-protection).
 
 ## Enabling WAM
 
@@ -165,10 +165,14 @@ To use the broker, developers will need to call <xref:Microsoft.Identity.Client.
 
 | Framework                       | [Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client/) | [Microsoft.Identity.Client.Broker](https://www.nuget.org/packages/Microsoft.Identity.Client.Broker/) | [Microsoft.Identity.Client.Desktop](https://www.nuget.org/packages/Microsoft.Identity.Client.Desktop/) |
 |:--------------------------------|:--------------------------|:---------------------------------|:----------------------------------|
-| net48                           | ⛔                       | ✅                               | ✅ (not recommended)             |
-| net6.0                          | ⛔                       | ✅                               | ⛔                               |
-| net6.0-windows                  | ✅                       | ⛔                               | ⛔                               |
-| .NET MAUI                       | ✅                       | ⛔                               | ⛔                               |
+| .NET 6+                         | ⛔ No                    | ✅ Yes                           | ⛔ No                            |
+| .NET 6+ Windows†                | ⛔ No                    | ✅ Yes                           | ✅ Yes (not recommended)         |
+| .NET MAUI                       | ✅ Yes                   | ⛔ No                            | ⛔ No                            |
+| .NET 4.6.2+                     | ⛔ No                    | ✅ Yes                           | ✅ Yes (not recommended)         |
+| .NET Standard                   | ⛔ No                    | ✅ Yes                           | ✅ Yes (not recommended)         |
+| .NET Core                       | ⛔ No                    | ✅ Yes                           | ✅ Yes (not recommended)         |
+
+**†** `Microsoft.Identity.Client` versions 4.61.0 and above no longer include `net6.0-windows7.0` binary. Existing desktop applications targeting `net6.0-windows` should reference `Microsoft.Identity.Client.Broker` when using interactive authentication with Windows Broker and call <xref:Microsoft.Identity.Client.Broker.BrokerExtension.WithBroker(Microsoft.Identity.Client.PublicClientApplicationBuilder,Microsoft.Identity.Client.BrokerOptions)>; or reference `Microsoft.Identity.Client.Desktop` when [authenticating with browser](https://aka.ms/msal-net-uses-web-browser) and call <xref:Microsoft.Identity.Client.Desktop.DesktopExtensions.WithWindowsEmbeddedBrowserSupport(Microsoft.Identity.Client.PublicClientApplicationBuilder)>.
 
 ## Troubleshooting
 
