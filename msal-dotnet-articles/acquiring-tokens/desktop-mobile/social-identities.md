@@ -9,7 +9,7 @@ ms.service: msal
 ms.subservice: msal-dotnet
 ms.topic: conceptual
 ms.workload: identity
-ms.date: 08/24/2023
+ms.date: 05/21/2024
 ms.author: dmwendia
 ms.reviewer: ddelimarsky, saeeda, jeferrie
 ms.custom: devx-track-csharp, aaddev, devx-track-dotnet
@@ -148,11 +148,12 @@ Or whichever special logic you were doing to process the `AADB2C90118` error.
 
 ## Resource Owner Password Credentials (ROPC) With B2C
 
-For more details on the ROPC flow, please see this [documentation](./username-password-authentication.md).
+For more details on the ROPC flow, please see the [username and password flow documentation](./username-password-authentication.md).
 
 ### This flow is not recommended
 
-This flow is **not recommended** because your application asking a user for their password is not secure. For more information about this problem, see [this article](https://news.microsoft.com/features/whats-solution-growing-problem-passwords-says-microsoft/).
+This flow is **not recommended** because your application asking a user for their password is not secure. For more information about this problem, see [why Microsoft is working to make passwords a thing of the past](https://news.microsoft.com/features/whats-solution-growing-problem-passwords-says-microsoft/).
+
 
 By using username/password you are giving-up a number of things:
 
@@ -160,9 +161,9 @@ By using username/password you are giving-up a number of things:
 - Users who need to do MFA won't be able to sign-in (as there is no interaction)
 - Users won't be able to do single sign-on
 
-### Configure the ROPC flow in AzureAD B2C
+### Configure the ROPC flow in Azure AD B2C
 
-In your AzureAD B2C tenant, create a new user flow and select **Sign in using ROPC**. This will enable the ROPC policy for your tenant. See [Configure the resource owner password credentials flow](/azure/active-directory-b2c/configure-ropc) for more details.
+In your Azure AD B2C tenant, create a new user flow and select **Sign in using ROPC**. This will enable the ROPC policy for your tenant. See [Configure the resource owner password credentials flow](/azure/active-directory-b2c/configure-ropc) for more details.
 
 `IPublicClientApplication` contains a method called `AcquireTokenByUsernamePassword`:
 
@@ -191,7 +192,7 @@ If you are a B2C developer using Google as an identity provider we recommend you
 
 ## Caching with B2C in MSAL.NET
 
-### Known issue with Azure B2C
+### Known issue with Azure AD B2C
 
 MSAL.Net supports a [token cache](/dotnet/api/microsoft.identity.client.tokencache). The token caching key is based on the claims returned by the Identity Provider. Currently MSAL.Net needs two claims to build a token cache key:
 
