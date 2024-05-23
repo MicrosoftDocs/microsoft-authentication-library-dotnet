@@ -17,7 +17,7 @@ ms.custom: devx-track-csharp, aaddev, has-adal-ref, devx-track-dotnet
 
 # Migrate public client applications from ADAL.NET to MSAL.NET
 
-This article describes how to migrate a public client application from Azure Active Directory Authentication Library for .NET (ADAL.NET) to Microsoft Authentication Library for .NET (MSAL.NET). Public client applications are desktop apps, including Win32, WPF, and UWP apps, and mobile apps, that call another service on the user's behalf. For more information about public client applications, see [Authentication flows and application scenarios](/azure/active-directory/develop/authentication-flows-app-scenarios).
+This article describes how to migrate a public client application from Azure Active Directory Authentication Library for .NET (ADAL.NET) to Microsoft Authentication Library for .NET (MSAL.NET). Public client applications are desktop apps, including Win32, WPF, and mobile apps, that call another service on the user's behalf. For more information about public client applications, see [Authentication flows and application scenarios](/azure/active-directory/develop/authentication-flows-app-scenarios).
 
 ## Migration steps
 
@@ -108,7 +108,7 @@ catch (MsalUiRequiredException) // no change in the pattern
     // 5. AcquireTokenInteractive
     var authResult = await pca.AcquireTokenInteractive(new[] { "User.Read" })
                               .WithAccount(accountToLogin)  // this already exists in MSAL, but it is more important for WAM
-                              .WithParentActivityOrWindow(myWindowHandle) // to be able to parent WAM's windows to your app (optional, but highly recommended; not needed on UWP)
+                              .WithParentActivityOrWindow(myWindowHandle) // to be able to parent WAM's windows to your app (optional, but highly recommended)
                               .ExecuteAsync();
 }
 ```
@@ -212,10 +212,7 @@ result = await context.AcquireTokenAsync(resource, clientId,
       // Explanation: the library was unable to query the current Windows logged-in user or this user is not AD or Azure AD
       // joined (work-place joined users are not supported).
 
-      // Mitigation 1: on UWP, check that the application has the following capabilities: Enterprise Authentication,
-      // Private Networks (Client and Server), User Account Information
-
-      // Mitigation 2: Implement your own logic to fetch the username (e.g. john@contoso.com) and use the
+      // Mitigation: Implement your own logic to fetch the username (e.g. john@contoso.com) and use the
       // AcquireTokenByIntegratedWindowsAuth form that takes in the username
 
       // Error Code: integrated_windows_auth_not_supported_managed_user

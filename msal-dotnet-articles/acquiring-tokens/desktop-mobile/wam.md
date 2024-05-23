@@ -33,12 +33,12 @@ WAM support is split across two packages:
 >[!NOTE]
 >For migration purposes, and if you have a .NET 6, .NET Core, or a .NET Standard application that needs to use _both_ WAM and the [embedded browser](/azure/active-directory/develop/msal-net-web-browsers#embedded-vs-system-web-ui), you will also need to use the [Microsoft.Identity.Client.Desktop](https://www.nuget.org/packages/Microsoft.Identity.Client.Desktop/) package. Once added, developers can use [`WithWindowsDesktopFeatures`](xref:Microsoft.Identity.Client.Desktop.DesktopExtensions.WithWindowsDesktopFeatures*) when setting up their public client application.
 >
->If your application targets UWP or `net-windows` (version-dependent Target Framework Moniker for Windows), WAM is included in the MSAL.NET package (applicable to versions 4.60.3 and below).
+>If your application targets `net-windows` (version-dependent Target Framework Moniker for Windows), WAM is included in the MSAL.NET package.
 
 After referencing the relevant packages, call [`WithBroker(BrokerOptions)`](xref:Microsoft.Identity.Client.Desktop.WamExtension.WithBroker*) with broker configuration options and [a window handle](#parent-window-handles) that the broker will be bound to.
 
 >[!NOTE]
->Most apps need to reference the [`Microsoft.Identity.Client.Broker`](https://www.nuget.org/packages/Microsoft.Identity.Client.Broker/) package to use this integration. .NET MAUI and UWP applications don't need to add the dependency because the functionality is embedded into MSAL.
+>Most apps need to reference the [`Microsoft.Identity.Client.Broker`](https://www.nuget.org/packages/Microsoft.Identity.Client.Broker/) package to use this integration. .NET MAUI applications don't need to add the dependency because the functionality is embedded into MSAL.
 
 ```csharp
 var scopes = new[] { "User.Read" };
@@ -158,8 +158,6 @@ This flow, also known as Resource Owner Password Credentials (ROPC), is not reco
 
 - Azure B2C and Active Directory Federation Services (ADFS) authorities aren't supported. MSAL will fall back to using a browser for user authentication.
 - On Mac, Linux, and versions of Windows earlier than 10 or Windows Server 2019, MSAL will fall back to a browser.
-- Updated WAM broker is not available on UWP due to Windows API limitations. UWP apps will use the legacy WAM implementation.
-- At this time, WAM uses EdgeHTML as the browser engine for authentication flows. Organizations and identity providers need to ensure that EdgeHTML is an allowed browser engine on customer devices for WAM-based applications to work.
 
 ## Package availability
 

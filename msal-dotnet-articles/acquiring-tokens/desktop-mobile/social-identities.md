@@ -220,9 +220,3 @@ One option is to use the "name" claim as the preferred username. The process is 
 ## Customizing the UI
 
 [Customize the user interface with Azure AD B2C](/azure/active-directory-b2c/customize-ui-overview).
-
-## Samples illustrating acquiring tokens interactively with MSAL.NET for B2C applications
-
-Sample | Platform | Description
------- | -------- | -----------
-[active-directory-b2c-xamarin-native](https://github.com/Azure-Samples/active-directory-b2c-xamarin-native) | Xamarin iOS, Xamarin Android, UWP | A simple Xamarin Forms app showcasing how to use MSAL.NET to authenticate users via Azure Active Directory B2C, and access a Web API with the resulting tokens.

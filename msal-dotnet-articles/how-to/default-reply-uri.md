@@ -12,10 +12,7 @@ This method's behavior is dependent upon the platform that you are using at the 
 | Platform                         | Redirect URI                                                          |
 |----------------------------------|-----------------------------------------------------------------------|
 | Desktop (.NET Framework)         | `https://login.microsoftonline.com/common/oauth2/nativeclient`        |
-| Universal Windows Platform (UWP) | Value of `WebAuthenticationBroker.GetCurrentApplicationCallbackUri()` |
 | .NET Core                        | `http://localhost`                                                    |
-
-For the UWP platform, we want to enhance the experience by enabling SSO with the browser by setting the value to the result of [`WebAuthenticationBroker.GetCurrentApplicationCallbackUri()`](/uwp/api/windows.security.authentication.web.webauthenticationbroker.getcurrentapplicationcallbackuri).
 
 For .NET Core, we are setting the value to the local host to enable the user to use the system browser for interactive authentication since .NET Core does not have a UI for the embedded web view at the moment.
 

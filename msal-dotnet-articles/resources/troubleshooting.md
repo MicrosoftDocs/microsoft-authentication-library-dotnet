@@ -59,20 +59,6 @@ Auto-discovery happens once and only once before the first call to acquire token
 
 Restart your service and capture logs. Look at `AuthenticationResult.AuthenticationResultMetadata.RegionDetails` to understand if auto-discovery failed. Send the logs to the MSAL team.
 
-## AcquireTokenInteractive crashes in a UWP app for ARM64
-
-### Symptom
-
-On ARM64 (for example a Surface Pro X), the app crashes with an unrecoverable exception in SharedLibrary.dll.
-
-### Workaround
-
-Add this to the .csproj file:
-
-```xml
-<UseDotNetNativeSharedAssemblyFrameworkPackage>false</UseDotNetNativeSharedAssemblyFrameworkPackage>
-```
-
 ## GetAccountAsync doesn't return any account in clouds scenarios
 
 ### Symptom

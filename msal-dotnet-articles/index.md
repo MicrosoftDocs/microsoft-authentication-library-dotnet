@@ -17,7 +17,9 @@ ms.custom: devx-track-csharp, aaddev
 
 # Microsoft Authentication Library for .NET
 
-MSAL.NET ([Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client)) is an authentication library that enables you to acquire tokens from Microsoft Entra ID, to access protected web APIs (Microsoft APIs or applications registered with Microsoft Entra ID). MSAL.NET is available on several .NET platforms (Desktop, Universal Windows Platform, MAUI, Xamarin Android, Xamarin iOS, Windows 8.1, and .NET Core).
+MSAL.NET ([Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client)) is an authentication library that enables you to acquire tokens from Microsoft Entra ID to access protected web APIs (Microsoft APIs or applications registered with Microsoft Entra ID).
+
+MSAL.NET is available on several .NET platforms (desktop, mobile, and web).
 
 > [!div class="nextstepaction"]
 > [Get MSAL.NET >](https://www.nuget.org/packages/Microsoft.Identity.Client/)
@@ -26,95 +28,56 @@ MSAL.NET ([Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.I
 
 MSAL.NET supports different application topologies, including:
 
-- [Native clients](/azure/active-directory/develop/active-directory-dev-glossary#native-client)  (mobile or desktop applications) calling the Microsoft Graph API on behalf of a user,
+- [Native clients](/azure/active-directory/develop/active-directory-dev-glossary#native-client) (mobile or desktop applications) calling the Microsoft Graph API on behalf of a user.
 - Daemons, services, or [web clients](/azure/active-directory/develop/active-directory-dev-glossary#web-client) (web apps or web APIs) calling the Microsoft Graph API on behalf of a user, or without a user.
-
-With the exception of [User-agent based client](/azure/active-directory/develop/active-directory-dev-glossary#user-agent-based-client) which is only supported in JavaScript.
 
 For more details about the supported scenarios, see [Scenarios](./getting-started/scenarios.md).
 
-MSAL.NET supports multiple platforms, including .NET Framework, [.NET Core](https://www.microsoft.com/net/learn/get-started/windows)(including .NET 6), [MAUI](https://dotnet.microsoft.com/apps/maui), [Xamarin](https://www.xamarin.com/) Android, Xamarin iOS, and [UWP](/windows/uwp/get-started/universal-application-platform-guide).
+MSAL.NET supports multiple platforms, including [.NET](https://dotnet.microsoft.com/), [.NET Framework](https://dotnet.microsoft.com/download/dotnet-framework), and [.NET MAUI](https://dotnet.microsoft.com/apps/maui).
 
-  > [!NOTE]
-  > Not all the authentication features are available in all platforms, mostly because:
-  >
-  >- Mobile platforms (Xamarin, MAUI and UWP) do not allow confidential client flows, because they are not meant to function as a backend and cannot store secrets securely.
-  >- On public clients (mobile and desktop), the default browser and redirect URIs are different from platform to platform and broker availability varies (details [in browser usage documentation](./acquiring-tokens/using-web-browsers.md)).
+> [!NOTE]
+> Not all the authentication features are available in all platforms.
+>
+>- Mobile platforms do not allow confidential client flows. They are not meant to function as a backend and cannot store secrets securely.
+>- On public clients (mobile and desktop) the default browser and redirect URIs are different from platform to platform, and broker availability varies (details [in browser usage documentation](./acquiring-tokens/using-web-browsers.md)).
 
-  Most of the articles in this MSAL.NET reference content describe the most complete platform (.NET Framework), but, topic by topic, it occasionally calls out differences between platforms.
+> [!NOTE]
+> MSAL.NET versions 4.61.0 and above do not provide support for Universal Windows Platform, Xamarin Android, and Xamarin iOS. Read more about the deprecation in [Announcing the Upcoming Deprecation of MSAL.NET for Xamarin and UWP](https://devblogs.microsoft.com/identity/uwp-xamarin-msal-net-deprecation/).
 
 ## Why use MSAL.NET ?
 
-MSAL.NET ([Microsoft Authentication Library for .NET](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet)) enables developers of .NET applications to acquire tokens in order to call secured web APIs. These web APIs can be the Microsoft Graph API, other Microsoft APIS, 3rd party Web APIs, or your own Web API.
+MSAL.NET provides several ways of getting a token. Using MSAL.NET is easier than using generic OAuth libraries or writing calls against the protocol. MSAL.NET provides several out-of-the-box benefits that simplify the developer workflow:
 
-As a token acquisition library, MSAL.NET provides several ways of getting a token, with a consistent API for a number of platforms. Using MSAL.NET adds value over using OAuth libraries and coding against the protocol by:
-
-- Maintains a **token cache** and **refreshes tokens** for you when they are close to expire.
-- Eliminates the need for you to handle token expiration by yourself.
-- Helps you specify which **audience** you want your application to sign-in (your organization, several organizations, work and school and Microsoft personal accounts, social identities with Azure AD B2C, users in sovereign and national clouds).
+- Maintain a **token cache** and **refresh tokens** for you when they are close to expiry.
+- Helps you specify which **audience** you want your application to sign-in (your organization, several organizations, work, school, and Microsoft personal accounts, social identities with Microsoft Entra External ID, or users in sovereign and national clouds).
 - Helps you set-up the application through **configuration** files.
 - Helps you troubleshoot the app by exposing actionable exceptions, logging, and telemetry.
 
-### MSAL.NET is about acquiring tokens, not protecting an API
-
-MSAL.NET is used to acquire tokens. It's not used to protect a Web API. If you are interested in protecting a Web API with Microsoft Entra ID, you might want to check out:
-
-- [Microsoft Entra ID with ASP.NET Core](/aspnet/core/security/authentication/azure-active-directory/). Note that some of these examples present web apps which also call a web API with MSAL.NET.
-- [Active-directory-dotnet-native-aspnetcore-v2](https://github.com/azure-samples/active-directory-dotnet-native-aspnetcore-v2) which shows how to call an ASP.NET Core Web API from a WPF application using Azure AD v2.
-- The [IdentityModel extensions for .Net](https://github.com/AzureAD/azure-activedirectory-identitymodel-extensions-for-dotnet) open source library providing middleware used by ASP.NET and ASP.NET Core to protect APIs.
-
-## Conceptual documentation
-
-### Getting started with MSAL.NET
+## Getting started with MSAL.NET
 
 1. Learn about [MSAL.NET usage scenarios](./getting-started/scenarios.md).
-1. You will need to [register your app](/azure/active-directory/develop/quickstart-register-app) with Microsoft Entra ID.
-1. Learn about the [types of client applications](/azure/active-directory/develop/msal-client-applications): public client and confidential client.
+1. [Register your app](/azure/active-directory/develop/quickstart-register-app) with Microsoft Entra ID.
+1. Learn about the [types of client applications](/entra/identity-platform/msal-client-applications): public client and confidential client.
 1. Learn about [acquiring tokens](acquiring-tokens/overview.md) to access a protected API.
 
-### Acquiring tokens
+## Considerations
 
-#### Acquiring tokens from cache in any app
+MSAL.NET is used to acquire tokens. It's not used to protect a Web API. If you are interested in protecting a Web API with Microsoft Entra ID, check out:
 
-- [AcquireTokenSilent](acquiring-tokens/acquiretokensilentasync-api.md) enables you to get a previously cached token.
-
-#### Acquiring tokens in desktop and mobile apps (public client applications)
-
-- [Acquiring a token interactively](acquiring-tokens/desktop-mobile/acquiring-tokens-interactively.md) enables the application to acquire a token after authenticating the user through an interactive sign-in. There are implementation-specific details depending on the target platforms, such as [Xamarin Android](acquiring-tokens/desktop-mobile/xamarin.md) or [UWP](acquiring-tokens/desktop-mobile/uwp.md).
-- Acquiring a token silently on a Windows domain or Microsoft Entra joined machine with [Integrated Windows Authentication](./acquiring-tokens/desktop-mobile/integrated-windows-authentication.md) or by using [Username/passwords](./acquiring-tokens/desktop-mobile/username-password-authentication.md) (not recommended).
-- Acquiring a token on a text-only device, by directing the user to sign-in on another device with the [Device Code Flow](./acquiring-tokens/desktop-mobile/device-code-flow.md).
-- Acquiring a token using the [Web Account Manager (WAM)](./acquiring-tokens/desktop-mobile/wam.md), a Windows OS component that acts a broker allowing the users of your app benefit from integration with accounts known to Windows.
-
-#### Acquiring tokens in web apps, web APIs, and daemon apps (confidential client applications)
-
-- Acquiring a token for the app (without a user) with [client credential flows](acquiring-tokens/web-apps-apis/client-credential-flows.md).
-- Acquiring a token [on behalf of a user](acquiring-tokens/web-apps-apis/on-behalf-of-flow.md) in service-to-service calls.
-- Acquiring a token for the signed-in user [by authorization code](acquiring-tokens/web-apps-apis/authorization-codes.md) in Web Apps.
-
-#### Confidential client availability
-
-MSAL.NET is a multi-framework library. All confidential client flows **are available on**:
-
-- .NET Core
-- .NET Desktop
-- .NET Standard
-
-They are not available on the mobile platforms, because the OAuth2 spec states that there should be a secure, dedicated connection between the application and the identity provider. This secure connection can be achieved on web servers and web API back-ends by deploying a certificate (or a secret string, but this is not recommended for production). It cannot be achieved on mobile apps and other client applications that are distributed to users. As such, these confidential flows **are not available on**:
-
-- Xamarin.Android / MAUI Android
-- Xamarin.iOS / MAUI iOS
-- UWP and WinUI
+- [Microsoft Entra ID with ASP.NET Core](/aspnet/core/security/authentication/azure-active-directory/). Examples showcase web apps that call a web API with MSAL.NET.
+- [active-directory-dotnet-native-aspnetcore-v2](https://github.com/azure-samples/active-directory-dotnet-native-aspnetcore-v2) shows how to call an ASP.NET Core Web API from a WPF application using Microsoft Entra ID.
+- The [IdentityModel extensions for .NET](https://github.com/AzureAD/azure-activedirectory-identitymodel-extensions-for-dotnet) open source library provides middleware used by ASP.NET and ASP.NET Core to protect APIs.
 
 ## Migration from Azure Active Directory Authentication Library (ADAL)
 
-Microsoft Authentication Library (MSAL) for .NET is the supported library that can be used for authentication token acquisition. If you or your organization are using the Azure Active Directory Authentication Library (ADAL), you should [migrate to MSAL](/azure/active-directory/develop/msal-migration). ADAL will reach end-of-life by **June 30, 2023**.
+Microsoft Authentication Library (MSAL) for .NET is the supported library that can be used for authentication token acquisition. If you or your organization are using the Azure Active Directory Authentication Library (ADAL), you should [migrate to MSAL](/entra/identity-platform/msal-migration). ADAL reached end-of-life on **June 30, 2023**.
 
 > [!NOTE]
-> While ADAL will be deprecated on June 30, 2023, applications depending on ADAL should not break as the underlying endpoint will remain active. However, no new features or support will be offered for ADAL.
+> While ADAL is deprecated since June 30, 2023, applications depending on ADAL should not break as the underlying endpoint will remain active. However, no new features or support will be offered for ADAL.
 
 ## Releases
 
-For previous releases, see the [Releases page on GitHub](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/releases). Minor (feature) releases are published every month. A feature could be included in a release or not depending on its complexity. Smaller patch or urgent fixes can be releases more frequently. Some of the security issues are back ported to the last major/minor release.
+For previous releases, see the [Releases on GitHub](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/releases).
 
 For work-in-progress and future releases, see [Milestones](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/milestones).
 
@@ -122,9 +85,4 @@ For additional information on versioning, see [Semantic versioning - API change 
 
 ## Samples
 
-See [our comprehensive sample list](/azure/active-directory/develop/active-directory-v2-code-samples).
-
-## FAQ
-
-- How MSAL.NET uses [web browsers](/azure/active-directory/develop/msal-net-web-browsers) for interactive authentication.
-- If you have issues with Xamarin.Forms applications leveraging MSAL.NET please read [Troubleshooting Xamarin.Android issues with MSAL](/azure/active-directory/develop/msal-net-xamarin-android-considerations).
+See [our comprehensive sample list](/entra/identity-platform/sample-v2-code).
