@@ -1,7 +1,6 @@
 ---
 title: MSAL.NET scenarios
 description: Learn the application scenarios and authentication flows supported by MSAL.NET
-services: active-directory
 author: Dickson-Mwendia
 manager: CelesteDG
 
@@ -12,7 +11,7 @@ ms.workload: identity
 ms.date: 03/17/2023
 ms.author: dmwendia
 ms.reviewer: localden
-ms.custom: devx-track-csharp, aaddev, engagement-fy23
+ms.custom: devx-track-csharp, aaddev
 # Customer intent: As an application developer, I want to know the application scenarios and authentication flows supported by MSAL.NET. 
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: Token cache serialization
 description: Learn about serialization and custom serialization of the token cache using the Microsoft Authentication Library for .NET (MSAL.NET).
-services: active-directory
 author: Dickson-Mwendia
 manager: CelesteDG
 
@@ -9,7 +8,7 @@ ms.service: msal
 ms.subservice: msal-dotnet
 ms.topic: conceptual
 ms.workload: identity
-ms.date: 08/24/2023
+ms.date: 05/20/2024
 ms.author: dmwendia
 ms.reviewer: ddelimarsky, jmprieur
 ms.custom: devx-track-csharp, aaddev, has-adal-ref, devx-track-dotnet

@@ -1,7 +1,6 @@
 ---
 title: Migrate public client applications to MSAL.NET
 description: Learn how to migrate a public client application from Azure Active Directory Authentication Library for .NET to Microsoft Authentication Library for .NET.
-services: active-directory
 author: Dickson-Mwendia
 manager: CelesteDG
 
@@ -9,7 +8,7 @@ ms.service: msal
 ms.subservice: msal-dotnet
 ms.topic: how-to
 ms.workload: identity
-ms.date: 08/31/2021
+ms.date: 05/20/2024
 ms.author: dmwendia
 ms.reviewer: celested, saeeda, shermanouko, jmprieur
 ms.custom: devx-track-csharp, aaddev, has-adal-ref, devx-track-dotnet
@@ -38,7 +37,7 @@ This article describes how to migrate a public client application from Azure Act
    - [Web Authentication Manager](/azure/active-directory/develop/scenario-desktop-acquire-token-wam) the preferred broker-based authentication on Windows.
    - [Interactive authentication](/azure/active-directory/develop/scenario-desktop-acquire-token-interactive) where the user is shown a web-based interface to complete the sign-in process.
    - [Integrated Windows authentication](/azure/active-directory/develop/scenario-desktop-acquire-token-integrated-windows-authentication) where a user signs using the same identity they used to sign into a Windows domain (for domain-joined or Microsoft Entra joined machines).
-   - [Username/password](/azure/active-directory/develop/scenario-desktop-acquire-token-username-password) where the sign-in occurs by providing a username/password credential.
+   - [Username/password](/azure/active-directory/develop/scenario-desktop-acquire-token-username-password) where the sign-in occurs by providing a username/password credential. Microsoft does not recommend the username and password flow because the application will be asking a user for their password directly, which is an insecure pattern.
    - [Device code flow](/azure/active-directory/develop/scenario-desktop-acquire-token-device-code-flow) where a device of limited UX shows you a device code to complete the authentication flow on an alternate device.
 
 
@@ -232,7 +231,8 @@ result = await context.AcquireTokenAsync(resource, clientId,
 
 ## [Username Password](#tab/up)
 
-Username Password authentication is where the sign-in occurs by providing a username/password credential.
+Username Password authentication is where the sign-in occurs by providing a username/password credential. Microsoft does not recommend this flow because it presents security risks that are not present in other flows.If you're using the username and password flow in production, we recommend switching to other secure alternatives available for your scenario.
+
 #### Find out if your code uses Username Password authentication
 
 The ADAL code for your app uses Username password authentication scenarios if it contains a call to `AcquireTokenAsync` available as an extension method of the `AuthenticationContextIntegratedAuthExtensions` class, with the following parameters:
