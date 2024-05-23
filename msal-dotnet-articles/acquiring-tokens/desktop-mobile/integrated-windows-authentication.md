@@ -14,7 +14,7 @@ If your desktop or mobile application runs on Windows and on a machine connected
 
 - **Federated** users only, i.e. those created in an Active Directory and backed by Microsoft Entra ID. Users created directly in Microsoft Entra ID, without AD backing - **managed** users - cannot use this auth flow. This limitation does not affect the Username/Password flow.
 - Does not work for MSA users. For MSA uses try out [WAM](./wam.md)
-- IWA is for apps written for .NET Framework, .NET Core and UWP platforms
+- IWA is for applications written for .NET and .NET Framework.
 - IWA does NOT bypass MFA (multi factor authentication). If MFA is configured, IWA might fail if an MFA challenge is required, because MFA requires user interaction. 
   > This one is tricky. IWA is non-interactive, but 2FA requires user interactivity. You do not control when the identity provider requests 2FA to be performed, the tenant admin does. From our observations, 2FA is required when you login from a different country, when not connected via VPN to a corporate network, and sometimes even when connected via VPN. Don’t expect a deterministic set of rules, Microsoft Entra ID uses AI to continuously learn if 2FA is required. You should fallback to a [user prompt](./acquiring-tokens-interactively.md) if IWA fails
 
@@ -120,10 +120,7 @@ static async Task GetATokenForGraph()
       // Explanation: the library was unable to query the current Windows logged-in user or this user is not AD or Azure AD
       // joined (work-place joined users are not supported). 
 
-      // Mitigation 1: on UWP, check that the application has the following capabilities: Enterprise Authentication, 
-      // Private Networks (Client and Server), User Account Information
-
-      // Mitigation 2: Implement your own logic to fetch the username (e.g. john@contoso.com) and use the 
+      // Mitigation: Implement your own logic to fetch the username (e.g. john@contoso.com) and use the 
       // AcquireTokenByIntegratedWindowsAuth form that takes in the username
 
       // Error Code: integrated_windows_auth_not_supported_managed_user

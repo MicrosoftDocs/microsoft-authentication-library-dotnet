@@ -1,7 +1,6 @@
 ---
 title: Migrate public client applications to MSAL.NET
 description: Learn how to migrate a public client application from Azure Active Directory Authentication Library for .NET to Microsoft Authentication Library for .NET.
-services: active-directory
 author: Dickson-Mwendia
 manager: CelesteDG
 
@@ -9,7 +8,7 @@ ms.service: msal
 ms.subservice: msal-dotnet
 ms.topic: how-to
 ms.workload: identity
-ms.date: 08/31/2021
+ms.date: 05/20/2024
 ms.author: dmwendia
 ms.reviewer: celested, saeeda, shermanouko, jmprieur
 ms.custom: devx-track-csharp, aaddev, has-adal-ref, devx-track-dotnet
@@ -18,7 +17,7 @@ ms.custom: devx-track-csharp, aaddev, has-adal-ref, devx-track-dotnet
 
 # Migrate public client applications from ADAL.NET to MSAL.NET
 
-This article describes how to migrate a public client application from Azure Active Directory Authentication Library for .NET (ADAL.NET) to Microsoft Authentication Library for .NET (MSAL.NET). Public client applications are desktop apps, including Win32, WPF, and UWP apps, and mobile apps, that call another service on the user's behalf. For more information about public client applications, see [Authentication flows and application scenarios](/azure/active-directory/develop/authentication-flows-app-scenarios).
+This article describes how to migrate a public client application from Azure Active Directory Authentication Library for .NET (ADAL.NET) to Microsoft Authentication Library for .NET (MSAL.NET). Public client applications are desktop apps, including Win32, WPF, and mobile apps, that call another service on the user's behalf. For more information about public client applications, see [Authentication flows and application scenarios](/azure/active-directory/develop/authentication-flows-app-scenarios).
 
 ## Migration steps
 
@@ -38,7 +37,7 @@ This article describes how to migrate a public client application from Azure Act
    - [Web Authentication Manager](/azure/active-directory/develop/scenario-desktop-acquire-token-wam) the preferred broker-based authentication on Windows.
    - [Interactive authentication](/azure/active-directory/develop/scenario-desktop-acquire-token-interactive) where the user is shown a web-based interface to complete the sign-in process.
    - [Integrated Windows authentication](/azure/active-directory/develop/scenario-desktop-acquire-token-integrated-windows-authentication) where a user signs using the same identity they used to sign into a Windows domain (for domain-joined or Microsoft Entra joined machines).
-   - [Username/password](/azure/active-directory/develop/scenario-desktop-acquire-token-username-password) where the sign-in occurs by providing a username/password credential.
+   - [Username/password](/azure/active-directory/develop/scenario-desktop-acquire-token-username-password) where the sign-in occurs by providing a username/password credential. Microsoft does not recommend the username and password flow because the application will be asking a user for their password directly, which is an insecure pattern.
    - [Device code flow](/azure/active-directory/develop/scenario-desktop-acquire-token-device-code-flow) where a device of limited UX shows you a device code to complete the authentication flow on an alternate device.
 
 
@@ -109,7 +108,7 @@ catch (MsalUiRequiredException) // no change in the pattern
     // 5. AcquireTokenInteractive
     var authResult = await pca.AcquireTokenInteractive(new[] { "User.Read" })
                               .WithAccount(accountToLogin)  // this already exists in MSAL, but it is more important for WAM
-                              .WithParentActivityOrWindow(myWindowHandle) // to be able to parent WAM's windows to your app (optional, but highly recommended; not needed on UWP)
+                              .WithParentActivityOrWindow(myWindowHandle) // to be able to parent WAM's windows to your app (optional, but highly recommended)
                               .ExecuteAsync();
 }
 ```
@@ -213,10 +212,7 @@ result = await context.AcquireTokenAsync(resource, clientId,
       // Explanation: the library was unable to query the current Windows logged-in user or this user is not AD or Azure AD
       // joined (work-place joined users are not supported).
 
-      // Mitigation 1: on UWP, check that the application has the following capabilities: Enterprise Authentication,
-      // Private Networks (Client and Server), User Account Information
-
-      // Mitigation 2: Implement your own logic to fetch the username (e.g. john@contoso.com) and use the
+      // Mitigation: Implement your own logic to fetch the username (e.g. john@contoso.com) and use the
       // AcquireTokenByIntegratedWindowsAuth form that takes in the username
 
       // Error Code: integrated_windows_auth_not_supported_managed_user
@@ -235,7 +231,8 @@ result = await context.AcquireTokenAsync(resource, clientId,
 
 ## [Username Password](#tab/up)
 
-Username Password authentication is where the sign-in occurs by providing a username/password credential.
+Username Password authentication is where the sign-in occurs by providing a username/password credential. Microsoft does not recommend this flow because it presents security risks that are not present in other flows.If you're using the username and password flow in production, we recommend switching to other secure alternatives available for your scenario.
+
 #### Find out if your code uses Username Password authentication
 
 The ADAL code for your app uses Username password authentication scenarios if it contains a call to `AcquireTokenAsync` available as an extension method of the `AuthenticationContextIntegratedAuthExtensions` class, with the following parameters:

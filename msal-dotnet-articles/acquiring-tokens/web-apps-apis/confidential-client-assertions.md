@@ -35,19 +35,12 @@ MSAL.NET has four methods to provide either credentials or assertions to the con
 
 ### Client assertions
 
-This is useful if you want to handle the certificate yourself. For example, if you wish to use Azure KeyVault's APIs for signing, which eliminates the need for downloading the certificates. A signed client assertion takes the form of a signed JWT with the payload containing the required authentication claims mandated by Microsoft Entra ID, Base64 encoded. To use it:
+This is useful if you want to handle the certificate yourself. For example, if you wish to use Azure KeyVault's APIs for signing, which eliminates the need for downloading the certificates. A signed client assertion takes the form of a signed JWT with the payload containing the required authentication claims mandated by Microsoft Entra ID, Base64 encoded. Or it can be a JWT form a different Identity Provider, for the "Federated Identity Credential" scenario.
+
+Use the delegate, which enables you to compute the assertion everytime MSAL needs to get a new token from the Identity Provider. Note that MSAL will not invoke your delegate if a token is found in the cache.
 
 ```csharp
-string signedClientAssertion = ComputeAssertion();
-app = ConfidentialClientApplicationBuilder.Create(config.ClientId)
-                                          .WithClientAssertion(signedClientAssertion)
-                                          .Build();
-```
-
-You can also use the delegate form, which enables you to compute the assertion just in time:
-
-```csharp
-string signedClientAssertion = ComputeAssertion();
+string signedClientAssertion = GetOrComputeAssertion();
 app = ConfidentialClientApplicationBuilder.Create(config.ClientId)
                                           .WithClientAssertion(async (AssertionRequestOptions options) => {
                                             // use 'options.ClientID' or 'options.TokenEndpoint' to generate client assertion

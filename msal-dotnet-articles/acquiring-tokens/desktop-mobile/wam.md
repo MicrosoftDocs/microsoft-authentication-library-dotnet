@@ -33,12 +33,12 @@ WAM support is split across two packages:
 >[!NOTE]
 >For migration purposes, and if you have a .NET 6, .NET Core, or a .NET Standard application that needs to use _both_ WAM and the [embedded browser](/azure/active-directory/develop/msal-net-web-browsers#embedded-vs-system-web-ui), you will also need to use the [Microsoft.Identity.Client.Desktop](https://www.nuget.org/packages/Microsoft.Identity.Client.Desktop/) package. Once added, developers can use [`WithWindowsDesktopFeatures`](xref:Microsoft.Identity.Client.Desktop.DesktopExtensions.WithWindowsDesktopFeatures*) when setting up their public client application.
 >
->If your application targets UWP or `net-windows` (version-dependent Target Framework Moniker for Windows), WAM is included in the MSAL.NET package (applicable to versions 4.60.3 and below).
+>If your application targets `net-windows` (version-dependent Target Framework Moniker for Windows), WAM is included in the MSAL.NET package.
 
 After referencing the relevant packages, call [`WithBroker(BrokerOptions)`](xref:Microsoft.Identity.Client.Desktop.WamExtension.WithBroker*) with broker configuration options and [a window handle](#parent-window-handles) that the broker will be bound to.
 
 >[!NOTE]
->Most apps need to reference the [`Microsoft.Identity.Client.Broker`](https://www.nuget.org/packages/Microsoft.Identity.Client.Broker/) package to use this integration. .NET MAUI and UWP applications don't need to add the dependency because the functionality is embedded into MSAL.
+>Most apps need to reference the [`Microsoft.Identity.Client.Broker`](https://www.nuget.org/packages/Microsoft.Identity.Client.Broker/) package to use this integration. .NET MAUI applications don't need to add the dependency because the functionality is embedded into MSAL.
 
 ```csharp
 var scopes = new[] { "User.Read" };
@@ -152,14 +152,12 @@ ms-appx-web://microsoft.aad.brokerplugin/{client_id}
 This flow, also known as Resource Owner Password Credentials (ROPC), is not recommended except in test scenarios or in scenarios where service principal access to a resource gives it too much access and you can only scope it down with user flows. When using WAM, [`AcquireTokenByUsernamePassword`](xref:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenByUsernamePassword*) will let WAM manage the protocol and fetch tokens.
 
 >[!WARNING]
->There are a few important considerations that you need to account for when using the ROPC flow. One of the main ones is that it **doesn't support personal Microsoft accounts** and **Microsoft Entra accounts with enabled multi-factor authentication**. Check out [Microsoft identity platform and OAuth 2.0 Resource Owner Password Credentials](/azure/active-directory/develop/v2-oauth-ropc) for the full overview.
+>Microsoft does not recommend using the username and password flow as the application will be asking a user for their password directly, which is an insecure pattern. Additionally, the ROPC flow **doesn't support personal Microsoft accounts** and **Microsoft Entra accounts with enabled multi-factor authentication**. Check out [Microsoft identity platform and OAuth 2.0 Resource Owner Password Credentials](/azure/active-directory/develop/v2-oauth-ropc) for the full overview.
 
 ## WAM limitations
 
 - Azure B2C and Active Directory Federation Services (ADFS) authorities aren't supported. MSAL will fall back to using a browser for user authentication.
 - On Mac, Linux, and versions of Windows earlier than 10 or Windows Server 2019, MSAL will fall back to a browser.
-- Updated WAM broker is not available on UWP due to Windows API limitations. UWP apps will use the legacy WAM implementation.
-- At this time, WAM uses EdgeHTML as the browser engine for authentication flows. Organizations and identity providers need to ensure that EdgeHTML is an allowed browser engine on customer devices for WAM-based applications to work.
 
 ## Package availability
 

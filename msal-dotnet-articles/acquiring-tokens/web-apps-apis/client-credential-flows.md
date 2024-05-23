@@ -7,7 +7,7 @@ description: "Client credential authentication flows allow services, APIs, and d
 
 ## Supported platforms
 
-While MSAL.NET is a multi-framework library, Confidential Client flows are not available on mobile and client-facing platforms (e.g., UWP, Xamarin.iOS, and Xamarin.Android) since there is no secure way of deploying a secret with an application.
+While MSAL.NET is a multi-framework library, Confidential Client flows are not available on mobile and client-facing platforms since there is no secure way of deploying a secret with an application.
 
 ## Supported client credentials
 

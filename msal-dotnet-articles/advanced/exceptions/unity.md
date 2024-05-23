@@ -11,7 +11,7 @@ MSAL 4.48.0 and above stopped using reflection on its `net6` target. This is the
 
 ### The issue
 
-When using MSAL.NET in a Unity UWP app, the application builds successfully. However at runtime, exceptions, like the ones below, are thrown that some members don't exist in MSAL.NET's code:
+When using MSAL.NET in a Unity app, the application builds successfully. However at runtime, exceptions, like the ones below, are thrown that some members don't exist in MSAL.NET's code:
 
 ```bash
 Error on deserializing read-only members in the class: No set method for property 'Claims' in type 'Microsoft.Identity.Client.OAuth2.OAuth2ResponseBase'.

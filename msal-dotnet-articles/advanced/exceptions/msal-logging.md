@@ -150,7 +150,7 @@ To enable distributed cache logging, set the <xref:Microsoft.Extensions.Logging.
      });
 ```
 
-See more sample code using Microsoft Identity Web token cache serializers in the [ConfidentialClientTokenCache sample](https://github.com/Azure-Samples/active-directory-dotnet-v1-to-v2/blob/master/ConfidentialClientTokenCache/Program.cs). Also see [Implement a custom logging provider](/dotnet/core/extensions/custom-logging-provider) for more details.
+See [Implement a custom logging provider](/dotnet/core/extensions/custom-logging-provider) for more details.
 
 ## Network traces
 
@@ -172,8 +172,8 @@ Logs help understand MSAL's behavior on the client side. To understand what's ha
 
 The correlation ID can be obtained in three ways:
 
-1. from a successful authentication result - <xref:Microsoft.Identity.Client.AuthenticationResult.CorrelationId?displayProperty=nameWithType>;
-2. from a service exception - <xref:Microsoft.Identity.Client.MsalServiceException.CorrelationId?displayProperty=nameWithType>, and
-3. by passing a custom correlation ID to <xref:Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder`1.WithCorrelationId(System.Guid)> when building a token request.
+1. From a successful authentication result - <xref:Microsoft.Identity.Client.AuthenticationResult.CorrelationId?displayProperty=nameWithType>;
+2. From a service exception - <xref:Microsoft.Identity.Client.MsalException.CorrelationId%2A?displayProperty=nameWithType>, and
+3. By passing a custom correlation ID to <xref:Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder%601.WithCorrelationId(System.Guid)> when building a token request.
 
 When providing your own correlation ID, use a different ID value for each request. Don't use a constant as we won't be able to differentiate between the requests.

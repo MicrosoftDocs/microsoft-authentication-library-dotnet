@@ -47,6 +47,10 @@ Supported ADFS versions in this federated scenario are ADFS v2 , ADFS v3 (Window
 
 When acquiring a token using the `AcquireTokenByIntegratedAuthentication` or `AcquireTokenByUsernamePassword` methods, MSAL.NET gets the identity provider to contact based on the username.  MSAL.NET receives a [SAML 1.1 token](/azure/active-directory/develop/reference-saml-tokens) after contacting the identity provider.  MSAL.NET then provides the SAML token to Microsoft Entra ID as a user assertion (similar to the [on-behalf-of flow](../web-apps-apis/on-behalf-of-flow.md) to get back a JWT.
 
+
+Microsoft recommends you **do not use** the username and password flow. In most scenarios, more secure alternatives are available and recommended. This flow requires a very high degree of trust in the application, and carries risks that are not present in other flows. You should only use this flow when other more secure flows aren't viable. For more information about why you want to avoid using this grant, see [why Microsoft is working to make passwords a thing of the past](https://news.microsoft.com/features/whats-solution-growing-problem-passwords-says-microsoft/).
+
+
 ## Case where MSAL connects directly to ADFS
 
 MSAL.NET supports connecting to AD FS 2019, which is OpenID Connect compliant and understands PKCE and scopes. This support requires that a service pack [KB 4490481](https://support.microsoft.com/help/4490481/windows-10-update-kb4490481) is applied to Windows Server. When connecting directly to AD FS, the authority you'll want to use to build your application is similar to `https://mysite.contoso.com/adfs/`.

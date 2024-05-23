@@ -25,9 +25,9 @@ Pros: end to end testing with real tokens
 
 Cons: UI automation is flaky. It's tedious to automate the login screens. Live accounts and "Work and School" have slightly different UI flows.
 
-**Strategy 2**: Use ROPC (Username/Password flow) to get tokens and test only your controllers
+**Strategy 2**: Use ROPC (Username/Password flow) to get tokens and test only your controllers. Microsoft does not recommend using the ROPC flow in production as it presents some security risks not present in other flows. Use this flow for testing purposes only.
 
-Pros: no ui automation
+Pros: No ui automation
 
 Cons: Does not work for Live accounts, where ROPC is not supported.
 
@@ -48,15 +48,9 @@ Daemon apps use pre-deployed secrets (passwords or certificates) to talk to Micr
 For native clients, there are several approaches to testing:
 
 - Use the [Username / Password](../acquiring-tokens/desktop-mobile/username-password-authentication.md) grant to fetch a token in a non-interactive way. This flow is not recommended in production, but it is reasonable to use it for testing.
-
 - Use a framework, like Appium or Xamarin.Test, that provides an automation interface for both your app and the MSAL created browser.
-
-- MSAL exposes an extensibility point that allows developers to inject their own browser experience. The MSAL team uses this internally to test interactive auth scenarios. Have a look at [this test](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/main/tests/Microsoft.Identity.Test.Integration.netfx/SeleniumTests/InteractiveFlowTests.cs) project to see how to inject a [Selenium powered browser](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/tree/main/tests/Microsoft.Identity.Test.Integration.netfx/Infrastructure) that can handle authentication.
-
-### Xamarin apps
-
-The MSAL team are currently running tests on a Xamarin app that uses MSAL.net; We are using [App Center](https://appcenter.ms/apps) to manage devices, test runs etc. The test framework is [Xamarin.UITest](/appcenter/test-cloud/uitest/). A limitation that we have found is that we are unable to test system browsers, only embedded browsers.
+- MSAL exposes an extensibility point that allows developers to inject their own browser experience. The MSAL team uses this internally to test interactive auth scenarios.
 
 ## Library feedback
 
-Please log issues or ask questions related to testing. Providing a good test experience is one of the goals of the team.
+Please [log issues](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/issues) or ask questions related to testing. Providing a good test experience is one of the goals of the team.

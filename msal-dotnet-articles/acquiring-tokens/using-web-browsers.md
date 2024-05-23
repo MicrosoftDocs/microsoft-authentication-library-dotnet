@@ -35,7 +35,7 @@ It's important to understand that when acquiring a token interactively, the cont
 
 ### Embedded web view vs system browser
 
-MSAL.NET is a multi-framework library and has framework-specific code to host a browser in a UI control (for example, on .NET either WinForms or WebView2; on Xamarin, native mobile controls, etc.). This control is called an *embedded* web view. Alternatively, MSAL.NET is also able to open a system web browser.
+MSAL.NET is a multi-framework library and has framework-specific code to host a browser in a UI control (for example, on .NET either WinForms or WebView2; on .NET MAUI, native mobile controls, etc.). This control is called an *embedded* web view. Alternatively, MSAL.NET is also able to open a system web browser.
 
 Generally, it's recommended that you use the platform default, and this is typically the system browser. The system browser is better at remembering the users that have logged in before. To change this behavior, use <xref:Microsoft.Identity.Client.AcquireTokenInteractiveParameterBuilder.WithUseEmbeddedWebView(System.Boolean)>
 
@@ -50,17 +50,12 @@ Generally, it's recommended that you use the platform default, and this is typic
 | .NET 4.6.2+                     | ✅ Yes                   | ✅ Yes                | Embedded              |
 | .NET Standard                   | ⛔ No†††                 | ✅ Yes                | System                |
 | .NET Core                       | ⛔ No†††                 | ✅ Yes                | System                |
-| UWP††††                         | ✅ Yes                   | ⛔ No                 | Embedded              |
-| Xamarin.Android††††             | ✅ Yes                   | ✅ Yes                | System                |
-| Xamarin.iOS††††                 | ✅ Yes                   | ✅ Yes                | System                |
 
 **†** System browser requires `http://localhost` redirect URI.
 
 **††** Target `net6.0-windows` or above to use the embedded browser.
 
 **†††** Reference [Microsoft.Identity.Client.Desktop](https://www.nuget.org/packages/Microsoft.Identity.Client.Desktop) and call <xref:Microsoft.Identity.Client.Desktop.DesktopExtensions.WithWindowsDesktopFeatures%2A> to use the embedded browser.
-
-**††††** MSAL.NET versions 4.61.0 and above do not provide support for UWP, Xamarin Android, and Xamarin iOS.
 
 ## System web browser
 
@@ -100,8 +95,6 @@ When you configure `http://localhost`, MSAL.NET will find a random open port and
 
 Azure B2C and ADFS 2019 do not yet implement the *any port* option. So, you cannot set `http://localhost` (no port) redirect URI, but only `http://localhost:1234` (with port) URI. This means that you will have to do your own port management, for example, you can reserve a few ports and configure them as redirect URIs. Then your app can cycle through them until a port is free - this can then be used by MSAL.
 
-UWP doesn't support listening to a port and thus doesn't support system browsers.
-
 For more details, see [Localhost exceptions](/azure/active-directory/develop/reply-url#localhost-exceptions).
 
 ### Linux and macOS
@@ -138,12 +131,12 @@ var options = new SystemWebViewOptions()
 }
 ```
 
-## Web views on Xamarin.Android and Xamarin.iOS
+## Web views in mobile applications
 
 > [!NOTE]
 > MSAL.NET versions 4.61.0 and above do not provide support for Xamarin Android and Xamarin iOS.
 
-Embedded web views can be enabled in Xamarin.Android and Xamarin.iOS apps. As a developer using MSAL.NET targeting Xamarin, you may choose to use either embedded web views or system browsers. This is your choice depending on the user experience and security concerns you want to target.
+Embedded web views can be enabled in .NET MAUI applications. You may choose to use either embedded web views or system browsers. This is your choice depending on the user experience and security concerns you want to target.
 
 ### Differences between embedded web view and system browser
 
@@ -181,7 +174,7 @@ var result = app.AcquireTokenInteractive(scopes)
                 .ExecuteAsync();
 ```
 
-#### Choosing between embedded web view or system browser on Xamarin.iOS
+#### Choosing between embedded web view or system browser on iOS
 
 In your iOS app, in `AppDelegate.cs` you can initialize the `ParentWindow` to `null`. It's not used in iOS.
 
@@ -189,7 +182,7 @@ In your iOS app, in `AppDelegate.cs` you can initialize the `ParentWindow` to `n
 App.ParentWindow = null; // no UI parent on iOS
 ```
 
-#### Choosing between embedded web view or system browser on Xamarin.Android
+#### Choosing between embedded web view or system browser on Android
 
 In your Android app, in `MainActivity.cs` you can set the parent activity so that the authentication result gets back to it:
 
@@ -206,7 +199,7 @@ var result = await App.PCA.AcquireTokenInteractive(App.Scopes)
                       .ExecuteAsync();
 ```
 
-#### Detecting the presence of custom tabs on Xamarin.Android
+#### Detecting the presence of custom tabs on Android
 
 If you want to use the system web browser to enable Single-Sign On with the apps running in the browser, but are worried about the user experience for Android devices not having a browser with custom tab support, you have the option to decide by calling the <xref:Microsoft.Identity.Client.IPublicClientApplication.IsSystemWebViewAvailable%2A?displayProperty=nameWithType>. This method returns `true` if the Android package manager detects custom tabs and `false` if they aren't detected on the device.
 

@@ -17,8 +17,8 @@ This is a conditional access policy applied by the tenant admin. For details see
 
 ## How to fix this?
 
-To satisfy this requirement you will have to leverage WAM on Windows or the system browser (Edge on Chromium). On mobile platform, you'll need to enable the brokers (Microsoft Authenticator and Company portal)
+To satisfy this requirement you will have to leverage WAM on Windows or the system browser. On mobile platforms, you'll need to enable the brokers (Microsoft Authenticator and Company portal)
 
 - If you are writing a desktop application running on Windows, see [WAM integration for Desktop applications](../../acquiring-tokens/desktop-mobile/wam.md).
-- [On iOS and Android](../../acquiring-tokens/desktop-mobile/xamarin.md), we recommend [enabling the authentication broker](/azure/active-directory/develop/msal-net-use-brokers-with-xamarin-apps)
+- [On iOS and Android](../../acquiring-tokens/desktop-mobile/mobile-applications.md), we recommend [enabling the authentication broker](/azure/active-directory/develop/msal-net-use-brokers-with-xamarin-apps)
 - The same principles apply to Web Applications, though given you are in a browser you must leverage a browser which can "talk to" WAM (that is either Edge on Chromium or Chrome with the Microsoft Entra extensions). For details see [Conditional access conditions](/azure/active-directory/conditional-access/concept-conditional-access-conditions#chrome-support).
