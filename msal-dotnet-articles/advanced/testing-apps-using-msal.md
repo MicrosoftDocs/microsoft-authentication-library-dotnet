@@ -25,9 +25,9 @@ Pros: end to end testing with real tokens
 
 Cons: UI automation is flaky. It's tedious to automate the login screens. Live accounts and "Work and School" have slightly different UI flows.
 
-**Strategy 2**: Use ROPC (Username/Password flow) to get tokens and test only your controllers
+**Strategy 2**: Use ROPC (Username/Password flow) to get tokens and test only your controllers. Microsoft does not recommend using the ROPC flow in production as it presents some security risks not present in other flows. Use this flow for testing purposes only.
 
-Pros: no ui automation
+Pros: No ui automation
 
 Cons: Does not work for Live accounts, where ROPC is not supported.
 
