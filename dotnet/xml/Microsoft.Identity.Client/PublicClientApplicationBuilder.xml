@@ -24,6 +24,7 @@
     <AssemblyVersion>4.60.2.0</AssemblyVersion>
     <AssemblyVersion>4.60.3.0</AssemblyVersion>
     <AssemblyVersion>4.61.0.0</AssemblyVersion>
+    <AssemblyVersion>4.61.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Identity.Client.AbstractApplicationBuilder&lt;Microsoft.Identity.Client.PublicClientApplicationBuilder&gt;</BaseTypeName>
@@ -46,7 +47,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.61.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.IPublicClientApplication</ReturnType>
@@ -71,7 +72,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.61.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.PublicClientApplicationBuilder</ReturnType>
@@ -100,7 +101,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.61.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.PublicClientApplicationBuilder</ReturnType>
@@ -128,7 +129,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.61.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -167,8 +168,18 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.61.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.1.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("The desktop broker is not directly available in the MSAL package. Install the NuGet package Microsoft.Identity.Client.Broker and call the extension method .WithBroker(BrokerOptions). For details, see https://aka.ms/msal-net-wam", true)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("The desktop broker is not directly available in the MSAL package. Install the NuGet package Microsoft.Identity.Client.Broker and call the extension method .WithBroker(BrokerOptions). For details, see https://aka.ms/msal-net-wam", true)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.PublicClientApplicationBuilder</ReturnType>
       </ReturnValue>
@@ -176,20 +187,12 @@
         <Parameter Name="enableBroker" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="enableBroker">Determines whether or not to use broker with the default set to true.</param>
-        <summary>
-            Brokers enable Single-Sign-On, device identification,
-            and application identification verification. To enable one of these features,
-            you need to set the WithBroker() parameters to true. See https://aka.ms/msal-net-wam 
-            for more information on platform specific settings required to enable the broker.
-            
-            On iOS and Android, Authenticator and Company Portal serve as brokers.
-            On Windows, WAM (Windows Account Manager) serves as broker. See https://aka.ms/msal-net-wam
-            </summary>
-        <returns>A <see cref="T:Microsoft.Identity.Client.PublicClientApplicationBuilder" /> from which to set more
-            parameters, and to create a public client application instance</returns>
+        <param name="enableBroker" />
+        <summary />
+        <returns />
         <remarks>On desktop (.NET, .NET Framework) install the NuGet package Microsoft.Identity.Client.Broker and call .WithBroker(BrokerOptions).
             This is not needed for MAUI apps.</remarks>
+        <exception cref="T:System.PlatformNotSupportedException" />
       </Docs>
     </Member>
     <Member MemberName="WithDefaultRedirectUri">
@@ -201,7 +204,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.61.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.PublicClientApplicationBuilder</ReturnType>
@@ -229,7 +232,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.61.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -265,7 +268,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.61.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.PublicClientApplicationBuilder</ReturnType>
@@ -297,7 +300,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.61.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -331,7 +334,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.61.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.PublicClientApplicationBuilder</ReturnType>
@@ -364,7 +367,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.61.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -397,7 +400,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.61.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -433,7 +436,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.61.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>

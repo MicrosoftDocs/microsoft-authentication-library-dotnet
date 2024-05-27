@@ -24,6 +24,7 @@
     <AssemblyVersion>4.60.2.0</AssemblyVersion>
     <AssemblyVersion>4.60.3.0</AssemblyVersion>
     <AssemblyVersion>4.61.0.0</AssemblyVersion>
+    <AssemblyVersion>4.61.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Identity.Client.AbstractApplicationBuilder&lt;Microsoft.Identity.Client.ConfidentialClientApplicationBuilder&gt;</BaseTypeName>
@@ -46,7 +47,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.61.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.IConfidentialClientApplication</ReturnType>
@@ -71,7 +72,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.61.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -100,7 +101,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.61.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -128,7 +129,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.61.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -166,7 +167,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.61.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -198,7 +199,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.61.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -227,7 +228,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.61.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -262,7 +263,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.61.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -271,10 +272,10 @@
         <Parameter Name="clientAssertionAsyncDelegate" Type="System.Func&lt;Microsoft.Identity.Client.AssertionRequestOptions,System.Threading.Tasks.Task&lt;System.String&gt;&gt;" />
       </Parameters>
       <Docs>
-        <param name="clientAssertionAsyncDelegate">An async delegate computing the client assertion used to prove the identity of the application to Azure AD.
-            This is a delegate that computes a Base-64 encoded JWT for each authentication call.</param>
+        <param name="clientAssertionAsyncDelegate">An async delegate that returns the client assertion. Assertion lifetime is the responsibility of the caller.</param>
         <summary>
-            Configures an async delegate that creates a client assertion. See https://aka.ms/msal-net-client-assertion
+            Configures an async delegate that creates a client assertion. The delegate is invoked only when a token cannot be retrieved from the cache.
+            See https://aka.ms/msal-net-client-assertion
             </summary>
         <returns>The ConfidentialClientApplicationBuilder to chain more .With methods</returns>
         <remarks> Callers can use this mechanism to cache their assertions </remarks>
@@ -289,7 +290,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.61.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -322,7 +323,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.61.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -355,8 +356,18 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.61.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.1.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("This method is not recommended. Use overload with Func&lt;AssertionRequestOptions, Task&lt;string&gt;&gt; instead, and return a non-expired assertion, which can be a Federated Credential. See https://aka.ms/msal-net-client-assertion", false)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("This method is not recommended. Use overload with Func&lt;AssertionRequestOptions, Task&lt;string&gt;&gt; instead, and return a non-expired assertion, which can be a Federated Credential. See https://aka.ms/msal-net-client-assertion", false)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
       </ReturnValue>
@@ -384,7 +395,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.61.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -419,7 +430,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.61.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -453,7 +464,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.61.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -480,7 +491,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.61.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -516,7 +527,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.61.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -548,7 +559,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.61.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
