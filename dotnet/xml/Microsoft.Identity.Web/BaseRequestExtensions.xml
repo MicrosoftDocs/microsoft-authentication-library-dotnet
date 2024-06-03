@@ -34,6 +34,7 @@
     <AssemblyVersion>2.17.5.0</AssemblyVersion>
     <AssemblyVersion>2.18.1.0</AssemblyVersion>
     <AssemblyVersion>2.18.2.0</AssemblyVersion>
+    <AssemblyVersion>2.19.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>Microsoft.Identity.Web.MicrosoftGraphBeta</AssemblyName>
@@ -81,7 +82,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.MicrosoftGraph</AssemblyName>
-        <AssemblyVersion>2.18.2.0</AssemblyVersion>
+        <AssemblyVersion>2.19.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.MicrosoftGraphBeta</AssemblyName>
@@ -123,7 +124,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.MicrosoftGraph</AssemblyName>
-        <AssemblyVersion>2.18.2.0</AssemblyVersion>
+        <AssemblyVersion>2.19.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.MicrosoftGraphBeta</AssemblyName>
@@ -164,7 +165,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.MicrosoftGraph</AssemblyName>
-        <AssemblyVersion>2.18.2.0</AssemblyVersion>
+        <AssemblyVersion>2.19.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.MicrosoftGraphBeta</AssemblyName>
@@ -206,7 +207,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.MicrosoftGraph</AssemblyName>
-        <AssemblyVersion>2.18.2.0</AssemblyVersion>
+        <AssemblyVersion>2.19.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.MicrosoftGraphBeta</AssemblyName>
@@ -237,6 +238,43 @@
             If you use a custom authentication handler or authentication provider, you have to handle its retrieval in your implementation.
             </summary>
         <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithUser&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static T WithUser&lt;T&gt; (this T baseRequest, System.Security.Claims.ClaimsPrincipal user) where T : Microsoft.Graph.IBaseRequest;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!T WithUser&lt;(class Microsoft.Graph.IBaseRequest) T&gt;(!!T baseRequest, class System.Security.Claims.ClaimsPrincipal user) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.BaseRequestExtensions.WithUser``1(``0,System.Security.Claims.ClaimsPrincipal)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function WithUser(Of T As IBaseRequest) (baseRequest As T, user As ClaimsPrincipal) As T" />
+      <MemberSignature Language="F#" Value="static member WithUser : 'T * System.Security.Claims.ClaimsPrincipal -&gt; 'T (requires 'T :&gt; Microsoft.Graph.IBaseRequest)" Usage="Microsoft.Identity.Web.BaseRequestExtensions.WithUser (baseRequest, user)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.MicrosoftGraph</AssemblyName>
+        <AssemblyVersion>2.19.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <InterfaceName>Microsoft.Graph.IBaseRequest</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="baseRequest" Type="T" RefType="this" />
+        <Parameter Name="user" Type="System.Security.Claims.ClaimsPrincipal" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Request</typeparam>
+        <param name="baseRequest">Request.</param>
+        <param name="user">Delegate to override
+            the authentication options</param>
+        <summary>
+            Overrides authentication options for a given request.
+            </summary>
+        <returns>Base request</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

@@ -2,18 +2,18 @@
 <Framework Name="msal-model-dotnet-latest">
   <Assemblies>
     <Assembly Name="Microsoft.Identity.Abstractions" Version="5.3.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.Azure" Version="2.18.2.0" />
-    <Assembly Name="Microsoft.Identity.Web.Certificate" Version="2.18.2.0" />
-    <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="2.18.2.0" />
-    <Assembly Name="Microsoft.Identity.Web" Version="2.18.2.0" />
+    <Assembly Name="Microsoft.Identity.Web.Azure" Version="2.19.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.Certificate" Version="2.19.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="2.19.0.0" />
+    <Assembly Name="Microsoft.Identity.Web" Version="2.19.0.0" />
     <Assembly Name="Microsoft.Identity.Web.DownstreamRestApi" Version="2.0.8.0" />
-    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraph" Version="2.18.2.0" />
+    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraph" Version="2.19.0.0" />
     <Assembly Name="Microsoft.Identity.Web.MicrosoftGraphBeta" Version="3.0.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.OWIN" Version="2.18.2.0" />
-    <Assembly Name="Microsoft.Identity.Web.TokenAcquisition" Version="2.18.2.0" />
-    <Assembly Name="Microsoft.Identity.Web.TokenCache" Version="2.18.2.0" />
-    <Assembly Name="Microsoft.Identity.Web.UI" Version="2.18.2.0" />
-    <Assembly Name="Microsoft.Identity.Web.UI.Views" Version="2.18.2.0" />
+    <Assembly Name="Microsoft.Identity.Web.OWIN" Version="2.19.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.TokenAcquisition" Version="2.19.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.TokenCache" Version="2.19.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.UI" Version="2.19.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.UI.Views" Version="2.19.0.0" />
   </Assemblies>
   <Namespace Name="AspNetCore">
     <Type Name="AspNetCore.Areas_MicrosoftIdentity_Pages__ViewStart" Id="T:AspNetCore.Areas_MicrosoftIdentity_Pages__ViewStart">
@@ -324,6 +324,7 @@
       <Member Id="M:Microsoft.Identity.Web.BaseRequestExtensions.WithAuthenticationOptions``1(``0,System.Action{Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions})" />
       <Member Id="M:Microsoft.Identity.Web.BaseRequestExtensions.WithAuthenticationScheme``1(``0,System.String)" />
       <Member Id="M:Microsoft.Identity.Web.BaseRequestExtensions.WithScopes``1(``0,System.String[])" />
+      <Member Id="M:Microsoft.Identity.Web.BaseRequestExtensions.WithUser``1(``0,System.Security.Claims.ClaimsPrincipal)" />
     </Type>
     <Type Name="Microsoft.Identity.Web.CertificateDescription" Id="T:Microsoft.Identity.Web.CertificateDescription">
       <Member Id="M:Microsoft.Identity.Web.CertificateDescription.#ctor" />
@@ -746,6 +747,13 @@
     </Type>
     <Type Name="Microsoft.Identity.Web.Experimental.ICertificatesObserver" Id="T:Microsoft.Identity.Web.Experimental.ICertificatesObserver">
       <Member Id="M:Microsoft.Identity.Web.Experimental.ICertificatesObserver.OnClientCertificateChanged(Microsoft.Identity.Web.Experimental.CertificateChangeEventArg)" />
+    </Type>
+  </Namespace>
+  <Namespace Name="Microsoft.Identity.Web.Extensibility">
+    <Type Name="Microsoft.Identity.Web.Extensibility.BaseAuthorizationHeaderProvider" Id="T:Microsoft.Identity.Web.Extensibility.BaseAuthorizationHeaderProvider">
+      <Member Id="M:Microsoft.Identity.Web.Extensibility.BaseAuthorizationHeaderProvider.#ctor(System.IServiceProvider)" />
+      <Member Id="M:Microsoft.Identity.Web.Extensibility.BaseAuthorizationHeaderProvider.CreateAuthorizationHeaderForAppAsync(System.String,Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions,System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.Identity.Web.Extensibility.BaseAuthorizationHeaderProvider.CreateAuthorizationHeaderForUserAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)" />
     </Type>
   </Namespace>
   <Namespace Name="Microsoft.Identity.Web.Internal">
