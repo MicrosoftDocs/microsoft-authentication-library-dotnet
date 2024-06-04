@@ -152,6 +152,18 @@ To enable distributed cache logging, set the <xref:Microsoft.Extensions.Logging.
 
 See [Implement a custom logging provider](/dotnet/core/extensions/custom-logging-provider) for more details.
 
+## Correlation ID
+
+Logs help understand MSAL's behavior on the client side. To understand what's happening on the service side, the team needs a correlation ID. This ID traces an authentication request through the various back-end services.
+
+The correlation ID can be obtained in three ways:
+
+1. From a successful authentication result - <xref:Microsoft.Identity.Client.AuthenticationResult.CorrelationId?displayProperty=nameWithType>;
+2. From a service exception - <xref:Microsoft.Identity.Client.MsalException.CorrelationId%2A?displayProperty=nameWithType>, and
+3. By passing a custom correlation ID to <xref:Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder%601.WithCorrelationId(System.Guid)> when building a token request.
+
+When providing your own correlation ID, use a different ID value for each request. Don't use a constant as we won't be able to differentiate between the requests.
+
 ## Network traces
 
 > [!IMPORTANT]
@@ -165,15 +177,16 @@ var msalPublicClient = PublicClientApplicationBuilder
        .WithHttpClientFactory(new HttpSnifferClientFactory())
        .Build();
 ```
+### Network traces when using WAM
 
-## Correlation ID
+To collect Fiddler traces for broker on Windows (WAM), a few extra steps are needed.
 
-Logs help understand MSAL's behavior on the client side. To understand what's happening on the service side, the team needs a correlation ID. This ID traces an authentication request through the various back-end services.
+1. Enable AppContainer loopback in Fiddler UI -> WinConfig -> Exempt All -> Save Changes
 
-The correlation ID can be obtained in three ways:
+![image](https://github.com/MicrosoftDocs/microsoft-authentication-library-dotnet/assets/12273384/c019a984-4a5d-4e21-9ebc-a56c12ee9877)
 
-1. From a successful authentication result - <xref:Microsoft.Identity.Client.AuthenticationResult.CorrelationId?displayProperty=nameWithType>;
-2. From a service exception - <xref:Microsoft.Identity.Client.MsalException.CorrelationId%2A?displayProperty=nameWithType>, and
-3. By passing a custom correlation ID to <xref:Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder%601.WithCorrelationId(System.Guid)> when building a token request.
+2. Enable HTTPS decryption, but exclude AD FS from HTTPS decryption:
 
-When providing your own correlation ID, use a different ID value for each request. Don't use a constant as we won't be able to differentiate between the requests.
+![image](https://github.com/MicrosoftDocs/microsoft-authentication-library-dotnet/assets/12273384/511b12b6-c7e8-4de0-a9d0-5b6fe1259335)
+
+
