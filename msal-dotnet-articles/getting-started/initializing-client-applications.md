@@ -1,7 +1,6 @@
 ---
 title: Initialize MSAL.NET client applications
 description: Learn about initializing public client and confidential client applications using the Microsoft Authentication Library for .NET (MSAL.NET).
-services: active-directory
 author: Dickson-Mwendia
 manager: CelesteDG
 
@@ -9,7 +8,7 @@ ms.service: msal
 ms.subservice: msal-dotnet
 ms.topic: conceptual
 ms.workload: identity
-ms.date: 08/24/2023
+ms.date: 06/04/2024
 ms.author: dmwendia
 ms.reviewer: ddelimarsky
 ms.custom: devx-track-csharp, aaddev, engagement-fy23, devx-track-dotnet
@@ -18,19 +17,19 @@ ms.custom: devx-track-csharp, aaddev, engagement-fy23, devx-track-dotnet
 
 # Initialize client applications using MSAL.NET
 
-This article describes initializing public client and confidential client applications using the Microsoft Authentication Library for .NET (MSAL.NET).  To learn more about the client application types, see [Public client and confidential client applications](/azure/active-directory/develop/msal-client-applications).
+This article describes initializing public client and confidential client applications using the Microsoft Authentication Library for .NET (MSAL.NET). To learn more about the client application types, see [Public client and confidential client applications](/azure/active-directory/develop/msal-client-applications).
 
 With MSAL.NET 3.x, the recommended way to instantiate an application is by using the application builders: `PublicClientApplicationBuilder` and `ConfidentialClientApplicationBuilder`. They offer a powerful mechanism to configure the application from the code, a configuration file, or even by mixing both approaches.
 
 ## Prerequisites
 
-Before initializing an application, you first need to register it so that your app can be integrated with the Microsoft identity platform. Refer to the [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app) for more information. After registration, you may need the following information (which can be found in the Azure portal):
+Before initializing an application, you first need to register it so that your app can be integrated with the Microsoft identity platform. Refer to the [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app) for more information. After registration, you'll need the following information, which can be found in the app registration page in the Microsoft Entra admin center.
 
 - **Application (client) ID** - This is a string representing a GUID.
 - **Directory (tenant) ID** - Provides identity and access management (IAM) capabilities to applications and resources used by your organization. It can specify if you're writing a line of business application solely for your organization (also named single-tenant application).
 - The identity provider URL (named the **instance**) and the sign-in audience for your application. These two parameters are collectively known as the authority.
 - **Client credentials** - which can take the form of an application secret (client secret string) or certificate (of type `X509Certificate2`) if it's a confidential client app.
-- For web apps, and sometimes for public client apps (in particular when your app needs to use a broker), you'll have also set the **Redirect URI** where the identity provider will contact back your application with the security tokens.
+- For web apps, and sometimes for public client apps (in particular when your app needs to use a broker), you need to set the **Redirect URI** where the identity provider will contact back your application with the security tokens.
 
 ## Initializing applications
 
@@ -38,7 +37,7 @@ There are many different ways to instantiate client applications.
 
 ### Initializing a public client application from code
 
-The following code instantiates a public client application, signing-in users in the Microsoft Azure public cloud, with their work, school or personal Microsoft accounts.
+The following code instantiates a public client application, signing-in users in the Microsoft Azure public cloud, with their work, school, or personal Microsoft accounts.
 
 ```csharp
 IPublicClientApplication app = PublicClientApplicationBuilder.Create(clientId)
@@ -57,7 +56,7 @@ IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create
     .Build();
 ```
 
-In production however, certificates are recommended as they're more secure than client secrets. They can be created and uploaded to the Azure portal. The code would then be the following:
+In production however, certificates are recommended as they're more secure than client secrets. They can be created and uploaded to the Microsoft Entra admin center. The code would then be the following:
 
 ```csharp
 IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create(clientId)
@@ -105,9 +104,9 @@ The modifiers you can set on a public client application builder on Xamarin.iOS 
 
 ### Modifiers specific to confidential client applications
 
-The modifiers you can set that are specific to a confidential client application builder can be found in the `ConfidentialClientApplicationBuilder` class. The different methods can be found in the [Azure SDK for .NET documentation](/dotnet/api/microsoft.identity.client.confidentialclientapplicationbuilder). 
+The modifiers specific to a confidential client application builder can be found in the `ConfidentialClientApplicationBuilder` class. The different methods can be found in the [Azure SDK for .NET documentation](/dotnet/api/microsoft.identity.client.confidentialclientapplicationbuilder). 
 
-Modifiers such as `.WithCertificate(X509Certificate2 certificate)` and `.WithClientSecret(string clientSecret)` are mutually exclusive. If you provide both, MSAL will throw a meaningful exception.
+Modifiers such as `.WithCertificate(X509Certificate2 certificate)` and `.WithClientSecret(string clientSecret)` are mutually exclusive. If you provide both, MSAL throws a meaningful exception.
 
 ### Example of usage of modifiers
 
@@ -129,7 +128,7 @@ app = PublicClientApplicationBuilder.Create(clientId)
         .Build();
 ```
 
-There's also an override for ADFS (MSAL.NET will only support ADFS 2019 or later):
+There's also an override for ADFS (MSAL.NET only supports ADFS 2019 or later):
 
 ```csharp
 IPublicClientApplication app;

@@ -1,7 +1,6 @@
 ---
 title: Microsoft Identity Web
-description: Learn how you can use Microsoft Identity Web to add authentication and authorization to web apps, web APIs and daemon applications. 
-services: active-directory
+description: Learn how you can use Microsoft Identity Web to add authentication and authorization to web apps, web APIs, and daemon applications. 
 author: Dickson-Mwendia
 manager: CelesteDG
 
@@ -9,7 +8,7 @@ ms.service: msal
 ms.subservice: microsoft-identity-web
 ms.topic: conceptual
 ms.workload: identity
-ms.date: 03/30/2023
+ms.date: 06/04/2024
 ms.author: jmprieur
 ms.reviewer: localden, jmprieur
 ms.custom: devx-track-csharp, aaddev
@@ -24,7 +23,7 @@ Microsoft Identity Web is a set of ASP.NET Core libraries that simplifies adding
 
 When building ASP.NET Core web apps or web APIs that use Microsoft Entra ID or Azure AD B2C for identity and access management (IAM), Microsoft Identity Web is recommended for these scenarios:
 
-- [Service/Daemon applications](/azure/active-directory/develop/scenario-daemon-overview)
+- [Service/daemon applications](/azure/active-directory/develop/scenario-daemon-overview)
 - [Web app that signs in users](/azure/active-directory/develop/scenario-web-app-sign-user-overview)
 - [Web app that signs in users and calls a web API on their behalf](/azure/active-directory/develop/scenario-web-app-call-api-overview)
 - [Protected web API that only authenticated users can access](/azure/active-directory/develop/scenario-protected-web-api-overview)
@@ -40,7 +39,7 @@ Microsoft Identity Web is available on NuGet as a set of packages that provide m
 
 - [Microsoft.Identity.Web](https://www.nuget.org/packages/Microsoft.Identity.Web) - The main package for ASP.NET Core applications.
 - [Microsoft.Identity.Web.OWIN](https://www.nuget.org/packages/Microsoft.Identity.Web.OWIN) - The main package for ASP.NET (OWIN) applications.
-- [Microsoft.Identity.Web.TokenAcquisition](https://www.nuget.org/packages/Microsoft.Identity.Web.TokenAcquisition) - The main package for other types of applications (daemon apps on .NET framework or .NET Core). This package is referenced by Microsoft.Identity.Web and Microsoft.Identity.Web.OWIN
+- [Microsoft.Identity.Web.TokenAcquisition](https://www.nuget.org/packages/Microsoft.Identity.Web.TokenAcquisition) - The main package for other types of applications (daemon apps on .NET framework or .NET Core). Microsoft.Identity.Web and Microsoft.Identity.Web.OWIN reference this package. 
 - [Microsoft.Identity.Web.UI](https://www.nuget.org/packages/Microsoft.Identity.Web.UI) - Optional, for ASP.NET Core web apps. Adds UI for user sign-in and sign-out and an associated controller for web apps.
 - [Microsoft.Identity.Web.MicrosoftGraph](https://www.nuget.org/packages/Microsoft.Identity.Web.MicrosoftGraph) - Optional. Provides simplified interaction with the Microsoft Graph API.
 - [Microsoft.Identity.Web.MicrosoftGraphBeta](https://www.nuget.org/packages/Microsoft.Identity.Web.MicrosoftGraphBeta) - Optional. Provides simplified interaction with the Microsoft Graph API [beta endpoint](/graph/api/overview?view=graph-rest-beta&preserve-view=true).
@@ -75,7 +74,7 @@ dotnet new webapp --auth SingleOrg --calls-graph --client-id "00001111-aaaa-2222
 ### Getting started with MSAL.NET
 
 1. Learn about [Scenarios](./getting-started/scenarios.md).
-1. You will need to [register your app](/azure/active-directory/develop/quickstart-register-app) with Microsoft Entra ID.
+1. You'll need to [register your app](/azure/active-directory/develop/quickstart-register-app) with Microsoft Entra ID.
 
 ## Samples
 
