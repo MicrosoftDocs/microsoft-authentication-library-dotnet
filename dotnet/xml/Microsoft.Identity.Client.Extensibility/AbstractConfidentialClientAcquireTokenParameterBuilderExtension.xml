@@ -24,6 +24,8 @@
     <AssemblyVersion>4.60.2.0</AssemblyVersion>
     <AssemblyVersion>4.60.3.0</AssemblyVersion>
     <AssemblyVersion>4.61.0.0</AssemblyVersion>
+    <AssemblyVersion>4.61.1.0</AssemblyVersion>
+    <AssemblyVersion>4.61.3.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -31,7 +33,8 @@
   <Interfaces />
   <Docs>
     <summary>
-            Extensions for <see cref="T:Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder" /></summary>
+            Extensions for all AcquireToken methods
+            </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -44,7 +47,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.61.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt;</ReturnType>
@@ -68,6 +71,44 @@
             Intervenes in the request pipeline, by executing a user provided delegate before MSAL makes the token request. 
             The delegate can modify the request payload by adding or removing  body parameters and headers. <see cref="T:Microsoft.Identity.Client.Extensibility.OnBeforeTokenRequestData" /></summary>
         <returns>The builder to chain other options to.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithProofOfPosessionKeyId&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt; WithProofOfPosessionKeyId&lt;T&gt; (this Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt; builder, string keyId, string expectedTokenTypeFromAad = &quot;Bearer&quot;) where T : Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt;;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1&lt;!!T&gt; WithProofOfPosessionKeyId&lt;(class Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1&lt;!!T&gt;) T&gt;(class Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1&lt;!!T&gt; builder, string keyId, string expectedTokenTypeFromAad) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.WithProofOfPosessionKeyId``1(Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder{``0},System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function WithProofOfPosessionKeyId(Of T As AbstractAcquireTokenParameterBuilder(Of T)) (builder As AbstractAcquireTokenParameterBuilder(Of T), keyId As String, Optional expectedTokenTypeFromAad As String = &quot;Bearer&quot;) As AbstractAcquireTokenParameterBuilder(Of T)" />
+      <MemberSignature Language="F#" Value="static member WithProofOfPosessionKeyId : Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;'T (requires 'T :&gt; Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;'T&gt;)&gt; * string * string -&gt; Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;'T (requires 'T :&gt; Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;'T&gt;)&gt; (requires 'T :&gt; Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;'T&gt;)" Usage="Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.WithProofOfPosessionKeyId (builder, keyId, expectedTokenTypeFromAad)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.61.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <BaseTypeName>Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt;</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="builder" Type="Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt;" RefType="this" />
+        <Parameter Name="keyId" Type="System.String" />
+        <Parameter Name="expectedTokenTypeFromAad" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T" />
+        <param name="builder">The builder to chain options to</param>
+        <param name="keyId">A key id to which the access token is associated. The token will not be retrieved from the cache unless the same key id is presented. Can be null.</param>
+        <param name="expectedTokenTypeFromAad">AAD issues several types of bound tokens. MSAL checks the token type, which needs to match the value set by ESTS. Normal POP tokens have this as "pop"</param>
+        <summary>
+            Binds the token to a key in the cache.No cryptographic operations is performed on the token.
+            </summary>
+        <returns>the builder</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
