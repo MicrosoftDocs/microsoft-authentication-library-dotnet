@@ -22,6 +22,8 @@
     <AssemblyVersion>4.60.2.0</AssemblyVersion>
     <AssemblyVersion>4.60.3.0</AssemblyVersion>
     <AssemblyVersion>4.61.0.0</AssemblyVersion>
+    <AssemblyVersion>4.61.1.0</AssemblyVersion>
+    <AssemblyVersion>4.61.3.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Identity.Client.ApplicationBase</BaseTypeName>
@@ -55,7 +57,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.61.0.0</AssemblyVersion>
+        <AssemblyVersion>4.61.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder</ReturnType>
@@ -69,6 +71,29 @@
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="GetManagedIdentitySource">
+      <MemberSignature Language="C#" Value="public static Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySource GetManagedIdentitySource ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySource GetManagedIdentitySource() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.ManagedIdentityApplication.GetManagedIdentitySource" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetManagedIdentitySource () As ManagedIdentitySource" />
+      <MemberSignature Language="F#" Value="static member GetManagedIdentitySource : unit -&gt; Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySource" Usage="Microsoft.Identity.Client.ManagedIdentityApplication.GetManagedIdentitySource " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.61.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySource</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Detects and returns the managed identity source available on the environment.
+            </summary>
+        <returns>Managed identity source detected on the environment if any.</returns>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
   </Members>

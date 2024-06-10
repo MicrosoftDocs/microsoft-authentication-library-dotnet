@@ -1,7 +1,6 @@
 ---
 title: Client assertions (MSAL.NET)
 description: Learn about signed client assertions support for confidential client applications in the Microsoft Authentication Library for .NET (MSAL.NET).
-services: active-directory
 author: Dickson-Mwendia
 manager: CelesteDG
 
@@ -9,7 +8,7 @@ ms.service: msal
 ms.subservice: msal-dotnet
 ms.topic: conceptual
 ms.workload: identity
-ms.date: 03/29/2023
+ms.date: 06/04/2024
 ms.author: dmwendia
 ms.reviewer: saeeda, jmprieur
 ms.custom: devx-track-csharp, aaddev, devx-track-dotnet
@@ -35,9 +34,9 @@ MSAL.NET has four methods to provide either credentials or assertions to the con
 
 ### Client assertions
 
-This is useful if you want to handle the certificate yourself. For example, if you wish to use Azure KeyVault's APIs for signing, which eliminates the need for downloading the certificates. A signed client assertion takes the form of a signed JWT with the payload containing the required authentication claims mandated by Microsoft Entra ID, Base64 encoded. Or it can be a JWT form a different Identity Provider, for the "Federated Identity Credential" scenario.
+This is useful if you want to handle the certificate yourself. For example, if you wish to use Azure KeyVault's APIs for signing, which eliminates the need for downloading the certificates. A signed client assertion takes the form of a signed JWT with the payload containing the required authentication claims mandated by Microsoft Entra ID, Base64 encoded. Or it can be a JWT from a different Identity Provider, for the "Federated Identity Credential" scenario.
 
-Use the delegate, which enables you to compute the assertion everytime MSAL needs to get a new token from the Identity Provider. Note that MSAL will not invoke your delegate if a token is found in the cache.
+Use the delegate, which enables you to compute the assertion every time MSAL needs to get a new token from the identity provider. MSAL doesn't invoke your delegate if a token is found in the cache.
 
 ```csharp
 string signedClientAssertion = GetOrComputeAssertion();
@@ -53,11 +52,11 @@ The [claims expected by Microsoft Entra ID](/azure/active-directory/develop/cert
 
 Claim type | Value | Description
 ---------- | ---------- | ----------
-aud | `https://login.microsoftonline.com/{tenantId}/oauth2/v2.0/token` | The "aud" (audience) claim identifies the recipients that the JWT is intended for (here Microsoft Entra ID) See [RFC 7519, Section 4.1.3](https://tools.ietf.org/html/rfc7519#section-4.1.3).  In this case, that recipient is the token endpoint of the identity provider
-exp | 1601519414 | The "exp" (expiration time) claim identifies the expiration time on or after which the JWT MUST NOT be accepted for processing. See [RFC 7519, Section 4.1.4](https://tools.ietf.org/html/rfc7519#section-4.1.4).  This allows the assertion to be used until then, so keep it short - 5-10 minutes after `nbf` at most.  Microsoft Entra ID does not place restrictions on the `exp` time currently. 
-iss | {ClientID} | The "iss" (issuer) claim identifies the principal that issued the JWT, in this case your client application.  Use the GUID application ID.
-jti | (a Guid) | The "jti" (JWT ID) claim provides a unique identifier for the JWT. The identifier value MUST be assigned in a manner that ensures that there is a negligible probability that the same value will be accidentally assigned to a different data object; if the application uses multiple issuers, collisions MUST be prevented among values produced by different issuers as well. The "jti" value is a case-sensitive string. [RFC 7519, Section 4.1.7](https://tools.ietf.org/html/rfc7519#section-4.1.7)
-nbf | 1601519114 | The "nbf" (not before) claim identifies the time before which the JWT MUST NOT be accepted for processing. [RFC 7519, Section 4.1.5](https://tools.ietf.org/html/rfc7519#section-4.1.5).  Using the current time is appropriate. 
+aud | `https://login.microsoftonline.com/{tenantId}/oauth2/v2.0/token` | The "aud" (audience) claim identifies the recipients that the JWT is intended for (here Microsoft Entra ID) See [RFC 7519, Section 4.1.3](https://tools.ietf.org/html/rfc7519#section-4.1.3). In this case, that recipient is the token endpoint of the identity provider
+exp | 1601519414 | The "exp" (expiration time) claim identifies the expiration time on or after which the JWT MUST NOT be accepted for processing. See [RFC 7519, Section 4.1.4](https://tools.ietf.org/html/rfc7519#section-4.1.4). This allows the assertion to be used until then, so keep it short - 5-10 minutes after `nbf` at most. Microsoft Entra ID doesn't place restrictions on the `exp` time currently. 
+iss | {ClientID} | The "iss" (issuer) claim identifies the principal that issued the JWT, in this case your client application. Use the GUID application ID.
+jti | (a Guid) | The "jti" (JWT ID) claim provides a unique identifier for the JWT. The identifier value MUST be assigned in a manner that ensures that there's a negligible probability that the same value can be accidentally assigned to a different data object. If the application uses multiple issuers, collisions MUST be prevented among values produced by different issuers as well. The "jti" value is a case-sensitive string. [RFC 7519, Section 4.1.7](https://tools.ietf.org/html/rfc7519#section-4.1.7)
+nbf | 1601519114 | The "nbf" (not before) claim identifies the time before which the JWT MUST NOT be accepted for processing. [RFC 7519, Section 4.1.5](https://tools.ietf.org/html/rfc7519#section-4.1.5). Using the current time is appropriate. 
 sub | {ClientID} | The "sub" (subject) claim identifies the subject of the JWT, in this case also your application. Use the same value as `iss`. 
 
 If you use a certificate as a client secret, the certificate must be deployed safely. We recommend that you store the certificate in a secure spot supported by the platform, such as in the certificate store on Windows or by using Azure Key Vault.
@@ -89,7 +88,7 @@ This is an example using [Microsoft.IdentityModel.JsonWebTokens](https://www.nug
         }
 ```
 
-Alternatively, if you do not wish to use Microsoft.IdentityModel.JsonWebTokens:
+Alternatively, if you don't wish to use Microsoft.IdentityModel.JsonWebTokens:
 
 ```csharp
 static string Base64UrlEncode(byte[] arg)
@@ -139,7 +138,7 @@ static string GetSignedClientAssertion(X509Certificate2 certificate, string tena
 
 In some cases, developers want to inject some claims into the assertions, but would still like MSAL to handle the creation of the assertion and the signing.
 
-`WithClientClaims(X509Certificate2 certificate, IDictionary<string, string> claimsToSign, bool mergeWithDefaultClaims = true)` will produce a signed assertion containing the claims expected by Microsoft Entra ID plus additional client claims that you want to send. 
+`WithClientClaims(X509Certificate2 certificate, IDictionary<string, string> claimsToSign, bool mergeWithDefaultClaims = true)` produces a signed assertion containing the claims expected by Microsoft Entra ID plus additional client claims that you want to send. 
 
 ```csharp
 string ipAddress = "192.168.1.2";
@@ -152,6 +151,6 @@ app = ConfidentialClientApplicationBuilder.Create(config.ClientId)
 
 ```
 
-If one of the claims in the dictionary that you pass in is the same as one of the mandatory claims, the additional claim's value will be taken into account. It will override the claims computed by MSAL.NET.
+If one of the claims in the dictionary that you pass in is the same as one of the mandatory claims, the additional claim's value is taken into account. It overrides the claims computed by MSAL.NET.
 
 If you want to provide your own claims, including the mandatory claims expected by Microsoft Entra ID, pass in `false` for the `mergeWithDefaultClaims` parameter.

@@ -152,12 +152,31 @@ To enable distributed cache logging, set the <xref:Microsoft.Extensions.Logging.
 
 See [Implement a custom logging provider](/dotnet/core/extensions/custom-logging-provider) for more details.
 
+## Correlation ID
+
+Logs help understand the MSAL behavior on the client side. To understand what's happening on the service side, the team needs a correlation ID. This ID traces an authentication request through the various backend services.
+
+The correlation ID can be obtained in three ways:
+
+1. From a successful authentication result: <xref:Microsoft.Identity.Client.AuthenticationResult.CorrelationId?displayProperty=nameWithType>.
+2. From a service exception: <xref:Microsoft.Identity.Client.MsalException.CorrelationId%2A?displayProperty=nameWithType>.
+3. By passing a custom correlation ID to <xref:Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder%601.WithCorrelationId(System.Guid)> when building a token request.
+
+When providing your own correlation ID, use a different ID value for each request. Don't use a constant as we won't be able to differentiate between the requests.
+
 ## Network traces
 
 > [!IMPORTANT]
-> Network traces typically contain personally-identifiable information. Remove these sensitive details before posting the logs on GitHub.
+> Network traces typically contain personally-identifiable information and credentials. **Remove any sensitive details** before posting the logs on GitHub.
 
-In the case when verbose logs don't provide sufficient insight, you can get a network trace using tools like [Fiddler](https://www.telerik.com/fiddler). If such tool is not possible to use, for example on mobile, you can modify the `HttpClient` used by MSAL to log the HTTP traffic. See [this custom `HttpClient` implementation with logging](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/b259cf00936a11a9cff789bf094935d8d31aea7f/tests/Microsoft.Identity.Test.Common/Core/Helpers/HttpSnifferClientFactory.cs#L11). (This client should not be used in production, but only for logging). Custom `HttpClient` can be added as following:
+In cases where verbose logs don't provide sufficient insights, you can get a network trace using tools like [Fiddler](https://www.telerik.com/fiddler) or [`mitmproxy`](https://mitmproxy.org/). You can configure your tool of choice to be a local proxy and accept traffic from devices on your local network, allowing you to capture traces from other devices, such as iPhone or Android phones. Platform-specific configuration may be required prior to capturing logs.
+
+If such tool is not possible to use, you can modify the `HttpClient` used by MSAL to log the HTTP traffic. For reference, see this [custom `HttpClient` implementation with logging](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/b259cf00936a11a9cff789bf094935d8d31aea7f/tests/Microsoft.Identity.Test.Common/Core/Helpers/HttpSnifferClientFactory.cs#L11).
+
+>[!WARNING]
+>This client should not be used in production and only for logging.
+
+Custom `HttpClient` can be added like this:
 
 ```csharp
 var msalPublicClient = PublicClientApplicationBuilder
@@ -166,14 +185,14 @@ var msalPublicClient = PublicClientApplicationBuilder
        .Build();
 ```
 
-## Correlation ID
+### Network traces when using WAM
 
-Logs help understand MSAL's behavior on the client side. To understand what's happening on the service side, the team needs a correlation ID. This ID traces an authentication request through the various back-end services.
+To collect network traces for [Web Account Manager (WAM) on Windows](../../acquiring-tokens/desktop-mobile/wam.md) with Fiddler, a few extra steps are needed.
 
-The correlation ID can be obtained in three ways:
+1. Enable AppContainer loopback in Fiddler by clicking on **WinConfig**, selecting **Exempt All** and saving the changes.
 
-1. From a successful authentication result - <xref:Microsoft.Identity.Client.AuthenticationResult.CorrelationId?displayProperty=nameWithType>;
-2. From a service exception - <xref:Microsoft.Identity.Client.MsalException.CorrelationId%2A?displayProperty=nameWithType>, and
-3. By passing a custom correlation ID to <xref:Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder%601.WithCorrelationId(System.Guid)> when building a token request.
+:::image type="content" source="../../media/msal-logging/fiddler-exempt.png" alt-text="Exemption interface in Fiddler, showing all applications in the WinConfig dialog.":::
 
-When providing your own correlation ID, use a different ID value for each request. Don't use a constant as we won't be able to differentiate between the requests.
+2. Enable HTTPS decryption, but exclude ADFS (`msft.sts.microsoft.com`) from HTTPS decryption:
+
+:::image type="content" source="../../media/msal-logging/msft-sts-fiddler.png" alt-text="Screenshot of Fiddler Options, showing how to configure HTTPS decryption":::

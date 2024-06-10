@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.Identity.Client.Broker" Version="4.61.0.0" />
-    <Assembly Name="Microsoft.Identity.Client.Desktop" Version="4.61.0.0" />
-    <Assembly Name="Microsoft.Identity.Client" Version="4.61.0.0" />
+    <Assembly Name="Microsoft.Identity.Client.Broker" Version="4.61.3.0" />
+    <Assembly Name="Microsoft.Identity.Client.Desktop" Version="4.61.3.0" />
+    <Assembly Name="Microsoft.Identity.Client" Version="4.61.3.0" />
   </Assemblies>
   <Namespace Name="Microsoft.Identity.Client">
     <Type Name="Microsoft.Identity.Client.AadAuthorityAudience" Id="T:Microsoft.Identity.Client.AadAuthorityAudience">
@@ -567,6 +567,7 @@
     </Type>
     <Type Name="Microsoft.Identity.Client.ManagedIdentityApplication" Id="T:Microsoft.Identity.Client.ManagedIdentityApplication">
       <Member Id="M:Microsoft.Identity.Client.ManagedIdentityApplication.AcquireTokenForManagedIdentity(System.String)" />
+      <Member Id="M:Microsoft.Identity.Client.ManagedIdentityApplication.GetManagedIdentitySource" />
     </Type>
     <Type Name="Microsoft.Identity.Client.ManagedIdentityApplicationBuilder" Id="T:Microsoft.Identity.Client.ManagedIdentityApplicationBuilder">
       <Member Id="M:Microsoft.Identity.Client.ManagedIdentityApplicationBuilder.Build" />
@@ -618,7 +619,6 @@
       <Member Id="F:Microsoft.Identity.Client.MsalError.CertWithoutPrivateKey" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.ClientCredentialAuthenticationTypeMustBeDefined" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.ClientCredentialAuthenticationTypesAreMutuallyExclusive" />
-      <Member Id="F:Microsoft.Identity.Client.MsalError.ClientIdMustBeAGuid" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.CodeExpired" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.CombinedUserAppCacheNotSupported" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.CryptographicError" />
@@ -1088,6 +1088,7 @@
   <Namespace Name="Microsoft.Identity.Client.Extensibility">
     <Type Name="Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension" Id="T:Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension">
       <Member Id="M:Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.OnBeforeTokenRequest``1(Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder{``0},System.Func{Microsoft.Identity.Client.Extensibility.OnBeforeTokenRequestData,System.Threading.Tasks.Task})" />
+      <Member Id="M:Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.WithProofOfPosessionKeyId``1(Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder{``0},System.String,System.String)" />
     </Type>
     <Type Name="Microsoft.Identity.Client.Extensibility.AcquireTokenForClientBuilderExtensions" Id="T:Microsoft.Identity.Client.Extensibility.AcquireTokenForClientBuilderExtensions">
       <Member Id="M:Microsoft.Identity.Client.Extensibility.AcquireTokenForClientBuilderExtensions.WithProofOfPosessionKeyId(Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder,System.String,System.String)" />
@@ -1167,6 +1168,7 @@
       <Member Id="F:Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySource.AppService" />
       <Member Id="F:Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySource.AzureArc" />
       <Member Id="F:Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySource.CloudShell" />
+      <Member Id="F:Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySource.DefaultToImds" />
       <Member Id="F:Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySource.Imds" />
       <Member Id="F:Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySource.None" />
       <Member Id="F:Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySource.ServiceFabric" />
