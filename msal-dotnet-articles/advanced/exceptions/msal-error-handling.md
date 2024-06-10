@@ -1,7 +1,6 @@
 ---
 title: Handle errors and exceptions in MSAL.NET
 description: Learn how to handle errors and exceptions, Conditional Access claims challenges, and retries in MSAL.NET.
-services: active-directory
 author: Dickson-Mwendia
 manager: CelesteDG
 
@@ -9,7 +8,7 @@ ms.service: msal
 ms.subservice: msal-dotnet
 ms.topic: conceptual
 ms.workload: identity
-ms.date: 01/25/2023
+ms.date: 06/04/2024
 ms.author: dmwendia
 ms.reviewer: saeeda, jmprieur
 ms.custom: aaddev, devx-track-dotnet
@@ -26,10 +25,11 @@ ms.custom: aaddev, devx-track-dotnet
 
 [MsalServiceException](/dotnet/api/microsoft.identity.client.msalserviceexception) is thrown when the Identity Provider (Microsoft Entra ID) returns an error. It's a translation of the server error.
 
-[MsalUIRequiredException](/dotnet/api/microsoft.identity.client.msaluirequiredexception) is type of [MsalServiceException](/dotnet/api/microsoft.identity.client.msalserviceexception) and indicates that user interaction is required, for example because MFA is required or because the user has changed their password and a token can't be acquired silently. 
+[MsalUIRequiredException](/dotnet/api/microsoft.identity.client.msaluirequiredexception) is type of [MsalServiceException](/dotnet/api/microsoft.identity.client.msalserviceexception) and indicates that user interaction is required. For example, when multifactor authentication (MFA) is required or when the user changes their password and a token can't be acquired silently. 
 
 
 ### Processing exceptions
+
 When processing .NET exceptions, you can use the exception type itself and the `ErrorCode` member to distinguish between exceptions. `ErrorCode` values are constants of type [MsalError](/dotnet/api/microsoft.identity.client.msalerror).
 
 You can also have a look at the fields of [MsalClientException](/dotnet/api/microsoft.identity.client.msalexception), [MsalServiceException](/dotnet/api/microsoft.identity.client.msalserviceexception), and [MsalUIRequiredException](/dotnet/api/microsoft.identity.client.msaluirequiredexception).
@@ -45,23 +45,23 @@ Here are the common exceptions that might be thrown and some possible mitigation
 | Exception | Error code | Mitigation|
 | --- | --- | --- |
 | [MsalUiRequiredException](/dotnet/api/microsoft.identity.client.msaluirequiredexception) | AADSTS65001: The user or administrator hasn't consented to use the application with ID '{appId}' named '{appName}'. Send an interactive authorization request for this user and resource.| Get user consent first. If you aren't using .NET Core (which doesn't have any Web UI), call (once only) `AcquireTokenInteractive`. If you're using .NET core or don't want to do an `AcquireTokenInteractive`, the user can navigate to a URL to give consent: `https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id={clientId}&response_type=code&scope=user.read`. to call `AcquireTokenInteractive`: `app.AcquireTokenInteractive(scopes).WithAccount(account).WithClaims(ex.Claims).ExecuteAsync();`|
-| [MsalUiRequiredException](/dotnet/api/microsoft.identity.client.msaluirequiredexception) | AADSTS50079: The user is required to use [multi-factor authentication (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks).| There's no mitigation. If MFA is configured for your tenant and Microsoft Entra ID decides to enforce it, fall back to an interactive flow such as `AcquireTokenInteractive`.|
+| [MsalUiRequiredException](/dotnet/api/microsoft.identity.client.msaluirequiredexception) | AADSTS50079: The user is required to use [multifactor authentication (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks).| There's no mitigation. If MFA is configured for your tenant and Microsoft Entra ID decides to enforce it, fall back to an interactive flow such as `AcquireTokenInteractive`.|
 | [MsalServiceException](/dotnet/api/microsoft.identity.client.msalserviceexception) |AADSTS90010: The grant type isn't supported over the */common* or */consumers* endpoints. Use the */organizations* or tenant-specific endpoint. You used */common*.| As explained in the message from Microsoft Entra ID, the authority needs to have a tenant or otherwise */organizations*.|
-| [MsalServiceException](/dotnet/api/microsoft.identity.client.msalserviceexception) | AADSTS70002: The request body must contain the following parameter: `client_secret or client_assertion`.| This exception can be thrown if your application wasn't registered as a public client application in Microsoft Entra ID. In the Azure portal, edit the manifest for your application and set `allowPublicClient` to `true`. |
+| [MsalServiceException](/dotnet/api/microsoft.identity.client.msalserviceexception) | AADSTS70002: The request body must contain the following parameter: `client_secret or client_assertion`.| This exception can be thrown if your application wasn't registered as a public client application in Microsoft Entra ID. In the Microsoft Entra admin center, edit the manifest for your application and set `allowPublicClient` to `true`. |
 | [MsalClientException](/dotnet/api/microsoft.identity.client.msalclientexception)| `unknown_user Message`: Couldn't identify logged in user| The library was unable to query the current Windows logged-in user or this user isn't Active Directory or Microsoft Entra joined (work-place joined users aren't supported). Mitigation: Implement your own logic to fetch the username (for example, john@contoso.com) and use the `AcquireTokenByIntegratedWindowsAuth` form that takes in the username.|
-| [MsalClientException](/dotnet/api/microsoft.identity.client.msalclientexception)|integrated_windows_auth_not_supported_managed_user| This method relies on a protocol exposed by Active Directory (AD). If a user was created in Microsoft Entra ID without AD backing ("managed" user), this method will fail. Users created in AD and backed by Microsoft Entra ID ("federated" users) can benefit from this non-interactive method of authentication. Mitigation: Use interactive authentication.|
+| [MsalClientException](/dotnet/api/microsoft.identity.client.msalclientexception)|integrated_windows_auth_not_supported_managed_user| This method relies on a protocol exposed by Active Directory (AD). If a user was created in Microsoft Entra ID without AD backing ("managed" user), this method fails. Users created in AD and backed by Microsoft Entra ID ("federated" users) can benefit from this non-interactive method of authentication. Mitigation: Use interactive authentication.|
 
 ### `MsalUiRequiredException`
 
 One of common status codes returned from MSAL.NET when calling `AcquireTokenSilent()` is `MsalError.InvalidGrantError`. This status code means that the application should call the authentication library again, but in interactive mode (AcquireTokenInteractive or AcquireTokenByDeviceCodeFlow for public client applications, do have a challenge in Web apps). This is because additional user interaction is required before authentication token can be issued.
 
-Most of the time when `AcquireTokenSilent` fails, it is because the token cache doesn't have tokens matching your request. Access tokens expire in 1 hour, and `AcquireTokenSilent` will try to fetch a new one based on a refresh token (in OAuth2 terms, this is the "Refresh Token' flow). This flow can also fail for various reasons, for example if a tenant admin configures more stringent login policies. 
+Most of the time when `AcquireTokenSilent` fails, it is because the token cache doesn't have tokens matching your request. Access tokens expire in 1 hour, and `AcquireTokenSilent` tries to fetch a new one based on a refresh token (in OAuth2 terms, this is the "Refresh Token' flow). This flow can also fail for various reasons, for example if a tenant admin configures more stringent sign-in policies. 
 
-The interaction aims at having the user do an action. Some of those conditions are easy for users to resolve (for example, accept Terms of Use with a single click), and some can't be resolved with the current configuration (for example, the machine in question needs to connect to a specific corporate network). Some help the user setting-up multi-factor authentication, or install Microsoft Authenticator on their device.
+The interaction aims at having the user do an action. Some of those conditions are easy for users to resolve (for example, accept Terms of Use with a single click), and some can't be resolved with the current configuration (for example, the machine in question needs to connect to a specific corporate network). Some help the user setting-up multifactor authentication, or install Microsoft Authenticator on their device.
 
 ### `MsalUiRequiredException` classification enumeration
 
-MSAL exposes a `Classification` field, which you can read to provide a better user experience. For example to tell the user that their password expired or that they'll need to provide consent to use some resources. The supported values are part of the [`UiRequiredExceptionClassification`](/dotnet/api/microsoft.identity.client.uirequiredexceptionclassification) enum:
+MSAL exposes a `Classification` field, which you can read to provide a better user experience. For example, to tell the user that their password expired or that they need to provide consent to use some resources. The supported values are part of the [`UiRequiredExceptionClassification`](/dotnet/api/microsoft.identity.client.uirequiredexceptionclassification) enum:
 
 | Classification    | Meaning           | Recommended handling |
 |-------------------|-------------------|----------------------|
@@ -133,7 +133,7 @@ catch (MsalUiRequiredException ex) when (ex.ErrorCode == MsalError.InvalidGrantE
 ```
 [!INCLUDE [Active directory error handling claims challenges](../../includes/error-handling-claims-challenges.md)]
 
-When calling an API requiring Conditional Access from MSAL.NET, your application will need to handle claim challenge exceptions. This will appear as an [MsalServiceException](/dotnet/api/microsoft.identity.client.msalserviceexception) where the [Claims](/dotnet/api/microsoft.identity.client.msalserviceexception.claims) property won't be empty.
+When calling an API requiring Conditional Access from MSAL.NET, your application needs to handle claim challenge exceptions. This appears as an [MsalServiceException](/dotnet/api/microsoft.identity.client.msalserviceexception) where the [Claims](/dotnet/api/microsoft.identity.client.msalserviceexception.claims) property won't be empty.
 
 To handle the claim challenge, use <xref:Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder%601.WithClaims(System.String)>.
 

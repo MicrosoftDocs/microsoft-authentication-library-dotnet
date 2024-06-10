@@ -1,14 +1,13 @@
 ---
 title: Microsoft Authentication Library for .NET
 description: Learn how you can use the Microsoft Authentication Library for .NET (MSAL.NET) to acquire tokens from the Microsoft identity platform and access protected web APIs. 
-services: active-directory
 author: Dickson-Mwendia
 manager: CelesteDG
 
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.topic: conceptual
-ms.date: 03/16/2023
+ms.date: 06/04/2024
 ms.author: dmwendia
 ms.reviewer: localden, jmprieur
 ms.custom: devx-track-csharp, aaddev
@@ -31,7 +30,7 @@ MSAL.NET supports different application topologies, including:
 - [Native clients](/azure/active-directory/develop/active-directory-dev-glossary#native-client) (mobile or desktop applications) calling the Microsoft Graph API on behalf of a user.
 - Daemons, services, or [web clients](/azure/active-directory/develop/active-directory-dev-glossary#web-client) (web apps or web APIs) calling the Microsoft Graph API on behalf of a user, or without a user.
 
-For more details about the supported scenarios, see [Scenarios](./getting-started/scenarios.md).
+For more information about the supported scenarios, see [Scenarios](./getting-started/scenarios.md).
 
 MSAL.NET supports multiple platforms, including [.NET](https://dotnet.microsoft.com/), [.NET Framework](https://dotnet.microsoft.com/download/dotnet-framework), and [.NET MAUI](https://dotnet.microsoft.com/apps/maui).
 
@@ -44,13 +43,13 @@ MSAL.NET supports multiple platforms, including [.NET](https://dotnet.microsoft.
 > [!NOTE]
 > MSAL.NET versions 4.61.0 and above do not provide support for Universal Windows Platform, Xamarin Android, and Xamarin iOS. Read more about the deprecation in [Announcing the Upcoming Deprecation of MSAL.NET for Xamarin and UWP](https://devblogs.microsoft.com/identity/uwp-xamarin-msal-net-deprecation/).
 
-## Why use MSAL.NET ?
+## Why use MSAL.NET?
 
 MSAL.NET provides several ways of getting a token. Using MSAL.NET is easier than using generic OAuth libraries or writing calls against the protocol. MSAL.NET provides several out-of-the-box benefits that simplify the developer workflow:
 
-- Maintain a **token cache** and **refresh tokens** for you when they are close to expiry.
+- Maintain a **token cache** and **refresh tokens** for you when they're close to expiry.
 - Helps you specify which **audience** you want your application to sign-in (your organization, several organizations, work, school, and Microsoft personal accounts, social identities with Microsoft Entra External ID, or users in sovereign and national clouds).
-- Helps you set-up the application through **configuration** files.
+- Helps you set up the application through **configuration** files.
 - Helps you troubleshoot the app by exposing actionable exceptions, logging, and telemetry.
 
 ## Getting started with MSAL.NET
@@ -62,7 +61,7 @@ MSAL.NET provides several ways of getting a token. Using MSAL.NET is easier than
 
 ## Considerations
 
-MSAL.NET is used to acquire tokens. It's not used to protect a Web API. If you are interested in protecting a Web API with Microsoft Entra ID, check out:
+MSAL.NET is used to acquire tokens. It's not used to protect a Web API. If you're interested in protecting a Web API with Microsoft Entra ID, check out:
 
 - [Microsoft Entra ID with ASP.NET Core](/aspnet/core/security/authentication/azure-active-directory/). Examples showcase web apps that call a web API with MSAL.NET.
 - [active-directory-dotnet-native-aspnetcore-v2](https://github.com/azure-samples/active-directory-dotnet-native-aspnetcore-v2) shows how to call an ASP.NET Core Web API from a WPF application using Microsoft Entra ID.
@@ -81,7 +80,7 @@ For previous releases, see the [Releases on GitHub](https://github.com/AzureAD/m
 
 For work-in-progress and future releases, see [Milestones](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/milestones).
 
-For additional information on versioning, see [Semantic versioning - API change management](resources/semantic-versioning-api-change-management.md) to understand changes in MSAL.NET public API.
+For more information on versioning, see [Semantic versioning - API change management](resources/semantic-versioning-api-change-management.md) to understand changes in MSAL.NET public API.
 
 ## Samples
 
