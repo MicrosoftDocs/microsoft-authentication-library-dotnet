@@ -37,7 +37,7 @@ The recommendation is:
 The [Microsoft.Identity.Web.TokenCache](https://www.nuget.org/packages/Microsoft.Identity.Web.TokenCache) NuGet package provides token cache serialization within the [Microsoft.Identity.Web](https://github.com/AzureAD/microsoft-identity-web) library. The library provides integration with both ASP.NET Core and ASP.NET Classic, and its abstractions can be used to drive other web app or API frameworks. 
 
 >[!NOTE]
-> The examples below are for ASP.NET Core. For ASP.NET the code is similar, see [the `ms-identity-aspnet-wepapp-openidconnect` web app sample](https://github.com/Azure-Samples/ms-identity-aspnet-webapp-openidconnect/blob/master/WebApp/App_Start/Startup.Auth.cs) for a reference implementation.
+> The examples below are for ASP.NET Core. For ASP.NET the code is similar, see [the `ms-identity-aspnet-wepapp-openidconnect` web app sample](https://github.com/Azure-Samples/ms-identity-aspnet-webapp-openidconnect/blob/archive/WebApp/App_Start/Startup.Auth.cs) for a reference implementation.
 
 | Extension method | Description  |
 | ---------------- | ------------ |
