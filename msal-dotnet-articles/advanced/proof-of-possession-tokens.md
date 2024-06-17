@@ -5,32 +5,51 @@ description: Learn how to acquire Proof-of-Possession tokens for public and conf
 
 # Proof-of-Possession (PoP) tokens
 
-Bearer tokens are the norm in modern identity flows, however they are vulnerable to being stolen and used to access a protected resource.
+Bearer tokens are the norm in modern identity flows; however they are vulnerable to being stolen from token caches and via man-in-the-middle (MITM) attacks.
 
-Proof-of-Possession (PoP) tokens mitigate this threat via 2 mechanisms:
+Proof-of-Possession (PoP) tokens, as described by [RFC 7800](https://tools.ietf.org/html/rfc7800), mitigate this threat. PoP tokens are bound to the client machine, via a public/private PoP key. The PoP public key is injected into the token by the token issuer (Entra ID) and the client
+also signs the token using the private PoP key. A fully formed PoP token has two digital signatures - one from the token issuer and one from the client. The PoP protocol has two protections in place:
 
-- They are bound to the user/machine that wants to access a protected resource, via a public/private key pair
-- They are bound to the protected resource itself, i.e. a token that is used to access `GET https://contoso.com/transactions` cannot be used to access `GET https://contoso.com/tranfer/100`
+- **Protection against token cache compromise**. MSAL will not store fully-formed PoP tokens in the cache. Instead, it will sign tokens on-demand when the app needs them. An attacker who is able to compromise the token cache will not be able to digitally sign with the PoP private key.
+- **Protection against man-in-the-middle attacks**. A server nonce is added to the protocol.
 
-For more details, see [RFC 7800](https://tools.ietf.org/html/rfc7800).
+> [!WARNING]
+> The strength of the PoP protocol depends in the strength of the PoP keys. Microsoft recommends using hardware keys via the [Trusted Platform Module (TPM)](https://support.microsoft.com/topic/what-is-tpm-705f241d-025d-4470-80c5-4feeb24fa1ee) where possible.
 
-## Does the protected resource accept PoP tokens?
+## PoP Variants
 
-If you make an unauthenticated request to a protected API, it should reply with HTTP 401 Unauthorized response, and with some [WWW-Authenticate](https://developer.mozilla.org/docs/Web/HTTP/Headers/WWW-Authenticate) headers. These headers inform the clients of the available authentication schemes, such as Basic, NTLM, Bearer, and POP. The MSAL family of libraries can help with Bearer and PoP.
+There are several PoP protocols and variations. The Microsoft Entra ID infrastructure currently supports two types:
 
-Programatically, MSAL.NET offers [a helper API](extract-authentication-parameters.md) for parsing these headers.
+- **PoP via Signed HTTP Request (SHR)** . See [PoP key distribution](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-pop-key-distribution-07) and [SHR](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-signed-http-request-03) for the detailed specifications.
+- **PoP via mutual TLS (mTLS)**. See [RFC 8705](https://datatracker.ietf.org/doc/html/rfc8705) for details.
 
-## Can my own web api validate PoP tokens?
+mTLS is faster and has the advantage of including man-in-the-middle protections at the TLS layer; however, it can be difficult to establish mTLS tunnels between the client and the identity provider and between the client and the resource.
 
-Microsoft does not currently offer an out-of-the-box PoP token validation experience, in the same way that it offers a Bearer token validation experience for web apis. A validator exists for Microsoft's own web apis.
+PoP via Signed HTTP Request (SHR) does not rely on transport protocol changes; however the server nonce must be handled explicitly by the app developer. All MSAL releases support PoP via SHR for public client (desktop) and confidential client applications.
 
-## Proof-of-Possession for public clients
+For confidential client (web apps, web APIs, and Managed Identity), support for mTLS is currently not available.
 
-Proof-of-Possession on public client flows can be achieved with the use of the updated [Windows broker](../acquiring-tokens/desktop-mobile/wam.md) in MSAL 4.52.0 and above. MSAL will use the best available keys which exist on the machine, typically hardware keys (see [TPM](/windows/security/hardware-security/tpm/tpm-fundamentals)).
+## Support for PoP
 
-It is possible that a client does not support creating PoP tokens. This is due to the fact that brokers (WAM, Company Portal) are not always present on the device or that the SDK does not implement the protocol on a specific operating system. Currently, PoP tokens are available on Windows 10+ and Windows Server 2019+. Use the API `publicClientApp.IsProofOfPossessionSupportedByClient()` to understand if POP is supported by the client.
+Microsoft has enabled PoP via Signed HTTP Request (SHR) in some of its web APIs. Microsoft Graph supports PoP tokens. For example, if you make an unauthenticated request to `https://graph.microsoft.com/v1.0/me/messages` you will get a `HTTP 401` response with two `WWW-Authenticate` headers, indicating bearer and PoP token support.
 
-Example implementation:
+:::image type="content" source="../media/proof-of-possession-tokens/example-www-authenticate-headers.png" alt-text="Example of WWW-Authenticate headers in response":::
+
+## Token validation
+
+Microsoft does not currently offer a public SDK for PoP token validation.
+
+## Usage
+
+### Public client applications
+
+PoP on public client flows can be achieved with the use of the [Windows broker](../acquiring-tokens/desktop-mobile/wam.md) (WAM). Other MSAL libraries also support PoP through WAM.
+
+MSAL will use the best available keys which exist on the machine, typically hardware keys (e.g., [TPM](/windows/security/hardware-security/tpm/tpm-fundamentals)). There is no option to bring your own key.
+
+It is possible that a client does not support creating PoP tokens. This is caused by the fact that brokers (such as WAM or Company Portal) are not always present on the device or the SDK does not implement the protocol on a specific operating system. Currently, PoP tokens are available on Windows 10 and above, as well as Windows Server 2019 and above. Use [`IsProofOfPossessionSupportedByClient()`](xref:Microsoft.Identity.Client.PublicClientApplication.IsProofOfPossessionSupportedByClient) to check if PoP is supported by the client.
+
+#### Example
 
 ```csharp
 // Required for the use of the broker 
@@ -70,16 +89,14 @@ var result = await pca.AcquireTokenSilent(new[] { "scope" }, accounts.FirstOrDef
        .WithProofOfPossession(nonce, method, requestUri)
        .ExecuteAsync()
        .ConfigureAwait(false);
-
 ```
 
-## Proof-of-Possession for confidential clients
+### Confidential client applications
 
 > [!NOTE]
-> Proof-of-Possession is experimental for confidential clients. 
->
+> Proof-of-Possession via Signed HTTP Request is experimental for confidential clients and will likely be renamed or removed in a future version. Future APIs will rely on PoP via mTLS.
 
-Example implementation:
+#### Example
 
 ```csharp
 // The PoP token will be bound to this user / machine and to `GET https://www.contoso.com/tranfers` (the query params are not bound).
@@ -112,26 +129,17 @@ result = await cca
 var authHeader = new AuthenticationHeaderValue(result.TokenType, result.AccessToken);
 ```
 
-## How does MSAL manage the keys
+#### No hardware keys by default
 
-An RSA key pair of length 2048 is generated by MSAL and stored in memory which will be cycled every 8 hours. For details, see the implementation in [PoPProviderFactory](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/300fba16bd8096dceba3684311550b4b52a56177/src/client/Microsoft.Identity.Client/AuthScheme/PoP/PoPProviderFactory.cs#L18) and [InMemoryCryptoProvider](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/main/src/client/Microsoft.Identity.Client/AuthScheme/PoP/InMemoryCryptoProvider.cs).
+MSAL.NET experimental API uses in-memory/software keys. An RSA key pair of length 2048 is generated by MSAL and stored in memory, cycled every eight hours. For details, see the implementation in [`PoPProviderFactory`](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/300fba16bd8096dceba3684311550b4b52a56177/src/client/Microsoft.Identity.Client/AuthScheme/PoP/PoPProviderFactory.cs#L18) and [`InMemoryCryptoProvider`](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/main/src/client/Microsoft.Identity.Client/AuthScheme/PoP/InMemoryCryptoProvider.cs).
 
-## Bring your own key
+#### Bring your own key
 
-The PoP feature in MSAL allows users to provide their own key management for additional control over cryptographic operations. The interface is an abstraction over the asymmetric key operations needed by PoP that encapsulates a pair of public and private keys and some typical crypto operations. All symmetric operations use SHA256.
+To use a better key, the API allows app developers to provide their own managed keys. The interface is an abstraction over the asymmetric key operations needed by PoP that encapsulates a pair of public and private keys and related crypto operations. All symmetric operations use SHA256.
 
 > [!IMPORTANT]
-> Two properties and the sign method on this interface will be called at different times but MUST return details of the same private / public key pair, i.e. do not change to a different key pair mid way. It is best to make this class immutable. Ideally there should be a single public and private key pair associated with a machine, so that implementers of this interface should consider exposing a singleton. See [IPoPCryptoProvider interface](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/master/src/client/Microsoft.Identity.Client/AuthScheme/PoP/IPoPCryptoProvider.cs), [example RSA key implementation](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/9895855ac4fcf52893fbc2b06ee20ea3eda1549a/tests/Microsoft.Identity.Test.Integration.netfx/HeadlessTests/PoPTests.cs#L503), and [example ECD key implementation](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/9895855ac4fcf52893fbc2b06ee20ea3eda1549a/tests/Microsoft.Identity.Test.Common/Core/Helpers/ECDCertificatePopCryptoProvider.cs#L11).
+> Two properties and the sign method on this interface will be called at different times but **must** return details of the same private/public key pair. Do not change to a different key pair through the process. It is best to make this class immutable. Ideally there should be a single public and private key pair associated with a machine. Implementers of this interface should consider exposing a singleton. See [`IPoPCryptoProvider`](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/master/src/client/Microsoft.Identity.Client/AuthScheme/PoP/IPoPCryptoProvider.cs), [example RSA key implementation](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/9895855ac4fcf52893fbc2b06ee20ea3eda1549a/tests/Microsoft.Identity.Test.Integration.netfx/HeadlessTests/PoPTests.cs#L503), and [an example ECD key implementation](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/9895855ac4fcf52893fbc2b06ee20ea3eda1549a/tests/Microsoft.Identity.Test.Common/Core/Helpers/ECDCertificatePopCryptoProvider.cs#L11) for reference.
 
-## How to add more claims / How do I create the Signed HTTP Request (SHR) part of the PoP token myself?
+#### Adding more claims or creating the SHR request part of the PoP token
 
-If you want to do key management and to create the SHR yourself,  see [this example implementation](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/300fba16bd8096dceba3684311550b4b52a56177/tests/Microsoft.Identity.Test.Integration.netfx/HeadlessTests/PoPTests.cs#L286).
-
-An end to end implementation would need to: 
-
-1. [Enable the use of broker](../acquiring-tokens/desktop-mobile/wam.md)
-1. Check if the client is capable of creating PoP tokens using `publicClientApp.IsProofOfPossessionSupportedByClient()`
-2. Make an unauthenticated call to the service
-3. [Parse the WWW-Authenticate headers](extract-authentication-parameters.md) and if PoP is supported, extract the nonce
-4. Request PoP tokens using the `AcquireTokenSilent` / `AcquireTokenInteractive` pattern, by adding the `.WithProofOfPossession(nonce, method, requestUri)` modifier
-5. Make the request to the protected resource. If the request results in 200 OK, [parse the Authenticate-Info](extract-authentication-parameters.md)  header and extract the new `nonce` - it needs to be used at step 4 when requesting a new token. If the request results in a 401 Unauthenticated, observe the error - it may be because of an expired nonce. In that case, repeat steps 3-5. 
+To create the SHR yourself, refer to [the example implementation](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/300fba16bd8096dceba3684311550b4b52a56177/tests/Microsoft.Identity.Test.Integration.netfx/HeadlessTests/PoPTests.cs#L286).
