@@ -5,12 +5,12 @@ description: Learn how to acquire Proof-of-Possession tokens for public and conf
 
 # Proof-of-Possession (PoP) tokens
 
-Bearer tokens are the norm in modern identity flows; however they are vulnerable to being stolen from token caches and via man-in-the-middle (MITM) attacks.
+Bearer tokens are the norm in modern identity flows; however they are vulnerable to being stolen from token caches.
 
 Proof-of-Possession (PoP) tokens, as described by [RFC 7800](https://tools.ietf.org/html/rfc7800), mitigate this threat. PoP tokens are bound to the client machine, via a public/private PoP key. The PoP public key is injected into the token by the token issuer (Entra ID) and the client
 also signs the token using the private PoP key. A fully formed PoP token has two digital signatures - one from the token issuer and one from the client. The PoP protocol has two protections in place:
 
-- **Protection against token cache compromise**. MSAL will not store fully-formed PoP tokens in the cache. Instead, it will sign tokens on-demand when the app needs them. An attacker who is able to compromise the token cache will not be able to digitally sign with the PoP private key.
+- **Protection against token cache compromise**. MSAL will not store fully-formed PoP tokens in the cache. Instead, it will sign tokens only when the app requests them. An attacker who is able to compromise the token cache should not be able to digitally sign the incomplete tokens in there, as they do not have access to the PoP private key. The ability of an attacker to steal a private key can be mitigated by using hardware protected keys.
 - **Protection against man-in-the-middle attacks**. A server nonce is added to the protocol.
 
 > [!WARNING]
@@ -18,18 +18,14 @@ also signs the token using the private PoP key. A fully formed PoP token has two
 
 ## PoP Variants
 
-There are several PoP protocols and variations. The Microsoft Entra ID infrastructure currently supports two types:
+There are several PoP protocols and variations. The Microsoft Entra ID infrastructure aims to supports two types:
 
-- **PoP via Signed HTTP Request (SHR)** . See [PoP key distribution](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-pop-key-distribution-07) and [SHR](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-signed-http-request-03) for the detailed specifications.
-- **PoP via mutual TLS (mTLS)**. See [RFC 8705](https://datatracker.ietf.org/doc/html/rfc8705) for details.
+- **PoP via Signed HTTP Request (SHR)** . See [PoP key distribution](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-pop-key-distribution-07) and [SHR](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-signed-http-request-03) for the detailed specifications. This is fully supported by Entra ID and by the SDKs for public client scenarios, i.e. desktop and mobile apps.
+- **PoP via mutual TLS (mTLS)**. See [RFC 8705](https://datatracker.ietf.org/doc/html/rfc8705) for details. Investigated for confidential clients, i.e. web sites, web apis, server to server calls. No support exists currently.
 
-mTLS is faster and has the advantage of including man-in-the-middle protections at the TLS layer; however, it can be difficult to establish mTLS tunnels between the client and the identity provider and between the client and the resource.
+mTLS is faster and has the advantage of including man-in-the-middle protections at the TLS layer; however, it can be difficult to establish mTLS tunnels between the client and the identity provider and between the client and the resource. PoP via Signed HTTP Request (SHR) does not rely on transport protocol changes; however the server nonce must be handled explicitly by the app developer. 
 
-PoP via Signed HTTP Request (SHR) does not rely on transport protocol changes; however the server nonce must be handled explicitly by the app developer. All MSAL releases support PoP via SHR for public client (desktop) and confidential client applications.
-
-For confidential client (web apps, web APIs, and Managed Identity), support for mTLS is currently not available.
-
-## Support for PoP
+## Support for PoP SHR
 
 Microsoft has enabled PoP via Signed HTTP Request (SHR) in some of its web APIs. Microsoft Graph supports PoP tokens. For example, if you make an unauthenticated request to `https://graph.microsoft.com/v1.0/me/messages` you will get a `HTTP 401` response with two `WWW-Authenticate` headers, indicating bearer and PoP token support.
 
@@ -45,7 +41,7 @@ Microsoft does not currently offer a public SDK for PoP token validation.
 
 PoP on public client flows can be achieved with the use of the [Windows broker](../acquiring-tokens/desktop-mobile/wam.md) (WAM). Other MSAL libraries also support PoP through WAM.
 
-MSAL will use the best available keys which exist on the machine, typically hardware keys (e.g., [TPM](/windows/security/hardware-security/tpm/tpm-fundamentals)). There is no option to bring your own key.
+The broker (via MSAL) will use the best available keys which exist on the machine, typically hardware keys (e.g., [TPM](/windows/security/hardware-security/tpm/tpm-fundamentals)). There is no option to bring your own key.
 
 It is possible that a client does not support creating PoP tokens. This is caused by the fact that brokers (such as WAM or Company Portal) are not always present on the device or the SDK does not implement the protocol on a specific operating system. Currently, PoP tokens are available on Windows 10 and above, as well as Windows Server 2019 and above. Use [`IsProofOfPossessionSupportedByClient()`](xref:Microsoft.Identity.Client.PublicClientApplication.IsProofOfPossessionSupportedByClient) to check if PoP is supported by the client.
 
