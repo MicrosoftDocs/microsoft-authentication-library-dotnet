@@ -73,7 +73,7 @@ The [standard pattern](https://datatracker.ietf.org/doc/html/rfc6750#section-3.1
 public void ReplyUnauthorizedWithWwwAuthenticateHeader(MsalUiRequiredException ex)
 {
      httpResponse.StatusCode = (int)HttpStatusCode.Unauthorized; // HTTP 401
-     httpResponse.Headers[HeaderNames.WWWAuthenticate] = $"Bearer claims={ex.Claims}, error={ex.Message};";
+     httpResponse.Headers[HeaderNames.WWWAuthenticate] = $"Bearer claims={ex.Claims}, error={ex.Message}";
 }
 ```
 
@@ -130,7 +130,7 @@ catch (MsalClientException ex) {
           authResult = await ((ILongRunningWebApi)confidentialClientApp)
          .InitiateLongRunningProcessInWebApi(
               scopes,
-              userAccessToken, //Valid access token
+              userAccessToken, // Valid access token
               ref sessionKey)
          .ExecuteAsync();
     }
@@ -140,8 +140,8 @@ catch (MsalClientException ex) {
     // but Microsoft Entra ID requires the user to sign in again.  
     // Trigger your app's user sign-in again by replying with a 401 + WWW-Authenticate  
     // Then call InitiateLongRunningProcessInWebApi once a new access token is acquired from the user
-     httpResponse.StatusCode = (int)HttpStatusCode.Forbidden;
-     httpResponse.Headers[HeaderNames.WWWAuthenticate] = $"Bearer claims={ex.Claims}, error={ex.Message};
+    httpResponse.StatusCode = (int)HttpStatusCode.Unauthorized;
+    httpResponse.Headers[HeaderNames.WWWAuthenticate] = $"Bearer claims={ex.Claims}, error={ex.Message}";
 }
 ```
 
