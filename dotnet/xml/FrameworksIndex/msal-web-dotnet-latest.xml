@@ -1,22 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-web-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.IdentityModel.Abstractions" Version="7.6.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.JsonWebTokens" Version="7.6.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.KeyVaultExtensions" Version="7.6.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Logging" Version="7.6.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.LoggingExtensions" Version="7.6.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.ManagedKeyVaultSecurityKey" Version="7.6.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols" Version="7.6.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="7.6.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.SignedHttpRequest" Version="7.6.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.WsFederation" Version="7.6.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.TestExtensions" Version="7.6.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Tokens" Version="7.6.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Tokens.Saml" Version="7.6.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Validators" Version="7.6.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Xml" Version="7.6.0.0" />
-    <Assembly Name="System.IdentityModel.Tokens.Jwt" Version="7.6.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Abstractions" Version="7.6.2.0" />
+    <Assembly Name="Microsoft.IdentityModel.JsonWebTokens" Version="7.6.2.0" />
+    <Assembly Name="Microsoft.IdentityModel.KeyVaultExtensions" Version="7.6.2.0" />
+    <Assembly Name="Microsoft.IdentityModel.Logging" Version="7.6.2.0" />
+    <Assembly Name="Microsoft.IdentityModel.LoggingExtensions" Version="7.6.2.0" />
+    <Assembly Name="Microsoft.IdentityModel.ManagedKeyVaultSecurityKey" Version="7.6.2.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols" Version="7.6.2.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="7.6.2.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.SignedHttpRequest" Version="7.6.2.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.WsFederation" Version="7.6.2.0" />
+    <Assembly Name="Microsoft.IdentityModel.TestExtensions" Version="7.6.2.0" />
+    <Assembly Name="Microsoft.IdentityModel.Tokens" Version="7.6.2.0" />
+    <Assembly Name="Microsoft.IdentityModel.Tokens.Saml" Version="7.6.2.0" />
+    <Assembly Name="Microsoft.IdentityModel.Validators" Version="7.6.2.0" />
+    <Assembly Name="Microsoft.IdentityModel.Xml" Version="7.6.2.0" />
+    <Assembly Name="System.IdentityModel.Tokens.Jwt" Version="7.6.2.0" />
   </Assemblies>
   <Namespace Name="Microsoft.IdentityModel.Abstractions">
     <Type Name="Microsoft.IdentityModel.Abstractions.EventLogLevel" Id="T:Microsoft.IdentityModel.Abstractions.EventLogLevel">
@@ -198,6 +198,7 @@
     <Type Name="Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames" Id="T:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames">
       <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Acr" />
       <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Actort" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Address" />
       <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Amr" />
       <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.AtHash" />
       <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Aud" />
@@ -206,6 +207,7 @@
       <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Birthdate" />
       <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.CHash" />
       <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Email" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.EmailVerified" />
       <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Exp" />
       <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.FamilyName" />
       <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Gender" />
@@ -213,18 +215,26 @@
       <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Iat" />
       <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Iss" />
       <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Jti" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Locale" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.MiddleName" />
       <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Name" />
       <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.NameId" />
       <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Nbf" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Nickname" />
       <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Nonce" />
       <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.PhoneNumber" />
       <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.PhoneNumberVerified" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Picture" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.PreferredUsername" />
       <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Prn" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Profile" />
       <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Sid" />
       <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Sub" />
       <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Typ" />
       <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.UniqueName" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.UpdatedAt" />
       <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Website" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.ZoneInfo" />
     </Type>
     <Type Name="Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities" Id="T:Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities">
       <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.RegexJwe" />
@@ -473,16 +483,20 @@
       <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.#ctor(System.String)" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.Create(System.String)" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeAcrValuesSupported" />
+      <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeBackchannelAuthenticationRequestSigningAlgValuesSupported" />
+      <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeBackchannelTokenDeliveryModesSupported" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeClaimsLocalesSupported" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeClaimsSupported" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeClaimTypesSupported" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeDisplayValuesSupported" />
+      <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeDPoPSigningAlgValuesSupported" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeGrantTypesSupported" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeIdTokenEncryptionAlgValuesSupported" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeIdTokenEncryptionEncValuesSupported" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeIdTokenSigningAlgValuesSupported" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeIntrospectionEndpointAuthMethodsSupported" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeIntrospectionEndpointAuthSigningAlgValuesSupported" />
+      <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializePromptValuesSupported" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeRequestObjectEncryptionAlgValuesSupported" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeRequestObjectEncryptionEncValuesSupported" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeRequestObjectSigningAlgValuesSupported" />
@@ -502,12 +516,18 @@
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ActiveTokenEndpoint" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.AdditionalData" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.AuthorizationEndpoint" />
+      <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.AuthorizationResponseIssParameterSupported" />
+      <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.BackchannelAuthenticationEndpoint" />
+      <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.BackchannelAuthenticationRequestSigningAlgValuesSupported" />
+      <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.BackchannelTokenDeliveryModesSupported" />
+      <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.BackchannelUserCodeParameterSupported" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.CheckSessionIframe" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ClaimsLocalesSupported" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ClaimsParameterSupported" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ClaimsSupported" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ClaimTypesSupported" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.DisplayValuesSupported" />
+      <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.DPoPSigningAlgValuesSupported" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.EndSessionEndpoint" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.FrontchannelLogoutSessionSupported" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.FrontchannelLogoutSupported" />
@@ -525,12 +545,15 @@
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.LogoutSessionSupported" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.OpPolicyUri" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.OpTosUri" />
+      <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.PromptValuesSupported" />
+      <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.PushedAuthorizationRequestEndpoint" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.RegistrationEndpoint" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.RequestObjectEncryptionAlgValuesSupported" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.RequestObjectEncryptionEncValuesSupported" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.RequestObjectSigningAlgValuesSupported" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.RequestParameterSupported" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.RequestUriParameterSupported" />
+      <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.RequirePushedAuthorizationRequests" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.RequireRequestUriRegistration" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ResponseModesSupported" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ResponseTypesSupported" />
@@ -770,6 +793,11 @@
     <Type Name="Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames" Id="T:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames">
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.AcrValuesSupported" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.AuthorizationEndpoint" />
+      <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.AuthorizationResponseIssParameterSupported" />
+      <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.BackchannelAuthenticationEndpoint" />
+      <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.BackchannelAuthenticationRequestSigningAlgValuesSupported" />
+      <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.BackchannelTokenDeliveryModesSupported" />
+      <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.BackchannelUserCodeParameterSupported" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.CheckSessionIframe" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.ClaimsLocalesSupported" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.ClaimsParameterSupported" />
@@ -777,6 +805,7 @@
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.ClaimTypesSupported" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.Discovery" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.DisplayValuesSupported" />
+      <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.DPoPSigningAlgValuesSupported" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.EndSessionEndpoint" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.FrontchannelLogoutSessionSupported" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.FrontchannelLogoutSupported" />
@@ -794,12 +823,15 @@
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.MicrosoftMultiRefreshToken" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.OpPolicyUri" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.OpTosUri" />
+      <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.PromptValuesSupported" />
+      <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.PushedAuthorizationRequestEndpoint" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.RegistrationEndpoint" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.RequestObjectEncryptionAlgValuesSupported" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.RequestObjectEncryptionEncValuesSupported" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.RequestObjectSigningAlgValuesSupported" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.RequestParameterSupported" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.RequestUriParameterSupported" />
+      <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.RequirePushedAuthorizationRequests" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.RequireRequestUriRegistration" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.ResponseModesSupported" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.ResponseTypesSupported" />
@@ -3329,6 +3361,7 @@
     <Type Name="System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames" Id="T:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames">
       <Member Id="F:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Acr" />
       <Member Id="F:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Actort" />
+      <Member Id="F:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Address" />
       <Member Id="F:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Amr" />
       <Member Id="F:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.AtHash" />
       <Member Id="F:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Aud" />
@@ -3337,6 +3370,7 @@
       <Member Id="F:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Birthdate" />
       <Member Id="F:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.CHash" />
       <Member Id="F:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Email" />
+      <Member Id="F:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.EmailVerified" />
       <Member Id="F:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Exp" />
       <Member Id="F:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.FamilyName" />
       <Member Id="F:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Gender" />
@@ -3344,16 +3378,26 @@
       <Member Id="F:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Iat" />
       <Member Id="F:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Iss" />
       <Member Id="F:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Jti" />
+      <Member Id="F:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Locale" />
+      <Member Id="F:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.MiddleName" />
       <Member Id="F:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Name" />
       <Member Id="F:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.NameId" />
       <Member Id="F:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Nbf" />
+      <Member Id="F:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Nickname" />
       <Member Id="F:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Nonce" />
+      <Member Id="F:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.PhoneNumber" />
+      <Member Id="F:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.PhoneNumberVerified" />
+      <Member Id="F:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Picture" />
+      <Member Id="F:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.PreferredUsername" />
       <Member Id="F:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Prn" />
+      <Member Id="F:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Profile" />
       <Member Id="F:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Sid" />
       <Member Id="F:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Sub" />
       <Member Id="F:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Typ" />
       <Member Id="F:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.UniqueName" />
+      <Member Id="F:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.UpdatedAt" />
       <Member Id="F:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Website" />
+      <Member Id="F:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.ZoneInfo" />
     </Type>
     <Type Name="System.IdentityModel.Tokens.Jwt.JwtSecurityToken" Id="T:System.IdentityModel.Tokens.Jwt.JwtSecurityToken">
       <Member Id="M:System.IdentityModel.Tokens.Jwt.JwtSecurityToken.#ctor(System.IdentityModel.Tokens.Jwt.JwtHeader,System.IdentityModel.Tokens.Jwt.JwtPayload)" />
