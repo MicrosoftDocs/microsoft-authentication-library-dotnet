@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-model-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.Identity.Abstractions" Version="5.3.0.0" />
+    <Assembly Name="Microsoft.Identity.Abstractions" Version="6.0.0.0" />
     <Assembly Name="Microsoft.Identity.Web.Azure" Version="2.19.1.0" />
     <Assembly Name="Microsoft.Identity.Web.Certificate" Version="2.19.1.0" />
     <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="2.19.1.0" />
@@ -170,6 +170,7 @@
       <Member Id="P:Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod.HttpMethod" />
     </Type>
     <Type Name="Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider" Id="T:Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider">
+      <Member Id="M:Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider.CreateAuthorizationHeaderAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider.CreateAuthorizationHeaderForAppAsync(System.String,Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions,System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider.CreateAuthorizationHeaderForUserAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)" />
     </Type>
