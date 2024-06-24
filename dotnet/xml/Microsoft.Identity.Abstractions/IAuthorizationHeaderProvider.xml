@@ -15,6 +15,7 @@
     <AssemblyVersion>5.0.0.0</AssemblyVersion>
     <AssemblyVersion>5.1.0.0</AssemblyVersion>
     <AssemblyVersion>5.3.0.0</AssemblyVersion>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces />
   <Docs>
@@ -24,6 +25,43 @@
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
+    <Member MemberName="CreateAuthorizationHeaderAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;string&gt; CreateAuthorizationHeaderAsync (System.Collections.Generic.IEnumerable&lt;string&gt; scopes, Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions? options = default, System.Security.Claims.ClaimsPrincipal? claimsPrincipal = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;string&gt; CreateAuthorizationHeaderAsync(class System.Collections.Generic.IEnumerable`1&lt;string&gt; scopes, class Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions options, class System.Security.Claims.ClaimsPrincipal claimsPrincipal, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider.CreateAuthorizationHeaderAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateAuthorizationHeaderAsync (scopes As IEnumerable(Of String), Optional options As AuthorizationHeaderProviderOptions = Nothing, Optional claimsPrincipal As ClaimsPrincipal = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of String)" />
+      <MemberSignature Language="F#" Value="abstract member CreateAuthorizationHeaderAsync : seq&lt;string&gt; * Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions * System.Security.Claims.ClaimsPrincipal * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;string&gt;" Usage="iAuthorizationHeaderProvider.CreateAuthorizationHeaderAsync (scopes, options, claimsPrincipal, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scopes" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="options" Type="Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions" />
+        <Parameter Name="claimsPrincipal" Type="System.Security.Claims.ClaimsPrincipal" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="scopes">The scopes for which to request the authorization header. 
+            Provide a single scope if the header needs to be created on behalf of an application.</param>
+        <param name="options">The <see cref="T:Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions" /> containing information about the API
+            to be called and token acquisition settings. If not provided, the header will be for a bearer token.</param>
+        <param name="claimsPrincipal">Inbound authentication elements. In a web API, this is usually the result of the
+            validation of a token. In a web app, this would be information about the signed-in user. This is not useful in
+            daemon applications. In Microsoft.Identity.Web you rarely need to provide this parameter as it's inferred from the
+            context.</param>
+        <param name="cancellationToken">A token to cancel the operation.</param>
+        <summary>
+            Creates an authorization header for calling a protected web API on behalf of a user or the application.
+            </summary>
+        <returns>A string containing the authorization header, such as "Bearer token" or "PoP token".</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="CreateAuthorizationHeaderForAppAsync">
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;string&gt; CreateAuthorizationHeaderForAppAsync (string scopes, Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions? downstreamApiOptions = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;string&gt; CreateAuthorizationHeaderForAppAsync(string scopes, class Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions downstreamApiOptions, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
@@ -33,7 +71,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.String&gt;</ReturnType>
@@ -68,7 +106,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>5.3.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.String&gt;</ReturnType>
@@ -85,7 +123,7 @@
             protocols like Pop), and token acquisition options.</param>
         <param name="claimsPrincipal">Inbound authentication elements. In a web API, this is usually the result of the
             validation of a token. In a web app, this would be information about the signed-in user. This is not useful in
-            daemon applications. In Microsoft.Identity.Web you rarely need to provide this parameter as it's infered from the
+            daemon applications. In Microsoft.Identity.Web you rarely need to provide this parameter as it's inferred from the
             context.</param>
         <param name="cancellationToken">Cancellation token.</param>
         <summary>
