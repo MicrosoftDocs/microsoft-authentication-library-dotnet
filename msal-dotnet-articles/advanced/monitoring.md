@@ -97,6 +97,8 @@ Counter to capture aggregation of failed requests in MSAL.
 | `MsalVersion`        | Version of MSAL used. |
 | `Platform`           | .NET SKU used.        |
 | `ErrorCode`          | Microsoft Entra ID error code in case of `MsalServiceException`, `MsalErrorCode` in case of `MsalClientException` or name of the exception in case it isn't an `MsalException`. |
+| `ApiId`              | ID for the API used for token acquisition. |
+| `CacheRefreshReason` | Reason for cache refresh. |
 
 ### Histograms
 
@@ -113,6 +115,7 @@ Histogram to capture total latency in milliseconds for token acquisition through
 | `ApiId`              | ID for the API used for token acquisition. |
 | `CacheLevel`         | L1, L2, or Unknown when the custom cache is used but level is not recorded. |
 | `TokenSource`        | Source of token (e.g., identity provider or cache). |
+| `CacheRefreshReason` | Reason for cache refresh. |
 
 #### `MsalDurationInL1CacheInUs_1b_histogram`
 
@@ -125,6 +128,9 @@ Histogram to capture latency when an L1 cache is used. Values are in microsecond
 | `MsalVersion`        | Version of MSAL used. |
 | `Platform`           | .NET SKU used.        |
 | `ApiId`              | ID for the API used for token acquisition. |
+| `CacheLevel`         | L1, L2, or Unknown when the custom cache is used but level is not recorded. |
+| `TokenSource`        | Source of token (e.g., identity provider or cache). |
+| `CacheRefreshReason` | Reason for cache refresh. |
 
 #### `MsalDurationInL2Cache_1a_histogram`
 
@@ -137,6 +143,7 @@ Histogram to capture L2 cache latency in milliseconds for token acquisition thro
 | `MsalVersion`        | Version of MSAL used. |
 | `Platform`           | .NET SKU used.        |
 | `ApiId`              | ID for the API used for token acquisition. |
+| `CacheRefreshReason` | Reason for cache refresh. |
 
 #### `MsalDurationInHttp_1a_histogram`
 
