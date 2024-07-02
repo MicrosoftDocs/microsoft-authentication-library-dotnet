@@ -1,9 +1,9 @@
 ---
-title: Creating configuration for InTune Mobile App Management conditional access
-description: "This scenario includes a backend application, and an iOS and Android client applications. This article describes the steps to correctly configure these applications for InTune MAM."
+title: Creating configuration for Intune Mobile App Management conditional access
+description: "This scenario includes a backend application, and an iOS and Android client applications. This article describes the steps to correctly configure these applications for Intune MAM."
 ---
 
-# Creating configuration for InTune Mobile App Management conditional access
+# Creating configuration for Intune Mobile App Management conditional access
 
 ## Scenario
 
