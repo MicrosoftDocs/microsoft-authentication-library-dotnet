@@ -5,7 +5,7 @@ description: "How to use MSAL.NET to acquire tokens from a PowerShell script."
 
 # Using MSAL.NET with PowerShell
 
-There is **no official PowerShell module or wrapper** for MSAL libraries maintained by the Entra SDK team. Consider using higher level APIs :
+There is **no official PowerShell module or wrapper** for MSAL libraries maintained by the Entra SDK team. Consider using maintained higher level SDKs:
 
 - [Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/installation)
 - [Azure PowerShell SDK](/powershell/azure/new-azureps-module-az)
