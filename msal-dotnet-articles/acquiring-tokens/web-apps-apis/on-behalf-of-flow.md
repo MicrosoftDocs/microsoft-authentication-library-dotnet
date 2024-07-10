@@ -50,6 +50,21 @@ private async Task AddAccountToCacheFromJwt(IEnumerable<string> scopes, JwtSecur
 }
 ```
 
+
+### Important Note on On-Behalf-Of (OBO) Flow with Guest Users
+
+When performing the On-Behalf-Of (OBO) flow, especially with guest users, it is important to target the specific tenant, denoted by the `tid` claim from the client token. Do not use `/common` or `/organizations` in OBO, because the token will be for the user's home tenant.
+
+#### Correct Usage Pattern
+
+1. **Extract the `tid` claim from the client assertion token**: This identifies the specific tenant.
+2. **Use the tenant-specific authority**: Form the authority URL using the extracted `tid` claim.
+
+#### Incorrect Pattern
+
+Many implementations incorrectly use the `/common` endpoint to perform OBO. This approach is not recommended and can lead to issues, particularly with guest users.
+
+
 ## Handling multi-factor auth (MFA), conditional access and incremental consent
 
 
