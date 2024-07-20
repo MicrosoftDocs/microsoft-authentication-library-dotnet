@@ -28,6 +28,8 @@
     <AssemblyVersion>7.5.2.0</AssemblyVersion>
     <AssemblyVersion>7.6.0.0</AssemblyVersion>
     <AssemblyVersion>7.6.2.0</AssemblyVersion>
+    <AssemblyVersion>7.6.3.0</AssemblyVersion>
+    <AssemblyVersion>8.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Delegate</BaseTypeName>
@@ -42,16 +44,15 @@
     <ReturnType>System.Boolean</ReturnType>
   </ReturnValue>
   <Docs>
-    <param name="securityKey">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> that signed the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" />.</param>
+    <param name="securityKey">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> used to sign the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" />.</param>
     <param name="securityToken">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" /> being validated.</param>
-    <param name="validationParameters">
-      <see cref="T:Microsoft.IdentityModel.Tokens.TokenValidationParameters" /> required for validation.</param>
-    <param name="configuration">
-      <see cref="T:Microsoft.IdentityModel.Tokens.BaseConfiguration" /> required for validation.</param>
+    <param name="validationParameters">The <see cref="T:Microsoft.IdentityModel.Tokens.TokenValidationParameters" /> to be used for validating the token.</param>
+    <param name="configuration">The configuration required for validation.</param>
     <summary>
-            Definition for IssuerSigningKeyValidatorUsingConfiguration.
+            Validates the signing key using additional configuration.
             </summary>
-    <returns>To be added.</returns>
+    <returns>
+      <see langword="true" /> if the signing key is valid; otherwise, <see langword="false" />.</returns>
     <remarks> If both <see cref="T:Microsoft.IdentityModel.Tokens.IssuerSigningKeyResolverUsingConfiguration" /> and <see cref="T:Microsoft.IdentityModel.Tokens.IssuerSigningKeyResolver" /> are set, IssuerSigningKeyResolverUsingConfiguration takes
             priority.</remarks>
   </Docs>

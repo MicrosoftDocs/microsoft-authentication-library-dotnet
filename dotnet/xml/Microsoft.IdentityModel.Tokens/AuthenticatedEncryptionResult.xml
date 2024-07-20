@@ -28,6 +28,8 @@
     <AssemblyVersion>7.5.2.0</AssemblyVersion>
     <AssemblyVersion>7.6.0.0</AssemblyVersion>
     <AssemblyVersion>7.6.2.0</AssemblyVersion>
+    <AssemblyVersion>7.6.3.0</AssemblyVersion>
+    <AssemblyVersion>8.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -49,7 +51,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="key" Type="Microsoft.IdentityModel.Tokens.SecurityKey" />
@@ -58,12 +60,13 @@
         <Parameter Name="authenticationTag" Type="System.Byte[]" />
       </Parameters>
       <Docs>
-        <param name="key">the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> used during <see cref="M:Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionProvider.Encrypt(System.Byte[],System.Byte[])" /></param>
-        <param name="ciphertext">protected text.</param>
-        <param name="iv">the initialization vector used.</param>
-        <param name="authenticationTag">the bytes that need be passed to <see cref="M:Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionProvider.Decrypt(System.Byte[],System.Byte[],System.Byte[],System.Byte[])" />.</param>
+        <param name="key">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> used during <see cref="M:Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionProvider.Encrypt(System.Byte[],System.Byte[])" />.</param>
+        <param name="ciphertext">The encrypted text.</param>
+        <param name="iv">The initialization vector used.</param>
+        <param name="authenticationTag">The authentication tag that was created during the encyption and needs <see cref="M:Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionProvider.Decrypt(System.Byte[],System.Byte[],System.Byte[],System.Byte[])" />.</param>
         <summary>
-            Initializes a new <see cref="T:Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionResult" /></summary>
+            Initializes a new instance of the <see cref="T:Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionResult" /> class.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -76,14 +79,14 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the authentication tag
+            Gets the authentication tag.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -98,7 +101,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -120,7 +123,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -142,7 +145,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.SecurityKey</ReturnType>

@@ -28,6 +28,8 @@
     <AssemblyVersion>7.5.2.0</AssemblyVersion>
     <AssemblyVersion>7.6.0.0</AssemblyVersion>
     <AssemblyVersion>7.6.2.0</AssemblyVersion>
+    <AssemblyVersion>7.6.3.0</AssemblyVersion>
+    <AssemblyVersion>8.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -35,11 +37,11 @@
   <Interfaces />
   <Docs>
     <summary>
-            Response types for OpenIdConnect.
+            Defines response types for OpenID Connect.
             </summary>
-    <remarks>Can be used to determine the message type by consumers of an <see cref="T:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectMessage" />.
-            For example: OpenIdConnectMessageTests.Publics() sets <see cref="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectMessage.ResponseType" />
-            to <see cref="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectResponseType.CodeIdToken" />.</remarks>
+    <remarks>
+            Can be used to determine the message type in an <see cref="T:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectMessage" />.
+            </remarks>
   </Docs>
   <Members>
     <Member MemberName="Code">
@@ -51,15 +53,15 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Indicates 'code' type see: http://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth.
-            For Example: http://openid.net/specs/openid-connect-core-1_0.html#codeExample.
+            Indicates the 'code' response type. See: <see href="https://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth" />.
+            For example: <see href="https://openid.net/specs/openid-connect-core-1_0.html#codeExample" />.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -73,15 +75,15 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Indicates 'code id_token' type see: http://openid.net/specs/openid-connect-core-1_0.html#HybridAuthRequest.
-            For Example: http://openid.net/specs/openid-connect-core-1_0.html#code-id_tokenExample.
+            Indicates the 'code id_token' response type. See: <see href="https://openid.net/specs/openid-connect-core-1_0.html#HybridAuthRequest" />.
+            For example: <see href="https://openid.net/specs/openid-connect-core-1_0.html#code-id_tokenExample" />.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -95,15 +97,15 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Indicates 'code id_token token' type see: http://openid.net/specs/openid-connect-core-1_0.html#HybridAuthRequest.
-            For Example: http://openid.net/specs/openid-connect-core-1_0.html#code-id_token-tokenExample.
+            Indicates the 'code id_token token' response type. See: <see href="https://openid.net/specs/openid-connect-core-1_0.html#HybridAuthRequest" />.
+            For example: <see href="https://openid.net/specs/openid-connect-core-1_0.html#code-id_token-tokenExample" />.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -117,15 +119,15 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Indicates 'code token' type see: http://openid.net/specs/openid-connect-core-1_0.html#HybridAuthRequest.
-            For Example: http://openid.net/specs/openid-connect-core-1_0.html#code-tokenExample.
+            Indicates the 'code token' response type. See: <see href="https://openid.net/specs/openid-connect-core-1_0.html#HybridAuthRequest" />.
+            For example: <see href="https://openid.net/specs/openid-connect-core-1_0.html#code-tokenExample" />.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -139,15 +141,15 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Indicates 'id_token' type see: http://openid.net/specs/openid-connect-core-1_0.html#HybridAuthRequest.
-            For Example: http://openid.net/specs/openid-connect-core-1_0.html#id_tokenExample.
+            Indicates the 'id_token' response type. See: <see href="https://openid.net/specs/openid-connect-core-1_0.html#HybridAuthRequest" />.
+            For example: <see href="https://openid.net/specs/openid-connect-core-1_0.html#id_tokenExample" />.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -161,15 +163,15 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Indicates 'id_token token' type see: http://openid.net/specs/openid-connect-core-1_0.html#ImplicitFlowAuth.
-            For Example: http://openid.net/specs/openid-connect-core-1_0.html#id_token-tokenExample.
+            Indicates the 'id_token token' response type. See: <see href="https://openid.net/specs/openid-connect-core-1_0.html#ImplicitFlowAuth" />.
+            For example: <see href="https://openid.net/specs/openid-connect-core-1_0.html#id_token-tokenExample" />.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -183,15 +185,15 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Defined in OAuth v2 multiple response types 1.0 spec, included for completion.
-            See: http://openid.net/specs/oauth-v2-multiple-response-types-1_0.html#OAuthResponseTypesReg.
+            Defined in the OAuth v2 Multiple Response Types 1.0 spec for completeness.
+            See: <see href="https://openid.net/specs/oauth-v2-multiple-response-types-1_0.html#OAuthResponseTypesReg" />.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -205,15 +207,15 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Defined in OAuth 2.0 spec, included for completion.
-            See: https://datatracker.ietf.org/doc/html/rfc6749#section-11.3.2.
+            Defined in the OAuth 2.0 spec for completeness.
+            See: <see href="https://datatracker.ietf.org/doc/html/rfc6749#section-11.3.2" />.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>

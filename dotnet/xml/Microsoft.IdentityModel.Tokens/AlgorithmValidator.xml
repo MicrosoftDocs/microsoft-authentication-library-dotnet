@@ -28,6 +28,8 @@
     <AssemblyVersion>7.5.2.0</AssemblyVersion>
     <AssemblyVersion>7.6.0.0</AssemblyVersion>
     <AssemblyVersion>7.6.2.0</AssemblyVersion>
+    <AssemblyVersion>7.6.3.0</AssemblyVersion>
+    <AssemblyVersion>8.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Delegate</BaseTypeName>
@@ -42,16 +44,15 @@
     <ReturnType>System.Boolean</ReturnType>
   </ReturnValue>
   <Docs>
-    <param name="algorithm">The algorithm to validate.</param>
-    <param name="securityKey">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> that signed the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" />.</param>
+    <param name="algorithm">The algorithm to be validated.</param>
+    <param name="securityKey">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> used to sign the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" />.</param>
     <param name="securityToken">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" /> being validated.</param>
-    <param name="validationParameters">
-      <see cref="T:Microsoft.IdentityModel.Tokens.TokenValidationParameters" /> required for validation.</param>
+    <param name="validationParameters">The <see cref="T:Microsoft.IdentityModel.Tokens.TokenValidationParameters" /> to be used for validating the token.</param>
     <summary>
-            Definition for AlgorithmValidator
+            Validates the cryptographic algorithm used.
             </summary>
     <returns>
-      <c>true</c> if the algorithm is considered valid</returns>
+      <see langword="true" /> if the algorithm is valid; otherwise, <see langword="false" />.</returns>
     <remarks>To be added.</remarks>
   </Docs>
 </Type>

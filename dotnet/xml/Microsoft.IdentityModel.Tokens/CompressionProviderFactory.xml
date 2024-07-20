@@ -28,6 +28,8 @@
     <AssemblyVersion>7.5.2.0</AssemblyVersion>
     <AssemblyVersion>7.6.0.0</AssemblyVersion>
     <AssemblyVersion>7.6.2.0</AssemblyVersion>
+    <AssemblyVersion>7.6.3.0</AssemblyVersion>
+    <AssemblyVersion>8.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -48,12 +50,12 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
         <summary>
-            Default constructor for <see cref="T:Microsoft.IdentityModel.Tokens.CompressionProviderFactory" />.
+            Initializes a new instance of the <see cref="T:Microsoft.IdentityModel.Tokens.CompressionProviderFactory" /> class.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -67,16 +69,15 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="other" Type="Microsoft.IdentityModel.Tokens.CompressionProviderFactory" />
       </Parameters>
       <Docs>
-        <param name="other">
-          <see cref="T:Microsoft.IdentityModel.Tokens.CompressionProviderFactory" /> to copy from.</param>
+        <param name="other">The <see cref="T:Microsoft.IdentityModel.Tokens.CompressionProviderFactory" /> to copy from.</param>
         <summary>
-            Constructor that creates a deep copy of given <see cref="T:Microsoft.IdentityModel.Tokens.CompressionProviderFactory" /> object.
+            Initializes a new instance of the <see cref="T:Microsoft.IdentityModel.Tokens.CompressionProviderFactory" /> class.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -90,7 +91,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.ICompressionProvider</ReturnType>
@@ -99,11 +100,11 @@
         <Parameter Name="algorithm" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="algorithm">the decompression algorithm.</param>
+        <param name="algorithm">The compression algorithm.</param>
         <summary>
-            Returns a <see cref="T:Microsoft.IdentityModel.Tokens.ICompressionProvider" /> for a specific algorithm.
+            Creates a <see cref="T:Microsoft.IdentityModel.Tokens.ICompressionProvider" /> for a specified compression algorithm.
             </summary>
-        <returns>a <see cref="T:Microsoft.IdentityModel.Tokens.ICompressionProvider" />.</returns>
+        <returns>An instance of <see cref="T:Microsoft.IdentityModel.Tokens.ICompressionProvider" /> for the specified algorithm.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -116,7 +117,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.ICompressionProvider</ReturnType>
@@ -126,12 +127,12 @@
         <Parameter Name="maximumDeflateSize" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="algorithm">the decompression algorithm.</param>
-        <param name="maximumDeflateSize">the maximum deflate size in chars that will be processed.</param>
+        <param name="algorithm">The compression algorithm.</param>
+        <param name="maximumDeflateSize">The maximum size limit (in characters) for deflate compression processing.</param>
         <summary>
-            Returns a <see cref="T:Microsoft.IdentityModel.Tokens.ICompressionProvider" /> for a specific algorithm.
+            Creates a <see cref="T:Microsoft.IdentityModel.Tokens.ICompressionProvider" /> for a specific compression algorithm with a maximum deflate size limit.
             </summary>
-        <returns>a <see cref="T:Microsoft.IdentityModel.Tokens.ICompressionProvider" />.</returns>
+        <returns>A <see cref="T:Microsoft.IdentityModel.Tokens.ICompressionProvider" /> instance.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -144,7 +145,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.ICompressionProvider</ReturnType>
@@ -166,7 +167,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.CompressionProviderFactory</ReturnType>
@@ -188,7 +189,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -197,11 +198,12 @@
         <Parameter Name="algorithm" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="algorithm">the name of the crypto algorithm.</param>
+        <param name="algorithm">The name of the cryptographic algorithm.</param>
         <summary>
-            Answers if an algorithm is supported.
+            Determines whether the specified algorithm is supported.
             </summary>
-        <returns>true if the algorithm is supported, false otherwise.</returns>
+        <returns>
+          <see langword="true" /> if the algorithm is supported; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

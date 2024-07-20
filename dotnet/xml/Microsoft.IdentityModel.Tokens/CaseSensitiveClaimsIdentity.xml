@@ -1,0 +1,295 @@
+<Type Name="CaseSensitiveClaimsIdentity" FullName="Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity">
+  <TypeSignature Language="C#" Value="public class CaseSensitiveClaimsIdentity : System.Security.Claims.ClaimsIdentity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CaseSensitiveClaimsIdentity extends System.Security.Claims.ClaimsIdentity" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity" />
+  <TypeSignature Language="VB.NET" Value="Public Class CaseSensitiveClaimsIdentity&#xA;Inherits ClaimsIdentity" />
+  <TypeSignature Language="F#" Value="type CaseSensitiveClaimsIdentity = class&#xA;    inherit ClaimsIdentity" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+    <AssemblyVersion>8.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Claims.ClaimsIdentity</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            A derived <see cref="T:System.Security.Claims.ClaimsIdentity" /> where claim retrieval is case-sensitive. The current <see cref="T:System.Security.Claims.ClaimsIdentity" /> retrieves claims in a case-insensitive manner which is different than querying the underlying <see cref="P:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity.SecurityToken" />. The <see cref="T:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity" /> provides consistent retrieval logic between the <see cref="P:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity.SecurityToken" /> and <see cref="T:System.Security.Claims.ClaimsIdentity" />.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CaseSensitiveClaimsIdentity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Initializes an instance of <see cref="T:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity" />.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CaseSensitiveClaimsIdentity (System.Collections.Generic.IEnumerable&lt;System.Security.Claims.Claim&gt; claims);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;class System.Security.Claims.Claim&gt; claims) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity.#ctor(System.Collections.Generic.IEnumerable{System.Security.Claims.Claim})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (claims As IEnumerable(Of Claim))" />
+      <MemberSignature Language="F#" Value="new Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity : seq&lt;System.Security.Claims.Claim&gt; -&gt; Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity" Usage="new Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity claims" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="claims" Type="System.Collections.Generic.IEnumerable&lt;System.Security.Claims.Claim&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="claims">
+          <see cref="T:System.Collections.Generic.IEnumerable`1" /> associated with this instance.</param>
+        <summary>
+            Initializes an instance of <see cref="T:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity" />.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CaseSensitiveClaimsIdentity (System.Security.Claims.ClaimsIdentity claimsIdentity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Claims.ClaimsIdentity claimsIdentity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity.#ctor(System.Security.Claims.ClaimsIdentity)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (claimsIdentity As ClaimsIdentity)" />
+      <MemberSignature Language="F#" Value="new Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity : System.Security.Claims.ClaimsIdentity -&gt; Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity" Usage="new Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity claimsIdentity" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="claimsIdentity" Type="System.Security.Claims.ClaimsIdentity" />
+      </Parameters>
+      <Docs>
+        <param name="claimsIdentity">
+          <see cref="T:System.Security.Claims.ClaimsIdentity" /> to copy.</param>
+        <summary>
+            Initializes an instance of <see cref="T:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity" />.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CaseSensitiveClaimsIdentity (string authenticationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string authenticationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (authenticationType As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity : string -&gt; Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity" Usage="new Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity authenticationType" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="authenticationType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="authenticationType">The authentication method used to establish this identity.</param>
+        <summary>
+            Initializes an instance of <see cref="T:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity" />.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CaseSensitiveClaimsIdentity (System.Collections.Generic.IEnumerable&lt;System.Security.Claims.Claim&gt; claims, string authenticationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;class System.Security.Claims.Claim&gt; claims, string authenticationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity.#ctor(System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (claims As IEnumerable(Of Claim), authenticationType As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity : seq&lt;System.Security.Claims.Claim&gt; * string -&gt; Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity" Usage="new Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity (claims, authenticationType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="claims" Type="System.Collections.Generic.IEnumerable&lt;System.Security.Claims.Claim&gt;" />
+        <Parameter Name="authenticationType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="claims">
+          <see cref="T:System.Collections.Generic.IEnumerable`1" /> associated with this instance.</param>
+        <param name="authenticationType">The authentication method used to establish this identity.</param>
+        <summary>
+            Initializes an instance of <see cref="T:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity" />.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CaseSensitiveClaimsIdentity (string authenticationType, string nameType, string roleType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string authenticationType, string nameType, string roleType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity.#ctor(System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (authenticationType As String, nameType As String, roleType As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity : string * string * string -&gt; Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity" Usage="new Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity (authenticationType, nameType, roleType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="authenticationType" Type="System.String" />
+        <Parameter Name="nameType" Type="System.String" />
+        <Parameter Name="roleType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="authenticationType">The authentication method used to establish this identity.</param>
+        <param name="nameType">The <see cref="P:System.Security.Claims.Claim.Type" /> used when obtaining the value of <see cref="P:System.Security.Claims.ClaimsIdentity.Name" />.</param>
+        <param name="roleType">The <see cref="P:System.Security.Claims.Claim.Type" /> used when performing logic for <see cref="M:System.Security.Claims.ClaimsPrincipal.IsInRole(System.String)" />.</param>
+        <summary>
+            Initializes an instance of <see cref="T:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity" />.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CaseSensitiveClaimsIdentity (System.Collections.Generic.IEnumerable&lt;System.Security.Claims.Claim&gt; claims, string authenticationType, string nameType, string roleType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;class System.Security.Claims.Claim&gt; claims, string authenticationType, string nameType, string roleType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity.#ctor(System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (claims As IEnumerable(Of Claim), authenticationType As String, nameType As String, roleType As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity : seq&lt;System.Security.Claims.Claim&gt; * string * string * string -&gt; Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity" Usage="new Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity (claims, authenticationType, nameType, roleType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="claims" Type="System.Collections.Generic.IEnumerable&lt;System.Security.Claims.Claim&gt;" />
+        <Parameter Name="authenticationType" Type="System.String" />
+        <Parameter Name="nameType" Type="System.String" />
+        <Parameter Name="roleType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="claims">
+          <see cref="T:System.Collections.Generic.IEnumerable`1" /> associated with this instance.</param>
+        <param name="authenticationType">The authentication method used to establish this identity.</param>
+        <param name="nameType">The <see cref="P:System.Security.Claims.Claim.Type" /> used when obtaining the value of <see cref="P:System.Security.Claims.ClaimsIdentity.Name" />.</param>
+        <param name="roleType">The <see cref="P:System.Security.Claims.Claim.Type" /> used when performing logic for <see cref="M:System.Security.Claims.ClaimsPrincipal.IsInRole(System.String)" />.</param>
+        <summary>
+            Initializes an instance of <see cref="T:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity" />.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindAll">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IEnumerable&lt;System.Security.Claims.Claim&gt; FindAll (string type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Security.Claims.Claim&gt; FindAll(string type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity.FindAll(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function FindAll (type As String) As IEnumerable(Of Claim)" />
+      <MemberSignature Language="F#" Value="override this.FindAll : string -&gt; seq&lt;System.Security.Claims.Claim&gt;" Usage="caseSensitiveClaimsIdentity.FindAll type" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Security.Claims.Claim&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">The type of the claim to match.</param>
+        <summary>
+            Retrieves a <see cref="T:System.Collections.Generic.IEnumerable`1" /> where each <see cref="P:System.Security.Claims.Claim.Type" /> equals <paramref name="type" />.
+            </summary>
+        <returns>A <see cref="T:System.Collections.Generic.IEnumerable`1" /> of matched claims.</returns>
+        <remarks>Comparison is <see cref="F:System.StringComparison.Ordinal" />.</remarks>
+        <exception cref="T:System.ArgumentNullException">if <paramref name="type" /> is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindFirst">
+      <MemberSignature Language="C#" Value="public override System.Security.Claims.Claim FindFirst (string type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.Claims.Claim FindFirst(string type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity.FindFirst(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function FindFirst (type As String) As Claim" />
+      <MemberSignature Language="F#" Value="override this.FindFirst : string -&gt; System.Security.Claims.Claim" Usage="caseSensitiveClaimsIdentity.FindFirst type" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Claims.Claim</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">The type of the claim to match.</param>
+        <summary>
+            Retrieves the first <see cref="T:System.Security.Claims.Claim" /> where <see cref="P:System.Security.Claims.Claim.Type" /> equals <paramref name="type" />.
+            </summary>
+        <returns>A <see cref="T:System.Security.Claims.Claim" />, <see langword="null" /> if nothing matches.</returns>
+        <remarks>Comparison is <see cref="F:System.StringComparison.Ordinal" />.</remarks>
+        <exception cref="T:System.ArgumentNullException">if <paramref name="type" /> is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HasClaim">
+      <MemberSignature Language="C#" Value="public override bool HasClaim (string type, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool HasClaim(string type, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity.HasClaim(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function HasClaim (type As String, value As String) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.HasClaim : string * string -&gt; bool" Usage="caseSensitiveClaimsIdentity.HasClaim (type, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">The type of the claim to match.</param>
+        <param name="value">The value of the claim to match.</param>
+        <summary>
+            Determines if a claim with type AND value is contained within this claims identity.
+            </summary>
+        <returns>
+          <c>true</c> if a claim is matched, <c>false</c> otherwise.</returns>
+        <remarks>Comparison is <see cref="F:System.StringComparison.Ordinal" /> for <see cref="P:System.Security.Claims.Claim.Type" /> and <see cref="P:System.Security.Claims.Claim.Value" />.</remarks>
+        <exception cref="T:System.ArgumentNullException">if <paramref name="value" /> is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityToken">
+      <MemberSignature Language="C#" Value="public Microsoft.IdentityModel.Tokens.SecurityToken SecurityToken { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.IdentityModel.Tokens.SecurityToken SecurityToken" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity.SecurityToken" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SecurityToken As SecurityToken" />
+      <MemberSignature Language="F#" Value="member this.SecurityToken : Microsoft.IdentityModel.Tokens.SecurityToken" Usage="Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity.SecurityToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Tokens.SecurityToken</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the <see cref="P:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity.SecurityToken" /> associated with this claims identity.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

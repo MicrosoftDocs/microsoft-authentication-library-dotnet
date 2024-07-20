@@ -28,6 +28,8 @@
     <AssemblyVersion>7.5.2.0</AssemblyVersion>
     <AssemblyVersion>7.6.0.0</AssemblyVersion>
     <AssemblyVersion>7.6.2.0</AssemblyVersion>
+    <AssemblyVersion>7.6.3.0</AssemblyVersion>
+    <AssemblyVersion>8.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Delegate</BaseTypeName>
@@ -41,14 +43,13 @@
     <ReturnType>System.String</ReturnType>
   </ReturnValue>
   <Docs>
-    <param name="type">The token type to validate.</param>
-    <param name="securityToken">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" /> that is being validated.</param>
-    <param name="validationParameters">
-      <see cref="T:Microsoft.IdentityModel.Tokens.TokenValidationParameters" /> required for validation.</param>
+    <param name="type">The token type to be validated.</param>
+    <param name="securityToken">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" /> being validated.</param>
+    <param name="validationParameters">The <see cref="T:Microsoft.IdentityModel.Tokens.TokenValidationParameters" /> to be used for validating the token.</param>
     <summary>
-            Definition for TypeValidator.
+            Validates the type of the security token.
             </summary>
-    <returns>The actual token type, that may be the same as <paramref name="type" /> or a different value if the token type was resolved from a different location.</returns>
+    <returns>The actual token type, which may be the same as <paramref name="type" /> or a different value if the token type was resolved from a different location.</returns>
     <remarks>To be added.</remarks>
   </Docs>
 </Type>

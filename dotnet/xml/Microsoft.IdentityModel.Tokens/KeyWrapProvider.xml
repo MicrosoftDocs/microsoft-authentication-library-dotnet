@@ -28,6 +28,8 @@
     <AssemblyVersion>7.5.2.0</AssemblyVersion>
     <AssemblyVersion>7.6.0.0</AssemblyVersion>
     <AssemblyVersion>7.6.2.0</AssemblyVersion>
+    <AssemblyVersion>7.6.3.0</AssemblyVersion>
+    <AssemblyVersion>8.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -39,7 +41,7 @@
   </Interfaces>
   <Docs>
     <summary>
-            Provides Wrap key and Unwrap key services.
+            Provides Wrap and Unwrap key services.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -52,7 +54,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -69,7 +71,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -91,7 +93,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -116,7 +118,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -124,7 +126,8 @@
       <Parameters />
       <Docs>
         <summary>
-            Calls <see cref="M:Microsoft.IdentityModel.Tokens.KeyWrapProvider.Dispose(System.Boolean)" /> and <see cref="M:System.GC.SuppressFinalize(System.Object)" /></summary>
+            Calls <see cref="M:Microsoft.IdentityModel.Tokens.KeyWrapProvider.Dispose(System.Boolean)" /> and <see cref="M:System.GC.SuppressFinalize(System.Object)" />.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -137,7 +140,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -146,9 +149,9 @@
         <Parameter Name="disposing" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="disposing">true, if called from Dispose(), false, if invoked inside a finalizer</param>
+        <param name="disposing">true if called from Dispose(), false if invoked inside a finalizer.</param>
         <summary>
-            Can be over written in descendants to dispose of internal components.
+            Can be overridden in descendants to dispose of internal components.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -162,7 +165,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.SecurityKey</ReturnType>
@@ -184,7 +187,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -193,11 +196,11 @@
         <Parameter Name="keyBytes" Type="System.Byte[]" />
       </Parameters>
       <Docs>
-        <param name="keyBytes">key to unwrap.</param>
+        <param name="keyBytes">The key to unwrap.</param>
         <summary>
-            Unwrap a key.
+            Unwraps a key.
             </summary>
-        <returns>Unwrapped key.</returns>
+        <returns>The unwrapped key.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -210,7 +213,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -219,11 +222,11 @@
         <Parameter Name="keyBytes" Type="System.Byte[]" />
       </Parameters>
       <Docs>
-        <param name="keyBytes">the key to be wrapped</param>
+        <param name="keyBytes">The key to be wrapped.</param>
         <summary>
-            Wrap a key.
+            Wraps a key.
             </summary>
-        <returns>wrapped key.</returns>
+        <returns>The wrapped key.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

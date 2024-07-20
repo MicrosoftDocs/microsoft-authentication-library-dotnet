@@ -28,6 +28,8 @@
     <AssemblyVersion>7.5.2.0</AssemblyVersion>
     <AssemblyVersion>7.6.0.0</AssemblyVersion>
     <AssemblyVersion>7.6.2.0</AssemblyVersion>
+    <AssemblyVersion>7.6.3.0</AssemblyVersion>
+    <AssemblyVersion>8.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Delegate</BaseTypeName>
@@ -40,13 +42,12 @@
     <ReturnType>Microsoft.IdentityModel.Tokens.SecurityToken</ReturnType>
   </ReturnValue>
   <Docs>
-    <param name="token">A securityToken with a signature.</param>
-    <param name="validationParameters">
-      <see cref="T:Microsoft.IdentityModel.Tokens.TokenValidationParameters" /> required for validation.</param>
+    <param name="token">The security token.</param>
+    <param name="validationParameters">The <see cref="T:Microsoft.IdentityModel.Tokens.TokenValidationParameters" /> to be used for validating the token.</param>
     <summary>
-            Definition for TokenReader.
+            Reads the security token.
             </summary>
-    <returns>To be added.</returns>
+    <returns>The read <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" />.</returns>
     <remarks>To be added.</remarks>
   </Docs>
 </Type>
