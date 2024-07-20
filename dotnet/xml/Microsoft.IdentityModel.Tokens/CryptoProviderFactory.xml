@@ -29,6 +29,7 @@
     <AssemblyVersion>7.6.0.0</AssemblyVersion>
     <AssemblyVersion>7.6.2.0</AssemblyVersion>
     <AssemblyVersion>7.6.3.0</AssemblyVersion>
+    <AssemblyVersion>8.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -49,12 +50,12 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
         <summary>
-            Default constructor for <see cref="T:Microsoft.IdentityModel.Tokens.CryptoProviderFactory" />.
+            Initializes a new instance of the <see cref="T:Microsoft.IdentityModel.Tokens.CryptoProviderFactory" /> class.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -68,17 +69,15 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="cache" Type="Microsoft.IdentityModel.Tokens.CryptoProviderCache" />
       </Parameters>
       <Docs>
-        <param name="cache">
-            The cache to use for caching CryptoProviders
-            </param>
+        <param name="cache">The cache to use for caching CryptoProviders.</param>
         <summary>
-            Initializes an instance of a <see cref="T:Microsoft.IdentityModel.Tokens.CryptoProviderFactory" />.
+            Initializes a new instance of the <see cref="T:Microsoft.IdentityModel.Tokens.CryptoProviderFactory" /> class.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -92,16 +91,15 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="other" Type="Microsoft.IdentityModel.Tokens.CryptoProviderFactory" />
       </Parameters>
       <Docs>
-        <param name="other">
-          <see cref="T:Microsoft.IdentityModel.Tokens.CryptoProviderFactory" /> to copy from.</param>
+        <param name="other">The <see cref="T:Microsoft.IdentityModel.Tokens.CryptoProviderFactory" /> to copy from.</param>
         <summary>
-            Constructor that creates a deep copy of given <see cref="T:Microsoft.IdentityModel.Tokens.CryptoProviderFactory" /> object.
+            Initializes a new instance of the <see cref="T:Microsoft.IdentityModel.Tokens.CryptoProviderFactory" /> class.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -115,7 +113,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -143,7 +141,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionProvider</ReturnType>
@@ -153,21 +151,21 @@
         <Parameter Name="algorithm" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="key">the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> to use.</param>
-        <param name="algorithm">the algorithm to use.</param>
+        <param name="key">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> to use.</param>
+        <param name="algorithm">The algorithm to use.</param>
         <summary>
-            Creates an instance of <see cref="T:Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionProvider" /> for a specific &lt;SecurityKey, Algorithm&gt;.
+            Creates an instance of <see cref="T:Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionProvider" /> for a specific <paramref name="key" /> and <paramref name="algorithm" />.
             </summary>
-        <returns>an instance of <see cref="T:Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionProvider" /></returns>
+        <returns>An instance of <see cref="T:Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionProvider" />.</returns>
         <remarks>
-          <para>If <see cref="P:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CustomCryptoProvider" /> is set and <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.IsSupportedAlgorithm(System.String,System.Object[])" /> returns true.
+          <para>If <see cref="P:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CustomCryptoProvider" /> is set and <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.IsSupportedAlgorithm(System.String,System.Object[])" /> returns true,
             <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.Create(System.String,System.Object[])" /> is called to obtain the <see cref="T:Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionProvider" />.
             </para>
-          <para>When finished with the <see cref="T:Microsoft.IdentityModel.Tokens.KeyWrapProvider" /> call <see cref="M:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.ReleaseKeyWrapProvider(Microsoft.IdentityModel.Tokens.KeyWrapProvider)" />.</para>
+          <para>Once done with the <see cref="T:Microsoft.IdentityModel.Tokens.KeyWrapProvider" />, call <see cref="M:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.ReleaseKeyWrapProvider(Microsoft.IdentityModel.Tokens.KeyWrapProvider)" />.</para>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">thrown if <paramref name="algorithm" /> is null or empty.</exception>
-        <exception cref="T:System.ArgumentException">thrown if <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> and algorithm pair are not supported.</exception>
-        <exception cref="T:System.InvalidOperationException">thrown if <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.Create(System.String,System.Object[])" /> returns a type that is not assignable from <see cref="T:Microsoft.IdentityModel.Tokens.KeyWrapProvider" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="algorithm" /> is null or empty.</exception>
+        <exception cref="T:System.ArgumentException">Thrown if the combination of <paramref name="key" /> and <paramref name="algorithm" /> is not supported.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown if the type returned by <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.Create(System.String,System.Object[])" /> is not assignable to <see cref="T:Microsoft.IdentityModel.Tokens.KeyWrapProvider" />.</exception>
       </Docs>
     </Member>
     <Member MemberName="CreateForSigning">
@@ -179,7 +177,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.SignatureProvider</ReturnType>
@@ -189,23 +187,23 @@
         <Parameter Name="algorithm" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="key">the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> to use for signing.</param>
-        <param name="algorithm">the algorithm to use for signing.</param>
+        <param name="key">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> to use for signing.</param>
+        <param name="algorithm">The algorithm to use for signing.</param>
         <summary>
-            Creates a <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> that creates a signature with the algorithm and <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" />.
+            Creates a <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> for signing with the specified <paramref name="key" /> and <paramref name="algorithm" />.
             </summary>
-        <returns>A <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> that can be used to create a signature using the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> and algorithm.</returns>
+        <returns>A <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> instance that can be used to create a signature.</returns>
         <remarks>
-          <para>AsymmetricSignatureProviders require access to a PrivateKey for Signing.</para>
-          <para>When finished with the <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> call <see cref="M:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.ReleaseSignatureProvider(Microsoft.IdentityModel.Tokens.SignatureProvider)" />.</para>
-          <para>If <see cref="P:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CustomCryptoProvider" /> is set and <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.IsSupportedAlgorithm(System.String,System.Object[])" /> returns true.
+          <para>AsymmetricSignatureProviders require access to a PrivateKey for signing.</para>
+          <para>Once done with the <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" />, call <see cref="M:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.ReleaseSignatureProvider(Microsoft.IdentityModel.Tokens.SignatureProvider)" />.</para>
+          <para>If <see cref="P:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CustomCryptoProvider" /> is set and <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.IsSupportedAlgorithm(System.String,System.Object[])" /> returns true,
             <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.Create(System.String,System.Object[])" /> is called to obtain the <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" />.
             </para>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">thrown if <paramref name="algorithm" /> is null or empty.</exception>
-        <exception cref="T:System.ArgumentOutOfRangeException">thrown if <see cref="P:Microsoft.IdentityModel.Tokens.SecurityKey.KeySize" /> is too small.</exception>
-        <exception cref="T:System.NotSupportedException">thrown if the key / algorithm is not supported.</exception>
-        <exception cref="T:System.InvalidOperationException">thrown if <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.Create(System.String,System.Object[])" /> returns a type that is not assignable from <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="algorithm" /> is null or empty.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown if <see cref="P:Microsoft.IdentityModel.Tokens.SecurityKey.KeySize" /> is too small.</exception>
+        <exception cref="T:System.NotSupportedException">Thrown if the key or algorithm combination is not supported.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown if the type returned by <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.Create(System.String,System.Object[])" /> is not assignable to <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" />.</exception>
       </Docs>
     </Member>
     <Member MemberName="CreateForSigning">
@@ -217,7 +215,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.SignatureProvider</ReturnType>
@@ -228,24 +226,24 @@
         <Parameter Name="cacheProvider" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="key">the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> to use for signing.</param>
-        <param name="algorithm">the algorithm to use for signing.</param>
-        <param name="cacheProvider">indicates if the <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> should be cached for reuse.</param>
+        <param name="key">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> to use for signing.</param>
+        <param name="algorithm">The algorithm to use for signing.</param>
+        <param name="cacheProvider">Indicates whether the <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> should be cached for reuse.</param>
         <summary>
-            Creates a <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> that creates a signature with the algorithm and <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" />.
+            Creates a <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> for signing with the specified <paramref name="key" /> and <paramref name="algorithm" />.
             </summary>
-        <returns>A <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> that can be used to create a signature using the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> and algorithm.</returns>
+        <returns>A <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> instance that can be used to create a signature.</returns>
         <remarks>
-          <para>AsymmetricSignatureProviders require access to a PrivateKey for Signing.</para>
-          <para>When finished with the <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> call <see cref="M:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.ReleaseSignatureProvider(Microsoft.IdentityModel.Tokens.SignatureProvider)" />.</para>
-          <para>If <see cref="P:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CustomCryptoProvider" /> is set and <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.IsSupportedAlgorithm(System.String,System.Object[])" /> returns true.
+          <para>AsymmetricSignatureProviders require access to a PrivateKey for signing.</para>
+          <para>Once done with the <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" />, call <see cref="M:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.ReleaseSignatureProvider(Microsoft.IdentityModel.Tokens.SignatureProvider)" />.</para>
+          <para>If <see cref="P:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CustomCryptoProvider" /> is set and <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.IsSupportedAlgorithm(System.String,System.Object[])" /> returns true,
             <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.Create(System.String,System.Object[])" /> is called to obtain the <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" />.
             </para>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">thrown if <paramref name="algorithm" /> is null or empty.</exception>
-        <exception cref="T:System.ArgumentOutOfRangeException">thrown if <see cref="P:Microsoft.IdentityModel.Tokens.SecurityKey.KeySize" /> is too small.</exception>
-        <exception cref="T:System.NotSupportedException">thrown if the key / algorithm is not supported.</exception>
-        <exception cref="T:System.InvalidOperationException">thrown if <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.Create(System.String,System.Object[])" /> returns a type that is not assignable from <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="algorithm" /> is null or empty.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown if <see cref="P:Microsoft.IdentityModel.Tokens.SecurityKey.KeySize" /> is too small.</exception>
+        <exception cref="T:System.NotSupportedException">Thrown if the combination of <paramref name="key" /> and <paramref name="algorithm" /> is not supported.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown if the type returned by <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.Create(System.String,System.Object[])" /> is not assignable to <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" />.</exception>
       </Docs>
     </Member>
     <Member MemberName="CreateForVerifying">
@@ -257,7 +255,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.SignatureProvider</ReturnType>
@@ -268,19 +266,21 @@
       </Parameters>
       <Docs>
         <param name="key">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> to use for signature verification.</param>
-        <param name="algorithm">The algorithm to use for verifying.</param>
+        <param name="algorithm">The algorithm to use for verifying signatures.</param>
         <summary>
-            Creates a <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> that supports the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> and algorithm.
+            Creates a <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> for verifying signatures with the specified <paramref name="key" /> and <paramref name="algorithm" />.
             </summary>
-        <returns>A <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> that can be used to validate a signature using the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> and algorithm.</returns>
-        <remarks>When finished with the <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> call <see cref="M:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.ReleaseSignatureProvider(Microsoft.IdentityModel.Tokens.SignatureProvider)" />.
-            <para>If <see cref="P:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CustomCryptoProvider" /> is set and <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.IsSupportedAlgorithm(System.String,System.Object[])" /> returns true.
+        <returns>A <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> instance that can be used to validate signatures using the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> and algorithm.</returns>
+        <remarks>
+          <para>Once done with the <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" />, call <see cref="M:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.ReleaseSignatureProvider(Microsoft.IdentityModel.Tokens.SignatureProvider)" />.</para>
+          <para>If <see cref="P:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CustomCryptoProvider" /> is set and <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.IsSupportedAlgorithm(System.String,System.Object[])" /> returns true,
             <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.Create(System.String,System.Object[])" /> is called to obtain the <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" />.
-            </para></remarks>
-        <exception cref="T:System.ArgumentNullException">thrown if <paramref name="algorithm" /> is null or empty.</exception>
-        <exception cref="T:System.ArgumentOutOfRangeException">thrown if <see cref="P:Microsoft.IdentityModel.Tokens.SecurityKey.KeySize" /> is too small.</exception>
-        <exception cref="T:System.NotSupportedException">thrown if the key / algorithm is not supported.</exception>
-        <exception cref="T:System.InvalidOperationException">thrown if <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.Create(System.String,System.Object[])" /> returns a type that is not assignable from <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" />.</exception>
+            </para>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="algorithm" /> is null or empty.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown if <see cref="P:Microsoft.IdentityModel.Tokens.SecurityKey.KeySize" /> is too small.</exception>
+        <exception cref="T:System.NotSupportedException">Thrown if the combination of <paramref name="key" /> and <paramref name="algorithm" /> is not supported.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown if the type returned by <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.Create(System.String,System.Object[])" /> is not assignable to <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" />.</exception>
       </Docs>
     </Member>
     <Member MemberName="CreateForVerifying">
@@ -292,7 +292,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.SignatureProvider</ReturnType>
@@ -304,20 +304,22 @@
       </Parameters>
       <Docs>
         <param name="key">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> to use for signature verification.</param>
-        <param name="algorithm">The algorithm to use for verifying.</param>
-        <param name="cacheProvider">should the <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> be cached.</param>
+        <param name="algorithm">The algorithm to use for verifying signatures.</param>
+        <param name="cacheProvider">Specifies whether the <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> should be cached for reuse.</param>
         <summary>
-            Creates a <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> that supports the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> and algorithm.
+            Creates a <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> for verifying signatures with the specified <paramref name="key" /> and <paramref name="algorithm" />.
             </summary>
-        <returns>A <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> that can be used to validate a signature using the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> and algorithm.</returns>
-        <remarks>When finished with the <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> call <see cref="M:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.ReleaseSignatureProvider(Microsoft.IdentityModel.Tokens.SignatureProvider)" />.
-            <para>If <see cref="P:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CustomCryptoProvider" /> is set and <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.IsSupportedAlgorithm(System.String,System.Object[])" /> returns true.
+        <returns>A <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> instance that can be used to validate signatures using the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> and algorithm.</returns>
+        <remarks>
+          <para>Once done with the <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" />, call <see cref="M:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.ReleaseSignatureProvider(Microsoft.IdentityModel.Tokens.SignatureProvider)" />.</para>
+          <para>If <see cref="P:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CustomCryptoProvider" /> is set and <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.IsSupportedAlgorithm(System.String,System.Object[])" /> returns true,
             <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.Create(System.String,System.Object[])" /> is called to obtain the <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" />.
-            </para></remarks>
-        <exception cref="T:System.ArgumentNullException">thrown if <paramref name="algorithm" /> is null or empty.</exception>
-        <exception cref="T:System.ArgumentOutOfRangeException">thrown if <see cref="P:Microsoft.IdentityModel.Tokens.SecurityKey.KeySize" /> is too small.</exception>
-        <exception cref="T:System.NotSupportedException">thrown if the key / algorithm is not supported.</exception>
-        <exception cref="T:System.InvalidOperationException">thrown if <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.Create(System.String,System.Object[])" /> returns a type that is not assignable from <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" />.</exception>
+            </para>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="algorithm" /> is null or empty.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown if <see cref="P:Microsoft.IdentityModel.Tokens.SecurityKey.KeySize" /> is too small.</exception>
+        <exception cref="T:System.NotSupportedException">Thrown if the combination of <paramref name="key" /> and <paramref name="algorithm" /> is not supported.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown if the type returned by <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.Create(System.String,System.Object[])" /> is not assignable to <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" />.</exception>
       </Docs>
     </Member>
     <Member MemberName="CreateHashAlgorithm">
@@ -329,7 +331,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Cryptography.HashAlgorithm</ReturnType>
@@ -338,18 +340,20 @@
         <Parameter Name="algorithm" Type="System.Security.Cryptography.HashAlgorithmName" />
       </Parameters>
       <Docs>
-        <param name="algorithm">the name of the hash algorithm to create.</param>
+        <param name="algorithm">The name of the hash algorithm to create.</param>
         <summary>
-            Creates a <see cref="T:System.Security.Cryptography.HashAlgorithm" /> for a specific algorithm.
+            Creates a <see cref="T:System.Security.Cryptography.HashAlgorithm" /> instance for a specific hash algorithm.
             </summary>
-        <returns>A <see cref="T:System.Security.Cryptography.HashAlgorithm" />.</returns>
-        <remarks>When finished with the <see cref="T:System.Security.Cryptography.HashAlgorithm" /> call <see cref="M:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.ReleaseHashAlgorithm(System.Security.Cryptography.HashAlgorithm)" />.
-            <para>If <see cref="P:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CustomCryptoProvider" /> is set and <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.IsSupportedAlgorithm(System.String,System.Object[])" /> returns true.
+        <returns>A <see cref="T:System.Security.Cryptography.HashAlgorithm" /> instance that corresponds to the specified <paramref name="algorithm" />.</returns>
+        <remarks>
+          <para>Once done with the <see cref="T:System.Security.Cryptography.HashAlgorithm" />, call <see cref="M:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.ReleaseHashAlgorithm(System.Security.Cryptography.HashAlgorithm)" />.</para>
+          <para>If <see cref="P:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CustomCryptoProvider" /> is set and <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.IsSupportedAlgorithm(System.String,System.Object[])" /> returns true,
             <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.Create(System.String,System.Object[])" /> is called to obtain the <see cref="T:System.Security.Cryptography.HashAlgorithm" />.
-            </para></remarks>
-        <exception cref="T:System.ArgumentNullException">thrown if <paramref name="algorithm" /> is null or empty.</exception>
-        <exception cref="T:System.InvalidOperationException">thrown if <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.Create(System.String,System.Object[])" /> returns a type that is not assignable from <see cref="T:System.Security.Cryptography.HashAlgorithm" />.</exception>
-        <exception cref="T:System.NotSupportedException">thrown if <paramref name="algorithm" /> is not supported.</exception>
+            </para>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="algorithm" /> is null or empty.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown if <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.Create(System.String,System.Object[])" /> returns a type that is not assignable to <see cref="T:System.Security.Cryptography.HashAlgorithm" />.</exception>
+        <exception cref="T:System.NotSupportedException">Thrown if <paramref name="algorithm" /> is not supported.</exception>
       </Docs>
     </Member>
     <Member MemberName="CreateHashAlgorithm">
@@ -361,7 +365,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Cryptography.HashAlgorithm</ReturnType>
@@ -370,18 +374,19 @@
         <Parameter Name="algorithm" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="algorithm">the name of the hash algorithm to create.</param>
+        <param name="algorithm">The name of the hash algorithm to create.</param>
         <summary>
-            Creates a <see cref="T:System.Security.Cryptography.HashAlgorithm" /> for a specific algorithm.
+            Creates a <see cref="T:System.Security.Cryptography.HashAlgorithm" /> instance for a specific hash algorithm.
             </summary>
-        <returns>A <see cref="T:System.Security.Cryptography.HashAlgorithm" />.</returns>
-        <remarks>When finished with the <see cref="T:System.Security.Cryptography.HashAlgorithm" /> call <see cref="M:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.ReleaseHashAlgorithm(System.Security.Cryptography.HashAlgorithm)" />.
-            <para>If <see cref="P:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CustomCryptoProvider" /> is set and <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.IsSupportedAlgorithm(System.String,System.Object[])" /> returns true.
+        <returns>A <see cref="T:System.Security.Cryptography.HashAlgorithm" /> instance that corresponds to the specified <paramref name="algorithm" />.</returns>
+        <remarks>
+            Once done with the <see cref="T:System.Security.Cryptography.HashAlgorithm" />, call <see cref="M:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.ReleaseHashAlgorithm(System.Security.Cryptography.HashAlgorithm)" />.
+            <para>If <see cref="P:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CustomCryptoProvider" /> is set and <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.IsSupportedAlgorithm(System.String,System.Object[])" /> returns true,
             <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.Create(System.String,System.Object[])" /> is called to obtain the <see cref="T:System.Security.Cryptography.HashAlgorithm" />.
             </para></remarks>
-        <exception cref="T:System.ArgumentNullException">thrown if <paramref name="algorithm" /> is null or empty.</exception>
-        <exception cref="T:System.InvalidOperationException">thrown if <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.Create(System.String,System.Object[])" /> returns a type that is not assignable from <see cref="T:System.Security.Cryptography.HashAlgorithm" />.</exception>
-        <exception cref="T:System.NotSupportedException">thrown if <paramref name="algorithm" /> is not supported.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="algorithm" /> is null or empty.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown if <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.Create(System.String,System.Object[])" /> returns a type that is not assignable to <see cref="T:System.Security.Cryptography.HashAlgorithm" />.</exception>
+        <exception cref="T:System.NotSupportedException">Thrown if <paramref name="algorithm" /> is not supported.</exception>
       </Docs>
     </Member>
     <Member MemberName="CreateKeyedHashAlgorithm">
@@ -393,7 +398,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Cryptography.KeyedHashAlgorithm</ReturnType>
@@ -403,20 +408,20 @@
         <Parameter Name="algorithm" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="keyBytes">bytes to use to create the Keyed Hash.</param>
-        <param name="algorithm">the name of the keyed hash algorithm to create.</param>
+        <param name="keyBytes">The bytes to use as the key for the keyed hash.</param>
+        <param name="algorithm">The name of the keyed hash algorithm to create.</param>
         <summary>
-            Returns a <see cref="T:System.Security.Cryptography.KeyedHashAlgorithm" /> for a specific algorithm.
+            Creates a <see cref="T:System.Security.Cryptography.KeyedHashAlgorithm" /> instance for a specific keyed hash algorithm.
             </summary>
-        <returns>A <see cref="T:System.Security.Cryptography.KeyedHashAlgorithm" />.</returns>
-        <remarks>When finished with the <see cref="T:System.Security.Cryptography.KeyedHashAlgorithm" /> call <see cref="M:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.ReleaseHashAlgorithm(System.Security.Cryptography.HashAlgorithm)" />.
-            <para>If <see cref="P:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CustomCryptoProvider" /> is set and <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.IsSupportedAlgorithm(System.String,System.Object[])" /> returns true.
+        <returns>A <see cref="T:System.Security.Cryptography.KeyedHashAlgorithm" /> instance that corresponds to the specified <paramref name="algorithm" />.</returns>
+        <remarks>
+            Once done with the <see cref="T:System.Security.Cryptography.KeyedHashAlgorithm" />, call <see cref="M:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.ReleaseHashAlgorithm(System.Security.Cryptography.HashAlgorithm)" />.
+            <para>If <see cref="P:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CustomCryptoProvider" /> is set and <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.IsSupportedAlgorithm(System.String,System.Object[])" /> returns true,
             <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.Create(System.String,System.Object[])" /> is called to obtain the <see cref="T:System.Security.Cryptography.KeyedHashAlgorithm" />.
             </para></remarks>
-        <exception cref="T:System.ArgumentNullException">thrown if <paramref name="algorithm" /> is null or empty.</exception>
-        <exception cref="T:System.InvalidOperationException">thrown if <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.Create(System.String,System.Object[])" /> returns a type that is not assignable from <see cref="T:System.Security.Cryptography.KeyedHashAlgorithm" />.</exception>
-        <exception cref="T:System.NotSupportedException">
-          <paramref name="algorithm" /> is not supported.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="algorithm" /> is null or empty.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown if <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.Create(System.String,System.Object[])" /> returns a type that is not assignable to <see cref="T:System.Security.Cryptography.KeyedHashAlgorithm" />.</exception>
+        <exception cref="T:System.NotSupportedException">Thrown if <paramref name="algorithm" /> is not supported.</exception>
       </Docs>
     </Member>
     <Member MemberName="CreateKeyWrapProvider">
@@ -428,7 +433,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.KeyWrapProvider</ReturnType>
@@ -438,21 +443,21 @@
         <Parameter Name="algorithm" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="key">the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> to use.</param>
-        <param name="algorithm">the algorithm to use.</param>
+        <param name="key">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> to use.</param>
+        <param name="algorithm">The algorithm to use.</param>
         <summary>
-            Creates an instance of <see cref="T:Microsoft.IdentityModel.Tokens.KeyWrapProvider" /> for a specific &lt;SecurityKey, Algorithm&gt;.
+            Creates an instance of <see cref="T:Microsoft.IdentityModel.Tokens.KeyWrapProvider" /> for a specific <paramref name="key" /> and <paramref name="algorithm" />.
             </summary>
-        <returns>an instance of <see cref="T:Microsoft.IdentityModel.Tokens.KeyWrapProvider" /></returns>
+        <returns>An instance of <see cref="T:Microsoft.IdentityModel.Tokens.KeyWrapProvider" />.</returns>
         <remarks>
-          <para>If <see cref="P:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CustomCryptoProvider" /> is set and <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.IsSupportedAlgorithm(System.String,System.Object[])" /> returns true.
+          <para>If <see cref="P:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CustomCryptoProvider" /> is set and <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.IsSupportedAlgorithm(System.String,System.Object[])" /> returns true,
             <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.Create(System.String,System.Object[])" /> is called to obtain the <see cref="T:Microsoft.IdentityModel.Tokens.KeyWrapProvider" />.
             </para>
-          <para>When finished with the <see cref="T:Microsoft.IdentityModel.Tokens.KeyWrapProvider" /> call <see cref="M:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.ReleaseKeyWrapProvider(Microsoft.IdentityModel.Tokens.KeyWrapProvider)" />.</para>
+          <para>Once done with the <see cref="T:Microsoft.IdentityModel.Tokens.KeyWrapProvider" />, call <see cref="M:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.ReleaseKeyWrapProvider(Microsoft.IdentityModel.Tokens.KeyWrapProvider)" />.</para>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">thrown if <paramref name="algorithm" /> is null or empty.</exception>
-        <exception cref="T:System.NotSupportedException">thrown if <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> and algorithm pair are not supported.</exception>
-        <exception cref="T:System.InvalidOperationException">thrown if <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.Create(System.String,System.Object[])" /> returns a type not assignable from <see cref="T:Microsoft.IdentityModel.Tokens.KeyWrapProvider" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="algorithm" /> is null or empty.</exception>
+        <exception cref="T:System.NotSupportedException">Thrown if the combination of <paramref name="key" /> and <paramref name="algorithm" /> is not supported.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown if the type returned by <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.Create(System.String,System.Object[])" /> is not assignable to <see cref="T:Microsoft.IdentityModel.Tokens.KeyWrapProvider" />.</exception>
       </Docs>
     </Member>
     <Member MemberName="CreateKeyWrapProviderForUnwrap">
@@ -464,7 +469,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.KeyWrapProvider</ReturnType>
@@ -474,21 +479,21 @@
         <Parameter Name="algorithm" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="key">the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> to use.</param>
-        <param name="algorithm">the algorithm to use.</param>
+        <param name="key">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> to use.</param>
+        <param name="algorithm">The algorithm to use.</param>
         <summary>
-            Creates an instance of <see cref="T:Microsoft.IdentityModel.Tokens.KeyWrapProvider" /> for a specific &lt;SecurityKey, Algorithm&gt;.
+            Creates an instance of <see cref="T:Microsoft.IdentityModel.Tokens.KeyWrapProvider" /> for a specific <paramref name="key" /> and <paramref name="algorithm" />.
             </summary>
-        <returns>an instance of <see cref="T:Microsoft.IdentityModel.Tokens.KeyWrapProvider" /></returns>
+        <returns>An instance of <see cref="T:Microsoft.IdentityModel.Tokens.KeyWrapProvider" />.</returns>
         <remarks>
-          <para>If <see cref="P:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CustomCryptoProvider" /> is set and <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.IsSupportedAlgorithm(System.String,System.Object[])" /> returns true.
-            <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.Create(System.String,System.Object[])" /> is called to obtain the <see cref="T:Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionProvider" />.
+          <para>If <see cref="P:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CustomCryptoProvider" /> is set and <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.IsSupportedAlgorithm(System.String,System.Object[])" /> returns true,
+            <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.Create(System.String,System.Object[])" /> is called to obtain the <see cref="T:Microsoft.IdentityModel.Tokens.KeyWrapProvider" />.
             </para>
-          <para>When finished with the <see cref="T:Microsoft.IdentityModel.Tokens.KeyWrapProvider" /> call <see cref="M:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.ReleaseKeyWrapProvider(Microsoft.IdentityModel.Tokens.KeyWrapProvider)" />.</para>
+          <para>Once done with the <see cref="T:Microsoft.IdentityModel.Tokens.KeyWrapProvider" />, call <see cref="M:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.ReleaseKeyWrapProvider(Microsoft.IdentityModel.Tokens.KeyWrapProvider)" />.</para>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">thrown if <paramref name="algorithm" /> is null or empty.</exception>
-        <exception cref="T:System.ArgumentException">thrown if <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> and algorithm pair are not supported.</exception>
-        <exception cref="T:System.InvalidOperationException">thrown if <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.Create(System.String,System.Object[])" /> returns a type that is not assignable from <see cref="T:Microsoft.IdentityModel.Tokens.KeyWrapProvider" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="algorithm" /> is null or empty.</exception>
+        <exception cref="T:System.ArgumentException">Thrown if the combination of <paramref name="key" /> and <paramref name="algorithm" /> is not supported.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown if the type returned by <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.Create(System.String,System.Object[])" /> is not assignable to <see cref="T:Microsoft.IdentityModel.Tokens.KeyWrapProvider" />.</exception>
       </Docs>
     </Member>
     <Member MemberName="CryptoProviderCache">
@@ -500,14 +505,15 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.CryptoProviderCache</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the <see cref="P:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CryptoProviderCache" /></summary>
+            Gets the <see cref="P:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CryptoProviderCache" />.
+            </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -521,7 +527,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.ICryptoProvider</ReturnType>
@@ -545,7 +551,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.CryptoProviderFactory</ReturnType>
@@ -567,7 +573,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -595,7 +601,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -617,7 +623,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -626,16 +632,16 @@
         <Parameter Name="algorithm" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="algorithm">the name of the Hash algorithm.</param>
+        <param name="algorithm">The name of the hash algorithm.</param>
         <summary>
-            Checks if an algorithm is supported.
+            Determines whether the specified hash algorithm is supported.
             </summary>
-        <returns>true if:
-            <para>
-            If <see cref="P:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CustomCryptoProvider" /> is set and <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.IsSupportedAlgorithm(System.String,System.Object[])" /> returns true.
-            </para><para>The algorithm is supported.
-            </para></returns>
-        <remarks>Only considers known Hash algorithms.</remarks>
+        <returns>
+          <see langword="true" /> if:
+            <list type="bullet"><item><description><see cref="P:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CustomCryptoProvider" /> is set and <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.IsSupportedAlgorithm(System.String,System.Object[])" /> returns true,</description></item><item><description>The algorithm is supported.</description></item></list>
+            Otherwise, <see langword="false" />.
+            </returns>
+        <remarks>Considers only known hash algorithms.</remarks>
       </Docs>
     </Member>
     <Member MemberName="IsSupportedAlgorithm">
@@ -647,7 +653,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -657,19 +663,20 @@
         <Parameter Name="key" Type="Microsoft.IdentityModel.Tokens.SecurityKey" />
       </Parameters>
       <Docs>
-        <param name="algorithm">the security algorithm to apply.</param>
-        <param name="key">the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" />.</param>
+        <param name="algorithm">The security algorithm to be used.</param>
+        <param name="key">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" />.</param>
         <summary>
-            Checks if the algorithm and <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> is supported.
+            Checks if the specified algorithm and <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> are supported.
             </summary>
-        <returns>true if:
-            <para>
-            If <see cref="P:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CustomCryptoProvider" /> is set and <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.IsSupportedAlgorithm(System.String,System.Object[])" /> returns true.
-            </para><para>The algorithm / key pair is supported.
-            </para></returns>
-        <remarks>Algorithms are supported for specific key types.
+        <returns>
+          <see langword="true" /> if:
+            <list type="bullet"><item><description><see cref="P:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CustomCryptoProvider" /> is set and <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.IsSupportedAlgorithm(System.String,System.Object[])" /> returns true,</description></item><item><description>The algorithm / key pair is supported.</description></item></list>
+            Otherwise, <see langword="false" />.
+            </returns>
+        <remarks>
+            Algorithms are supported for specific key types.
             For example:
-            <para><see cref="F:Microsoft.IdentityModel.Tokens.SecurityAlgorithms.RsaSha256" /> and <see cref="T:Microsoft.IdentityModel.Tokens.RsaSecurityKey" /> will return true.</para><para><see cref="F:Microsoft.IdentityModel.Tokens.SecurityAlgorithms.RsaSha256" /> and <see cref="T:Microsoft.IdentityModel.Tokens.SymmetricSecurityKey" /> will return false.</para></remarks>
+            <list type="bullet"><item><description><see cref="F:Microsoft.IdentityModel.Tokens.SecurityAlgorithms.RsaSha256" /> and <see cref="T:Microsoft.IdentityModel.Tokens.RsaSecurityKey" /> will return true.</description></item><item><description><see cref="F:Microsoft.IdentityModel.Tokens.SecurityAlgorithms.RsaSha256" /> and <see cref="T:Microsoft.IdentityModel.Tokens.SymmetricSecurityKey" /> will return false.</description></item></list></remarks>
       </Docs>
     </Member>
     <Member MemberName="ReleaseHashAlgorithm">
@@ -681,7 +688,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -690,12 +697,12 @@
         <Parameter Name="hashAlgorithm" Type="System.Security.Cryptography.HashAlgorithm" />
       </Parameters>
       <Docs>
-        <param name="hashAlgorithm">
-          <see cref="T:System.Security.Cryptography.HashAlgorithm" /> to be released.</param>
+        <param name="hashAlgorithm">The <see cref="T:System.Security.Cryptography.HashAlgorithm" /> instance to release.</param>
         <summary>
-            When finished with a <see cref="T:System.Security.Cryptography.HashAlgorithm" /> call this method for cleanup. The default behavior is to call <see cref="M:System.Security.Cryptography.HashAlgorithm.Dispose" /></summary>
+            Releases resources associated with a <see cref="T:System.Security.Cryptography.HashAlgorithm" /> instance. The default behavior is to call <see cref="M:System.Security.Cryptography.HashAlgorithm.Dispose" />.
+            </summary>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">thrown if <paramref name="hashAlgorithm" /> is null.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="hashAlgorithm" /> is null.</exception>
       </Docs>
     </Member>
     <Member MemberName="ReleaseKeyWrapProvider">
@@ -707,7 +714,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -716,13 +723,12 @@
         <Parameter Name="provider" Type="Microsoft.IdentityModel.Tokens.KeyWrapProvider" />
       </Parameters>
       <Docs>
-        <param name="provider">
-          <see cref="T:Microsoft.IdentityModel.Tokens.KeyWrapProvider" /> to be released.</param>
+        <param name="provider">The <see cref="T:Microsoft.IdentityModel.Tokens.KeyWrapProvider" /> instance to release.</param>
         <summary>
-            When finished with a <see cref="T:Microsoft.IdentityModel.Tokens.KeyWrapProvider" /> call this method for cleanup."/&gt;
+            Releases resources associated with a <see cref="T:Microsoft.IdentityModel.Tokens.KeyWrapProvider" /> instance.
             </summary>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">thrown if <paramref name="provider" /> is null.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="provider" /> is null.</exception>
       </Docs>
     </Member>
     <Member MemberName="ReleaseRsaKeyWrapProvider">
@@ -734,7 +740,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -743,13 +749,12 @@
         <Parameter Name="provider" Type="Microsoft.IdentityModel.Tokens.RsaKeyWrapProvider" />
       </Parameters>
       <Docs>
-        <param name="provider">
-          <see cref="T:Microsoft.IdentityModel.Tokens.RsaKeyWrapProvider" /> to be released.</param>
+        <param name="provider">The <see cref="T:Microsoft.IdentityModel.Tokens.RsaKeyWrapProvider" /> instance to release.</param>
         <summary>
-            When finished with a <see cref="T:Microsoft.IdentityModel.Tokens.RsaKeyWrapProvider" /> call this method for cleanup."/&gt;
+            Releases resources associated with an <see cref="T:Microsoft.IdentityModel.Tokens.RsaKeyWrapProvider" /> instance.
             </summary>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">thrown if <paramref name="provider" /> is null.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="provider" /> is null.</exception>
       </Docs>
     </Member>
     <Member MemberName="ReleaseSignatureProvider">
@@ -761,7 +766,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -770,12 +775,12 @@
         <Parameter Name="signatureProvider" Type="Microsoft.IdentityModel.Tokens.SignatureProvider" />
       </Parameters>
       <Docs>
-        <param name="signatureProvider">
-          <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> to be released.</param>
+        <param name="signatureProvider">The <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> instance to release.</param>
         <summary>
-            When finished with a <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> call this method for cleanup. The default behavior is to call <see cref="M:Microsoft.IdentityModel.Tokens.SignatureProvider.Dispose" /></summary>
+            Releases resources associated with a <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> instance.
+            </summary>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">thrown if <paramref name="signatureProvider" /> is null.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="signatureProvider" /> is null.</exception>
       </Docs>
     </Member>
     <Member MemberName="SignatureProviderObjectPoolCacheSize">
@@ -787,7 +792,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>

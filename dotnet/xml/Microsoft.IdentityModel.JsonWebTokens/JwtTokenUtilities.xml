@@ -31,6 +31,7 @@
     <AssemblyVersion>7.6.0.0</AssemblyVersion>
     <AssemblyVersion>7.6.2.0</AssemblyVersion>
     <AssemblyVersion>7.6.3.0</AssemblyVersion>
+    <AssemblyVersion>8.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -51,7 +52,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -68,7 +69,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -78,14 +79,14 @@
         <Parameter Name="signingCredentials" Type="Microsoft.IdentityModel.Tokens.SigningCredentials" />
       </Parameters>
       <Docs>
-        <param name="input">String to be signed</param>
+        <param name="input">The value to be signed.</param>
         <param name="signingCredentials">The <see cref="T:Microsoft.IdentityModel.Tokens.SigningCredentials" /> that contain crypto specs used to sign the token.</param>
         <summary>
             Produces a signature over the <paramref name="input" />.
             </summary>
         <returns>The base 64 url encoded signature over the bytes obtained from UTF8Encoding.GetBytes( 'input' ).</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">'input' or 'signingCredentials' is null.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="input" /> or <paramref name="signingCredentials" /> is null.</exception>
       </Docs>
     </Member>
     <Member MemberName="CreateEncodedSignature">
@@ -97,7 +98,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -108,16 +109,15 @@
         <Parameter Name="cacheProvider" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="input">String to be signed</param>
+        <param name="input">The value to be signed.</param>
         <param name="signingCredentials">The <see cref="T:Microsoft.IdentityModel.Tokens.SigningCredentials" /> that contain crypto specs used to sign the token.</param>
-        <param name="cacheProvider">should the <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> be cached.</param>
+        <param name="cacheProvider">Indicates whether the <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> should be cached.</param>
         <summary>
             Produces a signature over the <paramref name="input" />.
             </summary>
         <returns>The base 64 url encoded signature over the bytes obtained from UTF8Encoding.GetBytes( 'input' ).</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="input" /> or <paramref name="signingCredentials" /> is null.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="input" /> or <paramref name="signingCredentials" /> is null.</exception>
       </Docs>
     </Member>
     <Member MemberName="GenerateKeyBytes">
@@ -129,7 +129,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -155,7 +155,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.IdentityModel.Tokens.SecurityKey&gt;</ReturnType>
@@ -181,7 +181,7 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Text.RegularExpressions.Regex</ReturnType>
@@ -202,7 +202,7 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Text.RegularExpressions.Regex</ReturnType>

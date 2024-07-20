@@ -29,6 +29,7 @@
     <AssemblyVersion>7.6.0.0</AssemblyVersion>
     <AssemblyVersion>7.6.2.0</AssemblyVersion>
     <AssemblyVersion>7.6.3.0</AssemblyVersion>
+    <AssemblyVersion>8.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.IdentityModel.Tokens.BaseConfiguration</BaseTypeName>
@@ -49,7 +50,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -68,7 +69,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="json" Type="System.String" />
@@ -79,7 +80,7 @@
             Initializes an new instance of <see cref="T:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration" /> from a json string.
             </summary>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">If 'json' is null or empty.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="json" /> is null or empty.</exception>
       </Docs>
     </Member>
     <Member MemberName="AcrValuesSupported">
@@ -91,7 +92,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -119,7 +120,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -147,7 +148,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -166,6 +167,90 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="AuthorizationDetailsTypesSupported">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;string&gt; AuthorizationDetailsTypesSupported { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;string&gt; AuthorizationDetailsTypesSupported" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.AuthorizationDetailsTypesSupported" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AuthorizationDetailsTypesSupported As ICollection(Of String)" />
+      <MemberSignature Language="F#" Value="member this.AuthorizationDetailsTypesSupported : System.Collections.Generic.ICollection&lt;string&gt;" Usage="Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.AuthorizationDetailsTypesSupported" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("authorization_details_types_supported")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("authorization_details_types_supported")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the collection of 'authorization_details_types_supported'
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthorizationEncryptionAlgValuesSupported">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;string&gt; AuthorizationEncryptionAlgValuesSupported { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;string&gt; AuthorizationEncryptionAlgValuesSupported" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.AuthorizationEncryptionAlgValuesSupported" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AuthorizationEncryptionAlgValuesSupported As ICollection(Of String)" />
+      <MemberSignature Language="F#" Value="member this.AuthorizationEncryptionAlgValuesSupported : System.Collections.Generic.ICollection&lt;string&gt;" Usage="Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.AuthorizationEncryptionAlgValuesSupported" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("authorization_encryption_alg_values_supported")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("authorization_encryption_alg_values_supported")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the collection of 'authorization_encryption_alg_values_supported'
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthorizationEncryptionEncValuesSupported">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;string&gt; AuthorizationEncryptionEncValuesSupported { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;string&gt; AuthorizationEncryptionEncValuesSupported" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.AuthorizationEncryptionEncValuesSupported" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AuthorizationEncryptionEncValuesSupported As ICollection(Of String)" />
+      <MemberSignature Language="F#" Value="member this.AuthorizationEncryptionEncValuesSupported : System.Collections.Generic.ICollection&lt;string&gt;" Usage="Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.AuthorizationEncryptionEncValuesSupported" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("authorization_encryption_enc_values_supported")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("authorization_encryption_enc_values_supported")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the collection of 'authorization_encryption_enc_values_supported'
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="AuthorizationEndpoint">
       <MemberSignature Language="C#" Value="public string AuthorizationEndpoint { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string AuthorizationEndpoint" />
@@ -175,7 +260,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -207,7 +292,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -230,6 +315,34 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="AuthorizationSigningAlgValuesSupported">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;string&gt; AuthorizationSigningAlgValuesSupported { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;string&gt; AuthorizationSigningAlgValuesSupported" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.AuthorizationSigningAlgValuesSupported" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AuthorizationSigningAlgValuesSupported As ICollection(Of String)" />
+      <MemberSignature Language="F#" Value="member this.AuthorizationSigningAlgValuesSupported : System.Collections.Generic.ICollection&lt;string&gt;" Usage="Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.AuthorizationSigningAlgValuesSupported" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("authorization_signing_alg_values_supported")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("authorization_signing_alg_values_supported")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the collection of 'authorization_signing_alg_values_supported'
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="BackchannelAuthenticationEndpoint">
       <MemberSignature Language="C#" Value="public string BackchannelAuthenticationEndpoint { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string BackchannelAuthenticationEndpoint" />
@@ -239,7 +352,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -271,7 +384,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -299,7 +412,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -327,7 +440,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -359,7 +472,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -391,7 +504,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -419,7 +532,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -451,7 +564,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -479,7 +592,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -498,6 +611,34 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="CodeChallengeMethodsSupported">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;string&gt; CodeChallengeMethodsSupported { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;string&gt; CodeChallengeMethodsSupported" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.CodeChallengeMethodsSupported" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CodeChallengeMethodsSupported As ICollection(Of String)" />
+      <MemberSignature Language="F#" Value="member this.CodeChallengeMethodsSupported : System.Collections.Generic.ICollection&lt;string&gt;" Usage="Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.CodeChallengeMethodsSupported" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("code_challenge_methods_supported")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("code_challenge_methods_supported")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the collection of 'code_challenge_methods_supported'
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Create">
       <MemberSignature Language="C#" Value="public static Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration Create (string json);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration Create(string json) cil managed" />
@@ -507,7 +648,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration</ReturnType>
@@ -523,8 +664,40 @@
         <returns>
           <see cref="T:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration" /> object representing the configuration.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">If 'json' is null or empty.</exception>
-        <exception cref="T:System.ArgumentException">If 'json' fails to deserialize.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="json" /> is null or empty.</exception>
+        <exception cref="T:System.ArgumentException">Thrown if <paramref name="json" /> fails to deserialize.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceAuthorizationEndpoint">
+      <MemberSignature Language="C#" Value="public string DeviceAuthorizationEndpoint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DeviceAuthorizationEndpoint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.DeviceAuthorizationEndpoint" />
+      <MemberSignature Language="VB.NET" Value="Public Property DeviceAuthorizationEndpoint As String" />
+      <MemberSignature Language="F#" Value="member this.DeviceAuthorizationEndpoint : string with get, set" Usage="Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.DeviceAuthorizationEndpoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("device_authorization_endpoint")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("device_authorization_endpoint")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the 'device_authorization_endpoint'.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="DisplayValuesSupported">
@@ -536,7 +709,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -564,7 +737,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -592,7 +765,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -624,7 +797,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -655,7 +828,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -686,7 +859,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -714,7 +887,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -746,7 +919,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -774,7 +947,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -802,7 +975,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -830,7 +1003,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -862,7 +1035,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -890,7 +1063,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -918,7 +1091,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -950,7 +1123,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -977,7 +1150,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1009,7 +1182,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1037,7 +1210,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1069,7 +1242,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1101,7 +1274,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1129,7 +1302,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1161,7 +1334,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1193,7 +1366,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1221,7 +1394,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1249,7 +1422,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1277,7 +1450,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1309,7 +1482,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1341,7 +1514,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1373,7 +1546,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1405,7 +1578,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1433,7 +1606,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1452,6 +1625,94 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="RevocationEndpoint">
+      <MemberSignature Language="C#" Value="public string RevocationEndpoint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RevocationEndpoint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.RevocationEndpoint" />
+      <MemberSignature Language="VB.NET" Value="Public Property RevocationEndpoint As String" />
+      <MemberSignature Language="F#" Value="member this.RevocationEndpoint : string with get, set" Usage="Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.RevocationEndpoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("revocation_endpoint")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("revocation_endpoint")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the 'revocation_endpoint'
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RevocationEndpointAuthMethodsSupported">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;string&gt; RevocationEndpointAuthMethodsSupported { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;string&gt; RevocationEndpointAuthMethodsSupported" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.RevocationEndpointAuthMethodsSupported" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RevocationEndpointAuthMethodsSupported As ICollection(Of String)" />
+      <MemberSignature Language="F#" Value="member this.RevocationEndpointAuthMethodsSupported : System.Collections.Generic.ICollection&lt;string&gt;" Usage="Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.RevocationEndpointAuthMethodsSupported" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("revocation_endpoint_auth_methods_supported")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("revocation_endpoint_auth_methods_supported")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the collection of 'revocation_endpoint_auth_methods_supported'.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RevocationEndpointAuthSigningAlgValuesSupported">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;string&gt; RevocationEndpointAuthSigningAlgValuesSupported { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;string&gt; RevocationEndpointAuthSigningAlgValuesSupported" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.RevocationEndpointAuthSigningAlgValuesSupported" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RevocationEndpointAuthSigningAlgValuesSupported As ICollection(Of String)" />
+      <MemberSignature Language="F#" Value="member this.RevocationEndpointAuthSigningAlgValuesSupported : System.Collections.Generic.ICollection&lt;string&gt;" Usage="Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.RevocationEndpointAuthSigningAlgValuesSupported" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("revocation_endpoint_auth_signing_alg_values_supported")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("revocation_endpoint_auth_signing_alg_values_supported")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the collection of 'revocation_endpoint_auth_signing_alg_values_supported'.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="ScopesSupported">
       <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;string&gt; ScopesSupported { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;string&gt; ScopesSupported" />
@@ -1461,7 +1722,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1489,7 +1750,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1521,7 +1782,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1543,6 +1804,130 @@
         <return>true if 'acr_values_supported' (AcrValuesSupported) is not empty; otherwise, false.</return>
       </Docs>
     </Member>
+    <Member MemberName="ShouldSerializeAuthorizationDetailsTypesSupported">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeAuthorizationDetailsTypesSupported ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeAuthorizationDetailsTypesSupported() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeAuthorizationDetailsTypesSupported" />
+      <MemberSignature Language="VB.NET" Value="Public Function ShouldSerializeAuthorizationDetailsTypesSupported () As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ShouldSerializeAuthorizationDetailsTypesSupported : unit -&gt; bool" Usage="openIdConnectConfiguration.ShouldSerializeAuthorizationDetailsTypesSupported " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets a bool that determines if the 'authorization_details_types_supported' (AuthorizationDetailsTypesSupported) property should be serialized.
+            This is used by Json.NET in order to conditionally serialize properties.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <return>true if 'authorization_details_types_supported' (AuthorizationDetailsTypesSupported) is not empty; otherwise, false.</return>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeAuthorizationEncryptionAlgValuesSupported">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeAuthorizationEncryptionAlgValuesSupported ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeAuthorizationEncryptionAlgValuesSupported() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeAuthorizationEncryptionAlgValuesSupported" />
+      <MemberSignature Language="VB.NET" Value="Public Function ShouldSerializeAuthorizationEncryptionAlgValuesSupported () As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ShouldSerializeAuthorizationEncryptionAlgValuesSupported : unit -&gt; bool" Usage="openIdConnectConfiguration.ShouldSerializeAuthorizationEncryptionAlgValuesSupported " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets a bool that determines if the 'authorization_encryption_alg_values_supported' (AuthorizationEncryptionAlgValuesSupported) property should be serialized.
+            This is used by Json.NET in order to conditionally serialize properties.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <return>true if 'authorization_encryption_alg_values_supported' (AuthorizationEncryptionAlgValuesSupported) is not empty; otherwise, false.</return>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeAuthorizationEncryptionEncValuesSupported">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeAuthorizationEncryptionEncValuesSupported ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeAuthorizationEncryptionEncValuesSupported() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeAuthorizationEncryptionEncValuesSupported" />
+      <MemberSignature Language="VB.NET" Value="Public Function ShouldSerializeAuthorizationEncryptionEncValuesSupported () As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ShouldSerializeAuthorizationEncryptionEncValuesSupported : unit -&gt; bool" Usage="openIdConnectConfiguration.ShouldSerializeAuthorizationEncryptionEncValuesSupported " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets a bool that determines if the 'authorization_encryption_enc_values_supported' (AuthorizationEncryptionEncValuesSupported) property should be serialized.
+            This is used by Json.NET in order to conditionally serialize properties.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <return>true if 'authorization_encryption_enc_values_supported' (AuthorizationEncryptionEncValuesSupported) is not empty; otherwise, false.</return>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeAuthorizationSigningAlgValuesSupported">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeAuthorizationSigningAlgValuesSupported ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeAuthorizationSigningAlgValuesSupported() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeAuthorizationSigningAlgValuesSupported" />
+      <MemberSignature Language="VB.NET" Value="Public Function ShouldSerializeAuthorizationSigningAlgValuesSupported () As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ShouldSerializeAuthorizationSigningAlgValuesSupported : unit -&gt; bool" Usage="openIdConnectConfiguration.ShouldSerializeAuthorizationSigningAlgValuesSupported " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets a bool that determines if the 'authorization_signing_alg_values_supported' (AuthorizationSigningAlgValuesSupported) property should be serialized.
+            This is used by Json.NET in order to conditionally serialize properties.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <return>true if 'authorization_signing_alg_values_supported' (AuthorizationSigningAlgValuesSupported) is not empty; otherwise, false.</return>
+      </Docs>
+    </Member>
     <Member MemberName="ShouldSerializeBackchannelAuthenticationRequestSigningAlgValuesSupported">
       <MemberSignature Language="C#" Value="public bool ShouldSerializeBackchannelAuthenticationRequestSigningAlgValuesSupported ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeBackchannelAuthenticationRequestSigningAlgValuesSupported() cil managed" />
@@ -1552,7 +1937,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1583,7 +1968,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1614,7 +1999,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1645,7 +2030,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1676,7 +2061,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1698,6 +2083,37 @@
         <return>true if 'claim_types_supported' (ClaimTypesSupported) is not empty; otherwise, false.</return>
       </Docs>
     </Member>
+    <Member MemberName="ShouldSerializeCodeChallengeMethodsSupported">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeCodeChallengeMethodsSupported ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeCodeChallengeMethodsSupported() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeCodeChallengeMethodsSupported" />
+      <MemberSignature Language="VB.NET" Value="Public Function ShouldSerializeCodeChallengeMethodsSupported () As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ShouldSerializeCodeChallengeMethodsSupported : unit -&gt; bool" Usage="openIdConnectConfiguration.ShouldSerializeCodeChallengeMethodsSupported " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets a bool that determines if the 'code_challenge_methods_supported' (CodeChallengeMethodsSupported) property should be serialized.
+            This is used by Json.NET in order to conditionally serialize properties.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <return>true if 'code_challenge_methods_supported' (CodeChallengeMethodsSupported) is not empty; otherwise, false.</return>
+      </Docs>
+    </Member>
     <Member MemberName="ShouldSerializeDisplayValuesSupported">
       <MemberSignature Language="C#" Value="public bool ShouldSerializeDisplayValuesSupported ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeDisplayValuesSupported() cil managed" />
@@ -1707,7 +2123,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1738,7 +2154,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1769,7 +2185,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1800,7 +2216,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1831,7 +2247,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1862,7 +2278,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1893,7 +2309,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1924,7 +2340,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1955,7 +2371,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1986,7 +2402,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2017,7 +2433,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2048,7 +2464,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2079,7 +2495,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2110,7 +2526,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2132,6 +2548,68 @@
         <return>true if 'response_types_supported' (ResponseTypesSupported) is not empty; otherwise, false.</return>
       </Docs>
     </Member>
+    <Member MemberName="ShouldSerializeRevocationEndpointAuthMethodsSupported">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeRevocationEndpointAuthMethodsSupported ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeRevocationEndpointAuthMethodsSupported() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeRevocationEndpointAuthMethodsSupported" />
+      <MemberSignature Language="VB.NET" Value="Public Function ShouldSerializeRevocationEndpointAuthMethodsSupported () As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ShouldSerializeRevocationEndpointAuthMethodsSupported : unit -&gt; bool" Usage="openIdConnectConfiguration.ShouldSerializeRevocationEndpointAuthMethodsSupported " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets a bool that determines if the 'revocation_endpoint_auth_methods_supported' (RevocationEndpointAuthMethodsSupported) property should be serialized.
+            This is used by Json.NET in order to conditionally serialize properties.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <return>true if 'revocation_endpoint_auth_methods_supported' (RevocationEndpointAuthMethodsSupported) is not empty; otherwise, false.</return>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeRevocationEndpointAuthSigningAlgValuesSupported">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeRevocationEndpointAuthSigningAlgValuesSupported ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeRevocationEndpointAuthSigningAlgValuesSupported() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeRevocationEndpointAuthSigningAlgValuesSupported" />
+      <MemberSignature Language="VB.NET" Value="Public Function ShouldSerializeRevocationEndpointAuthSigningAlgValuesSupported () As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ShouldSerializeRevocationEndpointAuthSigningAlgValuesSupported : unit -&gt; bool" Usage="openIdConnectConfiguration.ShouldSerializeRevocationEndpointAuthSigningAlgValuesSupported " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets a bool that determines if the 'revocation_endpoint_auth_signing_alg_values_supported' (RevocationEndpointAuthSigningAlgValuesSupported) property should be serialized.
+            This is used by Json.NET in order to conditionally serialize properties.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <return>true if 'revocation_endpoint_auth_signing_alg_values_supported' (RevocationEndpointAuthSigningAlgValuesSupported) is not empty; otherwise, false.</return>
+      </Docs>
+    </Member>
     <Member MemberName="ShouldSerializeScopesSupported">
       <MemberSignature Language="C#" Value="public bool ShouldSerializeScopesSupported ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeScopesSupported() cil managed" />
@@ -2141,7 +2619,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2172,7 +2650,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2203,7 +2681,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2234,7 +2712,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2265,7 +2743,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2296,7 +2774,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2327,7 +2805,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2358,7 +2836,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2389,7 +2867,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2420,7 +2898,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2448,7 +2926,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2467,6 +2945,38 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="TlsClientCertificateBoundAccessTokens">
+      <MemberSignature Language="C#" Value="public bool TlsClientCertificateBoundAccessTokens { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TlsClientCertificateBoundAccessTokens" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.TlsClientCertificateBoundAccessTokens" />
+      <MemberSignature Language="VB.NET" Value="Public Property TlsClientCertificateBoundAccessTokens As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TlsClientCertificateBoundAccessTokens : bool with get, set" Usage="Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.TlsClientCertificateBoundAccessTokens" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingDefault)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingDefault)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("tls_client_certificate_bound_access_tokens")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("tls_client_certificate_bound_access_tokens")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the 'tls_client_certificate_bound_access_tokens'
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="TokenEndpoint">
       <MemberSignature Language="C#" Value="public override string TokenEndpoint { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string TokenEndpoint" />
@@ -2476,7 +2986,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2508,7 +3018,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2536,7 +3046,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2564,7 +3074,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2592,7 +3102,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2624,7 +3134,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2652,7 +3162,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2680,7 +3190,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2708,7 +3218,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -2724,7 +3234,35 @@
             </summary>
         <returns>json string representing the configuration object.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">If 'configuration' is null.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="configuration" /> is <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public static void Write (Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration configuration, System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Write(class Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration configuration, class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.Write(Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration,System.IO.Stream)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub Write (configuration As OpenIdConnectConfiguration, stream As Stream)" />
+      <MemberSignature Language="F#" Value="static member Write : Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration * System.IO.Stream -&gt; unit" Usage="Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.Write (configuration, stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Protocols.OpenIdConnect</AssemblyName>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="configuration" Type="Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration" />
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="configuration">The <see cref="T:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration" /> to serialize.</param>
+        <param name="stream">The <see cref="T:System.IO.Stream" /> to write to.</param>
+        <summary>
+            Writes an <see cref="T:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration" /> as JSON to the <paramref name="stream" />.
+            </summary>
+        <remarks>Because a <see cref="T:System.IO.Stream" /> is provided, this method does not return a value.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="configuration" /> or <paramref name="stream" /> is <see langword="null" />.</exception>
       </Docs>
     </Member>
   </Members>

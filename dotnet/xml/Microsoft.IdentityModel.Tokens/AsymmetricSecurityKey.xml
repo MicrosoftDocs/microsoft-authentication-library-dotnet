@@ -29,6 +29,7 @@
     <AssemblyVersion>7.6.0.0</AssemblyVersion>
     <AssemblyVersion>7.6.2.0</AssemblyVersion>
     <AssemblyVersion>7.6.3.0</AssemblyVersion>
+    <AssemblyVersion>8.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.IdentityModel.Tokens.SecurityKey</BaseTypeName>
@@ -36,7 +37,7 @@
   <Interfaces />
   <Docs>
     <summary>
-            Base class for a Security Key that contains Asymmetric key material.
+            Base class for a <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> that contains Asymmetric key material.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -49,12 +50,12 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
         <summary>
-            Default constructor
+            Initializes a new instance of the <see cref="T:Microsoft.IdentityModel.Tokens.AsymmetricSecurityKey" /> class.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -68,7 +69,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -97,16 +98,20 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.PrivateKeyStatus</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the status of the private key.
+            Gets a value indicating the existence of the private key.
             </summary>
-        <value>To be added.</value>
+        <value>
+          <see cref="F:Microsoft.IdentityModel.Tokens.PrivateKeyStatus.Exists" /> if the private key exists.
+            <see cref="F:Microsoft.IdentityModel.Tokens.PrivateKeyStatus.DoesNotExist" /> if the private key does not exist.
+            <see cref="F:Microsoft.IdentityModel.Tokens.PrivateKeyStatus.Unknown" /> if the existence of the private key cannot be determined.
+            </value>
         <remarks>To be added.</remarks>
         <return>'Exists' if private key exists for sure; 'DoesNotExist' if private key doesn't exist for sure; 'Unknown' if we cannot determine.</return>
       </Docs>

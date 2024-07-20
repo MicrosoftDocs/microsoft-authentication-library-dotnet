@@ -29,6 +29,7 @@
     <AssemblyVersion>7.6.0.0</AssemblyVersion>
     <AssemblyVersion>7.6.2.0</AssemblyVersion>
     <AssemblyVersion>7.6.3.0</AssemblyVersion>
+    <AssemblyVersion>8.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -36,7 +37,7 @@
   <Interfaces />
   <Docs>
     <summary>
-            Encodes and Decodes strings as Base64Url encoding.
+            Encodes and Decodes strings as base64url encoding.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -50,7 +51,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -59,11 +60,11 @@
         <Parameter Name="arg" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="arg">string to decode.</param>
+        <param name="arg">The base64url encoded string to decode.</param>
         <summary>
-            Decodes the string from Base64UrlEncoded to UTF8.
+            Decodes the specified base64url encoded string to UTF-8.
             </summary>
-        <returns>UTF8 string.</returns>
+        <returns>The UTF-8 decoded string.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -76,7 +77,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -85,10 +86,11 @@
         <Parameter Name="str" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="str">base64Url encoded string.</param>
+        <param name="str">The base64url encoded string.</param>
         <summary>
-            Converts the specified string, base-64-url encoded to utf8 bytes.</summary>
-        <returns>UTF8 bytes.</returns>
+            Converts the specified base64url encoded string to UTF-8 bytes.
+            </summary>
+        <returns>The UTF-8 bytes.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -101,7 +103,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -112,12 +114,12 @@
       <Docs>
         <param name="inArray">An array of 8-bit unsigned integers.</param>
         <summary>
-            Converts a subset of an array of 8-bit unsigned integers to its equivalent string representation which is encoded with base-64-url digits.
+            Converts a subset of an array of 8-bit unsigned integers to its equivalent string representation encoded with base64url digits.
             </summary>
-        <returns>The string representation in base 64 url encoding of length elements of inArray, starting at position offset.</returns>
+        <returns>The base64url encoded string representation of the elements in inArray.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">'inArray' is null.</exception>
-        <exception cref="T:System.ArgumentOutOfRangeException">offset or length is negative OR offset plus length is greater than the length of inArray.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown if inArray is null.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown if offset or length is negative, or if offset plus length is greater than the length of inArray.</exception>
       </Docs>
     </Member>
     <Member MemberName="Encode">
@@ -129,7 +131,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -138,14 +140,14 @@
         <Parameter Name="arg" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="arg">string to encode.</param>
+        <param name="arg">The string to encode.</param>
         <summary>
-            The following functions perform base64url encoding which differs from regular base64 encoding as follows
-            * padding is skipped so the pad character '=' doesn't have to be percent encoded
-            * the 62nd and 63rd regular base64 encoding characters ('+' and '/') are replace with ('-' and '_')
-            The changes make the encoding alphabet file and URL safe.
+            Performs base64url encoding, which differs from regular base64 encoding as follows:
+            * Padding is skipped so the pad character '=' doesn't have to be percent encoded.
+            * The 62nd and 63rd regular base64 encoding characters ('+' and '/') are replaced with ('-' and '_').
+            This makes the encoding alphabet URL safe.
             </summary>
-        <returns>Base64Url encoding of the UTF8 bytes.</returns>
+        <returns>The base64url encoding of the UTF8 bytes.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -158,7 +160,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -168,13 +170,12 @@
         <Parameter Name="output" Type="System.Span&lt;System.Char&gt;" />
       </Parameters>
       <Docs>
-        <param name="inArray">A span of bytes.</param>
-        <param name="output">output for encoding.</param>
+        <param name="inArray">A read-only span of bytes to encode.</param>
+        <param name="output">The span of characters to write the encoded output.</param>
         <summary>
-            Populates a <see cref="T:System.ReadOnlySpan`1" />Converts a <see cref="T:System.Span`1" /> encoded with base-64-url digits. Parameters specify
-            the subset as an offset in the input array, and the number of elements in the array to convert.
+            Populates a <see cref="T:System.Span`1" /> with the base64url encoded representation of a <see cref="T:System.ReadOnlySpan`1" /> of bytes.
             </summary>
-        <returns>The number of chars written to the output.</returns>
+        <returns>The number of characters written to the output span.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -187,7 +188,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -199,16 +200,16 @@
       </Parameters>
       <Docs>
         <param name="inArray">An array of 8-bit unsigned integers.</param>
-        <param name="length">An offset in inArray.</param>
-        <param name="offset">The number of elements of inArray to convert.</param>
+        <param name="offset">An offset in inArray.</param>
+        <param name="length">The number of elements of inArray to convert.</param>
         <summary>
-            Converts a subset of an array of 8-bit unsigned integers to its equivalent string representation which is encoded with base-64-url digits. Parameters specify
-            the subset as an offset in the input array, and the number of elements in the array to convert.
+            Converts a subset of an array of 8-bit unsigned integers to its equivalent string representation encoded with base64url digits.
+            Parameters specify the subset as an offset in the input array and the number of elements in the array to convert.
             </summary>
-        <returns>The string representation in base 64 url encoding of length elements of inArray, starting at position offset.</returns>
+        <returns>The base64url encoded string representation of length elements of inArray, starting at position offset.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">'inArray' is null.</exception>
-        <exception cref="T:System.ArgumentOutOfRangeException">offset or length is negative OR offset plus length is greater than the length of inArray.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown if inArray is null.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown if offset or length is negative, or if offset plus length is greater than the length of inArray.</exception>
       </Docs>
     </Member>
   </Members>

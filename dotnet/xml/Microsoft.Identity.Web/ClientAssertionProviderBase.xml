@@ -37,6 +37,7 @@
     <AssemblyVersion>2.19.0.0</AssemblyVersion>
     <AssemblyVersion>2.19.1.0</AssemblyVersion>
     <AssemblyVersion>2.20.0.0</AssemblyVersion>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -58,7 +59,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
-        <AssemblyVersion>2.20.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -75,7 +76,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
-        <AssemblyVersion>2.20.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.DateTimeOffset&gt;</ReturnType>
@@ -88,25 +89,25 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="GetClientAssertion">
-      <MemberSignature Language="C#" Value="protected abstract System.Threading.Tasks.Task&lt;Microsoft.Identity.Web.ClientAssertion&gt; GetClientAssertion (System.Threading.CancellationToken cancellationToken);" />
-      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Identity.Web.ClientAssertion&gt; GetClientAssertion(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.ClientAssertionProviderBase.GetClientAssertion(System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Protected MustOverride Function GetClientAssertion (cancellationToken As CancellationToken) As Task(Of ClientAssertion)" />
-      <MemberSignature Language="F#" Value="abstract member GetClientAssertion : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Web.ClientAssertion&gt;" Usage="clientAssertionProviderBase.GetClientAssertion cancellationToken" />
+    <Member MemberName="GetClientAssertionAsync">
+      <MemberSignature Language="C#" Value="protected abstract System.Threading.Tasks.Task&lt;Microsoft.Identity.Web.ClientAssertion&gt; GetClientAssertionAsync (Microsoft.Identity.Client.AssertionRequestOptions? assertionRequestOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Identity.Web.ClientAssertion&gt; GetClientAssertionAsync(class Microsoft.Identity.Client.AssertionRequestOptions assertionRequestOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.ClientAssertionProviderBase.GetClientAssertionAsync(Microsoft.Identity.Client.AssertionRequestOptions)" />
+      <MemberSignature Language="VB.NET" Value="Protected MustOverride Function GetClientAssertionAsync (assertionRequestOptions As AssertionRequestOptions) As Task(Of ClientAssertion)" />
+      <MemberSignature Language="F#" Value="abstract member GetClientAssertionAsync : Microsoft.Identity.Client.AssertionRequestOptions -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Web.ClientAssertion&gt;" Usage="clientAssertionProviderBase.GetClientAssertionAsync assertionRequestOptions" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
-        <AssemblyVersion>2.20.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Identity.Web.ClientAssertion&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+        <Parameter Name="assertionRequestOptions" Type="Microsoft.Identity.Client.AssertionRequestOptions" />
       </Parameters>
       <Docs>
-        <param name="cancellationToken" />
+        <param name="assertionRequestOptions" />
         <summary>
             Gets the Client assertion
             </summary>
@@ -114,25 +115,25 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="GetSignedAssertion">
-      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;string&gt; GetSignedAssertion (System.Threading.CancellationToken cancellationToken);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;string&gt; GetSignedAssertion(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.ClientAssertionProviderBase.GetSignedAssertion(System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Function GetSignedAssertion (cancellationToken As CancellationToken) As Task(Of String)" />
-      <MemberSignature Language="F#" Value="member this.GetSignedAssertion : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;string&gt;" Usage="clientAssertionProviderBase.GetSignedAssertion cancellationToken" />
+    <Member MemberName="GetSignedAssertionAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;string&gt; GetSignedAssertionAsync (Microsoft.Identity.Client.AssertionRequestOptions? assertionRequestOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;string&gt; GetSignedAssertionAsync(class Microsoft.Identity.Client.AssertionRequestOptions assertionRequestOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.ClientAssertionProviderBase.GetSignedAssertionAsync(Microsoft.Identity.Client.AssertionRequestOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetSignedAssertionAsync (assertionRequestOptions As AssertionRequestOptions) As Task(Of String)" />
+      <MemberSignature Language="F#" Value="member this.GetSignedAssertionAsync : Microsoft.Identity.Client.AssertionRequestOptions -&gt; System.Threading.Tasks.Task&lt;string&gt;" Usage="clientAssertionProviderBase.GetSignedAssertionAsync assertionRequestOptions" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
-        <AssemblyVersion>2.20.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.String&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+        <Parameter Name="assertionRequestOptions" Type="Microsoft.Identity.Client.AssertionRequestOptions" />
       </Parameters>
       <Docs>
-        <param name="cancellationToken">Cancellation token.</param>
+        <param name="assertionRequestOptions">Input object which is populated by the SDK.</param>
         <summary>
             Get the signed assertion (and refreshes it if needed).
             </summary>

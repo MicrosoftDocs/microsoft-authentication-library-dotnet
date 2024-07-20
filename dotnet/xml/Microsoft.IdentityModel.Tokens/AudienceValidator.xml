@@ -29,6 +29,7 @@
     <AssemblyVersion>7.6.0.0</AssemblyVersion>
     <AssemblyVersion>7.6.2.0</AssemblyVersion>
     <AssemblyVersion>7.6.3.0</AssemblyVersion>
+    <AssemblyVersion>8.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Delegate</BaseTypeName>
@@ -44,12 +45,12 @@
   <Docs>
     <param name="audiences">The audiences found in the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" />.</param>
     <param name="securityToken">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" /> being validated.</param>
-    <param name="validationParameters">
-      <see cref="T:Microsoft.IdentityModel.Tokens.TokenValidationParameters" /> required for validation.</param>
+    <param name="validationParameters">The <see cref="T:Microsoft.IdentityModel.Tokens.TokenValidationParameters" /> to be used for validating the token.</param>
     <summary>
-            Definition for AudienceValidator.
+            Validates the audiences found in the security token.
             </summary>
-    <returns>true if the audience is considered valid.</returns>
+    <returns>
+      <see langword="true" /> if the audience is valid; otherwise, <see langword="false" />.</returns>
     <remarks>To be added.</remarks>
   </Docs>
 </Type>

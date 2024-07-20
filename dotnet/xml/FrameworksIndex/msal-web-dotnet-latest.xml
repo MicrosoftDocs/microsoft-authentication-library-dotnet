@@ -1,22 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-web-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.IdentityModel.Abstractions" Version="7.6.3.0" />
-    <Assembly Name="Microsoft.IdentityModel.JsonWebTokens" Version="7.6.3.0" />
-    <Assembly Name="Microsoft.IdentityModel.KeyVaultExtensions" Version="7.6.3.0" />
-    <Assembly Name="Microsoft.IdentityModel.Logging" Version="7.6.3.0" />
-    <Assembly Name="Microsoft.IdentityModel.LoggingExtensions" Version="7.6.3.0" />
-    <Assembly Name="Microsoft.IdentityModel.ManagedKeyVaultSecurityKey" Version="7.6.3.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols" Version="7.6.3.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="7.6.3.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.SignedHttpRequest" Version="7.6.3.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.WsFederation" Version="7.6.3.0" />
-    <Assembly Name="Microsoft.IdentityModel.TestExtensions" Version="7.6.3.0" />
-    <Assembly Name="Microsoft.IdentityModel.Tokens" Version="7.6.3.0" />
-    <Assembly Name="Microsoft.IdentityModel.Tokens.Saml" Version="7.6.3.0" />
-    <Assembly Name="Microsoft.IdentityModel.Validators" Version="7.6.3.0" />
-    <Assembly Name="Microsoft.IdentityModel.Xml" Version="7.6.3.0" />
-    <Assembly Name="System.IdentityModel.Tokens.Jwt" Version="7.6.3.0" />
+    <Assembly Name="Microsoft.IdentityModel.Abstractions" Version="8.0.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.JsonWebTokens" Version="8.0.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.KeyVaultExtensions" Version="7.7.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.Logging" Version="8.0.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.LoggingExtensions" Version="8.0.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.ManagedKeyVaultSecurityKey" Version="7.7.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols" Version="8.0.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="8.0.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.SignedHttpRequest" Version="8.0.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.WsFederation" Version="8.0.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.TestExtensions" Version="8.0.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Tokens" Version="8.0.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Tokens.Saml" Version="8.0.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Validators" Version="8.0.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Xml" Version="8.0.0.0" />
+    <Assembly Name="System.IdentityModel.Tokens.Jwt" Version="8.0.0.0" />
   </Assemblies>
   <Namespace Name="Microsoft.IdentityModel.Abstractions">
     <Type Name="Microsoft.IdentityModel.Abstractions.EventLogLevel" Id="T:Microsoft.IdentityModel.Abstractions.EventLogLevel">
@@ -483,11 +483,16 @@
       <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.#ctor(System.String)" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.Create(System.String)" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeAcrValuesSupported" />
+      <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeAuthorizationDetailsTypesSupported" />
+      <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeAuthorizationEncryptionAlgValuesSupported" />
+      <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeAuthorizationEncryptionEncValuesSupported" />
+      <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeAuthorizationSigningAlgValuesSupported" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeBackchannelAuthenticationRequestSigningAlgValuesSupported" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeBackchannelTokenDeliveryModesSupported" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeClaimsLocalesSupported" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeClaimsSupported" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeClaimTypesSupported" />
+      <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeCodeChallengeMethodsSupported" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeDisplayValuesSupported" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeDPoPSigningAlgValuesSupported" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeGrantTypesSupported" />
@@ -502,6 +507,8 @@
       <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeRequestObjectSigningAlgValuesSupported" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeResponseModesSupported" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeResponseTypesSupported" />
+      <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeRevocationEndpointAuthMethodsSupported" />
+      <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeRevocationEndpointAuthSigningAlgValuesSupported" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeScopesSupported" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeSigningKeys" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeSubjectTypesSupported" />
@@ -512,11 +519,16 @@
       <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeUserInfoEndpointEncryptionEncValuesSupported" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeUserInfoEndpointSigningAlgValuesSupported" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.Write(Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration)" />
+      <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.Write(Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration,System.IO.Stream)" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.AcrValuesSupported" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ActiveTokenEndpoint" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.AdditionalData" />
+      <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.AuthorizationDetailsTypesSupported" />
+      <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.AuthorizationEncryptionAlgValuesSupported" />
+      <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.AuthorizationEncryptionEncValuesSupported" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.AuthorizationEndpoint" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.AuthorizationResponseIssParameterSupported" />
+      <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.AuthorizationSigningAlgValuesSupported" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.BackchannelAuthenticationEndpoint" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.BackchannelAuthenticationRequestSigningAlgValuesSupported" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.BackchannelTokenDeliveryModesSupported" />
@@ -526,6 +538,8 @@
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ClaimsParameterSupported" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ClaimsSupported" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ClaimTypesSupported" />
+      <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.CodeChallengeMethodsSupported" />
+      <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.DeviceAuthorizationEndpoint" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.DisplayValuesSupported" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.DPoPSigningAlgValuesSupported" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.EndSessionEndpoint" />
@@ -557,10 +571,14 @@
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.RequireRequestUriRegistration" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ResponseModesSupported" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ResponseTypesSupported" />
+      <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.RevocationEndpoint" />
+      <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.RevocationEndpointAuthMethodsSupported" />
+      <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.RevocationEndpointAuthSigningAlgValuesSupported" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ScopesSupported" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ServiceDocumentation" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.SigningKeys" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.SubjectTypesSupported" />
+      <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.TlsClientCertificateBoundAccessTokens" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.TokenEndpoint" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.TokenEndpointAuthMethodsSupported" />
       <Member Id="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.TokenEndpointAuthSigningAlgValuesSupported" />
@@ -579,9 +597,14 @@
     </Type>
     <Type Name="Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectGrantTypes" Id="T:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectGrantTypes">
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectGrantTypes.AuthorizationCode" />
+      <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectGrantTypes.Ciba" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectGrantTypes.ClientCredentials" />
+      <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectGrantTypes.DeviceCode" />
+      <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectGrantTypes.JwtBearer" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectGrantTypes.Password" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectGrantTypes.RefreshToken" />
+      <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectGrantTypes.Saml2Bearer" />
+      <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectGrantTypes.TokenExchange" />
     </Type>
     <Type Name="Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectMessage" Id="T:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectMessage">
       <Member Id="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectMessage.#ctor" />
@@ -685,6 +708,7 @@
     </Type>
     <Type Name="Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectPrompt" Id="T:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectPrompt">
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectPrompt.Consent" />
+      <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectPrompt.Create" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectPrompt.Login" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectPrompt.None" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectPrompt.SelectAccount" />
@@ -783,6 +807,7 @@
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectScope.OpenId" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectScope.OpenIdProfile" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectScope.Phone" />
+      <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectScope.Profile" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectScope.UserImpersonation" />
     </Type>
     <Type Name="Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectSessionProperties" Id="T:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectSessionProperties">
@@ -792,8 +817,12 @@
     </Type>
     <Type Name="Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames" Id="T:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames">
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.AcrValuesSupported" />
+      <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.AuthorizationDetailsTypesSupported" />
+      <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.AuthorizationEncryptionAlgValuesSupported" />
+      <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.AuthorizationEncryptionEncValuesSupported" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.AuthorizationEndpoint" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.AuthorizationResponseIssParameterSupported" />
+      <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.AuthorizationSigningAlgValuesSupported" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.BackchannelAuthenticationEndpoint" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.BackchannelAuthenticationRequestSigningAlgValuesSupported" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.BackchannelTokenDeliveryModesSupported" />
@@ -803,6 +832,8 @@
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.ClaimsParameterSupported" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.ClaimsSupported" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.ClaimTypesSupported" />
+      <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.CodeChallengeMethodsSupported" />
+      <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.DeviceAuthorizationEndpoint" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.Discovery" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.DisplayValuesSupported" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.DPoPSigningAlgValuesSupported" />
@@ -835,9 +866,13 @@
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.RequireRequestUriRegistration" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.ResponseModesSupported" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.ResponseTypesSupported" />
+      <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.RevocationEndpoint" />
+      <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.RevocationEndpointAuthMethodsSupported" />
+      <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.RevocationEndpointAuthSigningAlgValuesSupported" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.ScopesSupported" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.ServiceDocumentation" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.SubjectTypesSupported" />
+      <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.TlsClientCertificateBoundAccessTokens" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.TokenEndpoint" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.TokenEndpointAuthMethodsSupported" />
       <Member Id="F:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames.TokenEndpointAuthSigningAlgValuesSupported" />
@@ -1321,8 +1356,18 @@
       <Member Id="M:Microsoft.IdentityModel.Tokens.CallContext.#ctor" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.CallContext.#ctor(System.Guid)" />
     </Type>
-    <Type Name="Microsoft.IdentityModel.Tokens.CollectionUtilities" Id="T:Microsoft.IdentityModel.Tokens.CollectionUtilities">
-      <Member Id="M:Microsoft.IdentityModel.Tokens.CollectionUtilities.IsNullOrEmpty``1(System.Collections.Generic.IEnumerable{``0})" />
+    <Type Name="Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity" Id="T:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity">
+      <Member Id="M:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity.#ctor" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity.#ctor(System.Collections.Generic.IEnumerable{System.Security.Claims.Claim})" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity.#ctor(System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.String)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity.#ctor(System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.String,System.String,System.String)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity.#ctor(System.Security.Claims.ClaimsIdentity)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity.#ctor(System.String)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity.#ctor(System.String,System.String,System.String)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity.FindAll(System.String)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity.FindFirst(System.String)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity.HasClaim(System.String,System.String)" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity.SecurityToken" />
     </Type>
     <Type Name="Microsoft.IdentityModel.Tokens.CompressionAlgorithms" Id="T:Microsoft.IdentityModel.Tokens.CompressionAlgorithms">
       <Member Id="F:Microsoft.IdentityModel.Tokens.CompressionAlgorithms.Deflate" />
@@ -1709,6 +1754,7 @@
       <Member Id="P:Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor.AdditionalHeaderClaims" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor.AdditionalInnerHeaderClaims" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor.Audience" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor.Audiences" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor.Claims" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor.CompressionAlgorithm" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor.EncryptingCredentials" />
@@ -1738,6 +1784,8 @@
       <Member Id="M:Microsoft.IdentityModel.Tokens.SecurityTokenException.#ctor(System.String)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.SecurityTokenException.#ctor(System.String,System.Exception)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.SecurityTokenException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.SecurityTokenException.Source" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.SecurityTokenException.StackTrace" />
     </Type>
     <Type Name="Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException" Id="T:Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException">
       <Member Id="M:Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException.#ctor" />
@@ -3328,9 +3376,11 @@
     <Type Name="System.IdentityModel.Tokens.Jwt.JwtPayload" Id="T:System.IdentityModel.Tokens.Jwt.JwtPayload">
       <Member Id="M:System.IdentityModel.Tokens.Jwt.JwtPayload.#ctor" />
       <Member Id="M:System.IdentityModel.Tokens.Jwt.JwtPayload.#ctor(System.Collections.Generic.IEnumerable{System.Security.Claims.Claim})" />
+      <Member Id="M:System.IdentityModel.Tokens.Jwt.JwtPayload.#ctor(System.String,System.Collections.Generic.IList{System.String},System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.Collections.Generic.IDictionary{System.String,System.Object},System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.DateTime})" />
       <Member Id="M:System.IdentityModel.Tokens.Jwt.JwtPayload.#ctor(System.String,System.String,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.Collections.Generic.IDictionary{System.String,System.Object},System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.DateTime})" />
       <Member Id="M:System.IdentityModel.Tokens.Jwt.JwtPayload.#ctor(System.String,System.String,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.Nullable{System.DateTime},System.Nullable{System.DateTime})" />
       <Member Id="M:System.IdentityModel.Tokens.Jwt.JwtPayload.#ctor(System.String,System.String,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.DateTime})" />
+      <Member Id="M:System.IdentityModel.Tokens.Jwt.JwtPayload.#ctor(System.String,System.String,System.Collections.Generic.IList{System.String},System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.Collections.Generic.IDictionary{System.String,System.Object},System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.DateTime})" />
       <Member Id="M:System.IdentityModel.Tokens.Jwt.JwtPayload.AddClaim(System.Security.Claims.Claim)" />
       <Member Id="M:System.IdentityModel.Tokens.Jwt.JwtPayload.AddClaims(System.Collections.Generic.IEnumerable{System.Security.Claims.Claim})" />
       <Member Id="M:System.IdentityModel.Tokens.Jwt.JwtPayload.Base64UrlDeserialize(System.String)" />

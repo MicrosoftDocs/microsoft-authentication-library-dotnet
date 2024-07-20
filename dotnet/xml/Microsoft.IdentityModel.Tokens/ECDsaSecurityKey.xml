@@ -29,6 +29,7 @@
     <AssemblyVersion>7.6.0.0</AssemblyVersion>
     <AssemblyVersion>7.6.2.0</AssemblyVersion>
     <AssemblyVersion>7.6.3.0</AssemblyVersion>
+    <AssemblyVersion>8.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.IdentityModel.Tokens.AsymmetricSecurityKey</BaseTypeName>
@@ -50,17 +51,15 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="ecdsa" Type="System.Security.Cryptography.ECDsa" />
       </Parameters>
       <Docs>
-        <param name="ecdsa">
-          <see cref="T:System.Security.Cryptography.ECDsa" />
-        </param>
+        <param name="ecdsa">The <see cref="P:Microsoft.IdentityModel.Tokens.ECDsaSecurityKey.ECDsa" />.</param>
         <summary>
-            Returns a new instance of <see cref="T:Microsoft.IdentityModel.Tokens.ECDsaSecurityKey" />.
+            Initializes a new instance of the <see cref="T:Microsoft.IdentityModel.Tokens.ECDsaSecurityKey" /> class.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -74,7 +73,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -85,8 +84,8 @@
             Determines whether the <see cref="T:Microsoft.IdentityModel.Tokens.ECDsaSecurityKey" /> can compute a JWK thumbprint.
             </summary>
         <returns>
-          <c>true</c> if JWK thumbprint can be computed; otherwise, <c>false</c>.</returns>
-        <remarks>https://datatracker.ietf.org/doc/html/rfc7638</remarks>
+          <see langword="true" /> if JWK thumbprint can be computed; otherwise, <see langword="false" />.</returns>
+        <remarks>See: <see href="https://datatracker.ietf.org/doc/html/rfc7638" />.</remarks>
       </Docs>
     </Member>
     <Member MemberName="ComputeJwkThumbprint">
@@ -98,7 +97,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -106,10 +105,10 @@
       <Parameters />
       <Docs>
         <summary>
-            Computes a sha256 hash over the <see cref="T:Microsoft.IdentityModel.Tokens.ECDsaSecurityKey" />.
+            Computes a SHA256 hash over the <see cref="T:Microsoft.IdentityModel.Tokens.ECDsaSecurityKey" />.
             </summary>
         <returns>A JWK thumbprint.</returns>
-        <remarks>https://datatracker.ietf.org/doc/html/rfc7638</remarks>
+        <remarks>See: <see href="https://datatracker.ietf.org/doc/html/rfc7638" />.</remarks>
       </Docs>
     </Member>
     <Member MemberName="ECDsa">
@@ -121,14 +120,14 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Cryptography.ECDsa</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-          <see cref="T:System.Security.Cryptography.ECDsa" /> instance used to initialize the key.
+            The <see cref="P:Microsoft.IdentityModel.Tokens.ECDsaSecurityKey.ECDsa" /> instance used to initialize the key.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -143,7 +142,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -160,7 +159,8 @@
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
-        <return>true if it has a private key; otherwise, false.</return>
+        <return>
+          <see langword="true" /> if it has a private key; otherwise, <see langword="false" />.</return>
       </Docs>
     </Member>
     <Member MemberName="KeySize">
@@ -172,14 +172,14 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Gets <see cref="T:System.Security.Cryptography.ECDsa" /> key size.
+            Gets the <see cref="P:Microsoft.IdentityModel.Tokens.ECDsaSecurityKey.ECDsa" /> key size.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -194,16 +194,20 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.PrivateKeyStatus</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Gets an enum indicating if a private key exists.
+            Gets a value indicating the existence of the private key.
             </summary>
-        <value>To be added.</value>
+        <value>
+          <see cref="F:Microsoft.IdentityModel.Tokens.PrivateKeyStatus.Exists" /> if the private key exists.
+            <see cref="F:Microsoft.IdentityModel.Tokens.PrivateKeyStatus.DoesNotExist" /> if the private key does not exist.
+            <see cref="F:Microsoft.IdentityModel.Tokens.PrivateKeyStatus.Unknown" /> if the existence of the private key cannot be determined.
+            </value>
         <remarks>To be added.</remarks>
         <return>'Exists' if private key exists for sure; 'DoesNotExist' if private key doesn't exist for sure; 'Unknown' if we cannot determine.</return>
       </Docs>

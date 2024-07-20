@@ -29,6 +29,7 @@
     <AssemblyVersion>7.6.0.0</AssemblyVersion>
     <AssemblyVersion>7.6.2.0</AssemblyVersion>
     <AssemblyVersion>7.6.3.0</AssemblyVersion>
+    <AssemblyVersion>8.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -36,7 +37,7 @@
   <Interfaces />
   <Docs>
     <summary>
-            Definition of cache for crypto providers
+            Abstract definition of a cache for cryptographic providers.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -49,7 +50,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -66,7 +67,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -75,10 +76,11 @@
         <Parameter Name="signatureProvider" Type="Microsoft.IdentityModel.Tokens.SignatureProvider" />
       </Parameters>
       <Docs>
-        <param name="signatureProvider">the <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> to create the key for.</param>
+        <param name="signatureProvider">The <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> to create the key for.</param>
         <summary>
-            Returns the cache key to use when looking up an entry into the cache for a <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /></summary>
-        <returns>the cache key to use for finding a <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" />.</returns>
+            Returns the cache key used to look up an entry for a <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" />.
+            </summary>
+        <returns>The cache key used for finding a <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -91,7 +93,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -102,13 +104,13 @@
         <Parameter Name="typeofProvider" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="securityKey">the key that is used to by the crypto provider.</param>
-        <param name="algorithm">the algorithm that is used by the crypto provider.</param>
-        <param name="typeofProvider">the typeof the crypto provider obtained by calling object.GetType().</param>
+        <param name="securityKey">The key used by the cryptographic provider.</param>
+        <param name="algorithm">The algorithm used by the cryptographic provider.</param>
+        <param name="typeofProvider">The type of the cryptographic provider obtained by calling object.GetType().</param>
         <summary>
-            Returns the 'key' that will be used to find a crypto provider in this cache.
+            Returns the cache key used to find a cryptographic provider in this cache.
             </summary>
-        <returns>the cache key to use for finding a crypto provider.</returns>
+        <returns>The cache key used for finding a cryptographic provider.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -121,7 +123,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -130,12 +132,11 @@
         <Parameter Name="signatureProvider" Type="Microsoft.IdentityModel.Tokens.SignatureProvider" />
       </Parameters>
       <Docs>
-        <param name="signatureProvider">
-          <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> to cache.</param>
+        <param name="signatureProvider">The <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> to cache.</param>
         <summary>
-            Trys to adds a <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> to this cache.
+            Tries to add a <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> to this cache.
             </summary>
-        <returns>true if the <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> was added, false if the cache already contained the <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /></returns>
+        <returns>True if the <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> was added; false if the cache already contained the <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -148,7 +149,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -161,15 +162,15 @@
         <Parameter Name="signatureProvider" Type="Microsoft.IdentityModel.Tokens.SignatureProvider" RefType="out" />
       </Parameters>
       <Docs>
-        <param name="securityKey">the key that is used to by the crypto provider.</param>
-        <param name="algorithm">the algorithm that is used by the crypto provider.</param>
-        <param name="typeofProvider">the typeof the crypto provider obtained by calling object.GetType().</param>
-        <param name="willCreateSignatures">a bool to indicate if the <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> will be used to sign.</param>
-        <param name="signatureProvider">the <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> if found.</param>
+        <param name="securityKey">The key used by the cryptographic provider.</param>
+        <param name="algorithm">The algorithm used by the cryptographic provider.</param>
+        <param name="typeofProvider">The type of the cryptographic provider obtained by calling object.GetType().</param>
+        <param name="willCreateSignatures">If true, the provider will be used for creating signatures.</param>
+        <param name="signatureProvider">The <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> if found.</param>
         <summary>
-            Trys to find a <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> in this cache.
+            Tries to find a <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> in this cache.
             </summary>
-        <returns>true if a <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> was found, false otherwise.</returns>
+        <returns>True if a <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> was found; false otherwise.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -182,7 +183,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -191,12 +192,11 @@
         <Parameter Name="signatureProvider" Type="Microsoft.IdentityModel.Tokens.SignatureProvider" />
       </Parameters>
       <Docs>
-        <param name="signatureProvider">
-          <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> to remove.</param>
+        <param name="signatureProvider">The <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> to remove.</param>
         <summary>
-            Trys to remove a <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> from this cache.
+            Tries to remove a <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> from this cache.
             </summary>
-        <returns>true if the <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> was removed, false if the <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> was not found.</returns>
+        <returns>True if the <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> was removed; false if the <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> was not found.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

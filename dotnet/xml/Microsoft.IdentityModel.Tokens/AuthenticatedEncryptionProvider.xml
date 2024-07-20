@@ -29,6 +29,7 @@
     <AssemblyVersion>7.6.0.0</AssemblyVersion>
     <AssemblyVersion>7.6.2.0</AssemblyVersion>
     <AssemblyVersion>7.6.3.0</AssemblyVersion>
+    <AssemblyVersion>8.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -54,7 +55,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="key" Type="Microsoft.IdentityModel.Tokens.SecurityKey" />
@@ -62,14 +63,14 @@
       </Parameters>
       <Docs>
         <param name="key">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> that will be used for crypto operations.</param>
-        <param name="algorithm">The encryption algorithm to apply.</param>
+        <param name="algorithm">The encryption algorithm to be used.</param>
         <summary>
             Initializes a new instance of the <see cref="T:Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionProvider" /> class used for encryption and decryption.
             </summary>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">'algorithm' is null or whitespace.</exception>
-        <exception cref="T:System.ArgumentOutOfRangeException">key size is not large enough.</exception>
-        <exception cref="T:System.ArgumentException">a symmetricSignatureProvider is not created.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="algorithm" /> is null or whitespace.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown if the key size is not large enough.</exception>
+        <exception cref="T:System.ArgumentException">Thrown if a symmetricSignatureProvider is not created.</exception>
       </Docs>
     </Member>
     <Member MemberName="Algorithm">
@@ -81,7 +82,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -103,7 +104,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -125,7 +126,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -137,18 +138,17 @@
         <Parameter Name="authenticationTag" Type="System.Byte[]" />
       </Parameters>
       <Docs>
-        <param name="ciphertext">the encrypted text to decrypt.</param>
-        <param name="authenticatedData">the authenticateData that is used in verification.</param>
-        <param name="iv">the initialization vector used when creating the ciphertext.</param>
-        <param name="authenticationTag">the authenticationTag that was created during the encyption.</param>
+        <param name="ciphertext">The encrypted text to be decrypted.</param>
+        <param name="authenticatedData">The authenticate data that is used in verification.</param>
+        <param name="iv">The initialization vector used when creating the ciphertext.</param>
+        <param name="authenticationTag">The authentication tag that was created during the encyption.</param>
         <summary>
-            Decrypts ciphertext into plaintext
+            Decrypts ciphertext into plaintext.
             </summary>
-        <returns>decrypted ciphertext</returns>
+        <returns>The decrypted ciphertext.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="authenticationTag" /> is null or empty.</exception>
-        <exception cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenDecryptionFailedException">Thrown if the AES crypto operation threw. See inner exception.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="authenticationTag" /> is null or empty.</exception>
+        <exception cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenDecryptionFailedException">Thrown if the AES crypto operation threw. See inner exception for details.</exception>
         <exception cref="T:System.ObjectDisposedException">Thrown if the internal <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> is disposed.</exception>
       </Docs>
     </Member>
@@ -164,7 +164,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -185,7 +185,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -210,7 +210,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionResult</ReturnType>
@@ -220,16 +220,16 @@
         <Parameter Name="authenticatedData" Type="System.Byte[]" />
       </Parameters>
       <Docs>
-        <param name="plaintext">the data to be encrypted.</param>
-        <param name="authenticatedData">will be combined with iv and ciphertext to create an authenticationtag.</param>
+        <param name="plaintext">The data to be encrypted.</param>
+        <param name="authenticatedData">Will be combined with the initialization vector and ciphertext to create an authentication tag.</param>
         <summary>
-            Encrypts the 'plaintext'
+            Encrypts the specified plaintext.
             </summary>
-        <returns>
-          <see cref="T:Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionResult" />containing ciphertext, iv, authenticationtag.</returns>
+        <returns>A <see cref="T:Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionResult" /> the containing ciphertext, initialization vector, the and authentication tag.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">authenticationData is null or empty.</exception>
-        <exception cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenEncryptionFailedException">AES crypto operation threw. See inner exception for details.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="authenticatedData" /> is null or empty.</exception>
+        <exception cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenEncryptionFailedException">Thrown if AES crypto operation threw. See inner exception for details.</exception>
+        <exception cref="T:System.ObjectDisposedException">Thrown if the internal <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> is disposed.</exception>
       </Docs>
     </Member>
     <Member MemberName="Encrypt">
@@ -241,7 +241,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionResult</ReturnType>
@@ -252,18 +252,16 @@
         <Parameter Name="iv" Type="System.Byte[]" />
       </Parameters>
       <Docs>
-        <param name="plaintext">the data to be encrypted.</param>
-        <param name="authenticatedData">will be combined with iv and ciphertext to create an authenticationtag.</param>
-        <param name="iv">initialization vector for encryption.</param>
+        <param name="plaintext">The data to be encrypted.</param>
+        <param name="iv">The initialization vector to be used with the encryption algorithm.</param>
+        <param name="authenticatedData">Will be combined with the initialization vector and ciphertext to create an authentication tag.</param>
         <summary>
-            Encrypts the 'plaintext'
+            Encrypts the specified plaintext.
             </summary>
-        <returns>
-          <see cref="T:Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionResult" />containing ciphertext, iv, authenticationtag.</returns>
+        <returns>A <see cref="T:Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionResult" /> containing the ciphertext, initialization vector, and the authentication tag.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="authenticatedData" /> is null or empty.</exception>
-        <exception cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenEncryptionFailedException">Thrown if the AES crypto operation threw. See inner exception for details.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="authenticatedData" /> is null or empty.</exception>
+        <exception cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenEncryptionFailedException">Thrown if AES crypto operation threw. See inner exception for details.</exception>
         <exception cref="T:System.ObjectDisposedException">Thrown if the internal <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> is disposed.</exception>
       </Docs>
     </Member>
@@ -276,7 +274,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -285,17 +283,17 @@
         <Parameter Name="key" Type="Microsoft.IdentityModel.Tokens.SecurityKey" />
       </Parameters>
       <Docs>
-        <param name="key">
-          <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" />that will be used to obtain the byte[].</param>
+        <param name="key">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> that will be used to obtain the byte[].</param>
         <summary>
-            Called to obtain the byte[] needed to create a <see cref="T:System.Security.Cryptography.KeyedHashAlgorithm" /></summary>
+            Called to obtain the byte[] needed to create a <see cref="T:System.Security.Cryptography.KeyedHashAlgorithm" />.
+            </summary>
         <returns>
           <see cref="T:System.Byte" />[] that is used to populated the KeyedHashAlgorithm.</returns>
         <remarks>
           <see cref="T:Microsoft.IdentityModel.Tokens.SymmetricSecurityKey" /> and <see cref="T:Microsoft.IdentityModel.Tokens.JsonWebKey" /> are supported.
-            <para>For a <see cref="T:Microsoft.IdentityModel.Tokens.SymmetricSecurityKey" /> .Key is returned</para><para>For a <see cref="T:Microsoft.IdentityModel.Tokens.JsonWebKey" />Base64UrlEncoder.DecodeBytes is called with <see cref="P:Microsoft.IdentityModel.Tokens.JsonWebKey.K" /> if <see cref="P:Microsoft.IdentityModel.Tokens.JsonWebKey.Kty" /> == JsonWebAlgorithmsKeyTypes.Octet</para></remarks>
-        <exception cref="T:System.ArgumentNullException">if <paramref name="key" /> is null.</exception>
-        <exception cref="T:System.ArgumentException">if a byte[] can not be obtained from SecurityKey.</exception>
+            <para>For a <see cref="T:Microsoft.IdentityModel.Tokens.SymmetricSecurityKey" />, <see cref="P:Microsoft.IdentityModel.Tokens.SymmetricSecurityKey.Key" /> is returned</para><para>For a <see cref="T:Microsoft.IdentityModel.Tokens.JsonWebKey" />, <see cref="M:Microsoft.IdentityModel.Tokens.Base64UrlEncoder.DecodeBytes(System.String)" /> is called with <see cref="P:Microsoft.IdentityModel.Tokens.JsonWebKey.K" /> if <see cref="P:Microsoft.IdentityModel.Tokens.JsonWebKey.Kty" /> == JsonWebAlgorithmsKeyTypes.Octet.</para></remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="key" /> is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown if a byte[] can not be obtained from SecurityKey.</exception>
       </Docs>
     </Member>
     <Member MemberName="IsSupportedAlgorithm">
@@ -307,7 +305,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -317,12 +315,13 @@
         <Parameter Name="algorithm" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="key">the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /></param>
-        <param name="algorithm">the algorithm to check.</param>
+        <param name="key">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" />.</param>
+        <param name="algorithm">The algorithm to check.</param>
         <summary>
-            Checks if an 'key, algorithm' pair is supported
+            Checks if the key/algorithm pair is supported.
             </summary>
-        <returns>true if 'key, algorithm' pair is supported.</returns>
+        <returns>
+          <see langword="true" /> if the key/algorithm pair is supported.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -335,7 +334,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.SecurityKey</ReturnType>
@@ -357,7 +356,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -367,15 +366,14 @@
         <Parameter Name="algorithm" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="key">
-          <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> that contains bytes.</param>
-        <param name="algorithm">the algorithm to apply.</param>
+        <param name="key">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> that contains bytes.</param>
+        <param name="algorithm">The encryption algorithm to be used.</param>
         <summary>
-            Checks that the key has sufficient length
+            Checks that the key has sufficient length.
             </summary>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">if <paramref name="algorithm" /> is null or empty.</exception>
-        <exception cref="T:System.ArgumentException">if <paramref name="algorithm" /> is not a supported algorithm.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="algorithm" /> is null or empty.</exception>
+        <exception cref="T:System.ArgumentException">Thrown if <paramref name="algorithm" /> is not a supported algorithm.</exception>
       </Docs>
     </Member>
   </Members>

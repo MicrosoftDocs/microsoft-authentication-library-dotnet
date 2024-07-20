@@ -29,11 +29,12 @@
     <AssemblyVersion>7.6.0.0</AssemblyVersion>
     <AssemblyVersion>7.6.2.0</AssemblyVersion>
     <AssemblyVersion>7.6.3.0</AssemblyVersion>
+    <AssemblyVersion>8.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces />
   <Docs>
     <summary>
-            Compression provider interface.
+            Provides methods for compressing and decompressing data.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -47,14 +48,14 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the compression algorithm.
+            Gets the compression algorithm used by the provider.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -69,7 +70,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -78,11 +79,11 @@
         <Parameter Name="value" Type="System.Byte[]" />
       </Parameters>
       <Docs>
-        <param name="value">the value to decompress.</param>
+        <param name="value">The byte array to compress.</param>
         <summary>
-            Compress.
+            Compresses the specified byte array.
             </summary>
-        <returns>To be added.</returns>
+        <returns>A byte array containing the compressed data.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -95,7 +96,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -104,11 +105,11 @@
         <Parameter Name="value" Type="System.Byte[]" />
       </Parameters>
       <Docs>
-        <param name="value">the value to decompress.</param>
+        <param name="value">The byte array to decompress.</param>
         <summary>
-            Decompress.
+            Decompresses the specified byte array.
             </summary>
-        <returns>To be added.</returns>
+        <returns>A byte array containing the decompressed data.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -121,7 +122,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.3.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -130,11 +131,12 @@
         <Parameter Name="algorithm" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="algorithm">the algorithm that defines the compression method.</param>
+        <param name="algorithm">The compression algorithm to check.</param>
         <summary>
-            Called to determine if an algorithm is supported.
+            Determines if a specified algorithm is supported by the provider.
             </summary>
-        <returns>true if supported</returns>
+        <returns>
+          <see langword="true" /> if the algorithm is supported; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
