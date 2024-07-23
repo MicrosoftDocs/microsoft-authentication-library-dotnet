@@ -26,6 +26,7 @@
     <AssemblyVersion>4.61.0.0</AssemblyVersion>
     <AssemblyVersion>4.61.1.0</AssemblyVersion>
     <AssemblyVersion>4.61.3.0</AssemblyVersion>
+    <AssemblyVersion>4.62.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces />
   <Docs>
@@ -47,7 +48,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.61.3.0</AssemblyVersion>
+        <AssemblyVersion>4.62.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Uri&gt;</ReturnType>
@@ -59,27 +60,25 @@
       </Parameters>
       <Docs>
         <param name="authorizationUri"> URI computed by MSAL.NET that will let the UI extension
-             navigate to the STS authorization endpoint in order to sign-in the user and have them consent
-             </param>
+            navigate to the STS authorization endpoint in order to sign-in the user and have them consent
+            </param>
         <param name="redirectUri">The redirect URI that was configured. The auth code will be appended to this redirect URI and the browser
-             will redirect to it.
-             </param>
+            will redirect to it.
+            </param>
         <param name="cancellationToken">The cancellation token to which you should respond to.
-             See <see href="https://learn.microsoft.com/dotnet/standard/parallel-programming/task-cancellation">Task cancellation</see> for details.
-             </param>
+            See <see href="https://learn.microsoft.com/dotnet/standard/parallel-programming/task-cancellation">Task cancellation</see> for details.
+            </param>
         <summary>
-             Method called by MSAL.NET to delegate the authentication code web with the Secure Token Service (STS)
-             </summary>
+            Method called by MSAL.NET to delegate the authentication code web with the Secure Token Service (STS)
+            </summary>
         <returns> The URI returned back from the STS authorization endpoint. This URI contains a code=CODE
-             parameters that MSAL.NET will extract and redeem.
-             </returns>
+            parameters that MSAL.NET will extract and redeem.
+            </returns>
         <remarks>
-             The <paramref name="authorizationUri">authorizationUri</paramref>"/&gt; is crafted to
-             leverage PKCE in order to protect the token from a man in the middle attack.
-             Only MSAL.NET can redeem the code.
-            
-             In the event of cancellation, the implementer should return OperationCanceledException.
-             </remarks>
+            The <paramref name="authorizationUri">authorizationUri</paramref> is crafted to
+            leverage PKCE in order to protect the token from a man in the middle attack.
+            Only MSAL.NET can redeem the code.
+            </remarks>
       </Docs>
     </Member>
   </Members>

@@ -1,22 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-web-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.IdentityModel.Abstractions" Version="8.0.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.JsonWebTokens" Version="8.0.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Abstractions" Version="8.0.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.JsonWebTokens" Version="8.0.1.0" />
     <Assembly Name="Microsoft.IdentityModel.KeyVaultExtensions" Version="7.7.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.Logging" Version="8.0.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.LoggingExtensions" Version="8.0.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Logging" Version="8.0.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.LoggingExtensions" Version="8.0.1.0" />
     <Assembly Name="Microsoft.IdentityModel.ManagedKeyVaultSecurityKey" Version="7.7.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols" Version="8.0.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="8.0.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.SignedHttpRequest" Version="8.0.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.WsFederation" Version="8.0.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.TestExtensions" Version="8.0.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Tokens" Version="8.0.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Tokens.Saml" Version="8.0.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Validators" Version="8.0.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Xml" Version="8.0.0.0" />
-    <Assembly Name="System.IdentityModel.Tokens.Jwt" Version="8.0.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols" Version="8.0.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="8.0.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.SignedHttpRequest" Version="8.0.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.WsFederation" Version="8.0.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.TestExtensions" Version="8.0.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.Tokens" Version="8.0.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.Tokens.Saml" Version="8.0.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.Validators" Version="8.0.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.Xml" Version="8.0.1.0" />
+    <Assembly Name="System.IdentityModel.Tokens.Jwt" Version="8.0.1.0" />
   </Assemblies>
   <Namespace Name="Microsoft.IdentityModel.Abstractions">
     <Type Name="Microsoft.IdentityModel.Abstractions.EventLogLevel" Id="T:Microsoft.IdentityModel.Abstractions.EventLogLevel">
@@ -199,6 +199,7 @@
       <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Acr" />
       <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Actort" />
       <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Address" />
+      <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Alg" />
       <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Amr" />
       <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.AtHash" />
       <Member Id="F:Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Aud" />
@@ -1275,6 +1276,9 @@
   </Namespace>
   <Namespace Name="Microsoft.IdentityModel.Tokens">
     <Type Name="Microsoft.IdentityModel.Tokens.AlgorithmValidator" Id="T:Microsoft.IdentityModel.Tokens.AlgorithmValidator" />
+    <Type Name="Microsoft.IdentityModel.Tokens.AppCompatSwitches" Id="T:Microsoft.IdentityModel.Tokens.AppCompatSwitches">
+      <Member Id="F:Microsoft.IdentityModel.Tokens.AppCompatSwitches.UseRfcDefinitionOfEpkAndKid" />
+    </Type>
     <Type Name="Microsoft.IdentityModel.Tokens.AsymmetricSecurityKey" Id="T:Microsoft.IdentityModel.Tokens.AsymmetricSecurityKey">
       <Member Id="M:Microsoft.IdentityModel.Tokens.AsymmetricSecurityKey.#ctor" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.AsymmetricSecurityKey.HasPrivateKey" />
@@ -3412,6 +3416,7 @@
       <Member Id="F:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Acr" />
       <Member Id="F:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Actort" />
       <Member Id="F:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Address" />
+      <Member Id="F:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Alg" />
       <Member Id="F:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Amr" />
       <Member Id="F:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.AtHash" />
       <Member Id="F:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Aud" />
