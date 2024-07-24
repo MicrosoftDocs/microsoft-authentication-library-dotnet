@@ -26,6 +26,7 @@
     <AssemblyVersion>4.61.0.0</AssemblyVersion>
     <AssemblyVersion>4.61.1.0</AssemblyVersion>
     <AssemblyVersion>4.61.3.0</AssemblyVersion>
+    <AssemblyVersion>4.62.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Identity.Client.AbstractConfidentialClientAcquireTokenParameterBuilder&lt;Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder&gt;</BaseTypeName>
@@ -51,7 +52,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.61.3.0</AssemblyVersion>
+        <AssemblyVersion>4.62.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -72,7 +73,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.61.3.0</AssemblyVersion>
+        <AssemblyVersion>4.62.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -108,7 +109,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.61.3.0</AssemblyVersion>
+        <AssemblyVersion>4.62.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder</ReturnType>
@@ -117,14 +118,17 @@
         <Parameter Name="forceRefresh" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="forceRefresh">If <c>true</c>, the request will ignore the token cache. The default is <c>false</c></param>
+        <param name="forceRefresh">
+            If <c>true</c>, the request will ignore cached access tokens on read, but will still write them to the cache once obtained from the identity provider. The default is <c>false</c></param>
         <summary>
-            Specifies if the token request will ignore the access token in the application token cache
-            and will attempt to acquire a new access token using client credentials.
+            Specifies if the client application should ignore access tokens when reading the token cache. 
+            New tokens will still be written to the application token cache.
             By default the token is taken from the application token cache (forceRefresh=false)
             </summary>
         <returns>The builder to chain the .With methods</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            Do not use this flag except in well understood cases. Identity providers will throttle clients that make too many similar token requests.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="WithPreferredAzureRegion">
@@ -136,7 +140,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.61.3.0</AssemblyVersion>
+        <AssemblyVersion>4.62.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -176,7 +180,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.61.3.0</AssemblyVersion>
+        <AssemblyVersion>4.62.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder</ReturnType>

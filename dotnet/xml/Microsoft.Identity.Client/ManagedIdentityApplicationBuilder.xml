@@ -24,6 +24,7 @@
     <AssemblyVersion>4.61.0.0</AssemblyVersion>
     <AssemblyVersion>4.61.1.0</AssemblyVersion>
     <AssemblyVersion>4.61.3.0</AssemblyVersion>
+    <AssemblyVersion>4.62.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Identity.Client.BaseAbstractApplicationBuilder&lt;Microsoft.Identity.Client.ManagedIdentityApplicationBuilder&gt;</BaseTypeName>
@@ -48,7 +49,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.61.3.0</AssemblyVersion>
+        <AssemblyVersion>4.62.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.IManagedIdentityApplication</ReturnType>
@@ -73,7 +74,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.61.3.0</AssemblyVersion>
+        <AssemblyVersion>4.62.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ManagedIdentityApplicationBuilder</ReturnType>
@@ -105,8 +106,18 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.61.3.0</AssemblyVersion>
+        <AssemblyVersion>4.62.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("Telemetry is sent automatically by MSAL.NET. See https://aka.ms/msal-net-telemetry.", true)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Telemetry is sent automatically by MSAL.NET. See https://aka.ms/msal-net-telemetry.", true)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ManagedIdentityApplicationBuilder</ReturnType>
       </ReturnValue>
@@ -123,7 +134,7 @@
       <Docs>
         <param name="telemetryClients">List of telemetry clients to add telemetry logs.</param>
         <summary>
-            Sets telemetry client for the application.
+            This method is obsolete. See https://aka.ms/msal-net-telemetry
             </summary>
         <returns>The builder to chain the .With methods</returns>
         <remarks>To be added.</remarks>
