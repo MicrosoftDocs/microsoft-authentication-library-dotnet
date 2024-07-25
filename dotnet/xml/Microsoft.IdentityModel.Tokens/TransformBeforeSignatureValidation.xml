@@ -28,6 +28,9 @@
     <AssemblyVersion>7.5.2.0</AssemblyVersion>
     <AssemblyVersion>7.6.0.0</AssemblyVersion>
     <AssemblyVersion>7.6.2.0</AssemblyVersion>
+    <AssemblyVersion>7.6.3.0</AssemblyVersion>
+    <AssemblyVersion>8.0.0.0</AssemblyVersion>
+    <AssemblyVersion>8.0.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Delegate</BaseTypeName>
@@ -40,13 +43,12 @@
     <ReturnType>Microsoft.IdentityModel.Tokens.SecurityToken</ReturnType>
   </ReturnValue>
   <Docs>
-    <param name="token">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" /> that is being validated.</param>
-    <param name="validationParameters">
-      <see cref="T:Microsoft.IdentityModel.Tokens.TokenValidationParameters" /> required for validation.</param>
+    <param name="token">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" /> being validated.</param>
+    <param name="validationParameters">The <see cref="T:Microsoft.IdentityModel.Tokens.TokenValidationParameters" /> to be used for validating the token.</param>
     <summary>
-            Definition for TransformBeforeSignatureValidation.
+            Transforms the security token before signature validation.
             </summary>
-    <returns>A transformed <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" />.</returns>
+    <returns>The transformed <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" />.</returns>
     <remarks>To be added.</remarks>
   </Docs>
 </Type>

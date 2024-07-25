@@ -28,6 +28,9 @@
     <AssemblyVersion>7.5.2.0</AssemblyVersion>
     <AssemblyVersion>7.6.0.0</AssemblyVersion>
     <AssemblyVersion>7.6.2.0</AssemblyVersion>
+    <AssemblyVersion>7.6.3.0</AssemblyVersion>
+    <AssemblyVersion>8.0.0.0</AssemblyVersion>
+    <AssemblyVersion>8.0.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -50,7 +53,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -67,14 +70,14 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Default value for <see cref="P:Microsoft.IdentityModel.Tokens.CryptoProviderCacheOptions.SizeLimit" />.
+            Default value for the cache size limit (<see cref="P:Microsoft.IdentityModel.Tokens.CryptoProviderCacheOptions.SizeLimit" />). Default is 1000.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -88,16 +91,15 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the size of the cache (in number of items). 
-            20% of the cache will be evicted whenever the cache gets to 95% of this size.
-            Items will be evicted from least recently used to most recently used.
+            Gets or sets the size limit of the cache (in number of items). 
+            When the cache reaches 95% of this size, 20% of the least recently used items will be evicted.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>

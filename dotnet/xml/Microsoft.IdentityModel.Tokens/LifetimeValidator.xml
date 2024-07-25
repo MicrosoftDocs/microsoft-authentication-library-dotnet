@@ -28,6 +28,9 @@
     <AssemblyVersion>7.5.2.0</AssemblyVersion>
     <AssemblyVersion>7.6.0.0</AssemblyVersion>
     <AssemblyVersion>7.6.2.0</AssemblyVersion>
+    <AssemblyVersion>7.6.3.0</AssemblyVersion>
+    <AssemblyVersion>8.0.0.0</AssemblyVersion>
+    <AssemblyVersion>8.0.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Delegate</BaseTypeName>
@@ -42,15 +45,15 @@
     <ReturnType>System.Boolean</ReturnType>
   </ReturnValue>
   <Docs>
-    <param name="notBefore">The 'notBefore' time found in the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" />.</param>
+    <param name="notBefore">The 'not before' time found in the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" />.</param>
     <param name="expires">The 'expiration' time found in the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" />.</param>
     <param name="securityToken">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" /> being validated.</param>
-    <param name="validationParameters">
-      <see cref="T:Microsoft.IdentityModel.Tokens.TokenValidationParameters" /> required for validation.</param>
+    <param name="validationParameters">The <see cref="T:Microsoft.IdentityModel.Tokens.TokenValidationParameters" /> to be used for validating the token.</param>
     <summary>
-            Definition for LifetimeValidator.
+            Validates the lifetime of the security token.
             </summary>
-    <returns>To be added.</returns>
+    <returns>
+      <see langword="true" /> if the lifetime is valid; otherwise, <see langword="false" />.</returns>
     <remarks>To be added.</remarks>
   </Docs>
 </Type>

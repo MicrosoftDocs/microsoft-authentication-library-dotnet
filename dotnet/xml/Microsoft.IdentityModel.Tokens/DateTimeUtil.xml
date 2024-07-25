@@ -28,6 +28,9 @@
     <AssemblyVersion>7.5.2.0</AssemblyVersion>
     <AssemblyVersion>7.6.0.0</AssemblyVersion>
     <AssemblyVersion>7.6.2.0</AssemblyVersion>
+    <AssemblyVersion>7.6.3.0</AssemblyVersion>
+    <AssemblyVersion>8.0.0.0</AssemblyVersion>
+    <AssemblyVersion>8.0.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -35,7 +38,7 @@
   <Interfaces />
   <Docs>
     <summary>
-            Helper class for adding DateTimes and Timespans.
+            Utility class for performing operations involving <see cref="T:System.DateTime" /> and <see cref="T:System.TimeSpan" />.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -49,7 +52,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DateTime</ReturnType>
@@ -63,12 +66,11 @@
         <param name="timespan">
           <see cref="T:System.TimeSpan" /> to add.</param>
         <summary>
-            Add a DateTime and a TimeSpan.
-            The maximum time is DateTime.MaxTime.  It is not an error if time + timespan &gt; MaxTime.
-            Just return MaxTime.
+            Adds a <see cref="T:System.DateTime" /> and a <see cref="T:System.TimeSpan" />.
+            If the resulting value exceeds <see cref="F:System.DateTime.MaxValue" />, returns <see cref="F:System.DateTime.MaxValue" />.
+            If the resulting value is less than <see cref="F:System.DateTime.MinValue" />, returns <see cref="F:System.DateTime.MinValue" />.
             </summary>
-        <returns>
-          <see cref="T:System.DateTime" /> as the sum of time and timespan.</returns>
+        <returns>The sum of <paramref name="time" /> and <paramref name="timespan" />, or <see cref="F:System.DateTime.MaxValue" /> if the sum exceeds it, or <see cref="F:System.DateTime.MinValue" /> if the sum is less than it.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -81,7 +83,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DateTime</ReturnType>
@@ -90,11 +92,11 @@
         <Parameter Name="kind" Type="System.DateTimeKind" />
       </Parameters>
       <Docs>
-        <param name="kind">DateTimeKind to use.</param>
+        <param name="kind">The <see cref="T:System.DateTimeKind" />.</param>
         <summary>
-            Gets the Maximum value for a DateTime specifying kind.
+            Gets the maximum value for a <see cref="T:System.DateTime" /> with the specified <see cref="T:System.DateTimeKind" />.
             </summary>
-        <returns>DateTime of specified kind.</returns>
+        <returns>The maximum <see cref="T:System.DateTime" /> value of the specified kind.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -107,7 +109,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DateTime</ReturnType>
@@ -116,11 +118,11 @@
         <Parameter Name="kind" Type="System.DateTimeKind" />
       </Parameters>
       <Docs>
-        <param name="kind">DateTimeKind to use.</param>
+        <param name="kind">The <see cref="T:System.DateTimeKind" />.</param>
         <summary>
-            Gets the Minimum value for a DateTime specifying kind.
+            Gets the minimum value for a <see cref="T:System.DateTime" /> with the specified <see cref="T:System.DateTimeKind" />.
             </summary>
-        <returns>DateTime of specified kind.</returns>
+        <returns>The minimum <see cref="T:System.DateTime" /> value of the specified kind.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -133,7 +135,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DateTime</ReturnType>
@@ -142,12 +144,11 @@
         <Parameter Name="value" Type="System.DateTime" />
       </Parameters>
       <Docs>
-        <param name="value">
-          <see cref="T:System.DateTime" />to convert.</param>
+        <param name="value">The <see cref="T:System.DateTime" /> to convert.</param>
         <summary>
-            Ensures that DateTime is UTC.
+            Converts the specified <see cref="T:System.DateTime" /> to UTC if it is not already in UTC.
             </summary>
-        <returns />
+        <returns>The converted <see cref="T:System.DateTime" /> in UTC.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -160,7 +161,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.DateTime&gt;</ReturnType>
@@ -169,12 +170,11 @@
         <Parameter Name="value" Type="System.Nullable&lt;System.DateTime&gt;" />
       </Parameters>
       <Docs>
-        <param name="value">
-          <see cref="T:System.DateTime" />to convert.</param>
+        <param name="value">The <see cref="T:System.DateTime" /> to convert.</param>
         <summary>
-            Ensures that DataTime is UTC.
+            Converts the specified <see cref="T:System.DateTime" /> to UTC if it is not already in UTC.
             </summary>
-        <returns />
+        <returns>The converted <see cref="T:System.DateTime" /> in UTC, or null if <paramref name="value" /> is null.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

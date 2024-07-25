@@ -28,6 +28,9 @@
     <AssemblyVersion>7.5.2.0</AssemblyVersion>
     <AssemblyVersion>7.6.0.0</AssemblyVersion>
     <AssemblyVersion>7.6.2.0</AssemblyVersion>
+    <AssemblyVersion>7.6.3.0</AssemblyVersion>
+    <AssemblyVersion>8.0.0.0</AssemblyVersion>
+    <AssemblyVersion>8.0.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Delegate</BaseTypeName>
@@ -42,15 +45,14 @@
     <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.IdentityModel.Tokens.SecurityKey&gt;</ReturnType>
   </ReturnValue>
   <Docs>
-    <param name="token">The <see cref="T:System.String" /> representation of the token to be decrypted.</param>
-    <param name="securityToken">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" /> to be decrypted. The runtime by default passes null.</param>
-    <param name="kid">A key identifier. It may be null.</param>
-    <param name="validationParameters">
-      <see cref="T:Microsoft.IdentityModel.Tokens.TokenValidationParameters" /> required for validation.</param>
+    <param name="token">The string representation of the token to be decrypted.</param>
+    <param name="securityToken">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" /> to be decrypted, which is null by default.</param>
+    <param name="kid">The key identifier, which may be null.</param>
+    <param name="validationParameters">The <see cref="T:Microsoft.IdentityModel.Tokens.TokenValidationParameters" /> to be used for validating the token.</param>
     <summary>
-            Definition for TokenDecryptionKeyResolver.
+            Resolves the decryption key for the security token.
             </summary>
-    <returns>A <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> to use when decrypting the token.</returns>
+    <returns>The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> used to decrypt the token.</returns>
     <remarks>To be added.</remarks>
   </Docs>
 </Type>

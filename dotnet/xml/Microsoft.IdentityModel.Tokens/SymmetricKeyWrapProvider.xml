@@ -28,6 +28,9 @@
     <AssemblyVersion>7.5.2.0</AssemblyVersion>
     <AssemblyVersion>7.6.0.0</AssemblyVersion>
     <AssemblyVersion>7.6.2.0</AssemblyVersion>
+    <AssemblyVersion>7.6.3.0</AssemblyVersion>
+    <AssemblyVersion>8.0.0.0</AssemblyVersion>
+    <AssemblyVersion>8.0.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.IdentityModel.Tokens.KeyWrapProvider</BaseTypeName>
@@ -35,7 +38,7 @@
   <Interfaces />
   <Docs>
     <summary>
-            Provides Wrap key and Unwrap key services.
+            Provides Wrap and Unwrap key services.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -49,19 +52,23 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="key" Type="Microsoft.IdentityModel.Tokens.SecurityKey" />
         <Parameter Name="algorithm" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="key">To be added.</param>
-        <param name="algorithm">To be added.</param>
+        <param name="key">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> that will be used for cryptographic operations.</param>
+        <param name="algorithm">The KeyWrap algorithm to be used.</param>
         <summary>
-            Initializes a new instance of the <see cref="T:Microsoft.IdentityModel.Tokens.KeyWrapProvider" /> class used for wrap key and unwrap key.
-            <param name="key">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> that will be used for crypto operations.</param><param name="algorithm">The KeyWrap algorithm to apply.</param><exception cref="T:System.ArgumentNullException">'key' is null.</exception><exception cref="T:System.ArgumentNullException">'algorithm' is null.</exception><exception cref="T:System.ArgumentException">If <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> and algorithm pair are not supported.</exception><exception cref="T:System.ArgumentException">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> cannot be converted to byte array</exception><exception cref="T:System.ArgumentOutOfRangeException">The keysize doesn't match the algorithm.</exception><exception cref="T:System.InvalidOperationException">Failed to create symmetric algorithm with provided key and algorithm.</exception></summary>
+            Initializes a new instance of the <see cref="T:Microsoft.IdentityModel.Tokens.KeyWrapProvider" /> class used for wrapping and unwrapping keys.
+            </summary>
         <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="algorithm" /> is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown if the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> cannot be converted to a byte array.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown if the key size doesn't match the algorithm.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown if failed to create a symmetric algorithm with the provided key and algorithm.</exception>
       </Docs>
     </Member>
     <Member MemberName="Algorithm">
@@ -73,7 +80,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -95,7 +102,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -117,7 +124,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -126,9 +133,9 @@
         <Parameter Name="disposing" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="disposing">true, if called from Dispose(), false, if invoked inside a finalizer.</param>
+        <param name="disposing">If true, release both managed and unmanaged resources; otherwise, release only unmanaged resources.</param>
         <summary>
-            Disposes of internal components.
+            Releases the resources used by the current instance.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -142,7 +149,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Cryptography.SymmetricAlgorithm</ReturnType>
@@ -152,16 +159,16 @@
         <Parameter Name="algorithm" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="key">To be added.</param>
-        <param name="algorithm">To be added.</param>
+        <param name="key">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> that will be used for cryptographic operations.</param>
+        <param name="algorithm">The encryption algorithm to be used.</param>
         <summary>
             Returns the <see cref="T:System.Security.Cryptography.SymmetricAlgorithm" />.
             </summary>
-        <returns />
+        <returns>The initialized <see cref="T:System.Security.Cryptography.SymmetricAlgorithm" />.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentException">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> cannot be converted to byte array</exception>
-        <exception cref="T:System.ArgumentOutOfRangeException">The keysize doesn't match the algorithm.</exception>
-        <exception cref="T:System.InvalidOperationException">Failed to create symmetric algorithm with provided key and algorithm.</exception>
+        <exception cref="T:System.ArgumentException">Thrown if the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> cannot be converted to a byte array.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown if the key size doesn't match the algorithm.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown if failed to create a symmetric algorithm with the provided key and algorithm.</exception>
       </Docs>
     </Member>
     <Member MemberName="IsSupportedAlgorithm">
@@ -173,7 +180,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -183,12 +190,13 @@
         <Parameter Name="algorithm" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="key">the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /></param>
-        <param name="algorithm">the algorithm to use</param>
+        <param name="key">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> to use for cryptographic operations.</param>
+        <param name="algorithm">The algorithm to check for support.</param>
         <summary>
-            Answers if an algorithm is supported
+            Determines whether the specified algorithm is supported.
             </summary>
-        <returns>true if the algorithm is supported; otherwise, false.</returns>
+        <returns>
+          <see langword="true" /> if the algorithm is supported; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -201,7 +209,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.SecurityKey</ReturnType>
@@ -223,7 +231,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -232,16 +240,16 @@
         <Parameter Name="keyBytes" Type="System.Byte[]" />
       </Parameters>
       <Docs>
-        <param name="keyBytes">bytes to unwrap</param>
+        <param name="keyBytes">The bytes to unwrap.</param>
         <summary>
-            Unwrap a key using Symmetric decryption.
+            Unwraps a key using symmetric decryption.
             </summary>
-        <returns>Unwraped key</returns>
+        <returns>The unwrapped key.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">'keyBytes' is null or length == 0.</exception>
-        <exception cref="T:System.ArgumentException">'keyBytes' is not a multiple of 8.</exception>
-        <exception cref="T:System.ObjectDisposedException">If <see cref="M:Microsoft.IdentityModel.Tokens.KeyWrapProvider.Dispose(System.Boolean)" /> has been called.</exception>
-        <exception cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenKeyWrapException">Failed to unwrap the wrappedKey.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="keyBytes" /> is null or has a length of 0.</exception>
+        <exception cref="T:System.ArgumentException">Thrown if <paramref name="keyBytes" /> is not a multiple of 8.</exception>
+        <exception cref="T:System.ObjectDisposedException">Thrown if <see cref="M:Microsoft.IdentityModel.Tokens.KeyWrapProvider.Dispose(System.Boolean)" /> has been called.</exception>
+        <exception cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenKeyWrapException">Thrown if the key unwrapping operation fails.</exception>
       </Docs>
     </Member>
     <Member MemberName="WrapKey">
@@ -253,7 +261,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -262,16 +270,16 @@
         <Parameter Name="keyBytes" Type="System.Byte[]" />
       </Parameters>
       <Docs>
-        <param name="keyBytes">the key to be wrapped</param>
+        <param name="keyBytes">The key to be wrapped.</param>
         <summary>
-            Wrap a key using Symmetric encryption.
+            Wraps a key using symmetric encryption.
             </summary>
-        <returns>The wrapped key result</returns>
+        <returns>The wrapped key.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">'keyBytes' is null or has length 0.</exception>
-        <exception cref="T:System.ArgumentException">'keyBytes' is not a multiple of 8.</exception>
-        <exception cref="T:System.ObjectDisposedException">If <see cref="M:Microsoft.IdentityModel.Tokens.KeyWrapProvider.Dispose(System.Boolean)" /> has been called.</exception>
-        <exception cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenKeyWrapException">Failed to wrap 'keyBytes'.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="keyBytes" /> is null or has a length of 0.</exception>
+        <exception cref="T:System.ArgumentException">Thrown if <paramref name="keyBytes" /> is not a multiple of 8.</exception>
+        <exception cref="T:System.ObjectDisposedException">Thrown if <see cref="M:Microsoft.IdentityModel.Tokens.KeyWrapProvider.Dispose(System.Boolean)" /> has been called.</exception>
+        <exception cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenKeyWrapException">Thrown if the key wrapping operation fails.</exception>
       </Docs>
     </Member>
   </Members>

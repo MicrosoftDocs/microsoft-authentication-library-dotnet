@@ -28,6 +28,9 @@
     <AssemblyVersion>7.5.2.0</AssemblyVersion>
     <AssemblyVersion>7.6.0.0</AssemblyVersion>
     <AssemblyVersion>7.6.2.0</AssemblyVersion>
+    <AssemblyVersion>7.6.3.0</AssemblyVersion>
+    <AssemblyVersion>8.0.0.0</AssemblyVersion>
+    <AssemblyVersion>8.0.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.IdentityModel.Tokens.SignatureProvider</BaseTypeName>
@@ -49,15 +52,15 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="key" Type="Microsoft.IdentityModel.Tokens.SecurityKey" />
         <Parameter Name="algorithm" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="key">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> that will be used for signature operations.<see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /></param>
-        <param name="algorithm">The signature algorithm to apply.</param>
+        <param name="key">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> that will be used for signature operations.</param>
+        <param name="algorithm">The signature algorithm to be used.</param>
         <summary>
             Initializes a new instance of the <see cref="T:Microsoft.IdentityModel.Tokens.AsymmetricSignatureProvider" /> class used to create and verify signatures.
             </summary>
@@ -73,7 +76,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="key" Type="Microsoft.IdentityModel.Tokens.SecurityKey" />
@@ -82,23 +85,20 @@
       </Parameters>
       <Docs>
         <param name="key">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> that will be used for signature operations.</param>
-        <param name="algorithm">The signature algorithm to apply.</param>
-        <param name="willCreateSignatures">If this <see cref="T:Microsoft.IdentityModel.Tokens.AsymmetricSignatureProvider" /> is required to create signatures then set this to true.</param>
+        <param name="algorithm">The signature algorithm to be used.</param>
+        <param name="willCreateSignatures">If true, the provider will be used for creating signatures; otherwise, it will be used for verifying signatures.</param>
         <summary>
-            Initializes a new instance of the <see cref="T:Microsoft.IdentityModel.Tokens.AsymmetricSignatureProvider" /> class used to create and verify signatures.
+            Initializes a new instance of the <see cref="T:Microsoft.IdentityModel.Tokens.AsymmetricSignatureProvider" /> class used for creating and verifying signatures.
             </summary>
         <remarks>To be added.</remarks>
         <para>
             Creating signatures requires that the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> has access to a private key.
             Verifying signatures (the default), does not require access to the private key.
             </para>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="algorithm" />is null or empty.</exception>
-        <exception cref="T:System.InvalidOperationException">If the runtime is unable to create a suitable cryptographic provider.</exception>
-        <exception cref="T:System.NotSupportedException">If <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> and algorithm pair are not supported.</exception>
-        <exception cref="T:System.ArgumentOutOfRangeException">
-          <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" />.KeySize is less than the size corresponding to the algorithm in <see cref="P:Microsoft.IdentityModel.Tokens.AsymmetricSignatureProvider.MinimumAsymmetricKeySizeInBitsForVerifyingMap" />. Note: this is always checked.
-            </exception>
+        <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="algorithm" /> is null or empty.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown if the runtime is unable to create a suitable cryptographic provider.</exception>
+        <exception cref="T:System.NotSupportedException">Thrown if the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> and algorithm pair are not supported.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown if <see cref="P:Microsoft.IdentityModel.Tokens.SecurityKey.KeySize" /> is less than the required size for verifying signatures.</exception>
       </Docs>
     </Member>
     <Member MemberName="DefaultMinimumAsymmetricKeySizeInBitsForSigningMap">
@@ -110,7 +110,7 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,System.Int32&gt;</ReturnType>
@@ -131,7 +131,7 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,System.Int32&gt;</ReturnType>
@@ -152,7 +152,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -161,9 +161,9 @@
         <Parameter Name="disposing" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="disposing">true, if called from Dispose(), false, if invoked inside a finalizer.</param>
+        <param name="disposing">If true, release both managed and unmanaged resources; otherwise, release only unmanaged resources.</param>
         <summary>
-            Calls to release managed resources.
+            Releases the resources used by the current instance.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -177,7 +177,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Cryptography.HashAlgorithmName</ReturnType>
@@ -194,8 +194,8 @@
             </summary>
         <returns>The <see cref="T:System.Security.Cryptography.HashAlgorithmName" /> to use.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">if <paramref name="algorithm" /> is null or whitespace.</exception>
-        <exception cref="T:System.ArgumentOutOfRangeException">if <paramref name="algorithm" /> is not supported.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="algorithm" /> is null or whitespace.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown if <paramref name="algorithm" /> is not supported.</exception>
       </Docs>
     </Member>
     <Member MemberName="MinimumAsymmetricKeySizeInBitsForSigningMap">
@@ -207,7 +207,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IReadOnlyDictionary&lt;System.String,System.Int32&gt;</ReturnType>
@@ -229,7 +229,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IReadOnlyDictionary&lt;System.String,System.Int32&gt;</ReturnType>
@@ -251,7 +251,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -266,8 +266,8 @@
             </summary>
         <returns>A signature over the input.</returns>
         <remarks>Sign is thread safe.</remarks>
-        <exception cref="T:System.ArgumentNullException">if <paramref name="input" />.Length == 0.</exception>
-        <exception cref="T:System.ObjectDisposedException">If <see cref="M:Microsoft.IdentityModel.Tokens.AsymmetricSignatureProvider.Dispose(System.Boolean)" /> has been called. </exception>
+        <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="input" /> is null or has length of 0.</exception>
+        <exception cref="T:System.ObjectDisposedException">Thrown If <see cref="M:Microsoft.IdentityModel.Tokens.AsymmetricSignatureProvider.Dispose(System.Boolean)" /> has been called.</exception>
       </Docs>
     </Member>
     <Member MemberName="Sign">
@@ -279,7 +279,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -308,7 +308,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -337,7 +337,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -349,8 +349,8 @@
       </Parameters>
       <Docs>
         <param name="key">The asymmetric key to validate.</param>
-        <param name="algorithm">Algorithm for which this key will be used.</param>
-        <param name="willCreateSignatures">Whether they key will be used for creating signatures.</param>
+        <param name="algorithm">The algorithm for which this key will be used.</param>
+        <param name="willCreateSignatures">If true, the provider will be used for creating signatures.</param>
         <summary>
             Validates that an asymmetric key size is of sufficient size for a SignatureAlgorithm.
             </summary>
@@ -358,9 +358,8 @@
           <seealso cref="P:Microsoft.IdentityModel.Tokens.AsymmetricSignatureProvider.MinimumAsymmetricKeySizeInBitsForSigningMap" /> for minimum signing sizes.
             <seealso cref="P:Microsoft.IdentityModel.Tokens.AsymmetricSignatureProvider.MinimumAsymmetricKeySizeInBitsForVerifyingMap" /> for minimum verifying sizes.
             </remarks>
-        <exception cref="T:System.ArgumentNullException">if <paramref name="algorithm" />is null or empty.</exception>
-        <exception cref="T:System.ArgumentOutOfRangeException">if <paramref name="key" />.KeySize is less than the minimum
-            acceptable size.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="algorithm" /> is null or empty.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown if <paramref name="key.KeySize.KeySize" /> is less than the minimum acceptable size.</exception>
       </Docs>
     </Member>
     <Member MemberName="Verify">
@@ -372,7 +371,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -391,9 +390,8 @@
             </summary>
         <returns>true if signature matches, false otherwise.</returns>
         <remarks>Verify is thread safe.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="signature" /> is null or has length == 0.</exception>
-        <exception cref="T:System.ObjectDisposedException">If <see cref="M:Microsoft.IdentityModel.Tokens.AsymmetricSignatureProvider.Dispose(System.Boolean)" /> has been called. </exception>
+        <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="signature" /> is null or has length of 0.</exception>
+        <exception cref="T:System.ObjectDisposedException">Thrown if <see cref="M:Microsoft.IdentityModel.Tokens.AsymmetricSignatureProvider.Dispose(System.Boolean)" /> has been called.</exception>
       </Docs>
     </Member>
     <Member MemberName="Verify">
@@ -405,7 +403,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>

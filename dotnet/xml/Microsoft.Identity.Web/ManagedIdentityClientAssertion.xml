@@ -37,6 +37,8 @@
     <AssemblyVersion>2.19.0.0</AssemblyVersion>
     <AssemblyVersion>2.19.1.0</AssemblyVersion>
     <AssemblyVersion>2.20.0.0</AssemblyVersion>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+    <AssemblyVersion>3.0.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Identity.Web.ClientAssertionProviderBase</BaseTypeName>
@@ -58,13 +60,13 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
-        <AssemblyVersion>2.20.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="managedIdentityClientId" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="managedIdentityClientId">Optional ClientId of the Managed Identity or Workload Identity</param>
+        <param name="managedIdentityClientId">Optional ClientId of the Managed Identity</param>
         <summary>
             See https://aka.ms/ms-id-web/certificateless.
             </summary>
@@ -80,40 +82,41 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
-        <AssemblyVersion>2.20.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="managedIdentityClientId" Type="System.String" />
         <Parameter Name="tokenExchangeUrl" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="managedIdentityClientId">Optional ClientId of the Managed Identity or Workload Identity</param>
-        <param name="tokenExchangeUrl">Optional token exchange resource url. Default value is "api://AzureADTokenExchange/".</param>
+        <param name="managedIdentityClientId">Optional ClientId of the Managed Identity</param>
+        <param name="tokenExchangeUrl">Optional audience of the token to be requested from Managed Identity. Default value is "api://AzureADTokenExchange". 
+            This value is different on clouds other than Azure Public</param>
         <summary>
             See https://aka.ms/ms-id-web/certificateless.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="GetClientAssertion">
-      <MemberSignature Language="C#" Value="protected override System.Threading.Tasks.Task&lt;Microsoft.Identity.Web.ClientAssertion&gt; GetClientAssertion (System.Threading.CancellationToken cancellationToken);" />
-      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Identity.Web.ClientAssertion&gt; GetClientAssertion(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.ManagedIdentityClientAssertion.GetClientAssertion(System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Protected Overrides Function GetClientAssertion (cancellationToken As CancellationToken) As Task(Of ClientAssertion)" />
-      <MemberSignature Language="F#" Value="override this.GetClientAssertion : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Web.ClientAssertion&gt;" Usage="managedIdentityClientAssertion.GetClientAssertion cancellationToken" />
+    <Member MemberName="GetClientAssertionAsync">
+      <MemberSignature Language="C#" Value="protected override System.Threading.Tasks.Task&lt;Microsoft.Identity.Web.ClientAssertion&gt; GetClientAssertionAsync (Microsoft.Identity.Client.AssertionRequestOptions? assertionRequestOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Identity.Web.ClientAssertion&gt; GetClientAssertionAsync(class Microsoft.Identity.Client.AssertionRequestOptions assertionRequestOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.ManagedIdentityClientAssertion.GetClientAssertionAsync(Microsoft.Identity.Client.AssertionRequestOptions)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function GetClientAssertionAsync (assertionRequestOptions As AssertionRequestOptions) As Task(Of ClientAssertion)" />
+      <MemberSignature Language="F#" Value="override this.GetClientAssertionAsync : Microsoft.Identity.Client.AssertionRequestOptions -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Web.ClientAssertion&gt;" Usage="managedIdentityClientAssertion.GetClientAssertionAsync assertionRequestOptions" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
-        <AssemblyVersion>2.20.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Identity.Web.ClientAssertion&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+        <Parameter Name="assertionRequestOptions" Type="Microsoft.Identity.Client.AssertionRequestOptions" />
       </Parameters>
       <Docs>
-        <param name="cancellationToken">To be added.</param>
+        <param name="assertionRequestOptions">To be added.</param>
         <summary>
             Prototype of certificate-less authentication using a signed assertion
             acquired with managed identity (certificateless).

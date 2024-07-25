@@ -28,6 +28,9 @@
     <AssemblyVersion>7.5.2.0</AssemblyVersion>
     <AssemblyVersion>7.6.0.0</AssemblyVersion>
     <AssemblyVersion>7.6.2.0</AssemblyVersion>
+    <AssemblyVersion>7.6.3.0</AssemblyVersion>
+    <AssemblyVersion>8.0.0.0</AssemblyVersion>
+    <AssemblyVersion>8.0.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.IdentityModel.Tokens.KeyWrapProvider</BaseTypeName>
@@ -49,7 +52,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="key" Type="Microsoft.IdentityModel.Tokens.SecurityKey" />
@@ -57,14 +60,17 @@
         <Parameter Name="willUnwrap" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="key">To be added.</param>
-        <param name="algorithm">To be added.</param>
-        <param name="willUnwrap">To be added.</param>
+        <param name="key">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> that will be used for cryptographic operations.</param>
+        <param name="algorithm">The KeyWrap algorithm to be used.</param>
+        <param name="willUnwrap">Whether this <see cref="T:Microsoft.IdentityModel.Tokens.RsaKeyWrapProvider" /> is required to unwrap keys. If true, the private key is required.</param>
         <summary>
-            Initializes a new instance of <see cref="T:Microsoft.IdentityModel.Tokens.RsaKeyWrapProvider" /> used for wrapping and un-wrappping keys.
-            These keys are usually symmetric session keys that are wrapped using the recipients public key.
-            <param name="key">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> that will be used for cryptographic operations.</param><param name="algorithm">The KeyWrap algorithm to apply.</param><param name="willUnwrap">Whether this <see cref="T:Microsoft.IdentityModel.Tokens.RsaKeyWrapProvider" /> is required to un-wrap keys. If true, the private key is required.</param><exception cref="T:System.ArgumentNullException">'key' is null.</exception><exception cref="T:System.ArgumentNullException">'algorithm' is null.</exception><exception cref="T:System.ArgumentException">The key size doesn't match the algorithm.</exception><exception cref="T:System.ArgumentException">If <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> and algorithm pair are not supported.</exception><exception cref="T:System.NotSupportedException">Failed to create RSA algorithm with provided key and algorithm.</exception></summary>
+            Initializes a new instance of the <see cref="T:Microsoft.IdentityModel.Tokens.RsaKeyWrapProvider" /> class used for wrapping and unwrapping keys.
+            These keys are usually symmetric session keys that are wrapped using the recipient's public key.
+            </summary>
         <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="algorithm" /> is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown if the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> and <paramref name="algorithm" /> pair are not supported.</exception>
+        <exception cref="T:System.NotSupportedException">Thrown if failed to create RSA algorithm with the provided key and algorithm.</exception>
       </Docs>
     </Member>
     <Member MemberName="Algorithm">
@@ -76,7 +82,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -98,7 +104,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -120,7 +126,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -129,9 +135,9 @@
         <Parameter Name="disposing" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="disposing">true, if called from Dispose(), false, if invoked inside a finalizer.</param>
+        <param name="disposing">If true, release both managed and unmanaged resources; otherwise, release only unmanaged resources.</param>
         <summary>
-            Disposes of internal components.
+            Releases the resources used by the current instance.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -145,7 +151,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -155,10 +161,10 @@
         <Parameter Name="algorithm" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="key">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> that will be used for crypto operations.</param>
-        <param name="algorithm">The KeyWrap algorithm to apply.</param>
+        <param name="key">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> that will be used for cryptographic operations.</param>
+        <param name="algorithm">The KeyWrap algorithm to be used.</param>
         <summary>
-            Checks if an algorithm is supported.
+            Checks if the specified algorithm is supported.
             </summary>
         <returns>true if the algorithm is supported; otherwise, false.</returns>
         <remarks>To be added.</remarks>
@@ -173,7 +179,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.SecurityKey</ReturnType>
@@ -195,7 +201,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -204,16 +210,16 @@
         <Parameter Name="keyBytes" Type="System.Byte[]" />
       </Parameters>
       <Docs>
-        <param name="keyBytes">the bytes to unwrap.</param>
+        <param name="keyBytes">The bytes to unwrap.</param>
         <summary>
-            Unwrap a key using RSA decryption.
+            Unwraps a key using RSA decryption.
             </summary>
-        <returns>Unwrapped key</returns>
+        <returns>The unwrapped key.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">'keyBytes' is null or length == 0.</exception>
-        <exception cref="T:System.ObjectDisposedException">If <see cref="M:Microsoft.IdentityModel.Tokens.RsaKeyWrapProvider.Dispose(System.Boolean)" /> has been called.</exception>
-        <exception cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenKeyWrapException">Failed to unwrap the wrappedKey.</exception>
-        <exception cref="T:System.InvalidOperationException">If the internal RSA algorithm is null.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="keyBytes" /> is null or has a length of 0.</exception>
+        <exception cref="T:System.ObjectDisposedException">Thrown if <see cref="M:Microsoft.IdentityModel.Tokens.RsaKeyWrapProvider.Dispose(System.Boolean)" /> has been called.</exception>
+        <exception cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenKeyWrapException">Thrown if the key unwrapping operation fails.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown if the internal RSA algorithm is null.</exception>
       </Docs>
     </Member>
     <Member MemberName="WrapKey">
@@ -225,7 +231,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>7.6.2.0</AssemblyVersion>
+        <AssemblyVersion>8.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -234,16 +240,16 @@
         <Parameter Name="keyBytes" Type="System.Byte[]" />
       </Parameters>
       <Docs>
-        <param name="keyBytes">the key to be wrapped</param>
+        <param name="keyBytes">The key to be wrapped.</param>
         <summary>
-            Wrap a key using RSA encryption.
+            Wraps a key using RSA encryption.
             </summary>
-        <returns>A wrapped key</returns>
+        <returns>A wrapped key.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">'keyBytes' is null or has length == 0.</exception>
-        <exception cref="T:System.ObjectDisposedException">If <see cref="M:Microsoft.IdentityModel.Tokens.RsaKeyWrapProvider.Dispose(System.Boolean)" /> has been called.</exception>
-        <exception cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenKeyWrapException">Failed to wrap the 'keyBytes'.</exception>
-        <exception cref="T:System.InvalidOperationException">If the internal RSA algorithm is null.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="keyBytes" /> is null or has a length of 0.</exception>
+        <exception cref="T:System.ObjectDisposedException">Thrown if <see cref="M:Microsoft.IdentityModel.Tokens.RsaKeyWrapProvider.Dispose(System.Boolean)" /> has been called.</exception>
+        <exception cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenKeyWrapException">Thrown if the key wrapping operation fails.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown if the internal RSA algorithm is null.</exception>
       </Docs>
     </Member>
   </Members>
