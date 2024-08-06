@@ -9,7 +9,7 @@ ms.date: 06/29/2023
 MSAL is able to call Web Account Manager (WAM), a Windows component that ships with the OS. This component acts as an authentication broker allowing the users of your app to benefit from integration with accounts known to Windows, such as the account you signed into your Windows session.
 
 >[!NOTE]
->WAM is available on Windows 10 and above, as well as Windows Server 2019 and above. MSAL will automatically fallback to a browser if WAM cannot be used.
+>WAM is available for use with MSAL.NET-based applications on Windows 10 (Version 1703 - Creators Update) and above, as well as Windows Server 2019 and above. MSAL will automatically fallback to a browser if WAM cannot be used.
 
 ## What is a broker
 
@@ -173,6 +173,14 @@ To use the broker, developers will need to call <xref:Microsoft.Identity.Client.
 | .NET Core                       | ⛔ No                    | ✅ Yes                           | ✅ Yes (not recommended)         |
 
 **†** `Microsoft.Identity.Client` versions 4.61.0 and above no longer include `net6.0-windows7.0` binary. Existing desktop applications targeting `net6.0-windows` should reference `Microsoft.Identity.Client.Broker` when using interactive authentication with Windows Broker and call <xref:Microsoft.Identity.Client.Broker.BrokerExtension.WithBroker(Microsoft.Identity.Client.PublicClientApplicationBuilder,Microsoft.Identity.Client.BrokerOptions)>; or reference `Microsoft.Identity.Client.Desktop` when [authenticating with browser](https://aka.ms/msal-net-uses-web-browser) and call <xref:Microsoft.Identity.Client.Desktop.DesktopExtensions.WithWindowsEmbeddedBrowserSupport(Microsoft.Identity.Client.PublicClientApplicationBuilder)>.
+
+## Integration best practices
+
+To make sure that your customers have a great experience with WAM, we strongly advise you adhere to the following principles:
+
+1. **Give the user context prior to authentication**. Draw a UI or window that will inform the user that they need to authenticate, along with reasons for authentication. Explain the benefits of your application if it is a background service.
+2. **Invoke authentication based on user action**. The user should be aware that they triggered the authentication process in a specific application by clicking a link or a button, or by performing another gesture. Users should not type in credentials in windows that pop up within the operating system with no attached context or actions.
+3. **Attempt to [acquire token silently](xref:Microsoft.Identity.Client.AcquireTokenSilentParameterBuilder) first and fall back to [interactive prompt](xref:Microsoft.Identity.Client.AcquireTokenInteractiveParameterBuilder) if that fails**. Customers should only be prompted for interactive authentication if there is an explicit need to re-enter credentials or meet a policy requirement.
 
 ## Troubleshooting
 
