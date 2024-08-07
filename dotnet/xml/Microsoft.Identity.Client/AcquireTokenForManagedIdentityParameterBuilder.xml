@@ -25,6 +25,7 @@
     <AssemblyVersion>4.61.1.0</AssemblyVersion>
     <AssemblyVersion>4.61.3.0</AssemblyVersion>
     <AssemblyVersion>4.62.0.0</AssemblyVersion>
+    <AssemblyVersion>4.63.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Identity.Client.AbstractManagedIdentityAcquireTokenParameterBuilder&lt;Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder&gt;</BaseTypeName>
@@ -41,6 +42,36 @@
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
+    <Member MemberName="WithClaims">
+      <MemberSignature Language="C#" Value="public Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder WithClaims (string claims);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder WithClaims(string claims) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder.WithClaims(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithClaims (claims As String) As AcquireTokenForManagedIdentityParameterBuilder" />
+      <MemberSignature Language="F#" Value="member this.WithClaims : string -&gt; Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder" Usage="acquireTokenForManagedIdentityParameterBuilder.WithClaims claims" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.63.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="claims" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="claims">A string with one or multiple claims.</param>
+        <summary>
+            Adds a claims challenge to the token request. The SDK will bypass the token cache when a claims challenge is specified. Retry the 
+            token acquisition, and use this value in the <see cref="M:Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder.WithClaims(System.String)" /> method. A claims challenge typically arises when 
+            calling the protected downstream API, for example when the tenant administrator revokes credentials. Apps are required 
+            to look for a 401 Unauthorized response from the protected api and to parse the WWW-Authenticate response header in order to 
+            extract the claims. See https://aka.ms/msal-net-claim-challenge for details.
+            </summary>
+        <returns>The builder to chain .With methods.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="WithForceRefresh">
       <MemberSignature Language="C#" Value="public Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder WithForceRefresh (bool forceRefresh);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder WithForceRefresh(bool forceRefresh) cil managed" />
@@ -50,7 +81,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.62.0.0</AssemblyVersion>
+        <AssemblyVersion>4.63.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder</ReturnType>
