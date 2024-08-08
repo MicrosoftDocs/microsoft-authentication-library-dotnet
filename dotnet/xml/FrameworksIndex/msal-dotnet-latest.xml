@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.Identity.Client.Broker" Version="4.62.0.0" />
-    <Assembly Name="Microsoft.Identity.Client.Desktop" Version="4.62.0.0" />
-    <Assembly Name="Microsoft.Identity.Client" Version="4.62.0.0" />
+    <Assembly Name="Microsoft.Identity.Client.Broker" Version="4.63.0.0" />
+    <Assembly Name="Microsoft.Identity.Client.Desktop" Version="4.63.0.0" />
+    <Assembly Name="Microsoft.Identity.Client" Version="4.63.0.0" />
   </Assemblies>
   <Namespace Name="Microsoft.Identity.Client">
     <Type Name="Microsoft.Identity.Client.AadAuthorityAudience" Id="T:Microsoft.Identity.Client.AadAuthorityAudience">
@@ -116,6 +116,7 @@
       <Member Id="M:Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder.WithSendX5C(System.Boolean)" />
     </Type>
     <Type Name="Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder" Id="T:Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder">
+      <Member Id="M:Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder.WithClaims(System.String)" />
       <Member Id="M:Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder.WithForceRefresh(System.Boolean)" />
     </Type>
     <Type Name="Microsoft.Identity.Client.AcquireTokenInteractiveParameterBuilder" Id="T:Microsoft.Identity.Client.AcquireTokenInteractiveParameterBuilder">
@@ -168,6 +169,7 @@
     <Type Name="Microsoft.Identity.Client.AssertionRequestOptions" Id="T:Microsoft.Identity.Client.AssertionRequestOptions">
       <Member Id="M:Microsoft.Identity.Client.AssertionRequestOptions.#ctor" />
       <Member Id="P:Microsoft.Identity.Client.AssertionRequestOptions.CancellationToken" />
+      <Member Id="P:Microsoft.Identity.Client.AssertionRequestOptions.Claims" />
       <Member Id="P:Microsoft.Identity.Client.AssertionRequestOptions.ClientID" />
       <Member Id="P:Microsoft.Identity.Client.AssertionRequestOptions.TokenEndpoint" />
     </Type>
@@ -572,6 +574,7 @@
     <Type Name="Microsoft.Identity.Client.ManagedIdentityApplicationBuilder" Id="T:Microsoft.Identity.Client.ManagedIdentityApplicationBuilder">
       <Member Id="M:Microsoft.Identity.Client.ManagedIdentityApplicationBuilder.Build" />
       <Member Id="M:Microsoft.Identity.Client.ManagedIdentityApplicationBuilder.Create(Microsoft.Identity.Client.AppConfig.ManagedIdentityId)" />
+      <Member Id="M:Microsoft.Identity.Client.ManagedIdentityApplicationBuilder.WithClientCapabilities(System.Collections.Generic.IEnumerable{System.String})" />
       <Member Id="M:Microsoft.Identity.Client.ManagedIdentityApplicationBuilder.WithTelemetryClient(Microsoft.IdentityModel.Abstractions.ITelemetryClient[])" />
     </Type>
     <Type Name="Microsoft.Identity.Client.Metrics" Id="T:Microsoft.Identity.Client.Metrics">

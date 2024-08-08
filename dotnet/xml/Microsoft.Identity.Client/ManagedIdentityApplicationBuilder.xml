@@ -25,6 +25,7 @@
     <AssemblyVersion>4.61.1.0</AssemblyVersion>
     <AssemblyVersion>4.61.3.0</AssemblyVersion>
     <AssemblyVersion>4.62.0.0</AssemblyVersion>
+    <AssemblyVersion>4.63.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Identity.Client.BaseAbstractApplicationBuilder&lt;Microsoft.Identity.Client.ManagedIdentityApplicationBuilder&gt;</BaseTypeName>
@@ -49,7 +50,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.62.0.0</AssemblyVersion>
+        <AssemblyVersion>4.63.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.IManagedIdentityApplication</ReturnType>
@@ -74,7 +75,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.62.0.0</AssemblyVersion>
+        <AssemblyVersion>4.63.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ManagedIdentityApplicationBuilder</ReturnType>
@@ -97,6 +98,38 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="WithClientCapabilities">
+      <MemberSignature Language="C#" Value="public Microsoft.Identity.Client.ManagedIdentityApplicationBuilder WithClientCapabilities (System.Collections.Generic.IEnumerable&lt;string&gt; clientCapabilities);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Identity.Client.ManagedIdentityApplicationBuilder WithClientCapabilities(class System.Collections.Generic.IEnumerable`1&lt;string&gt; clientCapabilities) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.ManagedIdentityApplicationBuilder.WithClientCapabilities(System.Collections.Generic.IEnumerable{System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithClientCapabilities (clientCapabilities As IEnumerable(Of String)) As ManagedIdentityApplicationBuilder" />
+      <MemberSignature Language="F#" Value="member this.WithClientCapabilities : seq&lt;string&gt; -&gt; Microsoft.Identity.Client.ManagedIdentityApplicationBuilder" Usage="managedIdentityApplicationBuilder.WithClientCapabilities clientCapabilities" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.63.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.ManagedIdentityApplicationBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="clientCapabilities" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="clientCapabilities">To be added.</param>
+        <summary>
+            Microsoft Identity specific OIDC extension that allows resource challenges to be resolved without interaction. 
+            Allows configuration of one or more client capabilities, e.g. "llt"
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+            MSAL will transform these into special claims request. See https://openid.net/specs/openid-connect-core-1_0-final.html#ClaimsParameter for
+            details on claim requests. This is an experimental API. The method signature may change in the future 
+            without involving a major version upgrade.
+            For more details see https://aka.ms/msal-net-claims-request
+            </remarks>
+      </Docs>
+    </Member>
     <Member MemberName="WithTelemetryClient">
       <MemberSignature Language="C#" Value="public Microsoft.Identity.Client.ManagedIdentityApplicationBuilder WithTelemetryClient (params Microsoft.IdentityModel.Abstractions.ITelemetryClient[] telemetryClients);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Identity.Client.ManagedIdentityApplicationBuilder WithTelemetryClient(class Microsoft.IdentityModel.Abstractions.ITelemetryClient[] telemetryClients) cil managed" />
@@ -106,7 +139,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.62.0.0</AssemblyVersion>
+        <AssemblyVersion>4.63.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
