@@ -37,7 +37,7 @@ You're building a desktop or mobile app. Use MSAL.NET directly and start acquiri
 
 You're building a confidential client application (Web app, web API, daemon/service app) running on ASP.NET Core, ASP.NET OWIN, or .NET framework/.NET Core. See what Microsoft Identity Web has to offer:
 
-- Sign users in voa web apps in Microsoft Entra ID, Azure AD B2C, and Microsoft Entra External ID applications
+- Sign users in via web apps in Microsoft Entra ID, Azure AD B2C, and Microsoft Entra External ID applications
   - Support Microsoft personal accounts
   - Support guest users
   - Incremental consent and conditional access in web apps
