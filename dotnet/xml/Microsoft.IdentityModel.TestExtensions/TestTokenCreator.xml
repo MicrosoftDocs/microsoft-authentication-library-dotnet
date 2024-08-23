@@ -31,14 +31,72 @@
     <AssemblyVersion>7.6.3.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.1.0</AssemblyVersion>
+    <AssemblyVersion>8.0.2.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>
+             A class responsible for creating test tokens for use in unit testing implementations depending on
+             Microsoft.IdentityModel token validation.
+             </summary>
+    <remarks>
+             Microsoft.IdentityModel.SampleTests.SampleTokenValidationClassTests contains examples for how this class can be leveraged
+             to validate a trivial token validation class that depends on Microsoft.IdentityModel's token validation methods.
+             </remarks>
+    <example>
+             The following provides an example for how this class could be leveraged using a common testing framework, Xunit. The core concepts
+             will be applicable to unit testing using any framework however.
+            
+             The example imagines a class, ClassWithMicrosoftIdentityModelDependency, which exposes ValidateToken, a method calling the
+             Microsoft.IdentityModel library and GetTokenValidationParameters which retrieves the <see cref="T:Microsoft.IdentityModel.Tokens.TokenValidationParameters" />
+             the code under test actually uses. Note that it's important to use the real <see cref="T:Microsoft.IdentityModel.Tokens.TokenValidationParameters" /> since that
+             will allow the unit tests to actually confirm if there's a hole in the validation (e.g. certain important validation is disabled,
+             <see cref="P:Microsoft.IdentityModel.Tokens.TokenValidationParameters.ValidateAudience" />, <see cref="P:Microsoft.IdentityModel.Tokens.TokenValidationParameters.ValidateIssuer" />, etc.)
+            
+             In the following code example, generateTokenToTest should be one of the methods from this class.
+             
+             <code>
+             internal void AssertValidationException(Func{string} generateTokenToTest, Type innerExceptionType, string innerExceptionMessagePart)
+             {
+                 try
+                 {
+                     ClassWithMicrosoftIdentityModelDependency.ValidateToken(
+                         generateTokenToTest,
+                         ClassWithMicrosoftIdentityModelDependency.GetTokenValidationParameters());
+             
+                     if (innerExceptionType != null || innerExceptionType != null)
+                         throw new TestException(
+                             string.Format(
+                                 "Expected an exception of type '{0}' containing '{1}' in the message.",
+                                 innerExceptionType,
+                                 innerExceptionMessagePart));
+                 }
+                 catch (Exception e)
+                 {
+                     Assert.Equal(typeof(SampleTestTokenValidationException), e.GetType());
+                     Assert.Equal(innerExceptionType, e.InnerException.GetType());
+             
+                     if (!string.IsNullOrEmpty(innerExceptionMessagePart))
+                     {
+                         Assert.Contains(innerExceptionMessagePart, e.InnerException.Message);
+                     }
+                 }
+             }
+            
+             [Fact]
+             public void TokenWithoutSignature()
+             {
+                 var testTokenCreator = new TestTokenCreator();
+                 AssertValidationException(
+                     testTokenCreator.CreateTokenWithNoSignature,
+                     typeof(ArgumentException),
+                     "IDX14111");
+             }
+             
+             </code></example>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -49,7 +107,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
-        <AssemblyVersion>8.0.1.0</AssemblyVersion>
+        <AssemblyVersion>8.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -66,13 +124,15 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
-        <AssemblyVersion>8.0.1.0</AssemblyVersion>
+        <AssemblyVersion>8.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            Gets or sets the Audience to be stamped on the tokens created.
+            </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -86,15 +146,17 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
-        <AssemblyVersion>8.0.1.0</AssemblyVersion>
+        <AssemblyVersion>8.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,System.Object&gt;</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <summary>
+            Creates a default set of claims based on the instance values.
+            </summary>
+        <returns>A <see cref="T:System.Collections.Generic.Dictionary`2" /> representing the claims of a token to create.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -107,15 +169,18 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
-        <AssemblyVersion>8.0.1.0</AssemblyVersion>
+        <AssemblyVersion>8.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <summary>
+            Creates a default valid test token based based on the class's <see cref="P:Microsoft.IdentityModel.TestExtensions.TestTokenCreator.Issuer" />, <see cref="P:Microsoft.IdentityModel.TestExtensions.TestTokenCreator.Audience" />
+            and <see cref="P:Microsoft.IdentityModel.TestExtensions.TestTokenCreator.SigningCredentials" /> values.
+            </summary>
+        <returns>A test JWS token which is valid according to the class configuration.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -128,15 +193,17 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
-        <AssemblyVersion>8.0.1.0</AssemblyVersion>
+        <AssemblyVersion>8.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <summary>
+            Creates a test JWS token which is past its expiration.
+            </summary>
+        <returns>A test JWS token which is past its expiration.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -149,7 +216,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
-        <AssemblyVersion>8.0.1.0</AssemblyVersion>
+        <AssemblyVersion>8.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -158,9 +225,12 @@
         <Parameter Name="claims" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
       </Parameters>
       <Docs>
-        <param name="claims">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="claims">
+            The <see cref="T:System.Collections.Generic.Dictionary`2" /> of claims which describe the payload to create.</param>
+        <summary>
+            Creates a JSON payload based on the passed <see cref="T:System.Collections.Generic.IDictionary`2" />of claims.
+            </summary>
+        <returns>A JSON payload based on the passed <paramref name="claims" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -173,15 +243,17 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
-        <AssemblyVersion>8.0.1.0</AssemblyVersion>
+        <AssemblyVersion>8.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <summary>
+            Creates a test JWS token which is not yet valid.
+            </summary>
+        <returns>A test JWS token which is not yet valid.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -194,7 +266,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
-        <AssemblyVersion>8.0.1.0</AssemblyVersion>
+        <AssemblyVersion>8.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -203,9 +275,11 @@
         <Parameter Name="securityTokenDescriptor" Type="Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor" />
       </Parameters>
       <Docs>
-        <param name="securityTokenDescriptor">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="securityTokenDescriptor">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor" /> which describes the token to create.</param>
+        <summary>
+            Creates a token based on the passed <see cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor" />.
+            </summary>
+        <returns>A JWS token described by the passed <see cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -218,7 +292,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
-        <AssemblyVersion>8.0.1.0</AssemblyVersion>
+        <AssemblyVersion>8.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -227,9 +301,13 @@
         <Parameter Name="claims" Type="System.Collections.Generic.Dictionary&lt;System.String,System.Object&gt;" />
       </Parameters>
       <Docs>
-        <param name="claims">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="claims">
+            The <see cref="T:System.Collections.Generic.Dictionary`2" /> of claims which describe the token to create.
+            </param>
+        <summary>
+            Creates a token based on the passed <see cref="T:System.Collections.Generic.Dictionary`2" />.
+            </summary>
+        <returns>A JWS token described by the passed <see cref="T:System.Collections.Generic.Dictionary`2" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -242,15 +320,17 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
-        <AssemblyVersion>8.0.1.0</AssemblyVersion>
+        <AssemblyVersion>8.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <summary>
+            Creates a default <see cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor" /> based on the instance values.
+            </summary>
+        <returns>A <see cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor" /> representing the token to create.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -263,15 +343,17 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
-        <AssemblyVersion>8.0.1.0</AssemblyVersion>
+        <AssemblyVersion>8.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <summary>
+            Creates a test JWS token with an audience which doens't match the configured instance value.
+            </summary>
+        <returns>A test JWS token with an audience which doens't match the configured instance value.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -284,15 +366,17 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
-        <AssemblyVersion>8.0.1.0</AssemblyVersion>
+        <AssemblyVersion>8.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <summary>
+            Creates a test JWS token with an issuer which doens't match the configured instance value.
+            </summary>
+        <returns>A test JWS token with an issuer which doens't match the configured instance value.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -305,15 +389,17 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
-        <AssemblyVersion>8.0.1.0</AssemblyVersion>
+        <AssemblyVersion>8.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <summary>
+            Creates a test JWS token signed with a key that doens't match the configured instance value.
+            </summary>
+        <returns>A test JWS token signed with a key that doens't match the configured instance value.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -326,15 +412,17 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
-        <AssemblyVersion>8.0.1.0</AssemblyVersion>
+        <AssemblyVersion>8.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <summary>
+            Creates a test JWS token which is issued in the future.
+            </summary>
+        <returns>A test JWS token which is issued in the future.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -347,15 +435,17 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
-        <AssemblyVersion>8.0.1.0</AssemblyVersion>
+        <AssemblyVersion>8.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <summary>
+            Creates a test token with a signature that doesn't match the payload.
+            </summary>
+        <returns>A test JWS token with a signature which doesn't match the payload.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -368,15 +458,17 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
-        <AssemblyVersion>8.0.1.0</AssemblyVersion>
+        <AssemblyVersion>8.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <summary>
+            Creates a test JWS token with a missing audience (aud) claim.
+            </summary>
+        <returns>A test JWS token with a missing audience (aud) claim.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -389,15 +481,17 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
-        <AssemblyVersion>8.0.1.0</AssemblyVersion>
+        <AssemblyVersion>8.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <summary>
+            Creates a test JWS token with a missing Expiration Time (exp) claim.
+            </summary>
+        <returns>A test JWS token with a missing Expiration Time (exp) claim.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -410,15 +504,17 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
-        <AssemblyVersion>8.0.1.0</AssemblyVersion>
+        <AssemblyVersion>8.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <summary>
+            Creates a test JWS token with a missing IssuedAt (iat) claim.
+            </summary>
+        <returns>A test JWS token with a missing IssuedAt (iat) claim.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -431,15 +527,17 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
-        <AssemblyVersion>8.0.1.0</AssemblyVersion>
+        <AssemblyVersion>8.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <summary>
+            Creates a test JWS token with a missing issuer (iss) claim.
+            </summary>
+        <returns>A test JWS token with a missing issuer (iss) claim.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -452,15 +550,17 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
-        <AssemblyVersion>8.0.1.0</AssemblyVersion>
+        <AssemblyVersion>8.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <summary>
+            Creates a test JWS token without a signing key (i.e. alg=none, no signature).
+            </summary>
+        <returns>A test JWS token without a signing key (i.e. alg=none, no signature).</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -473,15 +573,17 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
-        <AssemblyVersion>8.0.1.0</AssemblyVersion>
+        <AssemblyVersion>8.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <summary>
+            Creates a test JWS token with a missing NotBefore (nbf) claim.
+            </summary>
+        <returns>A test JWS token with a missing NotBefore (nbf) claim.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -494,15 +596,17 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
-        <AssemblyVersion>8.0.1.0</AssemblyVersion>
+        <AssemblyVersion>8.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <summary>
+            Creates a test JWS token without any signature.
+            </summary>
+        <returns>A test JWS token without any signature.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -515,13 +619,15 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
-        <AssemblyVersion>8.0.1.0</AssemblyVersion>
+        <AssemblyVersion>8.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            Gets or sets the issuer to be stamped on the tokens created.
+            </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -535,13 +641,15 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
-        <AssemblyVersion>8.0.1.0</AssemblyVersion>
+        <AssemblyVersion>8.0.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.SigningCredentials</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            Gets or sets the SigningCredentials used to sign the tokens created.
+            </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
