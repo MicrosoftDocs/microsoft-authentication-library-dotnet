@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.Identity.Client.Broker" Version="4.63.0.0" />
-    <Assembly Name="Microsoft.Identity.Client.Desktop" Version="4.63.0.0" />
-    <Assembly Name="Microsoft.Identity.Client" Version="4.63.0.0" />
+    <Assembly Name="Microsoft.Identity.Client.Broker" Version="4.64.0.0" />
+    <Assembly Name="Microsoft.Identity.Client.Desktop" Version="4.64.0.0" />
+    <Assembly Name="Microsoft.Identity.Client" Version="4.64.0.0" />
   </Assemblies>
   <Namespace Name="Microsoft.Identity.Client">
     <Type Name="Microsoft.Identity.Client.AadAuthorityAudience" Id="T:Microsoft.Identity.Client.AadAuthorityAudience">
@@ -104,6 +104,7 @@
       <Member Id="M:Microsoft.Identity.Client.AcquireTokenByRefreshTokenParameterBuilder.Validate" />
       <Member Id="M:Microsoft.Identity.Client.AcquireTokenByRefreshTokenParameterBuilder.WithSendX5C(System.Boolean)" />
     </Type>
+    <Type Name="Microsoft.Identity.Client.AcquireTokenByUsernameAndPasswordConfidentialParameterBuilder" Id="T:Microsoft.Identity.Client.AcquireTokenByUsernameAndPasswordConfidentialParameterBuilder" />
     <Type Name="Microsoft.Identity.Client.AcquireTokenByUsernamePasswordParameterBuilder" Id="T:Microsoft.Identity.Client.AcquireTokenByUsernamePasswordParameterBuilder">
       <Member Id="M:Microsoft.Identity.Client.AcquireTokenByUsernamePasswordParameterBuilder.WithFederationMetadata(System.String)" />
       <Member Id="M:Microsoft.Identity.Client.AcquireTokenByUsernamePasswordParameterBuilder.WithProofOfPossession(System.String,System.Net.Http.HttpMethod,System.Uri)" />
@@ -328,6 +329,7 @@
       <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplication.InitiateLongRunningProcessInWebApi(System.Collections.Generic.IEnumerable{System.String},System.String,System.String@)" />
       <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplication.Microsoft#Identity#Client#IByRefreshToken#AcquireTokenByRefreshToken(System.Collections.Generic.IEnumerable{System.String},System.String)" />
       <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplication.Microsoft#Identity#Client#IByRefreshToken#AcquireTokenByRefreshTokenAsync(System.Collections.Generic.IEnumerable{System.String},System.String)" />
+      <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplication.Microsoft#Identity#Client#IByUsernameAndPassword#AcquireTokenByUsernamePassword(System.Collections.Generic.IEnumerable{System.String},System.String,System.String)" />
       <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplication.Microsoft#Identity#Client#IConfidentialClientApplicationWithCertificate#AcquireTokenForClientWithCertificateAsync(System.Collections.Generic.IEnumerable{System.String})" />
       <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplication.Microsoft#Identity#Client#IConfidentialClientApplicationWithCertificate#AcquireTokenForClientWithCertificateAsync(System.Collections.Generic.IEnumerable{System.String},System.Boolean)" />
       <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplication.Microsoft#Identity#Client#IConfidentialClientApplicationWithCertificate#AcquireTokenOnBehalfOfWithCertificateAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.UserAssertion)" />
@@ -417,6 +419,9 @@
     <Type Name="Microsoft.Identity.Client.IByRefreshToken" Id="T:Microsoft.Identity.Client.IByRefreshToken">
       <Member Id="M:Microsoft.Identity.Client.IByRefreshToken.AcquireTokenByRefreshToken(System.Collections.Generic.IEnumerable{System.String},System.String)" />
       <Member Id="M:Microsoft.Identity.Client.IByRefreshToken.AcquireTokenByRefreshTokenAsync(System.Collections.Generic.IEnumerable{System.String},System.String)" />
+    </Type>
+    <Type Name="Microsoft.Identity.Client.IByUsernameAndPassword" Id="T:Microsoft.Identity.Client.IByUsernameAndPassword">
+      <Member Id="M:Microsoft.Identity.Client.IByUsernameAndPassword.AcquireTokenByUsernamePassword(System.Collections.Generic.IEnumerable{System.String},System.String,System.String)" />
     </Type>
     <Type Name="Microsoft.Identity.Client.IClientApplicationBase" Id="T:Microsoft.Identity.Client.IClientApplicationBase">
       <Member Id="M:Microsoft.Identity.Client.IClientApplicationBase.AcquireTokenSilent(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount)" />
