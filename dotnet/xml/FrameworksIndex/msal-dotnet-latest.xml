@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.Identity.Client.Broker" Version="4.64.0.0" />
-    <Assembly Name="Microsoft.Identity.Client.Desktop" Version="4.64.0.0" />
-    <Assembly Name="Microsoft.Identity.Client" Version="4.64.0.0" />
+    <Assembly Name="Microsoft.Identity.Client.Broker" Version="4.64.1.0" />
+    <Assembly Name="Microsoft.Identity.Client.Desktop" Version="4.64.1.0" />
+    <Assembly Name="Microsoft.Identity.Client" Version="4.64.1.0" />
   </Assemblies>
   <Namespace Name="Microsoft.Identity.Client">
     <Type Name="Microsoft.Identity.Client.AadAuthorityAudience" Id="T:Microsoft.Identity.Client.AadAuthorityAudience">
@@ -104,7 +104,9 @@
       <Member Id="M:Microsoft.Identity.Client.AcquireTokenByRefreshTokenParameterBuilder.Validate" />
       <Member Id="M:Microsoft.Identity.Client.AcquireTokenByRefreshTokenParameterBuilder.WithSendX5C(System.Boolean)" />
     </Type>
-    <Type Name="Microsoft.Identity.Client.AcquireTokenByUsernameAndPasswordConfidentialParameterBuilder" Id="T:Microsoft.Identity.Client.AcquireTokenByUsernameAndPasswordConfidentialParameterBuilder" />
+    <Type Name="Microsoft.Identity.Client.AcquireTokenByUsernameAndPasswordConfidentialParameterBuilder" Id="T:Microsoft.Identity.Client.AcquireTokenByUsernameAndPasswordConfidentialParameterBuilder">
+      <Member Id="M:Microsoft.Identity.Client.AcquireTokenByUsernameAndPasswordConfidentialParameterBuilder.Validate" />
+    </Type>
     <Type Name="Microsoft.Identity.Client.AcquireTokenByUsernamePasswordParameterBuilder" Id="T:Microsoft.Identity.Client.AcquireTokenByUsernamePasswordParameterBuilder">
       <Member Id="M:Microsoft.Identity.Client.AcquireTokenByUsernamePasswordParameterBuilder.WithFederationMetadata(System.String)" />
       <Member Id="M:Microsoft.Identity.Client.AcquireTokenByUsernamePasswordParameterBuilder.WithProofOfPossession(System.String,System.Net.Http.HttpMethod,System.Uri)" />
