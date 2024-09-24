@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-model-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.Identity.Abstractions" Version="7.0.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.Azure" Version="3.1.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.Certificate" Version="3.1.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="3.1.0.0" />
-    <Assembly Name="Microsoft.Identity.Web" Version="3.1.0.0" />
+    <Assembly Name="Microsoft.Identity.Abstractions" Version="7.1.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.Azure" Version="3.2.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.Certificate" Version="3.2.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="3.2.0.0" />
+    <Assembly Name="Microsoft.Identity.Web" Version="3.2.0.0" />
     <Assembly Name="Microsoft.Identity.Web.DownstreamRestApi" Version="2.0.8.0" />
-    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraph" Version="3.1.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraphBeta" Version="3.1.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.OWIN" Version="3.1.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.TokenAcquisition" Version="3.1.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.TokenCache" Version="3.1.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.UI" Version="3.1.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraph" Version="3.2.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraphBeta" Version="3.2.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.OWIN" Version="3.2.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.TokenAcquisition" Version="3.2.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.TokenCache" Version="3.2.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.UI" Version="3.2.0.0" />
   </Assemblies>
   <Namespace Name="Microsoft.Identity.Abstractions">
     <Type Name="Microsoft.Identity.Abstractions.AcquireTokenOptions" Id="T:Microsoft.Identity.Abstractions.AcquireTokenOptions">
@@ -23,6 +23,7 @@
       <Member Id="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.Claims" />
       <Member Id="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.CorrelationId" />
       <Member Id="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.ExtraHeadersParameters" />
+      <Member Id="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.ExtraParameters" />
       <Member Id="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.ExtraQueryParameters" />
       <Member Id="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.ForceRefresh" />
       <Member Id="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.LongRunningWebApiSessionKey" />
@@ -479,6 +480,7 @@
     <Type Name="Microsoft.Identity.Web.ManagedIdentityClientAssertion" Id="T:Microsoft.Identity.Web.ManagedIdentityClientAssertion">
       <Member Id="M:Microsoft.Identity.Web.ManagedIdentityClientAssertion.#ctor(System.String)" />
       <Member Id="M:Microsoft.Identity.Web.ManagedIdentityClientAssertion.#ctor(System.String,System.String)" />
+      <Member Id="M:Microsoft.Identity.Web.ManagedIdentityClientAssertion.#ctor(System.String,System.String,Microsoft.Extensions.Logging.ILogger)" />
       <Member Id="M:Microsoft.Identity.Web.ManagedIdentityClientAssertion.GetClientAssertionAsync(Microsoft.Identity.Client.AssertionRequestOptions)" />
     </Type>
     <Type Name="Microsoft.Identity.Web.MicrosoftGraphExtensions" Id="T:Microsoft.Identity.Web.MicrosoftGraphExtensions">
