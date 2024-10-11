@@ -1,6 +1,6 @@
 <Type Name="CaseSensitiveClaimsIdentity" FullName="Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity">
   <TypeSignature Language="C#" Value="public class CaseSensitiveClaimsIdentity : System.Security.Claims.ClaimsIdentity" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CaseSensitiveClaimsIdentity extends System.Security.Claims.ClaimsIdentity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CaseSensitiveClaimsIdentity extends System.Security.Claims.ClaimsIdentity" />
   <TypeSignature Language="DocId" Value="T:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity" />
   <TypeSignature Language="VB.NET" Value="Public Class CaseSensitiveClaimsIdentity&#xA;Inherits ClaimsIdentity" />
   <TypeSignature Language="F#" Value="type CaseSensitiveClaimsIdentity = class&#xA;    inherit ClaimsIdentity" />
@@ -9,11 +9,20 @@
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.1.0</AssemblyVersion>
     <AssemblyVersion>8.0.2.0</AssemblyVersion>
+    <AssemblyVersion>8.1.0.0</AssemblyVersion>
+    <AssemblyVersion>8.1.1.0</AssemblyVersion>
+    <AssemblyVersion>8.1.2.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Security.Claims.ClaimsIdentity</BaseTypeName>
   </Base>
   <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Serializable]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Serializable&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>
             A derived <see cref="T:System.Security.Claims.ClaimsIdentity" /> where claim retrieval is case-sensitive. The current <see cref="T:System.Security.Claims.ClaimsIdentity" /> retrieves claims in a case-insensitive manner which is different than querying the underlying <see cref="P:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity.SecurityToken" />. The <see cref="T:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity" /> provides consistent retrieval logic between the <see cref="P:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity.SecurityToken" /> and <see cref="T:System.Security.Claims.ClaimsIdentity" />.
@@ -29,7 +38,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.0.2.0</AssemblyVersion>
+        <AssemblyVersion>8.1.2.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -48,7 +57,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.0.2.0</AssemblyVersion>
+        <AssemblyVersion>8.1.2.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="claims" Type="System.Collections.Generic.IEnumerable&lt;System.Security.Claims.Claim&gt;" />
@@ -71,7 +80,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.0.2.0</AssemblyVersion>
+        <AssemblyVersion>8.1.2.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="claimsIdentity" Type="System.Security.Claims.ClaimsIdentity" />
@@ -94,7 +103,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.0.2.0</AssemblyVersion>
+        <AssemblyVersion>8.1.2.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="authenticationType" Type="System.String" />
@@ -116,7 +125,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.0.2.0</AssemblyVersion>
+        <AssemblyVersion>8.1.2.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="claims" Type="System.Collections.Generic.IEnumerable&lt;System.Security.Claims.Claim&gt;" />
@@ -141,7 +150,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.0.2.0</AssemblyVersion>
+        <AssemblyVersion>8.1.2.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="authenticationType" Type="System.String" />
@@ -167,7 +176,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.0.2.0</AssemblyVersion>
+        <AssemblyVersion>8.1.2.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="claims" Type="System.Collections.Generic.IEnumerable&lt;System.Security.Claims.Claim&gt;" />
@@ -187,6 +196,28 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override System.Security.Claims.ClaimsIdentity Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.Claims.ClaimsIdentity Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity.Clone" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Clone () As ClaimsIdentity" />
+      <MemberSignature Language="F#" Value="override this.Clone : unit -&gt; System.Security.Claims.ClaimsIdentity" Usage="caseSensitiveClaimsIdentity.Clone " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Claims.ClaimsIdentity</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
     <Member MemberName="FindAll">
       <MemberSignature Language="C#" Value="public override System.Collections.Generic.IEnumerable&lt;System.Security.Claims.Claim&gt; FindAll (string type);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Security.Claims.Claim&gt; FindAll(string type) cil managed" />
@@ -196,7 +227,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.0.2.0</AssemblyVersion>
+        <AssemblyVersion>8.1.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Security.Claims.Claim&gt;</ReturnType>
@@ -223,7 +254,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.0.2.0</AssemblyVersion>
+        <AssemblyVersion>8.1.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Claims.Claim</ReturnType>
@@ -250,7 +281,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.0.2.0</AssemblyVersion>
+        <AssemblyVersion>8.1.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -280,7 +311,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.0.2.0</AssemblyVersion>
+        <AssemblyVersion>8.1.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.SecurityToken</ReturnType>

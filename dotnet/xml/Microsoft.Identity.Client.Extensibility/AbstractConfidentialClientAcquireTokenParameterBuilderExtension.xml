@@ -30,6 +30,7 @@
     <AssemblyVersion>4.63.0.0</AssemblyVersion>
     <AssemblyVersion>4.64.0.0</AssemblyVersion>
     <AssemblyVersion>4.64.1.0</AssemblyVersion>
+    <AssemblyVersion>4.65.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -51,7 +52,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.64.1.0</AssemblyVersion>
+        <AssemblyVersion>4.65.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt;</ReturnType>
@@ -78,6 +79,43 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="WithAdditionalCacheParameters&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt; WithAdditionalCacheParameters&lt;T&gt; (this Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt; builder, System.Collections.Generic.IEnumerable&lt;string&gt; cacheParameters) where T : Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt;;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1&lt;!!T&gt; WithAdditionalCacheParameters&lt;(class Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1&lt;!!T&gt;) T&gt;(class Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1&lt;!!T&gt; builder, class System.Collections.Generic.IEnumerable`1&lt;string&gt; cacheParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.WithAdditionalCacheParameters``1(Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder{``0},System.Collections.Generic.IEnumerable{System.String})" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function WithAdditionalCacheParameters(Of T As AbstractAcquireTokenParameterBuilder(Of T)) (builder As AbstractAcquireTokenParameterBuilder(Of T), cacheParameters As IEnumerable(Of String)) As AbstractAcquireTokenParameterBuilder(Of T)" />
+      <MemberSignature Language="F#" Value="static member WithAdditionalCacheParameters : Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;'T (requires 'T :&gt; Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;'T&gt;)&gt; * seq&lt;string&gt; -&gt; Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;'T (requires 'T :&gt; Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;'T&gt;)&gt; (requires 'T :&gt; Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;'T&gt;)" Usage="Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.WithAdditionalCacheParameters (builder, cacheParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.65.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <BaseTypeName>Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt;</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="builder" Type="Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt;" RefType="this" />
+        <Parameter Name="cacheParameters" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T" />
+        <param name="builder">The builder to chain options to</param>
+        <param name="cacheParameters">Additional parameters to cache</param>
+        <summary>
+            Specifies additional parameters acquired from authentication responses to be cached with the access token that are normally not included in the cache object.
+            these values can be read from the <see cref="P:Microsoft.Identity.Client.AuthenticationResult.AdditionalResponseParameters" /> parameter.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="WithProofOfPosessionKeyId&lt;T&gt;">
       <MemberSignature Language="C#" Value="public static Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt; WithProofOfPosessionKeyId&lt;T&gt; (this Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt; builder, string keyId, string expectedTokenTypeFromAad = &quot;Bearer&quot;) where T : Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt;;" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1&lt;!!T&gt; WithProofOfPosessionKeyId&lt;(class Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1&lt;!!T&gt;) T&gt;(class Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1&lt;!!T&gt; builder, string keyId, string expectedTokenTypeFromAad) cil managed" />
@@ -87,7 +125,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.64.1.0</AssemblyVersion>
+        <AssemblyVersion>4.65.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt;</ReturnType>

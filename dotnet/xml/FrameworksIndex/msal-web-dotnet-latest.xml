@@ -1,22 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-web-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.IdentityModel.Abstractions" Version="8.0.2.0" />
-    <Assembly Name="Microsoft.IdentityModel.JsonWebTokens" Version="8.0.2.0" />
+    <Assembly Name="Microsoft.IdentityModel.Abstractions" Version="8.1.2.0" />
+    <Assembly Name="Microsoft.IdentityModel.JsonWebTokens" Version="8.1.2.0" />
     <Assembly Name="Microsoft.IdentityModel.KeyVaultExtensions" Version="7.7.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.Logging" Version="8.0.2.0" />
-    <Assembly Name="Microsoft.IdentityModel.LoggingExtensions" Version="8.0.2.0" />
+    <Assembly Name="Microsoft.IdentityModel.Logging" Version="8.1.2.0" />
+    <Assembly Name="Microsoft.IdentityModel.LoggingExtensions" Version="8.1.2.0" />
     <Assembly Name="Microsoft.IdentityModel.ManagedKeyVaultSecurityKey" Version="7.7.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols" Version="8.0.2.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="8.0.2.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.SignedHttpRequest" Version="8.0.2.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.WsFederation" Version="8.0.2.0" />
-    <Assembly Name="Microsoft.IdentityModel.TestExtensions" Version="8.0.2.0" />
-    <Assembly Name="Microsoft.IdentityModel.Tokens" Version="8.0.2.0" />
-    <Assembly Name="Microsoft.IdentityModel.Tokens.Saml" Version="8.0.2.0" />
-    <Assembly Name="Microsoft.IdentityModel.Validators" Version="8.0.2.0" />
-    <Assembly Name="Microsoft.IdentityModel.Xml" Version="8.0.2.0" />
-    <Assembly Name="System.IdentityModel.Tokens.Jwt" Version="8.0.2.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols" Version="8.1.2.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="8.1.2.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.SignedHttpRequest" Version="8.1.2.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.WsFederation" Version="8.1.2.0" />
+    <Assembly Name="Microsoft.IdentityModel.TestExtensions" Version="8.1.2.0" />
+    <Assembly Name="Microsoft.IdentityModel.Tokens" Version="8.1.2.0" />
+    <Assembly Name="Microsoft.IdentityModel.Tokens.Saml" Version="8.1.2.0" />
+    <Assembly Name="Microsoft.IdentityModel.Validators" Version="8.1.2.0" />
+    <Assembly Name="Microsoft.IdentityModel.Xml" Version="8.1.2.0" />
+    <Assembly Name="System.IdentityModel.Tokens.Jwt" Version="8.1.2.0" />
   </Assemblies>
   <Namespace Name="Microsoft.IdentityModel.Abstractions">
     <Type Name="Microsoft.IdentityModel.Abstractions.EventLogLevel" Id="T:Microsoft.IdentityModel.Abstractions.EventLogLevel">
@@ -1368,6 +1368,7 @@
       <Member Id="M:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity.#ctor(System.Security.Claims.ClaimsIdentity)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity.#ctor(System.String)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity.#ctor(System.String,System.String,System.String)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity.Clone" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity.FindAll(System.String)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity.FindFirst(System.String)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity.HasClaim(System.String,System.String)" />
@@ -1830,6 +1831,15 @@
       <Member Id="M:Microsoft.IdentityModel.Tokens.SecurityTokenInvalidAudienceException.#ctor(System.String,System.Exception)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.SecurityTokenInvalidAudienceException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.SecurityTokenInvalidAudienceException.InvalidAudience" />
+    </Type>
+    <Type Name="Microsoft.IdentityModel.Tokens.SecurityTokenInvalidCloudInstanceException" Id="T:Microsoft.IdentityModel.Tokens.SecurityTokenInvalidCloudInstanceException">
+      <Member Id="M:Microsoft.IdentityModel.Tokens.SecurityTokenInvalidCloudInstanceException.#ctor" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.SecurityTokenInvalidCloudInstanceException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.SecurityTokenInvalidCloudInstanceException.#ctor(System.String)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.SecurityTokenInvalidCloudInstanceException.#ctor(System.String,System.Exception)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.SecurityTokenInvalidCloudInstanceException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.SecurityTokenInvalidCloudInstanceException.ConfigurationCloudInstanceName" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.SecurityTokenInvalidCloudInstanceException.SigningKeyCloudInstanceName" />
     </Type>
     <Type Name="Microsoft.IdentityModel.Tokens.SecurityTokenInvalidIssuerException" Id="T:Microsoft.IdentityModel.Tokens.SecurityTokenInvalidIssuerException">
       <Member Id="M:Microsoft.IdentityModel.Tokens.SecurityTokenInvalidIssuerException.#ctor" />
@@ -2905,6 +2915,7 @@
     </Type>
     <Type Name="Microsoft.IdentityModel.Validators.AadTokenValidationParametersExtension" Id="T:Microsoft.IdentityModel.Validators.AadTokenValidationParametersExtension">
       <Member Id="M:Microsoft.IdentityModel.Validators.AadTokenValidationParametersExtension.EnableAadSigningKeyIssuerValidation(Microsoft.IdentityModel.Tokens.TokenValidationParameters)" />
+      <Member Id="M:Microsoft.IdentityModel.Validators.AadTokenValidationParametersExtension.EnableEntraIdSigningKeyCloudInstanceValidation(Microsoft.IdentityModel.Tokens.TokenValidationParameters)" />
     </Type>
     <Type Name="Microsoft.IdentityModel.Validators.ProtocolVersion" Id="T:Microsoft.IdentityModel.Validators.ProtocolVersion">
       <Member Id="F:Microsoft.IdentityModel.Validators.ProtocolVersion.V1" />
