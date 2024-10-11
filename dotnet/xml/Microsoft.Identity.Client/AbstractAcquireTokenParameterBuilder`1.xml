@@ -30,6 +30,7 @@
     <AssemblyVersion>4.63.0.0</AssemblyVersion>
     <AssemblyVersion>4.64.0.0</AssemblyVersion>
     <AssemblyVersion>4.64.1.0</AssemblyVersion>
+    <AssemblyVersion>4.65.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeParameters>
     <TypeParameter Name="T">
@@ -63,7 +64,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.64.1.0</AssemblyVersion>
+        <AssemblyVersion>4.65.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -82,7 +83,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.64.1.0</AssemblyVersion>
+        <AssemblyVersion>4.65.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -110,7 +111,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.64.1.0</AssemblyVersion>
+        <AssemblyVersion>4.65.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -153,7 +154,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.64.1.0</AssemblyVersion>
+        <AssemblyVersion>4.65.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -199,7 +200,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.64.1.0</AssemblyVersion>
+        <AssemblyVersion>4.65.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -243,7 +244,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.64.1.0</AssemblyVersion>
+        <AssemblyVersion>4.65.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -288,7 +289,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.64.1.0</AssemblyVersion>
+        <AssemblyVersion>4.65.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -333,7 +334,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.64.1.0</AssemblyVersion>
+        <AssemblyVersion>4.65.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -376,7 +377,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.64.1.0</AssemblyVersion>
+        <AssemblyVersion>4.65.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -424,7 +425,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.64.1.0</AssemblyVersion>
+        <AssemblyVersion>4.65.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -452,7 +453,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.64.1.0</AssemblyVersion>
+        <AssemblyVersion>4.65.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -473,43 +474,15 @@
       </Docs>
     </Member>
     <Member MemberName="WithExtraQueryParameters">
-      <MemberSignature Language="C#" Value="public T WithExtraQueryParameters (System.Collections.Generic.Dictionary&lt;string,string&gt; extraQueryParameters);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !T WithExtraQueryParameters(class System.Collections.Generic.Dictionary`2&lt;string, string&gt; extraQueryParameters) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithExtraQueryParameters(System.Collections.Generic.Dictionary{System.String,System.String})" />
-      <MemberSignature Language="VB.NET" Value="Public Function WithExtraQueryParameters (extraQueryParameters As Dictionary(Of String, String)) As T" />
-      <MemberSignature Language="F#" Value="member this.WithExtraQueryParameters : System.Collections.Generic.Dictionary&lt;string, string&gt; -&gt; 'T" Usage="abstractAcquireTokenParameterBuilder.WithExtraQueryParameters extraQueryParameters" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.64.1.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>T</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="extraQueryParameters" Type="System.Collections.Generic.Dictionary&lt;System.String,System.String&gt;" />
-      </Parameters>
-      <Docs>
-        <param name="extraQueryParameters">This parameter will be appended as is to the query string in the HTTP authentication request to the authority
-            as a string of segments of the form <c>key=value</c> separated by an ampersand character.
-            The parameter can be null.</param>
-        <summary>
-            Sets Extra Query Parameters for the query string in the HTTP authentication request.
-            </summary>
-        <returns>The builder to chain the .With methods.</returns>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="WithExtraQueryParameters">
       <MemberSignature Language="C#" Value="public T WithExtraQueryParameters (string extraQueryParameters);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !T WithExtraQueryParameters(string extraQueryParameters) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithExtraQueryParameters(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function WithExtraQueryParameters (extraQueryParameters As String) As T" />
-      <MemberSignature Language="F#" Value="member this.WithExtraQueryParameters : string -&gt; 'T" Usage="abstractAcquireTokenParameterBuilder.WithExtraQueryParameters extraQueryParameters" />
+      <MemberSignature Language="F#" Value="override this.WithExtraQueryParameters : string -&gt; 'T" Usage="abstractAcquireTokenParameterBuilder.WithExtraQueryParameters extraQueryParameters" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.64.1.0</AssemblyVersion>
+        <AssemblyVersion>4.65.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -537,7 +510,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.64.1.0</AssemblyVersion>
+        <AssemblyVersion>4.65.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -568,7 +541,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.64.1.0</AssemblyVersion>
+        <AssemblyVersion>4.65.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -603,7 +576,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.64.1.0</AssemblyVersion>
+        <AssemblyVersion>4.65.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>

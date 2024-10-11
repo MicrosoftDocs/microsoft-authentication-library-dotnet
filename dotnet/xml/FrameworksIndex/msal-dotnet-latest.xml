@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.Identity.Client.Broker" Version="4.64.1.0" />
-    <Assembly Name="Microsoft.Identity.Client.Desktop" Version="4.64.1.0" />
-    <Assembly Name="Microsoft.Identity.Client" Version="4.64.1.0" />
+    <Assembly Name="Microsoft.Identity.Client.Broker" Version="4.65.0.0" />
+    <Assembly Name="Microsoft.Identity.Client.Desktop" Version="4.65.0.0" />
+    <Assembly Name="Microsoft.Identity.Client" Version="4.65.0.0" />
   </Assemblies>
   <Namespace Name="Microsoft.Identity.Client">
     <Type Name="Microsoft.Identity.Client.AadAuthorityAudience" Id="T:Microsoft.Identity.Client.AadAuthorityAudience">
@@ -25,7 +25,6 @@
       <Member Id="M:Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithAuthority(System.String,System.String,System.Boolean)" />
       <Member Id="M:Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithB2CAuthority(System.String)" />
       <Member Id="M:Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithClaims(System.String)" />
-      <Member Id="M:Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithExtraQueryParameters(System.Collections.Generic.Dictionary{System.String,System.String})" />
       <Member Id="M:Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithExtraQueryParameters(System.String)" />
       <Member Id="M:Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithScopes(System.Collections.Generic.IEnumerable{System.String})" />
       <Member Id="M:Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithTenantId(System.String)" />
@@ -45,8 +44,6 @@
       <Member Id="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithCacheOptions(Microsoft.Identity.Client.CacheOptions)" />
       <Member Id="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithClientCapabilities(System.Collections.Generic.IEnumerable{System.String})" />
       <Member Id="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithClientId(System.String)" />
-      <Member Id="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithClientName(System.String)" />
-      <Member Id="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithClientVersion(System.String)" />
       <Member Id="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithExtraQueryParameters(System.Collections.Generic.IDictionary{System.String,System.String})" />
       <Member Id="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithExtraQueryParameters(System.String)" />
       <Member Id="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithInstanceDicoveryMetadata(System.String)" />
@@ -238,8 +235,11 @@
       <Member Id="M:Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder`1.ExecuteAsync(System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder`1.Validate" />
       <Member Id="M:Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder`1.WithCorrelationId(System.Guid)" />
+      <Member Id="M:Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder`1.WithExtraQueryParameters(System.Collections.Generic.Dictionary{System.String,System.String})" />
     </Type>
     <Type Name="Microsoft.Identity.Client.BaseAbstractApplicationBuilder`1" Id="T:Microsoft.Identity.Client.BaseAbstractApplicationBuilder`1">
+      <Member Id="M:Microsoft.Identity.Client.BaseAbstractApplicationBuilder`1.WithClientName(System.String)" />
+      <Member Id="M:Microsoft.Identity.Client.BaseAbstractApplicationBuilder`1.WithClientVersion(System.String)" />
       <Member Id="M:Microsoft.Identity.Client.BaseAbstractApplicationBuilder`1.WithDebugLoggingCallback(Microsoft.Identity.Client.LogLevel,System.Boolean,System.Boolean)" />
       <Member Id="M:Microsoft.Identity.Client.BaseAbstractApplicationBuilder`1.WithExperimentalFeatures(System.Boolean)" />
       <Member Id="M:Microsoft.Identity.Client.BaseAbstractApplicationBuilder`1.WithHttpClientFactory(Microsoft.Identity.Client.IMsalHttpClientFactory)" />
@@ -1098,6 +1098,7 @@
   <Namespace Name="Microsoft.Identity.Client.Extensibility">
     <Type Name="Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension" Id="T:Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension">
       <Member Id="M:Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.OnBeforeTokenRequest``1(Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder{``0},System.Func{Microsoft.Identity.Client.Extensibility.OnBeforeTokenRequestData,System.Threading.Tasks.Task})" />
+      <Member Id="M:Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.WithAdditionalCacheParameters``1(Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder{``0},System.Collections.Generic.IEnumerable{System.String})" />
       <Member Id="M:Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.WithProofOfPosessionKeyId``1(Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder{``0},System.String,System.String)" />
     </Type>
     <Type Name="Microsoft.Identity.Client.Extensibility.AcquireTokenForClientBuilderExtensions" Id="T:Microsoft.Identity.Client.Extensibility.AcquireTokenForClientBuilderExtensions">

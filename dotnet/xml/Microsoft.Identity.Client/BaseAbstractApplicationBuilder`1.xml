@@ -28,6 +28,7 @@
     <AssemblyVersion>4.63.0.0</AssemblyVersion>
     <AssemblyVersion>4.64.0.0</AssemblyVersion>
     <AssemblyVersion>4.64.1.0</AssemblyVersion>
+    <AssemblyVersion>4.65.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeParameters>
     <TypeParameter Name="T">
@@ -46,6 +47,58 @@
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
+    <Member MemberName="WithClientName">
+      <MemberSignature Language="C#" Value="public T WithClientName (string clientName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !T WithClientName(string clientName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.BaseAbstractApplicationBuilder`1.WithClientName(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithClientName (clientName As String) As T" />
+      <MemberSignature Language="F#" Value="member this.WithClientName : string -&gt; 'T" Usage="baseAbstractApplicationBuilder.WithClientName clientName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.65.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="clientName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="clientName">The name of the SDK API for telemetry purposes.</param>
+        <summary>
+            Sets the name of the calling SDK API for telemetry purposes.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithClientVersion">
+      <MemberSignature Language="C#" Value="public T WithClientVersion (string clientVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !T WithClientVersion(string clientVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.BaseAbstractApplicationBuilder`1.WithClientVersion(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithClientVersion (clientVersion As String) As T" />
+      <MemberSignature Language="F#" Value="member this.WithClientVersion : string -&gt; 'T" Usage="baseAbstractApplicationBuilder.WithClientVersion clientVersion" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.65.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="clientVersion" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="clientVersion">The version of the calling SDK for telemetry purposes.</param>
+        <summary>
+            Sets the version of the calling SDK for telemetry purposes.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="WithDebugLoggingCallback">
       <MemberSignature Language="C#" Value="public T WithDebugLoggingCallback (Microsoft.Identity.Client.LogLevel logLevel = Microsoft.Identity.Client.LogLevel.Info, bool enablePiiLogging = false, bool withDefaultPlatformLoggingEnabled = false);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !T WithDebugLoggingCallback(valuetype Microsoft.Identity.Client.LogLevel logLevel, bool enablePiiLogging, bool withDefaultPlatformLoggingEnabled) cil managed" />
@@ -55,7 +108,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.64.1.0</AssemblyVersion>
+        <AssemblyVersion>4.65.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -96,7 +149,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.64.1.0</AssemblyVersion>
+        <AssemblyVersion>4.65.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -126,7 +179,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.64.1.0</AssemblyVersion>
+        <AssemblyVersion>4.65.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -159,7 +212,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.64.1.0</AssemblyVersion>
+        <AssemblyVersion>4.65.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -196,7 +249,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.64.1.0</AssemblyVersion>
+        <AssemblyVersion>4.65.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -230,7 +283,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.64.1.0</AssemblyVersion>
+        <AssemblyVersion>4.65.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -271,7 +324,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.64.1.0</AssemblyVersion>
+        <AssemblyVersion>4.65.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
