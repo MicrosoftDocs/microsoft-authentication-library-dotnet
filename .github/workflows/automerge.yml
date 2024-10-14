@@ -1,4 +1,4 @@
-name: Daily PR Workflow
+name: Sync CI changes
 
 on:
   schedule:
@@ -13,13 +13,19 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Checkout smoke-test branch
+        run: |
+          git fetch origin smoke-test
+          git checkout smoke-test
 
       - name: Create PR from smoke-test to main
         id: create_pr_smoke_test
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git checkout smoke-test
           git checkout -b pr-smoke-test-to-main
           git push origin pr-smoke-test-to-main
           pr_number=$(gh pr create --base main --head pr-smoke-test-to-main --title "Daily PR from smoke-test to main" --body "Automated PR from smoke-test to main" --json number -q .number)
