@@ -8,6 +8,9 @@ on:
 permissions:
   contents: write
 
+env:
+    GH_TOKEN: ${{ github.token }}
+
 jobs:
   create-and-merge-prs:
     runs-on: ubuntu-latest
