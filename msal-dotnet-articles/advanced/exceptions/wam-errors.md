@@ -29,6 +29,7 @@ The table below highlights some of the most common errors along with potential m
 | 3399614476 | V2Error: invalid_grant AADSTS50078: Presented multi-factor authentication has expired due to policies configured by your administrator, you must refresh your multi-factor authentication to access {API_TARGET}. | Account needs to be configured by the Microsoft Entra administrator with up-to-date MFA settings. |
 | 2148073494 | Keyset does not exist Internal Error Code: 545133655 | |
 | 2148073520 | The device that is required by this cryptographic provider is not ready for use. Internal Error Code: 545133655 | |
+| 80090016 | NTE_BAD_KEYSET | Issue with the device Trusted Platform Module (TPM). Follow [device recovery instructions](/microsoft-365/troubleshoot/authentication/connection-issue-when-sign-in-office-2016#manual-recovery) to get the PC into a good state. |
 
 ## Unlisted errors
 
