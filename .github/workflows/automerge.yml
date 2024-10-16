@@ -1,0 +1,94 @@
+name: Sync API Documentation Changes
+
+on:
+  # schedule:
+  #   - cron: '0 0 * * *'
+  workflow_dispatch:
+
+env:
+  GH_TOKEN: ${{ github.token }}
+
+jobs:
+  create-and-merge-prs:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Checkout smoke-test branch
+        run: |
+          git fetch origin smoke-test
+          git checkout smoke-test
+
+      - name: Create PR from smoke-test to main
+        id: create_pr_smoke_test
+        run: |
+          pr_number=$(gh pr create --base main --head smoke-test --title "Daily PR from smoke-test to main" --body "Automated PR from smoke-test to main" | grep -o '[0-9]*')
+          echo "PR number created: $pr_number"
+          echo "pr_number=$pr_number" >> $GITHUB_ENV
+
+      - name: Wait for PR checks to pass
+        run: |
+          pr_number=${{ env.pr_number }}
+          echo "Waiting for checks on PR #$pr_number to pass"
+          while true; do
+            checks=$(gh pr checks "$pr_number" | grep -o 'successful')
+            if [[ "$checks" == "successful" ]]; then
+              break
+            fi
+            echo "Checks still pending. Waiting..."
+            sleep 60  # Check every minute
+          done
+
+      - name: Merge PR from smoke-test to main
+        run: |
+          pr_number=${{ env.pr_number }}
+          gh pr merge "$pr_number" --merge
+
+      - name: Create PR from main to live
+        id: create_pr_main_live
+        run: |
+          git checkout main
+          git checkout -b pr-main-to-live
+          git push origin pr-main-to-live
+          pr_number_live=$(gh pr create --base live --head pr-main-to-live --title "Daily PR from main to live" --body "Automated PR from main to live" | grep -o '[0-9]*')
+          echo "PR number created for live: $pr_number_live"
+          echo "pr_number_live=$pr_number_live" >> $GITHUB_ENV
+
+      - name: Wait for PR checks to pass for main to live
+        id: wait_for_checks_live
+        run: |
+          pr_number_live=${{ env.pr_number_live }}
+          echo "Waiting for checks on PR #$pr_number_live to pass"
+          while true; do
+            checks_live=$(gh pr checks "$pr_number_live" | grep -o 'successful')
+            if [[ "$checks_live" == "successful" ]]; then
+              break
+            fi
+            echo "Checks still pending. Waiting..."
+            sleep 60  # Check every minute
+          done
+
+      - name: Add label if checks fail for smoke-test to main
+        if: ${{ steps.wait_for_checks.outcome != 'success' }}
+        run: |
+          pr_number=${{ env.pr_number }}
+          echo "Checks failed for PR #$pr_number. Adding 'needs-human-review' label."
+          gh pr edit "$pr_number" --add-label "needs-human-review"
+
+      - name: Merge PR from main to live
+        run: |
+          pr_number_live=${{ env.pr_number_live }}
+          gh pr merge "$pr_number_live" --merge
+
+      - name: Add label if checks fail for main to live
+        if: ${{ steps.wait_for_checks_live.outcome != 'success' }}
+        run: |
+          pr_number_live=${{ env.pr_number_live }}
+          echo "Checks failed for PR #$pr_number_live. Adding 'needs-human-review' label."
+          gh pr edit "$pr_number_live" --add-label "needs-human-review"
