@@ -1,0 +1,175 @@
+<Type Name="IAuthenticationOperation" FullName="Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation">
+  <TypeSignature Language="C#" Value="public interface IAuthenticationOperation" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IAuthenticationOperation" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IAuthenticationOperation" />
+  <TypeSignature Language="F#" Value="type IAuthenticationOperation = interface" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+    <AssemblyVersion>4.66.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Used to modify the experience depending on the type of token asked. 
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AccessTokenType">
+      <MemberSignature Language="C#" Value="public string AccessTokenType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AccessTokenType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation.AccessTokenType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AccessTokenType As String" />
+      <MemberSignature Language="F#" Value="member this.AccessTokenType : string" Usage="Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation.AccessTokenType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.66.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Expected to match the token_type parameter returned by ESTS. Used to disambiguate
+            between ATs of different types (e.g. Bearer and PoP) when loading from cache etc.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthorizationHeaderPrefix">
+      <MemberSignature Language="C#" Value="public string AuthorizationHeaderPrefix { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AuthorizationHeaderPrefix" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation.AuthorizationHeaderPrefix" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AuthorizationHeaderPrefix As String" />
+      <MemberSignature Language="F#" Value="member this.AuthorizationHeaderPrefix : string" Usage="Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation.AuthorizationHeaderPrefix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.66.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Prefix for the HTTP header that has the token. E.g. "Bearer" or "POP"
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormatResult">
+      <MemberSignature Language="C#" Value="public void FormatResult (Microsoft.Identity.Client.AuthenticationResult authenticationResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void FormatResult(class Microsoft.Identity.Client.AuthenticationResult authenticationResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation.FormatResult(Microsoft.Identity.Client.AuthenticationResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub FormatResult (authenticationResult As AuthenticationResult)" />
+      <MemberSignature Language="F#" Value="abstract member FormatResult : Microsoft.Identity.Client.AuthenticationResult -&gt; unit" Usage="iAuthenticationOperation.FormatResult authenticationResult" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.66.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="authenticationResult" Type="Microsoft.Identity.Client.AuthenticationResult" />
+      </Parameters>
+      <Docs>
+        <param name="authenticationResult">To be added.</param>
+        <summary>
+            Creates the access token that goes into an Authorization HTTP header. 
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTokenRequestParams">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; GetTokenRequestParams ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, string&gt; GetTokenRequestParams() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation.GetTokenRequestParams" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetTokenRequestParams () As IReadOnlyDictionary(Of String, String)" />
+      <MemberSignature Language="F#" Value="abstract member GetTokenRequestParams : unit -&gt; System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;" Usage="iAuthenticationOperation.GetTokenRequestParams " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.66.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IReadOnlyDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Extra parameters that are added to the request to the /token endpoint. 
+            </summary>
+        <returns>Name and values of params</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyId">
+      <MemberSignature Language="C#" Value="public string KeyId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string KeyId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation.KeyId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property KeyId As String" />
+      <MemberSignature Language="F#" Value="member this.KeyId : string" Usage="Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation.KeyId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.66.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Key ID of the public / private key pair used by the encryption algorithm, if any. 
+            Tokens obtained by authentication schemes that use this are bound to the KeyId, i.e. 
+            if a different kid is presented, the access token cannot be used.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TelemetryTokenType">
+      <MemberSignature Language="C#" Value="public int TelemetryTokenType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TelemetryTokenType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation.TelemetryTokenType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TelemetryTokenType As Integer" />
+      <MemberSignature Language="F#" Value="member this.TelemetryTokenType : int" Usage="Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation.TelemetryTokenType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.66.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Value to log to telemetry
+             Values available:
+             
+             Bearer token type.
+             Bearer = 1
+             
+             Pop token type.
+             Pop = 2,
+            
+             Ssh-cert token type.
+             SshCert = 3,
+            
+             External token type.
+             External = 4,
+            
+             Extension token type.
+             Extension = 5
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

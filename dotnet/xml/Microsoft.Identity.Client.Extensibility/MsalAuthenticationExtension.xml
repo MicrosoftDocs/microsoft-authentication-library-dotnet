@@ -1,0 +1,106 @@
+<Type Name="MsalAuthenticationExtension" FullName="Microsoft.Identity.Client.Extensibility.MsalAuthenticationExtension">
+  <TypeSignature Language="C#" Value="public class MsalAuthenticationExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MsalAuthenticationExtension extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Client.Extensibility.MsalAuthenticationExtension" />
+  <TypeSignature Language="VB.NET" Value="Public Class MsalAuthenticationExtension" />
+  <TypeSignature Language="F#" Value="type MsalAuthenticationExtension = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+    <AssemblyVersion>4.66.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Enables the extension of the MSAL authentication process by providing a custom authentication operation. 
+            These operations are provided through the implementation of the <see cref="T:Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation" /> interface.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MsalAuthenticationExtension ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.Extensibility.MsalAuthenticationExtension.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.66.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdditionalCacheParameters">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;string&gt; AdditionalCacheParameters { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; AdditionalCacheParameters" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.Extensibility.MsalAuthenticationExtension.AdditionalCacheParameters" />
+      <MemberSignature Language="VB.NET" Value="Public Property AdditionalCacheParameters As IEnumerable(Of String)" />
+      <MemberSignature Language="F#" Value="member this.AdditionalCacheParameters : seq&lt;string&gt; with get, set" Usage="Microsoft.Identity.Client.Extensibility.MsalAuthenticationExtension.AdditionalCacheParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.66.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies additional parameters acquired from authentication responses to be cached.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthenticationOperation">
+      <MemberSignature Language="C#" Value="public Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation AuthenticationOperation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation AuthenticationOperation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.Extensibility.MsalAuthenticationExtension.AuthenticationOperation" />
+      <MemberSignature Language="VB.NET" Value="Public Property AuthenticationOperation As IAuthenticationOperation" />
+      <MemberSignature Language="F#" Value="member this.AuthenticationOperation : Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation with get, set" Usage="Microsoft.Identity.Client.Extensibility.MsalAuthenticationExtension.AuthenticationOperation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.66.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Enables the developer to provide a custom authentication extension.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBeforeTokenRequestHandler">
+      <MemberSignature Language="C#" Value="public Func&lt;Microsoft.Identity.Client.Extensibility.OnBeforeTokenRequestData,System.Threading.Tasks.Task&gt; OnBeforeTokenRequestHandler { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Func`2&lt;class Microsoft.Identity.Client.Extensibility.OnBeforeTokenRequestData, class System.Threading.Tasks.Task&gt; OnBeforeTokenRequestHandler" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.Extensibility.MsalAuthenticationExtension.OnBeforeTokenRequestHandler" />
+      <MemberSignature Language="VB.NET" Value="Public Property OnBeforeTokenRequestHandler As Func(Of OnBeforeTokenRequestData, Task)" />
+      <MemberSignature Language="F#" Value="member this.OnBeforeTokenRequestHandler : Func&lt;Microsoft.Identity.Client.Extensibility.OnBeforeTokenRequestData, System.Threading.Tasks.Task&gt; with get, set" Usage="Microsoft.Identity.Client.Extensibility.MsalAuthenticationExtension.OnBeforeTokenRequestHandler" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.66.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;Microsoft.Identity.Client.Extensibility.OnBeforeTokenRequestData,System.Threading.Tasks.Task&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            A delegate which gets invoked just before MSAL makes a token request.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

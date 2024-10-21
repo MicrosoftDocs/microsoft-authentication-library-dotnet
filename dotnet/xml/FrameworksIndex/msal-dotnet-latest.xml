@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.Identity.Client.Broker" Version="4.65.0.0" />
-    <Assembly Name="Microsoft.Identity.Client.Desktop" Version="4.65.0.0" />
-    <Assembly Name="Microsoft.Identity.Client" Version="4.65.0.0" />
+    <Assembly Name="Microsoft.Identity.Client.Broker" Version="4.66.0.0" />
+    <Assembly Name="Microsoft.Identity.Client.Desktop" Version="4.66.0.0" />
+    <Assembly Name="Microsoft.Identity.Client" Version="4.66.0.0" />
   </Assemblies>
   <Namespace Name="Microsoft.Identity.Client">
     <Type Name="Microsoft.Identity.Client.AadAuthorityAudience" Id="T:Microsoft.Identity.Client.AadAuthorityAudience">
@@ -213,6 +213,7 @@
       <Member Id="M:Microsoft.Identity.Client.AuthenticationResultMetadata.#ctor(Microsoft.Identity.Client.TokenSource)" />
       <Member Id="P:Microsoft.Identity.Client.AuthenticationResultMetadata.CacheLevel" />
       <Member Id="P:Microsoft.Identity.Client.AuthenticationResultMetadata.CacheRefreshReason" />
+      <Member Id="P:Microsoft.Identity.Client.AuthenticationResultMetadata.DurationCreatingExtendedTokenInUs" />
       <Member Id="P:Microsoft.Identity.Client.AuthenticationResultMetadata.DurationInCacheInMs" />
       <Member Id="P:Microsoft.Identity.Client.AuthenticationResultMetadata.DurationInHttpInMs" />
       <Member Id="P:Microsoft.Identity.Client.AuthenticationResultMetadata.DurationTotalInMs" />
@@ -1057,6 +1058,16 @@
       <Member Id="P:Microsoft.Identity.Client.AppConfig.PoPAuthenticationConfiguration.SignHttpRequest" />
     </Type>
   </Namespace>
+  <Namespace Name="Microsoft.Identity.Client.AuthScheme">
+    <Type Name="Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation" Id="T:Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation">
+      <Member Id="M:Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation.FormatResult(Microsoft.Identity.Client.AuthenticationResult)" />
+      <Member Id="M:Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation.GetTokenRequestParams" />
+      <Member Id="P:Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation.AccessTokenType" />
+      <Member Id="P:Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation.AuthorizationHeaderPrefix" />
+      <Member Id="P:Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation.KeyId" />
+      <Member Id="P:Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation.TelemetryTokenType" />
+    </Type>
+  </Namespace>
   <Namespace Name="Microsoft.Identity.Client.AuthScheme.PoP">
     <Type Name="Microsoft.Identity.Client.AuthScheme.PoP.IPoPCryptoProvider" Id="T:Microsoft.Identity.Client.AuthScheme.PoP.IPoPCryptoProvider">
       <Member Id="M:Microsoft.Identity.Client.AuthScheme.PoP.IPoPCryptoProvider.Sign(System.Byte[])" />
@@ -1099,6 +1110,7 @@
     <Type Name="Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension" Id="T:Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension">
       <Member Id="M:Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.OnBeforeTokenRequest``1(Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder{``0},System.Func{Microsoft.Identity.Client.Extensibility.OnBeforeTokenRequestData,System.Threading.Tasks.Task})" />
       <Member Id="M:Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.WithAdditionalCacheParameters``1(Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder{``0},System.Collections.Generic.IEnumerable{System.String})" />
+      <Member Id="M:Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.WithAuthenticationExtension``1(Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder{``0},Microsoft.Identity.Client.Extensibility.MsalAuthenticationExtension)" />
       <Member Id="M:Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.WithProofOfPosessionKeyId``1(Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder{``0},System.String,System.String)" />
     </Type>
     <Type Name="Microsoft.Identity.Client.Extensibility.AcquireTokenForClientBuilderExtensions" Id="T:Microsoft.Identity.Client.Extensibility.AcquireTokenForClientBuilderExtensions">
@@ -1132,6 +1144,12 @@
     </Type>
     <Type Name="Microsoft.Identity.Client.Extensibility.ICustomWebUi" Id="T:Microsoft.Identity.Client.Extensibility.ICustomWebUi">
       <Member Id="M:Microsoft.Identity.Client.Extensibility.ICustomWebUi.AcquireAuthorizationCodeAsync(System.Uri,System.Uri,System.Threading.CancellationToken)" />
+    </Type>
+    <Type Name="Microsoft.Identity.Client.Extensibility.MsalAuthenticationExtension" Id="T:Microsoft.Identity.Client.Extensibility.MsalAuthenticationExtension">
+      <Member Id="M:Microsoft.Identity.Client.Extensibility.MsalAuthenticationExtension.#ctor" />
+      <Member Id="P:Microsoft.Identity.Client.Extensibility.MsalAuthenticationExtension.AdditionalCacheParameters" />
+      <Member Id="P:Microsoft.Identity.Client.Extensibility.MsalAuthenticationExtension.AuthenticationOperation" />
+      <Member Id="P:Microsoft.Identity.Client.Extensibility.MsalAuthenticationExtension.OnBeforeTokenRequestHandler" />
     </Type>
     <Type Name="Microsoft.Identity.Client.Extensibility.OnBeforeTokenRequestData" Id="T:Microsoft.Identity.Client.Extensibility.OnBeforeTokenRequestData">
       <Member Id="M:Microsoft.Identity.Client.Extensibility.OnBeforeTokenRequestData.#ctor(System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IDictionary{System.String,System.String},System.Uri,System.Threading.CancellationToken)" />
