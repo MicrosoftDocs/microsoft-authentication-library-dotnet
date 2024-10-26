@@ -1,0 +1,19 @@
+name: Sync Smoke Test To Main
+description: Creates pull requests on a schedule
+resource: repository
+
+where:
+configuration:
+  resourceManagementConfiguration:
+    scheduledSearches:
+    - description: Push to live branch (scheduled publish)
+      frequencies:
+      - daily:
+          time: 23:00
+      filters: []
+      actions:
+      - createPullRequest:
+          head: smoke-test
+          base: main
+          title: Sync smoke-test to main
+          body: Please don't squash-merge this PR.
