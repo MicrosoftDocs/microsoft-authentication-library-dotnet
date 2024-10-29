@@ -1,4 +1,4 @@
-name: Sync Smoke Test To Main
+name: GitOps.PullRequestIssueManagement - Scheduled PRs
 description: Creates pull requests on a schedule
 resource: repository
 
@@ -6,7 +6,7 @@ where:
 configuration:
   resourceManagementConfiguration:
     scheduledSearches:
-    - description: Push to live branch (scheduled publish)
+    - description: Push to main (scheduled publish)
       frequencies:
       - daily:
           time: 23:00
@@ -16,4 +16,4 @@ configuration:
           head: smoke-test
           base: main
           title: Sync smoke-test to main
-          body: Please don't squash-merge this PR.
+          body: "Please don't squash-merge this PR."
