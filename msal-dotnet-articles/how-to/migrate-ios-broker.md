@@ -35,7 +35,7 @@ Authentication brokers enable the following scenarios:
 
 - Single sign-on (SSO).
 - Device identification, which is required by some [Conditional Access policies](/entra/identity/conditional-access/overview). For more information, see [Device management](/entra/identity/conditional-access/concept-conditional-access-conditions#device-platforms).
-- Application identification verification, which is also required in some enterprise scenarios. For more information, see [Intune mobile application management (MAM)](/intune/mam-faq).
+- Application identification verification, which is also required in some enterprise scenarios. For more information, see [Intune mobile application management (MAM)](/mem/intune/apps/app-management).
 
 ## Migrate from ADAL to MSAL
 
