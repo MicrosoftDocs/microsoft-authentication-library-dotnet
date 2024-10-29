@@ -17,7 +17,9 @@ ms.custom: devx-track-csharp, aaddev, has-adal-ref, devx-track-dotnet
 
 # Migrate public client applications from ADAL.NET to MSAL.NET
 
-This article describes how to migrate a public client application from Azure Active Directory Authentication Library for .NET (ADAL.NET) to Microsoft Authentication Library for .NET (MSAL.NET). Public client applications are desktop apps, including Win32, WPF, and mobile apps, that call another service on the user's behalf. For more information about public client applications, see [Authentication flows and application scenarios](/azure/active-directory/develop/authentication-flows-app-scenarios).
+[!INCLUDE [ADAL migration note](../includes/adal-migration-note.md)]
+
+This article describes how to migrate a public client application from Azure Active Directory Authentication Library for .NET (ADAL.NET) to Microsoft Authentication Library for .NET (MSAL.NET). Public client applications are desktop and mobile applications, including native (Win32) and WPF projects that call another service or API on behalf of a Microsoft Entra ID user. For more information about public client applications, see [Authentication flows and application scenarios](/entra/identity-platform/authentication-flows-app-scenarios).
 
 ## Migration steps
 
@@ -28,18 +30,17 @@ This article describes how to migrate a public client application from Azure Act
    - A `resourceId` string. This variable is the app ID URI of the web API that you want to call.
    - A `clientId` which is the identifier for your application, also known as App ID.
 
-2. After you've identified that you have apps that are using ADAL.NET, install the MSAL.NET NuGet package [Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client) and update your project library references. For more information, see [Install a NuGet package](https://www.bing.com/search?q=install+nuget+package).
+2. After you've identified that you have applications that are using ADAL.NET, install the MSAL.NET NuGet package ([`Microsoft.Identity.Client`](https://www.nuget.org/packages/Microsoft.Identity.Client)) and update your project library references. For more information, see [An introduction to NuGet](/nuget/what-is-nuget).
 
-3. Update the code according to the public client application scenario. Some steps are common and apply across all the public client scenarios. Other steps are unique to each scenario. 
+3. Update the code according to the public client application scenario. Some steps are common and apply across all the public client scenarios. Other steps are unique to each scenario.
 
    The public client scenarios are:
 
-   - [Web Authentication Manager](/azure/active-directory/develop/scenario-desktop-acquire-token-wam) the preferred broker-based authentication on Windows.
-   - [Interactive authentication](/azure/active-directory/develop/scenario-desktop-acquire-token-interactive) where the user is shown a web-based interface to complete the sign-in process.
-   - [Integrated Windows authentication](/azure/active-directory/develop/scenario-desktop-acquire-token-integrated-windows-authentication) where a user signs using the same identity they used to sign into a Windows domain (for domain-joined or Microsoft Entra joined machines).
-   - [Username/password](/azure/active-directory/develop/scenario-desktop-acquire-token-username-password) where the sign-in occurs by providing a username/password credential. Microsoft does not recommend the username and password flow because the application will be asking a user for their password directly, which is an insecure pattern.
-   - [Device code flow](/azure/active-directory/develop/scenario-desktop-acquire-token-device-code-flow) where a device of limited UX shows you a device code to complete the authentication flow on an alternate device.
-
+   - [Web Account Manager](../acquiring-tokens/desktop-mobile/wam.md), the preferred authentication approach for Windows applications, using the authentication broker component.
+   - [Interactive authentication](../acquiring-tokens/desktop-mobile/acquiring-tokens-interactively.md), where the user is shown a web-based interface to complete the sign-in process.
+   - [Integrated Windows Authentication (IWA)](../acquiring-tokens/desktop-mobile/integrated-windows-authentication.md), where a user signs in using the same identity they signed into a Windows domain (for domain-joined or Microsoft Entra ID joined machines).
+   - [Username/password](../acquiring-tokens/desktop-mobile/username-password-authentication.md), where the sign-in occurs by providing a username/password credential. **Microsoft does not recommend the username and password flow** because the application will be asking a user for their password directly, which is an insecure pattern.
+   - [Device code flow](../acquiring-tokens/desktop-mobile/device-code-flow.md), where a device with limited UX capabilities shows the consumer a device code to complete the authentication flow on an alternative device.
 
 ## [Interactive](#tab/interactive)
 
@@ -48,14 +49,15 @@ Interactive scenarios are where your public client application shows a login use
 #### Find out if your code uses interactive scenarios
 
 The ADAL code for your app in a public client application that uses interactive authentication instantiates `AuthenticationContext` and includes a call to `AcquireTokenAsync`, with the following parameters.
- - A `clientId` which is a GUID representing your application registration
- - A `resourceUrl` which indicates the resource you are asking the token for
- - A URI that is the reply URL
- - A `PlatformParameters` object. 
 
- #### Update the code for interactive scenarios
+- A `clientId` which is a GUID representing your application registration.
+- A `resourceUrl` which indicates the resource you are asking the token for.
+- A URI that is the reply URL.
+- A `PlatformParameters` object.
 
- [!INCLUDE [Common steps](../includes/msal-net-adoption-steps-public-clients.md)]
+#### Update the code for interactive scenarios
+
+[!INCLUDE [Common steps](../includes/msal-net-adoption-steps-public-clients.md)]
 
 In this case, we replace the call to `AuthenticationContext.AcquireTokenAsync` with a call to `IPublicClientApplication.AcquireTokenInteractive`.
 
@@ -71,7 +73,7 @@ Here's a comparison of ADAL.NET and MSAL.NET code for interactive scenarios:
 :::row-end:::
 :::row:::
 :::column span="":::
-      
+
 ```csharp
 var ac = new AuthenticationContext("https://login.microsoftonline.com/<tenantId>");
 AuthenticationResult result;
@@ -80,48 +82,64 @@ result = await ac.AcquireTokenAsync("<clientId>",
                                     new Uri("https://ClientReplyUrl"),
                                     new PlatformParameters(PromptBehavior.Auto));
 ```
-:::column-end:::   
+
+:::column-end:::
 :::column span="":::
+
 ```csharp
-// 1. Configuration - read below about redirect URI
-var pca = PublicClientApplicationBuilder.Create("client_id")
-              .WithBroker()
-              .Build();
+var scopes = new[] { "User.Read" };
 
-// Add a token cache, see https://learn.microsoft.com/azure/active-directory/develop/msal-net-token-cache-serialization?tabs=desktop
+BrokerOptions options = new BrokerOptions(BrokerOptions.OperatingSystems.Windows);
+options.Title = "My Awesome Application";
 
-// 2. GetAccounts
-var accounts = await pca.GetAccountsAsync();
-var accountToLogin = // choose an account, or null, or use PublicClientApplication.OperatingSystemAccount for the default OS account
+IPublicClientApplication app =
+    PublicClientApplicationBuilder.Create("YOUR_CLIENT_ID")
+    .WithDefaultRedirectUri()
+    .WithParentActivityOrWindow(GetConsoleOrTerminalWindow)
+    .WithBroker(options)
+    .Build();
+
+AuthenticationResult result = null;
+
+// Try to use the previously signed-in account from the cache
+IEnumerable<IAccount> accounts = await app.GetAccountsAsync();
+IAccount existingAccount = accounts.FirstOrDefault();
 
 try
-{
-    // 3. AcquireTokenSilent 
-    var authResult = await pca.AcquireTokenSilent(new[] { "User.Read" }, accountToLogin)
-                              .ExecuteAsync();
+{    
+    if (existingAccount != null)
+    {
+        result = await app.AcquireTokenSilent(scopes, existingAccount).ExecuteAsync();
+    }
+    // Next, try to sign in silently with the account that the user is signed into Windows
+    else
+    {    
+        result = await app.AcquireTokenSilent(scopes, PublicClientApplication.OperatingSystemAccount)
+                            .ExecuteAsync();
+    }
 }
-catch (MsalUiRequiredException) // no change in the pattern
+// Can't get a token silently, go interactive
+catch (MsalUiRequiredException ex)
 {
-    // 4. Specific: Switch to the UI thread for next call . Not required for console apps.
-    await SwitchToUiThreadAsync(); // not actual code, this is different on each platform / tech
-
-    // 5. AcquireTokenInteractive
-    var authResult = await pca.AcquireTokenInteractive(new[] { "User.Read" })
-                              .WithAccount(accountToLogin)  // this already exists in MSAL, but it is more important for WAM
-                              .WithParentActivityOrWindow(myWindowHandle) // to be able to parent WAM's windows to your app (optional, but highly recommended)
-                              .ExecuteAsync();
+    result = await app.AcquireTokenInteractive(scopes).ExecuteAsync();
 }
 ```
+
    :::column-end:::
 :::row-end:::
 
-The MSAL code shown above uses WAM (Web authentication manager) which is the recommended approach. If you wish to use interactive authentication without WAM, see [Interactive Authentication](/azure/active-directory/develop/scenario-desktop-acquire-token-interactive).
+The MSAL code shown above uses WAM (Web Account Manager) which is the recommended approach for authenticating users on Windows. If you wish to use interactive authentication without WAM, see [Interactive Authentication](../acquiring-tokens/desktop-mobile/acquiring-tokens-interactively.md).
 
-## [Integrated Windows authentication](#tab/iwa)
+Refer to the [Using MSAL.NET with Web Account Manager (WAM)](../acquiring-tokens/desktop-mobile/wam.md) document for additional requirements to configure your application to use WAM.
 
-Integrated Windows authentication is where your public client application signs in using the same identity they used to sign into a Windows domain (for domain-joined or Microsoft Entra joined machines).
+>[!NOTE]
+>WAM is only available on Windows. If you are building a cross-platform application, you need to make sure that you have a fallback to [interactive authentication without WAM](../acquiring-tokens/desktop-mobile/acquiring-tokens-interactively.md).
 
-#### Find out if your code uses integrated Windows authentication
+## [Integrated Windows Authentication (IWA)](#tab/iwa)
+
+Integrated Windows Authentication enables your public client application to sign a user in using the same identity they used to sign into a Windows domain (for domain-joined or Microsoft Entra joined machines).
+
+#### Find out if your code uses Integrated Windows Authentication
 
 The ADAL code for your app uses integrated Windows authentication scenarios if it contains a call to `AcquireTokenAsync` available as an extension method of the `AuthenticationContextIntegratedAuthExtensions` class, with the following parameters:
 
@@ -129,13 +147,13 @@ The ADAL code for your app uses integrated Windows authentication scenarios if i
 - A `clientId` which is a GUID representing your application registration
 - A `UserCredential` object that represents the user you are trying to request the token for.
 
-#### Update the code for integrated Windows authentication scenarios
+#### Update the code for Integrated Windows Authentication scenarios
 
- [!INCLUDE [Common steps](../includes/msal-net-adoption-steps-public-clients.md)]
+[!INCLUDE [Common steps](../includes/msal-net-adoption-steps-public-clients.md)]
 
 In this case, we replace the call to `AuthenticationContext.AcquireTokenAsync` with a call to `IPublicClientApplication.AcquireTokenByIntegratedWindowsAuth`.
 
-Here's a comparison of ADAL.NET and MSAL.NET code for integrated Windows authentication scenarios:
+Here's a comparison of ADAL.NET and MSAL.NET code for integrated Windows Authentication scenarios:
 
 :::row:::
 :::column span="":::
@@ -147,15 +165,17 @@ Here's a comparison of ADAL.NET and MSAL.NET code for integrated Windows authent
 :::row-end:::
 :::row:::
 :::column span="":::
-      
+
 ```csharp
 var ac = new AuthenticationContext("https://login.microsoftonline.com/<tenantId>");
 AuthenticationResult result;
 result = await context.AcquireTokenAsync(resource, clientId,
                                          new UserCredential("john@contoso.com"));
 ```
-:::column-end:::   
+
+:::column-end:::
 :::column span="":::
+
 ```csharp
  string authority = "https://login.microsoftonline.com/contoso.com";
  string[] scopes = new string[] { "user.read" };
@@ -226,19 +246,23 @@ result = await context.AcquireTokenAsync(resource, clientId,
  Console.WriteLine(result.Account.Username);
 }
 ```
+
    :::column-end:::
 :::row-end:::
 
-## [Username Password](#tab/up)
+## [Username and password](#tab/up)
 
-Username Password authentication is where the sign-in occurs by providing a username/password credential. Microsoft does not recommend this flow because it presents security risks that are not present in other flows.If you're using the username and password flow in production, we recommend switching to other secure alternatives available for your scenario.
+Username and password authentication is where the sign-in occurs by providing a username and password credential directly to the application.
 
-#### Find out if your code uses Username Password authentication
+>[!WARNING]
+>**Microsoft does not recommend this flow because it presents security risks that are not present in other flows**. If you're using the username and password flow in production, we recommend switching to other, more secure alternatives outlined in this article.
 
-The ADAL code for your app uses Username password authentication scenarios if it contains a call to `AcquireTokenAsync` available as an extension method of the `AuthenticationContextIntegratedAuthExtensions` class, with the following parameters:
+#### Find out if your code uses username and password authentication
 
-- A `resource` which represents the resource you are asking the token for
-- A `clientId` which is a GUID representing your application registration
+The ADAL code for your app uses username password authentication scenarios if it contains a call to `AcquireTokenAsync` available as an extension method of the `AuthenticationContextIntegratedAuthExtensions` class, with the following parameters:
+
+- A `resource` which represents the resource you are asking the token for.
+- A `clientId` which is a GUID representing your application registration.
 - A `UserPasswordCredential` object that contains the username and password for the user you are trying to request the token for.
 
 #### Update the code for username password auth scenarios
@@ -247,7 +271,7 @@ In this case, we replace the call to `AuthenticationContext.AcquireTokenAsync` w
 
 Here's a comparison of ADAL.NET and MSAL.NET code for username password scenarios:
 
- [!INCLUDE [Common steps](../includes/msal-net-adoption-steps-public-clients.md)]
+[!INCLUDE [Common steps](../includes/msal-net-adoption-steps-public-clients.md)]
 
 :::row:::
 :::column span="":::
@@ -259,7 +283,7 @@ Here's a comparison of ADAL.NET and MSAL.NET code for username password scenario
 :::row-end:::
 :::row:::
 :::column span="":::
-      
+
 ```csharp
 var ac = new AuthenticationContext("https://login.microsoftonline.com/<tenantId>");
 AuthenticationResult result;
@@ -268,8 +292,10 @@ result = await context.AcquireTokenAsync(
    new UserPasswordCredential("john@contoso.com", johnsPassword));
 
 ```
-:::column-end:::   
+
+:::column-end:::
 :::column span="":::
+
 ```csharp
  string authority = "https://login.microsoftonline.com/contoso.com";
  string[] scopes = new string[] { "user.read" };
@@ -305,16 +331,18 @@ result = await context.AcquireTokenAsync(
  }
  Console.WriteLine(result.Account.Username);
 ```
+
    :::column-end:::
 :::row-end:::
 
-## [Device Code](#tab/devicecode)
+## [Device code](#tab/devicecode)
 
-Device code flow authentication is where a device of limited UX shows you a device code to complete the authentication flow on an alternate device.
+Device code flow authentication is where a device with limited UX shows you a device code to complete the authentication flow on an alternative device.
 
-#### Find out if your code uses Device code flow authentication
+#### Find out if your code uses device code flow authentication
 
 The ADAL code for your app uses device code flow scenarios if it contains a call to `AuthenticationContext.AcquireTokenByDeviceCodeAsync` with the following parameters:
+
 - A `DeviceCodeResult` object instance, which is instantiated with the `resourceID` of the resource you are asking for a token for, and a `clientId` which is the GUID that represents your application.
 
 #### Update the code for device code flow scenarios
@@ -335,7 +363,7 @@ Here's a comparison of ADAL.NET and MSAL.NET code for device code flow scenarios
 :::row-end:::
 :::row:::
 :::column span="":::
-      
+
 ```csharp
 static async Task<AuthenticationResult> GetTokenViaCode(AuthenticationContext ctx)
 {
@@ -366,8 +394,10 @@ static async Task<AuthenticationResult> GetTokenViaCode(AuthenticationContext ct
 }
 
 ```
-:::column-end:::   
+
+:::column-end:::
 :::column span="":::
+
 ```csharp
 private const string ClientId = "<client_guid>";
 private const string Authority = "https://login.microsoftonline.com/contoso.com";
@@ -456,27 +486,24 @@ private static async Task<AuthenticationResult> AcquireByDeviceCodeAsync(IPublic
     }
 }
 ```
+
    :::column-end:::
 :::row-end:::
 
 ---
+
 ### MSAL benefits
 
-Key benefits of MSAL.NET for your app include:
-
-- **Resilience**. MSAL.NET helps make your app resilient through the following:
-
-   - Microsoft Entra ID Cached Credential Service (CCS) benefits. CCS operates as a Microsoft Entra backup.
-   - Proactive renewal of tokens if the API that you call enables long-lived tokens through [continuous access evaluation](/azure/active-directory/develop/app-resilience-continuous-access-evaluation).
+Learn about MSAL library benefits in the [Migrate applications to the Microsoft Authentication Library (MSAL)](/entra/identity-platform/msal-migration) article.
 
 ### Troubleshooting
 
-The following troubleshooting information makes two assumptions: 
+The following troubleshooting information makes two assumptions:
 
 - Your ADAL.NET code was working.
 - You migrated to MSAL by keeping the same client ID.
 
-If you get an exception with either of the following messages: 
+If you get an exception with the following message:
 
 > `AADSTS90002: Tenant 'aaaabbbb-0000-cccc-1111-dddd2222eeee' not found. This may happen if there are no active`
 > `subscriptions for the tenant. Check to make sure you have the correct tenant ID. Check with your subscription`
@@ -485,9 +512,9 @@ If you get an exception with either of the following messages:
 You can troubleshoot the exception by using these steps:
 
 1. Confirm that you're using the latest version of MSAL.NET.
-1. Confirm that the authority host that you set when building the confidential client application and the authority host that you used with ADAL are similar. In particular, is it the same [cloud](/azure/active-directory/develop/msal-national-cloud) (Azure Government, Microsoft Azure operated by 21Vianet, or Azure Germany)?
+1. Confirm that the authority host that you set when building the confidential client application and the authority host that you used with ADAL are similar. In particular, is it the same [cloud](/entra/identity-platform/msal-national-cloud) (Azure Government, Microsoft Azure operated by 21Vianet, or Azure Germany)?
 
 ## Next steps
 
-Learn more about the [differences between ADAL.NET and MSAL.NET apps](differences-adal-msal-net.md).
-Learn more about [token cache serialization in MSAL.NET](token-cache-serialization.md)
+- Learn more about the [differences between ADAL.NET and MSAL.NET apps](differences-adal-msal-net.md).
+- Learn more about [token cache serialization in MSAL.NET](token-cache-serialization.md).
