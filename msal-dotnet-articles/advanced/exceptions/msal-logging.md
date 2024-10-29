@@ -73,7 +73,7 @@ namespace Microsoft.IdentityModel.Abstractions
 ```
 
 > [!NOTE]
-> Partner libraries (`Microsoft.Identity.Web`, `Microsoft.IdentityModel`) already provide implementations of this interface for various environments (in particular ASP.NET Core).
+> Higher-level libraries (`Microsoft.Identity.Web`, `Microsoft.IdentityModel`) already provide implementations of this interface for various environments (in particular ASP.NET Core).
 
 ### IIdentityLogger implementation
 
@@ -90,49 +90,49 @@ See <xref:Microsoft.IdentityModel.Abstractions.EventLogLevel> for details on the
 Example:
 
 ```csharp
-    class MyIdentityLogger : IIdentityLogger
+class MyIdentityLogger : IIdentityLogger
+{
+    public EventLogLevel MinLogLevel { get; }
+
+    public MyIdentityLogger()
     {
-        public EventLogLevel MinLogLevel { get; }
+        //Retrieve the log level from an environment variable
+        var msalEnvLogLevel = Environment.GetEnvironmentVariable("MSAL_LOG_LEVEL");
 
-        public MyIdentityLogger()
+        if (Enum.TryParse(msalEnvLogLevel, out EventLogLevel msalLogLevel))
         {
-            //Retrieve the log level from an environment variable
-            var msalEnvLogLevel = Environment.GetEnvironmentVariable("MSAL_LOG_LEVEL");
-
-            if (Enum.TryParse(msalEnvLogLevel, out EventLogLevel msalLogLevel))
-            {
-                MinLogLevel = msalLogLevel;
-            }
-            else
-            {
-                //Recommended default log level
-                MinLogLevel = EventLogLevel.Informational;
-            }
+            MinLogLevel = msalLogLevel;
         }
-
-        public bool IsEnabled(EventLogLevel eventLogLevel)
+        else
         {
-            return eventLogLevel <= MinLogLevel;
-        }
-
-        public void Log(LogEntry entry)
-        {
-            //Log Message here:
-            Console.WriteLine(entry.Message);
+            //Recommended default log level
+            MinLogLevel = EventLogLevel.Informational;
         }
     }
+
+    public bool IsEnabled(EventLogLevel eventLogLevel)
+    {
+        return eventLogLevel <= MinLogLevel;
+    }
+
+    public void Log(LogEntry entry)
+    {
+        //Log Message here:
+        Console.WriteLine(entry.Message);
+    }
+}
 ```
 
 Using `MyIdentityLogger`:
 
 ```csharp
-    MyIdentityLogger myLogger = new MyIdentityLogger(logLevel);
+MyIdentityLogger myLogger = new MyIdentityLogger();
 
-    var app = ConfidentialClientApplicationBuilder
-        .Create(TestConstants.ClientId)
-        .WithClientSecret("secret")
-        .WithLogging(myLogger, enablePiiLogging)
-        .Build();
+var app = ConfidentialClientApplicationBuilder
+    .Create(TestConstants.ClientId)
+    .WithClientSecret("secret")
+    .WithLogging(myLogger, enablePiiLogging)
+    .Build();
 ```
 
 ## Logging in a distributed token cache
