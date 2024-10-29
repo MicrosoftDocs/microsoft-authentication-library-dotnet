@@ -496,6 +496,8 @@ private static async Task<AuthenticationResult> AcquireByDeviceCodeAsync(IPublic
 
 Learn about MSAL library benefits in the [Migrate applications to the Microsoft Authentication Library (MSAL)](/entra/identity-platform/msal-migration) article.
 
+[!INCLUDE [importance-of-logging](../includes/importance-of-logging.md)]
+
 ### Troubleshooting
 
 The following troubleshooting information makes two assumptions:
