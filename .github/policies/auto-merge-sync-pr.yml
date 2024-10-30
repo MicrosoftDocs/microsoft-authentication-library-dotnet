@@ -34,11 +34,11 @@ configuration:
             branch: live
         - isActivitySender:
             user: microsoft-github-policy-service[bot]
-        - approvePullRequest:
-            comment: "Approved; this PR will merge when all status checks pass."
       then:
         - enableAutoMerge:
             mergeMethod: Merge
+        - approvePullRequest:
+            comment: "Approved; this PR will merge when all status checks pass."
 
     - description: Don't auto-merge PRs with 'auto-merge' label removed
       if:
