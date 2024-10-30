@@ -1,0 +1,29 @@
+<Type Name="BeforeTokenAcquisitionForApp" FullName="Microsoft.Identity.Web.BeforeTokenAcquisitionForApp">
+  <TypeSignature Language="C#" Value="public delegate void BeforeTokenAcquisitionForApp(AcquireTokenForClientParameterBuilder builder, AcquireTokenOptions? acquireTokenOptions);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BeforeTokenAcquisitionForApp extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Web.BeforeTokenAcquisitionForApp" />
+  <TypeSignature Language="VB.NET" Value="Public Delegate Sub BeforeTokenAcquisitionForApp(builder As AcquireTokenForClientParameterBuilder, acquireTokenOptions As AcquireTokenOptions)" />
+  <TypeSignature Language="F#" Value="type BeforeTokenAcquisitionForApp = delegate of AcquireTokenForClientParameterBuilder * AcquireTokenOptions -&gt; unit" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+    <AssemblyVersion>3.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="builder" Type="Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder" />
+    <Parameter Name="acquireTokenOptions" Type="Microsoft.Identity.Abstractions.AcquireTokenOptions" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="builder">Builder</param>
+    <param name="acquireTokenOptions">Token acquisition options for the request. Can be null.</param>
+    <summary>
+            Signature for token acquisition extensions that act on the request builder, for an app token
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

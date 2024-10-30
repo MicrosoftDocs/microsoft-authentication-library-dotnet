@@ -43,6 +43,7 @@
     <AssemblyVersion>3.2.0.0</AssemblyVersion>
     <AssemblyVersion>3.2.1.0</AssemblyVersion>
     <AssemblyVersion>3.2.2.0</AssemblyVersion>
+    <AssemblyVersion>3.3.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Identity.Web.DefaultCredentialsLoader</BaseTypeName>
@@ -78,7 +79,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-        <AssemblyVersion>3.2.2.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -97,7 +98,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-        <AssemblyVersion>3.2.2.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="logger" Type="Microsoft.Extensions.Logging.ILogger&lt;Microsoft.Identity.Web.DefaultCertificateLoader&gt;" />
@@ -119,7 +120,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-        <AssemblyVersion>3.2.2.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Security.Cryptography.X509Certificates.X509Certificate2&gt;</ReturnType>
@@ -145,10 +146,36 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-        <AssemblyVersion>3.2.2.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate2</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="certificateDescriptions" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Identity.Web.CertificateDescription&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="certificateDescriptions">Description of the certificates.</param>
+        <summary>
+            Load the first certificate from the certificate description list.
+            </summary>
+        <returns>First certificate in the certificate description list.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadFirstCertificateAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Security.Cryptography.X509Certificates.X509Certificate2?&gt; LoadFirstCertificateAsync (System.Collections.Generic.IEnumerable&lt;Microsoft.Identity.Web.CertificateDescription&gt; certificateDescriptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Security.Cryptography.X509Certificates.X509Certificate2&gt; LoadFirstCertificateAsync(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Identity.Web.CertificateDescription&gt; certificateDescriptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.DefaultCertificateLoader.LoadFirstCertificateAsync(System.Collections.Generic.IEnumerable{Microsoft.Identity.Web.CertificateDescription})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function LoadFirstCertificateAsync (certificateDescriptions As IEnumerable(Of CertificateDescription)) As Task(Of X509Certificate2)" />
+      <MemberSignature Language="F#" Value="static member LoadFirstCertificateAsync : seq&lt;Microsoft.Identity.Web.CertificateDescription&gt; -&gt; System.Threading.Tasks.Task&lt;System.Security.Cryptography.X509Certificates.X509Certificate2&gt;" Usage="Microsoft.Identity.Web.DefaultCertificateLoader.LoadFirstCertificateAsync certificateDescriptions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Security.Cryptography.X509Certificates.X509Certificate2&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="certificateDescriptions" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Identity.Web.CertificateDescription&gt;" />
@@ -174,7 +201,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-        <AssemblyVersion>3.2.2.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -190,6 +217,32 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="LoadIfNeededAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task LoadIfNeededAsync (Microsoft.Identity.Web.CertificateDescription certificateDescription);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task LoadIfNeededAsync(class Microsoft.Identity.Web.CertificateDescription certificateDescription) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.DefaultCertificateLoader.LoadIfNeededAsync(Microsoft.Identity.Web.CertificateDescription)" />
+      <MemberSignature Language="VB.NET" Value="Public Function LoadIfNeededAsync (certificateDescription As CertificateDescription) As Task" />
+      <MemberSignature Language="F#" Value="member this.LoadIfNeededAsync : Microsoft.Identity.Web.CertificateDescription -&gt; System.Threading.Tasks.Task" Usage="defaultCertificateLoader.LoadIfNeededAsync certificateDescription" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="certificateDescription" Type="Microsoft.Identity.Web.CertificateDescription" />
+      </Parameters>
+      <Docs>
+        <param name="certificateDescription">Description of the certificate.</param>
+        <summary>
+            Load the certificate from the description, if needed.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="ResetCertificates">
       <MemberSignature Language="C#" Value="public static void ResetCertificates (System.Collections.Generic.IEnumerable&lt;Microsoft.Identity.Abstractions.CredentialDescription&gt;? credentialDescription);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ResetCertificates(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Identity.Abstractions.CredentialDescription&gt; credentialDescription) cil managed" />
@@ -199,7 +252,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-        <AssemblyVersion>3.2.2.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -225,7 +278,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-        <AssemblyVersion>3.2.2.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -251,7 +304,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-        <AssemblyVersion>3.2.2.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
