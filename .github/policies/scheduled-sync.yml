@@ -6,14 +6,18 @@ where:
 configuration:
   resourceManagementConfiguration:
     scheduledSearches:
-    - description: Push to main (scheduled publish)
+    - description: Push to main (scheduled sync)
       frequencies:
       - daily:
-          time: 23:00
+          time: 1:00
+      - daily:
+          time: 9:00
+      - daily:
+          time: 17:00
       filters: []
       actions:
       - createPullRequest:
           head: smoke-test
           base: main
-          title: Sync smoke-test to main
-          body: "Please don't squash-merge this PR."
+          title: Merge smoke-test into main
+          body: Please don't squash-merge this PR.
