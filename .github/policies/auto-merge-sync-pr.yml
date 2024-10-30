@@ -16,9 +16,8 @@ configuration:
             label: ':octocat: auto-merge'
         - targetsBranch:
             branch: main
-        - or:
-            - isActivitySender:
-                user: microsoft-github-policy-service[bot]
+        - isActivitySender:
+            user: microsoft-github-policy-service[bot]
       then:
         - enableAutoMerge:
             mergeMethod: Squash
@@ -35,6 +34,8 @@ configuration:
             branch: live
         - isActivitySender:
             user: microsoft-github-policy-service[bot]
+        - approvePullRequest:
+            comment: "Approved; this PR will merge when all status checks pass."
       then:
         - enableAutoMerge:
             mergeMethod: Merge
