@@ -16,8 +16,9 @@ configuration:
             label: ':octocat: auto-merge'
         - targetsBranch:
             branch: main
-        - isActivitySender:
-            user: microsoft-github-policy-service[bot]
+        - or:
+            - isActivitySender:
+                user: microsoft-github-policy-service[bot]
       then:
         - enableAutoMerge:
             mergeMethod: Squash
@@ -32,8 +33,9 @@ configuration:
             label: ':octocat: auto-merge'
         - targetsBranch:
             branch: live
-        - isActivitySender:
-            user: microsoft-github-policy-service[bot]
+        - or:
+            - isActivitySender:
+                user: microsoft-github-policy-service[bot]
       then:
         - enableAutoMerge:
             mergeMethod: Merge
