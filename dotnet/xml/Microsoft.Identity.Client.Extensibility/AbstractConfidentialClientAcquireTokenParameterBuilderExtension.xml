@@ -31,6 +31,8 @@
     <AssemblyVersion>4.64.0.0</AssemblyVersion>
     <AssemblyVersion>4.64.1.0</AssemblyVersion>
     <AssemblyVersion>4.65.0.0</AssemblyVersion>
+    <AssemblyVersion>4.66.0.0</AssemblyVersion>
+    <AssemblyVersion>4.66.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -52,7 +54,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.65.0.0</AssemblyVersion>
+        <AssemblyVersion>4.66.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt;</ReturnType>
@@ -88,7 +90,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.65.0.0</AssemblyVersion>
+        <AssemblyVersion>4.66.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt;</ReturnType>
@@ -116,6 +118,42 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="WithAuthenticationExtension&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt; WithAuthenticationExtension&lt;T&gt; (this Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt; builder, Microsoft.Identity.Client.Extensibility.MsalAuthenticationExtension authenticationExtension) where T : Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt;;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1&lt;!!T&gt; WithAuthenticationExtension&lt;(class Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1&lt;!!T&gt;) T&gt;(class Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1&lt;!!T&gt; builder, class Microsoft.Identity.Client.Extensibility.MsalAuthenticationExtension authenticationExtension) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.WithAuthenticationExtension``1(Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder{``0},Microsoft.Identity.Client.Extensibility.MsalAuthenticationExtension)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function WithAuthenticationExtension(Of T As AbstractAcquireTokenParameterBuilder(Of T)) (builder As AbstractAcquireTokenParameterBuilder(Of T), authenticationExtension As MsalAuthenticationExtension) As AbstractAcquireTokenParameterBuilder(Of T)" />
+      <MemberSignature Language="F#" Value="static member WithAuthenticationExtension : Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;'T (requires 'T :&gt; Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;'T&gt;)&gt; * Microsoft.Identity.Client.Extensibility.MsalAuthenticationExtension -&gt; Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;'T (requires 'T :&gt; Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;'T&gt;)&gt; (requires 'T :&gt; Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;'T&gt;)" Usage="Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.WithAuthenticationExtension (builder, authenticationExtension)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.66.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <BaseTypeName>Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt;</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="builder" Type="Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt;" RefType="this" />
+        <Parameter Name="authenticationExtension" Type="Microsoft.Identity.Client.Extensibility.MsalAuthenticationExtension" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">To be added.</typeparam>
+        <param name="builder">The builder to chain options to</param>
+        <param name="authenticationExtension">The implementation of the authentication operation.</param>
+        <summary>
+            Enables client applications to provide a custom authentication operation to be used in the token acquisition request.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="WithProofOfPosessionKeyId&lt;T&gt;">
       <MemberSignature Language="C#" Value="public static Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt; WithProofOfPosessionKeyId&lt;T&gt; (this Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt; builder, string keyId, string expectedTokenTypeFromAad = &quot;Bearer&quot;) where T : Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt;;" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1&lt;!!T&gt; WithProofOfPosessionKeyId&lt;(class Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1&lt;!!T&gt;) T&gt;(class Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1&lt;!!T&gt; builder, string keyId, string expectedTokenTypeFromAad) cil managed" />
@@ -125,7 +163,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.65.0.0</AssemblyVersion>
+        <AssemblyVersion>4.66.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt;</ReturnType>
