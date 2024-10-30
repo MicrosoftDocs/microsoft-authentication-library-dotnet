@@ -38,7 +38,7 @@ WAM support is split across two packages:
 After referencing the relevant packages, call [`WithBroker(BrokerOptions)`](xref:Microsoft.Identity.Client.Desktop.WamExtension.WithBroker*) with broker configuration options and [a window handle](#parent-window-handles) that the broker will be bound to.
 
 >[!NOTE]
->Most apps need to reference the [`Microsoft.Identity.Client.Broker`](https://www.nuget.org/packages/Microsoft.Identity.Client.Broker/) package to use this integration. .NET MAUI applications don't need to add the dependency because the functionality is embedded into MSAL.
+>Most apps need to reference the [`Microsoft.Identity.Client.Broker`](https://www.nuget.org/packages/Microsoft.Identity.Client.Broker/) package to use this integration. Make sure that you add a `using Microsoft.Identity.Client.Broker;` statement to your application code to be able to use the right [`WithBroker`](xref:Microsoft.Identity.Client.Desktop.WamExtension.WithBroker*) overload. .NET MAUI applications don't need to add the dependency because the functionality is embedded into MSAL.
 
 ```csharp
 var scopes = new[] { "User.Read" };
