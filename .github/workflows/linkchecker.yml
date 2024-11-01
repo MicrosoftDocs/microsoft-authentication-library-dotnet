@@ -22,7 +22,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
         with:
-          args: --accept=200,429,403 --verbose --exclude-file .lycheeignore --no-progress './**/*.md' --exclude-mail
+          args: --accept=200,429,403 --verbose --no-progress './**/*.md'
           fail: true
 
       - name: Create Issue From File
