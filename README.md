@@ -1,12 +1,14 @@
 # Microsoft Authentication Library for .NET
 
+[![Validate existing links](https://github.com/MicrosoftDocs/microsoft-authentication-library-dotnet/actions/workflows/linkchecker.yml/badge.svg)](https://github.com/MicrosoftDocs/microsoft-authentication-library-dotnet/actions/workflows/linkchecker.yml)
+
 This is the **documentation repository** for Microsoft Authentication Library (MSAL) for .NET.
 
 | Resource                     | Location   |
 |:-----------------------------|:-----------|
-| 👋 **SDK Repository**           | [`AzureAD/microsoft-authentication-library-for-dotnet`](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet) |
-| 👋 **SDK Package**              | [`Microsoft.Identity.Client`](https://www.nuget.org/packages/Microsoft.Identity.Client/) |
-| 👋 **SDK Documentation**        | [MSAL.NET on Microsoft Learn](https://learn.microsoft.com/entra/msal/dotnet/) |
+| ✅ **SDK Repository**           | [`AzureAD/microsoft-authentication-library-for-dotnet`](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet) |
+| ✅ **SDK Package**              | [`Microsoft.Identity.Client`](https://www.nuget.org/packages/Microsoft.Identity.Client/) |
+| ✅ **SDK Documentation**        | [MSAL.NET on Microsoft Learn](https://learn.microsoft.com/entra/msal/dotnet/) |
 | 🔒 **SDK Documentation CI Job** | [Azure Pipelines](https://apidrop.visualstudio.com/Content%20CI/_build?definitionId=5311) |
 
 ## Contributions
