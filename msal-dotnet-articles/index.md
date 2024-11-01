@@ -16,6 +16,8 @@ ms.custom: devx-track-csharp, aaddev
 
 # Microsoft Authentication Library for .NET
 
+TEST - THIS WILL NOT BE MERGED.
+
 MSAL.NET ([Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client)) is an authentication library that enables you to acquire tokens from Microsoft Entra ID to access protected web APIs (Microsoft APIs or applications registered with Microsoft Entra ID).
 
 MSAL.NET is available on several .NET platforms (desktop, mobile, and web).
