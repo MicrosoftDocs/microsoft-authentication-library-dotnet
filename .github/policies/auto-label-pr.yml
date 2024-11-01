@@ -22,10 +22,10 @@ configuration:
       then:
       - addLabel:
           label: ':octocat: auto-merge'
+      - approvePullRequest:
+          comment: "Automatic approval for sync PR. Change can be merged once all checks pass."
       - enableAutoMerge:
           mergeMethod: Squash
-      - approvePullRequest:
-          comment: "Approved; this PR will merge when all status checks pass."
     - description: Label publish PRs from the microsoft-github-policy-service bot
       triggerOnOwnActions: true
       if:
@@ -40,7 +40,7 @@ configuration:
       then:
       - addLabel:
           label: ':octocat: auto-merge'
+      - approvePullRequest:
+          comment: "Automatic approval for sync PR. Change can be merged once all checks pass."
       - enableAutoMerge:
           mergeMethod: Squash
-      - approvePullRequest:
-          comment: "Approved; this PR will merge when all status checks pass."
