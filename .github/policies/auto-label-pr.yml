@@ -24,6 +24,8 @@ configuration:
           label: ':octocat: auto-merge'
       - enableAutoMerge:
           mergeMethod: Squash
+      - approvePullRequest:
+          comment: ':shipit:'
     - description: Label publish PRs from the microsoft-github-policy-service bot
       triggerOnOwnActions: true
       if:
@@ -40,3 +42,5 @@ configuration:
           label: ':octocat: auto-merge'
       - enableAutoMerge:
           mergeMethod: Squash
+      - approvePullRequest:
+          comment: ':shipit:'
