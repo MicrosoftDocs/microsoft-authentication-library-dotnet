@@ -6,18 +6,36 @@ where:
 configuration:
   resourceManagementConfiguration:
     scheduledSearches:
-    - description: Push to main (scheduled sync)
+    - description: Push to live branch (scheduled 11AM PT publish)
       frequencies:
       - daily:
-          time: 1:00
-      - daily:
-          time: 9:00
-      - daily:
-          time: 17:00
+          time: 18:00
       filters: []
       actions:
       - createPullRequest:
           head: main
           base: live
           title: Merge main into live
-          body: Please don't squash-merge this PR.
+          body: Automated merge of the main branch into live, syncing documentation content to the production environment.
+    - description: Push to live branch (scheduled 6PM PT publish)
+      frequencies:
+      - daily:
+          time: 2:00
+      filters: []
+      actions:
+      - createPullRequest:
+          head: main
+          base: live
+          title: Merge main into live
+          body: Automated merge of the main branch into live, syncing documentation content to the production environment.
+    - description: Push to live branch (scheduled 2AM PT publish)
+      frequencies:
+      - daily:
+          time: 10:00
+      filters: []
+      actions:
+      - createPullRequest:
+          head: main
+          base: live
+          title: Merge main into live
+          body: Automated merge of the main branch into live, syncing documentation content to the production environment.
