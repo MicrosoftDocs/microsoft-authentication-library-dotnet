@@ -1,0 +1,46 @@
+id:
+name: GitOps.PullRequestIssueManagement
+description: GitOps.PullRequestIssueManagement primitive
+owner:
+resource: repository
+disabled: false
+where:
+configuration:
+  resourceManagementConfiguration:
+    eventResponderTasks:
+    - description: Sync API documentation to staging environment.
+      triggerOnOwnActions: true
+      if:
+      - payloadType: Pull_Request
+      - isAction:
+          action: Opened
+      - isActivitySender:
+          user: microsoft-github-policy-service[bot]
+      - titleContains:
+          pattern: Merge smoke-test into main
+          isRegex: False
+      then:
+      - addLabel:
+          label: ':octocat: auto-merge'
+      - enableAutoMerge:
+          mergeMethod: Squash
+      - approvePullRequest:
+          comment: ':shipit:'
+    - description: Sync staging environment to production.
+      triggerOnOwnActions: true
+      if:
+      - payloadType: Pull_Request
+      - isAction:
+          action: Opened
+      - isActivitySender:
+          user: microsoft-github-policy-service[bot]
+      - titleContains:
+          pattern: Merge main into live
+          isRegex: False
+      then:
+      - addLabel:
+          label: ':octocat: auto-merge'
+      - enableAutoMerge:
+          mergeMethod: Merge
+      - approvePullRequest:
+          comment: ':shipit:'
