@@ -6,14 +6,43 @@ where:
 configuration:
   resourceManagementConfiguration:
     scheduledSearches:
-    - description: Push to main (scheduled sync)
+    - description: Push to main branch (scheduled 10AM PT publish)
+      frequencies:
+      - daily:
+          time: 17:00
+      filters: []
+      actions:
+      - createPullRequest:
+          head: smoke-test
+          base: main
+          title: Merge smoke-test into main
+          body: Please don't squash-merge this PR.
+    - description: Push to main branch (scheduled 1:30PM PT publish)
+      frequencies:
+      - daily:
+          time: 20:30
+      filters: []
+      actions:
+      - createPullRequest:
+          head: smoke-test
+          base: main
+          title: Merge smoke-test into main
+          body: Please don't squash-merge this PR.
+    - description: Push to main branch (scheduled 5PM PT publish)
       frequencies:
       - daily:
           time: 1:00
+      filters: []
+      actions:
+      - createPullRequest:
+          head: smoke-test
+          base: main
+          title: Merge smoke-test into main
+          body: Please don't squash-merge this PR.
+    - description: Push to main branch (scheduled 1AM PT publish)
+      frequencies:
       - daily:
           time: 9:00
-      - daily:
-          time: 17:00
       filters: []
       actions:
       - createPullRequest:
