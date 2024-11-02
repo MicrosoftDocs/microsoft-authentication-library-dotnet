@@ -1,4 +1,4 @@
-# Microsoft Authentication Library for .NET
+# Microsoft Authentication Library for .NET test
 
 [![Validate existing links](https://github.com/MicrosoftDocs/microsoft-authentication-library-dotnet/actions/workflows/linkchecker.yml/badge.svg)](https://github.com/MicrosoftDocs/microsoft-authentication-library-dotnet/actions/workflows/linkchecker.yml)
 
