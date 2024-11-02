@@ -16,8 +16,9 @@ configuration:
           head: main
           base: live
           title: Merge main into live
-          body: Automated merge of the main branch into live, syncing documentation content to the production environment.
-    - description: Push to live branch (scheduled 6PM PT publish)
+          body: Automated merge of the main branch into live.
+
+    - description: Push to live branch (scheduled 7PM PT publish)
       frequencies:
       - daily:
           time: 2:00
@@ -27,8 +28,9 @@ configuration:
           head: main
           base: live
           title: Merge main into live
-          body: Automated merge of the main branch into live, syncing documentation content to the production environment.
-    - description: Push to live branch (scheduled 2AM PT publish)
+          body: Automated merge of the main branch into live.
+
+    - description: Push to live branch (scheduled 3AM PT publish)
       frequencies:
       - daily:
           time: 10:00
@@ -38,4 +40,4 @@ configuration:
           head: main
           base: live
           title: Merge main into live
-          body: Automated merge of the main branch into live, syncing documentation content to the production environment.
+          body: Automated merge of the main branch into live.
