@@ -8,7 +8,7 @@ where:
 configuration:
   resourceManagementConfiguration:
     eventResponderTasks:
-    - description: Sync API documentation to staging environment.
+    - description: Sync API docs to staging
       triggerOnOwnActions: true
       if:
       - payloadType: Pull_Request
@@ -26,7 +26,7 @@ configuration:
           mergeMethod: Squash
       - approvePullRequest:
           comment: ':shipit:'
-    - description: Sync staging environment to production.
+    - description: Sync staging to production
       triggerOnOwnActions: true
       if:
       - payloadType: Pull_Request
