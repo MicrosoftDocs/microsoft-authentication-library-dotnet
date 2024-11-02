@@ -22,10 +22,7 @@ configuration:
       then:
       - addLabel:
           label: ':octocat: auto-merge'
-      - enableAutoMerge:
-          mergeMethod: Squash
-      - approvePullRequest:
-          comment: ':shipit:'
+
     - description: Sync staging to production
       triggerOnOwnActions: true
       if:
@@ -40,7 +37,3 @@ configuration:
       then:
       - addLabel:
           label: ':octocat: auto-merge'
-      - enableAutoMerge:
-          mergeMethod: Merge
-      - approvePullRequest:
-          comment: ':shipit:'
