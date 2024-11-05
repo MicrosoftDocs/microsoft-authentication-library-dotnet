@@ -23,9 +23,9 @@ MSAL.NET enables the development of confidential client applications with the he
 
 Refer to [Token acquisition](/entra/msal/dotnet/acquiring-tokens/overview) for more details.
 
-- [PublicClientApplication](xref:Microsoft.Identity.Client.PublicClientApplication)
-- [ConfidentialClientApplication](xref:Microsoft.Identity.Client.ConfidentialClientApplication)
-- [ManagedIdentityApplication](xref:Microsoft.Identity.Client.ManagedIdentityApplication)
+- [`PublicClientApplication`](xref:Microsoft.Identity.Client.PublicClientApplication)
+- [`ConfidentialClientApplication`](xref:Microsoft.Identity.Client.ConfidentialClientApplication)
+- [`ManagedIdentityApplication`](xref:Microsoft.Identity.Client.ManagedIdentityApplication)
 
 ## Resources
 

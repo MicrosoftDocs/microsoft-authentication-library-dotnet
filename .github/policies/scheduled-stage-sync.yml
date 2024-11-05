@@ -1,0 +1,43 @@
+name: GitOps.PullRequestIssueManagement - Scheduled PRs
+description: Creates pull requests on a schedule
+resource: repository
+
+where:
+configuration:
+  resourceManagementConfiguration:
+    scheduledSearches:
+    - description: Push to main branch (scheduled 10AM PT publish)
+      frequencies:
+      - daily:
+          time: 17:00
+      filters: []
+      actions:
+      - createPullRequest:
+          head: smoke-test
+          base: main
+          title: Merge smoke-test into main
+          body: Automated merge of the smoke-test branch into main.
+
+    - description: Push to main branch (scheduled 6PM PT publish)
+      frequencies:
+      - daily:
+          time: 1:00
+      filters: []
+      actions:
+      - createPullRequest:
+          head: smoke-test
+          base: main
+          title: Merge smoke-test into main
+          body: Automated merge of the smoke-test branch into main.
+
+    - description: Push to main branch (scheduled 2AM PT publish)
+      frequencies:
+      - daily:
+          time: 9:00
+      filters: []
+      actions:
+      - createPullRequest:
+          head: smoke-test
+          base: main
+          title: Merge smoke-test into main
+          body: Automated merge of the smoke-test branch into main.
