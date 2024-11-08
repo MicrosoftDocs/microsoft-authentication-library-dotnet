@@ -184,7 +184,7 @@ If you are updating MSAL.NET to 4.51.0+, there is a chance that `InitiateLongRun
 
 - Web APIs expose scopes. For more information, see [Quickstart: Configure an application to expose web APIs (Preview)](/azure/active-directory/develop/quickstart-configure-app-expose-web-apis).
 
-- Web APIs decide which version of the token they want to accept. For your own web API, you can change the property in the manifest named `accessTokenAcceptedVersion` (to 1 or 2). If in doubt, choose version 2. For more information, see [Microsoft Entra app manifest](/azure/active-directory/develop/reference-app-manifest).
+- Web APIs decide which version of the token they want to accept. For your own web API, you can change the property in the manifest named `accessTokenAcceptedVersion` (to `1` or `2`). Unless you explicitly know that you need version `1`, always choose `2`. For more information, see [Microsoft Entra app manifest](/entra/identity-platform/reference-app-manifest).
 
 ## Practical usage of OBO in an ASP.NET / ASP.NET Core application
 
