@@ -2,17 +2,17 @@
 <Framework Name="msal-model-dotnet-latest">
   <Assemblies>
     <Assembly Name="Microsoft.Identity.Abstractions" Version="7.2.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.Azure" Version="3.3.1.0" />
-    <Assembly Name="Microsoft.Identity.Web.Certificate" Version="3.3.1.0" />
-    <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="3.3.1.0" />
-    <Assembly Name="Microsoft.Identity.Web" Version="3.3.1.0" />
+    <Assembly Name="Microsoft.Identity.Web.Azure" Version="3.4.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.Certificate" Version="3.4.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="3.4.0.0" />
+    <Assembly Name="Microsoft.Identity.Web" Version="3.4.0.0" />
     <Assembly Name="Microsoft.Identity.Web.DownstreamRestApi" Version="2.0.8.0" />
-    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraph" Version="3.3.1.0" />
-    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraphBeta" Version="3.3.1.0" />
-    <Assembly Name="Microsoft.Identity.Web.OWIN" Version="3.3.1.0" />
-    <Assembly Name="Microsoft.Identity.Web.TokenAcquisition" Version="3.3.1.0" />
-    <Assembly Name="Microsoft.Identity.Web.TokenCache" Version="3.3.1.0" />
-    <Assembly Name="Microsoft.Identity.Web.UI" Version="3.3.1.0" />
+    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraph" Version="3.4.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraphBeta" Version="3.4.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.OWIN" Version="3.4.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.TokenAcquisition" Version="3.4.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.TokenCache" Version="3.4.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.UI" Version="3.4.0.0" />
   </Assemblies>
   <Namespace Name="Microsoft.Identity.Abstractions">
     <Type Name="Microsoft.Identity.Abstractions.AcquireTokenOptions" Id="T:Microsoft.Identity.Abstractions.AcquireTokenOptions">
@@ -283,6 +283,7 @@
       <Member Id="M:Microsoft.Identity.Web.BaseRequestExtensions.WithUser``1(``0,System.Security.Claims.ClaimsPrincipal)" />
     </Type>
     <Type Name="Microsoft.Identity.Web.BeforeTokenAcquisitionForApp" Id="T:Microsoft.Identity.Web.BeforeTokenAcquisitionForApp" />
+    <Type Name="Microsoft.Identity.Web.BeforeTokenAcquisitionForTestUser" Id="T:Microsoft.Identity.Web.BeforeTokenAcquisitionForTestUser" />
     <Type Name="Microsoft.Identity.Web.CertificateDescription" Id="T:Microsoft.Identity.Web.CertificateDescription">
       <Member Id="M:Microsoft.Identity.Web.CertificateDescription.#ctor" />
       <Member Id="M:Microsoft.Identity.Web.CertificateDescription.#ctor(Microsoft.Identity.Abstractions.CredentialDescription)" />
@@ -317,6 +318,7 @@
       <Member Id="F:Microsoft.Identity.Web.ClaimConstants.NameIdentifierId" />
       <Member Id="F:Microsoft.Identity.Web.ClaimConstants.ObjectId" />
       <Member Id="F:Microsoft.Identity.Web.ClaimConstants.Oid" />
+      <Member Id="F:Microsoft.Identity.Web.ClaimConstants.Password" />
       <Member Id="F:Microsoft.Identity.Web.ClaimConstants.PreferredUserName" />
       <Member Id="F:Microsoft.Identity.Web.ClaimConstants.Role" />
       <Member Id="F:Microsoft.Identity.Web.ClaimConstants.Roles" />
@@ -329,6 +331,7 @@
       <Member Id="F:Microsoft.Identity.Web.ClaimConstants.UniqueObjectIdentifier" />
       <Member Id="F:Microsoft.Identity.Web.ClaimConstants.UniqueTenantIdentifier" />
       <Member Id="F:Microsoft.Identity.Web.ClaimConstants.UserFlow" />
+      <Member Id="F:Microsoft.Identity.Web.ClaimConstants.Username" />
     </Type>
     <Type Name="Microsoft.Identity.Web.ClaimsPrincipalExtensions" Id="T:Microsoft.Identity.Web.ClaimsPrincipalExtensions">
       <Member Id="M:Microsoft.Identity.Web.ClaimsPrincipalExtensions.GetDisplayName(System.Security.Claims.ClaimsPrincipal)" />
@@ -345,6 +348,7 @@
     <Type Name="Microsoft.Identity.Web.ClaimsPrincipalFactory" Id="T:Microsoft.Identity.Web.ClaimsPrincipalFactory">
       <Member Id="M:Microsoft.Identity.Web.ClaimsPrincipalFactory.FromHomeTenantIdAndHomeObjectId(System.String,System.String)" />
       <Member Id="M:Microsoft.Identity.Web.ClaimsPrincipalFactory.FromTenantIdAndObjectId(System.String,System.String)" />
+      <Member Id="M:Microsoft.Identity.Web.ClaimsPrincipalFactory.FromUsernamePassword(System.String,System.String)" />
     </Type>
     <Type Name="Microsoft.Identity.Web.ClientAssertion" Id="T:Microsoft.Identity.Web.ClientAssertion">
       <Member Id="M:Microsoft.Identity.Web.ClientAssertion.#ctor(System.String,System.Nullable{System.DateTimeOffset})" />
@@ -680,6 +684,7 @@
     </Type>
     <Type Name="Microsoft.Identity.Web.TokenAcquisitionExtensionOptions" Id="T:Microsoft.Identity.Web.TokenAcquisitionExtensionOptions">
       <Member Id="E:Microsoft.Identity.Web.TokenAcquisitionExtensionOptions.OnBeforeTokenAcquisitionForApp" />
+      <Member Id="E:Microsoft.Identity.Web.TokenAcquisitionExtensionOptions.OnBeforeTokenAcquisitionForTestUser" />
       <Member Id="M:Microsoft.Identity.Web.TokenAcquisitionExtensionOptions.#ctor" />
     </Type>
     <Type Name="Microsoft.Identity.Web.TokenAcquisitionOptions" Id="T:Microsoft.Identity.Web.TokenAcquisitionOptions">
