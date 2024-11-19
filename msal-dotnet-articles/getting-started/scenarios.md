@@ -54,7 +54,7 @@ To enable this interaction, MSAL.NET leverages a [web browser](/azure/active-dir
 
 #### Protecting the app itself with Intune
 
-Your mobile app (written in Xamarin.iOS or Xamarin.Android) can have app protection policies applied to it, so that it can be [managed by InTune](/intune/app-sdk) and recognized by Intune as a managed app. The [InTune SDK](/intune/app-sdk-get-started) is separate from MSAL, and it talks to Microsoft Entra ID on its own.
+Your mobile app (written in Xamarin.iOS or Xamarin.Android) can have app protection policies applied to it, so that it can be [managed by InTune](/mem/intune/developer/app-sdk) and recognized by Intune as a managed app. The [InTune SDK](/mem/intune/developer/app-sdk-get-started) is separate from MSAL, and it talks to Microsoft Entra ID on its own.
 
 ### Desktop or service daemon app that calls a web API as itself (in its own name)
 
