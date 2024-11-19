@@ -180,11 +180,11 @@ Starting with MSAL 4.51.0, to remove cached tokens call `StopLongRunningProcessI
 
 If you are updating MSAL.NET to 4.51.0+, there is a chance that `InitiateLongRunningProcessInWebApi` will stop returning tokens and throw an exception if you are relying upon it to return tokens to you after the long-running process is already initiated and there is a token in the cache for the specified cache key. `InitiateLongRunningProcessInWebApi` no longer inspects the cache to acquire tokens. Please use `AcquireTokenInLongRunningProcess` to continue to access the currently active long-running process.  The `InitiateLongRunningProcessInWebApi` should only be used to initiate the process. If it is not possible to make these changes quickly, and you are updating to MSAL 4.54.1 or higher, you can use `InitiateLongRunningProcessInWebApi().WithSearchInCacheForLongRunningProcess()` to revert the behavior of `InitiateLongRunningProcessInWebApi`
 
-## App registration - specificities for Web APIs
+## App registration changes
 
 - Web APIs expose scopes. For more information, see [Quickstart: Configure an application to expose web APIs (Preview)](/azure/active-directory/develop/quickstart-configure-app-expose-web-apis).
 
-- Web APIs decide which version of the token they want to accept. For your own web API, you can change the property in the manifest named `accessTokenAcceptedVersion` (to 1 or 2). For more information, see [Microsoft Entra app manifest](/azure/active-directory/develop/reference-app-manifest).
+- Web APIs decide which version of the token they want to accept. For your own web API, you can change the property in the manifest named `accessTokenAcceptedVersion` (to `1` or `2`). Unless you explicitly know that you need version `1`, always choose `2`. For more information, see [Microsoft Entra app manifest](/entra/identity-platform/reference-app-manifest).
 
 ## Practical usage of OBO in an ASP.NET / ASP.NET Core application
 
