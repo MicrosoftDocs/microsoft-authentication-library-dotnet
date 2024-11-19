@@ -40,6 +40,7 @@
     <AssemblyVersion>3.2.2.0</AssemblyVersion>
     <AssemblyVersion>3.3.0.0</AssemblyVersion>
     <AssemblyVersion>3.3.1.0</AssemblyVersion>
+    <AssemblyVersion>3.4.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -61,7 +62,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>3.3.1.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Claims.ClaimsPrincipal</ReturnType>
@@ -107,7 +108,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>3.3.1.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Claims.ClaimsPrincipal</ReturnType>
@@ -142,6 +143,35 @@
               }
              </code>
         </example>
+      </Docs>
+    </Member>
+    <Member MemberName="FromUsernamePassword">
+      <MemberSignature Language="C#" Value="public static System.Security.Claims.ClaimsPrincipal FromUsernamePassword (string username, string password);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Claims.ClaimsPrincipal FromUsernamePassword(string username, string password) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.ClaimsPrincipalFactory.FromUsernamePassword(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FromUsernamePassword (username As String, password As String) As ClaimsPrincipal" />
+      <MemberSignature Language="F#" Value="static member FromUsernamePassword : string * string -&gt; System.Security.Claims.ClaimsPrincipal" Usage="Microsoft.Identity.Web.ClaimsPrincipalFactory.FromUsernamePassword (username, password)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web</AssemblyName>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Claims.ClaimsPrincipal</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="username" Type="System.String" />
+        <Parameter Name="password" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="username">UPN of the user for example username@domain.</param>
+        <param name="password">Password for the user.</param>
+        <summary>
+            Instantiate a <see cref="T:System.Security.Claims.ClaimsPrincipal" /> from a username and password.
+            This can be used for ROPC flow for testing purposes.
+            </summary>
+        <returns>A <see cref="T:System.Security.Claims.ClaimsPrincipal" /> containing these two claims.</returns>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
   </Members>

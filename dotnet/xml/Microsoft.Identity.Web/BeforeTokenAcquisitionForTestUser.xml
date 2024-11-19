@@ -1,0 +1,31 @@
+<Type Name="BeforeTokenAcquisitionForTestUser" FullName="Microsoft.Identity.Web.BeforeTokenAcquisitionForTestUser">
+  <TypeSignature Language="C#" Value="public delegate void BeforeTokenAcquisitionForTestUser(AcquireTokenByUsernameAndPasswordConfidentialParameterBuilder builder, AcquireTokenOptions? acquireTokenOptions, ClaimsPrincipal user);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BeforeTokenAcquisitionForTestUser extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Web.BeforeTokenAcquisitionForTestUser" />
+  <TypeSignature Language="VB.NET" Value="Public Delegate Sub BeforeTokenAcquisitionForTestUser(builder As AcquireTokenByUsernameAndPasswordConfidentialParameterBuilder, acquireTokenOptions As AcquireTokenOptions, user As ClaimsPrincipal)" />
+  <TypeSignature Language="F#" Value="type BeforeTokenAcquisitionForTestUser = delegate of AcquireTokenByUsernameAndPasswordConfidentialParameterBuilder * AcquireTokenOptions * ClaimsPrincipal -&gt; unit" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+    <AssemblyVersion>3.4.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="builder" Type="Microsoft.Identity.Client.AcquireTokenByUsernameAndPasswordConfidentialParameterBuilder" />
+    <Parameter Name="acquireTokenOptions" Type="Microsoft.Identity.Abstractions.AcquireTokenOptions" />
+    <Parameter Name="user" Type="System.Security.Claims.ClaimsPrincipal" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="builder">Builder</param>
+    <param name="acquireTokenOptions">Token acquisition options for the request. Can be null.</param>
+    <param name="user">User claims.</param>
+    <summary>
+            Signature for token acquisition extensions that act on the request builder, for ROPC flow.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>
