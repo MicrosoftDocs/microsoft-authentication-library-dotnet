@@ -7,11 +7,13 @@ description: "Microsoft Entra ID throttles applications when you call the authen
 
 ## Server throttling
 
-Microsoft Entra ID throttles applications when you call the authentication API too frequently. Most often this happens when token caching is not used because:
+Microsoft Entra ID throttles applications when you call the authentication API too frequently. Most often this happens when **token caching** is misused:
 
-1. Token caching is not setup correctly (see [Token cache serialization](/azure/active-directory/develop/msal-net-token-cache-serialization)).
-2. Not calling <xref:Microsoft.Identity.Client.ClientApplicationBase.AcquireTokenSilent(System.Collections.Generic.IEnumerable{System.String},System.String)> before calling <xref:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenInteractive(System.Collections.Generic.IEnumerable{System.String})>, <xref:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenByUsernamePassword(System.Collections.Generic.IEnumerable{System.String},System.String,System.String)>.
-3. If you are asking for a scope which does not apply to Microsoft Account (MSA) users, such as `User.ReadBasic.All`, resulting in cache misses.
+1. The most common cause is not setting up token caching correctly (see [Token cache serialization](/azure/active-directory/develop/msal-net-token-cache-serialization)).
+2. Or you are not calling <xref:Microsoft.Identity.Client.ClientApplicationBase.AcquireTokenSilent(System.Collections.Generic.IEnumerable{System.String},System.String)> before calling <xref:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenInteractive(System.Collections.Generic.IEnumerable{System.String})> or
+<xref:Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenByAuthorizationCode(System.Collections.Generic.IEnumerable{System.String}, string)> or
+<xref:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenByUsernamePassword(System.Collections.Generic.IEnumerable{System.String},System.String,System.String)>.
+3. It can also happen in the rare case where an application asks for a scope which does not apply to Microsoft Account (MSA) users, such as `User.ReadBasic.All`. This results in token cache misses.
 
 The server signals throttling in two ways:
 
