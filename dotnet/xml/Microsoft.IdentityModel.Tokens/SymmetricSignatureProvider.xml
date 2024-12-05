@@ -37,6 +37,7 @@
     <AssemblyVersion>8.1.2.0</AssemblyVersion>
     <AssemblyVersion>8.2.0.0</AssemblyVersion>
     <AssemblyVersion>8.2.1.0</AssemblyVersion>
+    <AssemblyVersion>8.3.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.IdentityModel.Tokens.SignatureProvider</BaseTypeName>
@@ -58,7 +59,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.2.1.0</AssemblyVersion>
+        <AssemblyVersion>8.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="key" Type="Microsoft.IdentityModel.Tokens.SecurityKey" />
@@ -85,7 +86,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.2.1.0</AssemblyVersion>
+        <AssemblyVersion>8.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="key" Type="Microsoft.IdentityModel.Tokens.SecurityKey" />
@@ -114,7 +115,7 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.2.1.0</AssemblyVersion>
+        <AssemblyVersion>8.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -135,7 +136,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.2.1.0</AssemblyVersion>
+        <AssemblyVersion>8.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -160,7 +161,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.2.1.0</AssemblyVersion>
+        <AssemblyVersion>8.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -191,7 +192,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.2.1.0</AssemblyVersion>
+        <AssemblyVersion>8.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Cryptography.KeyedHashAlgorithm</ReturnType>
@@ -207,7 +208,7 @@
             Returns a <see cref="T:System.Security.Cryptography.KeyedHashAlgorithm" />.
             This method is called just before a cryptographic operation.
             This provides the opportunity to obtain the <see cref="T:System.Security.Cryptography.KeyedHashAlgorithm" /> from an object pool.
-            If this method is overridden, it is importont to override <see cref="M:Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.ReleaseKeyedHashAlgorithm(System.Security.Cryptography.KeyedHashAlgorithm)" />
+            If this method is overridden, it is important to override <see cref="M:Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.ReleaseKeyedHashAlgorithm(System.Security.Cryptography.KeyedHashAlgorithm)" />
             if custom releasing of the <see cref="T:System.Security.Cryptography.KeyedHashAlgorithm" /> is desired.
             </summary>
         <returns>An instance of <see cref="T:System.Security.Cryptography.KeyedHashAlgorithm" /></returns>
@@ -223,7 +224,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.2.1.0</AssemblyVersion>
+        <AssemblyVersion>8.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -246,7 +247,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.2.1.0</AssemblyVersion>
+        <AssemblyVersion>8.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -273,7 +274,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.2.1.0</AssemblyVersion>
+        <AssemblyVersion>8.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -284,7 +285,8 @@
       <Docs>
         <param name="input">The bytes to sign.</param>
         <summary>
-            Produces a signature over the 'input' using the <see cref="T:Microsoft.IdentityModel.Tokens.SymmetricSecurityKey" /> and 'algorithm' passed to <see cref="M:Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.#ctor(Microsoft.IdentityModel.Tokens.SecurityKey,System.String)" />.
+            Produces a signature over the 'input' using the <see cref="T:Microsoft.IdentityModel.Tokens.SymmetricSecurityKey" /> and 'algorithm'
+            passed to <see cref="M:Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.#ctor(Microsoft.IdentityModel.Tokens.SecurityKey,System.String)" />.
             </summary>
         <returns>Signed bytes</returns>
         <remarks>Sign is thread safe.</remarks>
@@ -293,7 +295,8 @@
         <exception cref="T:System.ObjectDisposedException">
           <see cref="M:Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Dispose(System.Boolean)" /> has been called.</exception>
         <exception cref="T:System.InvalidOperationException">
-          <see cref="T:System.Security.Cryptography.KeyedHashAlgorithm" /> is null. This can occur if a derived type deletes it or does not create it.</exception>
+          <see cref="T:System.Security.Cryptography.KeyedHashAlgorithm" /> is null.
+            This can occur if a derived type deletes it or does not create it.</exception>
       </Docs>
     </Member>
     <Member MemberName="Sign">
@@ -305,7 +308,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.2.1.0</AssemblyVersion>
+        <AssemblyVersion>8.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -334,7 +337,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.2.1.0</AssemblyVersion>
+        <AssemblyVersion>8.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -363,7 +366,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.2.1.0</AssemblyVersion>
+        <AssemblyVersion>8.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -376,7 +379,8 @@
         <param name="input">The bytes to verify.</param>
         <param name="signature">signature to compare against.</param>
         <summary>
-            Verifies that a signature created over the 'input' matches the signature. Using <see cref="T:Microsoft.IdentityModel.Tokens.SymmetricSecurityKey" /> and 'algorithm' passed to <see cref="M:Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.#ctor(Microsoft.IdentityModel.Tokens.SecurityKey,System.String)" />.
+            Verifies that a signature created over the 'input' matches the signature. Using <see cref="T:Microsoft.IdentityModel.Tokens.SymmetricSecurityKey" /> and 'algorithm'
+            passed to <see cref="M:Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.#ctor(Microsoft.IdentityModel.Tokens.SecurityKey,System.String)" />.
             </summary>
         <returns>true if computed signature matches the signature parameter, false otherwise.</returns>
         <remarks>Verify is thread safe.</remarks>
@@ -384,7 +388,8 @@
         <exception cref="T:System.ArgumentException">'signature.Length' == 0. </exception>
         <exception cref="T:System.ObjectDisposedException">
           <see cref="M:Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Dispose(System.Boolean)" /> has been called.</exception>
-        <exception cref="T:System.InvalidOperationException">If the internal <see cref="T:System.Security.Cryptography.KeyedHashAlgorithm" /> is null. This can occur if a derived type deletes it or does not create it.</exception>
+        <exception cref="T:System.InvalidOperationException">If the internal <see cref="T:System.Security.Cryptography.KeyedHashAlgorithm" /> is null.
+            This can occur if a derived type deletes it or does not create it.</exception>
       </Docs>
     </Member>
     <Member MemberName="Verify">
@@ -396,7 +401,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.2.1.0</AssemblyVersion>
+        <AssemblyVersion>8.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -411,7 +416,8 @@
         <param name="signature">signature to compare against.</param>
         <param name="length">number of bytes of signature to use.</param>
         <summary>
-            Verifies that a signature created over the 'input' matches the signature. Using <see cref="T:Microsoft.IdentityModel.Tokens.SymmetricSecurityKey" /> and 'algorithm' passed to <see cref="M:Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.#ctor(Microsoft.IdentityModel.Tokens.SecurityKey,System.String)" />.
+            Verifies that a signature created over the 'input' matches the signature. Using <see cref="T:Microsoft.IdentityModel.Tokens.SymmetricSecurityKey" /> and 'algorithm'
+            passed to <see cref="M:Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.#ctor(Microsoft.IdentityModel.Tokens.SecurityKey,System.String)" />.
             </summary>
         <returns>true if computed signature matches the signature parameter, false otherwise.</returns>
         <remarks>To be added.</remarks>
@@ -419,7 +425,8 @@
         <exception cref="T:System.ArgumentException">'length &lt; 1'</exception>
         <exception cref="T:System.ObjectDisposedException">
           <see cref="M:Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Dispose(System.Boolean)" /> has been called.</exception>
-        <exception cref="T:System.InvalidOperationException">If the internal <see cref="T:System.Security.Cryptography.KeyedHashAlgorithm" /> is null. This can occur if a derived type deletes it or does not create it.</exception>
+        <exception cref="T:System.InvalidOperationException">If the internal <see cref="T:System.Security.Cryptography.KeyedHashAlgorithm" /> is null.
+            This can occur if a derived type deletes it or does not create it.</exception>
       </Docs>
     </Member>
     <Member MemberName="Verify">
@@ -431,7 +438,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.2.1.0</AssemblyVersion>
+        <AssemblyVersion>8.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
