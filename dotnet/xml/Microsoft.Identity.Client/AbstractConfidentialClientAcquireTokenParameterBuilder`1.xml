@@ -34,6 +34,7 @@
     <AssemblyVersion>4.66.0.0</AssemblyVersion>
     <AssemblyVersion>4.66.1.0</AssemblyVersion>
     <AssemblyVersion>4.66.2.0</AssemblyVersion>
+    <AssemblyVersion>4.67.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeParameters>
     <TypeParameter Name="T">
@@ -66,7 +67,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.66.2.0</AssemblyVersion>
+        <AssemblyVersion>4.67.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;</ReturnType>
@@ -91,7 +92,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.66.2.0</AssemblyVersion>
+        <AssemblyVersion>4.67.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -114,8 +115,18 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.66.2.0</AssemblyVersion>
+        <AssemblyVersion>4.67.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("WithProofOfPossession is deprecated. Use WithSignedHttpRequestProofOfPossession for SHR Proof-of-Possession functionality. For more details and to learn about other Proof-of-Possession MSAL supports, see the MSAL documentation: https://aka.ms/msal-net-pop")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("WithProofOfPossession is deprecated. Use WithSignedHttpRequestProofOfPossession for SHR Proof-of-Possession functionality. For more details and to learn about other Proof-of-Possession MSAL supports, see the MSAL documentation: https://aka.ms/msal-net-pop")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>T</ReturnType>
       </ReturnValue>
@@ -133,13 +144,50 @@
         <remarks>
           <list type="bullet">
             <item>
-              <description>An Authentication header is automatically added to the request.</description>
-            </item>
-            <item>
               <description>The PoP token is bound to the HTTP request, more specifically to the HTTP method (GET, POST, etc.) and to the Uri (path and query, but not query parameters).</description>
             </item>
             <item>
               <description>MSAL creates, reads and stores a key in memory that will be cycled every 8 hours.</description>
+            </item>
+            <item>
+              <description>This is an experimental API. The method signature may change in the future without involving a major version upgrade.</description>
+            </item>
+          </list>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithSignedHttpRequestProofOfPossession">
+      <MemberSignature Language="C#" Value="public T WithSignedHttpRequestProofOfPossession (Microsoft.Identity.Client.AppConfig.PoPAuthenticationConfiguration popAuthenticationConfiguration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !T WithSignedHttpRequestProofOfPossession(class Microsoft.Identity.Client.AppConfig.PoPAuthenticationConfiguration popAuthenticationConfiguration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.AbstractConfidentialClientAcquireTokenParameterBuilder`1.WithSignedHttpRequestProofOfPossession(Microsoft.Identity.Client.AppConfig.PoPAuthenticationConfiguration)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithSignedHttpRequestProofOfPossession (popAuthenticationConfiguration As PoPAuthenticationConfiguration) As T" />
+      <MemberSignature Language="F#" Value="member this.WithSignedHttpRequestProofOfPossession : Microsoft.Identity.Client.AppConfig.PoPAuthenticationConfiguration -&gt; 'T" Usage="abstractConfidentialClientAcquireTokenParameterBuilder.WithSignedHttpRequestProofOfPossession popAuthenticationConfiguration" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.67.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="popAuthenticationConfiguration" Type="Microsoft.Identity.Client.AppConfig.PoPAuthenticationConfiguration" />
+      </Parameters>
+      <Docs>
+        <param name="popAuthenticationConfiguration">Configuration properties used to construct a Proof-of-Possession request.</param>
+        <summary>
+            Modifies the request to acquire a Signed HTTP Request (SHR) Proof-of-Possession (PoP) token, rather than a Bearer.
+            SHR PoP tokens are bound to the HTTP request and to a cryptographic key, which MSAL manages on Windows.
+            SHR PoP tokens are different from mTLS PoP tokens, which are used for Mutual TLS (mTLS) authentication. See <see href="https://aka.ms/mtls-pop" /> for details.
+            </summary>
+        <returns>The builder.</returns>
+        <remarks>
+          <list type="bullet">
+            <item>
+              <description>The SHR PoP token is bound to the HTTP request, specifically to the HTTP method (for example, `GET` or `POST`) and to the URI path and query, excluding query parameters.</description>
+            </item>
+            <item>
+              <description>MSAL creates, reads, and stores a key in memory that will be cycled every 8 hours.</description>
             </item>
             <item>
               <description>This is an experimental API. The method signature may change in the future without involving a major version upgrade.</description>
