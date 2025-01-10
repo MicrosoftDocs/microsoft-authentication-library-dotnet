@@ -34,6 +34,7 @@
     <AssemblyVersion>4.66.0.0</AssemblyVersion>
     <AssemblyVersion>4.66.1.0</AssemblyVersion>
     <AssemblyVersion>4.66.2.0</AssemblyVersion>
+    <AssemblyVersion>4.67.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Delegate</BaseTypeName>
@@ -50,9 +51,7 @@
     <param name="level">Log level of the log message to process</param>
     <param name="message">Pre-formatted log message</param>
     <param name="containsPii">Indicates if the log message contains Organizational Identifiable Information (OII)
-            or Personally Identifiable Information (PII) nor not.
-            If <see cref="P:Microsoft.Identity.Client.Logger.PiiLoggingEnabled" /> is set to <c>false</c> then this value is always false.
-            Otherwise it will be <c>true</c> when the message contains PII.</param>
+            or Personally Identifiable Information (PII) nor not.</param>
     <summary>
             Callback delegate that allows application developers to consume logs, and handle them in a custom manner. This
             callback is set using <see cref="M:Microsoft.Identity.Client.BaseAbstractApplicationBuilder`1.WithLogging(Microsoft.Identity.Client.LogCallback,System.Nullable{Microsoft.Identity.Client.LogLevel},System.Nullable{System.Boolean},System.Nullable{System.Boolean})" />.
