@@ -12,7 +12,7 @@ The interaction aims at having the user do an action. Some of those conditions a
 
 ## `MsalUiRequiredException` Classification
 
-MSAL exposes a `Classification` field, which you can read to provide a better user experience, for example to tell the user that his password expired or that he will need to provide consent to use some resources. The supported values are part of the `UiRequiredExceptionClassification` enum:
+MSAL exposes a `Classification` field, which you can read to provide a better user experience, for example to tell the user that their password expired or that they will need to provide consent to use some resources. The supported values are part of the `UiRequiredExceptionClassification` enum:
 
 | Classification    | Meaning           | Recommended handling |
 |-------------------|-------------------|----------------------|
