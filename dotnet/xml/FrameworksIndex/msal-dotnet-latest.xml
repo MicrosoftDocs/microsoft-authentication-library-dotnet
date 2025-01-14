@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.Identity.Client.Broker" Version="4.66.2.0" />
-    <Assembly Name="Microsoft.Identity.Client.Desktop" Version="4.66.2.0" />
-    <Assembly Name="Microsoft.Identity.Client" Version="4.66.2.0" />
+    <Assembly Name="Microsoft.Identity.Client.Broker" Version="4.67.0.0" />
+    <Assembly Name="Microsoft.Identity.Client.Desktop" Version="4.67.0.0" />
+    <Assembly Name="Microsoft.Identity.Client" Version="4.67.0.0" />
   </Assemblies>
   <Namespace Name="Microsoft.Identity.Client">
     <Type Name="Microsoft.Identity.Client.AadAuthorityAudience" Id="T:Microsoft.Identity.Client.AadAuthorityAudience">
@@ -64,6 +64,7 @@
       <Member Id="M:Microsoft.Identity.Client.AbstractConfidentialClientAcquireTokenParameterBuilder`1.ExecuteAsync(System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.Identity.Client.AbstractConfidentialClientAcquireTokenParameterBuilder`1.Validate" />
       <Member Id="M:Microsoft.Identity.Client.AbstractConfidentialClientAcquireTokenParameterBuilder`1.WithProofOfPossession(Microsoft.Identity.Client.AppConfig.PoPAuthenticationConfiguration)" />
+      <Member Id="M:Microsoft.Identity.Client.AbstractConfidentialClientAcquireTokenParameterBuilder`1.WithSignedHttpRequestProofOfPossession(Microsoft.Identity.Client.AppConfig.PoPAuthenticationConfiguration)" />
     </Type>
     <Type Name="Microsoft.Identity.Client.AbstractManagedIdentityAcquireTokenParameterBuilder`1" Id="T:Microsoft.Identity.Client.AbstractManagedIdentityAcquireTokenParameterBuilder`1">
       <Member Id="M:Microsoft.Identity.Client.AbstractManagedIdentityAcquireTokenParameterBuilder`1.#ctor" />
@@ -112,6 +113,7 @@
       <Member Id="M:Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder.Validate" />
       <Member Id="M:Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder.WithAzureRegion(System.Boolean)" />
       <Member Id="M:Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder.WithForceRefresh(System.Boolean)" />
+      <Member Id="M:Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder.WithMtlsProofOfPossession" />
       <Member Id="M:Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder.WithPreferredAzureRegion(System.Boolean,System.String,System.Boolean)" />
       <Member Id="M:Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder.WithSendX5C(System.Boolean)" />
     </Type>
@@ -207,7 +209,6 @@
       <Member Id="P:Microsoft.Identity.Client.AuthenticationResult.TenantId" />
       <Member Id="P:Microsoft.Identity.Client.AuthenticationResult.TokenType" />
       <Member Id="P:Microsoft.Identity.Client.AuthenticationResult.UniqueId" />
-      <Member Id="P:Microsoft.Identity.Client.AuthenticationResult.User" />
     </Type>
     <Type Name="Microsoft.Identity.Client.AuthenticationResultMetadata" Id="T:Microsoft.Identity.Client.AuthenticationResultMetadata">
       <Member Id="M:Microsoft.Identity.Client.AuthenticationResultMetadata.#ctor(Microsoft.Identity.Client.TokenSource)" />
@@ -282,61 +283,28 @@
     <Type Name="Microsoft.Identity.Client.ClientApplicationBase" Id="T:Microsoft.Identity.Client.ClientApplicationBase">
       <Member Id="M:Microsoft.Identity.Client.ClientApplicationBase.AcquireTokenSilent(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount)" />
       <Member Id="M:Microsoft.Identity.Client.ClientApplicationBase.AcquireTokenSilent(System.Collections.Generic.IEnumerable{System.String},System.String)" />
-      <Member Id="M:Microsoft.Identity.Client.ClientApplicationBase.AcquireTokenSilentAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount)" />
-      <Member Id="M:Microsoft.Identity.Client.ClientApplicationBase.AcquireTokenSilentAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount,System.String,System.Boolean)" />
       <Member Id="M:Microsoft.Identity.Client.ClientApplicationBase.GetAccountAsync(System.String)" />
       <Member Id="M:Microsoft.Identity.Client.ClientApplicationBase.GetAccountAsync(System.String,System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.Identity.Client.ClientApplicationBase.GetAccountsAsync" />
       <Member Id="M:Microsoft.Identity.Client.ClientApplicationBase.GetAccountsAsync(System.String)" />
       <Member Id="M:Microsoft.Identity.Client.ClientApplicationBase.GetAccountsAsync(System.String,System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.Identity.Client.ClientApplicationBase.GetAccountsAsync(System.Threading.CancellationToken)" />
-      <Member Id="M:Microsoft.Identity.Client.ClientApplicationBase.GetUser(System.String)" />
-      <Member Id="M:Microsoft.Identity.Client.ClientApplicationBase.Remove(Microsoft.Identity.Client.IUser)" />
       <Member Id="M:Microsoft.Identity.Client.ClientApplicationBase.RemoveAsync(Microsoft.Identity.Client.IAccount)" />
       <Member Id="M:Microsoft.Identity.Client.ClientApplicationBase.RemoveAsync(Microsoft.Identity.Client.IAccount,System.Threading.CancellationToken)" />
       <Member Id="P:Microsoft.Identity.Client.ClientApplicationBase.AppConfig" />
       <Member Id="P:Microsoft.Identity.Client.ClientApplicationBase.Authority" />
-      <Member Id="P:Microsoft.Identity.Client.ClientApplicationBase.ClientId" />
-      <Member Id="P:Microsoft.Identity.Client.ClientApplicationBase.Component" />
-      <Member Id="P:Microsoft.Identity.Client.ClientApplicationBase.RedirectUri" />
-      <Member Id="P:Microsoft.Identity.Client.ClientApplicationBase.SliceParameters" />
-      <Member Id="P:Microsoft.Identity.Client.ClientApplicationBase.Users" />
       <Member Id="P:Microsoft.Identity.Client.ClientApplicationBase.UserTokenCache" />
-      <Member Id="P:Microsoft.Identity.Client.ClientApplicationBase.ValidateAuthority" />
-    </Type>
-    <Type Name="Microsoft.Identity.Client.ClientAssertionCertificate" Id="T:Microsoft.Identity.Client.ClientAssertionCertificate">
-      <Member Id="M:Microsoft.Identity.Client.ClientAssertionCertificate.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2)" />
-      <Member Id="P:Microsoft.Identity.Client.ClientAssertionCertificate.Certificate" />
-      <Member Id="P:Microsoft.Identity.Client.ClientAssertionCertificate.MinKeySizeInBits" />
-    </Type>
-    <Type Name="Microsoft.Identity.Client.ClientCredential" Id="T:Microsoft.Identity.Client.ClientCredential">
-      <Member Id="M:Microsoft.Identity.Client.ClientCredential.#ctor(Microsoft.Identity.Client.ClientAssertionCertificate)" />
-      <Member Id="M:Microsoft.Identity.Client.ClientCredential.#ctor(System.String)" />
     </Type>
     <Type Name="Microsoft.Identity.Client.ConfidentialClientApplication" Id="T:Microsoft.Identity.Client.ConfidentialClientApplication">
       <Member Id="F:Microsoft.Identity.Client.ConfidentialClientApplication.AttemptRegionDiscovery" />
-      <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplication.#ctor(System.String,System.String,Microsoft.Identity.Client.ClientCredential,Microsoft.Identity.Client.TokenCache,Microsoft.Identity.Client.TokenCache)" />
-      <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplication.#ctor(System.String,System.String,System.String,Microsoft.Identity.Client.ClientCredential,Microsoft.Identity.Client.TokenCache,Microsoft.Identity.Client.TokenCache)" />
       <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenByAuthorizationCode(System.Collections.Generic.IEnumerable{System.String},System.String)" />
-      <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenByAuthorizationCodeAsync(System.String,System.Collections.Generic.IEnumerable{System.String})" />
       <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenForClient(System.Collections.Generic.IEnumerable{System.String})" />
-      <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenForClientAsync(System.Collections.Generic.IEnumerable{System.String})" />
-      <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenForClientAsync(System.Collections.Generic.IEnumerable{System.String},System.Boolean)" />
       <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenInLongRunningProcess(System.Collections.Generic.IEnumerable{System.String},System.String)" />
       <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenOnBehalfOf(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.UserAssertion)" />
-      <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenOnBehalfOfAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.UserAssertion)" />
-      <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenOnBehalfOfAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.UserAssertion,System.String)" />
       <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplication.GetAuthorizationRequestUrl(System.Collections.Generic.IEnumerable{System.String})" />
-      <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplication.GetAuthorizationRequestUrlAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.String)" />
-      <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplication.GetAuthorizationRequestUrlAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.String)" />
       <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplication.InitiateLongRunningProcessInWebApi(System.Collections.Generic.IEnumerable{System.String},System.String,System.String@)" />
       <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplication.Microsoft#Identity#Client#IByRefreshToken#AcquireTokenByRefreshToken(System.Collections.Generic.IEnumerable{System.String},System.String)" />
-      <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplication.Microsoft#Identity#Client#IByRefreshToken#AcquireTokenByRefreshTokenAsync(System.Collections.Generic.IEnumerable{System.String},System.String)" />
       <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplication.Microsoft#Identity#Client#IByUsernameAndPassword#AcquireTokenByUsernamePassword(System.Collections.Generic.IEnumerable{System.String},System.String,System.String)" />
-      <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplication.Microsoft#Identity#Client#IConfidentialClientApplicationWithCertificate#AcquireTokenForClientWithCertificateAsync(System.Collections.Generic.IEnumerable{System.String})" />
-      <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplication.Microsoft#Identity#Client#IConfidentialClientApplicationWithCertificate#AcquireTokenForClientWithCertificateAsync(System.Collections.Generic.IEnumerable{System.String},System.Boolean)" />
-      <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplication.Microsoft#Identity#Client#IConfidentialClientApplicationWithCertificate#AcquireTokenOnBehalfOfWithCertificateAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.UserAssertion)" />
-      <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplication.Microsoft#Identity#Client#IConfidentialClientApplicationWithCertificate#AcquireTokenOnBehalfOfWithCertificateAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.UserAssertion,System.String)" />
       <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplication.StopLongRunningProcessInWebApiAsync(System.String,System.Threading.CancellationToken)" />
       <Member Id="P:Microsoft.Identity.Client.ConfidentialClientApplication.AppTokenCache" />
       <Member Id="P:Microsoft.Identity.Client.ConfidentialClientApplication.Certificate" />
@@ -421,7 +389,6 @@
     <Type Name="Microsoft.Identity.Client.IApplicationBase" Id="T:Microsoft.Identity.Client.IApplicationBase" />
     <Type Name="Microsoft.Identity.Client.IByRefreshToken" Id="T:Microsoft.Identity.Client.IByRefreshToken">
       <Member Id="M:Microsoft.Identity.Client.IByRefreshToken.AcquireTokenByRefreshToken(System.Collections.Generic.IEnumerable{System.String},System.String)" />
-      <Member Id="M:Microsoft.Identity.Client.IByRefreshToken.AcquireTokenByRefreshTokenAsync(System.Collections.Generic.IEnumerable{System.String},System.String)" />
     </Type>
     <Type Name="Microsoft.Identity.Client.IByUsernameAndPassword" Id="T:Microsoft.Identity.Client.IByUsernameAndPassword">
       <Member Id="M:Microsoft.Identity.Client.IByUsernameAndPassword.AcquireTokenByUsernamePassword(System.Collections.Generic.IEnumerable{System.String},System.String,System.String)" />
@@ -429,45 +396,22 @@
     <Type Name="Microsoft.Identity.Client.IClientApplicationBase" Id="T:Microsoft.Identity.Client.IClientApplicationBase">
       <Member Id="M:Microsoft.Identity.Client.IClientApplicationBase.AcquireTokenSilent(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount)" />
       <Member Id="M:Microsoft.Identity.Client.IClientApplicationBase.AcquireTokenSilent(System.Collections.Generic.IEnumerable{System.String},System.String)" />
-      <Member Id="M:Microsoft.Identity.Client.IClientApplicationBase.AcquireTokenSilentAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount)" />
-      <Member Id="M:Microsoft.Identity.Client.IClientApplicationBase.AcquireTokenSilentAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount,System.String,System.Boolean)" />
       <Member Id="M:Microsoft.Identity.Client.IClientApplicationBase.GetAccountAsync(System.String)" />
       <Member Id="M:Microsoft.Identity.Client.IClientApplicationBase.GetAccountsAsync" />
       <Member Id="M:Microsoft.Identity.Client.IClientApplicationBase.GetAccountsAsync(System.String)" />
-      <Member Id="M:Microsoft.Identity.Client.IClientApplicationBase.GetUser(System.String)" />
-      <Member Id="M:Microsoft.Identity.Client.IClientApplicationBase.Remove(Microsoft.Identity.Client.IUser)" />
       <Member Id="M:Microsoft.Identity.Client.IClientApplicationBase.RemoveAsync(Microsoft.Identity.Client.IAccount)" />
       <Member Id="P:Microsoft.Identity.Client.IClientApplicationBase.AppConfig" />
       <Member Id="P:Microsoft.Identity.Client.IClientApplicationBase.Authority" />
-      <Member Id="P:Microsoft.Identity.Client.IClientApplicationBase.ClientId" />
-      <Member Id="P:Microsoft.Identity.Client.IClientApplicationBase.Component" />
-      <Member Id="P:Microsoft.Identity.Client.IClientApplicationBase.RedirectUri" />
-      <Member Id="P:Microsoft.Identity.Client.IClientApplicationBase.SliceParameters" />
-      <Member Id="P:Microsoft.Identity.Client.IClientApplicationBase.Users" />
       <Member Id="P:Microsoft.Identity.Client.IClientApplicationBase.UserTokenCache" />
-      <Member Id="P:Microsoft.Identity.Client.IClientApplicationBase.ValidateAuthority" />
     </Type>
     <Type Name="Microsoft.Identity.Client.IConfidentialClientApplication" Id="T:Microsoft.Identity.Client.IConfidentialClientApplication">
       <Member Id="M:Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenByAuthorizationCode(System.Collections.Generic.IEnumerable{System.String},System.String)" />
-      <Member Id="M:Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenByAuthorizationCodeAsync(System.String,System.Collections.Generic.IEnumerable{System.String})" />
       <Member Id="M:Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenForClient(System.Collections.Generic.IEnumerable{System.String})" />
-      <Member Id="M:Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenForClientAsync(System.Collections.Generic.IEnumerable{System.String})" />
-      <Member Id="M:Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenForClientAsync(System.Collections.Generic.IEnumerable{System.String},System.Boolean)" />
       <Member Id="M:Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenOnBehalfOf(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.UserAssertion)" />
-      <Member Id="M:Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenOnBehalfOfAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.UserAssertion)" />
-      <Member Id="M:Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenOnBehalfOfAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.UserAssertion,System.String)" />
       <Member Id="M:Microsoft.Identity.Client.IConfidentialClientApplication.AcquireTokenSilent(System.Collections.Generic.IEnumerable{System.String},System.String)" />
       <Member Id="M:Microsoft.Identity.Client.IConfidentialClientApplication.GetAccountsAsync" />
       <Member Id="M:Microsoft.Identity.Client.IConfidentialClientApplication.GetAuthorizationRequestUrl(System.Collections.Generic.IEnumerable{System.String})" />
-      <Member Id="M:Microsoft.Identity.Client.IConfidentialClientApplication.GetAuthorizationRequestUrlAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.String)" />
-      <Member Id="M:Microsoft.Identity.Client.IConfidentialClientApplication.GetAuthorizationRequestUrlAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.String)" />
       <Member Id="P:Microsoft.Identity.Client.IConfidentialClientApplication.AppTokenCache" />
-    </Type>
-    <Type Name="Microsoft.Identity.Client.IConfidentialClientApplicationWithCertificate" Id="T:Microsoft.Identity.Client.IConfidentialClientApplicationWithCertificate">
-      <Member Id="M:Microsoft.Identity.Client.IConfidentialClientApplicationWithCertificate.AcquireTokenForClientWithCertificateAsync(System.Collections.Generic.IEnumerable{System.String})" />
-      <Member Id="M:Microsoft.Identity.Client.IConfidentialClientApplicationWithCertificate.AcquireTokenForClientWithCertificateAsync(System.Collections.Generic.IEnumerable{System.String},System.Boolean)" />
-      <Member Id="M:Microsoft.Identity.Client.IConfidentialClientApplicationWithCertificate.AcquireTokenOnBehalfOfWithCertificateAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.UserAssertion)" />
-      <Member Id="M:Microsoft.Identity.Client.IConfidentialClientApplicationWithCertificate.AcquireTokenOnBehalfOfWithCertificateAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.UserAssertion,System.String)" />
     </Type>
     <Type Name="Microsoft.Identity.Client.ILongRunningWebApi" Id="T:Microsoft.Identity.Client.ILongRunningWebApi">
       <Member Id="M:Microsoft.Identity.Client.ILongRunningWebApi.AcquireTokenInLongRunningProcess(System.Collections.Generic.IEnumerable{System.String},System.String)" />
@@ -487,32 +431,11 @@
       <Member Id="P:Microsoft.Identity.Client.IntuneAppProtectionPolicyRequiredException.Upn" />
     </Type>
     <Type Name="Microsoft.Identity.Client.IPublicClientApplication" Id="T:Microsoft.Identity.Client.IPublicClientApplication">
-      <Member Id="M:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String})" />
-      <Member Id="M:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount)" />
-      <Member Id="M:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount,Microsoft.Identity.Client.Prompt,System.String)" />
-      <Member Id="M:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount,Microsoft.Identity.Client.Prompt,System.String,Microsoft.Identity.Client.UIParent)" />
-      <Member Id="M:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount,Microsoft.Identity.Client.Prompt,System.String,System.Collections.Generic.IEnumerable{System.String},System.String)" />
-      <Member Id="M:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount,Microsoft.Identity.Client.Prompt,System.String,System.Collections.Generic.IEnumerable{System.String},System.String,Microsoft.Identity.Client.UIParent)" />
-      <Member Id="M:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount,Microsoft.Identity.Client.UIParent)" />
-      <Member Id="M:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.UIParent)" />
-      <Member Id="M:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},System.String)" />
-      <Member Id="M:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},System.String,Microsoft.Identity.Client.Prompt,System.String)" />
-      <Member Id="M:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},System.String,Microsoft.Identity.Client.Prompt,System.String,Microsoft.Identity.Client.UIParent)" />
-      <Member Id="M:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},System.String,Microsoft.Identity.Client.Prompt,System.String,System.Collections.Generic.IEnumerable{System.String},System.String)" />
-      <Member Id="M:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},System.String,Microsoft.Identity.Client.Prompt,System.String,System.Collections.Generic.IEnumerable{System.String},System.String,Microsoft.Identity.Client.UIParent)" />
-      <Member Id="M:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},System.String,Microsoft.Identity.Client.UIParent)" />
       <Member Id="M:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenByIntegratedWindowsAuth(System.Collections.Generic.IEnumerable{System.String})" />
-      <Member Id="M:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenByIntegratedWindowsAuthAsync(System.Collections.Generic.IEnumerable{System.String})" />
-      <Member Id="M:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenByIntegratedWindowsAuthAsync(System.Collections.Generic.IEnumerable{System.String},System.String)" />
       <Member Id="M:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenByUsernamePassword(System.Collections.Generic.IEnumerable{System.String},System.String,System.Security.SecureString)" />
       <Member Id="M:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenByUsernamePassword(System.Collections.Generic.IEnumerable{System.String},System.String,System.String)" />
-      <Member Id="M:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenByUsernamePasswordAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.Security.SecureString)" />
       <Member Id="M:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenInteractive(System.Collections.Generic.IEnumerable{System.String})" />
       <Member Id="M:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenWithDeviceCode(System.Collections.Generic.IEnumerable{System.String},System.Func{Microsoft.Identity.Client.DeviceCodeResult,System.Threading.Tasks.Task})" />
-      <Member Id="M:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenWithDeviceCodeAsync(System.Collections.Generic.IEnumerable{System.String},System.Func{Microsoft.Identity.Client.DeviceCodeResult,System.Threading.Tasks.Task})" />
-      <Member Id="M:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenWithDeviceCodeAsync(System.Collections.Generic.IEnumerable{System.String},System.Func{Microsoft.Identity.Client.DeviceCodeResult,System.Threading.Tasks.Task},System.Threading.CancellationToken)" />
-      <Member Id="M:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenWithDeviceCodeAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.Func{Microsoft.Identity.Client.DeviceCodeResult,System.Threading.Tasks.Task})" />
-      <Member Id="M:Microsoft.Identity.Client.IPublicClientApplication.AcquireTokenWithDeviceCodeAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.Func{Microsoft.Identity.Client.DeviceCodeResult,System.Threading.Tasks.Task},System.Threading.CancellationToken)" />
       <Member Id="P:Microsoft.Identity.Client.IPublicClientApplication.IsSystemWebViewAvailable" />
     </Type>
     <Type Name="Microsoft.Identity.Client.ITelemetryConfig" Id="T:Microsoft.Identity.Client.ITelemetryConfig">
@@ -529,16 +452,6 @@
       <Member Id="P:Microsoft.Identity.Client.ITelemetryEventPayload.StringValues" />
     </Type>
     <Type Name="Microsoft.Identity.Client.ITokenCache" Id="T:Microsoft.Identity.Client.ITokenCache">
-      <Member Id="M:Microsoft.Identity.Client.ITokenCache.Deserialize(System.Byte[])" />
-      <Member Id="M:Microsoft.Identity.Client.ITokenCache.DeserializeAdalV3(System.Byte[])" />
-      <Member Id="M:Microsoft.Identity.Client.ITokenCache.DeserializeMsalV2(System.Byte[])" />
-      <Member Id="M:Microsoft.Identity.Client.ITokenCache.DeserializeMsalV3(System.Byte[],System.Boolean)" />
-      <Member Id="M:Microsoft.Identity.Client.ITokenCache.DeserializeUnifiedAndAdalCache(Microsoft.Identity.Client.Cache.CacheData)" />
-      <Member Id="M:Microsoft.Identity.Client.ITokenCache.Serialize" />
-      <Member Id="M:Microsoft.Identity.Client.ITokenCache.SerializeAdalV3" />
-      <Member Id="M:Microsoft.Identity.Client.ITokenCache.SerializeMsalV2" />
-      <Member Id="M:Microsoft.Identity.Client.ITokenCache.SerializeMsalV3" />
-      <Member Id="M:Microsoft.Identity.Client.ITokenCache.SerializeUnifiedAndAdalCache" />
       <Member Id="M:Microsoft.Identity.Client.ITokenCache.SetAfterAccess(Microsoft.Identity.Client.TokenCacheCallback)" />
       <Member Id="M:Microsoft.Identity.Client.ITokenCache.SetAfterAccessAsync(System.Func{Microsoft.Identity.Client.TokenCacheNotificationArgs,System.Threading.Tasks.Task})" />
       <Member Id="M:Microsoft.Identity.Client.ITokenCache.SetBeforeAccess(Microsoft.Identity.Client.TokenCacheCallback)" />
@@ -554,20 +467,7 @@
       <Member Id="M:Microsoft.Identity.Client.ITokenCacheSerializer.SerializeMsalV2" />
       <Member Id="M:Microsoft.Identity.Client.ITokenCacheSerializer.SerializeMsalV3" />
     </Type>
-    <Type Name="Microsoft.Identity.Client.IUser" Id="T:Microsoft.Identity.Client.IUser">
-      <Member Id="P:Microsoft.Identity.Client.IUser.DisplayableId" />
-      <Member Id="P:Microsoft.Identity.Client.IUser.Identifier" />
-      <Member Id="P:Microsoft.Identity.Client.IUser.IdentityProvider" />
-      <Member Id="P:Microsoft.Identity.Client.IUser.Name" />
-    </Type>
     <Type Name="Microsoft.Identity.Client.LogCallback" Id="T:Microsoft.Identity.Client.LogCallback" />
-    <Type Name="Microsoft.Identity.Client.Logger" Id="T:Microsoft.Identity.Client.Logger">
-      <Member Id="M:Microsoft.Identity.Client.Logger.#ctor" />
-      <Member Id="P:Microsoft.Identity.Client.Logger.DefaultLoggingEnabled" />
-      <Member Id="P:Microsoft.Identity.Client.Logger.Level" />
-      <Member Id="P:Microsoft.Identity.Client.Logger.LogCallback" />
-      <Member Id="P:Microsoft.Identity.Client.Logger.PiiLoggingEnabled" />
-    </Type>
     <Type Name="Microsoft.Identity.Client.LogLevel" Id="T:Microsoft.Identity.Client.LogLevel">
       <Member Id="F:Microsoft.Identity.Client.LogLevel.Always" />
       <Member Id="F:Microsoft.Identity.Client.LogLevel.Error" />
@@ -676,9 +576,13 @@
       <Member Id="F:Microsoft.Identity.Client.MsalError.LoopbackRedirectUri" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.LoopbackResponseUriMismatch" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.ManagedIdentityRequestFailed" />
+      <Member Id="F:Microsoft.Identity.Client.MsalError.ManagedIdentityResponseParseFailure" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.ManagedIdentityUnreachableNetwork" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.MissingFederationMetadataUrl" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.MissingPassiveAuthEndpoint" />
+      <Member Id="F:Microsoft.Identity.Client.MsalError.MissingTenantedAuthority" />
+      <Member Id="F:Microsoft.Identity.Client.MsalError.MtlsCertificateNotProvided" />
+      <Member Id="F:Microsoft.Identity.Client.MsalError.MtlsPopWithoutRegion" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.MultipleAccountsForLoginHint" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.MultipleTokensMatchedError" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.NetworkNotAvailableError" />
@@ -705,6 +609,7 @@
       <Member Id="F:Microsoft.Identity.Client.MsalError.RegionDiscoveryFailed" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.RegionDiscoveryNotEnabled" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.RegionDiscoveryWithCustomInstanceMetadata" />
+      <Member Id="F:Microsoft.Identity.Client.MsalError.RegionRequiredForMtlsPop" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.RequestThrottled" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.RequestTimeout" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.RopcDoesNotSupportMsaAccounts" />
@@ -821,41 +726,16 @@
       <Member Id="M:Microsoft.Identity.Client.Prompt.op_Inequality(Microsoft.Identity.Client.Prompt,Microsoft.Identity.Client.Prompt)" />
     </Type>
     <Type Name="Microsoft.Identity.Client.PublicClientApplication" Id="T:Microsoft.Identity.Client.PublicClientApplication">
-      <Member Id="M:Microsoft.Identity.Client.PublicClientApplication.#ctor(System.String)" />
-      <Member Id="M:Microsoft.Identity.Client.PublicClientApplication.#ctor(System.String,System.String)" />
-      <Member Id="M:Microsoft.Identity.Client.PublicClientApplication.#ctor(System.String,System.String,Microsoft.Identity.Client.TokenCache)" />
-      <Member Id="M:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String})" />
-      <Member Id="M:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount)" />
-      <Member Id="M:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount,Microsoft.Identity.Client.Prompt,System.String)" />
-      <Member Id="M:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount,Microsoft.Identity.Client.Prompt,System.String,Microsoft.Identity.Client.UIParent)" />
-      <Member Id="M:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount,Microsoft.Identity.Client.Prompt,System.String,System.Collections.Generic.IEnumerable{System.String},System.String)" />
-      <Member Id="M:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount,Microsoft.Identity.Client.Prompt,System.String,System.Collections.Generic.IEnumerable{System.String},System.String,Microsoft.Identity.Client.UIParent)" />
-      <Member Id="M:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount,Microsoft.Identity.Client.UIParent)" />
-      <Member Id="M:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.UIParent)" />
-      <Member Id="M:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},System.String)" />
-      <Member Id="M:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},System.String,Microsoft.Identity.Client.Prompt,System.String)" />
-      <Member Id="M:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},System.String,Microsoft.Identity.Client.Prompt,System.String,Microsoft.Identity.Client.UIParent)" />
-      <Member Id="M:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},System.String,Microsoft.Identity.Client.Prompt,System.String,System.Collections.Generic.IEnumerable{System.String},System.String)" />
-      <Member Id="M:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},System.String,Microsoft.Identity.Client.Prompt,System.String,System.Collections.Generic.IEnumerable{System.String},System.String,Microsoft.Identity.Client.UIParent)" />
-      <Member Id="M:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenAsync(System.Collections.Generic.IEnumerable{System.String},System.String,Microsoft.Identity.Client.UIParent)" />
       <Member Id="M:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenByIntegratedWindowsAuth(System.Collections.Generic.IEnumerable{System.String})" />
-      <Member Id="M:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenByIntegratedWindowsAuthAsync(System.Collections.Generic.IEnumerable{System.String})" />
-      <Member Id="M:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenByIntegratedWindowsAuthAsync(System.Collections.Generic.IEnumerable{System.String},System.String)" />
       <Member Id="M:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenByUsernamePassword(System.Collections.Generic.IEnumerable{System.String},System.String,System.Security.SecureString)" />
       <Member Id="M:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenByUsernamePassword(System.Collections.Generic.IEnumerable{System.String},System.String,System.String)" />
-      <Member Id="M:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenByUsernamePasswordAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.Security.SecureString)" />
       <Member Id="M:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenInteractive(System.Collections.Generic.IEnumerable{System.String})" />
       <Member Id="M:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenWithDeviceCode(System.Collections.Generic.IEnumerable{System.String},System.Func{Microsoft.Identity.Client.DeviceCodeResult,System.Threading.Tasks.Task})" />
-      <Member Id="M:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenWithDeviceCodeAsync(System.Collections.Generic.IEnumerable{System.String},System.Func{Microsoft.Identity.Client.DeviceCodeResult,System.Threading.Tasks.Task})" />
-      <Member Id="M:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenWithDeviceCodeAsync(System.Collections.Generic.IEnumerable{System.String},System.Func{Microsoft.Identity.Client.DeviceCodeResult,System.Threading.Tasks.Task},System.Threading.CancellationToken)" />
-      <Member Id="M:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenWithDeviceCodeAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.Func{Microsoft.Identity.Client.DeviceCodeResult,System.Threading.Tasks.Task})" />
-      <Member Id="M:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenWithDeviceCodeAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.Func{Microsoft.Identity.Client.DeviceCodeResult,System.Threading.Tasks.Task},System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.Identity.Client.PublicClientApplication.IsBrokerAvailable" />
       <Member Id="M:Microsoft.Identity.Client.PublicClientApplication.IsEmbeddedWebViewAvailable" />
       <Member Id="M:Microsoft.Identity.Client.PublicClientApplication.IsProofOfPossessionSupportedByClient" />
       <Member Id="M:Microsoft.Identity.Client.PublicClientApplication.IsUserInteractive" />
       <Member Id="M:Microsoft.Identity.Client.PublicClientApplication.Microsoft#Identity#Client#IByRefreshToken#AcquireTokenByRefreshToken(System.Collections.Generic.IEnumerable{System.String},System.String)" />
-      <Member Id="M:Microsoft.Identity.Client.PublicClientApplication.Microsoft#Identity#Client#IByRefreshToken#AcquireTokenByRefreshTokenAsync(System.Collections.Generic.IEnumerable{System.String},System.String)" />
       <Member Id="P:Microsoft.Identity.Client.PublicClientApplication.IsSystemWebViewAvailable" />
       <Member Id="P:Microsoft.Identity.Client.PublicClientApplication.OperatingSystemAccount" />
     </Type>
@@ -897,14 +777,6 @@
       <Member Id="P:Microsoft.Identity.Client.SystemWebViewOptions.iOSHidePrivacyPrompt" />
       <Member Id="P:Microsoft.Identity.Client.SystemWebViewOptions.OpenBrowserAsync" />
     </Type>
-    <Type Name="Microsoft.Identity.Client.Telemetry" Id="T:Microsoft.Identity.Client.Telemetry">
-      <Member Id="M:Microsoft.Identity.Client.Telemetry.#ctor" />
-      <Member Id="M:Microsoft.Identity.Client.Telemetry.GetInstance" />
-      <Member Id="M:Microsoft.Identity.Client.Telemetry.HasRegisteredReceiver" />
-      <Member Id="M:Microsoft.Identity.Client.Telemetry.RegisterReceiver(Microsoft.Identity.Client.Telemetry.Receiver)" />
-      <Member Id="P:Microsoft.Identity.Client.Telemetry.TelemetryOnFailureOnly" />
-    </Type>
-    <Type Name="Microsoft.Identity.Client.Telemetry/Receiver" Id="T:Microsoft.Identity.Client.Telemetry.Receiver" />
     <Type Name="Microsoft.Identity.Client.TelemetryAudienceType" Id="T:Microsoft.Identity.Client.TelemetryAudienceType">
       <Member Id="F:Microsoft.Identity.Client.TelemetryAudienceType.PreProduction" />
       <Member Id="F:Microsoft.Identity.Client.TelemetryAudienceType.Production" />
@@ -917,22 +789,12 @@
     </Type>
     <Type Name="Microsoft.Identity.Client.TokenCache" Id="T:Microsoft.Identity.Client.TokenCache">
       <Member Id="M:Microsoft.Identity.Client.TokenCache.#ctor" />
-      <Member Id="M:Microsoft.Identity.Client.TokenCache.Deserialize(System.Byte[])" />
-      <Member Id="M:Microsoft.Identity.Client.TokenCache.DeserializeAdalV3(System.Byte[])" />
-      <Member Id="M:Microsoft.Identity.Client.TokenCache.DeserializeMsalV2(System.Byte[])" />
-      <Member Id="M:Microsoft.Identity.Client.TokenCache.DeserializeMsalV3(System.Byte[],System.Boolean)" />
-      <Member Id="M:Microsoft.Identity.Client.TokenCache.DeserializeUnifiedAndAdalCache(Microsoft.Identity.Client.Cache.CacheData)" />
       <Member Id="M:Microsoft.Identity.Client.TokenCache.Microsoft#Identity#Client#ITokenCacheSerializer#DeserializeAdalV3(System.Byte[])" />
       <Member Id="M:Microsoft.Identity.Client.TokenCache.Microsoft#Identity#Client#ITokenCacheSerializer#DeserializeMsalV2(System.Byte[])" />
       <Member Id="M:Microsoft.Identity.Client.TokenCache.Microsoft#Identity#Client#ITokenCacheSerializer#DeserializeMsalV3(System.Byte[],System.Boolean)" />
       <Member Id="M:Microsoft.Identity.Client.TokenCache.Microsoft#Identity#Client#ITokenCacheSerializer#SerializeAdalV3" />
       <Member Id="M:Microsoft.Identity.Client.TokenCache.Microsoft#Identity#Client#ITokenCacheSerializer#SerializeMsalV2" />
       <Member Id="M:Microsoft.Identity.Client.TokenCache.Microsoft#Identity#Client#ITokenCacheSerializer#SerializeMsalV3" />
-      <Member Id="M:Microsoft.Identity.Client.TokenCache.Serialize" />
-      <Member Id="M:Microsoft.Identity.Client.TokenCache.SerializeAdalV3" />
-      <Member Id="M:Microsoft.Identity.Client.TokenCache.SerializeMsalV2" />
-      <Member Id="M:Microsoft.Identity.Client.TokenCache.SerializeMsalV3" />
-      <Member Id="M:Microsoft.Identity.Client.TokenCache.SerializeUnifiedAndAdalCache" />
       <Member Id="M:Microsoft.Identity.Client.TokenCache.SetAfterAccess(Microsoft.Identity.Client.TokenCacheCallback)" />
       <Member Id="M:Microsoft.Identity.Client.TokenCache.SetAfterAccessAsync(System.Func{Microsoft.Identity.Client.TokenCacheNotificationArgs,System.Threading.Tasks.Task})" />
       <Member Id="M:Microsoft.Identity.Client.TokenCache.SetBeforeAccess(Microsoft.Identity.Client.TokenCacheCallback)" />
@@ -940,9 +802,7 @@
       <Member Id="M:Microsoft.Identity.Client.TokenCache.SetBeforeWrite(Microsoft.Identity.Client.TokenCacheCallback)" />
       <Member Id="M:Microsoft.Identity.Client.TokenCache.SetBeforeWriteAsync(System.Func{Microsoft.Identity.Client.TokenCacheNotificationArgs,System.Threading.Tasks.Task})" />
       <Member Id="M:Microsoft.Identity.Client.TokenCache.SetIosKeychainSecurityGroup(System.String)" />
-      <Member Id="P:Microsoft.Identity.Client.TokenCache.HasStateChanged" />
     </Type>
-    <Type Name="Microsoft.Identity.Client.TokenCache/TokenCacheNotification" Id="T:Microsoft.Identity.Client.TokenCache.TokenCacheNotification" />
     <Type Name="Microsoft.Identity.Client.TokenCacheCallback" Id="T:Microsoft.Identity.Client.TokenCacheCallback" />
     <Type Name="Microsoft.Identity.Client.TokenCacheExtensions" Id="T:Microsoft.Identity.Client.TokenCacheExtensions">
       <Member Id="M:Microsoft.Identity.Client.TokenCacheExtensions.SetCacheOptions(Microsoft.Identity.Client.ITokenCache,Microsoft.Identity.Client.CacheOptions)" />
@@ -967,7 +827,6 @@
       <Member Id="P:Microsoft.Identity.Client.TokenCacheNotificationArgs.SuggestedCacheKey" />
       <Member Id="P:Microsoft.Identity.Client.TokenCacheNotificationArgs.TelemetryData" />
       <Member Id="P:Microsoft.Identity.Client.TokenCacheNotificationArgs.TokenCache" />
-      <Member Id="P:Microsoft.Identity.Client.TokenCacheNotificationArgs.User" />
     </Type>
     <Type Name="Microsoft.Identity.Client.TokenSource" Id="T:Microsoft.Identity.Client.TokenSource">
       <Member Id="F:Microsoft.Identity.Client.TokenSource.Broker" />
@@ -980,12 +839,6 @@
       <Member Id="P:Microsoft.Identity.Client.TraceTelemetryConfig.AudienceType" />
       <Member Id="P:Microsoft.Identity.Client.TraceTelemetryConfig.DispatchAction" />
       <Member Id="P:Microsoft.Identity.Client.TraceTelemetryConfig.SessionId" />
-    </Type>
-    <Type Name="Microsoft.Identity.Client.UIBehavior" Id="T:Microsoft.Identity.Client.UIBehavior" />
-    <Type Name="Microsoft.Identity.Client.UIParent" Id="T:Microsoft.Identity.Client.UIParent">
-      <Member Id="M:Microsoft.Identity.Client.UIParent.#ctor" />
-      <Member Id="M:Microsoft.Identity.Client.UIParent.#ctor(System.Object,System.Boolean)" />
-      <Member Id="M:Microsoft.Identity.Client.UIParent.IsSystemWebviewAvailable" />
     </Type>
     <Type Name="Microsoft.Identity.Client.UiRequiredExceptionClassification" Id="T:Microsoft.Identity.Client.UiRequiredExceptionClassification">
       <Member Id="F:Microsoft.Identity.Client.UiRequiredExceptionClassification.AcquireTokenSilentFailed" />
