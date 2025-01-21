@@ -24,7 +24,7 @@ You can also rely on `AuthenticationResult.AuthenticationResultMetadata` propert
 
 ## Automatically collected data
 
-MSAL.NET sends basic telemetry about the client side state on requests to the Microsoft Entra token endpoint. Telemetry data is collected by Microsoft Entra ID, alongside the ussual Entra ID telemery associated with each request. 
+MSAL.NET sends basic telemetry about the client side state on requests to the Microsoft Entra token endpoint. Telemetry data is collected by Microsoft Entra ID, alongside the usual Entra ID telemetry associated with each request.
 
 The datapoints include:
 
