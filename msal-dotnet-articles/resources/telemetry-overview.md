@@ -16,7 +16,7 @@ The SDK uses the metric name `MicrosoftIdentityClient_Common_Meter`.  As of vers
 
 - A counter named `MsalSuccess` which contains: the SDK version, an identifier of the SDK which is different on .NET Framework and .NET, an ID of the main API used, the token source (cache or identity provider), the reason for the cache refresh in case of cache miss, details about the cache in case of cache hit and the token type. See [here](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/main//src/client/Microsoft.Identity.Client/Platforms/Features/OpenTelemetry/OtelInstrumentation.cs#L20) for more details.
 - A counter named `MsalFailure` which contains: the SDK version, the SDK identifier, the error code, the API used, the cache refresh reason and the token type.
-- Several histograms that measure overall time to acquire a token, time spent performing HTTP requests, cache calls and time spent forming complex tokens like PoP tokens.
+- Histograms that measure latency for requests through MSAL. For example, time spent performing HTTP requests, cache calls and time spent forming complex tokens like PoP tokens.
 
 ## Programatic Access
 
