@@ -7,7 +7,7 @@ description: Explore MSAL.NET's telemetry capabilities for Microsoft Entra token
 
 MSAL.NET relies on 2 strategies for telemetry: 
 
-1. It uses Open Telemetry to emit metrics. These need to be collected by apps explicitly.
+1. It uses Open Telemetry to emit [metrics](https://learn.microsoft.com/en-us/dotnet/core/diagnostics/metrics). These need to be collected by apps explicitly.
 2. It sends some datapoints with every request to the token endpoint. This is for Microsoft Entra consumption only and it happens automatically.
 
 ## Open Telemetry 
