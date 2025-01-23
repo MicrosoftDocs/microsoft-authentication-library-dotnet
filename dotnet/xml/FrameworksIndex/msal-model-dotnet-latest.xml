@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-model-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.Identity.Abstractions" Version="7.2.1.0" />
-    <Assembly Name="Microsoft.Identity.Web.Azure" Version="3.6.1.0" />
-    <Assembly Name="Microsoft.Identity.Web.Certificate" Version="3.6.1.0" />
-    <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="3.6.1.0" />
-    <Assembly Name="Microsoft.Identity.Web" Version="3.6.1.0" />
+    <Assembly Name="Microsoft.Identity.Abstractions" Version="8.0.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.Azure" Version="3.6.2.0" />
+    <Assembly Name="Microsoft.Identity.Web.Certificate" Version="3.6.2.0" />
+    <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="3.6.2.0" />
+    <Assembly Name="Microsoft.Identity.Web" Version="3.6.2.0" />
     <Assembly Name="Microsoft.Identity.Web.DownstreamRestApi" Version="2.0.8.0" />
-    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraph" Version="3.6.1.0" />
-    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraphBeta" Version="3.6.1.0" />
-    <Assembly Name="Microsoft.Identity.Web.OWIN" Version="3.6.1.0" />
-    <Assembly Name="Microsoft.Identity.Web.TokenAcquisition" Version="3.6.1.0" />
-    <Assembly Name="Microsoft.Identity.Web.TokenCache" Version="3.6.1.0" />
-    <Assembly Name="Microsoft.Identity.Web.UI" Version="3.6.1.0" />
+    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraph" Version="3.6.2.0" />
+    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraphBeta" Version="3.6.2.0" />
+    <Assembly Name="Microsoft.Identity.Web.OWIN" Version="3.6.2.0" />
+    <Assembly Name="Microsoft.Identity.Web.TokenAcquisition" Version="3.6.2.0" />
+    <Assembly Name="Microsoft.Identity.Web.TokenCache" Version="3.6.2.0" />
+    <Assembly Name="Microsoft.Identity.Web.UI" Version="3.6.2.0" />
   </Assemblies>
   <Namespace Name="Microsoft.Identity.Abstractions">
     <Type Name="Microsoft.Identity.Abstractions.AcquireTokenOptions" Id="T:Microsoft.Identity.Abstractions.AcquireTokenOptions">
@@ -60,6 +60,7 @@
     </Type>
     <Type Name="Microsoft.Identity.Abstractions.CredentialDescription" Id="T:Microsoft.Identity.Abstractions.CredentialDescription">
       <Member Id="M:Microsoft.Identity.Abstractions.CredentialDescription.#ctor" />
+      <Member Id="M:Microsoft.Identity.Abstractions.CredentialDescription.#ctor(Microsoft.Identity.Abstractions.CredentialDescription)" />
       <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.Base64EncodedValue" />
       <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.CachedValue" />
       <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.Certificate" />
@@ -69,14 +70,12 @@
       <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.CertificateStorePath" />
       <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.CertificateThumbprint" />
       <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.ClientSecret" />
-      <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.Container" />
       <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.CredentialType" />
       <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.DecryptKeysAuthenticationOptions" />
       <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.Id" />
       <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.KeyVaultCertificateName" />
       <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.KeyVaultUrl" />
       <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.ManagedIdentityClientId" />
-      <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.ReferenceOrValue" />
       <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.SignedAssertionFileDiskPath" />
       <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.Skip" />
       <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.SourceType" />
