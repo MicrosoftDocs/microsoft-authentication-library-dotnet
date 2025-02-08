@@ -38,6 +38,7 @@
     <AssemblyVersion>8.2.0.0</AssemblyVersion>
     <AssemblyVersion>8.2.1.0</AssemblyVersion>
     <AssemblyVersion>8.3.0.0</AssemblyVersion>
+    <AssemblyVersion>8.4.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeParameters>
     <TypeParameter Name="T">
@@ -71,7 +72,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
-        <AssemblyVersion>8.3.0.0</AssemblyVersion>
+        <AssemblyVersion>8.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="metadataAddress" Type="System.String" />
@@ -95,7 +96,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
-        <AssemblyVersion>8.3.0.0</AssemblyVersion>
+        <AssemblyVersion>8.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="metadataAddress" Type="System.String" />
@@ -122,7 +123,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
-        <AssemblyVersion>8.3.0.0</AssemblyVersion>
+        <AssemblyVersion>8.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="metadataAddress" Type="System.String" />
@@ -148,7 +149,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
-        <AssemblyVersion>8.3.0.0</AssemblyVersion>
+        <AssemblyVersion>8.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="metadataAddress" Type="System.String" />
@@ -177,7 +178,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
-        <AssemblyVersion>8.3.0.0</AssemblyVersion>
+        <AssemblyVersion>8.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="metadataAddress" Type="System.String" />
@@ -206,7 +207,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
-        <AssemblyVersion>8.3.0.0</AssemblyVersion>
+        <AssemblyVersion>8.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="metadataAddress" Type="System.String" />
@@ -237,7 +238,7 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
-        <AssemblyVersion>8.3.0.0</AssemblyVersion>
+        <AssemblyVersion>8.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.TimeSpan</ReturnType>
@@ -258,7 +259,7 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
-        <AssemblyVersion>8.3.0.0</AssemblyVersion>
+        <AssemblyVersion>8.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.TimeSpan</ReturnType>
@@ -279,7 +280,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
-        <AssemblyVersion>8.3.0.0</AssemblyVersion>
+        <AssemblyVersion>8.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.BaseConfiguration&gt;</ReturnType>
@@ -292,7 +293,7 @@
         <summary>
             Obtains an updated version of Configuration.
             </summary>
-        <returns>Configuration of type BaseConfiguration    .</returns>
+        <returns>Configuration of type BaseConfiguration.</returns>
         <remarks>If the time since the last call is less than <see cref="P:Microsoft.IdentityModel.Tokens.BaseConfigurationManager.AutomaticRefreshInterval" /> then <see cref="M:Microsoft.IdentityModel.Protocols.IConfigurationRetriever`1.GetConfigurationAsync(System.String,Microsoft.IdentityModel.Protocols.IDocumentRetriever,System.Threading.CancellationToken)" /> is not called and the current Configuration is returned.</remarks>
       </Docs>
     </Member>
@@ -305,7 +306,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
-        <AssemblyVersion>8.3.0.0</AssemblyVersion>
+        <AssemblyVersion>8.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;T&gt;</ReturnType>
@@ -315,8 +316,14 @@
         <summary>
             Obtains an updated version of Configuration.
             </summary>
-        <returns>Configuration of type T.</returns>
-        <remarks>If the time since the last call is less than <see cref="P:Microsoft.IdentityModel.Tokens.BaseConfigurationManager.AutomaticRefreshInterval" /> then <see cref="M:Microsoft.IdentityModel.Protocols.IConfigurationRetriever`1.GetConfigurationAsync(System.String,Microsoft.IdentityModel.Protocols.IDocumentRetriever,System.Threading.CancellationToken)" /> is not called and the current Configuration is returned.</remarks>
+        <returns>Configuration of type <typeparamref name="T" />.</returns>
+        <remarks>
+            If the time since the last call is less than <see cref="P:Microsoft.IdentityModel.Tokens.BaseConfigurationManager.AutomaticRefreshInterval" />
+            then <see cref="M:Microsoft.IdentityModel.Protocols.IConfigurationRetriever`1.GetConfigurationAsync(System.String,Microsoft.IdentityModel.Protocols.IDocumentRetriever,System.Threading.CancellationToken)" /> is not called and the current Configuration is returned.
+            If the configuration is not able to be updated, but a previous configuration was previously retrieved, the previous configuration is returned.
+            </remarks>
+        <exception cref="T:System.InvalidOperationException">Throw if the configuration is unable to be retrieved.</exception>
+        <exception cref="T:Microsoft.IdentityModel.Protocols.Configuration.InvalidConfigurationException">Throw if the configuration fails to be validated by the <see cref="T:Microsoft.IdentityModel.Protocols.IConfigurationValidator`1" />.</exception>
       </Docs>
     </Member>
     <Member MemberName="GetConfigurationAsync">
@@ -331,7 +338,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
-        <AssemblyVersion>8.3.0.0</AssemblyVersion>
+        <AssemblyVersion>8.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;T&gt;</ReturnType>
@@ -344,8 +351,14 @@
         <summary>
             Obtains an updated version of Configuration.
             </summary>
-        <returns>Configuration of type T.</returns>
-        <remarks>If the time since the last call is less than <see cref="P:Microsoft.IdentityModel.Tokens.BaseConfigurationManager.AutomaticRefreshInterval" /> then <see cref="M:Microsoft.IdentityModel.Protocols.IConfigurationRetriever`1.GetConfigurationAsync(System.String,Microsoft.IdentityModel.Protocols.IDocumentRetriever,System.Threading.CancellationToken)" /> is not called and the current Configuration is returned.</remarks>
+        <returns>Configuration of type <typeparamref name="T" />.</returns>
+        <remarks>
+            If the time since the last call is less than <see cref="P:Microsoft.IdentityModel.Tokens.BaseConfigurationManager.AutomaticRefreshInterval" />
+            then <see cref="M:Microsoft.IdentityModel.Protocols.IConfigurationRetriever`1.GetConfigurationAsync(System.String,Microsoft.IdentityModel.Protocols.IDocumentRetriever,System.Threading.CancellationToken)" /> is not called and the current Configuration is returned.
+            If the configuration is not able to be updated, but a previous configuration was previously retrieved, the previous configuration is returned.
+            </remarks>
+        <exception cref="T:System.InvalidOperationException">Throw if the configuration is unable to be retrieved.</exception>
+        <exception cref="T:Microsoft.IdentityModel.Protocols.Configuration.InvalidConfigurationException">Throw if the configuration fails to be validated by the <see cref="T:Microsoft.IdentityModel.Protocols.IConfigurationValidator`1" />.</exception>
       </Docs>
     </Member>
     <Member MemberName="MinimumAutomaticRefreshInterval">
@@ -357,7 +370,7 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
-        <AssemblyVersion>8.3.0.0</AssemblyVersion>
+        <AssemblyVersion>8.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.TimeSpan</ReturnType>
@@ -378,7 +391,7 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
-        <AssemblyVersion>8.3.0.0</AssemblyVersion>
+        <AssemblyVersion>8.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.TimeSpan</ReturnType>
@@ -402,7 +415,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
-        <AssemblyVersion>8.3.0.0</AssemblyVersion>
+        <AssemblyVersion>8.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -412,6 +425,34 @@
         <summary>
             Triggers updating metadata when:
             <para>1. Called the first time.</para><para>2. The time between when this method was called and DateTimeOffset.Now is greater than <see cref="P:Microsoft.IdentityModel.Tokens.BaseConfigurationManager.RefreshInterval" />.</para><para>If <see cref="P:Microsoft.IdentityModel.Tokens.BaseConfigurationManager.RefreshInterval" /> == <see cref="F:System.TimeSpan.MaxValue" /> then this method does nothing.</para></summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShutdownBackgroundTask">
+      <MemberSignature Language="C#" Value="public void ShutdownBackgroundTask ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ShutdownBackgroundTask() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Protocols.ConfigurationManager`1.ShutdownBackgroundTask" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ShutdownBackgroundTask ()" />
+      <MemberSignature Language="F#" Value="member this.ShutdownBackgroundTask : unit -&gt; unit" Usage="configurationManager.ShutdownBackgroundTask " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
+        <AssemblyVersion>8.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Requests that background tasks be shutdown.
+            This only applies if 'Switch.Microsoft.IdentityModel.UpdateConfigAsBlocking' is not set or set to false.
+            Note that this does not influence <see cref="M:Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationAsync(System.Threading.CancellationToken)" />.
+            If the background task stops, the next time the task would be signaled, the task will be
+            restarted unless <see cref="M:Microsoft.IdentityModel.Protocols.ConfigurationManager`1.ShutdownBackgroundTask" /> is called.
+            If using a background task, the <see cref="N:Microsoft.IdentityModel.Protocols.Configuration" /> cannot
+            be used after calling this method.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

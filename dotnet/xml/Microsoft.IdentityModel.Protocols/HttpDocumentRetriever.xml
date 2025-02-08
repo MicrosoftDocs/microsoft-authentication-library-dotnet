@@ -38,6 +38,7 @@
     <AssemblyVersion>8.2.0.0</AssemblyVersion>
     <AssemblyVersion>8.2.1.0</AssemblyVersion>
     <AssemblyVersion>8.3.0.0</AssemblyVersion>
+    <AssemblyVersion>8.4.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -62,7 +63,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
-        <AssemblyVersion>8.3.0.0</AssemblyVersion>
+        <AssemblyVersion>8.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -81,7 +82,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
-        <AssemblyVersion>8.3.0.0</AssemblyVersion>
+        <AssemblyVersion>8.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="httpClient" Type="System.Net.Http.HttpClient" />
@@ -106,7 +107,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
-        <AssemblyVersion>8.3.0.0</AssemblyVersion>
+        <AssemblyVersion>8.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -131,7 +132,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
-        <AssemblyVersion>8.3.0.0</AssemblyVersion>
+        <AssemblyVersion>8.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.String&gt;</ReturnType>
@@ -150,6 +151,58 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="HttpVersion">
+      <MemberSignature Language="C#" Value="public Version HttpVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version HttpVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Protocols.HttpDocumentRetriever.HttpVersion" />
+      <MemberSignature Language="VB.NET" Value="Public Property HttpVersion As Version" />
+      <MemberSignature Language="F#" Value="member this.HttpVersion : Version with get, set" Usage="Microsoft.IdentityModel.Protocols.HttpDocumentRetriever.HttpVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
+        <AssemblyVersion>8.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If set, specifies the desired HTTP version to use for the requests.
+            Otherwise, HttpClient.DefaultRequestVersion is used.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            HttpRequestMessage.Version specifies the desired request version.
+            HttpRequestMessage.VersionPolicy defines how strictly the HTTP version should be adhered to, allowing for fallback to other versions if necessary.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HttpVersionPolicy">
+      <MemberSignature Language="C#" Value="public System.Net.Http.HttpVersionPolicy? HttpVersionPolicy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.Net.Http.HttpVersionPolicy&gt; HttpVersionPolicy" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Protocols.HttpDocumentRetriever.HttpVersionPolicy" />
+      <MemberSignature Language="VB.NET" Value="Public Property HttpVersionPolicy As Nullable(Of HttpVersionPolicy)" />
+      <MemberSignature Language="F#" Value="member this.HttpVersionPolicy : Nullable&lt;System.Net.Http.HttpVersionPolicy&gt; with get, set" Usage="Microsoft.IdentityModel.Protocols.HttpDocumentRetriever.HttpVersionPolicy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
+        <AssemblyVersion>8.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Net.Http.HttpVersionPolicy&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If set, specifies the protocol version policy to use when sending HTTP requests.
+            Otherwise, HttpClient.DefaultVersionPolicy is used.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            HttpRequestMessage.Version specifies the desired request version.
+            HttpRequestMessage.VersionPolicy defines how strictly the HTTP version should be adhered to, allowing for fallback to other versions if necessary.
+            </remarks>
+      </Docs>
+    </Member>
     <Member MemberName="RequireHttps">
       <MemberSignature Language="C#" Value="public bool RequireHttps { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance bool RequireHttps" />
@@ -159,7 +212,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
-        <AssemblyVersion>8.3.0.0</AssemblyVersion>
+        <AssemblyVersion>8.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -181,7 +234,7 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
-        <AssemblyVersion>8.3.0.0</AssemblyVersion>
+        <AssemblyVersion>8.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -202,7 +255,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
-        <AssemblyVersion>8.3.0.0</AssemblyVersion>
+        <AssemblyVersion>8.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -224,7 +277,7 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
-        <AssemblyVersion>8.3.0.0</AssemblyVersion>
+        <AssemblyVersion>8.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
