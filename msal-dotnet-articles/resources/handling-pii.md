@@ -38,7 +38,7 @@ To read more about how MSAL.NET does logging, refer to [Logging in MSAL.NET](../
 
 - IDs related to an organization or tenant (not the user) like tenant ID, directory ID, or directory name (e.g. `contoso.onmicrosoft.com`).
 - Authority.
-- Scopes and resource names.
+- Scopes and resource names / IDs.
 - Client (application) ID.
 - Service principal details, such as object ID and client ID.
 - Exception messages and stack traces, including error codes coming from Microsoft Entra ID.
