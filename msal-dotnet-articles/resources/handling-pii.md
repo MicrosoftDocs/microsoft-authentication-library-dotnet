@@ -40,7 +40,7 @@ To read more about how MSAL.NET does logging, refer to [Logging in MSAL.NET](../
 - Authority.
 - Scopes and resource names / IDs.
 - Client (application) ID.
-- Service principal details, such as object ID and client ID.
+- Service principal details, such as object ID, client ID or resource ID (which can contain the subscription ID, identity name etc.)
 - Exception messages and stack traces, including error codes coming from Microsoft Entra ID.
 - HTTP details other than request and response (for example, HTTP status codes or payload size).
 - Correlation IDs.
