@@ -1,22 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-web-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.IdentityModel.Abstractions" Version="8.5.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.JsonWebTokens" Version="8.5.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Abstractions" Version="8.6.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.JsonWebTokens" Version="8.6.0.0" />
     <Assembly Name="Microsoft.IdentityModel.KeyVaultExtensions" Version="7.7.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.Logging" Version="8.5.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.LoggingExtensions" Version="8.5.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Logging" Version="8.6.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.LoggingExtensions" Version="8.6.0.0" />
     <Assembly Name="Microsoft.IdentityModel.ManagedKeyVaultSecurityKey" Version="7.7.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols" Version="8.5.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="8.5.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.SignedHttpRequest" Version="8.5.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.WsFederation" Version="8.5.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.TestExtensions" Version="8.5.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Tokens" Version="8.5.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Tokens.Saml" Version="8.5.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Validators" Version="8.5.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Xml" Version="8.5.0.0" />
-    <Assembly Name="System.IdentityModel.Tokens.Jwt" Version="8.5.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols" Version="8.6.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="8.6.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.SignedHttpRequest" Version="8.6.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.WsFederation" Version="8.6.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.TestExtensions" Version="8.6.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Tokens" Version="8.6.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Tokens.Saml" Version="8.6.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Validators" Version="8.6.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Xml" Version="8.6.0.0" />
+    <Assembly Name="System.IdentityModel.Tokens.Jwt" Version="8.6.0.0" />
   </Assemblies>
   <Namespace Name="Microsoft.IdentityModel.Abstractions">
     <Type Name="Microsoft.IdentityModel.Abstractions.EventLogLevel" Id="T:Microsoft.IdentityModel.Abstractions.EventLogLevel">
@@ -2071,6 +2071,7 @@
       <Member Id="P:Microsoft.IdentityModel.Tokens.TokenValidationParameters.TokenReplayCache" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.TokenValidationParameters.TokenReplayValidator" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.TokenValidationParameters.TransformBeforeSignatureValidation" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.TokenValidationParameters.TryAllDecryptionKeys" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.TokenValidationParameters.TryAllIssuerSigningKeys" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.TokenValidationParameters.TypeValidator" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.TokenValidationParameters.ValidAlgorithms" />
@@ -3095,6 +3096,7 @@
       <Member Id="M:Microsoft.IdentityModel.Xml.KeyInfo.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2)" />
       <Member Id="M:Microsoft.IdentityModel.Xml.KeyInfo.Equals(System.Object)" />
       <Member Id="M:Microsoft.IdentityModel.Xml.KeyInfo.GetHashCode" />
+      <Member Id="M:Microsoft.IdentityModel.Xml.KeyInfo.MatchesKey(Microsoft.IdentityModel.Tokens.SecurityKey)" />
       <Member Id="P:Microsoft.IdentityModel.Xml.KeyInfo.KeyName" />
       <Member Id="P:Microsoft.IdentityModel.Xml.KeyInfo.RetrievalMethodUri" />
       <Member Id="P:Microsoft.IdentityModel.Xml.KeyInfo.RSAKeyValue" />
