@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-model-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.Identity.Abstractions" Version="7.2.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.Azure" Version="3.5.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.Certificate" Version="3.5.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="3.5.0.0" />
-    <Assembly Name="Microsoft.Identity.Web" Version="3.5.0.0" />
+    <Assembly Name="Microsoft.Identity.Abstractions" Version="8.2.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.Azure" Version="3.7.1.0" />
+    <Assembly Name="Microsoft.Identity.Web.Certificate" Version="3.7.1.0" />
+    <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="3.7.1.0" />
+    <Assembly Name="Microsoft.Identity.Web" Version="3.7.1.0" />
     <Assembly Name="Microsoft.Identity.Web.DownstreamRestApi" Version="2.0.8.0" />
-    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraph" Version="3.5.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraphBeta" Version="3.5.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.OWIN" Version="3.5.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.TokenAcquisition" Version="3.5.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.TokenCache" Version="3.5.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.UI" Version="3.5.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraph" Version="3.7.1.0" />
+    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraphBeta" Version="3.7.1.0" />
+    <Assembly Name="Microsoft.Identity.Web.OWIN" Version="3.7.1.0" />
+    <Assembly Name="Microsoft.Identity.Web.TokenAcquisition" Version="3.7.1.0" />
+    <Assembly Name="Microsoft.Identity.Web.TokenCache" Version="3.7.1.0" />
+    <Assembly Name="Microsoft.Identity.Web.UI" Version="3.7.1.0" />
   </Assemblies>
   <Namespace Name="Microsoft.Identity.Abstractions">
     <Type Name="Microsoft.Identity.Abstractions.AcquireTokenOptions" Id="T:Microsoft.Identity.Abstractions.AcquireTokenOptions">
@@ -25,6 +25,7 @@
       <Member Id="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.ExtraHeadersParameters" />
       <Member Id="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.ExtraParameters" />
       <Member Id="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.ExtraQueryParameters" />
+      <Member Id="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.FmiPath" />
       <Member Id="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.ForceRefresh" />
       <Member Id="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.LongRunningWebApiSessionKey" />
       <Member Id="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.LongRunningWebApiSessionKeyAuto" />
@@ -60,6 +61,7 @@
     </Type>
     <Type Name="Microsoft.Identity.Abstractions.CredentialDescription" Id="T:Microsoft.Identity.Abstractions.CredentialDescription">
       <Member Id="M:Microsoft.Identity.Abstractions.CredentialDescription.#ctor" />
+      <Member Id="M:Microsoft.Identity.Abstractions.CredentialDescription.#ctor(Microsoft.Identity.Abstractions.CredentialDescription)" />
       <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.Base64EncodedValue" />
       <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.CachedValue" />
       <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.Certificate" />
@@ -69,17 +71,18 @@
       <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.CertificateStorePath" />
       <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.CertificateThumbprint" />
       <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.ClientSecret" />
-      <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.Container" />
       <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.CredentialType" />
+      <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.CustomSignedAssertionProviderData" />
+      <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.CustomSignedAssertionProviderName" />
       <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.DecryptKeysAuthenticationOptions" />
       <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.Id" />
       <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.KeyVaultCertificateName" />
       <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.KeyVaultUrl" />
       <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.ManagedIdentityClientId" />
-      <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.ReferenceOrValue" />
       <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.SignedAssertionFileDiskPath" />
       <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.Skip" />
       <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.SourceType" />
+      <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.TokenExchangeAuthority" />
       <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.TokenExchangeUrl" />
     </Type>
     <Type Name="Microsoft.Identity.Abstractions.CredentialSource" Id="T:Microsoft.Identity.Abstractions.CredentialSource">
@@ -87,6 +90,7 @@
       <Member Id="F:Microsoft.Identity.Abstractions.CredentialSource.Base64Encoded" />
       <Member Id="F:Microsoft.Identity.Abstractions.CredentialSource.Certificate" />
       <Member Id="F:Microsoft.Identity.Abstractions.CredentialSource.ClientSecret" />
+      <Member Id="F:Microsoft.Identity.Abstractions.CredentialSource.CustomSignedAssertion" />
       <Member Id="F:Microsoft.Identity.Abstractions.CredentialSource.KeyVault" />
       <Member Id="F:Microsoft.Identity.Abstractions.CredentialSource.Path" />
       <Member Id="F:Microsoft.Identity.Abstractions.CredentialSource.SignedAssertionFilePath" />
@@ -137,6 +141,9 @@
     <Type Name="Microsoft.Identity.Abstractions.ICredentialSourceLoader" Id="T:Microsoft.Identity.Abstractions.ICredentialSourceLoader">
       <Member Id="M:Microsoft.Identity.Abstractions.ICredentialSourceLoader.LoadIfNeededAsync(Microsoft.Identity.Abstractions.CredentialDescription,Microsoft.Identity.Abstractions.CredentialSourceLoaderParameters)" />
       <Member Id="P:Microsoft.Identity.Abstractions.ICredentialSourceLoader.CredentialSource" />
+    </Type>
+    <Type Name="Microsoft.Identity.Abstractions.ICustomSignedAssertionProvider" Id="T:Microsoft.Identity.Abstractions.ICustomSignedAssertionProvider">
+      <Member Id="P:Microsoft.Identity.Abstractions.ICustomSignedAssertionProvider.Name" />
     </Type>
     <Type Name="Microsoft.Identity.Abstractions.IdentityApplicationOptions" Id="T:Microsoft.Identity.Abstractions.IdentityApplicationOptions">
       <Member Id="M:Microsoft.Identity.Abstractions.IdentityApplicationOptions.#ctor" />
@@ -388,6 +395,7 @@
     <Type Name="Microsoft.Identity.Web.DefaultCertificateLoader" Id="T:Microsoft.Identity.Web.DefaultCertificateLoader">
       <Member Id="M:Microsoft.Identity.Web.DefaultCertificateLoader.#ctor" />
       <Member Id="M:Microsoft.Identity.Web.DefaultCertificateLoader.#ctor(Microsoft.Extensions.Logging.ILogger{Microsoft.Identity.Web.DefaultCertificateLoader})" />
+      <Member Id="M:Microsoft.Identity.Web.DefaultCertificateLoader.#ctor(System.Collections.Generic.IEnumerable{Microsoft.Identity.Abstractions.ICustomSignedAssertionProvider},Microsoft.Extensions.Logging.ILogger{Microsoft.Identity.Web.DefaultCertificateLoader})" />
       <Member Id="M:Microsoft.Identity.Web.DefaultCertificateLoader.LoadAllCertificates(System.Collections.Generic.IEnumerable{Microsoft.Identity.Web.CertificateDescription})" />
       <Member Id="M:Microsoft.Identity.Web.DefaultCertificateLoader.LoadFirstCertificate(System.Collections.Generic.IEnumerable{Microsoft.Identity.Web.CertificateDescription})" />
       <Member Id="M:Microsoft.Identity.Web.DefaultCertificateLoader.LoadFirstCertificateAsync(System.Collections.Generic.IEnumerable{Microsoft.Identity.Web.CertificateDescription})" />
@@ -400,10 +408,12 @@
     <Type Name="Microsoft.Identity.Web.DefaultCredentialsLoader" Id="T:Microsoft.Identity.Web.DefaultCredentialsLoader">
       <Member Id="M:Microsoft.Identity.Web.DefaultCredentialsLoader.#ctor" />
       <Member Id="M:Microsoft.Identity.Web.DefaultCredentialsLoader.#ctor(Microsoft.Extensions.Logging.ILogger{Microsoft.Identity.Web.DefaultCredentialsLoader})" />
+      <Member Id="M:Microsoft.Identity.Web.DefaultCredentialsLoader.#ctor(System.Collections.Generic.IEnumerable{Microsoft.Identity.Abstractions.ICustomSignedAssertionProvider},Microsoft.Extensions.Logging.ILogger{Microsoft.Identity.Web.DefaultCredentialsLoader})" />
       <Member Id="M:Microsoft.Identity.Web.DefaultCredentialsLoader.LoadCredentialsIfNeededAsync(Microsoft.Identity.Abstractions.CredentialDescription,Microsoft.Identity.Abstractions.CredentialSourceLoaderParameters)" />
       <Member Id="M:Microsoft.Identity.Web.DefaultCredentialsLoader.LoadFirstValidCredentialsAsync(System.Collections.Generic.IEnumerable{Microsoft.Identity.Abstractions.CredentialDescription},Microsoft.Identity.Abstractions.CredentialSourceLoaderParameters)" />
       <Member Id="M:Microsoft.Identity.Web.DefaultCredentialsLoader.ResetCredentials(System.Collections.Generic.IEnumerable{Microsoft.Identity.Abstractions.CredentialDescription})" />
       <Member Id="P:Microsoft.Identity.Web.DefaultCredentialsLoader.CredentialSourceLoaders" />
+      <Member Id="P:Microsoft.Identity.Web.DefaultCredentialsLoader.CustomSignedAssertionCredentialSourceLoaders" />
     </Type>
     <Type Name="Microsoft.Identity.Web.DownstreamRestApiExtensions" Id="T:Microsoft.Identity.Web.DownstreamRestApiExtensions">
       <Member Id="M:Microsoft.Identity.Web.DownstreamRestApiExtensions.AddDownstreamRestApi(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,Microsoft.Extensions.Configuration.IConfiguration)" />
