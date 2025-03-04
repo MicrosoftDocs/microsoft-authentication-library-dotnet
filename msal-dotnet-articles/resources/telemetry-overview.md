@@ -1,13 +1,14 @@
 ---
 title: MSAL.NET telemetry overview
 description: Explore MSAL.NET's telemetry capabilities for Microsoft Entra token endpoint requests. Learn about client-side state, error tracking, and SDK API usage metadata.
+ms.date: 03/03/2025
 ---
 
 # MSAL.NET telemetry overview
 
 MSAL.NET relies on 2 strategies for telemetry: 
 
-1. It uses Open Telemetry to emit [metrics](https://learn.microsoft.com/en-us/dotnet/core/diagnostics/metrics). These need to be collected by apps explicitly.
+1. It uses Open Telemetry to emit [metrics](/dotnet/core/diagnostics/metrics). These need to be collected by apps explicitly.
 2. It sends some datapoints with every request to the token endpoint. This is for Microsoft Entra consumption only and it happens automatically.
 
 ## Open Telemetry 
