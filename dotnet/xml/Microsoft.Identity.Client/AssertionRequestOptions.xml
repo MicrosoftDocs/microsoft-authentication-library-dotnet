@@ -38,6 +38,7 @@
     <AssemblyVersion>4.67.1.0</AssemblyVersion>
     <AssemblyVersion>4.67.2.0</AssemblyVersion>
     <AssemblyVersion>4.68.0.0</AssemblyVersion>
+    <AssemblyVersion>4.69.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -58,7 +59,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.68.0.0</AssemblyVersion>
+        <AssemblyVersion>4.69.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -75,7 +76,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.68.0.0</AssemblyVersion>
+        <AssemblyVersion>4.69.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.CancellationToken</ReturnType>
@@ -95,7 +96,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.68.0.0</AssemblyVersion>
+        <AssemblyVersion>4.69.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -103,6 +104,30 @@
       <Docs>
         <summary>
             Claims to be included in the client assertion
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientCapabilities">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;string&gt; ClientCapabilities { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; ClientCapabilities" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.AssertionRequestOptions.ClientCapabilities" />
+      <MemberSignature Language="VB.NET" Value="Public Property ClientCapabilities As IEnumerable(Of String)" />
+      <MemberSignature Language="F#" Value="member this.ClientCapabilities : seq&lt;string&gt; with get, set" Usage="Microsoft.Identity.Client.AssertionRequestOptions.ClientCapabilities" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.69.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Capabilities that the client application has declared. 
+            If the callback implementer calls the token issuer using another client application object 
+            (e.g. ManagedIdentityApplication or ConfidentialClientApplication), the same capabilities should be used there.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -117,7 +142,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.68.0.0</AssemblyVersion>
+        <AssemblyVersion>4.69.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -139,7 +164,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.68.0.0</AssemblyVersion>
+        <AssemblyVersion>4.69.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
