@@ -3,7 +3,7 @@ title: MSAL.NET API Reference Documentation
 description: "The full overview of the MSAL.NET API surface."
 ---
 
-# MSAL.NET API Reference Documentation
+# MSAL.NET API Reference Documentation 
 
 This section covers the complete API reference documentation for MSAL.NET. It's a reflection of the **latest version** of all MSAL.NET component packages hosted on NuGet.
 
