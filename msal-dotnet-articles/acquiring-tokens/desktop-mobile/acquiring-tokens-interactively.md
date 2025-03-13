@@ -190,13 +190,6 @@ AcquireTokenSilent(scopesForVendorApi, accounts.FirstOrDefault()).ExecuteAsync()
 
 For Microsoft personal accounts, re-prompting for consent on each native client call to authorize is the intended behavior. Native client identity is inherently insecure and the Microsoft identity platform chose to mitigate this for consumer services by prompting for consent each time the application is authorized.
 
-## Platform-specific details
-
-Depending on the platform, additional configuration might be required for interactive prompts:
-
-- [Configuration requirements and troubleshooting tips for Xamarin Android with MSAL.NET](/entra/identity-platform/msal-net-xamarin-android-considerations)
-- [Considerations for using Xamarin iOS with MSAL.NET](/entra/identity-platform/msal-net-xamarin-ios-considerations)
-
 ## Samples
 
 | Sample | Platform | Description |
