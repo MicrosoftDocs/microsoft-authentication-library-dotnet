@@ -1,5 +1,6 @@
 ---
 title: Experimental features in MSAL.NET
+ms.date: 03/17/2025
 ---
 
 # Experimental features in MSAL.NET
