@@ -1,6 +1,7 @@
 ---
 title: Multicloud support and instance awareness
 description: "The instance awareness feature helps complete the scenario where any an account from any cloud can be signed-in using the default value for environment."
+ms.date: 03/17/2025
 ---
 
 # Multicloud support and instance awareness

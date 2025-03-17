@@ -1,6 +1,7 @@
 ---
 title: Using MSAL.NET With .NET MAUI
 description: "How to use MSAL.NET on mobile platforms."
+ms.date: 03/17/2025
 ---
 
 # Using MSAL.NET With MAUI
