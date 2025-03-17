@@ -1,5 +1,6 @@
 ---
 title: Cache options in MSAL.NET
+ms.date: 03/17/2025
 ---
 
 # Cache options in MSAL.NET

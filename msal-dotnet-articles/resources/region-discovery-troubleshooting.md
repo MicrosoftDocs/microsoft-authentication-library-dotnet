@@ -1,5 +1,6 @@
 ---
 title: Region discovery troubleshooting
+ms.date: 03/17/2025
 ---
 
 # Region discovery troubleshooting

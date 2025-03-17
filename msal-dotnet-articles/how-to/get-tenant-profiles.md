@@ -1,5 +1,6 @@
 ---
 title: Getting tenant profiles with MSAL.NET
+ms.date: 03/17/2025
 ---
 
 # Getting tenant profiles with MSAL.NET

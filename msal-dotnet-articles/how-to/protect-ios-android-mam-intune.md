@@ -1,6 +1,7 @@
 ---
 title: Protecting iOS and Android applications with InTune
 description: "How to use InTune with Android and iOS applications that depend on MSAL.NET."
+ms.date: 03/17/2025
 ---
 
 # Protecting iOS and Android applications with InTune

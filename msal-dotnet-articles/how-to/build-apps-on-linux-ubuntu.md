@@ -1,5 +1,6 @@
 ---
 title: Building MSAL.NET applications on Linux
+ms.date: 03/17/2025
 ---
 
 # Building MSAL.NET applications on Linux

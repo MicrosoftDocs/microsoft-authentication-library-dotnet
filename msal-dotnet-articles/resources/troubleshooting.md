@@ -1,6 +1,7 @@
 ---
 title: Troubleshooting MSAL.NET
 description: Troubleshoot MSAL.NET issues with our comprehensive guide. Learn to fix JavaScript errors, region auto-discovery failures, and more on Microsoft's official site.
+ms.date: 03/17/2025
 ---
 
 # Troubleshooting MSAL.NET
