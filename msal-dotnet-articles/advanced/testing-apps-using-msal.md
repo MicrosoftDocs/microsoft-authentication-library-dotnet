@@ -48,7 +48,7 @@ Daemon apps use pre-deployed secrets (passwords or certificates) to talk to Micr
 For native clients, there are several approaches to testing:
 
 - Use the [Username / Password](../acquiring-tokens/desktop-mobile/username-password-authentication.md) grant to fetch a token in a non-interactive way. This flow is not recommended in production, but it is reasonable to use it for testing.
-- Use a framework, like Appium or Xamarin.Test, that provides an automation interface for both your app and the MSAL created browser.
+- Use a framework, like Appium, that provides an automation interface for both your app and the MSAL created browser.
 - MSAL exposes an extensibility point that allows developers to inject their own browser experience. The MSAL team uses this internally to test interactive auth scenarios.
 
 ## Library feedback
