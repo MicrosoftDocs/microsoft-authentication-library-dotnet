@@ -13,4 +13,5 @@ ms.topic:    # Add the ms.topic value
 ms.date:     03/18/2025
 ---
 
-Using MSAL Python with an Authentication Broker on Linux
+# Using MSAL .NET with an Authentication Broker on Linux
+
