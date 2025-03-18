@@ -1,6 +1,7 @@
 ---
 title: Managed identity with MSAL.NET
 description: "How to use Azure managed identities in MSAL.NET applications."
+ms.date: 03/17/2025
 ---
 
 # Managed identity with MSAL.NET

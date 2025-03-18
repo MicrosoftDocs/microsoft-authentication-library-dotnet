@@ -1,6 +1,7 @@
 ---
 title: MSAL.NET extensibility points
 description: Explore advanced extensibility points in MSAL.NET for scalable apps. Adapt HttpClient factories, modify token requests, inject query parameters, and more.
+ms.date: 03/17/2025
 ---
 
 # MSAL.NET extensibility points
@@ -9,7 +10,7 @@ MSAL adopts the strategy of "make simple scenarios simple, make complex scenario
 
 ## Use your own HttpClient
 
-Allows apps to adapt highly scalable HttpClient factories such as ASP.NET Core's [IHttpClientFactory](/aspnet/core/fundamentals/http-requests?view=aspnetcore-6.0).
+Allows apps to adapt highly scalable HttpClient factories such as ASP.NET Core's [IHttpClientFactory](/aspnet/core/fundamentals/http-requests).
 Helps desktop and mobile apps which have to deal with complex proxy configurations.
 Allows apps to fully control the HTTP messages.
 
@@ -50,10 +51,10 @@ Allows apps to add query (GET) parameters to applications, customizing the exper
 
 Useful to target Microsoft Entra service slices where new features or bug fixes are deployed first and to customize the UX experience with features not exposed by MSAL. Note that MSAL doesn't perform the `/authorize` request in ASP.NET / ASP.NET Core scenarios, so those calls are not affected!
 
-Details [here](/dotnet/api/microsoft.identity.client.abstractacquiretokenparameterbuilder-1.withextraqueryparameters?view=azure-dotnet#microsoft-identity-client-abstractacquiretokenparameterbuilder-1-withextraqueryparameters(system-string))
+Details [here](/dotnet/api/microsoft.identity.client.abstractacquiretokenparameterbuilder-1.withextraqueryparameters?)
 
 ## Desktop / Mobile Apps - ICustomWebUi
 
 Allows desktop and mobile apps to use their own browser instead of the embedded / system browsers provided by MSAL.
 
-Details [here](/dotnet/api/microsoft.identity.client.extensibility.icustomwebui?view=azure-dotnet)
+Details [here](/dotnet/api/microsoft.identity.client.extensibility.icustomwebui?)

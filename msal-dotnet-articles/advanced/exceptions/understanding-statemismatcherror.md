@@ -1,5 +1,7 @@
 ---
 title: Understanding StateMismatchError
+ms.date: 03/17/2025
+description: Understand the `StateMismatchError` exception in MSAL.NET
 ---
 
 # Understanding `StateMismatchError`
