@@ -44,6 +44,7 @@
     <AssemblyVersion>8.6.0.0</AssemblyVersion>
     <AssemblyVersion>8.6.1.0</AssemblyVersion>
     <AssemblyVersion>8.7.0.0</AssemblyVersion>
+    <AssemblyVersion>8.8.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeParameters>
     <TypeParameter Name="T">
@@ -77,7 +78,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
-        <AssemblyVersion>8.7.0.0</AssemblyVersion>
+        <AssemblyVersion>8.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="metadataAddress" Type="System.String" />
@@ -101,7 +102,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
-        <AssemblyVersion>8.7.0.0</AssemblyVersion>
+        <AssemblyVersion>8.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="metadataAddress" Type="System.String" />
@@ -128,7 +129,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
-        <AssemblyVersion>8.7.0.0</AssemblyVersion>
+        <AssemblyVersion>8.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="metadataAddress" Type="System.String" />
@@ -154,7 +155,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
-        <AssemblyVersion>8.7.0.0</AssemblyVersion>
+        <AssemblyVersion>8.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="metadataAddress" Type="System.String" />
@@ -183,7 +184,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
-        <AssemblyVersion>8.7.0.0</AssemblyVersion>
+        <AssemblyVersion>8.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="metadataAddress" Type="System.String" />
@@ -212,7 +213,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
-        <AssemblyVersion>8.7.0.0</AssemblyVersion>
+        <AssemblyVersion>8.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="metadataAddress" Type="System.String" />
@@ -243,7 +244,7 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
-        <AssemblyVersion>8.7.0.0</AssemblyVersion>
+        <AssemblyVersion>8.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.TimeSpan</ReturnType>
@@ -264,7 +265,7 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
-        <AssemblyVersion>8.7.0.0</AssemblyVersion>
+        <AssemblyVersion>8.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.TimeSpan</ReturnType>
@@ -285,7 +286,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
-        <AssemblyVersion>8.7.0.0</AssemblyVersion>
+        <AssemblyVersion>8.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.BaseConfiguration&gt;</ReturnType>
@@ -311,7 +312,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
-        <AssemblyVersion>8.7.0.0</AssemblyVersion>
+        <AssemblyVersion>8.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;T&gt;</ReturnType>
@@ -321,7 +322,7 @@
         <summary>
             Obtains an updated version of Configuration.
             </summary>
-        <returns>Configuration of type T.</returns>
+        <returns>Configuration of type <typeparamref name="T" />.</returns>
         <remarks>If the time since the last call is less than <see cref="P:Microsoft.IdentityModel.Tokens.BaseConfigurationManager.AutomaticRefreshInterval" /> then <see cref="M:Microsoft.IdentityModel.Protocols.IConfigurationRetriever`1.GetConfigurationAsync(System.String,Microsoft.IdentityModel.Protocols.IDocumentRetriever,System.Threading.CancellationToken)" /> is not called and the current Configuration is returned.</remarks>
         <exception cref="T:System.InvalidOperationException">Throw if the configuration is unable to be retrieved.</exception>
         <exception cref="T:Microsoft.IdentityModel.Protocols.Configuration.InvalidConfigurationException">Throw if the configuration fails to be validated by the <see cref="T:Microsoft.IdentityModel.Protocols.IConfigurationValidator`1" />.</exception>
@@ -339,7 +340,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
-        <AssemblyVersion>8.7.0.0</AssemblyVersion>
+        <AssemblyVersion>8.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;T&gt;</ReturnType>
@@ -352,8 +353,27 @@
         <summary>
             Obtains an updated version of Configuration.
             </summary>
-        <returns>Configuration of type T.</returns>
-        <remarks>If the time since the last call is less than <see cref="P:Microsoft.IdentityModel.Tokens.BaseConfigurationManager.AutomaticRefreshInterval" /> then <see cref="M:Microsoft.IdentityModel.Protocols.IConfigurationRetriever`1.GetConfigurationAsync(System.String,Microsoft.IdentityModel.Protocols.IDocumentRetriever,System.Threading.CancellationToken)" /> is not called and the current Configuration is returned.</remarks>
+        <returns>Configuration of type <typeparamref name="T" />.</returns>
+        <remarks>
+          <para>
+            If the time since the last call is less than <see cref="P:Microsoft.IdentityModel.Tokens.BaseConfigurationManager.AutomaticRefreshInterval" />
+            then <see cref="M:Microsoft.IdentityModel.Protocols.IConfigurationRetriever`1.GetConfigurationAsync(System.String,Microsoft.IdentityModel.Protocols.IDocumentRetriever,System.Threading.CancellationToken)" /> is not called and the current Configuration is returned.
+            By default, this method blocks until the configuration is retrieved the first time. After the configuration was retrieved once,
+            updates will happen in the background. Failures to retrieve the configuration on the background thread will be logged.
+            </para>
+          <para>
+            If this operation is configured to be blocking through the switch 'Switch.Microsoft.IdentityModel.UpdateConfigAsBlocking'
+            then this method will block each time the configuration needs to be updated or hasn't been retrieved. If the configuration
+            cannot be initially retrieved an exception will be thrown. If the configuration has been retrieved, but cannot be updated,
+            then the exception will be logged and the current configuration will be returned.
+            </para>
+          <para>
+            By using the app context switch you choose what works best for you when there is a signing key update:
+            either block requests from being validated until the new key is retrieved, or allow requests to be validated
+            with the current key until the new key is retrieved. If blocking, a service receiving high concurrent request
+            may experience thread starvation.
+            </para>
+        </remarks>
         <exception cref="T:System.InvalidOperationException">Throw if the configuration is unable to be retrieved.</exception>
         <exception cref="T:Microsoft.IdentityModel.Protocols.Configuration.InvalidConfigurationException">Throw if the configuration fails to be validated by the <see cref="T:Microsoft.IdentityModel.Protocols.IConfigurationValidator`1" />.</exception>
       </Docs>
@@ -367,7 +387,7 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
-        <AssemblyVersion>8.7.0.0</AssemblyVersion>
+        <AssemblyVersion>8.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.TimeSpan</ReturnType>
@@ -388,7 +408,7 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
-        <AssemblyVersion>8.7.0.0</AssemblyVersion>
+        <AssemblyVersion>8.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.TimeSpan</ReturnType>
@@ -412,7 +432,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
-        <AssemblyVersion>8.7.0.0</AssemblyVersion>
+        <AssemblyVersion>8.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -422,7 +442,11 @@
         <summary>
             Triggers updating metadata when:
             <para>1. Called the first time.</para><para>2. The time between when this method was called and DateTimeOffset.Now is greater than <see cref="P:Microsoft.IdentityModel.Tokens.BaseConfigurationManager.RefreshInterval" />.</para><para>If <see cref="P:Microsoft.IdentityModel.Tokens.BaseConfigurationManager.RefreshInterval" /> == <see cref="F:System.TimeSpan.MaxValue" /> then this method does nothing.</para></summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+            If the strategy is configured to be blocking through the switch 'Switch.Microsoft.IdentityModel.UpdateConfigAsBlocking',
+            then this method will not update the configuration, instead it will request the next call to <see cref="M:Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationAsync" />
+            should request new configuration.
+            </remarks>
       </Docs>
     </Member>
   </Members>
