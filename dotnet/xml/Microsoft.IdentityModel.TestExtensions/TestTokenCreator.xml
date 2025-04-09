@@ -1,0 +1,633 @@
+<Type Name="TestTokenCreator" FullName="Microsoft.IdentityModel.TestExtensions.TestTokenCreator">
+  <TypeSignature Language="C#" Value="public class TestTokenCreator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TestTokenCreator extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.IdentityModel.TestExtensions.TestTokenCreator" />
+  <TypeSignature Language="VB.NET" Value="Public Class TestTokenCreator" />
+  <TypeSignature Language="F#" Value="type TestTokenCreator = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
+    <AssemblyVersion>8.8.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+             A class responsible for creating test tokens for use in unit testing implementations depending on
+             Microsoft.IdentityModel token validation.
+             </summary>
+    <remarks>
+             Microsoft.IdentityModel.SampleTests.SampleTokenValidationClassTests contains examples for how this class can be leveraged
+             to validate a trivial token validation class that depends on Microsoft.IdentityModel's token validation methods.
+             </remarks>
+    <example>
+             The following provides an example for how this class could be leveraged using a common testing framework, Xunit. The core concepts
+             will be applicable to unit testing using any framework however.
+            
+             The example imagines a class, ClassWithMicrosoftIdentityModelDependency, which exposes ValidateToken, a method calling the
+             Microsoft.IdentityModel library and GetTokenValidationParameters which retrieves the <see cref="T:Microsoft.IdentityModel.Tokens.TokenValidationParameters" />
+             the code under test actually uses. Note that it's important to use the real <see cref="T:Microsoft.IdentityModel.Tokens.TokenValidationParameters" /> since that
+             will allow the unit tests to actually confirm if there's a gap in the validation (e.g. certain important validation is disabled,
+             <see cref="P:Microsoft.IdentityModel.Tokens.TokenValidationParameters.ValidateAudience" />, <see cref="P:Microsoft.IdentityModel.Tokens.TokenValidationParameters.ValidateIssuer" />, etc.)
+            
+             In the following code example, generateTokenToTest should be one of the methods from this class.
+             
+             <code>
+             internal void AssertValidationException(Func{string} generateTokenToTest, Type innerExceptionType, string innerExceptionMessagePart)
+             {
+                 try
+                 {
+                     ClassWithMicrosoftIdentityModelDependency.ValidateToken(
+                         generateTokenToTest,
+                         ClassWithMicrosoftIdentityModelDependency.GetTokenValidationParameters());
+             
+                     if (innerExceptionType != null || innerExceptionType != null)
+                         throw new TestException(
+                             string.Format(
+                                 "Expected an exception of type '{0}' containing '{1}' in the message.",
+                                 innerExceptionType,
+                                 innerExceptionMessagePart));
+                 }
+                 catch (Exception e)
+                 {
+                     Assert.Equal(typeof(SampleTestTokenValidationException), e.GetType());
+                     Assert.Equal(innerExceptionType, e.InnerException.GetType());
+             
+                     if (!string.IsNullOrEmpty(innerExceptionMessagePart))
+                     {
+                         Assert.Contains(innerExceptionMessagePart, e.InnerException.Message);
+                     }
+                 }
+             }
+            
+             [Fact]
+             public void TokenWithoutSignature()
+             {
+                 var testTokenCreator = new TestTokenCreator();
+                 AssertValidationException(
+                     testTokenCreator.CreateTokenWithNoSignature,
+                     typeof(ArgumentException),
+                     "IDX14111");
+             }
+             
+             </code></example>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TestTokenCreator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.TestExtensions.TestTokenCreator.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
+        <AssemblyVersion>8.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Audience">
+      <MemberSignature Language="C#" Value="public string Audience { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Audience" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.TestExtensions.TestTokenCreator.Audience" />
+      <MemberSignature Language="VB.NET" Value="Public Property Audience As String" />
+      <MemberSignature Language="F#" Value="member this.Audience : string with get, set" Usage="Microsoft.IdentityModel.TestExtensions.TestTokenCreator.Audience" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
+        <AssemblyVersion>8.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the Audience to be stamped on the tokens created.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateClaimsSetWithInstanceOverrides">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.Dictionary&lt;string,object&gt; CreateClaimsSetWithInstanceOverrides ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.Dictionary`2&lt;string, object&gt; CreateClaimsSetWithInstanceOverrides() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.TestExtensions.TestTokenCreator.CreateClaimsSetWithInstanceOverrides" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateClaimsSetWithInstanceOverrides () As Dictionary(Of String, Object)" />
+      <MemberSignature Language="F#" Value="member this.CreateClaimsSetWithInstanceOverrides : unit -&gt; System.Collections.Generic.Dictionary&lt;string, obj&gt;" Usage="testTokenCreator.CreateClaimsSetWithInstanceOverrides " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
+        <AssemblyVersion>8.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a default set of claims based on the instance values.
+            </summary>
+        <returns>A <see cref="T:System.Collections.Generic.Dictionary`2" /> representing the claims of a token to create.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDefaultValidToken">
+      <MemberSignature Language="C#" Value="public string CreateDefaultValidToken ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string CreateDefaultValidToken() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.TestExtensions.TestTokenCreator.CreateDefaultValidToken" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateDefaultValidToken () As String" />
+      <MemberSignature Language="F#" Value="member this.CreateDefaultValidToken : unit -&gt; string" Usage="testTokenCreator.CreateDefaultValidToken " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
+        <AssemblyVersion>8.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a default valid test token based based on the class's <see cref="P:Microsoft.IdentityModel.TestExtensions.TestTokenCreator.Issuer" />, <see cref="P:Microsoft.IdentityModel.TestExtensions.TestTokenCreator.Audience" />
+            and <see cref="P:Microsoft.IdentityModel.TestExtensions.TestTokenCreator.SigningCredentials" /> values.
+            </summary>
+        <returns>A test JWS token which is valid according to the class configuration.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateExpiredToken">
+      <MemberSignature Language="C#" Value="public string CreateExpiredToken ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string CreateExpiredToken() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.TestExtensions.TestTokenCreator.CreateExpiredToken" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateExpiredToken () As String" />
+      <MemberSignature Language="F#" Value="member this.CreateExpiredToken : unit -&gt; string" Usage="testTokenCreator.CreateExpiredToken " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
+        <AssemblyVersion>8.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a test JWS token which is past its expiration.
+            </summary>
+        <returns>A test JWS token which is past its expiration.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateJsonPayload">
+      <MemberSignature Language="C#" Value="public static string CreateJsonPayload (System.Collections.Generic.IDictionary&lt;string,object&gt; claims);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string CreateJsonPayload(class System.Collections.Generic.IDictionary`2&lt;string, object&gt; claims) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.TestExtensions.TestTokenCreator.CreateJsonPayload(System.Collections.Generic.IDictionary{System.String,System.Object})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateJsonPayload (claims As IDictionary(Of String, Object)) As String" />
+      <MemberSignature Language="F#" Value="static member CreateJsonPayload : System.Collections.Generic.IDictionary&lt;string, obj&gt; -&gt; string" Usage="Microsoft.IdentityModel.TestExtensions.TestTokenCreator.CreateJsonPayload claims" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
+        <AssemblyVersion>8.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="claims" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="claims">
+            The <see cref="T:System.Collections.Generic.Dictionary`2" /> of claims which describe the payload to create.</param>
+        <summary>
+            Creates a JSON payload based on the passed <see cref="T:System.Collections.Generic.IDictionary`2" />of claims.
+            </summary>
+        <returns>A JSON payload based on the passed <paramref name="claims" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNotYetValidToken">
+      <MemberSignature Language="C#" Value="public string CreateNotYetValidToken ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string CreateNotYetValidToken() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.TestExtensions.TestTokenCreator.CreateNotYetValidToken" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateNotYetValidToken () As String" />
+      <MemberSignature Language="F#" Value="member this.CreateNotYetValidToken : unit -&gt; string" Usage="testTokenCreator.CreateNotYetValidToken " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
+        <AssemblyVersion>8.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a test JWS token which is not yet valid.
+            </summary>
+        <returns>A test JWS token which is not yet valid.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateToken">
+      <MemberSignature Language="C#" Value="public static string CreateToken (Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor securityTokenDescriptor);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string CreateToken(class Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor securityTokenDescriptor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.TestExtensions.TestTokenCreator.CreateToken(Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateToken (securityTokenDescriptor As SecurityTokenDescriptor) As String" />
+      <MemberSignature Language="F#" Value="static member CreateToken : Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor -&gt; string" Usage="Microsoft.IdentityModel.TestExtensions.TestTokenCreator.CreateToken securityTokenDescriptor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
+        <AssemblyVersion>8.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="securityTokenDescriptor" Type="Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="securityTokenDescriptor">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor" /> which describes the token to create.</param>
+        <summary>
+            Creates a token based on the passed <see cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor" />.
+            </summary>
+        <returns>A JWS token described by the passed <see cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateToken">
+      <MemberSignature Language="C#" Value="public string CreateToken (System.Collections.Generic.Dictionary&lt;string,object&gt; claims);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string CreateToken(class System.Collections.Generic.Dictionary`2&lt;string, object&gt; claims) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.TestExtensions.TestTokenCreator.CreateToken(System.Collections.Generic.Dictionary{System.String,System.Object})" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateToken (claims As Dictionary(Of String, Object)) As String" />
+      <MemberSignature Language="F#" Value="member this.CreateToken : System.Collections.Generic.Dictionary&lt;string, obj&gt; -&gt; string" Usage="testTokenCreator.CreateToken claims" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
+        <AssemblyVersion>8.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="claims" Type="System.Collections.Generic.Dictionary&lt;System.String,System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="claims">
+            The <see cref="T:System.Collections.Generic.Dictionary`2" /> of claims which describe the token to create.
+            </param>
+        <summary>
+            Creates a token based on the passed <see cref="T:System.Collections.Generic.Dictionary`2" />.
+            </summary>
+        <returns>A JWS token described by the passed <see cref="T:System.Collections.Generic.Dictionary`2" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateTokenDescriptorWithInstanceOverrides">
+      <MemberSignature Language="C#" Value="public Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor CreateTokenDescriptorWithInstanceOverrides ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor CreateTokenDescriptorWithInstanceOverrides() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.TestExtensions.TestTokenCreator.CreateTokenDescriptorWithInstanceOverrides" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateTokenDescriptorWithInstanceOverrides () As SecurityTokenDescriptor" />
+      <MemberSignature Language="F#" Value="member this.CreateTokenDescriptorWithInstanceOverrides : unit -&gt; Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor" Usage="testTokenCreator.CreateTokenDescriptorWithInstanceOverrides " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
+        <AssemblyVersion>8.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a default <see cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor" /> based on the instance values.
+            </summary>
+        <returns>A <see cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor" /> representing the token to create.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateTokenWithBadAudience">
+      <MemberSignature Language="C#" Value="public string CreateTokenWithBadAudience ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string CreateTokenWithBadAudience() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.TestExtensions.TestTokenCreator.CreateTokenWithBadAudience" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateTokenWithBadAudience () As String" />
+      <MemberSignature Language="F#" Value="member this.CreateTokenWithBadAudience : unit -&gt; string" Usage="testTokenCreator.CreateTokenWithBadAudience " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
+        <AssemblyVersion>8.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a test JWS token with an audience which doens't match the configured instance value.
+            </summary>
+        <returns>A test JWS token with an audience which doens't match the configured instance value.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateTokenWithBadIssuer">
+      <MemberSignature Language="C#" Value="public string CreateTokenWithBadIssuer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string CreateTokenWithBadIssuer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.TestExtensions.TestTokenCreator.CreateTokenWithBadIssuer" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateTokenWithBadIssuer () As String" />
+      <MemberSignature Language="F#" Value="member this.CreateTokenWithBadIssuer : unit -&gt; string" Usage="testTokenCreator.CreateTokenWithBadIssuer " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
+        <AssemblyVersion>8.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a test JWS token with an issuer which doens't match the configured instance value.
+            </summary>
+        <returns>A test JWS token with an issuer which doens't match the configured instance value.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateTokenWithBadSignatureKey">
+      <MemberSignature Language="C#" Value="public string CreateTokenWithBadSignatureKey ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string CreateTokenWithBadSignatureKey() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.TestExtensions.TestTokenCreator.CreateTokenWithBadSignatureKey" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateTokenWithBadSignatureKey () As String" />
+      <MemberSignature Language="F#" Value="member this.CreateTokenWithBadSignatureKey : unit -&gt; string" Usage="testTokenCreator.CreateTokenWithBadSignatureKey " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
+        <AssemblyVersion>8.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a test JWS token signed with a key that doens't match the configured instance value.
+            </summary>
+        <returns>A test JWS token signed with a key that doens't match the configured instance value.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateTokenWithFutureIssuedAt">
+      <MemberSignature Language="C#" Value="public string CreateTokenWithFutureIssuedAt ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string CreateTokenWithFutureIssuedAt() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.TestExtensions.TestTokenCreator.CreateTokenWithFutureIssuedAt" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateTokenWithFutureIssuedAt () As String" />
+      <MemberSignature Language="F#" Value="member this.CreateTokenWithFutureIssuedAt : unit -&gt; string" Usage="testTokenCreator.CreateTokenWithFutureIssuedAt " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
+        <AssemblyVersion>8.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a test JWS token which is issued in the future.
+            </summary>
+        <returns>A test JWS token which is issued in the future.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateTokenWithInvalidSignature">
+      <MemberSignature Language="C#" Value="public string CreateTokenWithInvalidSignature ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string CreateTokenWithInvalidSignature() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.TestExtensions.TestTokenCreator.CreateTokenWithInvalidSignature" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateTokenWithInvalidSignature () As String" />
+      <MemberSignature Language="F#" Value="member this.CreateTokenWithInvalidSignature : unit -&gt; string" Usage="testTokenCreator.CreateTokenWithInvalidSignature " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
+        <AssemblyVersion>8.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a test token with a signature that doesn't match the payload.
+            </summary>
+        <returns>A test JWS token with a signature which doesn't match the payload.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateTokenWithMissingAudience">
+      <MemberSignature Language="C#" Value="public string CreateTokenWithMissingAudience ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string CreateTokenWithMissingAudience() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.TestExtensions.TestTokenCreator.CreateTokenWithMissingAudience" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateTokenWithMissingAudience () As String" />
+      <MemberSignature Language="F#" Value="member this.CreateTokenWithMissingAudience : unit -&gt; string" Usage="testTokenCreator.CreateTokenWithMissingAudience " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
+        <AssemblyVersion>8.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a test JWS token with a missing audience (aud) claim.
+            </summary>
+        <returns>A test JWS token with a missing audience (aud) claim.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateTokenWithMissingExpires">
+      <MemberSignature Language="C#" Value="public string CreateTokenWithMissingExpires ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string CreateTokenWithMissingExpires() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.TestExtensions.TestTokenCreator.CreateTokenWithMissingExpires" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateTokenWithMissingExpires () As String" />
+      <MemberSignature Language="F#" Value="member this.CreateTokenWithMissingExpires : unit -&gt; string" Usage="testTokenCreator.CreateTokenWithMissingExpires " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
+        <AssemblyVersion>8.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a test JWS token with a missing Expiration Time (exp) claim.
+            </summary>
+        <returns>A test JWS token with a missing Expiration Time (exp) claim.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateTokenWithMissingIssuedAt">
+      <MemberSignature Language="C#" Value="public string CreateTokenWithMissingIssuedAt ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string CreateTokenWithMissingIssuedAt() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.TestExtensions.TestTokenCreator.CreateTokenWithMissingIssuedAt" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateTokenWithMissingIssuedAt () As String" />
+      <MemberSignature Language="F#" Value="member this.CreateTokenWithMissingIssuedAt : unit -&gt; string" Usage="testTokenCreator.CreateTokenWithMissingIssuedAt " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
+        <AssemblyVersion>8.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a test JWS token with a missing IssuedAt (iat) claim.
+            </summary>
+        <returns>A test JWS token with a missing IssuedAt (iat) claim.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateTokenWithMissingIssuer">
+      <MemberSignature Language="C#" Value="public string CreateTokenWithMissingIssuer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string CreateTokenWithMissingIssuer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.TestExtensions.TestTokenCreator.CreateTokenWithMissingIssuer" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateTokenWithMissingIssuer () As String" />
+      <MemberSignature Language="F#" Value="member this.CreateTokenWithMissingIssuer : unit -&gt; string" Usage="testTokenCreator.CreateTokenWithMissingIssuer " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
+        <AssemblyVersion>8.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a test JWS token with a missing issuer (iss) claim.
+            </summary>
+        <returns>A test JWS token with a missing issuer (iss) claim.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateTokenWithMissingKey">
+      <MemberSignature Language="C#" Value="public string CreateTokenWithMissingKey ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string CreateTokenWithMissingKey() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.TestExtensions.TestTokenCreator.CreateTokenWithMissingKey" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateTokenWithMissingKey () As String" />
+      <MemberSignature Language="F#" Value="member this.CreateTokenWithMissingKey : unit -&gt; string" Usage="testTokenCreator.CreateTokenWithMissingKey " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
+        <AssemblyVersion>8.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a test JWS token without a signing key (i.e. alg=none, no signature).
+            </summary>
+        <returns>A test JWS token without a signing key (i.e. alg=none, no signature).</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateTokenWithMissingNotBefore">
+      <MemberSignature Language="C#" Value="public string CreateTokenWithMissingNotBefore ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string CreateTokenWithMissingNotBefore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.TestExtensions.TestTokenCreator.CreateTokenWithMissingNotBefore" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateTokenWithMissingNotBefore () As String" />
+      <MemberSignature Language="F#" Value="member this.CreateTokenWithMissingNotBefore : unit -&gt; string" Usage="testTokenCreator.CreateTokenWithMissingNotBefore " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
+        <AssemblyVersion>8.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a test JWS token with a missing NotBefore (nbf) claim.
+            </summary>
+        <returns>A test JWS token with a missing NotBefore (nbf) claim.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateTokenWithNoSignature">
+      <MemberSignature Language="C#" Value="public string CreateTokenWithNoSignature ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string CreateTokenWithNoSignature() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.TestExtensions.TestTokenCreator.CreateTokenWithNoSignature" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateTokenWithNoSignature () As String" />
+      <MemberSignature Language="F#" Value="member this.CreateTokenWithNoSignature : unit -&gt; string" Usage="testTokenCreator.CreateTokenWithNoSignature " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
+        <AssemblyVersion>8.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a test JWS token without any signature.
+            </summary>
+        <returns>A test JWS token without any signature.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Issuer">
+      <MemberSignature Language="C#" Value="public string Issuer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Issuer" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.TestExtensions.TestTokenCreator.Issuer" />
+      <MemberSignature Language="VB.NET" Value="Public Property Issuer As String" />
+      <MemberSignature Language="F#" Value="member this.Issuer : string with get, set" Usage="Microsoft.IdentityModel.TestExtensions.TestTokenCreator.Issuer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
+        <AssemblyVersion>8.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the issuer to be stamped on the tokens created.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SigningCredentials">
+      <MemberSignature Language="C#" Value="public Microsoft.IdentityModel.Tokens.SigningCredentials? SigningCredentials { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.IdentityModel.Tokens.SigningCredentials SigningCredentials" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.TestExtensions.TestTokenCreator.SigningCredentials" />
+      <MemberSignature Language="VB.NET" Value="Public Property SigningCredentials As SigningCredentials" />
+      <MemberSignature Language="F#" Value="member this.SigningCredentials : Microsoft.IdentityModel.Tokens.SigningCredentials with get, set" Usage="Microsoft.IdentityModel.TestExtensions.TestTokenCreator.SigningCredentials" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.TestExtensions</AssemblyName>
+        <AssemblyVersion>8.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Tokens.SigningCredentials</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the SigningCredentials used to sign the tokens created.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

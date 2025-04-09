@@ -1,0 +1,114 @@
+<Type Name="ClientAssertionProviderBase" FullName="Microsoft.Identity.Web.ClientAssertionProviderBase">
+  <TypeSignature Language="C#" Value="public abstract class ClientAssertionProviderBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ClientAssertionProviderBase extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Web.ClientAssertionProviderBase" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class ClientAssertionProviderBase" />
+  <TypeSignature Language="F#" Value="type ClientAssertionProviderBase = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
+    <AssemblyVersion>3.8.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Description of a client assertion in the application configuration.
+            See https://aka.ms/ms-id-web/client-assertions.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ClientAssertionProviderBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.ClientAssertionProviderBase.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
+        <AssemblyVersion>3.8.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Expiry">
+      <MemberSignature Language="C#" Value="public DateTimeOffset? Expiry { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; Expiry" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Web.ClientAssertionProviderBase.Expiry" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Expiry As Nullable(Of DateTimeOffset)" />
+      <MemberSignature Language="F#" Value="member this.Expiry : Nullable&lt;DateTimeOffset&gt;" Usage="Microsoft.Identity.Web.ClientAssertionProviderBase.Expiry" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
+        <AssemblyVersion>3.8.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.DateTimeOffset&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Expiry of the client assertion.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetClientAssertionAsync">
+      <MemberSignature Language="C#" Value="protected abstract System.Threading.Tasks.Task&lt;Microsoft.Identity.Web.ClientAssertion&gt; GetClientAssertionAsync (Microsoft.Identity.Client.AssertionRequestOptions? assertionRequestOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Identity.Web.ClientAssertion&gt; GetClientAssertionAsync(class Microsoft.Identity.Client.AssertionRequestOptions assertionRequestOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.ClientAssertionProviderBase.GetClientAssertionAsync(Microsoft.Identity.Client.AssertionRequestOptions)" />
+      <MemberSignature Language="VB.NET" Value="Protected MustOverride Function GetClientAssertionAsync (assertionRequestOptions As AssertionRequestOptions) As Task(Of ClientAssertion)" />
+      <MemberSignature Language="F#" Value="abstract member GetClientAssertionAsync : Microsoft.Identity.Client.AssertionRequestOptions -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Web.ClientAssertion&gt;" Usage="clientAssertionProviderBase.GetClientAssertionAsync assertionRequestOptions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
+        <AssemblyVersion>3.8.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Identity.Web.ClientAssertion&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assertionRequestOptions" Type="Microsoft.Identity.Client.AssertionRequestOptions" />
+      </Parameters>
+      <Docs>
+        <param name="assertionRequestOptions" />
+        <summary>
+            Gets the Client assertion
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSignedAssertionAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;string&gt; GetSignedAssertionAsync (Microsoft.Identity.Client.AssertionRequestOptions? assertionRequestOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;string&gt; GetSignedAssertionAsync(class Microsoft.Identity.Client.AssertionRequestOptions assertionRequestOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.ClientAssertionProviderBase.GetSignedAssertionAsync(Microsoft.Identity.Client.AssertionRequestOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetSignedAssertionAsync (assertionRequestOptions As AssertionRequestOptions) As Task(Of String)" />
+      <MemberSignature Language="F#" Value="member this.GetSignedAssertionAsync : Microsoft.Identity.Client.AssertionRequestOptions -&gt; System.Threading.Tasks.Task&lt;string&gt;" Usage="clientAssertionProviderBase.GetSignedAssertionAsync assertionRequestOptions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
+        <AssemblyVersion>3.8.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assertionRequestOptions" Type="Microsoft.Identity.Client.AssertionRequestOptions" />
+      </Parameters>
+      <Docs>
+        <param name="assertionRequestOptions">Input object which is populated by the SDK.</param>
+        <summary>
+            Get the signed assertion (and refreshes it if needed).
+            </summary>
+        <returns>The signed assertion.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

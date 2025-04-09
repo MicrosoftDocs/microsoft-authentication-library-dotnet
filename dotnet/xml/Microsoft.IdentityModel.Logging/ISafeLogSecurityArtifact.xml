@@ -1,0 +1,46 @@
+<Type Name="ISafeLogSecurityArtifact" FullName="Microsoft.IdentityModel.Logging.ISafeLogSecurityArtifact">
+  <TypeSignature Language="C#" Value="public interface ISafeLogSecurityArtifact" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit ISafeLogSecurityArtifact" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.IdentityModel.Logging.ISafeLogSecurityArtifact" />
+  <TypeSignature Language="VB.NET" Value="Public Interface ISafeLogSecurityArtifact" />
+  <TypeSignature Language="F#" Value="type ISafeLogSecurityArtifact = interface" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.IdentityModel.Logging</AssemblyName>
+    <AssemblyVersion>8.8.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Interface that provides an unsafe method to log a security artifact.
+            </summary>
+    <remarks>
+            SecurityToken and encoded token are considered as SecurityArtifacts.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="UnsafeToString">
+      <MemberSignature Language="C#" Value="public string UnsafeToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string UnsafeToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Logging.ISafeLogSecurityArtifact.UnsafeToString" />
+      <MemberSignature Language="VB.NET" Value="Public Function UnsafeToString () As String" />
+      <MemberSignature Language="F#" Value="abstract member UnsafeToString : unit -&gt; string" Usage="iSafeLogSecurityArtifact.UnsafeToString " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Logging</AssemblyName>
+        <AssemblyVersion>8.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns a string that represents the complete security artifact.
+            This may include sensitive information and should only be used for debugging purposes.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

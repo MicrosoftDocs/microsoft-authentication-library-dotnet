@@ -1,0 +1,132 @@
+<Type Name="AadIssuerValidator" FullName="Microsoft.IdentityModel.Validators.AadIssuerValidator">
+  <TypeSignature Language="C#" Value="public class AadIssuerValidator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AadIssuerValidator extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.IdentityModel.Validators.AadIssuerValidator" />
+  <TypeSignature Language="VB.NET" Value="Public Class AadIssuerValidator" />
+  <TypeSignature Language="F#" Value="type AadIssuerValidator = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.IdentityModel.Validators</AssemblyName>
+    <AssemblyVersion>8.8.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Generic class that validates the issuer for either JsonWebTokens or JwtSecurityTokens issued from the Microsoft identity platform (AAD).
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetAadIssuerValidator">
+      <MemberSignature Language="C#" Value="public static Microsoft.IdentityModel.Validators.AadIssuerValidator GetAadIssuerValidator (string aadAuthority);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.IdentityModel.Validators.AadIssuerValidator GetAadIssuerValidator(string aadAuthority) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Validators.AadIssuerValidator.GetAadIssuerValidator(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetAadIssuerValidator (aadAuthority As String) As AadIssuerValidator" />
+      <MemberSignature Language="F#" Value="static member GetAadIssuerValidator : string -&gt; Microsoft.IdentityModel.Validators.AadIssuerValidator" Usage="Microsoft.IdentityModel.Validators.AadIssuerValidator.GetAadIssuerValidator aadAuthority" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Validators</AssemblyName>
+        <AssemblyVersion>8.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Validators.AadIssuerValidator</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="aadAuthority" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="aadAuthority">The authority to create the validator for, e.g. https://login.microsoftonline.com/. </param>
+        <summary>
+            Gets an <see cref="T:Microsoft.IdentityModel.Validators.AadIssuerValidator" /> for an Azure Active Directory (AAD) authority.
+            </summary>
+        <returns>A <see cref="T:Microsoft.IdentityModel.Validators.AadIssuerValidator" /> for the aadAuthority.</returns>
+        <remarks>To be added.</remarks>
+        <example>
+          <code>
+            AadIssuerValidator aadIssuerValidator = AadIssuerValidator.GetAadIssuerValidator(authority);
+            TokenValidationParameters.IssuerValidator = aadIssuerValidator.Validate;
+            </code>
+        </example>
+        <exception cref="T:System.ArgumentNullException">if <paramref name="aadAuthority" /> is null or empty.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAadIssuerValidator">
+      <MemberSignature Language="C#" Value="public static Microsoft.IdentityModel.Validators.AadIssuerValidator GetAadIssuerValidator (string aadAuthority, System.Net.Http.HttpClient httpClient);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.IdentityModel.Validators.AadIssuerValidator GetAadIssuerValidator(string aadAuthority, class System.Net.Http.HttpClient httpClient) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Validators.AadIssuerValidator.GetAadIssuerValidator(System.String,System.Net.Http.HttpClient)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetAadIssuerValidator (aadAuthority As String, httpClient As HttpClient) As AadIssuerValidator" />
+      <MemberSignature Language="F#" Value="static member GetAadIssuerValidator : string * System.Net.Http.HttpClient -&gt; Microsoft.IdentityModel.Validators.AadIssuerValidator" Usage="Microsoft.IdentityModel.Validators.AadIssuerValidator.GetAadIssuerValidator (aadAuthority, httpClient)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Validators</AssemblyName>
+        <AssemblyVersion>8.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Validators.AadIssuerValidator</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="aadAuthority" Type="System.String" />
+        <Parameter Name="httpClient" Type="System.Net.Http.HttpClient" />
+      </Parameters>
+      <Docs>
+        <param name="aadAuthority">The authority to create the validator for, e.g. https://login.microsoftonline.com/. </param>
+        <param name="httpClient">Optional HttpClient to use to retrieve the endpoint metadata (can be null).</param>
+        <summary>
+            Gets an <see cref="T:Microsoft.IdentityModel.Validators.AadIssuerValidator" /> for an Azure Active Directory (AAD) authority.
+            </summary>
+        <returns>A <see cref="T:Microsoft.IdentityModel.Validators.AadIssuerValidator" /> for the aadAuthority.</returns>
+        <remarks>To be added.</remarks>
+        <example>
+          <code>
+            AadIssuerValidator aadIssuerValidator = AadIssuerValidator.GetAadIssuerValidator(authority, httpClient);
+            TokenValidationParameters.IssuerValidator = aadIssuerValidator.Validate;
+            </code>
+        </example>
+        <exception cref="T:System.ArgumentNullException">if <paramref name="aadAuthority" /> is null or empty.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public string Validate (string issuer, Microsoft.IdentityModel.Tokens.SecurityToken securityToken, Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string Validate(string issuer, class Microsoft.IdentityModel.Tokens.SecurityToken securityToken, class Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Validators.AadIssuerValidator.Validate(System.String,Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.TokenValidationParameters)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Validate (issuer As String, securityToken As SecurityToken, validationParameters As TokenValidationParameters) As String" />
+      <MemberSignature Language="F#" Value="member this.Validate : string * Microsoft.IdentityModel.Tokens.SecurityToken * Microsoft.IdentityModel.Tokens.TokenValidationParameters -&gt; string" Usage="aadIssuerValidator.Validate (issuer, securityToken, validationParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Validators</AssemblyName>
+        <AssemblyVersion>8.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="issuer" Type="System.String" />
+        <Parameter Name="securityToken" Type="Microsoft.IdentityModel.Tokens.SecurityToken" />
+        <Parameter Name="validationParameters" Type="Microsoft.IdentityModel.Tokens.TokenValidationParameters" />
+      </Parameters>
+      <Docs>
+        <param name="issuer">Issuer to validate (will be tenanted).</param>
+        <param name="securityToken">Received security token.</param>
+        <param name="validationParameters">The <see cref="T:Microsoft.IdentityModel.Tokens.TokenValidationParameters" /> to be used for validating the token.</param>
+        <summary>
+            Validate the issuer for single and multi-tenant applications of various audiences (Work and School accounts, or Work and School accounts +
+            Personal accounts) and the various clouds.
+            </summary>
+        <returns>The <c>issuer</c> if it's valid, or otherwise <c>SecurityTokenInvalidIssuerException</c> is thrown.</returns>
+        <remarks>The issuer is considered as valid if it has the same HTTP scheme and authority as the
+            authority from the configuration file, has a tenant ID, and optionally v2.0 (if this web API
+            accepts both V1 and V2 tokens).</remarks>
+        <example>
+          <code>
+            AadIssuerValidator aadIssuerValidator = AadIssuerValidator.GetAadIssuerValidator(authority, httpClient);
+            TokenValidationParameters.IssuerValidator = aadIssuerValidator.Validate;
+            </code>
+        </example>
+        <exception cref="T:System.ArgumentNullException"> if <paramref name="validationParameters" /> is null.</exception>
+        <exception cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenInvalidIssuerException">if the issuer is invalid or if there is a network issue. </exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,90 @@
+<Type Name="CertificatelessOptions" FullName="Microsoft.Identity.Web.CertificatelessOptions">
+  <TypeSignature Language="C#" Value="public class CertificatelessOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CertificatelessOptions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Web.CertificatelessOptions" />
+  <TypeSignature Language="VB.NET" Value="Public Class CertificatelessOptions" />
+  <TypeSignature Language="F#" Value="type CertificatelessOptions = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
+    <AssemblyVersion>3.8.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Options for configuring CertificatelessOptions.
+            See https://aka.ms/ms-id-web/certificateless.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CertificatelessOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.CertificatelessOptions.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
+        <AssemblyVersion>3.8.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEnabled">
+      <MemberSignature Language="C#" Value="public bool IsEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEnabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Web.CertificatelessOptions.IsEnabled" />
+      <MemberSignature Language="VB.NET" Value="Public Property IsEnabled As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsEnabled : bool with get, set" Usage="Microsoft.Identity.Web.CertificatelessOptions.IsEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
+        <AssemblyVersion>3.8.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Is certificateless enabled?
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <c>false.</c>
+      </Docs>
+    </Member>
+    <Member MemberName="ManagedIdentityClientId">
+      <MemberSignature Language="C#" Value="public string? ManagedIdentityClientId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ManagedIdentityClientId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Web.CertificatelessOptions.ManagedIdentityClientId" />
+      <MemberSignature Language="VB.NET" Value="Public Property ManagedIdentityClientId As String" />
+      <MemberSignature Language="F#" Value="member this.ManagedIdentityClientId : string with get, set" Usage="Microsoft.Identity.Web.CertificatelessOptions.ManagedIdentityClientId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
+        <AssemblyVersion>3.8.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The value is used to establish a connection between external workload identities
+            and Azure Active Directory. If Azure AD is the issuer, this value should be the object
+            ID of the managed identity service principal in the tenant that will be used to 
+            impersonate the app.
+            Can be null if you are using the machine assigned managed identity.
+            Needs to be assigned if you are using a user assigned managed identity.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
