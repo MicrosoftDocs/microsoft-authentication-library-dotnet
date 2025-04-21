@@ -1,0 +1,58 @@
+<Type Name="IMsalSFHttpClientFactory" FullName="Microsoft.Identity.Client.IMsalSFHttpClientFactory">
+  <TypeSignature Language="C#" Value="public interface IMsalSFHttpClientFactory : Microsoft.Identity.Client.IMsalHttpClientFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IMsalSFHttpClientFactory implements class Microsoft.Identity.Client.IMsalHttpClientFactory" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Client.IMsalSFHttpClientFactory" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IMsalSFHttpClientFactory&#xA;Implements IMsalHttpClientFactory" />
+  <TypeSignature Language="F#" Value="type IMsalSFHttpClientFactory = interface&#xA;    interface IMsalHttpClientFactory" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+    <AssemblyVersion>4.71.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Identity.Client.IMsalHttpClientFactory</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Factory responsible for creating HttpClient with a custom server certificate validation callback.
+            This is useful for the Service Fabric scenario where the server certificate validation is required using the server cert.
+            See https://learn.microsoft.com/dotnet/api/system.net.http.httpclient?view=net-7.0#instancing for more details.
+            </summary>
+    <remarks>
+            Implementations must be thread safe. 
+            Do not create a new HttpClient for each call to <see cref="M:Microsoft.Identity.Client.IMsalSFHttpClientFactory.GetHttpClient(System.Func{System.Net.Http.HttpRequestMessage,System.Security.Cryptography.X509Certificates.X509Certificate2,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors,System.Boolean})" /> - this leads to socket exhaustion.
+            If your app uses Integrated Windows Authentication, ensure <see cref="P:System.Net.Http.HttpClientHandler.UseDefaultCredentials" /> is set to true.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetHttpClient">
+      <MemberSignature Language="C#" Value="public System.Net.Http.HttpClient GetHttpClient (Func&lt;System.Net.Http.HttpRequestMessage,System.Security.Cryptography.X509Certificates.X509Certificate2,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors,bool&gt; validateServerCert);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Net.Http.HttpClient GetHttpClient(class System.Func`5&lt;class System.Net.Http.HttpRequestMessage, class System.Security.Cryptography.X509Certificates.X509Certificate2, class System.Security.Cryptography.X509Certificates.X509Chain, valuetype System.Net.Security.SslPolicyErrors, bool&gt; validateServerCert) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.IMsalSFHttpClientFactory.GetHttpClient(System.Func{System.Net.Http.HttpRequestMessage,System.Security.Cryptography.X509Certificates.X509Certificate2,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors,System.Boolean})" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetHttpClient (validateServerCert As Func(Of HttpRequestMessage, X509Certificate2, X509Chain, SslPolicyErrors, Boolean)) As HttpClient" />
+      <MemberSignature Language="F#" Value="abstract member GetHttpClient : Func&lt;System.Net.Http.HttpRequestMessage, System.Security.Cryptography.X509Certificates.X509Certificate2, System.Security.Cryptography.X509Certificates.X509Chain, System.Net.Security.SslPolicyErrors, bool&gt; -&gt; System.Net.Http.HttpClient" Usage="iMsalSFHttpClientFactory.GetHttpClient validateServerCert" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.71.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Http.HttpClient</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="validateServerCert" Type="System.Func&lt;System.Net.Http.HttpRequestMessage,System.Security.Cryptography.X509Certificates.X509Certificate2,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors,System.Boolean&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="validateServerCert">Callback to validate the server certificate for the Service Fabric.</param>
+        <summary>
+            Method returning an HTTP client that will be used to validate the server certificate through the provided callback.
+            This method is useful when custom certificate validation logic is required, 
+            for the managed identity flow running on a service fabric cluster.
+            </summary>
+        <returns>An HTTP client configured with the provided server certificate validation callback.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
