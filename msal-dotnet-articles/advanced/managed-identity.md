@@ -9,7 +9,7 @@ ms.date: 03/17/2025
 >[!NOTE]
 >This feature is available starting with [MSAL.NET](https://www.nuget.org/packages/Microsoft.Identity.Client/) version 4.54.0.
 
-A common challenge for developers is the management of secrets, credentials, certificates, and keys used to secure communication between services. [Managed identities](/azure/active-directory/managed-identities-azure-resources/overview) in Azure eliminate the need for developers to handle these credentials manually. MSAL.NET supports acquiring tokens through the managed identity service when used with applications running inside Azure infrastructure, such as:
+A common challenge for developers is the management of secrets, credentials, certificates, and keys used to secure communications between services. [Managed identities](/azure/active-directory/managed-identities-azure-resources/overview) in Azure eliminate the need for developers to handle these credentials manually. MSAL.NET supports acquiring tokens through the managed identity service when used with applications running inside Azure infrastructure, such as:
 
 * [Azure App Service](https://azure.microsoft.com/products/app-service/) (API version `2019-08-01` and above)
 * [Azure VMs](https://azure.microsoft.com/free/virtual-machines/)
