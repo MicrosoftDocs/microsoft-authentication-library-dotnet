@@ -1,7 +1,6 @@
 ---
 title: Custom token cache for a public client applications
 description: "This article is about custom token cache implementations for public client applications."
-ms.date: 03/17/2025
 ---
 
 # Custom token cache for a public client applications

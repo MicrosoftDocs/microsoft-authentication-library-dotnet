@@ -94,6 +94,14 @@ In the code snippets using application builders, many `.With` methods can be app
 
 The modifiers you can set on a public client or confidential client application builder can be found in the `AbstractApplicationBuilder<T>` class. The different methods can be found in the [Azure SDK for .NET documentation](/dotnet/api/microsoft.identity.client.abstractapplicationbuilder-1).
 
+### Modifiers specific to Xamarin.iOS applications
+
+The modifiers you can set on a public client application builder on Xamarin.iOS are:
+
+|Modifier | Description|
+|--------- | --------- |
+|`.WithIosKeychainSecurityGroup()` | **Xamarin.iOS only**: Sets the iOS key chain security group (for the cache persistence).|
+
 ### Modifiers specific to confidential client applications
 
 The modifiers specific to a confidential client application builder can be found in the `ConfidentialClientApplicationBuilder` class. The different methods can be found in the [Azure SDK for .NET documentation](/dotnet/api/microsoft.identity.client.confidentialclientapplicationbuilder). 

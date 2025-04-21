@@ -7,7 +7,7 @@ manager: CelesteDG
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.topic: conceptual
-ms.date: 03/17/2025
+ms.date: 06/04/2024
 ms.author: dmwendia
 ms.reviewer: localden, jmprieur
 ms.custom: devx-track-csharp, aaddev

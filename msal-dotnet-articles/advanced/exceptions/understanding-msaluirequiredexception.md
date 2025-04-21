@@ -1,7 +1,5 @@
 ---
 title: Understanding MsalUiRequiredException
-ms.date: 03/17/2025
-description: Learn how to handle `MsalUiRequiredException` in MSAL.NET when `AcquireTokenSilent` fails and requires user interaction.
 ---
 
 # Understanding `MsalUiRequiredException`

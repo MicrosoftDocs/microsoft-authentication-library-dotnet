@@ -1,7 +1,5 @@
 ---
 title: Getting tenant profiles with MSAL.NET
-ms.date: 03/17/2025
-description: Learn how to get tenant profiles using MSAL.NET. Authenticate and acquire tokens for different tenants.
 ---
 
 # Getting tenant profiles with MSAL.NET

@@ -1,7 +1,6 @@
 ---
 title: Overriding authority
 description: "How to override the default authority in MSAL.NET applications."
-ms.date: 03/17/2025
 ---
 
 # Overriding authority

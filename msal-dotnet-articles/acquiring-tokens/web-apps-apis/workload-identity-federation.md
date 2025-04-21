@@ -1,7 +1,6 @@
 ---
 title: Acquiring a token with federated workload identity
 description: "How to acquire tokens with federated workload identity in MSAL.NET"
-ms.date: 03/17/2025
 ---
 
 # Workload identity federation
