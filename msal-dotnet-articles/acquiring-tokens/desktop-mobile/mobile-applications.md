@@ -1,6 +1,7 @@
 ---
 title: Using MSAL.NET With .NET MAUI
 description: "How to use MSAL.NET on mobile platforms."
+ms.date: 03/17/2025
 ---
 
 # Using MSAL.NET With MAUI
@@ -19,8 +20,6 @@ MSAL.NET can be used with authentication brokers on mobile devices, such as Micr
 To get started with MSAL.NET integration on Android, refer to the following resources:
 
 - [How to migrate Xamarin ADAL apps to MSAL for Android](/entra/identity-platform/msal-net-migration-android-broker)
-- [Xamarin Android Configuration Tips + Troubleshooting](/entra/identity-platform/msal-net-xamarin-android-considerations)
-- [Xamarin Android System Browser Info](/entra/identity-platform/msal-net-system-browser-android-considerations)
 
 To learn more about testing MSAL on Android devices, refer to the [MSAL for Android Wiki](https://github.com/AzureAD/microsoft-authentication-library-for-android/wiki/Android-Emulator-with-MSAL).
 

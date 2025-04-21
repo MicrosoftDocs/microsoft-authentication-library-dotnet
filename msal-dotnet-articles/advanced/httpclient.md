@@ -1,6 +1,7 @@
 ---
 title: Providing your own HttpClient, supporting HTTP proxies, and customization of user agent headers
 description: "There are cases where developers want fine-grained control of the HttpClient instance, such as configuring a proxy or using ASP.NET Core's efficient ways of pooling the HttpClient."
+ms.date: 03/17/2025
 ---
 
 # Providing your own HttpClient, supporting HTTP proxies, and customization of user agent headers
@@ -56,11 +57,6 @@ public class StaticClientWithProxyFactory : IMsalHttpClientFactory
     }
 }
 ```
-
-
-## HttpClient and Xamarin iOS
-
-When using Xamarin iOS, it is recommended to create an `HttpClient` that explicitly uses the `NSURLSession`-based handler for iOS 7 and newer. MSAL.NET automatically creates an `HttpClient` that uses `NSURLSessionHandler` for iOS 7 and newer. For more information, read the [Xamarin iOS documentation for HttpClient](/xamarin/cross-platform/macios/http-stack).
 
 ## Troubleshooting
 
