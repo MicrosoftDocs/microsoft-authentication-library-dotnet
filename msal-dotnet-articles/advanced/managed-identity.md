@@ -9,7 +9,7 @@ ms.date: 03/17/2025
 >[!NOTE]
 >This feature is available starting with [MSAL.NET](https://www.nuget.org/packages/Microsoft.Identity.Client/) version 4.54.0.
 
-A common challenge for developers is the management of secrets, credentials, certificates, and keys used to secure communication between services. [Managed identities](/azure/active-directory/managed-identities-azure-resources/overview) in Azure eliminate the need for developers to handle these credentials manually. MSAL.NET supports acquiring tokens through the managed identity service when used with applications running inside Azure infrastructure, such as:
+A common challenge for developers is the management of secrets, credentials, certificates, and keys used to secure communications between services. [Managed identities](/azure/active-directory/managed-identities-azure-resources/overview) in Azure eliminate the need for developers to handle these credentials manually. MSAL.NET supports acquiring tokens through the managed identity service when used with applications running inside Azure infrastructure, such as:
 
 * [Azure App Service](https://azure.microsoft.com/products/app-service/) (API version `2019-08-01` and above)
 * [Azure VMs](https://azure.microsoft.com/free/virtual-machines/)
@@ -22,16 +22,16 @@ A common challenge for developers is the management of secrets, credentials, cer
 
 For a complete list, refer to [Azure services that can use managed identities to access other services](/azure/active-directory/managed-identities-azure-resources/managed-identities-status).
 
-## Which SDK to use - Azure SDK or MSAL?
+## Which SDK to use - Azure Identity library or MSAL?
 
-MSAL libraries provide lower level APIs that are closer to the OAuth2 and OIDC protocols. 
+MSAL libraries provide lower-level APIs that are closer to the OAuth2 and OIDC protocols.
 
-Both MSAL.NET and [Azure SDK](/dotnet/api/overview/azure/identity-readme?view=azure-dotnet&preserve-view=true) allow to acquire tokens via managed identity. Internally, Azure SDK uses MSAL.NET, and it provides a higher-level API via its `DefaultAzureCredential` and `ManagedIdentityCredential` abstractions. 
+Both MSAL.NET and the [Azure Identity library for .NET](/dotnet/api/overview/azure/identity-readme?view=azure-dotnet&preserve-view=true) allow you to acquire tokens via managed identity. Internally, the Azure Identity library uses MSAL.NET, and it provides a higher-level API via its `DefaultAzureCredential` and [ManagedIdentityCredential](/dotnet/api/azure.identity.managedidentitycredential?view=azure-dotnet&preserve-view=true) abstractions.
 
-If your application already uses one of the SDKs, continue using the same SDK. Use Azure SDK, if you are writing a new application and plan to call other Azure resources, as this SDK provides a better developer experience by allowing the app to run on private developer machines where managed identity doesn't exist. Consider using MSAL if you need to call other downstream web APIs like Microsoft Graph or your own web API. 
+If your application already uses MSAL .NET or the Azure Identity library, continue using that same library. Use the Azure Identity library if you're writing a new application and plan to call other Azure resources, as this library provides a better developer experience by allowing the app to run on private developer machines where managed identity doesn't exist. Consider using MSAL if you need to call other downstream web APIs like Microsoft Graph or your own web API.
 
 >[!NOTE]
->[Microsoft.Identity.Web](https://github.com/AzureAD/microsoft-identity-web) is a higher-level API that offers integration with ASP.NET Core and ASP.NET Classic, while using MSAL under the hood. The library also provides a way to load credentials (certificates, signed assertions) used by MSAL.NET as client credentials. For certificates it uses the `DefaultAzureCredentials` to fetch certificates from KeyVault. It also offers workload identity federation with managed identity credentials. For details see [CredentialDescription](/dotnet/api/microsoft.identity.abstractions.credentialdescription.keyvaulturl?view=msal-model-dotnet-latest#microsoft-identity-abstractions-credentialdescription-keyvaulturl&preserve-view=true).
+>[Microsoft.Identity.Web](https://github.com/AzureAD/microsoft-identity-web) is a higher-level API that offers integration with ASP.NET Core and ASP.NET Classic, while using MSAL under the hood. The library also provides a way to load credentials (certificates, signed assertions) used by MSAL.NET as client credentials. For certificates, it uses the `DefaultAzureCredential` to fetch certificates from KeyVault. It also offers workload identity federation with managed identity credentials. For details, see [CredentialDescription](/dotnet/api/microsoft.identity.abstractions.credentialdescription.keyvaulturl?view=msal-model-dotnet-latest#microsoft-identity-abstractions-credentialdescription-keyvaulturl&preserve-view=true).
 
 ## Quick start
 
