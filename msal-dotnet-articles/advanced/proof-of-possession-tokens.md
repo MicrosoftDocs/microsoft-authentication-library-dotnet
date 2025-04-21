@@ -1,7 +1,6 @@
 ---
 title: Proof-of-Possession (PoP) tokens
 description: Learn how to acquire Proof-of-Possession tokens for public and confidential clients in MSAL.NET
-ms.date: 03/03/2025
 ---
 
 # Proof-of-Possession (PoP) tokens
@@ -22,8 +21,7 @@ also signs the token using the private PoP key. A fully formed PoP token has two
 There are several PoP protocols and variations. The Microsoft Entra ID infrastructure aims to supports two types:
 
 - **PoP via Signed HTTP Request (SHR)** . See [PoP key distribution](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-pop-key-distribution-07) and [SHR](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-signed-http-request-03) for the detailed specifications. This is fully supported by Entra ID and by the SDKs for public client scenarios, such as desktop and mobile applications.
-- **Demonstrating Proof of Posession (dPOP)**. See [RFC9449](https://datatracker.ietf.org/doc/html/rfc9449). Under consideration, no support at this point.
-- **PoP via mutual TLS (mTLS)**. See [RFC 8705](https://datatracker.ietf.org/doc/html/rfc8705) for details. MSAL.NET has an experimental API to support this.
+- **PoP via mutual TLS (mTLS)**. See [RFC 8705](https://datatracker.ietf.org/doc/html/rfc8705) for details. Investigated for confidential clients, i.e. web sites, web apis, server to server calls. No support exists currently.
 
 mTLS is faster and has the advantage of including man-in-the-middle protections at the TLS layer; however, it can be difficult to establish mTLS tunnels between the client and the identity provider and between the client and the resource. PoP via Signed HTTP Request (SHR) does not rely on transport protocol changes; however the server nonce must be handled explicitly by the app developer. 
 

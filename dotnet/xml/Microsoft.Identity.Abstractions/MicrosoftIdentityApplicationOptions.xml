@@ -1,9 +1,9 @@
 <Type Name="MicrosoftIdentityApplicationOptions" FullName="Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions">
-  <TypeSignature Language="C#" Value="public class MicrosoftIdentityApplicationOptions : Microsoft.Identity.Abstractions.IdentityApplicationOptions" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MicrosoftIdentityApplicationOptions extends Microsoft.Identity.Abstractions.IdentityApplicationOptions" />
+  <TypeSignature Language="C#" Value="public class MicrosoftIdentityApplicationOptions : Microsoft.Identity.Abstractions.MicrosoftEntraApplicationOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MicrosoftIdentityApplicationOptions extends Microsoft.Identity.Abstractions.MicrosoftEntraApplicationOptions" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions" />
-  <TypeSignature Language="VB.NET" Value="Public Class MicrosoftIdentityApplicationOptions&#xA;Inherits IdentityApplicationOptions" />
-  <TypeSignature Language="F#" Value="type MicrosoftIdentityApplicationOptions = class&#xA;    inherit IdentityApplicationOptions" />
+  <TypeSignature Language="VB.NET" Value="Public Class MicrosoftIdentityApplicationOptions&#xA;Inherits MicrosoftEntraApplicationOptions" />
+  <TypeSignature Language="F#" Value="type MicrosoftIdentityApplicationOptions = class&#xA;    inherit MicrosoftEntraApplicationOptions" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
@@ -24,9 +24,10 @@
     <AssemblyVersion>8.1.0.0</AssemblyVersion>
     <AssemblyVersion>8.1.1.0</AssemblyVersion>
     <AssemblyVersion>8.2.0.0</AssemblyVersion>
+    <AssemblyVersion>9.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
-    <BaseTypeName>Microsoft.Identity.Abstractions.IdentityApplicationOptions</BaseTypeName>
+    <BaseTypeName>Microsoft.Identity.Abstractions.MicrosoftEntraApplicationOptions</BaseTypeName>
   </Base>
   <Interfaces />
   <Docs>
@@ -45,105 +46,11 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>8.2.0.0</AssemblyVersion>
+        <AssemblyVersion>9.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
         <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="AppHomeTenantId">
-      <MemberSignature Language="C#" Value="public string? AppHomeTenantId { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string AppHomeTenantId" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions.AppHomeTenantId" />
-      <MemberSignature Language="VB.NET" Value="Public Property AppHomeTenantId As String" />
-      <MemberSignature Language="F#" Value="member this.AppHomeTenantId : string with get, set" Usage="Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions.AppHomeTenantId" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>8.2.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            Home tenant of the app in which the app can acquire a token to call a downstream API on behalf of itself.
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="Authority">
-      <MemberSignature Language="C#" Value="public override string? Authority { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string Authority" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions.Authority" />
-      <MemberSignature Language="VB.NET" Value="Public Overrides Property Authority As String" />
-      <MemberSignature Language="F#" Value="member this.Authority : string with get, set" Usage="Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions.Authority" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>8.2.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            Gets or sets the Authority to use when making OpenIdConnect calls. By default the authority is computed
-            from the <see cref="P:Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions.Instance" /> and <see cref="P:Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions.TenantId" /> properties, by concatenating them, and appending "v2.0".
-            If your authority is not an Azure AD authority, you can set it directly here.
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="AzureRegion">
-      <MemberSignature Language="C#" Value="public string? AzureRegion { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string AzureRegion" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions.AzureRegion" />
-      <MemberSignature Language="VB.NET" Value="Public Property AzureRegion As String" />
-      <MemberSignature Language="F#" Value="member this.AzureRegion : string with get, set" Usage="Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions.AzureRegion" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>8.2.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            Specifies the Azure region. See https://aka.ms/azure-region. To have
-            the app attempt to detect the Azure region automatically,
-            use "TryAutoDetect".
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="ClientCapabilities">
-      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;string&gt;? ClientCapabilities { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; ClientCapabilities" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions.ClientCapabilities" />
-      <MemberSignature Language="VB.NET" Value="Public Property ClientCapabilities As IEnumerable(Of String)" />
-      <MemberSignature Language="F#" Value="member this.ClientCapabilities : seq&lt;string&gt; with get, set" Usage="Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions.ClientCapabilities" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>8.2.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            Specifies the capabilities of the client (for instance {"cp1", "cp2"}). This is
-            useful to express that the Client is capable of handling claims challenge. If your application
-            is CAE capable, it needs to express "cp1".
-            </summary>
-        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -156,7 +63,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>8.2.0.0</AssemblyVersion>
+        <AssemblyVersion>9.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -178,7 +85,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>8.2.0.0</AssemblyVersion>
+        <AssemblyVersion>9.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -200,7 +107,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>8.2.0.0</AssemblyVersion>
+        <AssemblyVersion>9.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -222,7 +129,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>8.2.0.0</AssemblyVersion>
+        <AssemblyVersion>9.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -237,28 +144,6 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="Instance">
-      <MemberSignature Language="C#" Value="public string? Instance { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string Instance" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions.Instance" />
-      <MemberSignature Language="VB.NET" Value="Public Property Instance As String" />
-      <MemberSignature Language="F#" Value="member this.Instance : string with get, set" Usage="Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions.Instance" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>8.2.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            Gets or sets the Azure Active Directory instance, e.g. <c>"https://login.microsoftonline.com/"</c>.
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
     <Member MemberName="ResetPasswordPath">
       <MemberSignature Language="C#" Value="public string? ResetPasswordPath { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string ResetPasswordPath" />
@@ -268,7 +153,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>8.2.0.0</AssemblyVersion>
+        <AssemblyVersion>9.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -293,7 +178,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>8.2.0.0</AssemblyVersion>
+        <AssemblyVersion>9.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -306,35 +191,6 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="SendX5C">
-      <MemberSignature Language="C#" Value="public bool SendX5C { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance bool SendX5C" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions.SendX5C" />
-      <MemberSignature Language="VB.NET" Value="Public Property SendX5C As Boolean" />
-      <MemberSignature Language="F#" Value="member this.SendX5C : bool with get, set" Usage="Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions.SendX5C" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>8.2.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Boolean</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            Specifies if the x5c claim (public key of the certificate) should be sent to the STS.
-            Sending the x5c enables application developers to achieve easy certificate rollover in Azure AD:
-            this method will send the public certificate to Azure AD along with the token request,
-            so that Azure AD can use it to validate the subject name based on a trusted issuer policy.
-            This saves the application admin from the need to explicitly manage the certificate rollover
-            (either via the app registration portal or using PowerShell/CLI). 
-            For details see https://aka.ms/msal-net-sni.
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-        <c>false</c>
-      </Docs>
-    </Member>
     <Member MemberName="SignUpSignInPolicyId">
       <MemberSignature Language="C#" Value="public string? SignUpSignInPolicyId { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string SignUpSignInPolicyId" />
@@ -344,7 +200,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>8.2.0.0</AssemblyVersion>
+        <AssemblyVersion>9.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -352,31 +208,6 @@
       <Docs>
         <summary>
             Gets or sets the sign up or sign in user flow name for B2C, e.g. b2c_1_susi.
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="TenantId">
-      <MemberSignature Language="C#" Value="public string? TenantId { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string TenantId" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions.TenantId" />
-      <MemberSignature Language="VB.NET" Value="Public Property TenantId As String" />
-      <MemberSignature Language="F#" Value="member this.TenantId : string with get, set" Usage="Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions.TenantId" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>8.2.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            Gets or sets the tenant ID. If your application is multi-tenant, you can also use "common" if it supports
-            both work and school, or personal accounts accounts, or "organizations" if your application supports only work 
-            and school accounts. If your application is single tenant, set this property to the tenant ID or domain name.
-            If your application works only for Microsoft personal accounts, use "consumers".
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -391,7 +222,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>8.2.0.0</AssemblyVersion>
+        <AssemblyVersion>9.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>

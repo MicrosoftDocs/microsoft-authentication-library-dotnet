@@ -1,7 +1,6 @@
 ---
 title: Extract authentication parameters from WWW-Authenticate headers
 description: "This article is both a conceptual article of why you'd want to get information from WWW-authenticate headers, and how to do it."
-ms.date: 03/17/2025
 ---
 
 # Extract authentication parameters from WWW-Authenticate headers

@@ -1,7 +1,6 @@
 ---
 title: Semantic versioning and API change management
 description: "MSAL.NET strategy for versioning library releases"
-ms.date: 03/17/2025
 ---
 
 # Semantic versioning and API change management

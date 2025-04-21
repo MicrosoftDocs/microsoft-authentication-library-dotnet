@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-model-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.Identity.Abstractions" Version="8.2.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.Azure" Version="3.8.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.Certificate" Version="3.8.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="3.8.0.0" />
-    <Assembly Name="Microsoft.Identity.Web" Version="3.8.0.0" />
+    <Assembly Name="Microsoft.Identity.Abstractions" Version="9.0.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.Azure" Version="3.8.3.0" />
+    <Assembly Name="Microsoft.Identity.Web.Certificate" Version="3.8.3.0" />
+    <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="3.8.3.0" />
+    <Assembly Name="Microsoft.Identity.Web" Version="3.8.3.0" />
     <Assembly Name="Microsoft.Identity.Web.DownstreamRestApi" Version="2.0.8.0" />
-    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraph" Version="3.8.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraphBeta" Version="3.8.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.OWIN" Version="3.8.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.TokenAcquisition" Version="3.8.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.TokenCache" Version="3.8.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.UI" Version="3.8.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraph" Version="3.8.3.0" />
+    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraphBeta" Version="3.8.3.0" />
+    <Assembly Name="Microsoft.Identity.Web.OWIN" Version="3.8.3.0" />
+    <Assembly Name="Microsoft.Identity.Web.TokenAcquisition" Version="3.8.3.0" />
+    <Assembly Name="Microsoft.Identity.Web.TokenCache" Version="3.8.3.0" />
+    <Assembly Name="Microsoft.Identity.Web.UI" Version="3.8.3.0" />
   </Assemblies>
   <Namespace Name="Microsoft.Identity.Abstractions">
     <Type Name="Microsoft.Identity.Abstractions.AcquireTokenOptions" Id="T:Microsoft.Identity.Abstractions.AcquireTokenOptions">
@@ -200,22 +200,26 @@
       <Member Id="M:Microsoft.Identity.Abstractions.ManagedIdentityOptions.Clone" />
       <Member Id="P:Microsoft.Identity.Abstractions.ManagedIdentityOptions.UserAssignedClientId" />
     </Type>
+    <Type Name="Microsoft.Identity.Abstractions.MicrosoftEntraApplicationOptions" Id="T:Microsoft.Identity.Abstractions.MicrosoftEntraApplicationOptions">
+      <Member Id="M:Microsoft.Identity.Abstractions.MicrosoftEntraApplicationOptions.#ctor" />
+      <Member Id="P:Microsoft.Identity.Abstractions.MicrosoftEntraApplicationOptions.AppHomeTenantId" />
+      <Member Id="P:Microsoft.Identity.Abstractions.MicrosoftEntraApplicationOptions.Authority" />
+      <Member Id="P:Microsoft.Identity.Abstractions.MicrosoftEntraApplicationOptions.AzureRegion" />
+      <Member Id="P:Microsoft.Identity.Abstractions.MicrosoftEntraApplicationOptions.ClientCapabilities" />
+      <Member Id="P:Microsoft.Identity.Abstractions.MicrosoftEntraApplicationOptions.Instance" />
+      <Member Id="P:Microsoft.Identity.Abstractions.MicrosoftEntraApplicationOptions.Name" />
+      <Member Id="P:Microsoft.Identity.Abstractions.MicrosoftEntraApplicationOptions.SendX5C" />
+      <Member Id="P:Microsoft.Identity.Abstractions.MicrosoftEntraApplicationOptions.TenantId" />
+    </Type>
     <Type Name="Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions" Id="T:Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions">
       <Member Id="M:Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions.#ctor" />
-      <Member Id="P:Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions.AppHomeTenantId" />
-      <Member Id="P:Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions.Authority" />
-      <Member Id="P:Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions.AzureRegion" />
-      <Member Id="P:Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions.ClientCapabilities" />
       <Member Id="P:Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions.DefaultUserFlow" />
       <Member Id="P:Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions.Domain" />
       <Member Id="P:Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions.EditProfilePolicyId" />
       <Member Id="P:Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions.ErrorPath" />
-      <Member Id="P:Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions.Instance" />
       <Member Id="P:Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions.ResetPasswordPath" />
       <Member Id="P:Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions.ResetPasswordPolicyId" />
-      <Member Id="P:Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions.SendX5C" />
       <Member Id="P:Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions.SignUpSignInPolicyId" />
-      <Member Id="P:Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions.TenantId" />
       <Member Id="P:Microsoft.Identity.Abstractions.MicrosoftIdentityApplicationOptions.WithSpaAuthCode" />
     </Type>
   </Namespace>

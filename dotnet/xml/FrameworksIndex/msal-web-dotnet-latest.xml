@@ -1,22 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-web-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.IdentityModel.Abstractions" Version="8.6.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.JsonWebTokens" Version="8.6.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.Abstractions" Version="8.8.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.JsonWebTokens" Version="8.8.0.0" />
     <Assembly Name="Microsoft.IdentityModel.KeyVaultExtensions" Version="7.7.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.Logging" Version="8.6.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.LoggingExtensions" Version="8.6.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.Logging" Version="8.8.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.LoggingExtensions" Version="8.8.0.0" />
     <Assembly Name="Microsoft.IdentityModel.ManagedKeyVaultSecurityKey" Version="7.7.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols" Version="8.6.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="8.6.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.SignedHttpRequest" Version="8.6.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.WsFederation" Version="8.6.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.TestExtensions" Version="8.6.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.Tokens" Version="8.6.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.Tokens.Saml" Version="8.6.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.Validators" Version="8.6.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.Xml" Version="8.6.1.0" />
-    <Assembly Name="System.IdentityModel.Tokens.Jwt" Version="8.6.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols" Version="8.8.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="8.8.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.SignedHttpRequest" Version="8.8.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.WsFederation" Version="8.8.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.TestExtensions" Version="8.8.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Tokens" Version="8.8.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Tokens.Saml" Version="8.8.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Validators" Version="8.8.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Xml" Version="8.8.0.0" />
+    <Assembly Name="System.IdentityModel.Tokens.Jwt" Version="8.8.0.0" />
   </Assemblies>
   <Namespace Name="Microsoft.IdentityModel.Abstractions">
     <Type Name="Microsoft.IdentityModel.Abstractions.EventLogLevel" Id="T:Microsoft.IdentityModel.Abstractions.EventLogLevel">
@@ -1376,6 +1376,14 @@
       <Member Id="M:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity.HasClaim(System.String,System.String)" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.CaseSensitiveClaimsIdentity.SecurityToken" />
     </Type>
+    <Type Name="Microsoft.IdentityModel.Tokens.Cnf" Id="T:Microsoft.IdentityModel.Tokens.Cnf">
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Cnf.#ctor" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Cnf.#ctor(System.String)" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Cnf.Jku" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Cnf.JsonWebKey" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Cnf.Jwe" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Cnf.Kid" />
+    </Type>
     <Type Name="Microsoft.IdentityModel.Tokens.CompressionAlgorithms" Id="T:Microsoft.IdentityModel.Tokens.CompressionAlgorithms">
       <Member Id="F:Microsoft.IdentityModel.Tokens.CompressionAlgorithms.Deflate" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.CompressionAlgorithms.#ctor" />
@@ -1388,6 +1396,13 @@
       <Member Id="M:Microsoft.IdentityModel.Tokens.CompressionProviderFactory.IsSupportedAlgorithm(System.String)" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.CompressionProviderFactory.CustomCompressionProvider" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.CompressionProviderFactory.Default" />
+    </Type>
+    <Type Name="Microsoft.IdentityModel.Tokens.ConfirmationClaimTypes" Id="T:Microsoft.IdentityModel.Tokens.ConfirmationClaimTypes">
+      <Member Id="F:Microsoft.IdentityModel.Tokens.ConfirmationClaimTypes.Cnf" />
+      <Member Id="F:Microsoft.IdentityModel.Tokens.ConfirmationClaimTypes.Jku" />
+      <Member Id="F:Microsoft.IdentityModel.Tokens.ConfirmationClaimTypes.Jwe" />
+      <Member Id="F:Microsoft.IdentityModel.Tokens.ConfirmationClaimTypes.Jwk" />
+      <Member Id="F:Microsoft.IdentityModel.Tokens.ConfirmationClaimTypes.Kid" />
     </Type>
     <Type Name="Microsoft.IdentityModel.Tokens.CryptoProviderCache" Id="T:Microsoft.IdentityModel.Tokens.CryptoProviderCache">
       <Member Id="M:Microsoft.IdentityModel.Tokens.CryptoProviderCache.#ctor" />

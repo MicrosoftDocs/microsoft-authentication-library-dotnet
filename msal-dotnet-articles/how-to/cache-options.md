@@ -1,7 +1,5 @@
 ---
 title: Cache options in MSAL.NET
-description: Learn to set up shared token cache in MSAL.NET using `EnableSharedCacheOptions`.
-ms.date: 03/17/2025
 ---
 
 # Cache options in MSAL.NET

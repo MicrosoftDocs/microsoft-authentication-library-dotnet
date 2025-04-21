@@ -1,7 +1,6 @@
 ---
 title: Cleaning the token cache
 description: "How to clear the token cache used by MSAL.NET"
-ms.date: 03/17/2025
 ---
 
 # Clearing the token cache
