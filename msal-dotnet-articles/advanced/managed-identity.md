@@ -17,6 +17,9 @@ A common challenge for developers is the management of secrets, credentials, cer
 * [Azure Cloud Shell](/azure/cloud-shell/overview)
 * [Azure Service Fabric](/azure/service-fabric/service-fabric-overview)
 
+>[!NOTE]
+>Service Fabric requires certificate validation which is supported [4.62.0](https://www.nuget.org/packages/Microsoft.Identity.Client/4.62.0) onwards. The validation is available for .NET Framework 4.7.1 and greater and .NET platform.
+
 For a complete list, refer to [Azure services that can use managed identities to access other services](/azure/active-directory/managed-identities-azure-resources/managed-identities-status).
 
 ## Which SDK to use - Azure SDK or MSAL?
