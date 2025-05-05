@@ -1,0 +1,89 @@
+---
+# Required metadata
+# For more information, see https://review.learn.microsoft.com/en-us/help/platform/learn-editor-add-metadata?branch=main
+# For valid values of ms.service, ms.prod, and ms.topic, see https://review.learn.microsoft.com/en-us/help/platform/metadata-taxonomies?branch=main
+
+title:       # Add a title for the browser tab
+description: # Add a meaningful description for search results
+author:      ploegert, xinyuxu1026 # GitHub alias
+ms.author:   jploegert, xinyuxu # Microsoft alias
+ms.service:  # Add the ms.service or ms.prod value
+# ms.prod:   # To use ms.prod, uncomment it and delete ms.service
+ms.topic:    # Add the ms.topic value
+ms.date:     05/05/2025
+---
+
+# Using MSAL .NET with an Authentication Broker on Linux
+
+
+> [!NOTE]
+> Microsoft Single Sign-on for Linux authentication broker support is introduced with `MSAL.NET` version v4.69.1.
+Using an authentication broker on Linux enables you to simplify how your users authenticate with Microsoft Entra ID from your application, as well as take advantage of future functionality that protects Microsoft Entra ID refresh tokens from exfiltration and misuse.
+
+Authentication brokers are **not** pre-installed on Linux but is bundled as a dependency of applications developed by Microsoft, such as [Company Portal](/mem/intune-service/user-help/enroll-device-linux). These applications are usually installed when a Linux computer is enrolled in a company's device fleet via an endpoint management solution like [Microsoft Intune](/mem/intune/fundamentals/what-is-intune). To learn more about Linux device set up with the Microsoft Identity Platform, refer to [Microsoft Enterprise SSO plug-in for Apple devices](/entra/identity-platform/apple-sso-plugin).
+
+## Dependency
+
+To use the broker, you will need to install a list of dependencies on Linux platform
+
+```bash
+libc++-dev
+libc++abi-dev
+libsecret-tools
+libwebkit2gtk-4.0
+```
+
+## Create a console app on Linux platform
+To use broker on Linux platform, you need to specify the `BrokerOptions` to `OperationsSystems.Linux`. Notice that we use the same option for both Windows Subsystem for Linux (WSL) and standalone Linux.
+```dotnet
+from msal import PublicClientApplication
+
+class Program
+    {
+        public static string ClientID = "your client id"; //msidentity-samples-testing tenant
+        public static string[] Scopes = { "User.Read" };
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+
+            var pcaBuilder = PublicClientApplicationBuilder.Create(ClientID)
+                .WithAuthority("https://login.microsoftonline.com/common")
+                .WithDefaultRedirectUri()
+                .WithBroker(new BrokerOptions(BrokerOptions.OperatingSystems.Linux){
+                            ListOperatingSystemAccounts = true,
+                            MsaPassthrough = true,
+                            Title = "MSAL WSL Test App"
+                          })
+                .Build();
+
+            AcquireTokenInteractiveParameterBuilder atparamBuilder = pcaBuilder.AcquireTokenInteractive(Scopes);
+
+            AuthenticationResult authenticationResult = atparamBuilder.ExecuteAsync().GetAwaiter().GetResult();
+            System.Console.WriteLine(authenticationResult.AccessToken);
+        }
+    }
+```
+
+## Sample App 
+There is a sample app in MSAL.NET repo, it's under ./tests/devapps/WAM/NetWSLWam path. The sample app has a dependenc of `libx11-dev` package. Please run `apt install libx11-dev` to install the package. To run the sample app, just run the command below.
+```
+dotnet run --project tests\devapps\WAM\NetWSLWam\test.csproj
+```
+
+## WSL Scenario
+
+### Update to the latest version of WSL
+Please make sure you have updated to the most recent version of WSL. Account control page is supported from WSL version 2.4.13. Otherwise, the broker scenario won't work. Here is the command to update WSL.
+```
+wsl.exe --update
+```
+
+### Set up Keyring in WSL
+We use libsecret on Linux and it needs to communicate with keyring daemon. Users can use `seahorse`(gnome GUI) package to manage the keyring with a user interface. You need to first install the package by `apt install seahorse` and then follow the instructions below.
+
+1. Run seahorse command
+2. On the top left corner, click "+" and create Password keyring
+3. Create a keyring with name 'login', and set the password
+4. Run wsl.exe --shutdown
+5. Start a new wsl window and run the test, it should ask you for the keyring password
+
