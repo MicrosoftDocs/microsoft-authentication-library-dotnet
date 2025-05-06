@@ -108,7 +108,7 @@ dotnet run --project tests\devapps\WAM\NetWSLWam\test.csproj
 
 ### Update to the latest version of WSL
 
-Please make sure you have updated to the latest WSL release. The WAM Account Control dialog is supported in WSL version 2.4.13 and above. Using the broker is not possible with earlier versions. You can check the WSL version using the command below:
+Enure you have updated to the latest WSL release. The WAM Account Control dialog is supported in WSL versions 2.4.13 and above. Using the broker isn't possible with earlier versions. To check the WSL version, use the following command:
 
 ```powershell
 wsl.exe --version
