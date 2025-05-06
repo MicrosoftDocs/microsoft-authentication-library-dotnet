@@ -79,7 +79,11 @@ dotnet run --project tests\devapps\WAM\NetWSLWam\test.csproj
 ## WSL Scenario
 
 ### Update to the latest version of WSL
-Please make sure you have updated to the most recent version of WSL. WAM Account Control dialog is supported from WSL version 2.4.13. Otherwise, the broker scenario won't work. Here is the command to update WSL.
+
+Please make sure you have updated to the latest WSL release. The WAM Account Control dialog is supported in WSL version 2.4.13 and above. Using the broker is not possible with earlier versions. 
+
+To update WSL, run the following command from Windows Terminal:
+
 ```
 wsl.exe --update
 ```
