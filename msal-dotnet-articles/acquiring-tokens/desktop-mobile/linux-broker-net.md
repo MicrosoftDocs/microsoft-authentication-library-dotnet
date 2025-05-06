@@ -97,5 +97,5 @@ On Debian-based distributions, you can install the package by running `sudo apt 
 2. In the top left corner, click **+** and create **Password** keyring.
 3. Create a keyring named 'login' and set the password.
 4. Run `wsl.exe --shutdown` from your Windows Terminal.
-5. Start a new wsl window and run the test, it should ask you for the keyring password
+5. Start a new WSL session and run the sample. You should be asked for the keyring password.
 
