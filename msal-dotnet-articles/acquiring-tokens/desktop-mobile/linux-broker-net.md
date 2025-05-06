@@ -94,7 +94,7 @@ MSAL uses `libsecret` on Linux - it is required to communicate with the `keyring
 On Debian-based distributions, you can install the package by running `sudo apt install seahorse` and then following the instructions below.
 
 1. Run `seahorse` in the terminal.
-2. On the top left corner, click "+" and create Password keyring
+2. In the top left corner, click **+** and create **Password** keyring.
 3. Create a keyring with name 'login', and set the password
 4. Run wsl.exe --shutdown
 5. Start a new wsl window and run the test, it should ask you for the keyring password
