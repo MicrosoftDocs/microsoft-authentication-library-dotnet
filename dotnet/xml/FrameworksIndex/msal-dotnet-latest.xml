@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.Identity.Client.Broker" Version="4.70.2.0" />
-    <Assembly Name="Microsoft.Identity.Client.Desktop" Version="4.70.2.0" />
-    <Assembly Name="Microsoft.Identity.Client" Version="4.70.2.0" />
+    <Assembly Name="Microsoft.Identity.Client.Broker" Version="4.71.1.0" />
+    <Assembly Name="Microsoft.Identity.Client.Desktop" Version="4.71.1.0" />
+    <Assembly Name="Microsoft.Identity.Client" Version="4.71.1.0" />
   </Assemblies>
   <Namespace Name="Microsoft.Identity.Client">
     <Type Name="Microsoft.Identity.Client.AadAuthorityAudience" Id="T:Microsoft.Identity.Client.AadAuthorityAudience">
@@ -425,6 +425,9 @@
     </Type>
     <Type Name="Microsoft.Identity.Client.IMsalHttpClientFactory" Id="T:Microsoft.Identity.Client.IMsalHttpClientFactory">
       <Member Id="M:Microsoft.Identity.Client.IMsalHttpClientFactory.GetHttpClient" />
+    </Type>
+    <Type Name="Microsoft.Identity.Client.IMsalSFHttpClientFactory" Id="T:Microsoft.Identity.Client.IMsalSFHttpClientFactory">
+      <Member Id="M:Microsoft.Identity.Client.IMsalSFHttpClientFactory.GetHttpClient(System.Func{System.Net.Http.HttpRequestMessage,System.Security.Cryptography.X509Certificates.X509Certificate2,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors,System.Boolean})" />
     </Type>
     <Type Name="Microsoft.Identity.Client.IntuneAppProtectionPolicyRequiredException" Id="T:Microsoft.Identity.Client.IntuneAppProtectionPolicyRequiredException">
       <Member Id="M:Microsoft.Identity.Client.IntuneAppProtectionPolicyRequiredException.#ctor(System.String,System.String)" />
