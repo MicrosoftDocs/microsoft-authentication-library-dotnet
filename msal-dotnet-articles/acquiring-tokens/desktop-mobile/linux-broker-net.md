@@ -24,7 +24,7 @@ Authentication brokers are **not** pre-installed on Linux but is bundled as a de
 
 ## Dependency
 
-To use the broker, you will need to install a list of dependencies on Linux platform
+To use the broker, you'll need to install a list of dependencies on the Linux platform:
 
 ```bash
 libc++-dev
