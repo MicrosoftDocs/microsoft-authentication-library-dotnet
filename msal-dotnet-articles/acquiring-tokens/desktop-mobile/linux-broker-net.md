@@ -84,7 +84,7 @@ Please make sure you have updated to the latest WSL release. The WAM Account Con
 
 To update WSL, run the following command from Windows Terminal:
 
-```
+```powershell
 wsl.exe --update
 ```
 
