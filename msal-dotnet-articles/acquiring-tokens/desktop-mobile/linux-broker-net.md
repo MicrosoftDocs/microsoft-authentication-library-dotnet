@@ -42,29 +42,29 @@ To use a broker on the Linux platform, set the `BrokerOptions` to `OperatingSyst
 from msal import PublicClientApplication
 
 class Program
+{
+    public static string ClientID = "your client id"; //msidentity-samples-testing tenant
+    public static string[] Scopes = { "User.Read" };
+    static void Main(string[] args)
     {
-        public static string ClientID = "your client id"; //msidentity-samples-testing tenant
-        public static string[] Scopes = { "User.Read" };
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
+        Console.WriteLine("Hello World!");
 
-            var pcaBuilder = PublicClientApplicationBuilder.Create(ClientID)
-                .WithAuthority("https://login.microsoftonline.com/common")
-                .WithDefaultRedirectUri()
-                .WithBroker(new BrokerOptions(BrokerOptions.OperatingSystems.Linux){
-                            ListOperatingSystemAccounts = true,
-                            MsaPassthrough = true,
-                            Title = "MSAL WSL Test App"
-                          })
-                .Build();
+        var pcaBuilder = PublicClientApplicationBuilder.Create(ClientID)
+            .WithAuthority("https://login.microsoftonline.com/common")
+            .WithDefaultRedirectUri()
+            .WithBroker(new BrokerOptions(BrokerOptions.OperatingSystems.Linux){
+                        ListOperatingSystemAccounts = true,
+                        MsaPassthrough = true,
+                        Title = "MSAL WSL Test App"
+                        })
+            .Build();
 
-            AcquireTokenInteractiveParameterBuilder atparamBuilder = pcaBuilder.AcquireTokenInteractive(Scopes);
+        AcquireTokenInteractiveParameterBuilder atparamBuilder = pcaBuilder.AcquireTokenInteractive(Scopes);
 
-            AuthenticationResult authenticationResult = atparamBuilder.ExecuteAsync().GetAwaiter().GetResult();
-            System.Console.WriteLine(authenticationResult.AccessToken);
-        }
+        AuthenticationResult authenticationResult = atparamBuilder.ExecuteAsync().GetAwaiter().GetResult();
+        System.Console.WriteLine(authenticationResult.AccessToken);
     }
+}
 ```
 
 ## Sample App 
@@ -111,13 +111,13 @@ dotnet run --project tests\devapps\WAM\NetWSLWam\test.csproj
 Enure you have updated to the latest WSL release. The WAM Account Control dialog is supported in WSL versions 2.4.13 and above. Using the broker isn't possible with earlier versions. To check the WSL version, use the following command:
 
 ```powershell
-wsl.exe --version
+wsl --version
 ```
 
 To update WSL, run the following command from Windows Terminal:
 
 ```powershell
-wsl.exe --update
+wsl --update
 ```
 
 ### Set up Keyring in WSL
