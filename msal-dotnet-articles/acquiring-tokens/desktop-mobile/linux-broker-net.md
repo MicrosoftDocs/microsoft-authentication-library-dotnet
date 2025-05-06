@@ -13,7 +13,7 @@ ms.topic:    how-to
 ms.date:     05/05/2025
 ---
 
-# Using MSAL .NET with an Authentication Broker on Linux
+# Use MSAL.NET with an authentication broker on Linux
 
 
 > [!NOTE]
