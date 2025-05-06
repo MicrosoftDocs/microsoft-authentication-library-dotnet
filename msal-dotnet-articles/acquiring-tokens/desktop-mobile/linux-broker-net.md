@@ -17,7 +17,7 @@ ms.date:     05/05/2025
 
 
 > [!NOTE]
-> Microsoft single sign-on for Linux authentication broker support is introduced with `Microsoft.Identity.Client` version v4.69.1.
+> Microsoft single sign-on (SSO) for Linux authentication broker support is introduced with `Microsoft.Identity.Client` version v4.69.1.
 
 Using an authentication broker on Linux enables you to simplify how your users authenticate with Microsoft Entra ID from your application, as well as take advantage of future functionality that protects Microsoft Entra ID refresh tokens from exfiltration and misuse.
 
