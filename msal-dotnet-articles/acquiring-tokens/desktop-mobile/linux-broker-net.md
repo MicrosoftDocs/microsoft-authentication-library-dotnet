@@ -4,7 +4,7 @@
 # For valid values of ms.service, ms.prod, and ms.topic, see https://review.learn.microsoft.com/en-us/help/platform/metadata-taxonomies?branch=main
 
 title:       Use MSAL.NET with an authentication broker on Linux
-description: "Learn how to use MSAL.NET with broker on Linux platform."
+description: "Learn how to use MSAL.NET with a broker on the Linux platform."
 author:      xinyuxu1026 # GitHub alias
 ms.author:   xinyuxu # Microsoft alias
 ms.service:  msal
