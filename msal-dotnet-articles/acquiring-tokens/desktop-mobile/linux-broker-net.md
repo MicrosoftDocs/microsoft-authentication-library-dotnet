@@ -72,7 +72,7 @@ A sample application is available for developers who want to try the authenticat
 On Debian-based distributions, please run `sudo apt install libx11-dev` to install the package.
 
 To run the sample app, use the following command:
-```
+```dotnetcli
 dotnet run --project tests\devapps\WAM\NetWSLWam\test.csproj
 ```
 
