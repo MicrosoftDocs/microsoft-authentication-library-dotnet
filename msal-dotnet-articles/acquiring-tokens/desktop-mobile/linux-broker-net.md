@@ -5,8 +5,8 @@
 
 title:       Use MSAL.NET on Linux with Broker
 description: "Learn how to use MSAL.NET with broker on Linux platform."
-author:      ploegert, xinyuxu1026 # GitHub alias
-ms.author:   jploegert, xinyuxu # Microsoft alias
+author:      xinyuxu1026 # GitHub alias
+ms.author:   xinyuxu # Microsoft alias
 ms.service:  msal
 # ms.prod:   # To use ms.prod, uncomment it and delete ms.service
 ms.topic:    how-to
