@@ -89,7 +89,9 @@ wsl.exe --update
 ```
 
 ### Set up Keyring in WSL
-We use libsecret on Linux and it needs to communicate with keyring daemon. Users can use `seahorse`(gnome GUI) package to manage the keyring with a user interface. You need to first install the package by `apt install seahorse` and then follow the instructions below.
+MSAL uses `libsecret` on Linux - it is required to communicate with the `keyring` daemon. Users can use [Seahorse](https://wiki.gnome.org/Apps/Seahorse/) (a GNOME application for managing encryption keys and passwords) to manage the `keyring` contents through a Graphical User Interface (GUI).
+
+On Debian-based distributions, you can install the package by running `sudo apt install seahorse` and then following the instructions below.
 
 1. Run seahorse command
 2. On the top left corner, click "+" and create Password keyring
