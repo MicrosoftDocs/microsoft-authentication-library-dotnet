@@ -34,7 +34,9 @@ libwebkit2gtk-4.0
 ```
 
 ## Create a console app on Linux platform
-To use broker on Linux platform, you need to specify the `BrokerOptions` to `OperationsSystems.Linux`. Notice that we use the same option for both Windows Subsystem for Linux (WSL) and standalone Linux.
+
+To use a broker on the Linux platform, set the `BrokerOptions` to `OperationsSystems.Linux`. Notice that we use the same option for both Windows Subsystem for Linux (WSL) and standalone Linux.
+
 ```dotnet
 from msal import PublicClientApplication
 
