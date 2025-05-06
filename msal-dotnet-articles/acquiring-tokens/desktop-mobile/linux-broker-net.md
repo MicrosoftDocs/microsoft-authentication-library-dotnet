@@ -70,7 +70,8 @@ class Program
 ## Sample App 
 A sample application is available for developers who want to try the authentication broker on Linux. The application is located [in the MSAL.NET GitHub repository](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/tree/main/tests/devapps/WAM/NetWSLWam). The app has a dependency of `libx11-dev` package. 
 
-On Debian-based distributions, please run `sudo apt install libx11-dev` to install the package. `libx11` library is used to get the console window handle on Linux. Here is the example code to use `libx11` to get the window handle:
+On Debian-based distributions, run `sudo apt install libx11-dev` to install the package. The `libx11` library is used to get the console window handle on Linux. Here's the sample code to use `libx11` to get the window handle:
+
 ```csharp
 using System;
 using System.Runtime.InteropServices;
