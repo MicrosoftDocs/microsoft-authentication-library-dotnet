@@ -67,7 +67,11 @@ class Program
 ```
 
 ## Sample App 
-There is a sample app in MSAL.NET repo, it's under ./tests/devapps/WAM/NetWSLWam path. The sample app has a dependenc of `libx11-dev` package. Please run `apt install libx11-dev` to install the package. To run the sample app, just run the command below.
+A sample application is available for developers who want to try the authentication broker on Linux. The application is located [in the MSAL.NET GitHub repository](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/tree/main/tests/devapps/WAM/NetWSLWam). The app has a dependency of `libx11-dev` package.
+
+On Debian-based distributions, please run `sudo apt install libx11-dev` to install the package.
+
+To run the sample app, use the following command:
 ```
 dotnet run --project tests\devapps\WAM\NetWSLWam\test.csproj
 ```
