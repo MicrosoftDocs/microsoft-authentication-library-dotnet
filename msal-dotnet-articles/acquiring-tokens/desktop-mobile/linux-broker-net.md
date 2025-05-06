@@ -20,7 +20,7 @@ ms.date:     05/05/2025
 > Microsoft single sign-on for Linux authentication broker support is introduced with `Microsoft.Identity.Client` version v4.69.1.
 Using an authentication broker on Linux enables you to simplify how your users authenticate with Microsoft Entra ID from your application, as well as take advantage of future functionality that protects Microsoft Entra ID refresh tokens from exfiltration and misuse.
 
-Authentication brokers are **not** pre-installed on standalone Linux but is bundled as a dependency of applications developed by Microsoft, such as [Company Portal](/mem/intune-service/user-help/enroll-device-linux). These applications are usually installed when a Linux computer is enrolled in a company's device fleet via an endpoint management solution like [Microsoft Intune](/mem/intune/fundamentals/what-is-intune). For [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/about) (WSL) scenario, WAM (Windows Account Manager) is used as the broker. WAM does come pre-installed on the Windows system. To learn more about Linux device set up with the Microsoft Identity Platform, refer to [Microsoft Enterprise SSO plug-in for Apple devices](/entra/identity-platform/apple-sso-plugin).
+Authentication brokers are **not** pre-installed on standalone Linux but is bundled as a dependency of applications developed by Microsoft, such as [Company Portal](/mem/intune-service/user-help/enroll-device-linux). These applications are usually installed when a Linux computer is enrolled in a company's device fleet via an endpoint management solution like [Microsoft Intune](/mem/intune/fundamentals/what-is-intune). For [Windows Subsystem for Linux](https://learn.microsoft.com/windows/wsl/about) (WSL) scenario, WAM (Windows Account Manager) is used as the broker. WAM does come pre-installed on the Windows system. To learn more about Linux device set up with the Microsoft Identity Platform, refer to [Microsoft Enterprise SSO plug-in for Apple devices](/entra/identity-platform/apple-sso-plugin).
 
 ## Dependency
 
@@ -67,9 +67,35 @@ class Program
 ```
 
 ## Sample App 
-A sample application is available for developers who want to try the authentication broker on Linux. The application is located [in the MSAL.NET GitHub repository](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/tree/main/tests/devapps/WAM/NetWSLWam). The app has a dependency of `libx11-dev` package. `libx11` library is used to get the console window handle on Linux.
+A sample application is available for developers who want to try the authentication broker on Linux. The application is located [in the MSAL.NET GitHub repository](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/tree/main/tests/devapps/WAM/NetWSLWam). The app has a dependency of `libx11-dev` package. 
 
-On Debian-based distributions, please run `sudo apt install libx11-dev` to install the package.
+On Debian-based distributions, please run `sudo apt install libx11-dev` to install the package. `libx11` library is used to get the console window handle on Linux. Here is the example code to use `libx11` to get the window handle:
+```csharp
+using System;
+using System.Runtime.InteropServices;
+
+class X11Interop
+{
+    [DllImport("libX11")]
+    public static extern IntPtr XOpenDisplay(IntPtr display);
+
+    [DllImport("libX11")]
+    public static extern IntPtr XDefaultRootWindow(IntPtr display);
+
+    public static void Main()
+    {
+        IntPtr display = XOpenDisplay(IntPtr.Zero);
+        if (display == IntPtr.Zero)
+        {
+            Console.WriteLine("Unable to open X display.");
+            return;
+        }
+
+        IntPtr rootWindow = XDefaultRootWindow(display);
+        Console.WriteLine($"Root window handle: {rootWindow}");
+    }
+}
+```
 
 To run the sample app, use the following command:
 ```dotnetcli
