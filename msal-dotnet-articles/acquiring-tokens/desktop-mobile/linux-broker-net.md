@@ -3,13 +3,13 @@
 # For more information, see https://review.learn.microsoft.com/en-us/help/platform/learn-editor-add-metadata?branch=main
 # For valid values of ms.service, ms.prod, and ms.topic, see https://review.learn.microsoft.com/en-us/help/platform/metadata-taxonomies?branch=main
 
-title:       # Add a title for the browser tab
-description: # Add a meaningful description for search results
+title:       Use MSAL.NET on Linux with Broker
+description: "Learn how to use MSAL.NET with broker on Linux platform."
 author:      ploegert, xinyuxu1026 # GitHub alias
 ms.author:   jploegert, xinyuxu # Microsoft alias
-ms.service:  # Add the ms.service or ms.prod value
+ms.service:  msal
 # ms.prod:   # To use ms.prod, uncomment it and delete ms.service
-ms.topic:    # Add the ms.topic value
+ms.topic:    how-to
 ms.date:     05/05/2025
 ---
 
@@ -73,7 +73,7 @@ dotnet run --project tests\devapps\WAM\NetWSLWam\test.csproj
 ## WSL Scenario
 
 ### Update to the latest version of WSL
-Please make sure you have updated to the most recent version of WSL. Account control page is supported from WSL version 2.4.13. Otherwise, the broker scenario won't work. Here is the command to update WSL.
+Please make sure you have updated to the most recent version of WSL. WAM Account Control dialog is supported from WSL version 2.4.13. Otherwise, the broker scenario won't work. Here is the command to update WSL.
 ```
 wsl.exe --update
 ```
