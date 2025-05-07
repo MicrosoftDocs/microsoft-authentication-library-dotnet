@@ -25,13 +25,15 @@ An authentication broker is **not** pre-installed on standalone Linux but is bun
 
 ## Prerequisites
 
+MSAL.NET project requires .NET version greater or equal than the version specified in [global.json](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/main/global.json) file, we recommend register the Microsoft package repository and install .NET, please follow the instructions here: [Install .NET on Ubuntu](https://learn.microsoft.com/dotnet/core/install/linux-ubuntu-decision#register-the-microsoft-package-repository). And please make sure you have all the [.NET required dependencies](https://learn.microsoft.com/dotnet/core/install/linux-ubuntu-decision#dependencies) installed.
+
 To use the broker, you'll need to install a list of dependencies on the Linux platform:
 
 ```bash
 libc++-dev
 libc++abi-dev
 libsecret-tools
-libwebkit2gtk-4.0
+libwebkit2gtk-4.0-dev
 ```
 
 ## Create a console app on Linux platform
@@ -126,8 +128,10 @@ MSAL uses `libsecret` on Linux. It is required to communicate with the `keyring`
 On Debian-based distributions, you can install the package by running `sudo apt install seahorse` and then following these instructions:
 
 1. Run `seahorse` in the terminal.
-2. In the top left corner, click **+** and create **Password** keyring.
+2. In the top left corner, click **+** and create **Password** keyring. 
+
+![Screenshot that shows the seahorse interface to create Password keyring.](../../media/msal-net-linux/password-keyring-seahorse.png)
+
 3. Create a keyring named 'login' and set the password.
 4. Run `wsl.exe --shutdown` from your Windows Terminal.
 5. Start a new WSL session and run the sample. You should be asked for the keyring password.
-
