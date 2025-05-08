@@ -133,5 +133,12 @@ On Debian-based distributions, you can install the package by running `sudo apt 
 ![Screenshot that shows the seahorse interface to create Password keyring.](../../media/msal-net-linux/password-keyring-seahorse.png)
 
 3. Create a keyring named 'login' and set the password.
+
+![Screenshot that creates keyring.](../../media/msal-net-linux/create-keyring-named-login.png)
+
+![Screenshot that enters password.](../../media/msal-net-linux/choose-password.png)
+
+![Screenshot that closes the keyring window.](../../media/msal-net-linux/close-keyring-window.png)
+
 4. Run `wsl.exe --shutdown` from your Windows Terminal.
 5. Start a new WSL session and run the sample. You should be asked for the keyring password.
