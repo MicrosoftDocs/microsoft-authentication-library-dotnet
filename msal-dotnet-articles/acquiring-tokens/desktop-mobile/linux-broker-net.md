@@ -7,79 +7,182 @@ title:       # Add a title for the browser tab
 description: # Add a meaningful description for search results
 author:      ploegert # GitHub alias
 ms.author:   jploegert # Microsoft alias
-ms.service:  # Add the ms.service or ms.prod value
+ms.service:  msal
 # ms.prod:   # To use ms.prod, uncomment it and delete ms.service
-ms.topic:    # Add the ms.topic value
-ms.date:     03/18/2025
+ms.topic:    how-to
+ms.date:     05/08/2025
 ---
 
-# Using MSAL .NET with an Authentication Broker on Linux
-
+# Use MSAL.NET with an authentication broker on Linux
 
 > [!NOTE]
-> Microsoft Single Sign-on for Linux authentication broker support is introduced with `MSAL` version v4.69.1.
+> Microsoft single sign-on (SSO) for Linux authentication broker support is introduced with `Microsoft.Identity.Client` version v4.69.1.
 
 Using an authentication broker on Linux enables you to simplify how your users authenticate with Microsoft Entra ID from your application, as well as take advantage of future functionality that protects Microsoft Entra ID refresh tokens from exfiltration and misuse.
 
-Authentication brokers are **not** pre-installed on Linux but is bundled as a dependency of applications developed by Microsoft, such as [Company Portal](/mem/intune-service/user-help/enroll-device-linux). These applications are usually installed when a Linux computer is enrolled in a company's device fleet via an endpoint management solution like [Microsoft Intune](/mem/intune/fundamentals/what-is-intune). To learn more about Linux device set up with the Microsoft Identity Platform, refer to [Microsoft Enterprise SSO plug-in for Apple devices](/entra/identity-platform/apple-sso-plugin).
+An authentication broker is **not** pre-installed on standalone Linux but is bundled as a dependency of applications developed by Microsoft, such as [Company Portal](/mem/intune-service/user-help/enroll-device-linux). These applications are usually installed when a Linux computer is enrolled in a company's device fleet via an endpoint management solution like [Microsoft Intune](/mem/intune/fundamentals/what-is-intune). For [Windows Subsystem for Linux](/windows/wsl/about) (WSL) scenario, WAM (Windows Account Manager) is used as the broker. WAM does come pre-installed on the Windows system. To learn more about Linux device set up with the Microsoft Identity Platform, see [Microsoft Enterprise SSO plug-in for Apple devices](/entra/identity-platform/apple-sso-plugin).
 
-## Usage
+## Prerequisites
 
-To use the broker, you will need to install the broker-related packages in addition to the core MSAL from PyPI:
+To use the broker, you'll need to install a list of dependencies on the Linux platform:
 
 ```bash
-pip install msal[broker]>=1.31,<2
+libc++-dev
+libc++abi-dev
+libsecret-tools
+libwebkit2gtk-4.0
 ```
 
->[!IMPORTANT]
->If broker-related packages are not installed and you will try to use the authentication broker, you will get an error: `ImportError: You need to install dependency by: pip install "msal[broker]>=1.31,<2"`.
 
-Typically, on macOS your [public client](/entra/identity-platform/msal-client-applications) Python applications would [acquire tokens](../getting-started/acquiring-tokens.md) via the system browser. To use authentication brokers installed on a macOS system instead, you will need to pass an additional argument in the `PublicClientApplication` constructor - `enable_broker_on_mac`:
+## Create a console app on Linux platform
 
-```python
+To use a broker on the Linux platform, set the `BrokerOptions` to `OperatingSystems.Linux`. Notice that we use the same option for both Windows Subsystem for Linux (WSL) and standalone Linux.
+
+```csharp
 from msal import PublicClientApplication
- 
-app = PublicClientApplication(
-    "CLIENT_ID",
-    authority="https://login.microsoftonline.com/common",
-    enable_broker_on_mac =True)
+
+class Program
+{
+    public static string ClientID = "your client id"; //msidentity-samples-testing tenant
+    public static string[] Scopes = { "User.Read" };
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Hello World!");
+
+        var pcaBuilder = PublicClientApplicationBuilder.Create(ClientID)
+            .WithAuthority("https://login.microsoftonline.com/common")
+            .WithDefaultRedirectUri()
+            .WithBroker(new BrokerOptions(BrokerOptions.OperatingSystems.Linux){
+                        ListOperatingSystemAccounts = true,
+                        MsaPassthrough = true,
+                        Title = "MSAL WSL Test App"
+                        })
+            .Build();
+
+        AcquireTokenInteractiveParameterBuilder atparamBuilder = pcaBuilder.AcquireTokenInteractive(Scopes);
+
+        AuthenticationResult authenticationResult = atparamBuilder.ExecuteAsync().GetAwaiter().GetResult();
+        System.Console.WriteLine(authenticationResult.AccessToken);
+    }
+}
 ```
 
->[!IMPORTANT]
->If you are writing a cross-platform application, you will also need to use `enable_broker_on_windows`, as outlined in the [Using MSAL Python with Web Account Manager](wam.md) article.
+## Sample App 
+A sample application is available for developers who want to try the authentication broker on Linux. The application is located [in the MSAL.NET GitHub repository](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/tree/main/tests/devapps/WAM/NetWSLWam). The app has a dependency of `libx11-dev` package. 
 
-In addition to the constructor change, your application needs to support broker-specific redirect URIs. For _unsigned_ applications, the URI is:
+On Debian-based distributions, run `sudo apt install libx11-dev` to install the package. The `libx11` library is used to get the console window handle on Linux. Here's the sample code to use `libx11` to get the window handle:
 
-```text
-msauth.com.msauth.unsignedapp://auth 
+```csharp
+using System;
+using System.Runtime.InteropServices;
+
+class X11Interop
+{
+    [DllImport("libX11")]
+    public static extern IntPtr XOpenDisplay(IntPtr display);
+
+    [DllImport("libX11")]
+    public static extern IntPtr XDefaultRootWindow(IntPtr display);
+
+    public static void Main()
+    {
+        IntPtr display = XOpenDisplay(IntPtr.Zero);
+        if (display == IntPtr.Zero)
+        {
+            Console.WriteLine("Unable to open X display.");
+            return;
+        }
+
+        IntPtr rootWindow = XDefaultRootWindow(display);
+        Console.WriteLine($"Root window handle: {rootWindow}");
+    }
+}
 ```
 
-For signed applications, the redirect URI should be:
-
-```text
-msauth.BUNDLE_ID://auth
+To run the sample app, use the following command:
+```dotnetcli
+dotnet run --project tests\devapps\WAM\NetWSLWam\test.csproj
 ```
 
-If the redirect URIs are not correctly set in the app configuration within the Entra portal, you will receive error like this: 
+## WSL Scenario
 
-```text
-Error detected... 
-tag=508170375
-context=AADSTS50011 Description: (pii), Domain: MSAIMSIDOAuthErrorDomain.Error was thrown in location: Broker 
-errorCode=-51411 
-status=Response_Status.Status_Unexpected 
+### Update to the latest version of WSL
+
+Enure you have updated to the latest WSL release. The WAM Account Control dialog is supported in WSL versions 2.4.13 and above. Using the broker isn't possible with earlier versions. 
+
+```powershell
+
+#to start from scratch:
+wsl --unregister Ubuntu-22.04
+
+#To check what distros are available:
+wsl.exe --list --online
+
+wsl.exe --install Ubuntu-22.04
+
+# To check the WSL version, use the following command:
+wsl --version
+
+# To update WSL, run the following command from Windows Terminal:
+wsl --update
 ```
 
-Once configured, you can call `acquire_token_interactive` to acquire a token.
+```bash
+sudo apt update -y
 
-```python
-result = app.acquire_token_interactive(["User.ReadBasic.All"],
-                    parent_window_handle=app.CONSOLE_WINDOW_HANDLE)
+# Setup .NET:
+wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh
+chmod +x ./dotnet-install.sh
+./dotnet-install.sh --version latest
+export DOTNET_ROOT=~/.dotnet
+export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
+
+dotnet --info
+sudo apt update
+sudo apt upgrade -y
+sudo apt install seahorse libsecret-1-0 libx11-dev libc++-dev libc++abi-dev libsecret-tools libwebkit2gtk-4.0-dev -y
+sudo apt install libc6 libgcc1 libgssapi-krb5-2 libicu70 libssl3 libstdc++6 zlib1g -y
+
+sudo seahorse
+# update the keychain
+
+# Reboot
+wsl.exe --shutdown
+export DOTNET_ROOT=~/.dotnet
+export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
+
+cd /mnt/c/git/microsoft-authentication-library-for-dotnet/tests/devapps/WAM/NetWSLWam/
+dotnet build
+donet run
+
+#Or do this 
+cd /mnt/c/git/microsoft-authentication-library-for-dotnet
+dotnet run --project tests/devapps/WAM/NetWSLWam/test.csproj
+
 ```
 
->[!NOTE]
->The `parent_window_handle` parameter is required even though on macOS it is not used. For GUI applications, the login prompt location will be determined ad-hoc and currently cannot be bound to a specific window. In a future update, this parameter will be used to determine the _actual_ parent window.
 
-## Token caching
+### Set up Keyring in WSL
+MSAL uses `libsecret` on Linux. It is required to communicate with the `keyring` daemon. Users can use [Seahorse](https://wiki.gnome.org/Apps/Seahorse/) (a GNOME application for managing encryption keys and passwords) to manage the `keyring` contents through a Graphical User Interface (GUI).
 
-The authentication broker handles refresh and access token caching. You do not need to set up custom caching.
+On Debian-based distributions, you can install the package by running `sudo apt install seahorse` and then following these instructions:
+
+1. Run `seahorse` in the terminal.
+
+    ![WSL1](../../media/wam/wsl1.png)
+
+2. In the top left corner, click **+** and create **Password** keyring.
+
+    ![WSL2](../../media/wam/wsl2.png)
+
+3. Create a keyring named 'login' 
+
+    ![WSL3](../../media/wam/wsl3.png)
+
+4. Set the password on the next dialog.
+    ![WSL4](../../media/wam/wsl4.png)
+
+5. Run `wsl.exe --shutdown` from your Windows Terminal.
+
+6. Start a new WSL session and run the sample. You should be asked for the keyring password.
+
