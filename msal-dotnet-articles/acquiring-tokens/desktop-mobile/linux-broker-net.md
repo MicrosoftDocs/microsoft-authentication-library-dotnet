@@ -41,7 +41,8 @@ libwebkit2gtk-4.0-dev
 To use a broker on the Linux platform, set the `BrokerOptions` to `OperatingSystems.Linux`. Notice that we use the same option for both Windows Subsystem for Linux (WSL) and standalone Linux.
 
 ```csharp
-from msal import PublicClientApplication
+using Microsoft.Identity.Client;
+using Microsoft.Identity.Client.Broker;
 
 class Program
 {
@@ -49,22 +50,21 @@ class Program
     public static string[] Scopes = { "User.Read" };
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello World!");
-
-        var pcaBuilder = PublicClientApplicationBuilder.Create(ClientID)
+        IPublicClientApplication pcaBuilder = PublicClientApplicationBuilder.Create(ClientID)
             .WithAuthority("https://login.microsoftonline.com/common")
             .WithDefaultRedirectUri()
-            .WithBroker(new BrokerOptions(BrokerOptions.OperatingSystems.Linux){
-                        ListOperatingSystemAccounts = true,
-                        MsaPassthrough = true,
-                        Title = "MSAL WSL Test App"
-                        })
+            .WithBroker(new BrokerOptions(BrokerOptions.OperatingSystems.Linux)
+            {
+                ListOperatingSystemAccounts = true,
+                MsaPassthrough = true,
+                Title = "MSAL WSL Test App"
+            })
             .Build();
 
-        AcquireTokenInteractiveParameterBuilder atparamBuilder = pcaBuilder.AcquireTokenInteractive(Scopes);
+        AcquireTokenInteractiveParameterBuilder atParamBuilder = pcaBuilder.AcquireTokenInteractive(Scopes);
 
-        AuthenticationResult authenticationResult = atparamBuilder.ExecuteAsync().GetAwaiter().GetResult();
-        System.Console.WriteLine(authenticationResult.AccessToken);
+        AuthenticationResult authenticationResult = atParamBuilder.ExecuteAsync().GetAwaiter().GetResult();
+        Console.WriteLine(authenticationResult.AccessToken);
     }
 }
 ```
