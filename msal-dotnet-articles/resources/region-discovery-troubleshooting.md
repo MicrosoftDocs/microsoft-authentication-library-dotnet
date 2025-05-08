@@ -1,7 +1,5 @@
 ---
 title: Region discovery troubleshooting
-ms.date: 03/17/2025
-description: Troubleshoot region discovery issues in Microsoft Entra ID
 ---
 
 # Region discovery troubleshooting

@@ -1,7 +1,6 @@
 ---
 title: Client credential flows
 description: "Client credential authentication flows allow services, APIs, and daemon applications to acquire a token without direct user interaction."
-ms.date: 03/17/2025
 ---
 
 # Client credential flows

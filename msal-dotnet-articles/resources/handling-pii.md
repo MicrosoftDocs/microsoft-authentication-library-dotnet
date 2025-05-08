@@ -1,7 +1,6 @@
 ---
 title: Handling of personally-identifiable information in MSAL.NET
 description: Outlines what MSAL considers to be personally identifiable information.
-ms.date: 03/17/2025
 ---
 
 # Handling of personally-identifiable information in MSAL.NET
@@ -39,9 +38,9 @@ To read more about how MSAL.NET does logging, refer to [Logging in MSAL.NET](../
 
 - IDs related to an organization or tenant (not the user) like tenant ID, directory ID, or directory name (e.g. `contoso.onmicrosoft.com`).
 - Authority.
-- Scopes and resource names / IDs.
+- Scopes and resource names.
 - Client (application) ID.
-- Service principal details, such as object ID, client ID or resource ID (which can contain the subscription ID, identity name etc.)
+- Service principal details, such as object ID and client ID.
 - Exception messages and stack traces, including error codes coming from Microsoft Entra ID.
 - HTTP details other than request and response (for example, HTTP status codes or payload size).
 - Correlation IDs.

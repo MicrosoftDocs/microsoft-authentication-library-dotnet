@@ -45,6 +45,9 @@
     <AssemblyVersion>8.5.0.0</AssemblyVersion>
     <AssemblyVersion>8.6.0.0</AssemblyVersion>
     <AssemblyVersion>8.6.1.0</AssemblyVersion>
+    <AssemblyVersion>8.7.0.0</AssemblyVersion>
+    <AssemblyVersion>8.8.0.0</AssemblyVersion>
+    <AssemblyVersion>8.9.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.IdentityModel.Tokens.SecurityToken</BaseTypeName>
@@ -66,7 +69,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.6.1.0</AssemblyVersion>
+        <AssemblyVersion>8.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="encodedTokenMemory" Type="System.ReadOnlyMemory&lt;System.Char&gt;" />
@@ -96,13 +99,76 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.6.1.0</AssemblyVersion>
+        <AssemblyVersion>8.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="jwtEncodedString" Type="System.String" />
       </Parameters>
       <Docs>
         <param name="jwtEncodedString">A JSON Web Token that has been serialized in JWS or JWE Compact serialized format.</param>
+        <summary>
+            Initializes a new instance of <see cref="T:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken" /> from a string in JWS or JWE Compact serialized format.
+            </summary>
+        <remarks>
+            See: <see href="https://datatracker.ietf.org/doc/html/rfc7519" /> (JWT).
+            See: <see href="https://datatracker.ietf.org/doc/html/rfc7515" /> (JWS).
+            See: <see href="https://datatracker.ietf.org/doc/html/rfc7516" /> (JWE).
+            <para>
+            The contents of the returned <see cref="T:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken" /> have not been validated, the JSON Web Token is simply decoded. Validation can be accomplished using the validation methods in <see cref="T:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler" /></para></remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="jwtEncodedString" /> is null or empty.</exception>
+        <exception cref="T:System.ArgumentException">Thrown if <paramref name="jwtEncodedString" /> is not in JWS or JWE Compact Serialization format.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public JsonWebToken (ReadOnlyMemory&lt;char&gt; encodedTokenMemory, Microsoft.IdentityModel.Tokens.TryReadJwtClaim tryReadJwtClaim);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.ReadOnlyMemory`1&lt;char&gt; encodedTokenMemory, class Microsoft.IdentityModel.Tokens.TryReadJwtClaim tryReadJwtClaim) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.#ctor(System.ReadOnlyMemory{System.Char},Microsoft.IdentityModel.Tokens.TryReadJwtClaim)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (encodedTokenMemory As ReadOnlyMemory(Of Char), tryReadJwtClaim As TryReadJwtClaim)" />
+      <MemberSignature Language="F#" Value="new Microsoft.IdentityModel.JsonWebTokens.JsonWebToken : ReadOnlyMemory&lt;char&gt; * Microsoft.IdentityModel.Tokens.TryReadJwtClaim -&gt; Microsoft.IdentityModel.JsonWebTokens.JsonWebToken" Usage="new Microsoft.IdentityModel.JsonWebTokens.JsonWebToken (encodedTokenMemory, tryReadJwtClaim)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>8.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="encodedTokenMemory" Type="System.ReadOnlyMemory&lt;System.Char&gt;" />
+        <Parameter Name="tryReadJwtClaim" Type="Microsoft.IdentityModel.Tokens.TryReadJwtClaim" />
+      </Parameters>
+      <Docs>
+        <param name="encodedTokenMemory">A ReadOnlyMemory{char} containing the JSON Web Token serialized in JWS or JWE Compact format.</param>
+        <param name="tryReadJwtClaim">Custom delegate to be called when reading associated claims.</param>
+        <summary>
+            Initializes a new instance of <see cref="T:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken" /> from a ReadOnlyMemory{char} in JWS or JWE Compact serialized format.
+            </summary>
+        <remarks>
+            See: <see href="https://datatracker.ietf.org/doc/html/rfc7519" /> (JWT).
+            See: <see href="https://datatracker.ietf.org/doc/html/rfc7515" /> (JWS).
+            See: <see href="https://datatracker.ietf.org/doc/html/rfc7516" /> (JWE).
+            <para>
+            The contents of the returned <see cref="T:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken" /> have not been validated; the JSON Web Token is simply decoded. Validation can be performed using the methods in <see cref="T:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler" />.
+            </para></remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="encodedTokenMemory" /> is empty.</exception>
+        <exception cref="T:System.ArgumentException">Thrown if <paramref name="encodedTokenMemory" /> does not represent a valid JWS or JWE Compact Serialization format.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public JsonWebToken (string jwtEncodedString, Microsoft.IdentityModel.Tokens.TryReadJwtClaim tryReadJwtClaim);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string jwtEncodedString, class Microsoft.IdentityModel.Tokens.TryReadJwtClaim tryReadJwtClaim) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.#ctor(System.String,Microsoft.IdentityModel.Tokens.TryReadJwtClaim)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (jwtEncodedString As String, tryReadJwtClaim As TryReadJwtClaim)" />
+      <MemberSignature Language="F#" Value="new Microsoft.IdentityModel.JsonWebTokens.JsonWebToken : string * Microsoft.IdentityModel.Tokens.TryReadJwtClaim -&gt; Microsoft.IdentityModel.JsonWebTokens.JsonWebToken" Usage="new Microsoft.IdentityModel.JsonWebTokens.JsonWebToken (jwtEncodedString, tryReadJwtClaim)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>8.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="jwtEncodedString" Type="System.String" />
+        <Parameter Name="tryReadJwtClaim" Type="Microsoft.IdentityModel.Tokens.TryReadJwtClaim" />
+      </Parameters>
+      <Docs>
+        <param name="jwtEncodedString">A JSON Web Token that has been serialized in JWS or JWE Compact serialized format.</param>
+        <param name="tryReadJwtClaim">Custom delegate to be called when reading associated claims.</param>
         <summary>
             Initializes a new instance of <see cref="T:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken" /> from a string in JWS or JWE Compact serialized format.
             </summary>
@@ -125,7 +191,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.6.1.0</AssemblyVersion>
+        <AssemblyVersion>8.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="header" Type="System.String" />
@@ -134,6 +200,38 @@
       <Docs>
         <param name="header">A string containing JSON which represents the cryptographic operations applied to the JWT and optionally any additional properties of the JWT.</param>
         <param name="payload">A string containing JSON which represents the claims contained in the JWT. Each claim is a JSON object of the form { Name, Value }. Can be the empty.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken" /> class where the header contains the crypto algorithms applied to the encoded header and payload.
+            </summary>
+        <remarks>
+            See: <see href="https://datatracker.ietf.org/doc/html/rfc7519" /> (JWT).
+            See: <see href="https://datatracker.ietf.org/doc/html/rfc7515" /> (JWS).
+            See: <see href="https://datatracker.ietf.org/doc/html/rfc7516" /> (JWE).
+            <para>
+            The contents of the returned <see cref="T:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken" /> have not been validated, the JSON Web Token is simply decoded. Validation can be accomplished using the validation methods in <see cref="T:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler" /></para></remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="payload" /> is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public JsonWebToken (string header, string payload, Microsoft.IdentityModel.Tokens.TryReadJwtClaim tryReadJwtClaim);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string header, string payload, class Microsoft.IdentityModel.Tokens.TryReadJwtClaim tryReadJwtClaim) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.#ctor(System.String,System.String,Microsoft.IdentityModel.Tokens.TryReadJwtClaim)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (header As String, payload As String, tryReadJwtClaim As TryReadJwtClaim)" />
+      <MemberSignature Language="F#" Value="new Microsoft.IdentityModel.JsonWebTokens.JsonWebToken : string * string * Microsoft.IdentityModel.Tokens.TryReadJwtClaim -&gt; Microsoft.IdentityModel.JsonWebTokens.JsonWebToken" Usage="new Microsoft.IdentityModel.JsonWebTokens.JsonWebToken (header, payload, tryReadJwtClaim)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>8.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="header" Type="System.String" />
+        <Parameter Name="payload" Type="System.String" />
+        <Parameter Name="tryReadJwtClaim" Type="Microsoft.IdentityModel.Tokens.TryReadJwtClaim" />
+      </Parameters>
+      <Docs>
+        <param name="header">A string containing JSON which represents the cryptographic operations applied to the JWT and optionally any additional properties of the JWT.</param>
+        <param name="payload">A string containing JSON which represents the claims contained in the JWT. Each claim is a JSON object of the form { Name, Value }. Can be the empty.</param>
+        <param name="tryReadJwtClaim">Custom delegate to be called when reading associated claims.</param>
         <summary>
             Initializes a new instance of the <see cref="T:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken" /> class where the header contains the crypto algorithms applied to the encoded header and payload.
             </summary>
@@ -155,7 +253,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.6.1.0</AssemblyVersion>
+        <AssemblyVersion>8.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -179,7 +277,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.6.1.0</AssemblyVersion>
+        <AssemblyVersion>8.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -207,7 +305,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.6.1.0</AssemblyVersion>
+        <AssemblyVersion>8.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
@@ -234,7 +332,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.6.1.0</AssemblyVersion>
+        <AssemblyVersion>8.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -261,7 +359,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.6.1.0</AssemblyVersion>
+        <AssemblyVersion>8.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -288,7 +386,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.6.1.0</AssemblyVersion>
+        <AssemblyVersion>8.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -315,7 +413,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.6.1.0</AssemblyVersion>
+        <AssemblyVersion>8.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Security.Claims.Claim&gt;</ReturnType>
@@ -340,7 +438,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.6.1.0</AssemblyVersion>
+        <AssemblyVersion>8.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -368,7 +466,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.6.1.0</AssemblyVersion>
+        <AssemblyVersion>8.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -394,7 +492,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.6.1.0</AssemblyVersion>
+        <AssemblyVersion>8.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -418,7 +516,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.6.1.0</AssemblyVersion>
+        <AssemblyVersion>8.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -442,7 +540,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.6.1.0</AssemblyVersion>
+        <AssemblyVersion>8.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -467,7 +565,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.6.1.0</AssemblyVersion>
+        <AssemblyVersion>8.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -491,7 +589,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.6.1.0</AssemblyVersion>
+        <AssemblyVersion>8.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -518,7 +616,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.6.1.0</AssemblyVersion>
+        <AssemblyVersion>8.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Claims.Claim</ReturnType>
@@ -549,7 +647,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.6.1.0</AssemblyVersion>
+        <AssemblyVersion>8.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -584,7 +682,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.6.1.0</AssemblyVersion>
+        <AssemblyVersion>8.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -619,7 +717,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.6.1.0</AssemblyVersion>
+        <AssemblyVersion>8.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -646,7 +744,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.6.1.0</AssemblyVersion>
+        <AssemblyVersion>8.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -673,7 +771,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.6.1.0</AssemblyVersion>
+        <AssemblyVersion>8.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.JsonWebTokens.JsonWebToken</ReturnType>
@@ -700,7 +798,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.6.1.0</AssemblyVersion>
+        <AssemblyVersion>8.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -722,7 +820,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.6.1.0</AssemblyVersion>
+        <AssemblyVersion>8.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -744,7 +842,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.6.1.0</AssemblyVersion>
+        <AssemblyVersion>8.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DateTime</ReturnType>
@@ -771,7 +869,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.6.1.0</AssemblyVersion>
+        <AssemblyVersion>8.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -798,7 +896,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.6.1.0</AssemblyVersion>
+        <AssemblyVersion>8.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -826,7 +924,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.6.1.0</AssemblyVersion>
+        <AssemblyVersion>8.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.SecurityKey</ReturnType>
@@ -848,7 +946,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.6.1.0</AssemblyVersion>
+        <AssemblyVersion>8.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.SecurityKey</ReturnType>
@@ -872,7 +970,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.6.1.0</AssemblyVersion>
+        <AssemblyVersion>8.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -899,7 +997,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.6.1.0</AssemblyVersion>
+        <AssemblyVersion>8.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -922,7 +1020,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.6.1.0</AssemblyVersion>
+        <AssemblyVersion>8.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -954,7 +1052,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.6.1.0</AssemblyVersion>
+        <AssemblyVersion>8.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -991,7 +1089,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.6.1.0</AssemblyVersion>
+        <AssemblyVersion>8.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1028,7 +1126,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.6.1.0</AssemblyVersion>
+        <AssemblyVersion>8.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1063,7 +1161,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.6.1.0</AssemblyVersion>
+        <AssemblyVersion>8.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1090,7 +1188,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.6.1.0</AssemblyVersion>
+        <AssemblyVersion>8.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1112,7 +1210,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.6.1.0</AssemblyVersion>
+        <AssemblyVersion>8.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DateTime</ReturnType>
@@ -1139,7 +1237,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.6.1.0</AssemblyVersion>
+        <AssemblyVersion>8.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DateTime</ReturnType>
@@ -1166,7 +1264,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.6.1.0</AssemblyVersion>
+        <AssemblyVersion>8.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1193,7 +1291,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.6.1.0</AssemblyVersion>
+        <AssemblyVersion>8.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>

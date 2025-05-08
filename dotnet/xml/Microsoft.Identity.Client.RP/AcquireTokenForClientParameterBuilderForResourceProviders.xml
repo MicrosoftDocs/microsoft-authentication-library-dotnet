@@ -1,0 +1,60 @@
+<Type Name="AcquireTokenForClientParameterBuilderForResourceProviders" FullName="Microsoft.Identity.Client.RP.AcquireTokenForClientParameterBuilderForResourceProviders">
+  <TypeSignature Language="C#" Value="public static class AcquireTokenForClientParameterBuilderForResourceProviders" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit AcquireTokenForClientParameterBuilderForResourceProviders extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Client.RP.AcquireTokenForClientParameterBuilderForResourceProviders" />
+  <TypeSignature Language="VB.NET" Value="Public Module AcquireTokenForClientParameterBuilderForResourceProviders" />
+  <TypeSignature Language="F#" Value="type AcquireTokenForClientParameterBuilderForResourceProviders = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+    <AssemblyVersion>4.70.0.0</AssemblyVersion>
+    <AssemblyVersion>4.70.1.0</AssemblyVersion>
+    <AssemblyVersion>4.70.2.0</AssemblyVersion>
+    <AssemblyVersion>4.71.0.0</AssemblyVersion>
+    <AssemblyVersion>4.71.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Resource Provider extensibility methods for AcquireTokenForClientParameterBuilder
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="WithAccessTokenSha256ToRefresh">
+      <MemberSignature Language="C#" Value="public static Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder WithAccessTokenSha256ToRefresh (this Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder builder, string hash);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder WithAccessTokenSha256ToRefresh(class Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder builder, string hash) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.RP.AcquireTokenForClientParameterBuilderForResourceProviders.WithAccessTokenSha256ToRefresh(Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder,System.String)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function WithAccessTokenSha256ToRefresh (builder As AcquireTokenForClientParameterBuilder, hash As String) As AcquireTokenForClientParameterBuilder" />
+      <MemberSignature Language="F#" Value="static member WithAccessTokenSha256ToRefresh : Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder * string -&gt; Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder" Usage="Microsoft.Identity.Client.RP.AcquireTokenForClientParameterBuilderForResourceProviders.WithAccessTokenSha256ToRefresh (builder, hash)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.71.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="builder" Type="Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder" RefType="this" />
+        <Parameter Name="hash" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="builder">The existing AcquireTokenForClientParameterBuilder instance.</param>
+        <param name="hash">
+            A Base64-encoded SHA-256 hash of the token (UTF-8). For example:
+            <c>Convert.ToBase64String(SHA256(Encoding.UTF8.GetBytes(accessToken)))</c>.
+            </param>
+        <summary>
+            Configures the SDK to not retrieve a token from the cache if it matches the SHA256 hash 
+            of the token configured. Similar to WithForceRefresh(bool) API, but instead of bypassing 
+            the cache for all tokens, the cache bypass only occurs for 1 token
+            </summary>
+        <returns>The builder to chain the .With methods.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

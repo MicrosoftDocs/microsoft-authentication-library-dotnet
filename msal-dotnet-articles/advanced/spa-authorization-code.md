@@ -1,7 +1,6 @@
 ---
 title: Single-page applications (SPA) and authorization codes
 description: "This flow enables confidential client applications to request an additional SPA auth code from the eSTS /token endpoint, and this authorization code can be redeemed silently by the front end running in the browser."
-ms.date: 03/17/2025
 ---
 
 # Single-page applications (SPA) and authorization codes

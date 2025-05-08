@@ -1,7 +1,5 @@
 ---
 title: Experimental features in MSAL.NET
-description: Learn about experimental features in MSAL.NET and how to use them in your projects.
-ms.date: 03/17/2025
 ---
 
 # Experimental features in MSAL.NET

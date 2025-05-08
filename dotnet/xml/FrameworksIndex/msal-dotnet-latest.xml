@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.Identity.Client.Broker" Version="4.69.1.0" />
-    <Assembly Name="Microsoft.Identity.Client.Desktop" Version="4.69.1.0" />
-    <Assembly Name="Microsoft.Identity.Client" Version="4.69.1.0" />
+    <Assembly Name="Microsoft.Identity.Client.Broker" Version="4.71.1.0" />
+    <Assembly Name="Microsoft.Identity.Client.Desktop" Version="4.71.1.0" />
+    <Assembly Name="Microsoft.Identity.Client" Version="4.71.1.0" />
   </Assemblies>
   <Namespace Name="Microsoft.Identity.Client">
     <Type Name="Microsoft.Identity.Client.AadAuthorityAudience" Id="T:Microsoft.Identity.Client.AadAuthorityAudience">
@@ -426,6 +426,9 @@
     <Type Name="Microsoft.Identity.Client.IMsalHttpClientFactory" Id="T:Microsoft.Identity.Client.IMsalHttpClientFactory">
       <Member Id="M:Microsoft.Identity.Client.IMsalHttpClientFactory.GetHttpClient" />
     </Type>
+    <Type Name="Microsoft.Identity.Client.IMsalSFHttpClientFactory" Id="T:Microsoft.Identity.Client.IMsalSFHttpClientFactory">
+      <Member Id="M:Microsoft.Identity.Client.IMsalSFHttpClientFactory.GetHttpClient(System.Func{System.Net.Http.HttpRequestMessage,System.Security.Cryptography.X509Certificates.X509Certificate2,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors,System.Boolean})" />
+    </Type>
     <Type Name="Microsoft.Identity.Client.IntuneAppProtectionPolicyRequiredException" Id="T:Microsoft.Identity.Client.IntuneAppProtectionPolicyRequiredException">
       <Member Id="M:Microsoft.Identity.Client.IntuneAppProtectionPolicyRequiredException.#ctor(System.String,System.String)" />
       <Member Id="P:Microsoft.Identity.Client.IntuneAppProtectionPolicyRequiredException.AccountUserId" />
@@ -550,6 +553,7 @@
       <Member Id="F:Microsoft.Identity.Client.MsalError.FailedToGetBrokerResponse" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.FailedToRefreshToken" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.FederatedServiceReturnedError" />
+      <Member Id="F:Microsoft.Identity.Client.MsalError.ForceRefreshNotCompatibleWithTokenHash" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.GetUserNameFailed" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.HttpListenerError" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.HttpStatusCodeNotOk" />
@@ -823,6 +827,7 @@
       <Member Id="P:Microsoft.Identity.Client.TokenCacheNotificationArgs.HasTokens" />
       <Member Id="P:Microsoft.Identity.Client.TokenCacheNotificationArgs.IdentityLogger" />
       <Member Id="P:Microsoft.Identity.Client.TokenCacheNotificationArgs.IsApplicationCache" />
+      <Member Id="P:Microsoft.Identity.Client.TokenCacheNotificationArgs.NoDistributedCacheUseReason" />
       <Member Id="P:Microsoft.Identity.Client.TokenCacheNotificationArgs.PiiLoggingEnabled" />
       <Member Id="P:Microsoft.Identity.Client.TokenCacheNotificationArgs.RequestScopes" />
       <Member Id="P:Microsoft.Identity.Client.TokenCacheNotificationArgs.RequestTenantId" />
@@ -1077,6 +1082,9 @@
     </Type>
   </Namespace>
   <Namespace Name="Microsoft.Identity.Client.RP">
+    <Type Name="Microsoft.Identity.Client.RP.AcquireTokenForClientParameterBuilderForResourceProviders" Id="T:Microsoft.Identity.Client.RP.AcquireTokenForClientParameterBuilderForResourceProviders">
+      <Member Id="M:Microsoft.Identity.Client.RP.AcquireTokenForClientParameterBuilderForResourceProviders.WithAccessTokenSha256ToRefresh(Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder,System.String)" />
+    </Type>
     <Type Name="Microsoft.Identity.Client.RP.ConfidentialClientApplicationBuilderForResourceProviders" Id="T:Microsoft.Identity.Client.RP.ConfidentialClientApplicationBuilderForResourceProviders">
       <Member Id="M:Microsoft.Identity.Client.RP.ConfidentialClientApplicationBuilderForResourceProviders.WithCertificate(Microsoft.Identity.Client.ConfidentialClientApplicationBuilder,System.Security.Cryptography.X509Certificates.X509Certificate2,System.Boolean,System.Boolean)" />
     </Type>
