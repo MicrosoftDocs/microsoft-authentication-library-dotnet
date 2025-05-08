@@ -25,7 +25,7 @@ An authentication broker is **not** pre-installed on standalone Linux but is bun
 
 ## Prerequisites
 
-MSAL.NET project requires .NET version greater or equal than the version specified in [global.json](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/main/global.json) file, we recommend register the Microsoft package repository and install .NET, please follow the instructions here: [Install .NET on Ubuntu](https://learn.microsoft.com/dotnet/core/install/linux-ubuntu-decision#register-the-microsoft-package-repository). And please make sure you have all the [.NET required dependencies](https://learn.microsoft.com/dotnet/core/install/linux-ubuntu-decision#dependencies) installed.
+MSAL.NET project requires .NET version greater or equal than the version specified in [global.json](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/main/global.json) file, we recommend register the Microsoft package repository and install .NET, please follow the instructions here: [Install .NET on Ubuntu](/dotnet/core/install/linux-ubuntu-decision#register-the-microsoft-package-repository). And please make sure you have all the [.NET required dependencies](/dotnet/core/install/linux-ubuntu-decision#dependencies) installed.
 
 To use the broker, you'll need to install a list of dependencies on the Linux platform:
 
