@@ -36,6 +36,11 @@ libsecret-tools
 libwebkit2gtk-4.0-dev
 ```
 
+On Debian-based distributions, run this command to install dependencies:
+```bash
+sudo apt install libc++-dev libc++abi-dev libsecret-tools libwebkit2gtk-4.0-dev - y
+```
+
 ## Create a console app on Linux platform
 
 To use a broker on the Linux platform, set the `BrokerOptions` to `OperatingSystems.Linux`. Notice that we use the same option for both Windows Subsystem for Linux (WSL) and standalone Linux.
@@ -101,7 +106,7 @@ class X11Interop
 }
 ```
 
-To run the sample app, use the following command:
+We recommend play with the sample app using your client id. To run the sample app, use the following command:
 ```dotnetcli
 dotnet run --project tests\devapps\WAM\NetWSLWam\test.csproj
 ```
