@@ -32,7 +32,7 @@ An authentication broker is an application that runs on a user’s machine that 
 ## Prerequisites
 
 ### .NET Installation
-Identity integration dependent on having dotnet 8 installed on the Linux distribution, and recommend installing via the [installation script](https://learn.microsoft.com/en-us/dotnet/core/install/linux-scripted-manual#scripted-install).
+Identity integration dependent on having dotnet 8 installed on the Linux distribution, and recommend installing via the [installation script](/dotnet/core/install/linux-scripted-manual#scripted-install).
 
 ```bash
 wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh

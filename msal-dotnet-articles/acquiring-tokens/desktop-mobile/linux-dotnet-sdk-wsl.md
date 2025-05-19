@@ -41,7 +41,7 @@ wsl --update
 ## Prerequisites
 
 ### .NET Installation
-Identity integration dependent on having dotnet 8 installed on the Linux distribution, and recommend installing via the [installation script](https://learn.microsoft.com/en-us/dotnet/core/install/linux-scripted-manual#scripted-install).
+Identity integration dependent on having dotnet 8 installed on the Linux distribution, and recommend installing via the [installation script](/dotnet/core/install/linux-scripted-manual#scripted-install).
 
 ```bash
 # Download the install script
@@ -63,18 +63,18 @@ On Debian-based distributions, you can install the package by running `sudo apt 
 
 1. Run `seahorse` in the terminal.
 
-    ![WSL1](../../media/wam/wsl1.png)
+    ![default keychain dialog](../../media/wam/wsl1.png)
 
 2. In the top left corner, select **+** and create **Password** keyring.
 
-    ![WSL2](../../media/wam/wsl2.png)
+    ![keychain dialog selecting password keyring](../../media/wam/wsl2.png)
 
 3. Create a keyring named 'login'
 
-    ![WSL3](../../media/wam/wsl3.png)
+    ![typing login to the prompt](../../media/wam/wsl3.png)
 
 4. Set the password on the next dialog.
-    ![WSL4](../../media/wam/wsl4.png)
+    ![selecting a password and confirming](../../media/wam/wsl4.png)
 
 5. Run `wsl.exe --shutdown` from your Windows Terminal.
 
