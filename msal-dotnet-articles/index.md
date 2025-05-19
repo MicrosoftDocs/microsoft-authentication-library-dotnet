@@ -9,7 +9,7 @@ ms.subservice: msal-dotnet
 ms.topic: conceptual
 ms.date: 06/04/2024
 ms.author: dmwendia
-ms.reviewer: localden, jmprieur
+ms.reviewer:
 ms.custom: devx-track-csharp, aaddev
 # Customer intent: As an application developer, I want to learn how MSAL.NET can help me acquire tokens from the Microsoft identity platform and access protected web APIs. 
 ---

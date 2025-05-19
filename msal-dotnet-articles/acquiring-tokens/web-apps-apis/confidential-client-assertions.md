@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.workload: identity
 ms.date: 06/04/2024
 ms.author: dmwendia
-ms.reviewer: saeeda, jmprieur
+ms.reviewer:
 ms.custom: devx-track-csharp, aaddev, devx-track-dotnet
 #Customer intent: As an application developer, I want to learn how to use client assertions to prove the identity of my confidential client application
 ---

@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.workload: identity
 ms.date: 06/04/2024
 ms.author: dmwendia
-ms.reviewer: saeeda, jmprieur
+ms.reviewer:
 ms.custom: aaddev, devx-track-dotnet
 ---
 # Handle errors and exceptions in MSAL.NET
