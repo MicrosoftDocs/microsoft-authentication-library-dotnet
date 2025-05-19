@@ -9,7 +9,7 @@ ms.topic: reference
 ms.workload: identity
 ms.date: 03/17/2023
 ms.author: dmwendia
-ms.reviewer: localden
+ms.reviewer:
 ms.custom: devx-track-csharp, aaddev, engagement-fy23
 # Customer intent: As an application developer, I want to learn how to use MSAL.NET in Azure Functions
 ---

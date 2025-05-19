@@ -10,7 +10,7 @@ ms.topic: how-to
 ms.workload: identity
 ms.date: 05/20/2024
 ms.author: dmwendia
-ms.reviewer: celested, saeeda, shermanouko, jmprieur
+ms.reviewer:
 ms.custom: devx-track-csharp, aaddev, has-adal-ref, devx-track-dotnet
 #Customer intent: As an application developer, I want to migrate my public client app from ADAL.NET to MSAL.NET.
 ---

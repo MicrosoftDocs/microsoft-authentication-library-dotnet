@@ -9,7 +9,7 @@ ms.subservice: msal-dotnet
 ms.topic: conceptual
 ms.date: 08/24/2023
 ms.author: dmwendia
-ms.reviewer: ddelimarsky, jmprieur, saeeda, shermanouko
+ms.reviewer:
 ms.custom: devx-track-csharp, aaddev, has-adal-ref, kr2b-contr-experiment, devx-track-dotnet
 #Customer intent: As an application developer, I want to migrate my confidential client app from ADAL.NET to MSAL.NET.
 ---
