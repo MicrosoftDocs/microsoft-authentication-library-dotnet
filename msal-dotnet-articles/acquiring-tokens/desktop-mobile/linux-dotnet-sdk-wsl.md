@@ -55,13 +55,48 @@ export DOTNET_ROOT=~/.dotnet
 export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
 ```
 
+### Package Dependencies 
+
+Install the following dependencies on your Linux platform:
+
+- `libsecret-tools` is required to interface with the Linux keychain
+- `libx11-dev` package, where the `libx11` library is used to get the console window handle on Linux.
+
+### [Ubuntu](#tab/ubuntudep)
+
+To install on debian/Ubuntu based Linux distribution:
+
+```bash
+sudo apt install libx11-6 libc++1 libc++abi1 libsecret-1-0 libwebkit2gtk-4.0-37 -y
+
+#from Powershell, run
+wsl.exe --shutdown
+```
+
+### [Red Hat Enterprise Linux](#tab/rheldep)
+
+To install on Red Hat/Fedora based Linux distribution:
+
+```bash
+sudo dnf install libx11-6 libc++1 libc++abi1 libsecret-1-0 libwebkit2gtk-4.0-37 -y
+
+#from Powershell, run
+wsl.exe --shutdown
+```
+
+---
+
+> [!IMPORTANT]
+> In order for the keychain to work as intended, you should make sure you 1. install the dependencies, 2. Reboot/restart wsl, 3. Configure the keychain. Failure to do the steps in the correct order will result with the keychain missing the option for "Password Keychain".
+
+
 ### Set up Keyring in WSL
 
 MSAL uses `libsecret` on Linux. It's required to communicate with the `keyring` daemon. Users can use [Seahorse](https://wiki.gnome.org/Apps/Seahorse/) (a GNOME application for managing encryption keys and passwords) to manage the `keyring` contents through a Graphical User Interface (GUI).
 
 On Debian-based distributions, you can install the package by running `sudo apt install seahorse` and then following these instructions:
 
-1. Run `seahorse` in the terminal.
+1. Run `seahorse` in the terminal as a regular user (not as sudo)
 
     ![default keychain dialog](../../media/wam/wsl1.png)
 
@@ -80,36 +115,12 @@ On Debian-based distributions, you can install the package by running `sudo apt 
 
 6. Start a new WSL session and run the sample. You should be asked for the keyring password.
 
-### Package Dependencies 
-
-Install the following dependencies on your Linux platform:
-
-- `libsecret-tools` is required to interface with the Linux keychain
-- `libx11-dev` package, where the `libx11` library is used to get the console window handle on Linux.
-
-### [Ubuntu](#tab/ubuntudep)
-
-To install on debian/Ubuntu based Linux distribution:
-
-```bash
-sudo apt install libx11-dev libc++-dev libc++abi-dev libsecret-tools libwebkit2gtk-4.0 -y
-```
-
-### [Red Hat Enterprise Linux](#tab/rheldep)
-
-To install on Red Hat/Fedora based Linux distribution:
-
-```bash
-sudo dnf install libx11-dev libc++-dev libc++abi-dev libsecret-tools libwebkit2gtk-4.0 -y
-```
-
----
 
 ## Run a Sample App
 
 To use a broker on the Linux platform, make sure you set the `BrokerOptions` to `OperatingSystems.Linux` as shown in the below code snippet:
 
-Reference the [Enable SSO in native Linux apps using MSAL.NET](./linux-dotnet-sdk.md) for information of how to configure the project. 
+Reference the [Enable SSO in native Linux apps using MSAL.NET](./linux-dotnet-sdk.md) for information of how to configure the project.
 
 To set up a test app, you use the sample app provided in [microsoft-authentication-library-for-dotnet](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet) under the path [/tests/devapps/WAM/NetWSLWam/Class1.cs](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/main/tests/devapps/WAM/NetWSLWam/Class1.cs)
 

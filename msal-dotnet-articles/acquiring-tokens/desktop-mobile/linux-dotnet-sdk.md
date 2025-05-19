@@ -32,6 +32,7 @@ An authentication broker is an application that runs on a user’s machine that 
 ## Prerequisites
 
 ### .NET Installation
+
 Identity integration dependent on having dotnet 8 installed on the Linux distribution, and recommend installing via the [installation script](/dotnet/core/install/linux-scripted-manual#scripted-install).
 
 ```bash
@@ -41,16 +42,18 @@ chmod +x ./dotnet-install.sh
 ```
 
 ### Package Dependencies 
+
 Install the following dependencies on your Linux platform:
+
 - `libsecret-tools` is required to interface with the Linux keychain
-- `libx11-dev` package, where the `libx11` library is used to get the console window handle on Linux.
+- `libx11-6` package, where the `libx11` library is used to get the console window handle on Linux.
 
 ### [Ubuntu](#tab/ubuntudep)
 
 To install on debian/Ubuntu based Linux distribution:
 
 ```bash
-sudo apt install libx11-dev libc++-dev libc++abi-dev libsecret-tools libwebkit2gtk-4.0 -y
+sudo apt install libx11-6 libc++1 libc++abi1 libsecret-1-0 libwebkit2gtk-4.0-37 -y
 ```
 
 ### [Red Hat Enterprise Linux](#tab/rheldep)
@@ -58,7 +61,7 @@ sudo apt install libx11-dev libc++-dev libc++abi-dev libsecret-tools libwebkit2g
 To install on Red Hat/Fedora based Linux distribution:
 
 ```bash
-sudo dnf install libx11-dev libc++-dev libc++abi-dev libsecret-tools libwebkit2gtk-4.0 -y
+sudo dnf install libx11-6 libc++1 libc++abi1 libsecret-1-0 libwebkit2gtk-4.0-37 -y
 ```
 
 ---
@@ -253,10 +256,6 @@ To run the sample app:
 # Run From the root folder of microsoft-authentication-library-dotnet directory
 dotnet run --project tests/devapps/WAM/NetWSLWam/test.csproj
 ```
-
-## Proof-of-Possession access tokens
-
-The Microsoft Single Sign-on for Linux broker allows acquiring PoP tokens for public client flows. For more information about Proof of Possession, see [Proof-of-Possession tokens](../../advanced/proof-of-possession-tokens.md).
 
 ## Redirect URI
 
