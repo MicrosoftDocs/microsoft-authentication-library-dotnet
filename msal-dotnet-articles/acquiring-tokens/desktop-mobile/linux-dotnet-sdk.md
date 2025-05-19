@@ -1,5 +1,5 @@
 ---
-title: Enable SSO in native Linux apps using MSAL.NET
+title: Using MSAL.Net with broker on Linux
 description: Learn how to integrate Microsoft Entra ID authentication in native Linux apps using MSAL.NET and the authentication broker.
 author: ploegert
 ms.author: jploegert
