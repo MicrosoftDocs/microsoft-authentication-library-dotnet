@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-model-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.Identity.Abstractions" Version="9.0.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.Azure" Version="3.9.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.Certificate" Version="3.9.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="3.9.0.0" />
-    <Assembly Name="Microsoft.Identity.Web" Version="3.9.0.0" />
+    <Assembly Name="Microsoft.Identity.Abstractions" Version="9.1.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.Azure" Version="3.9.1.0" />
+    <Assembly Name="Microsoft.Identity.Web.Certificate" Version="3.9.1.0" />
+    <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="3.9.1.0" />
+    <Assembly Name="Microsoft.Identity.Web" Version="3.9.1.0" />
     <Assembly Name="Microsoft.Identity.Web.DownstreamRestApi" Version="2.0.8.0" />
-    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraph" Version="3.9.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraphBeta" Version="3.9.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.OWIN" Version="3.9.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.TokenAcquisition" Version="3.9.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.TokenCache" Version="3.9.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.UI" Version="3.9.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraph" Version="3.9.1.0" />
+    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraphBeta" Version="3.9.1.0" />
+    <Assembly Name="Microsoft.Identity.Web.OWIN" Version="3.9.1.0" />
+    <Assembly Name="Microsoft.Identity.Web.TokenAcquisition" Version="3.9.1.0" />
+    <Assembly Name="Microsoft.Identity.Web.TokenCache" Version="3.9.1.0" />
+    <Assembly Name="Microsoft.Identity.Web.UI" Version="3.9.1.0" />
   </Assemblies>
   <Namespace Name="Microsoft.Identity.Abstractions">
     <Type Name="Microsoft.Identity.Abstractions.AcquireTokenOptions" Id="T:Microsoft.Identity.Abstractions.AcquireTokenOptions">
@@ -62,6 +62,7 @@
     <Type Name="Microsoft.Identity.Abstractions.CredentialDescription" Id="T:Microsoft.Identity.Abstractions.CredentialDescription">
       <Member Id="M:Microsoft.Identity.Abstractions.CredentialDescription.#ctor" />
       <Member Id="M:Microsoft.Identity.Abstractions.CredentialDescription.#ctor(Microsoft.Identity.Abstractions.CredentialDescription)" />
+      <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.Algorithm" />
       <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.Base64EncodedValue" />
       <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.CachedValue" />
       <Member Id="P:Microsoft.Identity.Abstractions.CredentialDescription.Certificate" />
@@ -131,6 +132,9 @@
       <Member Id="M:Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider.CreateAuthorizationHeaderAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider.CreateAuthorizationHeaderForAppAsync(System.String,Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions,System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider.CreateAuthorizationHeaderForUserAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)" />
+    </Type>
+    <Type Name="Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider`1" Id="T:Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider`1">
+      <Member Id="M:Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider`1.CreateAuthorizationHeaderAsync(Microsoft.Identity.Abstractions.DownstreamApiOptions,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)" />
     </Type>
     <Type Name="Microsoft.Identity.Abstractions.ICredentialsLoader" Id="T:Microsoft.Identity.Abstractions.ICredentialsLoader">
       <Member Id="M:Microsoft.Identity.Abstractions.ICredentialsLoader.LoadCredentialsIfNeededAsync(Microsoft.Identity.Abstractions.CredentialDescription,Microsoft.Identity.Abstractions.CredentialSourceLoaderParameters)" />
