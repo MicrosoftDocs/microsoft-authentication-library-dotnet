@@ -10,7 +10,7 @@ ms.topic: reference
 ms.workload: identity
 ms.date: 05/20/2024
 ms.author: dmwendia
-ms.reviewer: localden
+ms.reviewer:
 ms.custom: devx-track-csharp, aaddev
 # Customer intent: As an application developer, I want to learn how to acquire security tokens in public and confidential client applications using MSAL.NET
 ---

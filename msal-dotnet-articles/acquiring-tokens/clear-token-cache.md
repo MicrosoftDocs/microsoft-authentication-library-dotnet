@@ -11,7 +11,7 @@ ms.topic: how-to
 ms.workload: identity
 ms.date: 08/24/2023
 ms.author: dmwendia
-ms.reviewer: ddelimarsky
+ms.reviewer:
 ms.custom: devx-track-csharp, aaddev, devx-track-dotnet
 #Customer intent: As an application developer, I want to learn how how to clear the token cache so I can .
 ---

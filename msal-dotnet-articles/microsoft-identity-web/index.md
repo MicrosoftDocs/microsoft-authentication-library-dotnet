@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.workload: identity
 ms.date: 06/04/2024
 ms.author: jmprieur
-ms.reviewer: localden, jmprieur
+ms.reviewer:
 ms.custom: devx-track-csharp, aaddev
 # Customer intent: As an application developer, I want to learn how Microsoft Identity Web can help me protect my services with the Microsoft identity platform. 
 ---
