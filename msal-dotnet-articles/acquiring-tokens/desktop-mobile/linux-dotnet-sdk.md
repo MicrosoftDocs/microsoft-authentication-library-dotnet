@@ -257,6 +257,12 @@ To run the sample app:
 dotnet run --project tests/devapps/WAM/NetWSLWam/test.csproj
 ```
 
+## Demo of user Login
+
+This video demonstrates the sign-in experience on brokered flows on Linux
+
+![Demo of the Linux Login component component](../../media/linux/linux-entra-login.gif)
+
 ## Redirect URI
 
 Redirect URIs don't need to be configured in MSAL, but they must be configured in the app registration. They should follow the pattern below:
