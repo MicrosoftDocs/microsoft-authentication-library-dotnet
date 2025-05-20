@@ -1,6 +1,7 @@
 ---
 title: Experimental features in MSAL.NET
 ms.service: msal
+ms.subservice: msal-dotnet
 ---
 
 # Experimental features in MSAL.NET

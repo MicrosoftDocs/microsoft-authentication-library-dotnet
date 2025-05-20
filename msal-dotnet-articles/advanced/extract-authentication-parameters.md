@@ -2,6 +2,7 @@
 title: Extract authentication parameters from WWW-Authenticate headers
 description: "This article is both a conceptual article of why you'd want to get information from WWW-authenticate headers, and how to do it."
 ms.service: msal
+ms.subservice: msal-dotnet
 ---
 
 # Extract authentication parameters from WWW-Authenticate headers

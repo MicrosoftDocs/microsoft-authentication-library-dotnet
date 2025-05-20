@@ -1,6 +1,7 @@
 ---
 title: Cache options in MSAL.NET
 ms.service: msal
+ms.subservice: msal-dotnet
 ---
 
 # Cache options in MSAL.NET

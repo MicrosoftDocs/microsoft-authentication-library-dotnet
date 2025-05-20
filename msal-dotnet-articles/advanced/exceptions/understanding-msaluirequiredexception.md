@@ -1,6 +1,7 @@
 ---
 title: Understanding MsalUiRequiredException
 ms.service: msal
+ms.subservice: msal-dotnet
 ---
 
 # Understanding `MsalUiRequiredException`

@@ -2,6 +2,7 @@
 title: Custom token cache for a public client applications
 description: "This article is about custom token cache implementations for public client applications."
 ms.service: msal
+ms.subservice: msal-dotnet
 ---
 
 # Custom token cache for a public client applications

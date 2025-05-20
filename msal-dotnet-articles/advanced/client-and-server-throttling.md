@@ -2,6 +2,7 @@
 title: Understanding client and server throttling in MSAL.NET
 description: "Microsoft Entra ID throttles applications when you call the authentication API too frequently. Learn how to handle this with MSAL.NET."
 ms.service: msal
+ms.subservice: msal-dotnet
 ---
 
 # Understanding client and server throttling in MSAL.NET

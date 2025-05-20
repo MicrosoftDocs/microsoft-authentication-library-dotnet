@@ -2,6 +2,7 @@
 title: Handling of personally-identifiable information in MSAL.NET
 description: Outlines what MSAL considers to be personally identifiable information.
 ms.service: msal
+ms.subservice: msal-dotnet
 ---
 
 # Handling of personally-identifiable information in MSAL.NET

@@ -2,6 +2,7 @@
 title: Cleaning the token cache
 description: "How to clear the token cache used by MSAL.NET"
 ms.service: msal
+ms.subservice: msal-dotnet
 ---
 
 # Clearing the token cache

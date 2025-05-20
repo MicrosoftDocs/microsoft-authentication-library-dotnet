@@ -2,6 +2,7 @@
 title: Using SSH certificates with MSAL.NET
 description: "Microsoft Entra ID is capable of issuing SSH certificates instead of bearer tokens."
 ms.service: msal
+ms.subservice: msal-dotnet
 ---
 
 # Using SSH certificates with MSAL.NET

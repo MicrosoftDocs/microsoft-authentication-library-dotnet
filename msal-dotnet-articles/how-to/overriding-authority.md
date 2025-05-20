@@ -2,6 +2,7 @@
 title: Overriding authority
 description: "How to override the default authority in MSAL.NET applications."
 ms.service: msal
+ms.subservice: msal-dotnet
 ---
 
 # Overriding authority

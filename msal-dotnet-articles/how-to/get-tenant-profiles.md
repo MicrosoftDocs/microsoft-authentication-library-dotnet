@@ -1,6 +1,7 @@
 ---
 title: Getting tenant profiles with MSAL.NET
 ms.service: msal
+ms.subservice: msal-dotnet
 ---
 
 # Getting tenant profiles with MSAL.NET

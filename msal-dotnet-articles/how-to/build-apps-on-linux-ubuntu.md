@@ -1,6 +1,7 @@
 ---
 title: Building MSAL.NET applications on Linux
 ms.service: msal
+ms.subservice: msal-dotnet
 ---
 
 # Building MSAL.NET applications on Linux

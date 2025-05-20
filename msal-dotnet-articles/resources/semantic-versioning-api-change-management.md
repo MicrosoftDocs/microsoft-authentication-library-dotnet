@@ -2,6 +2,7 @@
 title: Semantic versioning and API change management
 description: "MSAL.NET strategy for versioning library releases"
 ms.service: msal
+ms.subservice: msal-dotnet
 ---
 
 # Semantic versioning and API change management

@@ -2,6 +2,7 @@
 title: Installing MSAL.NET from custom NuGet package source
 description: "How to install NuGet from a source other than the NuGet package feed."
 ms.service: msal
+ms.subservice: msal-dotnet
 ---
 
 # Installing MSAL.NET from custom NuGet package source

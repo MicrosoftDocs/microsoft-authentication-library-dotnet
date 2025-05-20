@@ -2,6 +2,7 @@
 title: Acquiring a token with federated workload identity
 description: "How to acquire tokens with federated workload identity in MSAL.NET"
 ms.service: msal
+ms.subservice: msal-dotnet
 ---
 
 # Workload identity federation

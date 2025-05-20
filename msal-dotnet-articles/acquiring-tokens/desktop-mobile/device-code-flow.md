@@ -2,6 +2,7 @@
 title: Using Device Code Flow in MSAL.NET
 description: "Interactive authentication with Microsoft Entra ID requires a web browser. However, in the case of devices and operating systems that do not provide a Web browser, Device Code Flow lets the user use another device (for instance another computer or a mobile phone) to sign-in interactively."
 ms.service: msal
+ms.subservice: msal-dotnet
 ---
 
 # Using Device Code Flow in MSAL.NET

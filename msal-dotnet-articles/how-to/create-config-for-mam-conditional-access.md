@@ -2,6 +2,7 @@
 title: Creating configuration for Intune Mobile App Management conditional access
 description: "This scenario includes a backend application, and an iOS and Android client applications. This article describes the steps to correctly configure these applications for Intune MAM."
 ms.service: msal
+ms.subservice: msal-dotnet
 ---
 
 # Creating configuration for Intune Mobile App Management conditional access

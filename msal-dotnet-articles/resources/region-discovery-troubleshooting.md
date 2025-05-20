@@ -1,6 +1,7 @@
 ---
 title: Region discovery troubleshooting
 ms.service: msal
+ms.subservice: msal-dotnet
 ---
 
 # Region discovery troubleshooting
