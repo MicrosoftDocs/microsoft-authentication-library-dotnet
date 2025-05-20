@@ -3,6 +3,7 @@ title: Monitoring applications using MSAL.NET
 description: "How to use the metrics provided by MSAL.NET to monitor your application."
 ms.service: msal
 ms.subservice: msal-dotnet
+ms.date: 05/20/2025
 ---
 
 # Monitoring applications using MSAL.NET

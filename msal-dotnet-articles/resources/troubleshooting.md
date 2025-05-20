@@ -3,6 +3,7 @@ title: Troubleshooting MSAL.NET
 description: Troubleshoot MSAL.NET issues with our comprehensive guide. Learn to fix JavaScript errors, region auto-discovery failures, and more on Microsoft's official site.
 ms.service: msal
 ms.subservice: msal-dotnet
+ms.date: 05/20/2025
 ---
 
 # Troubleshooting MSAL.NET

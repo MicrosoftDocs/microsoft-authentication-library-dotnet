@@ -3,6 +3,7 @@ title: Performance testing of MSAL.NET
 description: Explore performance testing of MSAL.NET with BenchmarkDotNet. Learn to run tests, view results, automate tests, and improve MSAL.NET performance.
 ms.service: msal
 ms.subservice: msal-dotnet
+ms.date: 05/20/2025
 ---
 
 # Performance testing of MSAL.NET

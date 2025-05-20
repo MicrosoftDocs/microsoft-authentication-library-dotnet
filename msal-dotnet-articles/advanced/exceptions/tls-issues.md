@@ -3,6 +3,7 @@ title: TLS issues
 description: "How to diagnose and address TLS issues when using MSAL.NET"
 ms.service: msal
 ms.subservice: msal-dotnet
+ms.date: 05/20/2025
 ---
 
 # TLS issues
