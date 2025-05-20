@@ -263,17 +263,6 @@ This video demonstrates the sign-in experience on brokered flows on Linux
 
 ![Demo of the Linux Login component component](../../media/linux/linux-entra-login.gif)
 
-## Redirect URI
-
-Redirect URIs don't need to be configured in MSAL, but they must be configured in the app registration. They should follow the pattern below:
-
-```text
-ms-appx-web://microsoft.aad.brokerplugin/{client_id}
-```
-
->[!NOTE]
->When configuring the redirect URL in the Azure portal, ensure that you're setting it in the **Mobile and desktop applications** section.
-
 ## Username/password flow
 
 This flow, also known as Resource Owner Password Credentials (ROPC), isn't recommended except in test scenarios or in scenarios where service principal access to a resource gives it too much access and you can only scope it down with user flows. When using the broker, [`AcquireTokenByUsernamePassword`](xref:Microsoft.Identity.Client.PublicClientApplication.AcquireTokenByUsernamePassword*) lets the broker manage the protocol and fetch tokens.
