@@ -4,6 +4,7 @@ description: "This flow enables confidential client applications to request an a
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.date: 05/20/2025
+ms.reviewer: 
 ---
 
 # Single-page applications (SPA) and authorization codes

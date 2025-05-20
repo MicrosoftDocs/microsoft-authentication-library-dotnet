@@ -4,6 +4,7 @@ description: "When building applications using MSAL.NET and the Web Account Mana
 ms.date: 08/30/2023
 ms.service: msal
 ms.subservice: msal-dotnet
+ms.reviewer: 
 ---
 
 # Errors associated with Web Account Manager (WAM)

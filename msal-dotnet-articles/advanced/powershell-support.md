@@ -4,6 +4,7 @@ description: "How to use MSAL.NET to acquire tokens from a PowerShell script."
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.date: 05/20/2025
+ms.reviewer: 
 ---
 
 # Using MSAL.NET with PowerShell

@@ -4,6 +4,7 @@ description: Explore high availability considerations in MSAL.NET, including tok
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.date: 05/20/2025
+ms.reviewer: 
 ---
 
 # High availability considerations in MSAL.NET

@@ -4,6 +4,7 @@ description: "How to use the modern embedded browser based on Microsoft Edge wit
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.date: 05/20/2025
+ms.reviewer: 
 ---
 
 # Using WebView2 with MSAL.NET

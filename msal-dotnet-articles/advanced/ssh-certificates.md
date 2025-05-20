@@ -4,6 +4,7 @@ description: "Microsoft Entra ID is capable of issuing SSH certificates instead 
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.date: 05/20/2025
+ms.reviewer: 
 ---
 
 # Using SSH certificates with MSAL.NET

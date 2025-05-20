@@ -4,6 +4,7 @@ description: "How to use MSAL.NET to authenticate on behalf of a user."
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.date: 05/20/2025
+ms.reviewer: 
 ---
 
 # On-behalf-of flows with MSAL.NET

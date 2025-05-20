@@ -4,6 +4,7 @@ description: "There are cases where developers want fine-grained control of the 
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.date: 05/20/2025
+ms.reviewer: 
 ---
 
 # Providing your own HttpClient, supporting HTTP proxies, and customization of user agent headers

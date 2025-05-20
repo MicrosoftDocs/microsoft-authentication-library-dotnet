@@ -3,6 +3,7 @@ title: Experimental features in MSAL.NET
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.date: 05/20/2025
+ms.reviewer: 
 ---
 
 # Experimental features in MSAL.NET

@@ -4,6 +4,7 @@ description: Master handling exceptions in MSAL.NET with this comprehensive guid
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.date: 05/20/2025
+ms.reviewer: 
 ---
 
 # Exceptions in MSAL.NET

@@ -4,6 +4,7 @@ description: "How to use MSAL.NET on mobile platforms."
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.date: 05/20/2025
+ms.reviewer: 
 ---
 
 # Using MSAL.NET With MAUI

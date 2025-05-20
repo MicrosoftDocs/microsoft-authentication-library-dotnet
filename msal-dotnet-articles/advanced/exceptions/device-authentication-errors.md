@@ -4,6 +4,7 @@ description: "Errors that can show up when using device authentication with MSAL
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.date: 05/20/2025
+ms.reviewer: 
 ---
 
 # Device authentication errors

@@ -4,6 +4,7 @@ description: "How to customize the reply URI in applications using MSAL.NET."
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.date: 05/20/2025
+ms.reviewer: 
 ---
 
 # Default reply URI

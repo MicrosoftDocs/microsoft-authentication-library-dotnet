@@ -4,6 +4,7 @@ description: Learn how to implement a custom retry policy for token acquisition 
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.date: 05/20/2025
+ms.reviewer: 
 ---
 
 # Retry Policies are baked in the libary

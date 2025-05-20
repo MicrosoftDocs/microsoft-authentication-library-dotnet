@@ -4,6 +4,7 @@ description: Explore MSAL.NET's telemetry capabilities for Microsoft Entra token
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.date: 05/20/2025
+ms.reviewer: 
 ---
 
 # MSAL.NET telemetry overview

@@ -4,6 +4,7 @@ description: "If your desktop or mobile application runs on Windows and on a mac
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.date: 05/20/2025
+ms.reviewer: 
 ---
 
 # Using MSAL.NET with Integrated Windows Authentication (IWA)

@@ -4,6 +4,7 @@ description: "How to use custom authority aliases with your MSAL.NET application
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.date: 05/20/2025
+ms.reviewer: 
 ---
 
 # Custom authority aliases

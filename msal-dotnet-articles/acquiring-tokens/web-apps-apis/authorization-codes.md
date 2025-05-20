@@ -4,6 +4,7 @@ description: "When users login to Web applications (web sites) using OpenID Conn
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.date: 05/20/2025
+ms.reviewer: 
 ---
 
 # Using MSAL.NET to get tokens by authorization code (for web sites)

@@ -4,6 +4,7 @@ description: Learn how to acquire Proof-of-Possession tokens for public and conf
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.date: 05/20/2025
+ms.reviewer: 
 ---
 
 # Proof-of-Possession (PoP) tokens

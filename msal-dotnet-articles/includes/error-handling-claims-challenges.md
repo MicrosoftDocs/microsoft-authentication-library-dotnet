@@ -7,6 +7,7 @@ ms.subservice: msal-dotnet
 ms.topic: include
 # Purpose:
 # Ingested by Microsoft identity platform articles in /articles/active-directory/develop/* that document the error handling Conditional Access and claims challenges for the different platforms.
+ms.reviewer: 
 ---
 ## Conditional Access and claims challenges
 

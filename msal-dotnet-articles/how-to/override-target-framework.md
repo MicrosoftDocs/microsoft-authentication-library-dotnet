@@ -4,6 +4,7 @@ description: "In rare circumstances you might want to override NuGet's algorithm
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.date: 05/20/2025
+ms.reviewer: 
 ---
 
 # Overriding target framework

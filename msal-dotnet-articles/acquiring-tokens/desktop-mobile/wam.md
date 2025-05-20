@@ -4,6 +4,7 @@ description: "MSAL is able to call Web Account Manager (WAM), a Windows componen
 ms.date: 06/29/2023
 ms.service: msal
 ms.subservice: msal-dotnet
+ms.reviewer: 
 ---
 
 # Using MSAL.NET with Web Account Manager (WAM)

@@ -4,6 +4,7 @@ description: "How to use InTune with Android and iOS applications that depend on
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.date: 05/20/2025
+ms.reviewer: 
 ---
 
 # Protecting iOS and Android applications with InTune

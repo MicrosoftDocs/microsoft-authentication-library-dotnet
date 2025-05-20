@@ -4,6 +4,7 @@ description: Explore advanced extensibility points in MSAL.NET for scalable apps
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.date: 05/20/2025
+ms.reviewer: 
 ---
 
 # MSAL.NET extensibility points

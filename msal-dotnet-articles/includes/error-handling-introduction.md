@@ -7,6 +7,7 @@ ms.subservice: msal-dotnet
 ms.topic: include
 # Purpose:
 # Ingested by Microsoft identity platform articles in /articles/active-directory/develop/* that document the error handling intro for the different platforms.
+ms.reviewer: 
 ---
 This article gives an overview of the different types of errors and recommendations for handling common sign-in errors.
 

@@ -4,6 +4,7 @@ description: Learn Microsoft's Advanced Client Credential Multi-Tenant with MSAL
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.date: 05/20/2025
+ms.reviewer: 
 ---
 
 # Using MSAL.NET for client credential flow in multi-tenant services

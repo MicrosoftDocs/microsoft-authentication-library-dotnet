@@ -4,6 +4,7 @@ description: "How to use the metrics provided by MSAL.NET to monitor your applic
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.date: 05/20/2025
+ms.reviewer: 
 ---
 
 # Monitoring applications using MSAL.NET

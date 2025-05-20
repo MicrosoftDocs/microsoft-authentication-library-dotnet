@@ -4,6 +4,7 @@ description: "In your desktop application, you can use the username and password
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.date: 05/20/2025
+ms.reviewer: 
 ---
 
 # Username and password (ROPC) authentication with MSAL.NET

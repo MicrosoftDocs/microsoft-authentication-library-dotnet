@@ -4,6 +4,7 @@ description: Outlines what MSAL considers to be personally identifiable informat
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.date: 05/20/2025
+ms.reviewer: 
 ---
 
 # Handling of personally-identifiable information in MSAL.NET

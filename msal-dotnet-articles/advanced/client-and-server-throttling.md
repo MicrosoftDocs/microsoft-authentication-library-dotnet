@@ -4,6 +4,7 @@ description: "Microsoft Entra ID throttles applications when you call the authen
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.date: 05/20/2025
+ms.reviewer: 
 ---
 
 # Understanding client and server throttling in MSAL.NET

@@ -4,6 +4,7 @@ description: "How to install NuGet from a source other than the NuGet package fe
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.date: 05/20/2025
+ms.reviewer: 
 ---
 
 # Installing MSAL.NET from custom NuGet package source

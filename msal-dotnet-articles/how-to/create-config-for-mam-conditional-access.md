@@ -4,6 +4,7 @@ description: "This scenario includes a backend application, and an iOS and Andro
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.date: 05/20/2025
+ms.reviewer: 
 ---
 
 # Creating configuration for Intune Mobile App Management conditional access

@@ -4,6 +4,7 @@ description: "How to test applications that use MSAL.NET for token acquisition."
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.date: 05/20/2025
+ms.reviewer: 
 ---
 
 # Testing applications using MSAL.NET

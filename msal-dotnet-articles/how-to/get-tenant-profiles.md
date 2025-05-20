@@ -3,6 +3,7 @@ title: Getting tenant profiles with MSAL.NET
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.date: 05/20/2025
+ms.reviewer: 
 ---
 
 # Getting tenant profiles with MSAL.NET

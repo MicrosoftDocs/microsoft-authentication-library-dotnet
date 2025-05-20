@@ -4,6 +4,7 @@ description: "MSAL.NET is based on Task-based Asynchronous Pattern (TAP). This p
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.date: 05/20/2025
+ms.reviewer: 
 ---
 
 # Synchronous programming with MSAL.NET

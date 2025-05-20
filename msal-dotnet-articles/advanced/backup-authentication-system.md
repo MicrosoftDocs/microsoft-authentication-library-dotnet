@@ -4,6 +4,7 @@ description: "The Microsoft Entra backup authentication system enables the cachi
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.date: 05/20/2025
+ms.reviewer: 
 ---
 
 # Backup authentication system

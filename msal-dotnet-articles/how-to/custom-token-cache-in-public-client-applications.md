@@ -4,6 +4,7 @@ description: "This article is about custom token cache implementations for publi
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.date: 05/20/2025
+ms.reviewer: 
 ---
 
 # Custom token cache for a public client applications
