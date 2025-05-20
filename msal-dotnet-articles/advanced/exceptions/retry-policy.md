@@ -1,6 +1,7 @@
 ---
 title: Retry policies
 description: Learn how to implement a custom retry policy for token acquisition operations in .NET with MSAL. Increase your service availability with our detailed guide.
+ms.service: msal
 ---
 
 # Retry Policies are baked in the libary

@@ -1,6 +1,7 @@
 ---
 title: Using MSAL.NET with Android and iOS emulators
 description: "How to use MSAL.NET with Android and iOS device emulators."
+ms.service: msal
 ---
 
 # Using MSAL.NET with Android and iOS emulators

@@ -1,6 +1,7 @@
 ---
 title: Multicloud support and instance awareness
 description: "The instance awareness feature helps complete the scenario where any an account from any cloud can be signed-in using the default value for environment."
+ms.service: msal
 ---
 
 # Multicloud support and instance awareness

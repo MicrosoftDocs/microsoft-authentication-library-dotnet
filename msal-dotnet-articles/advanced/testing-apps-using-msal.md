@@ -1,6 +1,7 @@
 ---
 title: Testing applications using MSAL.NET
 description: "How to test applications that use MSAL.NET for token acquisition."
+ms.service: msal
 ---
 
 # Testing applications using MSAL.NET

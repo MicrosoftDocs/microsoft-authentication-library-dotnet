@@ -1,5 +1,6 @@
 ---
 title: Cache options in MSAL.NET
+ms.service: msal
 ---
 
 # Cache options in MSAL.NET

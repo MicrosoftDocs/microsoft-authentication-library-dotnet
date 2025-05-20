@@ -1,6 +1,7 @@
 ---
 title: TLS issues
 description: "How to diagnose and address TLS issues when using MSAL.NET"
+ms.service: msal
 ---
 
 # TLS issues

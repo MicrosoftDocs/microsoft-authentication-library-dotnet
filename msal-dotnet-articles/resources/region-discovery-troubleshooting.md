@@ -1,5 +1,6 @@
 ---
 title: Region discovery troubleshooting
+ms.service: msal
 ---
 
 # Region discovery troubleshooting

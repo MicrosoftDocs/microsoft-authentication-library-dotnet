@@ -1,6 +1,7 @@
 ---
 title: Troubleshooting brokered applications
 description: Master brokered authentication on Android with our troubleshooting guide. Learn about redirect URIs, broker versions, precedence, and log acquisition.
+ms.service: msal
 ---
 
 # Troubleshooting brokered applications

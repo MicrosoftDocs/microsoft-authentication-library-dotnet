@@ -1,6 +1,7 @@
 ---
 title: Default reply URI
 description: "How to customize the reply URI in applications using MSAL.NET."
+ms.service: msal
 ---
 
 # Default reply URI

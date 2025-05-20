@@ -1,5 +1,6 @@
 ---
 title: Understanding MsalUiRequiredException
+ms.service: msal
 ---
 
 # Understanding `MsalUiRequiredException`

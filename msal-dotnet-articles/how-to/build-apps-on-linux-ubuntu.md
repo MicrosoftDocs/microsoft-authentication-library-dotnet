@@ -1,5 +1,6 @@
 ---
 title: Building MSAL.NET applications on Linux
+ms.service: msal
 ---
 
 # Building MSAL.NET applications on Linux

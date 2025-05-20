@@ -1,6 +1,7 @@
 ---
 title: Using MSAL.NET With .NET MAUI
 description: "How to use MSAL.NET on mobile platforms."
+ms.service: msal
 ---
 
 # Using MSAL.NET With MAUI
