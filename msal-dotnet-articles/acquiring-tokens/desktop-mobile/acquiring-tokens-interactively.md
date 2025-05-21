@@ -4,7 +4,6 @@ description: "How to acquire tokens with MSAL.NET and user interaction."
 services: active-directory
 author: Dickson-Mwendia
 manager: CelesteDG
-
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.topic: conceptual
