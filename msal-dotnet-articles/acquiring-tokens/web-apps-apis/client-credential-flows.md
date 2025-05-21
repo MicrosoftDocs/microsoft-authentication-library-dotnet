@@ -1,6 +1,9 @@
 ---
 title: Client credential flows
 description: "Client credential authentication flows allow services, APIs, and daemon applications to acquire a token without direct user interaction."
+ms.service: msal
+ms.subservice: msal-dotnet
+ms.date: 05/20/2025
 ---
 
 # Client credential flows

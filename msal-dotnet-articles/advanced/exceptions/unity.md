@@ -1,6 +1,9 @@
 ---
 title: Troubleshooting MSAL.NET in Unity applications
 description: Learn how to troubleshoot MSAL.NET in Unity applications. Understand the cause of runtime exceptions and discover effective solutions.
+ms.service: msal
+ms.subservice: msal-dotnet
+ms.date: 05/20/2025
 ---
 
 # Troubleshooting MSAL.NET in Unity applications
