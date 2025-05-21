@@ -1,6 +1,9 @@
 ---
 title: Custom authority aliases
 description: "How to use custom authority aliases with your MSAL.NET applications."
+ms.service: msal
+ms.subservice: msal-dotnet
+ms.date: 05/20/2025
 ---
 
 # Custom authority aliases

@@ -1,5 +1,8 @@
 ---
 title: Understanding StateMismatchError
+ms.service: msal
+ms.subservice: msal-dotnet
+ms.date: 05/20/2025
 ---
 
 # Understanding `StateMismatchError`

@@ -1,6 +1,9 @@
 ---
 title: MSAL.NET extensibility points
 description: Explore advanced extensibility points in MSAL.NET for scalable apps. Adapt HttpClient factories, modify token requests, inject query parameters, and more.
+ms.service: msal
+ms.subservice: msal-dotnet
+ms.date: 05/20/2025
 ---
 
 # MSAL.NET extensibility points

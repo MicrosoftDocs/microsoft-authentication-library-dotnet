@@ -1,5 +1,8 @@
 ---
 title: Region discovery troubleshooting
+ms.service: msal
+ms.subservice: msal-dotnet
+ms.date: 05/20/2025
 ---
 
 # Region discovery troubleshooting
