@@ -9,7 +9,7 @@ ms.service: msal
 ms.subservice: msal-dotnet
 ms.workload: identity
 ms.reviewer:
-ms.topic: reference
+ms.topic: conceptual
 ms.custom: devx-track-csharp, aaddev
 #Customer intent: 
 # Customer intent: As an application developer, I want to learn how to use MSAL.NET in Azure Functions

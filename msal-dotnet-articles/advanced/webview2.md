@@ -1,14 +1,14 @@
 ---
 title: Using WebView2 with MSAL.NET
 description: "How to use the modern embedded browser based on Microsoft Edge with MSAL.NET applications."
-author: 
+author: Dickson-Mwendia
 manager: 
-ms.author: 
+ms.author: dmwendia
 ms.date: 05/20/2025
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.reviewer: 
-ms.topic: 
+ms.topic: conceptual
 ms.custom: 
 #Customer intent: 
 ---

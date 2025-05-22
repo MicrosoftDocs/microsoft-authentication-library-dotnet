@@ -1,14 +1,14 @@
 ---
 title: Exceptions in MSAL.NET
 description: Master handling exceptions in MSAL.NET with this comprehensive guide. Learn about different types of exceptions, common issues, and how to implement retry policies.
-author: 
+author: Dickson-Mwendia
 manager: 
-ms.author: 
+ms.author: dmwendia
 ms.date: 05/20/2025
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.reviewer: 
-ms.topic: 
+ms.topic: conceptual
 ms.custom: 
 #Customer intent: 
 ---

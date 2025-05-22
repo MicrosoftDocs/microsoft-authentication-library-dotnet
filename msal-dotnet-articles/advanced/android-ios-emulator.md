@@ -1,14 +1,14 @@
 ---
 title: Using MSAL.NET with Android and iOS emulators
 description: "How to use MSAL.NET with Android and iOS device emulators."
-author: 
+author: Dickson-Mwendia
 manager: 
-ms.author: 
+ms.author: dmwendia
 ms.date: 05/20/2025
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.reviewer: 
-ms.topic: 
+ms.topic: conceptual
 ms.custom: 
 #Customer intent: 
 ---

@@ -1,14 +1,14 @@
 ---
 title: High availability considerations in MSAL.NET
 description: Explore high availability considerations in MSAL.NET, including token cache, monitoring MSAL operations, logging, retry policy, and certificate rotation. Learn more now.
-author: 
+author: Dickson-Mwendia
 manager: 
-ms.author: 
+ms.author: dmwendia
 ms.date: 05/20/2025
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.reviewer: 
-ms.topic: 
+ms.topic: conceptual
 ms.custom: 
 #Customer intent: 
 ---

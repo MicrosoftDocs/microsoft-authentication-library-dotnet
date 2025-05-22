@@ -1,14 +1,14 @@
 ---
 title: Providing your own HttpClient, supporting HTTP proxies, and customization of user agent headers
 description: "There are cases where developers want fine-grained control of the HttpClient instance, such as configuring a proxy or using ASP.NET Core's efficient ways of pooling the HttpClient."
-author: 
+author: Dickson-Mwendia
 manager: 
-ms.author: 
+ms.author: dmwendia
 ms.date: 05/20/2025
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.reviewer: 
-ms.topic: 
+ms.topic: conceptual
 ms.custom: 
 #Customer intent: 
 ---

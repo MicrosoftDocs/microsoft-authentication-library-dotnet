@@ -13,7 +13,6 @@ ms.reviewer:
 ms.topic: conceptual
 ms.custom: aaddev, devx-track-dotnet
 #Customer intent: 
-
 ---
 
 # Logging in MSAL.NET

@@ -1,14 +1,14 @@
 ---
 title: Backup authentication system
 description: "The Microsoft Entra backup authentication system enables the caching of credentials processed by the Evolved Security Token Service (ESTS) in order to provide resiliency during outages in Microsoft Entra authentication services."
-author: 
+author: Dickson-Mwendia
 manager: 
-ms.author: 
+ms.author: dmwendia
 ms.date: 05/20/2025
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.reviewer: 
-ms.topic: 
+ms.topic: conceptual
 ms.custom: 
 #Customer intent: 
 ---
