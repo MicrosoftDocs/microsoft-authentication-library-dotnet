@@ -8,8 +8,8 @@ ms.service: msal
 ms.subservice: msal-dotnet
 ms.reviewer: 
 ms.topic: reference
-
 #Customer intent: 
+
 ---
 
 # Region discovery troubleshooting

@@ -4,6 +4,7 @@ description: "How to customize the reply URI in applications using MSAL.NET."
 author: cilwerner
 manager: 
 ms.author: cwerner
+ms.date: 05/22/2025
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.reviewer: 

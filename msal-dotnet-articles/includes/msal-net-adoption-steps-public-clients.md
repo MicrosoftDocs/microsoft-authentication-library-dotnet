@@ -5,7 +5,7 @@ services: active-directory
 author: cilwerner
 manager: CelesteDG
 ms.author: cwerner
-ms.date: 09/08/2021
+ms.date: 05/22/2025
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.workload: identity
@@ -13,7 +13,6 @@ ms.reviewer:
 ms.topic: include
 ms.custom: aaddev
 #Customer intent: 
-
 ---
 
 The following steps for updating code apply across all the confidential client scenarios:
