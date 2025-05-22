@@ -11,9 +11,7 @@ ms.workload: identity
 ms.reviewer:
 ms.topic: conceptual
 ms.custom: devx-track-csharp, aaddev
-#Customer intent: 
 # Customer intent: As an application developer, I want to learn how Microsoft Identity Web can help me protect my services with the Microsoft identity platform. 
-
 ---
 
 # Microsoft Identity Web authentication library
