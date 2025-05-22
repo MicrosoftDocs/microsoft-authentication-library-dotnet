@@ -1,5 +1,6 @@
 ---
 title: Getting tenant profiles with MSAL.NET
+description: Getting tenant profiles with MSAL.NET
 author: cilwerner
 manager: 
 ms.author: cwerner

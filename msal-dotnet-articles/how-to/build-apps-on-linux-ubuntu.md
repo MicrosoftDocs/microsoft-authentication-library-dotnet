@@ -1,5 +1,6 @@
 ---
 title: Building MSAL.NET applications on Linux
+description: Building MSAL.NET applications on Linux
 author: cilwerner
 manager: 
 ms.author: cwerner

@@ -1,5 +1,6 @@
 ---
 title: Cache options in MSAL.NET
+description: Cache options in MSAL.NET
 author: cilwerner
 manager: 
 ms.author: cwerner
