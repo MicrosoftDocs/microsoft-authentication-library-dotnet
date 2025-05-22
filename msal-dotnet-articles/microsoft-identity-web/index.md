@@ -7,7 +7,6 @@ ms.author: jmprieur
 ms.date: 06/04/2024
 ms.service: msal
 ms.subservice: microsoft-identity-web
-ms.workload: identity
 ms.reviewer:
 ms.topic: conceptual
 ms.custom: devx-track-csharp, aaddev

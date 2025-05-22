@@ -1,14 +1,12 @@
 ---
 title: Choosing a version of MSAL.NET
 description: Learn how to choose a version of MSAL.NET that suits your development scenario, based on the type of application and the underlying platform. 
-services: active-directory
 author: cilwerner
 manager: CelesteDG
 ms.author: cwerner
 ms.date: 03/17/2023
 ms.service: msal
 ms.subservice: msal-dotnet
-ms.workload: identity
 ms.reviewer:
 ms.topic: reference
 ms.custom: devx-track-csharp, aaddev

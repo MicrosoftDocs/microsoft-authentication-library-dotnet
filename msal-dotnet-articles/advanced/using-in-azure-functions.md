@@ -7,7 +7,6 @@ ms.author: dmwendia
 ms.date: 03/17/2023
 ms.service: msal
 ms.subservice: msal-dotnet
-ms.workload: identity
 ms.reviewer:
 ms.topic: conceptual
 ms.custom: devx-track-csharp, aaddev

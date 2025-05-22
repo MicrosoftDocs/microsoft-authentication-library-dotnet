@@ -7,7 +7,6 @@ ms.author: cwerner
 ms.date: 06/04/2024
 ms.service: msal
 ms.subservice: msal-dotnet
-ms.workload: identity
 ms.reviewer:
 ms.topic: conceptual
 ms.custom: devx-track-csharp, aaddev, devx-track-dotnet

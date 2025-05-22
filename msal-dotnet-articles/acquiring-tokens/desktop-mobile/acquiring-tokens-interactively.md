@@ -1,14 +1,12 @@
 ---
 title: Acquiring tokens interactively
 description: "How to acquire tokens with MSAL.NET and user interaction."
-services: active-directory
 author: cilwerner
 manager: CelesteDG
 ms.author: cwerner
 ms.date: 12/13/2023
 ms.service: msal
 ms.subservice: msal-dotnet
-ms.workload: identity
 ms.reviewer:
 ms.topic: conceptual
 ms.custom: devx-track-csharp, aaddev, devx-track-dotnet

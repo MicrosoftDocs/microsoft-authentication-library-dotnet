@@ -7,12 +7,10 @@ ms.author: cwerner
 ms.date: 09/08/2019
 ms.service: msal
 ms.subservice: msal-dotnet
-ms.workload: identity
 ms.reviewer:
 ms.topic: conceptual
 ms.custom: devx-track-csharp, aaddev, has-adal-ref
 #Customer intent: As an application developer, I want to learn how to migrate my iOS applications that use Microsoft Authenticator from ADAL.NET to MSAL.NET.
-
 ---
 
 # Migrate iOS applications that use Microsoft Authenticator from ADAL.NET to MSAL.NET
