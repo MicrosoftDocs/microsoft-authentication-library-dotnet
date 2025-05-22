@@ -1,14 +1,15 @@
 ---
 title: Handling of personally-identifiable information in MSAL.NET
 description: Outlines what MSAL considers to be personally identifiable information.
-author: 
+author: Dickson-Mwendia
 manager: 
-ms.author: 
+ms.author: dmwendia
 ms.date: 05/20/2025
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.reviewer: 
 ms.topic: reference
+ms.custom:
 #Customer intent: 
 ---
 
