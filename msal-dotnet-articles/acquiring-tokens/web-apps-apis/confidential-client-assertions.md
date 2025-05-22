@@ -4,7 +4,7 @@ description: Learn about signed client assertions support for confidential clien
 author: cilwerner
 manager: CelesteDG
 ms.author: cwerner
-ms.date: 06/04/2024
+ms.date: 05/22/2025
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.workload: identity

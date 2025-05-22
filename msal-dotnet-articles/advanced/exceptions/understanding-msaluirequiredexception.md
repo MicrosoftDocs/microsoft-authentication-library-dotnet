@@ -1,5 +1,6 @@
 ---
 title: Understanding MsalUiRequiredException
+description: "Learn about MsalUiRequiredException in MSAL.NET, its properties, and how to handle it effectively."
 author: Dickson-Mwendia
 manager: 
 ms.author: dmwendia

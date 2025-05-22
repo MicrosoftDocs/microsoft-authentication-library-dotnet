@@ -1,5 +1,6 @@
 ---
 title: Experimental features in MSAL.NET
+description: "Explore experimental features in MSAL.NET, including regional discovery and other advanced capabilities."
 author: Dickson-Mwendia
 manager: 
 ms.author: dmwendia

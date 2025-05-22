@@ -4,6 +4,7 @@ description: "When users login to Web applications (web sites) using OpenID Conn
 author: cilwerner
 manager: 
 ms.author: cwerner
+ms.date: 05/22/2025
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.reviewer: 

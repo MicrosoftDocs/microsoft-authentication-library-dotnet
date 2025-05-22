@@ -4,6 +4,7 @@ description: "How to use MSAL.NET to authenticate on behalf of a user."
 author: cilwerner
 manager: 
 ms.author: cwerner
+ms.date: 05/22/2025
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.reviewer: 

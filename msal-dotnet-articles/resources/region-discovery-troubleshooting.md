@@ -1,5 +1,6 @@
 ---
 title: Region discovery troubleshooting
+description: Troubleshoot regional STS (ESTS-Regional) in Microsoft Entra ID. Learn about the service-to-service flow and opt-in process for first-party apps.
 author: Dickson-Mwendia
 manager: 
 ms.author: dmwendia
