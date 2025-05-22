@@ -1,7 +1,16 @@
 ---
 title: Core MSAL.NET Libraries
 description: "Core MSAL.NET libraries enable developers to build token acquisition flows into their applications both on the client (e.g., desktop, mobile, and web) as well as on the service sides (e.g., web APIs)."
-ms.reviewer: 
+author: Dickson-Mwendia
+manager: 
+ms.author: dmwendia
+ms.date: 05/22/2025
+ms.service: msal
+ms.subservice: msal-dotnet
+ms.reviewer:
+ms.topic: conceptual
+ms.custom: 
+#Customer intent: 
 ---
 
 # Core MSAL.NET Libraries
