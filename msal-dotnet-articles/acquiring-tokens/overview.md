@@ -13,6 +13,7 @@ ms.author: dmwendia
 ms.reviewer:
 ms.custom: devx-track-csharp, aaddev
 # Customer intent: As an application developer, I want to learn how to acquire security tokens in public and confidential client applications using MSAL.NET
+#Customer intent: 
 ---
 
 # Token acquisition

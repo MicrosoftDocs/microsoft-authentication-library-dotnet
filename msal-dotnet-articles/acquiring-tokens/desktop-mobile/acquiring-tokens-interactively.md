@@ -12,6 +12,7 @@ ms.date: 12/13/2023
 ms.author: dmwendia
 ms.reviewer:
 ms.custom: devx-track-csharp, aaddev, devx-track-dotnet
+#Customer intent: 
 ---
 
 # Acquiring tokens interactively

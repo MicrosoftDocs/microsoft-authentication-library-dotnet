@@ -13,6 +13,7 @@ ms.date: 10/21/2022
 ms.author: dmwendia
 ms.reviewer:
 ms.custom: aaddev, devx-track-dotnet
+#Customer intent: 
 ---
 
 # Logging in MSAL.NET

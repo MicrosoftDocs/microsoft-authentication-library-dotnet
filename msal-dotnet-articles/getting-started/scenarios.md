@@ -13,6 +13,7 @@ ms.author: dmwendia
 ms.reviewer:
 ms.custom: devx-track-csharp, aaddev
 # Customer intent: As an application developer, I want to know the application scenarios and authentication flows supported by MSAL.NET. 
+#Customer intent: 
 ---
 
 # MSAL.NET Scenarios

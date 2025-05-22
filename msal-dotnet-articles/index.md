@@ -12,6 +12,7 @@ ms.author: dmwendia
 ms.reviewer:
 ms.custom: devx-track-csharp, aaddev
 # Customer intent: As an application developer, I want to learn how MSAL.NET can help me acquire tokens from the Microsoft identity platform and access protected web APIs. 
+#Customer intent: 
 ---
 
 # Microsoft Authentication Library for .NET

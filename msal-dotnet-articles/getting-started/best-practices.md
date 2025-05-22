@@ -13,6 +13,7 @@ ms.author: dmwendia
 ms.reviewer:
 ms.custom: devx-track-csharp, aaddev, engagement-fy23
 # Customer intent: As an application developer, I want to learn the best practices for using MSAL.NET in my development scenario
+#Customer intent: 
 ---
 
 

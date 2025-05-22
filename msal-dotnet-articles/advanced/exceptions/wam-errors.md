@@ -5,6 +5,12 @@ ms.date: 08/30/2023
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.reviewer: 
+author: 
+ms.author: 
+ms.topic: 
+manager: 
+ms.custom: 
+#Customer intent: 
 ---
 
 # Errors associated with Web Account Manager (WAM)

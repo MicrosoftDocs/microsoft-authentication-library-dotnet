@@ -14,6 +14,7 @@ ms.author: dmwendia
 ms.reviewer:
 ms.custom: devx-track-csharp, aaddev, engagement-fy23
 # Customer intent: As an application developer, I want to know which version of MSAL.NET I'll use for my scenario based on the type of app I'm building and the platform I'm using. 
+#Customer intent: 
 ---
 
 # Choosing a version of MSAL.NET

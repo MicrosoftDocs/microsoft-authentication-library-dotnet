@@ -5,6 +5,12 @@ ms.date: 06/29/2023
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.reviewer: 
+author: 
+ms.author: 
+ms.topic: 
+manager: 
+ms.custom: 
+#Customer intent: 
 ---
 
 # Using MSAL.NET with Web Account Manager (WAM)

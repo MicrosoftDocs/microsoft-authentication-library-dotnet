@@ -14,6 +14,7 @@ ms.author: dmwendia
 ms.reviewer:
 ms.custom: devx-track-csharp, aaddev, engagement-fy23
 # Customer intent: As an application developer, I want to know the application scenarios and authentication flows supported by Microsoft Identity Web. 
+#Customer intent: 
 ---
 
 # Microsoft identity web scenarios

@@ -12,6 +12,7 @@ ms.author: dmwendia
 ms.reviewer:
 ms.custom: devx-track-csharp, aaddev, engagement-fy23
 # Customer intent: As an application developer, I want to learn how to use MSAL.NET in Azure Functions
+#Customer intent: 
 ---
 
 # Using MSAL.NET with Azure Functions

@@ -12,6 +12,7 @@ ms.date: 06/04/2024
 ms.author: dmwendia
 ms.reviewer:
 ms.custom: aaddev, devx-track-dotnet
+#Customer intent: 
 ---
 # Handle errors and exceptions in MSAL.NET
 

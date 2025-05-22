@@ -13,6 +13,7 @@ ms.author: dmwendia
 ms.reviewer:
 ms.custom: devx-track-csharp, aaddev, engagement-fy23
 # Customer intent: As an application developer, I want to learn how to acquire tokens silently in public and confidential client applications using MSAL.NET
+#Customer intent: 
 ---
 # Understanding the `AcquireTokenAsync` API
 

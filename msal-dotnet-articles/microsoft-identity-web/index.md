@@ -13,6 +13,7 @@ ms.author: jmprieur
 ms.reviewer:
 ms.custom: devx-track-csharp, aaddev
 # Customer intent: As an application developer, I want to learn how Microsoft Identity Web can help me protect my services with the Microsoft identity platform. 
+#Customer intent: 
 ---
 
 # Microsoft Identity Web authentication library
