@@ -1,13 +1,12 @@
 ---
 title: Building MSAL.NET applications on Linux
-author: 
+author: cilwerner
 manager: 
-ms.author: 
-ms.date: 05/20/2025
+ms.author: cwerner
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.reviewer: 
-ms.topic: 
+ms.topic: how-to
 ms.custom: 
 #Customer intent: 
 ---

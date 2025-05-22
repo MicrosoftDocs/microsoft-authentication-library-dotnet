@@ -2,9 +2,9 @@
 title: Differences between ADAL.NET and MSAL.NET apps
 description: Learn about the differences between the Microsoft Authentication Library for .NET (MSAL.NET) and Azure AD Authentication Library for .NET (ADAL.NET).
 services: active-directory
-author: Dickson-Mwendia
+author: cilwerner
 manager: CelesteDG
-ms.author: dmwendia
+ms.author: cwerner
 ms.date: 08/24/2023
 ms.service: msal
 ms.subservice: msal-dotnet

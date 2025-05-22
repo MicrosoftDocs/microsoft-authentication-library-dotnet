@@ -10,7 +10,7 @@ ms.subservice: msal-dotnet
 ms.workload: identity
 ms.reviewer:
 ms.topic: reference
-ms.custom: devx-track-csharp, aaddev, engagement-fy23
+ms.custom: devx-track-csharp, aaddev
 #Customer intent: 
 # Customer intent: As an application developer, I want to learn the best practices for using MSAL.NET in my development scenario
 

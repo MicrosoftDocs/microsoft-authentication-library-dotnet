@@ -11,7 +11,7 @@ ms.subservice: msal-dotnet
 ms.workload: identity
 ms.reviewer:
 ms.topic: reference
-ms.custom: devx-track-csharp, aaddev, engagement-fy23
+ms.custom: devx-track-csharp, aaddev
 #Customer intent: 
 # Customer intent: As an application developer, I want to know which version of MSAL.NET I'll use for my scenario based on the type of app I'm building and the platform I'm using. 
 

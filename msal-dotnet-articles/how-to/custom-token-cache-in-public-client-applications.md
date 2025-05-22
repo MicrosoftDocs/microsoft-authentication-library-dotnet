@@ -1,14 +1,13 @@
 ---
 title: Custom token cache for a public client applications
 description: "This article is about custom token cache implementations for public client applications."
-author: 
+author: cilwerner
 manager: 
-ms.author: 
-ms.date: 05/20/2025
+ms.author: cwerner
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.reviewer: 
-ms.topic: 
+ms.topic: how-to
 ms.custom: 
 #Customer intent: 
 ---
