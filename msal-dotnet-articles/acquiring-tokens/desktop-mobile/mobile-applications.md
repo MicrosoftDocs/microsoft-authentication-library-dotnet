@@ -1,9 +1,9 @@
 ---
 title: Using MSAL.NET With .NET MAUI
 description: "How to use MSAL.NET on mobile platforms."
-author: 
+author: cilwerner
 manager: 
-ms.author: 
+ms.author: cwerner
 ms.date: 05/20/2025
 ms.service: msal
 ms.subservice: msal-dotnet

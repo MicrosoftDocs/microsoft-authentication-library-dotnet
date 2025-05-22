@@ -2,9 +2,9 @@
 title: Using web browsers (MSAL.NET)
 description: Learn about using browsers in Microsoft Authentication Library for .NET (MSAL.NET).
 services: active-directory
-author: Dickson-Mwendia
+author: cilwerner
 manager: CelesteDG
-ms.author: dmwendia
+ms.author: cwerner
 ms.date: 08/24/2023
 ms.service: msal
 ms.subservice: msal-dotnet
@@ -13,7 +13,6 @@ ms.reviewer:
 ms.topic: conceptual
 ms.custom: devx-track-csharp, aaddev, has-adal-ref, devx-track-dotnet
 #Customer intent: As an application developer, I want to learn about web browsers MSAL.NET so I can decide if this platform meets my application development needs and requirements.
-
 ---
 
 # Using web browsers (MSAL.NET)

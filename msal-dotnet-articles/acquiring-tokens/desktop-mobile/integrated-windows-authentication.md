@@ -1,9 +1,9 @@
 ---
 title: Using MSAL.NET with Integrated Windows Authentication (IWA)
 description: "If your desktop or mobile application runs on Windows and on a machine connected to a Windows domain (Active Directory or Microsoft Entra joined) it is possible to use the Integrated Windows Authentication (IWA) to acquire a token silently. No UI is required when using the application."
-author: 
+author: cilwerner
 manager: 
-ms.author: 
+ms.author: cwerner
 ms.date: 05/22/2025
 ms.service: msal
 ms.subservice: msal-dotnet

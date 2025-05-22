@@ -1,9 +1,9 @@
 ---
 title: MSAL.NET scenarios
 description: Learn the application scenarios and authentication flows supported by MSAL.NET
-author: Dickson-Mwendia
+author: cilwerner
 manager: CelesteDG
-ms.author: dmwendia
+ms.author: cwerner
 ms.date: 03/17/2023
 ms.service: msal
 ms.subservice: msal-dotnet
@@ -13,7 +13,6 @@ ms.topic: reference
 ms.custom: devx-track-csharp, aaddev
 #Customer intent: 
 # Customer intent: As an application developer, I want to know the application scenarios and authentication flows supported by MSAL.NET. 
-
 ---
 
 # MSAL.NET Scenarios

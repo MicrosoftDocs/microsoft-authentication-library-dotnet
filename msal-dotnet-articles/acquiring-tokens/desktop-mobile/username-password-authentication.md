@@ -1,9 +1,9 @@
 ---
 title: Username and password (ROPC) authentication with MSAL.NET
 description: "In your desktop application, you can use the username and password flow to acquire a token silently. No UI is required when using the application."
-author: 
+author: cilwerner
 manager: 
-ms.author: 
+ms.author: cwerner
 ms.date: 05/20/2025
 ms.service: msal
 ms.subservice: msal-dotnet
