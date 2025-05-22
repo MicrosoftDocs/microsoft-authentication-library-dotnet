@@ -1,14 +1,14 @@
 ---
 title: Overriding target framework
 description: "In rare circumstances you might want to override NuGet's algorithm of determining the framework version of MSAL."
+author: 
+manager: 
+ms.author: 
+ms.date: 05/20/2025
 ms.service: msal
 ms.subservice: msal-dotnet
-ms.date: 05/20/2025
 ms.reviewer: 
-author: 
-ms.author: 
 ms.topic: 
-manager: 
 ms.custom: 
 #Customer intent: 
 ---

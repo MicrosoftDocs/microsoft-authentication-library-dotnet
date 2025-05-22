@@ -1,14 +1,14 @@
 ---
 title: Overriding authority
 description: "How to override the default authority in MSAL.NET applications."
+author: 
+manager: 
+ms.author: 
+ms.date: 05/20/2025
 ms.service: msal
 ms.subservice: msal-dotnet
-ms.date: 05/20/2025
 ms.reviewer: 
-author: 
-ms.author: 
 ms.topic: 
-manager: 
 ms.custom: 
 #Customer intent: 
 ---

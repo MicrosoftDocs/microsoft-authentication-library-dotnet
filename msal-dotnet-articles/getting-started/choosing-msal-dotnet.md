@@ -4,17 +4,17 @@ description: Learn how to choose a version of MSAL.NET that suits your developme
 services: active-directory
 author: Dickson-Mwendia
 manager: CelesteDG
-
+ms.author: dmwendia
+ms.date: 03/17/2023
 ms.service: msal
 ms.subservice: msal-dotnet
-ms.topic: reference
 ms.workload: identity
-ms.date: 03/17/2023
-ms.author: dmwendia
 ms.reviewer:
+ms.topic: reference
 ms.custom: devx-track-csharp, aaddev, engagement-fy23
-# Customer intent: As an application developer, I want to know which version of MSAL.NET I'll use for my scenario based on the type of app I'm building and the platform I'm using. 
 #Customer intent: 
+# Customer intent: As an application developer, I want to know which version of MSAL.NET I'll use for my scenario based on the type of app I'm building and the platform I'm using. 
+
 ---
 
 # Choosing a version of MSAL.NET

@@ -3,16 +3,16 @@ title: Microsoft Authentication Library for .NET
 description: Learn how you can use the Microsoft Authentication Library for .NET (MSAL.NET) to acquire tokens from the Microsoft identity platform and access protected web APIs. 
 author: Dickson-Mwendia
 manager: CelesteDG
-
+ms.author: dmwendia
+ms.date: 06/04/2024
 ms.service: msal
 ms.subservice: msal-dotnet
-ms.topic: conceptual
-ms.date: 06/04/2024
-ms.author: dmwendia
 ms.reviewer:
+ms.topic: conceptual
 ms.custom: devx-track-csharp, aaddev
-# Customer intent: As an application developer, I want to learn how MSAL.NET can help me acquire tokens from the Microsoft identity platform and access protected web APIs. 
 #Customer intent: 
+# Customer intent: As an application developer, I want to learn how MSAL.NET can help me acquire tokens from the Microsoft identity platform and access protected web APIs. 
+
 ---
 
 # Microsoft Authentication Library for .NET

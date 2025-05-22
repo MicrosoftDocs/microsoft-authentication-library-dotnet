@@ -4,16 +4,16 @@ description: Learn how to clear the token cache using the Microsoft Authenticati
 services: active-directory
 author: Dickson-Mwendia
 manager: CelesteDG
-
+ms.author: dmwendia
+ms.date: 08/24/2023
 ms.service: msal
 ms.subservice: msal-dotnet
-ms.topic: how-to
 ms.workload: identity
-ms.date: 08/24/2023
-ms.author: dmwendia
 ms.reviewer:
+ms.topic: how-to
 ms.custom: devx-track-csharp, aaddev, devx-track-dotnet
 #Customer intent: As an application developer, I want to learn how how to clear the token cache so I can .
+
 ---
 
 # Clear the token cache using MSAL.NET

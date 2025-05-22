@@ -4,16 +4,16 @@ description: Learn how to instantiate a public client application with configura
 services: active-directory
 author: Dickson-Mwendia
 manager: CelesteDG
-
+ms.author: dmwendia
+ms.date: 08/24/2023
 ms.service: msal
 ms.subservice: msal-dotnet
-ms.topic: how-to
 ms.workload: identity
-ms.date: 08/24/2023
-ms.author: dmwendia
 ms.reviewer:
+ms.topic: how-to
 ms.custom: devx-track-csharp, aaddev, devx-track-dotnet
 #Customer intent: As an application developer, I want to learn how to use application config options so I can instantiate a public client app.
+
 ---
 
 # Instantiate a public client application with configuration options using MSAL.NET

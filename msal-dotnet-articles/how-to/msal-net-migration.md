@@ -3,16 +3,16 @@ title: Migrating to MSAL.NET and Microsoft.Identity.Web
 description: Learn why and how to migrate from  Azure AD Authentication Library for .NET (ADAL.NET) to Microsoft Authentication Library for .NET (MSAL.NET) or Microsoft.Identity.Web
 author: Dickson-Mwendia
 manager: CelesteDG
-
+ms.author: dmwendia
+ms.date: 06/04/2024
 ms.service: msal
 ms.subservice: msal-dotnet
-ms.topic: conceptual
 ms.workload: identity
-ms.date: 06/04/2024
-ms.author: dmwendia
 ms.reviewer:
+ms.topic: conceptual
 ms.custom: devx-track-csharp, aaddev, has-adal-ref, engagement-fy23, devx-track-dotnet
 #Customer intent: As an application developer, I want to learn why and how to migrate from ADAL.NET and MSAL.NET or Microsoft.Identity.Web libraries.
+
 ---
 
 # Migrating applications to MSAL.NET or Microsoft.Identity.Web

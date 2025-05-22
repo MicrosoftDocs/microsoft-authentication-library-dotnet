@@ -4,16 +4,16 @@ description: Learn about Active Directory Federation Services (ADFS) support in 
 services: active-directory
 author: Dickson-Mwendia
 manager: CelesteDG
-
+ms.author: dmwendia
+ms.date: 08/24/2023
 ms.service: msal
 ms.subservice: msal-dotnet
-ms.topic: conceptual
 ms.workload: identity
-ms.date: 08/24/2023
-ms.author: dmwendia
 ms.reviewer:
+ms.topic: conceptual
 ms.custom: devx-track-csharp, aaddev, devx-track-dotnet
 #Customer intent: As an application developer, I want to learn about AD FS support in MSAL.NET so I can decide if this platform meets my application development needs and requirements.
+
 ---
 
 # Active Directory Federation Services support in MSAL.NET

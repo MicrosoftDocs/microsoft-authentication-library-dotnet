@@ -3,17 +3,17 @@ title: Token Acquisition
 description: "Learn how to acquire security tokens in public and confidential client applications using MSAL.NET."
 author: Dickson-Mwendia
 manager: CelesteDG
-
+ms.author: dmwendia
+ms.date: 05/20/2024
 ms.service: msal
 ms.subservice: msal-dotnet
-ms.topic: reference
 ms.workload: identity
-ms.date: 05/20/2024
-ms.author: dmwendia
 ms.reviewer:
+ms.topic: reference
 ms.custom: devx-track-csharp, aaddev
-# Customer intent: As an application developer, I want to learn how to acquire security tokens in public and confidential client applications using MSAL.NET
 #Customer intent: 
+# Customer intent: As an application developer, I want to learn how to acquire security tokens in public and confidential client applications using MSAL.NET
+
 ---
 
 # Token acquisition

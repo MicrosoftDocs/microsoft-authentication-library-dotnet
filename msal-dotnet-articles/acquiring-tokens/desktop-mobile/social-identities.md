@@ -4,17 +4,17 @@ description: "You can use MSAL.NET to sign-in users with social identities by us
 services: active-directory
 author: henrymbuguakiarie
 manager: CelesteDG
-
+ms.author: dmwendia
+ms.date: 05/21/2024
 ms.service: msal
 ms.subservice: msal-dotnet
-ms.topic: conceptual
 ms.workload: identity
-ms.date: 05/21/2024
-ms.author: dmwendia
 ms.reviewer:
+ms.topic: conceptual
 ms.custom: devx-track-csharp, aaddev, devx-track-dotnet
-# Customer intent: As an application developer, I want to learn about specific considerations when using Azure AD B2C and MSAL.NET so I can decide if this platform meets my application development needs and requirements.
 #Customer intent: 
+# Customer intent: As an application developer, I want to learn about specific considerations when using Azure AD B2C and MSAL.NET so I can decide if this platform meets my application development needs and requirements.
+
 ---
 
 # Using MSAL.NET to sign-in users with social identities

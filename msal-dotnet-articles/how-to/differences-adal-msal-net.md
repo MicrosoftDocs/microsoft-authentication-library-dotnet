@@ -4,16 +4,16 @@ description: Learn about the differences between the Microsoft Authentication Li
 services: active-directory
 author: Dickson-Mwendia
 manager: CelesteDG
-
+ms.author: dmwendia
+ms.date: 08/24/2023
 ms.service: msal
 ms.subservice: msal-dotnet
-ms.topic: reference
 ms.workload: identity
-ms.date: 08/24/2023
-ms.author: dmwendia
 ms.reviewer:
+ms.topic: reference
 ms.custom: devx-track-csharp, aaddev, has-adal-ref, devx-track-dotnet
 #Customer intent: As an application developer, I want to learn about the differences between the ADAL.NET and MSAL.NET libraries so I can migrate my applications to MSAL.NET.
+
 ---
 
 # Differences between ADAL.NET and MSAL.NET apps

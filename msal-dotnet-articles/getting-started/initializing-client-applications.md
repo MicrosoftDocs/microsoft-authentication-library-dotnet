@@ -3,16 +3,16 @@ title: Initialize MSAL.NET client applications
 description: Learn about initializing public client and confidential client applications using the Microsoft Authentication Library for .NET (MSAL.NET).
 author: Dickson-Mwendia
 manager: CelesteDG
-
+ms.author: dmwendia
+ms.date: 06/04/2024
 ms.service: msal
 ms.subservice: msal-dotnet
-ms.topic: conceptual
 ms.workload: identity
-ms.date: 06/04/2024
-ms.author: dmwendia
 ms.reviewer:
+ms.topic: conceptual
 ms.custom: devx-track-csharp, aaddev, engagement-fy23, devx-track-dotnet
 #Customer intent: As an application developer, I want to learn about initializing client applications so I can decide if this platform meets my application development needs and requirements.
+
 ---
 
 # Initialize client applications using MSAL.NET

@@ -1,14 +1,14 @@
 ---
 title: Errors associated with Web Account Manager (WAM)
 description: "When building applications using MSAL.NET and the Web Account Manager (WAM), developers may run into issues. This article explains potential errors and mitigations."
+author: 
+manager: 
+ms.author: 
 ms.date: 08/30/2023
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.reviewer: 
-author: 
-ms.author: 
 ms.topic: 
-manager: 
 ms.custom: 
 #Customer intent: 
 ---

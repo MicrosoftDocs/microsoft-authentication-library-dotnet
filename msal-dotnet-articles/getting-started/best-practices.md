@@ -3,17 +3,17 @@ title: Best practices for MSAL.NET
 description: Learn the best practices when using MSAL.NET in your application development scenario.
 author: Dickson-Mwendia
 manager: CelesteDG
-
+ms.author: dmwendia
+ms.date: 03/17/2023
 ms.service: msal
 ms.subservice: msal-dotnet
-ms.topic: reference
 ms.workload: identity
-ms.date: 03/17/2023
-ms.author: dmwendia
 ms.reviewer:
+ms.topic: reference
 ms.custom: devx-track-csharp, aaddev, engagement-fy23
-# Customer intent: As an application developer, I want to learn the best practices for using MSAL.NET in my development scenario
 #Customer intent: 
+# Customer intent: As an application developer, I want to learn the best practices for using MSAL.NET in my development scenario
+
 ---
 
 

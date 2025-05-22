@@ -4,16 +4,16 @@ description: Learn how to acquire an access token silently (from the token cache
 services: active-directory
 author: Dickson-Mwendia
 manager: CelesteDG
-
+ms.author: dmwendia
+ms.date: 08/24/2023
 ms.service: msal
 ms.subservice: msal-dotnet
-ms.topic: how-to
 ms.workload: identity
-ms.date: 08/24/2023
-ms.author: dmwendia
 ms.reviewer:
+ms.topic: how-to
 ms.custom: devx-track-csharp, aaddev, engagement-fy23, devx-track-dotnet
 #Customer intent: As an application developer, I want to learn how how to use the AcquireTokenSilent method so I can acquire tokens from the cache.
+
 ---
 
 # Get a token from the token cache using MSAL.NET
