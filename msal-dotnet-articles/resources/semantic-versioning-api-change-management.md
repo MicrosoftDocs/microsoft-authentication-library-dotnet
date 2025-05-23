@@ -1,9 +1,16 @@
 ---
 title: Semantic versioning and API change management
 description: "MSAL.NET strategy for versioning library releases"
+author: Dickson-Mwendia
+manager: 
+ms.author: dmwendia
+ms.date: 05/20/2025
 ms.service: msal
 ms.subservice: msal-dotnet
-ms.date: 05/20/2025
+ms.reviewer: 
+ms.topic: reference
+ms.custom:
+#Customer intent: 
 ---
 
 # Semantic versioning and API change management

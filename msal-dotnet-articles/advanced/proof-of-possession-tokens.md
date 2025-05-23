@@ -1,9 +1,16 @@
 ---
 title: Proof-of-Possession (PoP) tokens
 description: Learn how to acquire Proof-of-Possession tokens for public and confidential clients in MSAL.NET
+author: Dickson-Mwendia
+manager: 
+ms.author: dmwendia
+ms.date: 05/20/2025
 ms.service: msal
 ms.subservice: msal-dotnet
-ms.date: 05/20/2025
+ms.reviewer: 
+ms.topic: conceptual
+ms.custom: 
+#Customer intent: 
 ---
 
 # Proof-of-Possession (PoP) tokens

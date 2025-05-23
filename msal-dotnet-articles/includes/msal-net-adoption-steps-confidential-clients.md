@@ -1,3 +1,16 @@
+---
+author: cilwerner
+manager: 
+ms.author: cwerner
+ms.date: 05/22/2025
+ms.service: msal
+ms.subservice: msal-dotnet
+ms.reviewer: 
+ms.topic: include
+ms.custom: 
+#Customer intent: 
+---
+
 The following steps for updating code apply across all the confidential client scenarios:
 
 1. Add the MSAL.NET namespace in your source code: `using Microsoft.Identity.Client;`.

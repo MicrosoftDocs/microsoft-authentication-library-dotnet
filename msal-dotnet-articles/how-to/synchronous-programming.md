@@ -1,9 +1,16 @@
 ---
 title: Synchronous programming with MSAL.NET
 description: "MSAL.NET is based on Task-based Asynchronous Pattern (TAP). This page provides links to guidance about how to use async methods in a synchronous way. This has no one solution that fits all. So various best practices are recommended."
+author: cilwerner
+manager: 
+ms.author: cwerner
+ms.date: 05/22/2025
 ms.service: msal
 ms.subservice: msal-dotnet
-ms.date: 05/20/2025
+ms.reviewer: 
+ms.topic: how-to
+ms.custom: 
+#Customer intent: 
 ---
 
 # Synchronous programming with MSAL.NET

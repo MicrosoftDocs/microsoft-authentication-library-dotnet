@@ -1,13 +1,16 @@
 ---
 author: cilwerner
+manager: 
 ms.author: cwerner
 ms.date: 11/25/2020
 ms.service: msal
 ms.subservice: msal-dotnet
+ms.reviewer: 
 ms.topic: include
-# Purpose:
-# Ingested by Microsoft identity platform articles in /articles/active-directory/develop/* that document the error handling intro for the different platforms.
+ms.custom: 
+#Customer intent: 
 ---
+
 This article gives an overview of the different types of errors and recommendations for handling common sign-in errors.
 
 ## MSAL error handling basics

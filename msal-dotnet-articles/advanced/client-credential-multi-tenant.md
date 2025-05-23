@@ -1,9 +1,16 @@
 ---
 title: Using MSAL.NET for client credential flow in multi-tenant services
 description: Learn Microsoft's Advanced Client Credential Multi-Tenant with MSAL.NET, token caching, and Microsoft.Identity.Web for ASP.NET Core.
+author: Dickson-Mwendia
+manager: 
+ms.author: dmwendia
+ms.date: 05/20/2025
 ms.service: msal
 ms.subservice: msal-dotnet
-ms.date: 05/20/2025
+ms.reviewer: 
+ms.topic: conceptual
+ms.custom: 
+#Customer intent: 
 ---
 
 # Using MSAL.NET for client credential flow in multi-tenant services

@@ -1,9 +1,16 @@
 ---
 title: Known issues with MSAL.NET
 description: Troubleshoot MSAL.NET with our guide on known issues, including device compliance failures, AndroidActivityNotFound exceptions, and build issues.
+author: Dickson-Mwendia
+manager: 
+ms.author: dmwendia
+ms.date: 05/20/2025
 ms.service: msal
 ms.subservice: msal-dotnet
-ms.date: 05/20/2025
+ms.reviewer: 
+ms.topic: reference
+ms.custom:
+#Customer intent: 
 ---
 
 # Known issues with MSAL.NET

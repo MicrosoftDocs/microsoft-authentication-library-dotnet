@@ -1,9 +1,16 @@
 ---
 title: Cleaning the token cache
 description: "How to clear the token cache used by MSAL.NET"
+author: Dickson-Mwendia
+manager: 
+ms.author: dmwendia
+ms.date: 05/20/2025
 ms.service: msal
 ms.subservice: msal-dotnet
-ms.date: 05/20/2025
+ms.reviewer: 
+ms.topic: conceptual
+ms.custom: 
+#Customer intent: 
 ---
 
 # Clearing the token cache

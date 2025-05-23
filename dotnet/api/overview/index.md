@@ -1,6 +1,16 @@
 ---
 title: MSAL.NET API Reference Documentation
 description: "The full overview of the MSAL.NET API surface."
+author: Dickson-Mwendia
+manager: CelesteDG
+ms.author: dmwendia
+ms.date: 12/13/2023
+ms.service: msal
+ms.subservice: msal-dotnet
+ms.reviewer:
+ms.topic: conceptual
+ms.custom: devx-track-csharp, aaddev, devx-track-dotnet
+#Customer intent: 
 ---
 
 # MSAL.NET API Reference Documentation

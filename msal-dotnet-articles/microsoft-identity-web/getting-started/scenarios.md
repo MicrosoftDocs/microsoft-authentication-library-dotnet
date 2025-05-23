@@ -1,18 +1,15 @@
 ---
 title: Microsoft Identity Web scenarios
 description: Learn the application scenarios and authentication flows supported by Microsoft Identity Web.
-services: active-directory
 author: Dickson-Mwendia
 manager: CelesteDG
-
+ms.author: dmwendia
+ms.date: 03/17/2023
 ms.service: msal
 ms.subservice: msal-dotnet
-ms.topic: reference
-ms.workload: identity
-ms.date: 03/17/2023
-ms.author: dmwendia
 ms.reviewer:
-ms.custom: devx-track-csharp, aaddev, engagement-fy23
+ms.topic: reference
+ms.custom: devx-track-csharp, aaddev
 # Customer intent: As an application developer, I want to know the application scenarios and authentication flows supported by Microsoft Identity Web. 
 ---
 

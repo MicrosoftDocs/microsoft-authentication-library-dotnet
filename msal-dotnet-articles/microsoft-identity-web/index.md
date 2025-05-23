@@ -3,14 +3,12 @@ title: Microsoft Identity Web
 description: Learn how you can use Microsoft Identity Web to add authentication and authorization to web apps, web APIs, and daemon applications. 
 author: Dickson-Mwendia
 manager: CelesteDG
-
+ms.author: jmprieur
+ms.date: 06/04/2024
 ms.service: msal
 ms.subservice: microsoft-identity-web
-ms.topic: conceptual
-ms.workload: identity
-ms.date: 06/04/2024
-ms.author: jmprieur
 ms.reviewer:
+ms.topic: conceptual
 ms.custom: devx-track-csharp, aaddev
 # Customer intent: As an application developer, I want to learn how Microsoft Identity Web can help me protect my services with the Microsoft identity platform. 
 ---

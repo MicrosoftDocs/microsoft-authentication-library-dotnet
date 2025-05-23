@@ -1,10 +1,14 @@
 ---
 author: cilwerner
+manager: 
 ms.author: cwerner
-ms.date: 11/25/2020
+ms.date: 05/22/2025
 ms.service: msal
 ms.subservice: msal-dotnet
+ms.reviewer: 
 ms.topic: include
+ms.custom: 
+#Customer intent: 
 # Purpose:
 # Ingested by Microsoft identity platform articles in /articles/active-directory/develop/* that document the error handling retries for the different platforms.
 ---

@@ -1,9 +1,16 @@
 ---
 title: Monitoring applications using MSAL.NET
 description: "How to use the metrics provided by MSAL.NET to monitor your application."
+author: Dickson-Mwendia
+manager: 
+ms.author: dmwendia
+ms.date: 05/20/2025
 ms.service: msal
 ms.subservice: msal-dotnet
-ms.date: 05/20/2025
+ms.reviewer: 
+ms.topic: conceptual
+ms.custom: 
+#Customer intent: 
 ---
 
 # Monitoring applications using MSAL.NET
