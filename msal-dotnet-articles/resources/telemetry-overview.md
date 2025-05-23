@@ -1,9 +1,16 @@
 ---
 title: MSAL.NET telemetry overview
 description: Explore MSAL.NET's telemetry capabilities for Microsoft Entra token endpoint requests. Learn about client-side state, error tracking, and SDK API usage metadata.
+author: Dickson-Mwendia
+manager: 
+ms.author: dmwendia
+ms.date: 05/20/2025
 ms.service: msal
 ms.subservice: msal-dotnet
-ms.date: 05/20/2025
+ms.reviewer: 
+ms.topic: reference
+ms.custom:
+#Customer intent: 
 ---
 
 # MSAL.NET telemetry overview

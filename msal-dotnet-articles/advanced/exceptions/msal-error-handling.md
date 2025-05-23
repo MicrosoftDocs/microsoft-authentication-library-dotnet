@@ -3,15 +3,14 @@ title: Handle errors and exceptions in MSAL.NET
 description: Learn how to handle errors and exceptions, Conditional Access claims challenges, and retries in MSAL.NET.
 author: Dickson-Mwendia
 manager: CelesteDG
-
+ms.author: dmwendia
+ms.date: 06/04/2024
 ms.service: msal
 ms.subservice: msal-dotnet
-ms.topic: conceptual
-ms.workload: identity
-ms.date: 06/04/2024
-ms.author: dmwendia
 ms.reviewer:
+ms.topic: conceptual
 ms.custom: aaddev, devx-track-dotnet
+#Customer intent: 
 ---
 # Handle errors and exceptions in MSAL.NET
 

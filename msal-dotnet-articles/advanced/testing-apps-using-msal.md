@@ -1,9 +1,16 @@
 ---
 title: Testing applications using MSAL.NET
 description: "How to test applications that use MSAL.NET for token acquisition."
+author: Dickson-Mwendia
+manager: 
+ms.author: dmwendia
+ms.date: 05/20/2025
 ms.service: msal
 ms.subservice: msal-dotnet
-ms.date: 05/20/2025
+ms.reviewer: 
+ms.topic: conceptual
+ms.custom: 
+#Customer intent: 
 ---
 
 # Testing applications using MSAL.NET

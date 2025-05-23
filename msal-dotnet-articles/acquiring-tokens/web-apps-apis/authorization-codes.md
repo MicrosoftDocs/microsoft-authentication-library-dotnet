@@ -1,9 +1,16 @@
 ---
 title: Using MSAL.NET to get tokens by authorization code (for web sites)
 description: "When users login to Web applications (web sites) using OpenID Connect, the web application receives an authorization code which it can redeem to acquire a token to call Web APIs."
+author: cilwerner
+manager: 
+ms.author: cwerner
+ms.date: 05/22/2025
 ms.service: msal
 ms.subservice: msal-dotnet
-ms.date: 05/20/2025
+ms.reviewer: 
+ms.topic: conceptual
+ms.custom: 
+#Customer intent:
 ---
 
 # Using MSAL.NET to get tokens by authorization code (for web sites)

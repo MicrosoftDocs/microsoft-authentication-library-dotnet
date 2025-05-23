@@ -1,8 +1,16 @@
 ---
 title: Getting tenant profiles with MSAL.NET
+description: Getting tenant profiles with MSAL.NET
+author: cilwerner
+manager: 
+ms.author: cwerner
+ms.date: 05/22/2025
 ms.service: msal
 ms.subservice: msal-dotnet
-ms.date: 05/20/2025
+ms.reviewer: 
+ms.topic: reference
+ms.custom: 
+#Customer intent: 
 ---
 
 # Getting tenant profiles with MSAL.NET
