@@ -9,7 +9,7 @@ ms.service: msal
 ms.subservice: msal-dotnet
 ms.reviewer: 
 ms.topic: reference
-ms.custom:
+ms.custom: sfi-ropc-nochange
 #Customer intent: 
 ---
 
