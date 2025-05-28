@@ -7,9 +7,9 @@ ms.author: cwerner
 ms.date: 08/24/2023
 ms.service: msal
 ms.subservice: msal-dotnet
-ms.reviewer:
+ms.reviewer: 
 ms.topic: reference
-ms.custom: devx-track-csharp, aaddev, has-adal-ref, devx-track-dotnet
+ms.custom: devx-track-csharp, aaddev, has-adal-ref, devx-track-dotnet, sfi-image-nochange
 #Customer intent: As an application developer, I want to learn about the differences between the ADAL.NET and MSAL.NET libraries so I can migrate my applications to MSAL.NET.
 ---
 

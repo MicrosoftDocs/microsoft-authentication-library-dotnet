@@ -1,16 +1,15 @@
 ---
 title: Choosing a version of MSAL.NET
-description: Learn how to choose a version of MSAL.NET that suits your development scenario, based on the type of application and the underlying platform. 
+description: Learn how to choose a version of MSAL.NET that suits your development scenario, based on the type of application and the underlying platform.
 author: cilwerner
 manager: CelesteDG
 ms.author: cwerner
 ms.date: 03/17/2023
 ms.service: msal
 ms.subservice: msal-dotnet
-ms.reviewer:
+ms.reviewer: 
 ms.topic: reference
-ms.custom: devx-track-csharp, aaddev
-#Customer intent: 
+ms.custom: devx-track-csharp, aaddev, sfi-image-blocked
 # Customer intent: As an application developer, I want to know which version of MSAL.NET I'll use for my scenario based on the type of app I'm building and the platform I'm using. 
 ---
 

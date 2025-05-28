@@ -7,9 +7,9 @@ ms.author: dmwendia
 ms.date: 10/21/2022
 ms.service: msal
 ms.subservice: msal-dotnet
-ms.reviewer:
+ms.reviewer: 
 ms.topic: conceptual
-ms.custom: aaddev, devx-track-dotnet
+ms.custom: aaddev, devx-track-dotnet, sfi-image-nochange
 #Customer intent: 
 ---
 
