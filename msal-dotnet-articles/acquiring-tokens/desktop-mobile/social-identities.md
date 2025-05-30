@@ -4,7 +4,7 @@ description: "You can use MSAL.NET to sign-in users with social identities by us
 author: cilwerner
 manager: CelesteDG
 ms.author: cwerner
-ms.date: 05/21/2024
+ms.date: 05/30/2025
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.reviewer:
@@ -15,6 +15,9 @@ ms.custom: devx-track-csharp, aaddev, devx-track-dotnet
 ---
 
 # Using MSAL.NET to sign-in users with social identities
+
+> [!IMPORTANT]
+> Effective May 1, 2025, Azure AD B2C will no longer be available to purchase for new customers. [Learn more in our FAQ](/azure/active-directory-b2c/faq?tabs=app-reg-ga#azure-ad-b2c-end-of-sale).
 
 You can use MSAL.NET to sign-in users with social identities by using [Azure AD B2C](/azure/active-directory-b2c/overview). Azure AD B2C is built around the notion of policies. In MSAL.NET, specifying a policy translates to providing an authority.
 
