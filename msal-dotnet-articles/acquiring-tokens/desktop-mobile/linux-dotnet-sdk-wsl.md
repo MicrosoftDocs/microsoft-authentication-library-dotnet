@@ -1,5 +1,5 @@
 ---
-title: Using MSAL.Net with Wiindows Subsystem for Linux
+title: Using MSAL.Net with Windows Subsystem for Linux
 description: Learn how to integrate Microsoft Entra ID authentication in WSL apps using MSAL.NET and the Microsoft Single Sign-on for Linux broker.
 author: ploegert
 ms.author: jploegert

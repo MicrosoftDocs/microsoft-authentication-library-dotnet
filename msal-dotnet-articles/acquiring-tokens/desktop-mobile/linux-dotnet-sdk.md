@@ -29,7 +29,33 @@ An authentication broker is an application that runs on a user’s machine that 
 - **System integration.** Applications that use the broker plug-and-play with the built-in account picker, allowing the user to quickly pick an existing account instead of reentering the same credentials over and over.
 - **Token Protection.** Microsoft single sign-on for Linux ensures that the refresh tokens are device bound and [enables apps](../../advanced/proof-of-possession-tokens.md) to acquire device bound access tokens. See [Token Protection](/azure/active-directory/conditional-access/concept-token-protection).
 
-## Prerequisites
+## User sign-in experience
+
+This video demonstrates the sign-in experience on brokered flows on Linux
+
+![Demo of the Linux Login component component](../../media/linux/linux-entra-login.gif)
+
+## How to opt in to use broker?
+
+### Update Application Definition
+
+In the MSAL Python library, we've introduced the `enable_broker_on_linux` flag, which enables the broker on both WSL and standalone Linux.
+- If your goal is to enable broker support solely on WSL for Azure CLI, you can consider modifying the Azure CLI app code to activate the `enable_broker_on_wsl` flag exclusively on WSL.
+- If you are writing a cross-platform application, you'll also need to use `enable_broker_on_windows`, as outlined in the [Using MSAL Python with Web Account Manager](wam.md) article.
+- You can set any combination of the following opt-in parameters to true:
+
+| Opt-in flag              | If app runs on                | App has registered this as a Desktop platform redirect URI in Azure portal       |
+| ------------------------ | --------------------------------- | -------------------------------------------------------------------------------- |
+| enable_broker_on_windows | Windows 10+                       | ms-appx-web://Microsoft.AAD.BrokerPlugin/your_client_id                          |
+| enable_broker_on_wsl     | WSL                               | ms-appx-web://Microsoft.AAD.BrokerPlugin/your_client_id                          |
+| enable_broker_on_mac     | Mac with Company Portal installed | msauth.com.msauth.unsignedapp://auth                                             |
+| enable_broker_on_linux   | Linux with Intune installed       | `https://login.microsoftonline.com/common/oauth2/nativeclient` (MUST be enabled) |
+
+Your application needs to support broker-specific redirect URIs. For `Linux` specifically, the URL for the redirect URI must be:
+
+```text
+https://login.microsoftonline.com/common/oauth2/nativeclient
+```
 
 ### .NET Installation
 
@@ -70,9 +96,7 @@ sudo dnf install libx11-6 libc++1 libc++abi1 libsecret-1-0 libwebkit2gtk-4.0-37 
 
 To use the broker, apps must provide the window handle to which the modal dialog be parented using `libx11` library. The window handle must be provided by the developer because it's infeasible for MSAL itself to infer the parent window. In the past, lack of handling parent window leads to bad user experiences where the authentication window was hidden behind the application window.
 
-For console applications, you can use code like the snippet below.
-
-Here’s sample code to use `libx11`:
+For console applications, here’s sample code to use `libx11`:
 
 ```csharp
 using System;
@@ -106,40 +130,6 @@ class X11Interop
 To set up a test app, you can either create your own console app as shown below, or use and update the sample app provided in [microsoft-authentication-library-for-dotnet](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet) under the path [/tests/devapps/WAM/NetWSLWam/Class1.cs](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/main/tests/devapps/WAM/NetWSLWam/Class1.cs)
 
 To use a broker on the Linux platform, set the `BrokerOptions` to `OperatingSystems.Linux` as shown in the below code snippet:
-
-```csharp
-using Microsoft.Identity.Client;
-using Microsoft.Identity.Client.Broker;
-
-from msal import PublicClientApplication
-
-class Program
-{
-    public static string ClientID = "your client id"; //msidentity-samples-testing tenant
-    public static string[] Scopes = { "User.Read" };
-    static void Main(string[] args)
-    {
-        Console.WriteLine("Hello World!");
-
-        var pcaBuilder = PublicClientApplicationBuilder.Create(ClientID)
-            .WithAuthority("https://login.microsoftonline.com/common")
-            .WithDefaultRedirectUri()
-            .WithBroker(new BrokerOptions(BrokerOptions.OperatingSystems.Linux){
-                        ListOperatingSystemAccounts = true,
-                        MsaPassthrough = true,
-                        Title = "MSAL WSL Test App"
-                        })
-            .Build();
-
-        AcquireTokenInteractiveParameterBuilder atparamBuilder = pcaBuilder.AcquireTokenInteractive(Scopes);
-
-        AuthenticationResult authenticationResult = atparamBuilder.ExecuteAsync().GetAwaiter().GetResult();
-        System.Console.WriteLine(authenticationResult.AccessToken);
-    }
-}
-```
-
-## Sample App
 
 A sample application is available in the [MSAL.NET GitHub repository](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/tree/main/tests/devapps/WAM/NetWSLWam).
 
@@ -256,12 +246,6 @@ To run the sample app:
 # Run From the root folder of microsoft-authentication-library-dotnet directory
 dotnet run --project tests/devapps/WAM/NetWSLWam/test.csproj
 ```
-
-## Demo of user Login
-
-This video demonstrates the sign-in experience on brokered flows on Linux
-
-![Demo of the Linux Login component component](../../media/linux/linux-entra-login.gif)
 
 ## Username/password flow
 
