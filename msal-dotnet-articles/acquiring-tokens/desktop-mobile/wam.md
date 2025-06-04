@@ -33,6 +33,9 @@ An authentication broker is an application that runs on a user’s machine that 
 > [!IMPORTANT]
 > Use MSAL.NET 4.52.0 or higher to get broker support.
 
+> [!IMPORTANT]
+> WAM supports only Microsoft Entra ID and does not work with third-party identity providers (IDPs).
+
 WAM support is split across two packages:
 
 - [Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client/) (i.e., MSAL) - core library for token acquisition.
