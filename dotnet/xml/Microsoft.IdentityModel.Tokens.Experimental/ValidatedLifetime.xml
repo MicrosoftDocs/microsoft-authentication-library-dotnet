@@ -1,0 +1,260 @@
+<Type Name="ValidatedLifetime" FullName="Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime">
+  <TypeSignature Language="C#" Value="public readonly struct ValidatedLifetime : IEquatable&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit ValidatedLifetime extends System.ValueType implements class System.IEquatable`1&lt;valuetype Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime&gt;" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime" />
+  <TypeSignature Language="VB.NET" Value="Public Structure ValidatedLifetime&#xA;Implements IEquatable(Of ValidatedLifetime)" />
+  <TypeSignature Language="F#" Value="type ValidatedLifetime = struct" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+    <AssemblyVersion>8.12.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.IsReadOnly]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IsReadOnly&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Represents a validated lifetime, including the NotBefore and Expires values.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ValidatedLifetime (DateTime? notBefore, DateTime? expires);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; notBefore, valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; expires) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime.#ctor(System.Nullable{System.DateTime},System.Nullable{System.DateTime})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (notBefore As Nullable(Of DateTime), expires As Nullable(Of DateTime))" />
+      <MemberSignature Language="F#" Value="new Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime : Nullable&lt;DateTime&gt; * Nullable&lt;DateTime&gt; -&gt; Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime" Usage="new Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime (notBefore, expires)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="notBefore" Type="System.Nullable&lt;System.DateTime&gt;" />
+        <Parameter Name="expires" Type="System.Nullable&lt;System.DateTime&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="notBefore">The <see cref="T:System.DateTime" /> representing the time from which the token is considered valid.</param>
+        <param name="expires">The <see cref="T:System.DateTime" /> representing the token's expiration time.</param>
+        <summary>
+            Initializes a new instance of <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime" />.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(valuetype Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime.Equals(Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Equals (other As ValidatedLifetime) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime -&gt; bool" Usage="validatedLifetime.Equals other" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime" />
+      </Parameters>
+      <Docs>
+        <param name="other">The <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime" /> to compare with the current instance.</param>
+        <summary>
+            Determines whether the specified <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime" /> is equal to the current instance.
+            </summary>
+        <returns>
+          <c>true</c> if the specified <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime" /> is equal to the current instance; otherwise, <c>false</c>.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object? obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime.Equals(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="validatedLifetime.Equals obj" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">The object to compare with the current instance.</param>
+        <summary>
+            Determines whether the specified object is equal to the current instance of <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime" />.
+            </summary>
+        <returns>
+          <c>true</c> if the specified object is equal to the current instance; otherwise, <c>false</c>.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Expires">
+      <MemberSignature Language="C#" Value="public DateTime? Expires { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; Expires" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime.Expires" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Expires As Nullable(Of DateTime)" />
+      <MemberSignature Language="F#" Value="member this.Expires : Nullable&lt;DateTime&gt;" Usage="Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime.Expires" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.DateTime&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The <see cref="T:System.DateTime" /> representing the token's expiration time.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime.GetHashCode" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="validatedLifetime.GetHashCode " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the hash code for this instance of <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime" />.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotBefore">
+      <MemberSignature Language="C#" Value="public DateTime? NotBefore { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; NotBefore" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime.NotBefore" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property NotBefore As Nullable(Of DateTime)" />
+      <MemberSignature Language="F#" Value="member this.NotBefore : Nullable&lt;DateTime&gt;" Usage="Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime.NotBefore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.DateTime&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The <see cref="T:System.DateTime" /> representing the time from which the token is considered valid.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime left, Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime left, valuetype Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime.op_Equality(Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime,Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator == (left As ValidatedLifetime, right As ValidatedLifetime) As Boolean" />
+      <MemberSignature Language="F#" Value="static member ( = ) : Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime * Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime -&gt; bool" Usage="left = right" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime" />
+        <Parameter Name="right" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime" />
+      </Parameters>
+      <Docs>
+        <param name="left">The left value to compare.</param>
+        <param name="right">The right value to compare.</param>
+        <summary>
+            Equality comparison operator for <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime" />.
+            </summary>
+        <returns>A boolean indicating whether the left value is equal to the right one.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime left, Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime left, valuetype Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime.op_Inequality(Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime,Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator != (left As ValidatedLifetime, right As ValidatedLifetime) As Boolean" />
+      <MemberSignature Language="F#" Value="static member op_Inequality : Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime * Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime -&gt; bool" Usage="Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime.op_Inequality (left, right)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime" />
+        <Parameter Name="right" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime" />
+      </Parameters>
+      <Docs>
+        <param name="left">The left value to compare.</param>
+        <param name="right">The right value to compare.</param>
+        <summary>
+            Inequality comparison operator for <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime" />.
+            </summary>
+        <returns>A boolean indicating whether the left value is not equal to the right one.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="validatedLifetime.ToString " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            The validated lifetime's string representation.
+            </summary>
+        <returns>A string representing the validated lifetime.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

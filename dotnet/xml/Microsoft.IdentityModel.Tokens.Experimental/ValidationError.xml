@@ -1,0 +1,382 @@
+<Type Name="ValidationError" FullName="Microsoft.IdentityModel.Tokens.Experimental.ValidationError">
+  <TypeSignature Language="C#" Value="public class ValidationError" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ValidationError extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationError" />
+  <TypeSignature Language="VB.NET" Value="Public Class ValidationError" />
+  <TypeSignature Language="F#" Value="type ValidationError = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+    <AssemblyVersion>8.12.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents an error that occurred during token validation.
+            If necessary, it can be used to create an instance of <see cref="T:System.Exception" />.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected internal ValidationError (Microsoft.IdentityModel.Tokens.Experimental.MessageDetail messageDetail, Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType validationFailureType, Type exceptionType, System.Diagnostics.StackFrame stackFrame, Exception? innerException = default);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(class Microsoft.IdentityModel.Tokens.Experimental.MessageDetail messageDetail, class Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType validationFailureType, class System.Type exceptionType, class System.Diagnostics.StackFrame stackFrame, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.ValidationError.#ctor(Microsoft.IdentityModel.Tokens.Experimental.MessageDetail,Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType,System.Type,System.Diagnostics.StackFrame,System.Exception)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Sub New (messageDetail As MessageDetail, validationFailureType As ValidationFailureType, exceptionType As Type, stackFrame As StackFrame, Optional innerException As Exception = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.IdentityModel.Tokens.Experimental.ValidationError : Microsoft.IdentityModel.Tokens.Experimental.MessageDetail * Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType * Type * System.Diagnostics.StackFrame * Exception -&gt; Microsoft.IdentityModel.Tokens.Experimental.ValidationError" Usage="new Microsoft.IdentityModel.Tokens.Experimental.ValidationError (messageDetail, validationFailureType, exceptionType, stackFrame, innerException)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="messageDetail" Type="Microsoft.IdentityModel.Tokens.Experimental.MessageDetail" />
+        <Parameter Name="validationFailureType" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType" />
+        <Parameter Name="exceptionType" Type="System.Type" />
+        <Parameter Name="stackFrame" Type="System.Diagnostics.StackFrame" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="messageDetail" />
+        <param name="validationFailureType" />
+        <param name="exceptionType" />
+        <param name="stackFrame" />
+        <param name="innerException" />
+        <summary>
+            Creates an instance of <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationError" /></summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddCurrentStackFrame">
+      <MemberSignature Language="C#" Value="public Microsoft.IdentityModel.Tokens.Experimental.ValidationError AddCurrentStackFrame (string filePath = &quot;&quot;, int lineNumber = 0, int skipFrames = 1);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.IdentityModel.Tokens.Experimental.ValidationError AddCurrentStackFrame(string filePath, int32 lineNumber, int32 skipFrames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.ValidationError.AddCurrentStackFrame(System.String,System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Function AddCurrentStackFrame (Optional filePath As String = &quot;&quot;, Optional lineNumber As Integer = 0, Optional skipFrames As Integer = 1) As ValidationError" />
+      <MemberSignature Language="F#" Value="member this.AddCurrentStackFrame : string * int * int -&gt; Microsoft.IdentityModel.Tokens.Experimental.ValidationError" Usage="validationError.AddCurrentStackFrame (filePath, lineNumber, skipFrames)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Tokens.Experimental.ValidationError</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filePath" Type="System.String">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.CallerFilePath]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.CallerFilePath&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="lineNumber" Type="System.Int32">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.CallerLineNumber]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.CallerLineNumber&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="skipFrames" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="filePath">The path to the file from which this method is called. Captured automatically by default.</param>
+        <param name="lineNumber">The line number from which this method is called. CAptured automatically by default.</param>
+        <param name="skipFrames">The number of stack frames to skip when capturing. Used to avoid capturing this method and get the caller instead.</param>
+        <summary>
+            Adds the current stack frame to the list of stack frames and returns the updated object.
+            If there is no cache entry for the given file path and line number, a new stack frame is created and added to the cache.
+            </summary>
+        <returns>The updated object.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddStackFrame">
+      <MemberSignature Language="C#" Value="public Microsoft.IdentityModel.Tokens.Experimental.ValidationError AddStackFrame (System.Diagnostics.StackFrame stackFrame);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.IdentityModel.Tokens.Experimental.ValidationError AddStackFrame(class System.Diagnostics.StackFrame stackFrame) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.ValidationError.AddStackFrame(System.Diagnostics.StackFrame)" />
+      <MemberSignature Language="VB.NET" Value="Public Function AddStackFrame (stackFrame As StackFrame) As ValidationError" />
+      <MemberSignature Language="F#" Value="member this.AddStackFrame : System.Diagnostics.StackFrame -&gt; Microsoft.IdentityModel.Tokens.Experimental.ValidationError" Usage="validationError.AddStackFrame stackFrame" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Tokens.Experimental.ValidationError</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stackFrame" Type="System.Diagnostics.StackFrame" />
+      </Parameters>
+      <Docs>
+        <param name="stackFrame">The <see cref="T:System.Diagnostics.StackFrame" /> to be added.</param>
+        <summary>
+            Adds a stack frame to the list of stack frames and returns the updated object.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateException">
+      <MemberSignature Language="C#" Value="protected virtual Exception CreateException ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Exception CreateException() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.ValidationError.CreateException" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function CreateException () As Exception" />
+      <MemberSignature Language="F#" Value="abstract member CreateException : unit -&gt; Exception&#xA;override this.CreateException : unit -&gt; Exception" Usage="validationError.CreateException " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates an instance of an <see cref="T:System.Exception" /> using <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationError" /></summary>
+        <returns>An instance of an Exception.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExceptionType">
+      <MemberSignature Language="C#" Value="public Type ExceptionType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ExceptionType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationError.ExceptionType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ExceptionType As Type" />
+      <MemberSignature Language="F#" Value="member this.ExceptionType : Type" Usage="Microsoft.IdentityModel.Tokens.Experimental.ValidationError.ExceptionType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the type of exception that occurred.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FailureType">
+      <MemberSignature Language="C#" Value="public Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType FailureType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType FailureType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationError.FailureType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property FailureType As ValidationFailureType" />
+      <MemberSignature Language="F#" Value="member this.FailureType : Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType" Usage="Microsoft.IdentityModel.Tokens.Experimental.ValidationError.FailureType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the type of validation failure that occurred.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCurrentStackFrame">
+      <MemberSignature Language="C#" Value="public static System.Diagnostics.StackFrame GetCurrentStackFrame (string filePath = &quot;&quot;, int lineNumber = 0, int skipFrames = 1);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Diagnostics.StackFrame GetCurrentStackFrame(string filePath, int32 lineNumber, int32 skipFrames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.ValidationError.GetCurrentStackFrame(System.String,System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetCurrentStackFrame (Optional filePath As String = &quot;&quot;, Optional lineNumber As Integer = 0, Optional skipFrames As Integer = 1) As StackFrame" />
+      <MemberSignature Language="F#" Value="static member GetCurrentStackFrame : string * int * int -&gt; System.Diagnostics.StackFrame" Usage="Microsoft.IdentityModel.Tokens.Experimental.ValidationError.GetCurrentStackFrame (filePath, lineNumber, skipFrames)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.StackFrame</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filePath" Type="System.String">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.CallerFilePath]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.CallerFilePath&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="lineNumber" Type="System.Int32">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.CallerLineNumber]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.CallerLineNumber&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="skipFrames" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="filePath">The path to the file from which this method is called. Captured automatically by default.</param>
+        <param name="lineNumber">The line number from which this method is called. CAptured automatically by default.</param>
+        <param name="skipFrames">The number of stack frames to skip when capturing. Used to avoid capturing this method and get the caller instead.</param>
+        <summary>
+            Returns the stack frame corresponding to the file path and line number from which this method is called.
+            If there is no cache entry for the given file path and line number, a new stack frame is created and added to the cache.
+            </summary>
+        <returns>The captured stack frame.</returns>
+        <remarks>If this is called from a helper method, consider adding an extra skip frame to avoid capturing the helper instead.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetException">
+      <MemberSignature Language="C#" Value="public Exception GetException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Exception GetException() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.ValidationError.GetException" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetException () As Exception" />
+      <MemberSignature Language="F#" Value="member this.GetException : unit -&gt; Exception" Usage="validationError.GetException " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates and returns instance of an <see cref="T:System.Exception" /> using <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationError" /></summary>
+        <returns>An instance of an Exception.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InnerException">
+      <MemberSignature Language="C#" Value="public Exception? InnerException { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception InnerException" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationError.InnerException" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InnerException As Exception" />
+      <MemberSignature Language="F#" Value="member this.InnerException : Exception" Usage="Microsoft.IdentityModel.Tokens.Experimental.ValidationError.InnerException" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the inner exception that occurred.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Log">
+      <MemberSignature Language="C#" Value="public void Log (Microsoft.Extensions.Logging.ILogger logger);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Log(class Microsoft.Extensions.Logging.ILogger logger) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.ValidationError.Log(Microsoft.Extensions.Logging.ILogger)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Log (logger As ILogger)" />
+      <MemberSignature Language="F#" Value="member this.Log : Microsoft.Extensions.Logging.ILogger -&gt; unit" Usage="validationError.Log logger" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.CLSCompliant(false)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.CLSCompliant(false)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="logger" Type="Microsoft.Extensions.Logging.ILogger" />
+      </Parameters>
+      <Docs>
+        <param name="logger">The <see cref="T:Microsoft.Extensions.Logging.ILogger" /> to be used for logging.</param>
+        <summary>
+            Logs the validation error.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationError.Message" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Message As String" />
+      <MemberSignature Language="F#" Value="member this.Message : string" Usage="Microsoft.IdentityModel.Tokens.Experimental.ValidationError.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the message that explains the error.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NullParameter">
+      <MemberSignature Language="C#" Value="public static Microsoft.IdentityModel.Tokens.Experimental.ValidationError NullParameter (string parameterName, System.Diagnostics.StackFrame stackFrame);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.IdentityModel.Tokens.Experimental.ValidationError NullParameter(string parameterName, class System.Diagnostics.StackFrame stackFrame) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.ValidationError.NullParameter(System.String,System.Diagnostics.StackFrame)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function NullParameter (parameterName As String, stackFrame As StackFrame) As ValidationError" />
+      <MemberSignature Language="F#" Value="static member NullParameter : string * System.Diagnostics.StackFrame -&gt; Microsoft.IdentityModel.Tokens.Experimental.ValidationError" Usage="Microsoft.IdentityModel.Tokens.Experimental.ValidationError.NullParameter (parameterName, stackFrame)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Tokens.Experimental.ValidationError</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+        <Parameter Name="stackFrame" Type="System.Diagnostics.StackFrame" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">The name of the parameter.</param>
+        <param name="stackFrame">The stack frame where the error occurred.</param>
+        <summary>
+            Creates a new instance of <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationError" /> representing a null parameter.
+            </summary>
+        <returns>A new <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationError" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StackFrames">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.Diagnostics.StackFrame&gt; StackFrames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class System.Diagnostics.StackFrame&gt; StackFrames" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationError.StackFrames" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property StackFrames As IList(Of StackFrame)" />
+      <MemberSignature Language="F#" Value="member this.StackFrames : System.Collections.Generic.IList&lt;System.Diagnostics.StackFrame&gt;" Usage="Microsoft.IdentityModel.Tokens.Experimental.ValidationError.StackFrames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Diagnostics.StackFrame&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the stack frames where the exception occurred.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,36 @@
+<Type Name="IssuerValidationDelegateAsync" FullName="Microsoft.IdentityModel.Tokens.Experimental.IssuerValidationDelegateAsync">
+  <TypeSignature Language="C#" Value="public delegate System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedIssuer,Microsoft.IdentityModel.Tokens.Experimental.IssuerValidationError&gt;&gt; IssuerValidationDelegateAsync(string issuer, SecurityToken securityToken, ValidationParameters validationParameters, CallContext callContext, CancellationToken cancellationToken);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed IssuerValidationDelegateAsync extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.IdentityModel.Tokens.Experimental.IssuerValidationDelegateAsync" />
+  <TypeSignature Language="VB.NET" Value="Public Delegate Function IssuerValidationDelegateAsync(issuer As String, securityToken As SecurityToken, validationParameters As ValidationParameters, callContext As CallContext, cancellationToken As CancellationToken) As Task(Of ValidationResult(Of ValidatedIssuer, IssuerValidationError)) " />
+  <TypeSignature Language="F#" Value="type IssuerValidationDelegateAsync = delegate of string * SecurityToken * ValidationParameters * CallContext * CancellationToken -&gt; Task&lt;ValidationResult&lt;ValidatedIssuer, IssuerValidationError&gt;&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+    <AssemblyVersion>8.12.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="issuer" Type="System.String" />
+    <Parameter Name="securityToken" Type="Microsoft.IdentityModel.Tokens.SecurityToken" />
+    <Parameter Name="validationParameters" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters" />
+    <Parameter Name="callContext" Type="Microsoft.IdentityModel.Tokens.CallContext" />
+    <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedIssuer,Microsoft.IdentityModel.Tokens.Experimental.IssuerValidationError&gt;&gt;</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="issuer">The issuer to validate.</param>
+    <param name="securityToken">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" /> that is being validated.</param>
+    <param name="validationParameters">The <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters" /> to be used for validating the token.</param>
+    <param name="callContext" />
+    <param name="cancellationToken" />
+    <summary>
+            Definition for delegate that will validate the issuer value in a token.
+            </summary>
+    <returns>An <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2" />that contains the results of validating the issuer.</returns>
+    <remarks>This delegate is not expected to throw.</remarks>
+  </Docs>
+</Type>

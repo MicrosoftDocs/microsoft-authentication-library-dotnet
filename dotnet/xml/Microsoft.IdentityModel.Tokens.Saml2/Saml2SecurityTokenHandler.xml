@@ -1,9 +1,9 @@
 <Type Name="Saml2SecurityTokenHandler" FullName="Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler">
-  <TypeSignature Language="C#" Value="public class Saml2SecurityTokenHandler : Microsoft.IdentityModel.Tokens.SecurityTokenHandler" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Saml2SecurityTokenHandler extends Microsoft.IdentityModel.Tokens.SecurityTokenHandler" />
+  <TypeSignature Language="C#" Value="public class Saml2SecurityTokenHandler : Microsoft.IdentityModel.Tokens.SecurityTokenHandler, Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Saml2SecurityTokenHandler extends Microsoft.IdentityModel.Tokens.SecurityTokenHandler implements class Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation" />
   <TypeSignature Language="DocId" Value="T:Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler" />
-  <TypeSignature Language="VB.NET" Value="Public Class Saml2SecurityTokenHandler&#xA;Inherits SecurityTokenHandler" />
-  <TypeSignature Language="F#" Value="type Saml2SecurityTokenHandler = class&#xA;    inherit SecurityTokenHandler" />
+  <TypeSignature Language="VB.NET" Value="Public Class Saml2SecurityTokenHandler&#xA;Inherits SecurityTokenHandler&#xA;Implements IResultBasedValidation" />
+  <TypeSignature Language="F#" Value="type Saml2SecurityTokenHandler = class&#xA;    inherit SecurityTokenHandler&#xA;    interface IResultBasedValidation" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
     <AssemblyVersion>6.27.0.0</AssemblyVersion>
@@ -48,11 +48,16 @@
     <AssemblyVersion>8.9.0.0</AssemblyVersion>
     <AssemblyVersion>8.10.0.0</AssemblyVersion>
     <AssemblyVersion>8.11.0.0</AssemblyVersion>
+    <AssemblyVersion>8.12.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.IdentityModel.Tokens.SecurityTokenHandler</BaseTypeName>
   </Base>
-  <Interfaces />
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation</InterfaceName>
+    </Interface>
+  </Interfaces>
   <Docs>
     <summary>
             A <see cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenHandler" /> designed for creating and validating Saml2 Tokens. See: http://docs.oasis-open.org/security/saml/v2.0/saml-core-2.0-os.pdf
@@ -68,7 +73,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -85,7 +90,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -107,7 +112,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -133,7 +138,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -159,7 +164,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -181,7 +186,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -203,7 +208,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.ICollection&lt;Microsoft.IdentityModel.Tokens.Saml2.Saml2Attribute&gt;</ReturnType>
@@ -230,7 +235,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -259,7 +264,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.Saml2.Saml2Advice</ReturnType>
@@ -287,7 +292,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.Saml2.Saml2Attribute</ReturnType>
@@ -315,7 +320,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.Saml2.Saml2AttributeStatement</ReturnType>
@@ -342,7 +347,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.Saml2.Saml2AuthenticationStatement</ReturnType>
@@ -368,7 +373,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.Saml2.Saml2AuthorizationDecisionStatement</ReturnType>
@@ -394,7 +399,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Claims.ClaimsIdentity</ReturnType>
@@ -425,7 +430,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.Saml2.Saml2Conditions</ReturnType>
@@ -469,7 +474,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.Saml2.Saml2NameIdentifier</ReturnType>
@@ -497,7 +502,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.IdentityModel.Tokens.Saml2.Saml2Statement&gt;</ReturnType>
@@ -529,7 +534,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.IdentityModel.Tokens.Saml2.Saml2Statement&gt;</ReturnType>
@@ -563,7 +568,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.Saml2.Saml2Subject</ReturnType>
@@ -590,7 +595,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.SecurityToken</ReturnType>
@@ -617,7 +622,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.SecurityToken</ReturnType>
@@ -646,7 +651,7 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -655,6 +660,134 @@
         <summary>
             Default value of the Actor Claim Name used when processing actor claims.
             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync">
+      <MemberSignature Language="C#" Value="System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt; IResultBasedValidation.ValidateTokenAsync (Microsoft.IdentityModel.Tokens.SecurityToken token, Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters validationParameters, Microsoft.IdentityModel.Tokens.CallContext callContext);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;valuetype Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2&lt;class Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken, class Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt; Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync(class Microsoft.IdentityModel.Tokens.SecurityToken token, class Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters validationParameters, class Microsoft.IdentityModel.Tokens.CallContext callContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.Microsoft#IdentityModel#Tokens#Experimental#IResultBasedValidation#ValidateTokenAsync(Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext)" />
+      <MemberSignature Language="VB.NET" Value="Function ValidateTokenAsync (token As SecurityToken, validationParameters As ValidationParameters, callContext As CallContext) As Task(Of ValidationResult(Of ValidatedToken, ValidationError)) Implements IResultBasedValidation.ValidateTokenAsync" />
+      <MemberSignature Language="F#" Value="abstract member Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync : Microsoft.IdentityModel.Tokens.SecurityToken * Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters * Microsoft.IdentityModel.Tokens.CallContext -&gt; System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken, Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt;&#xA;override this.Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync : Microsoft.IdentityModel.Tokens.SecurityToken * Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters * Microsoft.IdentityModel.Tokens.CallContext -&gt; System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken, Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt;" Usage="saml2SecurityTokenHandler.Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync (token, validationParameters, callContext)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync(Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="Microsoft.IdentityModel.Tokens.SecurityToken" />
+        <Parameter Name="validationParameters" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters" />
+        <Parameter Name="callContext" Type="Microsoft.IdentityModel.Tokens.CallContext" />
+      </Parameters>
+      <Docs>
+        <param name="token">To be added.</param>
+        <param name="validationParameters">To be added.</param>
+        <param name="callContext">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync">
+      <MemberSignature Language="C#" Value="System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt; IResultBasedValidation.ValidateTokenAsync (string token, Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters validationParameters, Microsoft.IdentityModel.Tokens.CallContext callContext);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;valuetype Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2&lt;class Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken, class Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt; Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync(string token, class Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters validationParameters, class Microsoft.IdentityModel.Tokens.CallContext callContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.Microsoft#IdentityModel#Tokens#Experimental#IResultBasedValidation#ValidateTokenAsync(System.String,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext)" />
+      <MemberSignature Language="VB.NET" Value="Function ValidateTokenAsync (token As String, validationParameters As ValidationParameters, callContext As CallContext) As Task(Of ValidationResult(Of ValidatedToken, ValidationError)) Implements IResultBasedValidation.ValidateTokenAsync" />
+      <MemberSignature Language="F#" Value="abstract member Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync : string * Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters * Microsoft.IdentityModel.Tokens.CallContext -&gt; System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken, Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt;&#xA;override this.Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync : string * Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters * Microsoft.IdentityModel.Tokens.CallContext -&gt; System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken, Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt;" Usage="saml2SecurityTokenHandler.Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync (token, validationParameters, callContext)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync(System.String,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.String" />
+        <Parameter Name="validationParameters" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters" />
+        <Parameter Name="callContext" Type="Microsoft.IdentityModel.Tokens.CallContext" />
+      </Parameters>
+      <Docs>
+        <param name="token">To be added.</param>
+        <param name="validationParameters">To be added.</param>
+        <param name="callContext">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync">
+      <MemberSignature Language="C#" Value="System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt; IResultBasedValidation.ValidateTokenAsync (Microsoft.IdentityModel.Tokens.SecurityToken token, Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters validationParameters, Microsoft.IdentityModel.Tokens.CallContext callContext, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;valuetype Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2&lt;class Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken, class Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt; Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync(class Microsoft.IdentityModel.Tokens.SecurityToken token, class Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters validationParameters, class Microsoft.IdentityModel.Tokens.CallContext callContext, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.Microsoft#IdentityModel#Tokens#Experimental#IResultBasedValidation#ValidateTokenAsync(Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Function ValidateTokenAsync (token As SecurityToken, validationParameters As ValidationParameters, callContext As CallContext, cancellationToken As CancellationToken) As Task(Of ValidationResult(Of ValidatedToken, ValidationError)) Implements IResultBasedValidation.ValidateTokenAsync" />
+      <MemberSignature Language="F#" Value="abstract member Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync : Microsoft.IdentityModel.Tokens.SecurityToken * Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters * Microsoft.IdentityModel.Tokens.CallContext * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken, Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt;&#xA;override this.Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync : Microsoft.IdentityModel.Tokens.SecurityToken * Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters * Microsoft.IdentityModel.Tokens.CallContext * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken, Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt;" Usage="saml2SecurityTokenHandler.Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync (token, validationParameters, callContext, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync(Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext,System.Threading.CancellationToken)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="Microsoft.IdentityModel.Tokens.SecurityToken" />
+        <Parameter Name="validationParameters" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters" />
+        <Parameter Name="callContext" Type="Microsoft.IdentityModel.Tokens.CallContext" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">To be added.</param>
+        <param name="validationParameters">To be added.</param>
+        <param name="callContext">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync">
+      <MemberSignature Language="C#" Value="System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt; IResultBasedValidation.ValidateTokenAsync (string token, Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters validationParameters, Microsoft.IdentityModel.Tokens.CallContext callContext, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;valuetype Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2&lt;class Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken, class Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt; Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync(string token, class Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters validationParameters, class Microsoft.IdentityModel.Tokens.CallContext callContext, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.Microsoft#IdentityModel#Tokens#Experimental#IResultBasedValidation#ValidateTokenAsync(System.String,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Function ValidateTokenAsync (token As String, validationParameters As ValidationParameters, callContext As CallContext, cancellationToken As CancellationToken) As Task(Of ValidationResult(Of ValidatedToken, ValidationError)) Implements IResultBasedValidation.ValidateTokenAsync" />
+      <MemberSignature Language="F#" Value="abstract member Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync : string * Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters * Microsoft.IdentityModel.Tokens.CallContext * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken, Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt;&#xA;override this.Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync : string * Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters * Microsoft.IdentityModel.Tokens.CallContext * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken, Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt;" Usage="saml2SecurityTokenHandler.Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync (token, validationParameters, callContext, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync(System.String,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext,System.Threading.CancellationToken)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.String" />
+        <Parameter Name="validationParameters" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters" />
+        <Parameter Name="callContext" Type="Microsoft.IdentityModel.Tokens.CallContext" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">To be added.</param>
+        <param name="validationParameters">To be added.</param>
+        <param name="callContext">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -667,7 +800,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -698,7 +831,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -729,7 +862,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -758,7 +891,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -787,7 +920,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -817,7 +950,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken</ReturnType>
@@ -845,7 +978,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken</ReturnType>
@@ -873,7 +1006,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.SecurityToken</ReturnType>
@@ -901,7 +1034,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.SecurityToken</ReturnType>
@@ -928,7 +1061,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.SecurityToken</ReturnType>
@@ -957,7 +1090,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.SecurityKey</ReturnType>
@@ -988,7 +1121,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.Saml2.Saml2Serializer</ReturnType>
@@ -1011,7 +1144,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1045,7 +1178,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Type</ReturnType>
@@ -1067,7 +1200,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1097,7 +1230,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1126,7 +1259,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1155,7 +1288,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1186,7 +1319,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1215,7 +1348,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1247,7 +1380,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1274,7 +1407,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityToken</ReturnType>
@@ -1310,7 +1443,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1339,7 +1472,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Claims.ClaimsPrincipal</ReturnType>
@@ -1375,7 +1508,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Claims.ClaimsPrincipal</ReturnType>
@@ -1408,7 +1541,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.TokenValidationResult&gt;</ReturnType>
@@ -1435,7 +1568,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1464,7 +1597,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1492,7 +1625,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens.Saml</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

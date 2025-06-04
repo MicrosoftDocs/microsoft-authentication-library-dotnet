@@ -1,22 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-web-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.IdentityModel.Abstractions" Version="8.11.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.JsonWebTokens" Version="8.11.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Abstractions" Version="8.12.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.JsonWebTokens" Version="8.12.0.0" />
     <Assembly Name="Microsoft.IdentityModel.KeyVaultExtensions" Version="7.7.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.Logging" Version="8.11.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.LoggingExtensions" Version="8.11.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Logging" Version="8.12.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.LoggingExtensions" Version="8.12.0.0" />
     <Assembly Name="Microsoft.IdentityModel.ManagedKeyVaultSecurityKey" Version="7.7.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols" Version="8.11.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="8.11.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.SignedHttpRequest" Version="8.11.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.WsFederation" Version="8.11.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.TestExtensions" Version="8.11.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Tokens" Version="8.11.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Tokens.Saml" Version="8.11.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Validators" Version="8.11.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Xml" Version="8.11.0.0" />
-    <Assembly Name="System.IdentityModel.Tokens.Jwt" Version="8.11.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols" Version="8.12.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="8.12.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.SignedHttpRequest" Version="8.12.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.WsFederation" Version="8.12.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.TestExtensions" Version="8.12.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Tokens" Version="8.12.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Tokens.Saml" Version="8.12.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Validators" Version="8.12.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Xml" Version="8.12.0.0" />
+    <Assembly Name="System.IdentityModel.Tokens.Jwt" Version="8.12.0.0" />
   </Assemblies>
   <Namespace Name="Microsoft.IdentityModel.Abstractions">
     <Type Name="Microsoft.IdentityModel.Abstractions.EventLogLevel" Id="T:Microsoft.IdentityModel.Abstractions.EventLogLevel">
@@ -158,6 +158,10 @@
       <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.EncryptToken(System.String,Microsoft.IdentityModel.Tokens.EncryptingCredentials,System.Collections.Generic.IDictionary{System.String,System.Object})" />
       <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.EncryptToken(System.String,Microsoft.IdentityModel.Tokens.EncryptingCredentials,System.String)" />
       <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.EncryptToken(System.String,Microsoft.IdentityModel.Tokens.EncryptingCredentials,System.String,System.Collections.Generic.IDictionary{System.String,System.Object})" />
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.Microsoft#IdentityModel#Tokens#Experimental#IResultBasedValidation#ValidateTokenAsync(Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext)" />
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.Microsoft#IdentityModel#Tokens#Experimental#IResultBasedValidation#ValidateTokenAsync(Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext,System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.Microsoft#IdentityModel#Tokens#Experimental#IResultBasedValidation#ValidateTokenAsync(System.String,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext)" />
+      <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.Microsoft#IdentityModel#Tokens#Experimental#IResultBasedValidation#ValidateTokenAsync(System.String,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext,System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadJsonWebToken(System.ReadOnlyMemory{System.Char})" />
       <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadJsonWebToken(System.String)" />
       <Member Id="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(System.String)" />
@@ -407,11 +411,13 @@
       <Member Id="M:Microsoft.IdentityModel.Protocols.ConfigurationManager`1.#ctor(System.String,Microsoft.IdentityModel.Protocols.IConfigurationRetriever{`0},Microsoft.IdentityModel.Protocols.IDocumentRetriever,Microsoft.IdentityModel.Protocols.Configuration.LastKnownGoodConfigurationCacheOptions)" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.ConfigurationManager`1.#ctor(System.String,Microsoft.IdentityModel.Protocols.IConfigurationRetriever{`0},Microsoft.IdentityModel.Protocols.IDocumentRetriever,Microsoft.IdentityModel.Protocols.IConfigurationValidator{`0})" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.ConfigurationManager`1.#ctor(System.String,Microsoft.IdentityModel.Protocols.IConfigurationRetriever{`0},Microsoft.IdentityModel.Protocols.IDocumentRetriever,Microsoft.IdentityModel.Protocols.IConfigurationValidator{`0},Microsoft.IdentityModel.Protocols.Configuration.LastKnownGoodConfigurationCacheOptions)" />
+      <Member Id="M:Microsoft.IdentityModel.Protocols.ConfigurationManager`1.#ctor(System.String,Microsoft.IdentityModel.Protocols.IConfigurationRetriever{`0},Microsoft.IdentityModel.Protocols.IDocumentRetriever,Microsoft.IdentityModel.Protocols.IConfigurationValidator{`0},Microsoft.IdentityModel.Protocols.Configuration.LastKnownGoodConfigurationCacheOptions,Microsoft.IdentityModel.Protocols.Configuration.IConfigurationEventHandler{`0})" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.ConfigurationManager`1.#ctor(System.String,Microsoft.IdentityModel.Protocols.IConfigurationRetriever{`0},System.Net.Http.HttpClient)" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetBaseConfigurationAsync(System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationAsync" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationAsync(System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.ConfigurationManager`1.RequestRefresh" />
+      <Member Id="P:Microsoft.IdentityModel.Protocols.ConfigurationManager`1.ConfigurationEventHandler" />
     </Type>
     <Type Name="Microsoft.IdentityModel.Protocols.ConfigurationValidationResult" Id="T:Microsoft.IdentityModel.Protocols.ConfigurationValidationResult">
       <Member Id="M:Microsoft.IdentityModel.Protocols.ConfigurationValidationResult.#ctor" />
@@ -468,6 +474,16 @@
     </Type>
   </Namespace>
   <Namespace Name="Microsoft.IdentityModel.Protocols.Configuration">
+    <Type Name="Microsoft.IdentityModel.Protocols.Configuration.ConfigurationEventHandlerResult`1" Id="T:Microsoft.IdentityModel.Protocols.Configuration.ConfigurationEventHandlerResult`1">
+      <Member Id="F:Microsoft.IdentityModel.Protocols.Configuration.ConfigurationEventHandlerResult`1.NoResult" />
+      <Member Id="M:Microsoft.IdentityModel.Protocols.Configuration.ConfigurationEventHandlerResult`1.#ctor(`0,System.DateTimeOffset)" />
+      <Member Id="P:Microsoft.IdentityModel.Protocols.Configuration.ConfigurationEventHandlerResult`1.Configuration" />
+      <Member Id="P:Microsoft.IdentityModel.Protocols.Configuration.ConfigurationEventHandlerResult`1.RetrievalTime" />
+    </Type>
+    <Type Name="Microsoft.IdentityModel.Protocols.Configuration.IConfigurationEventHandler`1" Id="T:Microsoft.IdentityModel.Protocols.Configuration.IConfigurationEventHandler`1">
+      <Member Id="M:Microsoft.IdentityModel.Protocols.Configuration.IConfigurationEventHandler`1.AfterUpdateAsync(System.String,`0,System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.IdentityModel.Protocols.Configuration.IConfigurationEventHandler`1.BeforeRetrieveAsync(System.String,System.Threading.CancellationToken)" />
+    </Type>
     <Type Name="Microsoft.IdentityModel.Protocols.Configuration.InvalidConfigurationException" Id="T:Microsoft.IdentityModel.Protocols.Configuration.InvalidConfigurationException">
       <Member Id="M:Microsoft.IdentityModel.Protocols.Configuration.InvalidConfigurationException.#ctor" />
       <Member Id="M:Microsoft.IdentityModel.Protocols.Configuration.InvalidConfigurationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
@@ -1622,6 +1638,7 @@
       <Member Id="M:Microsoft.IdentityModel.Tokens.JsonWebKeySet.Create(System.String)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.JsonWebKeySet.GetSigningKeys" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.JsonWebKeySet.AdditionalData" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.JsonWebKeySet.JsonData" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.JsonWebKeySet.Keys" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.JsonWebKeySet.SkipUnresolvedJsonWebKeys" />
     </Type>
@@ -2151,13 +2168,20 @@
       <Member Id="F:Microsoft.IdentityModel.Tokens.ValidationFailure.None" />
     </Type>
     <Type Name="Microsoft.IdentityModel.Tokens.Validators" Id="T:Microsoft.IdentityModel.Tokens.Validators">
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Validators.ValidateAlgorithm(System.String,Microsoft.IdentityModel.Tokens.SecurityKey,Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.Validators.ValidateAlgorithm(System.String,Microsoft.IdentityModel.Tokens.SecurityKey,Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.TokenValidationParameters)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.Validators.ValidateAudience(System.Collections.Generic.IEnumerable{System.String},Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.TokenValidationParameters)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Validators.ValidateAudience(System.Collections.Generic.IList{System.String},Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.Validators.ValidateIssuer(System.String,Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.TokenValidationParameters)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Validators.ValidateIssuerAsync(System.String,Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext,System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.Validators.ValidateIssuerSecurityKey(Microsoft.IdentityModel.Tokens.SecurityKey,Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.TokenValidationParameters)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Validators.ValidateIssuerSigningKey(Microsoft.IdentityModel.Tokens.SecurityKey,Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(System.Nullable{System.DateTime},System.Nullable{System.DateTime},Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(System.Nullable{System.DateTime},System.Nullable{System.DateTime},Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.TokenValidationParameters)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Validators.ValidateTokenReplay(System.Nullable{System.DateTime},System.String,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.Validators.ValidateTokenReplay(System.Nullable{System.DateTime},System.String,Microsoft.IdentityModel.Tokens.TokenValidationParameters)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.Validators.ValidateTokenReplay(System.String,System.Nullable{System.DateTime},Microsoft.IdentityModel.Tokens.TokenValidationParameters)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Validators.ValidateTokenType(System.String,Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.Validators.ValidateTokenType(System.String,Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.TokenValidationParameters)" />
     </Type>
     <Type Name="Microsoft.IdentityModel.Tokens.X509EncryptingCredentials" Id="T:Microsoft.IdentityModel.Tokens.X509EncryptingCredentials">
@@ -2194,6 +2218,256 @@
       <Member Id="P:Microsoft.IdentityModel.Tokens.Configuration.LKGConfigurationCacheOptions.LastKnownGoodConfigurationSizeLimit" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.Configuration.LKGConfigurationCacheOptions.RemoveExpiredValues" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.Configuration.LKGConfigurationCacheOptions.TaskCreationOptions" />
+    </Type>
+  </Namespace>
+  <Namespace Name="Microsoft.IdentityModel.Tokens.Experimental">
+    <Type Name="Microsoft.IdentityModel.Tokens.Experimental.AlgorithmValidationDelegate" Id="T:Microsoft.IdentityModel.Tokens.Experimental.AlgorithmValidationDelegate" />
+    <Type Name="Microsoft.IdentityModel.Tokens.Experimental.AlgorithmValidationError" Id="T:Microsoft.IdentityModel.Tokens.Experimental.AlgorithmValidationError">
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.AlgorithmValidationError.#ctor(Microsoft.IdentityModel.Tokens.Experimental.MessageDetail,Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType,System.Type,System.Diagnostics.StackFrame,System.String,System.Exception)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.AlgorithmValidationError.CreateException" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.AlgorithmValidationError.NullParameter(System.String,System.Diagnostics.StackFrame)" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.AlgorithmValidationError.InvalidAlgorithm" />
+    </Type>
+    <Type Name="Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationDelegate" Id="T:Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationDelegate" />
+    <Type Name="Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationError" Id="T:Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationError">
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationError.#ctor(Microsoft.IdentityModel.Tokens.Experimental.MessageDetail,Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType,System.Type,System.Diagnostics.StackFrame,System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.Exception)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationError.CreateException" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationError.NullParameter(System.String,System.Diagnostics.StackFrame)" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationError.TokenAudiences" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationError.ValidAudiences" />
+    </Type>
+    <Type Name="Microsoft.IdentityModel.Tokens.Experimental.DecryptionKeyResolverDelegate" Id="T:Microsoft.IdentityModel.Tokens.Experimental.DecryptionKeyResolverDelegate" />
+    <Type Name="Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation" Id="T:Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation">
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync(Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync(Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext,System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync(System.String,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync(System.String,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext,System.Threading.CancellationToken)" />
+    </Type>
+    <Type Name="Microsoft.IdentityModel.Tokens.Experimental.IssuerSigningKeyResolverDelegate" Id="T:Microsoft.IdentityModel.Tokens.Experimental.IssuerSigningKeyResolverDelegate" />
+    <Type Name="Microsoft.IdentityModel.Tokens.Experimental.IssuerSigningKeyValidationDelegate" Id="T:Microsoft.IdentityModel.Tokens.Experimental.IssuerSigningKeyValidationDelegate" />
+    <Type Name="Microsoft.IdentityModel.Tokens.Experimental.IssuerSigningKeyValidationError" Id="T:Microsoft.IdentityModel.Tokens.Experimental.IssuerSigningKeyValidationError">
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.IssuerSigningKeyValidationError.#ctor(Microsoft.IdentityModel.Tokens.Experimental.MessageDetail,Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType,System.Type,System.Diagnostics.StackFrame,Microsoft.IdentityModel.Tokens.SecurityKey,System.Exception)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.IssuerSigningKeyValidationError.CreateException" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.IssuerSigningKeyValidationError.NullParameter(System.String,System.Diagnostics.StackFrame)" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.IssuerSigningKeyValidationError.InvalidSigningKey" />
+    </Type>
+    <Type Name="Microsoft.IdentityModel.Tokens.Experimental.IssuerValidationDelegateAsync" Id="T:Microsoft.IdentityModel.Tokens.Experimental.IssuerValidationDelegateAsync" />
+    <Type Name="Microsoft.IdentityModel.Tokens.Experimental.IssuerValidationError" Id="T:Microsoft.IdentityModel.Tokens.Experimental.IssuerValidationError">
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.IssuerValidationError.#ctor(Microsoft.IdentityModel.Tokens.Experimental.MessageDetail,Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType,System.Type,System.Diagnostics.StackFrame,System.String,System.Exception)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.IssuerValidationError.CreateException" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.IssuerValidationError.NullParameter(System.String,System.Diagnostics.StackFrame)" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.IssuerValidationError.InvalidIssuer" />
+    </Type>
+    <Type Name="Microsoft.IdentityModel.Tokens.Experimental.IssuerValidationSource" Id="T:Microsoft.IdentityModel.Tokens.Experimental.IssuerValidationSource">
+      <Member Id="F:Microsoft.IdentityModel.Tokens.Experimental.IssuerValidationSource.IssuerMatchedConfiguration" />
+      <Member Id="F:Microsoft.IdentityModel.Tokens.Experimental.IssuerValidationSource.IssuerMatchedValidationParameters" />
+      <Member Id="F:Microsoft.IdentityModel.Tokens.Experimental.IssuerValidationSource.NotValidated" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.IssuerValidationSource.#ctor(System.String)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.IssuerValidationSource.ToString" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.IssuerValidationSource.Name" />
+    </Type>
+    <Type Name="Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationDelegate" Id="T:Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationDelegate" />
+    <Type Name="Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationError" Id="T:Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationError">
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationError.#ctor(Microsoft.IdentityModel.Tokens.Experimental.MessageDetail,Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType,System.Type,System.Diagnostics.StackFrame,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Exception)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationError.CreateException" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationError.NullParameter(System.String,System.Diagnostics.StackFrame)" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationError.Expires" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationError.NotBefore" />
+    </Type>
+    <Type Name="Microsoft.IdentityModel.Tokens.Experimental.MessageDetail" Id="T:Microsoft.IdentityModel.Tokens.Experimental.MessageDetail">
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.MessageDetail.#ctor(System.String,System.Object[])" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.MessageDetail.NullParameter(System.String)" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.MessageDetail.Message" />
+    </Type>
+    <Type Name="Microsoft.IdentityModel.Tokens.Experimental.SignatureValidationDelegate" Id="T:Microsoft.IdentityModel.Tokens.Experimental.SignatureValidationDelegate" />
+    <Type Name="Microsoft.IdentityModel.Tokens.Experimental.SignatureValidationError" Id="T:Microsoft.IdentityModel.Tokens.Experimental.SignatureValidationError">
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.SignatureValidationError.#ctor(Microsoft.IdentityModel.Tokens.Experimental.MessageDetail,Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType,System.Type,System.Diagnostics.StackFrame,Microsoft.IdentityModel.Tokens.Experimental.ValidationError,System.Exception)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.SignatureValidationError.CreateException" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.SignatureValidationError.NullParameter(System.String,System.Diagnostics.StackFrame)" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.SignatureValidationError.InnerValidationError" />
+    </Type>
+    <Type Name="Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationDelegate" Id="T:Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationDelegate" />
+    <Type Name="Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationError" Id="T:Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationError">
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationError.#ctor(Microsoft.IdentityModel.Tokens.Experimental.MessageDetail,Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType,System.Type,System.Diagnostics.StackFrame,System.Nullable{System.DateTime},System.Exception)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationError.CreateException" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationError.NullParameter(System.String,System.Diagnostics.StackFrame)" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationError.ExpirationTime" />
+    </Type>
+    <Type Name="Microsoft.IdentityModel.Tokens.Experimental.TokenTypeValidationDelegate" Id="T:Microsoft.IdentityModel.Tokens.Experimental.TokenTypeValidationDelegate" />
+    <Type Name="Microsoft.IdentityModel.Tokens.Experimental.TokenTypeValidationError" Id="T:Microsoft.IdentityModel.Tokens.Experimental.TokenTypeValidationError">
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.TokenTypeValidationError.#ctor(Microsoft.IdentityModel.Tokens.Experimental.MessageDetail,Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType,System.Type,System.Diagnostics.StackFrame,System.String,System.Exception)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.TokenTypeValidationError.CreateException" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.TokenTypeValidationError.NullParameter(System.String,System.Diagnostics.StackFrame)" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.TokenTypeValidationError.InvalidTokenType" />
+    </Type>
+    <Type Name="Microsoft.IdentityModel.Tokens.Experimental.ValidatedIssuer" Id="T:Microsoft.IdentityModel.Tokens.Experimental.ValidatedIssuer">
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidatedIssuer.#ctor(System.String,Microsoft.IdentityModel.Tokens.Experimental.IssuerValidationSource)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidatedIssuer.Equals(Microsoft.IdentityModel.Tokens.Experimental.ValidatedIssuer)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidatedIssuer.Equals(System.Object)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidatedIssuer.GetHashCode" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidatedIssuer.op_Equality(Microsoft.IdentityModel.Tokens.Experimental.ValidatedIssuer,Microsoft.IdentityModel.Tokens.Experimental.ValidatedIssuer)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidatedIssuer.op_Inequality(Microsoft.IdentityModel.Tokens.Experimental.ValidatedIssuer,Microsoft.IdentityModel.Tokens.Experimental.ValidatedIssuer)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidatedIssuer.ToString" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidatedIssuer.Issuer" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidatedIssuer.ValidationSource" />
+    </Type>
+    <Type Name="Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime" Id="T:Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime">
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime.#ctor(System.Nullable{System.DateTime},System.Nullable{System.DateTime})" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime.Equals(Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime.Equals(System.Object)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime.GetHashCode" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime.op_Equality(Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime,Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime.op_Inequality(Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime,Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime.ToString" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime.Expires" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime.NotBefore" />
+    </Type>
+    <Type Name="Microsoft.IdentityModel.Tokens.Experimental.ValidatedSigningKeyLifetime" Id="T:Microsoft.IdentityModel.Tokens.Experimental.ValidatedSigningKeyLifetime">
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidatedSigningKeyLifetime.Equals(Microsoft.IdentityModel.Tokens.Experimental.ValidatedSigningKeyLifetime)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidatedSigningKeyLifetime.Equals(System.Object)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidatedSigningKeyLifetime.GetHashCode" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidatedSigningKeyLifetime.op_Equality(Microsoft.IdentityModel.Tokens.Experimental.ValidatedSigningKeyLifetime,Microsoft.IdentityModel.Tokens.Experimental.ValidatedSigningKeyLifetime)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidatedSigningKeyLifetime.op_Inequality(Microsoft.IdentityModel.Tokens.Experimental.ValidatedSigningKeyLifetime,Microsoft.IdentityModel.Tokens.Experimental.ValidatedSigningKeyLifetime)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidatedSigningKeyLifetime.ToString" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidatedSigningKeyLifetime.ValidationTime" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidatedSigningKeyLifetime.ValidFrom" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidatedSigningKeyLifetime.ValidTo" />
+    </Type>
+    <Type Name="Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken" Id="T:Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken">
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken.#ctor(Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.TokenHandler,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken.Log(Microsoft.Extensions.Logging.ILogger)" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken.ActorValidationResult" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken.Claims" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken.ClaimsIdentity" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken.SecurityToken" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken.TokenHandler" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken.ValidatedAudience" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken.ValidatedIssuer" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken.ValidatedLifetime" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken.ValidatedSigningKey" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken.ValidatedSigningKeyLifetime" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken.ValidatedTokenReplayExpirationTime" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken.ValidatedTokenType" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken.ValidationParameters" />
+    </Type>
+    <Type Name="Microsoft.IdentityModel.Tokens.Experimental.ValidatedTokenType" Id="T:Microsoft.IdentityModel.Tokens.Experimental.ValidatedTokenType">
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidatedTokenType.#ctor(System.String,System.Int32)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidatedTokenType.Equals(Microsoft.IdentityModel.Tokens.Experimental.ValidatedTokenType)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidatedTokenType.Equals(System.Object)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidatedTokenType.GetHashCode" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidatedTokenType.op_Equality(Microsoft.IdentityModel.Tokens.Experimental.ValidatedTokenType,Microsoft.IdentityModel.Tokens.Experimental.ValidatedTokenType)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidatedTokenType.op_Inequality(Microsoft.IdentityModel.Tokens.Experimental.ValidatedTokenType,Microsoft.IdentityModel.Tokens.Experimental.ValidatedTokenType)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidatedTokenType.ToString" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidatedTokenType.Type" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidatedTokenType.ValidTypeCount" />
+    </Type>
+    <Type Name="Microsoft.IdentityModel.Tokens.Experimental.ValidationError" Id="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationError">
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidationError.#ctor(Microsoft.IdentityModel.Tokens.Experimental.MessageDetail,Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType,System.Type,System.Diagnostics.StackFrame,System.Exception)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidationError.AddCurrentStackFrame(System.String,System.Int32,System.Int32)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidationError.AddStackFrame(System.Diagnostics.StackFrame)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidationError.CreateException" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidationError.GetCurrentStackFrame(System.String,System.Int32,System.Int32)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidationError.GetException" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidationError.Log(Microsoft.Extensions.Logging.ILogger)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidationError.NullParameter(System.String,System.Diagnostics.StackFrame)" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationError.ExceptionType" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationError.FailureType" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationError.InnerException" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationError.Message" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationError.StackFrames" />
+    </Type>
+    <Type Name="Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType" Id="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType">
+      <Member Id="F:Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType.AlgorithmValidationFailed" />
+      <Member Id="F:Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType.AlgorithmValidatorThrew" />
+      <Member Id="F:Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType.AudienceValidationFailed" />
+      <Member Id="F:Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType.AudienceValidatorThrew" />
+      <Member Id="F:Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType.InvalidSecurityToken" />
+      <Member Id="F:Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType.IssuerSigningKeyValidatorThrew" />
+      <Member Id="F:Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType.IssuerValidationFailed" />
+      <Member Id="F:Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType.IssuerValidatorThrew" />
+      <Member Id="F:Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType.LifetimeValidationFailed" />
+      <Member Id="F:Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType.LifetimeValidatorThrew" />
+      <Member Id="F:Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType.NoTokenAudiencesProvided" />
+      <Member Id="F:Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType.NoValidationParameterAudiencesProvided" />
+      <Member Id="F:Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType.NullArgument" />
+      <Member Id="F:Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType.SignatureAlgorithmValidationFailed" />
+      <Member Id="F:Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType.SignatureValidationFailed" />
+      <Member Id="F:Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType.SignatureValidatorThrew" />
+      <Member Id="F:Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType.SigningKeyValidationFailed" />
+      <Member Id="F:Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType.TokenDecryptionFailed" />
+      <Member Id="F:Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType.TokenExceedsMaximumSize" />
+      <Member Id="F:Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType.TokenIsNotSigned" />
+      <Member Id="F:Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType.TokenReadingFailed" />
+      <Member Id="F:Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType.TokenReplayValidationFailed" />
+      <Member Id="F:Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType.TokenReplayValidatorThrew" />
+      <Member Id="F:Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType.TokenTypeValidationFailed" />
+      <Member Id="F:Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType.TokenTypeValidatorThrew" />
+      <Member Id="F:Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType.XmlValidationFailed" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType.#ctor(System.String)" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType.Name" />
+    </Type>
+    <Type Name="Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters" Id="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters">
+      <Member Id="F:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.DefaultAuthenticationType" />
+      <Member Id="F:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.DefaultClockSkew" />
+      <Member Id="F:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.DefaultMaximumTokenSizeInBytes" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.#ctor" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.#ctor(Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.Clone" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.CreateClaimsIdentity(Microsoft.IdentityModel.Tokens.SecurityToken,System.String)" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.ActorValidationParameters" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.AlgorithmValidator" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.AudienceValidator" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.AuthenticationType" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.ClockSkew" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.ConfigurationManager" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.CryptoProviderFactory" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.DebugId" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.IgnoreTrailingSlashWhenValidatingAudience" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.IncludeTokenOnFailedValidation" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.InstancePropertyBag" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.IsClone" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.IssuerSigningKeyResolver" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.IssuerSigningKeys" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.IssuerSigningKeyValidator" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.IssuerValidatorAsync" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.LifetimeValidator" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.LogTokenId" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.NameClaimType" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.NameClaimTypeRetriever" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.PropertyBag" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.RefreshBeforeValidation" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.RoleClaimType" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.RoleClaimTypeRetriever" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.SaveSigninToken" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.SignatureValidator" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.TokenDecryptionKeys" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.TokenReplayCache" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.TokenReplayValidator" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.TokenTypeValidator" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.TryAllDecryptionKeys" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.TryAllIssuerSigningKeys" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.ValidAlgorithms" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.ValidateActor" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.ValidateWithLKG" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.ValidAudiences" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.ValidIssuers" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.ValidTypes" />
+    </Type>
+    <Type Name="Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2" Id="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2">
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2.#ctor" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2.#ctor(`0)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2.#ctor(`1)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2.Equals(Microsoft.IdentityModel.Tokens.Experimental.ValidationResult{`0,`1})" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2.Equals(System.Object)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2.GetHashCode" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2.op_Equality(Microsoft.IdentityModel.Tokens.Experimental.ValidationResult{`0,`1},Microsoft.IdentityModel.Tokens.Experimental.ValidationResult{`0,`1})" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2.op_Implicit(`0)~Microsoft.IdentityModel.Tokens.Experimental.ValidationResult{`0,`1}" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2.op_Implicit(`1)~Microsoft.IdentityModel.Tokens.Experimental.ValidationResult{`0,`1}" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2.op_Inequality(Microsoft.IdentityModel.Tokens.Experimental.ValidationResult{`0,`1},Microsoft.IdentityModel.Tokens.Experimental.ValidationResult{`0,`1})" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2.ToValidationResult" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2.Error" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2.IsValid" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2.Result" />
     </Type>
   </Namespace>
   <Namespace Name="Microsoft.IdentityModel.Tokens.Saml">
@@ -2420,6 +2694,10 @@
       <Member Id="M:Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CreateToken(Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CreateToken(Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor,Microsoft.IdentityModel.Tokens.Saml.AuthenticationInformation)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.CreateXmlStringFromAttributes(System.Collections.Generic.ICollection{Microsoft.IdentityModel.Tokens.Saml.SamlAttribute})" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.Microsoft#IdentityModel#Tokens#Experimental#IResultBasedValidation#ValidateTokenAsync(Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.Microsoft#IdentityModel#Tokens#Experimental#IResultBasedValidation#ValidateTokenAsync(Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext,System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.Microsoft#IdentityModel#Tokens#Experimental#IResultBasedValidation#ValidateTokenAsync(System.String,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.Microsoft#IdentityModel#Tokens#Experimental#IResultBasedValidation#ValidateTokenAsync(System.String,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext,System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.ProcessAttributeStatement(Microsoft.IdentityModel.Tokens.Saml.SamlAttributeStatement,System.Security.Claims.ClaimsIdentity,System.String)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.ProcessAuthenticationStatement(Microsoft.IdentityModel.Tokens.Saml.SamlAuthenticationStatement,System.Security.Claims.ClaimsIdentity,System.String)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.Saml.SamlSecurityTokenHandler.ProcessAuthorizationDecisionStatement(Microsoft.IdentityModel.Tokens.Saml.SamlAuthorizationDecisionStatement,System.Security.Claims.ClaimsIdentity,System.String)" />
@@ -2518,6 +2796,12 @@
     <Type Name="Microsoft.IdentityModel.Tokens.Saml.SamlSubjectStatement" Id="T:Microsoft.IdentityModel.Tokens.Saml.SamlSubjectStatement">
       <Member Id="M:Microsoft.IdentityModel.Tokens.Saml.SamlSubjectStatement.#ctor" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.Saml.SamlSubjectStatement.Subject" />
+    </Type>
+  </Namespace>
+  <Namespace Name="Microsoft.IdentityModel.Tokens.Saml.Experimental">
+    <Type Name="Microsoft.IdentityModel.Tokens.Saml.Experimental.SamlValidationError" Id="T:Microsoft.IdentityModel.Tokens.Saml.Experimental.SamlValidationError">
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Saml.Experimental.SamlValidationError.#ctor(Microsoft.IdentityModel.Tokens.Experimental.MessageDetail,Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType,System.Type,System.Diagnostics.StackFrame,System.Exception)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Saml.Experimental.SamlValidationError.CreateException" />
     </Type>
   </Namespace>
   <Namespace Name="Microsoft.IdentityModel.Tokens.Saml2">
@@ -2815,6 +3099,10 @@
       <Member Id="M:Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.CreateSubject(Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.CreateToken(Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.CreateToken(Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor,Microsoft.IdentityModel.Tokens.Saml2.AuthenticationInformation)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.Microsoft#IdentityModel#Tokens#Experimental#IResultBasedValidation#ValidateTokenAsync(Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.Microsoft#IdentityModel#Tokens#Experimental#IResultBasedValidation#ValidateTokenAsync(Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext,System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.Microsoft#IdentityModel#Tokens#Experimental#IResultBasedValidation#ValidateTokenAsync(System.String,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.Microsoft#IdentityModel#Tokens#Experimental#IResultBasedValidation#ValidateTokenAsync(System.String,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext,System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ProcessAttributeStatement(Microsoft.IdentityModel.Tokens.Saml2.Saml2AttributeStatement,System.Security.Claims.ClaimsIdentity,System.String)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ProcessAuthenticationStatement(Microsoft.IdentityModel.Tokens.Saml2.Saml2AuthenticationStatement,System.Security.Claims.ClaimsIdentity,System.String)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.Saml2.Saml2SecurityTokenHandler.ProcessAuthorizationDecisionStatement(Microsoft.IdentityModel.Tokens.Saml2.Saml2AuthorizationDecisionStatement,System.Security.Claims.ClaimsIdentity,System.String)" />
@@ -2936,6 +3224,12 @@
       <Member Id="M:Microsoft.IdentityModel.Tokens.Saml2.Saml2SubjectLocality.#ctor(System.String,System.String)" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.Saml2.Saml2SubjectLocality.Address" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.Saml2.Saml2SubjectLocality.DnsName" />
+    </Type>
+  </Namespace>
+  <Namespace Name="Microsoft.IdentityModel.Tokens.Saml2.Experimental">
+    <Type Name="Microsoft.IdentityModel.Tokens.Saml2.Experimental.Saml2ValidationError" Id="T:Microsoft.IdentityModel.Tokens.Saml2.Experimental.Saml2ValidationError">
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Saml2.Experimental.Saml2ValidationError.#ctor(Microsoft.IdentityModel.Tokens.Experimental.MessageDetail,Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType,System.Type,System.Diagnostics.StackFrame,System.Exception)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.Saml2.Experimental.Saml2ValidationError.CreateException" />
     </Type>
   </Namespace>
   <Namespace Name="Microsoft.IdentityModel.Validators">

@@ -48,6 +48,7 @@
     <AssemblyVersion>8.9.0.0</AssemblyVersion>
     <AssemblyVersion>8.10.0.0</AssemblyVersion>
     <AssemblyVersion>8.11.0.0</AssemblyVersion>
+    <AssemblyVersion>8.12.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -69,7 +70,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -92,6 +93,41 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="ValidateAlgorithm">
+      <MemberSignature Language="C#" Value="public static Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;string,Microsoft.IdentityModel.Tokens.Experimental.AlgorithmValidationError&gt; ValidateAlgorithm (string algorithm, Microsoft.IdentityModel.Tokens.SecurityKey securityKey, Microsoft.IdentityModel.Tokens.SecurityToken securityToken, Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters validationParameters, Microsoft.IdentityModel.Tokens.CallContext callContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2&lt;string, class Microsoft.IdentityModel.Tokens.Experimental.AlgorithmValidationError&gt; ValidateAlgorithm(string algorithm, class Microsoft.IdentityModel.Tokens.SecurityKey securityKey, class Microsoft.IdentityModel.Tokens.SecurityToken securityToken, class Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters validationParameters, class Microsoft.IdentityModel.Tokens.CallContext callContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Validators.ValidateAlgorithm(System.String,Microsoft.IdentityModel.Tokens.SecurityKey,Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ValidateAlgorithm (algorithm As String, securityKey As SecurityKey, securityToken As SecurityToken, validationParameters As ValidationParameters, callContext As CallContext) As ValidationResult(Of String, AlgorithmValidationError)" />
+      <MemberSignature Language="F#" Value="static member ValidateAlgorithm : string * Microsoft.IdentityModel.Tokens.SecurityKey * Microsoft.IdentityModel.Tokens.SecurityToken * Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters * Microsoft.IdentityModel.Tokens.CallContext -&gt; Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;string, Microsoft.IdentityModel.Tokens.Experimental.AlgorithmValidationError&gt;" Usage="Microsoft.IdentityModel.Tokens.Validators.ValidateAlgorithm (algorithm, securityKey, securityToken, validationParameters, callContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;System.String,Microsoft.IdentityModel.Tokens.Experimental.AlgorithmValidationError&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithm" Type="System.String" />
+        <Parameter Name="securityKey" Type="Microsoft.IdentityModel.Tokens.SecurityKey" />
+        <Parameter Name="securityToken" Type="Microsoft.IdentityModel.Tokens.SecurityToken" />
+        <Parameter Name="validationParameters" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters" />
+        <Parameter Name="callContext" Type="Microsoft.IdentityModel.Tokens.CallContext" />
+      </Parameters>
+      <Docs>
+        <param name="algorithm">The algorithm to be validated.</param>
+        <param name="securityKey">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> that signed the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" />.</param>
+        <param name="securityToken">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" /> being validated.</param>
+        <param name="validationParameters">
+          <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters" /> required for validation.</param>
+        <param name="callContext">The <see cref="T:Microsoft.IdentityModel.Tokens.CallContext" /> that contains call information.</param>
+        <summary>
+            Validates a given algorithm for a <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="ValidateAudience">
       <MemberSignature Language="C#" Value="public static void ValidateAudience (System.Collections.Generic.IEnumerable&lt;string&gt; audiences, Microsoft.IdentityModel.Tokens.SecurityToken securityToken, Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ValidateAudience(class System.Collections.Generic.IEnumerable`1&lt;string&gt; audiences, class Microsoft.IdentityModel.Tokens.SecurityToken securityToken, class Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters) cil managed" />
@@ -101,7 +137,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -124,6 +160,38 @@
         <exception cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenInvalidAudienceException">If none of the 'audiences' matched either <see cref="P:Microsoft.IdentityModel.Tokens.TokenValidationParameters.ValidAudience" /> or one of <see cref="P:Microsoft.IdentityModel.Tokens.TokenValidationParameters.ValidAudiences" />.</exception>
       </Docs>
     </Member>
+    <Member MemberName="ValidateAudience">
+      <MemberSignature Language="C#" Value="public static Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;string,Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationError&gt; ValidateAudience (System.Collections.Generic.IList&lt;string&gt; tokenAudiences, Microsoft.IdentityModel.Tokens.SecurityToken? securityToken, Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters validationParameters, Microsoft.IdentityModel.Tokens.CallContext callContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2&lt;string, class Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationError&gt; ValidateAudience(class System.Collections.Generic.IList`1&lt;string&gt; tokenAudiences, class Microsoft.IdentityModel.Tokens.SecurityToken securityToken, class Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters validationParameters, class Microsoft.IdentityModel.Tokens.CallContext callContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Validators.ValidateAudience(System.Collections.Generic.IList{System.String},Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ValidateAudience (tokenAudiences As IList(Of String), securityToken As SecurityToken, validationParameters As ValidationParameters, callContext As CallContext) As ValidationResult(Of String, AudienceValidationError)" />
+      <MemberSignature Language="F#" Value="static member ValidateAudience : System.Collections.Generic.IList&lt;string&gt; * Microsoft.IdentityModel.Tokens.SecurityToken * Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters * Microsoft.IdentityModel.Tokens.CallContext -&gt; Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;string, Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationError&gt;" Usage="Microsoft.IdentityModel.Tokens.Validators.ValidateAudience (tokenAudiences, securityToken, validationParameters, callContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;System.String,Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationError&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tokenAudiences" Type="System.Collections.Generic.IList&lt;System.String&gt;" />
+        <Parameter Name="securityToken" Type="Microsoft.IdentityModel.Tokens.SecurityToken" />
+        <Parameter Name="validationParameters" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters" />
+        <Parameter Name="callContext" Type="Microsoft.IdentityModel.Tokens.CallContext" />
+      </Parameters>
+      <Docs>
+        <param name="tokenAudiences">The audiences found in the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" />.</param>
+        <param name="securityToken">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" /> being validated.</param>
+        <param name="validationParameters">The <see cref="T:Microsoft.IdentityModel.Tokens.TokenValidationParameters" /> to be used for validating the token.</param>
+        <param name="callContext">The <see cref="T:Microsoft.IdentityModel.Tokens.CallContext" /> that contains call information.</param>
+        <summary>
+            Determines if the audiences found in a <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" /> are valid.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>An EXACT match is required.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="ValidateIssuer">
       <MemberSignature Language="C#" Value="public static string ValidateIssuer (string issuer, Microsoft.IdentityModel.Tokens.SecurityToken securityToken, Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ValidateIssuer(string issuer, class Microsoft.IdentityModel.Tokens.SecurityToken securityToken, class Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters) cil managed" />
@@ -133,7 +201,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -157,6 +225,40 @@
         <exception cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenInvalidIssuerException">If 'issuer' failed to matched either <see cref="P:Microsoft.IdentityModel.Tokens.TokenValidationParameters.ValidIssuer" /> or one of <see cref="P:Microsoft.IdentityModel.Tokens.TokenValidationParameters.ValidIssuers" />.</exception>
       </Docs>
     </Member>
+    <Member MemberName="ValidateIssuerAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedIssuer,Microsoft.IdentityModel.Tokens.Experimental.IssuerValidationError&gt;&gt; ValidateIssuerAsync (string? issuer, Microsoft.IdentityModel.Tokens.SecurityToken? securityToken, Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters validationParameters, Microsoft.IdentityModel.Tokens.CallContext? callContext, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;valuetype Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2&lt;valuetype Microsoft.IdentityModel.Tokens.Experimental.ValidatedIssuer, class Microsoft.IdentityModel.Tokens.Experimental.IssuerValidationError&gt;&gt; ValidateIssuerAsync(string issuer, class Microsoft.IdentityModel.Tokens.SecurityToken securityToken, class Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters validationParameters, class Microsoft.IdentityModel.Tokens.CallContext callContext, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Validators.ValidateIssuerAsync(System.String,Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ValidateIssuerAsync (issuer As String, securityToken As SecurityToken, validationParameters As ValidationParameters, callContext As CallContext, cancellationToken As CancellationToken) As Task(Of ValidationResult(Of ValidatedIssuer, IssuerValidationError))" />
+      <MemberSignature Language="F#" Value="static member ValidateIssuerAsync : string * Microsoft.IdentityModel.Tokens.SecurityToken * Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters * Microsoft.IdentityModel.Tokens.CallContext * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedIssuer, Microsoft.IdentityModel.Tokens.Experimental.IssuerValidationError&gt;&gt;" Usage="Microsoft.IdentityModel.Tokens.Validators.ValidateIssuerAsync (issuer, securityToken, validationParameters, callContext, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedIssuer,Microsoft.IdentityModel.Tokens.Experimental.IssuerValidationError&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="issuer" Type="System.String" />
+        <Parameter Name="securityToken" Type="Microsoft.IdentityModel.Tokens.SecurityToken" />
+        <Parameter Name="validationParameters" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters" />
+        <Parameter Name="callContext" Type="Microsoft.IdentityModel.Tokens.CallContext" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="issuer">The issuer to validate</param>
+        <param name="securityToken">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" /> that is being validated.</param>
+        <param name="validationParameters">The <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters" /> to be used for validating the token.</param>
+        <param name="callContext" />
+        <param name="cancellationToken" />
+        <summary>
+            Determines if an issuer found in a <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" /> is valid.
+            </summary>
+        <returns>An <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2" /> that contains either the issuer that was validated or an error.</returns>
+        <remarks>An EXACT match is required.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="ValidateIssuerSecurityKey">
       <MemberSignature Language="C#" Value="public static void ValidateIssuerSecurityKey (Microsoft.IdentityModel.Tokens.SecurityKey securityKey, Microsoft.IdentityModel.Tokens.SecurityToken securityToken, Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ValidateIssuerSecurityKey(class Microsoft.IdentityModel.Tokens.SecurityKey securityKey, class Microsoft.IdentityModel.Tokens.SecurityToken securityToken, class Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters) cil managed" />
@@ -166,7 +268,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -188,6 +290,38 @@
         <exception cref="T:System.ArgumentNullException"> if 'validationParameters' is null.</exception>
       </Docs>
     </Member>
+    <Member MemberName="ValidateIssuerSigningKey">
+      <MemberSignature Language="C#" Value="public static Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedSigningKeyLifetime,Microsoft.IdentityModel.Tokens.Experimental.IssuerSigningKeyValidationError&gt; ValidateIssuerSigningKey (Microsoft.IdentityModel.Tokens.SecurityKey securityKey, Microsoft.IdentityModel.Tokens.SecurityToken securityToken, Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters validationParameters, Microsoft.IdentityModel.Tokens.CallContext callContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2&lt;valuetype Microsoft.IdentityModel.Tokens.Experimental.ValidatedSigningKeyLifetime, class Microsoft.IdentityModel.Tokens.Experimental.IssuerSigningKeyValidationError&gt; ValidateIssuerSigningKey(class Microsoft.IdentityModel.Tokens.SecurityKey securityKey, class Microsoft.IdentityModel.Tokens.SecurityToken securityToken, class Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters validationParameters, class Microsoft.IdentityModel.Tokens.CallContext callContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Validators.ValidateIssuerSigningKey(Microsoft.IdentityModel.Tokens.SecurityKey,Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ValidateIssuerSigningKey (securityKey As SecurityKey, securityToken As SecurityToken, validationParameters As ValidationParameters, callContext As CallContext) As ValidationResult(Of ValidatedSigningKeyLifetime, IssuerSigningKeyValidationError)" />
+      <MemberSignature Language="F#" Value="static member ValidateIssuerSigningKey : Microsoft.IdentityModel.Tokens.SecurityKey * Microsoft.IdentityModel.Tokens.SecurityToken * Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters * Microsoft.IdentityModel.Tokens.CallContext -&gt; Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedSigningKeyLifetime, Microsoft.IdentityModel.Tokens.Experimental.IssuerSigningKeyValidationError&gt;" Usage="Microsoft.IdentityModel.Tokens.Validators.ValidateIssuerSigningKey (securityKey, securityToken, validationParameters, callContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedSigningKeyLifetime,Microsoft.IdentityModel.Tokens.Experimental.IssuerSigningKeyValidationError&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="securityKey" Type="Microsoft.IdentityModel.Tokens.SecurityKey" />
+        <Parameter Name="securityToken" Type="Microsoft.IdentityModel.Tokens.SecurityToken" />
+        <Parameter Name="validationParameters" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters" />
+        <Parameter Name="callContext" Type="Microsoft.IdentityModel.Tokens.CallContext" />
+      </Parameters>
+      <Docs>
+        <param name="securityKey">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> that signed the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" />.</param>
+        <param name="securityToken">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" /> being validated.</param>
+        <param name="validationParameters">The <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters" /> to be used for validating the token.</param>
+        <param name="callContext">The <see cref="T:Microsoft.IdentityModel.Tokens.CallContext" /> that contains call information.</param>
+        <summary>
+            Validates the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> that signed a <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="ValidateLifetime">
       <MemberSignature Language="C#" Value="public static void ValidateLifetime (DateTime? notBefore, DateTime? expires, Microsoft.IdentityModel.Tokens.SecurityToken securityToken, Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ValidateLifetime(valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; notBefore, valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; expires, class Microsoft.IdentityModel.Tokens.SecurityToken securityToken, class Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters) cil managed" />
@@ -197,7 +331,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -225,6 +359,40 @@
         <exception cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException">If 'expires' is &lt; DateTime.UtcNow.</exception>
       </Docs>
     </Member>
+    <Member MemberName="ValidateLifetime">
+      <MemberSignature Language="C#" Value="public static Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime,Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationError&gt; ValidateLifetime (DateTime? notBefore, DateTime? expires, Microsoft.IdentityModel.Tokens.SecurityToken? securityToken, Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters validationParameters, Microsoft.IdentityModel.Tokens.CallContext callContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2&lt;valuetype Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime, class Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationError&gt; ValidateLifetime(valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; notBefore, valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; expires, class Microsoft.IdentityModel.Tokens.SecurityToken securityToken, class Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters validationParameters, class Microsoft.IdentityModel.Tokens.CallContext callContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(System.Nullable{System.DateTime},System.Nullable{System.DateTime},Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ValidateLifetime (notBefore As Nullable(Of DateTime), expires As Nullable(Of DateTime), securityToken As SecurityToken, validationParameters As ValidationParameters, callContext As CallContext) As ValidationResult(Of ValidatedLifetime, LifetimeValidationError)" />
+      <MemberSignature Language="F#" Value="static member ValidateLifetime : Nullable&lt;DateTime&gt; * Nullable&lt;DateTime&gt; * Microsoft.IdentityModel.Tokens.SecurityToken * Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters * Microsoft.IdentityModel.Tokens.CallContext -&gt; Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime, Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationError&gt;" Usage="Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime (notBefore, expires, securityToken, validationParameters, callContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime,Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationError&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="notBefore" Type="System.Nullable&lt;System.DateTime&gt;" />
+        <Parameter Name="expires" Type="System.Nullable&lt;System.DateTime&gt;" />
+        <Parameter Name="securityToken" Type="Microsoft.IdentityModel.Tokens.SecurityToken" />
+        <Parameter Name="validationParameters" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters" />
+        <Parameter Name="callContext" Type="Microsoft.IdentityModel.Tokens.CallContext" />
+      </Parameters>
+      <Docs>
+        <param name="notBefore">The 'notBefore' time found in the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" />.</param>
+        <param name="expires">The 'expiration' time found in the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" />.</param>
+        <param name="securityToken">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" /> being validated.</param>
+        <param name="validationParameters">The <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters" /> to be used for validating the token.</param>
+        <param name="callContext">The <see cref="T:Microsoft.IdentityModel.Tokens.CallContext" /> that contains call information.</param>
+        <summary>
+            Validates the lifetime of a <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" />.
+            </summary>
+        <returns>A <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2" /> indicating whether validation was successful, and providing a <see cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenInvalidLifetimeException" /> if it was not.</returns>
+        <remarks>All time comparisons apply <see cref="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.ClockSkew" />.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="ValidateTokenReplay">
       <MemberSignature Language="C#" Value="public static void ValidateTokenReplay (DateTime? expirationTime, string securityToken, Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ValidateTokenReplay(valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; expirationTime, string securityToken, class Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters) cil managed" />
@@ -234,7 +402,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -268,7 +436,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -293,6 +461,38 @@
         <exception cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenReplayAddFailedException">If the 'securityToken' could not be added to the <see cref="P:Microsoft.IdentityModel.Tokens.TokenValidationParameters.TokenReplayCache" />.</exception>
       </Docs>
     </Member>
+    <Member MemberName="ValidateTokenReplay">
+      <MemberSignature Language="C#" Value="public static Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;DateTime?,Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationError&gt; ValidateTokenReplay (DateTime? expirationTime, string securityToken, Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters validationParameters, Microsoft.IdentityModel.Tokens.CallContext callContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2&lt;valuetype System.Nullable`1&lt;valuetype System.DateTime&gt;, class Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationError&gt; ValidateTokenReplay(valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; expirationTime, string securityToken, class Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters validationParameters, class Microsoft.IdentityModel.Tokens.CallContext callContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Validators.ValidateTokenReplay(System.Nullable{System.DateTime},System.String,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ValidateTokenReplay (expirationTime As Nullable(Of DateTime), securityToken As String, validationParameters As ValidationParameters, callContext As CallContext) As ValidationResult(Of Nullable(Of DateTime), TokenReplayValidationError)" />
+      <MemberSignature Language="F#" Value="static member ValidateTokenReplay : Nullable&lt;DateTime&gt; * string * Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters * Microsoft.IdentityModel.Tokens.CallContext -&gt; Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Nullable&lt;DateTime&gt;, Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationError&gt;" Usage="Microsoft.IdentityModel.Tokens.Validators.ValidateTokenReplay (expirationTime, securityToken, validationParameters, callContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;System.Nullable&lt;System.DateTime&gt;,Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationError&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expirationTime" Type="System.Nullable&lt;System.DateTime&gt;" />
+        <Parameter Name="securityToken" Type="System.String" />
+        <Parameter Name="validationParameters" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters" />
+        <Parameter Name="callContext" Type="Microsoft.IdentityModel.Tokens.CallContext" />
+      </Parameters>
+      <Docs>
+        <param name="expirationTime">When does the security token expire.</param>
+        <param name="securityToken">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" /> being validated.</param>
+        <param name="validationParameters">The <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters" /> to be used for validating the token.</param>
+        <param name="callContext">The <see cref="T:Microsoft.IdentityModel.Tokens.CallContext" /> that contains call information.</param>
+        <summary>
+            Validates if a token has been replayed.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="ValidateTokenType">
       <MemberSignature Language="C#" Value="public static string ValidateTokenType (string type, Microsoft.IdentityModel.Tokens.SecurityToken securityToken, Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ValidateTokenType(string type, class Microsoft.IdentityModel.Tokens.SecurityToken securityToken, class Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters) cil managed" />
@@ -302,7 +502,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.11.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -324,6 +524,39 @@
         <remarks>An EXACT match is required. <see cref="F:System.StringComparison.Ordinal" /> (case sensitive) is used for comparing <paramref name="type" /> against <see cref="P:Microsoft.IdentityModel.Tokens.TokenValidationParameters.ValidTypes" />.</remarks>
         <exception cref="T:System.ArgumentNullException">If <paramref name="securityToken" /> is null.</exception>
         <exception cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenInvalidTypeException">If <paramref name="type" /> failed to match <see cref="P:Microsoft.IdentityModel.Tokens.TokenValidationParameters.ValidTypes" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateTokenType">
+      <MemberSignature Language="C#" Value="public static Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedTokenType,Microsoft.IdentityModel.Tokens.Experimental.TokenTypeValidationError&gt; ValidateTokenType (string? type, Microsoft.IdentityModel.Tokens.SecurityToken? securityToken, Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters validationParameters, Microsoft.IdentityModel.Tokens.CallContext callContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2&lt;valuetype Microsoft.IdentityModel.Tokens.Experimental.ValidatedTokenType, class Microsoft.IdentityModel.Tokens.Experimental.TokenTypeValidationError&gt; ValidateTokenType(string type, class Microsoft.IdentityModel.Tokens.SecurityToken securityToken, class Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters validationParameters, class Microsoft.IdentityModel.Tokens.CallContext callContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Validators.ValidateTokenType(System.String,Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ValidateTokenType (type As String, securityToken As SecurityToken, validationParameters As ValidationParameters, callContext As CallContext) As ValidationResult(Of ValidatedTokenType, TokenTypeValidationError)" />
+      <MemberSignature Language="F#" Value="static member ValidateTokenType : string * Microsoft.IdentityModel.Tokens.SecurityToken * Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters * Microsoft.IdentityModel.Tokens.CallContext -&gt; Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedTokenType, Microsoft.IdentityModel.Tokens.Experimental.TokenTypeValidationError&gt;" Usage="Microsoft.IdentityModel.Tokens.Validators.ValidateTokenType (type, securityToken, validationParameters, callContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedTokenType,Microsoft.IdentityModel.Tokens.Experimental.TokenTypeValidationError&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.String" />
+        <Parameter Name="securityToken" Type="Microsoft.IdentityModel.Tokens.SecurityToken" />
+        <Parameter Name="validationParameters" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters" />
+        <Parameter Name="callContext" Type="Microsoft.IdentityModel.Tokens.CallContext" />
+      </Parameters>
+      <Docs>
+        <param name="type">The token type or <c>null</c> if it couldn't be resolved (e.g from the 'typ' header for a JWT).</param>
+        <param name="securityToken">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" /> that is being validated.</param>
+        <param name="validationParameters">
+          <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters" /> required for validation.</param>
+        <param name="callContext">The <see cref="T:Microsoft.IdentityModel.Tokens.CallContext" /> that contains call information.</param>
+        <summary>
+            Validates the type of the token.
+            </summary>
+        <returns> A <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2" />that contains the results of validating the token type.</returns>
+        <remarks>An EXACT match is required. <see cref="F:System.StringComparison.Ordinal" /> (case sensitive) is used for comparing <paramref name="type" /> against <see cref="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.ValidTypes" />.</remarks>
       </Docs>
     </Member>
   </Members>

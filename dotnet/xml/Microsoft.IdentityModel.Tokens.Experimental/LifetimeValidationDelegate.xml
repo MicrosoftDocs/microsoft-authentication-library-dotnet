@@ -1,0 +1,36 @@
+<Type Name="LifetimeValidationDelegate" FullName="Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationDelegate">
+  <TypeSignature Language="C#" Value="public delegate Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime,Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationError&gt; LifetimeValidationDelegate(DateTime? notBefore, DateTime? expires, SecurityToken? securityToken, ValidationParameters validationParameters, CallContext callContext);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed LifetimeValidationDelegate extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationDelegate" />
+  <TypeSignature Language="VB.NET" Value="Public Delegate Function LifetimeValidationDelegate(notBefore As Nullable(Of DateTime), expires As Nullable(Of DateTime), securityToken As SecurityToken, validationParameters As ValidationParameters, callContext As CallContext) As ValidationResult(Of ValidatedLifetime, LifetimeValidationError) " />
+  <TypeSignature Language="F#" Value="type LifetimeValidationDelegate = delegate of Nullable&lt;DateTime&gt; * Nullable&lt;DateTime&gt; * SecurityToken * ValidationParameters * CallContext -&gt; ValidationResult&lt;ValidatedLifetime, LifetimeValidationError&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+    <AssemblyVersion>8.12.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="notBefore" Type="System.Nullable&lt;System.DateTime&gt;" />
+    <Parameter Name="expires" Type="System.Nullable&lt;System.DateTime&gt;" />
+    <Parameter Name="securityToken" Type="Microsoft.IdentityModel.Tokens.SecurityToken" />
+    <Parameter Name="validationParameters" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters" />
+    <Parameter Name="callContext" Type="Microsoft.IdentityModel.Tokens.CallContext" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedLifetime,Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationError&gt;</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="notBefore">The 'notBefore' time found in the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" />.</param>
+    <param name="expires">The 'expiration' time found in the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" />.</param>
+    <param name="securityToken">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" /> that is being validated.</param>
+    <param name="validationParameters">The <see cref="T:Microsoft.IdentityModel.Tokens.TokenValidationParameters" /> to be used for validating the token.</param>
+    <param name="callContext">The <see cref="T:Microsoft.IdentityModel.Tokens.CallContext" /> that contains call information.</param>
+    <summary>
+            Definition for delegate that will validate the lifetime of a <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" />.
+            </summary>
+    <returns>A <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2" />that contains the results of validating the issuer.</returns>
+    <remarks>This delegate is not expected to throw.</remarks>
+  </Docs>
+</Type>
