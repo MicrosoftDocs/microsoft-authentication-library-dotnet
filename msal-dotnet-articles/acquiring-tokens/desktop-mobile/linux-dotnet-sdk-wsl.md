@@ -21,6 +21,13 @@ Using an authentication broker on Linux enables you to simplify how your users a
 
 To enable SSO in your WSL app using MSAL.NET, you must ensure the keychain is set up and unlocked, as MSAL uses `libsecret` to communicate with the keyring daemon.
 
+## User sign-in experience
+
+This video demonstrates the sign-in experience on brokered flows on Linux
+
+![Demo of the Linux Login component component](../../media/linux/dotnet-msal-wsl.gif)
+
+
 ## Update to the latest version of WSL
 
 Ensure you have updated to the latest WSL release. The WAM Account Control dialog is supported in WSL versions 2.4.13 and above.
