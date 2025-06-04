@@ -9,7 +9,7 @@ ms.service: msal
 ms.subservice: msal-dotnet
 ms.reviewer: 
 ms.topic: conceptual
-ms.custom: 
+ms.custom: sfi-image-nochange
 #Customer intent:
 ---
 
