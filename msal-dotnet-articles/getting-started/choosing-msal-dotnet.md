@@ -16,7 +16,7 @@ ms.custom: devx-track-csharp, aaddev, sfi-image-blocked
 # Choosing a version of MSAL.NET
 
 > [!IMPORTANT]
-> Effective May 1, 2025, Azure AD B2C will no longer be available to purchase for new customers. [Learn more in our FAQ](/azure/active-directory-b2c/faq?tabs=app-reg-ga#azure-ad-b2c-end-of-sale).
+> Effective May 1, 2025, Azure AD B2C is no longer available to purchase for new customers. [Learn more in our FAQ](/azure/active-directory-b2c/faq?tabs=app-reg-ga#azure-ad-b2c-end-of-sale).
 
 Depending on the type of application you're building, and its underlying platform, you can choose to use MSAL.NET, [Microsoft Identity Web](https://github.com/AzureAD/microsoft-identity-web), or both.
 
