@@ -19,7 +19,7 @@ Microsoft Identity Web is a set of ASP.NET Core libraries that simplifies adding
 
 ## Supported application scenarios
 
-When building ASP.NET Core web apps or web APIs that use Microsoft Entra ID or Microsoft Entra External ID C for identity and access management (IAM), Microsoft Identity Web is recommended for these scenarios:
+When building ASP.NET Core web apps or web APIs that use Microsoft Entra ID or Microsoft Entra External ID for identity and access management (IAM), Microsoft Identity Web is recommended for these scenarios:
 
 - [Service/daemon applications](/azure/active-directory/develop/scenario-daemon-overview)
 - [Web app that signs in users](/azure/active-directory/develop/scenario-web-app-sign-user-overview)
