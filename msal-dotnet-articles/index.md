@@ -42,6 +42,13 @@ MSAL.NET supports multiple platforms, including [.NET](https://dotnet.microsoft.
 >- On public clients (mobile and desktop) the default browser and redirect URIs are different from platform to platform, and broker availability varies (details [in browser usage documentation](./acquiring-tokens/using-web-browsers.md)).
 
 > [!NOTE]
+> MSAL.NET is optimized for use with Microsoft Entra ID as the identity provider (IDP). 
+> While it is possible to use MSAL.NET with third-party IDPs that support OAuth 2.
+> 0—particularly when using embedded or system browsers((see [in browser usage documentation](./acquiring-tokens/using-web-browsers.md)))
+> —interoperability is not guaranteed. Microsoft does not provide support for issues arising from third-party IDP integrations. Such scenarios are considered
+> best-effort and may not be addressed.
+
+> [!NOTE]
 > MSAL.NET versions 4.61.0 and above do not provide support for Universal Windows Platform, Xamarin Android, and Xamarin iOS. Read more about the deprecation in [Announcing the Upcoming Deprecation of MSAL.NET for Xamarin and UWP](https://devblogs.microsoft.com/identity/uwp-xamarin-msal-net-deprecation/).
 
 ## Why use MSAL.NET?
