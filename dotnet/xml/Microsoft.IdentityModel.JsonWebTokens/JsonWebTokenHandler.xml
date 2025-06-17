@@ -1,9 +1,9 @@
 <Type Name="JsonWebTokenHandler" FullName="Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler">
-  <TypeSignature Language="C#" Value="public class JsonWebTokenHandler : Microsoft.IdentityModel.Tokens.TokenHandler" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit JsonWebTokenHandler extends Microsoft.IdentityModel.Tokens.TokenHandler" />
+  <TypeSignature Language="C#" Value="public class JsonWebTokenHandler : Microsoft.IdentityModel.Tokens.TokenHandler, Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit JsonWebTokenHandler extends Microsoft.IdentityModel.Tokens.TokenHandler implements class Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation" />
   <TypeSignature Language="DocId" Value="T:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler" />
-  <TypeSignature Language="VB.NET" Value="Public Class JsonWebTokenHandler&#xA;Inherits TokenHandler" />
-  <TypeSignature Language="F#" Value="type JsonWebTokenHandler = class&#xA;    inherit TokenHandler" />
+  <TypeSignature Language="VB.NET" Value="Public Class JsonWebTokenHandler&#xA;Inherits TokenHandler&#xA;Implements IResultBasedValidation" />
+  <TypeSignature Language="F#" Value="type JsonWebTokenHandler = class&#xA;    inherit TokenHandler&#xA;    interface IResultBasedValidation" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
     <AssemblyVersion>6.25.0.0</AssemblyVersion>
@@ -48,11 +48,16 @@
     <AssemblyVersion>8.7.0.0</AssemblyVersion>
     <AssemblyVersion>8.8.0.0</AssemblyVersion>
     <AssemblyVersion>8.9.0.0</AssemblyVersion>
+    <AssemblyVersion>8.12.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.IdentityModel.Tokens.TokenHandler</BaseTypeName>
   </Base>
-  <Interfaces />
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation</InterfaceName>
+    </Interface>
+  </Interfaces>
   <Docs>
     <summary>
             A <see cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenHandler" /> designed for creating and validating Json Web Tokens.
@@ -71,7 +76,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.9.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -90,7 +95,7 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.9.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -113,7 +118,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.9.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -147,7 +152,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.9.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -170,7 +175,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.9.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Claims.ClaimsIdentity</ReturnType>
@@ -198,7 +203,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.9.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Claims.ClaimsIdentity</ReturnType>
@@ -228,7 +233,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.9.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -254,7 +259,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.9.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -281,7 +286,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.9.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -309,7 +314,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.9.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -338,7 +343,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.9.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -367,7 +372,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.9.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -400,7 +405,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.9.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -431,7 +436,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.9.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -462,7 +467,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.9.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -495,7 +500,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.9.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -530,7 +535,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.9.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -563,7 +568,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.9.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -600,7 +605,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.9.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -639,7 +644,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.9.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -663,6 +668,41 @@
         <exception cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenDecryptionFailedException">Thrown if the JWE was not able to be decrypted.</exception>
       </Docs>
     </Member>
+    <Member MemberName="DecryptTokenWithConfigurationAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;string&gt; DecryptTokenWithConfigurationAsync (Microsoft.IdentityModel.JsonWebTokens.JsonWebToken jwtToken, Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;string&gt; DecryptTokenWithConfigurationAsync(class Microsoft.IdentityModel.JsonWebTokens.JsonWebToken jwtToken, class Microsoft.IdentityModel.Tokens.TokenValidationParameters validationParameters, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.DecryptTokenWithConfigurationAsync(Microsoft.IdentityModel.JsonWebTokens.JsonWebToken,Microsoft.IdentityModel.Tokens.TokenValidationParameters,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function DecryptTokenWithConfigurationAsync (jwtToken As JsonWebToken, validationParameters As TokenValidationParameters, cancellationToken As CancellationToken) As Task(Of String)" />
+      <MemberSignature Language="F#" Value="member this.DecryptTokenWithConfigurationAsync : Microsoft.IdentityModel.JsonWebTokens.JsonWebToken * Microsoft.IdentityModel.Tokens.TokenValidationParameters * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;string&gt;" Usage="jsonWebTokenHandler.DecryptTokenWithConfigurationAsync (jwtToken, validationParameters, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="jwtToken" Type="Microsoft.IdentityModel.JsonWebTokens.JsonWebToken" />
+        <Parameter Name="validationParameters" Type="Microsoft.IdentityModel.Tokens.TokenValidationParameters" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="jwtToken">The JWE that contains the cypher text.</param>
+        <param name="validationParameters">The <see cref="T:Microsoft.IdentityModel.Tokens.TokenValidationParameters" /> to be used for validating the token.</param>
+        <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> that can be used to request cancellation of the asynchronous operation.</param>
+        <summary>
+            Decrypts a JWE and returns the clear text.
+            </summary>
+        <returns>The decoded (clear text) contents of the JWE.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="validationParameters" /> is null.</exception>
+        <exception cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenException">Thrown if <see cref="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Enc" /> is null or empty.</exception>
+        <exception cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenDecompressionFailedException">Thrown if the decompression failed.</exception>
+        <exception cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenEncryptionKeyNotFoundException">Thrown if <see cref="P:Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.Kid" /> is not null AND the decryption fails.</exception>
+        <exception cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenDecryptionFailedException">Thrown if the JWE was not able to be decrypted.</exception>
+      </Docs>
+    </Member>
     <Member MemberName="DefaultInboundClaimTypeMap">
       <MemberSignature Language="C#" Value="public static System.Collections.Generic.IDictionary&lt;string,string&gt; DefaultInboundClaimTypeMap;" />
       <MemberSignature Language="ILAsm" Value=".field public static class System.Collections.Generic.IDictionary`2&lt;string, string&gt; DefaultInboundClaimTypeMap" />
@@ -672,7 +712,7 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.9.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
@@ -693,7 +733,7 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.9.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -714,7 +754,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.9.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -745,7 +785,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.9.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -778,7 +818,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.9.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -812,7 +852,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.9.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -848,7 +888,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.9.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
@@ -871,7 +911,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.9.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -884,6 +924,134 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync">
+      <MemberSignature Language="C#" Value="System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt; IResultBasedValidation.ValidateTokenAsync (Microsoft.IdentityModel.Tokens.SecurityToken token, Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters validationParameters, Microsoft.IdentityModel.Tokens.CallContext callContext);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;valuetype Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2&lt;class Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken, class Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt; Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync(class Microsoft.IdentityModel.Tokens.SecurityToken token, class Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters validationParameters, class Microsoft.IdentityModel.Tokens.CallContext callContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.Microsoft#IdentityModel#Tokens#Experimental#IResultBasedValidation#ValidateTokenAsync(Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext)" />
+      <MemberSignature Language="VB.NET" Value="Function ValidateTokenAsync (token As SecurityToken, validationParameters As ValidationParameters, callContext As CallContext) As Task(Of ValidationResult(Of ValidatedToken, ValidationError)) Implements IResultBasedValidation.ValidateTokenAsync" />
+      <MemberSignature Language="F#" Value="abstract member Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync : Microsoft.IdentityModel.Tokens.SecurityToken * Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters * Microsoft.IdentityModel.Tokens.CallContext -&gt; System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken, Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt;&#xA;override this.Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync : Microsoft.IdentityModel.Tokens.SecurityToken * Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters * Microsoft.IdentityModel.Tokens.CallContext -&gt; System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken, Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt;" Usage="jsonWebTokenHandler.Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync (token, validationParameters, callContext)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync(Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="Microsoft.IdentityModel.Tokens.SecurityToken" />
+        <Parameter Name="validationParameters" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters" />
+        <Parameter Name="callContext" Type="Microsoft.IdentityModel.Tokens.CallContext" />
+      </Parameters>
+      <Docs>
+        <param name="token">To be added.</param>
+        <param name="validationParameters">To be added.</param>
+        <param name="callContext">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync">
+      <MemberSignature Language="C#" Value="System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt; IResultBasedValidation.ValidateTokenAsync (string token, Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters validationParameters, Microsoft.IdentityModel.Tokens.CallContext callContext);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;valuetype Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2&lt;class Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken, class Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt; Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync(string token, class Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters validationParameters, class Microsoft.IdentityModel.Tokens.CallContext callContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.Microsoft#IdentityModel#Tokens#Experimental#IResultBasedValidation#ValidateTokenAsync(System.String,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext)" />
+      <MemberSignature Language="VB.NET" Value="Function ValidateTokenAsync (token As String, validationParameters As ValidationParameters, callContext As CallContext) As Task(Of ValidationResult(Of ValidatedToken, ValidationError)) Implements IResultBasedValidation.ValidateTokenAsync" />
+      <MemberSignature Language="F#" Value="abstract member Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync : string * Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters * Microsoft.IdentityModel.Tokens.CallContext -&gt; System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken, Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt;&#xA;override this.Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync : string * Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters * Microsoft.IdentityModel.Tokens.CallContext -&gt; System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken, Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt;" Usage="jsonWebTokenHandler.Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync (token, validationParameters, callContext)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync(System.String,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.String" />
+        <Parameter Name="validationParameters" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters" />
+        <Parameter Name="callContext" Type="Microsoft.IdentityModel.Tokens.CallContext" />
+      </Parameters>
+      <Docs>
+        <param name="token">To be added.</param>
+        <param name="validationParameters">To be added.</param>
+        <param name="callContext">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync">
+      <MemberSignature Language="C#" Value="System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt; IResultBasedValidation.ValidateTokenAsync (Microsoft.IdentityModel.Tokens.SecurityToken token, Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters validationParameters, Microsoft.IdentityModel.Tokens.CallContext callContext, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;valuetype Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2&lt;class Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken, class Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt; Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync(class Microsoft.IdentityModel.Tokens.SecurityToken token, class Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters validationParameters, class Microsoft.IdentityModel.Tokens.CallContext callContext, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.Microsoft#IdentityModel#Tokens#Experimental#IResultBasedValidation#ValidateTokenAsync(Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Function ValidateTokenAsync (token As SecurityToken, validationParameters As ValidationParameters, callContext As CallContext, cancellationToken As CancellationToken) As Task(Of ValidationResult(Of ValidatedToken, ValidationError)) Implements IResultBasedValidation.ValidateTokenAsync" />
+      <MemberSignature Language="F#" Value="abstract member Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync : Microsoft.IdentityModel.Tokens.SecurityToken * Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters * Microsoft.IdentityModel.Tokens.CallContext * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken, Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt;&#xA;override this.Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync : Microsoft.IdentityModel.Tokens.SecurityToken * Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters * Microsoft.IdentityModel.Tokens.CallContext * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken, Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt;" Usage="jsonWebTokenHandler.Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync (token, validationParameters, callContext, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync(Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext,System.Threading.CancellationToken)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="Microsoft.IdentityModel.Tokens.SecurityToken" />
+        <Parameter Name="validationParameters" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters" />
+        <Parameter Name="callContext" Type="Microsoft.IdentityModel.Tokens.CallContext" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">To be added.</param>
+        <param name="validationParameters">To be added.</param>
+        <param name="callContext">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync">
+      <MemberSignature Language="C#" Value="System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt; IResultBasedValidation.ValidateTokenAsync (string token, Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters validationParameters, Microsoft.IdentityModel.Tokens.CallContext callContext, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;valuetype Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2&lt;class Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken, class Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt; Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync(string token, class Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters validationParameters, class Microsoft.IdentityModel.Tokens.CallContext callContext, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.Microsoft#IdentityModel#Tokens#Experimental#IResultBasedValidation#ValidateTokenAsync(System.String,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Function ValidateTokenAsync (token As String, validationParameters As ValidationParameters, callContext As CallContext, cancellationToken As CancellationToken) As Task(Of ValidationResult(Of ValidatedToken, ValidationError)) Implements IResultBasedValidation.ValidateTokenAsync" />
+      <MemberSignature Language="F#" Value="abstract member Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync : string * Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters * Microsoft.IdentityModel.Tokens.CallContext * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken, Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt;&#xA;override this.Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync : string * Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters * Microsoft.IdentityModel.Tokens.CallContext * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken, Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt;" Usage="jsonWebTokenHandler.Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync (token, validationParameters, callContext, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync(System.String,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext,System.Threading.CancellationToken)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.String" />
+        <Parameter Name="validationParameters" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters" />
+        <Parameter Name="callContext" Type="Microsoft.IdentityModel.Tokens.CallContext" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">To be added.</param>
+        <param name="validationParameters">To be added.</param>
+        <param name="callContext">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="ReadJsonWebToken">
       <MemberSignature Language="C#" Value="public virtual Microsoft.IdentityModel.JsonWebTokens.JsonWebToken ReadJsonWebToken (ReadOnlyMemory&lt;char&gt; token);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.IdentityModel.JsonWebTokens.JsonWebToken ReadJsonWebToken(valuetype System.ReadOnlyMemory`1&lt;char&gt; token) cil managed" />
@@ -893,7 +1061,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.9.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.JsonWebTokens.JsonWebToken</ReturnType>
@@ -926,7 +1094,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.9.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.JsonWebTokens.JsonWebToken</ReturnType>
@@ -960,7 +1128,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.9.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.SecurityToken</ReturnType>
@@ -989,7 +1157,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.9.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.SecurityKey</ReturnType>
@@ -1019,7 +1187,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.9.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1042,7 +1210,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.9.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Type</ReturnType>
@@ -1065,7 +1233,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.9.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1099,7 +1267,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.9.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.TokenValidationResult&gt;</ReturnType>
@@ -1126,7 +1294,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.JsonWebTokens</AssemblyName>
-        <AssemblyVersion>8.9.0.0</AssemblyVersion>
+        <AssemblyVersion>8.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.TokenValidationResult&gt;</ReturnType>
