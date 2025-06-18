@@ -1,0 +1,164 @@
+<Type Name="MacMainThreadScheduler" FullName="Microsoft.Identity.Client.Utils.MacMainThreadScheduler">
+  <TypeSignature Language="C#" Value="public class MacMainThreadScheduler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MacMainThreadScheduler extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Client.Utils.MacMainThreadScheduler" />
+  <TypeSignature Language="VB.NET" Value="Public Class MacMainThreadScheduler" />
+  <TypeSignature Language="F#" Value="type MacMainThreadScheduler = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+    <AssemblyVersion>4.73.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            This class implements a main thread scheduler for macOS applications. It should be also working on other platforms, but it is primarily designed for macOS.
+            It is mainly designed for internal use to support the MSAL library in "switching to the main thread anytime". 
+            However, external users can also call it if needed.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Instance">
+      <MemberSignature Language="C#" Value="public static Microsoft.Identity.Client.Utils.MacMainThreadScheduler Instance ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Identity.Client.Utils.MacMainThreadScheduler Instance() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.Utils.MacMainThreadScheduler.Instance" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Instance () As MacMainThreadScheduler" />
+      <MemberSignature Language="F#" Value="static member Instance : unit -&gt; Microsoft.Identity.Client.Utils.MacMainThreadScheduler" Usage="Microsoft.Identity.Client.Utils.MacMainThreadScheduler.Instance " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.73.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.Utils.MacMainThreadScheduler</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the singleton instance of MacMainThreadScheduler
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCurrentlyOnMainThread">
+      <MemberSignature Language="C#" Value="public bool IsCurrentlyOnMainThread ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsCurrentlyOnMainThread() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.Utils.MacMainThreadScheduler.IsCurrentlyOnMainThread" />
+      <MemberSignature Language="VB.NET" Value="Public Function IsCurrentlyOnMainThread () As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsCurrentlyOnMainThread : unit -&gt; bool" Usage="macMainThreadScheduler.IsCurrentlyOnMainThread " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.73.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Check if the current thread is the main thread.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRunning">
+      <MemberSignature Language="C#" Value="public bool IsRunning ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsRunning() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.Utils.MacMainThreadScheduler.IsRunning" />
+      <MemberSignature Language="VB.NET" Value="Public Function IsRunning () As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsRunning : unit -&gt; bool" Usage="macMainThreadScheduler.IsRunning " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.73.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Check if the message loop is currently running.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RunOnMainThreadAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task RunOnMainThreadAsync (Func&lt;System.Threading.Tasks.Task&gt; asyncAction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task RunOnMainThreadAsync(class System.Func`1&lt;class System.Threading.Tasks.Task&gt; asyncAction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.Utils.MacMainThreadScheduler.RunOnMainThreadAsync(System.Func{System.Threading.Tasks.Task})" />
+      <MemberSignature Language="VB.NET" Value="Public Function RunOnMainThreadAsync (asyncAction As Func(Of Task)) As Task" />
+      <MemberSignature Language="F#" Value="member this.RunOnMainThreadAsync : Func&lt;System.Threading.Tasks.Task&gt; -&gt; System.Threading.Tasks.Task" Usage="macMainThreadScheduler.RunOnMainThreadAsync asyncAction" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.73.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncAction" Type="System.Func&lt;System.Threading.Tasks.Task&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="asyncAction">action</param>
+        <summary>
+            Run on the main thread asynchronously.
+            </summary>
+        <returns>FinishedTask</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartMessageLoop">
+      <MemberSignature Language="C#" Value="public void StartMessageLoop ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StartMessageLoop() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.Utils.MacMainThreadScheduler.StartMessageLoop" />
+      <MemberSignature Language="VB.NET" Value="Public Sub StartMessageLoop ()" />
+      <MemberSignature Language="F#" Value="member this.StartMessageLoop : unit -&gt; unit" Usage="macMainThreadScheduler.StartMessageLoop " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.73.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Start the message loop on the main thread to process actions
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="public void Stop ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Stop() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.Utils.MacMainThreadScheduler.Stop" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Stop ()" />
+      <MemberSignature Language="F#" Value="member this.Stop : unit -&gt; unit" Usage="macMainThreadScheduler.Stop " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.73.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Stop the main thread message loop
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

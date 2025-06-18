@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.Identity.Client.Broker" Version="4.72.1.0" />
-    <Assembly Name="Microsoft.Identity.Client.Desktop" Version="4.72.1.0" />
-    <Assembly Name="Microsoft.Identity.Client" Version="4.72.1.0" />
+    <Assembly Name="Microsoft.Identity.Client.Broker" Version="4.73.0.0" />
+    <Assembly Name="Microsoft.Identity.Client.Desktop" Version="4.73.0.0" />
+    <Assembly Name="Microsoft.Identity.Client" Version="4.73.0.0" />
   </Assemblies>
   <Namespace Name="Microsoft.Identity.Client">
     <Type Name="Microsoft.Identity.Client.AadAuthorityAudience" Id="T:Microsoft.Identity.Client.AadAuthorityAudience">
@@ -173,6 +173,7 @@
       <Member Id="M:Microsoft.Identity.Client.AssertionRequestOptions.#ctor" />
       <Member Id="P:Microsoft.Identity.Client.AssertionRequestOptions.CancellationToken" />
       <Member Id="P:Microsoft.Identity.Client.AssertionRequestOptions.Claims" />
+      <Member Id="P:Microsoft.Identity.Client.AssertionRequestOptions.ClientAssertionFmiPath" />
       <Member Id="P:Microsoft.Identity.Client.AssertionRequestOptions.ClientCapabilities" />
       <Member Id="P:Microsoft.Identity.Client.AssertionRequestOptions.ClientID" />
       <Member Id="P:Microsoft.Identity.Client.AssertionRequestOptions.TokenEndpoint" />
@@ -214,6 +215,7 @@
     </Type>
     <Type Name="Microsoft.Identity.Client.AuthenticationResultMetadata" Id="T:Microsoft.Identity.Client.AuthenticationResultMetadata">
       <Member Id="M:Microsoft.Identity.Client.AuthenticationResultMetadata.#ctor(Microsoft.Identity.Client.TokenSource)" />
+      <Member Id="P:Microsoft.Identity.Client.AuthenticationResultMetadata.CachedAccessTokenCount" />
       <Member Id="P:Microsoft.Identity.Client.AuthenticationResultMetadata.CacheLevel" />
       <Member Id="P:Microsoft.Identity.Client.AuthenticationResultMetadata.CacheRefreshReason" />
       <Member Id="P:Microsoft.Identity.Client.AuthenticationResultMetadata.DurationCreatingExtendedTokenInUs" />
@@ -973,6 +975,7 @@
       <Member Id="M:Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.OnBeforeTokenRequest``1(Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder{``0},System.Func{Microsoft.Identity.Client.Extensibility.OnBeforeTokenRequestData,System.Threading.Tasks.Task})" />
       <Member Id="M:Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.WithAdditionalCacheParameters``1(Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder{``0},System.Collections.Generic.IEnumerable{System.String})" />
       <Member Id="M:Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.WithAuthenticationExtension``1(Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder{``0},Microsoft.Identity.Client.Extensibility.MsalAuthenticationExtension)" />
+      <Member Id="M:Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.WithFmiPathForClientAssertion``1(Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder{``0},System.String)" />
       <Member Id="M:Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.WithProofOfPosessionKeyId``1(Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder{``0},System.String,System.String)" />
     </Type>
     <Type Name="Microsoft.Identity.Client.Extensibility.AcquireTokenForClientBuilderExtensions" Id="T:Microsoft.Identity.Client.Extensibility.AcquireTokenForClientBuilderExtensions">
@@ -1100,6 +1103,16 @@
     <Type Name="Microsoft.Identity.Client.TelemetryCore.TelemetryClient.TelemetryData" Id="T:Microsoft.Identity.Client.TelemetryCore.TelemetryClient.TelemetryData">
       <Member Id="M:Microsoft.Identity.Client.TelemetryCore.TelemetryClient.TelemetryData.#ctor" />
       <Member Id="P:Microsoft.Identity.Client.TelemetryCore.TelemetryClient.TelemetryData.CacheLevel" />
+    </Type>
+  </Namespace>
+  <Namespace Name="Microsoft.Identity.Client.Utils">
+    <Type Name="Microsoft.Identity.Client.Utils.MacMainThreadScheduler" Id="T:Microsoft.Identity.Client.Utils.MacMainThreadScheduler">
+      <Member Id="M:Microsoft.Identity.Client.Utils.MacMainThreadScheduler.Instance" />
+      <Member Id="M:Microsoft.Identity.Client.Utils.MacMainThreadScheduler.IsCurrentlyOnMainThread" />
+      <Member Id="M:Microsoft.Identity.Client.Utils.MacMainThreadScheduler.IsRunning" />
+      <Member Id="M:Microsoft.Identity.Client.Utils.MacMainThreadScheduler.RunOnMainThreadAsync(System.Func{System.Threading.Tasks.Task})" />
+      <Member Id="M:Microsoft.Identity.Client.Utils.MacMainThreadScheduler.StartMessageLoop" />
+      <Member Id="M:Microsoft.Identity.Client.Utils.MacMainThreadScheduler.Stop" />
     </Type>
   </Namespace>
   <Namespace Name="Microsoft.Identity.Client.Utils.Windows">
