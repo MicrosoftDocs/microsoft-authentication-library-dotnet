@@ -47,6 +47,7 @@
     <AssemblyVersion>4.72.0.0</AssemblyVersion>
     <AssemblyVersion>4.72.1.0</AssemblyVersion>
     <AssemblyVersion>4.73.0.0</AssemblyVersion>
+    <AssemblyVersion>4.73.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
     <Interface>
@@ -80,8 +81,18 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.73.0.0</AssemblyVersion>
+        <AssemblyVersion>4.73.1.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("This API is no longer recommended. For scenarios requiring SSO with the Windows OS's default account, please transition to using WAM.", false)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("This API is no longer recommended. For scenarios requiring SSO with the Windows OS's default account, please transition to using WAM.", false)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenByIntegratedWindowsAuthParameterBuilder</ReturnType>
       </ReturnValue>
@@ -92,8 +103,9 @@
         <param name="scopes">Scopes requested to access a protected API.</param>
         <summary>
           <para>
-            This API is no longer recommended and will be deprecated in future versions in favor of 
-            similar functionality via <see href="https://aka.ms/msal-net-wam">the Windows broker (WAM)</see>.
+            This API is no longer recommended. If your application requires single sign-on (SSO) with the Windows OS's default account, 
+            please transition to using WAM, which provides similar functionality 
+            via <see href="https://aka.ms/msal-net-wam">the Windows broker (WAM)</see>.
             WAM does not require any setup for desktop apps to login with the Windows account.
             </para>
           <para>
@@ -119,7 +131,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.73.0.0</AssemblyVersion>
+        <AssemblyVersion>4.73.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -163,7 +175,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.73.0.0</AssemblyVersion>
+        <AssemblyVersion>4.73.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenByUsernamePasswordParameterBuilder</ReturnType>
@@ -198,7 +210,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.73.0.0</AssemblyVersion>
+        <AssemblyVersion>4.73.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenInteractiveParameterBuilder</ReturnType>
@@ -230,7 +242,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.73.0.0</AssemblyVersion>
+        <AssemblyVersion>4.73.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenWithDeviceCodeParameterBuilder</ReturnType>
@@ -268,7 +280,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.73.0.0</AssemblyVersion>
+        <AssemblyVersion>4.73.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
