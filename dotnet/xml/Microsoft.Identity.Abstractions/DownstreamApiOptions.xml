@@ -26,6 +26,7 @@
     <AssemblyVersion>8.2.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.1.0.0</AssemblyVersion>
+    <AssemblyVersion>9.2.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions</BaseTypeName>
@@ -47,7 +48,13 @@
                 "MyProfile": {
                    "BaseUrl": "https://graph.microsoft.com/v1.0",
                    "RelativePath": "/me/profile",
-                    "Scopes": [ "user.read"]
+                    "Scopes": [ "user.read"],
+                    "ExtraHeaderParameters": {
+                      "OData-Version": "4.0"
+                    },
+                    "ExtraQueryParameters": {
+                      "filter": "displayName eq 'John'"
+                    }
                 }
               ]
             ```
@@ -61,7 +68,13 @@
                    "RelativePath": "/books/all",
                    "RequestAppToken": true,
                    "ProtocolScheme": "Pop",
-                    "Scopes": ["https://mylibrary.com/.default"]
+                    "Scopes": ["https://mylibrary.com/.default"],
+                    "ExtraHeaderParameters": {
+                      "X-API-Version": "v2"
+                    },
+                    "ExtraQueryParameters": {
+                      "format": "json"
+                    }
                 }
               ]
             ```
@@ -77,7 +90,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>9.1.0.0</AssemblyVersion>
+        <AssemblyVersion>9.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -96,7 +109,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>9.1.0.0</AssemblyVersion>
+        <AssemblyVersion>9.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="other" Type="Microsoft.Identity.Abstractions.DownstreamApiOptions" />
@@ -118,7 +131,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>9.1.0.0</AssemblyVersion>
+        <AssemblyVersion>9.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -142,7 +155,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>9.1.0.0</AssemblyVersion>
+        <AssemblyVersion>9.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Abstractions.DownstreamApiOptions</ReturnType>
@@ -165,7 +178,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>9.1.0.0</AssemblyVersion>
+        <AssemblyVersion>9.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions</ReturnType>
@@ -187,7 +200,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>9.1.0.0</AssemblyVersion>
+        <AssemblyVersion>9.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -210,7 +223,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>9.1.0.0</AssemblyVersion>
+        <AssemblyVersion>9.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Func&lt;System.Net.Http.HttpContent,System.Object&gt;</ReturnType>
@@ -224,6 +237,56 @@
         <remarks>This property cannot be set in the configuration. It's code only.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="ExtraHeaderParameters">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,string&gt;? ExtraHeaderParameters { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, string&gt; ExtraHeaderParameters" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.DownstreamApiOptions.ExtraHeaderParameters" />
+      <MemberSignature Language="VB.NET" Value="Public Property ExtraHeaderParameters As IDictionary(Of String, String)" />
+      <MemberSignature Language="F#" Value="member this.ExtraHeaderParameters : System.Collections.Generic.IDictionary&lt;string, string&gt; with get, set" Usage="Microsoft.Identity.Abstractions.DownstreamApiOptions.ExtraHeaderParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>9.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Sets extra headers in the HTTP request to the downstream web API. This should
+            not be confused with another option to set the headers in the request to the 
+            Identity Provider. See <see cref="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.ExtraHeadersParameters" /> for 
+            that scenario.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtraQueryParameters">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,string&gt;? ExtraQueryParameters { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, string&gt; ExtraQueryParameters" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.DownstreamApiOptions.ExtraQueryParameters" />
+      <MemberSignature Language="VB.NET" Value="Public Property ExtraQueryParameters As IDictionary(Of String, String)" />
+      <MemberSignature Language="F#" Value="member this.ExtraQueryParameters : System.Collections.Generic.IDictionary&lt;string, string&gt; with get, set" Usage="Microsoft.Identity.Abstractions.DownstreamApiOptions.ExtraQueryParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>9.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Sets query parameters for the query string in the HTTP request to the 
+            downstream web API. This should not be confused with another option to set the 
+            query parameters in the request to the Identity Provider. See 
+            <see cref="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.ExtraQueryParameters" /> for that scenario.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Scopes">
       <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;string&gt;? Scopes { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; Scopes" />
@@ -233,7 +296,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>9.1.0.0</AssemblyVersion>
+        <AssemblyVersion>9.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
@@ -259,7 +322,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>9.1.0.0</AssemblyVersion>
+        <AssemblyVersion>9.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Func&lt;System.Object,System.Net.Http.HttpContent&gt;</ReturnType>
