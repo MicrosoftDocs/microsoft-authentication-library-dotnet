@@ -17,16 +17,14 @@ ms.custom: devx-track-csharp, aaddev, has-adal-ref, devx-track-dotnet
 
 [!INCLUDE [ADAL migration note](../includes/adal-migration-note.md)]
 
-## Why migrate to MSAL.NET or Microsoft.Identity.Web
+## Why migrate
 
 Azure AD Authentication Library for .NET (ADAL.NET) [has been deprecated](https://devblogs.microsoft.com/identity/update-your-applications-from-adal-to-msal/) and no new features or bug fixes, including security bugs will be implemented. 
 Application using ADAL will continue to work.
 
-## Migration guide for apps using ADAL directly
+### Migration guide for apps using ADAL directly
 
 Before digging in the details of MSAL.NET vs ADAL.NET, you might want to check if you want to use MSAL.NET or a higher-level library like [`Microsoft.Identity.Web`](../microsoft-identity-web/index.md). For details about the decision tree below, read [MSAL.NET or Microsoft.Identity.Web](../getting-started/choosing-msal-dotnet.md).
-
-![Block diagram explaining how to choose if you need to use MSAL.NET and Microsoft.Identity.Web or both when migrating from ADAL](../media/msal-net-migration/decision-diagram.png)
 
 - Learn how to [migrate confidential client applications built on top of ASP.NET MVC or .NET classic from ADAL.NET to MSAL.NET](migrate-confidential-client.md).
 - Learn how to [migrate public client applications built on top of .NET or .NET classic from ADAL.NET to MSAL.NET](migrate-public-client.md).
@@ -34,7 +32,7 @@ Before digging in the details of MSAL.NET vs ADAL.NET, you might want to check i
   - [Web apps](https://github.com/AzureAD/microsoft-identity-web/wiki/web-apps#migrating-from-previous-versions--adding-authentication)
   - [Web APIs](https://github.com/AzureAD/microsoft-identity-web/wiki/web-apis)
 
-## Migration guide for apps using ADAL indirectly 
+### Migration guide for apps using ADAL indirectly 
 
 You might unknowingly consume ADAL dependencies from other SDKs. In other words, ADAL is a transitive depdendency. This still represents a risk to your application, as your application cannot upgrade ADAL to fix a potential security issue or to benefit from a security improvement.
 
