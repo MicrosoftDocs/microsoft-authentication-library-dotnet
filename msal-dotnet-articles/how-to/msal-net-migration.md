@@ -36,7 +36,7 @@ Before digging in the details of MSAL.NET vs ADAL.NET, you might want to check i
 
 You might unknowingly consume ADAL dependencies from other SDKs. In other words, ADAL is a transitive depdendency. This still represents a risk to your application, as your application cannot upgrade ADAL to fix a potential security issue or to benefit from a security improvement.
 
-To migrate, you first have to indentify the root depedency that consumes ADAL. In most cases, the root depedency is itself deprecated. To identify the root depedency, you can get use [Visual Studio nuget interface](https://learn.microsoft.com/nuget/consume-packages/install-use-packages-visual-studio) or the `dotnet nuget why` [command](https://learn.microsoft.com/dotnet/core/tools/dotnet-nuget-why)
+To migrate, you first have to identify the root dependency that consumes ADAL. In most cases, the root dependency is itself deprecated. To identify the root dependency, you can get use [Visual Studio nuget interface](/nuget/consume-packages/install-use-packages-visual-studio) or the `dotnet nuget why` [command](/dotnet/core/tools/dotnet-nuget-why)
 
 Below are the most common deprecated packages and their MSAL alternatives. For more detailed migration information, see [AppAuthentication to Azure.Identity Migration Guidance](/dotnet/api/overview/azure/app-auth-migration) and **Migration guide** links in the specific [Azure SDK for .NET](/dotnet/api/overview/azure/) library pages.
 
