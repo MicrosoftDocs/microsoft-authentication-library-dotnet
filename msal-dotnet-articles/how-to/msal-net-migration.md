@@ -52,7 +52,6 @@ Below are the most common deprecated packages and their MSAL alternatives. For m
 | `Microsoft.Azure.Management.Compute.Fluent`                   | `Azure.ResourceManager.Compute`                                                                      |
 | `Microsoft.Azure.Management.MachineLearning.Fluent`           | `Azure.ResourceManager.MachineLearningCompute`                                                       |
 | `Microsoft.Azure.Management.Media, windowsazure.mediaservices`| `Azure.ResourceManager.Media`                                                                        |
-| `Microsoft.Azure.Management.Media, windowsazure.mediaservices`| `Azure.ResourceManager.Media`                                                                        |
 | `Microsoft.Kusto.Client`                                      | `Microsoft.Azure.Kusto.Data`                                                                         |
 | `Microsoft.Kusto.Ingest`                                      | `Microsoft.Azure.Kusto.Ingest`                                                                       |
 
