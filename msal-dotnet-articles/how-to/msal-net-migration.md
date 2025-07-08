@@ -19,33 +19,28 @@ ms.custom: devx-track-csharp, aaddev, has-adal-ref, devx-track-dotnet
 
 ## Why migrate to MSAL.NET or Microsoft.Identity.Web
 
-Both the Microsoft Authentication Library for .NET (MSAL.NET) and Azure AD Authentication Library for .NET (ADAL.NET) are used to authenticate Microsoft Entra entities and request tokens from Microsoft Entra ID.
+Azure AD Authentication Library for .NET (ADAL.NET) [has been deprecated](https://devblogs.microsoft.com/identity/update-your-applications-from-adal-to-msal/) and no new features or bug fixes, including security bugs will be implemented. 
+Application using ADAL will continue to work.
 
-Up until now, most developers have requested tokens from Microsoft Entra ID for developers platform (v1.0) using Azure AD Authentication Library (ADAL). These tokens are used to authenticate Microsoft Entra identities (work and school accounts).
+## Migration guide for apps using ADAL directly
 
-Because ADAL is deprecated, we **strongly advise** our customers to migrate to MSAL or higher-level libraries that are based on MSAL, such as `Microsoft.Identity.Web`. MSAL offers several key benefits:
-
-- You can authenticate a broader set of Microsoft identities: work or school accounts, personal Microsoft accounts, and social or local accounts with Azure AD B2C and Microsoft Entra External ID.
-- Your users get the best single-sign-on (SSO) experience.
-- Your application can enable incremental consent, Conditional Access, and other emerging security capabilities.
-- You benefit from continuous innovation in terms of security and resilience,
-
->[!IMPORTANT]
->**MSAL.NET or Microsoft.Identity.Web are now the recommended auth libraries to use with the Microsoft identity platform**. No new features will be implemented in ADAL. For details see the announcement: [Update your applications from ADAL to MSAL](https://devblogs.microsoft.com/identity/update-your-applications-from-adal-to-msal/).
-
-## Should you migrate to MSAL.NET or to Microsoft.Identity.Web
-
-Before digging in the details of MSAL.NET vs ADAL.NET, you might want to check if you want to use MSAL.NET or a higher-level library like [`Microsoft.Identity.Web`](../microsoft-identity-web/index.md).
-
-For details about the decision tree below, read [MSAL.NET or Microsoft.Identity.Web](../getting-started/choosing-msal-dotnet.md).
+Before digging in the details of MSAL.NET vs ADAL.NET, you might want to check if you want to use MSAL.NET or a higher-level library like [`Microsoft.Identity.Web`](../microsoft-identity-web/index.md). For details about the decision tree below, read [MSAL.NET or Microsoft.Identity.Web](../getting-started/choosing-msal-dotnet.md).
 
 ![Block diagram explaining how to choose if you need to use MSAL.NET and Microsoft.Identity.Web or both when migrating from ADAL](../media/msal-net-migration/decision-diagram.png)
 
-[!INCLUDE [importance-of-logging](../includes/importance-of-logging.md)]
+- Learn how to [migrate confidential client applications built on top of ASP.NET MVC or .NET classic from ADAL.NET to MSAL.NET](migrate-confidential-client.md).
+- Learn how to [migrate public client applications built on top of .NET or .NET classic from ADAL.NET to MSAL.NET](migrate-public-client.md).
+- Learn how to migrate confidential client applications built on top of ASP.NET Core from ADAL.NET to Microsoft.Identity.Web:
+  - [Web apps](https://github.com/AzureAD/microsoft-identity-web/wiki/web-apps#migrating-from-previous-versions--adding-authentication)
+  - [Web APIs](https://github.com/AzureAD/microsoft-identity-web/wiki/web-apis)
 
-### Deprecated ADAL.NET NuGet packages and their MSAL.NET equivalents
+## Migration guide for apps using ADAL indirectly 
 
-You might unknowingly consume ADAL dependencies from other Azure SDKs. Below are few of the deprecated packages and their MSAL alternatives. For more detailed migration information, see [AppAuthentication to Azure.Identity Migration Guidance](/dotnet/api/overview/azure/app-auth-migration) and **Migration guide** links in the specific [Azure SDK for .NET](/dotnet/api/overview/azure/) library pages.
+You might unknowingly consume ADAL dependencies from other SDKs. In other words, ADAL is a transitive depdendency. This still represents a risk to your application, as your application cannot upgrade ADAL to fix a potential security issue or to benefit from a security improvement.
+
+To migrate, you first have to indentify the root depedency that consumes ADAL. In most cases, the root depedency is itself deprecated. To identify the root depedency, you can get use [Visual Studio nuget interface](https://learn.microsoft.com/nuget/consume-packages/install-use-packages-visual-studio) or the `dotnet nuget why` [command](https://learn.microsoft.com/dotnet/core/tools/dotnet-nuget-why)
+
+Below are the most common deprecated packages and their MSAL alternatives. For more detailed migration information, see [AppAuthentication to Azure.Identity Migration Guidance](/dotnet/api/overview/azure/app-auth-migration) and **Migration guide** links in the specific [Azure SDK for .NET](/dotnet/api/overview/azure/) library pages.
 
 |  Legacy Package (ADAL-dependent, deprecated)                  | Supported Package (MSAL-dependent, current) |
 | ------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
@@ -59,6 +54,9 @@ You might unknowingly consume ADAL dependencies from other Azure SDKs. Below are
 | `Microsoft.Azure.Management.Compute.Fluent`                   | `Azure.ResourceManager.Compute`                                                                      |
 | `Microsoft.Azure.Management.MachineLearning.Fluent`           | `Azure.ResourceManager.MachineLearningCompute`                                                       |
 | `Microsoft.Azure.Management.Media, windowsazure.mediaservices`| `Azure.ResourceManager.Media`                                                                        |
+| `Microsoft.Azure.Management.Media, windowsazure.mediaservices`| `Azure.ResourceManager.Media`                                                                        |
+| `Microsoft.Kusto.Client`                                      | `Microsoft.Azure.Kusto.Data`                                                                         |
+| `Microsoft.Kusto.Ingest`                                      | `Microsoft.Azure.Kusto.Ingest`                                                                       |
 
 ## Next steps
 
