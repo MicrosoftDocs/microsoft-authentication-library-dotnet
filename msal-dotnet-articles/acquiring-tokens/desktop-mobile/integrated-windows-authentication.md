@@ -38,7 +38,7 @@ AuthenticationResult result = null;
 try
 {    
     result = await app.AcquireTokenSilent(scopes, PublicClientApplication.OperatingSystemAccount)
-                          .ExecuteAsync(); // this will try to SSO with Windows OS logged in account. 
+                          .ExecuteAsync(); // this will try to SSO silently with Windows OS logged in account. 
 }
 // Can't get a token silently, go interactive
 catch (MsalUiRequiredException ex)
