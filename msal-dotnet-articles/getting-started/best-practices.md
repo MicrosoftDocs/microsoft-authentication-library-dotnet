@@ -77,20 +77,40 @@ public async Task<AuthenticationResult> SignInAsync(string[] scopes)
 
 ## Enable comprehensive logging
 
-Always enable MSAL logging to help with troubleshooting authentication issues:
+Always enable MSAL logging to help with troubleshooting authentication issues. Use modern structured logging patterns:
 
 ```csharp
+// Modern structured logging approach
 var app = PublicClientApplicationBuilder
     .Create(clientId)
     .WithLogging((level, message, containsPii) =>
     {
-        // Use your preferred logging framework
-        Console.WriteLine($"[{level}] {message}");
+        // Use structured logging with your preferred framework
+        var logLevel = level switch
+        {
+            LogLevel.Error => Microsoft.Extensions.Logging.LogLevel.Error,
+            LogLevel.Warning => Microsoft.Extensions.Logging.LogLevel.Warning,
+            LogLevel.Info => Microsoft.Extensions.Logging.LogLevel.Information,
+            LogLevel.Verbose => Microsoft.Extensions.Logging.LogLevel.Debug,
+            _ => Microsoft.Extensions.Logging.LogLevel.Information
+        };
+        
+        logger.Log(logLevel, "MSAL: {Message}", message);
     }, 
     LogLevel.Info, 
-    enablePiiLogging: false, // Set to true only for debugging
+    enablePiiLogging: false, // Set to true only for debugging in development
     enableDefaultPlatformLogging: true)
     .Build();
+```
+
+For production applications, integrate with Microsoft.Extensions.Logging:
+
+```csharp
+services.AddLogging(builder =>
+{
+    builder.AddConsole();
+    builder.AddApplicationInsights(); // For Azure monitoring
+});
 ```
 
 ## Implement proper error handling
@@ -219,15 +239,20 @@ await retryPolicy.ExecuteAsync(async () =>
 
 ### Validate redirect URIs
 
-Always validate that redirect URIs in your app registration match exactly:
+Always validate that redirect URIs in your app registration match exactly. Use specific redirect URIs instead of generic ones:
 
 ```csharp
-// ✅ Good - Exact match
+// ✅ Good - Specific redirect URI for desktop apps
+.WithRedirectUri("http://localhost")  // Recommended for desktop apps
+
+// ✅ Good - Specific redirect URI for web apps
 .WithRedirectUri("https://localhost:5001/signin-oidc")
 
-// ❌ Bad - Generic redirect URI in production
-.WithRedirectUri("https://localhost")
+// ⚠️ Avoid generic patterns in production
+.WithRedirectUri("https://localhost")  // Too generic for production use
 ```
+
+> **Important**: The `WithDefaultRedirectUri()` method is being phased out in favor of explicit redirect URI configuration. Always specify your redirect URI explicitly.
 
 ### Secure token storage
 
@@ -340,21 +365,38 @@ public class AuthConfig
 
 ### Desktop applications
 
-- Use `WithDefaultRedirectUri()` for public client applications
-- Consider using WAM (Web Account Manager) for better user experience on Windows
+- Use explicit redirect URIs: `WithRedirectUri("http://localhost")` instead of `WithDefaultRedirectUri()`
+- **Enable WAM (Windows Authentication Manager)** for better user experience on Windows:
+  ```csharp
+  .WithBroker(new BrokerOptions(BrokerOptions.OperatingSystems.Windows)
+  {
+      Title = "Your App Name",
+      MsaPassthrough = true
+  })
+  ```
 - Implement proper token cache serialization for cross-session persistence
+- Consider using system browsers instead of embedded web views
 
 ### Web applications
 
-- Use Microsoft.Identity.Web for ASP.NET Core applications
-- Implement distributed token caching for scalability
-- Handle sign-out scenarios properly
+- **Use Microsoft.Identity.Web** for ASP.NET Core applications instead of direct MSAL.NET
+- Implement distributed token caching for scalability (`AddDistributedTokenCaches()`)
+- Handle sign-out scenarios properly with proper session management
+- Use Azure Key Vault for credential storage in production
 
 ### Mobile applications
 
 - Use system browsers instead of embedded web views when possible
-- Implement proper keychain/keystore integration
+- Implement proper keychain/keystore integration for secure token storage
 - Handle network connectivity issues gracefully
+- Consider using broker authentication where available
+
+### Cloud/Service applications
+
+- **Use Managed Identity** for Azure-hosted applications to eliminate credential management
+- Implement proper retry policies with exponential backoff
+- Use regional endpoints for better performance
+- Consider using certificate-based authentication over client secrets
 
 ## Common pitfalls to avoid
 
@@ -368,3 +410,72 @@ public class AuthConfig
 8. **Not testing error scenarios** - Test with various user conditions
 9. **Ignoring security best practices** - Always use HTTPS, validate redirect URIs
 10. **Not monitoring authentication metrics** - Track success/failure rates and performance
+
+## Avoid deprecated patterns
+
+### Username/Password flows are discouraged
+
+While `AcquireTokenByUsernamePassword` and `AcquireTokenByIntegratedWindowsAuth` are still available, they should be avoided in favor of more secure alternatives:
+
+```csharp
+// ❌ Avoid - Username/Password flow (ROPC)
+var result = await app.AcquireTokenByUsernamePassword(scopes, username, password).ExecuteAsync();
+
+// ✅ Prefer - Interactive authentication with broker
+var result = await app.AcquireTokenInteractive(scopes)
+    .WithBroker(new BrokerOptions(BrokerOptions.OperatingSystems.Windows))
+    .ExecuteAsync();
+```
+
+### SecureString is obsolete
+
+Microsoft no longer recommends using `SecureString`. Use regular strings for passwords:
+
+```csharp
+// ❌ Avoid - SecureString is obsolete
+var securePassword = new SecureString();
+// ... populate securePassword
+var result = await app.AcquireTokenByUsernamePassword(scopes, username, securePassword).ExecuteAsync();
+
+// ✅ Use regular string (if username/password flow is absolutely necessary)
+var result = await app.AcquireTokenByUsernamePassword(scopes, username, password).ExecuteAsync();
+```
+
+### Modern broker configuration
+
+Use modern broker options instead of simple boolean flags:
+
+```csharp
+// ❌ Old pattern - Simple boolean
+.WithBroker(true)
+
+// ✅ Modern pattern - Explicit broker options
+.WithBroker(new BrokerOptions(BrokerOptions.OperatingSystems.Windows)
+{
+    Title = "Your App Name",
+    MsaPassthrough = true  // Enable MSA passthrough if needed
+})
+```
+
+## Leverage Microsoft.Identity.Web for web applications
+
+For ASP.NET Core applications, use Microsoft.Identity.Web instead of directly using MSAL.NET:
+
+```csharp
+// ✅ Modern approach for web apps
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
+        .AddMicrosoftIdentityWebApp(Configuration.GetSection("AzureAd"))
+        .EnableTokenAcquisitionToCallDownstreamApi()
+        .AddMicrosoftGraph(Configuration.GetSection("GraphAPI"))
+        .AddInMemoryTokenCaches(); // Or AddDistributedTokenCaches for production
+}
+```
+
+This approach provides:
+- Automatic token cache management
+- Built-in token acquisition services
+- Integration with ASP.NET Core's dependency injection
+- Support for Microsoft Graph SDK
+- Automatic token refresh handling

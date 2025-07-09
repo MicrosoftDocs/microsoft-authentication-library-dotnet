@@ -41,7 +41,7 @@ public class DesktopAuthExample
         _app = PublicClientApplicationBuilder
             .Create(ClientId)
             .WithAuthority($"https://login.microsoftonline.com/{TenantId}")
-            .WithDefaultRedirectUri()
+            .WithRedirectUri("http://localhost") // Use explicit redirect URI
             .WithLogging((level, message, containsPii) =>
             {
                 Console.WriteLine($"[{level}] {message}");
@@ -668,7 +668,7 @@ public class TokenCacheExample
         var app = PublicClientApplicationBuilder
             .Create(ClientId)
             .WithAuthority("https://login.microsoftonline.com/organizations")
-            .WithDefaultRedirectUri()
+            .WithRedirectUri("http://localhost")
             .Build();
 
         // Configure token cache
@@ -900,7 +900,7 @@ public void ConfigureServices(IServiceCollection services)
         return PublicClientApplicationBuilder
             .Create(config.ClientId)
             .WithAuthority(config.Authority)
-            .WithDefaultRedirectUri()
+            .WithRedirectUri("http://localhost")
             .WithLogging((level, message, containsPii) =>
             {
                 if (config.EnableLogging)
