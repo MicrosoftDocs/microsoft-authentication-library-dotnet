@@ -15,7 +15,41 @@ ms.topic: conceptual
 # Using MSAL.NET with Integrated Windows Authentication (IWA)
 
 >[!NOTE]
->Integrated Windows Authentication has been replaced with a more reliable way of getting tokens silently - [WAM](wam.md). WAM can login the current windows user silently. This workflow does not require complex setup and it even works for personal (Microsoft) accounts. Internally, the Windows Broker (WAM) will try several strategies to get a token for the current Windows user, including IWA and redeeming the PRT. This eliminates most of the limitations with IWA.
+>Integrated Windows Authentication (IWA) is now deprecated and has been replaced by a more robust and modern mechanism for silent token acquisition: [WAM](wam.md).
+WAM enables silent Single Sign-On(SSO) for the current Windows user without requiring complex configuration. It also supports personal Microsoft accounts. Under the hood, WAM leverages multiple strategies—including IWA and Primary Refresh Token (PRT) redemption—to obtain tokens silently, thereby addressing many of the limitations associated with traditional IWA.
+
+The IWA documentation should only be referenced for maintaining existing production deployments. If you're planning to migrate to WAM for Single Sign-On (SSO) with OS account, refer to the below sample implementation for guidance and refer to [WAM](wam.md) for more details. 
+
+```csharp
+var scopes = new[] { "User.Read" };
+
+BrokerOptions options = new BrokerOptions(BrokerOptions.OperatingSystems.Windows);
+options.Title = "My Awesome Application";
+
+IPublicClientApplication app =
+    PublicClientApplicationBuilder.Create("YOUR_CLIENT_ID")
+    .WithDefaultRedirectUri()
+    .WithParentActivityOrWindow(GetConsoleOrTerminalWindow)
+    .WithBroker(options)
+    .Build();
+
+AuthenticationResult result = null;
+
+try
+{    
+    result = await app.AcquireTokenSilent(scopes, PublicClientApplication.OperatingSystemAccount)
+                          .ExecuteAsync(); // this will try to SSO with Windows OS logged in account. 
+}
+// Can't get a token silently, go interactive
+catch (MsalUiRequiredException ex)
+{
+    var atiBuilder = app.AcquireTokenInteractive(scopes)
+                         .WithAccount(PublicClientApplication.OperatingSystemAccount);
+    result = await atiBuilder.ExecuteAsync();
+}
+
+```
+
 
 If your desktop or mobile application runs on Windows and on a machine connected to a Windows domain (Active Directory or Microsoft Entra joined) it is possible to use the Integrated Windows Authentication (IWA) to acquire a token silently. No UI is required when using the application.
 
