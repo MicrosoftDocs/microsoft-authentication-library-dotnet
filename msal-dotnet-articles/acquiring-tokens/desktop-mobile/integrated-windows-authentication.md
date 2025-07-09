@@ -43,9 +43,9 @@ try
 // Can't get a token silently, go interactive
 catch (MsalUiRequiredException ex)
 {
-    var atiBuilder = app.AcquireTokenInteractive(scopes)
-                         .WithAccount(PublicClientApplication.OperatingSystemAccount);
-    result = await atiBuilder.ExecuteAsync();
+    result = app.AcquireTokenInteractive(scopes)
+                         .WithAccount(PublicClientApplication.OperatingSystemAccount)
+                         .ExecuteAsync();
 }
 
 ```
