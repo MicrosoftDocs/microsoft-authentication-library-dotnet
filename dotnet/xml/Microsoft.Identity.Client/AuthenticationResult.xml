@@ -48,6 +48,7 @@
     <AssemblyVersion>4.72.1.0</AssemblyVersion>
     <AssemblyVersion>4.73.0.0</AssemblyVersion>
     <AssemblyVersion>4.73.1.0</AssemblyVersion>
+    <AssemblyVersion>4.74.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -70,12 +71,16 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.73.1.0</AssemblyVersion>
+        <AssemblyVersion>4.74.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("Direct constructor use is deprecated.", false)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Direct constructor use is deprecated.", false)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <Parameters>
@@ -121,8 +126,18 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.73.1.0</AssemblyVersion>
+        <AssemblyVersion>4.74.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("Direct constructor use is deprecated.", false)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Direct constructor use is deprecated.", false)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters>
         <Parameter Name="accessToken" Type="System.String" />
         <Parameter Name="isExtendedLifeTimeToken" Type="System.Boolean" />
@@ -172,7 +187,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.73.1.0</AssemblyVersion>
+        <AssemblyVersion>4.74.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -186,15 +201,15 @@
       </Docs>
     </Member>
     <Member MemberName="Account">
-      <MemberSignature Language="C#" Value="public Microsoft.Identity.Client.IAccount Account { get; }" />
+      <MemberSignature Language="C#" Value="public Microsoft.Identity.Client.IAccount Account { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Identity.Client.IAccount Account" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.AuthenticationResult.Account" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Account As IAccount" />
-      <MemberSignature Language="F#" Value="member this.Account : Microsoft.Identity.Client.IAccount" Usage="Microsoft.Identity.Client.AuthenticationResult.Account" />
+      <MemberSignature Language="VB.NET" Value="Public Property Account As IAccount" />
+      <MemberSignature Language="F#" Value="member this.Account : Microsoft.Identity.Client.IAccount with get, set" Usage="Microsoft.Identity.Client.AuthenticationResult.Account" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.73.1.0</AssemblyVersion>
+        <AssemblyVersion>4.74.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.IAccount</ReturnType>
@@ -211,15 +226,15 @@
       </Docs>
     </Member>
     <Member MemberName="AdditionalResponseParameters">
-      <MemberSignature Language="C#" Value="public System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; AdditionalResponseParameters { get; }" />
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; AdditionalResponseParameters { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, string&gt; AdditionalResponseParameters" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.AuthenticationResult.AdditionalResponseParameters" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AdditionalResponseParameters As IReadOnlyDictionary(Of String, String)" />
-      <MemberSignature Language="F#" Value="member this.AdditionalResponseParameters : System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;" Usage="Microsoft.Identity.Client.AuthenticationResult.AdditionalResponseParameters" />
+      <MemberSignature Language="VB.NET" Value="Public Property AdditionalResponseParameters As IReadOnlyDictionary(Of String, String)" />
+      <MemberSignature Language="F#" Value="member this.AdditionalResponseParameters : System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; with get, set" Usage="Microsoft.Identity.Client.AuthenticationResult.AdditionalResponseParameters" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.73.1.0</AssemblyVersion>
+        <AssemblyVersion>4.74.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IReadOnlyDictionary&lt;System.String,System.String&gt;</ReturnType>
@@ -236,15 +251,15 @@
       </Docs>
     </Member>
     <Member MemberName="AuthenticationResultMetadata">
-      <MemberSignature Language="C#" Value="public Microsoft.Identity.Client.AuthenticationResultMetadata AuthenticationResultMetadata { get; }" />
+      <MemberSignature Language="C#" Value="public Microsoft.Identity.Client.AuthenticationResultMetadata AuthenticationResultMetadata { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Identity.Client.AuthenticationResultMetadata AuthenticationResultMetadata" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.AuthenticationResult.AuthenticationResultMetadata" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AuthenticationResultMetadata As AuthenticationResultMetadata" />
-      <MemberSignature Language="F#" Value="member this.AuthenticationResultMetadata : Microsoft.Identity.Client.AuthenticationResultMetadata" Usage="Microsoft.Identity.Client.AuthenticationResult.AuthenticationResultMetadata" />
+      <MemberSignature Language="VB.NET" Value="Public Property AuthenticationResultMetadata As AuthenticationResultMetadata" />
+      <MemberSignature Language="F#" Value="member this.AuthenticationResultMetadata : Microsoft.Identity.Client.AuthenticationResultMetadata with get, set" Usage="Microsoft.Identity.Client.AuthenticationResult.AuthenticationResultMetadata" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.73.1.0</AssemblyVersion>
+        <AssemblyVersion>4.74.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AuthenticationResultMetadata</ReturnType>
@@ -257,16 +272,38 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="ClaimsPrincipal">
-      <MemberSignature Language="C#" Value="public System.Security.Claims.ClaimsPrincipal ClaimsPrincipal { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Claims.ClaimsPrincipal ClaimsPrincipal" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.AuthenticationResult.ClaimsPrincipal" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ClaimsPrincipal As ClaimsPrincipal" />
-      <MemberSignature Language="F#" Value="member this.ClaimsPrincipal : System.Security.Claims.ClaimsPrincipal" Usage="Microsoft.Identity.Client.AuthenticationResult.ClaimsPrincipal" />
+    <Member MemberName="BindingCertificate">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509Certificate2 BindingCertificate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.X509Certificates.X509Certificate2 BindingCertificate" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.AuthenticationResult.BindingCertificate" />
+      <MemberSignature Language="VB.NET" Value="Public Property BindingCertificate As X509Certificate2" />
+      <MemberSignature Language="F#" Value="member this.BindingCertificate : System.Security.Cryptography.X509Certificates.X509Certificate2 with get, set" Usage="Microsoft.Identity.Client.AuthenticationResult.BindingCertificate" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.73.1.0</AssemblyVersion>
+        <AssemblyVersion>4.74.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate2</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The X509 certificate bound to the access-token when mTLS-PoP was used.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClaimsPrincipal">
+      <MemberSignature Language="C#" Value="public System.Security.Claims.ClaimsPrincipal ClaimsPrincipal { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Claims.ClaimsPrincipal ClaimsPrincipal" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.AuthenticationResult.ClaimsPrincipal" />
+      <MemberSignature Language="VB.NET" Value="Public Property ClaimsPrincipal As ClaimsPrincipal" />
+      <MemberSignature Language="F#" Value="member this.ClaimsPrincipal : System.Security.Claims.ClaimsPrincipal with get, set" Usage="Microsoft.Identity.Client.AuthenticationResult.ClaimsPrincipal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.74.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Claims.ClaimsPrincipal</ReturnType>
@@ -280,15 +317,15 @@
       </Docs>
     </Member>
     <Member MemberName="CorrelationId">
-      <MemberSignature Language="C#" Value="public Guid CorrelationId { get; }" />
+      <MemberSignature Language="C#" Value="public Guid CorrelationId { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid CorrelationId" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.AuthenticationResult.CorrelationId" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CorrelationId As Guid" />
-      <MemberSignature Language="F#" Value="member this.CorrelationId : Guid" Usage="Microsoft.Identity.Client.AuthenticationResult.CorrelationId" />
+      <MemberSignature Language="VB.NET" Value="Public Property CorrelationId As Guid" />
+      <MemberSignature Language="F#" Value="member this.CorrelationId : Guid with get, set" Usage="Microsoft.Identity.Client.AuthenticationResult.CorrelationId" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.73.1.0</AssemblyVersion>
+        <AssemblyVersion>4.74.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Guid</ReturnType>
@@ -310,7 +347,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.73.1.0</AssemblyVersion>
+        <AssemblyVersion>4.74.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -334,15 +371,15 @@
       </Docs>
     </Member>
     <Member MemberName="ExpiresOn">
-      <MemberSignature Language="C#" Value="public DateTimeOffset ExpiresOn { get; }" />
+      <MemberSignature Language="C#" Value="public DateTimeOffset ExpiresOn { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTimeOffset ExpiresOn" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.AuthenticationResult.ExpiresOn" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ExpiresOn As DateTimeOffset" />
-      <MemberSignature Language="F#" Value="member this.ExpiresOn : DateTimeOffset" Usage="Microsoft.Identity.Client.AuthenticationResult.ExpiresOn" />
+      <MemberSignature Language="VB.NET" Value="Public Property ExpiresOn As DateTimeOffset" />
+      <MemberSignature Language="F#" Value="member this.ExpiresOn : DateTimeOffset with get, set" Usage="Microsoft.Identity.Client.AuthenticationResult.ExpiresOn" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.73.1.0</AssemblyVersion>
+        <AssemblyVersion>4.74.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DateTimeOffset</ReturnType>
@@ -366,7 +403,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.73.1.0</AssemblyVersion>
+        <AssemblyVersion>4.74.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -391,15 +428,15 @@
       </Docs>
     </Member>
     <Member MemberName="IdToken">
-      <MemberSignature Language="C#" Value="public string IdToken { get; }" />
+      <MemberSignature Language="C#" Value="public string IdToken { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string IdToken" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.AuthenticationResult.IdToken" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IdToken As String" />
-      <MemberSignature Language="F#" Value="member this.IdToken : string" Usage="Microsoft.Identity.Client.AuthenticationResult.IdToken" />
+      <MemberSignature Language="VB.NET" Value="Public Property IdToken As String" />
+      <MemberSignature Language="F#" Value="member this.IdToken : string with get, set" Usage="Microsoft.Identity.Client.AuthenticationResult.IdToken" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.73.1.0</AssemblyVersion>
+        <AssemblyVersion>4.74.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -421,7 +458,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.73.1.0</AssemblyVersion>
+        <AssemblyVersion>4.74.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -452,15 +489,15 @@
       </Docs>
     </Member>
     <Member MemberName="Scopes">
-      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;string&gt; Scopes { get; }" />
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;string&gt; Scopes { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; Scopes" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.AuthenticationResult.Scopes" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Scopes As IEnumerable(Of String)" />
-      <MemberSignature Language="F#" Value="member this.Scopes : seq&lt;string&gt;" Usage="Microsoft.Identity.Client.AuthenticationResult.Scopes" />
+      <MemberSignature Language="VB.NET" Value="Public Property Scopes As IEnumerable(Of String)" />
+      <MemberSignature Language="F#" Value="member this.Scopes : seq&lt;string&gt; with get, set" Usage="Microsoft.Identity.Client.AuthenticationResult.Scopes" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.73.1.0</AssemblyVersion>
+        <AssemblyVersion>4.74.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
@@ -474,15 +511,15 @@
       </Docs>
     </Member>
     <Member MemberName="SpaAuthCode">
-      <MemberSignature Language="C#" Value="public string SpaAuthCode { get; }" />
+      <MemberSignature Language="C#" Value="public string SpaAuthCode { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string SpaAuthCode" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.AuthenticationResult.SpaAuthCode" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SpaAuthCode As String" />
-      <MemberSignature Language="F#" Value="member this.SpaAuthCode : string" Usage="Microsoft.Identity.Client.AuthenticationResult.SpaAuthCode" />
+      <MemberSignature Language="VB.NET" Value="Public Property SpaAuthCode As String" />
+      <MemberSignature Language="F#" Value="member this.SpaAuthCode : string with get, set" Usage="Microsoft.Identity.Client.AuthenticationResult.SpaAuthCode" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.73.1.0</AssemblyVersion>
+        <AssemblyVersion>4.74.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -497,15 +534,15 @@
       </Docs>
     </Member>
     <Member MemberName="TenantId">
-      <MemberSignature Language="C#" Value="public string TenantId { get; }" />
+      <MemberSignature Language="C#" Value="public string TenantId { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string TenantId" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.AuthenticationResult.TenantId" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TenantId As String" />
-      <MemberSignature Language="F#" Value="member this.TenantId : string" Usage="Microsoft.Identity.Client.AuthenticationResult.TenantId" />
+      <MemberSignature Language="VB.NET" Value="Public Property TenantId As String" />
+      <MemberSignature Language="F#" Value="member this.TenantId : string with get, set" Usage="Microsoft.Identity.Client.AuthenticationResult.TenantId" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.73.1.0</AssemblyVersion>
+        <AssemblyVersion>4.74.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -520,15 +557,15 @@
       </Docs>
     </Member>
     <Member MemberName="TokenType">
-      <MemberSignature Language="C#" Value="public string TokenType { get; }" />
+      <MemberSignature Language="C#" Value="public string TokenType { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string TokenType" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.AuthenticationResult.TokenType" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TokenType As String" />
-      <MemberSignature Language="F#" Value="member this.TokenType : string" Usage="Microsoft.Identity.Client.AuthenticationResult.TokenType" />
+      <MemberSignature Language="VB.NET" Value="Public Property TokenType As String" />
+      <MemberSignature Language="F#" Value="member this.TokenType : string with get, set" Usage="Microsoft.Identity.Client.AuthenticationResult.TokenType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.73.1.0</AssemblyVersion>
+        <AssemblyVersion>4.74.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -543,15 +580,15 @@
       </Docs>
     </Member>
     <Member MemberName="UniqueId">
-      <MemberSignature Language="C#" Value="public string UniqueId { get; }" />
+      <MemberSignature Language="C#" Value="public string UniqueId { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string UniqueId" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.AuthenticationResult.UniqueId" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property UniqueId As String" />
-      <MemberSignature Language="F#" Value="member this.UniqueId : string" Usage="Microsoft.Identity.Client.AuthenticationResult.UniqueId" />
+      <MemberSignature Language="VB.NET" Value="Public Property UniqueId As String" />
+      <MemberSignature Language="F#" Value="member this.UniqueId : string with get, set" Usage="Microsoft.Identity.Client.AuthenticationResult.UniqueId" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.73.1.0</AssemblyVersion>
+        <AssemblyVersion>4.74.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>

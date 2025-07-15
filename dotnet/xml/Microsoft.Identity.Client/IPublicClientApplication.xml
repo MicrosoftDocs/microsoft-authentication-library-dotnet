@@ -48,6 +48,7 @@
     <AssemblyVersion>4.72.1.0</AssemblyVersion>
     <AssemblyVersion>4.73.0.0</AssemblyVersion>
     <AssemblyVersion>4.73.1.0</AssemblyVersion>
+    <AssemblyVersion>4.74.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
     <Interface>
@@ -81,7 +82,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.73.1.0</AssemblyVersion>
+        <AssemblyVersion>4.74.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -131,7 +132,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.73.1.0</AssemblyVersion>
+        <AssemblyVersion>4.74.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -139,8 +140,8 @@
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName Language="C#">[System.Obsolete("Using SecureString is not recommended. Use AcquireTokenByUsernamePassword(IEnumerable&lt;string&gt; scopes, string username, string password) instead.", false)]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Obsolete("Using SecureString is not recommended. Use AcquireTokenByUsernamePassword(IEnumerable&lt;string&gt; scopes, string username, string password) instead.", false)&gt;]</AttributeName>
+          <AttributeName Language="C#">[System.Obsolete("This API has been deprecated, use a more secure flow. See https://aka.ms/msal-ropc-migration for migration guidance", false)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("This API has been deprecated, use a more secure flow. See https://aka.ms/msal-ropc-migration for migration guidance", false)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -175,8 +176,18 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.73.1.0</AssemblyVersion>
+        <AssemblyVersion>4.74.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("This API has been deprecated, use a more secure flow. See https://aka.ms/msal-ropc-migration for migration guidance", false)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("This API has been deprecated, use a more secure flow. See https://aka.ms/msal-ropc-migration for migration guidance", false)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenByUsernamePasswordParameterBuilder</ReturnType>
       </ReturnValue>
@@ -210,7 +221,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.73.1.0</AssemblyVersion>
+        <AssemblyVersion>4.74.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenInteractiveParameterBuilder</ReturnType>
@@ -242,7 +253,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.73.1.0</AssemblyVersion>
+        <AssemblyVersion>4.74.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenWithDeviceCodeParameterBuilder</ReturnType>
@@ -280,7 +291,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.73.1.0</AssemblyVersion>
+        <AssemblyVersion>4.74.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
