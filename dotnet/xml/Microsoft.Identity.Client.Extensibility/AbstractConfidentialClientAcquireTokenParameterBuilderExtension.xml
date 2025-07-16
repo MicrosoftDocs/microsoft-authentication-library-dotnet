@@ -44,6 +44,7 @@
     <AssemblyVersion>4.70.2.0</AssemblyVersion>
     <AssemblyVersion>4.71.0.0</AssemblyVersion>
     <AssemblyVersion>4.71.1.0</AssemblyVersion>
+    <AssemblyVersion>4.74.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -65,7 +66,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.71.1.0</AssemblyVersion>
+        <AssemblyVersion>4.74.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt;</ReturnType>
@@ -101,7 +102,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.71.1.0</AssemblyVersion>
+        <AssemblyVersion>4.74.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt;</ReturnType>
@@ -138,7 +139,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.71.1.0</AssemblyVersion>
+        <AssemblyVersion>4.74.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt;</ReturnType>
@@ -165,6 +166,46 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="WithFmiPathForClientAssertion&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt; WithFmiPathForClientAssertion&lt;T&gt; (this Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt; builder, string fmiPath) where T : Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt;;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1&lt;!!T&gt; WithFmiPathForClientAssertion&lt;(class Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1&lt;!!T&gt;) T&gt;(class Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1&lt;!!T&gt; builder, string fmiPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.WithFmiPathForClientAssertion``1(Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder{``0},System.String)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function WithFmiPathForClientAssertion(Of T As AbstractAcquireTokenParameterBuilder(Of T)) (builder As AbstractAcquireTokenParameterBuilder(Of T), fmiPath As String) As AbstractAcquireTokenParameterBuilder(Of T)" />
+      <MemberSignature Language="F#" Value="static member WithFmiPathForClientAssertion : Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;'T (requires 'T :&gt; Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;'T&gt;)&gt; * string -&gt; Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;'T (requires 'T :&gt; Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;'T&gt;)&gt; (requires 'T :&gt; Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;'T&gt;)" Usage="Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.WithFmiPathForClientAssertion (builder, fmiPath)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.74.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <BaseTypeName>Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt;</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="builder" Type="Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt;" RefType="this" />
+        <Parameter Name="fmiPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">To be added.</typeparam>
+        <param name="builder">The builder.</param>
+        <param name="fmiPath">The FMI path to use for client assertion.</param>
+        <summary>
+            Specifies an FMI path to be used for the client assertion. This lets higher level APIs like Id.Web 
+            provide credentials which are FMI sensitive.
+            Important: tokens are associated with the credential FMI path, which impacts cache lookups
+            This is an extensibility API and should not be used by applications.
+            </summary>
+        <returns>The builder to chain the .With methods</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when fmiPath is null or whitespace.</exception>
+      </Docs>
+    </Member>
     <Member MemberName="WithProofOfPosessionKeyId&lt;T&gt;">
       <MemberSignature Language="C#" Value="public static Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt; WithProofOfPosessionKeyId&lt;T&gt; (this Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt; builder, string keyId, string expectedTokenTypeFromAad = &quot;Bearer&quot;) where T : Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt;;" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1&lt;!!T&gt; WithProofOfPosessionKeyId&lt;(class Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1&lt;!!T&gt;) T&gt;(class Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1&lt;!!T&gt; builder, string keyId, string expectedTokenTypeFromAad) cil managed" />
@@ -174,7 +215,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.71.1.0</AssemblyVersion>
+        <AssemblyVersion>4.74.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt;</ReturnType>
