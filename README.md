@@ -9,7 +9,6 @@ This is the **documentation repository** for Microsoft Authentication Library (M
 | ✅ **SDK Repository**           | [`AzureAD/microsoft-authentication-library-for-dotnet`](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet) |
 | ✅ **SDK Package**              | [`Microsoft.Identity.Client`](https://www.nuget.org/packages/Microsoft.Identity.Client/) |
 | ✅ **SDK Documentation**        | [MSAL.NET on Microsoft Learn](https://learn.microsoft.com/entra/msal/dotnet/) |
-| 🔒 **SDK Documentation CI Job** | [Azure Pipelines](https://apidrop.visualstudio.com/Content%20CI/_build?definitionId=5311) |
 
 ## Contributions
 
