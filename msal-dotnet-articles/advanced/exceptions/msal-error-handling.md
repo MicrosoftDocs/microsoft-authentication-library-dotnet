@@ -8,7 +8,7 @@ ms.date: 06/04/2024
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.reviewer:
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: aaddev, devx-track-dotnet
 #Customer intent: 
 ---

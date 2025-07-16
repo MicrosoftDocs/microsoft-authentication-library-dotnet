@@ -8,7 +8,7 @@ ms.date: 10/21/2022
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.reviewer: 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: aaddev, devx-track-dotnet, sfi-image-nochange
 #Customer intent: 
 ---
