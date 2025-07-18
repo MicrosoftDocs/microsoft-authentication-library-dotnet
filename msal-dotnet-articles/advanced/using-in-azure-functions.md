@@ -8,7 +8,7 @@ ms.date: 03/17/2023
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.reviewer:
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: devx-track-csharp, aaddev
 #Customer intent: 
 # Customer intent: As an application developer, I want to learn how to use MSAL.NET in Azure Functions
