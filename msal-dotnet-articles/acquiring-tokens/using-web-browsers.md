@@ -8,7 +8,7 @@ ms.date: 08/24/2023
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.reviewer:
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: devx-track-csharp, aaddev, has-adal-ref, devx-track-dotnet
 #Customer intent: As an application developer, I want to learn about web browsers MSAL.NET so I can decide if this platform meets my application development needs and requirements.
 ---

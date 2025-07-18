@@ -8,7 +8,7 @@ ms.date: 08/31/2020
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.reviewer:
-ms.topic: conceptual
+ms.topic: upgrade-and-migration-article
 ms.custom: aaddev, has-adal-ref
 #Customer intent: As an application developer, I want to learn how to migrate my Xamarin Android applications that use Microsoft Authenticator from ADAL.NET to MSAL.NET.
 ---

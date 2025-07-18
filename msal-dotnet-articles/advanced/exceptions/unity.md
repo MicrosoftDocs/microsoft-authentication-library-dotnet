@@ -8,7 +8,7 @@ ms.date: 05/20/2025
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.reviewer: 
-ms.topic: conceptual
+ms.topic: troubleshooting-general
 ms.custom: 
 #Customer intent: 
 ---

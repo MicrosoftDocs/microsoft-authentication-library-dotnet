@@ -8,7 +8,7 @@ ms.date: 05/30/2025
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.reviewer:
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: devx-track-csharp, aaddev, devx-track-dotnet
 #Customer intent: 
 # Customer intent: As an application developer, I want to learn about specific considerations when using Azure AD B2C and MSAL.NET so I can decide if this platform meets my application development needs and requirements.
