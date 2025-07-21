@@ -162,12 +162,54 @@
       </ReturnValue>
       <Parameters>
         <Parameter Name="eventName" Type="System.String" />
-        <Parameter Name="stringProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
-        <Parameter Name="longProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Int64&gt;" />
-        <Parameter Name="boolProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Boolean&gt;" />
-        <Parameter Name="dateTimeProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.DateTime&gt;" />
-        <Parameter Name="doubleProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Double&gt;" />
-        <Parameter Name="guidProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Guid&gt;" />
+        <Parameter Name="stringProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1, 1 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1, 1 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="longProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Int64&gt;">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="boolProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Boolean&gt;">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="dateTimeProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.DateTime&gt;">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="doubleProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Double&gt;">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="guidProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Guid&gt;">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
       </Parameters>
       <Docs>
         <param name="eventName">Name of the event to track. Should be unique per scenario.</param>

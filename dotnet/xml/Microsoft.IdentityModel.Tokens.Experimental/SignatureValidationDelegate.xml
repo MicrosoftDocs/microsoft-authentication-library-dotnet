@@ -14,11 +14,24 @@
   <Parameters>
     <Parameter Name="token" Type="Microsoft.IdentityModel.Tokens.SecurityToken" />
     <Parameter Name="validationParameters" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters" />
-    <Parameter Name="configuration" Type="Microsoft.IdentityModel.Tokens.BaseConfiguration" />
+    <Parameter Name="configuration" Type="Microsoft.IdentityModel.Tokens.BaseConfiguration">
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+    </Parameter>
     <Parameter Name="callContext" Type="Microsoft.IdentityModel.Tokens.CallContext" />
   </Parameters>
   <ReturnValue>
     <ReturnType>Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.SecurityKey,Microsoft.IdentityModel.Tokens.Experimental.SignatureValidationError&gt;</ReturnType>
+    <Attributes>
+      <Attribute>
+        <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1, 1 })]</AttributeName>
+        <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1, 1 })&gt;]</AttributeName>
+      </Attribute>
+    </Attributes>
   </ReturnValue>
   <Docs>
     <param name="token">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" /> with a signature.</param>

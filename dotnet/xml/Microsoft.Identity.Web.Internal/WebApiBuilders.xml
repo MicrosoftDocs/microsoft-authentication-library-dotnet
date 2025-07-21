@@ -30,12 +30,6 @@
         <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("Calls Bind, Configure with Unspecified Configuration and ServiceCollection.")]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("Calls Bind, Configure with Unspecified Configuration and ServiceCollection.")&gt;]</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder</ReturnType>
       </ReturnValue>
@@ -43,7 +37,14 @@
         <Parameter Name="configureConfidentialClientApplicationOptions" Type="System.Action&lt;Microsoft.Identity.Client.ConfidentialClientApplicationOptions&gt;" />
         <Parameter Name="authenticationScheme" Type="System.String" />
         <Parameter Name="services" Type="Microsoft.Extensions.DependencyInjection.IServiceCollection" />
-        <Parameter Name="configuration" Type="Microsoft.Extensions.Configuration.IConfigurationSection" />
+        <Parameter Name="configuration" Type="Microsoft.Extensions.Configuration.IConfigurationSection">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
       </Parameters>
       <Docs>
         <param name="configureConfidentialClientApplicationOptions">The action to configure <see cref="T:Microsoft.Identity.Client.ConfidentialClientApplicationOptions" />.</param>

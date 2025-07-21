@@ -15,6 +15,12 @@
     </BaseTypeArguments>
   </Base>
   <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>
             App service authentication handler.
@@ -23,11 +29,11 @@
   </Docs>
   <Members>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public AppServicesAuthenticationHandler (Microsoft.Extensions.Options.IOptionsMonitor&lt;Microsoft.Identity.Web.AppServicesAuthenticationOptions&gt; options, Microsoft.Extensions.Logging.ILoggerFactory logger, System.Text.Encodings.Web.UrlEncoder encoder, Microsoft.AspNetCore.Authentication.ISystemClock clock);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Extensions.Options.IOptionsMonitor`1&lt;class Microsoft.Identity.Web.AppServicesAuthenticationOptions&gt; options, class Microsoft.Extensions.Logging.ILoggerFactory logger, class System.Text.Encodings.Web.UrlEncoder encoder, class Microsoft.AspNetCore.Authentication.ISystemClock clock) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.AppServicesAuthenticationHandler.#ctor(Microsoft.Extensions.Options.IOptionsMonitor{Microsoft.Identity.Web.AppServicesAuthenticationOptions},Microsoft.Extensions.Logging.ILoggerFactory,System.Text.Encodings.Web.UrlEncoder,Microsoft.AspNetCore.Authentication.ISystemClock)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (options As IOptionsMonitor(Of AppServicesAuthenticationOptions), logger As ILoggerFactory, encoder As UrlEncoder, clock As ISystemClock)" />
-      <MemberSignature Language="F#" Value="new Microsoft.Identity.Web.AppServicesAuthenticationHandler : Microsoft.Extensions.Options.IOptionsMonitor&lt;Microsoft.Identity.Web.AppServicesAuthenticationOptions&gt; * Microsoft.Extensions.Logging.ILoggerFactory * System.Text.Encodings.Web.UrlEncoder * Microsoft.AspNetCore.Authentication.ISystemClock -&gt; Microsoft.Identity.Web.AppServicesAuthenticationHandler" Usage="new Microsoft.Identity.Web.AppServicesAuthenticationHandler (options, logger, encoder, clock)" />
+      <MemberSignature Language="C#" Value="public AppServicesAuthenticationHandler (Microsoft.Extensions.Options.IOptionsMonitor&lt;Microsoft.Identity.Web.AppServicesAuthenticationOptions&gt; options, Microsoft.Extensions.Logging.ILoggerFactory logger, System.Text.Encodings.Web.UrlEncoder encoder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Extensions.Options.IOptionsMonitor`1&lt;class Microsoft.Identity.Web.AppServicesAuthenticationOptions&gt; options, class Microsoft.Extensions.Logging.ILoggerFactory logger, class System.Text.Encodings.Web.UrlEncoder encoder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.AppServicesAuthenticationHandler.#ctor(Microsoft.Extensions.Options.IOptionsMonitor{Microsoft.Identity.Web.AppServicesAuthenticationOptions},Microsoft.Extensions.Logging.ILoggerFactory,System.Text.Encodings.Web.UrlEncoder)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (options As IOptionsMonitor(Of AppServicesAuthenticationOptions), logger As ILoggerFactory, encoder As UrlEncoder)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Identity.Web.AppServicesAuthenticationHandler : Microsoft.Extensions.Options.IOptionsMonitor&lt;Microsoft.Identity.Web.AppServicesAuthenticationOptions&gt; * Microsoft.Extensions.Logging.ILoggerFactory * System.Text.Encodings.Web.UrlEncoder -&gt; Microsoft.Identity.Web.AppServicesAuthenticationHandler" Usage="new Microsoft.Identity.Web.AppServicesAuthenticationHandler (options, logger, encoder)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web</AssemblyName>
@@ -37,13 +43,11 @@
         <Parameter Name="options" Type="Microsoft.Extensions.Options.IOptionsMonitor&lt;Microsoft.Identity.Web.AppServicesAuthenticationOptions&gt;" />
         <Parameter Name="logger" Type="Microsoft.Extensions.Logging.ILoggerFactory" />
         <Parameter Name="encoder" Type="System.Text.Encodings.Web.UrlEncoder" />
-        <Parameter Name="clock" Type="Microsoft.AspNetCore.Authentication.ISystemClock" />
       </Parameters>
       <Docs>
         <param name="options">To be added.</param>
         <param name="logger">To be added.</param>
         <param name="encoder">To be added.</param>
-        <param name="clock">To be added.</param>
         <summary>To be added.</summary>
         <remarks>Note the parameters are required by the base class.</remarks>
         <inheritdoc />

@@ -13,7 +13,14 @@
   </Base>
   <Parameters>
     <Parameter Name="builder" Type="Microsoft.Identity.Client.AcquireTokenByUsernameAndPasswordConfidentialParameterBuilder" />
-    <Parameter Name="acquireTokenOptions" Type="Microsoft.Identity.Abstractions.AcquireTokenOptions" />
+    <Parameter Name="acquireTokenOptions" Type="Microsoft.Identity.Abstractions.AcquireTokenOptions">
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+    </Parameter>
     <Parameter Name="user" Type="System.Security.Claims.ClaimsPrincipal" />
   </Parameters>
   <ReturnValue>

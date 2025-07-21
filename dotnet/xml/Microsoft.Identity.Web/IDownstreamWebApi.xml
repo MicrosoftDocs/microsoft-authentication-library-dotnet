@@ -42,8 +42,22 @@
       </ReturnValue>
       <Parameters>
         <Parameter Name="serviceName" Type="System.String" />
-        <Parameter Name="downstreamWebApiOptionsOverride" Type="System.Action&lt;Microsoft.Identity.Web.DownstreamWebApiOptions&gt;" />
-        <Parameter Name="content" Type="System.Net.Http.StringContent" />
+        <Parameter Name="downstreamWebApiOptionsOverride" Type="System.Action&lt;Microsoft.Identity.Web.DownstreamWebApiOptions&gt;">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="content" Type="System.Net.Http.StringContent">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
       </Parameters>
       <Docs>
         <param name="serviceName">Name of the service describing the downstream web API. There can
@@ -77,9 +91,30 @@
       </ReturnValue>
       <Parameters>
         <Parameter Name="serviceName" Type="System.String" />
-        <Parameter Name="authenticationScheme" Type="System.String" />
-        <Parameter Name="downstreamWebApiOptionsOverride" Type="System.Action&lt;Microsoft.Identity.Web.DownstreamWebApiOptions&gt;" />
-        <Parameter Name="content" Type="System.Net.Http.StringContent" />
+        <Parameter Name="authenticationScheme" Type="System.String">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="downstreamWebApiOptionsOverride" Type="System.Action&lt;Microsoft.Identity.Web.DownstreamWebApiOptions&gt;">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="content" Type="System.Net.Http.StringContent">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
       </Parameters>
       <Docs>
         <param name="serviceName">Name of the service describing the downstream web API. There can
@@ -115,9 +150,30 @@
       </ReturnValue>
       <Parameters>
         <Parameter Name="serviceName" Type="System.String" />
-        <Parameter Name="calledDownstreamWebApiOptionsOverride" Type="System.Action&lt;Microsoft.Identity.Web.DownstreamWebApiOptions&gt;" />
-        <Parameter Name="user" Type="System.Security.Claims.ClaimsPrincipal" />
-        <Parameter Name="content" Type="System.Net.Http.StringContent" />
+        <Parameter Name="calledDownstreamWebApiOptionsOverride" Type="System.Action&lt;Microsoft.Identity.Web.DownstreamWebApiOptions&gt;">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="user" Type="System.Security.Claims.ClaimsPrincipal">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="content" Type="System.Net.Http.StringContent">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
       </Parameters>
       <Docs>
         <param name="serviceName">Name of the service describing the downstream web API. There can
@@ -152,11 +208,31 @@
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;</ReturnType>
+        <Attributes>
+          <Attribute>
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="serviceName" Type="System.String" />
+        <Parameter Name="serviceName" Type="System.String">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
         <Parameter Name="authenticationScheme" Type="System.String" />
-        <Parameter Name="calledDownstreamWebApiOptionsOverride" Type="System.Action&lt;Microsoft.Identity.Web.DownstreamWebApiOptions&gt;" />
+        <Parameter Name="calledDownstreamWebApiOptionsOverride" Type="System.Action&lt;Microsoft.Identity.Web.DownstreamWebApiOptions&gt;">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
         <Parameter Name="user" Type="System.Security.Claims.ClaimsPrincipal" />
         <Parameter Name="content" Type="System.Net.Http.StringContent" />
       </Parameters>
@@ -201,9 +277,22 @@
       </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;TOutput&gt;</ReturnType>
+        <Attributes>
+          <Attribute>
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 2 })]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 2 })&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
       </ReturnValue>
       <TypeParameters>
-        <TypeParameter Name="TInput" />
+        <TypeParameter Name="TInput">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </TypeParameter>
         <TypeParameter Name="TOutput">
           <Constraints>
             <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
@@ -213,8 +302,22 @@
       <Parameters>
         <Parameter Name="serviceName" Type="System.String" />
         <Parameter Name="input" Type="TInput" />
-        <Parameter Name="downstreamWebApiOptionsOverride" Type="System.Action&lt;Microsoft.Identity.Web.DownstreamWebApiOptions&gt;" />
-        <Parameter Name="user" Type="System.Security.Claims.ClaimsPrincipal" />
+        <Parameter Name="downstreamWebApiOptionsOverride" Type="System.Action&lt;Microsoft.Identity.Web.DownstreamWebApiOptions&gt;">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="user" Type="System.Security.Claims.ClaimsPrincipal">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
       </Parameters>
       <Docs>
         <typeparam name="TInput">Input type.</typeparam>
@@ -284,9 +387,22 @@
       </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;TOutput&gt;</ReturnType>
+        <Attributes>
+          <Attribute>
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 2 })]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 2 })&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
       </ReturnValue>
       <TypeParameters>
-        <TypeParameter Name="TInput" />
+        <TypeParameter Name="TInput">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </TypeParameter>
         <TypeParameter Name="TOutput">
           <Constraints>
             <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
@@ -296,9 +412,30 @@
       <Parameters>
         <Parameter Name="serviceName" Type="System.String" />
         <Parameter Name="input" Type="TInput" />
-        <Parameter Name="authenticationScheme" Type="System.String" />
-        <Parameter Name="downstreamWebApiOptionsOverride" Type="System.Action&lt;Microsoft.Identity.Web.DownstreamWebApiOptions&gt;" />
-        <Parameter Name="user" Type="System.Security.Claims.ClaimsPrincipal" />
+        <Parameter Name="authenticationScheme" Type="System.String">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="downstreamWebApiOptionsOverride" Type="System.Action&lt;Microsoft.Identity.Web.DownstreamWebApiOptions&gt;">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="user" Type="System.Security.Claims.ClaimsPrincipal">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
       </Parameters>
       <Docs>
         <typeparam name="TInput">Input type.</typeparam>

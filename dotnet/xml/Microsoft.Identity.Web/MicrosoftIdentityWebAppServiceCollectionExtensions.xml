@@ -30,12 +30,6 @@
         <AssemblyName>Microsoft.Identity.Web</AssemblyName>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("Microsoft.Identity.Web.MicrosoftIdentityWebAppAuthenticationBuilderExtensions.AddMicrosoftIdentityWebApp(AuthenticationBuilder, IConfiguration, String, String, String, Boolean, String).")]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("Microsoft.Identity.Web.MicrosoftIdentityWebAppAuthenticationBuilderExtensions.AddMicrosoftIdentityWebApp(AuthenticationBuilder, IConfiguration, String, String, String, Boolean, String).")&gt;]</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Web.MicrosoftIdentityWebAppAuthenticationBuilderWithConfiguration</ReturnType>
       </ReturnValue>
@@ -46,7 +40,14 @@
         <Parameter Name="openIdConnectScheme" Type="System.String" />
         <Parameter Name="cookieScheme" Type="System.String" />
         <Parameter Name="subscribeToOpenIdConnectMiddlewareDiagnosticsEvents" Type="System.Boolean" />
-        <Parameter Name="displayName" Type="System.String" />
+        <Parameter Name="displayName" Type="System.String">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
       </Parameters>
       <Docs>
         <param name="services">Service collection to which to add authentication.</param>

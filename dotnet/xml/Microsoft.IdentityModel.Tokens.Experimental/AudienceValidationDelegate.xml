@@ -13,12 +13,25 @@
   </Base>
   <Parameters>
     <Parameter Name="tokenAudiences" Type="System.Collections.Generic.IList&lt;System.String&gt;" />
-    <Parameter Name="securityToken" Type="Microsoft.IdentityModel.Tokens.SecurityToken" />
+    <Parameter Name="securityToken" Type="Microsoft.IdentityModel.Tokens.SecurityToken">
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+    </Parameter>
     <Parameter Name="validationParameters" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters" />
     <Parameter Name="callContext" Type="Microsoft.IdentityModel.Tokens.CallContext" />
   </Parameters>
   <ReturnValue>
     <ReturnType>Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;System.String,Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationError&gt;</ReturnType>
+    <Attributes>
+      <Attribute>
+        <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1, 1 })]</AttributeName>
+        <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1, 1 })&gt;]</AttributeName>
+      </Attribute>
+    </Attributes>
   </ReturnValue>
   <Docs>
     <param name="tokenAudiences">The audiences found in the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" />.</param>

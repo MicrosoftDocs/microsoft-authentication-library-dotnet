@@ -16,7 +16,14 @@
     <Parameter Name="securityToken" Type="Microsoft.IdentityModel.Tokens.SecurityToken" />
     <Parameter Name="kid" Type="System.String" />
     <Parameter Name="validationParameters" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters" />
-    <Parameter Name="callContext" Type="Microsoft.IdentityModel.Tokens.CallContext" />
+    <Parameter Name="callContext" Type="Microsoft.IdentityModel.Tokens.CallContext">
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+    </Parameter>
   </Parameters>
   <ReturnValue>
     <ReturnType>System.Collections.Generic.IList&lt;Microsoft.IdentityModel.Tokens.SecurityKey&gt;</ReturnType>

@@ -12,10 +12,24 @@
     <BaseTypeName>System.Delegate</BaseTypeName>
   </Base>
   <Parameters>
-    <Parameter Name="token" Type="System.String" />
+    <Parameter Name="token" Type="System.String">
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+    </Parameter>
     <Parameter Name="securityToken" Type="Microsoft.IdentityModel.Tokens.SecurityToken" />
     <Parameter Name="kid" Type="System.String" />
-    <Parameter Name="validationParameters" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters" />
+    <Parameter Name="validationParameters" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters">
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+    </Parameter>
     <Parameter Name="configuration" Type="Microsoft.IdentityModel.Tokens.BaseConfiguration" />
     <Parameter Name="callContext" Type="Microsoft.IdentityModel.Tokens.CallContext" />
   </Parameters>

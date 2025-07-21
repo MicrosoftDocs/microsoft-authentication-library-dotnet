@@ -12,6 +12,12 @@
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>
             Extensions for the <see cref="T:Microsoft.AspNetCore.Authentication.AuthenticationBuilder" /> for startup initialization.
@@ -30,12 +36,6 @@
         <AssemblyName>Microsoft.Identity.Web</AssemblyName>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("Calls Microsoft.Extensions.Configuration.ConfigurationBinder.Bind(IConfiguration, Object).")]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("Calls Microsoft.Extensions.Configuration.ConfigurationBinder.Bind(IConfiguration, Object).")&gt;]</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Web.MicrosoftIdentityWebAppAuthenticationBuilderWithConfiguration</ReturnType>
       </ReturnValue>
@@ -43,9 +43,23 @@
         <Parameter Name="builder" Type="Microsoft.AspNetCore.Authentication.AuthenticationBuilder" RefType="this" />
         <Parameter Name="configurationSection" Type="Microsoft.Extensions.Configuration.IConfigurationSection" />
         <Parameter Name="openIdConnectScheme" Type="System.String" />
-        <Parameter Name="cookieScheme" Type="System.String" />
+        <Parameter Name="cookieScheme" Type="System.String">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
         <Parameter Name="subscribeToOpenIdConnectMiddlewareDiagnosticsEvents" Type="System.Boolean" />
-        <Parameter Name="displayName" Type="System.String" />
+        <Parameter Name="displayName" Type="System.String">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
       </Parameters>
       <Docs>
         <param name="builder">The <see cref="T:Microsoft.AspNetCore.Authentication.AuthenticationBuilder" /> to which to add this configuration.</param>
@@ -87,9 +101,23 @@
         <Parameter Name="configuration" Type="Microsoft.Extensions.Configuration.IConfiguration" />
         <Parameter Name="configSectionName" Type="System.String" />
         <Parameter Name="openIdConnectScheme" Type="System.String" />
-        <Parameter Name="cookieScheme" Type="System.String" />
+        <Parameter Name="cookieScheme" Type="System.String">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
         <Parameter Name="subscribeToOpenIdConnectMiddlewareDiagnosticsEvents" Type="System.Boolean" />
-        <Parameter Name="displayName" Type="System.String" />
+        <Parameter Name="displayName" Type="System.String">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
       </Parameters>
       <Docs>
         <param name="builder">The <see cref="T:Microsoft.AspNetCore.Authentication.AuthenticationBuilder" /> to which to add this configuration.</param>
@@ -119,23 +147,38 @@
         <AssemblyName>Microsoft.Identity.Web</AssemblyName>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("Microsoft.Identity.Web.MicrosoftIdentityWebAppAuthenticationBuilderExtensions.AddMicrosoftWebAppWithoutConfiguration(AuthenticationBuilder, Action&lt;MicrosoftIdentityOptions&gt;, Action&lt;CookieAuthenticationOptions&gt;, String, String, Boolean, String).")]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("Microsoft.Identity.Web.MicrosoftIdentityWebAppAuthenticationBuilderExtensions.AddMicrosoftWebAppWithoutConfiguration(AuthenticationBuilder, Action&lt;MicrosoftIdentityOptions&gt;, Action&lt;CookieAuthenticationOptions&gt;, String, String, Boolean, String).")&gt;]</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Web.MicrosoftIdentityWebAppAuthenticationBuilder</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="builder" Type="Microsoft.AspNetCore.Authentication.AuthenticationBuilder" RefType="this" />
         <Parameter Name="configureMicrosoftIdentityOptions" Type="System.Action&lt;Microsoft.Identity.Web.MicrosoftIdentityOptions&gt;" />
-        <Parameter Name="configureCookieAuthenticationOptions" Type="System.Action&lt;Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions&gt;" />
+        <Parameter Name="configureCookieAuthenticationOptions" Type="System.Action&lt;Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions&gt;">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
         <Parameter Name="openIdConnectScheme" Type="System.String" />
-        <Parameter Name="cookieScheme" Type="System.String" />
+        <Parameter Name="cookieScheme" Type="System.String">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
         <Parameter Name="subscribeToOpenIdConnectMiddlewareDiagnosticsEvents" Type="System.Boolean" />
-        <Parameter Name="displayName" Type="System.String" />
+        <Parameter Name="displayName" Type="System.String">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
       </Parameters>
       <Docs>
         <param name="builder">The <see cref="T:Microsoft.AspNetCore.Authentication.AuthenticationBuilder" /> to which to add this configuration.</param>

@@ -12,6 +12,12 @@
     <BaseTypeName>Microsoft.Identity.Web.MicrosoftIdentityBaseAuthenticationBuilder</BaseTypeName>
   </Base>
   <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>
             Authentication builder for a web API.
@@ -30,12 +36,6 @@
         <AssemblyName>Microsoft.Identity.Web</AssemblyName>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("Calls Microsoft.Identity.Web.Internal.WebApiBuilders.EnableTokenAcquisition(IServiceCollection, string, Action&lt;ConfidentialClientApplicationOptions&gt;, IConfigurationSection).")]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("Calls Microsoft.Identity.Web.Internal.WebApiBuilders.EnableTokenAcquisition(IServiceCollection, string, Action&lt;ConfidentialClientApplicationOptions&gt;, IConfigurationSection).")&gt;]</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder</ReturnType>
       </ReturnValue>
