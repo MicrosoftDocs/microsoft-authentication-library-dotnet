@@ -1,0 +1,89 @@
+<Type Name="JsonClaimValueTypes" FullName="System.IdentityModel.Tokens.Jwt.JsonClaimValueTypes">
+  <TypeSignature Language="C#" Value="public static class JsonClaimValueTypes" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit JsonClaimValueTypes extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.Jwt.JsonClaimValueTypes" />
+  <TypeSignature Language="VB.NET" Value="Public Class JsonClaimValueTypes" />
+  <TypeSignature Language="F#" Value="type JsonClaimValueTypes = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel.Tokens.Jwt</AssemblyName>
+    <AssemblyVersion>8.13.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Constants that indicate how the <see cref="P:System.Security.Claims.Claim.Value" /> should be evaluated.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Json">
+      <MemberSignature Language="C#" Value="public const string Json;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string Json" />
+      <MemberSignature Language="DocId" Value="F:System.IdentityModel.Tokens.Jwt.JsonClaimValueTypes.Json" />
+      <MemberSignature Language="VB.NET" Value="Public Const Json As String " />
+      <MemberSignature Language="F#" Value="val mutable Json : string" Usage="System.IdentityModel.Tokens.Jwt.JsonClaimValueTypes.Json" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Tokens.Jwt</AssemblyName>
+        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            A value that indicates the <see cref="P:System.Security.Claims.Claim.Value" /> is a Json object.
+            </summary>
+        <remarks>When creating a <see cref="T:System.Security.Claims.Claim" /> from Json if the value was not a simple type {String, Null, True, False, Number}
+            then <see cref="P:System.Security.Claims.Claim.Value" /> will contain the Json value. If the Json was a JsonObject, the <see cref="P:System.Security.Claims.Claim.ValueType" /> will be set to "JSON".</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="JsonArray">
+      <MemberSignature Language="C#" Value="public const string JsonArray;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string JsonArray" />
+      <MemberSignature Language="DocId" Value="F:System.IdentityModel.Tokens.Jwt.JsonClaimValueTypes.JsonArray" />
+      <MemberSignature Language="VB.NET" Value="Public Const JsonArray As String " />
+      <MemberSignature Language="F#" Value="val mutable JsonArray : string" Usage="System.IdentityModel.Tokens.Jwt.JsonClaimValueTypes.JsonArray" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Tokens.Jwt</AssemblyName>
+        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            A value that indicates the <see cref="P:System.Security.Claims.Claim.Value" /> is a Json object.
+            </summary>
+        <remarks>When creating a <see cref="T:System.Security.Claims.Claim" /> from Json if the value was not a simple type {String, Null, True, False, Number}
+            then <see cref="P:System.Security.Claims.Claim.Value" /> will contain the Json value. If the Json was a JsonArray, the <see cref="P:System.Security.Claims.Claim.ValueType" /> will be set to "JSON_ARRAY".</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="JsonNull">
+      <MemberSignature Language="C#" Value="public const string JsonNull;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string JsonNull" />
+      <MemberSignature Language="DocId" Value="F:System.IdentityModel.Tokens.Jwt.JsonClaimValueTypes.JsonNull" />
+      <MemberSignature Language="VB.NET" Value="Public Const JsonNull As String " />
+      <MemberSignature Language="F#" Value="val mutable JsonNull : string" Usage="System.IdentityModel.Tokens.Jwt.JsonClaimValueTypes.JsonNull" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Tokens.Jwt</AssemblyName>
+        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            A value that indicates the <see cref="P:System.Security.Claims.Claim.Value" /> is Json null.
+            </summary>
+        <remarks>When creating a <see cref="T:System.Security.Claims.Claim" /> the <see cref="P:System.Security.Claims.Claim.Value" /> cannot be null. If the Json value was null, then the <see cref="P:System.Security.Claims.Claim.Value" />
+            will be set to <see cref="F:System.String.Empty" /> and the <see cref="P:System.Security.Claims.Claim.ValueType" /> will be set to "JSON_NULL".</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

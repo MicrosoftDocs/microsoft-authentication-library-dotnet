@@ -1,0 +1,128 @@
+<Type Name="IssuerValidationError" FullName="Microsoft.IdentityModel.Tokens.Experimental.IssuerValidationError">
+  <TypeSignature Language="C#" Value="public class IssuerValidationError : Microsoft.IdentityModel.Tokens.Experimental.ValidationError" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit IssuerValidationError extends Microsoft.IdentityModel.Tokens.Experimental.ValidationError" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.IdentityModel.Tokens.Experimental.IssuerValidationError" />
+  <TypeSignature Language="VB.NET" Value="Public Class IssuerValidationError&#xA;Inherits ValidationError" />
+  <TypeSignature Language="F#" Value="type IssuerValidationError = class&#xA;    inherit ValidationError" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+    <AssemblyVersion>8.13.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.IdentityModel.Tokens.Experimental.ValidationError</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents an error that occurs when the issuer of a token cannot be validated.
+            If available, the invalid issuer is stored in <see cref="P:Microsoft.IdentityModel.Tokens.Experimental.IssuerValidationError.InvalidIssuer" />.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IssuerValidationError (Microsoft.IdentityModel.Tokens.Experimental.MessageDetail messageDetail, Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType validationFailureType, Type exceptionType, System.Diagnostics.StackFrame stackFrame, string? invalidIssuer, Exception? innerException = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.IdentityModel.Tokens.Experimental.MessageDetail messageDetail, class Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType validationFailureType, class System.Type exceptionType, class System.Diagnostics.StackFrame stackFrame, string invalidIssuer, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.IssuerValidationError.#ctor(Microsoft.IdentityModel.Tokens.Experimental.MessageDetail,Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType,System.Type,System.Diagnostics.StackFrame,System.String,System.Exception)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (messageDetail As MessageDetail, validationFailureType As ValidationFailureType, exceptionType As Type, stackFrame As StackFrame, invalidIssuer As String, Optional innerException As Exception = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.IdentityModel.Tokens.Experimental.IssuerValidationError : Microsoft.IdentityModel.Tokens.Experimental.MessageDetail * Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType * Type * System.Diagnostics.StackFrame * string * Exception -&gt; Microsoft.IdentityModel.Tokens.Experimental.IssuerValidationError" Usage="new Microsoft.IdentityModel.Tokens.Experimental.IssuerValidationError (messageDetail, validationFailureType, exceptionType, stackFrame, invalidIssuer, innerException)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="messageDetail" Type="Microsoft.IdentityModel.Tokens.Experimental.MessageDetail" />
+        <Parameter Name="validationFailureType" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType" />
+        <Parameter Name="exceptionType" Type="System.Type" />
+        <Parameter Name="stackFrame" Type="System.Diagnostics.StackFrame" />
+        <Parameter Name="invalidIssuer" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="messageDetail" />
+        <param name="validationFailureType" />
+        <param name="exceptionType" />
+        <param name="stackFrame" />
+        <param name="invalidIssuer" />
+        <param name="innerException" />
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.IssuerValidationError" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateException">
+      <MemberSignature Language="C#" Value="protected override Exception CreateException ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Exception CreateException() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.IssuerValidationError.CreateException" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function CreateException () As Exception" />
+      <MemberSignature Language="F#" Value="override this.CreateException : unit -&gt; Exception" Usage="issuerValidationError.CreateException " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates an instance of an <see cref="T:System.Exception" /> using <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationError" /></summary>
+        <returns>An instance of an exception.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidIssuer">
+      <MemberSignature Language="C#" Value="public string? InvalidIssuer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InvalidIssuer" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Tokens.Experimental.IssuerValidationError.InvalidIssuer" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InvalidIssuer As String" />
+      <MemberSignature Language="F#" Value="member this.InvalidIssuer : string" Usage="Microsoft.IdentityModel.Tokens.Experimental.IssuerValidationError.InvalidIssuer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The issuer that could not be validated.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NullParameter">
+      <MemberSignature Language="C#" Value="public static Microsoft.IdentityModel.Tokens.Experimental.IssuerValidationError NullParameter (string parameterName, System.Diagnostics.StackFrame stackFrame);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.IdentityModel.Tokens.Experimental.IssuerValidationError NullParameter(string parameterName, class System.Diagnostics.StackFrame stackFrame) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.IssuerValidationError.NullParameter(System.String,System.Diagnostics.StackFrame)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function NullParameter (parameterName As String, stackFrame As StackFrame) As IssuerValidationError" />
+      <MemberSignature Language="F#" Value="static member NullParameter : string * System.Diagnostics.StackFrame -&gt; Microsoft.IdentityModel.Tokens.Experimental.IssuerValidationError" Usage="Microsoft.IdentityModel.Tokens.Experimental.IssuerValidationError.NullParameter (parameterName, stackFrame)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Tokens.Experimental.IssuerValidationError</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+        <Parameter Name="stackFrame" Type="System.Diagnostics.StackFrame" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">The name of the parameter.</param>
+        <param name="stackFrame">The stack frame where the error occurred.</param>
+        <summary>
+            Creates a new instance of <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.IssuerValidationError" /> representing a null parameter.
+            </summary>
+        <returns>A new <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.IssuerValidationError" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

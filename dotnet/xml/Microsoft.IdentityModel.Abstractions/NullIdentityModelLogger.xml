@@ -1,0 +1,104 @@
+<Type Name="NullIdentityModelLogger" FullName="Microsoft.IdentityModel.Abstractions.NullIdentityModelLogger">
+  <TypeSignature Language="C#" Value="public sealed class NullIdentityModelLogger : Microsoft.IdentityModel.Abstractions.IIdentityLogger" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit NullIdentityModelLogger extends System.Object implements class Microsoft.IdentityModel.Abstractions.IIdentityLogger" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.IdentityModel.Abstractions.NullIdentityModelLogger" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class NullIdentityModelLogger&#xA;Implements IIdentityLogger" />
+  <TypeSignature Language="F#" Value="type NullIdentityModelLogger = class&#xA;    interface IIdentityLogger" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.IdentityModel.Abstractions</AssemblyName>
+    <AssemblyVersion>8.13.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.IdentityModel.Abstractions.IIdentityLogger</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            A minimalistic <see cref="T:Microsoft.IdentityModel.Abstractions.IIdentityLogger" /> implementation that is disabled by default and doesn't log.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Instance">
+      <MemberSignature Language="C#" Value="public static Microsoft.IdentityModel.Abstractions.NullIdentityModelLogger Instance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Microsoft.IdentityModel.Abstractions.NullIdentityModelLogger Instance" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Abstractions.NullIdentityModelLogger.Instance" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property Instance As NullIdentityModelLogger" />
+      <MemberSignature Language="F#" Value="static member Instance : Microsoft.IdentityModel.Abstractions.NullIdentityModelLogger" Usage="Microsoft.IdentityModel.Abstractions.NullIdentityModelLogger.Instance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Abstractions</AssemblyName>
+        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Abstractions.NullIdentityModelLogger</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Default instance of <see cref="T:Microsoft.IdentityModel.Abstractions.NullIdentityModelLogger" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEnabled">
+      <MemberSignature Language="C#" Value="public bool IsEnabled (Microsoft.IdentityModel.Abstractions.EventLogLevel eventLogLevel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsEnabled(valuetype Microsoft.IdentityModel.Abstractions.EventLogLevel eventLogLevel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Abstractions.NullIdentityModelLogger.IsEnabled(Microsoft.IdentityModel.Abstractions.EventLogLevel)" />
+      <MemberSignature Language="VB.NET" Value="Public Function IsEnabled (eventLogLevel As EventLogLevel) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member IsEnabled : Microsoft.IdentityModel.Abstractions.EventLogLevel -&gt; bool&#xA;override this.IsEnabled : Microsoft.IdentityModel.Abstractions.EventLogLevel -&gt; bool" Usage="nullIdentityModelLogger.IsEnabled eventLogLevel" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.IdentityModel.Abstractions.IIdentityLogger.IsEnabled(Microsoft.IdentityModel.Abstractions.EventLogLevel)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Abstractions</AssemblyName>
+        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventLogLevel" Type="Microsoft.IdentityModel.Abstractions.EventLogLevel" />
+      </Parameters>
+      <Docs>
+        <param name="eventLogLevel">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Log">
+      <MemberSignature Language="C#" Value="public void Log (Microsoft.IdentityModel.Abstractions.LogEntry entry);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Log(class Microsoft.IdentityModel.Abstractions.LogEntry entry) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Abstractions.NullIdentityModelLogger.Log(Microsoft.IdentityModel.Abstractions.LogEntry)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Log (entry As LogEntry)" />
+      <MemberSignature Language="F#" Value="abstract member Log : Microsoft.IdentityModel.Abstractions.LogEntry -&gt; unit&#xA;override this.Log : Microsoft.IdentityModel.Abstractions.LogEntry -&gt; unit" Usage="nullIdentityModelLogger.Log entry" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.IdentityModel.Abstractions.IIdentityLogger.Log(Microsoft.IdentityModel.Abstractions.LogEntry)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Abstractions</AssemblyName>
+        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entry" Type="Microsoft.IdentityModel.Abstractions.LogEntry" />
+      </Parameters>
+      <Docs>
+        <param name="entry">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

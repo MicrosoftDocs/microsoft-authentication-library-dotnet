@@ -1,0 +1,383 @@
+<Type Name="ValidationResult&lt;TResult,TError&gt;" FullName="Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;TResult,TError&gt;">
+  <TypeSignature Language="C#" Value="public readonly struct ValidationResult&lt;TResult,TError&gt; : IEquatable&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;TResult,TError&gt;&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit ValidationResult`2&lt;TResult, TError&gt; extends System.ValueType implements class System.IEquatable`1&lt;valuetype Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2&lt;!TResult, !TError&gt;&gt;" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2" />
+  <TypeSignature Language="VB.NET" Value="Public Structure ValidationResult(Of TResult, TError)&#xA;Implements IEquatable(Of ValidationResult(Of TResult, TError))" />
+  <TypeSignature Language="F#" Value="type ValidationResult&lt;'Result, 'Error&gt; = struct" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+    <AssemblyVersion>8.13.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TResult" />
+    <TypeParameter Name="TError" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;TResult,TError&gt;&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.IsReadOnly]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IsReadOnly&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <typeparam name="TResult" />
+    <typeparam name="TError" />
+    <summary>
+            Represents a validation result that can be either valid or invalid.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ValidationResult ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("Cannot create an empty validation result", true)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Cannot create an empty validation result", true)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>
+            Empty constructor implementation to prevent creating an empty result.
+            </summary>
+        <remarks>Throws an <see cref="T:System.InvalidOperationException" /> when called as this should never be used. Always initialize Result with either a value or error.</remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when called.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ValidationResult (TError error);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(!TError error) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2.#ctor(`1)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (error As TError)" />
+      <MemberSignature Language="F#" Value="new Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;'Result, 'Error&gt; : 'Error -&gt; Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;'Result, 'Error&gt;" Usage="new Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;'Result, 'Error&gt; error" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="error" Type="TError" />
+      </Parameters>
+      <Docs>
+        <param name="error">The error associated with the failure.</param>
+        <summary>
+            Creates a new instance of <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2" />
+            indicating a failed operation and containing an error information.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ValidationResult (TResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(!TResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2.#ctor(`0)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (result As TResult)" />
+      <MemberSignature Language="F#" Value="new Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;'Result, 'Error&gt; : 'Result -&gt; Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;'Result, 'Error&gt;" Usage="new Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;'Result, 'Error&gt; result" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="result" Type="TResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The value associated with the success.</param>
+        <summary>
+            Creates a new instance of <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2" /> indicating a successful operation
+            and containing an object of the associated type.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;TResult,TError&gt; other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(valuetype Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2&lt;!TResult, !TError&gt; other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2.Equals(Microsoft.IdentityModel.Tokens.Experimental.ValidationResult{`0,`1})" />
+      <MemberSignature Language="VB.NET" Value="Public Function Equals (other As ValidationResult(Of TResult, TError)) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;'Result, 'Error&gt; -&gt; bool" Usage="validationResult.Equals other" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;TResult,TError&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="other">The <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2" /> to compare with the current instance.</param>
+        <summary>
+            Determines whether the specified <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2" /> is equal to the current instance.
+            </summary>
+        <returns>
+          <c>true</c> if the specified <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2" /> is equal to the current instance; otherwise, <c>false</c>.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object? obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2.Equals(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="validationResult.Equals obj" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">The object to compare with the current instance.</param>
+        <summary>
+            Determines whether the specified object is equal to the current instance of <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2" />.
+            </summary>
+        <returns>
+          <c>true</c> if the specified object is equal to the current instance; otherwise, <c>false</c>.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Error">
+      <MemberSignature Language="C#" Value="public TError? Error { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !TError Error" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2.Error" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Error As TError" />
+      <MemberSignature Language="F#" Value="member this.Error : 'Error" Usage="Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;'Result, 'Error&gt;.Error" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the error associated with the validation result.
+            </summary>
+        <value>The error associated with the validation result.</value>
+        <remarks>This property is only valid if the result type is not valid.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2.GetHashCode" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="validationResult.GetHashCode " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the hash code for this instance of <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2" />.
+            </summary>
+        <returns>The hash code for the current instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValid">
+      <MemberSignature Language="C#" Value="public bool IsValid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsValid" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2.IsValid" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsValid As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsValid : bool" Usage="Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;'Result, 'Error&gt;.IsValid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets a value indicating whether the result is valid.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;TResult,TError&gt; left, Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;TResult,TError&gt; right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2&lt;!TResult, !TError&gt; left, valuetype Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2&lt;!TResult, !TError&gt; right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2.op_Equality(Microsoft.IdentityModel.Tokens.Experimental.ValidationResult{`0,`1},Microsoft.IdentityModel.Tokens.Experimental.ValidationResult{`0,`1})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator == (left As ValidationResult(Of TResult, TError), right As ValidationResult(Of TResult, TError)) As Boolean" />
+      <MemberSignature Language="F#" Value="static member ( = ) : Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;'Result, 'Error&gt; * Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;'Result, 'Error&gt; -&gt; bool" Usage="left = right" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;TResult,TError&gt;" />
+        <Parameter Name="right" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;TResult,TError&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="left">The left value to compare.</param>
+        <param name="right">The right value to compare.</param>
+        <summary>
+            Equality comparison operator for <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2" />.
+            </summary>
+        <returns>A boolean indicating whether the left value is equal to the right one.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;TResult,TError&gt; (TError error);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2&lt;!TResult, !TError&gt; op_Implicit(!TError error) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2.op_Implicit(`1)~Microsoft.IdentityModel.Tokens.Experimental.ValidationResult{`0,`1}" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Widening Operator CType (error As TError) As ValidationResult(Of TResult, TError)" />
+      <MemberSignature Language="F#" Value="static member op_Implicit : 'Error -&gt; Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;'Result, 'Error&gt;" Usage="Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;'Result, 'Error&gt;.op_Implicit error" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;TResult,TError&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="error" Type="TError" />
+      </Parameters>
+      <Docs>
+        <param name="error">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;TResult,TError&gt; (TResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2&lt;!TResult, !TError&gt; op_Implicit(!TResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2.op_Implicit(`0)~Microsoft.IdentityModel.Tokens.Experimental.ValidationResult{`0,`1}" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Widening Operator CType (result As TResult) As ValidationResult(Of TResult, TError)" />
+      <MemberSignature Language="F#" Value="static member op_Implicit : 'Result -&gt; Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;'Result, 'Error&gt;" Usage="Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;'Result, 'Error&gt;.op_Implicit result" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;TResult,TError&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="TResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;TResult,TError&gt; left, Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;TResult,TError&gt; right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2&lt;!TResult, !TError&gt; left, valuetype Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2&lt;!TResult, !TError&gt; right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2.op_Inequality(Microsoft.IdentityModel.Tokens.Experimental.ValidationResult{`0,`1},Microsoft.IdentityModel.Tokens.Experimental.ValidationResult{`0,`1})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator != (left As ValidationResult(Of TResult, TError), right As ValidationResult(Of TResult, TError)) As Boolean" />
+      <MemberSignature Language="F#" Value="static member op_Inequality : Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;'Result, 'Error&gt; * Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;'Result, 'Error&gt; -&gt; bool" Usage="Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;'Result, 'Error&gt;.op_Inequality (left, right)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;TResult,TError&gt;" />
+        <Parameter Name="right" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;TResult,TError&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="left">The left value to compare.</param>
+        <param name="right">The right value to compare.</param>
+        <summary>
+            Inequality comparison operator for <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2" />.
+            </summary>
+        <returns>A boolean indicating whether the left value is not equal to the right one.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Result">
+      <MemberSignature Language="C#" Value="public TResult? Result { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !TResult Result" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2.Result" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Result As TResult" />
+      <MemberSignature Language="F#" Value="member this.Result : 'Result" Usage="Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;'Result, 'Error&gt;.Result" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the result associated with the validation result.
+            </summary>
+        <value>The result associated with the validation result.</value>
+        <remarks>This property is only valid if the result type is valid.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToValidationResult">
+      <MemberSignature Language="C#" Value="public Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;TResult,TError&gt; ToValidationResult ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2&lt;!TResult, !TError&gt; ToValidationResult() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2.ToValidationResult" />
+      <MemberSignature Language="VB.NET" Value="Public Function ToValidationResult () As ValidationResult(Of TResult, TError)" />
+      <MemberSignature Language="F#" Value="member this.ToValidationResult : unit -&gt; Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;'Result, 'Error&gt;" Usage="validationResult.ToValidationResult " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;TResult,TError&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Casts the result to a <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2" />.
+            </summary>
+        <returns>The existing instance.</returns>
+        <remarks>Required for compatibility, see CA2225 for more information</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1560 @@
+<Type Name="IDownstreamApi" FullName="Microsoft.Identity.Abstractions.IDownstreamApi">
+  <TypeSignature Language="C#" Value="public interface IDownstreamApi" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IDownstreamApi" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Abstractions.IDownstreamApi" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IDownstreamApi" />
+  <TypeSignature Language="F#" Value="type IDownstreamApi = interface" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+    <AssemblyVersion>9.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Interface used to call a downstream API, for instance from controllers.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CallApiAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt; CallApiAsync (Microsoft.Identity.Abstractions.DownstreamApiOptions downstreamApiOptions, System.Security.Claims.ClaimsPrincipal? user = default, System.Net.Http.HttpContent? content = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Net.Http.HttpResponseMessage&gt; CallApiAsync(class Microsoft.Identity.Abstractions.DownstreamApiOptions downstreamApiOptions, class System.Security.Claims.ClaimsPrincipal user, class System.Net.Http.HttpContent content, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.IDownstreamApi.CallApiAsync(Microsoft.Identity.Abstractions.DownstreamApiOptions,System.Security.Claims.ClaimsPrincipal,System.Net.Http.HttpContent,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CallApiAsync (downstreamApiOptions As DownstreamApiOptions, Optional user As ClaimsPrincipal = Nothing, Optional content As HttpContent = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of HttpResponseMessage)" />
+      <MemberSignature Language="F#" Value="abstract member CallApiAsync : Microsoft.Identity.Abstractions.DownstreamApiOptions * System.Security.Claims.ClaimsPrincipal * System.Net.Http.HttpContent * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;" Usage="iDownstreamApi.CallApiAsync (downstreamApiOptions, user, content, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>9.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="downstreamApiOptions" Type="Microsoft.Identity.Abstractions.DownstreamApiOptions" />
+        <Parameter Name="user" Type="System.Security.Claims.ClaimsPrincipal" />
+        <Parameter Name="content" Type="System.Net.Http.HttpContent" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="downstreamApiOptions">Options.</param>
+        <param name="user">(Optional) Claims representing a user. This is useful on platforms like Blazor
+            or Azure Signal R, where the HttpContext is not available. In other platforms, the library
+            will find the user from the HTTP request context.</param>
+        <param name="content">Content to send to the API in the case where
+            <see cref="P:Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions.HttpMethod" /> is <code>HttpMethod.Patch</code>, 
+            <see cref="P:System.Net.Http.HttpMethod.Post" />, <see cref="P:System.Net.Http.HttpMethod.Put" />.</param>
+        <param name="cancellationToken">Cancellation token.</param>
+        <summary>
+            Calls the downstream API based on a programmatic description of the
+            downstream API. The choice of calling the API on behalf of the user or the app, is made using
+            <see cref="P:Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions.RequestAppToken" />.
+            </summary>
+        <returns>An <see cref="T:System.Net.Http.HttpResponseMessage" /> that the application will process.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallApiAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt; CallApiAsync (string? serviceName, Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptions&gt;? downstreamApiOptionsOverride = default, System.Security.Claims.ClaimsPrincipal? user = default, System.Net.Http.HttpContent? content = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Net.Http.HttpResponseMessage&gt; CallApiAsync(string serviceName, class System.Action`1&lt;class Microsoft.Identity.Abstractions.DownstreamApiOptions&gt; downstreamApiOptionsOverride, class System.Security.Claims.ClaimsPrincipal user, class System.Net.Http.HttpContent content, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.IDownstreamApi.CallApiAsync(System.String,System.Action{Microsoft.Identity.Abstractions.DownstreamApiOptions},System.Security.Claims.ClaimsPrincipal,System.Net.Http.HttpContent,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CallApiAsync (serviceName As String, Optional downstreamApiOptionsOverride As Action(Of DownstreamApiOptions) = Nothing, Optional user As ClaimsPrincipal = Nothing, Optional content As HttpContent = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of HttpResponseMessage)" />
+      <MemberSignature Language="F#" Value="abstract member CallApiAsync : string * Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptions&gt; * System.Security.Claims.ClaimsPrincipal * System.Net.Http.HttpContent * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;" Usage="iDownstreamApi.CallApiAsync (serviceName, downstreamApiOptionsOverride, user, content, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>9.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceName" Type="System.String" />
+        <Parameter Name="downstreamApiOptionsOverride" Type="System.Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptions&gt;" />
+        <Parameter Name="user" Type="System.Security.Claims.ClaimsPrincipal" />
+        <Parameter Name="content" Type="System.Net.Http.HttpContent" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="serviceName">Name of the service describing the downstream web API. There can
+            be several configuration named sections mapped to a <see cref="T:Microsoft.Identity.Abstractions.DownstreamApiOptions" />,
+            each for one downstream API. You can pass-in null, but in that case <paramref name="downstreamApiOptionsOverride" />
+            needs to be set.</param>
+        <param name="downstreamApiOptionsOverride">(Optional) Overrides the options proposed in the configuration described
+            by <paramref name="serviceName" />. Can be null, in which case only the configuration is applied.</param>
+        <param name="user">(Optional) Claims representing a user. This is useful on platforms like Blazor
+            or Azure Signal R, where the HttpContext is not available. In other platforms, the library
+            will find the user from the HTTP request context.</param>
+        <param name="content">Content to send to the API in the case where
+            <see cref="P:Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions.HttpMethod" /> is <code>HttpMethod.Patch</code>, 
+            <see cref="P:System.Net.Http.HttpMethod.Post" />, <see cref="P:System.Net.Http.HttpMethod.Put" />.</param>
+        <param name="cancellationToken">Cancellation token.</param>
+        <summary>
+            Calls the downstream API based on a description of the
+            downstream API in the configuration (service name), overridatable programmatically. The choice
+            of calling the API on behalf of the user or the app, is made by the configuration or programmatically. 
+            This is the lowest level API. There are other APIs for specific Http methods.
+            </summary>
+        <returns>An <see cref="T:System.Net.Http.HttpResponseMessage" /> that the application will process.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallApiForAppAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt; CallApiForAppAsync (string? serviceName, Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptions&gt;? downstreamApiOptionsOverride = default, System.Net.Http.HttpContent? content = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Net.Http.HttpResponseMessage&gt; CallApiForAppAsync(string serviceName, class System.Action`1&lt;class Microsoft.Identity.Abstractions.DownstreamApiOptions&gt; downstreamApiOptionsOverride, class System.Net.Http.HttpContent content, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.IDownstreamApi.CallApiForAppAsync(System.String,System.Action{Microsoft.Identity.Abstractions.DownstreamApiOptions},System.Net.Http.HttpContent,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CallApiForAppAsync (serviceName As String, Optional downstreamApiOptionsOverride As Action(Of DownstreamApiOptions) = Nothing, Optional content As HttpContent = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of HttpResponseMessage)" />
+      <MemberSignature Language="F#" Value="abstract member CallApiForAppAsync : string * Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptions&gt; * System.Net.Http.HttpContent * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;" Usage="iDownstreamApi.CallApiForAppAsync (serviceName, downstreamApiOptionsOverride, content, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>9.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceName" Type="System.String" />
+        <Parameter Name="downstreamApiOptionsOverride" Type="System.Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptions&gt;" />
+        <Parameter Name="content" Type="System.Net.Http.HttpContent" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="serviceName">Name of the service describing the downstream API. There can
+            be several configuration named sections mapped to a <see cref="T:Microsoft.Identity.Abstractions.DownstreamApiOptions" />,
+            each for one downstream API. You can pass-in null, but in that case <paramref name="downstreamApiOptionsOverride" />
+            needs to be set.</param>
+        <param name="downstreamApiOptionsOverride">(Optional) Overrides the options proposed in the configuration described
+            by <paramref name="serviceName" />.</param>
+        <param name="content">Content to send to the API in the case where
+            <see cref="P:Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions.HttpMethod" /> is <code>HttpMethod.Patch</code>, 
+            <see cref="P:System.Net.Http.HttpMethod.Post" />, <see cref="P:System.Net.Http.HttpMethod.Put" />.</param>
+        <param name="cancellationToken">Cancellation token.</param>
+        <summary>
+            Calls the downstream API on behalf of the app itself, with the required scopes.
+            </summary>
+        <returns>An <see cref="T:System.Net.Http.HttpResponseMessage" /> that the application will process.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallApiForAppAsync&lt;TOutput&gt;">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TOutput?&gt; CallApiForAppAsync&lt;TOutput&gt; (string serviceName, Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptions&gt;? downstreamApiOptionsOverride = default, System.Threading.CancellationToken cancellationToken = default) where TOutput : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;!!TOutput&gt; CallApiForAppAsync&lt;class TOutput&gt;(string serviceName, class System.Action`1&lt;class Microsoft.Identity.Abstractions.DownstreamApiOptions&gt; downstreamApiOptionsOverride, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.IDownstreamApi.CallApiForAppAsync``1(System.String,System.Action{Microsoft.Identity.Abstractions.DownstreamApiOptions},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CallApiForAppAsync(Of TOutput As Class) (serviceName As String, Optional downstreamApiOptionsOverride As Action(Of DownstreamApiOptions) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of TOutput)" />
+      <MemberSignature Language="F#" Value="abstract member CallApiForAppAsync : string * Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptions&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;'Output (requires 'Output : null)&gt; (requires 'Output : null)" Usage="iDownstreamApi.CallApiForAppAsync (serviceName, downstreamApiOptionsOverride, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>9.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TOutput&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TOutput">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="serviceName" Type="System.String" />
+        <Parameter Name="downstreamApiOptionsOverride" Type="System.Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptions&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TOutput">Output type.</typeparam>
+        <param name="serviceName">Name of the service describing the downstream API. There can
+            be several configuration named sections mapped to a <see cref="T:Microsoft.Identity.Abstractions.DownstreamApiOptions" />,
+            each for one downstream API. You can pass-in null, but in that case <paramref name="downstreamApiOptionsOverride" />
+            needs to be set.</param>
+        <param name="downstreamApiOptionsOverride">Overrides the options proposed in the configuration described
+            by <paramref name="serviceName" />.</param>
+        <param name="cancellationToken">Cancellation token.</param>
+        <summary>
+            Call a web API endpoint with an HttpGet, and return strongly typed data.
+            </summary>
+        <returns>The value returned by the downstream web API.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallApiForAppAsync&lt;TInput,TOutput&gt;">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TOutput?&gt; CallApiForAppAsync&lt;TInput,TOutput&gt; (string? serviceName, TInput input, Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptions&gt;? downstreamApiOptionsOverride = default, System.Threading.CancellationToken cancellationToken = default) where TOutput : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;!!TOutput&gt; CallApiForAppAsync&lt;TInput, class TOutput&gt;(string serviceName, !!TInput input, class System.Action`1&lt;class Microsoft.Identity.Abstractions.DownstreamApiOptions&gt; downstreamApiOptionsOverride, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.IDownstreamApi.CallApiForAppAsync``2(System.String,``0,System.Action{Microsoft.Identity.Abstractions.DownstreamApiOptions},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CallApiForAppAsync(Of TInput, TOutput) (serviceName As String, input As TInput, Optional downstreamApiOptionsOverride As Action(Of DownstreamApiOptions) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of TOutput)" />
+      <MemberSignature Language="F#" Value="abstract member CallApiForAppAsync : string * 'Input * Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptions&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;'Output (requires 'Output : null)&gt; (requires 'Output : null)" Usage="iDownstreamApi.CallApiForAppAsync (serviceName, input, downstreamApiOptionsOverride, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>9.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TOutput&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TInput" />
+        <TypeParameter Name="TOutput">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="serviceName" Type="System.String" />
+        <Parameter Name="input" Type="TInput" />
+        <Parameter Name="downstreamApiOptionsOverride" Type="System.Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptions&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TInput">Input type.</typeparam>
+        <typeparam name="TOutput">Output type.</typeparam>
+        <param name="serviceName">Name of the service describing the downstream API. There can
+            be several configuration named sections mapped to a <see cref="T:Microsoft.Identity.Abstractions.DownstreamApiOptions" />,
+            each for one downstream API. You can pass-in null, but in that case <paramref name="downstreamApiOptionsOverride" />
+            needs to be set.</param>
+        <param name="input">Input parameter to the downstream web API.</param>
+        <param name="downstreamApiOptionsOverride">Overrides the options proposed in the configuration described
+            by <paramref name="serviceName" />.</param>
+        <param name="cancellationToken">Cancellation token.</param>
+        <summary>
+            Calls a downstream API consuming JSON with some data and returns data.
+            </summary>
+        <returns>The value returned by the downstream web API.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallApiForUserAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt; CallApiForUserAsync (string? serviceName, Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptions&gt;? downstreamApiOptionsOverride = default, System.Security.Claims.ClaimsPrincipal? user = default, System.Net.Http.HttpContent? content = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Net.Http.HttpResponseMessage&gt; CallApiForUserAsync(string serviceName, class System.Action`1&lt;class Microsoft.Identity.Abstractions.DownstreamApiOptions&gt; downstreamApiOptionsOverride, class System.Security.Claims.ClaimsPrincipal user, class System.Net.Http.HttpContent content, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.IDownstreamApi.CallApiForUserAsync(System.String,System.Action{Microsoft.Identity.Abstractions.DownstreamApiOptions},System.Security.Claims.ClaimsPrincipal,System.Net.Http.HttpContent,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CallApiForUserAsync (serviceName As String, Optional downstreamApiOptionsOverride As Action(Of DownstreamApiOptions) = Nothing, Optional user As ClaimsPrincipal = Nothing, Optional content As HttpContent = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of HttpResponseMessage)" />
+      <MemberSignature Language="F#" Value="abstract member CallApiForUserAsync : string * Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptions&gt; * System.Security.Claims.ClaimsPrincipal * System.Net.Http.HttpContent * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;" Usage="iDownstreamApi.CallApiForUserAsync (serviceName, downstreamApiOptionsOverride, user, content, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>9.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceName" Type="System.String" />
+        <Parameter Name="downstreamApiOptionsOverride" Type="System.Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptions&gt;" />
+        <Parameter Name="user" Type="System.Security.Claims.ClaimsPrincipal" />
+        <Parameter Name="content" Type="System.Net.Http.HttpContent" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="serviceName">Name of the service describing the downstream web API. There can
+            be several configuration named sections mapped to a <see cref="T:Microsoft.Identity.Abstractions.DownstreamApiOptions" />,
+            each for one downstream API. You can pass-in null, but in that case <paramref name="downstreamApiOptionsOverride" />
+            needs to be set.</param>
+        <param name="downstreamApiOptionsOverride">(Optional) Overrides the options proposed in the configuration described
+            by <paramref name="serviceName" />.</param>
+        <param name="user">(Optional) Claims representing a user. This is useful on platforms like Blazor
+            or Azure Signal R, where the HttpContext is not available. In other platforms, the library
+            will find the user from the HTTP request context.</param>
+        <param name="content">Content to send to the API in the case where
+            <see cref="P:Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions.HttpMethod" /> is <code>HttpMethod.Patch</code>, 
+            <see cref="P:System.Net.Http.HttpMethod.Post" />, <see cref="P:System.Net.Http.HttpMethod.Put" />.</param>
+        <param name="cancellationToken">Cancellation token.</param>
+        <summary>
+            Calls the downstream API on behalf of the user, based on a description of the
+            downstream API in the configuration (service name), overridatable programmatically. This
+            is a lower level API. There are other APIs for specific Http methods.
+            </summary>
+        <returns>An <see cref="T:System.Net.Http.HttpResponseMessage" /> that the application will process.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallApiForUserAsync&lt;TOutput&gt;">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TOutput?&gt; CallApiForUserAsync&lt;TOutput&gt; (string serviceName, Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptions&gt;? downstreamApiOptionsOverride = default, System.Security.Claims.ClaimsPrincipal? user = default, System.Threading.CancellationToken cancellationToken = default) where TOutput : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;!!TOutput&gt; CallApiForUserAsync&lt;class TOutput&gt;(string serviceName, class System.Action`1&lt;class Microsoft.Identity.Abstractions.DownstreamApiOptions&gt; downstreamApiOptionsOverride, class System.Security.Claims.ClaimsPrincipal user, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.IDownstreamApi.CallApiForUserAsync``1(System.String,System.Action{Microsoft.Identity.Abstractions.DownstreamApiOptions},System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CallApiForUserAsync(Of TOutput As Class) (serviceName As String, Optional downstreamApiOptionsOverride As Action(Of DownstreamApiOptions) = Nothing, Optional user As ClaimsPrincipal = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of TOutput)" />
+      <MemberSignature Language="F#" Value="abstract member CallApiForUserAsync : string * Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptions&gt; * System.Security.Claims.ClaimsPrincipal * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;'Output (requires 'Output : null)&gt; (requires 'Output : null)" Usage="iDownstreamApi.CallApiForUserAsync (serviceName, downstreamApiOptionsOverride, user, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>9.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TOutput&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TOutput">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="serviceName" Type="System.String" />
+        <Parameter Name="downstreamApiOptionsOverride" Type="System.Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptions&gt;" />
+        <Parameter Name="user" Type="System.Security.Claims.ClaimsPrincipal" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TOutput">Output type.</typeparam>
+        <param name="serviceName">Name of the service describing the downstream API. There can
+            be several configuration named sections mapped to a <see cref="T:Microsoft.Identity.Abstractions.DownstreamApiOptions" />,
+            each for one downstream API. You can pass-in null, but in that case <paramref name="downstreamApiOptionsOverride" />
+            needs to be set.</param>
+        <param name="downstreamApiOptionsOverride">Overrides the options proposed in the configuration described
+            by <paramref name="serviceName" />.</param>
+        <param name="user">[Optional] Claims representing a user. This is useful in platforms like Blazor
+            or Azure Signal R, where the HttpContext is not available. In other platforms, the library
+            will find the user from the HttpContext.</param>
+        <param name="cancellationToken">Cancellation token.</param>
+        <summary>
+            Call a web API endpoint with an HttpGet, and return strongly typed data.
+            </summary>
+        <returns>The value returned by the downstream web API.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallApiForUserAsync&lt;TInput,TOutput&gt;">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TOutput?&gt; CallApiForUserAsync&lt;TInput,TOutput&gt; (string? serviceName, TInput input, Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptions&gt;? downstreamApiOptionsOverride = default, System.Security.Claims.ClaimsPrincipal? user = default, System.Threading.CancellationToken cancellationToken = default) where TOutput : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;!!TOutput&gt; CallApiForUserAsync&lt;TInput, class TOutput&gt;(string serviceName, !!TInput input, class System.Action`1&lt;class Microsoft.Identity.Abstractions.DownstreamApiOptions&gt; downstreamApiOptionsOverride, class System.Security.Claims.ClaimsPrincipal user, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.IDownstreamApi.CallApiForUserAsync``2(System.String,``0,System.Action{Microsoft.Identity.Abstractions.DownstreamApiOptions},System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CallApiForUserAsync(Of TInput, TOutput) (serviceName As String, input As TInput, Optional downstreamApiOptionsOverride As Action(Of DownstreamApiOptions) = Nothing, Optional user As ClaimsPrincipal = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of TOutput)" />
+      <MemberSignature Language="F#" Value="abstract member CallApiForUserAsync : string * 'Input * Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptions&gt; * System.Security.Claims.ClaimsPrincipal * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;'Output (requires 'Output : null)&gt; (requires 'Output : null)" Usage="iDownstreamApi.CallApiForUserAsync (serviceName, input, downstreamApiOptionsOverride, user, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>9.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TOutput&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TInput" />
+        <TypeParameter Name="TOutput">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="serviceName" Type="System.String" />
+        <Parameter Name="input" Type="TInput" />
+        <Parameter Name="downstreamApiOptionsOverride" Type="System.Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptions&gt;" />
+        <Parameter Name="user" Type="System.Security.Claims.ClaimsPrincipal" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TInput">Input type.</typeparam>
+        <typeparam name="TOutput">Output type.</typeparam>
+        <param name="serviceName">Name of the service describing the downstream API. There can
+             be several configuration named sections mapped to a <see cref="T:Microsoft.Identity.Abstractions.DownstreamApiOptions" />,
+             each for one downstream API. You can pass-in null, but in that case <paramref name="downstreamApiOptionsOverride" />
+             needs to be set.</param>
+        <param name="input">Input parameter to the downstream web API.</param>
+        <param name="downstreamApiOptionsOverride">Overrides the options proposed in the configuration described
+             by <paramref name="serviceName" />.</param>
+        <param name="user">[Optional] Claims representing a user. This is useful in platforms like Blazor
+             or Azure Signal R, where the HttpContext is not available. In other platforms, the library
+             will find the user from the HttpContext.</param>
+        <param name="cancellationToken">Cancellation token.</param>
+        <summary>
+             Calls a downstream API consuming JSON with some data and returns data.
+             </summary>
+        <returns>The value returned by the downstream web API.</returns>
+        <remarks>To be added.</remarks>
+        <example>
+             A list method that returns an IEnumerable&lt;MyItem&gt;&gt;.
+             <code>
+             public Task&lt;IEnumerable&lt;MyItem&gt;&gt; GetAsync()
+             {
+              return _downstreamWebApi.CallWebApiForUserAsync&lt;object, IEnumerable&lt;MyItem&gt;&gt;(
+                     ServiceName,
+                     null,
+                     options =&gt;
+                     {
+                       options.RelativePath = $"api/todolist";
+                     });
+             }
+             </code>
+            
+             Example of editing.
+             <code>
+             public Task&lt;MyItem&gt; EditAsync(MyItem myItem)
+             {
+               return _downstreamWebApi.CallWebApiForUserAsync&lt;MyItem, MyItem&gt;(
+                     ServiceName,
+                     nyItem,
+                     options =&gt;
+                     {
+                        options.HttpMethod = HttpMethod.Patch;
+                        options.RelativePath = $"api/todolist/{myItem.Id}";
+                     });
+             }
+             </code></example>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteForAppAsync&lt;TInput&gt;">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task DeleteForAppAsync&lt;TInput&gt; (string? serviceName, TInput input, Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt;? downstreamApiOptionsOverride = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task DeleteForAppAsync&lt;TInput&gt;(string serviceName, !!TInput input, class System.Action`1&lt;class Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt; downstreamApiOptionsOverride, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.IDownstreamApi.DeleteForAppAsync``1(System.String,``0,System.Action{Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function DeleteForAppAsync(Of TInput) (serviceName As String, input As TInput, Optional downstreamApiOptionsOverride As Action(Of DownstreamApiOptionsReadOnlyHttpMethod) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task" />
+      <MemberSignature Language="F#" Value="abstract member DeleteForAppAsync : string * 'Input * Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="iDownstreamApi.DeleteForAppAsync (serviceName, input, downstreamApiOptionsOverride, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>9.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TInput" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="serviceName" Type="System.String" />
+        <Parameter Name="input" Type="TInput" />
+        <Parameter Name="downstreamApiOptionsOverride" Type="System.Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TInput">Generic input type.</typeparam>
+        <param name="serviceName">Name of the service describing the downstream API. There can
+            be several configuration named sections mapped to a <see cref="T:Microsoft.Identity.Abstractions.DownstreamApiOptions" />,
+            each for one downstream API. You can pass-in null, but in that case <paramref name="downstreamApiOptionsOverride" />
+            needs to be set.</param>
+        <param name="input">Data sent to the downstream web API, through the body or the HTTP request.</param>
+        <param name="downstreamApiOptionsOverride">[Optional] Overrides the options proposed in the configuration described
+            by <paramref name="serviceName" />.</param>
+        <param name="cancellationToken" />
+        <summary>
+            Calls, using <see cref="P:System.Net.Http.HttpMethod.Delete" />, a downstream API with some input data .
+            By default the input data is serialized in JSON  but you can provide your own serializer in the action
+            you pass-in through the <paramref name="downstreamApiOptionsOverride" /> parameter.
+            </summary>
+        <returns> The value returned by the downstream web API.</returns>
+        <remarks>To be added.</remarks>
+        <example>
+          <code>
+              await _downstreamApi.DeleteForAppAsync&lt;MyItem&gt;(
+                    "MyService",
+                    myItem,
+                    options =&gt;
+                    {
+                      options.RelativePath = $"api/todolist/{myItem.Id}";
+                    });
+            </code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteForAppAsync&lt;TInput,TOutput&gt;">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TOutput?&gt; DeleteForAppAsync&lt;TInput,TOutput&gt; (string? serviceName, TInput input, Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt;? downstreamApiOptionsOverride = default, System.Threading.CancellationToken cancellationToken = default) where TOutput : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;!!TOutput&gt; DeleteForAppAsync&lt;TInput, class TOutput&gt;(string serviceName, !!TInput input, class System.Action`1&lt;class Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt; downstreamApiOptionsOverride, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.IDownstreamApi.DeleteForAppAsync``2(System.String,``0,System.Action{Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function DeleteForAppAsync(Of TInput, TOutput) (serviceName As String, input As TInput, Optional downstreamApiOptionsOverride As Action(Of DownstreamApiOptionsReadOnlyHttpMethod) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of TOutput)" />
+      <MemberSignature Language="F#" Value="abstract member DeleteForAppAsync : string * 'Input * Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;'Output (requires 'Output : null)&gt; (requires 'Output : null)" Usage="iDownstreamApi.DeleteForAppAsync (serviceName, input, downstreamApiOptionsOverride, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>9.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TOutput&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TInput" />
+        <TypeParameter Name="TOutput">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="serviceName" Type="System.String" />
+        <Parameter Name="input" Type="TInput" />
+        <Parameter Name="downstreamApiOptionsOverride" Type="System.Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TInput">Generic input type.</typeparam>
+        <typeparam name="TOutput">Generic output type.</typeparam>
+        <param name="serviceName">Name of the service describing the downstream API. There can
+            be several configuration named sections mapped to a <see cref="T:Microsoft.Identity.Abstractions.DownstreamApiOptions" />,
+            each for one downstream API. You can pass-in null, but in that case <paramref name="downstreamApiOptionsOverride" />
+            needs to be set.</param>
+        <param name="input">Data sent to the downstream web API, through the body or the HTTP request.</param>
+        <param name="downstreamApiOptionsOverride">[Optional] Overrides the options proposed in the configuration described
+            by <paramref name="serviceName" />.</param>
+        <param name="cancellationToken" />
+        <summary>
+            Calls, using <see cref="P:System.Net.Http.HttpMethod.Delete" />, a downstream API with some input data and returning data.
+            By default the input data is serialized in JSON and the returned data is deserialized from JSON but you can provide your own serializer and your own deserializer in the action
+            you pass-in through the <paramref name="downstreamApiOptionsOverride" /> parameter.
+            </summary>
+        <returns> The value returned by the downstream web API.</returns>
+        <remarks>To be added.</remarks>
+        <example>
+          <code>
+             var result = await _downstreamApi.DeleteForAppAsync&lt;MyItem, IEnumerable&lt;MyItem&gt;&gt;(
+                    "MyService",
+                    myItem,
+                    options =&gt;
+                    {
+                      options.RelativePath = $"api/todolist/{myItem.Id}";
+                    });
+            </code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteForUserAsync&lt;TInput&gt;">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task DeleteForUserAsync&lt;TInput&gt; (string? serviceName, TInput input, Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt;? downstreamApiOptionsOverride = default, System.Security.Claims.ClaimsPrincipal? user = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task DeleteForUserAsync&lt;TInput&gt;(string serviceName, !!TInput input, class System.Action`1&lt;class Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt; downstreamApiOptionsOverride, class System.Security.Claims.ClaimsPrincipal user, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.IDownstreamApi.DeleteForUserAsync``1(System.String,``0,System.Action{Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod},System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function DeleteForUserAsync(Of TInput) (serviceName As String, input As TInput, Optional downstreamApiOptionsOverride As Action(Of DownstreamApiOptionsReadOnlyHttpMethod) = Nothing, Optional user As ClaimsPrincipal = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task" />
+      <MemberSignature Language="F#" Value="abstract member DeleteForUserAsync : string * 'Input * Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt; * System.Security.Claims.ClaimsPrincipal * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="iDownstreamApi.DeleteForUserAsync (serviceName, input, downstreamApiOptionsOverride, user, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>9.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TInput" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="serviceName" Type="System.String" />
+        <Parameter Name="input" Type="TInput" />
+        <Parameter Name="downstreamApiOptionsOverride" Type="System.Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt;" />
+        <Parameter Name="user" Type="System.Security.Claims.ClaimsPrincipal" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TInput">Generic input type.</typeparam>
+        <param name="serviceName">Name of the service describing the downstream API. There can
+            be several configuration named sections mapped to a <see cref="T:Microsoft.Identity.Abstractions.DownstreamApiOptions" />,
+            each for one downstream API. You can pass-in null, but in that case <paramref name="downstreamApiOptionsOverride" />
+            needs to be set.</param>
+        <param name="input">Data sent to the downstream web API, through the body or the HTTP request.</param>
+        <param name="downstreamApiOptionsOverride">[Optional] Overrides the options proposed in the configuration described
+            by <paramref name="serviceName" />.</param>
+        <param name="user">[Optional] Claims representing a user. This is useful in platforms like Blazor
+            or Azure Signal R, where the HttpContext is not available. In other platforms, the library
+            will find the user from the HttpContext.</param>
+        <param name="cancellationToken" />
+        <summary>
+            Calls, using <see cref="P:System.Net.Http.HttpMethod.Delete" />, a downstream API with some input data .
+            By default the input data is serialized in JSON  but you can provide your own serializer in the action
+            you pass-in through the <paramref name="downstreamApiOptionsOverride" /> parameter.
+            </summary>
+        <returns> The value returned by the downstream web API.</returns>
+        <remarks>To be added.</remarks>
+        <example>
+          <code>
+              await _downstreamApi.DeleteForUserAsync&lt;MyItem&gt;(
+                    "MyService",
+                    myItem,
+                    options =&gt;
+                    {
+                      options.RelativePath = $"api/todolist/{myItem.Id}";
+                    });
+            </code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteForUserAsync&lt;TInput,TOutput&gt;">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TOutput?&gt; DeleteForUserAsync&lt;TInput,TOutput&gt; (string? serviceName, TInput input, Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt;? downstreamApiOptionsOverride = default, System.Security.Claims.ClaimsPrincipal? user = default, System.Threading.CancellationToken cancellationToken = default) where TOutput : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;!!TOutput&gt; DeleteForUserAsync&lt;TInput, class TOutput&gt;(string serviceName, !!TInput input, class System.Action`1&lt;class Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt; downstreamApiOptionsOverride, class System.Security.Claims.ClaimsPrincipal user, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.IDownstreamApi.DeleteForUserAsync``2(System.String,``0,System.Action{Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod},System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function DeleteForUserAsync(Of TInput, TOutput) (serviceName As String, input As TInput, Optional downstreamApiOptionsOverride As Action(Of DownstreamApiOptionsReadOnlyHttpMethod) = Nothing, Optional user As ClaimsPrincipal = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of TOutput)" />
+      <MemberSignature Language="F#" Value="abstract member DeleteForUserAsync : string * 'Input * Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt; * System.Security.Claims.ClaimsPrincipal * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;'Output (requires 'Output : null)&gt; (requires 'Output : null)" Usage="iDownstreamApi.DeleteForUserAsync (serviceName, input, downstreamApiOptionsOverride, user, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>9.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TOutput&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TInput" />
+        <TypeParameter Name="TOutput">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="serviceName" Type="System.String" />
+        <Parameter Name="input" Type="TInput" />
+        <Parameter Name="downstreamApiOptionsOverride" Type="System.Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt;" />
+        <Parameter Name="user" Type="System.Security.Claims.ClaimsPrincipal" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TInput">Generic input type.</typeparam>
+        <typeparam name="TOutput">Generic output type.</typeparam>
+        <param name="serviceName">Name of the service describing the downstream API. There can
+            be several configuration named sections mapped to a <see cref="T:Microsoft.Identity.Abstractions.DownstreamApiOptions" />,
+            each for one downstream API. You can pass-in null, but in that case <paramref name="downstreamApiOptionsOverride" />
+            needs to be set.</param>
+        <param name="input">Data sent to the downstream web API, through the body or the HTTP request.</param>
+        <param name="downstreamApiOptionsOverride">[Optional] Overrides the options proposed in the configuration described
+            by <paramref name="serviceName" />.</param>
+        <param name="user">[Optional] Claims representing a user. This is useful in platforms like Blazor
+            or Azure Signal R, where the HttpContext is not available. In other platforms, the library
+            will find the user from the HttpContext.</param>
+        <param name="cancellationToken" />
+        <summary>
+            Calls, using <see cref="P:System.Net.Http.HttpMethod.Delete" />, a downstream API with some input data and returning data.
+            By default the input data is serialized in JSON and the returned data is deserialized from JSON but you can provide your own serializer and your own deserializer in the action
+            you pass-in through the <paramref name="downstreamApiOptionsOverride" /> parameter.
+            </summary>
+        <returns> The value returned by the downstream web API.</returns>
+        <remarks>To be added.</remarks>
+        <example>
+          <code>
+             var result = await _downstreamApi.DeleteForUserAsync&lt;MyItem, IEnumerable&lt;MyItem&gt;&gt;(
+                    "MyService",
+                    myItem,
+                    options =&gt;
+                    {
+                      options.RelativePath = $"api/todolist/{myItem.Id}";
+                    });
+            </code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="GetForAppAsync&lt;TOutput&gt;">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TOutput?&gt; GetForAppAsync&lt;TOutput&gt; (string? serviceName, Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt;? downstreamApiOptionsOverride = default, System.Threading.CancellationToken cancellationToken = default) where TOutput : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;!!TOutput&gt; GetForAppAsync&lt;class TOutput&gt;(string serviceName, class System.Action`1&lt;class Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt; downstreamApiOptionsOverride, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.IDownstreamApi.GetForAppAsync``1(System.String,System.Action{Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetForAppAsync(Of TOutput As Class) (serviceName As String, Optional downstreamApiOptionsOverride As Action(Of DownstreamApiOptionsReadOnlyHttpMethod) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of TOutput)" />
+      <MemberSignature Language="F#" Value="abstract member GetForAppAsync : string * Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;'Output (requires 'Output : null)&gt; (requires 'Output : null)" Usage="iDownstreamApi.GetForAppAsync (serviceName, downstreamApiOptionsOverride, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>9.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TOutput&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TOutput">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="serviceName" Type="System.String" />
+        <Parameter Name="downstreamApiOptionsOverride" Type="System.Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TOutput">Generic output type.</typeparam>
+        <param name="serviceName">Name of the service describing the downstream API. There can
+            be several configuration named sections mapped to a <see cref="T:Microsoft.Identity.Abstractions.DownstreamApiOptions" />,
+            each for one downstream API. You can pass-in null, but in that case <paramref name="downstreamApiOptionsOverride" />
+            needs to be set.</param>
+        <param name="downstreamApiOptionsOverride">[Optional] Overrides the options proposed in the configuration described
+            by <paramref name="serviceName" />.</param>
+        <param name="cancellationToken" />
+        <summary>
+            Calls, using <see cref="P:System.Net.Http.HttpMethod.Get" />, a downstream API returning data.
+            By default the returned data is deserialized from JSON but you can provide your own deserializer in the action
+            you pass-in through the <paramref name="downstreamApiOptionsOverride" /> parameter.
+            </summary>
+        <returns> a Task</returns>
+        <remarks>To be added.</remarks>
+        <example>
+          <code>
+             var result = await _downstreamApi.GetForAppAsync&lt;IEnumerable&lt;MyItem&gt;&gt;(
+                    "MyService",
+                    options =&gt;
+                    {
+                      options.RelativePath = $"api/todolist";
+                    });
+            </code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="GetForAppAsync&lt;TInput,TOutput&gt;">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TOutput?&gt; GetForAppAsync&lt;TInput,TOutput&gt; (string? serviceName, TInput input, Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt;? downstreamApiOptionsOverride = default, System.Threading.CancellationToken cancellationToken = default) where TOutput : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;!!TOutput&gt; GetForAppAsync&lt;TInput, class TOutput&gt;(string serviceName, !!TInput input, class System.Action`1&lt;class Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt; downstreamApiOptionsOverride, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.IDownstreamApi.GetForAppAsync``2(System.String,``0,System.Action{Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetForAppAsync(Of TInput, TOutput) (serviceName As String, input As TInput, Optional downstreamApiOptionsOverride As Action(Of DownstreamApiOptionsReadOnlyHttpMethod) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of TOutput)" />
+      <MemberSignature Language="F#" Value="abstract member GetForAppAsync : string * 'Input * Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;'Output (requires 'Output : null)&gt; (requires 'Output : null)" Usage="iDownstreamApi.GetForAppAsync (serviceName, input, downstreamApiOptionsOverride, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>9.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TOutput&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TInput" />
+        <TypeParameter Name="TOutput">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="serviceName" Type="System.String" />
+        <Parameter Name="input" Type="TInput" />
+        <Parameter Name="downstreamApiOptionsOverride" Type="System.Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TInput">Generic input type.</typeparam>
+        <typeparam name="TOutput">Generic output type.</typeparam>
+        <param name="serviceName">Name of the service describing the downstream API. There can
+            be several configuration named sections mapped to a <see cref="T:Microsoft.Identity.Abstractions.DownstreamApiOptions" />,
+            each for one downstream API. You can pass-in null, but in that case <paramref name="downstreamApiOptionsOverride" />
+            needs to be set.</param>
+        <param name="input">Data sent to the downstream web API, through the body or the HTTP request.</param>
+        <param name="downstreamApiOptionsOverride">[Optional] Overrides the options proposed in the configuration described
+            by <paramref name="serviceName" />.</param>
+        <param name="cancellationToken" />
+        <summary>
+            Calls, using <see cref="P:System.Net.Http.HttpMethod.Get" />, a downstream API with some input data and returning data.
+            By default the input data is serialized in JSON and the returned data is deserialized from JSON but you can provide your own serializer and your own deserializer in the action
+            you pass-in through the <paramref name="downstreamApiOptionsOverride" /> parameter.
+            </summary>
+        <returns> The value returned by the downstream web API.</returns>
+        <remarks>To be added.</remarks>
+        <example>
+          <code>
+             var result = await _downstreamApi.GetForAppAsync&lt;MyItem, IEnumerable&lt;MyItem&gt;&gt;(
+                    "MyService",
+                    myItem,
+                    options =&gt;
+                    {
+                      options.RelativePath = $"api/todolist/{myItem.Id}";
+                    });
+            </code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="GetForUserAsync&lt;TOutput&gt;">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TOutput?&gt; GetForUserAsync&lt;TOutput&gt; (string? serviceName, Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt;? downstreamApiOptionsOverride = default, System.Security.Claims.ClaimsPrincipal? user = default, System.Threading.CancellationToken cancellationToken = default) where TOutput : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;!!TOutput&gt; GetForUserAsync&lt;class TOutput&gt;(string serviceName, class System.Action`1&lt;class Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt; downstreamApiOptionsOverride, class System.Security.Claims.ClaimsPrincipal user, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.IDownstreamApi.GetForUserAsync``1(System.String,System.Action{Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod},System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetForUserAsync(Of TOutput As Class) (serviceName As String, Optional downstreamApiOptionsOverride As Action(Of DownstreamApiOptionsReadOnlyHttpMethod) = Nothing, Optional user As ClaimsPrincipal = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of TOutput)" />
+      <MemberSignature Language="F#" Value="abstract member GetForUserAsync : string * Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt; * System.Security.Claims.ClaimsPrincipal * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;'Output (requires 'Output : null)&gt; (requires 'Output : null)" Usage="iDownstreamApi.GetForUserAsync (serviceName, downstreamApiOptionsOverride, user, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>9.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TOutput&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TOutput">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="serviceName" Type="System.String" />
+        <Parameter Name="downstreamApiOptionsOverride" Type="System.Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt;" />
+        <Parameter Name="user" Type="System.Security.Claims.ClaimsPrincipal" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TOutput">Generic output type.</typeparam>
+        <param name="serviceName">Name of the service describing the downstream API. There can
+            be several configuration named sections mapped to a <see cref="T:Microsoft.Identity.Abstractions.DownstreamApiOptions" />,
+            each for one downstream API. You can pass-in null, but in that case <paramref name="downstreamApiOptionsOverride" />
+            needs to be set.</param>
+        <param name="downstreamApiOptionsOverride">[Optional] Overrides the options proposed in the configuration described
+            by <paramref name="serviceName" />.</param>
+        <param name="user">[Optional] Claims representing a user. This is useful in platforms like Blazor
+            or Azure Signal R, where the HttpContext is not available. In other platforms, the library
+            will find the user from the HttpContext.</param>
+        <param name="cancellationToken" />
+        <summary>
+            Calls, using <see cref="P:System.Net.Http.HttpMethod.Get" />, a downstream API returning data.
+            By default the returned data is deserialized from JSON but you can provide your own deserializer in the action
+            you pass-in through the <paramref name="downstreamApiOptionsOverride" /> parameter.
+            </summary>
+        <returns> a Task</returns>
+        <remarks>To be added.</remarks>
+        <example>
+          <code>
+             var result = await _downstreamApi.GetForUserAsync&lt;IEnumerable&lt;MyItem&gt;&gt;(
+                    "MyService",
+                    options =&gt;
+                    {
+                      options.RelativePath = $"api/todolist";
+                    });
+            </code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="GetForUserAsync&lt;TInput,TOutput&gt;">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TOutput?&gt; GetForUserAsync&lt;TInput,TOutput&gt; (string? serviceName, TInput input, Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt;? downstreamApiOptionsOverride = default, System.Security.Claims.ClaimsPrincipal? user = default, System.Threading.CancellationToken cancellationToken = default) where TOutput : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;!!TOutput&gt; GetForUserAsync&lt;TInput, class TOutput&gt;(string serviceName, !!TInput input, class System.Action`1&lt;class Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt; downstreamApiOptionsOverride, class System.Security.Claims.ClaimsPrincipal user, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.IDownstreamApi.GetForUserAsync``2(System.String,``0,System.Action{Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod},System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetForUserAsync(Of TInput, TOutput) (serviceName As String, input As TInput, Optional downstreamApiOptionsOverride As Action(Of DownstreamApiOptionsReadOnlyHttpMethod) = Nothing, Optional user As ClaimsPrincipal = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of TOutput)" />
+      <MemberSignature Language="F#" Value="abstract member GetForUserAsync : string * 'Input * Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt; * System.Security.Claims.ClaimsPrincipal * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;'Output (requires 'Output : null)&gt; (requires 'Output : null)" Usage="iDownstreamApi.GetForUserAsync (serviceName, input, downstreamApiOptionsOverride, user, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>9.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TOutput&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TInput" />
+        <TypeParameter Name="TOutput">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="serviceName" Type="System.String" />
+        <Parameter Name="input" Type="TInput" />
+        <Parameter Name="downstreamApiOptionsOverride" Type="System.Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt;" />
+        <Parameter Name="user" Type="System.Security.Claims.ClaimsPrincipal" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TInput">Generic input type.</typeparam>
+        <typeparam name="TOutput">Generic output type.</typeparam>
+        <param name="serviceName">Name of the service describing the downstream API. There can
+            be several configuration named sections mapped to a <see cref="T:Microsoft.Identity.Abstractions.DownstreamApiOptions" />,
+            each for one downstream API. You can pass-in null, but in that case <paramref name="downstreamApiOptionsOverride" />
+            needs to be set.</param>
+        <param name="input">Data sent to the downstream web API, through the body or the HTTP request.</param>
+        <param name="downstreamApiOptionsOverride">[Optional] Overrides the options proposed in the configuration described
+            by <paramref name="serviceName" />.</param>
+        <param name="user">[Optional] Claims representing a user. This is useful in platforms like Blazor
+            or Azure Signal R, where the HttpContext is not available. In other platforms, the library
+            will find the user from the HttpContext.</param>
+        <param name="cancellationToken" />
+        <summary>
+            Calls, using <see cref="P:System.Net.Http.HttpMethod.Get" />, a downstream API with some input data and returning data.
+            By default the input data is serialized in JSON and the returned data is deserialized from JSON but you can provide your own serializer and your own deserializer in the action
+            you pass-in through the <paramref name="downstreamApiOptionsOverride" /> parameter.
+            </summary>
+        <returns> The value returned by the downstream web API.</returns>
+        <remarks>To be added.</remarks>
+        <example>
+          <code>
+             var result = await _downstreamApi.GetForUserAsync&lt;MyItem, IEnumerable&lt;MyItem&gt;&gt;(
+                    "MyService",
+                    myItem,
+                    options =&gt;
+                    {
+                      options.RelativePath = $"api/todolist/{myItem.Id}";
+                    });
+            </code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="PatchForAppAsync&lt;TInput&gt;">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task PatchForAppAsync&lt;TInput&gt; (string? serviceName, TInput input, Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt;? downstreamApiOptionsOverride = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task PatchForAppAsync&lt;TInput&gt;(string serviceName, !!TInput input, class System.Action`1&lt;class Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt; downstreamApiOptionsOverride, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.IDownstreamApi.PatchForAppAsync``1(System.String,``0,System.Action{Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function PatchForAppAsync(Of TInput) (serviceName As String, input As TInput, Optional downstreamApiOptionsOverride As Action(Of DownstreamApiOptionsReadOnlyHttpMethod) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task" />
+      <MemberSignature Language="F#" Value="abstract member PatchForAppAsync : string * 'Input * Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="iDownstreamApi.PatchForAppAsync (serviceName, input, downstreamApiOptionsOverride, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>9.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TInput" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="serviceName" Type="System.String" />
+        <Parameter Name="input" Type="TInput" />
+        <Parameter Name="downstreamApiOptionsOverride" Type="System.Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TInput">Generic input type.</typeparam>
+        <param name="serviceName">Name of the service describing the downstream API. There can
+            be several configuration named sections mapped to a <see cref="T:Microsoft.Identity.Abstractions.DownstreamApiOptions" />,
+            each for one downstream API. You can pass-in null, but in that case <paramref name="downstreamApiOptionsOverride" />
+            needs to be set.</param>
+        <param name="input">Data sent to the downstream web API, through the body or the HTTP request.</param>
+        <param name="downstreamApiOptionsOverride">[Optional] Overrides the options proposed in the configuration described
+            by <paramref name="serviceName" />.</param>
+        <param name="cancellationToken" />
+        <summary>
+            Calls, using <see cref="P:System.Net.Http.HttpMethod.Patch" />, a downstream API with some input data .
+            By default the input data is serialized in JSON  but you can provide your own serializer in the action
+            you pass-in through the <paramref name="downstreamApiOptionsOverride" /> parameter.
+            </summary>
+        <returns> The value returned by the downstream web API.</returns>
+        <remarks>To be added.</remarks>
+        <example>
+          <code>
+              await _downstreamApi.PatchForAppAsync&lt;MyItem&gt;(
+                    "MyService",
+                    myItem,
+                    options =&gt;
+                    {
+                      options.RelativePath = $"api/todolist/{myItem.Id}";
+                    });
+            </code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="PatchForAppAsync&lt;TInput,TOutput&gt;">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TOutput?&gt; PatchForAppAsync&lt;TInput,TOutput&gt; (string? serviceName, TInput input, Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt;? downstreamApiOptionsOverride = default, System.Threading.CancellationToken cancellationToken = default) where TOutput : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;!!TOutput&gt; PatchForAppAsync&lt;TInput, class TOutput&gt;(string serviceName, !!TInput input, class System.Action`1&lt;class Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt; downstreamApiOptionsOverride, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.IDownstreamApi.PatchForAppAsync``2(System.String,``0,System.Action{Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function PatchForAppAsync(Of TInput, TOutput) (serviceName As String, input As TInput, Optional downstreamApiOptionsOverride As Action(Of DownstreamApiOptionsReadOnlyHttpMethod) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of TOutput)" />
+      <MemberSignature Language="F#" Value="abstract member PatchForAppAsync : string * 'Input * Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;'Output (requires 'Output : null)&gt; (requires 'Output : null)" Usage="iDownstreamApi.PatchForAppAsync (serviceName, input, downstreamApiOptionsOverride, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>9.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TOutput&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TInput" />
+        <TypeParameter Name="TOutput">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="serviceName" Type="System.String" />
+        <Parameter Name="input" Type="TInput" />
+        <Parameter Name="downstreamApiOptionsOverride" Type="System.Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TInput">Generic input type.</typeparam>
+        <typeparam name="TOutput">Generic output type.</typeparam>
+        <param name="serviceName">Name of the service describing the downstream API. There can
+            be several configuration named sections mapped to a <see cref="T:Microsoft.Identity.Abstractions.DownstreamApiOptions" />,
+            each for one downstream API. You can pass-in null, but in that case <paramref name="downstreamApiOptionsOverride" />
+            needs to be set.</param>
+        <param name="input">Data sent to the downstream web API, through the body or the HTTP request.</param>
+        <param name="downstreamApiOptionsOverride">[Optional] Overrides the options proposed in the configuration described
+            by <paramref name="serviceName" />.</param>
+        <param name="cancellationToken" />
+        <summary>
+            Calls, using <see cref="P:System.Net.Http.HttpMethod.Patch" />, a downstream API with some input data and returning data.
+            By default the input data is serialized in JSON and the returned data is deserialized from JSON but you can provide your own serializer and your own deserializer in the action
+            you pass-in through the <paramref name="downstreamApiOptionsOverride" /> parameter.
+            </summary>
+        <returns> The value returned by the downstream web API.</returns>
+        <remarks>To be added.</remarks>
+        <example>
+          <code>
+             var result = await _downstreamApi.PatchForAppAsync&lt;MyItem, IEnumerable&lt;MyItem&gt;&gt;(
+                    "MyService",
+                    myItem,
+                    options =&gt;
+                    {
+                      options.RelativePath = $"api/todolist/{myItem.Id}";
+                    });
+            </code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="PatchForUserAsync&lt;TInput&gt;">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task PatchForUserAsync&lt;TInput&gt; (string? serviceName, TInput input, Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt;? downstreamApiOptionsOverride = default, System.Security.Claims.ClaimsPrincipal? user = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task PatchForUserAsync&lt;TInput&gt;(string serviceName, !!TInput input, class System.Action`1&lt;class Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt; downstreamApiOptionsOverride, class System.Security.Claims.ClaimsPrincipal user, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.IDownstreamApi.PatchForUserAsync``1(System.String,``0,System.Action{Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod},System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function PatchForUserAsync(Of TInput) (serviceName As String, input As TInput, Optional downstreamApiOptionsOverride As Action(Of DownstreamApiOptionsReadOnlyHttpMethod) = Nothing, Optional user As ClaimsPrincipal = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task" />
+      <MemberSignature Language="F#" Value="abstract member PatchForUserAsync : string * 'Input * Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt; * System.Security.Claims.ClaimsPrincipal * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="iDownstreamApi.PatchForUserAsync (serviceName, input, downstreamApiOptionsOverride, user, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>9.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TInput" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="serviceName" Type="System.String" />
+        <Parameter Name="input" Type="TInput" />
+        <Parameter Name="downstreamApiOptionsOverride" Type="System.Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt;" />
+        <Parameter Name="user" Type="System.Security.Claims.ClaimsPrincipal" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TInput">Generic input type.</typeparam>
+        <param name="serviceName">Name of the service describing the downstream API. There can
+            be several configuration named sections mapped to a <see cref="T:Microsoft.Identity.Abstractions.DownstreamApiOptions" />,
+            each for one downstream API. You can pass-in null, but in that case <paramref name="downstreamApiOptionsOverride" />
+            needs to be set.</param>
+        <param name="input">Data sent to the downstream web API, through the body or the HTTP request.</param>
+        <param name="downstreamApiOptionsOverride">[Optional] Overrides the options proposed in the configuration described
+            by <paramref name="serviceName" />.</param>
+        <param name="user">[Optional] Claims representing a user. This is useful in platforms like Blazor
+            or Azure Signal R, where the HttpContext is not available. In other platforms, the library
+            will find the user from the HttpContext.</param>
+        <param name="cancellationToken" />
+        <summary>
+            Calls, using <see cref="P:System.Net.Http.HttpMethod.Patch" />, a downstream API with some input data .
+            By default the input data is serialized in JSON  but you can provide your own serializer in the action
+            you pass-in through the <paramref name="downstreamApiOptionsOverride" /> parameter.
+            </summary>
+        <returns> The value returned by the downstream web API.</returns>
+        <remarks>To be added.</remarks>
+        <example>
+          <code>
+              await _downstreamApi.PatchForUserAsync&lt;MyItem&gt;(
+                    "MyService",
+                    myItem,
+                    options =&gt;
+                    {
+                      options.RelativePath = $"api/todolist/{myItem.Id}";
+                    });
+            </code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="PatchForUserAsync&lt;TInput,TOutput&gt;">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TOutput?&gt; PatchForUserAsync&lt;TInput,TOutput&gt; (string? serviceName, TInput input, Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt;? downstreamApiOptionsOverride = default, System.Security.Claims.ClaimsPrincipal? user = default, System.Threading.CancellationToken cancellationToken = default) where TOutput : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;!!TOutput&gt; PatchForUserAsync&lt;TInput, class TOutput&gt;(string serviceName, !!TInput input, class System.Action`1&lt;class Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt; downstreamApiOptionsOverride, class System.Security.Claims.ClaimsPrincipal user, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.IDownstreamApi.PatchForUserAsync``2(System.String,``0,System.Action{Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod},System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function PatchForUserAsync(Of TInput, TOutput) (serviceName As String, input As TInput, Optional downstreamApiOptionsOverride As Action(Of DownstreamApiOptionsReadOnlyHttpMethod) = Nothing, Optional user As ClaimsPrincipal = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of TOutput)" />
+      <MemberSignature Language="F#" Value="abstract member PatchForUserAsync : string * 'Input * Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt; * System.Security.Claims.ClaimsPrincipal * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;'Output (requires 'Output : null)&gt; (requires 'Output : null)" Usage="iDownstreamApi.PatchForUserAsync (serviceName, input, downstreamApiOptionsOverride, user, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>9.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TOutput&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TInput" />
+        <TypeParameter Name="TOutput">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="serviceName" Type="System.String" />
+        <Parameter Name="input" Type="TInput" />
+        <Parameter Name="downstreamApiOptionsOverride" Type="System.Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt;" />
+        <Parameter Name="user" Type="System.Security.Claims.ClaimsPrincipal" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TInput">Generic input type.</typeparam>
+        <typeparam name="TOutput">Generic output type.</typeparam>
+        <param name="serviceName">Name of the service describing the downstream API. There can
+            be several configuration named sections mapped to a <see cref="T:Microsoft.Identity.Abstractions.DownstreamApiOptions" />,
+            each for one downstream API. You can pass-in null, but in that case <paramref name="downstreamApiOptionsOverride" />
+            needs to be set.</param>
+        <param name="input">Data sent to the downstream web API, through the body or the HTTP request.</param>
+        <param name="downstreamApiOptionsOverride">[Optional] Overrides the options proposed in the configuration described
+            by <paramref name="serviceName" />.</param>
+        <param name="user">[Optional] Claims representing a user. This is useful in platforms like Blazor
+            or Azure Signal R, where the HttpContext is not available. In other platforms, the library
+            will find the user from the HttpContext.</param>
+        <param name="cancellationToken" />
+        <summary>
+            Calls, using <see cref="P:System.Net.Http.HttpMethod.Patch" />, a downstream API with some input data and returning data.
+            By default the input data is serialized in JSON and the returned data is deserialized from JSON but you can provide your own serializer and your own deserializer in the action
+            you pass-in through the <paramref name="downstreamApiOptionsOverride" /> parameter.
+            </summary>
+        <returns> The value returned by the downstream web API.</returns>
+        <remarks>To be added.</remarks>
+        <example>
+          <code>
+             var result = await _downstreamApi.PatchForUserAsync&lt;MyItem, IEnumerable&lt;MyItem&gt;&gt;(
+                    "MyService",
+                    myItem,
+                    options =&gt;
+                    {
+                      options.RelativePath = $"api/todolist/{myItem.Id}";
+                    });
+            </code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="PostForAppAsync&lt;TInput&gt;">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task PostForAppAsync&lt;TInput&gt; (string? serviceName, TInput input, Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt;? downstreamApiOptionsOverride = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task PostForAppAsync&lt;TInput&gt;(string serviceName, !!TInput input, class System.Action`1&lt;class Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt; downstreamApiOptionsOverride, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.IDownstreamApi.PostForAppAsync``1(System.String,``0,System.Action{Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function PostForAppAsync(Of TInput) (serviceName As String, input As TInput, Optional downstreamApiOptionsOverride As Action(Of DownstreamApiOptionsReadOnlyHttpMethod) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task" />
+      <MemberSignature Language="F#" Value="abstract member PostForAppAsync : string * 'Input * Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="iDownstreamApi.PostForAppAsync (serviceName, input, downstreamApiOptionsOverride, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>9.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TInput" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="serviceName" Type="System.String" />
+        <Parameter Name="input" Type="TInput" />
+        <Parameter Name="downstreamApiOptionsOverride" Type="System.Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TInput">Generic input type.</typeparam>
+        <param name="serviceName">Name of the service describing the downstream API. There can
+            be several configuration named sections mapped to a <see cref="T:Microsoft.Identity.Abstractions.DownstreamApiOptions" />,
+            each for one downstream API. You can pass-in null, but in that case <paramref name="downstreamApiOptionsOverride" />
+            needs to be set.</param>
+        <param name="input">Data sent to the downstream web API, through the body or the HTTP request.</param>
+        <param name="downstreamApiOptionsOverride">[Optional] Overrides the options proposed in the configuration described
+            by <paramref name="serviceName" />.</param>
+        <param name="cancellationToken" />
+        <summary>
+            Calls, using <see cref="P:System.Net.Http.HttpMethod.Post" />, a downstream API with some input data .
+            By default the input data is serialized in JSON  but you can provide your own serializer in the action
+            you pass-in through the <paramref name="downstreamApiOptionsOverride" /> parameter.
+            </summary>
+        <returns> The value returned by the downstream web API.</returns>
+        <remarks>To be added.</remarks>
+        <example>
+          <code>
+              await _downstreamApi.PostForAppAsync&lt;MyItem&gt;(
+                    "MyService",
+                    myItem,
+                    options =&gt;
+                    {
+                      options.RelativePath = $"api/todolist/{myItem.Id}";
+                    });
+            </code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="PostForAppAsync&lt;TInput,TOutput&gt;">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TOutput?&gt; PostForAppAsync&lt;TInput,TOutput&gt; (string? serviceName, TInput input, Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt;? downstreamApiOptionsOverride = default, System.Threading.CancellationToken cancellationToken = default) where TOutput : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;!!TOutput&gt; PostForAppAsync&lt;TInput, class TOutput&gt;(string serviceName, !!TInput input, class System.Action`1&lt;class Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt; downstreamApiOptionsOverride, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.IDownstreamApi.PostForAppAsync``2(System.String,``0,System.Action{Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function PostForAppAsync(Of TInput, TOutput) (serviceName As String, input As TInput, Optional downstreamApiOptionsOverride As Action(Of DownstreamApiOptionsReadOnlyHttpMethod) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of TOutput)" />
+      <MemberSignature Language="F#" Value="abstract member PostForAppAsync : string * 'Input * Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;'Output (requires 'Output : null)&gt; (requires 'Output : null)" Usage="iDownstreamApi.PostForAppAsync (serviceName, input, downstreamApiOptionsOverride, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>9.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TOutput&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TInput" />
+        <TypeParameter Name="TOutput">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="serviceName" Type="System.String" />
+        <Parameter Name="input" Type="TInput" />
+        <Parameter Name="downstreamApiOptionsOverride" Type="System.Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TInput">Generic input type.</typeparam>
+        <typeparam name="TOutput">Generic output type.</typeparam>
+        <param name="serviceName">Name of the service describing the downstream API. There can
+            be several configuration named sections mapped to a <see cref="T:Microsoft.Identity.Abstractions.DownstreamApiOptions" />,
+            each for one downstream API. You can pass-in null, but in that case <paramref name="downstreamApiOptionsOverride" />
+            needs to be set.</param>
+        <param name="input">Data sent to the downstream web API, through the body or the HTTP request.</param>
+        <param name="downstreamApiOptionsOverride">[Optional] Overrides the options proposed in the configuration described
+            by <paramref name="serviceName" />.</param>
+        <param name="cancellationToken" />
+        <summary>
+            Calls, using <see cref="P:System.Net.Http.HttpMethod.Post" />, a downstream API with some input data and returning data.
+            By default the input data is serialized in JSON and the returned data is deserialized from JSON but you can provide your own serializer and your own deserializer in the action
+            you pass-in through the <paramref name="downstreamApiOptionsOverride" /> parameter.
+            </summary>
+        <returns> The value returned by the downstream web API.</returns>
+        <remarks>To be added.</remarks>
+        <example>
+          <code>
+             var result = await _downstreamApi.PostForAppAsync&lt;MyItem, IEnumerable&lt;MyItem&gt;&gt;(
+                    "MyService",
+                    myItem,
+                    options =&gt;
+                    {
+                      options.RelativePath = $"api/todolist/{myItem.Id}";
+                    });
+            </code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="PostForUserAsync&lt;TInput&gt;">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task PostForUserAsync&lt;TInput&gt; (string? serviceName, TInput input, Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt;? downstreamApiOptionsOverride = default, System.Security.Claims.ClaimsPrincipal? user = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task PostForUserAsync&lt;TInput&gt;(string serviceName, !!TInput input, class System.Action`1&lt;class Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt; downstreamApiOptionsOverride, class System.Security.Claims.ClaimsPrincipal user, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.IDownstreamApi.PostForUserAsync``1(System.String,``0,System.Action{Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod},System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function PostForUserAsync(Of TInput) (serviceName As String, input As TInput, Optional downstreamApiOptionsOverride As Action(Of DownstreamApiOptionsReadOnlyHttpMethod) = Nothing, Optional user As ClaimsPrincipal = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task" />
+      <MemberSignature Language="F#" Value="abstract member PostForUserAsync : string * 'Input * Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt; * System.Security.Claims.ClaimsPrincipal * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="iDownstreamApi.PostForUserAsync (serviceName, input, downstreamApiOptionsOverride, user, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>9.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TInput" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="serviceName" Type="System.String" />
+        <Parameter Name="input" Type="TInput" />
+        <Parameter Name="downstreamApiOptionsOverride" Type="System.Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt;" />
+        <Parameter Name="user" Type="System.Security.Claims.ClaimsPrincipal" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TInput">Generic input type.</typeparam>
+        <param name="serviceName">Name of the service describing the downstream API. There can
+            be several configuration named sections mapped to a <see cref="T:Microsoft.Identity.Abstractions.DownstreamApiOptions" />,
+            each for one downstream API. You can pass-in null, but in that case <paramref name="downstreamApiOptionsOverride" />
+            needs to be set.</param>
+        <param name="input">Data sent to the downstream web API, through the body or the HTTP request.</param>
+        <param name="downstreamApiOptionsOverride">[Optional] Overrides the options proposed in the configuration described
+            by <paramref name="serviceName" />.</param>
+        <param name="user">[Optional] Claims representing a user. This is useful in platforms like Blazor
+            or Azure Signal R, where the HttpContext is not available. In other platforms, the library
+            will find the user from the HttpContext.</param>
+        <param name="cancellationToken" />
+        <summary>
+            Calls, using <see cref="P:System.Net.Http.HttpMethod.Post" />, a downstream API with some input data .
+            By default the input data is serialized in JSON  but you can provide your own serializer in the action
+            you pass-in through the <paramref name="downstreamApiOptionsOverride" /> parameter.
+            </summary>
+        <returns> The value returned by the downstream web API.</returns>
+        <remarks>To be added.</remarks>
+        <example>
+          <code>
+              await _downstreamApi.PostForUserAsync&lt;MyItem&gt;(
+                    "MyService",
+                    myItem,
+                    options =&gt;
+                    {
+                      options.RelativePath = $"api/todolist/{myItem.Id}";
+                    });
+            </code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="PostForUserAsync&lt;TInput,TOutput&gt;">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TOutput?&gt; PostForUserAsync&lt;TInput,TOutput&gt; (string? serviceName, TInput input, Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt;? downstreamApiOptionsOverride = default, System.Security.Claims.ClaimsPrincipal? user = default, System.Threading.CancellationToken cancellationToken = default) where TOutput : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;!!TOutput&gt; PostForUserAsync&lt;TInput, class TOutput&gt;(string serviceName, !!TInput input, class System.Action`1&lt;class Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt; downstreamApiOptionsOverride, class System.Security.Claims.ClaimsPrincipal user, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.IDownstreamApi.PostForUserAsync``2(System.String,``0,System.Action{Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod},System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function PostForUserAsync(Of TInput, TOutput) (serviceName As String, input As TInput, Optional downstreamApiOptionsOverride As Action(Of DownstreamApiOptionsReadOnlyHttpMethod) = Nothing, Optional user As ClaimsPrincipal = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of TOutput)" />
+      <MemberSignature Language="F#" Value="abstract member PostForUserAsync : string * 'Input * Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt; * System.Security.Claims.ClaimsPrincipal * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;'Output (requires 'Output : null)&gt; (requires 'Output : null)" Usage="iDownstreamApi.PostForUserAsync (serviceName, input, downstreamApiOptionsOverride, user, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>9.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TOutput&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TInput" />
+        <TypeParameter Name="TOutput">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="serviceName" Type="System.String" />
+        <Parameter Name="input" Type="TInput" />
+        <Parameter Name="downstreamApiOptionsOverride" Type="System.Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt;" />
+        <Parameter Name="user" Type="System.Security.Claims.ClaimsPrincipal" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TInput">Generic input type.</typeparam>
+        <typeparam name="TOutput">Generic output type.</typeparam>
+        <param name="serviceName">Name of the service describing the downstream API. There can
+            be several configuration named sections mapped to a <see cref="T:Microsoft.Identity.Abstractions.DownstreamApiOptions" />,
+            each for one downstream API. You can pass-in null, but in that case <paramref name="downstreamApiOptionsOverride" />
+            needs to be set.</param>
+        <param name="input">Data sent to the downstream web API, through the body or the HTTP request.</param>
+        <param name="downstreamApiOptionsOverride">[Optional] Overrides the options proposed in the configuration described
+            by <paramref name="serviceName" />.</param>
+        <param name="user">[Optional] Claims representing a user. This is useful in platforms like Blazor
+            or Azure Signal R, where the HttpContext is not available. In other platforms, the library
+            will find the user from the HttpContext.</param>
+        <param name="cancellationToken" />
+        <summary>
+            Calls, using <see cref="P:System.Net.Http.HttpMethod.Post" />, a downstream API with some input data and returning data.
+            By default the input data is serialized in JSON and the returned data is deserialized from JSON but you can provide your own serializer and your own deserializer in the action
+            you pass-in through the <paramref name="downstreamApiOptionsOverride" /> parameter.
+            </summary>
+        <returns> The value returned by the downstream web API.</returns>
+        <remarks>To be added.</remarks>
+        <example>
+          <code>
+             var result = await _downstreamApi.PostForUserAsync&lt;MyItem, IEnumerable&lt;MyItem&gt;&gt;(
+                    "MyService",
+                    myItem,
+                    options =&gt;
+                    {
+                      options.RelativePath = $"api/todolist/{myItem.Id}";
+                    });
+            </code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="PutForAppAsync&lt;TInput&gt;">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task PutForAppAsync&lt;TInput&gt; (string? serviceName, TInput input, Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt;? downstreamApiOptionsOverride = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task PutForAppAsync&lt;TInput&gt;(string serviceName, !!TInput input, class System.Action`1&lt;class Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt; downstreamApiOptionsOverride, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.IDownstreamApi.PutForAppAsync``1(System.String,``0,System.Action{Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function PutForAppAsync(Of TInput) (serviceName As String, input As TInput, Optional downstreamApiOptionsOverride As Action(Of DownstreamApiOptionsReadOnlyHttpMethod) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task" />
+      <MemberSignature Language="F#" Value="abstract member PutForAppAsync : string * 'Input * Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="iDownstreamApi.PutForAppAsync (serviceName, input, downstreamApiOptionsOverride, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>9.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TInput" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="serviceName" Type="System.String" />
+        <Parameter Name="input" Type="TInput" />
+        <Parameter Name="downstreamApiOptionsOverride" Type="System.Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TInput">Generic input type.</typeparam>
+        <param name="serviceName">Name of the service describing the downstream API. There can
+            be several configuration named sections mapped to a <see cref="T:Microsoft.Identity.Abstractions.DownstreamApiOptions" />,
+            each for one downstream API. You can pass-in null, but in that case <paramref name="downstreamApiOptionsOverride" />
+            needs to be set.</param>
+        <param name="input">Data sent to the downstream web API, through the body or the HTTP request.</param>
+        <param name="downstreamApiOptionsOverride">[Optional] Overrides the options proposed in the configuration described
+            by <paramref name="serviceName" />.</param>
+        <param name="cancellationToken" />
+        <summary>
+            Calls, using <see cref="P:System.Net.Http.HttpMethod.Put" />, a downstream API with some input data .
+            By default the input data is serialized in JSON  but you can provide your own serializer in the action
+            you pass-in through the <paramref name="downstreamApiOptionsOverride" /> parameter.
+            </summary>
+        <returns> The value returned by the downstream web API.</returns>
+        <remarks>To be added.</remarks>
+        <example>
+          <code>
+              await _downstreamApi.PutForAppAsync&lt;MyItem&gt;(
+                    "MyService",
+                    myItem,
+                    options =&gt;
+                    {
+                      options.RelativePath = $"api/todolist/{myItem.Id}";
+                    });
+            </code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="PutForAppAsync&lt;TInput,TOutput&gt;">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TOutput?&gt; PutForAppAsync&lt;TInput,TOutput&gt; (string? serviceName, TInput input, Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt;? downstreamApiOptionsOverride = default, System.Threading.CancellationToken cancellationToken = default) where TOutput : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;!!TOutput&gt; PutForAppAsync&lt;TInput, class TOutput&gt;(string serviceName, !!TInput input, class System.Action`1&lt;class Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt; downstreamApiOptionsOverride, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.IDownstreamApi.PutForAppAsync``2(System.String,``0,System.Action{Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function PutForAppAsync(Of TInput, TOutput) (serviceName As String, input As TInput, Optional downstreamApiOptionsOverride As Action(Of DownstreamApiOptionsReadOnlyHttpMethod) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of TOutput)" />
+      <MemberSignature Language="F#" Value="abstract member PutForAppAsync : string * 'Input * Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;'Output (requires 'Output : null)&gt; (requires 'Output : null)" Usage="iDownstreamApi.PutForAppAsync (serviceName, input, downstreamApiOptionsOverride, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>9.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TOutput&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TInput" />
+        <TypeParameter Name="TOutput">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="serviceName" Type="System.String" />
+        <Parameter Name="input" Type="TInput" />
+        <Parameter Name="downstreamApiOptionsOverride" Type="System.Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TInput">Generic input type.</typeparam>
+        <typeparam name="TOutput">Generic output type.</typeparam>
+        <param name="serviceName">Name of the service describing the downstream API. There can
+            be several configuration named sections mapped to a <see cref="T:Microsoft.Identity.Abstractions.DownstreamApiOptions" />,
+            each for one downstream API. You can pass-in null, but in that case <paramref name="downstreamApiOptionsOverride" />
+            needs to be set.</param>
+        <param name="input">Data sent to the downstream web API, through the body or the HTTP request.</param>
+        <param name="downstreamApiOptionsOverride">[Optional] Overrides the options proposed in the configuration described
+            by <paramref name="serviceName" />.</param>
+        <param name="cancellationToken" />
+        <summary>
+            Calls, using <see cref="P:System.Net.Http.HttpMethod.Put" />, a downstream API with some input data and returning data.
+            By default the input data is serialized in JSON and the returned data is deserialized from JSON but you can provide your own serializer and your own deserializer in the action
+            you pass-in through the <paramref name="downstreamApiOptionsOverride" /> parameter.
+            </summary>
+        <returns> The value returned by the downstream web API.</returns>
+        <remarks>To be added.</remarks>
+        <example>
+          <code>
+             var result = await _downstreamApi.PutForAppAsync&lt;MyItem, IEnumerable&lt;MyItem&gt;&gt;(
+                    "MyService",
+                    myItem,
+                    options =&gt;
+                    {
+                      options.RelativePath = $"api/todolist/{myItem.Id}";
+                    });
+            </code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="PutForUserAsync&lt;TInput&gt;">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task PutForUserAsync&lt;TInput&gt; (string? serviceName, TInput input, Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt;? downstreamApiOptionsOverride = default, System.Security.Claims.ClaimsPrincipal? user = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task PutForUserAsync&lt;TInput&gt;(string serviceName, !!TInput input, class System.Action`1&lt;class Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt; downstreamApiOptionsOverride, class System.Security.Claims.ClaimsPrincipal user, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.IDownstreamApi.PutForUserAsync``1(System.String,``0,System.Action{Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod},System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function PutForUserAsync(Of TInput) (serviceName As String, input As TInput, Optional downstreamApiOptionsOverride As Action(Of DownstreamApiOptionsReadOnlyHttpMethod) = Nothing, Optional user As ClaimsPrincipal = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task" />
+      <MemberSignature Language="F#" Value="abstract member PutForUserAsync : string * 'Input * Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt; * System.Security.Claims.ClaimsPrincipal * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="iDownstreamApi.PutForUserAsync (serviceName, input, downstreamApiOptionsOverride, user, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>9.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TInput" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="serviceName" Type="System.String" />
+        <Parameter Name="input" Type="TInput" />
+        <Parameter Name="downstreamApiOptionsOverride" Type="System.Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt;" />
+        <Parameter Name="user" Type="System.Security.Claims.ClaimsPrincipal" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TInput">Generic input type.</typeparam>
+        <param name="serviceName">Name of the service describing the downstream API. There can
+            be several configuration named sections mapped to a <see cref="T:Microsoft.Identity.Abstractions.DownstreamApiOptions" />,
+            each for one downstream API. You can pass-in null, but in that case <paramref name="downstreamApiOptionsOverride" />
+            needs to be set.</param>
+        <param name="input">Data sent to the downstream web API, through the body or the HTTP request.</param>
+        <param name="downstreamApiOptionsOverride">[Optional] Overrides the options proposed in the configuration described
+            by <paramref name="serviceName" />.</param>
+        <param name="user">[Optional] Claims representing a user. This is useful in platforms like Blazor
+            or Azure Signal R, where the HttpContext is not available. In other platforms, the library
+            will find the user from the HttpContext.</param>
+        <param name="cancellationToken" />
+        <summary>
+            Calls, using <see cref="P:System.Net.Http.HttpMethod.Put" />, a downstream API with some input data .
+            By default the input data is serialized in JSON  but you can provide your own serializer in the action
+            you pass-in through the <paramref name="downstreamApiOptionsOverride" /> parameter.
+            </summary>
+        <returns> The value returned by the downstream web API.</returns>
+        <remarks>To be added.</remarks>
+        <example>
+          <code>
+              await _downstreamApi.PutForUserAsync&lt;MyItem&gt;(
+                    "MyService",
+                    myItem,
+                    options =&gt;
+                    {
+                      options.RelativePath = $"api/todolist/{myItem.Id}";
+                    });
+            </code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="PutForUserAsync&lt;TInput,TOutput&gt;">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TOutput?&gt; PutForUserAsync&lt;TInput,TOutput&gt; (string? serviceName, TInput input, Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt;? downstreamApiOptionsOverride = default, System.Security.Claims.ClaimsPrincipal? user = default, System.Threading.CancellationToken cancellationToken = default) where TOutput : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;!!TOutput&gt; PutForUserAsync&lt;TInput, class TOutput&gt;(string serviceName, !!TInput input, class System.Action`1&lt;class Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt; downstreamApiOptionsOverride, class System.Security.Claims.ClaimsPrincipal user, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.IDownstreamApi.PutForUserAsync``2(System.String,``0,System.Action{Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod},System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function PutForUserAsync(Of TInput, TOutput) (serviceName As String, input As TInput, Optional downstreamApiOptionsOverride As Action(Of DownstreamApiOptionsReadOnlyHttpMethod) = Nothing, Optional user As ClaimsPrincipal = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of TOutput)" />
+      <MemberSignature Language="F#" Value="abstract member PutForUserAsync : string * 'Input * Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt; * System.Security.Claims.ClaimsPrincipal * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;'Output (requires 'Output : null)&gt; (requires 'Output : null)" Usage="iDownstreamApi.PutForUserAsync (serviceName, input, downstreamApiOptionsOverride, user, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>9.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TOutput&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TInput" />
+        <TypeParameter Name="TOutput">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="serviceName" Type="System.String" />
+        <Parameter Name="input" Type="TInput" />
+        <Parameter Name="downstreamApiOptionsOverride" Type="System.Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod&gt;" />
+        <Parameter Name="user" Type="System.Security.Claims.ClaimsPrincipal" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TInput">Generic input type.</typeparam>
+        <typeparam name="TOutput">Generic output type.</typeparam>
+        <param name="serviceName">Name of the service describing the downstream API. There can
+            be several configuration named sections mapped to a <see cref="T:Microsoft.Identity.Abstractions.DownstreamApiOptions" />,
+            each for one downstream API. You can pass-in null, but in that case <paramref name="downstreamApiOptionsOverride" />
+            needs to be set.</param>
+        <param name="input">Data sent to the downstream web API, through the body or the HTTP request.</param>
+        <param name="downstreamApiOptionsOverride">[Optional] Overrides the options proposed in the configuration described
+            by <paramref name="serviceName" />.</param>
+        <param name="user">[Optional] Claims representing a user. This is useful in platforms like Blazor
+            or Azure Signal R, where the HttpContext is not available. In other platforms, the library
+            will find the user from the HttpContext.</param>
+        <param name="cancellationToken" />
+        <summary>
+            Calls, using <see cref="P:System.Net.Http.HttpMethod.Put" />, a downstream API with some input data and returning data.
+            By default the input data is serialized in JSON and the returned data is deserialized from JSON but you can provide your own serializer and your own deserializer in the action
+            you pass-in through the <paramref name="downstreamApiOptionsOverride" /> parameter.
+            </summary>
+        <returns> The value returned by the downstream web API.</returns>
+        <remarks>To be added.</remarks>
+        <example>
+          <code>
+             var result = await _downstreamApi.PutForUserAsync&lt;MyItem, IEnumerable&lt;MyItem&gt;&gt;(
+                    "MyService",
+                    myItem,
+                    options =&gt;
+                    {
+                      options.RelativePath = $"api/todolist/{myItem.Id}";
+                    });
+            </code>
+        </example>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

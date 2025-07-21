@@ -1,0 +1,51 @@
+<Type Name="PrincipalExtensionsForSecurityTokens" FullName="Microsoft.Identity.Web.PrincipalExtensionsForSecurityTokens">
+  <TypeSignature Language="C#" Value="public static class PrincipalExtensionsForSecurityTokens" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit PrincipalExtensionsForSecurityTokens extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Web.PrincipalExtensionsForSecurityTokens" />
+  <TypeSignature Language="VB.NET" Value="Public Module PrincipalExtensionsForSecurityTokens" />
+  <TypeSignature Language="F#" Value="type PrincipalExtensionsForSecurityTokens = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+    <AssemblyVersion>3.11.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Extensions to retrieve a <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" /> from <see cref="T:System.Security.Claims.ClaimsPrincipal" />.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetBootstrapToken">
+      <MemberSignature Language="C#" Value="public static Microsoft.IdentityModel.Tokens.SecurityToken? GetBootstrapToken (this System.Security.Principal.IPrincipal claimsPrincipal);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.IdentityModel.Tokens.SecurityToken GetBootstrapToken(class System.Security.Principal.IPrincipal claimsPrincipal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.PrincipalExtensionsForSecurityTokens.GetBootstrapToken(System.Security.Principal.IPrincipal)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function GetBootstrapToken (claimsPrincipal As IPrincipal) As SecurityToken" />
+      <MemberSignature Language="F#" Value="static member GetBootstrapToken : System.Security.Principal.IPrincipal -&gt; Microsoft.IdentityModel.Tokens.SecurityToken" Usage="Microsoft.Identity.Web.PrincipalExtensionsForSecurityTokens.GetBootstrapToken claimsPrincipal" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>3.11.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Tokens.SecurityToken</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="claimsPrincipal" Type="System.Security.Principal.IPrincipal" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="claimsPrincipal" />
+        <summary>
+            Get the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" /> used to call a protected web API.
+            </summary>
+        <returns>
+          <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" />
+        </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

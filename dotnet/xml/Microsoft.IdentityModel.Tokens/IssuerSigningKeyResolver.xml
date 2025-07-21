@@ -1,0 +1,34 @@
+<Type Name="IssuerSigningKeyResolver" FullName="Microsoft.IdentityModel.Tokens.IssuerSigningKeyResolver">
+  <TypeSignature Language="C#" Value="public delegate System.Collections.Generic.IEnumerable&lt;Microsoft.IdentityModel.Tokens.SecurityKey&gt; IssuerSigningKeyResolver(string token, SecurityToken securityToken, string kid, TokenValidationParameters validationParameters);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed IssuerSigningKeyResolver extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.IdentityModel.Tokens.IssuerSigningKeyResolver" />
+  <TypeSignature Language="VB.NET" Value="Public Delegate Function IssuerSigningKeyResolver(token As String, securityToken As SecurityToken, kid As String, validationParameters As TokenValidationParameters) As IEnumerable(Of SecurityKey) " />
+  <TypeSignature Language="F#" Value="type IssuerSigningKeyResolver = delegate of string * SecurityToken * string * TokenValidationParameters -&gt; seq&lt;SecurityKey&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+    <AssemblyVersion>8.13.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="token" Type="System.String" />
+    <Parameter Name="securityToken" Type="Microsoft.IdentityModel.Tokens.SecurityToken" />
+    <Parameter Name="kid" Type="System.String" />
+    <Parameter Name="validationParameters" Type="Microsoft.IdentityModel.Tokens.TokenValidationParameters" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.IdentityModel.Tokens.SecurityKey&gt;</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="token">The string representation of the token being validated.</param>
+    <param name="securityToken">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" /> being validated, which may be null.</param>
+    <param name="kid">The key identifier, which may be null.</param>
+    <param name="validationParameters">The <see cref="T:Microsoft.IdentityModel.Tokens.TokenValidationParameters" /> to be used for validating the token.</param>
+    <summary>
+            Resolves the signing key used for validating a token's signature.
+            </summary>
+    <returns>The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> used to validate the signature.</returns>
+    <remarks>If both <see cref="T:Microsoft.IdentityModel.Tokens.IssuerSigningKeyResolverUsingConfiguration" /> and <see cref="T:Microsoft.IdentityModel.Tokens.IssuerSigningKeyResolver" /> are set, <see cref="T:Microsoft.IdentityModel.Tokens.IssuerSigningKeyResolverUsingConfiguration" /> takes priority.</remarks>
+  </Docs>
+</Type>

@@ -1,0 +1,152 @@
+<Type Name="IResultBasedValidation" FullName="Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation">
+  <TypeSignature Language="C#" Value="public interface IResultBasedValidation" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IResultBasedValidation" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IResultBasedValidation" />
+  <TypeSignature Language="F#" Value="type IResultBasedValidation = interface" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+    <AssemblyVersion>8.13.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Experimental interface that provides result based token validation instead of throwing exceptions.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ValidateTokenAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt; ValidateTokenAsync (Microsoft.IdentityModel.Tokens.SecurityToken securityToken, Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters validationParameters, Microsoft.IdentityModel.Tokens.CallContext callContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;valuetype Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2&lt;class Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken, class Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt; ValidateTokenAsync(class Microsoft.IdentityModel.Tokens.SecurityToken securityToken, class Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters validationParameters, class Microsoft.IdentityModel.Tokens.CallContext callContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync(Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ValidateTokenAsync (securityToken As SecurityToken, validationParameters As ValidationParameters, callContext As CallContext) As Task(Of ValidationResult(Of ValidatedToken, ValidationError))" />
+      <MemberSignature Language="F#" Value="abstract member ValidateTokenAsync : Microsoft.IdentityModel.Tokens.SecurityToken * Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters * Microsoft.IdentityModel.Tokens.CallContext -&gt; System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken, Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt;" Usage="iResultBasedValidation.ValidateTokenAsync (securityToken, validationParameters, callContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="securityToken" Type="Microsoft.IdentityModel.Tokens.SecurityToken" />
+        <Parameter Name="validationParameters" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters" />
+        <Parameter Name="callContext" Type="Microsoft.IdentityModel.Tokens.CallContext" />
+      </Parameters>
+      <Docs>
+        <param name="securityToken">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" /> to be validated.</param>
+        <param name="validationParameters">The <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters" /> to be used for validating the token.</param>
+        <param name="callContext">A <see cref="T:Microsoft.IdentityModel.Tokens.CallContext" /> that contains call information.</param>
+        <summary>
+            Validates a token.
+            On a validation failure, no exception will be thrown; instead, the <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationError" /> will contain the information about the error that occurred.
+            Callers should always check the ValidationResult.IsValid property to verify the validity of the result.
+            </summary>
+        <returns>A <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2" /> with either a <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken" /> if the token was validated or an <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationError" /> with the failure information and exception otherwise.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateTokenAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt; ValidateTokenAsync (string token, Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters validationParameters, Microsoft.IdentityModel.Tokens.CallContext callContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;valuetype Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2&lt;class Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken, class Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt; ValidateTokenAsync(string token, class Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters validationParameters, class Microsoft.IdentityModel.Tokens.CallContext callContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync(System.String,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ValidateTokenAsync (token As String, validationParameters As ValidationParameters, callContext As CallContext) As Task(Of ValidationResult(Of ValidatedToken, ValidationError))" />
+      <MemberSignature Language="F#" Value="abstract member ValidateTokenAsync : string * Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters * Microsoft.IdentityModel.Tokens.CallContext -&gt; System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken, Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt;" Usage="iResultBasedValidation.ValidateTokenAsync (token, validationParameters, callContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.String" />
+        <Parameter Name="validationParameters" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters" />
+        <Parameter Name="callContext" Type="Microsoft.IdentityModel.Tokens.CallContext" />
+      </Parameters>
+      <Docs>
+        <param name="token">The token to be validated.</param>
+        <param name="validationParameters">The <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters" /> to be used for validating the token.</param>
+        <param name="callContext">A <see cref="T:Microsoft.IdentityModel.Tokens.CallContext" /> that contains call information.</param>
+        <summary>
+            Validates a token.
+            On a validation failure, no exception will be thrown; instead, the <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationError" /> will contain the information about the error that occurred.
+            Callers should always check the ValidationResult.IsValid property to verify the validity of the result.
+            </summary>
+        <returns>A <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2" /> with either a <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken" /> if the token was validated or an <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationError" /> with the failure information and exception otherwise.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateTokenAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt; ValidateTokenAsync (Microsoft.IdentityModel.Tokens.SecurityToken securityToken, Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters validationParameters, Microsoft.IdentityModel.Tokens.CallContext callContext, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;valuetype Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2&lt;class Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken, class Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt; ValidateTokenAsync(class Microsoft.IdentityModel.Tokens.SecurityToken securityToken, class Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters validationParameters, class Microsoft.IdentityModel.Tokens.CallContext callContext, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync(Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ValidateTokenAsync (securityToken As SecurityToken, validationParameters As ValidationParameters, callContext As CallContext, cancellationToken As CancellationToken) As Task(Of ValidationResult(Of ValidatedToken, ValidationError))" />
+      <MemberSignature Language="F#" Value="abstract member ValidateTokenAsync : Microsoft.IdentityModel.Tokens.SecurityToken * Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters * Microsoft.IdentityModel.Tokens.CallContext * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken, Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt;" Usage="iResultBasedValidation.ValidateTokenAsync (securityToken, validationParameters, callContext, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="securityToken" Type="Microsoft.IdentityModel.Tokens.SecurityToken" />
+        <Parameter Name="validationParameters" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters" />
+        <Parameter Name="callContext" Type="Microsoft.IdentityModel.Tokens.CallContext" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="securityToken">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" /> to be validated.</param>
+        <param name="validationParameters">The <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters" /> to be used for validating the token.</param>
+        <param name="callContext">A <see cref="T:Microsoft.IdentityModel.Tokens.CallContext" /> that contains call information.</param>
+        <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> that can be used to request cancellation of the asynchronous operation.</param>
+        <summary>
+            Validates a token.
+            On a validation failure, no exception will be thrown; instead, the <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationError" /> will contain the information about the error that occurred.
+            Callers should always check the ValidationResult.IsValid property to verify the validity of the result.
+            </summary>
+        <returns>A <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2" /> with either a <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken" /> if the token was validated or an <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationError" /> with the failure information and exception otherwise.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateTokenAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt; ValidateTokenAsync (string token, Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters validationParameters, Microsoft.IdentityModel.Tokens.CallContext callContext, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;valuetype Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2&lt;class Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken, class Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt; ValidateTokenAsync(string token, class Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters validationParameters, class Microsoft.IdentityModel.Tokens.CallContext callContext, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.IResultBasedValidation.ValidateTokenAsync(System.String,Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters,Microsoft.IdentityModel.Tokens.CallContext,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ValidateTokenAsync (token As String, validationParameters As ValidationParameters, callContext As CallContext, cancellationToken As CancellationToken) As Task(Of ValidationResult(Of ValidatedToken, ValidationError))" />
+      <MemberSignature Language="F#" Value="abstract member ValidateTokenAsync : string * Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters * Microsoft.IdentityModel.Tokens.CallContext * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken, Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt;" Usage="iResultBasedValidation.ValidateTokenAsync (token, validationParameters, callContext, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken,Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.String" />
+        <Parameter Name="validationParameters" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters" />
+        <Parameter Name="callContext" Type="Microsoft.IdentityModel.Tokens.CallContext" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">The token to be validated.</param>
+        <param name="validationParameters">The <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters" /> to be used for validating the token.</param>
+        <param name="callContext">A <see cref="T:Microsoft.IdentityModel.Tokens.CallContext" /> that contains call information.</param>
+        <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> that can be used to request cancellation of the asynchronous operation.</param>
+        <summary>
+            Validates a token.
+            On a validation failure, no exception will be thrown; instead, the <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationError" /> will contain the information about the error that occurred.
+            Callers should always check the ValidationResult.IsValid property to verify the validity of the result.
+            </summary>
+        <returns>A <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2" /> with either a <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidatedToken" /> if the token was validated or an <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationError" /> with the failure information and exception otherwise.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
