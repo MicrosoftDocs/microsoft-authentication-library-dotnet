@@ -1,0 +1,52 @@
+<Type Name="IssuerSigningKeyResolverDelegate" FullName="Microsoft.IdentityModel.Tokens.Experimental.IssuerSigningKeyResolverDelegate">
+  <TypeSignature Language="C#" Value="public delegate Microsoft.IdentityModel.Tokens.SecurityKey? IssuerSigningKeyResolverDelegate(string token, SecurityToken? securityToken, string? kid, ValidationParameters validationParameters, BaseConfiguration? configuration, CallContext? callContext);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed IssuerSigningKeyResolverDelegate extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.IdentityModel.Tokens.Experimental.IssuerSigningKeyResolverDelegate" />
+  <TypeSignature Language="VB.NET" Value="Public Delegate Function IssuerSigningKeyResolverDelegate(token As String, securityToken As SecurityToken, kid As String, validationParameters As ValidationParameters, configuration As BaseConfiguration, callContext As CallContext) As SecurityKey " />
+  <TypeSignature Language="F#" Value="type IssuerSigningKeyResolverDelegate = delegate of string * SecurityToken * string * ValidationParameters * BaseConfiguration * CallContext -&gt; SecurityKey" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+    <AssemblyVersion>8.13.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="token" Type="System.String">
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+    </Parameter>
+    <Parameter Name="securityToken" Type="Microsoft.IdentityModel.Tokens.SecurityToken" />
+    <Parameter Name="kid" Type="System.String" />
+    <Parameter Name="validationParameters" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters">
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+    </Parameter>
+    <Parameter Name="configuration" Type="Microsoft.IdentityModel.Tokens.BaseConfiguration" />
+    <Parameter Name="callContext" Type="Microsoft.IdentityModel.Tokens.CallContext" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>Microsoft.IdentityModel.Tokens.SecurityKey</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="token">The string representation of the token being validated.</param>
+    <param name="securityToken">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" /> being validated, which may be null.</param>
+    <param name="kid">The key identifier, which may be null.</param>
+    <param name="validationParameters">The <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters" /> to be used for validating the token.</param>
+    <param name="configuration">The <see cref="T:Microsoft.IdentityModel.Tokens.BaseConfiguration" /> to be used for validating the token.</param>
+    <param name="callContext">The <see cref="T:Microsoft.IdentityModel.Tokens.CallContext" /> used for logging.</param>
+    <summary>
+            Resolves the signing key used for validating a token's signature.
+            </summary>
+    <returns>The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> used to validate the signature.</returns>
+    <remarks>If both <see cref="T:Microsoft.IdentityModel.Tokens.IssuerSigningKeyResolverUsingConfiguration" /> and <see cref="T:Microsoft.IdentityModel.Tokens.IssuerSigningKeyResolver" /> are set, <see cref="T:Microsoft.IdentityModel.Tokens.IssuerSigningKeyResolverUsingConfiguration" /> takes priority.</remarks>
+  </Docs>
+</Type>

@@ -1,0 +1,99 @@
+<Type Name="ManagedKeyVaultSecurityKey" FullName="Microsoft.IdentityModel.ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey">
+  <TypeSignature Language="C#" Value="public class ManagedKeyVaultSecurityKey : Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ManagedKeyVaultSecurityKey extends Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.IdentityModel.ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey" />
+  <TypeSignature Language="VB.NET" Value="Public Class ManagedKeyVaultSecurityKey&#xA;Inherits KeyVaultSecurityKey" />
+  <TypeSignature Language="F#" Value="type ManagedKeyVaultSecurityKey = class&#xA;    inherit KeyVaultSecurityKey" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.IdentityModel.ManagedKeyVaultSecurityKey</AssemblyName>
+    <AssemblyVersion>7.7.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Provides signing and verifying operations using Azure Key Vault
+            for resources that are using Managed identities for Azure resources.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManagedKeyVaultSecurityKey (string keyIdentifier);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string keyIdentifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (keyIdentifier As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.IdentityModel.ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey : string -&gt; Microsoft.IdentityModel.ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey" Usage="new Microsoft.IdentityModel.ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey keyIdentifier" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.ManagedKeyVaultSecurityKey</AssemblyName>
+        <AssemblyVersion>7.7.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="keyIdentifier" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="keyIdentifier">The key identifier that is recognized by KeyVault.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.IdentityModel.ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">if <paramref name="keyIdentifier" /> is null or empty.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManagedKeyVaultSecurityKey (string keyIdentifier, Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey.AuthenticationCallback callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string keyIdentifier, class Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey/AuthenticationCallback callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey.#ctor(System.String,Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey.AuthenticationCallback)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (keyIdentifier As String, callback As KeyVaultSecurityKey.AuthenticationCallback)" />
+      <MemberSignature Language="F#" Value="new Microsoft.IdentityModel.ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey : string * Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey.AuthenticationCallback -&gt; Microsoft.IdentityModel.ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey" Usage="new Microsoft.IdentityModel.ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey (keyIdentifier, callback)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.ManagedKeyVaultSecurityKey</AssemblyName>
+        <AssemblyVersion>7.7.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="keyIdentifier" Type="System.String" />
+        <Parameter Name="callback" Type="Microsoft.IdentityModel.KeyVaultExtensions.KeyVaultSecurityKey+AuthenticationCallback" />
+      </Parameters>
+      <Docs>
+        <param name="keyIdentifier">The key identifier that is recognized by KeyVault.</param>
+        <param name="callback">The authentication callback.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.IdentityModel.ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">if <paramref name="callback" />is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManagedKeyVaultSecurityKey (string keyIdentifier, string clientId, string clientSecret);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string keyIdentifier, string clientId, string clientSecret) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey.#ctor(System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (keyIdentifier As String, clientId As String, clientSecret As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.IdentityModel.ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey : string * string * string -&gt; Microsoft.IdentityModel.ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey" Usage="new Microsoft.IdentityModel.ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey (keyIdentifier, clientId, clientSecret)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.ManagedKeyVaultSecurityKey</AssemblyName>
+        <AssemblyVersion>7.7.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="keyIdentifier" Type="System.String" />
+        <Parameter Name="clientId" Type="System.String" />
+        <Parameter Name="clientSecret" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="keyIdentifier">The key identifier.</param>
+        <param name="clientId">Identifier of the client.</param>
+        <param name="clientSecret">Secret of the client identity.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.IdentityModel.ManagedKeyVaultSecurityKey.ManagedKeyVaultSecurityKey" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">if <paramref name="clientSecret" />is null or clientSecret.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

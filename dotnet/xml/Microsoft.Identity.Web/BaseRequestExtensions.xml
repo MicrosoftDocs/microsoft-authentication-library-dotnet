@@ -1,0 +1,242 @@
+<Type Name="BaseRequestExtensions" FullName="Microsoft.Identity.Web.BaseRequestExtensions">
+  <TypeSignature Language="C#" Value="public static class BaseRequestExtensions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit BaseRequestExtensions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Web.BaseRequestExtensions" />
+  <TypeSignature Language="VB.NET" Value="Public Module BaseRequestExtensions" />
+  <TypeSignature Language="F#" Value="type BaseRequestExtensions = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Web.MicrosoftGraph</AssemblyName>
+    <AssemblyVersion>3.11.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Web.MicrosoftGraphBeta</AssemblyName>
+    <AssemblyVersion>3.11.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Extension methods for Graph requests
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="WithAppOnly&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static T WithAppOnly&lt;T&gt; (this T baseRequest, bool appOnly = true, string? tenant = default) where T : Microsoft.Graph.IBaseRequest;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!T WithAppOnly&lt;(class Microsoft.Graph.IBaseRequest) T&gt;(!!T baseRequest, bool appOnly, string tenant) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.BaseRequestExtensions.WithAppOnly``1(``0,System.Boolean,System.String)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function WithAppOnly(Of T As IBaseRequest) (baseRequest As T, Optional appOnly As Boolean = true, Optional tenant As String = Nothing) As T" />
+      <MemberSignature Language="F#" Value="static member WithAppOnly : 'T * bool * string -&gt; 'T (requires 'T :&gt; Microsoft.Graph.IBaseRequest)" Usage="Microsoft.Identity.Web.BaseRequestExtensions.WithAppOnly (baseRequest, appOnly, tenant)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.MicrosoftGraph</AssemblyName>
+        <AssemblyVersion>3.11.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.MicrosoftGraphBeta</AssemblyName>
+        <AssemblyVersion>3.11.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <InterfaceName>Microsoft.Graph.IBaseRequest</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="baseRequest" Type="T" RefType="this" />
+        <Parameter Name="appOnly" Type="System.Boolean" />
+        <Parameter Name="tenant" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Type of the request.</typeparam>
+        <param name="baseRequest">Request.</param>
+        <param name="appOnly">Should the permissions be app only or not.</param>
+        <param name="tenant">Tenant ID or domain for which we want to make the call..</param>
+        <summary>
+            Applied to a request, expresses to use app only permissions for Graph.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithAuthenticationOptions&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static T WithAuthenticationOptions&lt;T&gt; (this T baseRequest, Action&lt;Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions&gt; overrideAuthenticationOptions) where T : Microsoft.Graph.IBaseRequest;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!T WithAuthenticationOptions&lt;(class Microsoft.Graph.IBaseRequest) T&gt;(!!T baseRequest, class System.Action`1&lt;class Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions&gt; overrideAuthenticationOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.BaseRequestExtensions.WithAuthenticationOptions``1(``0,System.Action{Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions})" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function WithAuthenticationOptions(Of T As IBaseRequest) (baseRequest As T, overrideAuthenticationOptions As Action(Of AuthorizationHeaderProviderOptions)) As T" />
+      <MemberSignature Language="F#" Value="static member WithAuthenticationOptions : 'T * Action&lt;Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions&gt; -&gt; 'T (requires 'T :&gt; Microsoft.Graph.IBaseRequest)" Usage="Microsoft.Identity.Web.BaseRequestExtensions.WithAuthenticationOptions (baseRequest, overrideAuthenticationOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.MicrosoftGraph</AssemblyName>
+        <AssemblyVersion>3.11.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.MicrosoftGraphBeta</AssemblyName>
+        <AssemblyVersion>3.11.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <InterfaceName>Microsoft.Graph.IBaseRequest</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="baseRequest" Type="T" RefType="this" />
+        <Parameter Name="overrideAuthenticationOptions" Type="System.Action&lt;Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Request</typeparam>
+        <param name="baseRequest">Request.</param>
+        <param name="overrideAuthenticationOptions">Delegate to override
+            the authentication options</param>
+        <summary>
+            Overrides authentication options for a given request.
+            </summary>
+        <returns>Base request</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithAuthenticationScheme&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static T WithAuthenticationScheme&lt;T&gt; (this T baseRequest, string authenticationScheme) where T : Microsoft.Graph.IBaseRequest;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!T WithAuthenticationScheme&lt;(class Microsoft.Graph.IBaseRequest) T&gt;(!!T baseRequest, string authenticationScheme) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.BaseRequestExtensions.WithAuthenticationScheme``1(``0,System.String)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function WithAuthenticationScheme(Of T As IBaseRequest) (baseRequest As T, authenticationScheme As String) As T" />
+      <MemberSignature Language="F#" Value="static member WithAuthenticationScheme : 'T * string -&gt; 'T (requires 'T :&gt; Microsoft.Graph.IBaseRequest)" Usage="Microsoft.Identity.Web.BaseRequestExtensions.WithAuthenticationScheme (baseRequest, authenticationScheme)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.MicrosoftGraph</AssemblyName>
+        <AssemblyVersion>3.11.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.MicrosoftGraphBeta</AssemblyName>
+        <AssemblyVersion>3.11.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <InterfaceName>Microsoft.Graph.IBaseRequest</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="baseRequest" Type="T" RefType="this" />
+        <Parameter Name="authenticationScheme" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">To be added.</typeparam>
+        <param name="baseRequest">The <see cref="T:Microsoft.Graph.IBaseRequest" />.</param>
+        <param name="authenticationScheme">Authentication scheme used to authenticate this request.</param>
+        <summary>
+            Sets the authentication scheme that will be used by <see cref="T:Microsoft.Graph.IAuthenticationProvider" /> to authenticate this request.
+            This only works with the default authentication handler and default set of Microsoft Graph authentication providers.
+            If you use a custom authentication handler or authentication provider, you have to handle its retrieval in your implementation.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithScopes&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static T WithScopes&lt;T&gt; (this T baseRequest, params string[] scopes) where T : Microsoft.Graph.IBaseRequest;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!T WithScopes&lt;(class Microsoft.Graph.IBaseRequest) T&gt;(!!T baseRequest, string[] scopes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.BaseRequestExtensions.WithScopes``1(``0,System.String[])" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function WithScopes(Of T As IBaseRequest) (baseRequest As T, ParamArray scopes As String()) As T" />
+      <MemberSignature Language="F#" Value="static member WithScopes : 'T * string[] -&gt; 'T (requires 'T :&gt; Microsoft.Graph.IBaseRequest)" Usage="Microsoft.Identity.Web.BaseRequestExtensions.WithScopes (baseRequest, scopes)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.MicrosoftGraph</AssemblyName>
+        <AssemblyVersion>3.11.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.MicrosoftGraphBeta</AssemblyName>
+        <AssemblyVersion>3.11.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <InterfaceName>Microsoft.Graph.IBaseRequest</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="baseRequest" Type="T" RefType="this" />
+        <Parameter Name="scopes" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">To be added.</typeparam>
+        <param name="baseRequest">The <see cref="T:Microsoft.Graph.IBaseRequest" />.</param>
+        <param name="scopes">Microsoft Graph scopes used to authenticate this request.</param>
+        <summary>
+            Sets Microsoft Graph's scopes that will be used by <see cref="T:Microsoft.Graph.IAuthenticationProvider" /> to authenticate this request
+            and can be used to perform incremental scope consent.
+            This only works with the default authentication handler and default set of Microsoft Graph authentication providers.
+            If you use a custom authentication handler or authentication provider, you have to handle its retrieval in your implementation.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithUser&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static T WithUser&lt;T&gt; (this T baseRequest, System.Security.Claims.ClaimsPrincipal user) where T : Microsoft.Graph.IBaseRequest;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!T WithUser&lt;(class Microsoft.Graph.IBaseRequest) T&gt;(!!T baseRequest, class System.Security.Claims.ClaimsPrincipal user) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.BaseRequestExtensions.WithUser``1(``0,System.Security.Claims.ClaimsPrincipal)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function WithUser(Of T As IBaseRequest) (baseRequest As T, user As ClaimsPrincipal) As T" />
+      <MemberSignature Language="F#" Value="static member WithUser : 'T * System.Security.Claims.ClaimsPrincipal -&gt; 'T (requires 'T :&gt; Microsoft.Graph.IBaseRequest)" Usage="Microsoft.Identity.Web.BaseRequestExtensions.WithUser (baseRequest, user)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.MicrosoftGraph</AssemblyName>
+        <AssemblyVersion>3.11.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.MicrosoftGraphBeta</AssemblyName>
+        <AssemblyVersion>3.11.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <InterfaceName>Microsoft.Graph.IBaseRequest</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="baseRequest" Type="T" RefType="this" />
+        <Parameter Name="user" Type="System.Security.Claims.ClaimsPrincipal" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Request</typeparam>
+        <param name="baseRequest">Request.</param>
+        <param name="user">Delegate to override
+            the authentication options</param>
+        <summary>
+            Overrides authentication options for a given request.
+            </summary>
+        <returns>Base request</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

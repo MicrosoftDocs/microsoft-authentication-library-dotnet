@@ -1,0 +1,85 @@
+<Type Name="DownstreamRestApiExtensions" FullName="Microsoft.Identity.Web.DownstreamRestApiExtensions">
+  <TypeSignature Language="C#" Value="public static class DownstreamRestApiExtensions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit DownstreamRestApiExtensions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Web.DownstreamRestApiExtensions" />
+  <TypeSignature Language="VB.NET" Value="Public Module DownstreamRestApiExtensions" />
+  <TypeSignature Language="F#" Value="type DownstreamRestApiExtensions = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Web.DownstreamRestApi</AssemblyName>
+    <AssemblyVersion>2.0.8.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Extension methods to support downstream REST API services.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddDownstreamRestApi">
+      <MemberSignature Language="C#" Value="public static Microsoft.Extensions.DependencyInjection.IServiceCollection AddDownstreamRestApi (this Microsoft.Extensions.DependencyInjection.IServiceCollection services, string serviceName, Microsoft.Extensions.Configuration.IConfiguration configuration);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Extensions.DependencyInjection.IServiceCollection AddDownstreamRestApi(class Microsoft.Extensions.DependencyInjection.IServiceCollection services, string serviceName, class Microsoft.Extensions.Configuration.IConfiguration configuration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.DownstreamRestApiExtensions.AddDownstreamRestApi(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,Microsoft.Extensions.Configuration.IConfiguration)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function AddDownstreamRestApi (services As IServiceCollection, serviceName As String, configuration As IConfiguration) As IServiceCollection" />
+      <MemberSignature Language="F#" Value="static member AddDownstreamRestApi : Microsoft.Extensions.DependencyInjection.IServiceCollection * string * Microsoft.Extensions.Configuration.IConfiguration -&gt; Microsoft.Extensions.DependencyInjection.IServiceCollection" Usage="Microsoft.Identity.Web.DownstreamRestApiExtensions.AddDownstreamRestApi (services, serviceName, configuration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.DownstreamRestApi</AssemblyName>
+        <AssemblyVersion>2.0.8.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="services" Type="Microsoft.Extensions.DependencyInjection.IServiceCollection" RefType="this" />
+        <Parameter Name="serviceName" Type="System.String" />
+        <Parameter Name="configuration" Type="Microsoft.Extensions.Configuration.IConfiguration" />
+      </Parameters>
+      <Docs>
+        <param name="services">services.</param>
+        <param name="serviceName">Name of the configuration for the service.
+            This is the name used when calling the service from controller/pages.</param>
+        <param name="configuration">Configuration.</param>
+        <summary>
+            Adds a named downstream REST API service related to a specific configuration section.
+            </summary>
+        <returns>The builder for chaining.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddDownstreamRestApi">
+      <MemberSignature Language="C#" Value="public static Microsoft.Extensions.DependencyInjection.IServiceCollection AddDownstreamRestApi (this Microsoft.Extensions.DependencyInjection.IServiceCollection services, string serviceName, Action&lt;Microsoft.Identity.Abstractions.DownstreamRestApiOptions&gt; configureOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Extensions.DependencyInjection.IServiceCollection AddDownstreamRestApi(class Microsoft.Extensions.DependencyInjection.IServiceCollection services, string serviceName, class System.Action`1&lt;class Microsoft.Identity.Abstractions.DownstreamRestApiOptions&gt; configureOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.DownstreamRestApiExtensions.AddDownstreamRestApi(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.Action{Microsoft.Identity.Abstractions.DownstreamRestApiOptions})" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function AddDownstreamRestApi (services As IServiceCollection, serviceName As String, configureOptions As Action(Of DownstreamRestApiOptions)) As IServiceCollection" />
+      <MemberSignature Language="F#" Value="static member AddDownstreamRestApi : Microsoft.Extensions.DependencyInjection.IServiceCollection * string * Action&lt;Microsoft.Identity.Abstractions.DownstreamRestApiOptions&gt; -&gt; Microsoft.Extensions.DependencyInjection.IServiceCollection" Usage="Microsoft.Identity.Web.DownstreamRestApiExtensions.AddDownstreamRestApi (services, serviceName, configureOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.DownstreamRestApi</AssemblyName>
+        <AssemblyVersion>2.0.8.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="services" Type="Microsoft.Extensions.DependencyInjection.IServiceCollection" RefType="this" />
+        <Parameter Name="serviceName" Type="System.String" />
+        <Parameter Name="configureOptions" Type="System.Action&lt;Microsoft.Identity.Abstractions.DownstreamRestApiOptions&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="services">services.</param>
+        <param name="serviceName">Name of the configuration for the service.
+            This is the name which will be used when calling the service from controller/pages.</param>
+        <param name="configureOptions">Action to configure the options.</param>
+        <summary>
+            Adds a named downstream REST API service initialized with delegates.
+            </summary>
+        <returns>The builder for chaining.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

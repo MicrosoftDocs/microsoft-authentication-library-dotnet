@@ -1,0 +1,245 @@
+<Type Name="SignedHttpRequestValidationContext" FullName="Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext">
+  <TypeSignature Language="C#" Value="public class SignedHttpRequestValidationContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SignedHttpRequestValidationContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext" />
+  <TypeSignature Language="VB.NET" Value="Public Class SignedHttpRequestValidationContext" />
+  <TypeSignature Language="F#" Value="type SignedHttpRequestValidationContext = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.IdentityModel.Protocols.SignedHttpRequest</AssemblyName>
+    <AssemblyVersion>8.13.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Structure that wraps parameters needed for SignedHttpRequest validation.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SignedHttpRequestValidationContext (string signedHttpRequest, Microsoft.IdentityModel.Protocols.HttpRequestData httpRequestData, Microsoft.IdentityModel.Tokens.TokenValidationParameters accessTokenValidationParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string signedHttpRequest, class Microsoft.IdentityModel.Protocols.HttpRequestData httpRequestData, class Microsoft.IdentityModel.Tokens.TokenValidationParameters accessTokenValidationParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext.#ctor(System.String,Microsoft.IdentityModel.Protocols.HttpRequestData,Microsoft.IdentityModel.Tokens.TokenValidationParameters)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (signedHttpRequest As String, httpRequestData As HttpRequestData, accessTokenValidationParameters As TokenValidationParameters)" />
+      <MemberSignature Language="F#" Value="new Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext : string * Microsoft.IdentityModel.Protocols.HttpRequestData * Microsoft.IdentityModel.Tokens.TokenValidationParameters -&gt; Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext" Usage="new Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext (signedHttpRequest, httpRequestData, accessTokenValidationParameters)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Protocols.SignedHttpRequest</AssemblyName>
+        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="signedHttpRequest" Type="System.String" />
+        <Parameter Name="httpRequestData" Type="Microsoft.IdentityModel.Protocols.HttpRequestData" />
+        <Parameter Name="accessTokenValidationParameters" Type="Microsoft.IdentityModel.Tokens.TokenValidationParameters" />
+      </Parameters>
+      <Docs>
+        <param name="signedHttpRequest">SignedHttpRequest to be validated as a JWS in Compact Serialization Format.</param>
+        <param name="httpRequestData">A structure that represents an incoming http request.</param>
+        <param name="accessTokenValidationParameters">A <see cref="T:Microsoft.IdentityModel.Tokens.TokenValidationParameters" /> required for access token ("at") validation.</param>
+        <summary>
+            Initializes a new instance of <see cref="T:Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext" />.
+            </summary>
+        <remarks>Default <see cref="P:Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext.SignedHttpRequestValidationParameters" /> and <see cref="P:Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext.CallContext" /> will be created.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SignedHttpRequestValidationContext (string signedHttpRequest, Microsoft.IdentityModel.Protocols.HttpRequestData httpRequestData, Microsoft.IdentityModel.Tokens.TokenValidationParameters accessTokenValidationParameters, Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters signedHttpRequestValidationParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string signedHttpRequest, class Microsoft.IdentityModel.Protocols.HttpRequestData httpRequestData, class Microsoft.IdentityModel.Tokens.TokenValidationParameters accessTokenValidationParameters, class Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters signedHttpRequestValidationParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext.#ctor(System.String,Microsoft.IdentityModel.Protocols.HttpRequestData,Microsoft.IdentityModel.Tokens.TokenValidationParameters,Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (signedHttpRequest As String, httpRequestData As HttpRequestData, accessTokenValidationParameters As TokenValidationParameters, signedHttpRequestValidationParameters As SignedHttpRequestValidationParameters)" />
+      <MemberSignature Language="F#" Value="new Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext : string * Microsoft.IdentityModel.Protocols.HttpRequestData * Microsoft.IdentityModel.Tokens.TokenValidationParameters * Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters -&gt; Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext" Usage="new Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext (signedHttpRequest, httpRequestData, accessTokenValidationParameters, signedHttpRequestValidationParameters)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Protocols.SignedHttpRequest</AssemblyName>
+        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="signedHttpRequest" Type="System.String" />
+        <Parameter Name="httpRequestData" Type="Microsoft.IdentityModel.Protocols.HttpRequestData" />
+        <Parameter Name="accessTokenValidationParameters" Type="Microsoft.IdentityModel.Tokens.TokenValidationParameters" />
+        <Parameter Name="signedHttpRequestValidationParameters" Type="Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters" />
+      </Parameters>
+      <Docs>
+        <param name="signedHttpRequest">SignedHttpRequest to be validated encoded as a JWS in Compact Serialization Format.</param>
+        <param name="httpRequestData">A structure that represents an incoming http request.</param>
+        <param name="accessTokenValidationParameters">A <see cref="T:Microsoft.IdentityModel.Tokens.TokenValidationParameters" /> required for access token ("at") validation.</param>
+        <param name="signedHttpRequestValidationParameters">A set of parameters required for validating a SignedHttpRequest.</param>
+        <summary>
+            Initializes a new instance of <see cref="T:Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext" />.
+            </summary>
+        <remarks>Default <see cref="P:Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext.CallContext" /> will be created.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SignedHttpRequestValidationContext (string signedHttpRequest, Microsoft.IdentityModel.Protocols.HttpRequestData httpRequestData, Microsoft.IdentityModel.Tokens.TokenValidationParameters accessTokenValidationParameters, Microsoft.IdentityModel.Tokens.CallContext callContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string signedHttpRequest, class Microsoft.IdentityModel.Protocols.HttpRequestData httpRequestData, class Microsoft.IdentityModel.Tokens.TokenValidationParameters accessTokenValidationParameters, class Microsoft.IdentityModel.Tokens.CallContext callContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext.#ctor(System.String,Microsoft.IdentityModel.Protocols.HttpRequestData,Microsoft.IdentityModel.Tokens.TokenValidationParameters,Microsoft.IdentityModel.Tokens.CallContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (signedHttpRequest As String, httpRequestData As HttpRequestData, accessTokenValidationParameters As TokenValidationParameters, callContext As CallContext)" />
+      <MemberSignature Language="F#" Value="new Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext : string * Microsoft.IdentityModel.Protocols.HttpRequestData * Microsoft.IdentityModel.Tokens.TokenValidationParameters * Microsoft.IdentityModel.Tokens.CallContext -&gt; Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext" Usage="new Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext (signedHttpRequest, httpRequestData, accessTokenValidationParameters, callContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Protocols.SignedHttpRequest</AssemblyName>
+        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="signedHttpRequest" Type="System.String" />
+        <Parameter Name="httpRequestData" Type="Microsoft.IdentityModel.Protocols.HttpRequestData" />
+        <Parameter Name="accessTokenValidationParameters" Type="Microsoft.IdentityModel.Tokens.TokenValidationParameters" />
+        <Parameter Name="callContext" Type="Microsoft.IdentityModel.Tokens.CallContext" />
+      </Parameters>
+      <Docs>
+        <param name="signedHttpRequest">SignedHttpRequest to be validated encoded as a JWS in Compact Serialization Format.</param>
+        <param name="httpRequestData">A structure that represents an incoming http request.</param>
+        <param name="accessTokenValidationParameters">A <see cref="T:Microsoft.IdentityModel.Tokens.TokenValidationParameters" /> required for access token ("at") validation.</param>
+        <param name="callContext">An opaque context used to store work when working with authentication artifacts.</param>
+        <summary>
+            Initializes a new instance of <see cref="T:Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext" />.
+            </summary>
+        <remarks>Default <see cref="P:Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext.SignedHttpRequestValidationParameters" /> will be created.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SignedHttpRequestValidationContext (string signedHttpRequest, Microsoft.IdentityModel.Protocols.HttpRequestData httpRequestData, Microsoft.IdentityModel.Tokens.TokenValidationParameters accessTokenValidationParameters, Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters signedHttpRequestValidationParameters, Microsoft.IdentityModel.Tokens.CallContext callContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string signedHttpRequest, class Microsoft.IdentityModel.Protocols.HttpRequestData httpRequestData, class Microsoft.IdentityModel.Tokens.TokenValidationParameters accessTokenValidationParameters, class Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters signedHttpRequestValidationParameters, class Microsoft.IdentityModel.Tokens.CallContext callContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext.#ctor(System.String,Microsoft.IdentityModel.Protocols.HttpRequestData,Microsoft.IdentityModel.Tokens.TokenValidationParameters,Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters,Microsoft.IdentityModel.Tokens.CallContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (signedHttpRequest As String, httpRequestData As HttpRequestData, accessTokenValidationParameters As TokenValidationParameters, signedHttpRequestValidationParameters As SignedHttpRequestValidationParameters, callContext As CallContext)" />
+      <MemberSignature Language="F#" Value="new Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext : string * Microsoft.IdentityModel.Protocols.HttpRequestData * Microsoft.IdentityModel.Tokens.TokenValidationParameters * Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters * Microsoft.IdentityModel.Tokens.CallContext -&gt; Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext" Usage="new Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext (signedHttpRequest, httpRequestData, accessTokenValidationParameters, signedHttpRequestValidationParameters, callContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Protocols.SignedHttpRequest</AssemblyName>
+        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="signedHttpRequest" Type="System.String" />
+        <Parameter Name="httpRequestData" Type="Microsoft.IdentityModel.Protocols.HttpRequestData" />
+        <Parameter Name="accessTokenValidationParameters" Type="Microsoft.IdentityModel.Tokens.TokenValidationParameters" />
+        <Parameter Name="signedHttpRequestValidationParameters" Type="Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters" />
+        <Parameter Name="callContext" Type="Microsoft.IdentityModel.Tokens.CallContext" />
+      </Parameters>
+      <Docs>
+        <param name="signedHttpRequest">SignedHttpRequest to be validated encoded as a JWS in Compact Serialization Format.</param>
+        <param name="httpRequestData">A structure that represents an incoming http request.</param>
+        <param name="accessTokenValidationParameters">A <see cref="T:Microsoft.IdentityModel.Tokens.TokenValidationParameters" /> required for access token ("at") validation.</param>
+        <param name="signedHttpRequestValidationParameters">A set of parameters required for validating a SignedHttpRequest.</param>
+        <param name="callContext">An opaque context used to store work when working with authentication artifacts.</param>
+        <summary>
+            Initializes a new instance of <see cref="T:Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext" />.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessTokenValidationParameters">
+      <MemberSignature Language="C#" Value="public Microsoft.IdentityModel.Tokens.TokenValidationParameters AccessTokenValidationParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.IdentityModel.Tokens.TokenValidationParameters AccessTokenValidationParameters" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext.AccessTokenValidationParameters" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AccessTokenValidationParameters As TokenValidationParameters" />
+      <MemberSignature Language="F#" Value="member this.AccessTokenValidationParameters : Microsoft.IdentityModel.Tokens.TokenValidationParameters" Usage="Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext.AccessTokenValidationParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Protocols.SignedHttpRequest</AssemblyName>
+        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Tokens.TokenValidationParameters</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets <see cref="T:Microsoft.IdentityModel.Tokens.TokenValidationParameters" /> required for access token ("at") validation.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallContext">
+      <MemberSignature Language="C#" Value="public Microsoft.IdentityModel.Tokens.CallContext CallContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.IdentityModel.Tokens.CallContext CallContext" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext.CallContext" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CallContext As CallContext" />
+      <MemberSignature Language="F#" Value="member this.CallContext : Microsoft.IdentityModel.Tokens.CallContext" Usage="Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext.CallContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Protocols.SignedHttpRequest</AssemblyName>
+        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Tokens.CallContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            An opaque context used to store work and logs when working with authentication artifacts. 
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HttpRequestData">
+      <MemberSignature Language="C#" Value="public Microsoft.IdentityModel.Protocols.HttpRequestData HttpRequestData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.IdentityModel.Protocols.HttpRequestData HttpRequestData" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext.HttpRequestData" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HttpRequestData As HttpRequestData" />
+      <MemberSignature Language="F#" Value="member this.HttpRequestData : Microsoft.IdentityModel.Protocols.HttpRequestData" Usage="Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext.HttpRequestData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Protocols.SignedHttpRequest</AssemblyName>
+        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Protocols.HttpRequestData</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            A structure that represents an incoming http request.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignedHttpRequest">
+      <MemberSignature Language="C#" Value="public string SignedHttpRequest { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SignedHttpRequest" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext.SignedHttpRequest" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SignedHttpRequest As String" />
+      <MemberSignature Language="F#" Value="member this.SignedHttpRequest : string" Usage="Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext.SignedHttpRequest" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Protocols.SignedHttpRequest</AssemblyName>
+        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets a signed http request that is to be validated as a JWS in Compact Serialization Format.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignedHttpRequestValidationParameters">
+      <MemberSignature Language="C#" Value="public Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters SignedHttpRequestValidationParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters SignedHttpRequestValidationParameters" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext.SignedHttpRequestValidationParameters" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SignedHttpRequestValidationParameters As SignedHttpRequestValidationParameters" />
+      <MemberSignature Language="F#" Value="member this.SignedHttpRequestValidationParameters : Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters" Usage="Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationContext.SignedHttpRequestValidationParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Protocols.SignedHttpRequest</AssemblyName>
+        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Protocols.SignedHttpRequest.SignedHttpRequestValidationParameters</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets a set of parameters required for validating a SignedHttpRequest.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
