@@ -1,0 +1,30 @@
+<Type Name="CnfDecryptionKeysResolverAsync" FullName="Microsoft.IdentityModel.Protocols.SignedHttpRequest.CnfDecryptionKeysResolverAsync">
+  <TypeSignature Language="C#" Value="public delegate System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.IdentityModel.Tokens.SecurityKey&gt;&gt; CnfDecryptionKeysResolverAsync(SecurityToken jweCnf, CancellationToken cancellationToken);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CnfDecryptionKeysResolverAsync extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.IdentityModel.Protocols.SignedHttpRequest.CnfDecryptionKeysResolverAsync" />
+  <TypeSignature Language="VB.NET" Value="Public Delegate Function CnfDecryptionKeysResolverAsync(jweCnf As SecurityToken, cancellationToken As CancellationToken) As Task(Of IEnumerable(Of SecurityKey)) " />
+  <TypeSignature Language="F#" Value="type CnfDecryptionKeysResolverAsync = delegate of SecurityToken * CancellationToken -&gt; Task&lt;seq&lt;SecurityKey&gt;&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.IdentityModel.Protocols.SignedHttpRequest</AssemblyName>
+    <AssemblyVersion>8.13.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="jweCnf" Type="Microsoft.IdentityModel.Tokens.SecurityToken" />
+    <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.IdentityModel.Tokens.SecurityKey&gt;&gt;</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="jweCnf">A 'cnf' claim represented as a <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" />.</param>
+    <param name="cancellationToken">Propagates notification that operations should be canceled.</param>
+    <summary>
+            A delegate that will be called to retrieve a collection of <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" />s used for the 'cnf' claim decryption.
+            </summary>
+    <returns>A collection of cnf decryption keys.</returns>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

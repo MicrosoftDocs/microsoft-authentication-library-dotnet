@@ -1,0 +1,177 @@
+<Type Name="Cnf" FullName="Microsoft.IdentityModel.Tokens.Cnf">
+  <TypeSignature Language="C#" Value="public class Cnf" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Cnf extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.IdentityModel.Tokens.Cnf" />
+  <TypeSignature Language="VB.NET" Value="Public Class Cnf" />
+  <TypeSignature Language="F#" Value="type Cnf = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+    <AssemblyVersion>8.13.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents the Cnf Claim
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Cnf ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Cnf.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.IdentityModel.Tokens.Cnf" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Cnf (string json);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string json) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Cnf.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (json As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.IdentityModel.Tokens.Cnf : string -&gt; Microsoft.IdentityModel.Tokens.Cnf" Usage="new Microsoft.IdentityModel.Tokens.Cnf json" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="json" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="json">
+            JSON representation of the Cnf Claim.
+            </param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.IdentityModel.Tokens.Cnf" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Jku">
+      <MemberSignature Language="C#" Value="public string Jku { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Jku" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Tokens.Cnf.Jku" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Jku As String" />
+      <MemberSignature Language="F#" Value="member this.Jku : string" Usage="Microsoft.IdentityModel.Tokens.Cnf.Jku" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("jku")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("jku")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The Jku property is used to specify the location of the public key used to verify the signature of the JWT.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="JsonWebKey">
+      <MemberSignature Language="C#" Value="public Microsoft.IdentityModel.Tokens.JsonWebKey JsonWebKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.IdentityModel.Tokens.JsonWebKey JsonWebKey" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Tokens.Cnf.JsonWebKey" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property JsonWebKey As JsonWebKey" />
+      <MemberSignature Language="F#" Value="member this.JsonWebKey : Microsoft.IdentityModel.Tokens.JsonWebKey" Usage="Microsoft.IdentityModel.Tokens.Cnf.JsonWebKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("jwk")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("jwk")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Tokens.JsonWebKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The Jwk property is used to specify the public key used to verify the signature of the JWT.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Jwe">
+      <MemberSignature Language="C#" Value="public string Jwe { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Jwe" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Tokens.Cnf.Jwe" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Jwe As String" />
+      <MemberSignature Language="F#" Value="member this.Jwe : string" Usage="Microsoft.IdentityModel.Tokens.Cnf.Jwe" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("jwe")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("jwe")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The Jwe property is used to specify an encrypted JSON web key.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Kid">
+      <MemberSignature Language="C#" Value="public string Kid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Kid" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Tokens.Cnf.Kid" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Kid As String" />
+      <MemberSignature Language="F#" Value="member this.Kid : string" Usage="Microsoft.IdentityModel.Tokens.Cnf.Kid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("kid")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("kid")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The Kid property is used to specify the key ID of the public key used to verify the signature of the JWT.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
