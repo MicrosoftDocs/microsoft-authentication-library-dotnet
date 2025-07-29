@@ -1,0 +1,43 @@
+<Type Name="AlgorithmValidationDelegate" FullName="Microsoft.IdentityModel.Tokens.Experimental.AlgorithmValidationDelegate">
+  <TypeSignature Language="C#" Value="public delegate Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;string,Microsoft.IdentityModel.Tokens.Experimental.AlgorithmValidationError&gt; AlgorithmValidationDelegate(string algorithm, SecurityKey securityKey, SecurityToken securityToken, ValidationParameters validationParameters, CallContext callContext);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AlgorithmValidationDelegate extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.IdentityModel.Tokens.Experimental.AlgorithmValidationDelegate" />
+  <TypeSignature Language="VB.NET" Value="Public Delegate Function AlgorithmValidationDelegate(algorithm As String, securityKey As SecurityKey, securityToken As SecurityToken, validationParameters As ValidationParameters, callContext As CallContext) As ValidationResult(Of String, AlgorithmValidationError) " />
+  <TypeSignature Language="F#" Value="type AlgorithmValidationDelegate = delegate of string * SecurityKey * SecurityToken * ValidationParameters * CallContext -&gt; ValidationResult&lt;string, AlgorithmValidationError&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+    <AssemblyVersion>8.13.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="algorithm" Type="System.String" />
+    <Parameter Name="securityKey" Type="Microsoft.IdentityModel.Tokens.SecurityKey" />
+    <Parameter Name="securityToken" Type="Microsoft.IdentityModel.Tokens.SecurityToken" />
+    <Parameter Name="validationParameters" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters" />
+    <Parameter Name="callContext" Type="Microsoft.IdentityModel.Tokens.CallContext" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;System.String,Microsoft.IdentityModel.Tokens.Experimental.AlgorithmValidationError&gt;</ReturnType>
+    <Attributes>
+      <Attribute>
+        <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1, 1 })]</AttributeName>
+        <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1, 1 })&gt;]</AttributeName>
+      </Attribute>
+    </Attributes>
+  </ReturnValue>
+  <Docs>
+    <param name="algorithm">The algorithm to be validated.</param>
+    <param name="securityKey">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" /> that signed the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" />.</param>
+    <param name="securityToken">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" /> being validated.</param>
+    <param name="validationParameters">
+      <see cref="T:Microsoft.IdentityModel.Tokens.TokenValidationParameters" /> required for validation.</param>
+    <param name="callContext" />
+    <summary>
+            Definition for delegate that will validate a given algorithm for a <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" />.
+            </summary>
+    <returns>A <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2" />that contains the results of validating the algorithm.</returns>
+    <remarks>This delegate is not expected to throw.</remarks>
+  </Docs>
+</Type>

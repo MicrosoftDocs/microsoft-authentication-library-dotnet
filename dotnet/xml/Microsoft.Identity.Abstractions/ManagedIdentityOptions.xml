@@ -1,0 +1,102 @@
+<Type Name="ManagedIdentityOptions" FullName="Microsoft.Identity.Abstractions.ManagedIdentityOptions">
+  <TypeSignature Language="C#" Value="public class ManagedIdentityOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ManagedIdentityOptions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Abstractions.ManagedIdentityOptions" />
+  <TypeSignature Language="VB.NET" Value="Public Class ManagedIdentityOptions" />
+  <TypeSignature Language="F#" Value="type ManagedIdentityOptions = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+    <AssemblyVersion>9.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Data object to hold the definition of a managed identity for an application to use for authentication. If 
+            <see cref="P:Microsoft.Identity.Abstractions.ManagedIdentityOptions.UserAssignedClientId" /> is null, the application will use the system-assigned managed identity. If
+            <see cref="P:Microsoft.Identity.Abstractions.ManagedIdentityOptions.UserAssignedClientId" /> is set, the application will try to use the user-assigned managed identity associated
+            with the provided ClientID. See <see href="https://aka.ms/Entra/ManagedIdentityOverview" /> for more details.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManagedIdentityOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.ManagedIdentityOptions.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>9.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public Microsoft.Identity.Abstractions.ManagedIdentityOptions Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Identity.Abstractions.ManagedIdentityOptions Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.ManagedIdentityOptions.Clone" />
+      <MemberSignature Language="VB.NET" Value="Public Function Clone () As ManagedIdentityOptions" />
+      <MemberSignature Language="F#" Value="member this.Clone : unit -&gt; Microsoft.Identity.Abstractions.ManagedIdentityOptions" Usage="managedIdentityOptions.Clone " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>9.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Abstractions.ManagedIdentityOptions</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Makes a new object to avoid sharing the same reference.
+            </summary>
+        <returns>
+            New instance of <see cref="T:Microsoft.Identity.Abstractions.ManagedIdentityOptions" /> with the same <see cref="P:Microsoft.Identity.Abstractions.ManagedIdentityOptions.UserAssignedClientId" />.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserAssignedClientId">
+      <MemberSignature Language="C#" Value="public string? UserAssignedClientId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserAssignedClientId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.ManagedIdentityOptions.UserAssignedClientId" />
+      <MemberSignature Language="VB.NET" Value="Public Property UserAssignedClientId As String" />
+      <MemberSignature Language="F#" Value="member this.UserAssignedClientId : string with get, set" Usage="Microsoft.Identity.Abstractions.ManagedIdentityOptions.UserAssignedClientId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>9.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.ComponentModel.DefaultValue(null)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.DefaultValue(null)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the value of the ClientID for user-assigned managed identity. If not set, the default value is null
+            which will tell the application to use the system-assigned managed identity.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
