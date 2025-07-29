@@ -1,0 +1,47 @@
+<Type Name="AudienceValidationDelegate" FullName="Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationDelegate">
+  <TypeSignature Language="C#" Value="public delegate Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;string,Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationError&gt; AudienceValidationDelegate(IList&lt;string&gt; tokenAudiences, SecurityToken? securityToken, ValidationParameters validationParameters, CallContext callContext);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AudienceValidationDelegate extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationDelegate" />
+  <TypeSignature Language="VB.NET" Value="Public Delegate Function AudienceValidationDelegate(tokenAudiences As IList(Of String), securityToken As SecurityToken, validationParameters As ValidationParameters, callContext As CallContext) As ValidationResult(Of String, AudienceValidationError) " />
+  <TypeSignature Language="F#" Value="type AudienceValidationDelegate = delegate of IList&lt;string&gt; * SecurityToken * ValidationParameters * CallContext -&gt; ValidationResult&lt;string, AudienceValidationError&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+    <AssemblyVersion>8.13.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="tokenAudiences" Type="System.Collections.Generic.IList&lt;System.String&gt;" />
+    <Parameter Name="securityToken" Type="Microsoft.IdentityModel.Tokens.SecurityToken">
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+    </Parameter>
+    <Parameter Name="validationParameters" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters" />
+    <Parameter Name="callContext" Type="Microsoft.IdentityModel.Tokens.CallContext" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;System.String,Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationError&gt;</ReturnType>
+    <Attributes>
+      <Attribute>
+        <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1, 1 })]</AttributeName>
+        <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1, 1 })&gt;]</AttributeName>
+      </Attribute>
+    </Attributes>
+  </ReturnValue>
+  <Docs>
+    <param name="tokenAudiences">The audiences found in the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" />.</param>
+    <param name="securityToken">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" /> that is being validated.</param>
+    <param name="validationParameters">The <see cref="T:Microsoft.IdentityModel.Tokens.TokenValidationParameters" /> to be used for validating the token.</param>
+    <param name="callContext" />
+    <summary>
+            Definition for delegate that will validate the audiences value in a token.
+            </summary>
+    <returns>A <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationResult`2" />that contains the results of validating the issuer.</returns>
+    <remarks>This delegate is not expected to throw.</remarks>
+  </Docs>
+</Type>

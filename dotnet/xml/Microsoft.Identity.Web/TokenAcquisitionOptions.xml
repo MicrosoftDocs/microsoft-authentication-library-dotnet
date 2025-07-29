@@ -1,0 +1,115 @@
+<Type Name="TokenAcquisitionOptions" FullName="Microsoft.Identity.Web.TokenAcquisitionOptions">
+  <TypeSignature Language="C#" Value="public class TokenAcquisitionOptions : Microsoft.Identity.Abstractions.AcquireTokenOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TokenAcquisitionOptions extends Microsoft.Identity.Abstractions.AcquireTokenOptions" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Web.TokenAcquisitionOptions" />
+  <TypeSignature Language="VB.NET" Value="Public Class TokenAcquisitionOptions&#xA;Inherits AcquireTokenOptions" />
+  <TypeSignature Language="F#" Value="type TokenAcquisitionOptions = class&#xA;    inherit AcquireTokenOptions" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+    <AssemblyVersion>3.11.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Identity.Abstractions.AcquireTokenOptions</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Options passed-in to create the token acquisition object which calls into MSAL .NET.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TokenAcquisitionOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.TokenAcquisitionOptions.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>3.11.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancellationToken">
+      <MemberSignature Language="C#" Value="public System.Threading.CancellationToken CancellationToken { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Threading.CancellationToken CancellationToken" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Web.TokenAcquisitionOptions.CancellationToken" />
+      <MemberSignature Language="VB.NET" Value="Public Property CancellationToken As CancellationToken" />
+      <MemberSignature Language="F#" Value="member this.CancellationToken : System.Threading.CancellationToken with get, set" Usage="Microsoft.Identity.Web.TokenAcquisitionOptions.CancellationToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>3.11.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.CancellationToken</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Cancellation token to be used when calling the token acquisition methods.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public Microsoft.Identity.Web.TokenAcquisitionOptions Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Identity.Web.TokenAcquisitionOptions Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.TokenAcquisitionOptions.Clone" />
+      <MemberSignature Language="VB.NET" Value="Public Function Clone () As TokenAcquisitionOptions" />
+      <MemberSignature Language="F#" Value="override this.Clone : unit -&gt; Microsoft.Identity.Web.TokenAcquisitionOptions" Usage="tokenAcquisitionOptions.Clone " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>3.11.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Web.TokenAcquisitionOptions</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Clone the options (to be able to override them).
+            </summary>
+        <returns>A clone of the options.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PoPConfiguration">
+      <MemberSignature Language="C#" Value="public Microsoft.Identity.Client.AppConfig.PoPAuthenticationConfiguration? PoPConfiguration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Identity.Client.AppConfig.PoPAuthenticationConfiguration PoPConfiguration" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Web.TokenAcquisitionOptions.PoPConfiguration" />
+      <MemberSignature Language="VB.NET" Value="Public Property PoPConfiguration As PoPAuthenticationConfiguration" />
+      <MemberSignature Language="F#" Value="member this.PoPConfiguration : Microsoft.Identity.Client.AppConfig.PoPAuthenticationConfiguration with get, set" Usage="Microsoft.Identity.Web.TokenAcquisitionOptions.PoPConfiguration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>3.11.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.AppConfig.PoPAuthenticationConfiguration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Modifies the token acquisition request so that the acquired token is a Proof of Possession token (PoP),
+            rather than a Bearer token.
+            PoP tokens are similar to Bearer tokens, but are bound to the HTTP request and to a cryptographic key,
+            which MSAL can manage. See https://aka.ms/msal-net-pop.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
