@@ -1,0 +1,39 @@
+<Type Name="BeforeTokenAcquisitionForTestUserAsync" FullName="Microsoft.Identity.Web.BeforeTokenAcquisitionForTestUserAsync">
+  <TypeSignature Language="C#" Value="public delegate System.Threading.Tasks.Task BeforeTokenAcquisitionForTestUserAsync(AcquireTokenByUsernameAndPasswordConfidentialParameterBuilder builder, AcquireTokenOptions? acquireTokenOptions, ClaimsPrincipal user);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BeforeTokenAcquisitionForTestUserAsync extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Web.BeforeTokenAcquisitionForTestUserAsync" />
+  <TypeSignature Language="VB.NET" Value="Public Delegate Function BeforeTokenAcquisitionForTestUserAsync(builder As AcquireTokenByUsernameAndPasswordConfidentialParameterBuilder, acquireTokenOptions As AcquireTokenOptions, user As ClaimsPrincipal) As Task " />
+  <TypeSignature Language="F#" Value="type BeforeTokenAcquisitionForTestUserAsync = delegate of AcquireTokenByUsernameAndPasswordConfidentialParameterBuilder * AcquireTokenOptions * ClaimsPrincipal -&gt; Task" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+    <AssemblyVersion>3.12.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="builder" Type="Microsoft.Identity.Client.AcquireTokenByUsernameAndPasswordConfidentialParameterBuilder" />
+    <Parameter Name="acquireTokenOptions" Type="Microsoft.Identity.Abstractions.AcquireTokenOptions">
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+    </Parameter>
+    <Parameter Name="user" Type="System.Security.Claims.ClaimsPrincipal" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Threading.Tasks.Task</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="builder">Builder</param>
+    <param name="acquireTokenOptions">Token acquisition options for the request. Can be null.</param>
+    <param name="user">User claims.</param>
+    <summary>
+            Signature for token acquisition extensions that act on the request builder, for ROPC flow (Async version).
+            </summary>
+    <returns>To be added.</returns>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

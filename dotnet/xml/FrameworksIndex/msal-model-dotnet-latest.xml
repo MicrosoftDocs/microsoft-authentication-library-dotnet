@@ -2,17 +2,17 @@
 <Framework Name="msal-model-dotnet-latest">
   <Assemblies>
     <Assembly Name="Microsoft.Identity.Abstractions" Version="9.2.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.Azure" Version="3.11.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.Certificate" Version="3.11.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="3.11.0.0" />
-    <Assembly Name="Microsoft.Identity.Web" Version="3.11.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.Azure" Version="3.12.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.Certificate" Version="3.12.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="3.12.0.0" />
+    <Assembly Name="Microsoft.Identity.Web" Version="3.12.0.0" />
     <Assembly Name="Microsoft.Identity.Web.DownstreamRestApi" Version="2.0.8.0" />
-    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraph" Version="3.11.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraphBeta" Version="3.11.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.OWIN" Version="3.11.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.TokenAcquisition" Version="3.11.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.TokenCache" Version="3.11.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.UI" Version="3.11.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraph" Version="3.12.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraphBeta" Version="3.12.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.OWIN" Version="3.12.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.TokenAcquisition" Version="3.12.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.TokenCache" Version="3.12.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.UI" Version="3.12.0.0" />
   </Assemblies>
   <Namespace Name="Microsoft.Identity.Abstractions">
     <Type Name="Microsoft.Identity.Abstractions.AcquireTokenOptions" Id="T:Microsoft.Identity.Abstractions.AcquireTokenOptions">
@@ -350,6 +350,7 @@
     </Type>
     <Type Name="Microsoft.Identity.Web.BeforeTokenAcquisitionForApp" Id="T:Microsoft.Identity.Web.BeforeTokenAcquisitionForApp" />
     <Type Name="Microsoft.Identity.Web.BeforeTokenAcquisitionForTestUser" Id="T:Microsoft.Identity.Web.BeforeTokenAcquisitionForTestUser" />
+    <Type Name="Microsoft.Identity.Web.BeforeTokenAcquisitionForTestUserAsync" Id="T:Microsoft.Identity.Web.BeforeTokenAcquisitionForTestUserAsync" />
     <Type Name="Microsoft.Identity.Web.CertificateDescription" Id="T:Microsoft.Identity.Web.CertificateDescription">
       <Member Id="M:Microsoft.Identity.Web.CertificateDescription.#ctor" />
       <Member Id="M:Microsoft.Identity.Web.CertificateDescription.#ctor(Microsoft.Identity.Abstractions.CredentialDescription)" />
@@ -739,6 +740,10 @@
       <Member Id="M:Microsoft.Identity.Web.TokenAcquirerAppTokenCredential.GetToken(Azure.Core.TokenRequestContext,System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.Identity.Web.TokenAcquirerAppTokenCredential.GetTokenAsync(Azure.Core.TokenRequestContext,System.Threading.CancellationToken)" />
     </Type>
+    <Type Name="Microsoft.Identity.Web.TokenAcquirerExtensions" Id="T:Microsoft.Identity.Web.TokenAcquirerExtensions">
+      <Member Id="M:Microsoft.Identity.Web.TokenAcquirerExtensions.GetFicTokenAsync(Microsoft.Identity.Abstractions.ITokenAcquirer,Microsoft.Identity.Abstractions.AcquireTokenOptions,System.String,System.String,System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.Identity.Web.TokenAcquirerExtensions.WithClientAssertion(Microsoft.Identity.Abstractions.AcquireTokenOptions,System.String)" />
+    </Type>
     <Type Name="Microsoft.Identity.Web.TokenAcquirerFactory" Id="T:Microsoft.Identity.Web.TokenAcquirerFactory">
       <Member Id="M:Microsoft.Identity.Web.TokenAcquirerFactory.#ctor" />
       <Member Id="M:Microsoft.Identity.Web.TokenAcquirerFactory.Build" />
@@ -766,6 +771,7 @@
     <Type Name="Microsoft.Identity.Web.TokenAcquisitionExtensionOptions" Id="T:Microsoft.Identity.Web.TokenAcquisitionExtensionOptions">
       <Member Id="E:Microsoft.Identity.Web.TokenAcquisitionExtensionOptions.OnBeforeTokenAcquisitionForApp" />
       <Member Id="E:Microsoft.Identity.Web.TokenAcquisitionExtensionOptions.OnBeforeTokenAcquisitionForTestUser" />
+      <Member Id="E:Microsoft.Identity.Web.TokenAcquisitionExtensionOptions.OnBeforeTokenAcquisitionForTestUserAsync" />
       <Member Id="M:Microsoft.Identity.Web.TokenAcquisitionExtensionOptions.#ctor" />
     </Type>
     <Type Name="Microsoft.Identity.Web.TokenAcquisitionOptions" Id="T:Microsoft.Identity.Web.TokenAcquisitionOptions">
@@ -795,6 +801,7 @@
       <Member Id="P:Microsoft.Identity.Web.Experimental.CertificateChangeEventArg.Action" />
       <Member Id="P:Microsoft.Identity.Web.Experimental.CertificateChangeEventArg.Certificate" />
       <Member Id="P:Microsoft.Identity.Web.Experimental.CertificateChangeEventArg.CredentialDescription" />
+      <Member Id="P:Microsoft.Identity.Web.Experimental.CertificateChangeEventArg.ThrownException" />
     </Type>
     <Type Name="Microsoft.Identity.Web.Experimental.ICertificatesObserver" Id="T:Microsoft.Identity.Web.Experimental.ICertificatesObserver">
       <Member Id="M:Microsoft.Identity.Web.Experimental.ICertificatesObserver.OnClientCertificateChanged(Microsoft.Identity.Web.Experimental.CertificateChangeEventArg)" />
