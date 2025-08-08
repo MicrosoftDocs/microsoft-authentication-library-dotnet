@@ -187,6 +187,9 @@ To use the broker, developers will need to call <xref:Microsoft.Identity.Client.
 
 ## Integration best practices
 
+> [!IMPORTANT]
+> When using WAM, your application MUST be running in the context of an active, interactive Windows user session and be able to display UI. Attempting to acquire tokens using WAM while running as a Windows service, using task scheduler (unless *specifically* running as a logged in user) or while using `runas` to impersonate another account will result in errors by design.
+
 To make sure that your customers have a great experience with WAM, we strongly advise you adhere to the following principles:
 
 1. **Give the user context prior to authentication**. Draw a UI or window that will inform the user that they need to authenticate, along with reasons for authentication. Explain the benefits of your application if it is a background service.
