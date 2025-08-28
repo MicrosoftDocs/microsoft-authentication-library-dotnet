@@ -1,12 +1,13 @@
 <Type Name="TokenTypeValidationDelegate" FullName="Microsoft.IdentityModel.Tokens.Experimental.TokenTypeValidationDelegate">
-  <TypeSignature Language="C#" Value="public delegate Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedTokenType,Microsoft.IdentityModel.Tokens.Experimental.TokenTypeValidationError&gt; TokenTypeValidationDelegate(string? type, SecurityToken? securityToken, ValidationParameters validationParameters, CallContext callContext);" />
+  <TypeSignature Language="C#" Value="public delegate Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedTokenType,Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt; TokenTypeValidationDelegate(string? type, SecurityToken? securityToken, ValidationParameters validationParameters, CallContext callContext);" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TokenTypeValidationDelegate extends System.MulticastDelegate" />
   <TypeSignature Language="DocId" Value="T:Microsoft.IdentityModel.Tokens.Experimental.TokenTypeValidationDelegate" />
-  <TypeSignature Language="VB.NET" Value="Public Delegate Function TokenTypeValidationDelegate(type As String, securityToken As SecurityToken, validationParameters As ValidationParameters, callContext As CallContext) As ValidationResult(Of ValidatedTokenType, TokenTypeValidationError) " />
-  <TypeSignature Language="F#" Value="type TokenTypeValidationDelegate = delegate of string * SecurityToken * ValidationParameters * CallContext -&gt; ValidationResult&lt;ValidatedTokenType, TokenTypeValidationError&gt;" />
+  <TypeSignature Language="VB.NET" Value="Public Delegate Function TokenTypeValidationDelegate(type As String, securityToken As SecurityToken, validationParameters As ValidationParameters, callContext As CallContext) As ValidationResult(Of ValidatedTokenType, ValidationError) " />
+  <TypeSignature Language="F#" Value="type TokenTypeValidationDelegate = delegate of string * SecurityToken * ValidationParameters * CallContext -&gt; ValidationResult&lt;ValidatedTokenType, ValidationError&gt;" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
     <AssemblyVersion>8.13.0.0</AssemblyVersion>
+    <AssemblyVersion>8.14.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Delegate</BaseTypeName>
@@ -32,7 +33,7 @@
     <Parameter Name="callContext" Type="Microsoft.IdentityModel.Tokens.CallContext" />
   </Parameters>
   <ReturnValue>
-    <ReturnType>Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedTokenType,Microsoft.IdentityModel.Tokens.Experimental.TokenTypeValidationError&gt;</ReturnType>
+    <ReturnType>Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedTokenType,Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;</ReturnType>
     <Attributes>
       <Attribute>
         <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })]</AttributeName>

@@ -46,6 +46,7 @@
     <AssemblyVersion>4.71.1.0</AssemblyVersion>
     <AssemblyVersion>4.74.0.0</AssemblyVersion>
     <AssemblyVersion>4.74.1.0</AssemblyVersion>
+    <AssemblyVersion>4.76.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Identity.Client.AbstractApplicationBuilder&lt;Microsoft.Identity.Client.ConfidentialClientApplicationBuilder&gt;</BaseTypeName>
@@ -68,7 +69,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.74.1.0</AssemblyVersion>
+        <AssemblyVersion>4.76.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.IConfidentialClientApplication</ReturnType>
@@ -93,7 +94,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.74.1.0</AssemblyVersion>
+        <AssemblyVersion>4.76.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -122,7 +123,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.74.1.0</AssemblyVersion>
+        <AssemblyVersion>4.76.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -150,7 +151,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.74.1.0</AssemblyVersion>
+        <AssemblyVersion>4.76.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -188,7 +189,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.74.1.0</AssemblyVersion>
+        <AssemblyVersion>4.76.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -220,7 +221,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.74.1.0</AssemblyVersion>
+        <AssemblyVersion>4.76.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -249,7 +250,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.74.1.0</AssemblyVersion>
+        <AssemblyVersion>4.76.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -276,6 +277,36 @@
       </Docs>
     </Member>
     <Member MemberName="WithClientAssertion">
+      <MemberSignature Language="C#" Value="public Microsoft.Identity.Client.ConfidentialClientApplicationBuilder WithClientAssertion (Func&lt;Microsoft.Identity.Client.AssertionRequestOptions,System.Threading.CancellationToken,System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.ClientSignedAssertion&gt;&gt; clientSignedAssertionProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Identity.Client.ConfidentialClientApplicationBuilder WithClientAssertion(class System.Func`3&lt;class Microsoft.Identity.Client.AssertionRequestOptions, valuetype System.Threading.CancellationToken, class System.Threading.Tasks.Task`1&lt;class Microsoft.Identity.Client.ClientSignedAssertion&gt;&gt; clientSignedAssertionProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.ConfidentialClientApplicationBuilder.WithClientAssertion(System.Func{Microsoft.Identity.Client.AssertionRequestOptions,System.Threading.CancellationToken,System.Threading.Tasks.Task{Microsoft.Identity.Client.ClientSignedAssertion}})" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithClientAssertion (clientSignedAssertionProvider As Func(Of AssertionRequestOptions, CancellationToken, Task(Of ClientSignedAssertion))) As ConfidentialClientApplicationBuilder" />
+      <MemberSignature Language="F#" Value="member this.WithClientAssertion : Func&lt;Microsoft.Identity.Client.AssertionRequestOptions, System.Threading.CancellationToken, System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.ClientSignedAssertion&gt;&gt; -&gt; Microsoft.Identity.Client.ConfidentialClientApplicationBuilder" Usage="confidentialClientApplicationBuilder.WithClientAssertion clientSignedAssertionProvider" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.76.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="clientSignedAssertionProvider" Type="System.Func&lt;Microsoft.Identity.Client.AssertionRequestOptions,System.Threading.CancellationToken,System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.ClientSignedAssertion&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="clientSignedAssertionProvider">A delegate that asynchronously provides an <see cref="T:Microsoft.Identity.Client.ClientSignedAssertion" /> based on the given <see cref="T:Microsoft.Identity.Client.AssertionRequestOptions" /> and <see cref="T:System.Threading.CancellationToken" />. This delegate must not be <see langword="null" />.</param>
+        <summary>
+            Configures the client application to use a client assertion for authentication.
+            </summary>
+        <returns>The <see cref="T:Microsoft.Identity.Client.ConfidentialClientApplicationBuilder" /> instance configured with the specified client
+            assertion.</returns>
+        <remarks>This method allows the client application to authenticate using a custom client
+            assertion, which can be useful in scenarios where the assertion needs to be dynamically generated or
+            retrieved.</remarks>
+        <exception cref="T:Microsoft.Identity.Client.MsalClientException">Thrown if <paramref name="clientSignedAssertionProvider" /> is <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WithClientAssertion">
       <MemberSignature Language="C#" Value="public Microsoft.Identity.Client.ConfidentialClientApplicationBuilder WithClientAssertion (Func&lt;Microsoft.Identity.Client.AssertionRequestOptions,System.Threading.Tasks.Task&lt;string&gt;&gt; clientAssertionAsyncDelegate);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Identity.Client.ConfidentialClientApplicationBuilder WithClientAssertion(class System.Func`2&lt;class Microsoft.Identity.Client.AssertionRequestOptions, class System.Threading.Tasks.Task`1&lt;string&gt;&gt; clientAssertionAsyncDelegate) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.ConfidentialClientApplicationBuilder.WithClientAssertion(System.Func{Microsoft.Identity.Client.AssertionRequestOptions,System.Threading.Tasks.Task{System.String}})" />
@@ -284,7 +315,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.74.1.0</AssemblyVersion>
+        <AssemblyVersion>4.76.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -311,7 +342,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.74.1.0</AssemblyVersion>
+        <AssemblyVersion>4.76.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -344,7 +375,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.74.1.0</AssemblyVersion>
+        <AssemblyVersion>4.76.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -377,7 +408,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.74.1.0</AssemblyVersion>
+        <AssemblyVersion>4.76.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -416,7 +447,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.74.1.0</AssemblyVersion>
+        <AssemblyVersion>4.76.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -451,7 +482,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.74.1.0</AssemblyVersion>
+        <AssemblyVersion>4.76.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -485,7 +516,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.74.1.0</AssemblyVersion>
+        <AssemblyVersion>4.76.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -512,7 +543,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.74.1.0</AssemblyVersion>
+        <AssemblyVersion>4.76.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -548,7 +579,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.74.1.0</AssemblyVersion>
+        <AssemblyVersion>4.76.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -580,7 +611,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.74.1.0</AssemblyVersion>
+        <AssemblyVersion>4.76.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>

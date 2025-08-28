@@ -1,0 +1,152 @@
+<Type Name="AudienceValidationFailure" FullName="Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationFailure">
+  <TypeSignature Language="C#" Value="public abstract class AudienceValidationFailure : Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit AudienceValidationFailure extends Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationFailure" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class AudienceValidationFailure&#xA;Inherits ValidationFailureType" />
+  <TypeSignature Language="F#" Value="type AudienceValidationFailure = class&#xA;    inherit ValidationFailureType" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+    <AssemblyVersion>8.14.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Failures that occur during validation of a <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" /> audience.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected AudienceValidationFailure (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationFailure.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (name As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationFailure : string -&gt; Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationFailure" Usage="new Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationFailure name" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.14.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">To be added.</param>
+        <summary>
+            Creates an instance of <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationFailure" /></summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AudienceDidNotMatch">
+      <MemberSignature Language="C#" Value="public static readonly Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationFailure AudienceDidNotMatch;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationFailure AudienceDidNotMatch" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationFailure.AudienceDidNotMatch" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly AudienceDidNotMatch As AudienceValidationFailure " />
+      <MemberSignature Language="F#" Value=" staticval mutable AudienceDidNotMatch : Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationFailure" Usage="Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationFailure.AudienceDidNotMatch" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.14.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationFailure</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Audience validation failed.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoAudienceInToken">
+      <MemberSignature Language="C#" Value="public static readonly Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationFailure NoAudienceInToken;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationFailure NoAudienceInToken" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationFailure.NoAudienceInToken" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly NoAudienceInToken As AudienceValidationFailure " />
+      <MemberSignature Language="F#" Value=" staticval mutable NoAudienceInToken : Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationFailure" Usage="Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationFailure.NoAudienceInToken" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.14.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationFailure</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            No audience found in the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" />.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoValidationParameterAudiencesProvided">
+      <MemberSignature Language="C#" Value="public static readonly Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationFailure NoValidationParameterAudiencesProvided;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationFailure NoValidationParameterAudiencesProvided" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationFailure.NoValidationParameterAudiencesProvided" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly NoValidationParameterAudiencesProvided As AudienceValidationFailure " />
+      <MemberSignature Language="F#" Value=" staticval mutable NoValidationParameterAudiencesProvided : Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationFailure" Usage="Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationFailure.NoValidationParameterAudiencesProvided" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.14.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationFailure</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            No audiences were found in <see cref="P:Microsoft.IdentityModel.Tokens.Experimental.ValidationParameters.ValidAudiences" />.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidatorThrew">
+      <MemberSignature Language="C#" Value="public static readonly Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationFailure ValidatorThrew;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationFailure ValidatorThrew" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationFailure.ValidatorThrew" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly ValidatorThrew As AudienceValidationFailure " />
+      <MemberSignature Language="F#" Value=" staticval mutable ValidatorThrew : Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationFailure" Usage="Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationFailure.ValidatorThrew" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.14.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationFailure</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Audience validation delegate threw an exception.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.Identity.Client.Broker" Version="4.74.1.0" />
-    <Assembly Name="Microsoft.Identity.Client.Desktop" Version="4.74.1.0" />
-    <Assembly Name="Microsoft.Identity.Client" Version="4.74.1.0" />
+    <Assembly Name="Microsoft.Identity.Client.Broker" Version="4.76.0.0" />
+    <Assembly Name="Microsoft.Identity.Client.Desktop" Version="4.76.0.0" />
+    <Assembly Name="Microsoft.Identity.Client" Version="4.76.0.0" />
   </Assemblies>
   <Namespace Name="Microsoft.Identity.Client">
     <Type Name="Microsoft.Identity.Client.AadAuthorityAudience" Id="T:Microsoft.Identity.Client.AadAuthorityAudience">
@@ -302,6 +302,11 @@
       <Member Id="P:Microsoft.Identity.Client.ClientApplicationBase.Authority" />
       <Member Id="P:Microsoft.Identity.Client.ClientApplicationBase.UserTokenCache" />
     </Type>
+    <Type Name="Microsoft.Identity.Client.ClientSignedAssertion" Id="T:Microsoft.Identity.Client.ClientSignedAssertion">
+      <Member Id="M:Microsoft.Identity.Client.ClientSignedAssertion.#ctor" />
+      <Member Id="P:Microsoft.Identity.Client.ClientSignedAssertion.Assertion" />
+      <Member Id="P:Microsoft.Identity.Client.ClientSignedAssertion.TokenBindingCertificate" />
+    </Type>
     <Type Name="Microsoft.Identity.Client.ConfidentialClientApplication" Id="T:Microsoft.Identity.Client.ConfidentialClientApplication">
       <Member Id="F:Microsoft.Identity.Client.ConfidentialClientApplication.AttemptRegionDiscovery" />
       <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplication.AcquireTokenByAuthorizationCode(System.Collections.Generic.IEnumerable{System.String},System.String)" />
@@ -324,6 +329,7 @@
       <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplicationBuilder.WithCacheSynchronization(System.Boolean)" />
       <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplicationBuilder.WithCertificate(System.Security.Cryptography.X509Certificates.X509Certificate2)" />
       <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplicationBuilder.WithCertificate(System.Security.Cryptography.X509Certificates.X509Certificate2,System.Boolean)" />
+      <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplicationBuilder.WithClientAssertion(System.Func{Microsoft.Identity.Client.AssertionRequestOptions,System.Threading.CancellationToken,System.Threading.Tasks.Task{Microsoft.Identity.Client.ClientSignedAssertion}})" />
       <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplicationBuilder.WithClientAssertion(System.Func{Microsoft.Identity.Client.AssertionRequestOptions,System.Threading.Tasks.Task{System.String}})" />
       <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplicationBuilder.WithClientAssertion(System.Func{System.String})" />
       <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplicationBuilder.WithClientAssertion(System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{System.String}})" />
@@ -572,6 +578,7 @@
       <Member Id="F:Microsoft.Identity.Client.MsalError.InvalidAuthorityType" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.InvalidAuthorizationUri" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.InvalidClient" />
+      <Member Id="F:Microsoft.Identity.Client.MsalError.InvalidClientAssertion" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.InvalidGrantError" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.InvalidInstance" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.InvalidJsonClaimsFormat" />
@@ -982,6 +989,7 @@
       <Member Id="M:Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.WithProofOfPosessionKeyId``1(Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder{``0},System.String,System.String)" />
     </Type>
     <Type Name="Microsoft.Identity.Client.Extensibility.AcquireTokenForClientBuilderExtensions" Id="T:Microsoft.Identity.Client.Extensibility.AcquireTokenForClientBuilderExtensions">
+      <Member Id="M:Microsoft.Identity.Client.Extensibility.AcquireTokenForClientBuilderExtensions.WithExtraBodyParameters(Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder,System.Collections.Generic.Dictionary{System.String,System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{System.String}}})" />
       <Member Id="M:Microsoft.Identity.Client.Extensibility.AcquireTokenForClientBuilderExtensions.WithProofOfPosessionKeyId(Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder,System.String,System.String)" />
     </Type>
     <Type Name="Microsoft.Identity.Client.Extensibility.AcquireTokenInteractiveParameterBuilderExtensions" Id="T:Microsoft.Identity.Client.Extensibility.AcquireTokenInteractiveParameterBuilderExtensions">
