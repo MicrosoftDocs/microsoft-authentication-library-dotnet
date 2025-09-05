@@ -29,7 +29,7 @@ To use WebView2 in your application, the following requirements must be met:
 
 The package required depends on your target framework and application type:
 
-- **Legacy frameworks** (.NET Framework, .NET Core 3.1): Use [`Microsoft.Identity.Client.Desktop`](https://www.nuget.org/packages/Microsoft.Identity.Client.Desktop/)
+- **.Net Framework** : Use [`Microsoft.Identity.Client.Desktop`](https://www.nuget.org/packages/Microsoft.Identity.Client.Desktop/)
 - **.NET MAUI 9+ and WinAppSDK packaged apps**: Use [`Microsoft.Identity.Client.Desktop.WinUI3`](https://www.nuget.org/packages/Microsoft.Identity.Client.Desktop.WinUI3/)
 
 ## Call pattern
