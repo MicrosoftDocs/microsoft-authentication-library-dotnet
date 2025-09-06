@@ -7,6 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
     <AssemblyVersion>8.13.0.0</AssemblyVersion>
+    <AssemblyVersion>8.14.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.IdentityModel.Tokens.Experimental.ValidationError</BaseTypeName>
@@ -20,27 +21,57 @@
   </Attributes>
   <Docs>
     <summary>
-            Represents an error that occurs when a token cannot be validated against being re-used or replay is detected.
-            If available, the expiration time of the token that failed the validation is included.
+            Represents a validation error when a <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" /> replay is detected.
+            If available, the expiration time of the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" /> that failed the validation is included.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public TokenReplayValidationError (Microsoft.IdentityModel.Tokens.Experimental.MessageDetail messageDetail, Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType validationFailureType, Type exceptionType, System.Diagnostics.StackFrame stackFrame, DateTime? expirationTime, Exception? innerException = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.IdentityModel.Tokens.Experimental.MessageDetail messageDetail, class Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType validationFailureType, class System.Type exceptionType, class System.Diagnostics.StackFrame stackFrame, valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; expirationTime, class System.Exception innerException) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationError.#ctor(Microsoft.IdentityModel.Tokens.Experimental.MessageDetail,Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType,System.Type,System.Diagnostics.StackFrame,System.Nullable{System.DateTime},System.Exception)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (messageDetail As MessageDetail, validationFailureType As ValidationFailureType, exceptionType As Type, stackFrame As StackFrame, expirationTime As Nullable(Of DateTime), Optional innerException As Exception = Nothing)" />
-      <MemberSignature Language="F#" Value="new Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationError : Microsoft.IdentityModel.Tokens.Experimental.MessageDetail * Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType * Type * System.Diagnostics.StackFrame * Nullable&lt;DateTime&gt; * Exception -&gt; Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationError" Usage="new Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationError (messageDetail, validationFailureType, exceptionType, stackFrame, expirationTime, innerException)" />
+      <MemberSignature Language="C#" Value="public TokenReplayValidationError (Microsoft.IdentityModel.Tokens.Experimental.MessageDetail messageDetail, Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType validationFailure, System.Diagnostics.StackFrame stackFrame, DateTime? expirationTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.IdentityModel.Tokens.Experimental.MessageDetail messageDetail, class Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType validationFailure, class System.Diagnostics.StackFrame stackFrame, valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; expirationTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationError.#ctor(Microsoft.IdentityModel.Tokens.Experimental.MessageDetail,Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType,System.Diagnostics.StackFrame,System.Nullable{System.DateTime})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (messageDetail As MessageDetail, validationFailure As ValidationFailureType, stackFrame As StackFrame, expirationTime As Nullable(Of DateTime))" />
+      <MemberSignature Language="F#" Value="new Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationError : Microsoft.IdentityModel.Tokens.Experimental.MessageDetail * Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType * System.Diagnostics.StackFrame * Nullable&lt;DateTime&gt; -&gt; Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationError" Usage="new Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationError (messageDetail, validationFailure, stackFrame, expirationTime)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+        <AssemblyVersion>8.14.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="messageDetail" Type="Microsoft.IdentityModel.Tokens.Experimental.MessageDetail" />
-        <Parameter Name="validationFailureType" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType" />
-        <Parameter Name="exceptionType" Type="System.Type" />
+        <Parameter Name="validationFailure" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType" />
+        <Parameter Name="stackFrame" Type="System.Diagnostics.StackFrame" />
+        <Parameter Name="expirationTime" Type="System.Nullable&lt;System.DateTime&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="messageDetail" />
+        <param name="validationFailure" />
+        <param name="stackFrame" />
+        <param name="expirationTime" />
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationError" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+        <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType" />
+        <see cref="T:System.DateTime" />
+        <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TokenReplayValidationError (Microsoft.IdentityModel.Tokens.Experimental.MessageDetail messageDetail, Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType validationFailure, System.Diagnostics.StackFrame stackFrame, DateTime? expirationTime, Exception? innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.IdentityModel.Tokens.Experimental.MessageDetail messageDetail, class Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType validationFailure, class System.Diagnostics.StackFrame stackFrame, valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; expirationTime, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationError.#ctor(Microsoft.IdentityModel.Tokens.Experimental.MessageDetail,Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType,System.Diagnostics.StackFrame,System.Nullable{System.DateTime},System.Exception)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (messageDetail As MessageDetail, validationFailure As ValidationFailureType, stackFrame As StackFrame, expirationTime As Nullable(Of DateTime), innerException As Exception)" />
+      <MemberSignature Language="F#" Value="new Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationError : Microsoft.IdentityModel.Tokens.Experimental.MessageDetail * Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType * System.Diagnostics.StackFrame * Nullable&lt;DateTime&gt; * Exception -&gt; Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationError" Usage="new Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationError (messageDetail, validationFailure, stackFrame, expirationTime, innerException)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.14.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="messageDetail" Type="Microsoft.IdentityModel.Tokens.Experimental.MessageDetail" />
+        <Parameter Name="validationFailure" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType" />
         <Parameter Name="stackFrame" Type="System.Diagnostics.StackFrame" />
         <Parameter Name="expirationTime" Type="System.Nullable&lt;System.DateTime&gt;" />
         <Parameter Name="innerException" Type="System.Exception">
@@ -54,37 +85,17 @@
       </Parameters>
       <Docs>
         <param name="messageDetail" />
-        <param name="validationFailureType" />
-        <param name="exceptionType" />
+        <param name="validationFailure" />
         <param name="stackFrame" />
         <param name="expirationTime" />
         <param name="innerException" />
         <summary>
-            Initializes a new instance of the <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.IssuerSigningKeyValidationError" /> class.
+            Initializes a new instance of the <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationError" /> class.
             </summary>
         <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="CreateException">
-      <MemberSignature Language="C#" Value="protected override Exception CreateException ();" />
-      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Exception CreateException() cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationError.CreateException" />
-      <MemberSignature Language="VB.NET" Value="Protected Overrides Function CreateException () As Exception" />
-      <MemberSignature Language="F#" Value="override this.CreateException : unit -&gt; Exception" Usage="tokenReplayValidationError.CreateException " />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.13.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Exception</ReturnType>
-      </ReturnValue>
-      <Parameters />
-      <Docs>
-        <summary>
-            Creates an instance of an <see cref="T:System.Exception" /> using <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationError" /></summary>
-        <returns>An instance of an exception.</returns>
-        <remarks>To be added.</remarks>
+        <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType" />
+        <see cref="T:System.DateTime" />
+        <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" />
       </Docs>
     </Member>
     <Member MemberName="ExpirationTime">
@@ -96,7 +107,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+        <AssemblyVersion>8.14.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.DateTime&gt;</ReturnType>
@@ -109,31 +120,26 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="NullParameter">
-      <MemberSignature Language="C#" Value="public static Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationError NullParameter (string parameterName, System.Diagnostics.StackFrame stackFrame);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationError NullParameter(string parameterName, class System.Diagnostics.StackFrame stackFrame) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationError.NullParameter(System.String,System.Diagnostics.StackFrame)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function NullParameter (parameterName As String, stackFrame As StackFrame) As TokenReplayValidationError" />
-      <MemberSignature Language="F#" Value="static member NullParameter : string * System.Diagnostics.StackFrame -&gt; Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationError" Usage="Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationError.NullParameter (parameterName, stackFrame)" />
+    <Member MemberName="GetException">
+      <MemberSignature Language="C#" Value="public override Exception GetException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Exception GetException() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationError.GetException" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetException () As Exception" />
+      <MemberSignature Language="F#" Value="override this.GetException : unit -&gt; Exception" Usage="tokenReplayValidationError.GetException " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+        <AssemblyVersion>8.14.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationError</ReturnType>
+        <ReturnType>System.Exception</ReturnType>
       </ReturnValue>
-      <Parameters>
-        <Parameter Name="parameterName" Type="System.String" />
-        <Parameter Name="stackFrame" Type="System.Diagnostics.StackFrame" />
-      </Parameters>
+      <Parameters />
       <Docs>
-        <param name="parameterName">The name of the parameter.</param>
-        <param name="stackFrame">The stack frame where the error occurred.</param>
         <summary>
-            Creates a new instance of <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationError" /> representing a null parameter.
+            Creates an instance of an <see cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenReplayDetectedException" />.
             </summary>
-        <returns>A new <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationError" />.</returns>
+        <returns>An instance of an exception.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

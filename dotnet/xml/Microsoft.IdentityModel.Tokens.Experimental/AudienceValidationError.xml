@@ -7,6 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
     <AssemblyVersion>8.13.0.0</AssemblyVersion>
+    <AssemblyVersion>8.14.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.IdentityModel.Tokens.Experimental.ValidationError</BaseTypeName>
@@ -20,28 +21,73 @@
   </Attributes>
   <Docs>
     <summary>
-            Represents an error that occurs when the token's audience cannot be validated.
-            If available, the invalid audiences from the token are stored in <see cref="P:Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationError.TokenAudiences" />
-            and the allowed audiences are stored in <see cref="P:Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationError.ValidAudiences" />.
+            Represents a validation error when the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" /> audience is not valid.
+            If available, the audiences from the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" /> are stored in <see cref="P:Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationError.TokenAudiences" />.
+            Valid audiences are stored in <see cref="P:Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationError.ValidAudiences" />.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public AudienceValidationError (Microsoft.IdentityModel.Tokens.Experimental.MessageDetail messageDetail, Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType validationFailureType, Type exceptionType, System.Diagnostics.StackFrame stackFrame, System.Collections.Generic.IList&lt;string&gt;? tokenAudiences, System.Collections.Generic.IList&lt;string&gt;? validAudiences, Exception? innerException = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.IdentityModel.Tokens.Experimental.MessageDetail messageDetail, class Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType validationFailureType, class System.Type exceptionType, class System.Diagnostics.StackFrame stackFrame, class System.Collections.Generic.IList`1&lt;string&gt; tokenAudiences, class System.Collections.Generic.IList`1&lt;string&gt; validAudiences, class System.Exception innerException) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationError.#ctor(Microsoft.IdentityModel.Tokens.Experimental.MessageDetail,Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType,System.Type,System.Diagnostics.StackFrame,System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.Exception)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (messageDetail As MessageDetail, validationFailureType As ValidationFailureType, exceptionType As Type, stackFrame As StackFrame, tokenAudiences As IList(Of String), validAudiences As IList(Of String), Optional innerException As Exception = Nothing)" />
-      <MemberSignature Language="F#" Value="new Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationError : Microsoft.IdentityModel.Tokens.Experimental.MessageDetail * Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType * Type * System.Diagnostics.StackFrame * System.Collections.Generic.IList&lt;string&gt; * System.Collections.Generic.IList&lt;string&gt; * Exception -&gt; Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationError" Usage="new Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationError (messageDetail, validationFailureType, exceptionType, stackFrame, tokenAudiences, validAudiences, innerException)" />
+      <MemberSignature Language="C#" Value="public AudienceValidationError (Microsoft.IdentityModel.Tokens.Experimental.MessageDetail messageDetail, Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType validationFailure, System.Diagnostics.StackFrame stackFrame, System.Collections.Generic.IList&lt;string&gt;? tokenAudiences, System.Collections.Generic.IList&lt;string&gt;? validAudiences);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.IdentityModel.Tokens.Experimental.MessageDetail messageDetail, class Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType validationFailure, class System.Diagnostics.StackFrame stackFrame, class System.Collections.Generic.IList`1&lt;string&gt; tokenAudiences, class System.Collections.Generic.IList`1&lt;string&gt; validAudiences) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationError.#ctor(Microsoft.IdentityModel.Tokens.Experimental.MessageDetail,Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType,System.Diagnostics.StackFrame,System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (messageDetail As MessageDetail, validationFailure As ValidationFailureType, stackFrame As StackFrame, tokenAudiences As IList(Of String), validAudiences As IList(Of String))" />
+      <MemberSignature Language="F#" Value="new Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationError : Microsoft.IdentityModel.Tokens.Experimental.MessageDetail * Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType * System.Diagnostics.StackFrame * System.Collections.Generic.IList&lt;string&gt; * System.Collections.Generic.IList&lt;string&gt; -&gt; Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationError" Usage="new Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationError (messageDetail, validationFailure, stackFrame, tokenAudiences, validAudiences)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+        <AssemblyVersion>8.14.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="messageDetail" Type="Microsoft.IdentityModel.Tokens.Experimental.MessageDetail" />
-        <Parameter Name="validationFailureType" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType" />
-        <Parameter Name="exceptionType" Type="System.Type" />
+        <Parameter Name="validationFailure" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType" />
+        <Parameter Name="stackFrame" Type="System.Diagnostics.StackFrame" />
+        <Parameter Name="tokenAudiences" Type="System.Collections.Generic.IList&lt;System.String&gt;">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="validAudiences" Type="System.Collections.Generic.IList&lt;System.String&gt;">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="messageDetail" />
+        <param name="validationFailure" />
+        <param name="stackFrame" />
+        <param name="tokenAudiences" />
+        <param name="validAudiences" />
+        <summary>
+            Initializes a new instance of <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationError" />.
+            </summary>
+        <remarks>To be added.</remarks>
+        <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType" />
+        <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AudienceValidationError (Microsoft.IdentityModel.Tokens.Experimental.MessageDetail messageDetail, Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType validationFailure, System.Diagnostics.StackFrame stackFrame, System.Collections.Generic.IList&lt;string&gt;? tokenAudiences, System.Collections.Generic.IList&lt;string&gt;? validAudiences, Exception? innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.IdentityModel.Tokens.Experimental.MessageDetail messageDetail, class Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType validationFailure, class System.Diagnostics.StackFrame stackFrame, class System.Collections.Generic.IList`1&lt;string&gt; tokenAudiences, class System.Collections.Generic.IList`1&lt;string&gt; validAudiences, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationError.#ctor(Microsoft.IdentityModel.Tokens.Experimental.MessageDetail,Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType,System.Diagnostics.StackFrame,System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.Exception)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (messageDetail As MessageDetail, validationFailure As ValidationFailureType, stackFrame As StackFrame, tokenAudiences As IList(Of String), validAudiences As IList(Of String), innerException As Exception)" />
+      <MemberSignature Language="F#" Value="new Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationError : Microsoft.IdentityModel.Tokens.Experimental.MessageDetail * Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType * System.Diagnostics.StackFrame * System.Collections.Generic.IList&lt;string&gt; * System.Collections.Generic.IList&lt;string&gt; * Exception -&gt; Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationError" Usage="new Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationError (messageDetail, validationFailure, stackFrame, tokenAudiences, validAudiences, innerException)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.14.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="messageDetail" Type="Microsoft.IdentityModel.Tokens.Experimental.MessageDetail" />
+        <Parameter Name="validationFailure" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType" />
         <Parameter Name="stackFrame" Type="System.Diagnostics.StackFrame" />
         <Parameter Name="tokenAudiences" Type="System.Collections.Generic.IList&lt;System.String&gt;">
           <Attributes>
@@ -70,28 +116,29 @@
       </Parameters>
       <Docs>
         <param name="messageDetail" />
-        <param name="validationFailureType" />
-        <param name="exceptionType" />
+        <param name="validationFailure" />
         <param name="stackFrame" />
         <param name="tokenAudiences" />
         <param name="validAudiences" />
         <param name="innerException" />
         <summary>
-            Initializes a new instance of the <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.IssuerSigningKeyValidationError" /> class.
+            Initializes a new instance of <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationError" />.
             </summary>
         <remarks>To be added.</remarks>
+        <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType" />
+        <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" />
       </Docs>
     </Member>
-    <Member MemberName="CreateException">
-      <MemberSignature Language="C#" Value="protected override Exception CreateException ();" />
-      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Exception CreateException() cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationError.CreateException" />
-      <MemberSignature Language="VB.NET" Value="Protected Overrides Function CreateException () As Exception" />
-      <MemberSignature Language="F#" Value="override this.CreateException : unit -&gt; Exception" Usage="audienceValidationError.CreateException " />
+    <Member MemberName="GetException">
+      <MemberSignature Language="C#" Value="public override Exception GetException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Exception GetException() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationError.GetException" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetException () As Exception" />
+      <MemberSignature Language="F#" Value="override this.GetException : unit -&gt; Exception" Usage="audienceValidationError.GetException " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+        <AssemblyVersion>8.14.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Exception</ReturnType>
@@ -99,36 +146,9 @@
       <Parameters />
       <Docs>
         <summary>
-            Creates an instance of an <see cref="T:System.Exception" /> using <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationError" /></summary>
-        <returns>An instance of an Exception.</returns>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="NullParameter">
-      <MemberSignature Language="C#" Value="public static Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationError NullParameter (string parameterName, System.Diagnostics.StackFrame stackFrame);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationError NullParameter(string parameterName, class System.Diagnostics.StackFrame stackFrame) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationError.NullParameter(System.String,System.Diagnostics.StackFrame)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function NullParameter (parameterName As String, stackFrame As StackFrame) As AudienceValidationError" />
-      <MemberSignature Language="F#" Value="static member NullParameter : string * System.Diagnostics.StackFrame -&gt; Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationError" Usage="Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationError.NullParameter (parameterName, stackFrame)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.13.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationError</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="parameterName" Type="System.String" />
-        <Parameter Name="stackFrame" Type="System.Diagnostics.StackFrame" />
-      </Parameters>
-      <Docs>
-        <param name="parameterName">The name of the parameter.</param>
-        <param name="stackFrame">The stack frame where the error occurred.</param>
-        <summary>
-            Creates a new instance of <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationError" /> representing a null parameter.
+            Creates an instance of an <see cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenInvalidAudienceException" />.
             </summary>
-        <returns>A new <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.AudienceValidationError" />.</returns>
+        <returns>An instance of an Exception.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -141,7 +161,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+        <AssemblyVersion>8.14.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -169,7 +189,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.13.0.0</AssemblyVersion>
+        <AssemblyVersion>8.14.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>

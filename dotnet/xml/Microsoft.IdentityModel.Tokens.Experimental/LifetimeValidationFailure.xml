@@ -1,0 +1,233 @@
+<Type Name="LifetimeValidationFailure" FullName="Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure">
+  <TypeSignature Language="C#" Value="public abstract class LifetimeValidationFailure : Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit LifetimeValidationFailure extends Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class LifetimeValidationFailure&#xA;Inherits ValidationFailureType" />
+  <TypeSignature Language="F#" Value="type LifetimeValidationFailure = class&#xA;    inherit ValidationFailureType" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+    <AssemblyVersion>8.14.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Failures that occur during validation of a <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" /> lifetime.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected LifetimeValidationFailure (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (name As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure : string -&gt; Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure" Usage="new Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure name" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.14.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">To be added.</param>
+        <summary>
+            Creates an instance of <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure" /></summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Expired">
+      <MemberSignature Language="C#" Value="public static readonly Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure Expired;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure Expired" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure.Expired" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Expired As LifetimeValidationFailure " />
+      <MemberSignature Language="F#" Value=" staticval mutable Expired : Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure" Usage="Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure.Expired" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.14.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Token was expired.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IssuedInFuture">
+      <MemberSignature Language="C#" Value="public static readonly Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure IssuedInFuture;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure IssuedInFuture" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure.IssuedInFuture" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly IssuedInFuture As LifetimeValidationFailure " />
+      <MemberSignature Language="F#" Value=" staticval mutable IssuedInFuture : Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure" Usage="Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure.IssuedInFuture" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.14.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Token was issued in the future.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoExpirationTime">
+      <MemberSignature Language="C#" Value="public static readonly Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure NoExpirationTime;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure NoExpirationTime" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure.NoExpirationTime" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly NoExpirationTime As LifetimeValidationFailure " />
+      <MemberSignature Language="F#" Value=" staticval mutable NoExpirationTime : Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure" Usage="Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure.NoExpirationTime" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.14.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            No expiration found in the security token.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotbeforeGreaterThanExpirationTime">
+      <MemberSignature Language="C#" Value="public static readonly Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure NotbeforeGreaterThanExpirationTime;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure NotbeforeGreaterThanExpirationTime" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure.NotbeforeGreaterThanExpirationTime" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly NotbeforeGreaterThanExpirationTime As LifetimeValidationFailure " />
+      <MemberSignature Language="F#" Value=" staticval mutable NotbeforeGreaterThanExpirationTime : Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure" Usage="Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure.NotbeforeGreaterThanExpirationTime" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.14.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            NotBefore time is after the expires time.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotYetValid">
+      <MemberSignature Language="C#" Value="public static readonly Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure NotYetValid;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure NotYetValid" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure.NotYetValid" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly NotYetValid As LifetimeValidationFailure " />
+      <MemberSignature Language="F#" Value=" staticval mutable NotYetValid : Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure" Usage="Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure.NotYetValid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.14.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Token was not yet valid.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidationFailed">
+      <MemberSignature Language="C#" Value="public static readonly Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure ValidationFailed;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure ValidationFailed" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure.ValidationFailed" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly ValidationFailed As LifetimeValidationFailure " />
+      <MemberSignature Language="F#" Value=" staticval mutable ValidationFailed : Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure" Usage="Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure.ValidationFailed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.14.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            General lifetime validation failure.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidatorThrew">
+      <MemberSignature Language="C#" Value="public static readonly Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure ValidatorThrew;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure ValidatorThrew" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure.ValidatorThrew" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly ValidatorThrew As LifetimeValidationFailure " />
+      <MemberSignature Language="F#" Value=" staticval mutable ValidatorThrew : Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure" Usage="Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure.ValidatorThrew" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.14.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Tokens.Experimental.LifetimeValidationFailure</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Lifetime validator delegate threw an exception.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
