@@ -1,0 +1,166 @@
+<Type Name="SignatureKeyValidationError" FullName="Microsoft.IdentityModel.Tokens.Experimental.SignatureKeyValidationError">
+  <TypeSignature Language="C#" Value="public class SignatureKeyValidationError : Microsoft.IdentityModel.Tokens.Experimental.ValidationError" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SignatureKeyValidationError extends Microsoft.IdentityModel.Tokens.Experimental.ValidationError" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.IdentityModel.Tokens.Experimental.SignatureKeyValidationError" />
+  <TypeSignature Language="VB.NET" Value="Public Class SignatureKeyValidationError&#xA;Inherits ValidationError" />
+  <TypeSignature Language="F#" Value="type SignatureKeyValidationError = class&#xA;    inherit ValidationError" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+    <AssemblyVersion>8.14.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.IdentityModel.Tokens.Experimental.ValidationError</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Represents a validation error when the <see cref="P:Microsoft.IdentityModel.Tokens.SecurityToken.SecurityKey" /> that signed the <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" />is not valid.
+            If available, the invalid signing key is stored in <see cref="P:Microsoft.IdentityModel.Tokens.Experimental.SignatureKeyValidationError.InvalidSigningKey" />.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SignatureKeyValidationError (Microsoft.IdentityModel.Tokens.Experimental.MessageDetail messageDetail, Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType validationFailure, System.Diagnostics.StackFrame stackFrame, Microsoft.IdentityModel.Tokens.SecurityKey? invalidSigningKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.IdentityModel.Tokens.Experimental.MessageDetail messageDetail, class Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType validationFailure, class System.Diagnostics.StackFrame stackFrame, class Microsoft.IdentityModel.Tokens.SecurityKey invalidSigningKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.SignatureKeyValidationError.#ctor(Microsoft.IdentityModel.Tokens.Experimental.MessageDetail,Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType,System.Diagnostics.StackFrame,Microsoft.IdentityModel.Tokens.SecurityKey)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (messageDetail As MessageDetail, validationFailure As ValidationFailureType, stackFrame As StackFrame, invalidSigningKey As SecurityKey)" />
+      <MemberSignature Language="F#" Value="new Microsoft.IdentityModel.Tokens.Experimental.SignatureKeyValidationError : Microsoft.IdentityModel.Tokens.Experimental.MessageDetail * Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType * System.Diagnostics.StackFrame * Microsoft.IdentityModel.Tokens.SecurityKey -&gt; Microsoft.IdentityModel.Tokens.Experimental.SignatureKeyValidationError" Usage="new Microsoft.IdentityModel.Tokens.Experimental.SignatureKeyValidationError (messageDetail, validationFailure, stackFrame, invalidSigningKey)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.14.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="messageDetail" Type="Microsoft.IdentityModel.Tokens.Experimental.MessageDetail" />
+        <Parameter Name="validationFailure" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType" />
+        <Parameter Name="stackFrame" Type="System.Diagnostics.StackFrame" />
+        <Parameter Name="invalidSigningKey" Type="Microsoft.IdentityModel.Tokens.SecurityKey">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="messageDetail" />
+        <param name="validationFailure" />
+        <param name="stackFrame" />
+        <param name="invalidSigningKey" />
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.SignatureKeyValidationError" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+        <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType" />
+        <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" />
+        <see cref="P:Microsoft.IdentityModel.Tokens.SecurityToken.SigningKey" />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SignatureKeyValidationError (Microsoft.IdentityModel.Tokens.Experimental.MessageDetail messageDetail, Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType validationFailure, System.Diagnostics.StackFrame stackFrame, Microsoft.IdentityModel.Tokens.SecurityKey? invalidSigningKey, Exception? innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.IdentityModel.Tokens.Experimental.MessageDetail messageDetail, class Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType validationFailure, class System.Diagnostics.StackFrame stackFrame, class Microsoft.IdentityModel.Tokens.SecurityKey invalidSigningKey, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.SignatureKeyValidationError.#ctor(Microsoft.IdentityModel.Tokens.Experimental.MessageDetail,Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType,System.Diagnostics.StackFrame,Microsoft.IdentityModel.Tokens.SecurityKey,System.Exception)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (messageDetail As MessageDetail, validationFailure As ValidationFailureType, stackFrame As StackFrame, invalidSigningKey As SecurityKey, innerException As Exception)" />
+      <MemberSignature Language="F#" Value="new Microsoft.IdentityModel.Tokens.Experimental.SignatureKeyValidationError : Microsoft.IdentityModel.Tokens.Experimental.MessageDetail * Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType * System.Diagnostics.StackFrame * Microsoft.IdentityModel.Tokens.SecurityKey * Exception -&gt; Microsoft.IdentityModel.Tokens.Experimental.SignatureKeyValidationError" Usage="new Microsoft.IdentityModel.Tokens.Experimental.SignatureKeyValidationError (messageDetail, validationFailure, stackFrame, invalidSigningKey, innerException)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.14.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="messageDetail" Type="Microsoft.IdentityModel.Tokens.Experimental.MessageDetail" />
+        <Parameter Name="validationFailure" Type="Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType" />
+        <Parameter Name="stackFrame" Type="System.Diagnostics.StackFrame" />
+        <Parameter Name="invalidSigningKey" Type="Microsoft.IdentityModel.Tokens.SecurityKey">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="innerException" Type="System.Exception">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="messageDetail" />
+        <param name="validationFailure" />
+        <param name="stackFrame" />
+        <param name="invalidSigningKey" />
+        <param name="innerException" />
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.SignatureKeyValidationError" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+        <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType" />
+        <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey" />
+        <see cref="P:Microsoft.IdentityModel.Tokens.SecurityToken.SigningKey" />
+      </Docs>
+    </Member>
+    <Member MemberName="GetException">
+      <MemberSignature Language="C#" Value="public override Exception GetException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Exception GetException() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.SignatureKeyValidationError.GetException" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetException () As Exception" />
+      <MemberSignature Language="F#" Value="override this.GetException : unit -&gt; Exception" Usage="signatureKeyValidationError.GetException " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.14.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates an instance of an <see cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenInvalidSigningKeyException" />.
+            </summary>
+        <returns>An instance of an Exception.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidSigningKey">
+      <MemberSignature Language="C#" Value="protected Microsoft.IdentityModel.Tokens.SecurityKey? InvalidSigningKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.IdentityModel.Tokens.SecurityKey InvalidSigningKey" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Tokens.Experimental.SignatureKeyValidationError.InvalidSigningKey" />
+      <MemberSignature Language="VB.NET" Value="Protected ReadOnly Property InvalidSigningKey As SecurityKey" />
+      <MemberSignature Language="F#" Value="member this.InvalidSigningKey : Microsoft.IdentityModel.Tokens.SecurityKey" Usage="Microsoft.IdentityModel.Tokens.Experimental.SignatureKeyValidationError.InvalidSigningKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.14.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Tokens.SecurityKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The signing key that was found invalid.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

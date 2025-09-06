@@ -1,0 +1,179 @@
+<Type Name="TokenReplayValidationFailure" FullName="Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationFailure">
+  <TypeSignature Language="C#" Value="public abstract class TokenReplayValidationFailure : Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TokenReplayValidationFailure extends Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationFailure" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class TokenReplayValidationFailure&#xA;Inherits ValidationFailureType" />
+  <TypeSignature Language="F#" Value="type TokenReplayValidationFailure = class&#xA;    inherit ValidationFailureType" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+    <AssemblyVersion>8.14.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.IdentityModel.Tokens.Experimental.ValidationFailureType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Failures that occur during validation of a <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken" /> token replay.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TokenReplayValidationFailure (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationFailure.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (name As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationFailure : string -&gt; Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationFailure" Usage="new Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationFailure name" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.14.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">To be added.</param>
+        <summary>
+            Creates an instance of <see cref="T:Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationFailure" /></summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddToCacheFailed">
+      <MemberSignature Language="C#" Value="public static readonly Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationFailure AddToCacheFailed;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationFailure AddToCacheFailed" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationFailure.AddToCacheFailed" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly AddToCacheFailed As TokenReplayValidationFailure " />
+      <MemberSignature Language="F#" Value=" staticval mutable AddToCacheFailed : Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationFailure" Usage="Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationFailure.AddToCacheFailed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.14.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationFailure</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Token could not be added to the cache.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoExpiration">
+      <MemberSignature Language="C#" Value="public static readonly Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationFailure NoExpiration;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationFailure NoExpiration" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationFailure.NoExpiration" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly NoExpiration As TokenReplayValidationFailure " />
+      <MemberSignature Language="F#" Value=" staticval mutable NoExpiration : Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationFailure" Usage="Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationFailure.NoExpiration" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.14.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationFailure</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            No expiration time found in the security token.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenFoundInCache">
+      <MemberSignature Language="C#" Value="public static readonly Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationFailure TokenFoundInCache;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationFailure TokenFoundInCache" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationFailure.TokenFoundInCache" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly TokenFoundInCache As TokenReplayValidationFailure " />
+      <MemberSignature Language="F#" Value=" staticval mutable TokenFoundInCache : Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationFailure" Usage="Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationFailure.TokenFoundInCache" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.14.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationFailure</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Token was found in the cache.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidationFailed">
+      <MemberSignature Language="C#" Value="public static readonly Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationFailure ValidationFailed;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationFailure ValidationFailed" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationFailure.ValidationFailed" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly ValidationFailed As TokenReplayValidationFailure " />
+      <MemberSignature Language="F#" Value=" staticval mutable ValidationFailed : Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationFailure" Usage="Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationFailure.ValidationFailed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.14.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationFailure</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Token replay validation failed.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidatorThrew">
+      <MemberSignature Language="C#" Value="public static readonly Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationFailure ValidatorThrew;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationFailure ValidatorThrew" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationFailure.ValidatorThrew" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly ValidatorThrew As TokenReplayValidationFailure " />
+      <MemberSignature Language="F#" Value=" staticval mutable ValidatorThrew : Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationFailure" Usage="Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationFailure.ValidatorThrew" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.14.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Tokens.Experimental.TokenReplayValidationFailure</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Token replay validation delegate threw an exception.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

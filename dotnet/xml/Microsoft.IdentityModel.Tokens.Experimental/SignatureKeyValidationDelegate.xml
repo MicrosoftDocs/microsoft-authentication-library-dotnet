@@ -1,12 +1,12 @@
-<Type Name="IssuerSigningKeyValidationDelegate" FullName="Microsoft.IdentityModel.Tokens.Experimental.IssuerSigningKeyValidationDelegate">
-  <TypeSignature Language="C#" Value="public delegate Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedSigningKeyLifetime,Microsoft.IdentityModel.Tokens.Experimental.IssuerSigningKeyValidationError&gt; IssuerSigningKeyValidationDelegate(SecurityKey signingKey, SecurityToken securityToken, ValidationParameters validationParameters, CallContext callContext);" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed IssuerSigningKeyValidationDelegate extends System.MulticastDelegate" />
-  <TypeSignature Language="DocId" Value="T:Microsoft.IdentityModel.Tokens.Experimental.IssuerSigningKeyValidationDelegate" />
-  <TypeSignature Language="VB.NET" Value="Public Delegate Function IssuerSigningKeyValidationDelegate(signingKey As SecurityKey, securityToken As SecurityToken, validationParameters As ValidationParameters, callContext As CallContext) As ValidationResult(Of ValidatedSigningKeyLifetime, IssuerSigningKeyValidationError) " />
-  <TypeSignature Language="F#" Value="type IssuerSigningKeyValidationDelegate = delegate of SecurityKey * SecurityToken * ValidationParameters * CallContext -&gt; ValidationResult&lt;ValidatedSigningKeyLifetime, IssuerSigningKeyValidationError&gt;" />
+<Type Name="SignatureKeyValidationDelegate" FullName="Microsoft.IdentityModel.Tokens.Experimental.SignatureKeyValidationDelegate">
+  <TypeSignature Language="C#" Value="public delegate Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedSignatureKey,Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt; SignatureKeyValidationDelegate(SecurityKey signingKey, SecurityToken securityToken, ValidationParameters validationParameters, CallContext callContext);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SignatureKeyValidationDelegate extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.IdentityModel.Tokens.Experimental.SignatureKeyValidationDelegate" />
+  <TypeSignature Language="VB.NET" Value="Public Delegate Function SignatureKeyValidationDelegate(signingKey As SecurityKey, securityToken As SecurityToken, validationParameters As ValidationParameters, callContext As CallContext) As ValidationResult(Of ValidatedSignatureKey, ValidationError) " />
+  <TypeSignature Language="F#" Value="type SignatureKeyValidationDelegate = delegate of SecurityKey * SecurityToken * ValidationParameters * CallContext -&gt; ValidationResult&lt;ValidatedSignatureKey, ValidationError&gt;" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-    <AssemblyVersion>8.13.0.0</AssemblyVersion>
+    <AssemblyVersion>8.14.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Delegate</BaseTypeName>
@@ -18,7 +18,7 @@
     <Parameter Name="callContext" Type="Microsoft.IdentityModel.Tokens.CallContext" />
   </Parameters>
   <ReturnValue>
-    <ReturnType>Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedSigningKeyLifetime,Microsoft.IdentityModel.Tokens.Experimental.IssuerSigningKeyValidationError&gt;</ReturnType>
+    <ReturnType>Microsoft.IdentityModel.Tokens.Experimental.ValidationResult&lt;Microsoft.IdentityModel.Tokens.Experimental.ValidatedSignatureKey,Microsoft.IdentityModel.Tokens.Experimental.ValidationError&gt;</ReturnType>
     <Attributes>
       <Attribute>
         <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })]</AttributeName>
