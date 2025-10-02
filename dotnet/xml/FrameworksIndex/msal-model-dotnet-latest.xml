@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-model-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.Identity.Abstractions" Version="9.3.0.0" />
+    <Assembly Name="Microsoft.Identity.Abstractions" Version="9.5.0.0" />
     <Assembly Name="Microsoft.Identity.Web.Azure" Version="3.14.1.0" />
     <Assembly Name="Microsoft.Identity.Web.Certificate" Version="3.14.1.0" />
     <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="3.14.1.0" />
@@ -38,12 +38,27 @@
     <Type Name="Microsoft.Identity.Abstractions.AcquireTokenResult" Id="T:Microsoft.Identity.Abstractions.AcquireTokenResult">
       <Member Id="M:Microsoft.Identity.Abstractions.AcquireTokenResult.#ctor(System.String,System.DateTimeOffset,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Guid,System.String)" />
       <Member Id="P:Microsoft.Identity.Abstractions.AcquireTokenResult.AccessToken" />
+      <Member Id="P:Microsoft.Identity.Abstractions.AcquireTokenResult.AdditionalResponseParameters" />
+      <Member Id="P:Microsoft.Identity.Abstractions.AcquireTokenResult.BindingCertificate" />
       <Member Id="P:Microsoft.Identity.Abstractions.AcquireTokenResult.CorrelationId" />
       <Member Id="P:Microsoft.Identity.Abstractions.AcquireTokenResult.ExpiresOn" />
       <Member Id="P:Microsoft.Identity.Abstractions.AcquireTokenResult.IdToken" />
       <Member Id="P:Microsoft.Identity.Abstractions.AcquireTokenResult.Scopes" />
       <Member Id="P:Microsoft.Identity.Abstractions.AcquireTokenResult.TenantId" />
       <Member Id="P:Microsoft.Identity.Abstractions.AcquireTokenResult.TokenType" />
+    </Type>
+    <Type Name="Microsoft.Identity.Abstractions.AuthorizationHeaderError" Id="T:Microsoft.Identity.Abstractions.AuthorizationHeaderError">
+      <Member Id="M:Microsoft.Identity.Abstractions.AuthorizationHeaderError.#ctor" />
+      <Member Id="M:Microsoft.Identity.Abstractions.AuthorizationHeaderError.#ctor(System.String,System.String)" />
+      <Member Id="M:Microsoft.Identity.Abstractions.AuthorizationHeaderError.#ctor(System.String,System.String,System.Exception)" />
+      <Member Id="P:Microsoft.Identity.Abstractions.AuthorizationHeaderError.Code" />
+      <Member Id="P:Microsoft.Identity.Abstractions.AuthorizationHeaderError.Exception" />
+      <Member Id="P:Microsoft.Identity.Abstractions.AuthorizationHeaderError.Message" />
+    </Type>
+    <Type Name="Microsoft.Identity.Abstractions.AuthorizationHeaderInformation" Id="T:Microsoft.Identity.Abstractions.AuthorizationHeaderInformation">
+      <Member Id="M:Microsoft.Identity.Abstractions.AuthorizationHeaderInformation.#ctor" />
+      <Member Id="P:Microsoft.Identity.Abstractions.AuthorizationHeaderInformation.AuthorizationHeaderValue" />
+      <Member Id="P:Microsoft.Identity.Abstractions.AuthorizationHeaderInformation.BindingCertificate" />
     </Type>
     <Type Name="Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions" Id="T:Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions">
       <Member Id="M:Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions.#ctor" />
@@ -58,6 +73,17 @@
       <Member Id="P:Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions.ProtocolScheme" />
       <Member Id="P:Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions.RelativePath" />
       <Member Id="P:Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions.RequestAppToken" />
+    </Type>
+    <Type Name="Microsoft.Identity.Abstractions.AuthorizationHeaderResult" Id="T:Microsoft.Identity.Abstractions.AuthorizationHeaderResult">
+      <Member Id="M:Microsoft.Identity.Abstractions.AuthorizationHeaderResult.#ctor(Microsoft.Identity.Abstractions.AuthorizationHeaderError)" />
+      <Member Id="M:Microsoft.Identity.Abstractions.AuthorizationHeaderResult.#ctor(Microsoft.Identity.Abstractions.AuthorizationHeaderInformation)" />
+      <Member Id="M:Microsoft.Identity.Abstractions.AuthorizationHeaderResult.#ctor(Microsoft.Identity.Abstractions.AuthorizationHeaderInformation,Microsoft.Identity.Abstractions.AuthorizationHeaderError)" />
+      <Member Id="M:Microsoft.Identity.Abstractions.AuthorizationHeaderResult.op_Implicit(Microsoft.Identity.Abstractions.AuthorizationHeaderError)~Microsoft.Identity.Abstractions.AuthorizationHeaderResult" />
+      <Member Id="M:Microsoft.Identity.Abstractions.AuthorizationHeaderResult.op_Implicit(Microsoft.Identity.Abstractions.AuthorizationHeaderInformation)~Microsoft.Identity.Abstractions.AuthorizationHeaderResult" />
+      <Member Id="M:Microsoft.Identity.Abstractions.AuthorizationHeaderResult.op_Implicit(Microsoft.Identity.Abstractions.AuthorizationHeaderResult)~System.String" />
+      <Member Id="P:Microsoft.Identity.Abstractions.AuthorizationHeaderResult.Error" />
+      <Member Id="P:Microsoft.Identity.Abstractions.AuthorizationHeaderResult.Result" />
+      <Member Id="P:Microsoft.Identity.Abstractions.AuthorizationHeaderResult.Succeeded" />
     </Type>
     <Type Name="Microsoft.Identity.Abstractions.CredentialDescription" Id="T:Microsoft.Identity.Abstractions.CredentialDescription">
       <Member Id="M:Microsoft.Identity.Abstractions.CredentialDescription.#ctor" />
@@ -98,6 +124,7 @@
       <Member Id="F:Microsoft.Identity.Abstractions.CredentialSource.ClientSecret" />
       <Member Id="F:Microsoft.Identity.Abstractions.CredentialSource.CustomSignedAssertion" />
       <Member Id="F:Microsoft.Identity.Abstractions.CredentialSource.KeyVault" />
+      <Member Id="F:Microsoft.Identity.Abstractions.CredentialSource.ManagedCertificate" />
       <Member Id="F:Microsoft.Identity.Abstractions.CredentialSource.Path" />
       <Member Id="F:Microsoft.Identity.Abstractions.CredentialSource.SignedAssertionFilePath" />
       <Member Id="F:Microsoft.Identity.Abstractions.CredentialSource.SignedAssertionFromManagedIdentity" />
