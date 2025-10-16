@@ -2,17 +2,17 @@
 <Framework Name="msal-model-dotnet-latest">
   <Assemblies>
     <Assembly Name="Microsoft.Identity.Abstractions" Version="9.5.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.Azure" Version="3.14.1.0" />
-    <Assembly Name="Microsoft.Identity.Web.Certificate" Version="3.14.1.0" />
-    <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="3.14.1.0" />
-    <Assembly Name="Microsoft.Identity.Web" Version="3.14.1.0" />
+    <Assembly Name="Microsoft.Identity.Web.Azure" Version="4.0.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.Certificate" Version="4.0.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="4.0.0.0" />
+    <Assembly Name="Microsoft.Identity.Web" Version="4.0.0.0" />
     <Assembly Name="Microsoft.Identity.Web.DownstreamRestApi" Version="2.0.8.0" />
-    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraph" Version="3.14.1.0" />
-    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraphBeta" Version="3.14.1.0" />
-    <Assembly Name="Microsoft.Identity.Web.OWIN" Version="3.14.1.0" />
-    <Assembly Name="Microsoft.Identity.Web.TokenAcquisition" Version="3.14.1.0" />
-    <Assembly Name="Microsoft.Identity.Web.TokenCache" Version="3.14.1.0" />
-    <Assembly Name="Microsoft.Identity.Web.UI" Version="3.14.1.0" />
+    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraph" Version="4.0.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraphBeta" Version="4.0.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.OWIN" Version="4.0.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.TokenAcquisition" Version="4.0.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.TokenCache" Version="4.0.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.UI" Version="4.0.0.0" />
   </Assemblies>
   <Namespace Name="Microsoft.Identity.Abstractions">
     <Type Name="Microsoft.Identity.Abstractions.AcquireTokenOptions" Id="T:Microsoft.Identity.Abstractions.AcquireTokenOptions">
@@ -485,6 +485,8 @@
     <Type Name="Microsoft.Identity.Web.DefaultCertificateLoader" Id="T:Microsoft.Identity.Web.DefaultCertificateLoader">
       <Member Id="M:Microsoft.Identity.Web.DefaultCertificateLoader.#ctor" />
       <Member Id="M:Microsoft.Identity.Web.DefaultCertificateLoader.#ctor(Microsoft.Extensions.Logging.ILogger{Microsoft.Identity.Web.DefaultCertificateLoader})" />
+      <Member Id="M:Microsoft.Identity.Web.DefaultCertificateLoader.#ctor(System.Collections.Generic.IEnumerable{Microsoft.Identity.Abstractions.ICredentialSourceLoader},Microsoft.Extensions.Logging.ILogger{Microsoft.Identity.Web.DefaultCertificateLoader})" />
+      <Member Id="M:Microsoft.Identity.Web.DefaultCertificateLoader.#ctor(System.Collections.Generic.IEnumerable{Microsoft.Identity.Abstractions.ICredentialSourceLoader},System.Collections.Generic.IEnumerable{Microsoft.Identity.Abstractions.ICustomSignedAssertionProvider},Microsoft.Extensions.Logging.ILogger{Microsoft.Identity.Web.DefaultCertificateLoader})" />
       <Member Id="M:Microsoft.Identity.Web.DefaultCertificateLoader.#ctor(System.Collections.Generic.IEnumerable{Microsoft.Identity.Abstractions.ICustomSignedAssertionProvider},Microsoft.Extensions.Logging.ILogger{Microsoft.Identity.Web.DefaultCertificateLoader})" />
       <Member Id="M:Microsoft.Identity.Web.DefaultCertificateLoader.LoadAllCertificates(System.Collections.Generic.IEnumerable{Microsoft.Identity.Web.CertificateDescription})" />
       <Member Id="M:Microsoft.Identity.Web.DefaultCertificateLoader.LoadFirstCertificate(System.Collections.Generic.IEnumerable{Microsoft.Identity.Web.CertificateDescription})" />
@@ -498,6 +500,8 @@
     <Type Name="Microsoft.Identity.Web.DefaultCredentialsLoader" Id="T:Microsoft.Identity.Web.DefaultCredentialsLoader">
       <Member Id="M:Microsoft.Identity.Web.DefaultCredentialsLoader.#ctor" />
       <Member Id="M:Microsoft.Identity.Web.DefaultCredentialsLoader.#ctor(Microsoft.Extensions.Logging.ILogger{Microsoft.Identity.Web.DefaultCredentialsLoader})" />
+      <Member Id="M:Microsoft.Identity.Web.DefaultCredentialsLoader.#ctor(System.Collections.Generic.IEnumerable{Microsoft.Identity.Abstractions.ICredentialSourceLoader},Microsoft.Extensions.Logging.ILogger{Microsoft.Identity.Web.DefaultCredentialsLoader})" />
+      <Member Id="M:Microsoft.Identity.Web.DefaultCredentialsLoader.#ctor(System.Collections.Generic.IEnumerable{Microsoft.Identity.Abstractions.ICredentialSourceLoader},System.Collections.Generic.IEnumerable{Microsoft.Identity.Abstractions.ICustomSignedAssertionProvider},Microsoft.Extensions.Logging.ILogger{Microsoft.Identity.Web.DefaultCredentialsLoader})" />
       <Member Id="M:Microsoft.Identity.Web.DefaultCredentialsLoader.#ctor(System.Collections.Generic.IEnumerable{Microsoft.Identity.Abstractions.ICustomSignedAssertionProvider},Microsoft.Extensions.Logging.ILogger{Microsoft.Identity.Web.DefaultCredentialsLoader})" />
       <Member Id="M:Microsoft.Identity.Web.DefaultCredentialsLoader.LoadCredentialsIfNeededAsync(Microsoft.Identity.Abstractions.CredentialDescription,Microsoft.Identity.Abstractions.CredentialSourceLoaderParameters)" />
       <Member Id="M:Microsoft.Identity.Web.DefaultCredentialsLoader.LoadFirstValidCredentialsAsync(System.Collections.Generic.IEnumerable{Microsoft.Identity.Abstractions.CredentialDescription},Microsoft.Identity.Abstractions.CredentialSourceLoaderParameters)" />
@@ -540,6 +544,11 @@
     <Type Name="Microsoft.Identity.Web.GraphServiceCollectionExtensions" Id="T:Microsoft.Identity.Web.GraphServiceCollectionExtensions">
       <Member Id="M:Microsoft.Identity.Web.GraphServiceCollectionExtensions.AddMicrosoftGraph(Microsoft.Extensions.DependencyInjection.IServiceCollection)" />
       <Member Id="M:Microsoft.Identity.Web.GraphServiceCollectionExtensions.AddMicrosoftGraph(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Microsoft.Identity.Web.MicrosoftGraphOptions})" />
+    </Type>
+    <Type Name="Microsoft.Identity.Web.HttpRequestMessageAuthenticationExtensions" Id="T:Microsoft.Identity.Web.HttpRequestMessageAuthenticationExtensions">
+      <Member Id="M:Microsoft.Identity.Web.HttpRequestMessageAuthenticationExtensions.GetAuthenticationOptions(System.Net.Http.HttpRequestMessage)" />
+      <Member Id="M:Microsoft.Identity.Web.HttpRequestMessageAuthenticationExtensions.WithAuthenticationOptions(System.Net.Http.HttpRequestMessage,Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions)" />
+      <Member Id="M:Microsoft.Identity.Web.HttpRequestMessageAuthenticationExtensions.WithAuthenticationOptions(System.Net.Http.HttpRequestMessage,System.Action{Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions})" />
     </Type>
     <Type Name="Microsoft.Identity.Web.IAuthenticationSchemeInformationProvider" Id="T:Microsoft.Identity.Web.IAuthenticationSchemeInformationProvider" />
     <Type Name="Microsoft.Identity.Web.IAuthRequiredScopeMetadata" Id="T:Microsoft.Identity.Web.IAuthRequiredScopeMetadata">
@@ -630,6 +639,10 @@
       <Member Id="P:Microsoft.Identity.Web.MicrosoftIdentityAuthenticationBaseOptions.TokenAcquisitionOptions" />
       <Member Id="P:Microsoft.Identity.Web.MicrosoftIdentityAuthenticationBaseOptions.UserFlow" />
     </Type>
+    <Type Name="Microsoft.Identity.Web.MicrosoftIdentityAuthenticationException" Id="T:Microsoft.Identity.Web.MicrosoftIdentityAuthenticationException">
+      <Member Id="M:Microsoft.Identity.Web.MicrosoftIdentityAuthenticationException.#ctor(System.String)" />
+      <Member Id="M:Microsoft.Identity.Web.MicrosoftIdentityAuthenticationException.#ctor(System.String,System.Exception)" />
+    </Type>
     <Type Name="Microsoft.Identity.Web.MicrosoftIdentityAuthenticationMessageHandlerHttpClientBuilderExtensions" Id="T:Microsoft.Identity.Web.MicrosoftIdentityAuthenticationMessageHandlerHttpClientBuilderExtensions">
       <Member Id="M:Microsoft.Identity.Web.MicrosoftIdentityAuthenticationMessageHandlerHttpClientBuilderExtensions.AddMicrosoftIdentityAppAuthenticationHandler(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,System.String,Microsoft.Extensions.Configuration.IConfiguration)" />
       <Member Id="M:Microsoft.Identity.Web.MicrosoftIdentityAuthenticationMessageHandlerHttpClientBuilderExtensions.AddMicrosoftIdentityAppAuthenticationHandler(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,System.String,System.Action{Microsoft.Identity.Web.MicrosoftIdentityAuthenticationMessageHandlerOptions})" />
@@ -657,6 +670,14 @@
       <Member Id="P:Microsoft.Identity.Web.MicrosoftIdentityConsentAndConditionalAccessHandler.BaseUri" />
       <Member Id="P:Microsoft.Identity.Web.MicrosoftIdentityConsentAndConditionalAccessHandler.IsBlazorServer" />
       <Member Id="P:Microsoft.Identity.Web.MicrosoftIdentityConsentAndConditionalAccessHandler.User" />
+    </Type>
+    <Type Name="Microsoft.Identity.Web.MicrosoftIdentityMessageHandler" Id="T:Microsoft.Identity.Web.MicrosoftIdentityMessageHandler">
+      <Member Id="M:Microsoft.Identity.Web.MicrosoftIdentityMessageHandler.#ctor(Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider,Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions,Microsoft.Extensions.Logging.ILogger{Microsoft.Identity.Web.MicrosoftIdentityMessageHandler})" />
+      <Member Id="M:Microsoft.Identity.Web.MicrosoftIdentityMessageHandler.SendAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)" />
+    </Type>
+    <Type Name="Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions" Id="T:Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions">
+      <Member Id="M:Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions.#ctor" />
+      <Member Id="P:Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions.Scopes" />
     </Type>
     <Type Name="Microsoft.Identity.Web.MicrosoftIdentityOptions" Id="T:Microsoft.Identity.Web.MicrosoftIdentityOptions">
       <Member Id="M:Microsoft.Identity.Web.MicrosoftIdentityOptions.#ctor" />
@@ -823,6 +844,7 @@
     <Type Name="Microsoft.Identity.Web.Experimental.CerticateObserverAction" Id="T:Microsoft.Identity.Web.Experimental.CerticateObserverAction">
       <Member Id="F:Microsoft.Identity.Web.Experimental.CerticateObserverAction.Deselected" />
       <Member Id="F:Microsoft.Identity.Web.Experimental.CerticateObserverAction.Selected" />
+      <Member Id="F:Microsoft.Identity.Web.Experimental.CerticateObserverAction.SuccessfullyUsed" />
     </Type>
     <Type Name="Microsoft.Identity.Web.Experimental.CertificateChangeEventArg" Id="T:Microsoft.Identity.Web.Experimental.CertificateChangeEventArg">
       <Member Id="M:Microsoft.Identity.Web.Experimental.CertificateChangeEventArg.#ctor" />
