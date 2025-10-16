@@ -1,0 +1,93 @@
+<Type Name="AuthorizationHeaderInformation" FullName="Microsoft.Identity.Abstractions.AuthorizationHeaderInformation">
+  <TypeSignature Language="C#" Value="public class AuthorizationHeaderInformation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AuthorizationHeaderInformation extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Abstractions.AuthorizationHeaderInformation" />
+  <TypeSignature Language="VB.NET" Value="Public Class AuthorizationHeaderInformation" />
+  <TypeSignature Language="F#" Value="type AuthorizationHeaderInformation = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+    <AssemblyVersion>9.5.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Represents comprehensive information about an authorization header,
+            including the header value and binding certificate.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AuthorizationHeaderInformation ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.AuthorizationHeaderInformation.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>9.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthorizationHeaderValue">
+      <MemberSignature Language="C#" Value="public string? AuthorizationHeaderValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AuthorizationHeaderValue" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.AuthorizationHeaderInformation.AuthorizationHeaderValue" />
+      <MemberSignature Language="VB.NET" Value="Public Property AuthorizationHeaderValue As String" />
+      <MemberSignature Language="F#" Value="member this.AuthorizationHeaderValue : string with get, set" Usage="Microsoft.Identity.Abstractions.AuthorizationHeaderInformation.AuthorizationHeaderValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>9.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the authorization header value.
+            For example: "Bearer token", "PoP token", etc.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingCertificate">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509Certificate2? BindingCertificate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.X509Certificates.X509Certificate2 BindingCertificate" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.AuthorizationHeaderInformation.BindingCertificate" />
+      <MemberSignature Language="VB.NET" Value="Public Property BindingCertificate As X509Certificate2" />
+      <MemberSignature Language="F#" Value="member this.BindingCertificate : System.Security.Cryptography.X509Certificates.X509Certificate2 with get, set" Usage="Microsoft.Identity.Abstractions.AuthorizationHeaderInformation.BindingCertificate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>9.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate2</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the binding certificate for client authentication.
+            This certificate is used to bind the authorization header to the client,
+            commonly used in mutual TLS (mTLS) authentication scenarios and Proof-of-Possession (PoP) protocols.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
