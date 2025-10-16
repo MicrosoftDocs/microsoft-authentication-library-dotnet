@@ -1,0 +1,278 @@
+<Type Name="AuthorizationHeaderResult" FullName="Microsoft.Identity.Abstractions.AuthorizationHeaderResult">
+  <TypeSignature Language="C#" Value="public class AuthorizationHeaderResult" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AuthorizationHeaderResult extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Abstractions.AuthorizationHeaderResult" />
+  <TypeSignature Language="VB.NET" Value="Public Class AuthorizationHeaderResult" />
+  <TypeSignature Language="F#" Value="type AuthorizationHeaderResult = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+    <AssemblyVersion>9.5.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Represents the result of an authorization header creation operation.
+            This result can contain either successful authorization header information or error details.
+            </summary>
+    <remarks>
+            This class wraps <see cref="T:Microsoft.Identity.Abstractions.OperationResult`2" /> to provide strongly-typed
+            results for authorization header operations. It includes an implicit conversion to string
+            for backward compatibility with existing code that expects a string authorization header.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AuthorizationHeaderResult (Microsoft.Identity.Abstractions.AuthorizationHeaderError error);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Identity.Abstractions.AuthorizationHeaderError error) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.AuthorizationHeaderResult.#ctor(Microsoft.Identity.Abstractions.AuthorizationHeaderError)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (error As AuthorizationHeaderError)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Identity.Abstractions.AuthorizationHeaderResult : Microsoft.Identity.Abstractions.AuthorizationHeaderError -&gt; Microsoft.Identity.Abstractions.AuthorizationHeaderResult" Usage="new Microsoft.Identity.Abstractions.AuthorizationHeaderResult error" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>9.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="error" Type="Microsoft.Identity.Abstractions.AuthorizationHeaderError" />
+      </Parameters>
+      <Docs>
+        <param name="error">The error information describing why the operation failed.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Identity.Abstractions.AuthorizationHeaderResult" /> class
+            with error information.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AuthorizationHeaderResult (Microsoft.Identity.Abstractions.AuthorizationHeaderInformation info);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Identity.Abstractions.AuthorizationHeaderInformation info) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.AuthorizationHeaderResult.#ctor(Microsoft.Identity.Abstractions.AuthorizationHeaderInformation)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (info As AuthorizationHeaderInformation)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Identity.Abstractions.AuthorizationHeaderResult : Microsoft.Identity.Abstractions.AuthorizationHeaderInformation -&gt; Microsoft.Identity.Abstractions.AuthorizationHeaderResult" Usage="new Microsoft.Identity.Abstractions.AuthorizationHeaderResult info" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>9.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="Microsoft.Identity.Abstractions.AuthorizationHeaderInformation" />
+      </Parameters>
+      <Docs>
+        <param name="info">The authorization header information containing the result of a successful operation.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Identity.Abstractions.AuthorizationHeaderResult" /> class
+            with successful authorization header information.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AuthorizationHeaderResult (Microsoft.Identity.Abstractions.AuthorizationHeaderInformation? info, Microsoft.Identity.Abstractions.AuthorizationHeaderError? error);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Identity.Abstractions.AuthorizationHeaderInformation info, class Microsoft.Identity.Abstractions.AuthorizationHeaderError error) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.AuthorizationHeaderResult.#ctor(Microsoft.Identity.Abstractions.AuthorizationHeaderInformation,Microsoft.Identity.Abstractions.AuthorizationHeaderError)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (info As AuthorizationHeaderInformation, error As AuthorizationHeaderError)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Identity.Abstractions.AuthorizationHeaderResult : Microsoft.Identity.Abstractions.AuthorizationHeaderInformation * Microsoft.Identity.Abstractions.AuthorizationHeaderError -&gt; Microsoft.Identity.Abstractions.AuthorizationHeaderResult" Usage="new Microsoft.Identity.Abstractions.AuthorizationHeaderResult (info, error)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>9.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="Microsoft.Identity.Abstractions.AuthorizationHeaderInformation" />
+        <Parameter Name="error" Type="Microsoft.Identity.Abstractions.AuthorizationHeaderError" />
+      </Parameters>
+      <Docs>
+        <param name="info">The authorization header information if the operation succeeded, or null if it failed.</param>
+        <param name="error">The error information if the operation failed, or null if it succeeded.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Identity.Abstractions.AuthorizationHeaderResult" /> class
+            with either authorization header information or error details.
+            </summary>
+        <remarks>
+            Exactly one of <paramref name="info" /> or <paramref name="error" /> should be non-null.
+            This constructor is provided for compatibility with the original design proposal.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Error">
+      <MemberSignature Language="C#" Value="public Microsoft.Identity.Abstractions.AuthorizationHeaderError? Error { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Identity.Abstractions.AuthorizationHeaderError Error" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.AuthorizationHeaderResult.Error" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Error As AuthorizationHeaderError" />
+      <MemberSignature Language="F#" Value="member this.Error : Microsoft.Identity.Abstractions.AuthorizationHeaderError" Usage="Microsoft.Identity.Abstractions.AuthorizationHeaderResult.Error" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>9.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Abstractions.AuthorizationHeaderError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the error associated with the operation result.
+            </summary>
+        <value>The error associated with the operation result.</value>
+        <remarks>This property is only valid if <see cref="P:Microsoft.Identity.Abstractions.AuthorizationHeaderResult.Succeeded" /> is <c>false</c>.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator Microsoft.Identity.Abstractions.AuthorizationHeaderResult (Microsoft.Identity.Abstractions.AuthorizationHeaderError error);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class Microsoft.Identity.Abstractions.AuthorizationHeaderResult op_Implicit(class Microsoft.Identity.Abstractions.AuthorizationHeaderError error) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.AuthorizationHeaderResult.op_Implicit(Microsoft.Identity.Abstractions.AuthorizationHeaderError)~Microsoft.Identity.Abstractions.AuthorizationHeaderResult" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Widening Operator CType (error As AuthorizationHeaderError) As AuthorizationHeaderResult" />
+      <MemberSignature Language="F#" Value="static member op_Implicit : Microsoft.Identity.Abstractions.AuthorizationHeaderError -&gt; Microsoft.Identity.Abstractions.AuthorizationHeaderResult" Usage="Microsoft.Identity.Abstractions.AuthorizationHeaderResult.op_Implicit error" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>9.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Abstractions.AuthorizationHeaderResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="error" Type="Microsoft.Identity.Abstractions.AuthorizationHeaderError" />
+      </Parameters>
+      <Docs>
+        <param name="error">The authorization header error.</param>
+        <summary>
+            Implicitly creates an <see cref="T:Microsoft.Identity.Abstractions.AuthorizationHeaderResult" /> from
+            <see cref="T:Microsoft.Identity.Abstractions.AuthorizationHeaderError" />.
+            </summary>
+        <returns>A failed result containing the error information.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator Microsoft.Identity.Abstractions.AuthorizationHeaderResult (Microsoft.Identity.Abstractions.AuthorizationHeaderInformation info);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class Microsoft.Identity.Abstractions.AuthorizationHeaderResult op_Implicit(class Microsoft.Identity.Abstractions.AuthorizationHeaderInformation info) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.AuthorizationHeaderResult.op_Implicit(Microsoft.Identity.Abstractions.AuthorizationHeaderInformation)~Microsoft.Identity.Abstractions.AuthorizationHeaderResult" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Widening Operator CType (info As AuthorizationHeaderInformation) As AuthorizationHeaderResult" />
+      <MemberSignature Language="F#" Value="static member op_Implicit : Microsoft.Identity.Abstractions.AuthorizationHeaderInformation -&gt; Microsoft.Identity.Abstractions.AuthorizationHeaderResult" Usage="Microsoft.Identity.Abstractions.AuthorizationHeaderResult.op_Implicit info" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>9.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Abstractions.AuthorizationHeaderResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="Microsoft.Identity.Abstractions.AuthorizationHeaderInformation" />
+      </Parameters>
+      <Docs>
+        <param name="info">The authorization header information.</param>
+        <summary>
+            Implicitly creates an <see cref="T:Microsoft.Identity.Abstractions.AuthorizationHeaderResult" /> from
+            <see cref="T:Microsoft.Identity.Abstractions.AuthorizationHeaderInformation" />.
+            </summary>
+        <returns>A successful result containing the authorization header information.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator string (Microsoft.Identity.Abstractions.AuthorizationHeaderResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname string op_Implicit(class Microsoft.Identity.Abstractions.AuthorizationHeaderResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.AuthorizationHeaderResult.op_Implicit(Microsoft.Identity.Abstractions.AuthorizationHeaderResult)~System.String" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Widening Operator CType (result As AuthorizationHeaderResult) As String" />
+      <MemberSignature Language="F#" Value="static member op_Implicit : Microsoft.Identity.Abstractions.AuthorizationHeaderResult -&gt; string" Usage="Microsoft.Identity.Abstractions.AuthorizationHeaderResult.op_Implicit result" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>9.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="Microsoft.Identity.Abstractions.AuthorizationHeaderResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The result to convert.</param>
+        <summary>
+            Implicitly converts an <see cref="T:Microsoft.Identity.Abstractions.AuthorizationHeaderResult" /> to a string
+            containing the authorization header value.
+            </summary>
+        <returns>The authorization header value if the operation succeeded.</returns>
+        <remarks>
+            This implicit conversion provides backward compatibility with code that expects
+            authorization header providers to return string values directly.
+            </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the result represents a failed operation. If the error contains an exception,
+            the original exception is thrown; otherwise, a new <see cref="T:System.InvalidOperationException" />
+            is thrown with details about the failure.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Result">
+      <MemberSignature Language="C#" Value="public Microsoft.Identity.Abstractions.AuthorizationHeaderInformation? Result { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Identity.Abstractions.AuthorizationHeaderInformation Result" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.AuthorizationHeaderResult.Result" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Result As AuthorizationHeaderInformation" />
+      <MemberSignature Language="F#" Value="member this.Result : Microsoft.Identity.Abstractions.AuthorizationHeaderInformation" Usage="Microsoft.Identity.Abstractions.AuthorizationHeaderResult.Result" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>9.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Abstractions.AuthorizationHeaderInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the authorization header information associated with the operation result.
+            </summary>
+        <value>The authorization header information associated with the operation result.</value>
+        <remarks>This property is only valid if <see cref="P:Microsoft.Identity.Abstractions.AuthorizationHeaderResult.Succeeded" /> is <c>true</c>.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Succeeded">
+      <MemberSignature Language="C#" Value="public bool Succeeded { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Succeeded" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.AuthorizationHeaderResult.Succeeded" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Succeeded As Boolean" />
+      <MemberSignature Language="F#" Value="member this.Succeeded : bool" Usage="Microsoft.Identity.Abstractions.AuthorizationHeaderResult.Succeeded" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>9.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets a value indicating whether the operation succeeded.
+            </summary>
+        <value>
+          <c>true</c> if the operation succeeded and <see cref="P:Microsoft.Identity.Abstractions.AuthorizationHeaderResult.Result" /> contains a valid value;
+            <c>false</c> if the operation failed and <see cref="P:Microsoft.Identity.Abstractions.AuthorizationHeaderResult.Error" /> contains the error.
+            </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,103 @@
+<Type Name="MicrosoftIdentityMessageHandlerOptions" FullName="Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions">
+  <TypeSignature Language="C#" Value="public class MicrosoftIdentityMessageHandlerOptions : Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MicrosoftIdentityMessageHandlerOptions extends Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions" />
+  <TypeSignature Language="VB.NET" Value="Public Class MicrosoftIdentityMessageHandlerOptions&#xA;Inherits AuthorizationHeaderProviderOptions" />
+  <TypeSignature Language="F#" Value="type MicrosoftIdentityMessageHandlerOptions = class&#xA;    inherit AuthorizationHeaderProviderOptions" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Configuration options for <see cref="T:Microsoft.Identity.Web.MicrosoftIdentityMessageHandler" /> authentication.
+            Inherits from <see cref="T:Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions" /> to enable compatibility
+            with existing extension methods such as <c>WithAgentIdentity()</c> and <c>WithUserAgentIdentity()</c>.
+            </summary>
+    <remarks>To be added.</remarks>
+    <example>
+      <para>Basic usage with scopes:</para>
+      <code>
+            var options = new MicrosoftIdentityMessageHandlerOptions
+            {
+                Scopes = { "https://graph.microsoft.com/.default" }
+            };
+            </code>
+      <para>Usage with extension methods:</para>
+      <code>
+            var options = new MicrosoftIdentityMessageHandlerOptions
+            {
+                Scopes = { "api://myapi/.default" }
+            };
+            options.WithAgentIdentity("agent-guid");
+            </code>
+    </example>
+    <altmember cref="T:Microsoft.Identity.Web.MicrosoftIdentityMessageHandler" />
+    <altmember cref="T:Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions" />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MicrosoftIdentityMessageHandlerOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scopes">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;string&gt; Scopes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;string&gt; Scopes" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions.Scopes" />
+      <MemberSignature Language="VB.NET" Value="Public Property Scopes As IList(Of String)" />
+      <MemberSignature Language="F#" Value="member this.Scopes : System.Collections.Generic.IList&lt;string&gt; with get, set" Usage="Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions.Scopes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the scopes to request for the token.
+            </summary>
+        <value>
+            A list of scopes required to access the target API. 
+            For instance, "user.read mail.read" for Microsoft Graph user permissions.
+            For Microsoft Identity, in the case of application tokens (requested by the app on behalf of itself), 
+            there should be only one scope, and it should end with ".default" (e.g., "https://graph.microsoft.com/.default").
+            </value>
+        <remarks>
+            This property must contain at least one scope, or the <see cref="T:Microsoft.Identity.Web.MicrosoftIdentityMessageHandler" />
+            will throw a <see cref="T:Microsoft.Identity.Web.MicrosoftIdentityAuthenticationException" /> when processing requests.
+            </remarks>
+        <example>
+          <code>
+            var options = new MicrosoftIdentityMessageHandlerOptions();
+            options.Scopes.Add("https://graph.microsoft.com/.default");
+            options.Scopes.Add("https://myapi.domain.com/access");
+            </code>
+        </example>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

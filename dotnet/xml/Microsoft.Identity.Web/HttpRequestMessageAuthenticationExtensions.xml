@@ -1,0 +1,208 @@
+<Type Name="HttpRequestMessageAuthenticationExtensions" FullName="Microsoft.Identity.Web.HttpRequestMessageAuthenticationExtensions">
+  <TypeSignature Language="C#" Value="public static class HttpRequestMessageAuthenticationExtensions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit HttpRequestMessageAuthenticationExtensions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Web.HttpRequestMessageAuthenticationExtensions" />
+  <TypeSignature Language="VB.NET" Value="Public Module HttpRequestMessageAuthenticationExtensions" />
+  <TypeSignature Language="F#" Value="type HttpRequestMessageAuthenticationExtensions = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Extension methods for <see cref="T:System.Net.Http.HttpRequestMessage" /> to configure per-request authentication options
+            when using <see cref="T:Microsoft.Identity.Web.MicrosoftIdentityMessageHandler" />.
+            </summary>
+    <remarks>
+            These extension methods enable flexible per-request authentication configuration that can override
+            or supplement the default options configured in the message handler. The methods support both
+            modern .NET (using HttpRequestMessage.Options) and legacy frameworks 
+            (using HttpRequestMessage.Properties).
+            </remarks>
+    <example>
+      <para>Setting authentication options with an object:</para>
+      <code>
+            var request = new HttpRequestMessage(HttpMethod.Get, "/api/data")
+                .WithAuthenticationOptions(new MicrosoftIdentityMessageHandlerOptions
+                {
+                    Scopes = { "custom.scope" }
+                });
+            </code>
+      <para>Configuring authentication options with a delegate:</para>
+      <code>
+            var request = new HttpRequestMessage(HttpMethod.Get, "/api/data")
+                .WithAuthenticationOptions(options =&gt;
+                {
+                    options.Scopes.Add("https://graph.microsoft.com/.default");
+                    options.WithAgentIdentity("agent-guid");
+                    options.RequestAppToken = true;
+                });
+            </code>
+    </example>
+  </Docs>
+  <Members>
+    <Member MemberName="GetAuthenticationOptions">
+      <MemberSignature Language="C#" Value="public static Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions? GetAuthenticationOptions (this System.Net.Http.HttpRequestMessage request);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions GetAuthenticationOptions(class System.Net.Http.HttpRequestMessage request) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.HttpRequestMessageAuthenticationExtensions.GetAuthenticationOptions(System.Net.Http.HttpRequestMessage)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function GetAuthenticationOptions (request As HttpRequestMessage) As MicrosoftIdentityMessageHandlerOptions" />
+      <MemberSignature Language="F#" Value="static member GetAuthenticationOptions : System.Net.Http.HttpRequestMessage -&gt; Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions" Usage="Microsoft.Identity.Web.HttpRequestMessageAuthenticationExtensions.GetAuthenticationOptions request" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions</ReturnType>
+        <Attributes>
+          <Attribute>
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="System.Net.Http.HttpRequestMessage" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="request">The HTTP request message to examine.</param>
+        <summary>
+            Gets the authentication options that have been set for the HTTP request.
+            </summary>
+        <returns>
+            The <see cref="T:Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions" /> if previously set using 
+            <see cref="M:Microsoft.Identity.Web.HttpRequestMessageAuthenticationExtensions.WithAuthenticationOptions(System.Net.Http.HttpRequestMessage,Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions)" /> 
+            or <see cref="M:Microsoft.Identity.Web.HttpRequestMessageAuthenticationExtensions.WithAuthenticationOptions(System.Net.Http.HttpRequestMessage,System.Action{Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions})" />, 
+            otherwise <see langword="null" />.
+            </returns>
+        <remarks>
+            This method is primarily used internally by <see cref="T:Microsoft.Identity.Web.MicrosoftIdentityMessageHandler" />
+            but can also be useful for debugging or conditional logic based on authentication configuration.
+            </remarks>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when <paramref name="request" /> is <see langword="null" />.
+            </exception>
+        <example>
+          <code>
+            var request = new HttpRequestMessage(HttpMethod.Get, "/api/data")
+                .WithAuthenticationOptions(options =&gt; options.Scopes.Add("custom.scope"));
+            
+            var options = request.GetAuthenticationOptions();
+            if (options != null)
+            {
+                Console.WriteLine($"Request has {options.Scopes.Count} scopes configured.");
+            }
+            </code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="WithAuthenticationOptions">
+      <MemberSignature Language="C#" Value="public static System.Net.Http.HttpRequestMessage WithAuthenticationOptions (this System.Net.Http.HttpRequestMessage request, Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.Http.HttpRequestMessage WithAuthenticationOptions(class System.Net.Http.HttpRequestMessage request, class Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.HttpRequestMessageAuthenticationExtensions.WithAuthenticationOptions(System.Net.Http.HttpRequestMessage,Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function WithAuthenticationOptions (request As HttpRequestMessage, options As MicrosoftIdentityMessageHandlerOptions) As HttpRequestMessage" />
+      <MemberSignature Language="F#" Value="static member WithAuthenticationOptions : System.Net.Http.HttpRequestMessage * Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions -&gt; System.Net.Http.HttpRequestMessage" Usage="Microsoft.Identity.Web.HttpRequestMessageAuthenticationExtensions.WithAuthenticationOptions (request, options)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Http.HttpRequestMessage</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="System.Net.Http.HttpRequestMessage" RefType="this" />
+        <Parameter Name="options" Type="Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions" />
+      </Parameters>
+      <Docs>
+        <param name="request">The HTTP request message to configure.</param>
+        <param name="options">The authentication options to apply to this request.</param>
+        <summary>
+            Sets authentication options for the HTTP request.
+            </summary>
+        <returns>The same request message for method chaining.</returns>
+        <remarks>
+            This method will override any existing authentication options set on the request.
+            The options object can be further configured with extension methods from other Microsoft Identity Web packages.
+            </remarks>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when <paramref name="request" /> or <paramref name="options" /> is <see langword="null" />.
+            </exception>
+        <example>
+          <code>
+            var options = new MicrosoftIdentityMessageHandlerOptions
+            {
+                Scopes = { "https://graph.microsoft.com/.default" }
+            };
+            options.WithAgentIdentity("my-agent-guid");
+            
+            var request = new HttpRequestMessage(HttpMethod.Get, "/me")
+                .WithAuthenticationOptions(options);
+            </code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="WithAuthenticationOptions">
+      <MemberSignature Language="C#" Value="public static System.Net.Http.HttpRequestMessage WithAuthenticationOptions (this System.Net.Http.HttpRequestMessage request, Action&lt;Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions&gt; configure);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.Http.HttpRequestMessage WithAuthenticationOptions(class System.Net.Http.HttpRequestMessage request, class System.Action`1&lt;class Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions&gt; configure) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.HttpRequestMessageAuthenticationExtensions.WithAuthenticationOptions(System.Net.Http.HttpRequestMessage,System.Action{Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions})" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function WithAuthenticationOptions (request As HttpRequestMessage, configure As Action(Of MicrosoftIdentityMessageHandlerOptions)) As HttpRequestMessage" />
+      <MemberSignature Language="F#" Value="static member WithAuthenticationOptions : System.Net.Http.HttpRequestMessage * Action&lt;Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions&gt; -&gt; System.Net.Http.HttpRequestMessage" Usage="Microsoft.Identity.Web.HttpRequestMessageAuthenticationExtensions.WithAuthenticationOptions (request, configure)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Http.HttpRequestMessage</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="System.Net.Http.HttpRequestMessage" RefType="this" />
+        <Parameter Name="configure" Type="System.Action&lt;Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="request">The HTTP request message to configure.</param>
+        <param name="configure">A delegate that configures the authentication options.</param>
+        <summary>
+            Configures authentication options for the HTTP request using a delegate.
+            </summary>
+        <returns>The same request message for method chaining.</returns>
+        <remarks>
+          <para>
+            If the request already has authentication options configured, the delegate will receive
+            the existing options object to modify. Otherwise, a new <see cref="T:Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions" /> 
+            instance will be created and passed to the delegate.
+            </para>
+          <para>
+            This method is particularly useful when you need to apply extension methods from other
+            Microsoft Identity Web packages, such as agent identity methods.
+            </para>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when <paramref name="request" /> or <paramref name="configure" /> is <see langword="null" />.
+            </exception>
+        <example>
+          <code>
+            var request = new HttpRequestMessage(HttpMethod.Get, "/api/users")
+                .WithAuthenticationOptions(options =&gt;
+                {
+                    options.Scopes.Add("https://myapi.domain.com/user.read");
+                    options.WithAgentIdentity("agent-application-id");
+                    options.RequestAppToken = true;
+                });
+            </code>
+        </example>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

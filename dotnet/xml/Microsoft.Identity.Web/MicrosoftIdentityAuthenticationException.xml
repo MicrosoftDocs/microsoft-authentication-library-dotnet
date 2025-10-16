@@ -1,0 +1,154 @@
+<Type Name="MicrosoftIdentityAuthenticationException" FullName="Microsoft.Identity.Web.MicrosoftIdentityAuthenticationException">
+  <TypeSignature Language="C#" Value="public class MicrosoftIdentityAuthenticationException : Exception" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MicrosoftIdentityAuthenticationException extends System.Exception" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Web.MicrosoftIdentityAuthenticationException" />
+  <TypeSignature Language="VB.NET" Value="Public Class MicrosoftIdentityAuthenticationException&#xA;Inherits Exception" />
+  <TypeSignature Language="F#" Value="type MicrosoftIdentityAuthenticationException = class&#xA;    inherit Exception" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Exception thrown when authentication fails during HTTP message handling by <see cref="T:Microsoft.Identity.Web.MicrosoftIdentityMessageHandler" />.
+            </summary>
+    <remarks>
+      <para>
+            This exception is typically thrown in the following scenarios:
+            </para>
+      <list type="bullet">
+        <item>
+          <description>No authentication options are configured (neither default nor per-request)</description>
+        </item>
+        <item>
+          <description>No scopes are specified in the authentication options</description>
+        </item>
+        <item>
+          <description>Token acquisition fails due to authentication provider issues</description>
+        </item>
+      </list>
+      <para>
+        <strong>Note on WWW-Authenticate Challenge Handling:</strong>
+            When a downstream API returns a 401 Unauthorized response with a WWW-Authenticate header containing 
+            additional claims (e.g., for Conditional Access), the handler automatically extracts these claims using 
+            <see cref="T:Microsoft.Identity.Client.WwwAuthenticateParameters" /> and attempts to acquire a new token 
+            with the requested claims. If this automatic retry succeeds, no exception is thrown. If the retry also 
+            fails with a 401, the response is returned to the caller without throwing an exception - the caller 
+            should check the status code. Exceptions are only thrown for token acquisition failures, not for 
+            HTTP 401 responses themselves.
+            </para>
+      <para>
+            When handling this exception, examine the <see cref="P:System.Exception.Message" /> property for specific details
+            about what caused the authentication failure. If an inner exception is present, it may contain
+            additional information from the underlying authentication provider.
+            </para>
+    </remarks>
+    <example>
+      <para>Typical exception handling pattern:</para>
+      <code>
+            try
+            {
+                var response = await httpClient.SendAsync(request, cancellationToken);
+                response.EnsureSuccessStatusCode();
+            }
+            catch (MicrosoftIdentityAuthenticationException authEx)
+            {
+                // Handle authentication-specific failures
+                logger.LogError(authEx, "Authentication failed: {Message}", authEx.Message);
+                throw; // Re-throw or handle as appropriate
+            }
+            catch (HttpRequestException httpEx)
+            {
+                // Handle other HTTP-related failures
+                logger.LogError(httpEx, "HTTP request failed: {Message}", httpEx.Message);
+            }
+            </code>
+    </example>
+    <altmember cref="T:Microsoft.Identity.Web.MicrosoftIdentityMessageHandler" />
+    <altmember cref="T:Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions" />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MicrosoftIdentityAuthenticationException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.MicrosoftIdentityAuthenticationException.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (message As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Identity.Web.MicrosoftIdentityAuthenticationException : string -&gt; Microsoft.Identity.Web.MicrosoftIdentityAuthenticationException" Usage="new Microsoft.Identity.Web.MicrosoftIdentityAuthenticationException message" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">The error message that explains the reason for the exception.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Identity.Web.MicrosoftIdentityAuthenticationException" /> class
+            with a specified error message.
+            </summary>
+        <remarks>To be added.</remarks>
+        <example>
+          <code>
+            throw new MicrosoftIdentityAuthenticationException(
+                "Authentication options must be configured either in default options or per-request using WithAuthenticationOptions().");
+            </code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MicrosoftIdentityAuthenticationException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.MicrosoftIdentityAuthenticationException.#ctor(System.String,System.Exception)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (message As String, innerException As Exception)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Identity.Web.MicrosoftIdentityAuthenticationException : string * Exception -&gt; Microsoft.Identity.Web.MicrosoftIdentityAuthenticationException" Usage="new Microsoft.Identity.Web.MicrosoftIdentityAuthenticationException (message, innerException)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">The error message that explains the reason for the exception.</param>
+        <param name="innerException">
+            The exception that is the cause of the current exception, or <see langword="null" />
+            if no inner exception is specified.
+            </param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Identity.Web.MicrosoftIdentityAuthenticationException" /> class
+            with a specified error message and a reference to the inner exception that is the cause of this exception.
+            </summary>
+        <remarks>
+            Use this constructor when you want to preserve the original exception that caused the authentication failure,
+            such as exceptions from the underlying token acquisition provider.
+            </remarks>
+        <example>
+          <code>
+            try
+            {
+                var authHeader = await headerProvider.CreateAuthorizationHeaderAsync(scopes, options);
+            }
+            catch (Exception ex)
+            {
+                throw new MicrosoftIdentityAuthenticationException("Failed to acquire authorization header.", ex);
+            }
+            </code>
+        </example>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
