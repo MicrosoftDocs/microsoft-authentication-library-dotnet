@@ -48,6 +48,7 @@
     <AssemblyVersion>4.77.0.0</AssemblyVersion>
     <AssemblyVersion>4.77.1.0</AssemblyVersion>
     <AssemblyVersion>4.78.0.0</AssemblyVersion>
+    <AssemblyVersion>4.79.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Identity.Client.BaseAbstractApplicationBuilder&lt;Microsoft.Identity.Client.ManagedIdentityApplicationBuilder&gt;</BaseTypeName>
@@ -72,7 +73,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.78.0.0</AssemblyVersion>
+        <AssemblyVersion>4.79.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.IManagedIdentityApplication</ReturnType>
@@ -97,7 +98,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.78.0.0</AssemblyVersion>
+        <AssemblyVersion>4.79.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ManagedIdentityApplicationBuilder</ReturnType>
@@ -129,7 +130,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.78.0.0</AssemblyVersion>
+        <AssemblyVersion>4.79.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ManagedIdentityApplicationBuilder</ReturnType>
@@ -151,6 +152,40 @@
             </remarks>
       </Docs>
     </Member>
+    <Member MemberName="WithExtraQueryParameters">
+      <MemberSignature Language="C#" Value="public Microsoft.Identity.Client.ManagedIdentityApplicationBuilder WithExtraQueryParameters (System.Collections.Generic.IDictionary&lt;string,string&gt; extraQueryParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Identity.Client.ManagedIdentityApplicationBuilder WithExtraQueryParameters(class System.Collections.Generic.IDictionary`2&lt;string, string&gt; extraQueryParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.ManagedIdentityApplicationBuilder.WithExtraQueryParameters(System.Collections.Generic.IDictionary{System.String,System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithExtraQueryParameters (extraQueryParameters As IDictionary(Of String, String)) As ManagedIdentityApplicationBuilder" />
+      <MemberSignature Language="F#" Value="member this.WithExtraQueryParameters : System.Collections.Generic.IDictionary&lt;string, string&gt; -&gt; Microsoft.Identity.Client.ManagedIdentityApplicationBuilder" Usage="managedIdentityApplicationBuilder.WithExtraQueryParameters extraQueryParameters" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.79.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.ManagedIdentityApplicationBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="extraQueryParameters" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="extraQueryParameters">This parameter will be appended as is to the query string in the HTTP authentication request to the authority
+            as a string of segments of the form <c>key=value</c> separated by an ampersand character.
+            The parameter can be null.</param>
+        <summary>
+            Sets Extra Query Parameters for the query string in the HTTP authentication request.
+            </summary>
+        <returns>The builder to chain the .With methods.</returns>
+        <remarks>This API is experimental and it may change in future versions of the library without a major version increment</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="WithTelemetryClient">
       <MemberSignature Language="C#" Value="public Microsoft.Identity.Client.ManagedIdentityApplicationBuilder WithTelemetryClient (params Microsoft.IdentityModel.Abstractions.ITelemetryClient[] telemetryClients);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Identity.Client.ManagedIdentityApplicationBuilder WithTelemetryClient(class Microsoft.IdentityModel.Abstractions.ITelemetryClient[] telemetryClients) cil managed" />
@@ -160,7 +195,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.78.0.0</AssemblyVersion>
+        <AssemblyVersion>4.79.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
