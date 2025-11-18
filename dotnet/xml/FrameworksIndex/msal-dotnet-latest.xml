@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.Identity.Client.Broker" Version="4.77.1.0" />
-    <Assembly Name="Microsoft.Identity.Client.Desktop" Version="4.77.1.0" />
-    <Assembly Name="Microsoft.Identity.Client" Version="4.77.1.0" />
+    <Assembly Name="Microsoft.Identity.Client.Broker" Version="4.79.1.0" />
+    <Assembly Name="Microsoft.Identity.Client.Desktop" Version="4.79.1.0" />
+    <Assembly Name="Microsoft.Identity.Client" Version="4.79.1.0" />
   </Assemblies>
   <Namespace Name="Microsoft.Identity.Client">
     <Type Name="Microsoft.Identity.Client.AadAuthorityAudience" Id="T:Microsoft.Identity.Client.AadAuthorityAudience">
@@ -45,6 +45,7 @@
       <Member Id="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithClientCapabilities(System.Collections.Generic.IEnumerable{System.String})" />
       <Member Id="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithClientId(System.String)" />
       <Member Id="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithExtraQueryParameters(System.Collections.Generic.IDictionary{System.String,System.String})" />
+      <Member Id="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithExtraQueryParameters(System.Collections.Generic.IDictionary{System.String,System.ValueTuple{System.String,System.Boolean}})" />
       <Member Id="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithExtraQueryParameters(System.String)" />
       <Member Id="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithInstanceDicoveryMetadata(System.String)" />
       <Member Id="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithInstanceDicoveryMetadata(System.Uri)" />
@@ -153,7 +154,9 @@
       <Member Id="M:Microsoft.Identity.Client.AcquireTokenWithDeviceCodeParameterBuilder.Validate" />
       <Member Id="M:Microsoft.Identity.Client.AcquireTokenWithDeviceCodeParameterBuilder.WithDeviceCodeResultCallback(System.Func{Microsoft.Identity.Client.DeviceCodeResult,System.Threading.Tasks.Task})" />
     </Type>
-    <Type Name="Microsoft.Identity.Client.ApplicationBase" Id="T:Microsoft.Identity.Client.ApplicationBase" />
+    <Type Name="Microsoft.Identity.Client.ApplicationBase" Id="T:Microsoft.Identity.Client.ApplicationBase">
+      <Member Id="M:Microsoft.Identity.Client.ApplicationBase.ResetStateForTest" />
+    </Type>
     <Type Name="Microsoft.Identity.Client.ApplicationOptions" Id="T:Microsoft.Identity.Client.ApplicationOptions">
       <Member Id="M:Microsoft.Identity.Client.ApplicationOptions.#ctor" />
       <Member Id="P:Microsoft.Identity.Client.ApplicationOptions.AadAuthorityAudience" />
@@ -243,6 +246,7 @@
       <Member Id="M:Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder`1.Validate" />
       <Member Id="M:Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder`1.WithCorrelationId(System.Guid)" />
       <Member Id="M:Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder`1.WithExtraQueryParameters(System.Collections.Generic.Dictionary{System.String,System.String})" />
+      <Member Id="M:Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder`1.WithExtraQueryParameters(System.Collections.Generic.IDictionary{System.String,System.ValueTuple{System.String,System.Boolean}})" />
     </Type>
     <Type Name="Microsoft.Identity.Client.BaseAbstractApplicationBuilder`1" Id="T:Microsoft.Identity.Client.BaseAbstractApplicationBuilder`1">
       <Member Id="M:Microsoft.Identity.Client.BaseAbstractApplicationBuilder`1.WithClientName(System.String)" />
@@ -436,6 +440,9 @@
     <Type Name="Microsoft.Identity.Client.IMsalHttpClientFactory" Id="T:Microsoft.Identity.Client.IMsalHttpClientFactory">
       <Member Id="M:Microsoft.Identity.Client.IMsalHttpClientFactory.GetHttpClient" />
     </Type>
+    <Type Name="Microsoft.Identity.Client.IMsalMtlsHttpClientFactory" Id="T:Microsoft.Identity.Client.IMsalMtlsHttpClientFactory">
+      <Member Id="M:Microsoft.Identity.Client.IMsalMtlsHttpClientFactory.GetHttpClient(System.Security.Cryptography.X509Certificates.X509Certificate2)" />
+    </Type>
     <Type Name="Microsoft.Identity.Client.IMsalSFHttpClientFactory" Id="T:Microsoft.Identity.Client.IMsalSFHttpClientFactory">
       <Member Id="M:Microsoft.Identity.Client.IMsalSFHttpClientFactory.GetHttpClient(System.Func{System.Net.Http.HttpRequestMessage,System.Security.Cryptography.X509Certificates.X509Certificate2,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors,System.Boolean})" />
     </Type>
@@ -494,11 +501,13 @@
     <Type Name="Microsoft.Identity.Client.ManagedIdentityApplication" Id="T:Microsoft.Identity.Client.ManagedIdentityApplication">
       <Member Id="M:Microsoft.Identity.Client.ManagedIdentityApplication.AcquireTokenForManagedIdentity(System.String)" />
       <Member Id="M:Microsoft.Identity.Client.ManagedIdentityApplication.GetManagedIdentitySource" />
+      <Member Id="M:Microsoft.Identity.Client.ManagedIdentityApplication.GetManagedIdentitySourceAsync" />
     </Type>
     <Type Name="Microsoft.Identity.Client.ManagedIdentityApplicationBuilder" Id="T:Microsoft.Identity.Client.ManagedIdentityApplicationBuilder">
       <Member Id="M:Microsoft.Identity.Client.ManagedIdentityApplicationBuilder.Build" />
       <Member Id="M:Microsoft.Identity.Client.ManagedIdentityApplicationBuilder.Create(Microsoft.Identity.Client.AppConfig.ManagedIdentityId)" />
       <Member Id="M:Microsoft.Identity.Client.ManagedIdentityApplicationBuilder.WithClientCapabilities(System.Collections.Generic.IEnumerable{System.String})" />
+      <Member Id="M:Microsoft.Identity.Client.ManagedIdentityApplicationBuilder.WithExtraQueryParameters(System.Collections.Generic.IDictionary{System.String,System.String})" />
       <Member Id="M:Microsoft.Identity.Client.ManagedIdentityApplicationBuilder.WithTelemetryClient(Microsoft.IdentityModel.Abstractions.ITelemetryClient[])" />
     </Type>
     <Type Name="Microsoft.Identity.Client.Metrics" Id="T:Microsoft.Identity.Client.Metrics">
@@ -542,6 +551,7 @@
       <Member Id="F:Microsoft.Identity.Client.MsalError.BrokerResponseReturnedError" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.CannotAccessUserInformationOrUserNotDomainJoined" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.CannotInvokeBroker" />
+      <Member Id="F:Microsoft.Identity.Client.MsalError.CannotSwitchBetweenImdsVersionsForPreview" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.CertificateNotRsa" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.CertWithoutPrivateKey" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.ClientCredentialAuthenticationTypeMustBeDefined" />
@@ -577,6 +587,7 @@
       <Member Id="F:Microsoft.Identity.Client.MsalError.InvalidAuthority" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.InvalidAuthorityType" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.InvalidAuthorizationUri" />
+      <Member Id="F:Microsoft.Identity.Client.MsalError.InvalidCertificate" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.InvalidClient" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.InvalidClientAssertion" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.InvalidGrantError" />
@@ -602,6 +613,8 @@
       <Member Id="F:Microsoft.Identity.Client.MsalError.MissingPassiveAuthEndpoint" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.MissingTenantedAuthority" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.MtlsCertificateNotProvided" />
+      <Member Id="F:Microsoft.Identity.Client.MsalError.MtlsNotSupportedForManagedIdentity" />
+      <Member Id="F:Microsoft.Identity.Client.MsalError.MtlsPopTokenNotSupportedinImdsV1" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.MtlsPopWithoutRegion" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.MultipleAccountsForLoginHint" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.MultipleTokensMatchedError" />
@@ -1078,6 +1091,7 @@
       <Member Id="F:Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySource.CloudShell" />
       <Member Id="F:Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySource.DefaultToImds" />
       <Member Id="F:Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySource.Imds" />
+      <Member Id="F:Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySource.ImdsV2" />
       <Member Id="F:Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySource.MachineLearning" />
       <Member Id="F:Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySource.None" />
       <Member Id="F:Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySource.ServiceFabric" />

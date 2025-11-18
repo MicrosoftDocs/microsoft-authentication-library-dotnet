@@ -1,0 +1,59 @@
+<Type Name="IMsalMtlsHttpClientFactory" FullName="Microsoft.Identity.Client.IMsalMtlsHttpClientFactory">
+  <TypeSignature Language="C#" Value="public interface IMsalMtlsHttpClientFactory : Microsoft.Identity.Client.IMsalHttpClientFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IMsalMtlsHttpClientFactory implements class Microsoft.Identity.Client.IMsalHttpClientFactory" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Client.IMsalMtlsHttpClientFactory" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IMsalMtlsHttpClientFactory&#xA;Implements IMsalHttpClientFactory" />
+  <TypeSignature Language="F#" Value="type IMsalMtlsHttpClientFactory = interface&#xA;    interface IMsalHttpClientFactory" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+    <AssemblyVersion>4.79.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Identity.Client.IMsalHttpClientFactory</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            A factory responsible for creating HttpClient instances configured for mutual TLS (mTLS).
+            This factory is intended for use to secure communication with Azure AD using mTLS.
+            For more details on HttpClient instancing, see https://learn.microsoft.com/en-us/dotnet/api/system.net.http.httpclient?view=net-8.0#instancing.
+            </summary>
+    <remarks>
+            Implementations of this interface must be thread-safe.
+            It is important to reuse HttpClient instances to avoid socket exhaustion.
+            Do not create a new HttpClient for each call to <see cref="M:Microsoft.Identity.Client.IMsalMtlsHttpClientFactory.GetHttpClient(System.Security.Cryptography.X509Certificates.X509Certificate2)" />.
+            If your application requires Integrated Windows Authentication, set <see cref="P:System.Net.Http.HttpClientHandler.UseDefaultCredentials" /> to true.
+            This interface is designed to support mTLS scenarios.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetHttpClient">
+      <MemberSignature Language="C#" Value="public System.Net.Http.HttpClient GetHttpClient (System.Security.Cryptography.X509Certificates.X509Certificate2 x509Certificate2);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Net.Http.HttpClient GetHttpClient(class System.Security.Cryptography.X509Certificates.X509Certificate2 x509Certificate2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.IMsalMtlsHttpClientFactory.GetHttpClient(System.Security.Cryptography.X509Certificates.X509Certificate2)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetHttpClient (x509Certificate2 As X509Certificate2) As HttpClient" />
+      <MemberSignature Language="F#" Value="abstract member GetHttpClient : System.Security.Cryptography.X509Certificates.X509Certificate2 -&gt; System.Net.Http.HttpClient" Usage="iMsalMtlsHttpClientFactory.GetHttpClient x509Certificate2" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.79.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Http.HttpClient</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x509Certificate2" Type="System.Security.Cryptography.X509Certificates.X509Certificate2" />
+      </Parameters>
+      <Docs>
+        <param name="x509Certificate2">The certificate to be used for MTLS authentication.</param>
+        <summary>
+            Returns an HttpClient configured with a certificate for mutual TLS authentication.
+            This method enables advanced MTLS scenarios within Azure AD communications in MSAL.
+            </summary>
+        <returns>An HttpClient instance configured with the specified certificate.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
