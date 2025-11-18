@@ -47,6 +47,8 @@
     <AssemblyVersion>4.76.0.0</AssemblyVersion>
     <AssemblyVersion>4.77.0.0</AssemblyVersion>
     <AssemblyVersion>4.77.1.0</AssemblyVersion>
+    <AssemblyVersion>4.78.0.0</AssemblyVersion>
+    <AssemblyVersion>4.79.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -61,5 +63,29 @@
     <remarks>To be added.</remarks>
     <inheritdoc />
   </Docs>
-  <Members />
+  <Members>
+    <Member MemberName="ResetStateForTest">
+      <MemberSignature Language="C#" Value="public static void ResetStateForTest ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ResetStateForTest() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.ApplicationBase.ResetStateForTest" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub ResetStateForTest ()" />
+      <MemberSignature Language="F#" Value="static member ResetStateForTest : unit -&gt; unit" Usage="Microsoft.Identity.Client.ApplicationBase.ResetStateForTest " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.79.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Resets the SDKs internal state, such as static caches, to facilitate testing. 
+            This API is meant to be used by other SDKs that build on top of MSAL, and only by test code.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
 </Type>

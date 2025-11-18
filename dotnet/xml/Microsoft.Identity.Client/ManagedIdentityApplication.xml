@@ -47,6 +47,8 @@
     <AssemblyVersion>4.76.0.0</AssemblyVersion>
     <AssemblyVersion>4.77.0.0</AssemblyVersion>
     <AssemblyVersion>4.77.1.0</AssemblyVersion>
+    <AssemblyVersion>4.78.0.0</AssemblyVersion>
+    <AssemblyVersion>4.79.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Identity.Client.ApplicationBase</BaseTypeName>
@@ -80,7 +82,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.77.1.0</AssemblyVersion>
+        <AssemblyVersion>4.79.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder</ReturnType>
@@ -105,8 +107,14 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.77.1.0</AssemblyVersion>
+        <AssemblyVersion>4.79.1.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("Use GetManagedIdentitySourceAsync() instead. "ManagedIdentityApplication mi = miBuilder.Build() as ManagedIdentityApplication;"")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use GetManagedIdentitySourceAsync() instead. "ManagedIdentityApplication mi = miBuilder.Build() as ManagedIdentityApplication;"")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySource</ReturnType>
       </ReturnValue>
@@ -117,6 +125,28 @@
             </summary>
         <returns>Managed identity source detected on the environment if any.</returns>
         <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetManagedIdentitySourceAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySource&gt; GetManagedIdentitySourceAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;valuetype Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySource&gt; GetManagedIdentitySourceAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.ManagedIdentityApplication.GetManagedIdentitySourceAsync" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetManagedIdentitySourceAsync () As Task(Of ManagedIdentitySource)" />
+      <MemberSignature Language="F#" Value="member this.GetManagedIdentitySourceAsync : unit -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySource&gt;" Usage="managedIdentityApplication.GetManagedIdentitySourceAsync " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.79.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySource&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
       </Docs>
     </Member>
   </Members>
