@@ -6,6 +6,7 @@
     <Assembly Name="Microsoft.Identity.Web.Certificate" Version="4.1.1.0" />
     <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="4.1.1.0" />
     <Assembly Name="Microsoft.Identity.Web" Version="4.1.1.0" />
+    <Assembly Name="Microsoft.Identity.Web.DownstreamApi" Version="4.1.1.0" />
     <Assembly Name="Microsoft.Identity.Web.DownstreamRestApi" Version="2.0.8.0" />
     <Assembly Name="Microsoft.Identity.Web.MicrosoftGraph" Version="4.1.1.0" />
     <Assembly Name="Microsoft.Identity.Web.MicrosoftGraphBeta" Version="4.1.1.0" />
@@ -509,6 +510,11 @@
       <Member Id="M:Microsoft.Identity.Web.DefaultCredentialsLoader.ResetCredentials(System.Collections.Generic.IEnumerable{Microsoft.Identity.Abstractions.CredentialDescription})" />
       <Member Id="P:Microsoft.Identity.Web.DefaultCredentialsLoader.CredentialSourceLoaders" />
       <Member Id="P:Microsoft.Identity.Web.DefaultCredentialsLoader.CustomSignedAssertionCredentialSourceLoaders" />
+    </Type>
+    <Type Name="Microsoft.Identity.Web.DownstreamApiExtensions" Id="T:Microsoft.Identity.Web.DownstreamApiExtensions">
+      <Member Id="M:Microsoft.Identity.Web.DownstreamApiExtensions.AddDownstreamApi(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,Microsoft.Extensions.Configuration.IConfiguration)" />
+      <Member Id="M:Microsoft.Identity.Web.DownstreamApiExtensions.AddDownstreamApi(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.Action{Microsoft.Identity.Abstractions.DownstreamApiOptions})" />
+      <Member Id="M:Microsoft.Identity.Web.DownstreamApiExtensions.AddDownstreamApis(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfigurationSection)" />
     </Type>
     <Type Name="Microsoft.Identity.Web.DownstreamRestApiExtensions" Id="T:Microsoft.Identity.Web.DownstreamRestApiExtensions">
       <Member Id="M:Microsoft.Identity.Web.DownstreamRestApiExtensions.AddDownstreamRestApi(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,Microsoft.Extensions.Configuration.IConfiguration)" />

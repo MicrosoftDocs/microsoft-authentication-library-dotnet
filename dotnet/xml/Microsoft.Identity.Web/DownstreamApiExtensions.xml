@@ -1,0 +1,114 @@
+<Type Name="DownstreamApiExtensions" FullName="Microsoft.Identity.Web.DownstreamApiExtensions">
+  <TypeSignature Language="C#" Value="public static class DownstreamApiExtensions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit DownstreamApiExtensions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Web.DownstreamApiExtensions" />
+  <TypeSignature Language="VB.NET" Value="Public Module DownstreamApiExtensions" />
+  <TypeSignature Language="F#" Value="type DownstreamApiExtensions = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Web.DownstreamApi</AssemblyName>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Extension methods to support downstream API services.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddDownstreamApi">
+      <MemberSignature Language="C#" Value="public static Microsoft.Extensions.DependencyInjection.IServiceCollection AddDownstreamApi (this Microsoft.Extensions.DependencyInjection.IServiceCollection services, string serviceName, Microsoft.Extensions.Configuration.IConfiguration configuration);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Extensions.DependencyInjection.IServiceCollection AddDownstreamApi(class Microsoft.Extensions.DependencyInjection.IServiceCollection services, string serviceName, class Microsoft.Extensions.Configuration.IConfiguration configuration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.DownstreamApiExtensions.AddDownstreamApi(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,Microsoft.Extensions.Configuration.IConfiguration)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function AddDownstreamApi (services As IServiceCollection, serviceName As String, configuration As IConfiguration) As IServiceCollection" />
+      <MemberSignature Language="F#" Value="static member AddDownstreamApi : Microsoft.Extensions.DependencyInjection.IServiceCollection * string * Microsoft.Extensions.Configuration.IConfiguration -&gt; Microsoft.Extensions.DependencyInjection.IServiceCollection" Usage="Microsoft.Identity.Web.DownstreamApiExtensions.AddDownstreamApi (services, serviceName, configuration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.DownstreamApi</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="services" Type="Microsoft.Extensions.DependencyInjection.IServiceCollection" RefType="this" />
+        <Parameter Name="serviceName" Type="System.String" />
+        <Parameter Name="configuration" Type="Microsoft.Extensions.Configuration.IConfiguration" />
+      </Parameters>
+      <Docs>
+        <param name="services">services.</param>
+        <param name="serviceName">Name of the configuration for the service.
+            This is the name used when calling the service from controller/pages.</param>
+        <param name="configuration">Configuration.</param>
+        <summary>
+            Adds a named downstream API service related to a specific configuration section.
+            </summary>
+        <returns>The builder for chaining.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddDownstreamApi">
+      <MemberSignature Language="C#" Value="public static Microsoft.Extensions.DependencyInjection.IServiceCollection AddDownstreamApi (this Microsoft.Extensions.DependencyInjection.IServiceCollection services, string serviceName, Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptions&gt; configureOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Extensions.DependencyInjection.IServiceCollection AddDownstreamApi(class Microsoft.Extensions.DependencyInjection.IServiceCollection services, string serviceName, class System.Action`1&lt;class Microsoft.Identity.Abstractions.DownstreamApiOptions&gt; configureOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.DownstreamApiExtensions.AddDownstreamApi(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.Action{Microsoft.Identity.Abstractions.DownstreamApiOptions})" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function AddDownstreamApi (services As IServiceCollection, serviceName As String, configureOptions As Action(Of DownstreamApiOptions)) As IServiceCollection" />
+      <MemberSignature Language="F#" Value="static member AddDownstreamApi : Microsoft.Extensions.DependencyInjection.IServiceCollection * string * Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptions&gt; -&gt; Microsoft.Extensions.DependencyInjection.IServiceCollection" Usage="Microsoft.Identity.Web.DownstreamApiExtensions.AddDownstreamApi (services, serviceName, configureOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.DownstreamApi</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="services" Type="Microsoft.Extensions.DependencyInjection.IServiceCollection" RefType="this" />
+        <Parameter Name="serviceName" Type="System.String" />
+        <Parameter Name="configureOptions" Type="System.Action&lt;Microsoft.Identity.Abstractions.DownstreamApiOptions&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="services">services.</param>
+        <param name="serviceName">Name of the configuration for the service.
+            This is the name which will be used when calling the service from controller/pages.</param>
+        <param name="configureOptions">Action to configure the options.</param>
+        <summary>
+            Adds a named downstream API service initialized with delegates.
+            </summary>
+        <returns>The builder for chaining.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddDownstreamApis">
+      <MemberSignature Language="C#" Value="public static Microsoft.Extensions.DependencyInjection.IServiceCollection AddDownstreamApis (this Microsoft.Extensions.DependencyInjection.IServiceCollection services, Microsoft.Extensions.Configuration.IConfigurationSection configurationSection);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Extensions.DependencyInjection.IServiceCollection AddDownstreamApis(class Microsoft.Extensions.DependencyInjection.IServiceCollection services, class Microsoft.Extensions.Configuration.IConfigurationSection configurationSection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.DownstreamApiExtensions.AddDownstreamApis(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfigurationSection)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function AddDownstreamApis (services As IServiceCollection, configurationSection As IConfigurationSection) As IServiceCollection" />
+      <MemberSignature Language="F#" Value="static member AddDownstreamApis : Microsoft.Extensions.DependencyInjection.IServiceCollection * Microsoft.Extensions.Configuration.IConfigurationSection -&gt; Microsoft.Extensions.DependencyInjection.IServiceCollection" Usage="Microsoft.Identity.Web.DownstreamApiExtensions.AddDownstreamApis (services, configurationSection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.DownstreamApi</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="services" Type="Microsoft.Extensions.DependencyInjection.IServiceCollection" RefType="this" />
+        <Parameter Name="configurationSection" Type="Microsoft.Extensions.Configuration.IConfigurationSection" />
+      </Parameters>
+      <Docs>
+        <param name="services">
+            This is the name used when calling the service from controller/pages.</param>
+        <param name="configurationSection">Configuration section.</param>
+        <summary>
+            Adds named downstream APIs related to a specific configuration section.
+            </summary>
+        <returns>The builder for chaining.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
