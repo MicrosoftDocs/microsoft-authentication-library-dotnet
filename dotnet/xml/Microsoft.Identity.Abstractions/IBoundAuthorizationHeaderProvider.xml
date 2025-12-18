@@ -1,0 +1,67 @@
+<Type Name="IBoundAuthorizationHeaderProvider" FullName="Microsoft.Identity.Abstractions.IBoundAuthorizationHeaderProvider">
+  <TypeSignature Language="C#" Value="public interface IBoundAuthorizationHeaderProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IBoundAuthorizationHeaderProvider" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Abstractions.IBoundAuthorizationHeaderProvider" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IBoundAuthorizationHeaderProvider" />
+  <TypeSignature Language="F#" Value="type IBoundAuthorizationHeaderProvider = interface" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Creates an authorization header value that the caller can use to access a protected web API, which supports either unbound or
+            bound to a certificate (for example, in an mTLS PoP scenario) tokens.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateBoundAuthorizationHeaderAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Identity.Abstractions.OperationResult&lt;Microsoft.Identity.Abstractions.AuthorizationHeaderInformation,Microsoft.Identity.Abstractions.AuthorizationHeaderError&gt;&gt; CreateBoundAuthorizationHeaderAsync (Microsoft.Identity.Abstractions.DownstreamApiOptions downstreamApiOptions, System.Security.Claims.ClaimsPrincipal? claimsPrincipal = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;valuetype Microsoft.Identity.Abstractions.OperationResult`2&lt;class Microsoft.Identity.Abstractions.AuthorizationHeaderInformation, class Microsoft.Identity.Abstractions.AuthorizationHeaderError&gt;&gt; CreateBoundAuthorizationHeaderAsync(class Microsoft.Identity.Abstractions.DownstreamApiOptions downstreamApiOptions, class System.Security.Claims.ClaimsPrincipal claimsPrincipal, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.IBoundAuthorizationHeaderProvider.CreateBoundAuthorizationHeaderAsync(Microsoft.Identity.Abstractions.DownstreamApiOptions,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateBoundAuthorizationHeaderAsync (downstreamApiOptions As DownstreamApiOptions, Optional claimsPrincipal As ClaimsPrincipal = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of OperationResult(Of AuthorizationHeaderInformation, AuthorizationHeaderError))" />
+      <MemberSignature Language="F#" Value="abstract member CreateBoundAuthorizationHeaderAsync : Microsoft.Identity.Abstractions.DownstreamApiOptions * System.Security.Claims.ClaimsPrincipal * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Abstractions.OperationResult&lt;Microsoft.Identity.Abstractions.AuthorizationHeaderInformation, Microsoft.Identity.Abstractions.AuthorizationHeaderError&gt;&gt;" Usage="iBoundAuthorizationHeaderProvider.CreateBoundAuthorizationHeaderAsync (downstreamApiOptions, claimsPrincipal, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Identity.Abstractions.OperationResult&lt;Microsoft.Identity.Abstractions.AuthorizationHeaderInformation,Microsoft.Identity.Abstractions.AuthorizationHeaderError&gt;&gt;</ReturnType>
+        <Attributes>
+          <Attribute>
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 0, 1, 1 })]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 0, 1, 1 })&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="downstreamApiOptions" Type="Microsoft.Identity.Abstractions.DownstreamApiOptions" />
+        <Parameter Name="claimsPrincipal" Type="System.Security.Claims.ClaimsPrincipal">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="downstreamApiOptions">Information about the API that will be called and token acquisition options.</param>
+        <param name="claimsPrincipal">Inbound authentication elements. In a web API, this is usually the result of the
+            validation of a token. In a web app, this would be information about the signed-in user. This is not useful in
+            daemon applications. In Microsoft.Identity.Web you rarely need to provide this parameter as it's inferred from the
+            context.</param>
+        <param name="cancellationToken">Cancellation token.</param>
+        <summary>
+            Creates the authorization header used to call a protected web API with either unbound or bound to certificate tokens.
+            </summary>
+        <returns>A result which contains authorization token with optional bound certificate</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

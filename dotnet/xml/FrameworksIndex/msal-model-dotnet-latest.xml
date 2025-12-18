@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-model-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.Identity.Abstractions" Version="9.6.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.Azure" Version="4.1.1.0" />
-    <Assembly Name="Microsoft.Identity.Web.Certificate" Version="4.1.1.0" />
-    <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="4.1.1.0" />
-    <Assembly Name="Microsoft.Identity.Web" Version="4.1.1.0" />
-    <Assembly Name="Microsoft.Identity.Web.DownstreamApi" Version="4.1.1.0" />
+    <Assembly Name="Microsoft.Identity.Abstractions" Version="10.0.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.Azure" Version="4.2.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.Certificate" Version="4.2.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="4.2.0.0" />
+    <Assembly Name="Microsoft.Identity.Web" Version="4.2.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.DownstreamApi" Version="4.2.0.0" />
     <Assembly Name="Microsoft.Identity.Web.DownstreamRestApi" Version="2.0.8.0" />
-    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraph" Version="4.1.1.0" />
-    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraphBeta" Version="4.1.1.0" />
-    <Assembly Name="Microsoft.Identity.Web.OWIN" Version="4.1.1.0" />
-    <Assembly Name="Microsoft.Identity.Web.TokenAcquisition" Version="4.1.1.0" />
-    <Assembly Name="Microsoft.Identity.Web.TokenCache" Version="4.1.1.0" />
-    <Assembly Name="Microsoft.Identity.Web.UI" Version="4.1.1.0" />
+    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraph" Version="4.2.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraphBeta" Version="4.2.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.OWIN" Version="4.2.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.TokenAcquisition" Version="4.2.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.TokenCache" Version="4.2.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.UI" Version="4.2.0.0" />
   </Assemblies>
   <Namespace Name="Microsoft.Identity.Abstractions">
     <Type Name="Microsoft.Identity.Abstractions.AcquireTokenOptions" Id="T:Microsoft.Identity.Abstractions.AcquireTokenOptions">
@@ -174,7 +174,9 @@
     <Type Name="Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider`1" Id="T:Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider`1">
       <Member Id="M:Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider`1.CreateAuthorizationHeaderAsync(Microsoft.Identity.Abstractions.DownstreamApiOptions,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)" />
     </Type>
-    <Type Name="Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider2" Id="T:Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider2" />
+    <Type Name="Microsoft.Identity.Abstractions.IBoundAuthorizationHeaderProvider" Id="T:Microsoft.Identity.Abstractions.IBoundAuthorizationHeaderProvider">
+      <Member Id="M:Microsoft.Identity.Abstractions.IBoundAuthorizationHeaderProvider.CreateBoundAuthorizationHeaderAsync(Microsoft.Identity.Abstractions.DownstreamApiOptions,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)" />
+    </Type>
     <Type Name="Microsoft.Identity.Abstractions.ICredentialsLoader" Id="T:Microsoft.Identity.Abstractions.ICredentialsLoader">
       <Member Id="M:Microsoft.Identity.Abstractions.ICredentialsLoader.LoadCredentialsIfNeededAsync(Microsoft.Identity.Abstractions.CredentialDescription,Microsoft.Identity.Abstractions.CredentialSourceLoaderParameters)" />
       <Member Id="M:Microsoft.Identity.Abstractions.ICredentialsLoader.LoadFirstValidCredentialsAsync(System.Collections.Generic.IEnumerable{Microsoft.Identity.Abstractions.CredentialDescription},Microsoft.Identity.Abstractions.CredentialSourceLoaderParameters)" />
@@ -677,6 +679,12 @@
       <Member Id="P:Microsoft.Identity.Web.MicrosoftIdentityConsentAndConditionalAccessHandler.BaseUri" />
       <Member Id="P:Microsoft.Identity.Web.MicrosoftIdentityConsentAndConditionalAccessHandler.IsBlazorServer" />
       <Member Id="P:Microsoft.Identity.Web.MicrosoftIdentityConsentAndConditionalAccessHandler.User" />
+    </Type>
+    <Type Name="Microsoft.Identity.Web.MicrosoftIdentityHttpClientBuilderExtensions" Id="T:Microsoft.Identity.Web.MicrosoftIdentityHttpClientBuilderExtensions">
+      <Member Id="M:Microsoft.Identity.Web.MicrosoftIdentityHttpClientBuilderExtensions.AddMicrosoftIdentityMessageHandler(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder)" />
+      <Member Id="M:Microsoft.Identity.Web.MicrosoftIdentityHttpClientBuilderExtensions.AddMicrosoftIdentityMessageHandler(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,Microsoft.Extensions.Configuration.IConfiguration,System.String)" />
+      <Member Id="M:Microsoft.Identity.Web.MicrosoftIdentityHttpClientBuilderExtensions.AddMicrosoftIdentityMessageHandler(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions)" />
+      <Member Id="M:Microsoft.Identity.Web.MicrosoftIdentityHttpClientBuilderExtensions.AddMicrosoftIdentityMessageHandler(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,System.Action{Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions})" />
     </Type>
     <Type Name="Microsoft.Identity.Web.MicrosoftIdentityMessageHandler" Id="T:Microsoft.Identity.Web.MicrosoftIdentityMessageHandler">
       <Member Id="M:Microsoft.Identity.Web.MicrosoftIdentityMessageHandler.#ctor(Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider,Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions,Microsoft.Extensions.Logging.ILogger{Microsoft.Identity.Web.MicrosoftIdentityMessageHandler})" />
