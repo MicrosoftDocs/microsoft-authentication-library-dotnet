@@ -50,6 +50,7 @@
     <AssemblyVersion>4.78.0.0</AssemblyVersion>
     <AssemblyVersion>4.79.1.0</AssemblyVersion>
     <AssemblyVersion>4.79.2.0</AssemblyVersion>
+    <AssemblyVersion>4.80.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Identity.Client.ApplicationBase</BaseTypeName>
@@ -83,7 +84,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.79.2.0</AssemblyVersion>
+        <AssemblyVersion>4.80.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder</ReturnType>
@@ -108,7 +109,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.79.2.0</AssemblyVersion>
+        <AssemblyVersion>4.80.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -129,21 +130,24 @@
       </Docs>
     </Member>
     <Member MemberName="GetManagedIdentitySourceAsync">
-      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySource&gt; GetManagedIdentitySourceAsync ();" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;valuetype Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySource&gt; GetManagedIdentitySourceAsync() cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.ManagedIdentityApplication.GetManagedIdentitySourceAsync" />
-      <MemberSignature Language="VB.NET" Value="Public Function GetManagedIdentitySourceAsync () As Task(Of ManagedIdentitySource)" />
-      <MemberSignature Language="F#" Value="member this.GetManagedIdentitySourceAsync : unit -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySource&gt;" Usage="managedIdentityApplication.GetManagedIdentitySourceAsync " />
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySourceResult&gt; GetManagedIdentitySourceAsync (System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySourceResult&gt; GetManagedIdentitySourceAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.ManagedIdentityApplication.GetManagedIdentitySourceAsync(System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetManagedIdentitySourceAsync (cancellationToken As CancellationToken) As Task(Of ManagedIdentitySourceResult)" />
+      <MemberSignature Language="F#" Value="member this.GetManagedIdentitySourceAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySourceResult&gt;" Usage="managedIdentityApplication.GetManagedIdentitySourceAsync cancellationToken" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.79.2.0</AssemblyVersion>
+        <AssemblyVersion>4.80.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySource&gt;</ReturnType>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySourceResult&gt;</ReturnType>
       </ReturnValue>
-      <Parameters />
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
       <Docs>
+        <param name="cancellationToken">To be added.</param>
         <summary>To be added.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>

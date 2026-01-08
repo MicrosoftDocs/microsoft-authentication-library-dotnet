@@ -1,0 +1,151 @@
+<Type Name="MsalMtlsHttpClientFactory" FullName="Microsoft.Identity.Web.MsalMtlsHttpClientFactory">
+  <TypeSignature Language="C#" Value="public sealed class MsalMtlsHttpClientFactory : IDisposable, Microsoft.Identity.Client.IMsalMtlsHttpClientFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MsalMtlsHttpClientFactory extends System.Object implements class Microsoft.Identity.Client.IMsalHttpClientFactory, class Microsoft.Identity.Client.IMsalMtlsHttpClientFactory, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Web.MsalMtlsHttpClientFactory" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class MsalMtlsHttpClientFactory&#xA;Implements IDisposable, IMsalMtlsHttpClientFactory" />
+  <TypeSignature Language="F#" Value="type MsalMtlsHttpClientFactory = class&#xA;    interface IMsalMtlsHttpClientFactory&#xA;    interface IMsalHttpClientFactory&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Identity.Client.IMsalHttpClientFactory</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Microsoft.Identity.Client.IMsalMtlsHttpClientFactory</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Provides a factory for creating HTTP clients configured for mTLS authentication with using binding certificate.
+            It uses a hybrid approach with leveraging IHttpClientFactory for non-mTLS HTTP clients and maintaining
+            a pool of mTLS clients with using certificate thumbprint as a key.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MsalMtlsHttpClientFactory (System.Net.Http.IHttpClientFactory httpClientFactory);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Net.Http.IHttpClientFactory httpClientFactory) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.MsalMtlsHttpClientFactory.#ctor(System.Net.Http.IHttpClientFactory)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (httpClientFactory As IHttpClientFactory)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Identity.Web.MsalMtlsHttpClientFactory : System.Net.Http.IHttpClientFactory -&gt; Microsoft.Identity.Web.MsalMtlsHttpClientFactory" Usage="new Microsoft.Identity.Web.MsalMtlsHttpClientFactory httpClientFactory" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="httpClientFactory" Type="System.Net.Http.IHttpClientFactory" />
+      </Parameters>
+      <Docs>
+        <param name="httpClientFactory">The factory used to create HttpClient instances for mutual TLS (mTLS) operations. Cannot be null.</param>
+        <summary>
+            Initializes a new instance of the MsalMtlsHttpClientFactory class using the specified HTTP client factory.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.MsalMtlsHttpClientFactory.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="msalMtlsHttpClientFactory.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="GetHttpClient">
+      <MemberSignature Language="C#" Value="public System.Net.Http.HttpClient GetHttpClient ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Net.Http.HttpClient GetHttpClient() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.MsalMtlsHttpClientFactory.GetHttpClient" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetHttpClient () As HttpClient" />
+      <MemberSignature Language="F#" Value="abstract member GetHttpClient : unit -&gt; System.Net.Http.HttpClient&#xA;override this.GetHttpClient : unit -&gt; System.Net.Http.HttpClient" Usage="msalMtlsHttpClientFactory.GetHttpClient " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Identity.Client.IMsalHttpClientFactory.GetHttpClient</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Http.HttpClient</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates and configures a new instance of <see cref="T:System.Net.Http.HttpClient" /> with telemetry headers applied.
+            </summary>
+        <returns>A new <see cref="T:System.Net.Http.HttpClient" /> instance with telemetry information included in the default request headers.</returns>
+        <remarks>
+            The returned <see cref="T:System.Net.Http.HttpClient" /> includes a telemetry header for tracking or
+            diagnostics purposes. Callers are responsible for disposing the <see cref="T:System.Net.Http.HttpClient" /> instance when it is
+            no longer needed.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHttpClient">
+      <MemberSignature Language="C#" Value="public System.Net.Http.HttpClient GetHttpClient (System.Security.Cryptography.X509Certificates.X509Certificate2 x509Certificate2);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Net.Http.HttpClient GetHttpClient(class System.Security.Cryptography.X509Certificates.X509Certificate2 x509Certificate2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.MsalMtlsHttpClientFactory.GetHttpClient(System.Security.Cryptography.X509Certificates.X509Certificate2)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetHttpClient (x509Certificate2 As X509Certificate2) As HttpClient" />
+      <MemberSignature Language="F#" Value="abstract member GetHttpClient : System.Security.Cryptography.X509Certificates.X509Certificate2 -&gt; System.Net.Http.HttpClient&#xA;override this.GetHttpClient : System.Security.Cryptography.X509Certificates.X509Certificate2 -&gt; System.Net.Http.HttpClient" Usage="msalMtlsHttpClientFactory.GetHttpClient x509Certificate2" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Identity.Client.IMsalMtlsHttpClientFactory.GetHttpClient(System.Security.Cryptography.X509Certificates.X509Certificate2)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Http.HttpClient</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x509Certificate2" Type="System.Security.Cryptography.X509Certificates.X509Certificate2" />
+      </Parameters>
+      <Docs>
+        <param name="x509Certificate2">The X.509 certificate to use for client authentication. If <see langword="null" />, a default <see cref="T:System.Net.Http.HttpClient" /> instance without client certificate authentication is returned.</param>
+        <summary>
+            Returns an instance of <see cref="T:System.Net.Http.HttpClient" /> configured to use the specified X.509 client certificate for
+            mutual TLS authentication.
+            </summary>
+        <returns>A <see cref="T:System.Net.Http.HttpClient" /> instance configured for mutual TLS authentication using the specified certificate or default <see cref="T:System.Net.Http.HttpClient" /> instance.</returns>
+        <remarks>
+            The returned <see cref="T:System.Net.Http.HttpClient" /> instance is pooled and reused for the given certificate.
+            The client includes a telemetry header in each request. Callers should not modify the default
+            request headers or dispose the returned instance.
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

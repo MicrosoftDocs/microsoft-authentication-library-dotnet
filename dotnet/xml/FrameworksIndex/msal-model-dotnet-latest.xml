@@ -2,18 +2,18 @@
 <Framework Name="msal-model-dotnet-latest">
   <Assemblies>
     <Assembly Name="Microsoft.Identity.Abstractions" Version="10.0.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.Azure" Version="4.2.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.Certificate" Version="4.2.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="4.2.0.0" />
-    <Assembly Name="Microsoft.Identity.Web" Version="4.2.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.DownstreamApi" Version="4.2.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.Azure" Version="4.3.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.Certificate" Version="4.3.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="4.3.0.0" />
+    <Assembly Name="Microsoft.Identity.Web" Version="4.3.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.DownstreamApi" Version="4.3.0.0" />
     <Assembly Name="Microsoft.Identity.Web.DownstreamRestApi" Version="2.0.8.0" />
-    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraph" Version="4.2.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraphBeta" Version="4.2.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.OWIN" Version="4.2.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.TokenAcquisition" Version="4.2.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.TokenCache" Version="4.2.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.UI" Version="4.2.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraph" Version="4.3.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraphBeta" Version="4.3.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.OWIN" Version="4.3.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.TokenAcquisition" Version="4.3.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.TokenCache" Version="4.3.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.UI" Version="4.3.0.0" />
   </Assemblies>
   <Namespace Name="Microsoft.Identity.Abstractions">
     <Type Name="Microsoft.Identity.Abstractions.AcquireTokenOptions" Id="T:Microsoft.Identity.Abstractions.AcquireTokenOptions">
@@ -762,6 +762,12 @@
       <Member Id="P:Microsoft.Identity.Web.MicrosoftIdentityWebChallengeUserException.MsalUiRequiredException" />
       <Member Id="P:Microsoft.Identity.Web.MicrosoftIdentityWebChallengeUserException.Scopes" />
       <Member Id="P:Microsoft.Identity.Web.MicrosoftIdentityWebChallengeUserException.Userflow" />
+    </Type>
+    <Type Name="Microsoft.Identity.Web.MsalMtlsHttpClientFactory" Id="T:Microsoft.Identity.Web.MsalMtlsHttpClientFactory">
+      <Member Id="M:Microsoft.Identity.Web.MsalMtlsHttpClientFactory.#ctor(System.Net.Http.IHttpClientFactory)" />
+      <Member Id="M:Microsoft.Identity.Web.MsalMtlsHttpClientFactory.Dispose" />
+      <Member Id="M:Microsoft.Identity.Web.MsalMtlsHttpClientFactory.GetHttpClient" />
+      <Member Id="M:Microsoft.Identity.Web.MsalMtlsHttpClientFactory.GetHttpClient(System.Security.Cryptography.X509Certificates.X509Certificate2)" />
     </Type>
     <Type Name="Microsoft.Identity.Web.PolicyBuilderExtensions" Id="T:Microsoft.Identity.Web.PolicyBuilderExtensions">
       <Member Id="M:Microsoft.Identity.Web.PolicyBuilderExtensions.RequireScope(Microsoft.AspNetCore.Authorization.AuthorizationPolicyBuilder,System.Collections.Generic.IEnumerable{System.String})" />
