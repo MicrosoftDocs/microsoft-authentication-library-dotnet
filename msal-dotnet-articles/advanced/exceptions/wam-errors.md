@@ -8,7 +8,7 @@ ms.date: 08/30/2023
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.reviewer: 
-ms.topic: article
+ms.topic: troubleshooting-error-codes
 ms.custom: 
 #Customer intent: 
 ---
