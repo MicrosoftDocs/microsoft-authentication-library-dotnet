@@ -71,7 +71,7 @@ Details [here](/dotnet/api/microsoft.identity.client.abstractacquiretokenparamet
 > - **Service Issue**: This approach will not work because eSTS (Enterprise Security Token Service) mitigates the security risk by redirecting within 3 seconds after the initial authorization code redirect, causing the authorization code to disappear from the browser's address bar. When using the `nativeclient` redirect URI, implementations typically require users to manually extract and copy the authorization code from the URL query string—an anti-pattern that provides poor user experience—but this is no longer possible due to the redirect clearing the URL.
 > - **Recommended Alternatives**: 
 >   - **Use [Broker authentication (WAM)](../acquiring-tokens/desktop-mobile/wam.md)** for Windows 10+ applications - provides the best security and user experience
->   - **Use embedded browser flow** with [WebView2](./webview2.md) as described in [Using web browsers](../acquiring-tokens/using-web-browsers.md)
+>   - **Use embedded browser flow** as described in [Using web browsers](../acquiring-tokens/using-web-browsers.md)
 
 While ICustomWebUi allows desktop and mobile apps to use their own browser instead of the embedded / system browsers provided by MSAL, it should only be used for testing or legacy scenarios where migration is not yet possible.
 
