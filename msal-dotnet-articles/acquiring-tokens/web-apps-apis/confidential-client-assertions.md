@@ -8,7 +8,7 @@ ms.date: 05/22/2025
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.reviewer:
-ms.topic: article
+ms.topic: concept-article
 ms.custom: devx-track-csharp, aaddev, devx-track-dotnet
 #Customer intent: As an application developer, I want to learn how to use client assertions to prove the identity of my confidential client application
 ---

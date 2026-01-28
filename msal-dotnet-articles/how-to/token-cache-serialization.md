@@ -8,7 +8,7 @@ ms.date: 05/20/2024
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.reviewer: 
-ms.topic: article
+ms.topic: concept-article
 ms.custom: devx-track-csharp, aaddev, devx-track-dotnet, sfi-ropc-nochange, sfi-image-nochange
 #Customer intent: As an application developer, I want to learn about token cache serialization so I can have fine-grained control of the proxy.
 ---

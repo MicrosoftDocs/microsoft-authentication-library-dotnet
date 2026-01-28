@@ -8,7 +8,7 @@ ms.date: 06/04/2024
 ms.service: msal
 ms.subservice: microsoft-identity-web
 ms.reviewer:
-ms.topic: article
+ms.topic: concept-article
 ms.custom: devx-track-csharp, aaddev
 # Customer intent: As an application developer, I want to learn how Microsoft Identity Web can help me protect my services with the Microsoft identity platform. 
 ---

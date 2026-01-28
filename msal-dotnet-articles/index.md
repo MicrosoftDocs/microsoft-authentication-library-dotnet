@@ -8,7 +8,7 @@ ms.date: 06/04/2024
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.reviewer:
-ms.topic: article
+ms.topic: concept-article
 ms.custom: devx-track-csharp, aaddev
 #Customer intent: 
 # Customer intent: As an application developer, I want to learn how MSAL.NET can help me acquire tokens from the Microsoft identity platform and access protected web APIs. 
