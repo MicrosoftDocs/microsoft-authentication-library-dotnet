@@ -38,7 +38,7 @@ Broker support is split across two packages:
 - [Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client/) – core library for token acquisition.
 - [Microsoft.Identity.Client.Broker](https://www.nuget.org/packages/Microsoft.Identity.Client.Broker/) – adds support for authentication via platform brokers (Windows WAM, macOS broker, Linux broker, etc.).
 
-After referencing the relevant packages, call [`WithBroker(BrokerOptions)`](xref:Microsoft.Identity.Client.Broker.BrokerExtension.WithBroker*) with the macOS broker configuration. Unlike on Windows, for macOS broker flows we do not support setting parent window handle.
+After referencing the relevant packages, call [`WithBroker(BrokerOptions)`](xref:Microsoft.Identity.Client.Broker.BrokerExtension.WithBroker*) with the macOS broker configuration. Unlike on Windows, for macOS broker flows does not support setting parent window handle.
 
 > [!NOTE]
 > Ensure you add a `using Microsoft.Identity.Client.Broker;` statement to access the correct `WithBroker` extension overload. The broker API is unified; you specify supported operating systems within `BrokerOptions`.
