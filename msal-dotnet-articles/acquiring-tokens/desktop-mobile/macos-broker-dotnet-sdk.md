@@ -1,10 +1,10 @@
 ---
 title: Using MSAL.NET with the macOS broker
 description: "Learn how to enable and use the macOS authentication broker with MSAL.NET applications to integrate with system accounts and provide secure, seamless sign-in experiences on macOS."
-author: cilwerner
+author: fengga
 manager: 
 ms.author: fengga
-ms.date: 10/20/2025
+ms.date: 01/28/2026
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.reviewer: 
