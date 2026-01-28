@@ -177,6 +177,4 @@ The macOS broker supports the following configurations:
 ## See also
 - [Enroll your macOS device using the Company Portal app](https://learn.microsoft.com/en-us/intune/intune-service/user-help/enroll-your-device-in-intune-macos-cp)
 - [Add the macOS Company Portal App](https://learn.microsoft.com/en-us/intune/intune-service/apps/apps-company-portal-macos)
-- [Using MSAL.NET with Web Account Manager (WAM) on Windows](../../wam/wam.md)
-- [Authentication flows and authorities](/azure/active-directory/develop/msal-client-application-configuration)
-
+- [Using MSAL.NET with Web Account Manager (WAM) on Windows](wam.md)
