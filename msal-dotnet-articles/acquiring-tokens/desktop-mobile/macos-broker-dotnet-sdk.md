@@ -31,7 +31,7 @@ An authentication broker is a component or application that runs on the user's m
 > Use MSAL.NET 4.73.1 or higher to get macOS broker support. We recommend using the latest version of `Microsoft.Identity.Client` and `Microsoft.Identity.Client.Broker`.
 
 > [!IMPORTANT]
-> Enroll the macOS device using [Company Portal app](https://learn.microsoft.com/en-us/intune/intune-service/user-help/enroll-your-device-in-intune-macos-cp). After the enrollment finished, make sure the other Microsoft apps can talk to the broker via SSO extension (for example, you can sign in Word via Company Portal)
+> Enroll the macOS device using [Company Portal app](https://learn.microsoft.com/intune/intune-service/user-help/enroll-your-device-in-intune-macos-cp). After the enrollment finished, make sure the other Microsoft apps can talk to the broker via SSO extension (for example, you can sign in Word via Company Portal)
 
 Broker support is split across two packages:
 
@@ -175,6 +175,6 @@ The macOS broker supports the following configurations:
 
 
 ## See also
-- [Enroll your macOS device using the Company Portal app](https://learn.microsoft.com/en-us/intune/intune-service/user-help/enroll-your-device-in-intune-macos-cp)
-- [Add the macOS Company Portal App](https://learn.microsoft.com/en-us/intune/intune-service/apps/apps-company-portal-macos)
+- [Enroll your macOS device using the Company Portal app](https://learn.microsoft.com/intune/intune-service/user-help/enroll-your-device-in-intune-macos-cp)
+- [Add the macOS Company Portal App](https://learn.microsoft.com/intune/intune-service/apps/apps-company-portal-macos)
 - [Using MSAL.NET with Web Account Manager (WAM) on Windows](wam.md)
