@@ -16,9 +16,6 @@ ms.topic: how-to
 
 MSAL.NET can integrate with the macOS authentication broker to provide rich single sign-on (SSO) and secure token acquisition by leveraging accounts known to the operating system. This allows users of your app to sign in using an existing Microsoft Entra ID (Azure AD) or Microsoft account with fewer prompts and improved security posture.
 
-> [!NOTE]
-> The macOS broker is currently available for MSAL.NET desktop applications running on macOS 12 (Monterey) and above. Earlier versions of macOS will fall back to browser-based interactive authentication.
-
 ## What is a broker
 
 An authentication broker is a component or application that runs on the user's machine and manages authentication handshakes and token lifecycle for connected accounts. On Windows this role is performed by Web Account Manager (WAM). On macOS the broker comes with the Company Portal app. Key benefits include:
@@ -163,7 +160,7 @@ The macOS broker supports the following configurations:
 | Component | Supported versions |
 |-----------|-------------------|
 | **Architecture** | ARM64 (Apple Silicon) and x64 (Intel) |
-| **macOS version** | macOS 12 (Monterey) and later |
+| **macOS version** | macOS 10.15 (Catalina) and later |
 
 > [!TIP]
 > We recommend updating to the latest macOS version to ensure compatibility with the newest security features and broker capabilities.
@@ -171,7 +168,7 @@ The macOS broker supports the following configurations:
 ## macOS broker limitations
 
 - Azure AD B2C and Active Directory Federation Services (ADFS) authorities are not supported via the macOS broker.
-- Older macOS versions (earlier than 12) are not supported.
+- Older macOS versions (earlier than 10.15) are not supported.
 - Running in non-interactive contexts (non-main thread context) will fail for interactive broker flows by design.
 - Third-party IDPs are not supported.
 
