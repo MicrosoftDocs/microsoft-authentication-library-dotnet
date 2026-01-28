@@ -163,7 +163,7 @@ The macOS broker supports the following configurations:
 | Component | Supported versions |
 |-----------|-------------------|
 | **Architecture** | ARM64 (Apple Silicon) and x64 (Intel) |
-| **macOS version** | macOS 10.15 (Catalina) and later |
+| **macOS version** | macOS 12 (Monterey) and later |
 
 > [!TIP]
 > We recommend updating to the latest macOS version to ensure compatibility with the newest security features and broker capabilities.
@@ -171,7 +171,7 @@ The macOS broker supports the following configurations:
 ## macOS broker limitations
 
 - Azure AD B2C and Active Directory Federation Services (ADFS) authorities are not supported via the macOS broker.
-- Older macOS versions (earlier than 10.15) are not supported.
+- Older macOS versions (earlier than 12) are not supported.
 - Running in non-interactive contexts (non-main thread context) will fail for interactive broker flows by design.
 - Third-party IDPs are not supported.
 
