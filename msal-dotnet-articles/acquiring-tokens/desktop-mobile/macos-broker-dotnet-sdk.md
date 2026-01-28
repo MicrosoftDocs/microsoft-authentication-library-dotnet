@@ -56,6 +56,7 @@ Enabling macOS broker flows could be as simple as:
     builder = builder.WithLogging(SampleLogging);
 
     builder = builder.WithBroker(new BrokerOptions(BrokerOptions.OperatingSystems.OSX)
+    // For Windows, please use BrokerOptions(BrokerOptions.OperatingSystems.Windows)
     {
         ListOperatingSystemAccounts = false,
         MsaPassthrough = false,
