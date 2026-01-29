@@ -1,0 +1,80 @@
+<Type Name="IAuthenticationOperation2" FullName="Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation2">
+  <TypeSignature Language="C#" Value="public interface IAuthenticationOperation2 : Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IAuthenticationOperation2 implements class Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation2" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IAuthenticationOperation2&#xA;Implements IAuthenticationOperation" />
+  <TypeSignature Language="F#" Value="type IAuthenticationOperation2 = interface&#xA;    interface IAuthenticationOperation" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+    <AssemblyVersion>4.81.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            This is an extensibility API and should only be used by SDKs.
+            Enhanced version of IAuthenticationOperation that supports asynchronous token formatting.
+            Used to modify the experience depending on the type of token asked with async capabilities.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FormatResultAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task FormatResultAsync (Microsoft.Identity.Client.AuthenticationResult authenticationResult, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task FormatResultAsync(class Microsoft.Identity.Client.AuthenticationResult authenticationResult, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation2.FormatResultAsync(Microsoft.Identity.Client.AuthenticationResult,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function FormatResultAsync (authenticationResult As AuthenticationResult, Optional cancellationToken As CancellationToken = Nothing) As Task" />
+      <MemberSignature Language="F#" Value="abstract member FormatResultAsync : Microsoft.Identity.Client.AuthenticationResult * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="iAuthenticationOperation2.FormatResultAsync (authenticationResult, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.81.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="authenticationResult" Type="Microsoft.Identity.Client.AuthenticationResult" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="authenticationResult">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Will be invoked instead of IAuthenticationOperation.FormatResult
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateCachedTokenAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;bool&gt; ValidateCachedTokenAsync (Microsoft.Identity.Client.AuthScheme.MsalCacheValidationData cachedTokenData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;bool&gt; ValidateCachedTokenAsync(class Microsoft.Identity.Client.AuthScheme.MsalCacheValidationData cachedTokenData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation2.ValidateCachedTokenAsync(Microsoft.Identity.Client.AuthScheme.MsalCacheValidationData)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ValidateCachedTokenAsync (cachedTokenData As MsalCacheValidationData) As Task(Of Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member ValidateCachedTokenAsync : Microsoft.Identity.Client.AuthScheme.MsalCacheValidationData -&gt; System.Threading.Tasks.Task&lt;bool&gt;" Usage="iAuthenticationOperation2.ValidateCachedTokenAsync cachedTokenData" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.81.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cachedTokenData" Type="Microsoft.Identity.Client.AuthScheme.MsalCacheValidationData" />
+      </Parameters>
+      <Docs>
+        <param name="cachedTokenData">Data used to determine if token is still valid</param>
+        <summary>
+            Determines whether the cached token is still valid.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

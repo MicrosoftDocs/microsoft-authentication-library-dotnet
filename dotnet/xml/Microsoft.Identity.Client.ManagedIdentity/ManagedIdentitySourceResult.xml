@@ -1,0 +1,123 @@
+<Type Name="ManagedIdentitySourceResult" FullName="Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySourceResult">
+  <TypeSignature Language="C#" Value="public class ManagedIdentitySourceResult" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ManagedIdentitySourceResult extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySourceResult" />
+  <TypeSignature Language="VB.NET" Value="Public Class ManagedIdentitySourceResult" />
+  <TypeSignature Language="F#" Value="type ManagedIdentitySourceResult = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+    <AssemblyVersion>4.81.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Result of managed identity source detection, including the detected source and any failure information from IMDS probes.
+            </summary>
+    <remarks>
+            This class is returned by <see cref="M:Microsoft.Identity.Client.ManagedIdentityApplication.GetManagedIdentitySourceAsync(System.Threading.CancellationToken)" /> to provide
+            detailed information about managed identity source detection, including failure reasons when IMDS probes fail.
+            This information is useful for credential chains like DefaultAzureCredential to determine whether to skip
+            managed identity authentication entirely.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManagedIdentitySourceResult (Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySource source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySource source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySourceResult.#ctor(Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySource)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (source As ManagedIdentitySource)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySourceResult : Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySource -&gt; Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySourceResult" Usage="new Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySourceResult source" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.81.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="source" Type="Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySource" />
+      </Parameters>
+      <Docs>
+        <param name="source">The detected managed identity source.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySourceResult" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImdsV1FailureReason">
+      <MemberSignature Language="C#" Value="public string ImdsV1FailureReason { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ImdsV1FailureReason" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySourceResult.ImdsV1FailureReason" />
+      <MemberSignature Language="VB.NET" Value="Public Property ImdsV1FailureReason As String" />
+      <MemberSignature Language="F#" Value="member this.ImdsV1FailureReason : string with get, set" Usage="Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySourceResult.ImdsV1FailureReason" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.81.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the failure reason from the IMDSv1 probe, if it failed.
+            </summary>
+        <value>
+            A string describing why the IMDSv1 probe failed, or <c>null</c> if the probe succeeded or was not attempted.
+            </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImdsV2FailureReason">
+      <MemberSignature Language="C#" Value="public string ImdsV2FailureReason { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ImdsV2FailureReason" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySourceResult.ImdsV2FailureReason" />
+      <MemberSignature Language="VB.NET" Value="Public Property ImdsV2FailureReason As String" />
+      <MemberSignature Language="F#" Value="member this.ImdsV2FailureReason : string with get, set" Usage="Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySourceResult.ImdsV2FailureReason" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.81.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the failure reason from the IMDSv2 probe, if it failed.
+            </summary>
+        <value>
+            A string describing why the IMDSv2 probe failed, or <c>null</c> if the probe succeeded or was not attempted.
+            </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySource Source { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySource Source" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySourceResult.Source" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Source As ManagedIdentitySource" />
+      <MemberSignature Language="F#" Value="member this.Source : Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySource" Usage="Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySourceResult.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.81.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the detected managed identity source.
+            </summary>
+        <value>
+            The <see cref="T:Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySource" /> that was detected on the environment.
+            Returns <see cref="F:Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySource.None" /> if no managed identity source was detected.
+            </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,125 @@
+<Type Name="ExecutionResult" FullName="Microsoft.Identity.Client.Extensibility.ExecutionResult">
+  <TypeSignature Language="C#" Value="public class ExecutionResult" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ExecutionResult extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Client.Extensibility.ExecutionResult" />
+  <TypeSignature Language="VB.NET" Value="Public Class ExecutionResult" />
+  <TypeSignature Language="F#" Value="type ExecutionResult = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+    <AssemblyVersion>4.81.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents the result of a token acquisition attempt.
+            Used by the execution observer configured via <see cref="M:Microsoft.Identity.Client.Extensibility.ConfidentialClientApplicationBuilderExtensions.OnCompletion(Microsoft.Identity.Client.ConfidentialClientApplicationBuilder,System.Func{Microsoft.Identity.Client.AssertionRequestOptions,Microsoft.Identity.Client.Extensibility.ExecutionResult,System.Threading.Tasks.Task})" />.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ClientCertificate">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509Certificate2 ClientCertificate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.X509Certificates.X509Certificate2 ClientCertificate" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.Extensibility.ExecutionResult.ClientCertificate" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ClientCertificate As X509Certificate2" />
+      <MemberSignature Language="F#" Value="member this.ClientCertificate : System.Security.Cryptography.X509Certificates.X509Certificate2" Usage="Microsoft.Identity.Client.Extensibility.ExecutionResult.ClientCertificate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.81.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate2</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The certificate used for authentication, if certificate-based authentication was used.
+            </summary>
+        <value>
+            An <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> used to authenticate the client application;
+            otherwise, <c>null</c> if certificate authentication was not used or if the certificate is not available.
+            </value>
+        <remarks>
+            This property provides access to the certificate used during the token acquisition for this request.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exception">
+      <MemberSignature Language="C#" Value="public Microsoft.Identity.Client.MsalException Exception { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Identity.Client.MsalException Exception" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.Extensibility.ExecutionResult.Exception" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Exception As MsalException" />
+      <MemberSignature Language="F#" Value="member this.Exception : Microsoft.Identity.Client.MsalException" Usage="Microsoft.Identity.Client.Extensibility.ExecutionResult.Exception" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.81.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.MsalException</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The exception that occurred if the token acquisition failed.
+            </summary>
+        <value>
+            An <see cref="T:Microsoft.Identity.Client.MsalException" /> describing the failure if <see cref="P:Microsoft.Identity.Client.Extensibility.ExecutionResult.Successful" /> is <c>false</c>;
+            otherwise, <c>null</c>.
+            </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Result">
+      <MemberSignature Language="C#" Value="public Microsoft.Identity.Client.AuthenticationResult Result { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Identity.Client.AuthenticationResult Result" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.Extensibility.ExecutionResult.Result" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Result As AuthenticationResult" />
+      <MemberSignature Language="F#" Value="member this.Result : Microsoft.Identity.Client.AuthenticationResult" Usage="Microsoft.Identity.Client.Extensibility.ExecutionResult.Result" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.81.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.AuthenticationResult</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The authentication result if the token acquisition was successful.
+            </summary>
+        <value>
+            An <see cref="T:Microsoft.Identity.Client.AuthenticationResult" /> containing the access token and related metadata if <see cref="P:Microsoft.Identity.Client.Extensibility.ExecutionResult.Successful" /> is <c>true</c>;
+            otherwise, <c>null</c>.
+            </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Successful">
+      <MemberSignature Language="C#" Value="public bool Successful { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Successful" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.Extensibility.ExecutionResult.Successful" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Successful As Boolean" />
+      <MemberSignature Language="F#" Value="member this.Successful : bool" Usage="Microsoft.Identity.Client.Extensibility.ExecutionResult.Successful" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.81.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Indicates whether the token acquisition was successful.
+            </summary>
+        <value>
+          <c>true</c> if the token was successfully acquired; otherwise, <c>false</c>.
+            </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
