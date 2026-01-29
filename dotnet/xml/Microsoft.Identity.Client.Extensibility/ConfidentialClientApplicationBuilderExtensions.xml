@@ -52,6 +52,7 @@
     <AssemblyVersion>4.78.0.0</AssemblyVersion>
     <AssemblyVersion>4.79.1.0</AssemblyVersion>
     <AssemblyVersion>4.79.2.0</AssemblyVersion>
+    <AssemblyVersion>4.81.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -63,6 +64,130 @@
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
+    <Member MemberName="OnCompletion">
+      <MemberSignature Language="C#" Value="public static Microsoft.Identity.Client.ConfidentialClientApplicationBuilder OnCompletion (this Microsoft.Identity.Client.ConfidentialClientApplicationBuilder builder, Func&lt;Microsoft.Identity.Client.AssertionRequestOptions,Microsoft.Identity.Client.Extensibility.ExecutionResult,System.Threading.Tasks.Task&gt; onCompletion);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Identity.Client.ConfidentialClientApplicationBuilder OnCompletion(class Microsoft.Identity.Client.ConfidentialClientApplicationBuilder builder, class System.Func`3&lt;class Microsoft.Identity.Client.AssertionRequestOptions, class Microsoft.Identity.Client.Extensibility.ExecutionResult, class System.Threading.Tasks.Task&gt; onCompletion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.Extensibility.ConfidentialClientApplicationBuilderExtensions.OnCompletion(Microsoft.Identity.Client.ConfidentialClientApplicationBuilder,System.Func{Microsoft.Identity.Client.AssertionRequestOptions,Microsoft.Identity.Client.Extensibility.ExecutionResult,System.Threading.Tasks.Task})" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function OnCompletion (builder As ConfidentialClientApplicationBuilder, onCompletion As Func(Of AssertionRequestOptions, ExecutionResult, Task)) As ConfidentialClientApplicationBuilder" />
+      <MemberSignature Language="F#" Value="static member OnCompletion : Microsoft.Identity.Client.ConfidentialClientApplicationBuilder * Func&lt;Microsoft.Identity.Client.AssertionRequestOptions, Microsoft.Identity.Client.Extensibility.ExecutionResult, System.Threading.Tasks.Task&gt; -&gt; Microsoft.Identity.Client.ConfidentialClientApplicationBuilder" Usage="Microsoft.Identity.Client.Extensibility.ConfidentialClientApplicationBuilderExtensions.OnCompletion (builder, onCompletion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.81.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="builder" Type="Microsoft.Identity.Client.ConfidentialClientApplicationBuilder" RefType="this" />
+        <Parameter Name="onCompletion" Type="System.Func&lt;Microsoft.Identity.Client.AssertionRequestOptions,Microsoft.Identity.Client.Extensibility.ExecutionResult,System.Threading.Tasks.Task&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="builder">The confidential client application builder.</param>
+        <param name="onCompletion">
+            An async callback that receives the assertion request options and the execution result.
+            The result contains either the successful <see cref="T:Microsoft.Identity.Client.AuthenticationResult" /> or the <see cref="T:Microsoft.Identity.Client.MsalException" /> that occurred.
+            This callback is invoked after all retries have been exhausted (if an <see cref="M:Microsoft.Identity.Client.Extensibility.ConfidentialClientApplicationBuilderExtensions.OnMsalServiceFailure(Microsoft.Identity.Client.ConfidentialClientApplicationBuilder,System.Func{Microsoft.Identity.Client.AssertionRequestOptions,Microsoft.Identity.Client.Extensibility.ExecutionResult,System.Threading.Tasks.Task{System.Boolean}})" /> handler is configured).
+            </param>
+        <summary>
+            Configures an async callback that is invoked when a token acquisition request completes.
+            This callback is invoked once per <c>AcquireTokenForClient</c> call, after all retry attempts have been exhausted.
+            While named <c>OnCompletion</c> for the common case, this callback fires for both successful and failed acquisitions.
+            This enables scenarios such as telemetry, logging, and custom result handling.
+            </summary>
+        <returns>The builder to chain additional configuration calls.</returns>
+        <remarks>
+          <para>This callback is invoked for both successful and failed token acquisitions. Check <see cref="P:Microsoft.Identity.Client.Extensibility.ExecutionResult.Successful" /> to determine the outcome.</para>
+          <para>This callback is only invoked for network token acquisition attempts, not when tokens are retrieved from cache.</para>
+          <para>If multiple calls to <c>OnCompletion</c> are made, only the last configured callback will be used.</para>
+          <para>Exceptions thrown by this callback will be caught and logged internally to prevent disruption of the authentication flow.</para>
+          <para>The callback is invoked on the same thread/context as the token acquisition request.</para>
+          <para>The callback can perform async operations such as sending telemetry to Application Insights, persisting logs to databases, or triggering webhooks.</para>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="onCompletion" /> is null.</exception>
+        <example>
+          <code>
+            var app = ConfidentialClientApplicationBuilder
+                .Create(clientId)
+                .WithCertificate(certificate)
+                .OnCompletion(async (options, result) =&gt;
+                {
+                    if (result.Successful)
+                    {
+                        await telemetry.TrackEventAsync("TokenAcquired", new { ClientId = options.ClientID });
+                    }
+                    else
+                    {
+                        await telemetry.TrackExceptionAsync(result.Exception);
+                    }
+                })
+                .Build();
+            </code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMsalServiceFailure">
+      <MemberSignature Language="C#" Value="public static Microsoft.Identity.Client.ConfidentialClientApplicationBuilder OnMsalServiceFailure (this Microsoft.Identity.Client.ConfidentialClientApplicationBuilder builder, Func&lt;Microsoft.Identity.Client.AssertionRequestOptions,Microsoft.Identity.Client.Extensibility.ExecutionResult,System.Threading.Tasks.Task&lt;bool&gt;&gt; onMsalServiceFailure);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Identity.Client.ConfidentialClientApplicationBuilder OnMsalServiceFailure(class Microsoft.Identity.Client.ConfidentialClientApplicationBuilder builder, class System.Func`3&lt;class Microsoft.Identity.Client.AssertionRequestOptions, class Microsoft.Identity.Client.Extensibility.ExecutionResult, class System.Threading.Tasks.Task`1&lt;bool&gt;&gt; onMsalServiceFailure) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.Extensibility.ConfidentialClientApplicationBuilderExtensions.OnMsalServiceFailure(Microsoft.Identity.Client.ConfidentialClientApplicationBuilder,System.Func{Microsoft.Identity.Client.AssertionRequestOptions,Microsoft.Identity.Client.Extensibility.ExecutionResult,System.Threading.Tasks.Task{System.Boolean}})" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function OnMsalServiceFailure (builder As ConfidentialClientApplicationBuilder, onMsalServiceFailure As Func(Of AssertionRequestOptions, ExecutionResult, Task(Of Boolean))) As ConfidentialClientApplicationBuilder" />
+      <MemberSignature Language="F#" Value="static member OnMsalServiceFailure : Microsoft.Identity.Client.ConfidentialClientApplicationBuilder * Func&lt;Microsoft.Identity.Client.AssertionRequestOptions, Microsoft.Identity.Client.Extensibility.ExecutionResult, System.Threading.Tasks.Task&lt;bool&gt;&gt; -&gt; Microsoft.Identity.Client.ConfidentialClientApplicationBuilder" Usage="Microsoft.Identity.Client.Extensibility.ConfidentialClientApplicationBuilderExtensions.OnMsalServiceFailure (builder, onMsalServiceFailure)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.81.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="builder" Type="Microsoft.Identity.Client.ConfidentialClientApplicationBuilder" RefType="this" />
+        <Parameter Name="onMsalServiceFailure" Type="System.Func&lt;Microsoft.Identity.Client.AssertionRequestOptions,Microsoft.Identity.Client.Extensibility.ExecutionResult,System.Threading.Tasks.Task&lt;System.Boolean&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="builder">The confidential client application builder.</param>
+        <param name="onMsalServiceFailure">
+            An async callback that determines whether to retry after a service failure.
+            Receives the assertion request options and the <see cref="T:Microsoft.Identity.Client.MsalServiceException" /> that occurred.
+            Returns <c>true</c> to retry the request, or <c>false</c> to stop retrying and propagate the exception.
+            The callback will be invoked repeatedly after each service failure until it returns <c>false</c> or the request succeeds.
+            </param>
+        <summary>
+            Configures an async callback that is invoked when MSAL receives an error response from the identity provider (Security Token Service).
+            The callback determines whether MSAL should retry the token request or propagate the exception.
+            This callback is invoked after each service failure and can be called multiple times until it returns <c>false</c> or the request succeeds.
+            </summary>
+        <returns>The builder to chain additional configuration calls.</returns>
+        <remarks>
+          <para>This callback is ONLY triggered for <see cref="T:Microsoft.Identity.Client.MsalServiceException" /> - errors returned by the identity provider (e.g., HTTP 500, 503, throttling).</para>
+          <para>This callback is NOT triggered for client-side errors (<see cref="T:Microsoft.Identity.Client.MsalClientException" />) or network failures handled internally by MSAL.</para>
+          <para>This callback is only invoked for network token acquisition attempts, not when tokens are retrieved from cache.</para>
+          <para>When the callback returns <c>true</c>, MSAL will invoke the certificate provider (if configured via <see cref="M:Microsoft.Identity.Client.Extensibility.ConfidentialClientApplicationBuilderExtensions.WithCertificate(Microsoft.Identity.Client.ConfidentialClientApplicationBuilder,System.Func{Microsoft.Identity.Client.AssertionRequestOptions,System.Threading.Tasks.Task{System.Security.Cryptography.X509Certificates.X509Certificate2}})" />)
+            before making another token request, enabling certificate rotation scenarios.</para>
+          <para>MSAL's internal throttling and retry mechanisms will still apply, including respecting Retry-After headers from the identity provider.</para>
+          <para>To prevent infinite loops, ensure your callback has appropriate termination conditions (e.g., max retry count, timeout).</para>
+          <para>The callback can perform async operations such as logging to remote services, checking external health endpoints, or querying configuration stores.</para>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="onMsalServiceFailure" /> is null.</exception>
+        <example>
+          <code>
+            int retryCount = 0;
+            var app = ConfidentialClientApplicationBuilder
+                .Create(clientId)
+                .WithCertificate(async options =&gt; await GetCertificateFromKeyVaultAsync(options.TokenEndpoint))
+                .OnMsalServiceFailure(async (options, serviceException) =&gt;
+                {
+                    retryCount++;
+                    await LogExceptionAsync(serviceException);
+                    
+                    // Retry up to 3 times for transient service errors (5xx)
+                    return serviceException.StatusCode &gt;= 500 &amp;&amp; retryCount &lt; 3;
+                })
+                .Build();
+            </code>
+        </example>
+      </Docs>
+    </Member>
     <Member MemberName="WithAppTokenProvider">
       <MemberSignature Language="C#" Value="public static Microsoft.Identity.Client.ConfidentialClientApplicationBuilder WithAppTokenProvider (this Microsoft.Identity.Client.ConfidentialClientApplicationBuilder builder, Func&lt;Microsoft.Identity.Client.Extensibility.AppTokenProviderParameters,System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.Extensibility.AppTokenProviderResult&gt;&gt; appTokenProvider);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Identity.Client.ConfidentialClientApplicationBuilder WithAppTokenProvider(class Microsoft.Identity.Client.ConfidentialClientApplicationBuilder builder, class System.Func`2&lt;class Microsoft.Identity.Client.Extensibility.AppTokenProviderParameters, class System.Threading.Tasks.Task`1&lt;class Microsoft.Identity.Client.Extensibility.AppTokenProviderResult&gt;&gt; appTokenProvider) cil managed" />
@@ -72,7 +197,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.79.2.0</AssemblyVersion>
+        <AssemblyVersion>4.81.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -93,6 +218,51 @@
         <returns>To be added.</returns>
         <remarks>This is part of an extensibility mechanism designed to be used only by Azure SDK in order to
             enhance managed identity support. Only client_credential flow is supported.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithCertificate">
+      <MemberSignature Language="C#" Value="public static Microsoft.Identity.Client.ConfidentialClientApplicationBuilder WithCertificate (this Microsoft.Identity.Client.ConfidentialClientApplicationBuilder builder, Func&lt;Microsoft.Identity.Client.AssertionRequestOptions,System.Threading.Tasks.Task&lt;System.Security.Cryptography.X509Certificates.X509Certificate2&gt;&gt; certificateProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Identity.Client.ConfidentialClientApplicationBuilder WithCertificate(class Microsoft.Identity.Client.ConfidentialClientApplicationBuilder builder, class System.Func`2&lt;class Microsoft.Identity.Client.AssertionRequestOptions, class System.Threading.Tasks.Task`1&lt;class System.Security.Cryptography.X509Certificates.X509Certificate2&gt;&gt; certificateProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.Extensibility.ConfidentialClientApplicationBuilderExtensions.WithCertificate(Microsoft.Identity.Client.ConfidentialClientApplicationBuilder,System.Func{Microsoft.Identity.Client.AssertionRequestOptions,System.Threading.Tasks.Task{System.Security.Cryptography.X509Certificates.X509Certificate2}})" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function WithCertificate (builder As ConfidentialClientApplicationBuilder, certificateProvider As Func(Of AssertionRequestOptions, Task(Of X509Certificate2))) As ConfidentialClientApplicationBuilder" />
+      <MemberSignature Language="F#" Value="static member WithCertificate : Microsoft.Identity.Client.ConfidentialClientApplicationBuilder * Func&lt;Microsoft.Identity.Client.AssertionRequestOptions, System.Threading.Tasks.Task&lt;System.Security.Cryptography.X509Certificates.X509Certificate2&gt;&gt; -&gt; Microsoft.Identity.Client.ConfidentialClientApplicationBuilder" Usage="Microsoft.Identity.Client.Extensibility.ConfidentialClientApplicationBuilderExtensions.WithCertificate (builder, certificateProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.81.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="builder" Type="Microsoft.Identity.Client.ConfidentialClientApplicationBuilder" RefType="this" />
+        <Parameter Name="certificateProvider" Type="System.Func&lt;Microsoft.Identity.Client.AssertionRequestOptions,System.Threading.Tasks.Task&lt;System.Security.Cryptography.X509Certificates.X509Certificate2&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="builder">The confidential client application builder.</param>
+        <param name="certificateProvider">
+            An async callback that provides the certificate based on the application configuration.
+            Called before each network request to acquire a token.
+            Must return a valid <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> with a private key.
+            </param>
+        <summary>
+            Configures an async callback to provide the client credential certificate dynamically.
+            The callback is invoked before each token acquisition request to the identity provider (including retries).
+            This enables scenarios such as certificate rotation and dynamic certificate selection based on application context.
+            </summary>
+        <returns>The builder to chain additional configuration calls.</returns>
+        <remarks>
+          <para>This method cannot be used together with <see cref="M:Microsoft.Identity.Client.ConfidentialClientApplicationBuilder.WithCertificate(System.Security.Cryptography.X509Certificates.X509Certificate2)" />.</para>
+          <para>The callback is not invoked when tokens are retrieved from cache, only for network calls.</para>
+          <para>The certificate returned by the callback will be used to sign the client assertion (JWT) for that token request.</para>
+          <para>The callback can perform async operations such as fetching certificates from Azure Key Vault or other secret management systems.</para>
+          <para>See https://aka.ms/msal-net-client-credentials for more details on client credentials.</para>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="certificateProvider" /> is null.</exception>
+        <exception cref="T:Microsoft.Identity.Client.MsalClientException">
+            Thrown at build time if both <see cref="M:Microsoft.Identity.Client.ConfidentialClientApplicationBuilder.WithCertificate(System.Security.Cryptography.X509Certificates.X509Certificate2)" /> 
+            and this method are configured.
+            </exception>
       </Docs>
     </Member>
   </Members>
