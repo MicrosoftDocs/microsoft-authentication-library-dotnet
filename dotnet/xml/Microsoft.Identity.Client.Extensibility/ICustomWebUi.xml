@@ -55,12 +55,6 @@
   </AssemblyInfo>
   <Interfaces />
   <Docs>
-    <summary>
-            Interface that an MSAL.NET extender can implement to provide their own web UI in public client applications
-            to sign-in user and have them consented part of the Authorization code flow.
-            MSAL.NET provides an embedded web view for Windows and Mac, but there are other scenarios not yet supported.
-            This extensibility point enables them to provide such UI in a secure way
-            </summary>
     <remarks>
       <format type="text/markdown"><![CDATA[
 > [!CAUTION]
@@ -73,6 +67,12 @@
 >   - **Use embedded browser flow** as described in [Using web browsers](https://learn.microsoft.com/entra/msal/dotnet/acquiring-tokens/using-web-browsers)
 ]]></format>
             </remarks>
+    <summary>
+            Interface that an MSAL.NET extender can implement to provide their own web UI in public client applications
+            to sign-in user and have them consented part of the Authorization code flow.
+            MSAL.NET provides an embedded web view for Windows and Mac, but there are other scenarios not yet supported.
+            This extensibility point enables them to provide such UI in a secure way
+            </summary>
   </Docs>
   <Members>
     <Member MemberName="AcquireAuthorizationCodeAsync">
