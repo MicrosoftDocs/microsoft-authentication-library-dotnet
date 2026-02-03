@@ -65,10 +65,10 @@ Details [here](/dotnet/api/microsoft.identity.client.abstractacquiretokenparamet
 ## Desktop / Mobile Apps - ICustomWebUi
 
 > [!CAUTION]
-> **ICustomWebUi is not recommended for production use due to security risks and current service limitations.**
+> **ICustomWebUi is not recommended for production use and is on a deprecation path.**
 >
-> - **Security Risk**: Using native client redirect URIs (like `http://localhost` or `https://login.microsoftonline.com/common/oauth2/nativeclient`) with custom web UI implementations poses significant security risks and is generally not recommended for production applications.
-> - **Service Issue**: This approach typically requires users to manually copy the authorization code from the URL—an anti-pattern most commonly seen with the `nativeclient` URI. This pattern will not work in most configurations and poses security risks.
+> This pattern introduces security risks and is not supported by Entra ID cloud services. Using native client redirect URIs (like `https://login.microsoftonline.com/common/oauth2/nativeclient`) with custom web UI implementations typically requires users to manually copy the authorization code from the URL—an anti-pattern most commonly seen with the `nativeclient` URI. This pattern will not work in most configurations and poses security risks.
+>
 > - **Recommended Alternatives**: 
 >   - **Use [Broker authentication (WAM)](../acquiring-tokens/desktop-mobile/wam.md)** for Windows 10+ applications - provides the best security and user experience
 >   - **Use embedded browser flow** as described in [Using web browsers](../acquiring-tokens/using-web-browsers.md)
