@@ -64,6 +64,15 @@ Details [here](/dotnet/api/microsoft.identity.client.abstractacquiretokenparamet
 
 ## Desktop / Mobile Apps - ICustomWebUi
 
-Allows desktop and mobile apps to use their own browser instead of the embedded / system browsers provided by MSAL.
+> [!CAUTION]
+> **ICustomWebUi is not recommended for production use due to security risks and current service limitations, and is on a deprecation path.**
+>
+> This pattern introduces security risks and is not supported by Entra ID cloud services. Using native client redirect URIs (like `https://login.microsoftonline.com/common/oauth2/nativeclient`) with custom web UI implementations typically requires users to manually copy the authorization code from the URL—an anti-pattern most commonly seen with the `nativeclient` URI. This pattern will not work in most configurations and poses security risks.
+>
+> - **Recommended Alternatives**: 
+>   - **Use [Broker authentication (WAM)](../acquiring-tokens/desktop-mobile/wam.md)** for Windows 10+ applications - provides the best security and user experience
+>   - **Use embedded browser flow** as described in [Using web browsers](../acquiring-tokens/using-web-browsers.md)
+
+While ICustomWebUi allows desktop and mobile apps to use their own browser instead of the embedded / system browsers provided by MSAL, it should only be used for testing or legacy scenarios where migration is not yet possible.
 
 Details [here](/dotnet/api/microsoft.identity.client.extensibility.icustomwebui?view=azure-dotnet)
