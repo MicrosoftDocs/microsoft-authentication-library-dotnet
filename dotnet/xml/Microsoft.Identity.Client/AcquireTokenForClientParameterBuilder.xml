@@ -53,6 +53,7 @@
     <AssemblyVersion>4.79.1.0</AssemblyVersion>
     <AssemblyVersion>4.79.2.0</AssemblyVersion>
     <AssemblyVersion>4.81.0.0</AssemblyVersion>
+    <AssemblyVersion>4.82.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Identity.Client.AbstractConfidentialClientAcquireTokenParameterBuilder&lt;Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder&gt;</BaseTypeName>
@@ -78,7 +79,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.81.0.0</AssemblyVersion>
+        <AssemblyVersion>4.82.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -91,6 +92,38 @@
         <altmember cref="M:Microsoft.Identity.Client.ConfidentialClientApplicationBuilder.Validate" />
       </Docs>
     </Member>
+    <Member MemberName="WithAttributes">
+      <MemberSignature Language="C#" Value="public Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder WithAttributes (string attributeJson);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder WithAttributes(string attributeJson) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder.WithAttributes(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithAttributes (attributeJson As String) As AcquireTokenForClientParameterBuilder" />
+      <MemberSignature Language="F#" Value="member this.WithAttributes : string -&gt; Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder" Usage="acquireTokenForClientParameterBuilder.WithAttributes attributeJson" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.82.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributeJson" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="attributeJson">The attribute value to include in the request</param>
+        <summary>
+            Specifies an identity attribute to include in the token request.
+            The attribute values will be returned as a claim in the token called "xms_attr"
+            in the access token claims. This is typically used with FMI (Federated Managed Identity) scenarios.
+            Example attribute json: "{\"sg1\":\"0000-00000-0001\",\"sg2\":[\"0000-00000-0002\",\"0000-00000-0003\",\"0000-00000-0004\"]}"
+            </summary>
+        <returns>The builder to chain method calls</returns>
+        <remarks>
+            The attribute value is included in the cache key, so different attribute values will result in different cache entries.
+            This ensures that tokens with different attributes are not confused with each other.
+            </remarks>
+      </Docs>
+    </Member>
     <Member MemberName="WithAzureRegion">
       <MemberSignature Language="C#" Value="public Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder WithAzureRegion (bool useAzureRegion);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder WithAzureRegion(bool useAzureRegion) cil managed" />
@@ -100,7 +133,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.81.0.0</AssemblyVersion>
+        <AssemblyVersion>4.82.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -136,7 +169,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.81.0.0</AssemblyVersion>
+        <AssemblyVersion>4.82.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder</ReturnType>
@@ -162,7 +195,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.81.0.0</AssemblyVersion>
+        <AssemblyVersion>4.82.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder</ReturnType>
@@ -193,7 +226,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.81.0.0</AssemblyVersion>
+        <AssemblyVersion>4.82.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder</ReturnType>
@@ -217,7 +250,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.81.0.0</AssemblyVersion>
+        <AssemblyVersion>4.82.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -257,7 +290,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.81.0.0</AssemblyVersion>
+        <AssemblyVersion>4.82.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder</ReturnType>
