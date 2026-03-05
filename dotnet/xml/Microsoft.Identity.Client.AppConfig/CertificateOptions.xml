@@ -1,0 +1,313 @@
+<Type Name="CertificateOptions" FullName="Microsoft.Identity.Client.AppConfig.CertificateOptions">
+  <TypeSignature Language="C#" Value="public class CertificateOptions : IEquatable&lt;Microsoft.Identity.Client.AppConfig.CertificateOptions&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CertificateOptions extends System.Object implements class System.IEquatable`1&lt;class Microsoft.Identity.Client.AppConfig.CertificateOptions&gt;" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Client.AppConfig.CertificateOptions" />
+  <TypeSignature Language="VB.NET" Value="Public Class CertificateOptions&#xA;Implements IEquatable(Of CertificateOptions)" />
+  <TypeSignature Language="F#" Value="type CertificateOptions = class&#xA;    interface IEquatable&lt;CertificateOptions&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+    <AssemblyVersion>4.82.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;Microsoft.Identity.Client.AppConfig.CertificateOptions&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Represents configuration options for certificate handling or management.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CertificateOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.AppConfig.CertificateOptions.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.82.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CertificateOptions (Microsoft.Identity.Client.AppConfig.CertificateOptions original);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class Microsoft.Identity.Client.AppConfig.CertificateOptions original) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.AppConfig.CertificateOptions.#ctor(Microsoft.Identity.Client.AppConfig.CertificateOptions)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (original As CertificateOptions)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.82.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="original" Type="Microsoft.Identity.Client.AppConfig.CertificateOptions" />
+      </Parameters>
+      <Docs>
+        <param name="original">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="&lt;Clone&gt;$">
+      <MemberSignature Language="C#" Value="public virtual Microsoft.Identity.Client.AppConfig.CertificateOptions &lt;Clone&gt;$ ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Identity.Client.AppConfig.CertificateOptions &lt;Clone&gt;$() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.AppConfig.CertificateOptions.&lt;Clone&gt;$" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function &lt;Clone&gt;$ () As CertificateOptions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.82.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.AppConfig.CertificateOptions</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssociateTokensWithCertificate">
+      <MemberSignature Language="C#" Value="public bool AssociateTokensWithCertificate { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AssociateTokensWithCertificate" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.AppConfig.CertificateOptions.AssociateTokensWithCertificate" />
+      <MemberSignature Language="VB.NET" Value="Public Property AssociateTokensWithCertificate As Boolean" />
+      <MemberSignature Language="F#" Value="member this.AssociateTokensWithCertificate : bool with get, set" Usage="Microsoft.Identity.Client.AppConfig.CertificateOptions.AssociateTokensWithCertificate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.82.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets a value indicating if the application tokens acquired from Azure AD are associated with the certificate serial number.
+            This property when set, allow you to associate the tokens acquired from Azure AD with the certificate serial number. 
+            This can be used to partition the cache by certificate. Tokens acquired with one certificate will not be accessible to another certificate with a different serial number.
+            <remarks>Set this property to <see langword="true" /> to indicate that the tokens acquired from Azure AD are associated with the certificate serial number,
+            by default it is set to <see langword="false" /> /&gt;</remarks></summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EqualityContract">
+      <MemberSignature Language="C#" Value="protected virtual Type EqualityContract { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type EqualityContract" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.AppConfig.CertificateOptions.EqualityContract" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable ReadOnly Property EqualityContract As Type" />
+      <MemberSignature Language="F#" Value="member this.EqualityContract : Type" Usage="Microsoft.Identity.Client.AppConfig.CertificateOptions.EqualityContract" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.82.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public virtual bool Equals (Microsoft.Identity.Client.AppConfig.CertificateOptions? other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class Microsoft.Identity.Client.AppConfig.CertificateOptions other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.AppConfig.CertificateOptions.Equals(Microsoft.Identity.Client.AppConfig.CertificateOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function Equals (other As CertificateOptions) As Boolean" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.82.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="Microsoft.Identity.Client.AppConfig.CertificateOptions" />
+      </Parameters>
+      <Docs>
+        <param name="other">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object? obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.AppConfig.CertificateOptions.Equals(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.82.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.AppConfig.CertificateOptions.GetHashCode" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.82.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (Microsoft.Identity.Client.AppConfig.CertificateOptions? left, Microsoft.Identity.Client.AppConfig.CertificateOptions? right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class Microsoft.Identity.Client.AppConfig.CertificateOptions left, class Microsoft.Identity.Client.AppConfig.CertificateOptions right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.AppConfig.CertificateOptions.op_Equality(Microsoft.Identity.Client.AppConfig.CertificateOptions,Microsoft.Identity.Client.AppConfig.CertificateOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator == (left As CertificateOptions, right As CertificateOptions) As Boolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.82.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="Microsoft.Identity.Client.AppConfig.CertificateOptions" />
+        <Parameter Name="right" Type="Microsoft.Identity.Client.AppConfig.CertificateOptions" />
+      </Parameters>
+      <Docs>
+        <param name="left">To be added.</param>
+        <param name="right">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (Microsoft.Identity.Client.AppConfig.CertificateOptions? left, Microsoft.Identity.Client.AppConfig.CertificateOptions? right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class Microsoft.Identity.Client.AppConfig.CertificateOptions left, class Microsoft.Identity.Client.AppConfig.CertificateOptions right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.AppConfig.CertificateOptions.op_Inequality(Microsoft.Identity.Client.AppConfig.CertificateOptions,Microsoft.Identity.Client.AppConfig.CertificateOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator != (left As CertificateOptions, right As CertificateOptions) As Boolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.82.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="Microsoft.Identity.Client.AppConfig.CertificateOptions" />
+        <Parameter Name="right" Type="Microsoft.Identity.Client.AppConfig.CertificateOptions" />
+      </Parameters>
+      <Docs>
+        <param name="left">To be added.</param>
+        <param name="right">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrintMembers">
+      <MemberSignature Language="C#" Value="protected virtual bool PrintMembers (System.Text.StringBuilder builder);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool PrintMembers(class System.Text.StringBuilder builder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.AppConfig.CertificateOptions.PrintMembers(System.Text.StringBuilder)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function PrintMembers (builder As StringBuilder) As Boolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.82.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="builder" Type="System.Text.StringBuilder" />
+      </Parameters>
+      <Docs>
+        <param name="builder">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendX5C">
+      <MemberSignature Language="C#" Value="public bool SendX5C { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SendX5C" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.AppConfig.CertificateOptions.SendX5C" />
+      <MemberSignature Language="VB.NET" Value="Public Property SendX5C As Boolean" />
+      <MemberSignature Language="F#" Value="member this.SendX5C : bool with get, set" Usage="Microsoft.Identity.Client.AppConfig.CertificateOptions.SendX5C" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.82.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets a value indicating whether the X.509 certificate chain (x5c) should be included in the token
+            request.
+            </summary>
+        <value>To be added.</value>
+        <remarks>Set this property to <see langword="true" /> to include X5C in the token request 
+            otherwise, set it to <see langword="false" />.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.AppConfig.CertificateOptions.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.82.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

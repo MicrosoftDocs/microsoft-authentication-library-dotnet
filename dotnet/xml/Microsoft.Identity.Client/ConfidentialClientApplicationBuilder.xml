@@ -53,6 +53,7 @@
     <AssemblyVersion>4.79.1.0</AssemblyVersion>
     <AssemblyVersion>4.79.2.0</AssemblyVersion>
     <AssemblyVersion>4.81.0.0</AssemblyVersion>
+    <AssemblyVersion>4.82.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Identity.Client.AbstractApplicationBuilder&lt;Microsoft.Identity.Client.ConfidentialClientApplicationBuilder&gt;</BaseTypeName>
@@ -75,7 +76,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.81.0.0</AssemblyVersion>
+        <AssemblyVersion>4.82.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.IConfidentialClientApplication</ReturnType>
@@ -100,7 +101,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.81.0.0</AssemblyVersion>
+        <AssemblyVersion>4.82.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -129,7 +130,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.81.0.0</AssemblyVersion>
+        <AssemblyVersion>4.82.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -157,7 +158,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.81.0.0</AssemblyVersion>
+        <AssemblyVersion>4.82.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -195,7 +196,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.81.0.0</AssemblyVersion>
+        <AssemblyVersion>4.82.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -227,7 +228,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.81.0.0</AssemblyVersion>
+        <AssemblyVersion>4.82.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -248,6 +249,41 @@
       </Docs>
     </Member>
     <Member MemberName="WithCertificate">
+      <MemberSignature Language="C#" Value="public Microsoft.Identity.Client.ConfidentialClientApplicationBuilder WithCertificate (System.Security.Cryptography.X509Certificates.X509Certificate2 certificate, Microsoft.Identity.Client.AppConfig.CertificateOptions certificateOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Identity.Client.ConfidentialClientApplicationBuilder WithCertificate(class System.Security.Cryptography.X509Certificates.X509Certificate2 certificate, class Microsoft.Identity.Client.AppConfig.CertificateOptions certificateOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.ConfidentialClientApplicationBuilder.WithCertificate(System.Security.Cryptography.X509Certificates.X509Certificate2,Microsoft.Identity.Client.AppConfig.CertificateOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithCertificate (certificate As X509Certificate2, certificateOptions As CertificateOptions) As ConfidentialClientApplicationBuilder" />
+      <MemberSignature Language="F#" Value="member this.WithCertificate : System.Security.Cryptography.X509Certificates.X509Certificate2 * Microsoft.Identity.Client.AppConfig.CertificateOptions -&gt; Microsoft.Identity.Client.ConfidentialClientApplicationBuilder" Usage="confidentialClientApplicationBuilder.WithCertificate (certificate, certificateOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.82.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate2" />
+        <Parameter Name="certificateOptions" Type="Microsoft.Identity.Client.AppConfig.CertificateOptions" />
+      </Parameters>
+      <Docs>
+        <param name="certificate">The X509 certificate used as credentials to prove the identity of the application to Azure AD.</param>
+        <param name="certificateOptions">Configuration options for certificate handling. See <see cref="T:Microsoft.Identity.Client.AppConfig.CertificateOptions" /> for more information.</param>
+        <summary>
+            Sets the certificate associated with the application.
+            Applicable to first-party applications only, this method also allows to specify 
+            if the <see href="https://datatracker.ietf.org/doc/html/rfc7517#section-4.7">x5c claim</see> should be sent to Azure AD.
+            Sending the x5c enables application developers to achieve easy certificate roll-over in Azure AD:
+            this method will send the certificate chain to Azure AD along with the token request,
+            so that Azure AD can use it to validate the subject name based on a trusted issuer policy.
+            This saves the application admin from the need to explicitly manage the certificate rollover
+            (either via portal or PowerShell/CLI operation). For details see https://aka.ms/msal-net-sni
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>You should use certificates with a private key size of at least 2048 bytes. Future versions of this library might reject certificates with smaller keys. </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithCertificate">
       <MemberSignature Language="C#" Value="public Microsoft.Identity.Client.ConfidentialClientApplicationBuilder WithCertificate (System.Security.Cryptography.X509Certificates.X509Certificate2 certificate, bool sendX5C);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Identity.Client.ConfidentialClientApplicationBuilder WithCertificate(class System.Security.Cryptography.X509Certificates.X509Certificate2 certificate, bool sendX5C) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.ConfidentialClientApplicationBuilder.WithCertificate(System.Security.Cryptography.X509Certificates.X509Certificate2,System.Boolean)" />
@@ -256,7 +292,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.81.0.0</AssemblyVersion>
+        <AssemblyVersion>4.82.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -291,7 +327,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.81.0.0</AssemblyVersion>
+        <AssemblyVersion>4.82.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -321,7 +357,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.81.0.0</AssemblyVersion>
+        <AssemblyVersion>4.82.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -348,7 +384,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.81.0.0</AssemblyVersion>
+        <AssemblyVersion>4.82.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -381,7 +417,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.81.0.0</AssemblyVersion>
+        <AssemblyVersion>4.82.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -414,7 +450,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.81.0.0</AssemblyVersion>
+        <AssemblyVersion>4.82.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -453,8 +489,18 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.81.0.0</AssemblyVersion>
+        <AssemblyVersion>4.82.1.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("This method is obsolete. Use the WithExtraClientAssertionClaims method on AcquireTokenForClientParameterBuilder", false)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("This method is obsolete. Use the WithExtraClientAssertionClaims method on AcquireTokenForClientParameterBuilder", false)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
       </ReturnValue>
@@ -488,8 +534,18 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.81.0.0</AssemblyVersion>
+        <AssemblyVersion>4.82.1.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("This method is obsolete. Use the WithExtraClientAssertionClaims method on AcquireTokenForClientParameterBuilder", false)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("This method is obsolete. Use the WithExtraClientAssertionClaims method on AcquireTokenForClientParameterBuilder", false)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
       </ReturnValue>
@@ -522,7 +578,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.81.0.0</AssemblyVersion>
+        <AssemblyVersion>4.82.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -549,7 +605,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.81.0.0</AssemblyVersion>
+        <AssemblyVersion>4.82.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -585,7 +641,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.81.0.0</AssemblyVersion>
+        <AssemblyVersion>4.82.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -617,7 +673,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.81.0.0</AssemblyVersion>
+        <AssemblyVersion>4.82.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
