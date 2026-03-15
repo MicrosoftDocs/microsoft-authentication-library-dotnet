@@ -16,6 +16,7 @@
     <AssemblyVersion>4.1.1.0</AssemblyVersion>
     <AssemblyVersion>4.2.0.0</AssemblyVersion>
     <AssemblyVersion>4.3.0.0</AssemblyVersion>
+    <AssemblyVersion>4.5.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -43,11 +44,53 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
-        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
         <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBeforeOnBehalfOfInitialized">
+      <MemberSignature Language="C#" Value="public event Microsoft.Identity.Web.BeforeOnBehalfOfInitialized? OnBeforeOnBehalfOfInitialized;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Identity.Web.BeforeOnBehalfOfInitialized OnBeforeOnBehalfOfInitialized" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Identity.Web.TokenAcquisitionExtensionOptions.OnBeforeOnBehalfOfInitialized" />
+      <MemberSignature Language="VB.NET" Value="Public Event OnBeforeOnBehalfOfInitialized As BeforeOnBehalfOfInitialized " />
+      <MemberSignature Language="F#" Value="member this.OnBeforeOnBehalfOfInitialized : Microsoft.Identity.Web.BeforeOnBehalfOfInitialized " Usage="member this.OnBeforeOnBehalfOfInitialized : Microsoft.Identity.Web.BeforeOnBehalfOfInitialized " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Web.BeforeOnBehalfOfInitialized</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Occurs before the On-Behalf-Of flow is initialized.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBeforeOnBehalfOfInitializedAsync">
+      <MemberSignature Language="C#" Value="public event Microsoft.Identity.Web.BeforeOnBehalfOfInitializedAsync? OnBeforeOnBehalfOfInitializedAsync;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Identity.Web.BeforeOnBehalfOfInitializedAsync OnBeforeOnBehalfOfInitializedAsync" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Identity.Web.TokenAcquisitionExtensionOptions.OnBeforeOnBehalfOfInitializedAsync" />
+      <MemberSignature Language="VB.NET" Value="Public Event OnBeforeOnBehalfOfInitializedAsync As BeforeOnBehalfOfInitializedAsync " />
+      <MemberSignature Language="F#" Value="member this.OnBeforeOnBehalfOfInitializedAsync : Microsoft.Identity.Web.BeforeOnBehalfOfInitializedAsync " Usage="member this.OnBeforeOnBehalfOfInitializedAsync : Microsoft.Identity.Web.BeforeOnBehalfOfInitializedAsync " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Web.BeforeOnBehalfOfInitializedAsync</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Occurs before the On-Behalf-Of flow is initialized.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -60,7 +103,7 @@
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
-        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Web.BeforeTokenAcquisitionForApp</ReturnType>
@@ -68,6 +111,50 @@
       <Docs>
         <summary>
             Event fired when a client credential flow request is being built.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBeforeTokenAcquisitionForOnBehalfOf">
+      <MemberSignature Language="C#" Value="public event Microsoft.Identity.Web.BeforeTokenAcquisitionForOnBehalfOf? OnBeforeTokenAcquisitionForOnBehalfOf;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Identity.Web.BeforeTokenAcquisitionForOnBehalfOf OnBeforeTokenAcquisitionForOnBehalfOf" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Identity.Web.TokenAcquisitionExtensionOptions.OnBeforeTokenAcquisitionForOnBehalfOf" />
+      <MemberSignature Language="VB.NET" Value="Public Event OnBeforeTokenAcquisitionForOnBehalfOf As BeforeTokenAcquisitionForOnBehalfOf " />
+      <MemberSignature Language="F#" Value="member this.OnBeforeTokenAcquisitionForOnBehalfOf : Microsoft.Identity.Web.BeforeTokenAcquisitionForOnBehalfOf " Usage="member this.OnBeforeTokenAcquisitionForOnBehalfOf : Microsoft.Identity.Web.BeforeTokenAcquisitionForOnBehalfOf " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Web.BeforeTokenAcquisitionForOnBehalfOf</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Occurs before an asynchronous token acquisition operation for the On-Behalf-Of authentication flow is
+            initiated.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBeforeTokenAcquisitionForOnBehalfOfAsync">
+      <MemberSignature Language="C#" Value="public event Microsoft.Identity.Web.BeforeTokenAcquisitionForOnBehalfOfAsync? OnBeforeTokenAcquisitionForOnBehalfOfAsync;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Identity.Web.BeforeTokenAcquisitionForOnBehalfOfAsync OnBeforeTokenAcquisitionForOnBehalfOfAsync" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Identity.Web.TokenAcquisitionExtensionOptions.OnBeforeTokenAcquisitionForOnBehalfOfAsync" />
+      <MemberSignature Language="VB.NET" Value="Public Event OnBeforeTokenAcquisitionForOnBehalfOfAsync As BeforeTokenAcquisitionForOnBehalfOfAsync " />
+      <MemberSignature Language="F#" Value="member this.OnBeforeTokenAcquisitionForOnBehalfOfAsync : Microsoft.Identity.Web.BeforeTokenAcquisitionForOnBehalfOfAsync " Usage="member this.OnBeforeTokenAcquisitionForOnBehalfOfAsync : Microsoft.Identity.Web.BeforeTokenAcquisitionForOnBehalfOfAsync " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Web.BeforeTokenAcquisitionForOnBehalfOfAsync</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Occurs before an asynchronous token acquisition operation for the On-Behalf-Of authentication flow is
+            initiated.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -81,7 +168,7 @@
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
-        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Web.BeforeTokenAcquisitionForTestUser</ReturnType>
@@ -102,7 +189,7 @@
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
-        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Web.BeforeTokenAcquisitionForTestUserAsync</ReturnType>

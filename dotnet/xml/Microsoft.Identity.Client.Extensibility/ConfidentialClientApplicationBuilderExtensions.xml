@@ -53,6 +53,7 @@
     <AssemblyVersion>4.79.1.0</AssemblyVersion>
     <AssemblyVersion>4.79.2.0</AssemblyVersion>
     <AssemblyVersion>4.81.0.0</AssemblyVersion>
+    <AssemblyVersion>4.82.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -73,7 +74,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.81.0.0</AssemblyVersion>
+        <AssemblyVersion>4.82.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -135,7 +136,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.81.0.0</AssemblyVersion>
+        <AssemblyVersion>4.82.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -162,7 +163,7 @@
           <para>This callback is ONLY triggered for <see cref="T:Microsoft.Identity.Client.MsalServiceException" /> - errors returned by the identity provider (e.g., HTTP 500, 503, throttling).</para>
           <para>This callback is NOT triggered for client-side errors (<see cref="T:Microsoft.Identity.Client.MsalClientException" />) or network failures handled internally by MSAL.</para>
           <para>This callback is only invoked for network token acquisition attempts, not when tokens are retrieved from cache.</para>
-          <para>When the callback returns <c>true</c>, MSAL will invoke the certificate provider (if configured via <see cref="M:Microsoft.Identity.Client.Extensibility.ConfidentialClientApplicationBuilderExtensions.WithCertificate(Microsoft.Identity.Client.ConfidentialClientApplicationBuilder,System.Func{Microsoft.Identity.Client.AssertionRequestOptions,System.Threading.Tasks.Task{System.Security.Cryptography.X509Certificates.X509Certificate2}})" />)
+          <para>When the callback returns <c>true</c>, MSAL will invoke the certificate provider (if configured via <see cref="M:Microsoft.Identity.Client.Extensibility.ConfidentialClientApplicationBuilderExtensions.WithCertificate(Microsoft.Identity.Client.ConfidentialClientApplicationBuilder,System.Func{Microsoft.Identity.Client.AssertionRequestOptions,System.Threading.Tasks.Task{System.Security.Cryptography.X509Certificates.X509Certificate2}},Microsoft.Identity.Client.AppConfig.CertificateOptions)" />)
             before making another token request, enabling certificate rotation scenarios.</para>
           <para>MSAL's internal throttling and retry mechanisms will still apply, including respecting Retry-After headers from the identity provider.</para>
           <para>To prevent infinite loops, ensure your callback has appropriate termination conditions (e.g., max retry count, timeout).</para>
@@ -197,7 +198,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.81.0.0</AssemblyVersion>
+        <AssemblyVersion>4.82.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -221,15 +222,15 @@
       </Docs>
     </Member>
     <Member MemberName="WithCertificate">
-      <MemberSignature Language="C#" Value="public static Microsoft.Identity.Client.ConfidentialClientApplicationBuilder WithCertificate (this Microsoft.Identity.Client.ConfidentialClientApplicationBuilder builder, Func&lt;Microsoft.Identity.Client.AssertionRequestOptions,System.Threading.Tasks.Task&lt;System.Security.Cryptography.X509Certificates.X509Certificate2&gt;&gt; certificateProvider);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Identity.Client.ConfidentialClientApplicationBuilder WithCertificate(class Microsoft.Identity.Client.ConfidentialClientApplicationBuilder builder, class System.Func`2&lt;class Microsoft.Identity.Client.AssertionRequestOptions, class System.Threading.Tasks.Task`1&lt;class System.Security.Cryptography.X509Certificates.X509Certificate2&gt;&gt; certificateProvider) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.Extensibility.ConfidentialClientApplicationBuilderExtensions.WithCertificate(Microsoft.Identity.Client.ConfidentialClientApplicationBuilder,System.Func{Microsoft.Identity.Client.AssertionRequestOptions,System.Threading.Tasks.Task{System.Security.Cryptography.X509Certificates.X509Certificate2}})" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function WithCertificate (builder As ConfidentialClientApplicationBuilder, certificateProvider As Func(Of AssertionRequestOptions, Task(Of X509Certificate2))) As ConfidentialClientApplicationBuilder" />
-      <MemberSignature Language="F#" Value="static member WithCertificate : Microsoft.Identity.Client.ConfidentialClientApplicationBuilder * Func&lt;Microsoft.Identity.Client.AssertionRequestOptions, System.Threading.Tasks.Task&lt;System.Security.Cryptography.X509Certificates.X509Certificate2&gt;&gt; -&gt; Microsoft.Identity.Client.ConfidentialClientApplicationBuilder" Usage="Microsoft.Identity.Client.Extensibility.ConfidentialClientApplicationBuilderExtensions.WithCertificate (builder, certificateProvider)" />
+      <MemberSignature Language="C#" Value="public static Microsoft.Identity.Client.ConfidentialClientApplicationBuilder WithCertificate (this Microsoft.Identity.Client.ConfidentialClientApplicationBuilder builder, Func&lt;Microsoft.Identity.Client.AssertionRequestOptions,System.Threading.Tasks.Task&lt;System.Security.Cryptography.X509Certificates.X509Certificate2&gt;&gt; certificateProvider, Microsoft.Identity.Client.AppConfig.CertificateOptions certificateOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Identity.Client.ConfidentialClientApplicationBuilder WithCertificate(class Microsoft.Identity.Client.ConfidentialClientApplicationBuilder builder, class System.Func`2&lt;class Microsoft.Identity.Client.AssertionRequestOptions, class System.Threading.Tasks.Task`1&lt;class System.Security.Cryptography.X509Certificates.X509Certificate2&gt;&gt; certificateProvider, class Microsoft.Identity.Client.AppConfig.CertificateOptions certificateOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.Extensibility.ConfidentialClientApplicationBuilderExtensions.WithCertificate(Microsoft.Identity.Client.ConfidentialClientApplicationBuilder,System.Func{Microsoft.Identity.Client.AssertionRequestOptions,System.Threading.Tasks.Task{System.Security.Cryptography.X509Certificates.X509Certificate2}},Microsoft.Identity.Client.AppConfig.CertificateOptions)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function WithCertificate (builder As ConfidentialClientApplicationBuilder, certificateProvider As Func(Of AssertionRequestOptions, Task(Of X509Certificate2)), certificateOptions As CertificateOptions) As ConfidentialClientApplicationBuilder" />
+      <MemberSignature Language="F#" Value="static member WithCertificate : Microsoft.Identity.Client.ConfidentialClientApplicationBuilder * Func&lt;Microsoft.Identity.Client.AssertionRequestOptions, System.Threading.Tasks.Task&lt;System.Security.Cryptography.X509Certificates.X509Certificate2&gt;&gt; * Microsoft.Identity.Client.AppConfig.CertificateOptions -&gt; Microsoft.Identity.Client.ConfidentialClientApplicationBuilder" Usage="Microsoft.Identity.Client.Extensibility.ConfidentialClientApplicationBuilderExtensions.WithCertificate (builder, certificateProvider, certificateOptions)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.81.0.0</AssemblyVersion>
+        <AssemblyVersion>4.82.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -237,14 +238,15 @@
       <Parameters>
         <Parameter Name="builder" Type="Microsoft.Identity.Client.ConfidentialClientApplicationBuilder" RefType="this" />
         <Parameter Name="certificateProvider" Type="System.Func&lt;Microsoft.Identity.Client.AssertionRequestOptions,System.Threading.Tasks.Task&lt;System.Security.Cryptography.X509Certificates.X509Certificate2&gt;&gt;" />
+        <Parameter Name="certificateOptions" Type="Microsoft.Identity.Client.AppConfig.CertificateOptions" />
       </Parameters>
       <Docs>
         <param name="builder">The confidential client application builder.</param>
         <param name="certificateProvider">
             An async callback that provides the certificate based on the application configuration.
             Called before each network request to acquire a token.
-            Must return a valid <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> with a private key.
-            </param>
+            Must return a valid <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> with a private key.</param>
+        <param name="certificateOptions">Configuration options for the certificate handling.</param>
         <summary>
             Configures an async callback to provide the client credential certificate dynamically.
             The callback is invoked before each token acquisition request to the identity provider (including retries).
