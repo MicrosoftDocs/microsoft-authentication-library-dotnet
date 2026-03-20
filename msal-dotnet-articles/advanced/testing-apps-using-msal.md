@@ -2,14 +2,12 @@
 title: Testing applications using MSAL.NET
 description: "How to test applications that use MSAL.NET for token acquisition."
 author: Dickson-Mwendia
-manager: 
+ms.manager: Dougeby
 ms.author: dmwendia
 ms.date: 05/20/2025
 ms.service: msal
 ms.subservice: msal-dotnet
-ms.reviewer: 
 ms.topic: concept-article
-ms.custom: 
 #Customer intent: 
 ---
 
@@ -21,7 +19,7 @@ MSAL.NET's API uses the builder pattern heavily. Builders are difficult and tedi
 
 ## End-to-end testing
 
-For end to end testing, you can setup test accounts, test applications or even separate directories. Username and passwords can be deployed via the Continuous Integration pipeline (e.g. secret build variables in Azure DevOps). Another strategy is to keep test credentials in KeyVault and configure the machine that runs the tests to access KeyVault, for example by installing a certificate. Feel free to use MSAL's [strategy for accessing KeyVault](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/master/tests/Microsoft.Identity.Test.LabInfrastructure/KeyVaultSecretsProvider.cs#L112).
+For end to end testing, you can setup test accounts, test applications or even separate directories. Username and passwords can be deployed via the Continuous Integration pipeline (e.g. secret build variables in Azure DevOps). Another strategy is to keep test credentials in KeyVault and configure the machine that runs the tests to access KeyVault, for example by installing a certificate.
 
 Note that once token acquisition occurs, both an Access Token and a Refresh Token are cached. The first has a lifetime of 1h, the latter of several months. When the Access Token expires, MSAL will automatically use the Refresh Token to acquire a new one, without user interaction. You can rely on this behaviour to provision your tests.
 
