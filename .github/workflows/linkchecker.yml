@@ -22,7 +22,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
         with:
-          args: --base https://learn.microsoft.com --accept=200,429,403,502,503 --verbose --no-progress './**/*.md'
+          args: --remap "^/(.*) https://learn.microsoft.com/\$1" --accept=200,429,403,502,503 --verbose --no-progress './**/*.md'
           fail: true
 
       - name: Create Issue From File
