@@ -1,0 +1,93 @@
+<Type Name="OnBehalfOfEventArgs" FullName="Microsoft.Identity.Web.OnBehalfOfEventArgs">
+  <TypeSignature Language="C#" Value="public class OnBehalfOfEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit OnBehalfOfEventArgs extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Web.OnBehalfOfEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public Class OnBehalfOfEventArgs" />
+  <TypeSignature Language="F#" Value="type OnBehalfOfEventArgs = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+    <AssemblyVersion>4.5.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Event arguments for on-behalf-of token acquisition operations.
+            Contains user assertion token information about the user and additional data for the token request.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OnBehalfOfEventArgs ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.OnBehalfOfEventArgs.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="User">
+      <MemberSignature Language="C#" Value="public System.Security.Claims.ClaimsPrincipal? User { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Claims.ClaimsPrincipal User" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Web.OnBehalfOfEventArgs.User" />
+      <MemberSignature Language="VB.NET" Value="Public Property User As ClaimsPrincipal" />
+      <MemberSignature Language="F#" Value="member this.User : System.Security.Claims.ClaimsPrincipal with get, set" Usage="Microsoft.Identity.Web.OnBehalfOfEventArgs.User" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Claims.ClaimsPrincipal</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the claims principal representing the user for whom the token is being acquired.
+            This is the claims principal into the the api.
+            This value can be null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserAssertionToken">
+      <MemberSignature Language="C#" Value="public string? UserAssertionToken { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserAssertionToken" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Web.OnBehalfOfEventArgs.UserAssertionToken" />
+      <MemberSignature Language="VB.NET" Value="Public Property UserAssertionToken As String" />
+      <MemberSignature Language="F#" Value="member this.UserAssertionToken : string with get, set" Usage="Microsoft.Identity.Web.OnBehalfOfEventArgs.UserAssertionToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets additional context information for the token acquisition operation.
+            If the incoming token is encrypted, it will be decrypted and made available in this property.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

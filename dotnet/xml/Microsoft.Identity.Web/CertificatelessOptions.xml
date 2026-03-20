@@ -16,6 +16,7 @@
     <AssemblyVersion>4.1.1.0</AssemblyVersion>
     <AssemblyVersion>4.2.0.0</AssemblyVersion>
     <AssemblyVersion>4.3.0.0</AssemblyVersion>
+    <AssemblyVersion>4.5.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -37,7 +38,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
-        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -54,7 +55,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
-        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -77,7 +78,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
-        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -85,9 +86,8 @@
       <Docs>
         <summary>
             The value is used to establish a connection between external workload identities
-            and Azure Active Directory. If Azure AD is the issuer, this value should be the object
-            ID of the managed identity service principal in the tenant that will be used to 
-            impersonate the app.
+            and Azure Active Directory. If Azure AD is the issuer, this value should be the client
+            ID of the managed identity.
             Can be null if you are using the machine assigned managed identity.
             Needs to be assigned if you are using a user assigned managed identity.
             </summary>

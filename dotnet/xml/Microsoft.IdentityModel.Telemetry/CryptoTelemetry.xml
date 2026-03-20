@@ -1,0 +1,63 @@
+<Type Name="CryptoTelemetry" FullName="Microsoft.IdentityModel.Telemetry.CryptoTelemetry">
+  <TypeSignature Language="C#" Value="public static class CryptoTelemetry" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit CryptoTelemetry extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.IdentityModel.Telemetry.CryptoTelemetry" />
+  <TypeSignature Language="VB.NET" Value="Public Class CryptoTelemetry" />
+  <TypeSignature Language="F#" Value="type CryptoTelemetry = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+    <AssemblyVersion>8.16.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Provides utility methods for telemetry and analytics purposes.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EnableSignatureValidationTelemetry">
+      <MemberSignature Language="C#" Value="public static void EnableSignatureValidationTelemetry (bool enable, string[]? trackedIssuers);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void EnableSignatureValidationTelemetry(bool enable, string[] trackedIssuers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Telemetry.CryptoTelemetry.EnableSignatureValidationTelemetry(System.Boolean,System.String[])" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub EnableSignatureValidationTelemetry (enable As Boolean, trackedIssuers As String())" />
+      <MemberSignature Language="F#" Value="static member EnableSignatureValidationTelemetry : bool * string[] -&gt; unit" Usage="Microsoft.IdentityModel.Telemetry.CryptoTelemetry.EnableSignatureValidationTelemetry (enable, trackedIssuers)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.16.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enable" Type="System.Boolean" />
+        <Parameter Name="trackedIssuers" Type="System.String[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="enable">Indicates whether to enable signature validation telemetry.</param>
+        <param name="trackedIssuers">An optional list of issuer hosts to track in telemetry. Issuers not in this list will be reported as "other".</param>
+        <summary>
+            Enables or disables telemetry for signature validation and configures related settings.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

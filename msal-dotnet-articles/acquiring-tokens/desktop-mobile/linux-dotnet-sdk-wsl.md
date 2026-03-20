@@ -68,13 +68,14 @@ Install the following dependencies on your Linux platform:
 
 - `libsecret-tools` is required to interface with the Linux keychain
 - `libx11-dev` package, where the `libx11` library is used to get the console window handle on Linux.
+- Starting with `Microsoft.Identity.Client.NativeInterop` v0.20.2, `libwebkit2gtk-4.1-37` is required. For versions earlier than v0.20.2, install `libwebkit2gtk-4.0-37`.
 
 ### [Ubuntu](#tab/ubuntudep)
 
 To install on debian/Ubuntu based Linux distribution:
 
 ```bash
-sudo apt install libx11-6 libc++1 libc++abi1 libsecret-1-0 libwebkit2gtk-4.0-37 -y
+sudo apt install libx11-6 libc++1 libc++abi1 libsecret-1-0 libwebkit2gtk-4.1-37 -y
 
 #from Powershell, run
 wsl.exe --shutdown
@@ -85,7 +86,7 @@ wsl.exe --shutdown
 To install on Red Hat/Fedora based Linux distribution:
 
 ```bash
-sudo dnf install libx11-6 libc++1 libc++abi1 libsecret-1-0 libwebkit2gtk-4.0-37 -y
+sudo dnf install libx11-6 libc++1 libc++abi1 libsecret-1-0 libwebkit2gtk-4.1-37 -y
 
 #from Powershell, run
 wsl.exe --shutdown
