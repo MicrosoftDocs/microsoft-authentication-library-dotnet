@@ -1,0 +1,27 @@
+<Type Name="BeforeOnBehalfOfInitialized" FullName="Microsoft.Identity.Web.BeforeOnBehalfOfInitialized">
+  <TypeSignature Language="C#" Value="public delegate void BeforeOnBehalfOfInitialized(OnBehalfOfEventArgs eventArgs);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BeforeOnBehalfOfInitialized extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Web.BeforeOnBehalfOfInitialized" />
+  <TypeSignature Language="VB.NET" Value="Public Delegate Sub BeforeOnBehalfOfInitialized(eventArgs As OnBehalfOfEventArgs)" />
+  <TypeSignature Language="F#" Value="type BeforeOnBehalfOfInitialized = delegate of OnBehalfOfEventArgs -&gt; unit" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+    <AssemblyVersion>4.5.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="eventArgs" Type="Microsoft.Identity.Web.OnBehalfOfEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="eventArgs">Event arguments containing the user assertion token. Handlers can modify <see cref="P:Microsoft.Identity.Web.OnBehalfOfEventArgs.UserAssertionToken" /> to replace the assertion.</param>
+    <summary>
+            Signature for a sync event that fires before the on-behalf-of flow is initialized.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

@@ -16,6 +16,7 @@
     <AssemblyVersion>4.1.1.0</AssemblyVersion>
     <AssemblyVersion>4.2.0.0</AssemblyVersion>
     <AssemblyVersion>4.3.0.0</AssemblyVersion>
+    <AssemblyVersion>4.5.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Identity.Abstractions.CredentialDescription</BaseTypeName>
@@ -42,7 +43,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -61,7 +62,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="credentialDescription" Type="Microsoft.Identity.Abstractions.CredentialDescription" />
@@ -83,7 +84,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -111,7 +112,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Web.CertificateDescription</ReturnType>
@@ -137,7 +138,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Web.CertificateDescription</ReturnType>
@@ -165,7 +166,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Web.CertificateDescription</ReturnType>
@@ -191,7 +192,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Web.CertificateDescription</ReturnType>
@@ -219,7 +220,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Web.CertificateDescription</ReturnType>
@@ -254,7 +255,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Web.CertificateDescription</ReturnType>
@@ -276,6 +277,39 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="FromStoreWithSubjectName">
+      <MemberSignature Language="C#" Value="public static Microsoft.Identity.Web.CertificateDescription FromStoreWithSubjectName (string certificateSubjectName, System.Security.Cryptography.X509Certificates.StoreLocation certificateStoreLocation = System.Security.Cryptography.X509Certificates.StoreLocation.CurrentUser, System.Security.Cryptography.X509Certificates.StoreName certificateStoreName = System.Security.Cryptography.X509Certificates.StoreName.My);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Identity.Web.CertificateDescription FromStoreWithSubjectName(string certificateSubjectName, valuetype System.Security.Cryptography.X509Certificates.StoreLocation certificateStoreLocation, valuetype System.Security.Cryptography.X509Certificates.StoreName certificateStoreName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.CertificateDescription.FromStoreWithSubjectName(System.String,System.Security.Cryptography.X509Certificates.StoreLocation,System.Security.Cryptography.X509Certificates.StoreName)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FromStoreWithSubjectName (certificateSubjectName As String, Optional certificateStoreLocation As StoreLocation = System.Security.Cryptography.X509Certificates.StoreLocation.CurrentUser, Optional certificateStoreName As StoreName = System.Security.Cryptography.X509Certificates.StoreName.My) As CertificateDescription" />
+      <MemberSignature Language="F#" Value="static member FromStoreWithSubjectName : string * System.Security.Cryptography.X509Certificates.StoreLocation * System.Security.Cryptography.X509Certificates.StoreName -&gt; Microsoft.Identity.Web.CertificateDescription" Usage="Microsoft.Identity.Web.CertificateDescription.FromStoreWithSubjectName (certificateSubjectName, certificateStoreLocation, certificateStoreName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Web.CertificateDescription</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="certificateSubjectName" Type="System.String" />
+        <Parameter Name="certificateStoreLocation" Type="System.Security.Cryptography.X509Certificates.StoreLocation" />
+        <Parameter Name="certificateStoreName" Type="System.Security.Cryptography.X509Certificates.StoreName" />
+      </Parameters>
+      <Docs>
+        <param name="certificateSubjectName">Certificate subject name (or substring of the subject) to search for in the store.</param>
+        <param name="certificateStoreLocation">Store location where to find the certificate.</param>
+        <param name="certificateStoreName">Store name where to find the certificate.</param>
+        <summary>
+            Creates a certificate description from a certificate subject name (such as "MyCert")
+            and store location (Certificate Manager on Windows, for instance).
+            The provided subject name is matched as a substring against the Subject field of each
+            certificate in the store; the most recently issued matching certificate is selected.
+            </summary>
+        <returns>A certificate description.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="FromStoreWithThumbprint">
       <MemberSignature Language="C#" Value="public static Microsoft.Identity.Web.CertificateDescription FromStoreWithThumbprint (string certificateThumbprint, System.Security.Cryptography.X509Certificates.StoreLocation certificateStoreLocation = System.Security.Cryptography.X509Certificates.StoreLocation.CurrentUser, System.Security.Cryptography.X509Certificates.StoreName certificateStoreName = System.Security.Cryptography.X509Certificates.StoreName.My);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Identity.Web.CertificateDescription FromStoreWithThumbprint(string certificateThumbprint, valuetype System.Security.Cryptography.X509Certificates.StoreLocation certificateStoreLocation, valuetype System.Security.Cryptography.X509Certificates.StoreName certificateStoreName) cil managed" />
@@ -285,7 +319,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Web.CertificateDescription</ReturnType>
@@ -315,7 +349,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Web.CertificateSource</ReturnType>
@@ -337,7 +371,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificate</AssemblyName>
-        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Cryptography.X509Certificates.X509KeyStorageFlags</ReturnType>

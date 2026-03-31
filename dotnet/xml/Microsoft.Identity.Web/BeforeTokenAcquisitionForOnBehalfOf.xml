@@ -1,0 +1,38 @@
+<Type Name="BeforeTokenAcquisitionForOnBehalfOf" FullName="Microsoft.Identity.Web.BeforeTokenAcquisitionForOnBehalfOf">
+  <TypeSignature Language="C#" Value="public delegate void BeforeTokenAcquisitionForOnBehalfOf(AcquireTokenOnBehalfOfParameterBuilder builder, AcquireTokenOptions? acquireTokenOptions, OnBehalfOfEventArgs eventArgs);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BeforeTokenAcquisitionForOnBehalfOf extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Web.BeforeTokenAcquisitionForOnBehalfOf" />
+  <TypeSignature Language="VB.NET" Value="Public Delegate Sub BeforeTokenAcquisitionForOnBehalfOf(builder As AcquireTokenOnBehalfOfParameterBuilder, acquireTokenOptions As AcquireTokenOptions, eventArgs As OnBehalfOfEventArgs)" />
+  <TypeSignature Language="F#" Value="type BeforeTokenAcquisitionForOnBehalfOf = delegate of AcquireTokenOnBehalfOfParameterBuilder * AcquireTokenOptions * OnBehalfOfEventArgs -&gt; unit" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+    <AssemblyVersion>4.5.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="builder" Type="Microsoft.Identity.Client.AcquireTokenOnBehalfOfParameterBuilder" />
+    <Parameter Name="acquireTokenOptions" Type="Microsoft.Identity.Abstractions.AcquireTokenOptions">
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+    </Parameter>
+    <Parameter Name="eventArgs" Type="Microsoft.Identity.Web.OnBehalfOfEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="builder">Builder</param>
+    <param name="acquireTokenOptions">Token acquisition options for the request. Can be null.</param>
+    <param name="eventArgs">Event arguments containing user claims and additional context information.</param>
+    <summary>
+            Signature for token acquisition extensions that act on the request builder, for on-behalf-of flow.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>
