@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-model-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.Identity.Abstractions" Version="11.2.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.Azure" Version="4.5.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.Certificate" Version="4.5.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="4.5.0.0" />
-    <Assembly Name="Microsoft.Identity.Web" Version="4.5.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.DownstreamApi" Version="4.5.0.0" />
+    <Assembly Name="Microsoft.Identity.Abstractions" Version="12.0.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.Azure" Version="4.7.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.Certificate" Version="4.7.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="4.7.0.0" />
+    <Assembly Name="Microsoft.Identity.Web" Version="4.7.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.DownstreamApi" Version="4.7.0.0" />
     <Assembly Name="Microsoft.Identity.Web.DownstreamRestApi" Version="2.0.8.0" />
-    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraph" Version="4.5.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraphBeta" Version="4.5.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.OWIN" Version="4.5.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.TokenAcquisition" Version="4.5.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.TokenCache" Version="4.5.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.UI" Version="4.5.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraph" Version="4.7.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraphBeta" Version="4.7.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.OWIN" Version="4.7.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.TokenAcquisition" Version="4.7.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.TokenCache" Version="4.7.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.UI" Version="4.7.0.0" />
   </Assemblies>
   <Namespace Name="Microsoft.Identity.Abstractions">
     <Type Name="Microsoft.Identity.Abstractions.AcquireTokenOptions" Id="T:Microsoft.Identity.Abstractions.AcquireTokenOptions">
@@ -393,6 +393,14 @@
     <Type Name="Microsoft.Identity.Web.BeforeTokenAcquisitionForOnBehalfOfAsync" Id="T:Microsoft.Identity.Web.BeforeTokenAcquisitionForOnBehalfOfAsync" />
     <Type Name="Microsoft.Identity.Web.BeforeTokenAcquisitionForTestUser" Id="T:Microsoft.Identity.Web.BeforeTokenAcquisitionForTestUser" />
     <Type Name="Microsoft.Identity.Web.BeforeTokenAcquisitionForTestUserAsync" Id="T:Microsoft.Identity.Web.BeforeTokenAcquisitionForTestUserAsync" />
+    <Type Name="Microsoft.Identity.Web.BlazorAuthenticationChallengeHandler" Id="T:Microsoft.Identity.Web.BlazorAuthenticationChallengeHandler">
+      <Member Id="M:Microsoft.Identity.Web.BlazorAuthenticationChallengeHandler.#ctor(Microsoft.AspNetCore.Components.NavigationManager,Microsoft.AspNetCore.Components.Authorization.AuthenticationStateProvider,Microsoft.Extensions.Configuration.IConfiguration)" />
+      <Member Id="M:Microsoft.Identity.Web.BlazorAuthenticationChallengeHandler.ChallengeUser(System.Security.Claims.ClaimsPrincipal,System.String[],System.String)" />
+      <Member Id="M:Microsoft.Identity.Web.BlazorAuthenticationChallengeHandler.ChallengeUserWithConfiguredScopesAsync(System.String)" />
+      <Member Id="M:Microsoft.Identity.Web.BlazorAuthenticationChallengeHandler.GetUserAsync" />
+      <Member Id="M:Microsoft.Identity.Web.BlazorAuthenticationChallengeHandler.HandleExceptionAsync(System.Exception)" />
+      <Member Id="M:Microsoft.Identity.Web.BlazorAuthenticationChallengeHandler.IsAuthenticatedAsync" />
+    </Type>
     <Type Name="Microsoft.Identity.Web.CertificateDescription" Id="T:Microsoft.Identity.Web.CertificateDescription">
       <Member Id="M:Microsoft.Identity.Web.CertificateDescription.#ctor" />
       <Member Id="M:Microsoft.Identity.Web.CertificateDescription.#ctor(Microsoft.Identity.Abstractions.CredentialDescription)" />
@@ -613,6 +621,9 @@
       <Member Id="M:Microsoft.Identity.Web.ITokenAcquisition.ReplyForbiddenWithWwwAuthenticateHeader(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.MsalUiRequiredException,Microsoft.AspNetCore.Http.HttpResponse)" />
       <Member Id="M:Microsoft.Identity.Web.ITokenAcquisition.ReplyForbiddenWithWwwAuthenticateHeader(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.MsalUiRequiredException,System.String,Microsoft.AspNetCore.Http.HttpResponse)" />
       <Member Id="M:Microsoft.Identity.Web.ITokenAcquisition.ReplyForbiddenWithWwwAuthenticateHeaderAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.MsalUiRequiredException,Microsoft.AspNetCore.Http.HttpResponse)" />
+    </Type>
+    <Type Name="Microsoft.Identity.Web.LoginLogoutEndpointRouteBuilderExtensions" Id="T:Microsoft.Identity.Web.LoginLogoutEndpointRouteBuilderExtensions">
+      <Member Id="M:Microsoft.Identity.Web.LoginLogoutEndpointRouteBuilderExtensions.MapLoginAndLogout(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder)" />
     </Type>
     <Type Name="Microsoft.Identity.Web.ManagedIdentityClientAssertion" Id="T:Microsoft.Identity.Web.ManagedIdentityClientAssertion">
       <Member Id="M:Microsoft.Identity.Web.ManagedIdentityClientAssertion.#ctor(System.String)" />

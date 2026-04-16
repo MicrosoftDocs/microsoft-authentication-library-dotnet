@@ -1,0 +1,74 @@
+<Type Name="LoginLogoutEndpointRouteBuilderExtensions" FullName="Microsoft.Identity.Web.LoginLogoutEndpointRouteBuilderExtensions">
+  <TypeSignature Language="C#" Value="public static class LoginLogoutEndpointRouteBuilderExtensions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit LoginLogoutEndpointRouteBuilderExtensions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Web.LoginLogoutEndpointRouteBuilderExtensions" />
+  <TypeSignature Language="VB.NET" Value="Public Module LoginLogoutEndpointRouteBuilderExtensions" />
+  <TypeSignature Language="F#" Value="type LoginLogoutEndpointRouteBuilderExtensions = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Web</AssemblyName>
+    <AssemblyVersion>4.7.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Extension methods for mapping login and logout endpoints that support
+            incremental consent and Conditional Access scenarios.
+            </summary>
+    <remarks>
+            These extension methods are designed for Blazor Server scenarios to provide
+            dedicated login and logout endpoints with support for incremental consent
+            and Conditional Access. The login endpoint accepts query parameters for scopes,
+            loginHint, domainHint, and claims to enable advanced authentication scenarios.
+            Use in conjunction with <see cref="T:Microsoft.Identity.Web.BlazorAuthenticationChallengeHandler" /> for
+            a complete authentication solution in Blazor Server applications.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="MapLoginAndLogout">
+      <MemberSignature Language="C#" Value="public static Microsoft.AspNetCore.Builder.IEndpointConventionBuilder MapLoginAndLogout (this Microsoft.AspNetCore.Routing.IEndpointRouteBuilder endpoints);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.AspNetCore.Builder.IEndpointConventionBuilder MapLoginAndLogout(class Microsoft.AspNetCore.Routing.IEndpointRouteBuilder endpoints) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.LoginLogoutEndpointRouteBuilderExtensions.MapLoginAndLogout(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function MapLoginAndLogout (endpoints As IEndpointRouteBuilder) As IEndpointConventionBuilder" />
+      <MemberSignature Language="F#" Value="static member MapLoginAndLogout : Microsoft.AspNetCore.Routing.IEndpointRouteBuilder -&gt; Microsoft.AspNetCore.Builder.IEndpointConventionBuilder" Usage="Microsoft.Identity.Web.LoginLogoutEndpointRouteBuilderExtensions.MapLoginAndLogout endpoints" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web</AssemblyName>
+        <AssemblyVersion>4.7.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresDynamicCode("Minimal APIs require dynamic code generation for delegate binding.")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresDynamicCode("Minimal APIs require dynamic code generation for delegate binding.")&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("Minimal APIs perform reflection on delegate types which may be trimmed if not directly referenced.")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("Minimal APIs perform reflection on delegate types which may be trimmed if not directly referenced.")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.AspNetCore.Builder.IEndpointConventionBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoints" Type="Microsoft.AspNetCore.Routing.IEndpointRouteBuilder" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="endpoints">The endpoint route builder.</param>
+        <summary>
+            Maps login and logout endpoints under the current route group.
+            The login endpoint supports incremental consent via scope, loginHint, domainHint, and claims parameters.
+            </summary>
+        <returns>The endpoint convention builder for further configuration.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
