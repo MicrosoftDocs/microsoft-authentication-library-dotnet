@@ -35,7 +35,7 @@ Because ADAL is deprecated, we **strongly advise** our customers to migrate to M
 
 ## Should you migrate to MSAL.NET or to Microsoft.Identity.Web
 
-Before digging in the details of MSAL.NET vs ADAL.NET, you might want to check if you want to use MSAL.NET or a higher-level library like [`Microsoft.Identity.Web`](../microsoft-identity-web/index.md).
+Before digging in the details of MSAL.NET vs ADAL.NET, you might want to check if you want to use MSAL.NET or a higher-level library like [`Microsoft.Identity.Web`](/entra/msidweb/).
 
 For details about the decision tree below, read [MSAL.NET or Microsoft.Identity.Web](../getting-started/choosing-msal-dotnet.md).
 
