@@ -2,18 +2,18 @@
 <Framework Name="msal-model-dotnet-latest">
   <Assemblies>
     <Assembly Name="Microsoft.Identity.Abstractions" Version="12.0.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.Azure" Version="4.7.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.Certificate" Version="4.7.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="4.7.0.0" />
-    <Assembly Name="Microsoft.Identity.Web" Version="4.7.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.DownstreamApi" Version="4.7.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.Azure" Version="4.8.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.Certificate" Version="4.8.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="4.8.0.0" />
+    <Assembly Name="Microsoft.Identity.Web" Version="4.8.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.DownstreamApi" Version="4.8.0.0" />
     <Assembly Name="Microsoft.Identity.Web.DownstreamRestApi" Version="2.0.8.0" />
-    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraph" Version="4.7.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraphBeta" Version="4.7.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.OWIN" Version="4.7.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.TokenAcquisition" Version="4.7.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.TokenCache" Version="4.7.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.UI" Version="4.7.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraph" Version="4.8.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraphBeta" Version="4.8.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.OWIN" Version="4.8.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.TokenAcquisition" Version="4.8.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.TokenCache" Version="4.8.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.UI" Version="4.8.0.0" />
   </Assemblies>
   <Namespace Name="Microsoft.Identity.Abstractions">
     <Type Name="Microsoft.Identity.Abstractions.AcquireTokenOptions" Id="T:Microsoft.Identity.Abstractions.AcquireTokenOptions">
@@ -591,6 +591,10 @@
     <Type Name="Microsoft.Identity.Web.ICertificateLoader" Id="T:Microsoft.Identity.Web.ICertificateLoader">
       <Member Id="M:Microsoft.Identity.Web.ICertificateLoader.LoadIfNeeded(Microsoft.Identity.Web.CertificateDescription)" />
     </Type>
+    <Type Name="Microsoft.Identity.Web.ICredentialsProvider" Id="T:Microsoft.Identity.Web.ICredentialsProvider">
+      <Member Id="M:Microsoft.Identity.Web.ICredentialsProvider.GetCredentialAsync(Microsoft.Identity.Abstractions.CredentialSourceLoaderParameters,System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.Identity.Web.ICredentialsProvider.NotifyCertificateUsed(Microsoft.Identity.Abstractions.CredentialSourceLoaderParameters,Microsoft.Identity.Abstractions.CredentialDescription,System.Security.Cryptography.X509Certificates.X509Certificate2,System.Boolean,System.Exception)" />
+    </Type>
     <Type Name="Microsoft.Identity.Web.IDownstreamWebApi" Id="T:Microsoft.Identity.Web.IDownstreamWebApi">
       <Member Id="M:Microsoft.Identity.Web.IDownstreamWebApi.CallWebApiForAppAsync(System.String,System.Action{Microsoft.Identity.Web.DownstreamWebApiOptions},System.Net.Http.StringContent)" />
       <Member Id="M:Microsoft.Identity.Web.IDownstreamWebApi.CallWebApiForAppAsync(System.String,System.String,System.Action{Microsoft.Identity.Web.DownstreamWebApiOptions},System.Net.Http.StringContent)" />
@@ -709,10 +713,12 @@
     </Type>
     <Type Name="Microsoft.Identity.Web.MicrosoftIdentityMessageHandler" Id="T:Microsoft.Identity.Web.MicrosoftIdentityMessageHandler">
       <Member Id="M:Microsoft.Identity.Web.MicrosoftIdentityMessageHandler.#ctor(Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider,Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions,Microsoft.Extensions.Logging.ILogger{Microsoft.Identity.Web.MicrosoftIdentityMessageHandler})" />
+      <Member Id="M:Microsoft.Identity.Web.MicrosoftIdentityMessageHandler.#ctor(Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider,Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions,Microsoft.Identity.Client.IMsalMtlsHttpClientFactory,Microsoft.Extensions.Logging.ILogger{Microsoft.Identity.Web.MicrosoftIdentityMessageHandler})" />
       <Member Id="M:Microsoft.Identity.Web.MicrosoftIdentityMessageHandler.SendAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)" />
     </Type>
     <Type Name="Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions" Id="T:Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions">
       <Member Id="M:Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions.#ctor" />
+      <Member Id="M:Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions.#ctor(Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions)" />
       <Member Id="P:Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions.Scopes" />
     </Type>
     <Type Name="Microsoft.Identity.Web.MicrosoftIdentityOptions" Id="T:Microsoft.Identity.Web.MicrosoftIdentityOptions">
@@ -902,6 +908,7 @@
       <Member Id="P:Microsoft.Identity.Web.Experimental.CertificateChangeEventArg.Action" />
       <Member Id="P:Microsoft.Identity.Web.Experimental.CertificateChangeEventArg.Certificate" />
       <Member Id="P:Microsoft.Identity.Web.Experimental.CertificateChangeEventArg.CredentialDescription" />
+      <Member Id="P:Microsoft.Identity.Web.Experimental.CertificateChangeEventArg.CredentialSourceLoaderParameters" />
       <Member Id="P:Microsoft.Identity.Web.Experimental.CertificateChangeEventArg.ThrownException" />
     </Type>
     <Type Name="Microsoft.Identity.Web.Experimental.ICertificatesObserver" Id="T:Microsoft.Identity.Web.Experimental.ICertificatesObserver">

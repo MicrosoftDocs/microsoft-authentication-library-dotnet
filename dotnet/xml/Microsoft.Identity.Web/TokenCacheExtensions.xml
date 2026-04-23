@@ -18,6 +18,7 @@
     <AssemblyVersion>4.3.0.0</AssemblyVersion>
     <AssemblyVersion>4.5.0.0</AssemblyVersion>
     <AssemblyVersion>4.7.0.0</AssemblyVersion>
+    <AssemblyVersion>4.8.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -47,7 +48,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.TokenCache</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
+        <AssemblyVersion>4.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.IConfidentialClientApplication</ReturnType>
@@ -81,6 +82,24 @@
                        options.InstanceName = "Redis";
                    });
               });
+             </code>
+            
+             Alternatively the following code adds a token cache based on PostgreSQL and initializes
+             its configuration.
+            
+             <code>
+              app.AddDistributedTokenCache(services =&gt;
+              {
+                   // PostgreSQL token cache
+                   // Requires to reference Microsoft.Extensions.Caching.Postgres
+                   services.AddDistributedPostgresCache(options =&gt;
+                   {
+                       options.ConnectionString = "Host=localhost;Database=mydb;Username=myuser;Password=mypassword";
+                       options.SchemaName = "public";
+                       options.TableName = "token_cache";
+                       options.CreateIfNotExists = true;
+                   });
+              });
              </code></example>
       </Docs>
     </Member>
@@ -93,7 +112,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.TokenCache</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
+        <AssemblyVersion>4.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.IConfidentialClientApplication</ReturnType>
@@ -129,7 +148,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.TokenCache</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
+        <AssemblyVersion>4.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.IConfidentialClientApplication</ReturnType>
