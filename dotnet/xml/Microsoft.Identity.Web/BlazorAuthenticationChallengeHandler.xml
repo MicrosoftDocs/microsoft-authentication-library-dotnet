@@ -1,0 +1,221 @@
+<Type Name="BlazorAuthenticationChallengeHandler" FullName="Microsoft.Identity.Web.BlazorAuthenticationChallengeHandler">
+  <TypeSignature Language="C#" Value="public class BlazorAuthenticationChallengeHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BlazorAuthenticationChallengeHandler extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Web.BlazorAuthenticationChallengeHandler" />
+  <TypeSignature Language="VB.NET" Value="Public Class BlazorAuthenticationChallengeHandler" />
+  <TypeSignature Language="F#" Value="type BlazorAuthenticationChallengeHandler = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Web</AssemblyName>
+    <AssemblyVersion>4.7.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Handles authentication challenges for Blazor Server components.
+            Provides functionality for incremental consent and Conditional Access scenarios.
+            </summary>
+    <remarks>
+            This handler is designed specifically for Blazor Server scenarios where authentication
+            challenges need to be initiated from component code. It supports incremental consent
+            (requesting additional scopes) and Conditional Access (handling step-up authentication).
+            Use this in combination with <see cref="M:Microsoft.Identity.Web.LoginLogoutEndpointRouteBuilderExtensions.MapLoginAndLogout(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder)" />
+            to enable seamless authentication flows in Blazor Server applications.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BlazorAuthenticationChallengeHandler (Microsoft.AspNetCore.Components.NavigationManager navigation, Microsoft.AspNetCore.Components.Authorization.AuthenticationStateProvider authenticationStateProvider, Microsoft.Extensions.Configuration.IConfiguration configuration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.AspNetCore.Components.NavigationManager navigation, class Microsoft.AspNetCore.Components.Authorization.AuthenticationStateProvider authenticationStateProvider, class Microsoft.Extensions.Configuration.IConfiguration configuration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.BlazorAuthenticationChallengeHandler.#ctor(Microsoft.AspNetCore.Components.NavigationManager,Microsoft.AspNetCore.Components.Authorization.AuthenticationStateProvider,Microsoft.Extensions.Configuration.IConfiguration)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (navigation As NavigationManager, authenticationStateProvider As AuthenticationStateProvider, configuration As IConfiguration)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Identity.Web.BlazorAuthenticationChallengeHandler : Microsoft.AspNetCore.Components.NavigationManager * Microsoft.AspNetCore.Components.Authorization.AuthenticationStateProvider * Microsoft.Extensions.Configuration.IConfiguration -&gt; Microsoft.Identity.Web.BlazorAuthenticationChallengeHandler" Usage="new Microsoft.Identity.Web.BlazorAuthenticationChallengeHandler (navigation, authenticationStateProvider, configuration)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web</AssemblyName>
+        <AssemblyVersion>4.7.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="navigation" Type="Microsoft.AspNetCore.Components.NavigationManager" />
+        <Parameter Name="authenticationStateProvider" Type="Microsoft.AspNetCore.Components.Authorization.AuthenticationStateProvider" />
+        <Parameter Name="configuration" Type="Microsoft.Extensions.Configuration.IConfiguration" />
+      </Parameters>
+      <Docs>
+        <param name="navigation">To be added.</param>
+        <param name="authenticationStateProvider">To be added.</param>
+        <param name="configuration">To be added.</param>
+        <summary>
+            Handles authentication challenges for Blazor Server components.
+            Provides functionality for incremental consent and Conditional Access scenarios.
+            </summary>
+        <remarks>
+            This handler is designed specifically for Blazor Server scenarios where authentication
+            challenges need to be initiated from component code. It supports incremental consent
+            (requesting additional scopes) and Conditional Access (handling step-up authentication).
+            Use this in combination with <see cref="M:Microsoft.Identity.Web.LoginLogoutEndpointRouteBuilderExtensions.MapLoginAndLogout(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder)" />
+            to enable seamless authentication flows in Blazor Server applications.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChallengeUser">
+      <MemberSignature Language="C#" Value="public void ChallengeUser (System.Security.Claims.ClaimsPrincipal user, string[]? scopes = default, string? claims = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ChallengeUser(class System.Security.Claims.ClaimsPrincipal user, string[] scopes, string claims) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.BlazorAuthenticationChallengeHandler.ChallengeUser(System.Security.Claims.ClaimsPrincipal,System.String[],System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ChallengeUser (user As ClaimsPrincipal, Optional scopes As String() = Nothing, Optional claims As String = Nothing)" />
+      <MemberSignature Language="F#" Value="member this.ChallengeUser : System.Security.Claims.ClaimsPrincipal * string[] * string -&gt; unit" Usage="blazorAuthenticationChallengeHandler.ChallengeUser (user, scopes, claims)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web</AssemblyName>
+        <AssemblyVersion>4.7.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="user" Type="System.Security.Claims.ClaimsPrincipal" />
+        <Parameter Name="scopes" Type="System.String[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="claims" Type="System.String">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="user">To be added.</param>
+        <param name="scopes">To be added.</param>
+        <param name="claims">To be added.</param>
+        <summary>
+            Initiates a challenge to authenticate the user or request additional consent.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChallengeUserWithConfiguredScopesAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task ChallengeUserWithConfiguredScopesAsync (string configurationSection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task ChallengeUserWithConfiguredScopesAsync(string configurationSection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.BlazorAuthenticationChallengeHandler.ChallengeUserWithConfiguredScopesAsync(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ChallengeUserWithConfiguredScopesAsync (configurationSection As String) As Task" />
+      <MemberSignature Language="F#" Value="member this.ChallengeUserWithConfiguredScopesAsync : string -&gt; System.Threading.Tasks.Task" Usage="blazorAuthenticationChallengeHandler.ChallengeUserWithConfiguredScopesAsync configurationSection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web</AssemblyName>
+        <AssemblyVersion>4.7.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresDynamicCode("Binding strongly typed objects from configuration values may require generating dynamic code at runtime.")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresDynamicCode("Binding strongly typed objects from configuration values may require generating dynamic code at runtime.")&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("Binding strongly typed objects from configuration values may require generating dynamic code at runtime.")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("Binding strongly typed objects from configuration values may require generating dynamic code at runtime.")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="configurationSection" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="configurationSection">To be added.</param>
+        <summary>
+            Initiates a challenge with scopes from configuration.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUserAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Security.Claims.ClaimsPrincipal&gt; GetUserAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Security.Claims.ClaimsPrincipal&gt; GetUserAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.BlazorAuthenticationChallengeHandler.GetUserAsync" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetUserAsync () As Task(Of ClaimsPrincipal)" />
+      <MemberSignature Language="F#" Value="member this.GetUserAsync : unit -&gt; System.Threading.Tasks.Task&lt;System.Security.Claims.ClaimsPrincipal&gt;" Usage="blazorAuthenticationChallengeHandler.GetUserAsync " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web</AssemblyName>
+        <AssemblyVersion>4.7.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Security.Claims.ClaimsPrincipal&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the current user's authentication state.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleExceptionAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;bool&gt; HandleExceptionAsync (Exception exception);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;bool&gt; HandleExceptionAsync(class System.Exception exception) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.BlazorAuthenticationChallengeHandler.HandleExceptionAsync(System.Exception)" />
+      <MemberSignature Language="VB.NET" Value="Public Function HandleExceptionAsync (exception As Exception) As Task(Of Boolean)" />
+      <MemberSignature Language="F#" Value="member this.HandleExceptionAsync : Exception -&gt; System.Threading.Tasks.Task&lt;bool&gt;" Usage="blazorAuthenticationChallengeHandler.HandleExceptionAsync exception" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web</AssemblyName>
+        <AssemblyVersion>4.7.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exception" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="exception">To be added.</param>
+        <summary>
+            Handles exceptions that may require user re-authentication.
+            Returns true if a challenge was initiated, false otherwise.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAuthenticatedAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;bool&gt; IsAuthenticatedAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;bool&gt; IsAuthenticatedAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.BlazorAuthenticationChallengeHandler.IsAuthenticatedAsync" />
+      <MemberSignature Language="VB.NET" Value="Public Function IsAuthenticatedAsync () As Task(Of Boolean)" />
+      <MemberSignature Language="F#" Value="member this.IsAuthenticatedAsync : unit -&gt; System.Threading.Tasks.Task&lt;bool&gt;" Usage="blazorAuthenticationChallengeHandler.IsAuthenticatedAsync " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web</AssemblyName>
+        <AssemblyVersion>4.7.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Checks if the current user is authenticated.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
