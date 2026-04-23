@@ -14,6 +14,7 @@
     <AssemblyVersion>4.3.0.0</AssemblyVersion>
     <AssemblyVersion>4.5.0.0</AssemblyVersion>
     <AssemblyVersion>4.7.0.0</AssemblyVersion>
+    <AssemblyVersion>4.8.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions</BaseTypeName>
@@ -27,30 +28,30 @@
   </Attributes>
   <Docs>
     <summary>
-            Configuration options for <see cref="T:Microsoft.Identity.Web.MicrosoftIdentityMessageHandler" /> authentication.
-            Inherits from <see cref="T:Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions" /> to enable compatibility
-            with existing extension methods such as <c>WithAgentIdentity()</c> and <c>WithUserAgentIdentity()</c>.
-            </summary>
+             Configuration options for <see cref="T:Microsoft.Identity.Web.MicrosoftIdentityMessageHandler" /> authentication.
+             Inherits from <see cref="T:Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions" /> to enable compatibility
+             with existing extension methods such as <c>WithAgentIdentity()</c> and <c>WithUserAgentIdentity()</c>.
+             </summary>
     <remarks>To be added.</remarks>
-    <altmember cref="T:Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions" />
+    <altmember cref="T:Microsoft.Identity.Web.MicrosoftIdentityMessageHandler" />
     <example>
       <para>Basic usage with scopes:</para>
       <code>
-            var options = new MicrosoftIdentityMessageHandlerOptions
-            {
-                Scopes = { "https://graph.microsoft.com/.default" }
-            };
-            </code>
+             var options = new MicrosoftIdentityMessageHandlerOptions
+             {
+                 Scopes = { "https://graph.microsoft.com/.default" }
+             };
+             </code>
       <para>Usage with extension methods:</para>
       <code>
-            var options = new MicrosoftIdentityMessageHandlerOptions
-            {
-                Scopes = { "api://myapi/.default" }
-            };
-            options.WithAgentIdentity("agent-guid");
-            </code>
+             var options = new MicrosoftIdentityMessageHandlerOptions
+             {
+                 Scopes = { "api://myapi/.default" }
+             };
+             options.WithAgentIdentity("agent-guid");
+             </code>
     </example>
-    <altmember cref="T:Microsoft.Identity.Web.MicrosoftIdentityMessageHandler" />
+    <altmember cref="T:Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions" />
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -61,11 +62,36 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
+        <AssemblyVersion>4.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MicrosoftIdentityMessageHandlerOptions (Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions.#ctor(Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (other As MicrosoftIdentityMessageHandlerOptions)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions : Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions -&gt; Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions" Usage="new Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions other" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>4.8.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="other" Type="Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions" />
+      </Parameters>
+      <Docs>
+        <param name="other">The options instance to copy from.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions" /> class
+            by copying values from an existing instance.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -78,7 +104,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
-        <AssemblyVersion>4.7.0.0</AssemblyVersion>
+        <AssemblyVersion>4.8.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IList&lt;System.String&gt;</ReturnType>
@@ -88,9 +114,9 @@
             Gets or sets the scopes to request for the token.
             </summary>
         <value>
-            A list of scopes required to access the target API. 
+            A list of scopes required to access the target API.
             For instance, "user.read mail.read" for Microsoft Graph user permissions.
-            For Microsoft Identity, in the case of application tokens (requested by the app on behalf of itself), 
+            For Microsoft Identity, in the case of application tokens (requested by the app on behalf of itself),
             there should be only one scope, and it should end with ".default" (e.g., "https://graph.microsoft.com/.default").
             </value>
         <remarks>
