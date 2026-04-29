@@ -21,7 +21,7 @@ You can monitor the source of the tokens by inspecting the [`AuthenticationResul
 
 ## Websites and web APIs
 
-ASP.NET Core and ASP.NET Classic websites should integrate with [Microsoft.Identity.Web](../microsoft-identity-web/index.md), a wrapper for MSAL.NET. Memory token caching or distributed token caching can be configured as described in [token cache serialization](../how-to/token-cache-serialization.md?tabs=aspnetcore). 
+ASP.NET Core and ASP.NET Classic websites should integrate with [Microsoft.Identity.Web](/entra/msidweb/), a wrapper for MSAL.NET. Memory token caching or distributed token caching can be configured as described in [token cache serialization](../how-to/token-cache-serialization.md?tabs=aspnetcore). 
 
 Web APIs on ASP.NET Core should use Microsoft.Identity.Web. Web APIs on ASP.NET classic, use MSAL directly, by calling `AcquireTokenOnBehalfOf` and should configure memory or distributed caching. For more information, see [Token cache serialization in MSAL.NET](../how-to/token-cache-serialization.md?tabs=aspnet). There's no reason to call the `AcquireTokenSilent` API as there's no API to clear the cache. Cache size can be managed by setting eviction policies on the underlying cache store, such as MemoryCache, Redis etc.
 

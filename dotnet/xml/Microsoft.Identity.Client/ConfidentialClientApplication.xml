@@ -1,9 +1,9 @@
 <Type Name="ConfidentialClientApplication" FullName="Microsoft.Identity.Client.ConfidentialClientApplication">
   <TypeSignature Language="C#" Value="public sealed class ConfidentialClientApplication : Microsoft.Identity.Client.ClientApplicationBase, Microsoft.Identity.Client.IByRefreshToken, Microsoft.Identity.Client.IByUsernameAndPassword, Microsoft.Identity.Client.IConfidentialClientApplication, Microsoft.Identity.Client.ILongRunningWebApi" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ConfidentialClientApplication extends Microsoft.Identity.Client.ClientApplicationBase implements class Microsoft.Identity.Client.IApplicationBase, class Microsoft.Identity.Client.IByRefreshToken, class Microsoft.Identity.Client.IByUsernameAndPassword, class Microsoft.Identity.Client.IClientApplicationBase, class Microsoft.Identity.Client.IConfidentialClientApplication, class Microsoft.Identity.Client.ILongRunningWebApi" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ConfidentialClientApplication extends Microsoft.Identity.Client.ClientApplicationBase implements class Microsoft.Identity.Client.IApplicationBase, class Microsoft.Identity.Client.IByRefreshToken, class Microsoft.Identity.Client.IByUserFederatedIdentityCredential, class Microsoft.Identity.Client.IByUsernameAndPassword, class Microsoft.Identity.Client.IClientApplicationBase, class Microsoft.Identity.Client.IConfidentialClientApplication, class Microsoft.Identity.Client.ILongRunningWebApi" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Client.ConfidentialClientApplication" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ConfidentialClientApplication&#xA;Inherits ClientApplicationBase&#xA;Implements IByRefreshToken, IByUsernameAndPassword, IConfidentialClientApplication, ILongRunningWebApi" />
-  <TypeSignature Language="F#" Value="type ConfidentialClientApplication = class&#xA;    inherit ClientApplicationBase&#xA;    interface IConfidentialClientApplication&#xA;    interface IClientApplicationBase&#xA;    interface IApplicationBase&#xA;    interface IByRefreshToken&#xA;    interface ILongRunningWebApi&#xA;    interface IByUsernameAndPassword" />
+  <TypeSignature Language="F#" Value="type ConfidentialClientApplication = class&#xA;    inherit ClientApplicationBase&#xA;    interface IConfidentialClientApplication&#xA;    interface IClientApplicationBase&#xA;    interface IApplicationBase&#xA;    interface IByUserFederatedIdentityCredential&#xA;    interface IByRefreshToken&#xA;    interface ILongRunningWebApi&#xA;    interface IByUsernameAndPassword" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Identity.Client</AssemblyName>
     <AssemblyVersion>4.48.1.0</AssemblyVersion>
@@ -55,6 +55,7 @@
     <AssemblyVersion>4.81.0.0</AssemblyVersion>
     <AssemblyVersion>4.82.1.0</AssemblyVersion>
     <AssemblyVersion>4.83.1.0</AssemblyVersion>
+    <AssemblyVersion>4.83.3.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Identity.Client.ClientApplicationBase</BaseTypeName>
@@ -65,6 +66,9 @@
     </Interface>
     <Interface>
       <InterfaceName>Microsoft.Identity.Client.IByRefreshToken</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Microsoft.Identity.Client.IByUserFederatedIdentityCredential</InterfaceName>
     </Interface>
     <Interface>
       <InterfaceName>Microsoft.Identity.Client.IByUsernameAndPassword</InterfaceName>
@@ -105,7 +109,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.83.1.0</AssemblyVersion>
+        <AssemblyVersion>4.83.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenByAuthorizationCodeParameterBuilder</ReturnType>
@@ -144,7 +148,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.83.1.0</AssemblyVersion>
+        <AssemblyVersion>4.83.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder</ReturnType>
@@ -179,7 +183,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.83.1.0</AssemblyVersion>
+        <AssemblyVersion>4.83.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenOnBehalfOfParameterBuilder</ReturnType>
@@ -209,7 +213,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.83.1.0</AssemblyVersion>
+        <AssemblyVersion>4.83.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenOnBehalfOfParameterBuilder</ReturnType>
@@ -247,7 +251,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.83.1.0</AssemblyVersion>
+        <AssemblyVersion>4.83.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ITokenCache</ReturnType>
@@ -272,7 +276,7 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.83.1.0</AssemblyVersion>
+        <AssemblyVersion>4.83.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -293,7 +297,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.83.1.0</AssemblyVersion>
+        <AssemblyVersion>4.83.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate2</ReturnType>
@@ -318,7 +322,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.83.1.0</AssemblyVersion>
+        <AssemblyVersion>4.83.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.GetAuthorizationRequestUrlParameterBuilder</ReturnType>
@@ -352,7 +356,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.83.1.0</AssemblyVersion>
+        <AssemblyVersion>4.83.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenOnBehalfOfParameterBuilder</ReturnType>
@@ -384,7 +388,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.83.1.0</AssemblyVersion>
+        <AssemblyVersion>4.83.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenByRefreshTokenParameterBuilder</ReturnType>
@@ -401,6 +405,38 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="Microsoft.Identity.Client.IByUserFederatedIdentityCredential.AcquireTokenByUserFederatedIdentityCredential">
+      <MemberSignature Language="C#" Value="Microsoft.Identity.Client.AcquireTokenByUserFederatedIdentityCredentialParameterBuilder IByUserFederatedIdentityCredential.AcquireTokenByUserFederatedIdentityCredential (System.Collections.Generic.IEnumerable&lt;string&gt; scopes, string username, string assertion);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class Microsoft.Identity.Client.AcquireTokenByUserFederatedIdentityCredentialParameterBuilder Microsoft.Identity.Client.IByUserFederatedIdentityCredential.AcquireTokenByUserFederatedIdentityCredential(class System.Collections.Generic.IEnumerable`1&lt;string&gt; scopes, string username, string assertion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.ConfidentialClientApplication.Microsoft#Identity#Client#IByUserFederatedIdentityCredential#AcquireTokenByUserFederatedIdentityCredential(System.Collections.Generic.IEnumerable{System.String},System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Function AcquireTokenByUserFederatedIdentityCredential (scopes As IEnumerable(Of String), username As String, assertion As String) As AcquireTokenByUserFederatedIdentityCredentialParameterBuilder Implements IByUserFederatedIdentityCredential.AcquireTokenByUserFederatedIdentityCredential" />
+      <MemberSignature Language="F#" Value="abstract member Microsoft.Identity.Client.IByUserFederatedIdentityCredential.AcquireTokenByUserFederatedIdentityCredential : seq&lt;string&gt; * string * string -&gt; Microsoft.Identity.Client.AcquireTokenByUserFederatedIdentityCredentialParameterBuilder&#xA;override this.Microsoft.Identity.Client.IByUserFederatedIdentityCredential.AcquireTokenByUserFederatedIdentityCredential : seq&lt;string&gt; * string * string -&gt; Microsoft.Identity.Client.AcquireTokenByUserFederatedIdentityCredentialParameterBuilder" Usage="confidentialClientApplication.Microsoft.Identity.Client.IByUserFederatedIdentityCredential.AcquireTokenByUserFederatedIdentityCredential (scopes, username, assertion)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Identity.Client.IByUserFederatedIdentityCredential.AcquireTokenByUserFederatedIdentityCredential(System.Collections.Generic.IEnumerable{System.String},System.String,System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.83.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.AcquireTokenByUserFederatedIdentityCredentialParameterBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scopes" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="username" Type="System.String" />
+        <Parameter Name="assertion" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="scopes">To be added.</param>
+        <param name="username">To be added.</param>
+        <param name="assertion">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
     <Member MemberName="Microsoft.Identity.Client.IByUsernameAndPassword.AcquireTokenByUsernamePassword">
       <MemberSignature Language="C#" Value="Microsoft.Identity.Client.AcquireTokenByUsernameAndPasswordConfidentialParameterBuilder IByUsernameAndPassword.AcquireTokenByUsernamePassword (System.Collections.Generic.IEnumerable&lt;string&gt; scopes, string username, string password);" />
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class Microsoft.Identity.Client.AcquireTokenByUsernameAndPasswordConfidentialParameterBuilder Microsoft.Identity.Client.IByUsernameAndPassword.AcquireTokenByUsernamePassword(class System.Collections.Generic.IEnumerable`1&lt;string&gt; scopes, string username, string password) cil managed" />
@@ -413,7 +449,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.83.1.0</AssemblyVersion>
+        <AssemblyVersion>4.83.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenByUsernameAndPasswordConfidentialParameterBuilder</ReturnType>
@@ -442,7 +478,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.83.1.0</AssemblyVersion>
+        <AssemblyVersion>4.83.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Boolean&gt;</ReturnType>

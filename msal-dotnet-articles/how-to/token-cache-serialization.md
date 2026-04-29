@@ -22,7 +22,7 @@ After Microsoft Authentication Library (MSAL) [acquires a token](/azure/active-d
 The recommendation is:
 - When writing mobile apps, caching is already pre-configured by MSAL.
 - When writing a desktop application, use the cross-platform token cache as explained in [desktop apps](token-cache-serialization.md?tabs=desktop).
-- When writing new confidential client applications ([web apps](/azure/active-directory/develop/scenario-web-app-call-api-overview), [web APIs](/azure/active-directory/develop/scenario-web-api-call-api-overview), or [service-to-service or daemon apps](/azure/active-directory/develop/scenario-daemon-overview), use [Microsoft.Identity.Web](../microsoft-identity-web/index.md) as a higher-level API. It offers integration with ASP.NET Core, ASP.NET Classic, and works standalone as well.
+- When writing new confidential client applications ([web apps](/azure/active-directory/develop/scenario-web-app-call-api-overview), [web APIs](/azure/active-directory/develop/scenario-web-api-call-api-overview), or [service-to-service or daemon apps](/azure/active-directory/develop/scenario-daemon-overview), use [Microsoft.Identity.Web](/entra/msidweb/) as a higher-level API. It offers integration with ASP.NET Core, ASP.NET Classic, and works standalone as well.
 - Existing confidential client applications that leverage MSAL.NET directly can continue to do so. 
 - [Web apps](/azure/active-directory/develop/scenario-web-app-call-api-overview) and [web APIs](/azure/active-directory/develop/scenario-web-api-call-api-overview) should use a [distributed token cache](token-cache-serialization.md?tabs=aspnet#distributed-caches) (e.g., Redis, SQL Server, Azure Cosmos DB) in conjunction with a constrained memory cache. 
 - Encryption at rest can be optionally configured using [ASP.NET Core Data Protection](/aspnet/core/security/data-protection/introduction).
@@ -163,7 +163,7 @@ The usage of distributed cache is featured in the [ASP.NET Core web app tutorial
 
 ## [Confidential clients using MSAL.NET](#tab/msal)
 
-.NET confidential clients are recommended to use [Microsoft.Identity.Web](../microsoft-identity-web/index.md), which is based on MSAL.NET, as higher level APIs are able to handle complex scenarios out-of-the-box (e.g., guest users, Continuous Access Evaluation, Proof-of-Possession tokens). Applications that need to access Azure APIs should use [Azure SDK](https://azure.github.io/azure-sdk/), which leverages MSAL internally.
+.NET confidential clients are recommended to use [Microsoft.Identity.Web](/entra/msidweb/), which is based on MSAL.NET, as higher level APIs are able to handle complex scenarios out-of-the-box (e.g., guest users, Continuous Access Evaluation, Proof-of-Possession tokens). Applications that need to access Azure APIs should use [Azure SDK](https://azure.github.io/azure-sdk/), which leverages MSAL internally.
 
 The following material is relevant if you're using MSAL.NET directly.
 

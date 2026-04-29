@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.Identity.Client.Broker" Version="4.83.1.0" />
-    <Assembly Name="Microsoft.Identity.Client.Desktop" Version="4.83.1.0" />
-    <Assembly Name="Microsoft.Identity.Client" Version="4.83.1.0" />
+    <Assembly Name="Microsoft.Identity.Client.Broker" Version="4.83.3.0" />
+    <Assembly Name="Microsoft.Identity.Client.Desktop" Version="4.83.3.0" />
+    <Assembly Name="Microsoft.Identity.Client" Version="4.83.3.0" />
   </Assemblies>
   <Namespace Name="Microsoft.Identity.Client">
     <Type Name="Microsoft.Identity.Client.AadAuthorityAudience" Id="T:Microsoft.Identity.Client.AadAuthorityAudience">
@@ -102,6 +102,11 @@
     <Type Name="Microsoft.Identity.Client.AcquireTokenByRefreshTokenParameterBuilder" Id="T:Microsoft.Identity.Client.AcquireTokenByRefreshTokenParameterBuilder">
       <Member Id="M:Microsoft.Identity.Client.AcquireTokenByRefreshTokenParameterBuilder.Validate" />
       <Member Id="M:Microsoft.Identity.Client.AcquireTokenByRefreshTokenParameterBuilder.WithSendX5C(System.Boolean)" />
+    </Type>
+    <Type Name="Microsoft.Identity.Client.AcquireTokenByUserFederatedIdentityCredentialParameterBuilder" Id="T:Microsoft.Identity.Client.AcquireTokenByUserFederatedIdentityCredentialParameterBuilder">
+      <Member Id="M:Microsoft.Identity.Client.AcquireTokenByUserFederatedIdentityCredentialParameterBuilder.Validate" />
+      <Member Id="M:Microsoft.Identity.Client.AcquireTokenByUserFederatedIdentityCredentialParameterBuilder.WithForceRefresh(System.Boolean)" />
+      <Member Id="M:Microsoft.Identity.Client.AcquireTokenByUserFederatedIdentityCredentialParameterBuilder.WithSendX5C(System.Boolean)" />
     </Type>
     <Type Name="Microsoft.Identity.Client.AcquireTokenByUsernameAndPasswordConfidentialParameterBuilder" Id="T:Microsoft.Identity.Client.AcquireTokenByUsernameAndPasswordConfidentialParameterBuilder">
       <Member Id="M:Microsoft.Identity.Client.AcquireTokenByUsernameAndPasswordConfidentialParameterBuilder.Validate" />
@@ -324,6 +329,7 @@
       <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplication.GetAuthorizationRequestUrl(System.Collections.Generic.IEnumerable{System.String})" />
       <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplication.InitiateLongRunningProcessInWebApi(System.Collections.Generic.IEnumerable{System.String},System.String,System.String@)" />
       <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplication.Microsoft#Identity#Client#IByRefreshToken#AcquireTokenByRefreshToken(System.Collections.Generic.IEnumerable{System.String},System.String)" />
+      <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplication.Microsoft#Identity#Client#IByUserFederatedIdentityCredential#AcquireTokenByUserFederatedIdentityCredential(System.Collections.Generic.IEnumerable{System.String},System.String,System.String)" />
       <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplication.Microsoft#Identity#Client#IByUsernameAndPassword#AcquireTokenByUsernamePassword(System.Collections.Generic.IEnumerable{System.String},System.String,System.String)" />
       <Member Id="M:Microsoft.Identity.Client.ConfidentialClientApplication.StopLongRunningProcessInWebApiAsync(System.String,System.Threading.CancellationToken)" />
       <Member Id="P:Microsoft.Identity.Client.ConfidentialClientApplication.AppTokenCache" />
@@ -411,6 +417,9 @@
     <Type Name="Microsoft.Identity.Client.IApplicationBase" Id="T:Microsoft.Identity.Client.IApplicationBase" />
     <Type Name="Microsoft.Identity.Client.IByRefreshToken" Id="T:Microsoft.Identity.Client.IByRefreshToken">
       <Member Id="M:Microsoft.Identity.Client.IByRefreshToken.AcquireTokenByRefreshToken(System.Collections.Generic.IEnumerable{System.String},System.String)" />
+    </Type>
+    <Type Name="Microsoft.Identity.Client.IByUserFederatedIdentityCredential" Id="T:Microsoft.Identity.Client.IByUserFederatedIdentityCredential">
+      <Member Id="M:Microsoft.Identity.Client.IByUserFederatedIdentityCredential.AcquireTokenByUserFederatedIdentityCredential(System.Collections.Generic.IEnumerable{System.String},System.String,System.String)" />
     </Type>
     <Type Name="Microsoft.Identity.Client.IByUsernameAndPassword" Id="T:Microsoft.Identity.Client.IByUsernameAndPassword">
       <Member Id="M:Microsoft.Identity.Client.IByUsernameAndPassword.AcquireTokenByUsernamePassword(System.Collections.Generic.IEnumerable{System.String},System.String,System.String)" />
