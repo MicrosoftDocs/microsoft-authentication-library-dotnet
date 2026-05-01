@@ -19,7 +19,7 @@ ms.custom: devx-track-csharp, aaddev
 
 ### Public client application
 
-Once MSAL.NET has acquired a user token to call a Web API, it caches it. If you are building a public client application and want to acquire a token, first call `AcquireTokenSilent`, to verify if an acceptable token is in the cache, can be refreshed, or can get derived. If not, call the AcquireToken*ForFlow* method depending on the flow you are interested in.
+Once MSAL.NET has acquired a user token to call a Web API, it caches it. If you are building a public client application and want to acquire a token, first call `AcquireTokenSilent`, to verify if an acceptable token is in the cache, can be refreshed, or can get derived. If not, call the AcquireToken*ForFlow* method depending on the flow you are interested in. test PR
 
 ### Confidential client application
 
