@@ -37,6 +37,7 @@
     <AssemblyVersion>4.82.1.0</AssemblyVersion>
     <AssemblyVersion>4.83.1.0</AssemblyVersion>
     <AssemblyVersion>4.83.3.0</AssemblyVersion>
+    <AssemblyVersion>4.84.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -56,8 +57,18 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.83.3.0</AssemblyVersion>
+        <AssemblyVersion>4.84.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("Use AbstractConfidentialClientAcquireTokenParameterBuilderExtension.WithExtraBodyParameters instead, which also supports OBO and AuthorizationCode flows.", false)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use AbstractConfidentialClientAcquireTokenParameterBuilderExtension.WithExtraBodyParameters instead, which also supports OBO and AuthorizationCode flows.", false)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder</ReturnType>
       </ReturnValue>
@@ -84,7 +95,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.83.3.0</AssemblyVersion>
+        <AssemblyVersion>4.84.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
