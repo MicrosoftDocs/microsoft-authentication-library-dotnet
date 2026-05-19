@@ -24,7 +24,7 @@ Application using ADAL will continue to work.
 
 ### Migration guide for apps using ADAL directly
 
-Before digging in the details of MSAL.NET vs ADAL.NET, you might want to check if you want to use MSAL.NET or a higher-level library like [`Microsoft.Identity.Web`](../microsoft-identity-web/index.md). For details about the decision tree below, read [MSAL.NET or Microsoft.Identity.Web](../getting-started/choosing-msal-dotnet.md).
+Before digging in the details of MSAL.NET vs ADAL.NET, you might want to check if you want to use MSAL.NET or a higher-level library like [`Microsoft.Identity.Web`](/entra/msidweb/). For details about the decision tree below, read [MSAL.NET or Microsoft.Identity.Web](../getting-started/choosing-msal-dotnet.md).
 
 - You can authenticate a broader set of Microsoft identities: work or school accounts, personal Microsoft accounts, and social or local accounts with Azure AD B2C and Microsoft Entra External ID.
 - Your users get the best single-sign-on (SSO) experience.
