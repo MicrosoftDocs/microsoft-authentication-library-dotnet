@@ -2,18 +2,18 @@
 <Framework Name="msal-model-dotnet-latest">
   <Assemblies>
     <Assembly Name="Microsoft.Identity.Abstractions" Version="12.0.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.Azure" Version="4.8.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.Certificate" Version="4.8.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="4.8.0.0" />
-    <Assembly Name="Microsoft.Identity.Web" Version="4.8.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.DownstreamApi" Version="4.8.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.Azure" Version="4.10.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.Certificate" Version="4.10.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="4.10.0.0" />
+    <Assembly Name="Microsoft.Identity.Web" Version="4.10.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.DownstreamApi" Version="4.10.0.0" />
     <Assembly Name="Microsoft.Identity.Web.DownstreamRestApi" Version="2.0.8.0" />
-    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraph" Version="4.8.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraphBeta" Version="4.8.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.OWIN" Version="4.8.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.TokenAcquisition" Version="4.8.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.TokenCache" Version="4.8.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.UI" Version="4.8.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraph" Version="4.10.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraphBeta" Version="4.10.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.OWIN" Version="4.10.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.TokenAcquisition" Version="4.10.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.TokenCache" Version="4.10.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.UI" Version="4.10.0.0" />
   </Assemblies>
   <Namespace Name="Microsoft.Identity.Abstractions">
     <Type Name="Microsoft.Identity.Abstractions.AcquireTokenOptions" Id="T:Microsoft.Identity.Abstractions.AcquireTokenOptions">
@@ -845,6 +845,7 @@
     <Type Name="Microsoft.Identity.Web.TokenAcquirerExtensions" Id="T:Microsoft.Identity.Web.TokenAcquirerExtensions">
       <Member Id="M:Microsoft.Identity.Web.TokenAcquirerExtensions.GetFicTokenAsync(Microsoft.Identity.Abstractions.ITokenAcquirer,Microsoft.Identity.Abstractions.AcquireTokenOptions,System.String,System.String,System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.Identity.Web.TokenAcquirerExtensions.WithClientAssertion(Microsoft.Identity.Abstractions.AcquireTokenOptions,System.String)" />
+      <Member Id="M:Microsoft.Identity.Web.TokenAcquirerExtensions.WithExtraBodyParameters(Microsoft.Identity.Abstractions.AcquireTokenOptions,System.Collections.Generic.IDictionary{System.String,System.String})" />
     </Type>
     <Type Name="Microsoft.Identity.Web.TokenAcquirerFactory" Id="T:Microsoft.Identity.Web.TokenAcquirerFactory">
       <Member Id="M:Microsoft.Identity.Web.TokenAcquirerFactory.#ctor" />
@@ -921,6 +922,12 @@
       <Member Id="M:Microsoft.Identity.Web.Extensibility.BaseAuthorizationHeaderProvider.CreateAuthorizationHeaderAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.Identity.Web.Extensibility.BaseAuthorizationHeaderProvider.CreateAuthorizationHeaderForAppAsync(System.String,Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions,System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.Identity.Web.Extensibility.BaseAuthorizationHeaderProvider.CreateAuthorizationHeaderForUserAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)" />
+    </Type>
+    <Type Name="Microsoft.Identity.Web.Extensibility.IConfidentialClientApplicationProvider" Id="T:Microsoft.Identity.Web.Extensibility.IConfidentialClientApplicationProvider">
+      <Member Id="M:Microsoft.Identity.Web.Extensibility.IConfidentialClientApplicationProvider.GetConfidentialClientApplicationAsync(System.String)" />
+    </Type>
+    <Type Name="Microsoft.Identity.Web.Extensibility.TokenAcquisitionOptionsExtensions" Id="T:Microsoft.Identity.Web.Extensibility.TokenAcquisitionOptionsExtensions">
+      <Member Id="M:Microsoft.Identity.Web.Extensibility.TokenAcquisitionOptionsExtensions.WithCachePartitionKeys(Microsoft.Identity.Web.TokenAcquisitionOptions,System.Collections.Generic.IDictionary{System.String,System.String})" />
     </Type>
   </Namespace>
   <Namespace Name="Microsoft.Identity.Web.Internal">

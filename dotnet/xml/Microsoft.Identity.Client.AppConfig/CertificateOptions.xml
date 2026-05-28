@@ -9,6 +9,7 @@
     <AssemblyVersion>4.82.1.0</AssemblyVersion>
     <AssemblyVersion>4.83.1.0</AssemblyVersion>
     <AssemblyVersion>4.83.3.0</AssemblyVersion>
+    <AssemblyVersion>4.84.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -33,7 +34,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.83.3.0</AssemblyVersion>
+        <AssemblyVersion>4.84.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -49,7 +50,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.83.3.0</AssemblyVersion>
+        <AssemblyVersion>4.84.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="original" Type="Microsoft.Identity.Client.AppConfig.CertificateOptions" />
@@ -68,7 +69,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.83.3.0</AssemblyVersion>
+        <AssemblyVersion>4.84.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AppConfig.CertificateOptions</ReturnType>
@@ -89,7 +90,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.83.3.0</AssemblyVersion>
+        <AssemblyVersion>4.84.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -114,7 +115,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.83.3.0</AssemblyVersion>
+        <AssemblyVersion>4.84.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Type</ReturnType>
@@ -136,7 +137,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.83.3.0</AssemblyVersion>
+        <AssemblyVersion>4.84.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -159,7 +160,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.83.3.0</AssemblyVersion>
+        <AssemblyVersion>4.84.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -182,7 +183,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.83.3.0</AssemblyVersion>
+        <AssemblyVersion>4.84.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -202,7 +203,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.83.3.0</AssemblyVersion>
+        <AssemblyVersion>4.84.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -227,7 +228,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.83.3.0</AssemblyVersion>
+        <AssemblyVersion>4.84.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -252,7 +253,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.83.3.0</AssemblyVersion>
+        <AssemblyVersion>4.84.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -267,6 +268,47 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="SendCertificateOverMtls">
+      <MemberSignature Language="C#" Value="public bool SendCertificateOverMtls { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SendCertificateOverMtls" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.AppConfig.CertificateOptions.SendCertificateOverMtls" />
+      <MemberSignature Language="VB.NET" Value="Public Property SendCertificateOverMtls As Boolean" />
+      <MemberSignature Language="F#" Value="member this.SendCertificateOverMtls : bool with get, set" Usage="Microsoft.Identity.Client.AppConfig.CertificateOptions.SendCertificateOverMtls" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.84.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets a value indicating whether the certificate should be sent over mTLS
+            (TLS client certificate authentication) as the default transport for token requests.
+            When <see langword="true" />, the certificate is sent in the TLS handshake instead of as a
+            JWT assertion in the request body. This controls transport only — the resulting token type
+            depends on request-level configuration: a plain request produces a Bearer token, while
+            <see cref="M:Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder.WithMtlsProofOfPossession" /> produces
+            an mTLS PoP token.
+            When <see langword="false" /> (default), the certificate is sent as a JWT assertion in the request body.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>This property sets the default transport for requests that do not explicitly call
+            <see cref="M:Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder.WithMtlsProofOfPossession" />.</para>
+          <para>Request-level <see cref="M:Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder.WithMtlsProofOfPossession" />
+            always implies mTLS transport, regardless of this setting.</para>
+          <para>This option is supported with certificate-based credentials configured via
+            <see cref="M:Microsoft.Identity.Client.ConfidentialClientApplicationBuilder.WithCertificate(System.Security.Cryptography.X509Certificates.X509Certificate2,Microsoft.Identity.Client.AppConfig.CertificateOptions)" />
+            (static certificate) or the dynamic certificate provider overload.
+            Non-certificate credentials will throw at build time.</para>
+          <para>When no Azure region is configured, requests are sent to the global mTLS endpoint.
+            When <see cref="M:Microsoft.Identity.Client.ConfidentialClientApplicationBuilder.WithAzureRegion(System.String)" /> is also set,
+            requests are routed to the regional mTLS endpoint instead.</para>
+        </remarks>
+      </Docs>
+    </Member>
     <Member MemberName="SendX5C">
       <MemberSignature Language="C#" Value="public bool SendX5C { get; init; }" />
       <MemberSignature Language="ILAsm" Value=".property instance bool SendX5C" />
@@ -276,7 +318,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.83.3.0</AssemblyVersion>
+        <AssemblyVersion>4.84.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -299,7 +341,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.83.3.0</AssemblyVersion>
+        <AssemblyVersion>4.84.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>

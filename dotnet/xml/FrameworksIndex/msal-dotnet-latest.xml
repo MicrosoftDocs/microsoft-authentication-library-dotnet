@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.Identity.Client.Broker" Version="4.83.3.0" />
-    <Assembly Name="Microsoft.Identity.Client.Desktop" Version="4.83.3.0" />
-    <Assembly Name="Microsoft.Identity.Client" Version="4.83.3.0" />
+    <Assembly Name="Microsoft.Identity.Client.Broker" Version="4.84.1.0" />
+    <Assembly Name="Microsoft.Identity.Client.Desktop" Version="4.84.1.0" />
+    <Assembly Name="Microsoft.Identity.Client" Version="4.84.1.0" />
   </Assemblies>
   <Namespace Name="Microsoft.Identity.Client">
     <Type Name="Microsoft.Identity.Client.AadAuthorityAudience" Id="T:Microsoft.Identity.Client.AadAuthorityAudience">
@@ -187,6 +187,7 @@
       <Member Id="P:Microsoft.Identity.Client.AssertionRequestOptions.ClientAssertionFmiPath" />
       <Member Id="P:Microsoft.Identity.Client.AssertionRequestOptions.ClientCapabilities" />
       <Member Id="P:Microsoft.Identity.Client.AssertionRequestOptions.ClientID" />
+      <Member Id="P:Microsoft.Identity.Client.AssertionRequestOptions.CorrelationId" />
       <Member Id="P:Microsoft.Identity.Client.AssertionRequestOptions.TenantId" />
       <Member Id="P:Microsoft.Identity.Client.AssertionRequestOptions.TokenEndpoint" />
     </Type>
@@ -290,10 +291,13 @@
     <Type Name="Microsoft.Identity.Client.CacheOptions" Id="T:Microsoft.Identity.Client.CacheOptions">
       <Member Id="M:Microsoft.Identity.Client.CacheOptions.#ctor" />
       <Member Id="M:Microsoft.Identity.Client.CacheOptions.#ctor(System.Boolean)" />
+      <Member Id="P:Microsoft.Identity.Client.CacheOptions.DisableInternalCacheOptions" />
       <Member Id="P:Microsoft.Identity.Client.CacheOptions.EnableSharedCacheOptions" />
+      <Member Id="P:Microsoft.Identity.Client.CacheOptions.IsInternalCacheDisabled" />
       <Member Id="P:Microsoft.Identity.Client.CacheOptions.UseSharedCache" />
     </Type>
     <Type Name="Microsoft.Identity.Client.CacheRefreshReason" Id="T:Microsoft.Identity.Client.CacheRefreshReason">
+      <Member Id="F:Microsoft.Identity.Client.CacheRefreshReason.CacheDisabled" />
       <Member Id="F:Microsoft.Identity.Client.CacheRefreshReason.Expired" />
       <Member Id="F:Microsoft.Identity.Client.CacheRefreshReason.ForceRefreshOrClaims" />
       <Member Id="F:Microsoft.Identity.Client.CacheRefreshReason.NoCachedAccessToken" />
@@ -600,6 +604,7 @@
       <Member Id="F:Microsoft.Identity.Client.MsalError.IntegratedWindowsAuthenticationFailed" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.IntegratedWindowsAuthNotSupportedForManagedUser" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.InteractionRequired" />
+      <Member Id="F:Microsoft.Identity.Client.MsalError.InternalCacheDisabled" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.InternalError" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.InvalidAdalCacheMultipleRTs" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.InvalidAuthority" />
@@ -609,6 +614,7 @@
       <Member Id="F:Microsoft.Identity.Client.MsalError.InvalidClient" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.InvalidClientAssertion" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.InvalidClientCredentialConfiguration" />
+      <Member Id="F:Microsoft.Identity.Client.MsalError.InvalidCredentialMaterial" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.InvalidGrantError" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.InvalidInstance" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.InvalidJsonClaimsFormat" />
@@ -962,6 +968,7 @@
       <Member Id="M:Microsoft.Identity.Client.AppConfig.CertificateOptions.ToString" />
       <Member Id="P:Microsoft.Identity.Client.AppConfig.CertificateOptions.AssociateTokensWithCertificate" />
       <Member Id="P:Microsoft.Identity.Client.AppConfig.CertificateOptions.EqualityContract" />
+      <Member Id="P:Microsoft.Identity.Client.AppConfig.CertificateOptions.SendCertificateOverMtls" />
       <Member Id="P:Microsoft.Identity.Client.AppConfig.CertificateOptions.SendX5C" />
     </Type>
     <Type Name="Microsoft.Identity.Client.AppConfig.ManagedIdentityId" Id="T:Microsoft.Identity.Client.AppConfig.ManagedIdentityId">
@@ -983,6 +990,10 @@
     </Type>
   </Namespace>
   <Namespace Name="Microsoft.Identity.Client.AuthScheme">
+    <Type Name="Microsoft.Identity.Client.AuthScheme.CredentialEvaluationContext" Id="T:Microsoft.Identity.Client.AuthScheme.CredentialEvaluationContext">
+      <Member Id="M:Microsoft.Identity.Client.AuthScheme.CredentialEvaluationContext.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2)" />
+      <Member Id="P:Microsoft.Identity.Client.AuthScheme.CredentialEvaluationContext.MtlsCertificate" />
+    </Type>
     <Type Name="Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation" Id="T:Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation">
       <Member Id="M:Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation.FormatResult(Microsoft.Identity.Client.AuthenticationResult)" />
       <Member Id="M:Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation.GetTokenRequestParams" />
@@ -994,6 +1005,9 @@
     <Type Name="Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation2" Id="T:Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation2">
       <Member Id="M:Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation2.FormatResultAsync(Microsoft.Identity.Client.AuthenticationResult,System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation2.ValidateCachedTokenAsync(Microsoft.Identity.Client.AuthScheme.MsalCacheValidationData)" />
+    </Type>
+    <Type Name="Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation3" Id="T:Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation3">
+      <Member Id="M:Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation3.AfterCredentialEvaluationAsync(Microsoft.Identity.Client.AuthScheme.CredentialEvaluationContext,System.Threading.CancellationToken)" />
     </Type>
     <Type Name="Microsoft.Identity.Client.AuthScheme.MsalCacheValidationData" Id="T:Microsoft.Identity.Client.AuthScheme.MsalCacheValidationData">
       <Member Id="M:Microsoft.Identity.Client.AuthScheme.MsalCacheValidationData.#ctor" />
@@ -1043,7 +1057,9 @@
     <Type Name="Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension" Id="T:Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension">
       <Member Id="M:Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.OnBeforeTokenRequest``1(Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder{``0},System.Func{Microsoft.Identity.Client.Extensibility.OnBeforeTokenRequestData,System.Threading.Tasks.Task})" />
       <Member Id="M:Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.WithAdditionalCacheParameters``1(Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder{``0},System.Collections.Generic.IEnumerable{System.String})" />
+      <Member Id="M:Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.WithAttributeTokens``1(Microsoft.Identity.Client.AbstractConfidentialClientAcquireTokenParameterBuilder{``0},System.Collections.Generic.IEnumerable{System.String})" />
       <Member Id="M:Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.WithAuthenticationExtension``1(Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder{``0},Microsoft.Identity.Client.Extensibility.MsalAuthenticationExtension)" />
+      <Member Id="M:Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.WithExtraBodyParameters``1(Microsoft.Identity.Client.AbstractConfidentialClientAcquireTokenParameterBuilder{``0},System.Collections.Generic.Dictionary{System.String,System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{System.String}}})" />
       <Member Id="M:Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.WithExtraClientAssertionClaims``1(Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder{``0},System.String)" />
       <Member Id="M:Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.WithFmiPathForClientAssertion``1(Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder{``0},System.String)" />
       <Member Id="M:Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.WithProofOfPosessionKeyId``1(Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder{``0},System.String,System.String)" />
@@ -1059,7 +1075,9 @@
       <Member Id="M:Microsoft.Identity.Client.Extensibility.AcquireTokenOnBehalfOfParameterBuilderExtensions.WithSearchInCacheForLongRunningProcess(Microsoft.Identity.Client.AcquireTokenOnBehalfOfParameterBuilder,System.Boolean)" />
     </Type>
     <Type Name="Microsoft.Identity.Client.Extensibility.AcquireTokenParameterBuilderExtensions" Id="T:Microsoft.Identity.Client.Extensibility.AcquireTokenParameterBuilderExtensions">
+      <Member Id="M:Microsoft.Identity.Client.Extensibility.AcquireTokenParameterBuilderExtensions.WithCachePartitionKey``1(Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder{``0},System.String,System.String)" />
       <Member Id="M:Microsoft.Identity.Client.Extensibility.AcquireTokenParameterBuilderExtensions.WithExtraHttpHeaders``1(Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder{``0},System.Collections.Generic.IDictionary{System.String,System.String})" />
+      <Member Id="M:Microsoft.Identity.Client.Extensibility.AcquireTokenParameterBuilderExtensions.WithReservedScopes(Microsoft.Identity.Client.AcquireTokenByAuthorizationCodeParameterBuilder,System.Boolean)" />
     </Type>
     <Type Name="Microsoft.Identity.Client.Extensibility.AppTokenProviderParameters" Id="T:Microsoft.Identity.Client.Extensibility.AppTokenProviderParameters">
       <Member Id="M:Microsoft.Identity.Client.Extensibility.AppTokenProviderParameters.#ctor" />
@@ -1074,6 +1092,9 @@
       <Member Id="P:Microsoft.Identity.Client.Extensibility.AppTokenProviderResult.AccessToken" />
       <Member Id="P:Microsoft.Identity.Client.Extensibility.AppTokenProviderResult.ExpiresInSeconds" />
       <Member Id="P:Microsoft.Identity.Client.Extensibility.AppTokenProviderResult.RefreshInSeconds" />
+    </Type>
+    <Type Name="Microsoft.Identity.Client.Extensibility.AuthenticationResultExtensions" Id="T:Microsoft.Identity.Client.Extensibility.AuthenticationResultExtensions">
+      <Member Id="M:Microsoft.Identity.Client.Extensibility.AuthenticationResultExtensions.GetRefreshToken(Microsoft.Identity.Client.AuthenticationResult)" />
     </Type>
     <Type Name="Microsoft.Identity.Client.Extensibility.ConfidentialClientApplicationBuilderExtensions" Id="T:Microsoft.Identity.Client.Extensibility.ConfidentialClientApplicationBuilderExtensions">
       <Member Id="M:Microsoft.Identity.Client.Extensibility.ConfidentialClientApplicationBuilderExtensions.OnCompletion(Microsoft.Identity.Client.ConfidentialClientApplicationBuilder,System.Func{Microsoft.Identity.Client.AssertionRequestOptions,Microsoft.Identity.Client.Extensibility.ExecutionResult,System.Threading.Tasks.Task})" />
