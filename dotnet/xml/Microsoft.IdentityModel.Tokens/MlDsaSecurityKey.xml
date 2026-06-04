@@ -1,0 +1,251 @@
+<Type Name="MlDsaSecurityKey" FullName="Microsoft.IdentityModel.Tokens.MlDsaSecurityKey">
+  <TypeSignature Language="C#" Value="public class MlDsaSecurityKey : Microsoft.IdentityModel.Tokens.AsymmetricSecurityKey, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MlDsaSecurityKey extends Microsoft.IdentityModel.Tokens.AsymmetricSecurityKey implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.IdentityModel.Tokens.MlDsaSecurityKey" />
+  <TypeSignature Language="VB.NET" Value="Public Class MlDsaSecurityKey&#xA;Inherits AsymmetricSecurityKey&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type MlDsaSecurityKey = class&#xA;    inherit AsymmetricSecurityKey&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+    <AssemblyVersion>8.19.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.IdentityModel.Tokens.AsymmetricSecurityKey</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Represents an ML-DSA security key.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MlDsaSecurityKey (System.Security.Cryptography.MLDsa mlDsa);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.MLDsa mlDsa) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.MlDsaSecurityKey.#ctor(System.Security.Cryptography.MLDsa)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (mlDsa As MLDsa)" />
+      <MemberSignature Language="F#" Value="new Microsoft.IdentityModel.Tokens.MlDsaSecurityKey : System.Security.Cryptography.MLDsa -&gt; Microsoft.IdentityModel.Tokens.MlDsaSecurityKey" Usage="new Microsoft.IdentityModel.Tokens.MlDsaSecurityKey mlDsa" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="mlDsa" Type="System.Security.Cryptography.MLDsa" />
+      </Parameters>
+      <Docs>
+        <param name="mlDsa">The <see cref="P:Microsoft.IdentityModel.Tokens.MlDsaSecurityKey.MLDsa" /> instance. The caller is responsible for the
+            lifetime of this instance; disposing the key does not dispose the MLDsa.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.IdentityModel.Tokens.MlDsaSecurityKey" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanComputeJwkThumbprint">
+      <MemberSignature Language="C#" Value="public override bool CanComputeJwkThumbprint ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanComputeJwkThumbprint() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.MlDsaSecurityKey.CanComputeJwkThumbprint" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function CanComputeJwkThumbprint () As Boolean" />
+      <MemberSignature Language="F#" Value="override this.CanComputeJwkThumbprint : unit -&gt; bool" Usage="mlDsaSecurityKey.CanComputeJwkThumbprint " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Determines whether the <see cref="T:Microsoft.IdentityModel.Tokens.MlDsaSecurityKey" /> can compute a JWK thumbprint.
+            </summary>
+        <returns>
+          <see langword="true" /> if JWK thumbprint can be computed; otherwise, <see langword="false" />.</returns>
+        <remarks>See: <see href="https://datatracker.ietf.org/doc/html/rfc7638" />.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputeJwkThumbprint">
+      <MemberSignature Language="C#" Value="public override byte[] ComputeJwkThumbprint ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance unsigned int8[] ComputeJwkThumbprint() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.MlDsaSecurityKey.ComputeJwkThumbprint" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ComputeJwkThumbprint () As Byte()" />
+      <MemberSignature Language="F#" Value="override this.ComputeJwkThumbprint : unit -&gt; byte[]" Usage="mlDsaSecurityKey.ComputeJwkThumbprint " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Computes a SHA256 hash over the <see cref="T:Microsoft.IdentityModel.Tokens.MlDsaSecurityKey" />.
+            </summary>
+        <returns>A JWK thumbprint.</returns>
+        <remarks>See: <see href="https://datatracker.ietf.org/doc/html/rfc7638" />.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.MlDsaSecurityKey.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="mlDsaSecurityKey.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Releases resources held by this instance.
+            Only disposes the <see cref="P:Microsoft.IdentityModel.Tokens.MlDsaSecurityKey.MLDsa" /> if this key owns the instance
+            (i.e., the instance was created internally from a <see cref="T:Microsoft.IdentityModel.Tokens.JsonWebKey" />).
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.MlDsaSecurityKey.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : bool -&gt; unit&#xA;override this.Dispose : bool -&gt; unit" Usage="mlDsaSecurityKey.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> to release both managed and unmanaged resources;
+            <see langword="false" /> to release only unmanaged resources.</param>
+        <summary>
+            Releases unmanaged and, optionally, managed resources.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasPrivateKey">
+      <MemberSignature Language="C#" Value="public override bool HasPrivateKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasPrivateKey" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Tokens.MlDsaSecurityKey.HasPrivateKey" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property HasPrivateKey As Boolean" />
+      <MemberSignature Language="F#" Value="member this.HasPrivateKey : bool" Usage="Microsoft.IdentityModel.Tokens.MlDsaSecurityKey.HasPrivateKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("HasPrivateKey method is deprecated, please use PrivateKeyStatus instead.")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("HasPrivateKey method is deprecated, please use PrivateKeyStatus instead.")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets a bool indicating if a private key exists.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <return>
+          <see langword="true" /> if it has a private key; otherwise, <see langword="false" />.</return>
+      </Docs>
+    </Member>
+    <Member MemberName="KeySize">
+      <MemberSignature Language="C#" Value="public override int KeySize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 KeySize" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Tokens.MlDsaSecurityKey.KeySize" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property KeySize As Integer" />
+      <MemberSignature Language="F#" Value="member this.KeySize : int" Usage="Microsoft.IdentityModel.Tokens.MlDsaSecurityKey.KeySize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the ML-DSA key size in bits.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MLDsa">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.MLDsa MLDsa { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.MLDsa MLDsa" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Tokens.MlDsaSecurityKey.MLDsa" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MLDsa As MLDsa" />
+      <MemberSignature Language="F#" Value="member this.MLDsa : System.Security.Cryptography.MLDsa" Usage="Microsoft.IdentityModel.Tokens.MlDsaSecurityKey.MLDsa" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.MLDsa</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The <see cref="P:Microsoft.IdentityModel.Tokens.MlDsaSecurityKey.MLDsa" /> instance used to initialize the key.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrivateKeyStatus">
+      <MemberSignature Language="C#" Value="public override Microsoft.IdentityModel.Tokens.PrivateKeyStatus PrivateKeyStatus { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.IdentityModel.Tokens.PrivateKeyStatus PrivateKeyStatus" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Tokens.MlDsaSecurityKey.PrivateKeyStatus" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property PrivateKeyStatus As PrivateKeyStatus" />
+      <MemberSignature Language="F#" Value="member this.PrivateKeyStatus : Microsoft.IdentityModel.Tokens.PrivateKeyStatus" Usage="Microsoft.IdentityModel.Tokens.MlDsaSecurityKey.PrivateKeyStatus" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Tokens.PrivateKeyStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets a value indicating the existence of the private key.
+            </summary>
+        <value>
+          <see cref="F:Microsoft.IdentityModel.Tokens.PrivateKeyStatus.Exists" /> if the private key exists.
+            <see cref="F:Microsoft.IdentityModel.Tokens.PrivateKeyStatus.DoesNotExist" /> if the private key does not exist.
+            <see cref="F:Microsoft.IdentityModel.Tokens.PrivateKeyStatus.Unknown" /> if the existence of the private key cannot be determined.
+            </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

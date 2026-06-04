@@ -1,22 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-web-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.IdentityModel.Abstractions" Version="8.18.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.JsonWebTokens" Version="8.18.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Abstractions" Version="8.19.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.JsonWebTokens" Version="8.19.1.0" />
     <Assembly Name="Microsoft.IdentityModel.KeyVaultExtensions" Version="7.7.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.Logging" Version="8.18.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.LoggingExtensions" Version="8.18.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Logging" Version="8.19.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.LoggingExtensions" Version="8.19.1.0" />
     <Assembly Name="Microsoft.IdentityModel.ManagedKeyVaultSecurityKey" Version="7.7.1.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols" Version="8.18.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="8.18.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.SignedHttpRequest" Version="8.18.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Protocols.WsFederation" Version="8.18.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.TestExtensions" Version="8.18.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Tokens" Version="8.18.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Tokens.Saml" Version="8.18.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Validators" Version="8.18.0.0" />
-    <Assembly Name="Microsoft.IdentityModel.Xml" Version="8.18.0.0" />
-    <Assembly Name="System.IdentityModel.Tokens.Jwt" Version="8.18.0.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols" Version="8.19.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="8.19.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.SignedHttpRequest" Version="8.19.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.Protocols.WsFederation" Version="8.19.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.TestExtensions" Version="8.19.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.Tokens" Version="8.19.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.Tokens.Saml" Version="8.19.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.Validators" Version="8.19.1.0" />
+    <Assembly Name="Microsoft.IdentityModel.Xml" Version="8.19.1.0" />
+    <Assembly Name="System.IdentityModel.Tokens.Jwt" Version="8.19.1.0" />
   </Assemblies>
   <Namespace Name="Microsoft.IdentityModel.Abstractions">
     <Type Name="Microsoft.IdentityModel.Abstractions.EventLogLevel" Id="T:Microsoft.IdentityModel.Abstractions.EventLogLevel">
@@ -1473,6 +1473,7 @@
       <Member Id="M:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.ReleaseKeyWrapProvider(Microsoft.IdentityModel.Tokens.KeyWrapProvider)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.ReleaseRsaKeyWrapProvider(Microsoft.IdentityModel.Tokens.RsaKeyWrapProvider)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.ReleaseSignatureProvider(Microsoft.IdentityModel.Tokens.SignatureProvider)" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CacheCustomProviders" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CacheSignatureProviders" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CryptoProviderCache" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CustomCryptoProvider" />
@@ -1567,6 +1568,7 @@
       <Member Id="M:Microsoft.IdentityModel.Tokens.ITokenReplayCache.TryFind(System.String)" />
     </Type>
     <Type Name="Microsoft.IdentityModel.Tokens.JsonWebAlgorithmsKeyTypes" Id="T:Microsoft.IdentityModel.Tokens.JsonWebAlgorithmsKeyTypes">
+      <Member Id="F:Microsoft.IdentityModel.Tokens.JsonWebAlgorithmsKeyTypes.Akp" />
       <Member Id="F:Microsoft.IdentityModel.Tokens.JsonWebAlgorithmsKeyTypes.EllipticCurve" />
       <Member Id="F:Microsoft.IdentityModel.Tokens.JsonWebAlgorithmsKeyTypes.Octet" />
       <Member Id="F:Microsoft.IdentityModel.Tokens.JsonWebAlgorithmsKeyTypes.RSA" />
@@ -1595,6 +1597,8 @@
       <Member Id="P:Microsoft.IdentityModel.Tokens.JsonWebKey.N" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.JsonWebKey.Oth" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.JsonWebKey.P" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.JsonWebKey.Priv" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.JsonWebKey.Pub" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.JsonWebKey.Q" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.JsonWebKey.QI" />
       <Member Id="P:Microsoft.IdentityModel.Tokens.JsonWebKey.Use" />
@@ -1608,6 +1612,7 @@
     <Type Name="Microsoft.IdentityModel.Tokens.JsonWebKeyConverter" Id="T:Microsoft.IdentityModel.Tokens.JsonWebKeyConverter">
       <Member Id="M:Microsoft.IdentityModel.Tokens.JsonWebKeyConverter.#ctor" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.JsonWebKeyConverter.ConvertFromECDsaSecurityKey(Microsoft.IdentityModel.Tokens.ECDsaSecurityKey)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.JsonWebKeyConverter.ConvertFromMlDsaSecurityKey(Microsoft.IdentityModel.Tokens.MlDsaSecurityKey)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.JsonWebKeyConverter.ConvertFromRSASecurityKey(Microsoft.IdentityModel.Tokens.RsaSecurityKey)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.JsonWebKeyConverter.ConvertFromSecurityKey(Microsoft.IdentityModel.Tokens.SecurityKey)" />
       <Member Id="M:Microsoft.IdentityModel.Tokens.JsonWebKeyConverter.ConvertFromSymmetricSecurityKey(Microsoft.IdentityModel.Tokens.SymmetricSecurityKey)" />
@@ -1636,6 +1641,8 @@
       <Member Id="F:Microsoft.IdentityModel.Tokens.JsonWebKeyParameterNames.N" />
       <Member Id="F:Microsoft.IdentityModel.Tokens.JsonWebKeyParameterNames.Oth" />
       <Member Id="F:Microsoft.IdentityModel.Tokens.JsonWebKeyParameterNames.P" />
+      <Member Id="F:Microsoft.IdentityModel.Tokens.JsonWebKeyParameterNames.Priv" />
+      <Member Id="F:Microsoft.IdentityModel.Tokens.JsonWebKeyParameterNames.Pub" />
       <Member Id="F:Microsoft.IdentityModel.Tokens.JsonWebKeyParameterNames.Q" />
       <Member Id="F:Microsoft.IdentityModel.Tokens.JsonWebKeyParameterNames.QI" />
       <Member Id="F:Microsoft.IdentityModel.Tokens.JsonWebKeyParameterNames.Use" />
@@ -1679,6 +1686,17 @@
       <Member Id="P:Microsoft.IdentityModel.Tokens.KeyWrapProvider.Key" />
     </Type>
     <Type Name="Microsoft.IdentityModel.Tokens.LifetimeValidator" Id="T:Microsoft.IdentityModel.Tokens.LifetimeValidator" />
+    <Type Name="Microsoft.IdentityModel.Tokens.MlDsaSecurityKey" Id="T:Microsoft.IdentityModel.Tokens.MlDsaSecurityKey">
+      <Member Id="M:Microsoft.IdentityModel.Tokens.MlDsaSecurityKey.#ctor(System.Security.Cryptography.MLDsa)" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.MlDsaSecurityKey.CanComputeJwkThumbprint" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.MlDsaSecurityKey.ComputeJwkThumbprint" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.MlDsaSecurityKey.Dispose" />
+      <Member Id="M:Microsoft.IdentityModel.Tokens.MlDsaSecurityKey.Dispose(System.Boolean)" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.MlDsaSecurityKey.HasPrivateKey" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.MlDsaSecurityKey.KeySize" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.MlDsaSecurityKey.MLDsa" />
+      <Member Id="P:Microsoft.IdentityModel.Tokens.MlDsaSecurityKey.PrivateKeyStatus" />
+    </Type>
     <Type Name="Microsoft.IdentityModel.Tokens.PrivateKeyStatus" Id="T:Microsoft.IdentityModel.Tokens.PrivateKeyStatus">
       <Member Id="F:Microsoft.IdentityModel.Tokens.PrivateKeyStatus.DoesNotExist" />
       <Member Id="F:Microsoft.IdentityModel.Tokens.PrivateKeyStatus.Exists" />
@@ -1741,6 +1759,9 @@
       <Member Id="F:Microsoft.IdentityModel.Tokens.SecurityAlgorithms.HmacSha384Signature" />
       <Member Id="F:Microsoft.IdentityModel.Tokens.SecurityAlgorithms.HmacSha512" />
       <Member Id="F:Microsoft.IdentityModel.Tokens.SecurityAlgorithms.HmacSha512Signature" />
+      <Member Id="F:Microsoft.IdentityModel.Tokens.SecurityAlgorithms.MlDsa44" />
+      <Member Id="F:Microsoft.IdentityModel.Tokens.SecurityAlgorithms.MlDsa65" />
+      <Member Id="F:Microsoft.IdentityModel.Tokens.SecurityAlgorithms.MlDsa87" />
       <Member Id="F:Microsoft.IdentityModel.Tokens.SecurityAlgorithms.None" />
       <Member Id="F:Microsoft.IdentityModel.Tokens.SecurityAlgorithms.Ripemd160Digest" />
       <Member Id="F:Microsoft.IdentityModel.Tokens.SecurityAlgorithms.RsaOAEP" />

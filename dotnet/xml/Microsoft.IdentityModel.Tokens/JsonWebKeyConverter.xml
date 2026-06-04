@@ -12,6 +12,7 @@
     <AssemblyVersion>8.16.0.0</AssemblyVersion>
     <AssemblyVersion>8.17.0.0</AssemblyVersion>
     <AssemblyVersion>8.18.0.0</AssemblyVersion>
+    <AssemblyVersion>8.19.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -33,7 +34,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.18.0.0</AssemblyVersion>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -50,7 +51,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.18.0.0</AssemblyVersion>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.JsonWebKey</ReturnType>
@@ -67,6 +68,32 @@
         <exception cref="T:System.ArgumentNullException">if <paramref name="key" />is null.</exception>
       </Docs>
     </Member>
+    <Member MemberName="ConvertFromMlDsaSecurityKey">
+      <MemberSignature Language="C#" Value="public static Microsoft.IdentityModel.Tokens.JsonWebKey ConvertFromMlDsaSecurityKey (Microsoft.IdentityModel.Tokens.MlDsaSecurityKey key);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.IdentityModel.Tokens.JsonWebKey ConvertFromMlDsaSecurityKey(class Microsoft.IdentityModel.Tokens.MlDsaSecurityKey key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Tokens.JsonWebKeyConverter.ConvertFromMlDsaSecurityKey(Microsoft.IdentityModel.Tokens.MlDsaSecurityKey)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ConvertFromMlDsaSecurityKey (key As MlDsaSecurityKey) As JsonWebKey" />
+      <MemberSignature Language="F#" Value="static member ConvertFromMlDsaSecurityKey : Microsoft.IdentityModel.Tokens.MlDsaSecurityKey -&gt; Microsoft.IdentityModel.Tokens.JsonWebKey" Usage="Microsoft.IdentityModel.Tokens.JsonWebKeyConverter.ConvertFromMlDsaSecurityKey key" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.IdentityModel.Tokens.JsonWebKey</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="Microsoft.IdentityModel.Tokens.MlDsaSecurityKey" />
+      </Parameters>
+      <Docs>
+        <param name="key">To be added.</param>
+        <summary>
+            Converts an <see cref="T:Microsoft.IdentityModel.Tokens.MlDsaSecurityKey" /> into a <see cref="T:Microsoft.IdentityModel.Tokens.JsonWebKey" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="ConvertFromRSASecurityKey">
       <MemberSignature Language="C#" Value="public static Microsoft.IdentityModel.Tokens.JsonWebKey ConvertFromRSASecurityKey (Microsoft.IdentityModel.Tokens.RsaSecurityKey key);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.IdentityModel.Tokens.JsonWebKey ConvertFromRSASecurityKey(class Microsoft.IdentityModel.Tokens.RsaSecurityKey key) cil managed" />
@@ -76,7 +103,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.18.0.0</AssemblyVersion>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.JsonWebKey</ReturnType>
@@ -102,7 +129,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.18.0.0</AssemblyVersion>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.JsonWebKey</ReturnType>
@@ -129,7 +156,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.18.0.0</AssemblyVersion>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.JsonWebKey</ReturnType>
@@ -155,7 +182,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.18.0.0</AssemblyVersion>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.JsonWebKey</ReturnType>
@@ -181,7 +208,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.18.0.0</AssemblyVersion>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.JsonWebKey</ReturnType>
@@ -193,7 +220,7 @@
       <Docs>
         <param name="key">a <see cref="T:Microsoft.IdentityModel.Tokens.X509SecurityKey" /> to convert.</param>
         <param name="representAsRsaKey">
-          <c>true</c> to represent the <paramref name="key" /> as an <see cref="T:Microsoft.IdentityModel.Tokens.RsaSecurityKey" />,
+          <c>true</c> to extract the key material (RSA, ECDsa, or ML-DSA) from the <paramref name="key" />,
             <c>false</c> to represent the <paramref name="key" /> as an <see cref="T:Microsoft.IdentityModel.Tokens.X509SecurityKey" />, using the "x5c" parameter.
             </param>
         <summary>
@@ -213,7 +240,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.18.0.0</AssemblyVersion>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>

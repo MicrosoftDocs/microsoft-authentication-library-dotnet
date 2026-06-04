@@ -12,6 +12,7 @@
     <AssemblyVersion>8.16.0.0</AssemblyVersion>
     <AssemblyVersion>8.17.0.0</AssemblyVersion>
     <AssemblyVersion>8.18.0.0</AssemblyVersion>
+    <AssemblyVersion>8.19.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -32,7 +33,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.18.0.0</AssemblyVersion>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -51,7 +52,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.18.0.0</AssemblyVersion>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="cache" Type="Microsoft.IdentityModel.Tokens.CryptoProviderCache" />
@@ -73,7 +74,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.18.0.0</AssemblyVersion>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="other" Type="Microsoft.IdentityModel.Tokens.CryptoProviderFactory" />
@@ -86,6 +87,39 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="CacheCustomProviders">
+      <MemberSignature Language="C#" Value="public bool CacheCustomProviders { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CacheCustomProviders" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CacheCustomProviders" />
+      <MemberSignature Language="VB.NET" Value="Public Property CacheCustomProviders As Boolean" />
+      <MemberSignature Language="F#" Value="member this.CacheCustomProviders : bool with get, set" Usage="Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CacheCustomProviders" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.ComponentModel.DefaultValue(false)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.DefaultValue(false)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets a bool controlling if <see cref="T:Microsoft.IdentityModel.Tokens.SignatureProvider" /> instances created by <see cref="P:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CustomCryptoProvider" />
+            should be cached. Default is <see langword="false" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            When <see langword="true" />, signature providers returned by <see cref="M:Microsoft.IdentityModel.Tokens.ICryptoProvider.Create(System.String,System.Object[])" />
+            are cached using the same <see cref="P:Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CryptoProviderCache" /> used for built-in providers. This avoids
+            repeated provider creation and key materialisation on every signature validation.
+            </remarks>
+      </Docs>
+    </Member>
     <Member MemberName="CacheSignatureProviders">
       <MemberSignature Language="C#" Value="public bool CacheSignatureProviders { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance bool CacheSignatureProviders" />
@@ -95,7 +129,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.18.0.0</AssemblyVersion>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -123,7 +157,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.18.0.0</AssemblyVersion>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.AuthenticatedEncryptionProvider</ReturnType>
@@ -162,7 +196,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.18.0.0</AssemblyVersion>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.SignatureProvider</ReturnType>
@@ -201,7 +235,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.18.0.0</AssemblyVersion>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.SignatureProvider</ReturnType>
@@ -243,7 +277,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.18.0.0</AssemblyVersion>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.SignatureProvider</ReturnType>
@@ -282,7 +316,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.18.0.0</AssemblyVersion>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.SignatureProvider</ReturnType>
@@ -322,7 +356,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.18.0.0</AssemblyVersion>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Cryptography.HashAlgorithm</ReturnType>
@@ -357,7 +391,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.18.0.0</AssemblyVersion>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Cryptography.HashAlgorithm</ReturnType>
@@ -391,7 +425,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.18.0.0</AssemblyVersion>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Cryptography.KeyedHashAlgorithm</ReturnType>
@@ -427,7 +461,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.18.0.0</AssemblyVersion>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.KeyWrapProvider</ReturnType>
@@ -465,7 +499,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.18.0.0</AssemblyVersion>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.KeyWrapProvider</ReturnType>
@@ -503,7 +537,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.18.0.0</AssemblyVersion>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.CryptoProviderCache</ReturnType>
@@ -525,7 +559,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.18.0.0</AssemblyVersion>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.ICryptoProvider</ReturnType>
@@ -550,7 +584,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.18.0.0</AssemblyVersion>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.IdentityModel.Tokens.CryptoProviderFactory</ReturnType>
@@ -572,7 +606,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.18.0.0</AssemblyVersion>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -600,7 +634,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.18.0.0</AssemblyVersion>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -622,7 +656,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.18.0.0</AssemblyVersion>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -652,7 +686,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.18.0.0</AssemblyVersion>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -687,7 +721,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.18.0.0</AssemblyVersion>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -713,7 +747,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.18.0.0</AssemblyVersion>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -739,7 +773,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.18.0.0</AssemblyVersion>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -765,7 +799,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.18.0.0</AssemblyVersion>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -791,7 +825,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.IdentityModel.Tokens</AssemblyName>
-        <AssemblyVersion>8.18.0.0</AssemblyVersion>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
