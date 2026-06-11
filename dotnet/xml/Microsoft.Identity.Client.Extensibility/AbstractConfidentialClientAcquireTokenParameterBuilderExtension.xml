@@ -57,6 +57,7 @@
     <AssemblyVersion>4.83.1.0</AssemblyVersion>
     <AssemblyVersion>4.83.3.0</AssemblyVersion>
     <AssemblyVersion>4.84.1.0</AssemblyVersion>
+    <AssemblyVersion>4.84.2.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -78,7 +79,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.84.1.0</AssemblyVersion>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt;</ReturnType>
@@ -99,7 +100,7 @@
         <param name="builder">The builder to chain options to</param>
         <param name="onBeforeTokenRequestHandler">An async delegate which gets invoked just before MSAL makes a token request</param>
         <summary>
-            Intervenes in the request pipeline, by executing a user provided delegate before MSAL makes the token request. 
+            Intervenes in the request pipeline, by executing a user provided delegate before MSAL makes the token request.
             The delegate can modify the request payload by adding or removing  body parameters and headers. <see cref="T:Microsoft.Identity.Client.Extensibility.OnBeforeTokenRequestData" /></summary>
         <returns>The builder to chain other options to.</returns>
         <remarks>To be added.</remarks>
@@ -114,7 +115,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.84.1.0</AssemblyVersion>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt;</ReturnType>
@@ -151,7 +152,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.84.1.0</AssemblyVersion>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -212,7 +213,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.84.1.0</AssemblyVersion>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt;</ReturnType>
@@ -239,6 +240,46 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="WithClaimsFromClient&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static T WithClaimsFromClient&lt;T&gt; (this Microsoft.Identity.Client.AbstractConfidentialClientAcquireTokenParameterBuilder&lt;T&gt; builder, string claimsJson) where T : Microsoft.Identity.Client.AbstractConfidentialClientAcquireTokenParameterBuilder&lt;T&gt;;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!T WithClaimsFromClient&lt;(class Microsoft.Identity.Client.AbstractConfidentialClientAcquireTokenParameterBuilder`1&lt;!!T&gt;) T&gt;(class Microsoft.Identity.Client.AbstractConfidentialClientAcquireTokenParameterBuilder`1&lt;!!T&gt; builder, string claimsJson) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.WithClaimsFromClient``1(Microsoft.Identity.Client.AbstractConfidentialClientAcquireTokenParameterBuilder{``0},System.String)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function WithClaimsFromClient(Of T As AbstractConfidentialClientAcquireTokenParameterBuilder(Of T)) (builder As AbstractConfidentialClientAcquireTokenParameterBuilder(Of T), claimsJson As String) As T" />
+      <MemberSignature Language="F#" Value="static member WithClaimsFromClient : Microsoft.Identity.Client.AbstractConfidentialClientAcquireTokenParameterBuilder&lt;'T (requires 'T :&gt; Microsoft.Identity.Client.AbstractConfidentialClientAcquireTokenParameterBuilder&lt;'T&gt;)&gt; * string -&gt; 'T (requires 'T :&gt; Microsoft.Identity.Client.AbstractConfidentialClientAcquireTokenParameterBuilder&lt;'T&gt;)" Usage="Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.WithClaimsFromClient (builder, claimsJson)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <BaseTypeName>Microsoft.Identity.Client.AbstractConfidentialClientAcquireTokenParameterBuilder&lt;T&gt;</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="builder" Type="Microsoft.Identity.Client.AbstractConfidentialClientAcquireTokenParameterBuilder&lt;T&gt;" RefType="this" />
+        <Parameter Name="claimsJson" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">The concrete confidential client builder type.</typeparam>
+        <param name="builder">The builder to chain options to.</param>
+        <param name="claimsJson">A JSON string containing the client-originated claims. Must be valid JSON.</param>
+        <summary>
+            Specifies client-originated claims to include in the token request.
+            Unlike <see cref="M:Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1.WithClaims(System.String)" /> (for server-issued
+            claims challenges), tokens acquired with client claims <b>are cached</b> and the cache entry
+            is keyed on the claims value. Different claims values produce separate cache entries.
+            Use stable, non-dynamic values to avoid unbounded cache growth.
+            </summary>
+        <returns>The builder to chain the .With methods.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="WithExtraBodyParameters&lt;T&gt;">
       <MemberSignature Language="C#" Value="public static T WithExtraBodyParameters&lt;T&gt; (this Microsoft.Identity.Client.AbstractConfidentialClientAcquireTokenParameterBuilder&lt;T&gt; builder, System.Collections.Generic.Dictionary&lt;string,Func&lt;System.Threading.CancellationToken,System.Threading.Tasks.Task&lt;string&gt;&gt;&gt; extraBodyParams) where T : Microsoft.Identity.Client.AbstractConfidentialClientAcquireTokenParameterBuilder&lt;T&gt;;" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!T WithExtraBodyParameters&lt;(class Microsoft.Identity.Client.AbstractConfidentialClientAcquireTokenParameterBuilder`1&lt;!!T&gt;) T&gt;(class Microsoft.Identity.Client.AbstractConfidentialClientAcquireTokenParameterBuilder`1&lt;!!T&gt; builder, class System.Collections.Generic.Dictionary`2&lt;string, class System.Func`2&lt;valuetype System.Threading.CancellationToken, class System.Threading.Tasks.Task`1&lt;string&gt;&gt;&gt; extraBodyParams) cil managed" />
@@ -248,7 +289,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.84.1.0</AssemblyVersion>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -286,7 +327,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.84.1.0</AssemblyVersion>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt;</ReturnType>
@@ -327,7 +368,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.84.1.0</AssemblyVersion>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt;</ReturnType>
@@ -367,7 +408,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.84.1.0</AssemblyVersion>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt;</ReturnType>

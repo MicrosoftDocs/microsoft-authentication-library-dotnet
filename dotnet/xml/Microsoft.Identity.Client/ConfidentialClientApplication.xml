@@ -57,6 +57,7 @@
     <AssemblyVersion>4.83.1.0</AssemblyVersion>
     <AssemblyVersion>4.83.3.0</AssemblyVersion>
     <AssemblyVersion>4.84.1.0</AssemblyVersion>
+    <AssemblyVersion>4.84.2.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Identity.Client.ClientApplicationBase</BaseTypeName>
@@ -110,7 +111,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.84.1.0</AssemblyVersion>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenByAuthorizationCodeParameterBuilder</ReturnType>
@@ -149,7 +150,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.84.1.0</AssemblyVersion>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenForClientParameterBuilder</ReturnType>
@@ -184,7 +185,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.84.1.0</AssemblyVersion>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenOnBehalfOfParameterBuilder</ReturnType>
@@ -214,7 +215,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.84.1.0</AssemblyVersion>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenOnBehalfOfParameterBuilder</ReturnType>
@@ -252,7 +253,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.84.1.0</AssemblyVersion>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ITokenCache</ReturnType>
@@ -277,7 +278,7 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.84.1.0</AssemblyVersion>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -298,7 +299,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.84.1.0</AssemblyVersion>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate2</ReturnType>
@@ -323,7 +324,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.84.1.0</AssemblyVersion>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.GetAuthorizationRequestUrlParameterBuilder</ReturnType>
@@ -357,7 +358,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.84.1.0</AssemblyVersion>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenOnBehalfOfParameterBuilder</ReturnType>
@@ -389,7 +390,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.84.1.0</AssemblyVersion>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenByRefreshTokenParameterBuilder</ReturnType>
@@ -407,6 +408,38 @@
       </Docs>
     </Member>
     <Member MemberName="Microsoft.Identity.Client.IByUserFederatedIdentityCredential.AcquireTokenByUserFederatedIdentityCredential">
+      <MemberSignature Language="C#" Value="Microsoft.Identity.Client.AcquireTokenByUserFederatedIdentityCredentialParameterBuilder IByUserFederatedIdentityCredential.AcquireTokenByUserFederatedIdentityCredential (System.Collections.Generic.IEnumerable&lt;string&gt; scopes, Guid userObjectId, string assertion);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class Microsoft.Identity.Client.AcquireTokenByUserFederatedIdentityCredentialParameterBuilder Microsoft.Identity.Client.IByUserFederatedIdentityCredential.AcquireTokenByUserFederatedIdentityCredential(class System.Collections.Generic.IEnumerable`1&lt;string&gt; scopes, valuetype System.Guid userObjectId, string assertion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.ConfidentialClientApplication.Microsoft#Identity#Client#IByUserFederatedIdentityCredential#AcquireTokenByUserFederatedIdentityCredential(System.Collections.Generic.IEnumerable{System.String},System.Guid,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Function AcquireTokenByUserFederatedIdentityCredential (scopes As IEnumerable(Of String), userObjectId As Guid, assertion As String) As AcquireTokenByUserFederatedIdentityCredentialParameterBuilder Implements IByUserFederatedIdentityCredential.AcquireTokenByUserFederatedIdentityCredential" />
+      <MemberSignature Language="F#" Value="abstract member Microsoft.Identity.Client.IByUserFederatedIdentityCredential.AcquireTokenByUserFederatedIdentityCredential : seq&lt;string&gt; * Guid * string -&gt; Microsoft.Identity.Client.AcquireTokenByUserFederatedIdentityCredentialParameterBuilder&#xA;override this.Microsoft.Identity.Client.IByUserFederatedIdentityCredential.AcquireTokenByUserFederatedIdentityCredential : seq&lt;string&gt; * Guid * string -&gt; Microsoft.Identity.Client.AcquireTokenByUserFederatedIdentityCredentialParameterBuilder" Usage="confidentialClientApplication.Microsoft.Identity.Client.IByUserFederatedIdentityCredential.AcquireTokenByUserFederatedIdentityCredential (scopes, userObjectId, assertion)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Identity.Client.IByUserFederatedIdentityCredential.AcquireTokenByUserFederatedIdentityCredential(System.Collections.Generic.IEnumerable{System.String},System.Guid,System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.AcquireTokenByUserFederatedIdentityCredentialParameterBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scopes" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="userObjectId" Type="System.Guid" />
+        <Parameter Name="assertion" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="scopes">To be added.</param>
+        <param name="userObjectId">To be added.</param>
+        <param name="assertion">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.Identity.Client.IByUserFederatedIdentityCredential.AcquireTokenByUserFederatedIdentityCredential">
       <MemberSignature Language="C#" Value="Microsoft.Identity.Client.AcquireTokenByUserFederatedIdentityCredentialParameterBuilder IByUserFederatedIdentityCredential.AcquireTokenByUserFederatedIdentityCredential (System.Collections.Generic.IEnumerable&lt;string&gt; scopes, string username, string assertion);" />
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class Microsoft.Identity.Client.AcquireTokenByUserFederatedIdentityCredentialParameterBuilder Microsoft.Identity.Client.IByUserFederatedIdentityCredential.AcquireTokenByUserFederatedIdentityCredential(class System.Collections.Generic.IEnumerable`1&lt;string&gt; scopes, string username, string assertion) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.ConfidentialClientApplication.Microsoft#Identity#Client#IByUserFederatedIdentityCredential#AcquireTokenByUserFederatedIdentityCredential(System.Collections.Generic.IEnumerable{System.String},System.String,System.String)" />
@@ -418,7 +451,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.84.1.0</AssemblyVersion>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenByUserFederatedIdentityCredentialParameterBuilder</ReturnType>
@@ -450,7 +483,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.84.1.0</AssemblyVersion>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenByUsernameAndPasswordConfidentialParameterBuilder</ReturnType>
@@ -479,7 +512,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.84.1.0</AssemblyVersion>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Boolean&gt;</ReturnType>
