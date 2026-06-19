@@ -228,7 +228,7 @@ public static async Task<AuthenticationResult> GetTokenAsync(string clientId, X5
 
 ### Distributed caches
 
-If you use `app.AddDistributedTokenCache`, the token cache is an adapter against the .NET `IDistributedCache` implementation. So you can choose between a SQL Server cache, a Redis cache, an Azure Cosmos DB cache, or any other cache implementing the [IDistributedCache](/dotnet/api/microsoft.extensions.caching.distributed.idistributedcache?view=dotnet-plat-ext-6.0&preserve-view=true) interface. 
+If you use `app.AddDistributedTokenCache`, the token cache is an adapter against the .NET `IDistributedCache` implementation. So you can choose between a SQL Server cache, a Redis cache, an Azure Cosmos DB cache, a Postgres cache, or any other cache implementing the [IDistributedCache](/dotnet/api/microsoft.extensions.caching.distributed.idistributedcache?view=dotnet-plat-ext-6.0&preserve-view=true) interface. 
 
 For testing purposes, you can use `services.AddDistributedMemoryCache()`, an in-memory implementation of `IDistributedCache`. 
 
@@ -299,6 +299,24 @@ Here's the code for an Azure Cosmos DB cache:
           cacheOptions.ClientBuilder = new CosmosClientBuilder(Configuration["CosmosConnectionString"]);
           cacheOptions.CreateIfNotExists = true;
         });
+       });
+```
+
+Here's the code for a Postgres cache:
+
+```csharp
+      // Postgres token cache
+      app.AddDistributedTokenCache(services =>
+      {
+        // Requires to reference Microsoft.Extensions.Caching.Postgres
+		services.AddDistributedPostgresCache(options =>
+        {
+		    options.ConnectionString = builder.Configuration.GetConnectionString("PostgresCache");
+		    options.SchemaName = builder.Configuration.GetValue<string>("PostgresCache:SchemaName", "public");
+		    options.TableName = builder.Configuration.GetValue<string>("PostgresCache:TableName", "cache");
+		    options.CreateIfNotExists = builder.Configuration.GetValue<bool>("PostgresCache:CreateIfNotExists", true);
+		    options.UseWAL = builder.Configuration.GetValue<bool>("PostgresCache:UseWAL", false);		    
+		});
        });
 ```
 
