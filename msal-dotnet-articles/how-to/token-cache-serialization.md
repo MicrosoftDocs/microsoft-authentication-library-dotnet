@@ -153,6 +153,7 @@ services.AddCosmosCache((CosmosCacheOptions cacheOptions) =>
 });
 
 // Or even a Postgres cache
+// Requires the Microsoft.Extensions.Caching.Postgres NuGet package
 services.AddDistributedPostgresCache(options =>
 {
     options.ConnectionString = builder.Configuration.GetConnectionString("PostgresCache");
