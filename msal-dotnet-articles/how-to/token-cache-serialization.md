@@ -133,7 +133,7 @@ services.Configure<MsalDistributedTokenCacheAdapterOptions>(options =>
   };
 });
 
-// Or even a SQL Server token cache
+// Or with a SQL Server token cache
 // Requires the Microsoft.Extensions.Caching.SqlServer NuGet package
 services.AddDistributedSqlServerCache(options =>
 {
@@ -151,6 +151,18 @@ services.AddCosmosCache((CosmosCacheOptions cacheOptions) =>
     cacheOptions.ClientBuilder = new CosmosClientBuilder(Configuration["CosmosConnectionString"]);
     cacheOptions.CreateIfNotExists = true;
 });
+
+// Or even a Postgres cache
+services.AddDistributedPostgresCache(options =>
+{
+    options.ConnectionString = builder.Configuration.GetConnectionString("PostgresCache");
+    options.SchemaName = builder.Configuration.GetValue<string>("PostgresCache:SchemaName", "public");
+    options.TableName = builder.Configuration.GetValue<string>("PostgresCache:TableName", "cache");
+    options.CreateIfNotExists = builder.Configuration.GetValue<bool>("PostgresCache:CreateIfNotExists", true);
+    options.UseWAL = builder.Configuration.GetValue<bool>("PostgresCache:UseWAL", false);
+
+});
+
 ```
 
 For more information, see:
