@@ -56,6 +56,8 @@
     <AssemblyVersion>4.82.1.0</AssemblyVersion>
     <AssemblyVersion>4.83.1.0</AssemblyVersion>
     <AssemblyVersion>4.83.3.0</AssemblyVersion>
+    <AssemblyVersion>4.84.1.0</AssemblyVersion>
+    <AssemblyVersion>4.84.2.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -76,7 +78,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.83.3.0</AssemblyVersion>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -95,7 +97,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.83.3.0</AssemblyVersion>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -117,7 +119,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.83.3.0</AssemblyVersion>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.CancellationToken</ReturnType>
@@ -139,7 +141,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.83.3.0</AssemblyVersion>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -161,7 +163,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.83.3.0</AssemblyVersion>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -183,7 +185,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.83.3.0</AssemblyVersion>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
@@ -207,7 +209,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.83.3.0</AssemblyVersion>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -215,6 +217,29 @@
       <Docs>
         <summary>
             Client ID for which a signed assertion is requested
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CorrelationId">
+      <MemberSignature Language="C#" Value="public Guid CorrelationId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid CorrelationId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.AssertionRequestOptions.CorrelationId" />
+      <MemberSignature Language="VB.NET" Value="Public Property CorrelationId As Guid" />
+      <MemberSignature Language="F#" Value="member this.CorrelationId : Guid with get, set" Usage="Microsoft.Identity.Client.AssertionRequestOptions.CorrelationId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Correlation ID of the authentication request. Use this to propagate the same correlation ID 
+            to downstream token requests (e.g., Managed Identity) for coherent end-to-end tracing.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -229,7 +254,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.83.3.0</AssemblyVersion>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -251,7 +276,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.83.3.0</AssemblyVersion>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
