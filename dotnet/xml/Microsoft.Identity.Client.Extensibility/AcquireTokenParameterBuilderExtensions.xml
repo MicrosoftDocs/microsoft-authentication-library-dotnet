@@ -15,6 +15,8 @@
     <AssemblyVersion>4.82.1.0</AssemblyVersion>
     <AssemblyVersion>4.83.1.0</AssemblyVersion>
     <AssemblyVersion>4.83.3.0</AssemblyVersion>
+    <AssemblyVersion>4.84.1.0</AssemblyVersion>
+    <AssemblyVersion>4.84.2.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -27,6 +29,47 @@
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
+    <Member MemberName="WithCachePartitionKey&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static T WithCachePartitionKey&lt;T&gt; (this Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder&lt;T&gt; builder, string key, string value) where T : Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder&lt;T&gt;;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!T WithCachePartitionKey&lt;(class Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder`1&lt;!!T&gt;) T&gt;(class Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder`1&lt;!!T&gt; builder, string key, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.Extensibility.AcquireTokenParameterBuilderExtensions.WithCachePartitionKey``1(Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder{``0},System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function WithCachePartitionKey(Of T As BaseAbstractAcquireTokenParameterBuilder(Of T)) (builder As BaseAbstractAcquireTokenParameterBuilder(Of T), key As String, value As String) As T" />
+      <MemberSignature Language="F#" Value="static member WithCachePartitionKey : Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder&lt;'T (requires 'T :&gt; Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder&lt;'T&gt;)&gt; * string * string -&gt; 'T (requires 'T :&gt; Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder&lt;'T&gt;)" Usage="Microsoft.Identity.Client.Extensibility.AcquireTokenParameterBuilderExtensions.WithCachePartitionKey (builder, key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <BaseTypeName>Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder&lt;T&gt;</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="builder" Type="Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder&lt;T&gt;" RefType="this" />
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">To be added.</typeparam>
+        <param name="builder">The builder to chain .With methods.</param>
+        <param name="key">The partition key name.</param>
+        <param name="value">The partition key value.</param>
+        <summary>
+            Adds a key-value pair to the token cache key without sending it as a query parameter.
+            Use this to partition cached tokens (e.g., isolating short-lived sessions from regular
+            sessions for the same user). Both <c>AcquireTokenByAuthorizationCode</c> and
+            <c>AcquireTokenSilent</c> must use the same partition key to match cached entries.
+            </summary>
+        <returns>The builder to chain .With methods.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="WithExtraHttpHeaders&lt;T&gt;">
       <MemberSignature Language="C#" Value="public static T WithExtraHttpHeaders&lt;T&gt; (this Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt; builder, System.Collections.Generic.IDictionary&lt;string,string&gt; extraHttpHeaders) where T : Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder&lt;T&gt;;" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!T WithExtraHttpHeaders&lt;(class Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1&lt;!!T&gt;) T&gt;(class Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder`1&lt;!!T&gt; builder, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; extraHttpHeaders) cil managed" />
@@ -36,7 +79,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.83.3.0</AssemblyVersion>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -58,6 +101,38 @@
         <param name="extraHttpHeaders">Additional HTTP headers to add to the token request.</param>
         <summary>Adds additional HTTP headers to the token request.</summary>
         <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithReservedScopes">
+      <MemberSignature Language="C#" Value="public static Microsoft.Identity.Client.AcquireTokenByAuthorizationCodeParameterBuilder WithReservedScopes (this Microsoft.Identity.Client.AcquireTokenByAuthorizationCodeParameterBuilder builder, bool offlineAccessScope);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Identity.Client.AcquireTokenByAuthorizationCodeParameterBuilder WithReservedScopes(class Microsoft.Identity.Client.AcquireTokenByAuthorizationCodeParameterBuilder builder, bool offlineAccessScope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.Extensibility.AcquireTokenParameterBuilderExtensions.WithReservedScopes(Microsoft.Identity.Client.AcquireTokenByAuthorizationCodeParameterBuilder,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function WithReservedScopes (builder As AcquireTokenByAuthorizationCodeParameterBuilder, offlineAccessScope As Boolean) As AcquireTokenByAuthorizationCodeParameterBuilder" />
+      <MemberSignature Language="F#" Value="static member WithReservedScopes : Microsoft.Identity.Client.AcquireTokenByAuthorizationCodeParameterBuilder * bool -&gt; Microsoft.Identity.Client.AcquireTokenByAuthorizationCodeParameterBuilder" Usage="Microsoft.Identity.Client.Extensibility.AcquireTokenParameterBuilderExtensions.WithReservedScopes (builder, offlineAccessScope)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.AcquireTokenByAuthorizationCodeParameterBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="builder" Type="Microsoft.Identity.Client.AcquireTokenByAuthorizationCodeParameterBuilder" RefType="this" />
+        <Parameter Name="offlineAccessScope" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="builder">The builder to chain .With methods.</param>
+        <param name="offlineAccessScope">
+            Set to <see langword="false" /> to omit <c>offline_access</c>. Set to <see langword="true" />
+            to preserve the default MSAL behavior of sending all reserved scopes.
+            </param>
+        <summary>
+            Controls whether MSAL sends the reserved <c>offline_access</c> scope while continuing to
+            send <c>openid</c> and <c>profile</c>. Only applicable to authorization code redemption flows.
+            </summary>
+        <returns>The builder to chain .With methods.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
