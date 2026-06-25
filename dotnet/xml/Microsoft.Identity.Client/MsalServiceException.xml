@@ -58,6 +58,7 @@
     <AssemblyVersion>4.83.3.0</AssemblyVersion>
     <AssemblyVersion>4.84.1.0</AssemblyVersion>
     <AssemblyVersion>4.84.2.0</AssemblyVersion>
+    <AssemblyVersion>4.85.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Identity.Client.MsalException</BaseTypeName>
@@ -80,7 +81,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.84.2.0</AssemblyVersion>
+        <AssemblyVersion>4.85.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="errorCode" Type="System.String" />
@@ -109,7 +110,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.84.2.0</AssemblyVersion>
+        <AssemblyVersion>4.85.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="errorCode" Type="System.String" />
@@ -143,7 +144,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.84.2.0</AssemblyVersion>
+        <AssemblyVersion>4.85.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="errorCode" Type="System.String" />
@@ -174,7 +175,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.84.2.0</AssemblyVersion>
+        <AssemblyVersion>4.85.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="errorCode" Type="System.String" />
@@ -210,7 +211,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.84.2.0</AssemblyVersion>
+        <AssemblyVersion>4.85.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="errorCode" Type="System.String" />
@@ -248,7 +249,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.84.2.0</AssemblyVersion>
+        <AssemblyVersion>4.85.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -283,7 +284,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.84.2.0</AssemblyVersion>
+        <AssemblyVersion>4.85.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Net.Http.Headers.HttpResponseHeaders</ReturnType>
@@ -308,7 +309,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.84.2.0</AssemblyVersion>
+        <AssemblyVersion>4.85.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -330,7 +331,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.84.2.0</AssemblyVersion>
+        <AssemblyVersion>4.85.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -345,6 +346,31 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="SubErrorForLogging">
+      <MemberSignature Language="C#" Value="public string SubErrorForLogging { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SubErrorForLogging" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.MsalServiceException.SubErrorForLogging" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SubErrorForLogging As String" />
+      <MemberSignature Language="F#" Value="member this.SubErrorForLogging : string" Usage="Microsoft.Identity.Client.MsalServiceException.SubErrorForLogging" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.85.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Sub-error returned by the token service refining <see cref="P:Microsoft.Identity.Client.MsalException.ErrorCode" />
+            (for example <c>consent_required</c>, <c>bad_token</c>, <c>protection_policy_required</c>).
+            Values are emitted by the service and may change without notice; intended for diagnostics
+            and logging — do not branch production behavior on this value.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="ToString">
       <MemberSignature Language="C#" Value="public override string ToString ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
@@ -354,7 +380,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.84.2.0</AssemblyVersion>
+        <AssemblyVersion>4.85.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -377,7 +403,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.84.2.0</AssemblyVersion>
+        <AssemblyVersion>4.85.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

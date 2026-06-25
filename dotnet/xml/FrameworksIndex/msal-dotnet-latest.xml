@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.Identity.Client.Broker" Version="4.84.2.0" />
-    <Assembly Name="Microsoft.Identity.Client.Desktop" Version="4.84.2.0" />
-    <Assembly Name="Microsoft.Identity.Client" Version="4.84.2.0" />
+    <Assembly Name="Microsoft.Identity.Client.Broker" Version="4.85.1.0" />
+    <Assembly Name="Microsoft.Identity.Client.Desktop" Version="4.85.1.0" />
+    <Assembly Name="Microsoft.Identity.Client" Version="4.85.1.0" />
   </Assemblies>
   <Namespace Name="Microsoft.Identity.Client">
     <Type Name="Microsoft.Identity.Client.AadAuthorityAudience" Id="T:Microsoft.Identity.Client.AadAuthorityAudience">
@@ -248,6 +248,9 @@
       <Member Id="F:Microsoft.Identity.Client.AzureCloudInstance.AzureGermany" />
       <Member Id="F:Microsoft.Identity.Client.AzureCloudInstance.AzurePublic" />
       <Member Id="F:Microsoft.Identity.Client.AzureCloudInstance.AzureUsGovernment" />
+      <Member Id="F:Microsoft.Identity.Client.AzureCloudInstance.GovDe" />
+      <Member Id="F:Microsoft.Identity.Client.AzureCloudInstance.GovFr" />
+      <Member Id="F:Microsoft.Identity.Client.AzureCloudInstance.GovSg" />
       <Member Id="F:Microsoft.Identity.Client.AzureCloudInstance.None" />
     </Type>
     <Type Name="Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder`1" Id="T:Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder`1">
@@ -757,6 +760,7 @@
       <Member Id="P:Microsoft.Identity.Client.MsalServiceException.Headers" />
       <Member Id="P:Microsoft.Identity.Client.MsalServiceException.ResponseBody" />
       <Member Id="P:Microsoft.Identity.Client.MsalServiceException.StatusCode" />
+      <Member Id="P:Microsoft.Identity.Client.MsalServiceException.SubErrorForLogging" />
     </Type>
     <Type Name="Microsoft.Identity.Client.MsalThrottledServiceException" Id="T:Microsoft.Identity.Client.MsalThrottledServiceException">
       <Member Id="M:Microsoft.Identity.Client.MsalThrottledServiceException.#ctor(Microsoft.Identity.Client.MsalServiceException)" />
@@ -1071,6 +1075,7 @@
       <Member Id="M:Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.WithExtraBodyParameters``1(Microsoft.Identity.Client.AbstractConfidentialClientAcquireTokenParameterBuilder{``0},System.Collections.Generic.Dictionary{System.String,System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{System.String}}})" />
       <Member Id="M:Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.WithExtraClientAssertionClaims``1(Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder{``0},System.String)" />
       <Member Id="M:Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.WithFmiPathForClientAssertion``1(Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder{``0},System.String)" />
+      <Member Id="M:Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.WithOtelTagsEnricher``1(Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder{``0},System.Action{Microsoft.Identity.Client.Extensibility.ExecutionResult,System.Collections.Generic.IList{System.Collections.Generic.KeyValuePair{System.String,System.Object}}})" />
       <Member Id="M:Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.WithProofOfPosessionKeyId``1(Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder{``0},System.String,System.String)" />
     </Type>
     <Type Name="Microsoft.Identity.Client.Extensibility.AcquireTokenForClientBuilderExtensions" Id="T:Microsoft.Identity.Client.Extensibility.AcquireTokenForClientBuilderExtensions">
@@ -1128,6 +1133,9 @@
       <Member Id="P:Microsoft.Identity.Client.Extensibility.MsalAuthenticationExtension.AdditionalCacheParameters" />
       <Member Id="P:Microsoft.Identity.Client.Extensibility.MsalAuthenticationExtension.AuthenticationOperation" />
       <Member Id="P:Microsoft.Identity.Client.Extensibility.MsalAuthenticationExtension.OnBeforeTokenRequestHandler" />
+    </Type>
+    <Type Name="Microsoft.Identity.Client.Extensibility.MsalMetricsCatalog" Id="T:Microsoft.Identity.Client.Extensibility.MsalMetricsCatalog">
+      <Member Id="P:Microsoft.Identity.Client.Extensibility.MsalMetricsCatalog.CanonicalTagsByMetric" />
     </Type>
     <Type Name="Microsoft.Identity.Client.Extensibility.OnBeforeTokenRequestData" Id="T:Microsoft.Identity.Client.Extensibility.OnBeforeTokenRequestData">
       <Member Id="M:Microsoft.Identity.Client.Extensibility.OnBeforeTokenRequestData.#ctor(System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IDictionary{System.String,System.String},System.Uri,System.Threading.CancellationToken)" />

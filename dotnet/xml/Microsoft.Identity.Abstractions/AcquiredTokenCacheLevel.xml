@@ -1,0 +1,108 @@
+<Type Name="AcquiredTokenCacheLevel" FullName="Microsoft.Identity.Abstractions.AcquiredTokenCacheLevel">
+  <TypeSignature Language="C#" Value="public enum AcquiredTokenCacheLevel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AcquiredTokenCacheLevel extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Abstractions.AcquiredTokenCacheLevel" />
+  <TypeSignature Language="VB.NET" Value="Public Enum AcquiredTokenCacheLevel" />
+  <TypeSignature Language="F#" Value="type AcquiredTokenCacheLevel = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+    <AssemblyVersion>12.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Cache tier that served the access token.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="L1Cache">
+      <MemberSignature Language="C#" Value="L1Cache" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Identity.Abstractions.AcquiredTokenCacheLevel L1Cache = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Abstractions.AcquiredTokenCacheLevel.L1Cache" />
+      <MemberSignature Language="VB.NET" Value="L1Cache" />
+      <MemberSignature Language="F#" Value="L1Cache = 2" Usage="Microsoft.Identity.Abstractions.AcquiredTokenCacheLevel.L1Cache" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Abstractions.AcquiredTokenCacheLevel</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            Token served from the in-memory (L1) cache.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="L2Cache">
+      <MemberSignature Language="C#" Value="L2Cache" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Identity.Abstractions.AcquiredTokenCacheLevel L2Cache = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Abstractions.AcquiredTokenCacheLevel.L2Cache" />
+      <MemberSignature Language="VB.NET" Value="L2Cache" />
+      <MemberSignature Language="F#" Value="L2Cache = 3" Usage="Microsoft.Identity.Abstractions.AcquiredTokenCacheLevel.L2Cache" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Abstractions.AcquiredTokenCacheLevel</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>
+            Token served from the distributed (L2) cache.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Identity.Abstractions.AcquiredTokenCacheLevel None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Abstractions.AcquiredTokenCacheLevel.None" />
+      <MemberSignature Language="VB.NET" Value="None" />
+      <MemberSignature Language="F#" Value="None = 0" Usage="Microsoft.Identity.Abstractions.AcquiredTokenCacheLevel.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Abstractions.AcquiredTokenCacheLevel</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            Token was retrieved from the identity provider rather than from a cache tier.
+            This includes cache misses (entry absent or expired), forced or proactive refresh,
+            and cases where the cache was bypassed.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Identity.Abstractions.AcquiredTokenCacheLevel Unknown = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Abstractions.AcquiredTokenCacheLevel.Unknown" />
+      <MemberSignature Language="VB.NET" Value="Unknown" />
+      <MemberSignature Language="F#" Value="Unknown = 1" Usage="Microsoft.Identity.Abstractions.AcquiredTokenCacheLevel.Unknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Abstractions.AcquiredTokenCacheLevel</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            The cache tier is not known.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

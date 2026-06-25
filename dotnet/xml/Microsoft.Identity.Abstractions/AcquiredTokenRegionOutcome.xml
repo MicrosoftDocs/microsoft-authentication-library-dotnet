@@ -1,0 +1,148 @@
+<Type Name="AcquiredTokenRegionOutcome" FullName="Microsoft.Identity.Abstractions.AcquiredTokenRegionOutcome">
+  <TypeSignature Language="C#" Value="public enum AcquiredTokenRegionOutcome" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AcquiredTokenRegionOutcome extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Abstractions.AcquiredTokenRegionOutcome" />
+  <TypeSignature Language="VB.NET" Value="Public Enum AcquiredTokenRegionOutcome" />
+  <TypeSignature Language="F#" Value="type AcquiredTokenRegionOutcome = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+    <AssemblyVersion>12.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Outcome of regional ESTS routing for a token-acquisition attempt.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AutodetectSuccess">
+      <MemberSignature Language="C#" Value="AutodetectSuccess" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Identity.Abstractions.AcquiredTokenRegionOutcome AutodetectSuccess = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Abstractions.AcquiredTokenRegionOutcome.AutodetectSuccess" />
+      <MemberSignature Language="VB.NET" Value="AutodetectSuccess" />
+      <MemberSignature Language="F#" Value="AutodetectSuccess = 4" Usage="Microsoft.Identity.Abstractions.AcquiredTokenRegionOutcome.AutodetectSuccess" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Abstractions.AcquiredTokenRegionOutcome</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>
+            The region was discovered through autodetection.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FallbackToGlobal">
+      <MemberSignature Language="C#" Value="FallbackToGlobal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Identity.Abstractions.AcquiredTokenRegionOutcome FallbackToGlobal = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Abstractions.AcquiredTokenRegionOutcome.FallbackToGlobal" />
+      <MemberSignature Language="VB.NET" Value="FallbackToGlobal" />
+      <MemberSignature Language="F#" Value="FallbackToGlobal = 5" Usage="Microsoft.Identity.Abstractions.AcquiredTokenRegionOutcome.FallbackToGlobal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Abstractions.AcquiredTokenRegionOutcome</ReturnType>
+      </ReturnValue>
+      <MemberValue>5</MemberValue>
+      <Docs>
+        <summary>
+            Autodetection failed and the request was sent to the global ESTS.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Identity.Abstractions.AcquiredTokenRegionOutcome None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Abstractions.AcquiredTokenRegionOutcome.None" />
+      <MemberSignature Language="VB.NET" Value="None" />
+      <MemberSignature Language="F#" Value="None = 0" Usage="Microsoft.Identity.Abstractions.AcquiredTokenRegionOutcome.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Abstractions.AcquiredTokenRegionOutcome</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            Regional routing was not requested.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UserProvidedAutodetectionFailed">
+      <MemberSignature Language="C#" Value="UserProvidedAutodetectionFailed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Identity.Abstractions.AcquiredTokenRegionOutcome UserProvidedAutodetectionFailed = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Abstractions.AcquiredTokenRegionOutcome.UserProvidedAutodetectionFailed" />
+      <MemberSignature Language="VB.NET" Value="UserProvidedAutodetectionFailed" />
+      <MemberSignature Language="F#" Value="UserProvidedAutodetectionFailed = 2" Usage="Microsoft.Identity.Abstractions.AcquiredTokenRegionOutcome.UserProvidedAutodetectionFailed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Abstractions.AcquiredTokenRegionOutcome</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            A user-supplied region was used; autodetection could not verify it.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UserProvidedInvalid">
+      <MemberSignature Language="C#" Value="UserProvidedInvalid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Identity.Abstractions.AcquiredTokenRegionOutcome UserProvidedInvalid = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Abstractions.AcquiredTokenRegionOutcome.UserProvidedInvalid" />
+      <MemberSignature Language="VB.NET" Value="UserProvidedInvalid" />
+      <MemberSignature Language="F#" Value="UserProvidedInvalid = 3" Usage="Microsoft.Identity.Abstractions.AcquiredTokenRegionOutcome.UserProvidedInvalid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Abstractions.AcquiredTokenRegionOutcome</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>
+            A user-supplied region was used but disagreed with the autodetected region.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UserProvidedValid">
+      <MemberSignature Language="C#" Value="UserProvidedValid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Identity.Abstractions.AcquiredTokenRegionOutcome UserProvidedValid = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Abstractions.AcquiredTokenRegionOutcome.UserProvidedValid" />
+      <MemberSignature Language="VB.NET" Value="UserProvidedValid" />
+      <MemberSignature Language="F#" Value="UserProvidedValid = 1" Usage="Microsoft.Identity.Abstractions.AcquiredTokenRegionOutcome.UserProvidedValid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Abstractions.AcquiredTokenRegionOutcome</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            A user-supplied region was used and matched the autodetected region.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,245 @@
+<Type Name="TokenAcquisitionMetadata" FullName="Microsoft.Identity.Abstractions.TokenAcquisitionMetadata">
+  <TypeSignature Language="C#" Value="public sealed class TokenAcquisitionMetadata" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TokenAcquisitionMetadata extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Abstractions.TokenAcquisitionMetadata" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class TokenAcquisitionMetadata" />
+  <TypeSignature Language="F#" Value="type TokenAcquisitionMetadata = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+    <AssemblyVersion>12.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Metadata describing how an access token was acquired: timings, cache state,
+            region routing, and any additional response parameters returned by the token endpoint.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TokenAcquisitionMetadata ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.TokenAcquisitionMetadata.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheLevel">
+      <MemberSignature Language="C#" Value="public Microsoft.Identity.Abstractions.AcquiredTokenCacheLevel CacheLevel { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Identity.Abstractions.AcquiredTokenCacheLevel CacheLevel" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.TokenAcquisitionMetadata.CacheLevel" />
+      <MemberSignature Language="VB.NET" Value="Public Property CacheLevel As AcquiredTokenCacheLevel" />
+      <MemberSignature Language="F#" Value="member this.CacheLevel : Microsoft.Identity.Abstractions.AcquiredTokenCacheLevel with get, set" Usage="Microsoft.Identity.Abstractions.TokenAcquisitionMetadata.CacheLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Abstractions.AcquiredTokenCacheLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Cache tier that served the token.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheRefreshReason">
+      <MemberSignature Language="C#" Value="public Microsoft.Identity.Abstractions.AcquiredTokenCacheRefreshReason CacheRefreshReason { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Identity.Abstractions.AcquiredTokenCacheRefreshReason CacheRefreshReason" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.TokenAcquisitionMetadata.CacheRefreshReason" />
+      <MemberSignature Language="VB.NET" Value="Public Property CacheRefreshReason As AcquiredTokenCacheRefreshReason" />
+      <MemberSignature Language="F#" Value="member this.CacheRefreshReason : Microsoft.Identity.Abstractions.AcquiredTokenCacheRefreshReason with get, set" Usage="Microsoft.Identity.Abstractions.TokenAcquisitionMetadata.CacheRefreshReason" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Abstractions.AcquiredTokenCacheRefreshReason</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Reason the cache was refreshed during this attempt, if any.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DurationInCacheInMs">
+      <MemberSignature Language="C#" Value="public long DurationInCacheInMs { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 DurationInCacheInMs" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.TokenAcquisitionMetadata.DurationInCacheInMs" />
+      <MemberSignature Language="VB.NET" Value="Public Property DurationInCacheInMs As Long" />
+      <MemberSignature Language="F#" Value="member this.DurationInCacheInMs : int64 with get, set" Usage="Microsoft.Identity.Abstractions.TokenAcquisitionMetadata.DurationInCacheInMs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Time spent reading and writing the token cache, in milliseconds.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DurationInHttpInMs">
+      <MemberSignature Language="C#" Value="public long DurationInHttpInMs { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 DurationInHttpInMs" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.TokenAcquisitionMetadata.DurationInHttpInMs" />
+      <MemberSignature Language="VB.NET" Value="Public Property DurationInHttpInMs As Long" />
+      <MemberSignature Language="F#" Value="member this.DurationInHttpInMs : int64 with get, set" Usage="Microsoft.Identity.Abstractions.TokenAcquisitionMetadata.DurationInHttpInMs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Time spent in HTTP calls to the token endpoint, in milliseconds.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DurationTotalInMs">
+      <MemberSignature Language="C#" Value="public long DurationTotalInMs { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 DurationTotalInMs" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.TokenAcquisitionMetadata.DurationTotalInMs" />
+      <MemberSignature Language="VB.NET" Value="Public Property DurationTotalInMs As Long" />
+      <MemberSignature Language="F#" Value="member this.DurationTotalInMs : int64 with get, set" Usage="Microsoft.Identity.Abstractions.TokenAcquisitionMetadata.DurationTotalInMs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Total wall-clock duration of the token-acquisition attempt, in milliseconds.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RefreshOn">
+      <MemberSignature Language="C#" Value="public DateTimeOffset? RefreshOn { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; RefreshOn" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.TokenAcquisitionMetadata.RefreshOn" />
+      <MemberSignature Language="VB.NET" Value="Public Property RefreshOn As Nullable(Of DateTimeOffset)" />
+      <MemberSignature Language="F#" Value="member this.RefreshOn : Nullable&lt;DateTimeOffset&gt; with get, set" Usage="Microsoft.Identity.Abstractions.TokenAcquisitionMetadata.RefreshOn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.DateTimeOffset&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Point in time at which the token should be proactively refreshed,
+            or <see langword="null" /> when no proactive refresh hint was provided.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegionDetails">
+      <MemberSignature Language="C#" Value="public Microsoft.Identity.Abstractions.AcquiredTokenRegionDetails? RegionDetails { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Identity.Abstractions.AcquiredTokenRegionDetails RegionDetails" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.TokenAcquisitionMetadata.RegionDetails" />
+      <MemberSignature Language="VB.NET" Value="Public Property RegionDetails As AcquiredTokenRegionDetails" />
+      <MemberSignature Language="F#" Value="member this.RegionDetails : Microsoft.Identity.Abstractions.AcquiredTokenRegionDetails with get, set" Usage="Microsoft.Identity.Abstractions.TokenAcquisitionMetadata.RegionDetails" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Abstractions.AcquiredTokenRegionDetails</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Regional ESTS routing details, or <see langword="null" /> when regional routing was not used.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenEndpoint">
+      <MemberSignature Language="C#" Value="public string? TokenEndpoint { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TokenEndpoint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.TokenAcquisitionMetadata.TokenEndpoint" />
+      <MemberSignature Language="VB.NET" Value="Public Property TokenEndpoint As String" />
+      <MemberSignature Language="F#" Value="member this.TokenEndpoint : string with get, set" Usage="Microsoft.Identity.Abstractions.TokenAcquisitionMetadata.TokenEndpoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Token endpoint contacted, or <see langword="null" /> if the token was served from the cache.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenSource">
+      <MemberSignature Language="C#" Value="public Microsoft.Identity.Abstractions.AcquiredTokenSource TokenSource { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Identity.Abstractions.AcquiredTokenSource TokenSource" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.TokenAcquisitionMetadata.TokenSource" />
+      <MemberSignature Language="VB.NET" Value="Public Property TokenSource As AcquiredTokenSource" />
+      <MemberSignature Language="F#" Value="member this.TokenSource : Microsoft.Identity.Abstractions.AcquiredTokenSource with get, set" Usage="Microsoft.Identity.Abstractions.TokenAcquisitionMetadata.TokenSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Abstractions.AcquiredTokenSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Source the token was obtained from.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

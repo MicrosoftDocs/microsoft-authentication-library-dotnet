@@ -1,0 +1,162 @@
+<Type Name="TokenAcquisitionFailureDetails" FullName="Microsoft.Identity.Abstractions.TokenAcquisitionFailureDetails">
+  <TypeSignature Language="C#" Value="public sealed class TokenAcquisitionFailureDetails" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TokenAcquisitionFailureDetails extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Abstractions.TokenAcquisitionFailureDetails" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class TokenAcquisitionFailureDetails" />
+  <TypeSignature Language="F#" Value="type TokenAcquisitionFailureDetails = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+    <AssemblyVersion>12.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Diagnostic details about a failed token-acquisition attempt, mirroring fields
+            exposed by the underlying token-service exception.
+            </summary>
+    <remarks>
+            All members are diagnostic only. Do not program against specific values of <see cref="P:Microsoft.Identity.Abstractions.TokenAcquisitionFailureDetails.SubError" />
+            or <see cref="P:Microsoft.Identity.Abstractions.TokenAcquisitionFailureDetails.ErrorCode" />; they are set by the token service and may change without notice.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TokenAcquisitionFailureDetails ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.TokenAcquisitionFailureDetails.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Claims">
+      <MemberSignature Language="C#" Value="public string? Claims { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Claims" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.TokenAcquisitionFailureDetails.Claims" />
+      <MemberSignature Language="VB.NET" Value="Public Property Claims As String" />
+      <MemberSignature Language="F#" Value="member this.Claims : string with get, set" Usage="Microsoft.Identity.Abstractions.TokenAcquisitionFailureDetails.Claims" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Claims challenge returned by the token service, when available.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CorrelationId">
+      <MemberSignature Language="C#" Value="public string? CorrelationId { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CorrelationId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.TokenAcquisitionFailureDetails.CorrelationId" />
+      <MemberSignature Language="VB.NET" Value="Public Property CorrelationId As String" />
+      <MemberSignature Language="F#" Value="member this.CorrelationId : string with get, set" Usage="Microsoft.Identity.Abstractions.TokenAcquisitionFailureDetails.CorrelationId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Correlation id associated with the failing request.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorCode">
+      <MemberSignature Language="C#" Value="public string? ErrorCode { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ErrorCode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.TokenAcquisitionFailureDetails.ErrorCode" />
+      <MemberSignature Language="VB.NET" Value="Public Property ErrorCode As String" />
+      <MemberSignature Language="F#" Value="member this.ErrorCode : string with get, set" Usage="Microsoft.Identity.Abstractions.TokenAcquisitionFailureDetails.ErrorCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Token-service error code (for example an OAuth error code or an ESTS error code).
+            Mirrors <c>MsalServiceException.ErrorCode</c> when MSAL is the underlying acquirer.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StatusCode">
+      <MemberSignature Language="C#" Value="public int? StatusCode { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; StatusCode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.TokenAcquisitionFailureDetails.StatusCode" />
+      <MemberSignature Language="VB.NET" Value="Public Property StatusCode As Nullable(Of Integer)" />
+      <MemberSignature Language="F#" Value="member this.StatusCode : Nullable&lt;int&gt; with get, set" Usage="Microsoft.Identity.Abstractions.TokenAcquisitionFailureDetails.StatusCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            HTTP status code returned by the token endpoint, when available.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubError">
+      <MemberSignature Language="C#" Value="public string? SubError { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SubError" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.TokenAcquisitionFailureDetails.SubError" />
+      <MemberSignature Language="VB.NET" Value="Public Property SubError As String" />
+      <MemberSignature Language="F#" Value="member this.SubError : string with get, set" Usage="Microsoft.Identity.Abstractions.TokenAcquisitionFailureDetails.SubError" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Server-emitted sub-error code refining <see cref="P:Microsoft.Identity.Abstractions.TokenAcquisitionFailureDetails.ErrorCode" /> (for example
+            <c>consent_required</c>, <c>bad_token</c>, <c>protection_policy_required</c>);
+            diagnostic only.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

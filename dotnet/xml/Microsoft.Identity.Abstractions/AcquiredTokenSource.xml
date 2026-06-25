@@ -1,0 +1,85 @@
+<Type Name="AcquiredTokenSource" FullName="Microsoft.Identity.Abstractions.AcquiredTokenSource">
+  <TypeSignature Language="C#" Value="public enum AcquiredTokenSource" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AcquiredTokenSource extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Abstractions.AcquiredTokenSource" />
+  <TypeSignature Language="VB.NET" Value="Public Enum AcquiredTokenSource" />
+  <TypeSignature Language="F#" Value="type AcquiredTokenSource = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+    <AssemblyVersion>12.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Source from which an access token was obtained.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Broker">
+      <MemberSignature Language="C#" Value="Broker" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Identity.Abstractions.AcquiredTokenSource Broker = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Abstractions.AcquiredTokenSource.Broker" />
+      <MemberSignature Language="VB.NET" Value="Broker" />
+      <MemberSignature Language="F#" Value="Broker = 2" Usage="Microsoft.Identity.Abstractions.AcquiredTokenSource.Broker" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Abstractions.AcquiredTokenSource</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            Token was obtained from a broker (for example WAM on Windows).
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Cache">
+      <MemberSignature Language="C#" Value="Cache" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Identity.Abstractions.AcquiredTokenSource Cache = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Abstractions.AcquiredTokenSource.Cache" />
+      <MemberSignature Language="VB.NET" Value="Cache" />
+      <MemberSignature Language="F#" Value="Cache = 1" Usage="Microsoft.Identity.Abstractions.AcquiredTokenSource.Cache" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Abstractions.AcquiredTokenSource</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Token was served from the token cache (in-memory L1 or distributed L2).
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IdentityProvider">
+      <MemberSignature Language="C#" Value="IdentityProvider" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Identity.Abstractions.AcquiredTokenSource IdentityProvider = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Abstractions.AcquiredTokenSource.IdentityProvider" />
+      <MemberSignature Language="VB.NET" Value="IdentityProvider" />
+      <MemberSignature Language="F#" Value="IdentityProvider = 0" Usage="Microsoft.Identity.Abstractions.AcquiredTokenSource.IdentityProvider" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Abstractions.AcquiredTokenSource</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            Token was obtained directly from the identity provider (an STS token endpoint).
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

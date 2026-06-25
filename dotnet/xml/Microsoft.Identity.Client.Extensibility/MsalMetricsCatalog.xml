@@ -1,0 +1,67 @@
+<Type Name="MsalMetricsCatalog" FullName="Microsoft.Identity.Client.Extensibility.MsalMetricsCatalog">
+  <TypeSignature Language="C#" Value="public static class MsalMetricsCatalog" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit MsalMetricsCatalog extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Client.Extensibility.MsalMetricsCatalog" />
+  <TypeSignature Language="VB.NET" Value="Public Class MsalMetricsCatalog" />
+  <TypeSignature Language="F#" Value="type MsalMetricsCatalog = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+    <AssemblyVersion>4.85.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Describes the OpenTelemetry metrics that MSAL emits and, for each metric, the canonical
+            (MSAL-owned) tag names it records. Consumers such as downstream metric pipelines can use
+            <see cref="P:Microsoft.Identity.Client.Extensibility.MsalMetricsCatalog.CanonicalTagsByMetric" /> to discover which tags belong to a given MSAL metric and,
+            for example, keep only those tags.
+            </summary>
+    <remarks>
+      <para>
+            The tag names listed for a metric are the canonical base tags MSAL emits for it (some are conditional). They do not
+            include any extra tags supplied through
+            <see cref="M:Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.WithOtelTagsEnricher``1(Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder{``0},System.Action{Microsoft.Identity.Client.Extensibility.ExecutionResult,System.Collections.Generic.IList{System.Collections.Generic.KeyValuePair{System.String,System.Object}}})" />,
+            which are caller-defined and therefore not part of this catalog. Some canonical tags are emitted only
+            under certain conditions (for example the raw STS error-code tag is present on the failure counter only
+            when the STS returns a sub-error); they are listed here because they are part of the metric's canonical
+            schema.
+            </para>
+      <para>
+            Both the metric names (the dictionary keys) and the tag names (the dictionary values) are plain strings
+            that match what MSAL records, so consumers can compare them directly against the metric and tag names
+            observed on the OpenTelemetry pipeline, then drive per-metric tag filtering from this mapping (for
+            example via OpenTelemetry Views and <c>MetricStreamConfiguration.TagKeys</c>). Keeping the mapping here
+            means it stays in sync with MSAL automatically: updating the MSAL package reference updates the canonical
+            tag set, with nothing to maintain on the consumer side.
+            </para>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CanonicalTagsByMetric">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IReadOnlyDictionary&lt;string,System.Collections.Generic.IReadOnlyList&lt;string&gt;&gt; CanonicalTagsByMetric { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, class System.Collections.Generic.IReadOnlyList`1&lt;string&gt;&gt; CanonicalTagsByMetric" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.Extensibility.MsalMetricsCatalog.CanonicalTagsByMetric" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property CanonicalTagsByMetric As IReadOnlyDictionary(Of String, IReadOnlyList(Of String))" />
+      <MemberSignature Language="F#" Value="static member CanonicalTagsByMetric : System.Collections.Generic.IReadOnlyDictionary&lt;string, System.Collections.Generic.IReadOnlyList&lt;string&gt;&gt;" Usage="Microsoft.Identity.Client.Extensibility.MsalMetricsCatalog.CanonicalTagsByMetric" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.85.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IReadOnlyDictionary&lt;System.String,System.Collections.Generic.IReadOnlyList&lt;System.String&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Maps each MSAL metric name to the read-only list of canonical tag names that metric records.
+            Keys are compared with <see cref="P:System.StringComparer.Ordinal" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -13,6 +13,7 @@
     <AssemblyVersion>11.2.0.0</AssemblyVersion>
     <AssemblyVersion>12.0.0.0</AssemblyVersion>
     <AssemblyVersion>12.1.0.0</AssemblyVersion>
+    <AssemblyVersion>12.2.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Identity.Abstractions.OperationError</BaseTypeName>
@@ -39,7 +40,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -58,7 +59,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="code" Type="System.String" />
@@ -83,7 +84,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="code" Type="System.String" />
@@ -117,8 +118,14 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -139,20 +146,37 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>System.Exception</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
             Gets or sets the underlying exception that caused this error, if any.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FailureDetails">
+      <MemberSignature Language="C#" Value="public Microsoft.Identity.Abstractions.TokenAcquisitionFailureDetails? FailureDetails { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Identity.Abstractions.TokenAcquisitionFailureDetails FailureDetails" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.AuthorizationHeaderError.FailureDetails" />
+      <MemberSignature Language="VB.NET" Value="Public Property FailureDetails As TokenAcquisitionFailureDetails" />
+      <MemberSignature Language="F#" Value="member this.FailureDetails : Microsoft.Identity.Abstractions.TokenAcquisitionFailureDetails with get, set" Usage="Microsoft.Identity.Abstractions.AuthorizationHeaderError.FailureDetails" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Abstractions.TokenAcquisitionFailureDetails</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Diagnostic details about the failure (server error code, status code, claims challenge,
+            correlation id), or <see langword="null" /> when no such details were captured.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -167,14 +191,43 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
             Gets or sets a human-readable message describing the error.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Metadata">
+      <MemberSignature Language="C#" Value="public Microsoft.Identity.Abstractions.TokenAcquisitionMetadata? Metadata { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Identity.Abstractions.TokenAcquisitionMetadata Metadata" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.AuthorizationHeaderError.Metadata" />
+      <MemberSignature Language="VB.NET" Value="Public Property Metadata As TokenAcquisitionMetadata" />
+      <MemberSignature Language="F#" Value="member this.Metadata : Microsoft.Identity.Abstractions.TokenAcquisitionMetadata with get, set" Usage="Microsoft.Identity.Abstractions.AuthorizationHeaderError.Metadata" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Abstractions.TokenAcquisitionMetadata</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Metadata captured during the failed token-acquisition attempt that produced this error,
+            or <see langword="null" /> when no metadata was captured.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>

@@ -20,6 +20,7 @@
     <AssemblyVersion>4.7.0.0</AssemblyVersion>
     <AssemblyVersion>4.8.0.0</AssemblyVersion>
     <AssemblyVersion>4.10.0.0</AssemblyVersion>
+    <AssemblyVersion>4.11.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Identity.Web.ClientAssertionProviderBase</BaseTypeName>
@@ -41,7 +42,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
-        <AssemblyVersion>4.10.0.0</AssemblyVersion>
+        <AssemblyVersion>4.11.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="managedIdentityClientId" Type="System.String" />
@@ -63,7 +64,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
-        <AssemblyVersion>4.10.0.0</AssemblyVersion>
+        <AssemblyVersion>4.11.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="managedIdentityClientId" Type="System.String" />
@@ -88,7 +89,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
-        <AssemblyVersion>4.10.0.0</AssemblyVersion>
+        <AssemblyVersion>4.11.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="managedIdentityClientId" Type="System.String" />
@@ -115,7 +116,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
-        <AssemblyVersion>4.10.0.0</AssemblyVersion>
+        <AssemblyVersion>4.11.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Identity.Web.ClientAssertion&gt;</ReturnType>
@@ -130,6 +131,64 @@
             acquired with managed identity (certificateless).
             </summary>
         <returns>The signed assertion.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSignedAssertionWithBindingAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.ClientSignedAssertion?&gt; GetSignedAssertionWithBindingAsync (Microsoft.Identity.Client.AssertionRequestOptions? assertionRequestOptions, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Identity.Client.ClientSignedAssertion&gt; GetSignedAssertionWithBindingAsync(class Microsoft.Identity.Client.AssertionRequestOptions assertionRequestOptions, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.ManagedIdentityClientAssertion.GetSignedAssertionWithBindingAsync(Microsoft.Identity.Client.AssertionRequestOptions,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetSignedAssertionWithBindingAsync (assertionRequestOptions As AssertionRequestOptions, Optional cancellationToken As CancellationToken = Nothing) As Task(Of ClientSignedAssertion)" />
+      <MemberSignature Language="F#" Value="override this.GetSignedAssertionWithBindingAsync : Microsoft.Identity.Client.AssertionRequestOptions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.ClientSignedAssertion&gt;" Usage="managedIdentityClientAssertion.GetSignedAssertionWithBindingAsync (assertionRequestOptions, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
+        <AssemblyVersion>4.11.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.ClientSignedAssertion&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assertionRequestOptions" Type="Microsoft.Identity.Client.AssertionRequestOptions" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="assertionRequestOptions">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Acquires a managed identity token bound to a binding certificate via mTLS PoP,
+            returning both the assertion and the binding certificate so MSAL can pin the outer
+            confidential client request to the same certificate (FIC + mTLS PoP, two-leg flow).
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+            Used when the consuming confidential client has token binding enabled (e.g.,
+            <c>AuthorizationHeaderProviderOptions.ProtocolScheme = "MTLS_POP"</c>). Requires
+            MSAL.NET key-attestation support and an Azure VM / Arc-hosted managed identity
+            capable of returning a <see cref="P:Microsoft.Identity.Client.AuthenticationResult.BindingCertificate" />.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsTokenBinding">
+      <MemberSignature Language="C#" Value="public override bool SupportsTokenBinding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsTokenBinding" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Web.ManagedIdentityClientAssertion.SupportsTokenBinding" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property SupportsTokenBinding As Boolean" />
+      <MemberSignature Language="F#" Value="member this.SupportsTokenBinding : bool" Usage="Microsoft.Identity.Web.ManagedIdentityClientAssertion.SupportsTokenBinding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
+        <AssemblyVersion>4.11.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns <c>true</c>: managed identity provides a binding certificate alongside the
+            federated assertion via MSAL's IMDS V2 mTLS PoP flow.
+            </summary>
+        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

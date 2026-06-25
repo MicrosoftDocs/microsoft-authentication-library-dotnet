@@ -16,6 +16,7 @@
     <AssemblyVersion>4.7.0.0</AssemblyVersion>
     <AssemblyVersion>4.8.0.0</AssemblyVersion>
     <AssemblyVersion>4.10.0.0</AssemblyVersion>
+    <AssemblyVersion>4.11.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Net.Http.DelegatingHandler</BaseTypeName>
@@ -73,9 +74,9 @@
              scenarios where additional claims are required.
              </para>
     </remarks>
-    <altmember cref="T:Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions" />
     <altmember cref="T:Microsoft.Identity.Web.HttpRequestMessageAuthenticationExtensions" />
     <altmember cref="T:Microsoft.Identity.Web.MicrosoftIdentityAuthenticationException" />
+    <altmember cref="T:Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider" />
     <example>
       <para>
         <strong>Basic setup with dependency injection:</strong>
@@ -181,7 +182,7 @@
              }
              </code>
     </example>
-    <altmember cref="T:Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider" />
+    <altmember cref="T:Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions" />
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -193,7 +194,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
-        <AssemblyVersion>4.10.0.0</AssemblyVersion>
+        <AssemblyVersion>4.11.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="headerProvider" Type="Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider" />
@@ -298,7 +299,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
-        <AssemblyVersion>4.10.0.0</AssemblyVersion>
+        <AssemblyVersion>4.11.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="headerProvider" Type="Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider">
@@ -363,6 +364,84 @@
             </exception>
       </Docs>
     </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MicrosoftIdentityMessageHandler (Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider headerProvider, Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions? defaultOptions, Microsoft.Identity.Client.IMsalMtlsHttpClientFactory? mtlsHttpClientFactory, Microsoft.Identity.Web.ICredentialsProvider? credentialsProvider, Microsoft.Extensions.Logging.ILogger&lt;Microsoft.Identity.Web.MicrosoftIdentityMessageHandler&gt;? logger = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider headerProvider, class Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions defaultOptions, class Microsoft.Identity.Client.IMsalMtlsHttpClientFactory mtlsHttpClientFactory, class Microsoft.Identity.Web.ICredentialsProvider credentialsProvider, class Microsoft.Extensions.Logging.ILogger`1&lt;class Microsoft.Identity.Web.MicrosoftIdentityMessageHandler&gt; logger) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.MicrosoftIdentityMessageHandler.#ctor(Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider,Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions,Microsoft.Identity.Client.IMsalMtlsHttpClientFactory,Microsoft.Identity.Web.ICredentialsProvider,Microsoft.Extensions.Logging.ILogger{Microsoft.Identity.Web.MicrosoftIdentityMessageHandler})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (headerProvider As IAuthorizationHeaderProvider, defaultOptions As MicrosoftIdentityMessageHandlerOptions, mtlsHttpClientFactory As IMsalMtlsHttpClientFactory, credentialsProvider As ICredentialsProvider, Optional logger As ILogger(Of MicrosoftIdentityMessageHandler) = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Identity.Web.MicrosoftIdentityMessageHandler : Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider * Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions * Microsoft.Identity.Client.IMsalMtlsHttpClientFactory * Microsoft.Identity.Web.ICredentialsProvider * Microsoft.Extensions.Logging.ILogger&lt;Microsoft.Identity.Web.MicrosoftIdentityMessageHandler&gt; -&gt; Microsoft.Identity.Web.MicrosoftIdentityMessageHandler" Usage="new Microsoft.Identity.Web.MicrosoftIdentityMessageHandler (headerProvider, defaultOptions, mtlsHttpClientFactory, credentialsProvider, logger)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>4.11.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="headerProvider" Type="Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="defaultOptions" Type="Microsoft.Identity.Web.MicrosoftIdentityMessageHandlerOptions" />
+        <Parameter Name="mtlsHttpClientFactory" Type="Microsoft.Identity.Client.IMsalMtlsHttpClientFactory" />
+        <Parameter Name="credentialsProvider" Type="Microsoft.Identity.Web.ICredentialsProvider" />
+        <Parameter Name="logger" Type="Microsoft.Extensions.Logging.ILogger&lt;Microsoft.Identity.Web.MicrosoftIdentityMessageHandler&gt;">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="headerProvider">
+            The <see cref="T:Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider" /> used to acquire authorization headers for outgoing requests.
+            This is typically obtained from the dependency injection container.
+            </param>
+        <param name="defaultOptions">
+            Default authentication options that will be used for all requests unless overridden per-request.
+            If <see langword="null" />, each request must specify its own authentication options or an exception will be thrown.
+            </param>
+        <param name="mtlsHttpClientFactory">
+            Optional factory for creating HTTP clients configured with mTLS client certificates for token binding
+            (mTLS PoP) scenarios. When provided and the <see cref="P:Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions.ProtocolScheme" />
+            is set to <c>"MTLS_POP"</c>, the handler will use this factory to create an HTTP client with the binding
+            certificate and send requests through it.
+            </param>
+        <param name="credentialsProvider">
+            Optional provider for certificates. This is required for mTLS-only authentication purposes.
+            </param>
+        <param name="logger">
+            Optional logger for debugging and monitoring authentication operations.
+            </param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Identity.Web.MicrosoftIdentityMessageHandler" /> class with mTLS and mTLS_Pop support.
+            </summary>
+        <remarks>
+          <para>
+            mTLS PoP (Mutual TLS Proof-of-Possession) token binding, as described in
+            <see href="https://datatracker.ietf.org/doc/html/rfc8705">RFC 8705</see>,
+            cryptographically binds access tokens to a specific X.509 certificate. When enabled,
+            the handler acquires a bound token with the certificate thumbprint in the <c>cnf</c> claim,
+            creates an mTLS HTTP client with the binding certificate, and sends requests through the mTLS channel.
+            </para>
+          <para>
+            Token binding currently supports only application (app-only) tokens. Set
+            <see cref="P:Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions.RequestAppToken" /> to <see langword="true" />.
+            </para>
+          <para>
+            Prefer using the <see cref="T:Microsoft.Identity.Web.MicrosoftIdentityHttpClientBuilderExtensions" /> extension methods
+            to configure this handler through dependency injection rather than instantiating it directly.
+            </para>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when <paramref name="headerProvider" /> is <see langword="null" />.
+            </exception>
+      </Docs>
+    </Member>
     <Member MemberName="SendAsync">
       <MemberSignature Language="C#" Value="protected override System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt; SendAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Threading.Tasks.Task`1&lt;class System.Net.Http.HttpResponseMessage&gt; SendAsync(class System.Net.Http.HttpRequestMessage request, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
@@ -372,7 +451,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
-        <AssemblyVersion>4.10.0.0</AssemblyVersion>
+        <AssemblyVersion>4.11.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;</ReturnType>

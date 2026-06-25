@@ -1,0 +1,103 @@
+<Type Name="AcquireTokenOptionsExtensions" FullName="Microsoft.Identity.Abstractions.AcquireTokenOptionsExtensions">
+  <TypeSignature Language="C#" Value="public static class AcquireTokenOptionsExtensions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit AcquireTokenOptionsExtensions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Abstractions.AcquireTokenOptionsExtensions" />
+  <TypeSignature Language="VB.NET" Value="Public Module AcquireTokenOptionsExtensions" />
+  <TypeSignature Language="F#" Value="type AcquireTokenOptionsExtensions = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+    <AssemblyVersion>12.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            SDK-to-SDK helpers for flowing the outgoing <see cref="T:System.Net.Http.HttpRequestMessage" /> to a request-aware
+            authorization header provider through <see cref="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.ExtraParameters" />.
+            </summary>
+    <remarks>
+            Not meant to be used by application developers, but by other SDKs. Some protocols bind the authorization
+            header to the outgoing request - for example a PoP SignedHttpRequest's <c>q</c>/<c>h</c>/<c>b</c> claims
+            hash the request's query, headers, and body. The calling SDK sets the request before the header is created;
+            the header-provider SDK reads it. Using the existing <see cref="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.ExtraParameters" /> bag
+            avoids adding a new interface for each request-bound protocol (SHR, mTLS PoP, acquisition metadata, ...).
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetHttpRequestMessage">
+      <MemberSignature Language="C#" Value="public static System.Net.Http.HttpRequestMessage? GetHttpRequestMessage (this Microsoft.Identity.Abstractions.AcquireTokenOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.Http.HttpRequestMessage GetHttpRequestMessage(class Microsoft.Identity.Abstractions.AcquireTokenOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.AcquireTokenOptionsExtensions.GetHttpRequestMessage(Microsoft.Identity.Abstractions.AcquireTokenOptions)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function GetHttpRequestMessage (options As AcquireTokenOptions) As HttpRequestMessage" />
+      <MemberSignature Language="F#" Value="static member GetHttpRequestMessage : Microsoft.Identity.Abstractions.AcquireTokenOptions -&gt; System.Net.Http.HttpRequestMessage" Usage="Microsoft.Identity.Abstractions.AcquireTokenOptionsExtensions.GetHttpRequestMessage options" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Http.HttpRequestMessage</ReturnType>
+        <Attributes>
+          <Attribute>
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.Identity.Abstractions.AcquireTokenOptions" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="options">The token acquisition options to read the request from.</param>
+        <summary>
+            Gets the outgoing <see cref="T:System.Net.Http.HttpRequestMessage" /> previously stored by
+            <see cref="M:Microsoft.Identity.Abstractions.AcquireTokenOptionsExtensions.SetHttpRequestMessage(Microsoft.Identity.Abstractions.AcquireTokenOptions,System.Net.Http.HttpRequestMessage)" />, or <see langword="null" />
+            if none was set. The reader does not own the request; the SDK that created it remains responsible for disposal.
+            </summary>
+        <returns>The stored request, or <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetHttpRequestMessage">
+      <MemberSignature Language="C#" Value="public static void SetHttpRequestMessage (this Microsoft.Identity.Abstractions.AcquireTokenOptions options, System.Net.Http.HttpRequestMessage httpRequestMessage);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetHttpRequestMessage(class Microsoft.Identity.Abstractions.AcquireTokenOptions options, class System.Net.Http.HttpRequestMessage httpRequestMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.AcquireTokenOptionsExtensions.SetHttpRequestMessage(Microsoft.Identity.Abstractions.AcquireTokenOptions,System.Net.Http.HttpRequestMessage)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub SetHttpRequestMessage (options As AcquireTokenOptions, httpRequestMessage As HttpRequestMessage)" />
+      <MemberSignature Language="F#" Value="static member SetHttpRequestMessage : Microsoft.Identity.Abstractions.AcquireTokenOptions * System.Net.Http.HttpRequestMessage -&gt; unit" Usage="Microsoft.Identity.Abstractions.AcquireTokenOptionsExtensions.SetHttpRequestMessage (options, httpRequestMessage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.Identity.Abstractions.AcquireTokenOptions" RefType="this" />
+        <Parameter Name="httpRequestMessage" Type="System.Net.Http.HttpRequestMessage" />
+      </Parameters>
+      <Docs>
+        <param name="options">The token acquisition options to attach the request to.</param>
+        <param name="httpRequestMessage">The outgoing request whose material may be bound into the header.</param>
+        <summary>
+            Stores the outgoing <see cref="T:System.Net.Http.HttpRequestMessage" /> so a request-aware authorization header provider
+            can bind to it. The request's content should already be set so that body binding is accurate.
+            </summary>
+        <remarks>
+            Writes to a fresh copy of <see cref="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.ExtraParameters" />. <see cref="M:Microsoft.Identity.Abstractions.AcquireTokenOptions.Clone" />
+            shallow-copies the dictionary reference, so a per-call options object can share one instance with a
+            DI-singleton; cloning before writing keeps this per-request value isolated to the current call and prevents
+            concurrent acquisitions from observing each other's request.
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

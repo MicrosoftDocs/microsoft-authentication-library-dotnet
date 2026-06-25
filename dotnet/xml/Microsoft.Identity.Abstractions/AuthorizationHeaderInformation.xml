@@ -13,6 +13,7 @@
     <AssemblyVersion>11.2.0.0</AssemblyVersion>
     <AssemblyVersion>12.0.0.0</AssemblyVersion>
     <AssemblyVersion>12.1.0.0</AssemblyVersion>
+    <AssemblyVersion>12.2.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -40,11 +41,41 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
         <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdditionalResponseParameters">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt;? AdditionalResponseParameters { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, string&gt; AdditionalResponseParameters" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.AuthorizationHeaderInformation.AdditionalResponseParameters" />
+      <MemberSignature Language="VB.NET" Value="Public Property AdditionalResponseParameters As IReadOnlyDictionary(Of String, String)" />
+      <MemberSignature Language="F#" Value="member this.AdditionalResponseParameters : System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; with get, set" Usage="Microsoft.Identity.Abstractions.AuthorizationHeaderInformation.AdditionalResponseParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1, 1 })]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1, 1 })&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IReadOnlyDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Additional parameters returned on the token-endpoint response, or <see langword="null" /> if none.
+            Mirrors <see cref="P:Microsoft.Identity.Abstractions.AcquireTokenResult.AdditionalResponseParameters" />; populated on the header surface
+            so callers do not need a separate <see cref="T:Microsoft.Identity.Abstractions.AcquireTokenResult" /> lookup.
+            </summary>
+        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -57,7 +88,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -80,7 +111,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.1.0.0</AssemblyVersion>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate2</ReturnType>
@@ -90,6 +121,29 @@
             Gets or sets the binding certificate for client authentication.
             This certificate is used to bind the authorization header to the client,
             commonly used in mutual TLS (mTLS) authentication scenarios and Proof-of-Possession (PoP) protocols.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Metadata">
+      <MemberSignature Language="C#" Value="public Microsoft.Identity.Abstractions.TokenAcquisitionMetadata? Metadata { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Identity.Abstractions.TokenAcquisitionMetadata Metadata" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.AuthorizationHeaderInformation.Metadata" />
+      <MemberSignature Language="VB.NET" Value="Public Property Metadata As TokenAcquisitionMetadata" />
+      <MemberSignature Language="F#" Value="member this.Metadata : Microsoft.Identity.Abstractions.TokenAcquisitionMetadata with get, set" Usage="Microsoft.Identity.Abstractions.AuthorizationHeaderInformation.Metadata" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Abstractions.TokenAcquisitionMetadata</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Metadata describing how the access token backing this header was acquired,
+            or <see langword="null" /> when no metadata was captured.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>

@@ -20,6 +20,7 @@
     <AssemblyVersion>4.7.0.0</AssemblyVersion>
     <AssemblyVersion>4.8.0.0</AssemblyVersion>
     <AssemblyVersion>4.10.0.0</AssemblyVersion>
+    <AssemblyVersion>4.11.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -41,7 +42,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
-        <AssemblyVersion>4.10.0.0</AssemblyVersion>
+        <AssemblyVersion>4.11.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -58,7 +59,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
-        <AssemblyVersion>4.10.0.0</AssemblyVersion>
+        <AssemblyVersion>4.11.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.DateTimeOffset&gt;</ReturnType>
@@ -80,7 +81,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
-        <AssemblyVersion>4.10.0.0</AssemblyVersion>
+        <AssemblyVersion>4.11.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Identity.Web.ClientAssertion&gt;</ReturnType>
@@ -106,7 +107,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
-        <AssemblyVersion>4.10.0.0</AssemblyVersion>
+        <AssemblyVersion>4.11.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.String&gt;</ReturnType>
@@ -120,6 +121,66 @@
             Get the signed assertion (and refreshes it if needed).
             </summary>
         <returns>The signed assertion.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSignedAssertionWithBindingAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.ClientSignedAssertion?&gt; GetSignedAssertionWithBindingAsync (Microsoft.Identity.Client.AssertionRequestOptions? assertionRequestOptions, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Identity.Client.ClientSignedAssertion&gt; GetSignedAssertionWithBindingAsync(class Microsoft.Identity.Client.AssertionRequestOptions assertionRequestOptions, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.ClientAssertionProviderBase.GetSignedAssertionWithBindingAsync(Microsoft.Identity.Client.AssertionRequestOptions,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetSignedAssertionWithBindingAsync (assertionRequestOptions As AssertionRequestOptions, Optional cancellationToken As CancellationToken = Nothing) As Task(Of ClientSignedAssertion)" />
+      <MemberSignature Language="F#" Value="abstract member GetSignedAssertionWithBindingAsync : Microsoft.Identity.Client.AssertionRequestOptions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.ClientSignedAssertion&gt;&#xA;override this.GetSignedAssertionWithBindingAsync : Microsoft.Identity.Client.AssertionRequestOptions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.ClientSignedAssertion&gt;" Usage="clientAssertionProviderBase.GetSignedAssertionWithBindingAsync (assertionRequestOptions, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
+        <AssemblyVersion>4.11.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.ClientSignedAssertion&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assertionRequestOptions" Type="Microsoft.Identity.Client.AssertionRequestOptions" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="assertionRequestOptions">Input options populated by MSAL.</param>
+        <param name="cancellationToken">Cancellation token.</param>
+        <summary>
+            Acquires a signed assertion together with its binding certificate, used by
+            confidential clients configured for mTLS Proof-of-Possession. Returns <c>null</c>
+            when the provider does not support token binding (the default).
+            </summary>
+        <returns>
+            The signed assertion paired with its binding certificate, or <c>null</c> if the
+            provider does not support token binding. Providers that return non-null must also
+            return <c>true</c> from <see cref="P:Microsoft.Identity.Web.ClientAssertionProviderBase.SupportsTokenBinding" />.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsTokenBinding">
+      <MemberSignature Language="C#" Value="public virtual bool SupportsTokenBinding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsTokenBinding" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Web.ClientAssertionProviderBase.SupportsTokenBinding" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property SupportsTokenBinding As Boolean" />
+      <MemberSignature Language="F#" Value="member this.SupportsTokenBinding : bool" Usage="Microsoft.Identity.Web.ClientAssertionProviderBase.SupportsTokenBinding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
+        <AssemblyVersion>4.11.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Indicates whether this provider can produce a binding certificate alongside its signed
+            assertion, enabling the outer confidential client to issue mTLS Proof-of-Possession
+            tokens. Defaults to <c>false</c>; providers that opt in must override this property to
+            <c>true</c> and override <see cref="M:Microsoft.Identity.Web.ClientAssertionProviderBase.GetSignedAssertionWithBindingAsync(Microsoft.Identity.Client.AssertionRequestOptions,System.Threading.CancellationToken)" /> to return a
+            non-null <see cref="T:Microsoft.Identity.Client.ClientSignedAssertion" />.
+            </summary>
+        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

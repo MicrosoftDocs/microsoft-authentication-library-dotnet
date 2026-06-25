@@ -1,0 +1,148 @@
+<Type Name="AcquiredTokenCacheRefreshReason" FullName="Microsoft.Identity.Abstractions.AcquiredTokenCacheRefreshReason">
+  <TypeSignature Language="C#" Value="public enum AcquiredTokenCacheRefreshReason" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AcquiredTokenCacheRefreshReason extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Abstractions.AcquiredTokenCacheRefreshReason" />
+  <TypeSignature Language="VB.NET" Value="Public Enum AcquiredTokenCacheRefreshReason" />
+  <TypeSignature Language="F#" Value="type AcquiredTokenCacheRefreshReason = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+    <AssemblyVersion>12.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Reason a token-acquisition attempt refreshed the cached access token.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CacheDisabled">
+      <MemberSignature Language="C#" Value="CacheDisabled" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Identity.Abstractions.AcquiredTokenCacheRefreshReason CacheDisabled = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Abstractions.AcquiredTokenCacheRefreshReason.CacheDisabled" />
+      <MemberSignature Language="VB.NET" Value="CacheDisabled" />
+      <MemberSignature Language="F#" Value="CacheDisabled = 5" Usage="Microsoft.Identity.Abstractions.AcquiredTokenCacheRefreshReason.CacheDisabled" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Abstractions.AcquiredTokenCacheRefreshReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>5</MemberValue>
+      <Docs>
+        <summary>
+            The token cache was disabled, so the cache was not consulted.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Expired">
+      <MemberSignature Language="C#" Value="Expired" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Identity.Abstractions.AcquiredTokenCacheRefreshReason Expired = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Abstractions.AcquiredTokenCacheRefreshReason.Expired" />
+      <MemberSignature Language="VB.NET" Value="Expired" />
+      <MemberSignature Language="F#" Value="Expired = 3" Usage="Microsoft.Identity.Abstractions.AcquiredTokenCacheRefreshReason.Expired" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Abstractions.AcquiredTokenCacheRefreshReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>
+            The cached token had expired.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ForceRefreshOrClaims">
+      <MemberSignature Language="C#" Value="ForceRefreshOrClaims" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Identity.Abstractions.AcquiredTokenCacheRefreshReason ForceRefreshOrClaims = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Abstractions.AcquiredTokenCacheRefreshReason.ForceRefreshOrClaims" />
+      <MemberSignature Language="VB.NET" Value="ForceRefreshOrClaims" />
+      <MemberSignature Language="F#" Value="ForceRefreshOrClaims = 1" Usage="Microsoft.Identity.Abstractions.AcquiredTokenCacheRefreshReason.ForceRefreshOrClaims" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Abstractions.AcquiredTokenCacheRefreshReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Refresh was requested explicitly (for example a force-refresh flag) or driven by a claims challenge.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoCachedAccessToken">
+      <MemberSignature Language="C#" Value="NoCachedAccessToken" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Identity.Abstractions.AcquiredTokenCacheRefreshReason NoCachedAccessToken = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Abstractions.AcquiredTokenCacheRefreshReason.NoCachedAccessToken" />
+      <MemberSignature Language="VB.NET" Value="NoCachedAccessToken" />
+      <MemberSignature Language="F#" Value="NoCachedAccessToken = 2" Usage="Microsoft.Identity.Abstractions.AcquiredTokenCacheRefreshReason.NoCachedAccessToken" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Abstractions.AcquiredTokenCacheRefreshReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            No matching token was found in the cache.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotApplicable">
+      <MemberSignature Language="C#" Value="NotApplicable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Identity.Abstractions.AcquiredTokenCacheRefreshReason NotApplicable = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Abstractions.AcquiredTokenCacheRefreshReason.NotApplicable" />
+      <MemberSignature Language="VB.NET" Value="NotApplicable" />
+      <MemberSignature Language="F#" Value="NotApplicable = 0" Usage="Microsoft.Identity.Abstractions.AcquiredTokenCacheRefreshReason.NotApplicable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Abstractions.AcquiredTokenCacheRefreshReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            No refresh occurred. The cached token satisfied the request.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ProactivelyRefreshed">
+      <MemberSignature Language="C#" Value="ProactivelyRefreshed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Identity.Abstractions.AcquiredTokenCacheRefreshReason ProactivelyRefreshed = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Abstractions.AcquiredTokenCacheRefreshReason.ProactivelyRefreshed" />
+      <MemberSignature Language="VB.NET" Value="ProactivelyRefreshed" />
+      <MemberSignature Language="F#" Value="ProactivelyRefreshed = 4" Usage="Microsoft.Identity.Abstractions.AcquiredTokenCacheRefreshReason.ProactivelyRefreshed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Abstractions.AcquiredTokenCacheRefreshReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>
+            The token was refreshed proactively before its expiration to smooth out load.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

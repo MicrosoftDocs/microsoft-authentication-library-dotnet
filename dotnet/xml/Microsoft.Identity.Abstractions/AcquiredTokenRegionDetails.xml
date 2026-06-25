@@ -1,0 +1,111 @@
+<Type Name="AcquiredTokenRegionDetails" FullName="Microsoft.Identity.Abstractions.AcquiredTokenRegionDetails">
+  <TypeSignature Language="C#" Value="public sealed class AcquiredTokenRegionDetails" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AcquiredTokenRegionDetails extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Abstractions.AcquiredTokenRegionDetails" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class AcquiredTokenRegionDetails" />
+  <TypeSignature Language="F#" Value="type AcquiredTokenRegionDetails = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+    <AssemblyVersion>12.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Information about regional ESTS routing for a token-acquisition attempt.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AcquiredTokenRegionDetails ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.AcquiredTokenRegionDetails.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoDetectionError">
+      <MemberSignature Language="C#" Value="public string? AutoDetectionError { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AutoDetectionError" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.AcquiredTokenRegionDetails.AutoDetectionError" />
+      <MemberSignature Language="VB.NET" Value="Public Property AutoDetectionError As String" />
+      <MemberSignature Language="F#" Value="member this.AutoDetectionError : string with get, set" Usage="Microsoft.Identity.Abstractions.AcquiredTokenRegionDetails.AutoDetectionError" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Diagnostic message populated when region autodetection failed; <see langword="null" /> otherwise.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegionOutcome">
+      <MemberSignature Language="C#" Value="public Microsoft.Identity.Abstractions.AcquiredTokenRegionOutcome RegionOutcome { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Identity.Abstractions.AcquiredTokenRegionOutcome RegionOutcome" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.AcquiredTokenRegionDetails.RegionOutcome" />
+      <MemberSignature Language="VB.NET" Value="Public Property RegionOutcome As AcquiredTokenRegionOutcome" />
+      <MemberSignature Language="F#" Value="member this.RegionOutcome : Microsoft.Identity.Abstractions.AcquiredTokenRegionOutcome with get, set" Usage="Microsoft.Identity.Abstractions.AcquiredTokenRegionDetails.RegionOutcome" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Abstractions.AcquiredTokenRegionOutcome</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            How the value of <see cref="P:Microsoft.Identity.Abstractions.AcquiredTokenRegionDetails.RegionUsed" /> was obtained.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegionUsed">
+      <MemberSignature Language="C#" Value="public string? RegionUsed { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RegionUsed" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.AcquiredTokenRegionDetails.RegionUsed" />
+      <MemberSignature Language="VB.NET" Value="Public Property RegionUsed As String" />
+      <MemberSignature Language="F#" Value="member this.RegionUsed : string with get, set" Usage="Microsoft.Identity.Abstractions.AcquiredTokenRegionDetails.RegionUsed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Region that was used for the request, or <see langword="null" /> if no region was used.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
