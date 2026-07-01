@@ -133,7 +133,7 @@ services.Configure<MsalDistributedTokenCacheAdapterOptions>(options =>
   };
 });
 
-// Or even a SQL Server token cache
+// Or with a SQL Server token cache
 // Requires the Microsoft.Extensions.Caching.SqlServer NuGet package
 services.AddDistributedSqlServerCache(options =>
 {
@@ -151,6 +151,19 @@ services.AddCosmosCache((CosmosCacheOptions cacheOptions) =>
     cacheOptions.ClientBuilder = new CosmosClientBuilder(Configuration["CosmosConnectionString"]);
     cacheOptions.CreateIfNotExists = true;
 });
+
+// Or even a Postgres cache
+// Requires the Microsoft.Extensions.Caching.Postgres NuGet package
+services.AddDistributedPostgresCache(options =>
+{
+    options.ConnectionString = Configuration.GetConnectionString("PostgresCache");
+    options.SchemaName = Configuration.GetValue<string>("PostgresCache:SchemaName", "public");
+    options.TableName = Configuration.GetValue<string>("PostgresCache:TableName", "cache");
+    options.CreateIfNotExists = Configuration.GetValue<bool>("PostgresCache:CreateIfNotExists", true);
+    options.UseWAL = Configuration.GetValue<bool>("PostgresCache:UseWAL", false);
+
+});
+
 ```
 
 For more information, see:
@@ -228,7 +241,7 @@ public static async Task<AuthenticationResult> GetTokenAsync(string clientId, X5
 
 ### Distributed caches
 
-If you use `app.AddDistributedTokenCache`, the token cache is an adapter against the .NET `IDistributedCache` implementation. So you can choose between a SQL Server cache, a Redis cache, an Azure Cosmos DB cache, or any other cache implementing the [IDistributedCache](/dotnet/api/microsoft.extensions.caching.distributed.idistributedcache?view=dotnet-plat-ext-6.0&preserve-view=true) interface. 
+If you use `app.AddDistributedTokenCache`, the token cache is an adapter against the .NET `IDistributedCache` implementation. So you can choose between a SQL Server cache, a Redis cache, an Azure Cosmos DB cache, a Postgres cache, or any other cache implementing the [IDistributedCache](/dotnet/api/microsoft.extensions.caching.distributed.idistributedcache?view=dotnet-plat-ext-6.0&preserve-view=true) interface. 
 
 For testing purposes, you can use `services.AddDistributedMemoryCache()`, an in-memory implementation of `IDistributedCache`. 
 
@@ -298,6 +311,24 @@ Here's the code for an Azure Cosmos DB cache:
           cacheOptions.DatabaseName = Configuration["CosmosCacheDatabase"];
           cacheOptions.ClientBuilder = new CosmosClientBuilder(Configuration["CosmosConnectionString"]);
           cacheOptions.CreateIfNotExists = true;
+        });
+       });
+```
+
+Here's the code for a Postgres cache:
+
+```csharp
+      // Postgres token cache
+      app.AddDistributedTokenCache(services =>
+      {
+        // Requires to reference Microsoft.Extensions.Caching.Postgres
+        services.AddDistributedPostgresCache(options =>
+        {
+            options.ConnectionString = Configuration.GetConnectionString("PostgresCache");
+            options.SchemaName = Configuration.GetValue<string>("PostgresCache:SchemaName", "public");
+            options.TableName = Configuration.GetValue<string>("PostgresCache:TableName", "cache");
+            options.CreateIfNotExists = Configuration.GetValue<bool>("PostgresCache:CreateIfNotExists", true);
+            options.UseWAL = Configuration.GetValue<bool>("PostgresCache:UseWAL", false);
         });
        });
 ```
