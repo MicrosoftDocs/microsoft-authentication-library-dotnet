@@ -322,14 +322,14 @@ Here's the code for a Postgres cache:
       app.AddDistributedTokenCache(services =>
       {
         // Requires to reference Microsoft.Extensions.Caching.Postgres
-		services.AddDistributedPostgresCache(options =>
+        services.AddDistributedPostgresCache(options =>
         {
-		    options.ConnectionString = Configuration.GetConnectionString("PostgresCache");
-		    options.SchemaName = Configuration.GetValue<string>("PostgresCache:SchemaName", "public");
-		    options.TableName = Configuration.GetValue<string>("PostgresCache:TableName", "cache");
-		    options.CreateIfNotExists = Configuration.GetValue<bool>("PostgresCache:CreateIfNotExists", true);
-		    options.UseWAL = Configuration.GetValue<bool>("PostgresCache:UseWAL", false);		    
-		});
+            options.ConnectionString = Configuration.GetConnectionString("PostgresCache");
+            options.SchemaName = Configuration.GetValue<string>("PostgresCache:SchemaName", "public");
+            options.TableName = Configuration.GetValue<string>("PostgresCache:TableName", "cache");
+            options.CreateIfNotExists = Configuration.GetValue<bool>("PostgresCache:CreateIfNotExists", true);
+            options.UseWAL = Configuration.GetValue<bool>("PostgresCache:UseWAL", false);
+        });
        });
 ```
 
