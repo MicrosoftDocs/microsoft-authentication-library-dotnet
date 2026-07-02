@@ -18,6 +18,7 @@
     <AssemblyVersion>4.84.1.0</AssemblyVersion>
     <AssemblyVersion>4.84.2.0</AssemblyVersion>
     <AssemblyVersion>4.85.1.0</AssemblyVersion>
+    <AssemblyVersion>4.85.2.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -39,7 +40,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.1.0</AssemblyVersion>
+        <AssemblyVersion>4.85.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -63,6 +64,53 @@
         <param name="value">The partition key value.</param>
         <summary>
             Adds a key-value pair to the token cache key without sending it as a query parameter.
+            Use this to partition cached access tokens (e.g., isolating short-lived sessions from regular
+            sessions for the same user). Both <c>AcquireTokenByAuthorizationCode</c> and
+            <c>AcquireTokenSilent</c> must use the same partition key to match cached entries.
+            </summary>
+        <returns>The builder to chain .With methods.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithCachePartitionKey&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static T WithCachePartitionKey&lt;T&gt; (this Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder&lt;T&gt; builder, string key, string value, bool partitionRefreshToken) where T : Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder&lt;T&gt;;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!T WithCachePartitionKey&lt;(class Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder`1&lt;!!T&gt;) T&gt;(class Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder`1&lt;!!T&gt; builder, string key, string value, bool partitionRefreshToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.Extensibility.AcquireTokenParameterBuilderExtensions.WithCachePartitionKey``1(Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder{``0},System.String,System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function WithCachePartitionKey(Of T As BaseAbstractAcquireTokenParameterBuilder(Of T)) (builder As BaseAbstractAcquireTokenParameterBuilder(Of T), key As String, value As String, partitionRefreshToken As Boolean) As T" />
+      <MemberSignature Language="F#" Value="static member WithCachePartitionKey : Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder&lt;'T (requires 'T :&gt; Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder&lt;'T&gt;)&gt; * string * string * bool -&gt; 'T (requires 'T :&gt; Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder&lt;'T&gt;)" Usage="Microsoft.Identity.Client.Extensibility.AcquireTokenParameterBuilderExtensions.WithCachePartitionKey (builder, key, value, partitionRefreshToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <BaseTypeName>Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder&lt;T&gt;</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="builder" Type="Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder&lt;T&gt;" RefType="this" />
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="partitionRefreshToken" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">To be added.</typeparam>
+        <param name="builder">The builder to chain .With methods.</param>
+        <param name="key">The partition key name.</param>
+        <param name="value">The partition key value.</param>
+        <param name="partitionRefreshToken">
+            When <see langword="true" />, the refresh token is also stored and looked up using
+            the partition key. When <see langword="false" />, only the access token is partitioned
+            and the refresh token remains in the shared pool.
+            </param>
+        <summary>
+            Adds a key-value pair to the token cache key without sending it as a query parameter.
             Use this to partition cached tokens (e.g., isolating short-lived sessions from regular
             sessions for the same user). Both <c>AcquireTokenByAuthorizationCode</c> and
             <c>AcquireTokenSilent</c> must use the same partition key to match cached entries.
@@ -80,7 +128,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.1.0</AssemblyVersion>
+        <AssemblyVersion>4.85.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -114,7 +162,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.1.0</AssemblyVersion>
+        <AssemblyVersion>4.85.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenByAuthorizationCodeParameterBuilder</ReturnType>

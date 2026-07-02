@@ -1,9 +1,9 @@
 <Type Name="BaseAuthorizationHeaderProvider" FullName="Microsoft.Identity.Web.Extensibility.BaseAuthorizationHeaderProvider">
-  <TypeSignature Language="C#" Value="public class BaseAuthorizationHeaderProvider : Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BaseAuthorizationHeaderProvider extends System.Object implements class Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider" />
+  <TypeSignature Language="C#" Value="public class BaseAuthorizationHeaderProvider : Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider2" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BaseAuthorizationHeaderProvider extends System.Object implements class Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider, class Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider2" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Web.Extensibility.BaseAuthorizationHeaderProvider" />
-  <TypeSignature Language="VB.NET" Value="Public Class BaseAuthorizationHeaderProvider&#xA;Implements IAuthorizationHeaderProvider" />
-  <TypeSignature Language="F#" Value="type BaseAuthorizationHeaderProvider = class&#xA;    interface IAuthorizationHeaderProvider" />
+  <TypeSignature Language="VB.NET" Value="Public Class BaseAuthorizationHeaderProvider&#xA;Implements IAuthorizationHeaderProvider2" />
+  <TypeSignature Language="F#" Value="type BaseAuthorizationHeaderProvider = class&#xA;    interface IAuthorizationHeaderProvider&#xA;    interface IAuthorizationHeaderProvider2" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
     <AssemblyVersion>3.11.0.0</AssemblyVersion>
@@ -21,6 +21,7 @@
     <AssemblyVersion>4.8.0.0</AssemblyVersion>
     <AssemblyVersion>4.10.0.0</AssemblyVersion>
     <AssemblyVersion>4.11.0.0</AssemblyVersion>
+    <AssemblyVersion>4.12.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -28,6 +29,9 @@
   <Interfaces>
     <Interface>
       <InterfaceName>Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider2</InterfaceName>
     </Interface>
   </Interfaces>
   <Attributes>
@@ -41,7 +45,12 @@
             Base class for custom implementations of <see cref="T:Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider" /> that
             would still want to leverage the default implementation for the bearer and Pop protocols.
             </summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+            Also implements <see cref="T:Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider2" /> (added in
+            Microsoft.Identity.Abstractions 12.3.0) so subclasses automatically expose the
+            metadata-rich header-creation surface without needing to opt in. Override the
+            <c>CreateAuthorizationHeaderInformation*</c> virtuals to customize that path.
+            </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -53,7 +62,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
-        <AssemblyVersion>4.11.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
@@ -78,7 +87,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
-        <AssemblyVersion>4.11.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.String&gt;</ReturnType>
@@ -126,7 +135,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
-        <AssemblyVersion>4.11.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.String&gt;</ReturnType>
@@ -165,7 +174,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
-        <AssemblyVersion>4.11.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.String&gt;</ReturnType>
@@ -198,6 +207,148 @@
         <summary>To be added.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="CreateAuthorizationHeaderInformationAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Microsoft.Identity.Abstractions.OperationResult&lt;Microsoft.Identity.Abstractions.AuthorizationHeaderInformation,Microsoft.Identity.Abstractions.AuthorizationHeaderError&gt;&gt; CreateAuthorizationHeaderInformationAsync (System.Collections.Generic.IEnumerable&lt;string&gt; scopes, Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions? options = default, System.Security.Claims.ClaimsPrincipal? claimsPrincipal = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;valuetype Microsoft.Identity.Abstractions.OperationResult`2&lt;class Microsoft.Identity.Abstractions.AuthorizationHeaderInformation, class Microsoft.Identity.Abstractions.AuthorizationHeaderError&gt;&gt; CreateAuthorizationHeaderInformationAsync(class System.Collections.Generic.IEnumerable`1&lt;string&gt; scopes, class Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions options, class System.Security.Claims.ClaimsPrincipal claimsPrincipal, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.Extensibility.BaseAuthorizationHeaderProvider.CreateAuthorizationHeaderInformationAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateAuthorizationHeaderInformationAsync (scopes As IEnumerable(Of String), Optional options As AuthorizationHeaderProviderOptions = Nothing, Optional claimsPrincipal As ClaimsPrincipal = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of OperationResult(Of AuthorizationHeaderInformation, AuthorizationHeaderError))" />
+      <MemberSignature Language="F#" Value="abstract member CreateAuthorizationHeaderInformationAsync : seq&lt;string&gt; * Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions * System.Security.Claims.ClaimsPrincipal * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Abstractions.OperationResult&lt;Microsoft.Identity.Abstractions.AuthorizationHeaderInformation, Microsoft.Identity.Abstractions.AuthorizationHeaderError&gt;&gt;&#xA;override this.CreateAuthorizationHeaderInformationAsync : seq&lt;string&gt; * Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions * System.Security.Claims.ClaimsPrincipal * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Abstractions.OperationResult&lt;Microsoft.Identity.Abstractions.AuthorizationHeaderInformation, Microsoft.Identity.Abstractions.AuthorizationHeaderError&gt;&gt;" Usage="baseAuthorizationHeaderProvider.CreateAuthorizationHeaderInformationAsync (scopes, options, claimsPrincipal, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider2.CreateAuthorizationHeaderInformationAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Identity.Abstractions.OperationResult&lt;Microsoft.Identity.Abstractions.AuthorizationHeaderInformation,Microsoft.Identity.Abstractions.AuthorizationHeaderError&gt;&gt;</ReturnType>
+        <Attributes>
+          <Attribute>
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 0, 1, 1 })]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 0, 1, 1 })&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scopes" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="options" Type="Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions" />
+        <Parameter Name="claimsPrincipal" Type="System.Security.Claims.ClaimsPrincipal" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="scopes">To be added.</param>
+        <param name="options">To be added.</param>
+        <param name="claimsPrincipal">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="CreateAuthorizationHeaderInformationForAppAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Microsoft.Identity.Abstractions.OperationResult&lt;Microsoft.Identity.Abstractions.AuthorizationHeaderInformation,Microsoft.Identity.Abstractions.AuthorizationHeaderError&gt;&gt; CreateAuthorizationHeaderInformationForAppAsync (string scopes, Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions? downstreamApiOptions = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;valuetype Microsoft.Identity.Abstractions.OperationResult`2&lt;class Microsoft.Identity.Abstractions.AuthorizationHeaderInformation, class Microsoft.Identity.Abstractions.AuthorizationHeaderError&gt;&gt; CreateAuthorizationHeaderInformationForAppAsync(string scopes, class Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions downstreamApiOptions, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.Extensibility.BaseAuthorizationHeaderProvider.CreateAuthorizationHeaderInformationForAppAsync(System.String,Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateAuthorizationHeaderInformationForAppAsync (scopes As String, Optional downstreamApiOptions As AuthorizationHeaderProviderOptions = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of OperationResult(Of AuthorizationHeaderInformation, AuthorizationHeaderError))" />
+      <MemberSignature Language="F#" Value="abstract member CreateAuthorizationHeaderInformationForAppAsync : string * Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Abstractions.OperationResult&lt;Microsoft.Identity.Abstractions.AuthorizationHeaderInformation, Microsoft.Identity.Abstractions.AuthorizationHeaderError&gt;&gt;&#xA;override this.CreateAuthorizationHeaderInformationForAppAsync : string * Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Abstractions.OperationResult&lt;Microsoft.Identity.Abstractions.AuthorizationHeaderInformation, Microsoft.Identity.Abstractions.AuthorizationHeaderError&gt;&gt;" Usage="baseAuthorizationHeaderProvider.CreateAuthorizationHeaderInformationForAppAsync (scopes, downstreamApiOptions, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider2.CreateAuthorizationHeaderInformationForAppAsync(System.String,Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions,System.Threading.CancellationToken)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Identity.Abstractions.OperationResult&lt;Microsoft.Identity.Abstractions.AuthorizationHeaderInformation,Microsoft.Identity.Abstractions.AuthorizationHeaderError&gt;&gt;</ReturnType>
+        <Attributes>
+          <Attribute>
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 0, 1, 1 })]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 0, 1, 1 })&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scopes" Type="System.String" />
+        <Parameter Name="downstreamApiOptions" Type="Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="scopes">To be added.</param>
+        <param name="downstreamApiOptions">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="CreateAuthorizationHeaderInformationForUserAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Microsoft.Identity.Abstractions.OperationResult&lt;Microsoft.Identity.Abstractions.AuthorizationHeaderInformation,Microsoft.Identity.Abstractions.AuthorizationHeaderError&gt;&gt; CreateAuthorizationHeaderInformationForUserAsync (System.Collections.Generic.IEnumerable&lt;string&gt; scopes, Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions? authorizationHeaderProviderOptions = default, System.Security.Claims.ClaimsPrincipal? claimsPrincipal = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;valuetype Microsoft.Identity.Abstractions.OperationResult`2&lt;class Microsoft.Identity.Abstractions.AuthorizationHeaderInformation, class Microsoft.Identity.Abstractions.AuthorizationHeaderError&gt;&gt; CreateAuthorizationHeaderInformationForUserAsync(class System.Collections.Generic.IEnumerable`1&lt;string&gt; scopes, class Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions authorizationHeaderProviderOptions, class System.Security.Claims.ClaimsPrincipal claimsPrincipal, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.Extensibility.BaseAuthorizationHeaderProvider.CreateAuthorizationHeaderInformationForUserAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateAuthorizationHeaderInformationForUserAsync (scopes As IEnumerable(Of String), Optional authorizationHeaderProviderOptions As AuthorizationHeaderProviderOptions = Nothing, Optional claimsPrincipal As ClaimsPrincipal = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of OperationResult(Of AuthorizationHeaderInformation, AuthorizationHeaderError))" />
+      <MemberSignature Language="F#" Value="abstract member CreateAuthorizationHeaderInformationForUserAsync : seq&lt;string&gt; * Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions * System.Security.Claims.ClaimsPrincipal * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Abstractions.OperationResult&lt;Microsoft.Identity.Abstractions.AuthorizationHeaderInformation, Microsoft.Identity.Abstractions.AuthorizationHeaderError&gt;&gt;&#xA;override this.CreateAuthorizationHeaderInformationForUserAsync : seq&lt;string&gt; * Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions * System.Security.Claims.ClaimsPrincipal * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Abstractions.OperationResult&lt;Microsoft.Identity.Abstractions.AuthorizationHeaderInformation, Microsoft.Identity.Abstractions.AuthorizationHeaderError&gt;&gt;" Usage="baseAuthorizationHeaderProvider.CreateAuthorizationHeaderInformationForUserAsync (scopes, authorizationHeaderProviderOptions, claimsPrincipal, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider2.CreateAuthorizationHeaderInformationForUserAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Identity.Abstractions.OperationResult&lt;Microsoft.Identity.Abstractions.AuthorizationHeaderInformation,Microsoft.Identity.Abstractions.AuthorizationHeaderError&gt;&gt;</ReturnType>
+        <Attributes>
+          <Attribute>
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 0, 1, 1 })]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 0, 1, 1 })&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scopes" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="authorizationHeaderProviderOptions" Type="Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions" />
+        <Parameter Name="claimsPrincipal" Type="System.Security.Claims.ClaimsPrincipal" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="scopes">To be added.</param>
+        <param name="authorizationHeaderProviderOptions">To be added.</param>
+        <param name="claimsPrincipal">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>
+            Default implementation delegates to <see cref="T:Microsoft.Identity.Web.DefaultAuthorizationHeaderProvider" />; override to inject
+            custom logic while still receiving the binding certificate and token-acquisition metadata for free.
+            </remarks>
         <inheritdoc />
       </Docs>
     </Member>

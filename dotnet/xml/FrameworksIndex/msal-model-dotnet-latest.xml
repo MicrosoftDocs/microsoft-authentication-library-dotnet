@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-model-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.Identity.Abstractions" Version="12.2.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.Azure" Version="4.11.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.Certificate" Version="4.11.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="4.11.0.0" />
-    <Assembly Name="Microsoft.Identity.Web" Version="4.11.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.DownstreamApi" Version="4.11.0.0" />
+    <Assembly Name="Microsoft.Identity.Abstractions" Version="12.4.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.Azure" Version="4.12.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.Certificate" Version="4.12.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="4.12.0.0" />
+    <Assembly Name="Microsoft.Identity.Web" Version="4.12.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.DownstreamApi" Version="4.12.0.0" />
     <Assembly Name="Microsoft.Identity.Web.DownstreamRestApi" Version="2.0.8.0" />
-    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraph" Version="4.11.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraphBeta" Version="4.11.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.OWIN" Version="4.11.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.TokenAcquisition" Version="4.11.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.TokenCache" Version="4.11.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.UI" Version="4.11.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraph" Version="4.12.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraphBeta" Version="4.12.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.OWIN" Version="4.12.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.TokenAcquisition" Version="4.12.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.TokenCache" Version="4.12.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.UI" Version="4.12.0.0" />
   </Assemblies>
   <Namespace Name="Microsoft.Identity.Abstractions">
     <Type Name="Microsoft.Identity.Abstractions.AcquiredTokenCacheLevel" Id="T:Microsoft.Identity.Abstractions.AcquiredTokenCacheLevel">
@@ -221,6 +221,11 @@
     <Type Name="Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider`1" Id="T:Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider`1">
       <Member Id="M:Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider`1.CreateAuthorizationHeaderAsync(Microsoft.Identity.Abstractions.DownstreamApiOptions,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)" />
     </Type>
+    <Type Name="Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider2" Id="T:Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider2">
+      <Member Id="M:Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider2.CreateAuthorizationHeaderInformationAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider2.CreateAuthorizationHeaderInformationForAppAsync(System.String,Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions,System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.Identity.Abstractions.IAuthorizationHeaderProvider2.CreateAuthorizationHeaderInformationForUserAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)" />
+    </Type>
     <Type Name="Microsoft.Identity.Abstractions.IBoundAuthorizationHeaderProvider" Id="T:Microsoft.Identity.Abstractions.IBoundAuthorizationHeaderProvider">
       <Member Id="M:Microsoft.Identity.Abstractions.IBoundAuthorizationHeaderProvider.CreateBoundAuthorizationHeaderAsync(Microsoft.Identity.Abstractions.DownstreamApiOptions,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)" />
     </Type>
@@ -373,6 +378,7 @@
       <Member Id="P:Microsoft.Identity.Abstractions.TokenAcquisitionMetadata.DurationInCacheInMs" />
       <Member Id="P:Microsoft.Identity.Abstractions.TokenAcquisitionMetadata.DurationInHttpInMs" />
       <Member Id="P:Microsoft.Identity.Abstractions.TokenAcquisitionMetadata.DurationTotalInMs" />
+      <Member Id="P:Microsoft.Identity.Abstractions.TokenAcquisitionMetadata.ExpiresOn" />
       <Member Id="P:Microsoft.Identity.Abstractions.TokenAcquisitionMetadata.RefreshOn" />
       <Member Id="P:Microsoft.Identity.Abstractions.TokenAcquisitionMetadata.RegionDetails" />
       <Member Id="P:Microsoft.Identity.Abstractions.TokenAcquisitionMetadata.TokenEndpoint" />
@@ -990,6 +996,9 @@
       <Member Id="M:Microsoft.Identity.Web.Extensibility.BaseAuthorizationHeaderProvider.CreateAuthorizationHeaderAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.Identity.Web.Extensibility.BaseAuthorizationHeaderProvider.CreateAuthorizationHeaderForAppAsync(System.String,Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions,System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.Identity.Web.Extensibility.BaseAuthorizationHeaderProvider.CreateAuthorizationHeaderForUserAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.Identity.Web.Extensibility.BaseAuthorizationHeaderProvider.CreateAuthorizationHeaderInformationAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.Identity.Web.Extensibility.BaseAuthorizationHeaderProvider.CreateAuthorizationHeaderInformationForAppAsync(System.String,Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions,System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.Identity.Web.Extensibility.BaseAuthorizationHeaderProvider.CreateAuthorizationHeaderInformationForUserAsync(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)" />
     </Type>
     <Type Name="Microsoft.Identity.Web.Extensibility.IConfidentialClientApplicationProvider" Id="T:Microsoft.Identity.Web.Extensibility.IConfidentialClientApplicationProvider">
       <Member Id="M:Microsoft.Identity.Web.Extensibility.IConfidentialClientApplicationProvider.GetConfidentialClientApplicationAsync(System.String)" />

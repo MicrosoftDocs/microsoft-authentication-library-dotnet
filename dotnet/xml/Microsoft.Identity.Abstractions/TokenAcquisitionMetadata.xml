@@ -7,6 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
     <AssemblyVersion>12.2.0.0</AssemblyVersion>
+    <AssemblyVersion>12.4.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -34,7 +35,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+        <AssemblyVersion>12.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -51,7 +52,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+        <AssemblyVersion>12.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Abstractions.AcquiredTokenCacheLevel</ReturnType>
@@ -73,7 +74,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+        <AssemblyVersion>12.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Abstractions.AcquiredTokenCacheRefreshReason</ReturnType>
@@ -95,7 +96,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+        <AssemblyVersion>12.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int64</ReturnType>
@@ -117,7 +118,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+        <AssemblyVersion>12.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int64</ReturnType>
@@ -139,7 +140,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+        <AssemblyVersion>12.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int64</ReturnType>
@@ -147,6 +148,29 @@
       <Docs>
         <summary>
             Total wall-clock duration of the token-acquisition attempt, in milliseconds.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpiresOn">
+      <MemberSignature Language="C#" Value="public DateTimeOffset? ExpiresOn { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; ExpiresOn" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.TokenAcquisitionMetadata.ExpiresOn" />
+      <MemberSignature Language="VB.NET" Value="Public Property ExpiresOn As Nullable(Of DateTimeOffset)" />
+      <MemberSignature Language="F#" Value="member this.ExpiresOn : Nullable&lt;DateTimeOffset&gt; with get, set" Usage="Microsoft.Identity.Abstractions.TokenAcquisitionMetadata.ExpiresOn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.DateTimeOffset&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Point in time at which the access token expires, or <see langword="null" /> when not captured.
+            Mirrors <see cref="P:Microsoft.Identity.Abstractions.AcquireTokenResult.ExpiresOn" />.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -161,7 +185,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+        <AssemblyVersion>12.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.DateTimeOffset&gt;</ReturnType>
@@ -184,7 +208,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+        <AssemblyVersion>12.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Abstractions.AcquiredTokenRegionDetails</ReturnType>
@@ -206,7 +230,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+        <AssemblyVersion>12.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -228,7 +252,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.2.0.0</AssemblyVersion>
+        <AssemblyVersion>12.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Abstractions.AcquiredTokenSource</ReturnType>

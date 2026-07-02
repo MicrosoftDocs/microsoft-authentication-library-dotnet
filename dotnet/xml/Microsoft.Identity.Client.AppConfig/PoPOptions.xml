@@ -1,0 +1,76 @@
+<Type Name="PoPOptions" FullName="Microsoft.Identity.Client.AppConfig.PoPOptions">
+  <TypeSignature Language="C#" Value="public class PoPOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PoPOptions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Client.AppConfig.PoPOptions" />
+  <TypeSignature Language="VB.NET" Value="Public Class PoPOptions" />
+  <TypeSignature Language="F#" Value="type PoPOptions = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+    <AssemblyVersion>4.85.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Options that control mTLS Proof-of-Possession (PoP) token acquisition. This type is the
+            extensibility point for PoP-related knobs so future settings can be added without growing
+            the builder surface.
+            </summary>
+    <remarks>
+            This type is shared by managed identity and confidential client mTLS Proof-of-Possession
+            scenarios.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PoPOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.AppConfig.PoPOptions.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinStrength">
+      <MemberSignature Language="C#" Value="public Microsoft.Identity.Client.AppConfig.MtlsBindingStrength MinStrength { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Identity.Client.AppConfig.MtlsBindingStrength MinStrength" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.AppConfig.PoPOptions.MinStrength" />
+      <MemberSignature Language="VB.NET" Value="Public Property MinStrength As MtlsBindingStrength" />
+      <MemberSignature Language="F#" Value="member this.MinStrength : Microsoft.Identity.Client.AppConfig.MtlsBindingStrength with get, set" Usage="Microsoft.Identity.Client.AppConfig.PoPOptions.MinStrength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.AppConfig.MtlsBindingStrength</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the minimum binding strength the host must be able to produce for the
+            request to succeed. This is a <b>floor assertion</b>, not a downgrade selector: MSAL
+            always uses the host's maximum binding strength, and the request fails when the host
+            cannot meet this floor.
+            </summary>
+        <value>
+            The minimum required <see cref="T:Microsoft.Identity.Client.AppConfig.MtlsBindingStrength" />. The default is
+            <see cref="F:Microsoft.Identity.Client.AppConfig.MtlsBindingStrength.None" />, which imposes no floor and behaves identically
+            to the parameterless mTLS PoP request. When set to a value greater than
+            <see cref="F:Microsoft.Identity.Client.AppConfig.MtlsBindingStrength.None" />, the request fails with
+            <see cref="F:Microsoft.Identity.Client.MsalError.MinStrengthNotMet" /> if the host's maximum binding strength is
+            lower than this value.
+            </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.Identity.Client.Broker" Version="4.85.1.0" />
-    <Assembly Name="Microsoft.Identity.Client.Desktop" Version="4.85.1.0" />
-    <Assembly Name="Microsoft.Identity.Client" Version="4.85.1.0" />
+    <Assembly Name="Microsoft.Identity.Client.Broker" Version="4.85.2.0" />
+    <Assembly Name="Microsoft.Identity.Client.Desktop" Version="4.85.2.0" />
+    <Assembly Name="Microsoft.Identity.Client" Version="4.85.2.0" />
   </Assemblies>
   <Namespace Name="Microsoft.Identity.Client">
     <Type Name="Microsoft.Identity.Client.AadAuthorityAudience" Id="T:Microsoft.Identity.Client.AadAuthorityAudience">
@@ -536,6 +536,7 @@
     </Type>
     <Type Name="Microsoft.Identity.Client.ManagedIdentityPopExtensions" Id="T:Microsoft.Identity.Client.ManagedIdentityPopExtensions">
       <Member Id="M:Microsoft.Identity.Client.ManagedIdentityPopExtensions.WithMtlsProofOfPossession(Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder)" />
+      <Member Id="M:Microsoft.Identity.Client.ManagedIdentityPopExtensions.WithMtlsProofOfPossession(Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder,Microsoft.Identity.Client.AppConfig.PoPOptions)" />
     </Type>
     <Type Name="Microsoft.Identity.Client.Metrics" Id="T:Microsoft.Identity.Client.Metrics">
       <Member Id="P:Microsoft.Identity.Client.Metrics.TotalAccessTokensFromBroker" />
@@ -640,6 +641,7 @@
       <Member Id="F:Microsoft.Identity.Client.MsalError.ManagedIdentityRequestFailed" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.ManagedIdentityResponseParseFailure" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.ManagedIdentityUnreachableNetwork" />
+      <Member Id="F:Microsoft.Identity.Client.MsalError.MinStrengthNotMet" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.MissingFederationMetadataUrl" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.MissingManagedIdentityEnvVar" />
       <Member Id="F:Microsoft.Identity.Client.MsalError.MissingPassiveAuthEndpoint" />
@@ -1000,6 +1002,10 @@
       <Member Id="P:Microsoft.Identity.Client.AppConfig.PoPAuthenticationConfiguration.PopCryptoProvider" />
       <Member Id="P:Microsoft.Identity.Client.AppConfig.PoPAuthenticationConfiguration.SignHttpRequest" />
     </Type>
+    <Type Name="Microsoft.Identity.Client.AppConfig.PoPOptions" Id="T:Microsoft.Identity.Client.AppConfig.PoPOptions">
+      <Member Id="M:Microsoft.Identity.Client.AppConfig.PoPOptions.#ctor" />
+      <Member Id="P:Microsoft.Identity.Client.AppConfig.PoPOptions.MinStrength" />
+    </Type>
   </Namespace>
   <Namespace Name="Microsoft.Identity.Client.AuthScheme">
     <Type Name="Microsoft.Identity.Client.AuthScheme.CredentialEvaluationContext" Id="T:Microsoft.Identity.Client.AuthScheme.CredentialEvaluationContext">
@@ -1090,6 +1096,7 @@
     </Type>
     <Type Name="Microsoft.Identity.Client.Extensibility.AcquireTokenParameterBuilderExtensions" Id="T:Microsoft.Identity.Client.Extensibility.AcquireTokenParameterBuilderExtensions">
       <Member Id="M:Microsoft.Identity.Client.Extensibility.AcquireTokenParameterBuilderExtensions.WithCachePartitionKey``1(Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder{``0},System.String,System.String)" />
+      <Member Id="M:Microsoft.Identity.Client.Extensibility.AcquireTokenParameterBuilderExtensions.WithCachePartitionKey``1(Microsoft.Identity.Client.BaseAbstractAcquireTokenParameterBuilder{``0},System.String,System.String,System.Boolean)" />
       <Member Id="M:Microsoft.Identity.Client.Extensibility.AcquireTokenParameterBuilderExtensions.WithExtraHttpHeaders``1(Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder{``0},System.Collections.Generic.IDictionary{System.String,System.String})" />
       <Member Id="M:Microsoft.Identity.Client.Extensibility.AcquireTokenParameterBuilderExtensions.WithReservedScopes(Microsoft.Identity.Client.AcquireTokenByAuthorizationCodeParameterBuilder,System.Boolean)" />
     </Type>

@@ -12,6 +12,7 @@
     <AssemblyVersion>4.84.1.0</AssemblyVersion>
     <AssemblyVersion>4.84.2.0</AssemblyVersion>
     <AssemblyVersion>4.85.1.0</AssemblyVersion>
+    <AssemblyVersion>4.85.2.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -33,7 +34,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.1.0</AssemblyVersion>
+        <AssemblyVersion>4.85.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder</ReturnType>
@@ -45,6 +46,41 @@
         <param name="builder">The AcquireTokenForManagedIdentityParameterBuilder instance.</param>
         <summary>
             Enables mTLS Proof-of-Possession for managed identity token acquisition.
+            When attestation is required (KeyGuard scenarios), use the Msal.KeyAttestation package
+            and call .WithAttestationSupport() after this method.
+            </summary>
+        <returns>The builder to chain .With methods.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithMtlsProofOfPossession">
+      <MemberSignature Language="C#" Value="public static Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder WithMtlsProofOfPossession (this Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder builder, Microsoft.Identity.Client.AppConfig.PoPOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder WithMtlsProofOfPossession(class Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder builder, class Microsoft.Identity.Client.AppConfig.PoPOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.ManagedIdentityPopExtensions.WithMtlsProofOfPossession(Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder,Microsoft.Identity.Client.AppConfig.PoPOptions)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function WithMtlsProofOfPossession (builder As AcquireTokenForManagedIdentityParameterBuilder, options As PoPOptions) As AcquireTokenForManagedIdentityParameterBuilder" />
+      <MemberSignature Language="F#" Value="static member WithMtlsProofOfPossession : Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder * Microsoft.Identity.Client.AppConfig.PoPOptions -&gt; Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder" Usage="Microsoft.Identity.Client.ManagedIdentityPopExtensions.WithMtlsProofOfPossession (builder, options)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="builder" Type="Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder" RefType="this" />
+        <Parameter Name="options" Type="Microsoft.Identity.Client.AppConfig.PoPOptions" />
+      </Parameters>
+      <Docs>
+        <param name="builder">The AcquireTokenForManagedIdentityParameterBuilder instance.</param>
+        <param name="options">
+            PoP options controlling the request. Use <see cref="P:Microsoft.Identity.Client.AppConfig.PoPOptions.MinStrength" /> to require
+            a minimum host binding strength; the request fails with
+            <see cref="F:Microsoft.Identity.Client.MsalError.MinStrengthNotMet" /> when the host cannot meet the floor.
+            </param>
+        <summary>
+            Enables mTLS Proof-of-Possession for managed identity token acquisition with additional
+            PoP options, such as a minimum required binding strength.
             When attestation is required (KeyGuard scenarios), use the Msal.KeyAttestation package
             and call .WithAttestationSupport() after this method.
             </summary>
