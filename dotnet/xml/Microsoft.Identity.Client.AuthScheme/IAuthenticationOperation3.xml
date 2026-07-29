@@ -1,0 +1,84 @@
+<Type Name="IAuthenticationOperation3" FullName="Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation3">
+  <TypeSignature Language="C#" Value="public interface IAuthenticationOperation3 : Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation2" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IAuthenticationOperation3 implements class Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation, class Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation2" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation3" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IAuthenticationOperation3&#xA;Implements IAuthenticationOperation2" />
+  <TypeSignature Language="F#" Value="type IAuthenticationOperation3 = interface&#xA;    interface IAuthenticationOperation2&#xA;    interface IAuthenticationOperation" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+    <AssemblyVersion>4.84.1.0</AssemblyVersion>
+    <AssemblyVersion>4.84.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation2</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Extends <see cref="T:Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation2" /> with a lifecycle hook so MSAL can
+            pass runtime context (e.g., the mTLS certificate selected for the current request)
+            to a custom authentication operation. Enables composition of schemes such as
+            CDT + mTLS PoP without MSAL having to replace the operation.
+            </summary>
+    <remarks>
+      <para>
+            This callback fires on every <c>ExecuteAsync</c> invocation, including when a valid
+            token is served from the cache. Implementations should avoid expensive work that is
+            unnecessary on cache hits.
+            </para>
+      <para>
+        <b>Thread safety:</b> If the same <see cref="T:Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation3" /> instance
+            is shared across concurrent <c>ExecuteAsync</c> calls, <see cref="M:Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation3.AfterCredentialEvaluationAsync(Microsoft.Identity.Client.AuthScheme.CredentialEvaluationContext,System.Threading.CancellationToken)" />
+            will be invoked concurrently. Implementations must either be thread-safe or create
+            a fresh instance per <c>ExecuteAsync</c> call (recommended).
+            </para>
+      <para>
+        <b>Scope:</b> This hook fires only on confidential client token requests.
+            Managed identity flows do not invoke it.
+            </para>
+      <para>
+        <b>Exceptions:</b> Exceptions thrown from this callback will propagate
+            to the caller of <c>ExecuteAsync</c> without wrapping.
+            </para>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AfterCredentialEvaluationAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task AfterCredentialEvaluationAsync (Microsoft.Identity.Client.AuthScheme.CredentialEvaluationContext context, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task AfterCredentialEvaluationAsync(class Microsoft.Identity.Client.AuthScheme.CredentialEvaluationContext context, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation3.AfterCredentialEvaluationAsync(Microsoft.Identity.Client.AuthScheme.CredentialEvaluationContext,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function AfterCredentialEvaluationAsync (context As CredentialEvaluationContext, Optional cancellationToken As CancellationToken = Nothing) As Task" />
+      <MemberSignature Language="F#" Value="abstract member AfterCredentialEvaluationAsync : Microsoft.Identity.Client.AuthScheme.CredentialEvaluationContext * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="iAuthenticationOperation3.AfterCredentialEvaluationAsync (context, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="Microsoft.Identity.Client.AuthScheme.CredentialEvaluationContext" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="context">
+            Runtime state owned by MSAL. Never <c>null</c>. Must not be retained past this call.
+            </param>
+        <param name="cancellationToken">Cancellation token.</param>
+        <summary>
+            MSAL invokes this once per token request, after it has evaluated the
+            credentials that will be used. The operation reads what it needs from
+            <paramref name="context" /> and configures itself for the upcoming
+            <see cref="M:Microsoft.Identity.Client.AuthScheme.IAuthenticationOperation.FormatResult(Microsoft.Identity.Client.AuthenticationResult)" /> call.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

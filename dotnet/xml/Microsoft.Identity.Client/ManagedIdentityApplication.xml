@@ -54,6 +54,8 @@
     <AssemblyVersion>4.82.1.0</AssemblyVersion>
     <AssemblyVersion>4.83.1.0</AssemblyVersion>
     <AssemblyVersion>4.83.3.0</AssemblyVersion>
+    <AssemblyVersion>4.84.1.0</AssemblyVersion>
+    <AssemblyVersion>4.84.2.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Identity.Client.ApplicationBase</BaseTypeName>
@@ -87,7 +89,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.83.3.0</AssemblyVersion>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder</ReturnType>
@@ -103,6 +105,39 @@
         <inheritdoc />
       </Docs>
     </Member>
+    <Member MemberName="GetManagedIdentityCapabilitiesAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.ManagedIdentity.ManagedIdentityCapabilities&gt; GetManagedIdentityCapabilitiesAsync (System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Identity.Client.ManagedIdentity.ManagedIdentityCapabilities&gt; GetManagedIdentityCapabilitiesAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.ManagedIdentityApplication.GetManagedIdentityCapabilitiesAsync(System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetManagedIdentityCapabilitiesAsync (cancellationToken As CancellationToken) As Task(Of ManagedIdentityCapabilities)" />
+      <MemberSignature Language="F#" Value="member this.GetManagedIdentityCapabilitiesAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.ManagedIdentity.ManagedIdentityCapabilities&gt;" Usage="managedIdentityApplication.GetManagedIdentityCapabilitiesAsync cancellationToken" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.ManagedIdentity.ManagedIdentityCapabilities&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">A cancellation token to observe while waiting for the detection to complete.</param>
+        <summary>
+            Detects the managed identity source available on the host and the strongest mTLS
+            binding the host can produce. Useful for credential chains (such as
+            <c>DefaultAzureCredential</c>) to decide whether managed identity is available and
+            what binding strength to expect.
+            </summary>
+        <returns>A <see cref="T:Microsoft.Identity.Client.ManagedIdentity.ManagedIdentityCapabilities" /> describing the detected source and host capabilities.</returns>
+        <remarks>
+            On hosts capable of key binding, detecting the strongest available strength may provision
+            (and persist) a binding key as a side effect, pre-warming the cache reused by a subsequent
+            token request. The key provider is created once per process and its key is cached.
+            </remarks>
+      </Docs>
+    </Member>
     <Member MemberName="GetManagedIdentitySource">
       <MemberSignature Language="C#" Value="public static Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySource GetManagedIdentitySource ();" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySource GetManagedIdentitySource() cil managed" />
@@ -112,12 +147,12 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.83.3.0</AssemblyVersion>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName Language="C#">[System.Obsolete("Use GetManagedIdentitySourceAsync() instead. "ManagedIdentityApplication mi = miBuilder.Build() as ManagedIdentityApplication;"")]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Obsolete("Use GetManagedIdentitySourceAsync() instead. "ManagedIdentityApplication mi = miBuilder.Build() as ManagedIdentityApplication;"")&gt;]</AttributeName>
+          <AttributeName Language="C#">[System.Obsolete("Use GetManagedIdentityCapabilitiesAsync() instead. "ManagedIdentityApplication mi = miBuilder.Build() as ManagedIdentityApplication;"")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use GetManagedIdentityCapabilitiesAsync() instead. "ManagedIdentityApplication mi = miBuilder.Build() as ManagedIdentityApplication;"")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -130,31 +165,6 @@
             </summary>
         <returns>Managed identity source detected on the environment if any.</returns>
         <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="GetManagedIdentitySourceAsync">
-      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySourceResult&gt; GetManagedIdentitySourceAsync (System.Threading.CancellationToken cancellationToken);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySourceResult&gt; GetManagedIdentitySourceAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.ManagedIdentityApplication.GetManagedIdentitySourceAsync(System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Function GetManagedIdentitySourceAsync (cancellationToken As CancellationToken) As Task(Of ManagedIdentitySourceResult)" />
-      <MemberSignature Language="F#" Value="member this.GetManagedIdentitySourceAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySourceResult&gt;" Usage="managedIdentityApplication.GetManagedIdentitySourceAsync cancellationToken" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.83.3.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySourceResult&gt;</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
-      </Parameters>
-      <Docs>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
-        <inheritdoc />
       </Docs>
     </Member>
   </Members>

@@ -1,0 +1,58 @@
+<Type Name="IConfidentialClientApplicationProvider" FullName="Microsoft.Identity.Web.Extensibility.IConfidentialClientApplicationProvider">
+  <TypeSignature Language="C#" Value="public interface IConfidentialClientApplicationProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IConfidentialClientApplicationProvider" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Web.Extensibility.IConfidentialClientApplicationProvider" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IConfidentialClientApplicationProvider" />
+  <TypeSignature Language="F#" Value="type IConfidentialClientApplicationProvider = interface" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+    <AssemblyVersion>4.10.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Provides access to the <see cref="T:Microsoft.Identity.Client.IConfidentialClientApplication" /> managed by
+            Microsoft.Identity.Web for a given authentication scheme. Use this when you need
+            to call MSAL directly (e.g., for custom token acquisition flows) while reusing
+            the same application instance, credentials, and token cache that IdWeb manages.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetConfidentialClientApplicationAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.IConfidentialClientApplication&gt; GetConfidentialClientApplicationAsync (string? authenticationScheme = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Identity.Client.IConfidentialClientApplication&gt; GetConfidentialClientApplicationAsync(string authenticationScheme) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.Extensibility.IConfidentialClientApplicationProvider.GetConfidentialClientApplicationAsync(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetConfidentialClientApplicationAsync (Optional authenticationScheme As String = Nothing) As Task(Of IConfidentialClientApplication)" />
+      <MemberSignature Language="F#" Value="abstract member GetConfidentialClientApplicationAsync : string -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.IConfidentialClientApplication&gt;" Usage="iConfidentialClientApplicationProvider.GetConfidentialClientApplicationAsync authenticationScheme" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>4.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.IConfidentialClientApplication&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="authenticationScheme" Type="System.String">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="authenticationScheme">
+            The authentication scheme name. If null, the effective default scheme is used.
+            </param>
+        <summary>
+            Gets the <see cref="T:Microsoft.Identity.Client.IConfidentialClientApplication" /> for the specified authentication scheme.
+            </summary>
+        <returns>The confidential client application instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

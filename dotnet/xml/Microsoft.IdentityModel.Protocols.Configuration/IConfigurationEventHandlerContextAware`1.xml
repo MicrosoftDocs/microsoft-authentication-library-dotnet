@@ -1,0 +1,97 @@
+<Type Name="IConfigurationEventHandlerContextAware&lt;T&gt;" FullName="Microsoft.IdentityModel.Protocols.Configuration.IConfigurationEventHandlerContextAware&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public interface IConfigurationEventHandlerContextAware&lt;T&gt; : Microsoft.IdentityModel.Protocols.Configuration.IConfigurationEventHandler&lt;T&gt; where T : class" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IConfigurationEventHandlerContextAware`1&lt;class T&gt; implements class Microsoft.IdentityModel.Protocols.Configuration.IConfigurationEventHandler`1&lt;!T&gt;" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.IdentityModel.Protocols.Configuration.IConfigurationEventHandlerContextAware`1" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IConfigurationEventHandlerContextAware(Of T)&#xA;Implements IConfigurationEventHandler(Of T)" />
+  <TypeSignature Language="F#" Value="type IConfigurationEventHandlerContextAware&lt;'T (requires 'T : null)&gt; = interface&#xA;    interface IConfigurationEventHandler&lt;'T (requires 'T : null)&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
+    <AssemblyVersion>8.18.0.0</AssemblyVersion>
+    <AssemblyVersion>8.19.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T">
+      <Constraints>
+        <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.IdentityModel.Protocols.Configuration.IConfigurationEventHandler&lt;T&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="T">The type of configuration.</typeparam>
+    <summary>
+            Defines event handlers for configuration retrieval and update operations.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AfterUpdateAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task AfterUpdateAsync (string metadataAddress, T configuration, Microsoft.IdentityModel.Protocols.Configuration.ConfigurationRetrievalContext context, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task AfterUpdateAsync(string metadataAddress, !T configuration, class Microsoft.IdentityModel.Protocols.Configuration.ConfigurationRetrievalContext context, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Protocols.Configuration.IConfigurationEventHandlerContextAware`1.AfterUpdateAsync(System.String,`0,Microsoft.IdentityModel.Protocols.Configuration.ConfigurationRetrievalContext,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function AfterUpdateAsync (metadataAddress As String, configuration As T, context As ConfigurationRetrievalContext, Optional cancellationToken As CancellationToken = Nothing) As Task" />
+      <MemberSignature Language="F#" Value="abstract member AfterUpdateAsync : string * 'T * Microsoft.IdentityModel.Protocols.Configuration.ConfigurationRetrievalContext * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="iConfigurationEventHandlerContextAware.AfterUpdateAsync (metadataAddress, configuration, context, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadataAddress" Type="System.String" />
+        <Parameter Name="configuration" Type="T" />
+        <Parameter Name="context" Type="Microsoft.IdentityModel.Protocols.Configuration.ConfigurationRetrievalContext" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="metadataAddress">The metadata endpoint address.</param>
+        <param name="configuration">The retrieved configuration.</param>
+        <param name="context">The context for the configuration retrieval operation, providing additional information and control.</param>
+        <param name="cancellationToken">A cancellation token to observe while waiting for the task to complete.</param>
+        <summary>
+            Called in a fire-and-forget manner after a configuration has been successfully retrieved.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeforeRetrieveAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Protocols.Configuration.ConfigurationEventHandlerResult&lt;T&gt;&gt; BeforeRetrieveAsync (string metadataAddress, Microsoft.IdentityModel.Protocols.Configuration.ConfigurationRetrievalContext context, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.IdentityModel.Protocols.Configuration.ConfigurationEventHandlerResult`1&lt;!T&gt;&gt; BeforeRetrieveAsync(string metadataAddress, class Microsoft.IdentityModel.Protocols.Configuration.ConfigurationRetrievalContext context, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.IdentityModel.Protocols.Configuration.IConfigurationEventHandlerContextAware`1.BeforeRetrieveAsync(System.String,Microsoft.IdentityModel.Protocols.Configuration.ConfigurationRetrievalContext,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeforeRetrieveAsync (metadataAddress As String, context As ConfigurationRetrievalContext, Optional cancellationToken As CancellationToken = Nothing) As Task(Of ConfigurationEventHandlerResult(Of T))" />
+      <MemberSignature Language="F#" Value="abstract member BeforeRetrieveAsync : string * Microsoft.IdentityModel.Protocols.Configuration.ConfigurationRetrievalContext * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Protocols.Configuration.ConfigurationEventHandlerResult&lt;'T&gt;&gt;" Usage="iConfigurationEventHandlerContextAware.BeforeRetrieveAsync (metadataAddress, context, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
+        <AssemblyVersion>8.19.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Protocols.Configuration.ConfigurationEventHandlerResult&lt;T&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadataAddress" Type="System.String" />
+        <Parameter Name="context" Type="Microsoft.IdentityModel.Protocols.Configuration.ConfigurationRetrievalContext" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="metadataAddress">The metadata endpoint address.</param>
+        <param name="context">The context for the configuration retrieval operation, providing additional information and control.</param>
+        <param name="cancellationToken">A cancellation token to observe while waiting for the task to complete.</param>
+        <summary>
+            Called before retrieving configuration from the metadata endpoint.
+            </summary>
+        <returns>
+            A <see cref="T:Microsoft.IdentityModel.Protocols.Configuration.ConfigurationEventHandlerResult`1" /> if valid and available, or <see cref="F:Microsoft.IdentityModel.Protocols.Configuration.ConfigurationEventHandlerResult`1.NoResult" /> to proceed with normal retrieval.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

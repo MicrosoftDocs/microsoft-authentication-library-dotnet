@@ -56,6 +56,8 @@
     <AssemblyVersion>4.82.1.0</AssemblyVersion>
     <AssemblyVersion>4.83.1.0</AssemblyVersion>
     <AssemblyVersion>4.83.3.0</AssemblyVersion>
+    <AssemblyVersion>4.84.1.0</AssemblyVersion>
+    <AssemblyVersion>4.84.2.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -79,7 +81,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.83.3.0</AssemblyVersion>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -98,7 +100,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.83.3.0</AssemblyVersion>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="useSharedCache" Type="System.Boolean" />
@@ -111,6 +113,34 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="DisableInternalCacheOptions">
+      <MemberSignature Language="C#" Value="public static Microsoft.Identity.Client.CacheOptions DisableInternalCacheOptions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Microsoft.Identity.Client.CacheOptions DisableInternalCacheOptions" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.CacheOptions.DisableInternalCacheOptions" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property DisableInternalCacheOptions As CacheOptions" />
+      <MemberSignature Language="F#" Value="static member DisableInternalCacheOptions : Microsoft.Identity.Client.CacheOptions" Usage="Microsoft.Identity.Client.CacheOptions.DisableInternalCacheOptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.CacheOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Options that disable MSAL's internal in-memory token cache entirely.
+            Use this when your application manages its own token cache lifecycle.
+            <para>When set:</para><list type="bullet"><item><description>MSAL will not read from or write to the internal cache accessor.</description></item><item><description>Token cache serialization callbacks (<c>OnBeforeAccess</c>, <c>OnAfterAccess</c>, <c>OnBeforeWrite</c>) will <b>not</b> be invoked.</description></item><item><description><see cref="M:Microsoft.Identity.Client.IClientApplicationBase.GetAccountsAsync" /> will always return an empty collection.</description></item><item><description><see cref="M:Microsoft.Identity.Client.IClientApplicationBase.AcquireTokenSilent(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount)" /> will throw a <see cref="T:Microsoft.Identity.Client.MsalUiRequiredException" /> with error code <see cref="F:Microsoft.Identity.Client.MsalError.InternalCacheDisabled" />.</description></item><item><description><see cref="M:Microsoft.Identity.Client.ILongRunningWebApi.AcquireTokenInLongRunningProcess(System.Collections.Generic.IEnumerable{System.String},System.String)" /> will throw a <see cref="T:Microsoft.Identity.Client.MsalUiRequiredException" /> with error code <see cref="F:Microsoft.Identity.Client.MsalError.InternalCacheDisabled" />, because the long-running OBO flow requires a cached token to refresh.</description></item></list><para>
+            For confidential client flows, retrieve the refresh token using
+            <see cref="M:Microsoft.Identity.Client.Extensibility.AuthenticationResultExtensions.GetRefreshToken(Microsoft.Identity.Client.AuthenticationResult)" />
+            and call <see cref="M:Microsoft.Identity.Client.IByRefreshToken.AcquireTokenByRefreshToken(System.Collections.Generic.IEnumerable{System.String},System.String)" />
+            to re-acquire a token on subsequent requests, or use another interactive flow.
+            </para></summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="EnableSharedCacheOptions">
       <MemberSignature Language="C#" Value="public static Microsoft.Identity.Client.CacheOptions EnableSharedCacheOptions { get; }" />
       <MemberSignature Language="ILAsm" Value=".property class Microsoft.Identity.Client.CacheOptions EnableSharedCacheOptions" />
@@ -120,7 +150,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.83.3.0</AssemblyVersion>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.CacheOptions</ReturnType>
@@ -133,6 +163,34 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="IsInternalCacheDisabled">
+      <MemberSignature Language="C#" Value="public bool IsInternalCacheDisabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInternalCacheDisabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.CacheOptions.IsInternalCacheDisabled" />
+      <MemberSignature Language="VB.NET" Value="Public Property IsInternalCacheDisabled As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsInternalCacheDisabled : bool with get, set" Usage="Microsoft.Identity.Client.CacheOptions.IsInternalCacheDisabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            When set to true, MSAL will not read from or write to the internal in-memory token cache.
+            This is intended for advanced scenarios where the caller manages its own token cache.
+            Cannot be combined with <see cref="P:Microsoft.Identity.Client.CacheOptions.UseSharedCache" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            When enabled, <see cref="M:Microsoft.Identity.Client.IClientApplicationBase.AcquireTokenSilent(System.Collections.Generic.IEnumerable{System.String},Microsoft.Identity.Client.IAccount)" />
+            and <see cref="M:Microsoft.Identity.Client.ILongRunningWebApi.AcquireTokenInLongRunningProcess(System.Collections.Generic.IEnumerable{System.String},System.String)" />
+            will throw a <see cref="T:Microsoft.Identity.Client.MsalUiRequiredException" /> with error code <see cref="F:Microsoft.Identity.Client.MsalError.InternalCacheDisabled" />.
+            </remarks>
+      </Docs>
+    </Member>
     <Member MemberName="UseSharedCache">
       <MemberSignature Language="C#" Value="public bool UseSharedCache { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance bool UseSharedCache" />
@@ -142,7 +200,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.83.3.0</AssemblyVersion>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>

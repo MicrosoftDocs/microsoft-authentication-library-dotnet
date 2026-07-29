@@ -18,6 +18,7 @@
     <AssemblyVersion>4.5.0.0</AssemblyVersion>
     <AssemblyVersion>4.7.0.0</AssemblyVersion>
     <AssemblyVersion>4.8.0.0</AssemblyVersion>
+    <AssemblyVersion>4.10.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -45,7 +46,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
+        <AssemblyVersion>4.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Identity.Abstractions.AcquireTokenResult&gt;</ReturnType>
@@ -100,7 +101,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
-        <AssemblyVersion>4.8.0.0</AssemblyVersion>
+        <AssemblyVersion>4.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Abstractions.AcquireTokenOptions</ReturnType>
@@ -116,6 +117,36 @@
             Consider the client assertion for the token request.
             </summary>
         <returns>The modified options. New options with the signed assertion if <paramref name="options" /> was null.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithExtraBodyParameters">
+      <MemberSignature Language="C#" Value="public static Microsoft.Identity.Abstractions.AcquireTokenOptions WithExtraBodyParameters (this Microsoft.Identity.Abstractions.AcquireTokenOptions options, System.Collections.Generic.IDictionary&lt;string,string&gt; extraBodyParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Identity.Abstractions.AcquireTokenOptions WithExtraBodyParameters(class Microsoft.Identity.Abstractions.AcquireTokenOptions options, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; extraBodyParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.TokenAcquirerExtensions.WithExtraBodyParameters(Microsoft.Identity.Abstractions.AcquireTokenOptions,System.Collections.Generic.IDictionary{System.String,System.String})" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function WithExtraBodyParameters (options As AcquireTokenOptions, extraBodyParameters As IDictionary(Of String, String)) As AcquireTokenOptions" />
+      <MemberSignature Language="F#" Value="static member WithExtraBodyParameters : Microsoft.Identity.Abstractions.AcquireTokenOptions * System.Collections.Generic.IDictionary&lt;string, string&gt; -&gt; Microsoft.Identity.Abstractions.AcquireTokenOptions" Usage="Microsoft.Identity.Web.TokenAcquirerExtensions.WithExtraBodyParameters (options, extraBodyParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>4.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Abstractions.AcquireTokenOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.Identity.Abstractions.AcquireTokenOptions" RefType="this" />
+        <Parameter Name="extraBodyParameters" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="options">The acquire token options.</param>
+        <param name="extraBodyParameters">The extra body parameters to include in the token request.</param>
+        <summary>
+            Adds extra body parameters to the token acquisition request.
+            Parameters are merged into any existing extra body parameters dictionary,
+            so this can be composed with other extensions that also add body parameters.
+            </summary>
+        <returns>The modified options for fluent chaining.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

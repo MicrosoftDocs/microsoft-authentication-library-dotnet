@@ -1,0 +1,53 @@
+<Type Name="TokenAcquisitionOptionsExtensions" FullName="Microsoft.Identity.Web.Extensibility.TokenAcquisitionOptionsExtensions">
+  <TypeSignature Language="C#" Value="public static class TokenAcquisitionOptionsExtensions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit TokenAcquisitionOptionsExtensions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Web.Extensibility.TokenAcquisitionOptionsExtensions" />
+  <TypeSignature Language="VB.NET" Value="Public Module TokenAcquisitionOptionsExtensions" />
+  <TypeSignature Language="F#" Value="type TokenAcquisitionOptionsExtensions = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+    <AssemblyVersion>4.10.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Extension methods for <see cref="T:Microsoft.Identity.Web.TokenAcquisitionOptions" /> in extensibility scenarios.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="WithCachePartitionKeys">
+      <MemberSignature Language="C#" Value="public static Microsoft.Identity.Web.TokenAcquisitionOptions WithCachePartitionKeys (this Microsoft.Identity.Web.TokenAcquisitionOptions options, System.Collections.Generic.IDictionary&lt;string,string&gt; partitionKeys);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Identity.Web.TokenAcquisitionOptions WithCachePartitionKeys(class Microsoft.Identity.Web.TokenAcquisitionOptions options, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; partitionKeys) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.Extensibility.TokenAcquisitionOptionsExtensions.WithCachePartitionKeys(Microsoft.Identity.Web.TokenAcquisitionOptions,System.Collections.Generic.IDictionary{System.String,System.String})" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function WithCachePartitionKeys (options As TokenAcquisitionOptions, partitionKeys As IDictionary(Of String, String)) As TokenAcquisitionOptions" />
+      <MemberSignature Language="F#" Value="static member WithCachePartitionKeys : Microsoft.Identity.Web.TokenAcquisitionOptions * System.Collections.Generic.IDictionary&lt;string, string&gt; -&gt; Microsoft.Identity.Web.TokenAcquisitionOptions" Usage="Microsoft.Identity.Web.Extensibility.TokenAcquisitionOptionsExtensions.WithCachePartitionKeys (options, partitionKeys)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>4.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Web.TokenAcquisitionOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.Identity.Web.TokenAcquisitionOptions" RefType="this" />
+        <Parameter Name="partitionKeys" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="options">The token acquisition options.</param>
+        <param name="partitionKeys">The partition key-value pairs.</param>
+        <summary>
+            Sets cache partition key-value pairs on the options. When set, the token cache
+            lookup and storage will include these components, isolating cached tokens from
+            entries that have different (or no) partition keys.
+            </summary>
+        <returns>The options instance for chaining.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

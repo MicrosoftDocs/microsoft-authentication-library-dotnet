@@ -1,0 +1,97 @@
+<Type Name="MtlsBindingStrength" FullName="Microsoft.Identity.Client.AppConfig.MtlsBindingStrength">
+  <TypeSignature Language="C#" Value="public enum MtlsBindingStrength" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MtlsBindingStrength extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Client.AppConfig.MtlsBindingStrength" />
+  <TypeSignature Language="VB.NET" Value="Public Enum MtlsBindingStrength" />
+  <TypeSignature Language="F#" Value="type MtlsBindingStrength = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+    <AssemblyVersion>4.84.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Describes the strength with which a token can be bound to a cryptographic key on the
+            current host. Higher values indicate stronger binding. The value reflects what the host
+            is capable of producing, not what a particular request used.
+            </summary>
+    <remarks>
+            This type is shared by managed identity and confidential client mTLS Proof-of-Possession
+            scenarios. A value greater than <see cref="F:Microsoft.Identity.Client.AppConfig.MtlsBindingStrength.None" /> means the host can bind a token to a
+            key; it does <b>not</b> by itself imply hardware attestation. Attestation corresponds to
+            the <see cref="F:Microsoft.Identity.Client.AppConfig.MtlsBindingStrength.KeyGuard" /> tier specifically.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="KeyGuard">
+      <MemberSignature Language="C#" Value="KeyGuard" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Identity.Client.AppConfig.MtlsBindingStrength KeyGuard = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Client.AppConfig.MtlsBindingStrength.KeyGuard" />
+      <MemberSignature Language="VB.NET" Value="KeyGuard" />
+      <MemberSignature Language="F#" Value="KeyGuard = 3" Usage="Microsoft.Identity.Client.AppConfig.MtlsBindingStrength.KeyGuard" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.AppConfig.MtlsBindingStrength</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>
+            The token can be bound to a key isolated by Virtualization-based Security (VBS), such
+            as KeyGuard on a Trusted Launch (TVM) or Confidential (CVM) virtual machine. This is
+            the only tier that implies hardware-backed attestation.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Identity.Client.AppConfig.MtlsBindingStrength None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Client.AppConfig.MtlsBindingStrength.None" />
+      <MemberSignature Language="VB.NET" Value="None" />
+      <MemberSignature Language="F#" Value="None = 0" Usage="Microsoft.Identity.Client.AppConfig.MtlsBindingStrength.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.AppConfig.MtlsBindingStrength</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            No key binding is available, so the host cannot perform mTLS Proof-of-Possession. This
+            is the floor of the range (for example, on .NET Framework 4.6.2, which does not support
+            PoP).
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Software">
+      <MemberSignature Language="C#" Value="Software" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Identity.Client.AppConfig.MtlsBindingStrength Software = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Client.AppConfig.MtlsBindingStrength.Software" />
+      <MemberSignature Language="VB.NET" Value="Software" />
+      <MemberSignature Language="F#" Value="Software = 1" Usage="Microsoft.Identity.Client.AppConfig.MtlsBindingStrength.Software" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.84.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.AppConfig.MtlsBindingStrength</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            The token can be bound to a software-backed key (for example, a persisted CNG key on
+            Windows, or a software RSA key elsewhere). The key is not hardware-isolated.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
