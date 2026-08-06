@@ -60,6 +60,7 @@
     <AssemblyVersion>4.84.2.0</AssemblyVersion>
     <AssemblyVersion>4.85.1.0</AssemblyVersion>
     <AssemblyVersion>4.85.2.0</AssemblyVersion>
+    <AssemblyVersion>4.87.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -80,7 +81,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -99,7 +100,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -121,7 +122,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.CancellationToken</ReturnType>
@@ -143,7 +144,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -165,7 +166,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -187,7 +188,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
@@ -211,7 +212,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -233,7 +234,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Guid</ReturnType>
@@ -242,6 +243,32 @@
         <summary>
             Correlation ID of the authentication request. Use this to propagate the same correlation ID 
             to downstream token requests (e.g., Managed Identity) for coherent end-to-end tracing.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OtelTagsEnricher">
+      <MemberSignature Language="C#" Value="public Action&lt;Microsoft.Identity.Client.Extensibility.ExecutionResult,System.Collections.Generic.IList&lt;System.Collections.Generic.KeyValuePair&lt;string,object&gt;&gt;&gt; OtelTagsEnricher { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Action`2&lt;class Microsoft.Identity.Client.Extensibility.ExecutionResult, class System.Collections.Generic.IList`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;string, object&gt;&gt;&gt; OtelTagsEnricher" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.AssertionRequestOptions.OtelTagsEnricher" />
+      <MemberSignature Language="VB.NET" Value="Public Property OtelTagsEnricher As Action(Of ExecutionResult, IList(Of KeyValuePair(Of String, Object)))" />
+      <MemberSignature Language="F#" Value="member this.OtelTagsEnricher : Action&lt;Microsoft.Identity.Client.Extensibility.ExecutionResult, System.Collections.Generic.IList&lt;System.Collections.Generic.KeyValuePair&lt;string, obj&gt;&gt;&gt; with get, set" Usage="Microsoft.Identity.Client.AssertionRequestOptions.OtelTagsEnricher" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Action&lt;Microsoft.Identity.Client.Extensibility.ExecutionResult,System.Collections.Generic.IList&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.Object&gt;&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The OpenTelemetry tags enricher configured on the outer request via <c>WithOtelTagsEnricher</c>, if any.
+            When the client-assertion callback acquires the assertion by issuing another token request
+            (e.g. via <c>ITokenAcquirer.GetTokenForAppAsync</c> for a Federated Identity Credential), forward this
+            delegate to that inner request so the inner acquisition's metrics carry the same enrichment tags as the
+            outer request. Null when no enricher was configured.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -256,7 +283,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -278,7 +305,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>

@@ -1,0 +1,62 @@
+<Type Name="ManagedIdentityApplicationBuilderExtensions" FullName="Microsoft.Identity.Client.Extensibility.ManagedIdentityApplicationBuilderExtensions">
+  <TypeSignature Language="C#" Value="public static class ManagedIdentityApplicationBuilderExtensions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ManagedIdentityApplicationBuilderExtensions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Client.Extensibility.ManagedIdentityApplicationBuilderExtensions" />
+  <TypeSignature Language="VB.NET" Value="Public Module ManagedIdentityApplicationBuilderExtensions" />
+  <TypeSignature Language="F#" Value="type ManagedIdentityApplicationBuilderExtensions = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+    <AssemblyVersion>4.87.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Extensibility methods for <see cref="T:Microsoft.Identity.Client.ManagedIdentityApplicationBuilder" />.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="OnBackgroundTokenRefreshCompleted">
+      <MemberSignature Language="C#" Value="public static Microsoft.Identity.Client.ManagedIdentityApplicationBuilder OnBackgroundTokenRefreshCompleted (this Microsoft.Identity.Client.ManagedIdentityApplicationBuilder builder, Func&lt;Microsoft.Identity.Client.Extensibility.ExecutionResult,System.Threading.Tasks.Task&gt; onBackgroundTokenRefreshCompleted);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Identity.Client.ManagedIdentityApplicationBuilder OnBackgroundTokenRefreshCompleted(class Microsoft.Identity.Client.ManagedIdentityApplicationBuilder builder, class System.Func`2&lt;class Microsoft.Identity.Client.Extensibility.ExecutionResult, class System.Threading.Tasks.Task&gt; onBackgroundTokenRefreshCompleted) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.Extensibility.ManagedIdentityApplicationBuilderExtensions.OnBackgroundTokenRefreshCompleted(Microsoft.Identity.Client.ManagedIdentityApplicationBuilder,System.Func{Microsoft.Identity.Client.Extensibility.ExecutionResult,System.Threading.Tasks.Task})" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function OnBackgroundTokenRefreshCompleted (builder As ManagedIdentityApplicationBuilder, onBackgroundTokenRefreshCompleted As Func(Of ExecutionResult, Task)) As ManagedIdentityApplicationBuilder" />
+      <MemberSignature Language="F#" Value="static member OnBackgroundTokenRefreshCompleted : Microsoft.Identity.Client.ManagedIdentityApplicationBuilder * Func&lt;Microsoft.Identity.Client.Extensibility.ExecutionResult, System.Threading.Tasks.Task&gt; -&gt; Microsoft.Identity.Client.ManagedIdentityApplicationBuilder" Usage="Microsoft.Identity.Client.Extensibility.ManagedIdentityApplicationBuilderExtensions.OnBackgroundTokenRefreshCompleted (builder, onBackgroundTokenRefreshCompleted)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.ManagedIdentityApplicationBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="builder" Type="Microsoft.Identity.Client.ManagedIdentityApplicationBuilder" RefType="this" />
+        <Parameter Name="onBackgroundTokenRefreshCompleted" Type="System.Func&lt;Microsoft.Identity.Client.Extensibility.ExecutionResult,System.Threading.Tasks.Task&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="builder">The managed identity application builder.</param>
+        <param name="onBackgroundTokenRefreshCompleted">
+            An async callback that receives the <see cref="T:Microsoft.Identity.Client.Extensibility.ExecutionResult" /> of the background refresh. On success,
+            <see cref="P:Microsoft.Identity.Client.Extensibility.ExecutionResult.Result" /> holds the refreshed token; on failure, <see cref="P:Microsoft.Identity.Client.Extensibility.ExecutionResult.Exception" />
+            holds the exception, whose <see cref="P:Microsoft.Identity.Client.MsalException.AuthenticationResultMetadata" /> carries the failed
+            attempt's HTTP duration.
+            </param>
+        <summary>
+            Configures an async callback invoked when a fire-and-forget background (proactive) token refresh completes.
+            Proactive refresh runs on a background thread after the caller has already received a valid cached token,
+            so its outcome (latency, failures) is otherwise unobservable. This callback surfaces it, e.g. for telemetry.
+            </summary>
+        <returns>The builder to chain additional configuration calls.</returns>
+        <remarks>
+          <para>Invoked on a background thread. Check <see cref="P:Microsoft.Identity.Client.Extensibility.ExecutionResult.Successful" /> to determine the outcome.</para>
+          <para>Exceptions thrown by this callback are caught and logged internally so they cannot disrupt the refresh.</para>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="onBackgroundTokenRefreshCompleted" /> is null.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

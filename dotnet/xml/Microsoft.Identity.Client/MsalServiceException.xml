@@ -60,6 +60,7 @@
     <AssemblyVersion>4.84.2.0</AssemblyVersion>
     <AssemblyVersion>4.85.1.0</AssemblyVersion>
     <AssemblyVersion>4.85.2.0</AssemblyVersion>
+    <AssemblyVersion>4.87.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Identity.Client.MsalException</BaseTypeName>
@@ -82,7 +83,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="errorCode" Type="System.String" />
@@ -111,7 +112,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="errorCode" Type="System.String" />
@@ -145,7 +146,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="errorCode" Type="System.String" />
@@ -176,7 +177,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="errorCode" Type="System.String" />
@@ -212,7 +213,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="errorCode" Type="System.String" />
@@ -250,7 +251,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -276,6 +277,32 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="ErrorCodesForLogging">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IReadOnlyList&lt;string&gt; ErrorCodesForLogging { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IReadOnlyList`1&lt;string&gt; ErrorCodesForLogging" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.MsalServiceException.ErrorCodesForLogging" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ErrorCodesForLogging As IReadOnlyList(Of String)" />
+      <MemberSignature Language="F#" Value="member this.ErrorCodesForLogging : System.Collections.Generic.IReadOnlyList&lt;string&gt;" Usage="Microsoft.Identity.Client.MsalServiceException.ErrorCodesForLogging" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IReadOnlyList&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The list of STS-specific error codes returned by the token service (for example the
+            numeric <c>AADSTS</c> codes such as <c>50076</c>, <c>50079</c>) that refine
+            <see cref="P:Microsoft.Identity.Client.MsalException.ErrorCode" />. Values are emitted by the service and may change
+            without notice; intended for diagnostics and logging — do not branch production behavior
+            on this value. Returns <see langword="null" /> when the service did not supply error codes.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Headers">
       <MemberSignature Language="C#" Value="public System.Net.Http.Headers.HttpResponseHeaders Headers { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Http.Headers.HttpResponseHeaders Headers" />
@@ -285,7 +312,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Net.Http.Headers.HttpResponseHeaders</ReturnType>
@@ -310,7 +337,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -332,7 +359,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -356,7 +383,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -381,7 +408,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -404,7 +431,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

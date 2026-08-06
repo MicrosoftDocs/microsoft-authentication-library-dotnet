@@ -1,0 +1,74 @@
+<Type Name="AbstractManagedIdentityAcquireTokenParameterBuilderExtension" FullName="Microsoft.Identity.Client.Extensibility.AbstractManagedIdentityAcquireTokenParameterBuilderExtension">
+  <TypeSignature Language="C#" Value="public static class AbstractManagedIdentityAcquireTokenParameterBuilderExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit AbstractManagedIdentityAcquireTokenParameterBuilderExtension extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Client.Extensibility.AbstractManagedIdentityAcquireTokenParameterBuilderExtension" />
+  <TypeSignature Language="VB.NET" Value="Public Module AbstractManagedIdentityAcquireTokenParameterBuilderExtension" />
+  <TypeSignature Language="F#" Value="type AbstractManagedIdentityAcquireTokenParameterBuilderExtension = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+    <AssemblyVersion>4.87.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Extension methods for managed identity acquire-token requests
+            (<see cref="T:Microsoft.Identity.Client.AbstractManagedIdentityAcquireTokenParameterBuilder`1" />).
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="WithOtelTagsEnricher&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static Microsoft.Identity.Client.AbstractManagedIdentityAcquireTokenParameterBuilder&lt;T&gt; WithOtelTagsEnricher&lt;T&gt; (this Microsoft.Identity.Client.AbstractManagedIdentityAcquireTokenParameterBuilder&lt;T&gt; builder, Action&lt;Microsoft.Identity.Client.Extensibility.ExecutionResult,System.Collections.Generic.IList&lt;System.Collections.Generic.KeyValuePair&lt;string,object&gt;&gt;&gt; tagsEnricher) where T : Microsoft.Identity.Client.AbstractManagedIdentityAcquireTokenParameterBuilder&lt;T&gt;;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Identity.Client.AbstractManagedIdentityAcquireTokenParameterBuilder`1&lt;!!T&gt; WithOtelTagsEnricher&lt;(class Microsoft.Identity.Client.AbstractManagedIdentityAcquireTokenParameterBuilder`1&lt;!!T&gt;) T&gt;(class Microsoft.Identity.Client.AbstractManagedIdentityAcquireTokenParameterBuilder`1&lt;!!T&gt; builder, class System.Action`2&lt;class Microsoft.Identity.Client.Extensibility.ExecutionResult, class System.Collections.Generic.IList`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;string, object&gt;&gt;&gt; tagsEnricher) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.Extensibility.AbstractManagedIdentityAcquireTokenParameterBuilderExtension.WithOtelTagsEnricher``1(Microsoft.Identity.Client.AbstractManagedIdentityAcquireTokenParameterBuilder{``0},System.Action{Microsoft.Identity.Client.Extensibility.ExecutionResult,System.Collections.Generic.IList{System.Collections.Generic.KeyValuePair{System.String,System.Object}}})" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function WithOtelTagsEnricher(Of T As AbstractManagedIdentityAcquireTokenParameterBuilder(Of T)) (builder As AbstractManagedIdentityAcquireTokenParameterBuilder(Of T), tagsEnricher As Action(Of ExecutionResult, IList(Of KeyValuePair(Of String, Object)))) As AbstractManagedIdentityAcquireTokenParameterBuilder(Of T)" />
+      <MemberSignature Language="F#" Value="static member WithOtelTagsEnricher : Microsoft.Identity.Client.AbstractManagedIdentityAcquireTokenParameterBuilder&lt;'T (requires 'T :&gt; Microsoft.Identity.Client.AbstractManagedIdentityAcquireTokenParameterBuilder&lt;'T&gt;)&gt; * Action&lt;Microsoft.Identity.Client.Extensibility.ExecutionResult, System.Collections.Generic.IList&lt;System.Collections.Generic.KeyValuePair&lt;string, obj&gt;&gt;&gt; -&gt; Microsoft.Identity.Client.AbstractManagedIdentityAcquireTokenParameterBuilder&lt;'T (requires 'T :&gt; Microsoft.Identity.Client.AbstractManagedIdentityAcquireTokenParameterBuilder&lt;'T&gt;)&gt; (requires 'T :&gt; Microsoft.Identity.Client.AbstractManagedIdentityAcquireTokenParameterBuilder&lt;'T&gt;)" Usage="Microsoft.Identity.Client.Extensibility.AbstractManagedIdentityAcquireTokenParameterBuilderExtension.WithOtelTagsEnricher (builder, tagsEnricher)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.AbstractManagedIdentityAcquireTokenParameterBuilder&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <BaseTypeName>Microsoft.Identity.Client.AbstractManagedIdentityAcquireTokenParameterBuilder&lt;T&gt;</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="builder" Type="Microsoft.Identity.Client.AbstractManagedIdentityAcquireTokenParameterBuilder&lt;T&gt;" RefType="this" />
+        <Parameter Name="tagsEnricher" Type="System.Action&lt;Microsoft.Identity.Client.Extensibility.ExecutionResult,System.Collections.Generic.IList&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.Object&gt;&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">The concrete managed identity builder type.</typeparam>
+        <param name="builder">The builder to chain options to.</param>
+        <param name="tagsEnricher">
+            A delegate that receives the <see cref="T:Microsoft.Identity.Client.Extensibility.ExecutionResult" /> and a mutable list of tags to enrich.
+            The delegate runs on MSAL's metric-recording path, so it should be fast, non-blocking and must not throw.
+            The supplied tag list must be populated synchronously; do not retain or mutate it after the delegate returns.
+            </param>
+        <summary>
+            Registers a delegate that adds additional tags (dimensions) to the OpenTelemetry metrics MSAL emits
+            for this managed identity token acquisition. The delegate is invoked while MSAL records its metrics and
+            receives the <see cref="T:Microsoft.Identity.Client.Extensibility.ExecutionResult" /> of the acquisition (indicating success or failure, with the
+            result or exception) together with a mutable list of tags. Tags appended to that list are attached to
+            every metric recorded for the request, including metrics emitted during proactive background refresh.
+            </summary>
+        <returns>The builder to chain the .With methods.</returns>
+        <remarks>
+            Keep both the number of added tags and — more importantly — their value cardinality low. High-cardinality
+            tag values (such as correlation ids, timestamps, or user identifiers) can cause an unbounded number of
+            metric time series in the downstream telemetry backend. The tags are applied to every metric MSAL records
+            for the request, so a large number of tags also adds overhead on the metric-recording path.
+            </remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="tagsEnricher" /> is null.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

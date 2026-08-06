@@ -60,6 +60,7 @@
     <AssemblyVersion>4.84.2.0</AssemblyVersion>
     <AssemblyVersion>4.85.1.0</AssemblyVersion>
     <AssemblyVersion>4.85.2.0</AssemblyVersion>
+    <AssemblyVersion>4.87.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Exception</BaseTypeName>
@@ -82,7 +83,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -101,7 +102,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="errorCode" Type="System.String" />
@@ -127,7 +128,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="errorCode" Type="System.String" />
@@ -155,7 +156,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="errorCode" Type="System.String" />
@@ -189,7 +190,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IReadOnlyDictionary&lt;System.String,System.String&gt;</ReturnType>
@@ -202,6 +203,64 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="AuthenticationResultMetadata">
+      <MemberSignature Language="C#" Value="public Microsoft.Identity.Client.AuthenticationResultMetadata AuthenticationResultMetadata { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Identity.Client.AuthenticationResultMetadata AuthenticationResultMetadata" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.MsalException.AuthenticationResultMetadata" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AuthenticationResultMetadata As AuthenticationResultMetadata" />
+      <MemberSignature Language="F#" Value="member this.AuthenticationResultMetadata : Microsoft.Identity.Client.AuthenticationResultMetadata" Usage="Microsoft.Identity.Client.MsalException.AuthenticationResultMetadata" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.AuthenticationResultMetadata</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Diagnostic metadata for the failed token-acquisition attempt — the total duration and, when the
+            relevant stage ran, HTTP/cache durations, token endpoint, and region used. This is
+            <see langword="null" /> when the exception was thrown before the request pipeline started collecting
+            metadata (for example, parameter or builder validation). When it is non-null — the typical
+            in-request failure — <see cref="P:Microsoft.Identity.Client.AuthenticationResultMetadata.DurationTotalInMs" /> is always
+            populated (useful for latency measurement), while the other fields may be 0/null when the
+            corresponding stage did not run. On a failure
+            <see cref="P:Microsoft.Identity.Client.AuthenticationResultMetadata.TokenSource" /> has no meaningful value and should not be
+            relied on. Reuses the type returned by <see cref="P:Microsoft.Identity.Client.AuthenticationResult.AuthenticationResultMetadata" />
+            on the success path.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Populated in-process after the request completes; it is intentionally not part of the exception's
+            JSON serialization, so it is not preserved if the exception is marshaled across a process boundary.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthenticationResultMetadataKey">
+      <MemberSignature Language="C#" Value="public const string AuthenticationResultMetadataKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string AuthenticationResultMetadataKey" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Client.MsalException.AuthenticationResultMetadataKey" />
+      <MemberSignature Language="VB.NET" Value="Public Const AuthenticationResultMetadataKey As String " />
+      <MemberSignature Language="F#" Value="val mutable AuthenticationResultMetadataKey : string" Usage="Microsoft.Identity.Client.MsalException.AuthenticationResultMetadataKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            A key on <see cref="P:System.Exception.Data" /> under which MSAL stores the
+            <see cref="P:Microsoft.Identity.Client.MsalException.AuthenticationResultMetadata" /> captured when a token acquisition fails with a
+            non-<see cref="T:Microsoft.Identity.Client.MsalException" />. Lets downstream consumers surface token-acquisition diagnostics
+            even though the originating exception is re-thrown unchanged.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="BrokerErrorCode">
       <MemberSignature Language="C#" Value="public const string BrokerErrorCode;" />
       <MemberSignature Language="ILAsm" Value=".field public static literal string BrokerErrorCode" />
@@ -211,7 +270,7 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -232,7 +291,7 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -253,7 +312,7 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -274,7 +333,7 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -295,7 +354,7 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -316,7 +375,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -338,7 +397,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -362,7 +421,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.MsalException</ReturnType>
@@ -388,7 +447,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -410,7 +469,7 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -431,7 +490,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -454,7 +513,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>

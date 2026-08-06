@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-model-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.Identity.Abstractions" Version="12.4.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.Azure" Version="4.12.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.Certificate" Version="4.12.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="4.12.0.0" />
-    <Assembly Name="Microsoft.Identity.Web" Version="4.12.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.DownstreamApi" Version="4.12.0.0" />
+    <Assembly Name="Microsoft.Identity.Abstractions" Version="12.6.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.Azure" Version="4.14.2.0" />
+    <Assembly Name="Microsoft.Identity.Web.Certificate" Version="4.14.2.0" />
+    <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="4.14.2.0" />
+    <Assembly Name="Microsoft.Identity.Web" Version="4.14.2.0" />
+    <Assembly Name="Microsoft.Identity.Web.DownstreamApi" Version="4.14.2.0" />
     <Assembly Name="Microsoft.Identity.Web.DownstreamRestApi" Version="2.0.8.0" />
-    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraph" Version="4.12.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraphBeta" Version="4.12.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.OWIN" Version="4.12.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.TokenAcquisition" Version="4.12.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.TokenCache" Version="4.12.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.UI" Version="4.12.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraph" Version="4.14.2.0" />
+    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraphBeta" Version="4.14.2.0" />
+    <Assembly Name="Microsoft.Identity.Web.OWIN" Version="4.14.2.0" />
+    <Assembly Name="Microsoft.Identity.Web.TokenAcquisition" Version="4.14.2.0" />
+    <Assembly Name="Microsoft.Identity.Web.TokenCache" Version="4.14.2.0" />
+    <Assembly Name="Microsoft.Identity.Web.UI" Version="4.14.2.0" />
   </Assemblies>
   <Namespace Name="Microsoft.Identity.Abstractions">
     <Type Name="Microsoft.Identity.Abstractions.AcquiredTokenCacheLevel" Id="T:Microsoft.Identity.Abstractions.AcquiredTokenCacheLevel">
@@ -113,6 +113,8 @@
       <Member Id="P:Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions.BaseUrl" />
       <Member Id="P:Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions.CustomizeHttpRequestMessage" />
       <Member Id="P:Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions.HttpMethod" />
+      <Member Id="P:Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions.OnAfterAuthHeaderCreation" />
+      <Member Id="P:Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions.OnBeforeAuthHeaderCreation" />
       <Member Id="P:Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions.ProtocolScheme" />
       <Member Id="P:Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions.RelativePath" />
       <Member Id="P:Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions.RequestAppToken" />
@@ -368,6 +370,7 @@
       <Member Id="P:Microsoft.Identity.Abstractions.TokenAcquisitionFailureDetails.Claims" />
       <Member Id="P:Microsoft.Identity.Abstractions.TokenAcquisitionFailureDetails.CorrelationId" />
       <Member Id="P:Microsoft.Identity.Abstractions.TokenAcquisitionFailureDetails.ErrorCode" />
+      <Member Id="P:Microsoft.Identity.Abstractions.TokenAcquisitionFailureDetails.ServiceErrorCodes" />
       <Member Id="P:Microsoft.Identity.Abstractions.TokenAcquisitionFailureDetails.StatusCode" />
       <Member Id="P:Microsoft.Identity.Abstractions.TokenAcquisitionFailureDetails.SubError" />
     </Type>
@@ -395,6 +398,7 @@
     </Type>
     <Type Name="Microsoft.Identity.Web.ApiControllerExtensions" Id="T:Microsoft.Identity.Web.ApiControllerExtensions">
       <Member Id="M:Microsoft.Identity.Web.ApiControllerExtensions.GetAuthorizationHeaderProvider(System.Web.Http.ApiController)" />
+      <Member Id="M:Microsoft.Identity.Web.ApiControllerExtensions.GetAuthorizationHeaderProvider2(System.Web.Http.ApiController)" />
       <Member Id="M:Microsoft.Identity.Web.ApiControllerExtensions.GetDownstreamApi(System.Web.Http.ApiController)" />
       <Member Id="M:Microsoft.Identity.Web.ApiControllerExtensions.GetGraphServiceClient(System.Web.Http.ApiController)" />
     </Type>
@@ -567,6 +571,7 @@
     </Type>
     <Type Name="Microsoft.Identity.Web.ControllerBaseExtensions" Id="T:Microsoft.Identity.Web.ControllerBaseExtensions">
       <Member Id="M:Microsoft.Identity.Web.ControllerBaseExtensions.GetAuthorizationHeaderProvider(System.Web.Mvc.ControllerBase)" />
+      <Member Id="M:Microsoft.Identity.Web.ControllerBaseExtensions.GetAuthorizationHeaderProvider2(System.Web.Mvc.ControllerBase)" />
       <Member Id="M:Microsoft.Identity.Web.ControllerBaseExtensions.GetDownstreamApi(System.Web.Mvc.ControllerBase)" />
       <Member Id="M:Microsoft.Identity.Web.ControllerBaseExtensions.GetGraphServiceClient(System.Web.Mvc.ControllerBase)" />
     </Type>
@@ -808,6 +813,7 @@
       <Member Id="P:Microsoft.Identity.Web.MicrosoftIdentityOptions.ExtraQueryParameters" />
       <Member Id="P:Microsoft.Identity.Web.MicrosoftIdentityOptions.Instance" />
       <Member Id="P:Microsoft.Identity.Web.MicrosoftIdentityOptions.LegacyCacheCompatibilityEnabled" />
+      <Member Id="P:Microsoft.Identity.Web.MicrosoftIdentityOptions.PartitionAppTokenCacheByAudience" />
       <Member Id="P:Microsoft.Identity.Web.MicrosoftIdentityOptions.ResetPasswordPath" />
       <Member Id="P:Microsoft.Identity.Web.MicrosoftIdentityOptions.ResetPasswordPolicyId" />
       <Member Id="P:Microsoft.Identity.Web.MicrosoftIdentityOptions.SendX5C" />
@@ -815,6 +821,7 @@
       <Member Id="P:Microsoft.Identity.Web.MicrosoftIdentityOptions.TenantId" />
       <Member Id="P:Microsoft.Identity.Web.MicrosoftIdentityOptions.TokenDecryptionCertificates" />
       <Member Id="P:Microsoft.Identity.Web.MicrosoftIdentityOptions.TokenDecryptionCredentials" />
+      <Member Id="P:Microsoft.Identity.Web.MicrosoftIdentityOptions.UseFastUnboundedCache" />
       <Member Id="P:Microsoft.Identity.Web.MicrosoftIdentityOptions.UserAssignedManagedIdentityClientId" />
       <Member Id="P:Microsoft.Identity.Web.MicrosoftIdentityOptions.WithSpaAuthCode" />
     </Type>
@@ -954,6 +961,7 @@
       <Member Id="E:Microsoft.Identity.Web.TokenAcquisitionExtensionOptions.OnBeforeTokenAcquisitionForTestUser" />
       <Member Id="E:Microsoft.Identity.Web.TokenAcquisitionExtensionOptions.OnBeforeTokenAcquisitionForTestUserAsync" />
       <Member Id="M:Microsoft.Identity.Web.TokenAcquisitionExtensionOptions.#ctor" />
+      <Member Id="P:Microsoft.Identity.Web.TokenAcquisitionExtensionOptions.OnBackgroundTokenRefreshCompleted" />
     </Type>
     <Type Name="Microsoft.Identity.Web.TokenAcquisitionOptions" Id="T:Microsoft.Identity.Web.TokenAcquisitionOptions">
       <Member Id="M:Microsoft.Identity.Web.TokenAcquisitionOptions.#ctor" />

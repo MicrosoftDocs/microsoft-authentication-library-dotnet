@@ -17,6 +17,7 @@
     <AssemblyVersion>12.1.0.0</AssemblyVersion>
     <AssemblyVersion>12.2.0.0</AssemblyVersion>
     <AssemblyVersion>12.4.0.0</AssemblyVersion>
+    <AssemblyVersion>12.6.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -44,7 +45,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -63,7 +64,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="other" Type="Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions" />
@@ -85,7 +86,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Abstractions.AcquireTokenOptions</ReturnType>
@@ -107,7 +108,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -135,7 +136,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions</ReturnType>
@@ -158,7 +159,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions</ReturnType>
@@ -181,7 +182,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -211,7 +212,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -234,7 +235,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -253,6 +254,74 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="OnAfterAuthHeaderCreation">
+      <MemberSignature Language="C#" Value="public Action&lt;System.Net.Http.HttpRequestMessage&gt;? OnAfterAuthHeaderCreation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Action`1&lt;class System.Net.Http.HttpRequestMessage&gt; OnAfterAuthHeaderCreation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions.OnAfterAuthHeaderCreation" />
+      <MemberSignature Language="VB.NET" Value="Public Property OnAfterAuthHeaderCreation As Action(Of HttpRequestMessage)" />
+      <MemberSignature Language="F#" Value="member this.OnAfterAuthHeaderCreation : Action&lt;System.Net.Http.HttpRequestMessage&gt; with get, set" Usage="Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions.OnAfterAuthHeaderCreation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Action&lt;System.Net.Http.HttpRequestMessage&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Provides an opportunity for the caller app to customize the <see cref="T:System.Net.Http.HttpRequestMessage" /><b>after</b>
+            the authorization header (including the <c>Authorization</c> header) has been set, and just before the
+            message is sent — the point at which the finalized request can be read or adjusted. Provided for naming
+            symmetry with <see cref="P:Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions.OnBeforeAuthHeaderCreation" />; it shares this timing with the pre-existing
+            <see cref="P:Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions.CustomizeHttpRequestMessage" />, which continues to be invoked for backwards compatibility. When
+            both are set they run at the same point, so callers should not depend on their relative order. Do
+            not modify material bound by a request-binding protocol (SHR <c>q</c>/<c>h</c>/<c>b</c>) here, since it
+            runs after signing; use <see cref="P:Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions.OnBeforeAuthHeaderCreation" /> for that.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBeforeAuthHeaderCreation">
+      <MemberSignature Language="C#" Value="public Action&lt;System.Net.Http.HttpRequestMessage&gt;? OnBeforeAuthHeaderCreation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Action`1&lt;class System.Net.Http.HttpRequestMessage&gt; OnBeforeAuthHeaderCreation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions.OnBeforeAuthHeaderCreation" />
+      <MemberSignature Language="VB.NET" Value="Public Property OnBeforeAuthHeaderCreation As Action(Of HttpRequestMessage)" />
+      <MemberSignature Language="F#" Value="member this.OnBeforeAuthHeaderCreation : Action&lt;System.Net.Http.HttpRequestMessage&gt; with get, set" Usage="Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions.OnBeforeAuthHeaderCreation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Action&lt;System.Net.Http.HttpRequestMessage&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Provides an opportunity for the caller app to customize the <see cref="T:System.Net.Http.HttpRequestMessage" /><b>before</b>
+            the authorization header is created. At this point the <c>Authorization</c> header is not yet present.
+            Use this to shape the request that a request-binding protocol signs — for example a SignedHttpRequest
+            (SHR) that binds the query, headers, or body (the <c>q</c>/<c>h</c>/<c>b</c> claims) to the token — so the
+            signature covers the finalized request. To observe or adjust the request <b>after</b> the header has been
+            created, use <see cref="P:Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions.OnAfterAuthHeaderCreation" /> (or <see cref="P:Microsoft.Identity.Abstractions.AuthorizationHeaderProviderOptions.CustomizeHttpRequestMessage" />).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="ProtocolScheme">
       <MemberSignature Language="C#" Value="public string ProtocolScheme { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string ProtocolScheme" />
@@ -262,7 +331,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -290,7 +359,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -312,7 +381,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>

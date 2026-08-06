@@ -60,6 +60,7 @@
     <AssemblyVersion>4.84.2.0</AssemblyVersion>
     <AssemblyVersion>4.85.1.0</AssemblyVersion>
     <AssemblyVersion>4.85.2.0</AssemblyVersion>
+    <AssemblyVersion>4.87.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Enum</BaseTypeName>
@@ -80,7 +81,7 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.Region.RegionOutcome</ReturnType>
@@ -101,7 +102,7 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.Region.RegionOutcome</ReturnType>
@@ -122,7 +123,7 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.Region.RegionOutcome</ReturnType>
@@ -130,7 +131,28 @@
       <MemberValue>0</MemberValue>
       <Docs>
         <summary>
-            Indicates that the API .WithAzureRegion() was not used
+            Indicates that no region outcome was recorded.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UserProvided">
+      <MemberSignature Language="C#" Value="UserProvided" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Identity.Client.Region.RegionOutcome UserProvided = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Client.Region.RegionOutcome.UserProvided" />
+      <MemberSignature Language="VB.NET" Value="UserProvided" />
+      <MemberSignature Language="F#" Value="UserProvided = 6" Usage="Microsoft.Identity.Client.Region.RegionOutcome.UserProvided" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.Region.RegionOutcome</ReturnType>
+      </ReturnValue>
+      <MemberValue>6</MemberValue>
+      <Docs>
+        <summary>
+            Region provided by the user and used without auto-detection.
             </summary>
       </Docs>
     </Member>
@@ -143,15 +165,21 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("MSAL no longer performs auto-discovery for explicitly configured regions. Use UserProvided instead.", false)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("MSAL no longer performs auto-discovery for explicitly configured regions. Use UserProvided instead.", false)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.Region.RegionOutcome</ReturnType>
       </ReturnValue>
       <MemberValue>2</MemberValue>
       <Docs>
         <summary>
-            Region provided by the user, auto detection cannot be done
+            Region provided by the user, auto detection cannot be done.
             </summary>
       </Docs>
     </Member>
@@ -164,15 +192,21 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("MSAL no longer performs auto-discovery for explicitly configured regions. Use UserProvided instead.", false)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("MSAL no longer performs auto-discovery for explicitly configured regions. Use UserProvided instead.", false)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.Region.RegionOutcome</ReturnType>
       </ReturnValue>
       <MemberValue>3</MemberValue>
       <Docs>
         <summary>
-            Region provided by the user, does not match auto detected region
+            Region provided by the user, does not match auto detected region.
             </summary>
       </Docs>
     </Member>
@@ -185,15 +219,21 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("MSAL no longer performs auto-discovery for explicitly configured regions. Use UserProvided instead.", false)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("MSAL no longer performs auto-discovery for explicitly configured regions. Use UserProvided instead.", false)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.Region.RegionOutcome</ReturnType>
       </ReturnValue>
       <MemberValue>1</MemberValue>
       <Docs>
         <summary>
-            Region provided by the user, matches auto detected region
+            Region provided by the user, matches auto detected region.
             </summary>
       </Docs>
     </Member>

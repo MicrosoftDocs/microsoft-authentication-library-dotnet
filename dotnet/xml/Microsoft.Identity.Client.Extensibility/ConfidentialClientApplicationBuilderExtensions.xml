@@ -60,6 +60,7 @@
     <AssemblyVersion>4.84.2.0</AssemblyVersion>
     <AssemblyVersion>4.85.1.0</AssemblyVersion>
     <AssemblyVersion>4.85.2.0</AssemblyVersion>
+    <AssemblyVersion>4.87.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -71,6 +72,45 @@
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
+    <Member MemberName="OnBackgroundTokenRefreshCompleted">
+      <MemberSignature Language="C#" Value="public static Microsoft.Identity.Client.ConfidentialClientApplicationBuilder OnBackgroundTokenRefreshCompleted (this Microsoft.Identity.Client.ConfidentialClientApplicationBuilder builder, Func&lt;Microsoft.Identity.Client.Extensibility.ExecutionResult,System.Threading.Tasks.Task&gt; onBackgroundTokenRefreshCompleted);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Identity.Client.ConfidentialClientApplicationBuilder OnBackgroundTokenRefreshCompleted(class Microsoft.Identity.Client.ConfidentialClientApplicationBuilder builder, class System.Func`2&lt;class Microsoft.Identity.Client.Extensibility.ExecutionResult, class System.Threading.Tasks.Task&gt; onBackgroundTokenRefreshCompleted) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.Extensibility.ConfidentialClientApplicationBuilderExtensions.OnBackgroundTokenRefreshCompleted(Microsoft.Identity.Client.ConfidentialClientApplicationBuilder,System.Func{Microsoft.Identity.Client.Extensibility.ExecutionResult,System.Threading.Tasks.Task})" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function OnBackgroundTokenRefreshCompleted (builder As ConfidentialClientApplicationBuilder, onBackgroundTokenRefreshCompleted As Func(Of ExecutionResult, Task)) As ConfidentialClientApplicationBuilder" />
+      <MemberSignature Language="F#" Value="static member OnBackgroundTokenRefreshCompleted : Microsoft.Identity.Client.ConfidentialClientApplicationBuilder * Func&lt;Microsoft.Identity.Client.Extensibility.ExecutionResult, System.Threading.Tasks.Task&gt; -&gt; Microsoft.Identity.Client.ConfidentialClientApplicationBuilder" Usage="Microsoft.Identity.Client.Extensibility.ConfidentialClientApplicationBuilderExtensions.OnBackgroundTokenRefreshCompleted (builder, onBackgroundTokenRefreshCompleted)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="builder" Type="Microsoft.Identity.Client.ConfidentialClientApplicationBuilder" RefType="this" />
+        <Parameter Name="onBackgroundTokenRefreshCompleted" Type="System.Func&lt;Microsoft.Identity.Client.Extensibility.ExecutionResult,System.Threading.Tasks.Task&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="builder">The confidential client application builder.</param>
+        <param name="onBackgroundTokenRefreshCompleted">
+            An async callback that receives the <see cref="T:Microsoft.Identity.Client.Extensibility.ExecutionResult" /> of the background refresh. On success,
+            <see cref="P:Microsoft.Identity.Client.Extensibility.ExecutionResult.Result" /> holds the refreshed token; on failure, <see cref="P:Microsoft.Identity.Client.Extensibility.ExecutionResult.Exception" />
+            holds the exception, whose <see cref="P:Microsoft.Identity.Client.MsalException.AuthenticationResultMetadata" /> carries the failed
+            attempt's HTTP duration.
+            </param>
+        <summary>
+            Configures an async callback invoked when a fire-and-forget background (proactive) token refresh completes.
+            Proactive refresh runs on a background thread after the caller has already received a valid cached token,
+            so its outcome (latency, failures) is otherwise unobservable. This callback surfaces it, e.g. for telemetry.
+            </summary>
+        <returns>The builder to chain additional configuration calls.</returns>
+        <remarks>
+          <para>Invoked on a background thread. Check <see cref="P:Microsoft.Identity.Client.Extensibility.ExecutionResult.Successful" /> to determine the outcome.</para>
+          <para>Exceptions thrown by this callback are caught and logged internally so they cannot disrupt the refresh.</para>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="onBackgroundTokenRefreshCompleted" /> is null.</exception>
+      </Docs>
+    </Member>
     <Member MemberName="OnCompletion">
       <MemberSignature Language="C#" Value="public static Microsoft.Identity.Client.ConfidentialClientApplicationBuilder OnCompletion (this Microsoft.Identity.Client.ConfidentialClientApplicationBuilder builder, Func&lt;Microsoft.Identity.Client.AssertionRequestOptions,Microsoft.Identity.Client.Extensibility.ExecutionResult,System.Threading.Tasks.Task&gt; onCompletion);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Identity.Client.ConfidentialClientApplicationBuilder OnCompletion(class Microsoft.Identity.Client.ConfidentialClientApplicationBuilder builder, class System.Func`3&lt;class Microsoft.Identity.Client.AssertionRequestOptions, class Microsoft.Identity.Client.Extensibility.ExecutionResult, class System.Threading.Tasks.Task&gt; onCompletion) cil managed" />
@@ -80,7 +120,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -142,7 +182,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -204,7 +244,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>
@@ -236,7 +276,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.85.2.0</AssemblyVersion>
+        <AssemblyVersion>4.87.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.ConfidentialClientApplicationBuilder</ReturnType>

@@ -8,6 +8,7 @@
     <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
     <AssemblyVersion>12.2.0.0</AssemblyVersion>
     <AssemblyVersion>12.4.0.0</AssemblyVersion>
+    <AssemblyVersion>12.6.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -25,8 +26,9 @@
             exposed by the underlying token-service exception.
             </summary>
     <remarks>
-            All members are diagnostic only. Do not program against specific values of <see cref="P:Microsoft.Identity.Abstractions.TokenAcquisitionFailureDetails.SubError" />
-            or <see cref="P:Microsoft.Identity.Abstractions.TokenAcquisitionFailureDetails.ErrorCode" />; they are set by the token service and may change without notice.
+            All members are diagnostic only. Do not program against specific values of <see cref="P:Microsoft.Identity.Abstractions.TokenAcquisitionFailureDetails.SubError" />,
+            <see cref="P:Microsoft.Identity.Abstractions.TokenAcquisitionFailureDetails.ErrorCode" />, or <see cref="P:Microsoft.Identity.Abstractions.TokenAcquisitionFailureDetails.ServiceErrorCodes" />; they are set by the token service and
+            may change without notice.
             </remarks>
   </Docs>
   <Members>
@@ -38,7 +40,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -55,7 +57,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -77,7 +79,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -99,7 +101,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -108,6 +110,36 @@
         <summary>
             Token-service error code (for example an OAuth error code or an ESTS error code).
             Mirrors <c>MsalServiceException.ErrorCode</c> when MSAL is the underlying acquirer.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceErrorCodes">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IReadOnlyList&lt;string&gt;? ServiceErrorCodes { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IReadOnlyList`1&lt;string&gt; ServiceErrorCodes" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Abstractions.TokenAcquisitionFailureDetails.ServiceErrorCodes" />
+      <MemberSignature Language="VB.NET" Value="Public Property ServiceErrorCodes As IReadOnlyList(Of String)" />
+      <MemberSignature Language="F#" Value="member this.ServiceErrorCodes : System.Collections.Generic.IReadOnlyList&lt;string&gt; with get, set" Usage="Microsoft.Identity.Abstractions.TokenAcquisitionFailureDetails.ServiceErrorCodes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IReadOnlyList&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The raw STS-specific error codes returned by the token service (for example the numeric
+            <c>AADSTS</c> codes) that further refine <see cref="P:Microsoft.Identity.Abstractions.TokenAcquisitionFailureDetails.ErrorCode" />. Mirrors
+            <c>MsalServiceException.ErrorCodesForLogging</c> when MSAL is the underlying acquirer; diagnostic only.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -122,7 +154,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
@@ -144,7 +176,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.4.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>

@@ -22,6 +22,7 @@
     <AssemblyVersion>4.10.0.0</AssemblyVersion>
     <AssemblyVersion>4.11.0.0</AssemblyVersion>
     <AssemblyVersion>4.12.0.0</AssemblyVersion>
+    <AssemblyVersion>4.14.2.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -49,12 +50,50 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
-        <AssemblyVersion>4.12.0.0</AssemblyVersion>
+        <AssemblyVersion>4.14.2.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
         <summary>To be added.</summary>
         <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBackgroundTokenRefreshCompleted">
+      <MemberSignature Language="C#" Value="public Func&lt;Microsoft.Identity.Client.Extensibility.ExecutionResult,System.Threading.Tasks.Task&gt;? OnBackgroundTokenRefreshCompleted { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Func`2&lt;class Microsoft.Identity.Client.Extensibility.ExecutionResult, class System.Threading.Tasks.Task&gt; OnBackgroundTokenRefreshCompleted" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Web.TokenAcquisitionExtensionOptions.OnBackgroundTokenRefreshCompleted" />
+      <MemberSignature Language="VB.NET" Value="Public Property OnBackgroundTokenRefreshCompleted As Func(Of ExecutionResult, Task)" />
+      <MemberSignature Language="F#" Value="member this.OnBackgroundTokenRefreshCompleted : Func&lt;Microsoft.Identity.Client.Extensibility.ExecutionResult, System.Threading.Tasks.Task&gt; with get, set" Usage="Microsoft.Identity.Web.TokenAcquisitionExtensionOptions.OnBackgroundTokenRefreshCompleted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>4.14.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1, 1 })]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1, 1 })&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;Microsoft.Identity.Client.Extensibility.ExecutionResult,System.Threading.Tasks.Task&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Callback invoked when a fire-and-forget background (proactive) token refresh completes, for confidential
+            client and managed identity applications. Proactive refresh runs on a background thread after the caller
+            has already received a valid cached token, so its outcome (latency, failures) is otherwise unobservable;
+            this callback surfaces it, for example to emit telemetry.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            The <see cref="T:Microsoft.Identity.Client.Extensibility.ExecutionResult" /> carries the refreshed token on success
+            (<see cref="P:Microsoft.Identity.Client.Extensibility.ExecutionResult.Result" />) or the exception on failure (<see cref="P:Microsoft.Identity.Client.Extensibility.ExecutionResult.Exception" />),
+            whose <see cref="P:Microsoft.Identity.Client.MsalException.AuthenticationResultMetadata" /> exposes the failed attempt's HTTP duration.
+            The callback is invoked on a background thread; exceptions it throws are caught and logged by MSAL so they
+            cannot disrupt the refresh. Set once; the same delegate is applied to every confidential client and managed
+            identity application built by Microsoft.Identity.Web.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="OnBeforeOnBehalfOfInitialized">
@@ -66,7 +105,7 @@
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
-        <AssemblyVersion>4.12.0.0</AssemblyVersion>
+        <AssemblyVersion>4.14.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Web.BeforeOnBehalfOfInitialized</ReturnType>
@@ -87,7 +126,7 @@
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
-        <AssemblyVersion>4.12.0.0</AssemblyVersion>
+        <AssemblyVersion>4.14.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Web.BeforeOnBehalfOfInitializedAsync</ReturnType>
@@ -108,7 +147,7 @@
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
-        <AssemblyVersion>4.12.0.0</AssemblyVersion>
+        <AssemblyVersion>4.14.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Web.BeforeTokenAcquisitionForApp</ReturnType>
@@ -129,7 +168,7 @@
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
-        <AssemblyVersion>4.12.0.0</AssemblyVersion>
+        <AssemblyVersion>4.14.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Web.BeforeTokenAcquisitionForOnBehalfOf</ReturnType>
@@ -151,7 +190,7 @@
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
-        <AssemblyVersion>4.12.0.0</AssemblyVersion>
+        <AssemblyVersion>4.14.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Web.BeforeTokenAcquisitionForOnBehalfOfAsync</ReturnType>
@@ -173,7 +212,7 @@
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
-        <AssemblyVersion>4.12.0.0</AssemblyVersion>
+        <AssemblyVersion>4.14.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Web.BeforeTokenAcquisitionForTestUser</ReturnType>
@@ -194,7 +233,7 @@
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
-        <AssemblyVersion>4.12.0.0</AssemblyVersion>
+        <AssemblyVersion>4.14.2.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Web.BeforeTokenAcquisitionForTestUserAsync</ReturnType>
