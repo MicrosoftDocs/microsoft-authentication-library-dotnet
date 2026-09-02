@@ -14,6 +14,7 @@
     <AssemblyVersion>4.85.1.0</AssemblyVersion>
     <AssemblyVersion>4.85.2.0</AssemblyVersion>
     <AssemblyVersion>4.87.0.0</AssemblyVersion>
+    <AssemblyVersion>4.88.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -35,7 +36,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.87.0.0</AssemblyVersion>
+        <AssemblyVersion>4.88.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder</ReturnType>
@@ -63,7 +64,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.87.0.0</AssemblyVersion>
+        <AssemblyVersion>4.88.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder</ReturnType>
@@ -84,6 +85,38 @@
             PoP options, such as a minimum required binding strength.
             When attestation is required (KeyGuard scenarios), use the Msal.KeyAttestation package
             and call .WithAttestationSupport() after this method.
+            </summary>
+        <returns>The builder to chain .With methods.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithRequestOverMtls">
+      <MemberSignature Language="C#" Value="public static Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder WithRequestOverMtls (this Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder builder);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder WithRequestOverMtls(class Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder builder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.ManagedIdentityPopExtensions.WithRequestOverMtls(Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function WithRequestOverMtls (builder As AcquireTokenForManagedIdentityParameterBuilder) As AcquireTokenForManagedIdentityParameterBuilder" />
+      <MemberSignature Language="F#" Value="static member WithRequestOverMtls : Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder -&gt; Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder" Usage="Microsoft.Identity.Client.ManagedIdentityPopExtensions.WithRequestOverMtls builder" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.88.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="builder" Type="Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="builder">The AcquireTokenForManagedIdentityParameterBuilder instance.</param>
+        <summary>
+            Uses the IMDSv2 attested flow (Credential Guard–issued certificate over mTLS) to acquire
+            a standard bearer token. The mTLS certificate authenticates the connection to the ESTS
+            token endpoint, but the returned token carries <c>token_type=bearer</c> and has no
+            binding certificate in the <see cref="T:Microsoft.Identity.Client.AuthenticationResult" />.
+            Requires Windows Credential Guard (VBS) to be enabled on the host.
+            When attestation is required, call <c>.WithAttestationSupport()</c> (from the
+            <c>Microsoft.Identity.Client.KeyAttestation</c> package) after this method.
             </summary>
         <returns>The builder to chain .With methods.</returns>
         <remarks>To be added.</remarks>

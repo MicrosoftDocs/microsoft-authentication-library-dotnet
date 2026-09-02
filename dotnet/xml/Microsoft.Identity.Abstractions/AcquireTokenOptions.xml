@@ -18,6 +18,7 @@
     <AssemblyVersion>12.2.0.0</AssemblyVersion>
     <AssemblyVersion>12.4.0.0</AssemblyVersion>
     <AssemblyVersion>12.6.0.0</AssemblyVersion>
+    <AssemblyVersion>12.6.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -45,7 +46,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -64,7 +65,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="other" Type="Microsoft.Identity.Abstractions.AcquireTokenOptions" />
@@ -85,7 +86,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -109,7 +110,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -134,7 +135,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Abstractions.AcquireTokenOptions</ReturnType>
@@ -142,9 +143,12 @@
       <Parameters />
       <Docs>
         <summary>
-            Performs a shallow Clone the options (to be able to override them).
+            Clones the options so they can be overridden without affecting the original. Mutable
+            collections (<see cref="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.ExtraParameters" />, <see cref="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.ExtraQueryParameters" /> and
+            <see cref="P:Microsoft.Identity.Abstractions.AcquireTokenOptions.ExtraHeadersParameters" />) are copied into new containers, so that mutating
+            the clone's collections does not mutate the collections of the original instance.
             </summary>
-        <returns>A shallow Clone of the options.</returns>
+        <returns>A clone of the options with independent mutable collections.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -157,7 +161,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Guid&gt;</ReturnType>
@@ -179,7 +183,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -205,7 +209,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -239,7 +243,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -268,7 +272,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -290,7 +294,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -316,7 +320,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -343,7 +347,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -372,7 +376,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Identity.Abstractions.ManagedIdentityOptions</ReturnType>
@@ -415,7 +419,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -437,7 +441,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -462,7 +466,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -487,7 +491,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
-        <AssemblyVersion>12.6.0.0</AssemblyVersion>
+        <AssemblyVersion>12.6.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
