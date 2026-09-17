@@ -1,0 +1,94 @@
+<Type Name="KnownCloudMetadata" FullName="Microsoft.Identity.Client.Instance.Discovery.KnownCloudMetadata">
+  <TypeSignature Language="C#" Value="public sealed class KnownCloudMetadata" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit KnownCloudMetadata extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Client.Instance.Discovery.KnownCloudMetadata" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class KnownCloudMetadata" />
+  <TypeSignature Language="F#" Value="type KnownCloudMetadata = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+    <AssemblyVersion>4.90.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            MSAL's built-in, publicly known cloud metadata, resolved by authority host.
+            </summary>
+    <remarks>
+      <para>
+            Exposes the cloud-specific values MSAL ships for every publicly known Azure cloud (today: the FIC
+            token-exchange audience — see <see cref="T:Microsoft.Identity.Client.Instance.Discovery.CloudMetadataKeyNames" />), keyed by authority host. Access
+            the built-in data through <see cref="P:Microsoft.Identity.Client.Instance.Discovery.KnownCloudMetadata.Default" />.
+            </para>
+      <para>
+            The built-in data is projected from the single internal source of truth (<c>KnownCloudData</c>),
+            which MSAL's internal instance-discovery pipeline also derives from, so the alias and cloud-specific
+            magic strings live in exactly one place.
+            </para>
+      <para>
+            This type is shaped as an instance behind <see cref="P:Microsoft.Identity.Client.Instance.Discovery.KnownCloudMetadata.Default" /> (rather than a static class) so a
+            future caller-supplied override can be introduced additively, without a second "default" concept.
+            </para>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static Microsoft.Identity.Client.Instance.Discovery.KnownCloudMetadata Default { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Microsoft.Identity.Client.Instance.Discovery.KnownCloudMetadata Default" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.Instance.Discovery.KnownCloudMetadata.Default" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property Default As KnownCloudMetadata" />
+      <MemberSignature Language="F#" Value="static member Default : Microsoft.Identity.Client.Instance.Discovery.KnownCloudMetadata" Usage="Microsoft.Identity.Client.Instance.Discovery.KnownCloudMetadata.Default" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.90.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.Instance.Discovery.KnownCloudMetadata</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The built-in known-clouds lookup covering all publicly known Azure cloud environments.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetByAuthorityHost">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; GetByAuthorityHost (string authorityHost);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, string&gt; GetByAuthorityHost(string authorityHost) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.Instance.Discovery.KnownCloudMetadata.GetByAuthorityHost(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetByAuthorityHost (authorityHost As String) As IReadOnlyDictionary(Of String, String)" />
+      <MemberSignature Language="F#" Value="member this.GetByAuthorityHost : string -&gt; System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;" Usage="knownCloudMetadata.GetByAuthorityHost authorityHost" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.90.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IReadOnlyDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="authorityHost" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="authorityHost">
+            The authority host name (e.g., "login.microsoftonline.com", "login.microsoftonline.us"). Lookup
+            is case-insensitive.
+            </param>
+        <summary>
+            Gets the cloud-specific metadata for the given authority host.
+            </summary>
+        <returns>
+            A read-only, case-insensitive dictionary of cloud-specific values (keyed by
+            <see cref="T:Microsoft.Identity.Client.Instance.Discovery.CloudMetadataKeyNames" />) for hosts MSAL ships a value for; or <c>null</c> for a
+            null/empty host, an unknown host, or a known host that has no cloud-specific value to expose. The
+            returned dictionary is a <see cref="T:System.Collections.ObjectModel.ReadOnlyDictionary`2" /> and cannot be mutated.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

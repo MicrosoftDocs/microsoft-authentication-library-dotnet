@@ -1,0 +1,66 @@
+<Type Name="CloudMetadataKeyNames" FullName="Microsoft.Identity.Abstractions.CloudMetadataKeyNames">
+  <TypeSignature Language="C#" Value="public static class CloudMetadataKeyNames" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit CloudMetadataKeyNames extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Abstractions.CloudMetadataKeyNames" />
+  <TypeSignature Language="VB.NET" Value="Public Class CloudMetadataKeyNames" />
+  <TypeSignature Language="F#" Value="type CloudMetadataKeyNames = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+    <AssemblyVersion>12.7.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Well-known keys for the cloud-specific metadata exchanged through <see cref="T:Microsoft.Identity.Abstractions.ICloudMetadataProvider" />.
+            </summary>
+    <remarks>
+      <para>
+            These string literals are the <b>shared vocabulary</b> used to exchange cloud-specific values
+            between cooperating SDKs and their callers. A key literal is intentionally
+            identical across every SDK that recognizes it, so a value written under a key by one layer can be
+            read under the same key by another layer without any translation table.
+            </para>
+      <para>
+            The list is <b>add-only</b>: new keys can be introduced without breaking existing callers, because
+            consumers look up only the keys they understand and ignore the rest. When no longer needed, keys
+            can be marked as <see cref="T:System.ObsoleteAttribute" /> to discourage new use while leaving the
+            constant in place; producers simply stop writing a value under it and consumers stop reading.
+            </para>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FederatedCredentialAudience">
+      <MemberSignature Language="C#" Value="public const string FederatedCredentialAudience;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string FederatedCredentialAudience" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Abstractions.CloudMetadataKeyNames.FederatedCredentialAudience" />
+      <MemberSignature Language="VB.NET" Value="Public Const FederatedCredentialAudience As String " />
+      <MemberSignature Language="F#" Value="val mutable FederatedCredentialAudience : string" Usage="Microsoft.Identity.Abstractions.CloudMetadataKeyNames.FederatedCredentialAudience" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The Federated Identity Credential (FIC) token-exchange audience for a cloud, stored in its
+            <b>bare</b> form (without a <c>/.default</c> suffix), for example
+            <c>api://AzureADTokenExchange</c> for the public cloud. Consumers that need the client-credentials
+            scope form append <c>/.default</c> themselves.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

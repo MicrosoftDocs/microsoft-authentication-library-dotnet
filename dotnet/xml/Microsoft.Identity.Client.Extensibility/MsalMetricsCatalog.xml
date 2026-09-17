@@ -10,6 +10,7 @@
     <AssemblyVersion>4.85.2.0</AssemblyVersion>
     <AssemblyVersion>4.87.0.0</AssemblyVersion>
     <AssemblyVersion>4.88.0.0</AssemblyVersion>
+    <AssemblyVersion>4.90.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -24,13 +25,10 @@
             </summary>
     <remarks>
       <para>
-            The tag names listed for a metric are the canonical base tags MSAL emits for it (some are conditional). They do not
+            The tag names listed for a metric are the canonical base tags MSAL emits for it. They do not
             include any extra tags supplied through
             <see cref="M:Microsoft.Identity.Client.Extensibility.AbstractConfidentialClientAcquireTokenParameterBuilderExtension.WithOtelTagsEnricher``1(Microsoft.Identity.Client.AbstractAcquireTokenParameterBuilder{``0},System.Action{Microsoft.Identity.Client.Extensibility.ExecutionResult,System.Collections.Generic.IList{System.Collections.Generic.KeyValuePair{System.String,System.Object}}})" />,
-            which are caller-defined and therefore not part of this catalog. Some canonical tags are emitted only
-            under certain conditions (for example the raw STS error-code tag is present on the failure counter only
-            when the STS returns a sub-error); they are listed here because they are part of the metric's canonical
-            schema.
+            which are caller-defined and therefore not part of this catalog.
             </para>
       <para>
             Both the metric names (the dictionary keys) and the tag names (the dictionary values) are plain strings
@@ -52,7 +50,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Client</AssemblyName>
-        <AssemblyVersion>4.88.0.0</AssemblyVersion>
+        <AssemblyVersion>4.90.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IReadOnlyDictionary&lt;System.String,System.Collections.Generic.IReadOnlyList&lt;System.String&gt;&gt;</ReturnType>

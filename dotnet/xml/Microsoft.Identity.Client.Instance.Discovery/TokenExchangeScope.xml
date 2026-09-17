@@ -1,0 +1,61 @@
+<Type Name="TokenExchangeScope" FullName="Microsoft.Identity.Client.Instance.Discovery.TokenExchangeScope">
+  <TypeSignature Language="C#" Value="public static class TokenExchangeScope" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit TokenExchangeScope extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Client.Instance.Discovery.TokenExchangeScope" />
+  <TypeSignature Language="VB.NET" Value="Public Class TokenExchangeScope" />
+  <TypeSignature Language="F#" Value="type TokenExchangeScope = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+    <AssemblyVersion>4.90.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Computes the FIC (Federated Identity Credential) token-exchange <b>scope</b> from a bare audience.
+            </summary>
+    <remarks>
+            Cloud-specific audiences are stored <b>bare</b> (without <c>/.default</c>); the scope form is
+            computed here so no call site hand-appends the suffix. This type is the single owner of the
+            audience→scope rule.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FromAudience">
+      <MemberSignature Language="C#" Value="public static string FromAudience (string audience);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string FromAudience(string audience) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.Instance.Discovery.TokenExchangeScope.FromAudience(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FromAudience (audience As String) As String" />
+      <MemberSignature Language="F#" Value="static member FromAudience : string -&gt; string" Usage="Microsoft.Identity.Client.Instance.Discovery.TokenExchangeScope.FromAudience audience" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.90.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="audience" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="audience">
+            The bare token-exchange audience URI (e.g., "api://AzureADTokenExchange"), typically read from
+            <see cref="M:Microsoft.Identity.Client.Instance.Discovery.KnownCloudMetadata.GetByAuthorityHost(System.String)" /> under
+            <see cref="F:Microsoft.Identity.Client.Instance.Discovery.CloudMetadataKeyNames.FederatedCredentialAudience" />.
+            </param>
+        <summary>
+            Returns the FIC token-exchange <b>scope</b> for a bare audience — the audience with
+            <c>/.default</c> appended — suitable for client-credentials / app-token contexts.
+            </summary>
+        <returns>
+            The audience with <c>/.default</c> appended; the input unchanged if it already ends with
+            <c>/.default</c>; or <c>null</c> if <paramref name="audience" /> is null or empty.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-model-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.Identity.Abstractions" Version="12.6.1.0" />
+    <Assembly Name="Microsoft.Identity.Abstractions" Version="12.7.0.0" />
     <Assembly Name="Microsoft.Identity.Web.Azure" Version="4.14.2.0" />
     <Assembly Name="Microsoft.Identity.Web.Certificate" Version="4.14.2.0" />
     <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="4.14.2.0" />
@@ -130,6 +130,9 @@
       <Member Id="P:Microsoft.Identity.Abstractions.AuthorizationHeaderResult.Result" />
       <Member Id="P:Microsoft.Identity.Abstractions.AuthorizationHeaderResult.Succeeded" />
     </Type>
+    <Type Name="Microsoft.Identity.Abstractions.CloudMetadataKeyNames" Id="T:Microsoft.Identity.Abstractions.CloudMetadataKeyNames">
+      <Member Id="F:Microsoft.Identity.Abstractions.CloudMetadataKeyNames.FederatedCredentialAudience" />
+    </Type>
     <Type Name="Microsoft.Identity.Abstractions.CredentialDescription" Id="T:Microsoft.Identity.Abstractions.CredentialDescription">
       <Member Id="M:Microsoft.Identity.Abstractions.CredentialDescription.#ctor" />
       <Member Id="M:Microsoft.Identity.Abstractions.CredentialDescription.#ctor(Microsoft.Identity.Abstractions.CredentialDescription)" />
@@ -231,6 +234,9 @@
     <Type Name="Microsoft.Identity.Abstractions.IBoundAuthorizationHeaderProvider" Id="T:Microsoft.Identity.Abstractions.IBoundAuthorizationHeaderProvider">
       <Member Id="M:Microsoft.Identity.Abstractions.IBoundAuthorizationHeaderProvider.CreateBoundAuthorizationHeaderAsync(Microsoft.Identity.Abstractions.DownstreamApiOptions,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)" />
     </Type>
+    <Type Name="Microsoft.Identity.Abstractions.ICloudMetadataProvider" Id="T:Microsoft.Identity.Abstractions.ICloudMetadataProvider">
+      <Member Id="M:Microsoft.Identity.Abstractions.ICloudMetadataProvider.GetByAuthorityHost(System.String)" />
+    </Type>
     <Type Name="Microsoft.Identity.Abstractions.ICredentialsLoader" Id="T:Microsoft.Identity.Abstractions.ICredentialsLoader">
       <Member Id="M:Microsoft.Identity.Abstractions.ICredentialsLoader.LoadCredentialsIfNeededAsync(Microsoft.Identity.Abstractions.CredentialDescription,Microsoft.Identity.Abstractions.CredentialSourceLoaderParameters)" />
       <Member Id="M:Microsoft.Identity.Abstractions.ICredentialsLoader.LoadFirstValidCredentialsAsync(System.Collections.Generic.IEnumerable{Microsoft.Identity.Abstractions.CredentialDescription},Microsoft.Identity.Abstractions.CredentialSourceLoaderParameters)" />
@@ -309,6 +315,12 @@
       <Member Id="M:Microsoft.Identity.Abstractions.IDownstreamApi.PutForUserAsync``1(System.String,``0,System.Text.Json.Serialization.Metadata.JsonTypeInfo{``0},System.Action{Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod},System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.Identity.Abstractions.IDownstreamApi.PutForUserAsync``2(System.String,``0,System.Action{Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod},System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.Identity.Abstractions.IDownstreamApi.PutForUserAsync``2(System.String,``0,System.Text.Json.Serialization.Metadata.JsonTypeInfo{``0},System.Text.Json.Serialization.Metadata.JsonTypeInfo{``1},System.Action{Microsoft.Identity.Abstractions.DownstreamApiOptionsReadOnlyHttpMethod},System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)" />
+    </Type>
+    <Type Name="Microsoft.Identity.Abstractions.InMemoryCloudMetadataProvider" Id="T:Microsoft.Identity.Abstractions.InMemoryCloudMetadataProvider">
+      <Member Id="M:Microsoft.Identity.Abstractions.InMemoryCloudMetadataProvider.#ctor(Microsoft.Identity.Abstractions.ICloudMetadataProvider)" />
+      <Member Id="M:Microsoft.Identity.Abstractions.InMemoryCloudMetadataProvider.AddOrUpdate(System.String,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String})" />
+      <Member Id="M:Microsoft.Identity.Abstractions.InMemoryCloudMetadataProvider.AddOrUpdate(System.String,System.String,System.String)" />
+      <Member Id="M:Microsoft.Identity.Abstractions.InMemoryCloudMetadataProvider.GetByAuthorityHost(System.String)" />
     </Type>
     <Type Name="Microsoft.Identity.Abstractions.ITokenAcquirer" Id="T:Microsoft.Identity.Abstractions.ITokenAcquirer">
       <Member Id="M:Microsoft.Identity.Abstractions.ITokenAcquirer.GetTokenForAppAsync(System.String,Microsoft.Identity.Abstractions.AcquireTokenOptions,System.Threading.CancellationToken)" />

@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msal-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.Identity.Client.Broker" Version="4.88.0.0" />
-    <Assembly Name="Microsoft.Identity.Client.Desktop" Version="4.88.0.0" />
-    <Assembly Name="Microsoft.Identity.Client" Version="4.88.0.0" />
+    <Assembly Name="Microsoft.Identity.Client.Broker" Version="4.90.0.0" />
+    <Assembly Name="Microsoft.Identity.Client.Desktop" Version="4.90.0.0" />
+    <Assembly Name="Microsoft.Identity.Client" Version="4.90.0.0" />
   </Assemblies>
   <Namespace Name="Microsoft.Identity.Client">
     <Type Name="Microsoft.Identity.Client.AadAuthorityAudience" Id="T:Microsoft.Identity.Client.AadAuthorityAudience">
@@ -524,6 +524,7 @@
     </Type>
     <Type Name="Microsoft.Identity.Client.ManagedIdentityApplication" Id="T:Microsoft.Identity.Client.ManagedIdentityApplication">
       <Member Id="M:Microsoft.Identity.Client.ManagedIdentityApplication.AcquireTokenForManagedIdentity(System.String)" />
+      <Member Id="M:Microsoft.Identity.Client.ManagedIdentityApplication.GetManagedIdentityCapabilitiesAsync(Microsoft.Identity.Client.ManagedIdentity.ManagedIdentityCapabilitiesOptions,System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.Identity.Client.ManagedIdentityApplication.GetManagedIdentityCapabilitiesAsync(System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.Identity.Client.ManagedIdentityApplication.GetManagedIdentitySource" />
     </Type>
@@ -1163,6 +1164,18 @@
       <Member Id="P:Microsoft.Identity.Client.Extensibility.OnBeforeTokenRequestData.RequestUri" />
     </Type>
   </Namespace>
+  <Namespace Name="Microsoft.Identity.Client.Instance.Discovery">
+    <Type Name="Microsoft.Identity.Client.Instance.Discovery.CloudMetadataKeyNames" Id="T:Microsoft.Identity.Client.Instance.Discovery.CloudMetadataKeyNames">
+      <Member Id="F:Microsoft.Identity.Client.Instance.Discovery.CloudMetadataKeyNames.FederatedCredentialAudience" />
+    </Type>
+    <Type Name="Microsoft.Identity.Client.Instance.Discovery.KnownCloudMetadata" Id="T:Microsoft.Identity.Client.Instance.Discovery.KnownCloudMetadata">
+      <Member Id="M:Microsoft.Identity.Client.Instance.Discovery.KnownCloudMetadata.GetByAuthorityHost(System.String)" />
+      <Member Id="P:Microsoft.Identity.Client.Instance.Discovery.KnownCloudMetadata.Default" />
+    </Type>
+    <Type Name="Microsoft.Identity.Client.Instance.Discovery.TokenExchangeScope" Id="T:Microsoft.Identity.Client.Instance.Discovery.TokenExchangeScope">
+      <Member Id="M:Microsoft.Identity.Client.Instance.Discovery.TokenExchangeScope.FromAudience(System.String)" />
+    </Type>
+  </Namespace>
   <Namespace Name="Microsoft.Identity.Client.Kerberos">
     <Type Name="Microsoft.Identity.Client.Kerberos.KerberosKeyTypes" Id="T:Microsoft.Identity.Client.Kerberos.KerberosKeyTypes">
       <Member Id="F:Microsoft.Identity.Client.Kerberos.KerberosKeyTypes.Aes128CtsHmacSha196" />
@@ -1202,6 +1215,10 @@
       <Member Id="P:Microsoft.Identity.Client.ManagedIdentity.ManagedIdentityCapabilities.IsMtlsPopSupportedByHost" />
       <Member Id="P:Microsoft.Identity.Client.ManagedIdentity.ManagedIdentityCapabilities.MaxSupportedBindingStrength" />
       <Member Id="P:Microsoft.Identity.Client.ManagedIdentity.ManagedIdentityCapabilities.Source" />
+    </Type>
+    <Type Name="Microsoft.Identity.Client.ManagedIdentity.ManagedIdentityCapabilitiesOptions" Id="T:Microsoft.Identity.Client.ManagedIdentity.ManagedIdentityCapabilitiesOptions">
+      <Member Id="M:Microsoft.Identity.Client.ManagedIdentity.ManagedIdentityCapabilitiesOptions.#ctor" />
+      <Member Id="P:Microsoft.Identity.Client.ManagedIdentity.ManagedIdentityCapabilitiesOptions.CapabilityDiscoveryTimeout" />
     </Type>
     <Type Name="Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySource" Id="T:Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySource">
       <Member Id="F:Microsoft.Identity.Client.ManagedIdentity.ManagedIdentitySource.AppService" />

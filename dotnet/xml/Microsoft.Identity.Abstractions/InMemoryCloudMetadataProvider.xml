@@ -1,0 +1,192 @@
+<Type Name="InMemoryCloudMetadataProvider" FullName="Microsoft.Identity.Abstractions.InMemoryCloudMetadataProvider">
+  <TypeSignature Language="C#" Value="public sealed class InMemoryCloudMetadataProvider : Microsoft.Identity.Abstractions.ICloudMetadataProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit InMemoryCloudMetadataProvider extends System.Object implements class Microsoft.Identity.Abstractions.ICloudMetadataProvider" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Abstractions.InMemoryCloudMetadataProvider" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class InMemoryCloudMetadataProvider&#xA;Implements ICloudMetadataProvider" />
+  <TypeSignature Language="F#" Value="type InMemoryCloudMetadataProvider = class&#xA;    interface ICloudMetadataProvider" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+    <AssemblyVersion>12.7.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Identity.Abstractions.ICloudMetadataProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+             A ready-made, mutable <see cref="T:Microsoft.Identity.Abstractions.ICloudMetadataProvider" /> that a caller populates at startup, with an
+             optional fallback provider for hosts it does not itself know about.
+             </summary>
+    <remarks>
+      <para>
+             This is the type customers instantiate directly when they need to inject a new cloud, or adjust an
+             existing one, without implementing <see cref="T:Microsoft.Identity.Abstractions.ICloudMetadataProvider" /> by hand.
+             </para>
+      <para>
+             Like the rest of the identity SDK configuration surface, this provider follows a
+             <b>configure-then-read</b> model: populate it via <see cref="M:Microsoft.Identity.Abstractions.InMemoryCloudMetadataProvider.AddOrUpdate(System.String,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String})" />
+             while composing your app (typically before registering it as a singleton), then treat it as read-only.
+             The <c>AddOrUpdate</c> mutators are not safe to call concurrently with reads or with each other;
+             <see cref="M:Microsoft.Identity.Abstractions.InMemoryCloudMetadataProvider.GetByAuthorityHost(System.String)" /> is safe for concurrent reads once population is complete.
+             </para>
+      <para>
+             Resolution layers the registered values over the optional fallback provider <b>per key</b>: a key
+             registered here wins, a key not registered here falls back to the same host in the fallback, and a host
+             unknown to both resolves to <c>null</c>. This per-key merge lets a caller override a single value for a
+             cloud (for example one cloud's audience) while inheriting the rest of that cloud's metadata from the
+             fallback, instead of re-declaring every key.
+             </para>
+    </remarks>
+    <example>
+      <code>
+             // Inject a brand-new cloud (or adjust an existing one — same call, this provider wins per key):
+             ICloudMetadataProvider provider = new InMemoryCloudMetadataProvider()
+                 .AddOrUpdate("login.mynewcloud.example", new Dictionary&lt;string, string&gt;
+                 {
+                     [CloudMetadataKeyNames.FederatedCredentialAudience] = "api://AzureADTokenExchangeMyCloud",
+                 });
+            
+             services.AddSingleton&lt;ICloudMetadataProvider&gt;(provider);
+             </code>
+    </example>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InMemoryCloudMetadataProvider (Microsoft.Identity.Abstractions.ICloudMetadataProvider? fallback = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Identity.Abstractions.ICloudMetadataProvider fallback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.InMemoryCloudMetadataProvider.#ctor(Microsoft.Identity.Abstractions.ICloudMetadataProvider)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional fallback As ICloudMetadataProvider = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Identity.Abstractions.InMemoryCloudMetadataProvider : Microsoft.Identity.Abstractions.ICloudMetadataProvider -&gt; Microsoft.Identity.Abstractions.InMemoryCloudMetadataProvider" Usage="new Microsoft.Identity.Abstractions.InMemoryCloudMetadataProvider fallback" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fallback" Type="Microsoft.Identity.Abstractions.ICloudMetadataProvider" />
+      </Parameters>
+      <Docs>
+        <param name="fallback">An optional provider consulted, per key, for values this instance does not
+            have its own entry for. When <c>null</c>, hosts not registered here resolve to <c>null</c>.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Identity.Abstractions.InMemoryCloudMetadataProvider" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOrUpdate">
+      <MemberSignature Language="C#" Value="public Microsoft.Identity.Abstractions.InMemoryCloudMetadataProvider AddOrUpdate (string authorityHost, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Identity.Abstractions.InMemoryCloudMetadataProvider AddOrUpdate(string authorityHost, class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, string&gt; values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.InMemoryCloudMetadataProvider.AddOrUpdate(System.String,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Function AddOrUpdate (authorityHost As String, values As IReadOnlyDictionary(Of String, String)) As InMemoryCloudMetadataProvider" />
+      <MemberSignature Language="F#" Value="member this.AddOrUpdate : string * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; -&gt; Microsoft.Identity.Abstractions.InMemoryCloudMetadataProvider" Usage="inMemoryCloudMetadataProvider.AddOrUpdate (authorityHost, values)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Abstractions.InMemoryCloudMetadataProvider</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="authorityHost" Type="System.String" />
+        <Parameter Name="values" Type="System.Collections.Generic.IReadOnlyDictionary&lt;System.String,System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="authorityHost">The authority host (for example <c>login.microsoftonline.us</c>).</param>
+        <param name="values">The cloud-specific key/value pairs. Keys should come from
+            <see cref="T:Microsoft.Identity.Abstractions.CloudMetadataKeyNames" /> (or an SDK-specific extension of that vocabulary).</param>
+        <summary>
+            Adds or updates the metadata for the cloud identified by <paramref name="authorityHost" />, merged
+            <b>per key</b> over any values already registered for that host (and, at resolution time, over the
+            fallback). Keys in <paramref name="values" /> win; keys not supplied are left untouched.
+            </summary>
+        <returns>This same instance, to allow chaining multiple <see cref="M:Microsoft.Identity.Abstractions.InMemoryCloudMetadataProvider.AddOrUpdate(System.String,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String})" /> calls.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Thrown when <paramref name="authorityHost" /> is null or whitespace,
+            or when any key in <paramref name="values" /> is null or whitespace.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="values" /> is <c>null</c>, or when
+            any value in <paramref name="values" /> is <c>null</c>.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOrUpdate">
+      <MemberSignature Language="C#" Value="public Microsoft.Identity.Abstractions.InMemoryCloudMetadataProvider AddOrUpdate (string authorityHost, string key, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Identity.Abstractions.InMemoryCloudMetadataProvider AddOrUpdate(string authorityHost, string key, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.InMemoryCloudMetadataProvider.AddOrUpdate(System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function AddOrUpdate (authorityHost As String, key As String, value As String) As InMemoryCloudMetadataProvider" />
+      <MemberSignature Language="F#" Value="member this.AddOrUpdate : string * string * string -&gt; Microsoft.Identity.Abstractions.InMemoryCloudMetadataProvider" Usage="inMemoryCloudMetadataProvider.AddOrUpdate (authorityHost, key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Abstractions.InMemoryCloudMetadataProvider</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="authorityHost" Type="System.String" />
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="authorityHost">The authority host (for example <c>login.microsoftonline.us</c>).</param>
+        <param name="key">The value's key, typically one of the <see cref="T:Microsoft.Identity.Abstractions.CloudMetadataKeyNames" /> literals.</param>
+        <param name="value">The value to set.</param>
+        <summary>
+            Adds or updates a <b>single</b> cloud-specific value for an authority host, merged per key over any
+            values already registered for that host (and, at resolution time, over the fallback). Use this to
+            adjust or add one value for a cloud while leaving its other values as-is.
+            </summary>
+        <returns>This same instance, to allow chaining.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Thrown when <paramref name="authorityHost" /> or
+            <paramref name="key" /> is null or whitespace.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="value" /> is <c>null</c>.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetByAuthorityHost">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt;? GetByAuthorityHost (string authorityHost);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, string&gt; GetByAuthorityHost(string authorityHost) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Abstractions.InMemoryCloudMetadataProvider.GetByAuthorityHost(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetByAuthorityHost (authorityHost As String) As IReadOnlyDictionary(Of String, String)" />
+      <MemberSignature Language="F#" Value="abstract member GetByAuthorityHost : string -&gt; System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&#xA;override this.GetByAuthorityHost : string -&gt; System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;" Usage="inMemoryCloudMetadataProvider.GetByAuthorityHost authorityHost" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Identity.Abstractions.ICloudMetadataProvider.GetByAuthorityHost(System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Abstractions</AssemblyName>
+        <AssemblyVersion>12.7.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IReadOnlyDictionary&lt;System.String,System.String&gt;</ReturnType>
+        <Attributes>
+          <Attribute>
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1, 1 })]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1, 1 })&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="authorityHost" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="authorityHost">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

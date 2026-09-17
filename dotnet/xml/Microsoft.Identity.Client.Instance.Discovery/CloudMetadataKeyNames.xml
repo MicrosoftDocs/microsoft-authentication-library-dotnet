@@ -1,0 +1,65 @@
+<Type Name="CloudMetadataKeyNames" FullName="Microsoft.Identity.Client.Instance.Discovery.CloudMetadataKeyNames">
+  <TypeSignature Language="C#" Value="public static class CloudMetadataKeyNames" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit CloudMetadataKeyNames extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Client.Instance.Discovery.CloudMetadataKeyNames" />
+  <TypeSignature Language="VB.NET" Value="Public Class CloudMetadataKeyNames" />
+  <TypeSignature Language="F#" Value="type CloudMetadataKeyNames = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+    <AssemblyVersion>4.90.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Well-known keys for the cloud-specific metadata returned by
+            <see cref="M:Microsoft.Identity.Client.Instance.Discovery.KnownCloudMetadata.GetByAuthorityHost(System.String)" />.
+            </summary>
+    <remarks>
+      <para>
+            Cloud metadata is returned as a string-keyed dictionary rather than as fixed typed properties, so
+            that new cloud-specific values can be added — and obsolete ones removed — without source- or
+            binary-breaking callers. Callers read values by these key constants.
+            </para>
+      <para>
+            These are MSAL's <b>public</b> keys. Higher-level SDKs that carry additional, internal-only cloud
+            values define their own key namespace and translate to these keys before handing a value to MSAL.
+            </para>
+      <para>
+            Preferred network/cache hosts are deliberately <b>not</b> exposed here: MSAL's instance-discovery
+            pipeline resolves them from its own internal table and never reads them from this dictionary, so a
+            value placed here would be inert. To override preferred hosts, use
+            <see cref="M:Microsoft.Identity.Client.AbstractApplicationBuilder`1.WithInstanceDiscoveryMetadata(System.Uri)" /> (or the JSON
+            overload) instead.
+            </para>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FederatedCredentialAudience">
+      <MemberSignature Language="C#" Value="public const string FederatedCredentialAudience;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string FederatedCredentialAudience" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Identity.Client.Instance.Discovery.CloudMetadataKeyNames.FederatedCredentialAudience" />
+      <MemberSignature Language="VB.NET" Value="Public Const FederatedCredentialAudience As String " />
+      <MemberSignature Language="F#" Value="val mutable FederatedCredentialAudience : string" Usage="Microsoft.Identity.Client.Instance.Discovery.CloudMetadataKeyNames.FederatedCredentialAudience" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.90.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The cloud-specific FIC (Federated Identity Credential) token-exchange audience URI, stored
+            <b>without</b> the <c>/.default</c> suffix (e.g., "api://AzureADTokenExchange"). Use
+            <see cref="M:Microsoft.Identity.Client.Instance.Discovery.TokenExchangeScope.FromAudience(System.String)" /> to obtain the scope form (with
+            <c>/.default</c>) for client-credentials flows.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

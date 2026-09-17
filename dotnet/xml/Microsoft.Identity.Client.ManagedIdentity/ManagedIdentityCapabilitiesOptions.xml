@@ -1,0 +1,68 @@
+<Type Name="ManagedIdentityCapabilitiesOptions" FullName="Microsoft.Identity.Client.ManagedIdentity.ManagedIdentityCapabilitiesOptions">
+  <TypeSignature Language="C#" Value="public sealed class ManagedIdentityCapabilitiesOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ManagedIdentityCapabilitiesOptions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Client.ManagedIdentity.ManagedIdentityCapabilitiesOptions" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ManagedIdentityCapabilitiesOptions" />
+  <TypeSignature Language="F#" Value="type ManagedIdentityCapabilitiesOptions = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+    <AssemblyVersion>4.90.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Configures managed identity capability discovery.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManagedIdentityCapabilitiesOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Client.ManagedIdentity.ManagedIdentityCapabilitiesOptions.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.90.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CapabilityDiscoveryTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan? CapabilityDiscoveryTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.TimeSpan&gt; CapabilityDiscoveryTimeout" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Identity.Client.ManagedIdentity.ManagedIdentityCapabilitiesOptions.CapabilityDiscoveryTimeout" />
+      <MemberSignature Language="VB.NET" Value="Public Property CapabilityDiscoveryTimeout As Nullable(Of TimeSpan)" />
+      <MemberSignature Language="F#" Value="member this.CapabilityDiscoveryTimeout : Nullable&lt;TimeSpan&gt; with get, set" Usage="Microsoft.Identity.Client.ManagedIdentity.ManagedIdentityCapabilitiesOptions.CapabilityDiscoveryTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Client</AssemblyName>
+        <AssemblyVersion>4.90.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.TimeSpan&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the total time allowed for uncached managed identity capability discovery.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            The timeout covers discovery lock contention, IMDS probes and retries, fallback,
+            compute metadata retrieval, and binding-strength detection. A <c>null</c> value
+            preserves the existing cancellation ordering and waits without a discovery timeout.
+            When a timeout is configured, an already-canceled caller token is observed before
+            uncached discovery begins. Cancellation is cooperative, so non-interruptible platform
+            work may finish before the timeout is observed.
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
