@@ -23,6 +23,7 @@
     <AssemblyVersion>4.11.0.0</AssemblyVersion>
     <AssemblyVersion>4.12.0.0</AssemblyVersion>
     <AssemblyVersion>4.14.2.0</AssemblyVersion>
+    <AssemblyVersion>4.15.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -50,7 +51,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>4.14.2.0</AssemblyVersion>
+        <AssemblyVersion>4.15.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -78,7 +79,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>4.14.2.0</AssemblyVersion>
+        <AssemblyVersion>4.15.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>TBuilder</ReturnType>
@@ -107,8 +108,9 @@
         <param name="scope">Scope.</param>
         <param name="appPermission">App permission.</param>
         <summary>
-            This method adds metadata to route endpoint to describe required scopes or app permissions. It's the imperative version of
-            the [RequiredScopeOrAppPermission] attribute.
+            This method adds metadata to a route endpoint to describe required scopes or app permissions.
+            Authorization succeeds when an accepted scope is present in a scope claim or an accepted app permission
+            is present in a role claim. It's the imperative version of the [RequiredScopeOrAppPermission] attribute.
             </summary>
         <returns>Builder.</returns>
         <remarks>To be added.</remarks>

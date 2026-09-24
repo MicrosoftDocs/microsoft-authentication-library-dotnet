@@ -23,6 +23,7 @@
     <AssemblyVersion>4.11.0.0</AssemblyVersion>
     <AssemblyVersion>4.12.0.0</AssemblyVersion>
     <AssemblyVersion>4.14.2.0</AssemblyVersion>
+    <AssemblyVersion>4.15.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -42,7 +43,11 @@
     <summary>
             Implementation of ITokenAcquisition for App Services authentication (EasyAuth).
             </summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+            User token methods return the provider access token supplied by App Services authentication
+            for the current request. App token methods acquire an app-only token through MSAL using the
+            configured application credentials.
+            </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -54,7 +59,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>4.14.2.0</AssemblyVersion>
+        <AssemblyVersion>4.15.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="tokenCacheProvider" Type="Microsoft.Identity.Web.TokenCacheProviders.IMsalTokenCacheProvider" />
@@ -83,7 +88,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>4.14.2.0</AssemblyVersion>
+        <AssemblyVersion>4.15.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.String&gt;</ReturnType>
@@ -114,7 +119,10 @@
         <param name="tokenAcquisitionOptions">To be added.</param>
         <summary>To be added.</summary>
         <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            Acquires an app-only token through the client credentials flow. This method does not
+            return the provider token associated with the signed-in user.
+            </remarks>
         <inheritdoc />
       </Docs>
     </Member>
@@ -130,7 +138,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>4.14.2.0</AssemblyVersion>
+        <AssemblyVersion>4.15.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.String&gt;</ReturnType>
@@ -181,7 +189,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>4.14.2.0</AssemblyVersion>
+        <AssemblyVersion>4.15.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;</ReturnType>
@@ -212,7 +220,10 @@
         <param name="tokenAcquisitionOptions">To be added.</param>
         <summary>To be added.</summary>
         <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            Acquires an app-only token through the client credentials flow. This method does not
+            return the provider token associated with the signed-in user.
+            </remarks>
         <inheritdoc />
       </Docs>
     </Member>
@@ -228,7 +239,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>4.14.2.0</AssemblyVersion>
+        <AssemblyVersion>4.15.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;</ReturnType>
@@ -279,7 +290,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>4.14.2.0</AssemblyVersion>
+        <AssemblyVersion>4.15.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -314,7 +325,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>4.14.2.0</AssemblyVersion>
+        <AssemblyVersion>4.15.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -361,7 +372,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>4.14.2.0</AssemblyVersion>
+        <AssemblyVersion>4.15.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>

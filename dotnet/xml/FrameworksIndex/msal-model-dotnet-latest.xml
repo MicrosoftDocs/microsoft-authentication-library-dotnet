@@ -2,18 +2,18 @@
 <Framework Name="msal-model-dotnet-latest">
   <Assemblies>
     <Assembly Name="Microsoft.Identity.Abstractions" Version="12.7.0.0" />
-    <Assembly Name="Microsoft.Identity.Web.Azure" Version="4.14.2.0" />
-    <Assembly Name="Microsoft.Identity.Web.Certificate" Version="4.14.2.0" />
-    <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="4.14.2.0" />
-    <Assembly Name="Microsoft.Identity.Web" Version="4.14.2.0" />
-    <Assembly Name="Microsoft.Identity.Web.DownstreamApi" Version="4.14.2.0" />
+    <Assembly Name="Microsoft.Identity.Web.Azure" Version="4.15.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.Certificate" Version="4.15.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.Certificateless" Version="4.15.0.0" />
+    <Assembly Name="Microsoft.Identity.Web" Version="4.15.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.DownstreamApi" Version="4.15.0.0" />
     <Assembly Name="Microsoft.Identity.Web.DownstreamRestApi" Version="2.0.8.0" />
-    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraph" Version="4.14.2.0" />
-    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraphBeta" Version="4.14.2.0" />
-    <Assembly Name="Microsoft.Identity.Web.OWIN" Version="4.14.2.0" />
-    <Assembly Name="Microsoft.Identity.Web.TokenAcquisition" Version="4.14.2.0" />
-    <Assembly Name="Microsoft.Identity.Web.TokenCache" Version="4.14.2.0" />
-    <Assembly Name="Microsoft.Identity.Web.UI" Version="4.14.2.0" />
+    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraph" Version="4.15.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.MicrosoftGraphBeta" Version="4.15.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.OWIN" Version="4.15.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.TokenAcquisition" Version="4.15.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.TokenCache" Version="4.15.0.0" />
+    <Assembly Name="Microsoft.Identity.Web.UI" Version="4.15.0.0" />
   </Assemblies>
   <Namespace Name="Microsoft.Identity.Abstractions">
     <Type Name="Microsoft.Identity.Abstractions.AcquiredTokenCacheLevel" Id="T:Microsoft.Identity.Abstractions.AcquiredTokenCacheLevel">
@@ -567,6 +567,9 @@
       <Member Id="P:Microsoft.Identity.Web.ClientAssertionProviderBase.Expiry" />
       <Member Id="P:Microsoft.Identity.Web.ClientAssertionProviderBase.SupportsTokenBinding" />
     </Type>
+    <Type Name="Microsoft.Identity.Web.CloudMetadataServiceCollectionExtensions" Id="T:Microsoft.Identity.Web.CloudMetadataServiceCollectionExtensions">
+      <Member Id="M:Microsoft.Identity.Web.CloudMetadataServiceCollectionExtensions.AddCloudMetadata(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)" />
+    </Type>
     <Type Name="Microsoft.Identity.Web.Constants" Id="T:Microsoft.Identity.Web.Constants">
       <Member Id="F:Microsoft.Identity.Web.Constants.AzureAd" />
       <Member Id="F:Microsoft.Identity.Web.Constants.AzureAdB2C" />
@@ -691,6 +694,9 @@
       <Member Id="M:Microsoft.Identity.Web.IDownstreamWebApi.CallWebApiForUserAsync``2(System.String,``0,System.Action{Microsoft.Identity.Web.DownstreamWebApiOptions},System.Security.Claims.ClaimsPrincipal)" />
       <Member Id="M:Microsoft.Identity.Web.IDownstreamWebApi.CallWebApiForUserAsync``2(System.String,``0,System.String,System.Action{Microsoft.Identity.Web.DownstreamWebApiOptions},System.Security.Claims.ClaimsPrincipal)" />
     </Type>
+    <Type Name="Microsoft.Identity.Web.IKeyAttestationProvider" Id="T:Microsoft.Identity.Web.IKeyAttestationProvider">
+      <Member Id="M:Microsoft.Identity.Web.IKeyAttestationProvider.EnableAttestation(Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder)" />
+    </Type>
     <Type Name="Microsoft.Identity.Web.ILoginErrorAccessor" Id="T:Microsoft.Identity.Web.ILoginErrorAccessor">
       <Member Id="M:Microsoft.Identity.Web.ILoginErrorAccessor.GetMessage(Microsoft.AspNetCore.Http.HttpContext)" />
       <Member Id="M:Microsoft.Identity.Web.ILoginErrorAccessor.SetMessage(Microsoft.AspNetCore.Http.HttpContext,System.String)" />
@@ -721,6 +727,7 @@
       <Member Id="M:Microsoft.Identity.Web.ManagedIdentityClientAssertion.#ctor(System.String)" />
       <Member Id="M:Microsoft.Identity.Web.ManagedIdentityClientAssertion.#ctor(System.String,System.String)" />
       <Member Id="M:Microsoft.Identity.Web.ManagedIdentityClientAssertion.#ctor(System.String,System.String,Microsoft.Extensions.Logging.ILogger)" />
+      <Member Id="M:Microsoft.Identity.Web.ManagedIdentityClientAssertion.#ctor(System.String,System.String,Microsoft.Extensions.Logging.ILogger,Microsoft.Identity.Web.IKeyAttestationProvider)" />
       <Member Id="M:Microsoft.Identity.Web.ManagedIdentityClientAssertion.GetClientAssertionAsync(Microsoft.Identity.Client.AssertionRequestOptions)" />
       <Member Id="M:Microsoft.Identity.Web.ManagedIdentityClientAssertion.GetSignedAssertionWithBindingAsync(Microsoft.Identity.Client.AssertionRequestOptions,System.Threading.CancellationToken)" />
       <Member Id="P:Microsoft.Identity.Web.ManagedIdentityClientAssertion.SupportsTokenBinding" />

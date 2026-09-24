@@ -23,6 +23,7 @@
     <AssemblyVersion>4.11.0.0</AssemblyVersion>
     <AssemblyVersion>4.12.0.0</AssemblyVersion>
     <AssemblyVersion>4.14.2.0</AssemblyVersion>
+    <AssemblyVersion>4.15.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -45,7 +46,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web</AssemblyName>
-        <AssemblyVersion>4.14.2.0</AssemblyVersion>
+        <AssemblyVersion>4.15.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -65,11 +66,12 @@
         <param name="context">HttpContext (from the controller).</param>
         <param name="acceptedRoles">Roles accepted by this web API.</param>
         <summary>
-            When applied to an <see cref="T:Microsoft.AspNetCore.Http.HttpContext" />, verifies that the application
-            has the expected roles.
+            When applied to an <see cref="T:Microsoft.AspNetCore.Http.HttpContext" />, verifies that the current principal
+            has one of the expected role values. This validates a role claim and value, not whether
+            the caller is an application.
             </summary>
         <remarks>When the roles don't match, the response is a 403 (Forbidden),
-            because the app does not have the expected roles.</remarks>
+            because the principal does not have the expected roles.</remarks>
       </Docs>
     </Member>
   </Members>

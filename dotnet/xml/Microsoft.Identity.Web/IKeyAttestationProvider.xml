@@ -1,0 +1,46 @@
+<Type Name="IKeyAttestationProvider" FullName="Microsoft.Identity.Web.IKeyAttestationProvider">
+  <TypeSignature Language="C#" Value="public interface IKeyAttestationProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IKeyAttestationProvider" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Web.IKeyAttestationProvider" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IKeyAttestationProvider" />
+  <TypeSignature Language="F#" Value="type IKeyAttestationProvider = interface" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
+    <AssemblyVersion>4.15.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Enables optional key attestation on a managed identity mTLS proof-of-possession request.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EnableAttestation">
+      <MemberSignature Language="C#" Value="public Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder EnableAttestation (Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder builder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder EnableAttestation(class Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder builder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.IKeyAttestationProvider.EnableAttestation(Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder)" />
+      <MemberSignature Language="VB.NET" Value="Public Function EnableAttestation (builder As AcquireTokenForManagedIdentityParameterBuilder) As AcquireTokenForManagedIdentityParameterBuilder" />
+      <MemberSignature Language="F#" Value="abstract member EnableAttestation : Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder -&gt; Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder" Usage="iKeyAttestationProvider.EnableAttestation builder" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.Certificateless</AssemblyName>
+        <AssemblyVersion>4.15.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="builder" Type="Microsoft.Identity.Client.AcquireTokenForManagedIdentityParameterBuilder" />
+      </Parameters>
+      <Docs>
+        <param name="builder">The managed identity request builder.</param>
+        <summary>
+            Configures key attestation on the managed identity request.
+            </summary>
+        <returns>The configured request builder.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

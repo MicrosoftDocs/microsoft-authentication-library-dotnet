@@ -23,6 +23,7 @@
     <AssemblyVersion>4.11.0.0</AssemblyVersion>
     <AssemblyVersion>4.12.0.0</AssemblyVersion>
     <AssemblyVersion>4.14.2.0</AssemblyVersion>
+    <AssemblyVersion>4.15.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -44,7 +45,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.OWIN</AssemblyName>
-        <AssemblyVersion>4.14.2.0</AssemblyVersion>
+        <AssemblyVersion>4.15.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Owin.IAppBuilder</ReturnType>
@@ -66,7 +67,11 @@
             Adds a protected web API.
             </summary>
         <returns>The app builder to chain.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            By default, bearer tokens must contain a recognized scope or role claim with a non-whitespace value. Set
+            <see cref="P:Microsoft.Identity.Abstractions.IdentityApplicationOptions.AllowWebApiToBeAuthorizedByACL" /> to
+            <c>true</c> when the application uses ACL-based authorization instead.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="AddMicrosoftIdentityWebApp">
@@ -78,7 +83,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Identity.Web.OWIN</AssemblyName>
-        <AssemblyVersion>4.14.2.0</AssemblyVersion>
+        <AssemblyVersion>4.15.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Owin.IAppBuilder</ReturnType>

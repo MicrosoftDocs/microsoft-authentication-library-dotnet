@@ -1,0 +1,69 @@
+<Type Name="CloudMetadataServiceCollectionExtensions" FullName="Microsoft.Identity.Web.CloudMetadataServiceCollectionExtensions">
+  <TypeSignature Language="C#" Value="public static class CloudMetadataServiceCollectionExtensions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit CloudMetadataServiceCollectionExtensions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Identity.Web.CloudMetadataServiceCollectionExtensions" />
+  <TypeSignature Language="VB.NET" Value="Public Module CloudMetadataServiceCollectionExtensions" />
+  <TypeSignature Language="F#" Value="type CloudMetadataServiceCollectionExtensions = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+    <AssemblyVersion>4.15.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Extension methods that register cloud-specific metadata (for example the Federated Identity Credential
+            token-exchange audience, keyed by authority host) from configuration, so Microsoft.Identity.Web can
+            resolve the correct value for sovereign or private clouds it and MSAL do not ship — with no code beyond
+            binding an <c>appsettings.json</c> section.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddCloudMetadata">
+      <MemberSignature Language="C#" Value="public static Microsoft.Extensions.DependencyInjection.IServiceCollection AddCloudMetadata (this Microsoft.Extensions.DependencyInjection.IServiceCollection services, Microsoft.Extensions.Configuration.IConfiguration cloudMetadataSection);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Extensions.DependencyInjection.IServiceCollection AddCloudMetadata(class Microsoft.Extensions.DependencyInjection.IServiceCollection services, class Microsoft.Extensions.Configuration.IConfiguration cloudMetadataSection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Identity.Web.CloudMetadataServiceCollectionExtensions.AddCloudMetadata(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function AddCloudMetadata (services As IServiceCollection, cloudMetadataSection As IConfiguration) As IServiceCollection" />
+      <MemberSignature Language="F#" Value="static member AddCloudMetadata : Microsoft.Extensions.DependencyInjection.IServiceCollection * Microsoft.Extensions.Configuration.IConfiguration -&gt; Microsoft.Extensions.DependencyInjection.IServiceCollection" Usage="Microsoft.Identity.Web.CloudMetadataServiceCollectionExtensions.AddCloudMetadata (services, cloudMetadataSection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Identity.Web.TokenAcquisition</AssemblyName>
+        <AssemblyVersion>4.15.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="services" Type="Microsoft.Extensions.DependencyInjection.IServiceCollection" RefType="this" />
+        <Parameter Name="cloudMetadataSection" Type="Microsoft.Extensions.Configuration.IConfiguration" />
+      </Parameters>
+      <Docs>
+        <param name="services">The service collection to modify.</param>
+        <param name="cloudMetadataSection">A configuration section whose immediate children are authority
+            hosts, each of whose children are metadata key/value pairs. For example:
+            <code>
+            "CloudMetadata": {
+              "login.microsoftonline.us": { "federated_credential_audience": "api://AzureADTokenExchangeUSGov" },
+              "login.mynewcloud.example": { "federated_credential_audience": "api://AzureADTokenExchangeMyCloud" }
+            }
+            </code>
+            Keys should come from <see cref="T:Microsoft.Identity.Abstractions.CloudMetadataKeyNames" />.
+            </param>
+        <summary>
+            Registers an <see cref="T:Microsoft.Identity.Abstractions.ICloudMetadataProvider" /> populated from <paramref name="cloudMetadataSection" />
+            so Microsoft.Identity.Web resolves cloud-specific FIC token-exchange values (for clouds it and MSAL do
+            not know about) from configuration, with no code beyond binding an <c>appsettings.json</c> section.
+            </summary>
+        <returns>The original service collection instance.</returns>
+        <remarks>
+            The provider is registered with <c>TryAddSingleton</c>, so an <see cref="T:Microsoft.Identity.Abstractions.ICloudMetadataProvider" /> a
+            caller (or an upstream SDK) registered explicitly beforehand takes precedence and is
+            left untouched.
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
